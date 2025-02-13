@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// The set password 
+        /// The set password.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

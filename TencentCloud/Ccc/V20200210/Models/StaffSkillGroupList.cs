@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Skill group ID.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }

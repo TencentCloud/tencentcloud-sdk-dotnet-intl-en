@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Query task list skill group ID.
+        /// Query task list skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }

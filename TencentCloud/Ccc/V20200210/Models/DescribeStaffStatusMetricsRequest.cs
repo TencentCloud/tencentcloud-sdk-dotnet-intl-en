@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Filter agent list. By default, do not pass all returned agent information.
+        /// Filter agent list. by default, do not pass all returned agent information.
         /// </summary>
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }
 
         /// <summary>
-        /// Filter skill group ID list.
+        /// Filter skill group id list.
         /// </summary>
         [JsonProperty("GroupIdList")]
         public long?[] GroupIdList{ get; set; }
 
         /// <summary>
-        /// Filter agent status list Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+        /// Filter agent status list agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline . 
         /// </summary>
         [JsonProperty("StatusList")]
         public string[] StatusList{ get; set; }

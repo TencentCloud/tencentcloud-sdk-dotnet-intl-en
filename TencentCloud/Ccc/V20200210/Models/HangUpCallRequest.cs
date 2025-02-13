@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// TCCC instance application ID.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Session ID.
+        /// Session id.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

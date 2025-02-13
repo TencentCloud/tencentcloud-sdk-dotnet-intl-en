@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Total number
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// File Information
+        /// File information.
         /// </summary>
         [JsonProperty("FileInfo")]
         public AudioFileInfo[] FileInfo{ get; set; }

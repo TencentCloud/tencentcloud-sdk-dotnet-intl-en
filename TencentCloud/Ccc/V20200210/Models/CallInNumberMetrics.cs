@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Number{ get; set; }
 
         /// <summary>
-        /// Line-related metrics.
+        /// Line-Related metrics.
         /// </summary>
         [JsonProperty("Metrics")]
         public CallInMetrics Metrics{ get; set; }

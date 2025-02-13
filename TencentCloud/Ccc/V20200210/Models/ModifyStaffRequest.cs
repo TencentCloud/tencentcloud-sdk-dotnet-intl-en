@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Nick{ get; set; }
 
         /// <summary>
-        /// Agent ID
+        /// Agent id.
         /// </summary>
         [JsonProperty("StaffNo")]
         public string StaffNo{ get; set; }
 
         /// <summary>
-        /// Bind skill group ID list.
+        /// Bind skill group id list.
         /// </summary>
         [JsonProperty("SkillGroupIds")]
         public long?[] SkillGroupIds{ get; set; }
@@ -73,10 +73,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public bool? UseMobileCallOut{ get; set; }
 
         /// <summary>
-        /// Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+        /// Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
         /// </summary>
         [JsonProperty("UseMobileAccept")]
         public long? UseMobileAccept{ get; set; }
+
+        /// <summary>
+        /// Agent extension number (starting with 1 to 8, 4 - 6 digits).
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
             this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

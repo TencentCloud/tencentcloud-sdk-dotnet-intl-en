@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Number of IVR residency.
+        /// Number of ivr residency.
         /// </summary>
         [JsonProperty("IvrCount")]
         public long? IvrCount{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? RingCount{ get; set; }
 
         /// <summary>
-        /// Number in connection.
+        /// Number of connections.
         /// </summary>
         [JsonProperty("AcceptCount")]
         public long? AcceptCount{ get; set; }

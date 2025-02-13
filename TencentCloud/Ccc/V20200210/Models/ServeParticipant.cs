@@ -26,126 +26,108 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// Agent email.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mail")]
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Agent Telephone
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Agent phone number.
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// Ring timestamp. Unix second-level timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Ringing timestamp, unix second-level timestamp.
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
-        /// Answer timestamp. Unix second-level timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Answer timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
-        /// End timestamp. Unix second-level timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// End timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("EndedTimestamp")]
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
-        /// Recording ID, which can be used to index the recording on the agent side
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recording id can be indexed to the agent side recording.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Participant type: "staffSeat", "outboundSeat", "staffPhoneSeat".
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Participant type: "staffseat", "outboundseat", "staffphoneseat".
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Transfer Source Agent Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transfer source agent information.
         /// </summary>
         [JsonProperty("TransferFrom")]
         public string TransferFrom{ get; set; }
 
         /// <summary>
-        /// Transfer source participant type is consistent with the Type value.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transfer source participant type is consistent with the type value.
         /// </summary>
         [JsonProperty("TransferFromType")]
         public string TransferFromType{ get; set; }
 
         /// <summary>
-        /// Transfer Destination Agent Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transfer destination agent information.
         /// </summary>
         [JsonProperty("TransferTo")]
         public string TransferTo{ get; set; }
 
         /// <summary>
-        /// Transfer destination participant type is consistent with Type values.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transfer destination participant type, which is consistent with type values.
         /// </summary>
         [JsonProperty("TransferToType")]
         public string TransferToType{ get; set; }
 
         /// <summary>
-        /// Skill group ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
         /// Ending status.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }
 
         /// <summary>
-        /// Recording URL.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recording url.
         /// </summary>
         [JsonProperty("RecordURL")]
         public string RecordURL{ get; set; }
 
         /// <summary>
         /// Participant sequence number, starting from 0.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Sequence")]
         public long? Sequence{ get; set; }
 
         /// <summary>
-        /// Start timestamp. Unix second-level timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// Skill Group name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Skill group name.
         /// </summary>
         [JsonProperty("SkillGroupName")]
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// Address of the third party COS for transferring recording.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address of the third-party cos for transferring recording.
         /// </summary>
         [JsonProperty("CustomRecordURL")]
         public string CustomRecordURL{ get; set; }

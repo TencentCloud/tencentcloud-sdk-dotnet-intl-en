@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Number of minutes consumed by Outbound Package.
+        /// Number of minutes consumed by outbound package.
         /// </summary>
         [JsonProperty("TelCallOutCount")]
         public long? TelCallOutCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by Inbound Package.
+        /// Number of minutes consumed by inbound package.
         /// </summary>
         [JsonProperty("TelCallInCount")]
         public long? TelCallInCount{ get; set; }
@@ -43,26 +43,26 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SeatUsedCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by Audio package.
+        /// Number of minutes consumed by audio package.
         /// </summary>
         [JsonProperty("VoipCallInCount")]
         [System.Obsolete]
         public long? VoipCallInCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by Audio package.
+        /// Number of minutes consumed by audio package.
         /// </summary>
         [JsonProperty("VOIPCallInCount")]
         public long? VOIPCallInCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by Offline Speech-to-Text Package.
+        /// Number of minutes consumed by offline speech-to-text package.
         /// </summary>
         [JsonProperty("AsrOfflineCount")]
         public long? AsrOfflineCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by Real-time Speech-to-Text Package.
+        /// Number of minutes consumed by real-time speech-to-text package.
         /// </summary>
         [JsonProperty("AsrRealtimeCount")]
         public long? AsrRealtimeCount{ get; set; }

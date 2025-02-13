@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Application id.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Application Name
+        /// Application name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Agent Purchase Count (still within the validity period)
+        /// Agent purchase count (still within the validity period).
         /// </summary>
         [JsonProperty("StaffBuyNum")]
         public long? StaffBuyNum{ get; set; }
 
         /// <summary>
-        /// Agent Purchase List (still within the validity period)
+        /// Agent purchase list (still within the validity period).
         /// </summary>
         [JsonProperty("StaffBuyList")]
         public StaffBuyInfo[] StaffBuyList{ get; set; }
@@ -56,7 +56,6 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// Number of office telephones purchased (still within the validity period).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SipBuyNum")]
         public long? SipBuyNum{ get; set; }

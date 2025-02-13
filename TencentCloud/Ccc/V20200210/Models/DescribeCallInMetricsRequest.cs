@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Whether to return skill group dimension information or not (the default is "Yes").
+        /// Whether to return skill group dimension information or not (the default is "yes").
         /// </summary>
         [JsonProperty("EnabledSkillGroup")]
         public bool? EnabledSkillGroup{ get; set; }
 
         /// <summary>
-        /// Whether to return line dimension information or not (the default is "No").
+        /// Whether to return line dimension information or not (the default is "no").
         /// </summary>
         [JsonProperty("EnabledNumber")]
         public bool? EnabledNumber{ get; set; }

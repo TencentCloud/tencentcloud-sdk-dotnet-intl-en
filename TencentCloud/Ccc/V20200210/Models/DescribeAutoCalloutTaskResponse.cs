@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Task Description.
+        /// <Task description>.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

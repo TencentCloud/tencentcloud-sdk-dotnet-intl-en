@@ -25,18 +25,40 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Key.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hit keyword or press.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Tag associated with key.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Tag associated with the key.
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
+
+        /// <summary>
+        /// UNIX millisecond timestamp.
+        /// </summary>
+        [JsonProperty("Timestamp")]
+        public long? Timestamp{ get; set; }
+
+        /// <summary>
+        /// Node tags.
+        /// </summary>
+        [JsonProperty("NodeLabel")]
+        public string NodeLabel{ get; set; }
+
+        /// <summary>
+        /// User'S original input.
+        /// </summary>
+        [JsonProperty("OriginalContent")]
+        public string OriginalContent{ get; set; }
+
+        /// <summary>
+        /// TTS prompt content.
+        /// </summary>
+        [JsonProperty("TTSPrompt")]
+        public string TTSPrompt{ get; set; }
 
 
         /// <summary>
@@ -46,6 +68,10 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "NodeLabel", this.NodeLabel);
+            this.SetParamSimple(map, prefix + "OriginalContent", this.OriginalContent);
+            this.SetParamSimple(map, prefix + "TTSPrompt", this.TTSPrompt);
         }
     }
 }

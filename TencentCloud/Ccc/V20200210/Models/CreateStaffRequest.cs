@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public SeatUserInfo[] Staffs{ get; set; }
 
         /// <summary>
-        /// Whether to send a password mail or not (the default is true)
+        /// Whether to send a password mail or not (the default is true).
         /// </summary>
         [JsonProperty("SendPassword")]
         public bool? SendPassword{ get; set; }

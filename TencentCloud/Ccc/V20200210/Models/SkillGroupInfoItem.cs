@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Skill group ID.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
@@ -37,49 +37,43 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// (Deprecated) Type: IM, TEL, ALL (full media).
+        /// (Deprecated) type: im, tel, all (full media).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Session allocation policy.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoutePolicy")]
         public string RoutePolicy{ get; set; }
 
         /// <summary>
-        /// Should the conversation allocation prioritize the last service seat?
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the session is allocated to the last serviced agent first.
         /// </summary>
         [JsonProperty("UsingLastSeat")]
         public long? UsingLastSeat{ get; set; }
 
         /// <summary>
         /// Maximum concurrency number of single client service (default 1 for telephone type).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxConcurrency")]
         public long? MaxConcurrency{ get; set; }
 
         /// <summary>
         /// Last modification time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }
 
         /// <summary>
-        /// Skill group type 0-phone, 1-online, 3-audio, 4-video.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Skill group type 0-cell phone, 1-online, 3-audio, 4-video.	.	
         /// </summary>
         [JsonProperty("SkillGroupType")]
         public long? SkillGroupType{ get; set; }
 
         /// <summary>
-        /// Extension number within the skill group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intra-Skill group line number.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }

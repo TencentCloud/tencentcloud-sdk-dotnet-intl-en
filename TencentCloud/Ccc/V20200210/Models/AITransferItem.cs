@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 
+        /// Name of the function calling for transfer to human.
         /// </summary>
         [JsonProperty("TransferFunctionName")]
         public string TransferFunctionName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Takes effect when transferfunctionenable is true; the description of transfer_to_human function calling defaults to "transfer to human when the user has to transfer to human (like says transfer to human) or you are instructed to do so.".
         /// </summary>
         [JsonProperty("TransferFunctionDesc")]
         public string TransferFunctionDesc{ get; set; }
 
         /// <summary>
-        /// 
+        /// Skill group id for transferring to human agent.
         /// </summary>
         [JsonProperty("TransferSkillGroupId")]
         public ulong? TransferSkillGroupId{ get; set; }

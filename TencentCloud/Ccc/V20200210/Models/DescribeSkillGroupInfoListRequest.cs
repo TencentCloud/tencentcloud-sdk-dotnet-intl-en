@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Page number starting from 0.
+        /// <Page number starting from 0.>.
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Using skill group ID when querying a single skill group.
+        /// Using skill group id when querying a single skill group.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// Used when querying skill groups with a modified time greater or equal to ModifiedTime.
+        /// Used when querying skill groups with a modified time greater or equal to modifiedtime.
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }

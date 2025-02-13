@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID list, query all applications when not transmitted.
+        /// Application id list, query all applications when not transmitted.
         /// </summary>
         [JsonProperty("SdkAppIds")]
         public long?[] SdkAppIds{ get; set; }

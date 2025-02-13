@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Page size, upper limit 9,999
+        /// Page size, upper limit 9,999.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffMail{ get; set; }
 
         /// <summary>
-        /// Use when querying for agents with a modification time greater or equal to ModifiedTime.
+        /// Use when querying for agents with a modification time greater or equal to modifiedtime.
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
         /// <summary>
-        /// Skill group ID.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }

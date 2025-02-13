@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of calls.
+        /// Number of called parties.
         /// </summary>
         [JsonProperty("CalleeCount")]
         public ulong? CalleeCount{ get; set; }
@@ -49,7 +49,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? NotBefore{ get; set; }
 
         /// <summary>
-        /// End timestamp.
+        /// End timestamp
+        /// .
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NotAfter")]
@@ -62,18 +63,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? IvrId{ get; set; }
 
         /// <summary>
-        /// Task status:
-        /// 0 Initial: Task created, calling not started
-        /// 1 Running
-        /// 2  Completed: All calls in the task are completed
-        /// 3 Ending: The task is due, but some calls are still not finished
-        /// 4 Ended: Task terminated due to expiration
+        /// Task status:.
+        /// 0 initial: task creation, call not started.
+        /// 1 running.
+        /// 2 completed: all calls in the task are completed.
+        /// 3 ending: the task has expired, but there are still some calls not ended.
+        /// 4 ended: task terminated due to expiration.
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
         /// <summary>
-        /// Task ID.
+        /// <Task id>.
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

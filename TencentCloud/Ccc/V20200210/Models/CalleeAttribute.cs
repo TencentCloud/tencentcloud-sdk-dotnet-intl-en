@@ -31,13 +31,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Associate data.
+        /// Accompanying data.
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
-        /// Parameter
+        /// Parameter.
         /// </summary>
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }

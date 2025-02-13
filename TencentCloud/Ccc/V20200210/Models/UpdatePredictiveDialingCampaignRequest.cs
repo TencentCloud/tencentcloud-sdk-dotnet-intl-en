@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Generated task ID.
+        /// Generated task id.
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Called list supporting E.164 or number formats without country code.
+        /// Called list supporting e.164 or number formats without country code.
         /// </summary>
         [JsonProperty("Callees")]
         public string[] Callees{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Expected call drop rate, percentage, 5 - 50.
+        /// Expected call drop rate, percentage, 5 - 50.	.	
         /// </summary>
         [JsonProperty("ExpectedAbandonRate")]
         public long? ExpectedAbandonRate{ get; set; }
@@ -85,19 +85,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? RetryInterval{ get; set; }
 
         /// <summary>
-        /// Task start time. Unix timestamp. The task will automatically start after this time.
+        /// Task start time. unix timestamp. the task will automatically start after this time.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Task termination time. Unix timestamp. The task will automatically terminate after this time.
+        /// Task termination time. unix timestamp. the task will automatically terminate after this time.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Specified IVR ID.
+        /// Specified ivr id.
         /// </summary>
         [JsonProperty("IVRId")]
         public long? IVRId{ get; set; }
@@ -107,6 +107,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("RetryTimes")]
         public long? RetryTimes{ get; set; }
+
+        /// <summary>
+        /// Custom variable.
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
+        /// <summary>
+        /// 	UUI
+        /// </summary>
+        [JsonProperty("UUI")]
+        public string UUI{ get; set; }
+
+        /// <summary>
+        /// Property of the called.
+        /// </summary>
+        [JsonProperty("CalleeAttributes")]
+        public CalleeAttribute[] CalleeAttributes{ get; set; }
 
 
         /// <summary>
@@ -128,6 +146,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "IVRId", this.IVRId);
             this.SetParamSimple(map, prefix + "RetryTimes", this.RetryTimes);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "UUI", this.UUI);
+            this.SetParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
         }
     }
 }

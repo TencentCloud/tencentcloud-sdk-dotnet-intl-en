@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Task starting timestamp. Unix second-level timestamp.
+        /// Task starting timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("NotBefore")]
         public long? NotBefore{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Task description.
+        /// <Task description>.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Task stop timestamp. Unix second-level timestamp.
+        /// Task stop timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("NotAfter")]
         public long? NotAfter{ get; set; }
 
         /// <summary>
-        /// Maximum attempts, 1-3 times
+        /// Maximum attempts, 1-3 times.
         /// </summary>
         [JsonProperty("Tries")]
         public ulong? Tries{ get; set; }

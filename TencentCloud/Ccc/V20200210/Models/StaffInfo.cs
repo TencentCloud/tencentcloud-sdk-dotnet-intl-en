@@ -26,7 +26,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// Agent name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -38,45 +37,46 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Mail{ get; set; }
 
         /// <summary>
-        /// Agent's Telephone Number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Agent phone number.
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
         /// Agent nickname.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// Agent ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Agent id.
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// User Role ID
+        /// User role id.
         /// </summary>
         [JsonProperty("RoleId")]
         public ulong? RoleId{ get; set; }
 
         /// <summary>
-        /// Affiliated Skill Group List.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Affiliated skill group list.
         /// </summary>
         [JsonProperty("SkillGroupList")]
         public SkillGroupItem[] SkillGroupList{ get; set; }
 
         /// <summary>
         /// Last modification time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastModifyTimestamp")]
         public long? LastModifyTimestamp{ get; set; }
+
+        /// <summary>
+        /// Agent extension number (starting with 1 to 8, 4 - 6 digits).
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
 
 
         /// <summary>
@@ -92,6 +92,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

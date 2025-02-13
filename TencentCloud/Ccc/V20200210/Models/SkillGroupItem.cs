@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Skill group ID.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// Priority
+        /// Priority.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Type: IM, TEL, ALL (full media).
+        /// Type: im, tel, all (full media).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

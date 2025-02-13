@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Real-time information on agent status.
+        /// Real-Time information on agent status.
         /// </summary>
         [JsonProperty("Metrics")]
         public StaffStatusMetrics[] Metrics{ get; set; }

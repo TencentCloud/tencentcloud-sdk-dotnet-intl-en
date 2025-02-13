@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// SDK log-in Token.
+        /// SDK log-in token.
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// Expiry timestamp. Unix timestamp.
+        /// Expiry timestamp. unix timestamp.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// The path in which the SDK is loaded will change with its release.
+        /// The path in which the sdk is loaded will change with its release.
         /// </summary>
         [JsonProperty("SdkURL")]
         public string SdkURL{ get; set; }

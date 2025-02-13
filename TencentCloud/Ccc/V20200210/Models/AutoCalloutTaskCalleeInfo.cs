@@ -31,13 +31,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Call status 0 - Initial, 1 - Answered, 2 - Unanswered, 3 - Calling, 4 - Pending Retry.
+        /// Call status 0 - initial, 1 - answered, 2 - unanswered, 3 - calling, 4 - pending retry.
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
         /// <summary>
-        /// List of session IDs.
+        /// List of session ids.
         /// </summary>
         [JsonProperty("Sessions")]
         public string[] Sessions{ get; set; }

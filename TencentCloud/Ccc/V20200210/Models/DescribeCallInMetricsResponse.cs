@@ -38,14 +38,12 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// Circuit dimension metrics.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NumberMetrics")]
         public CallInNumberMetrics[] NumberMetrics{ get; set; }
 
         /// <summary>
-        /// Skill group dimension metrics
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Skill group dimension metrics.
         /// </summary>
         [JsonProperty("SkillGroupMetrics")]
         public CallInSkillGroupMetrics[] SkillGroupMetrics{ get; set; }

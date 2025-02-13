@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Customer service emails, supports up to 200 at a time.
+        /// List of customer service emails to be deleted, supports up to 200 at a time.
         /// </summary>
         [JsonProperty("StaffList")]
         public string[] StaffList{ get; set; }

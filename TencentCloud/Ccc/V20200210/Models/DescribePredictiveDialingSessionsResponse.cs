@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of session IDs for a call. You can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1
+        /// List of session ids for a call. you can access detailed call bills in batches through https://intl.cloud.tencent.com/document/product/679/47714.?from_cn_redirect=1.
         /// </summary>
         [JsonProperty("SessionList")]
         public string[] SessionList{ get; set; }

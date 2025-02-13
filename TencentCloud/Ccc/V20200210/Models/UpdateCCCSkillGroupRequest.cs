@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required).
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Skill group ID.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupID")]
         public long? SkillGroupID{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// Modified maximum concurrency and the maximum synchronization is 2.
+        /// Modified maximum concurrency, with the maximum synchronization being 2.
         /// </summary>
         [JsonProperty("MaxConcurrency")]
         public long? MaxConcurrency{ get; set; }

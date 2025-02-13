@@ -37,13 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Call initiation timestamp, Unix timestamp.
+        /// Call initiation timestamp, unix timestamp.
         /// </summary>
         [JsonProperty("Time")]
         public long? Time{ get; set; }
 
         /// <summary>
-        /// Call direction: 0 - Inbound, 1 - Outbound.
+        /// Call direction: 0 - inbound, 1 - outbound.
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
@@ -55,78 +55,78 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// Recording Information.
+        /// Recording information.
         /// </summary>
         [JsonProperty("RecordURL")]
         public string RecordURL{ get; set; }
 
         /// <summary>
-        /// Recording ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Recording id.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Agent Information
+        /// Agent information.
         /// </summary>
         [JsonProperty("SeatUser")]
         public SeatUserInfo SeatUser{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+        /// EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
         /// 
-        /// **Scenario	         EndStatus	EndStatusString	Status Description**
+        /// **Scenario	EndStatus	EndStatusString	Status description**.
         /// 
-        /// Incoming & Outgoing Calls	1	        ok	                        Normal End
+        /// Inbound call & call	1	ok	end properly.
         /// 
-        /// Incoming & Outgoing Calls	0	        error	                System Error
+        /// Inbound call & call | 0 | error | system error.
         /// 
-        /// Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+        /// Inbound call | 102 | ivrgiveup | user gives up during ivr.
         /// 
-        /// Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+        /// Inbound call | 103 | waitinggiveup | user gives up during session queue.
         /// 
-        /// Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+        /// Inbound call | 104 | ringinggiveup | user gives up during session ringing.
         /// 
-        /// Incoming Call	             105	        noSeatOnline	       No Seat Online
+        /// Inbound call | 105 | noseatonline | no agent online.
         /// 
-        /// Incoming Call              106	       notWorkTime	       Non-Working Hours   
+        /// Inbound call              106	       non - working hour      non - working hour.   
         /// 
-        /// Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+        /// Inbound call              107	       ivrend                   end directly after ivr.
         /// 
-        /// Incoming Call	            100	      blackList Incoming blocklist  
+        /// Inbound call              100	       blocklist call - in      call - in blocklist. 
         /// 
-        /// Outgoing Call               2	              unconnected	Unconnected
+        /// Outgoing call            2                 unconnected            unconnected.
         /// 
-        /// Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+        /// Outgoing call            108           restricted callee      callee restricted due to high - risk.
         /// 
-        /// Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+        /// Outgoing call         109        toomanyrequest        overfrequency.
         /// 
-        /// Outgoing Call             110	        restrictedArea	    Call to restricted area
+        /// Outgoing call         110        restrictedarea        outbound blind area.
         /// 
-        /// Outgoing Call             111	        restrictedTime	Call time restricted
+        /// Outgoing call         111        restrictedtime        outbound time restriction.
         ///                          
-        /// Outgoing Call             201            unknown	Unknown status
+        /// Outgoing call         201        unknown               unknown status.
         /// 
-        /// Outgoing Call             202            notAnswer	Missed call
+        /// Outgoing call         202        notanswer             unanswered.
         /// 
-        /// Outgoing Call            203	    userReject	Reject/Hang Up
+        /// Outgoing call - 203 - userreject: reject call.
         /// 
-        /// Outgoing Call	          204	    powerOff	Shutting down
+        /// Outgoing call - 204 - poweroff: power off.
         /// 
-        /// Outgoing Call           205            numberNotExist	Disconnected Number
+        /// Outgoing call - 205 - numbernotexist: nonexistent number.
         /// 
-        /// Outgoing Call	         206	           busy	During the call
+        /// Outgoing call - 206 - busy: call in progress.
         /// 
-        /// Outgoing Call   	        207	           outOfCredit	Overdue Payment
+        /// Outgoing call - 207 - outofcredit: arrears.
         /// 
-        /// Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+        /// Outgoing call - 208 - operatorerror - ISP line exception.
         /// 
-        /// Outgoing Call         	209	           callerCancel	Caller Cancelled
+        /// Outgoing call - 209 - callercancel - caller cancellation.
         /// 
-        /// Outgoing Call	        210	           notInService	Out of Service Area
+        /// Outgoing call - 210 - notinservice - not in service area.
         /// 
-        /// Incoming & Outgoing Calls	211    clientError    Client Error
+        /// Inbound and outgoing call - 211 - clienterror - client error.
+        /// Outgoing call - 212 - carrierblocked - ISP blocking.
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
@@ -138,236 +138,223 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroup{ get; set; }
 
         /// <summary>
-        /// Caller's location.
+        /// Caller'S location.
         /// </summary>
         [JsonProperty("CallerLocation")]
         public string CallerLocation{ get; set; }
 
         /// <summary>
-        /// Time spent in IVR stage.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Time spent in ivr stage.
         /// </summary>
         [JsonProperty("IVRDuration")]
         public long? IVRDuration{ get; set; }
 
         /// <summary>
-        /// Ring timestamp. UNIX second-level timestamp
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Ring timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
-        /// Answer timestamp. UNIX second-Level timestamp
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Answer timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
-        /// End timestamp. UNIX second-level timestamp
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// End timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("EndedTimestamp")]
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
-        /// IVR key information, e.g. ["1","2","3"]
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IVR key information, e.g. ["1","2","3"].
         /// </summary>
         [JsonProperty("IVRKeyPressed")]
         public string[] IVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// Hanging Up Party seat Seat user Users system system
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Hang-Up side, seat, user, system.
         /// </summary>
         [JsonProperty("HungUpSide")]
         public string HungUpSide{ get; set; }
 
         /// <summary>
-        /// List of Service Participants
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Service participant list.
         /// </summary>
         [JsonProperty("ServeParticipants")]
         public ServeParticipant[] ServeParticipants{ get; set; }
 
         /// <summary>
-        /// Skill group ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Skill group id.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with EndStatusString, specific enumerations are as follows:
+        /// EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
         /// 
-        /// **Scenario	         EndStatus	EndStatusString	Status Description**
+        /// **Scenario	EndStatus	EndStatusString	Status description**.
         /// 
-        /// Incoming & Outgoing Calls	1	        ok	                        Normal End
+        /// Inbound call & call	1	ok	end properly.
         /// 
-        /// Incoming & Outgoing Calls	0	        error	                System Error
+        /// Inbound call & call | 0 | error | system error.
         /// 
-        /// Incoming Call	             102	        ivrGiveUp	        User Gave Up During IVR
+        /// Inbound call | 102 | ivrgiveup | user gives up during ivr.
         /// 
-        /// Incoming Call	             103	        waitingGiveUp	       User Gave Up During Queue
+        /// Inbound call | 103 | waitinggiveup | user gives up during session queue.
         /// 
-        /// Incoming Call	             104	        ringingGiveUp	       User Gave Up During Ringing
+        /// Inbound call | 104 | ringinggiveup | user gives up during session ringing.
         /// 
-        /// Incoming Call	             105	        noSeatOnline	       No Seat Online
+        /// Inbound call | 105 | noseatonline | no agent online.
         /// 
-        /// Incoming Call              106	       notWorkTime	       Non-Working Hours   
+        /// Inbound call              106	       non - working hour      non - working hour.   
         /// 
-        /// Incoming Call	            107	       ivrEnd	               Ended Directly After IVR
+        /// Inbound call              107	       ivrend                   end directly after ivr.
         /// 
-        /// Incoming Call	            100	      blackList Incoming blocklist  
+        /// Inbound call              100	       blocklist call - in      call - in blocklist. 
         /// 
-        /// Outgoing Call               2	              unconnected	Unconnected
+        /// Outgoing call            2                 unconnected            unconnected.
         /// 
-        /// Outgoing Call             108	        restrictedCallee	Callee restricted due to high risk
+        /// Outgoing call            108           restricted callee      callee restricted due to high - risk.
         /// 
-        /// Outgoing Call             109	        tooManyRequest	    Frequency limit exceeded
+        /// Outgoing call         109        toomanyrequest        overfrequency.
         /// 
-        /// Outgoing Call             110	        restrictedArea	    Call to restricted area
+        /// Outgoing call         110        restrictedarea        outbound blind area.
         /// 
-        /// Outgoing Call             111	        restrictedTime	Call time restricted
+        /// Outgoing call         111        restrictedtime        outbound time restriction.
         ///                          
-        /// Outgoing Call             201            unknown	Unknown status
+        /// Outgoing call         201        unknown               unknown status.
         /// 
-        /// Outgoing Call             202            notAnswer	Missed call
+        /// Outgoing call         202        notanswer             unanswered.
         /// 
-        /// Outgoing Call            203	    userReject	Reject/Hang Up
+        /// Outgoing call - 203 - userreject: reject call.
         /// 
-        /// Outgoing Call	          204	    powerOff	Shutting down
+        /// Outgoing call - 204 - poweroff: power off.
         /// 
-        /// Outgoing Call           205            numberNotExist	Disconnected Number
+        /// Outgoing call - 205 - numbernotexist: nonexistent number.
         /// 
-        /// Phone Call Out	         206	           busy	In Call
+        /// Outgoing call - 206 - busy: call in progress.
         /// 
-        /// Outgoing Call   	        207	           outOfCredit	Overdue Payment
+        /// Outgoing call - 207 - outofcredit: arrears.
         /// 
-        /// Outgoing Call	         208	           operatorError	 ISP Carrier Line Anomaly
+        /// Outgoing call - 208 - operatorerror - ISP line exception.
         /// 
-        /// Outgoing Call         	209	           callerCancel	Caller Cancelled
+        /// Outgoing call - 209 - callercancel - caller cancellation.
         /// 
-        /// Outgoing Call	        210	           notInService	Out of Service Area
+        /// Outgoing call - 210 - notinservice - not in service area.
         /// 
-        /// Phone Call In & Out	211    clientError    Client Error
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Inbound and outgoing call - 211 - clienterror - client error.
+        /// Outgoing call - 212 - carrierblocked - ISP blocking.
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }
 
         /// <summary>
-        /// Session start timestamp. UNIX second-level timestamp.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Session start timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// Queue entry time. Unix second-level timestamp.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Queue entry time. unix second-level timestamp.
         /// </summary>
         [JsonProperty("QueuedTimestamp")]
         public long? QueuedTimestamp{ get; set; }
 
         /// <summary>
-        /// Post-IVR key information (e.g. [{"Key":"1","Label":"Very Satisfied"}])
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Post-IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
         /// </summary>
         [JsonProperty("PostIVRKeyPressed")]
         public IVRKeyPressedElement[] PostIVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// Queue Skill Group ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Queue skill group id.
         /// </summary>
         [JsonProperty("QueuedSkillGroupId")]
         public long? QueuedSkillGroupId{ get; set; }
 
         /// <summary>
-        /// Session ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Session id.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Caller number protection ID. (Effective when the number protection map feature is activated, and the Caller field is empty).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
         /// </summary>
         [JsonProperty("ProtectedCaller")]
         public string ProtectedCaller{ get; set; }
 
         /// <summary>
-        /// Called number protection ID (Effective when the number protection map feature is activated, and the Callee field is empty).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
         /// </summary>
         [JsonProperty("ProtectedCallee")]
         public string ProtectedCallee{ get; set; }
 
         /// <summary>
-        /// Customer custom data. (User-to-User Interface)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Customer custom data. (user - to - user interface).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uui")]
         [System.Obsolete]
         public string Uui{ get; set; }
 
         /// <summary>
-        /// Customer custom data. (User-to-User Interface)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Customer custom data. (user - to - user interface).
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
-        /// IVR key information (e.g.?[{"Key":"1","Label":"highly satisfied"}])
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IVR key information (e.g. [{"key":"1","label":"very satisfied"}]).
         /// </summary>
         [JsonProperty("IVRKeyPressedEx")]
         public IVRKeyPressedElement[] IVRKeyPressedEx{ get; set; }
 
         /// <summary>
-        /// Access to the ASR text information address of the recording.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Access to the asr text information address of the recording.
         /// </summary>
         [JsonProperty("AsrUrl")]
         public string AsrUrl{ get; set; }
 
         /// <summary>
-        /// Address of the third party COS for transferring recording.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ASRUrl status: complete.
+        /// Completed;.
+        /// Processing.
+        /// Generating.
+        /// NotExists.
+        /// No record (offline asr generation is not enabled or no package is available).
+        /// </summary>
+        [JsonProperty("AsrStatus")]
+        public string AsrStatus{ get; set; }
+
+        /// <summary>
+        /// Address of the third-party cos for transferring recording.
         /// </summary>
         [JsonProperty("CustomRecordURL")]
         public string CustomRecordURL{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Queue skill group name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QueuedSkillGroupName")]
         public string QueuedSkillGroupName{ get; set; }
 
         /// <summary>
-        /// Audio message recording URL during call.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio message recording url during call.
         /// </summary>
         [JsonProperty("VoicemailRecordURL")]
         public string[] VoicemailRecordURL{ get; set; }
 
         /// <summary>
-        /// Text Information address of ASR audio message during a call.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Text information address of asr audio message during a call.
         /// </summary>
         [JsonProperty("VoicemailAsrURL")]
         public string[] VoicemailAsrURL{ get; set; }
@@ -409,6 +396,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UUI", this.UUI);
             this.SetParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
             this.SetParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+            this.SetParamSimple(map, prefix + "AsrStatus", this.AsrStatus);
             this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);

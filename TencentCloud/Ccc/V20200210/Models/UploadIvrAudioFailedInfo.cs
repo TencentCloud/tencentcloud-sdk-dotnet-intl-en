@@ -25,15 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Filename
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filename.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Reason for failure
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for failure.
         /// </summary>
         [JsonProperty("FailedMsg")]
         public string FailedMsg{ get; set; }

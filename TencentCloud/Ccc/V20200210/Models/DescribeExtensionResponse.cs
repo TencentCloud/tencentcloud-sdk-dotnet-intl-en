@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Extension
+        /// Extension.
         /// </summary>
         [JsonProperty("ExtensionId")]
         public string ExtensionId{ get; set; }
 
         /// <summary>
-        /// Domain name
+        /// Domain name.
         /// </summary>
         [JsonProperty("ExtensionDomain")]
         public string ExtensionDomain{ get; set; }

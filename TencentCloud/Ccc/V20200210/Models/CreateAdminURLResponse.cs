@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Log-in link.
+        /// Log-In link.
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }

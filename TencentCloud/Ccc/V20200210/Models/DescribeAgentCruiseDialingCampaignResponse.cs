@@ -25,31 +25,31 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Agent Account
+        /// Agent account.
         /// </summary>
         [JsonProperty("Agent")]
         public string Agent{ get; set; }
 
         /// <summary>
-        /// Single-round Concurrent Call Volume 1-20
+        /// Single-Round concurrent call volume 1-20.
         /// </summary>
         [JsonProperty("ConcurrencyNumber")]
         public long? ConcurrencyNumber{ get; set; }
 
         /// <summary>
-        /// Task start time. Unix timestamp. The task will automatically start after this time.
+        /// Task start time. unix timestamp. the task will automatically start after this time.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Task termination time. Unix timestamp. The task will automatically terminate after this time.
+        /// Task termination time. unix timestamp. the task will automatically terminate after this time.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
@@ -61,25 +61,25 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? CallOrder{ get; set; }
 
         /// <summary>
-        /// Caller Custom Data, Maximum Length 1024
+        /// Caller custom data, maximum length 1024.
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
-        /// Task status 0 Not started 1 Running 2 Completed 3 Terminated
+        /// Task status 0 not started 1 running 2 completed 3 terminated.
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
-        /// Total number of called parties
+        /// Total number of called parties.
         /// </summary>
         [JsonProperty("TotalCalleeCount")]
         public long? TotalCalleeCount{ get; set; }
 
         /// <summary>
-        /// Number of called parties
+        /// Number of calls made and received.
         /// </summary>
         [JsonProperty("CalledCalleeCount")]
         public long? CalledCalleeCount{ get; set; }

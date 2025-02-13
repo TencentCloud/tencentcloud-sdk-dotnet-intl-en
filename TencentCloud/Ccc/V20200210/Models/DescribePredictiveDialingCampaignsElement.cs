@@ -25,57 +25,49 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task ID
-        /// Note: This field may return null if no valid value is obtained.
+        /// <Task id>.
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }
 
         /// <summary>
-        /// Task Name
-        /// Note: This field might return null if no valid values can be obtained.
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Task status 0 - Ready to start, 1 - In progress, 2 - Paused, 3 - Terminated, 4 - Completed.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Task status 0 - ready to start, 1 - in progress, 2 - paused, 3 - terminated, 4 - completed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Task status reasons 0 - Normal, 1 - Manually ended, 2 - Ended due to overtime.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Task status reasons 0 - normal, 1 - manually ended, 2 - ended due to overtime.
         /// </summary>
         [JsonProperty("StatusReason")]
         public long? StatusReason{ get; set; }
 
         /// <summary>
         /// Number of called numbers.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CalleeCount")]
         public long? CalleeCount{ get; set; }
 
         /// <summary>
         /// Number of completed calls.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FinishedCalleeCount")]
         public long? FinishedCalleeCount{ get; set; }
 
         /// <summary>
         /// Running priority of multiple tasks in the same application, from high to low 1 - 5.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
         /// ID of the used skill group of agents.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }

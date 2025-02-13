@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Number of agents purchased
+        /// Number of agents purchased.
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }
@@ -37,14 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? BuyTime{ get; set; }
 
         /// <summary>
-        /// End timestamp.
+        /// Deadline timestamp.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Number of office telephones purchased.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Quantity of office telephones purchased.
         /// </summary>
         [JsonProperty("SipNum")]
         public long? SipNum{ get; set; }

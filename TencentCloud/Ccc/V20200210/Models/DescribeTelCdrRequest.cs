@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Start timestamp, Unix Timestamp in Seconds. Supports up to the past 180 days.
+        /// Start timestamp, unix timestamp in seconds. supports up to the past 180 days.
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// End timestamp, Unix Timestamp in Seconds. The range between the end time and start time is less than 90 days.
+        /// End timestamp, unix timestamp in seconds. the range between the end time and start time is less than 90 days.
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
-        /// Instance ID (deprecated).
+        /// Instance id (deprecated).
         /// </summary>
         [JsonProperty("InstanceId")]
         [System.Obsolete]
@@ -56,7 +56,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -68,19 +68,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Page number (required), starting from 0.
+        /// <Page number (required), starting from 0.>.
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Filter by Phone Number.
+        /// Filter by phone number.
         /// </summary>
         [JsonProperty("Phones")]
         public string[] Phones{ get; set; }
 
         /// <summary>
-        /// Filter by SessionId.
+        /// Filter by sessionid.
         /// </summary>
         [JsonProperty("SessionIds")]
         public string[] SessionIds{ get; set; }

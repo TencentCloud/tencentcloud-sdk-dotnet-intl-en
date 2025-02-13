@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// File Alias (can be duplicated)
+        /// File alias (can be duplicated).
         /// </summary>
         [JsonProperty("CustomFileName")]
         public string CustomFileName{ get; set; }
 
         /// <summary>
-        /// Audio File Link (supports mp3 and wav formats, file size not exceeding 5MB)
+        /// Audio file link (supports mp3 and wav formats, file size not exceeding 5mb).
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }

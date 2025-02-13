@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance id.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string FullExtensionId{ get; set; }
 
         /// <summary>
-        /// Extension
+        /// Extension.
         /// </summary>
         [JsonProperty("ExtensionId")]
         public string ExtensionId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string ExtensionName{ get; set; }
 
         /// <summary>
-        /// Creation Time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? ModifyTime{ get; set; }
 
         /// <summary>
-        /// Telephone status (0 Offline, 100 Free, 200 Busy).
+        /// Telephone status (0 offline, 100 free, 200 busy).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public bool? Register{ get; set; }
 
         /// <summary>
-        /// Bind Agent Email
+        /// Bind agent email.
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }
 
         /// <summary>
-        /// Bind Agent Name
+        /// Bind agent name.
         /// </summary>
         [JsonProperty("RelationName")]
         public string RelationName{ get; set; }

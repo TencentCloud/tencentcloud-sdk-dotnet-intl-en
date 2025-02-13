@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Telephone Number
+        /// Telephone number.
         /// </summary>
         [JsonProperty("PhoneNum")]
         public string PhoneNum{ get; set; }
 
         /// <summary>
-        /// Number type, 0 - Landline | 1 - Virtual Business Number | 2 - ISP Number | 3 - 400 Number.
+        /// Number type, 0 - landline | 1 - virtual business number | 2 - ISP number | 3 - 400 number.
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Call type of the number, 1 - Inbound | 2 - Outbound | 3 - Inbound and outbound.
+        /// Call type of the number, 1 - inbound | 2 - outbound | 3 - inbound and outbound.
         /// </summary>
         [JsonProperty("CallType")]
         public long? CallType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? BuyTime{ get; set; }
 
         /// <summary>
-        /// End timestamp.
+        /// Deadline timestamp.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Number status, 1-Normal | 2-Suspended due to non-payment | 4-Admin suspended | 5-Suspended due to violation.
+        /// Number status, 1-normal | 2-suspended due to non-payment | 4-admin suspended | 5-suspended due to violation.
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }

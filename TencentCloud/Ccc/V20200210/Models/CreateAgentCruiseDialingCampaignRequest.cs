@@ -25,43 +25,43 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Agent Account
+        /// Agent account.
         /// </summary>
         [JsonProperty("Agent")]
         public string Agent{ get; set; }
 
         /// <summary>
-        /// Single-round Concurrent Call Volume 1-20
+        /// Single-Round concurrent call volume 1-20.
         /// </summary>
         [JsonProperty("ConcurrencyNumber")]
         public long? ConcurrencyNumber{ get; set; }
 
         /// <summary>
-        /// Task start time. Unix timestamp. The task will automatically start after this time.
+        /// Task start time. unix timestamp. the task will automatically start after this time.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Task termination time. Unix timestamp. The task will automatically terminate after this time.
+        /// Task termination time. unix timestamp. the task will automatically terminate after this time.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Called list supporting E.164 or number formats without country code.
+        /// Called list supporting e.164 or number formats without country code.
         /// </summary>
         [JsonProperty("Callees")]
         public string[] Callees{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? CallOrder{ get; set; }
 
         /// <summary>
-        /// Caller Custom Data, Maximum Length 1024
+        /// Caller custom data, maximum length 1024.
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }

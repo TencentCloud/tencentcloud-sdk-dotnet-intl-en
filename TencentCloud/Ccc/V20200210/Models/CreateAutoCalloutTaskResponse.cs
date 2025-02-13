@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// Task id.
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

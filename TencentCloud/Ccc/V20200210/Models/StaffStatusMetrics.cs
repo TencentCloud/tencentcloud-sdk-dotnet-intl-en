@@ -31,73 +31,73 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// Agent status free Available | busy Busy | rest On Break | notReady Not Ready | afterCallWork Post-call Adjustment | offline Offline
+        /// Agent status free available | busy busy | rest on break | notready not ready | aftercallwork post-call adjustment | offline offline.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Supplementary Information on Agent Status
+        /// Supplementary information on agent status.
         /// </summary>
         [JsonProperty("StatusExtra")]
         public StaffStatusExtra StatusExtra{ get; set; }
 
         /// <summary>
-        /// Total Online duration of the day.
+        /// Total online duration of the day.
         /// </summary>
         [JsonProperty("OnlineDuration")]
         public long? OnlineDuration{ get; set; }
 
         /// <summary>
-        /// Total Available duration of the day.
+        /// Total available duration of the day.
         /// </summary>
         [JsonProperty("FreeDuration")]
         public long? FreeDuration{ get; set; }
 
         /// <summary>
-        /// Total Busy duration of the day.
+        /// Total busy duration of the day.
         /// </summary>
         [JsonProperty("BusyDuration")]
         public long? BusyDuration{ get; set; }
 
         /// <summary>
-        /// Total Not Ready status duration of the day.
+        /// Total not ready status duration of the day.
         /// </summary>
         [JsonProperty("NotReadyDuration")]
         public long? NotReadyDuration{ get; set; }
 
         /// <summary>
-        /// Total Break duration of the day.
+        /// Total break duration of the day.
         /// </summary>
         [JsonProperty("RestDuration")]
         public long? RestDuration{ get; set; }
 
         /// <summary>
-        /// Total After Call Work duration of the day.
+        /// Adjust the total duration of after-call work for the day.
         /// </summary>
         [JsonProperty("AfterCallWorkDuration")]
         public long? AfterCallWorkDuration{ get; set; }
 
         /// <summary>
-        /// Reason for Break.
+        /// Reason for break.
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }
 
         /// <summary>
-        /// Whether to reserve Break status.
+        /// Whether to reserve break status.
         /// </summary>
         [JsonProperty("ReserveRest")]
         public bool? ReserveRest{ get; set; }
 
         /// <summary>
-        /// Whether to reserve Not Ready status.
+        /// Whether to reserve not ready status.
         /// </summary>
         [JsonProperty("ReserveNotReady")]
         public bool? ReserveNotReady{ get; set; }
 
         /// <summary>
-        /// Cell phone answering pattern: 0 - Off | 1 - Only when Offline | 2 - Always.
+        /// Cell phone answering pattern: 0 - off | 1 - only when offline | 2 - always.
         /// </summary>
         [JsonProperty("UseMobileAccept")]
         public long? UseMobileAccept{ get; set; }
@@ -110,14 +110,14 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// Last online timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastOnlineTimestamp")]
         public long? LastOnlineTimestamp{ get; set; }
 
         /// <summary>
         /// Last status timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastStatusTimestamp")]
         public long? LastStatusTimestamp{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Start timestamp. Unix second-level timestamp.
+        /// Start timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// End timestamp. Unix second-level timestamp.
+        /// End timestamp. unix second-level timestamp.
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
-        /// For the Application ID, go to https://console.cloud.tencent.com/ccc.
+        /// For the application id, you can check https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }

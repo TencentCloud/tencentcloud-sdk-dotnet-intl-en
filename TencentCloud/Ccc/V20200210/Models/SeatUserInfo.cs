@@ -38,13 +38,12 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// Worker number.
-        /// Note: This field may return null, indicating that no valid value could be obtained.
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// Agent's Telephone Number (With 0086 Prefix)
+        /// Agent'S telephone number (with 0086 prefix).
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
@@ -56,27 +55,31 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User ID
+        /// User id.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// List of skill groups associated with the seat
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of skill groups associated with the agent.
         /// </summary>
         [JsonProperty("SkillGroupNameList")]
         public string[] SkillGroupNameList{ get; set; }
 
         /// <summary>
-        /// 1: Admin.
-        /// 2: Quality inspector.
-        /// 3: Ordinary agent.
-        /// else: Custom Role ID.
-        /// Note: This field may return null, indicating that no valid value could be obtained.
+        /// 1: admin.
+        /// 2: quality inspector.
+        /// 3: ordinary agent.
+        /// Else: custom role id.
         /// </summary>
         [JsonProperty("Role")]
         public long? Role{ get; set; }
+
+        /// <summary>
+        /// Agent extension number (starting with 1 to 8, 4 - 6 digits).
+        /// </summary>
+        [JsonProperty("ExtensionNumber")]
+        public string ExtensionNumber{ get; set; }
 
 
         /// <summary>
@@ -92,6 +95,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
             this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
         }
     }
 }

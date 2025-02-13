@@ -25,29 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// File ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File id.
         /// </summary>
         [JsonProperty("FileId")]
         public ulong? FileId{ get; set; }
 
         /// <summary>
-        /// File alias
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File alias.
         /// </summary>
         [JsonProperty("CustomFileName")]
         public string CustomFileName{ get; set; }
 
         /// <summary>
-        /// Filename
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filename.
         /// </summary>
         [JsonProperty("AudioFileName")]
         public string AudioFileName{ get; set; }
 
         /// <summary>
-        /// Review status, 0-Not reviewed, 1-Approved, 2-Rejected
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Review status: 0 - unreviewed, 1 - approved, 2 - rejected.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

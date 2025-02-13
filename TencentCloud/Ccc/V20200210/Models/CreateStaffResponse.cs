@@ -26,7 +26,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// Error agent list and error information.
-        /// Note: This field may return null, indicating that no valid value could be obtained.
         /// </summary>
         [JsonProperty("ErrorStaffList")]
         public ErrStaffItem[] ErrorStaffList{ get; set; }

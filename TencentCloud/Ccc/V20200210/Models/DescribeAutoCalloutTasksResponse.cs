@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Task list.
+        /// <Task list>.
         /// </summary>
         [JsonProperty("Tasks")]
         public AutoCalloutTaskInfo[] Tasks{ get; set; }

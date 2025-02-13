@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Page size, upper limit 50
+        /// Page size, upper limit 50.
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// File alias
+        /// File alias.
         /// </summary>
         [JsonProperty("CustomFileName")]
         public string[] CustomFileName{ get; set; }
 
         /// <summary>
-        /// Filename
+        /// Filename.
         /// </summary>
         [JsonProperty("AudioFileName")]
         public string[] AudioFileName{ get; set; }
 
         /// <summary>
-        /// File ID
+        /// File id.
         /// </summary>
         [JsonProperty("FileId")]
         public ulong?[] FileId{ get; set; }

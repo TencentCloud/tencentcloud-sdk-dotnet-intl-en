@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Application id.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Customer Service User ID usually refers to the customer service email.
+        /// Customer service user id usually refers to the customer service email.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Caller number (obsolete one and use Callers) must be preceded by 0086.
+        /// Caller number (obsolete one and use callers) must be preceded by 0086.
         /// </summary>
         [JsonProperty("Caller")]
         public string Caller{ get; set; }
 
         /// <summary>
-        /// Designated caller number list. If the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
+        /// Designated caller number list. if the prior number fails, it will automatically switch to the next number that must be preceded by 0086.
         /// </summary>
         [JsonProperty("Callers")]
         public string[] Callers{ get; set; }

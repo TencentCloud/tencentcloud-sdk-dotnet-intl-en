@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Skill Group Information List.
+        /// Skill group information list.
         /// </summary>
         [JsonProperty("SkillGroupList")]
         public SkillGroupInfoItem[] SkillGroupList{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         
         /// <summary>
         /// Total data volume.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Data
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data.
         /// </summary>
         [JsonProperty("CampaignList")]
         public DescribePredictiveDialingCampaignsElement[] CampaignList{ get; set; }

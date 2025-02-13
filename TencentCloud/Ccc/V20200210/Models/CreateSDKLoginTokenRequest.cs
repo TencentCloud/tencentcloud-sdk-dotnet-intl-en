@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SeatUserId{ get; set; }
 
         /// <summary>
-        /// Whether the generated token is for one-time verification?
+        /// Whether the generated token is for one-time verification?.
         /// </summary>
         [JsonProperty("OnlyOnce")]
         public bool? OnlyOnce{ get; set; }

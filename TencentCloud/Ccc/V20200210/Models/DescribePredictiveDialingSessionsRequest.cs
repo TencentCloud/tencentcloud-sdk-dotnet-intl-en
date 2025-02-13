@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Generated task ID.
+        /// Generated task id.
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }
 
         /// <summary>
-        /// Page size, maximum of 1000
+        /// Page size, maximum of 1000.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

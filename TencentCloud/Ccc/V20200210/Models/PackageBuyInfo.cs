@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Package ID.
+        /// Package id.
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Package type, 0 - Outbound call package | 1 - 400 inbound call package.
+        /// Package type, 0 - outbound call package | 1 - 400 inbound call package.
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Total package.
+        /// <TOTAL_PACKAGE>.
         /// </summary>
         [JsonProperty("CapacitySize")]
         public long? CapacitySize{ get; set; }
 
         /// <summary>
-        /// Remaining package.
+        /// Remaining package balance.
         /// </summary>
         [JsonProperty("CapacityRemain")]
         public long? CapacityRemain{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? BuyTime{ get; set; }
 
         /// <summary>
-        /// End timestamp.
+        /// Deadline timestamp.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

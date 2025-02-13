@@ -25,15 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// List of failed uploads
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of files that failed to be uploaded.
         /// </summary>
         [JsonProperty("FailedFileList")]
         public UploadIvrAudioFailedInfo[] FailedFileList{ get; set; }
 
         /// <summary>
-        /// List of successful uploads
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of successfully uploaded files.
         /// </summary>
         [JsonProperty("SuccessFileList")]
         public AudioFileInfo[] SuccessFileList{ get; set; }

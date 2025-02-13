@@ -75,7 +75,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// <summary>
         /// Model interface protocol types, currently compatible with three protocol types:
         /// 
-        /// - OpenAI protocol (including GPT, Hunyuan, DeepSeek, etc.):"openai"
+        /// - OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
         /// - Azure protocol:"azure"
         /// - Minimax protocol:"minimax"
         /// </summary>
@@ -86,7 +86,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// Model name, such as
         /// 
         /// - OpenAI protocol
-        /// "gpt-4o-mini","gpt-4o","hunyuan-standard", "hunyuan-turbo","deepseek-chat";
+        /// "gpt-4o-mini","gpt-4o","deepseek-chat";
         /// 
         /// - Azure protocol
         /// "gpt-4o-mini", "gpt-4o";
@@ -114,7 +114,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 
         /// - OpenAI protocol
         /// GPT:"https://api.openai.com/v1/"
-        /// Hunyuan:"https://api.hunyuan.cloud.tencent.com/v1"
         /// Deepseek:"https://api.deepseek.com/v1"
         /// 
         /// - Azure protocol
@@ -166,7 +165,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string VoiceType{ get; set; }
 
         /// <summary>
-        /// List of calling numbers.
+        /// Caller number list
         /// </summary>
         [JsonProperty("Callers")]
         public string[] Callers{ get; set; }
@@ -183,6 +182,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("WelcomeType")]
         public long? WelcomeType{ get; set; }
+
+        /// <summary>
+        /// 0: interruptible by default, 1: high priority and not interruptible.
+        /// </summary>
+        [JsonProperty("WelcomeMessagePriority")]
+        public long? WelcomeMessagePriority{ get; set; }
 
         /// <summary>
         /// Maximum Waiting Duration (milliseconds), default is 60 seconds, if the user does not speak within this time, the call is automatically terminated
@@ -220,7 +225,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] Languages{ get; set; }
 
         /// <summary>
-        /// Interrupt AI speech mode, default is 0, 0 indicates the server interrupts automatically, 1 indicates the server does not interrupt, interruption signal sent by the client side.
+        /// Interrupt ai speaking mode. default is 0. 0 indicates automatic interruption and 1 indicates no interruption.
         /// </summary>
         [JsonProperty("InterruptMode")]
         public long? InterruptMode{ get; set; }
@@ -244,13 +249,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string EndFunctionDesc{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the model supports (or enables) transfer_to_human function calling.
         /// </summary>
         [JsonProperty("TransferFunctionEnable")]
         public bool? TransferFunctionEnable{ get; set; }
 
         /// <summary>
-        /// 
+        /// Takes effect when transferfunctionenable is true: transfer to human configuration.
         /// </summary>
         [JsonProperty("TransferItems")]
         public AITransferItem[] TransferItems{ get; set; }
@@ -268,7 +273,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string NotifyMessage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum number of times to trigger ai prompt sound, unlimited by default.
         /// </summary>
         [JsonProperty("NotifyMaxCount")]
         public ulong? NotifyMaxCount{ get; set; }
@@ -293,35 +298,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </code></pre>
         /// 
         ///   </div></div><ul>
-        /// <li>Minimax TTS<br>
-        /// For configuration, please refer to the <a href="https://platform.minimaxi.com/document/T2A%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. Note that Minimax TTS has frequency limits, and exceeding the limit may cause response delays, <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit related documentation link</a>.</li>
-        /// </ul>
-        /// <div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        ///         &quot;TTSType&quot;: &quot;minimax&quot;,  // String TTS type,
-        ///         &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        ///         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        ///         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        ///         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        ///         &quot;VoiceType&quot;:&quot;female-tianmei-yujie&quot;,
-        ///         &quot;Speed&quot;: 1.2
-        /// }
-        /// </code></pre>
-        /// </div></div><ul>
-        /// <li>Volcano TTS</li>
-        /// </ul>
-        /// <p>For type of sound quality configuration, refer to the<a href="https://www.volcengine.com/docs/6561/162929" target="_blank">Volcano TTS documentation</a><br>
-        /// TTS Sound Quality List - Voice Technology - Volcano Engine<br>
-        /// Large Model TTS Sound Quality List - Voice Technology - Volcano Engine</p>
-        /// <div><div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-        ///     &quot;TTSType&quot;: &quot;volcengine&quot;,  // Required: String TTS type
-        ///     &quot;AppId&quot; : &quot;xxxxxxxx&quot;,   // Required: String Volcano Engine assigned AppId
-        ///     &quot;Token&quot; : &quot;TY9d4sQXHxxxxxxx&quot;, // Required: String type Volcano Engine access token
-        ///     &quot;Speed&quot; : 1.0,            // Optional parameter: Playback speed, default is 1.0
-        ///     &quot;Volume&quot;: 1.0,            // Optional parameter: Volume, default is 1.0
-        ///     &quot;Cluster&quot; : &quot;volcano_tts&quot;, // Optional parameter: Business cluster, default is volcano_tts
-        ///     &quot;VoiceType&quot; : &quot;zh_male_aojiaobazong_moon_bigtts&quot;   // Sound quality type, default is the sound quality of the large model TTS. If using normal TTS, fill in the corresponding sound quality type. Incorrect sound quality type will result in no sound.
-        /// }
-        /// </code></pre>
         /// 
         /// </div></div><ul>
         /// <li>Azure TTS<br>
@@ -358,10 +334,22 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string CustomTTSConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Prompt word variable.
         /// </summary>
         [JsonProperty("PromptVariables")]
         public Variable[] PromptVariables{ get; set; }
+
+        /// <summary>
+        /// Automatic speech recognition vad time ranges from 240 to 2000, with a default of 1000, measured in milliseconds. smaller values will make automatic speech recognition segment faster.
+        /// </summary>
+        [JsonProperty("VadSilenceTime")]
+        public long? VadSilenceTime{ get; set; }
+
+        /// <summary>
+        /// Call content extraction configuration.
+        /// </summary>
+        [JsonProperty("ExtractConfig")]
+        public AICallExtractConfigElement[] ExtractConfig{ get; set; }
 
 
         /// <summary>
@@ -380,6 +368,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
             this.SetParamSimple(map, prefix + "WelcomeType", this.WelcomeType);
+            this.SetParamSimple(map, prefix + "WelcomeMessagePriority", this.WelcomeMessagePriority);
             this.SetParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
             this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
             this.SetParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
@@ -393,6 +382,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
             this.SetParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+            this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
+            this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
         }
     }
 }

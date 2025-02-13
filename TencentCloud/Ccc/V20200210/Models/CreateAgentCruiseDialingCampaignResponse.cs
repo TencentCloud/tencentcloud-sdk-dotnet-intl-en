@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Generated task ID.
+        /// Generated task id.
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }

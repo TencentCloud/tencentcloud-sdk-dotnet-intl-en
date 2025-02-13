@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Disabled{ get; set; }
 
         /// <summary>
-        /// TCCC instance application ID.
+        /// TCCC instance application id.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }

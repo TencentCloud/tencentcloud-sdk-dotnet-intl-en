@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// TCCC instance application ID.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Page number (starting from 0)
+        /// Page number (starting from 0).
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Filtering extension number list
+        /// Filtering extension number list.
         /// </summary>
         [JsonProperty("ExtensionIds")]
         public string[] ExtensionIds{ get; set; }
 
         /// <summary>
-        /// Page size
+        /// Page size.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

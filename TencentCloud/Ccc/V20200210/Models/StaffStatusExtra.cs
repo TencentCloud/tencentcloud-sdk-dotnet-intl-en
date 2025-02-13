@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// IM - Text | TEL - Cell phone | ALL - Full media.
+        /// IM - text | tel - cell phone | all - full media.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// IN - Inbound | OUT - Outbound.
+        /// IN - inbound | out - outbound.
         /// </summary>
         [JsonProperty("Direct")]
         public string Direct{ get; set; }

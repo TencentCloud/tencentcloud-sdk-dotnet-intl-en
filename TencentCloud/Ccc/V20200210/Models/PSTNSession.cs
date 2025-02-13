@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Session ID.
+        /// Session id.
         /// </summary>
         [JsonProperty("SessionID")]
         public string SessionID{ get; set; }
 
         /// <summary>
-        /// Temporary room ID for session.
+        /// Temporary room id for session.
         /// </summary>
         [JsonProperty("RoomID")]
         public string RoomID{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Start time. Unix timestamp.
+        /// Start time. unix timestamp.
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// Ring time. Unix timestamp.
+        /// Ring time. unix timestamp.
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
-        /// Answer time. Unix timestamp.
+        /// Answer time. unix timestamp.
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
@@ -73,29 +73,29 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffEmail{ get; set; }
 
         /// <summary>
-        /// Agent ID
+        /// Agent id.
         /// </summary>
         [JsonProperty("StaffNumber")]
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// Session Status
-        /// ringing Ringing
-        /// seatJoining  waiting for the agent to answer
-        /// inProgress  Ongoing
-        /// finished - Completed.
+        /// Session status.
+        /// Ringing - in progress.
+        /// SeatJoining - waiting for the agent to answer.
+        /// InProgress: in progress.
+        /// Finished - completed.
         /// </summary>
         [JsonProperty("SessionStatus")]
         public string SessionStatus{ get; set; }
 
         /// <summary>
-        /// Session call direction, 0 - Inbound | 1 - Outbound.
+        /// Session call direction, 0 - inbound | 1 - outbound.
         /// </summary>
         [JsonProperty("Direction")]
         public long? Direction{ get; set; }
 
         /// <summary>
-        /// The number used for transferring to the external line (Outbound Caller).
+        /// The number used for transferring to the external line (outbound caller).
         /// </summary>
         [JsonProperty("OutBoundCaller")]
         public string OutBoundCaller{ get; set; }
@@ -107,13 +107,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string OutBoundCallee{ get; set; }
 
         /// <summary>
-        /// Caller number protection ID. Effective when the number protection map feature is activated, and the Caller field is empty.
+        /// Caller number protection id. effective when the number protection map feature is activated, and the caller field is empty.
         /// </summary>
         [JsonProperty("ProtectedCaller")]
         public string ProtectedCaller{ get; set; }
 
         /// <summary>
-        /// Called number protection ID. Effective when the number protection map feature is activated, and the Callee field is empty.
+        /// Called number protection id. effective when the number protection map feature is activated, and the callee field is empty.
         /// </summary>
         [JsonProperty("ProtectedCallee")]
         public string ProtectedCallee{ get; set; }

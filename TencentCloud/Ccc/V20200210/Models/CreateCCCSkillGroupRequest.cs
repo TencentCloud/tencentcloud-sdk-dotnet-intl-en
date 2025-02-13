@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required).
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
@@ -37,14 +37,14 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SkillGroupName{ get; set; }
 
         /// <summary>
-        /// Skill group type 0-Cell phone, 1-Online, 3-Audio, 4-Video.
+        /// Skill group type 0-cell phone, 1-online, 3-audio, 4-video.
         /// </summary>
         [JsonProperty("SkillGroupType")]
         public long? SkillGroupType{ get; set; }
 
         /// <summary>
-        /// The maximum number of people received by the skill group (the maximum number of people that one seat in this skill group can receive) is set to 1 by default. 1. If the skill group type is online, the maximum could be set to one and above.
-        /// 2. If the skill group type is phone, audio, or video, then the maximum must be 1
+        /// The maximum number of people received by the skill group (the maximum number of people that one agent in this skill group can receive) is set to 1 by default. if the skill group type is online, the maximum can be set to one or more.
+        /// 2. if the skill group type is phone, audio, or video, then the reception limit must be 1.
         /// </summary>
         [JsonProperty("MaxConcurrency")]
         public ulong? MaxConcurrency{ get; set; }

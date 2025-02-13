@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// Task id.
         /// </summary>
         [JsonProperty("CampaignId")]
         public long? CampaignId{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// Specified IVR ID.
+        /// Specified ivr id.
         /// </summary>
         [JsonProperty("IVRId")]
         public long? IVRId{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? RetryInterval{ get; set; }
 
         /// <summary>
-        /// Task start time. Unix timestamp. The task will automatically start after this time.
+        /// Task start time. unix timestamp. the task will automatically start after this time.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Task termination time. Unix timestamp. The task will automatically terminate after this time.
+        /// Task termination time. unix timestamp. the task will automatically terminate after this time.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

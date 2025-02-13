@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application ID (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Number{ get; set; }
 
         /// <summary>
-        /// Skill group ID list to be bound.
+        /// Skill group id list to be bound.
         /// </summary>
         [JsonProperty("SkillGroupIds")]
         public ulong?[] SkillGroupIds{ get; set; }

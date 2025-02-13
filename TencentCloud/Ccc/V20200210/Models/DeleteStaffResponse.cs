@@ -25,8 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// List of customer service staff that can't be deleted when being online.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of customer service staff that cannot be deleted when they are online.
         /// </summary>
         [JsonProperty("OnlineStaffList")]
         public string[] OnlineStaffList{ get; set; }
