@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1070";
+       private const string sdkVersion = "SDK_NET_3.0.1071";
 
         /// <summary>
         /// Client constructor.
@@ -1684,6 +1684,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Query current playlist of the round play.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="DescribeCurrentPlaylistResponse"/></returns>
+        public Task<DescribeCurrentPlaylistResponse> DescribeCurrentPlaylist(DescribeCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentPlaylistResponse>(req, "DescribeCurrentPlaylist");
+        }
+
+        /// <summary>
+        /// Query current playlist of the round play.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="DescribeCurrentPlaylistResponse"/></returns>
+        public DescribeCurrentPlaylistResponse DescribeCurrentPlaylistSync(DescribeCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentPlaylistResponse>(req, "DescribeCurrentPlaylist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the download links of playback statistics files.
         /// * You can query the download links of playback statistics files in the past year. The start and end dates for query cannot be more than 90 days apart.
         /// * Every day, VOD will analyze CDN request logs of the previous day and then generate a playback statistics file.
@@ -2684,6 +2705,27 @@ namespace TencentCloud.Vod.V20180717
         public ForbidMediaDistributionResponse ForbidMediaDistributionSync(ForbidMediaDistributionRequest req)
         {
             return InternalRequestAsync<ForbidMediaDistributionResponse>(req, "ForbidMediaDistribution")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Operate the current play list . Supported operations include:<li> Insert: Insert a playing program into the current playlist.</li><li> Delete: Remove a playing program from the playlist.</li>
+        /// </summary>
+        /// <param name="req"><see cref="HandleCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="HandleCurrentPlaylistResponse"/></returns>
+        public Task<HandleCurrentPlaylistResponse> HandleCurrentPlaylist(HandleCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<HandleCurrentPlaylistResponse>(req, "HandleCurrentPlaylist");
+        }
+
+        /// <summary>
+        /// Operate the current play list . Supported operations include:<li> Insert: Insert a playing program into the current playlist.</li><li> Delete: Remove a playing program from the playlist.</li>
+        /// </summary>
+        /// <param name="req"><see cref="HandleCurrentPlaylistRequest"/></param>
+        /// <returns><see cref="HandleCurrentPlaylistResponse"/></returns>
+        public HandleCurrentPlaylistResponse HandleCurrentPlaylistSync(HandleCurrentPlaylistRequest req)
+        {
+            return InternalRequestAsync<HandleCurrentPlaylistResponse>(req, "HandleCurrentPlaylist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,25 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The playlist IDs. Array length limit: 100.
+        /// Filter criteria: playlist identifier, array length limit: 100.
         /// </summary>
         [JsonProperty("RoundPlayIds")]
         public string[] RoundPlayIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// Filter criteria: playlist creation time.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public TimeRange CreateTime{ get; set; }
+
+        /// <summary>
+        /// Filter criteria: playlist update time.
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public TimeRange UpdateTime{ get; set; }
+
+        /// <summary>
+        /// Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+        /// </summary>
+        [JsonProperty("ScrollToken")]
+        public string ScrollToken{ get; set; }
+
+        /// <summary>
+        /// Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The number of records to return. Default value: 10. Maximum value: 100.
+        /// Number of returned entries. default value: 10. maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -56,6 +80,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "RoundPlayIds.", this.RoundPlayIds);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
+            this.SetParamObj(map, prefix + "UpdateTime.", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

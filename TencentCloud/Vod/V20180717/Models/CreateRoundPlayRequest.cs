@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The playback start time, in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+        /// The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The files on the list.
-        /// <li>Array length limit: 100.</li>
+        /// The program list.
+        /// <Li>Array length limit: 100.</li>.
         /// </summary>
         [JsonProperty("RoundPlaylist")]
         public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -50,19 +50,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// The playlist description (not longer than 256 characters).
+        /// The playlist description, length limit: 256 characters.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Play mode, optional values:
-        /// <li>Loop: Play the playlist in a loop;</li>
-        /// <li>Linear: Play once, stop playing after the playlist is played. </li>
-        /// Default value: Loop.
+        /// Play mode, optional values:.
+        /// <Li>Loop: loop the playlist;</li>.
+        /// <Li>Linear: single play, stop playback after the single play finishes.</li>.
+        /// Default value: loop.
         /// </summary>
         [JsonProperty("PlayBackMode")]
         public string PlayBackMode{ get; set; }
+
+        /// <summary>
+        /// Playlist unique identifier id, with a length limit of 64 characters, only allowing uppercase and lowercase english letters (a-za-z), digits (0-9) and hyphens (-). if there is a playlist with the same roundplayid, return the error invalidparametervalue.roundplayalreadyexists. the default value is empty, which means it is system-assigned.
+        /// </summary>
+        [JsonProperty("RoundPlayId")]
+        public string RoundPlayId{ get; set; }
+
+        /// <summary>
+        /// Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playlist will stop playing after expiration. "9999-12-31t23:59:59+08:00" means it does not expire. default value: 9999-12-31t23:59:59+08:00.
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public string ExpiredTime{ get; set; }
 
 
         /// <summary>
@@ -76,6 +88,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+            this.SetParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         }
     }
 }

@@ -40,7 +40,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// The transcoding template used to generate the transcoding output played. This parameter is required if `AudioVideoType` is `Transcode`.
+        /// ID of the program to be played, assigned by the system.
+        /// </summary>
+        [JsonProperty("ItemId")]
+        public string ItemId{ get; set; }
+
+        /// <summary>
+        /// The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -53,6 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
+            this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }

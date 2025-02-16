@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The playlist ID, which is unique.
+        /// The unique identifier of the playlist.
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// The playlist URL.
+        /// The playlist playback url.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
