@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1071";
+       private const string sdkVersion = "SDK_NET_3.0.1072";
 
         /// <summary>
         /// Client constructor.
@@ -140,6 +140,62 @@ namespace TencentCloud.Vpc.V20170312
         public AllocateAddressesResponse AllocateAddressesSync(AllocateAddressesRequest req)
         {
             return InternalRequestAsync<AllocateAddressesResponse>(req, "AllocateAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to apply for one or more Elastic IPv6 (EIPv6) instances.
+        /// 
+        /// - EIPv6 is a fixed public IPv6 address that can be independently applied for and held in a Tencent Cloud region, providing a consistent product experience with Elastic IPv4.
+        /// - You can quickly bind an EIPv6 instance to the private IPv6 address of a cloud resource, so as to quickly enable IPv6 public bandwidth for the cloud resource.
+        /// - You can also bind an EIPv6 instance to other cloud resources as needed, so as to shield instance failures.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIPv6AddressesRequest"/></param>
+        /// <returns><see cref="AllocateIPv6AddressesResponse"/></returns>
+        public Task<AllocateIPv6AddressesResponse> AllocateIPv6Addresses(AllocateIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<AllocateIPv6AddressesResponse>(req, "AllocateIPv6Addresses");
+        }
+
+        /// <summary>
+        /// This API is used to apply for one or more Elastic IPv6 (EIPv6) instances.
+        /// 
+        /// - EIPv6 is a fixed public IPv6 address that can be independently applied for and held in a Tencent Cloud region, providing a consistent product experience with Elastic IPv4.
+        /// - You can quickly bind an EIPv6 instance to the private IPv6 address of a cloud resource, so as to quickly enable IPv6 public bandwidth for the cloud resource.
+        /// - You can also bind an EIPv6 instance to other cloud resources as needed, so as to shield instance failures.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIPv6AddressesRequest"/></param>
+        /// <returns><see cref="AllocateIPv6AddressesResponse"/></returns>
+        public AllocateIPv6AddressesResponse AllocateIPv6AddressesSync(AllocateIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<AllocateIPv6AddressesResponse>(req, "AllocateIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to allocate IPv6 public network bandwidth for classic elastic public IPv6 addresses.
+        /// 
+        /// - Classic elastic public IPv6 addresses only have the private network communication capability by default. They can have the IPv6 public network communication capability and be displayed in the list of Classic Elastic Public IPv6 only after IPv6 public network bandwidth is allocated in the console or by calling this API. 
+        /// - You can allocate public network bandwidth for one or multiple Classic elastic public IPv6 addresses each time.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="AllocateIp6AddressesBandwidthResponse"/></returns>
+        public Task<AllocateIp6AddressesBandwidthResponse> AllocateIp6AddressesBandwidth(AllocateIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<AllocateIp6AddressesBandwidthResponse>(req, "AllocateIp6AddressesBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to allocate IPv6 public network bandwidth for classic elastic public IPv6 addresses.
+        /// 
+        /// - Classic elastic public IPv6 addresses only have the private network communication capability by default. They can have the IPv6 public network communication capability and be displayed in the list of Classic Elastic Public IPv6 only after IPv6 public network bandwidth is allocated in the console or by calling this API. 
+        /// - You can allocate public network bandwidth for one or multiple Classic elastic public IPv6 addresses each time.
+        /// </summary>
+        /// <param name="req"><see cref="AllocateIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="AllocateIp6AddressesBandwidthResponse"/></returns>
+        public AllocateIp6AddressesBandwidthResponse AllocateIp6AddressesBandwidthSync(AllocateIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<AllocateIp6AddressesBandwidthResponse>(req, "AllocateIp6AddressesBandwidth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -306,6 +362,33 @@ namespace TencentCloud.Vpc.V20170312
         public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGatewaySync(AssociateDirectConnectGatewayNatGatewayRequest req)
         {
             return InternalRequestAsync<AssociateDirectConnectGatewayNatGatewayResponse>(req, "AssociateDirectConnectGatewayNatGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind an EIPv6 instance to the private IPv6 address configured on the CVM or ENI.
+        /// 
+        /// - Binding an EIPv6 to the CVM essentially indicates binding the EIPv6 to the private IPv6 address configured on the ENI of the CVM.
+        /// - Before binding an EIPv6 to the private IPv6 of a specified ENI, ensure that the private IPv6 address is unbound before the binding operation is performed.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="AssociateIPv6AddressResponse"/></returns>
+        public Task<AssociateIPv6AddressResponse> AssociateIPv6Address(AssociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<AssociateIPv6AddressResponse>(req, "AssociateIPv6Address");
+        }
+
+        /// <summary>
+        /// This API is used to bind an EIPv6 instance to the private IPv6 address configured on the CVM or ENI.
+        /// 
+        /// - Binding an EIPv6 to the CVM essentially indicates binding the EIPv6 to the private IPv6 address configured on the ENI of the CVM.
+        /// - Before binding an EIPv6 to the private IPv6 of a specified ENI, ensure that the private IPv6 address is unbound before the binding operation is performed.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="AssociateIPv6AddressResponse"/></returns>
+        public AssociateIPv6AddressResponse AssociateIPv6AddressSync(AssociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<AssociateIPv6AddressResponse>(req, "AssociateIPv6Address")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2833,6 +2916,54 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query detailed information of one or more EIPv6 instances.
+        /// 
+        /// - You can query EIPv6 and traditional EIPv6 instance information in a specified region.
+        /// - The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIPv6AddressesResponse"/></returns>
+        public Task<DescribeIPv6AddressesResponse> DescribeIPv6Addresses(DescribeIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPv6AddressesResponse>(req, "DescribeIPv6Addresses");
+        }
+
+        /// <summary>
+        /// This API is used to query detailed information of one or more EIPv6 instances.
+        /// 
+        /// - You can query EIPv6 and traditional EIPv6 instance information in a specified region.
+        /// - The system returns a certain number (as specified by the Limit, the default value is 20) of EIPv6 instances of the current user if the parameter is empty.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPv6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIPv6AddressesResponse"/></returns>
+        public DescribeIPv6AddressesResponse DescribeIPv6AddressesSync(DescribeIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIPv6AddressesResponse>(req, "DescribeIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIp6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIp6AddressesResponse"/></returns>
+        public Task<DescribeIp6AddressesResponse> DescribeIp6Addresses(DescribeIp6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIp6AddressesResponse>(req, "DescribeIp6Addresses");
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information on one or multiple classic elastic public IPv6 instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIp6AddressesRequest"/></param>
+        /// <returns><see cref="DescribeIp6AddressesResponse"/></returns>
+        public DescribeIp6AddressesResponse DescribeIp6AddressesSync(DescribeIp6AddressesRequest req)
+        {
+            return InternalRequestAsync<DescribeIp6AddressesResponse>(req, "DescribeIp6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the download link of an IP location database.
         /// <font color="#FF0000">This API will be discontinued soon and is only available for existing users.</font>
         /// </summary>
@@ -3972,6 +4103,33 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to unbind an EIPv6 instance.
+        /// 
+        /// - You can unbind EIPv6 instances bound to Cloud Virtual Machine (CVM) or Elastic Network Interface (ENI).
+        /// - Only EIPv6 instances in BIND or BIND_ENI status can be unbound.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="DisassociateIPv6AddressResponse"/></returns>
+        public Task<DisassociateIPv6AddressResponse> DisassociateIPv6Address(DisassociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<DisassociateIPv6AddressResponse>(req, "DisassociateIPv6Address");
+        }
+
+        /// <summary>
+        /// This API is used to unbind an EIPv6 instance.
+        /// 
+        /// - You can unbind EIPv6 instances bound to Cloud Virtual Machine (CVM) or Elastic Network Interface (ENI).
+        /// - Only EIPv6 instances in BIND or BIND_ENI status can be unbound.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateIPv6AddressRequest"/></param>
+        /// <returns><see cref="DisassociateIPv6AddressResponse"/></returns>
+        public DisassociateIPv6AddressResponse DisassociateIPv6AddressSync(DisassociateIPv6AddressRequest req)
+        {
+            return InternalRequestAsync<DisassociateIPv6AddressResponse>(req, "DisassociateIPv6Address")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to unbind an EIP from a NAT gateway.
         /// </summary>
         /// <param name="req"><see cref="DisassociateNatGatewayAddressRequest"/></param>
@@ -4811,6 +4969,79 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the name of an EIPv6 instance.
+        /// 
+        /// - You can modify the name of both EIPv6 and traditional EIPv6 instances.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesAttributesRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesAttributesResponse"/></returns>
+        public Task<ModifyIPv6AddressesAttributesResponse> ModifyIPv6AddressesAttributes(ModifyIPv6AddressesAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesAttributesResponse>(req, "ModifyIPv6AddressesAttributes");
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of an EIPv6 instance.
+        /// 
+        /// - You can modify the name of both EIPv6 and traditional EIPv6 instances.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesAttributesRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesAttributesResponse"/></returns>
+        public ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributesSync(ModifyIPv6AddressesAttributesRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesAttributesResponse>(req, "ModifyIPv6AddressesAttributes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the bandwidth cap of an EIPv6 instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesBandwidthResponse"/></returns>
+        public Task<ModifyIPv6AddressesBandwidthResponse> ModifyIPv6AddressesBandwidth(ModifyIPv6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesBandwidthResponse>(req, "ModifyIPv6AddressesBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to modify the bandwidth cap of an EIPv6 instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIPv6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIPv6AddressesBandwidthResponse"/></returns>
+        public ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidthSync(ModifyIPv6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIPv6AddressesBandwidthResponse>(req, "ModifyIPv6AddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to adjust the bandwidth limit of a classic elastic public IPv6 instance.
+        /// 
+        /// - You can adjust the bandwidth limit of only classic elastic public IPv6 instances.
+        /// - To adjust the bandwidth limit of an elastic public IPv6 instance, call the ModifyIPv6AddressesBandwidth API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIp6AddressesBandwidthResponse"/></returns>
+        public Task<ModifyIp6AddressesBandwidthResponse> ModifyIp6AddressesBandwidth(ModifyIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIp6AddressesBandwidthResponse>(req, "ModifyIp6AddressesBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to adjust the bandwidth limit of a classic elastic public IPv6 instance.
+        /// 
+        /// - You can adjust the bandwidth limit of only classic elastic public IPv6 instances.
+        /// - To adjust the bandwidth limit of an elastic public IPv6 instance, call the ModifyIPv6AddressesBandwidth API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ModifyIp6AddressesBandwidthResponse"/></returns>
+        public ModifyIp6AddressesBandwidthResponse ModifyIp6AddressesBandwidthSync(ModifyIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ModifyIp6AddressesBandwidthResponse>(req, "ModifyIp6AddressesBandwidth")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
         /// </summary>
         /// <param name="req"><see cref="ModifyIpv6AddressesAttributeRequest"/></param>
@@ -5498,6 +5729,60 @@ namespace TencentCloud.Vpc.V20170312
         public ReleaseAddressesResponse ReleaseAddressesSync(ReleaseAddressesRequest req)
         {
             return InternalRequestAsync<ReleaseAddressesResponse>(req, "ReleaseAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to release one or more EIPv6 instances.
+        /// 
+        /// - You can release the obtained EIPv6 instances. To use them again, please reapply.
+        /// - Only EIPv6 instances in UNBIND status can be released.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIPv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIPv6AddressesResponse"/></returns>
+        public Task<ReleaseIPv6AddressesResponse> ReleaseIPv6Addresses(ReleaseIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<ReleaseIPv6AddressesResponse>(req, "ReleaseIPv6Addresses");
+        }
+
+        /// <summary>
+        /// This API is used to release one or more EIPv6 instances.
+        /// 
+        /// - You can release the obtained EIPv6 instances. To use them again, please reapply.
+        /// - Only EIPv6 instances in UNBIND status can be released.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIPv6AddressesRequest"/></param>
+        /// <returns><see cref="ReleaseIPv6AddressesResponse"/></returns>
+        public ReleaseIPv6AddressesResponse ReleaseIPv6AddressesSync(ReleaseIPv6AddressesRequest req)
+        {
+            return InternalRequestAsync<ReleaseIPv6AddressesResponse>(req, "ReleaseIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to release the IPv6 public network bandwidth of classic elastic public IPv6 instances.
+        /// 
+        /// - Classic elastic public IPv6 addresses still have the IPv6 private network communication capability after the public network bandwidth is released.
+        /// - To allocate IPV6 public network bandwidth, call the AllocateIp6AddressesBandwidth API.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ReleaseIp6AddressesBandwidthResponse"/></returns>
+        public Task<ReleaseIp6AddressesBandwidthResponse> ReleaseIp6AddressesBandwidth(ReleaseIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ReleaseIp6AddressesBandwidthResponse>(req, "ReleaseIp6AddressesBandwidth");
+        }
+
+        /// <summary>
+        /// This API is used to release the IPv6 public network bandwidth of classic elastic public IPv6 instances.
+        /// 
+        /// - Classic elastic public IPv6 addresses still have the IPv6 private network communication capability after the public network bandwidth is released.
+        /// - To allocate IPV6 public network bandwidth, call the AllocateIp6AddressesBandwidth API.
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseIp6AddressesBandwidthRequest"/></param>
+        /// <returns><see cref="ReleaseIp6AddressesBandwidthResponse"/></returns>
+        public ReleaseIp6AddressesBandwidthResponse ReleaseIp6AddressesBandwidthSync(ReleaseIp6AddressesBandwidthRequest req)
+        {
+            return InternalRequestAsync<ReleaseIp6AddressesBandwidthResponse>(req, "ReleaseIp6AddressesBandwidth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -91,7 +91,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? IsEipDirectConnection{ get; set; }
 
         /// <summary>
-        /// IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+        /// EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public IP), `EIP` (elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (anti-DDoS EIP).
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
@@ -166,7 +166,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Static single-line IP network egress
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
@@ -178,16 +179,32 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AntiDDoSPackageId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether the current EIP is auto-renewed. This field is displayed only for EIPs with monthly prepaid bandwidth. Valid values are as follows:
+        /// <li>NOTIFY_AND_MANUAL_RENEW: Normal renewal</li><li>NOTIFY_AND_AUTO_RENEW: Automatic renewal</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: No renewal upon expiration</li>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates the ID of the Bandwidth Package associated with the current public IP. If the public IP is not billed by Bandwidth Package, this field is empty.
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
+
+        /// <summary>
+        /// Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
+        /// Note: This field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("UnVpcId")]
+        public string UnVpcId{ get; set; }
+
+        /// <summary>
+        /// Indicates the unique ID of the CDC.
+        /// Note: This field may return 'null', indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
 
         /// <summary>
@@ -220,6 +237,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }
