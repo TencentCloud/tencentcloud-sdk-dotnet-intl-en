@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1072";
+       private const string sdkVersion = "SDK_NET_3.0.1073";
 
         /// <summary>
         /// Client constructor.
@@ -429,6 +429,27 @@ namespace TencentCloud.Ocr.V20181119
         public PermitOCRResponse PermitOCRSync(PermitOCRRequest req)
         {
             return InternalRequestAsync<PermitOCRResponse>(req, "PermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilDriverLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilDriverLicenseOCRResponse"/></returns>
+        public Task<RecognizeBrazilDriverLicenseOCRResponse> RecognizeBrazilDriverLicenseOCR(RecognizeBrazilDriverLicenseOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilDriverLicenseOCRResponse>(req, "RecognizeBrazilDriverLicenseOCR");
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian driver's license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilDriverLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilDriverLicenseOCRResponse"/></returns>
+        public RecognizeBrazilDriverLicenseOCRResponse RecognizeBrazilDriverLicenseOCRSync(RecognizeBrazilDriverLicenseOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilDriverLicenseOCRResponse>(req, "RecognizeBrazilDriverLicenseOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

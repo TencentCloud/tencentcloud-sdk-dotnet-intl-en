@@ -25,7 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site.
+        /// Zone id.
+        /// .
+        /// If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }

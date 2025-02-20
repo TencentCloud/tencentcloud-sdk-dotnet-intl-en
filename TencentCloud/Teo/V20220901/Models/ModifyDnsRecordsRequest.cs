@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone id.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of DNS record modification data, with a maximum of 100 modifications at a time.
+        /// DNS record modification data list, up to 100 entries can be modified at a time.
         /// </summary>
         [JsonProperty("DnsRecords")]
         public DnsRecord[] DnsRecords{ get; set; }

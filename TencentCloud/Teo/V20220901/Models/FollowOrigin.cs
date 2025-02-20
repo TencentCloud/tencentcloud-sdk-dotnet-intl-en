@@ -33,26 +33,23 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on; otherwise, it is ineffective. Valid values:
-        /// <li>on: Cache.</li>
-        /// <li>off: Do not cache.</li>
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
+        /// <Li>On: cache;</li>.
+        /// <Li>Off: do not cache.</li>.
         /// </summary>
         [JsonProperty("DefaultCache")]
         public string DefaultCache{ get; set; }
 
         /// <summary>
-        /// Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheTime is not 0, this field should be off. Valid values:
-        /// <li>on: Use the default caching policy.</li>
-        /// <li>off: Do not use the default caching policy.</li>
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
+        /// <Li>On: use the default caching policy.</li>.
+        /// <Li>Off: do not use the default caching policy.</li>.
         /// </summary>
         [JsonProperty("DefaultCacheStrategy")]
         public string DefaultCacheStrategy{ get; set; }
 
         /// <summary>
-        /// The default cache time in seconds when an origin server does not return the Cache-Control header. The value ranges from 0 to 315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field should be 0.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
         /// </summary>
         [JsonProperty("DefaultCacheTime")]
         public long? DefaultCacheTime{ get; set; }

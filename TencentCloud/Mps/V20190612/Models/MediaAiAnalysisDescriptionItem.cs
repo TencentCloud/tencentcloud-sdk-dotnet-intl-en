@@ -37,6 +37,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
+        /// Intelligent description title.
+        /// </summary>
+        [JsonProperty("Title")]
+        public string Title{ get; set; }
+
+        /// <summary>
+        /// Intelligent description keywords.
+        /// </summary>
+        [JsonProperty("Keywords")]
+        public string[] Keywords{ get; set; }
+
+        /// <summary>
         /// Segmentation result.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
         }
     }

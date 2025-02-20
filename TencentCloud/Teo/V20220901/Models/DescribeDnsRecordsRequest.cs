@@ -25,54 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID of the DNS record.
+        /// Zone id.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The page offset. Default value: 0
+        /// Offset of paginated query. default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The paginated query limit. Default value: 20. Maximum value: 1000.
+        /// Number limit of paginated query. default value: 20. maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// The upper limit of Filters.Values is 20. The detailed filtering conditions are as follows: <li>id: Filter by DNS record ID, supports fuzzy query;</li><li>name: Filter by DNS record name, supports fuzzy query;</li><li>content: Filter by DNS record content, supports fuzzy query;</li><li>type: Filter by DNS record type, does not support fuzzy query. Options:<br> A: Point the domain name to an external IPv4 address, such as 8.8.8.8;<br> AAAA: Point the domain name to an external IPv6 address;<br> CNAME: Point the domain name to another domain name, which then resolves to the final IP address;<br> TXT: Identify and describe the domain name, often used for domain verification and SPF records (anti-spam);<br> NS: If you need to delegate subdomain resolution to another DNS service provider, you need to add an NS record. Root domains cannot add NS records;<br> CAA: Specify the CA that can issue certificates for this site;<br> SRV: Identify a server using a specific service, commonly used in Microsoft's directory management;<br> MX: Specify the recipient's mail server.</li><li>ttl: Filter by the time-to-live (TTL) of the record, does not support fuzzy query.</li>
+        /// Filter conditions. up to 20 values for each filter. detailed filter conditions are as follows: <li>id: filter by dns record id, supports fuzzy search;</li><li>name: filter by dns record name, supports fuzzy search;</li><li>content: filter by dns record content, supports fuzzy search;</li><li>type: filter by dns record type, does not support fuzzy search. valid values:<br>   a: points the domain name to an external ipv4 address, such as 8.8.8.8;<br>   aaaa: points the domain name to an external ipv6 address;<br>   cname: points the domain name to another domain name, which then resolves to the final ip address;<br>   txt: identifies and describes the domain name, commonly used for domain verification and spf records (anti-spam);<br>   ns: if you need to delegate the subdomain to another dns service provider, you need to add an ns record. root domain cannot add ns records;<br>   caa: specifies the ca that can issue certificates for this site;<br>   srv: identifies a server using a specific service, commonly used in microsoft's directory management;<br>   mx: specifies the recipient's mail server.</li><li>ttl: filter by resolution effective time, does not support fuzzy search.</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Sort criteria, with possible values:
-        /// <li>content: DNS record content;</li>
-        /// <li>created-on: DNS record creation time;</li>
-        /// <li>name: DNS record name;</li>
-        /// <li>ttl: Time-to-live (TTL);</li>
-        /// <li>type: DNS record type.</li>
-        /// The default sorting is based on a combination of type and name attributes.
+        /// Sorting basis. values include: <li>`content`: dns record content</li><li>`created-on`: dns record creation time</li><li>`name`: dns record name</li><li>`ttl`: cache time</li><li>`type`: dns record type</li> default sorting is by the combination of `type`, `name`.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// List sorting order, with possible values:
-        /// <li>asc: Ascending order;</li>
-        /// <li>desc: Descending order.</li>
-        /// The default value is asc.
+        /// List sort method. values: <li>`asc`: ascending order</li><li>`desc`: sort in descending order</li> default value: `asc`.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// The match mode. Values:
-        /// <li>`all`: Return all records that match the specified filter.</li>
-        /// <li>`any`: Return any record that matches the specified filter.</li>Default value: all.
+        /// Match method. values: <li>`all`: return records that match all query conditions</li><li>`any`: return records that match any query condition</li> default value: `all`.
         /// </summary>
         [JsonProperty("Match")]
         public string Match{ get; set; }

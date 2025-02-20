@@ -42,6 +42,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
         /// </summary>
         [JsonProperty("EncodeUrl")]
+        [System.Obsolete]
         public bool? EncodeUrl{ get; set; }
 
         /// <summary>

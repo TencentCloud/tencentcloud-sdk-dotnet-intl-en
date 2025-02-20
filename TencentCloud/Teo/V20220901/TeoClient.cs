@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1072";
+       private const string sdkVersion = "SDK_NET_3.0.1073";
 
         /// <summary>
         /// Client constructor.
@@ -268,6 +268,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
+        /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
+        public Task<CreateContentIdentifierResponse> CreateContentIdentifier(CreateContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier");
+        }
+
+        /// <summary>
+        /// This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
+        /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
+        public CreateContentIdentifierResponse CreateContentIdentifierSync(CreateContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a custom response page.
         /// </summary>
         /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
@@ -289,7 +310,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a DNS record.
+        /// After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
         /// </summary>
         /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
         /// <returns><see cref="CreateDnsRecordResponse"/></returns>
@@ -299,7 +320,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a DNS record.
+        /// After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
         /// </summary>
         /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
         /// <returns><see cref="CreateDnsRecordResponse"/></returns>
@@ -390,6 +411,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateL4ProxyRulesResponse CreateL4ProxyRulesSync(CreateL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<CreateL4ProxyRulesResponse>(req, "CreateL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
+        /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
+        public Task<CreateL7AccRulesResponse> CreateL7AccRules(CreateL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL7AccRulesResponse>(req, "CreateL7AccRules");
+        }
+
+        /// <summary>
+        /// This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
+        /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
+        public CreateL7AccRulesResponse CreateL7AccRulesSync(CreateL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<CreateL7AccRulesResponse>(req, "CreateL7AccRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -549,7 +591,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a rule in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -559,7 +601,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a rule in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -721,6 +763,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// Delete the specified content identifier. This feature is only available to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
+        /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
+        public Task<DeleteContentIdentifierResponse> DeleteContentIdentifier(DeleteContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<DeleteContentIdentifierResponse>(req, "DeleteContentIdentifier");
+        }
+
+        /// <summary>
+        /// Delete the specified content identifier. This feature is only available to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
+        /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
+        public DeleteContentIdentifierResponse DeleteContentIdentifierSync(DeleteContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<DeleteContentIdentifierResponse>(req, "DeleteContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom response page.
         /// </summary>
         /// <param name="req"><see cref="DeleteCustomErrorPageRequest"/></param>
@@ -742,7 +805,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete DNS records in batches.
+        /// You can use this API to batch delete DNS records.
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
         /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
@@ -752,7 +815,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete DNS records in batches.
+        /// You can use this API to batch delete DNS records.
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
         /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
@@ -847,6 +910,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
+        /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
+        public Task<DeleteL7AccRulesResponse> DeleteL7AccRules(DeleteL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL7AccRulesResponse>(req, "DeleteL7AccRules");
+        }
+
+        /// <summary>
+        /// This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
+        /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
+        public DeleteL7AccRulesResponse DeleteL7AccRulesSync(DeleteL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteL7AccRulesResponse>(req, "DeleteL7AccRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
@@ -910,7 +994,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch delete rules from the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -920,7 +1004,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch delete rules from the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -1162,6 +1246,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
+        /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
+        public Task<DescribeContentIdentifiersResponse> DescribeContentIdentifiers(DescribeContentIdentifiersRequest req)
+        {
+            return InternalRequestAsync<DescribeContentIdentifiersResponse>(req, "DescribeContentIdentifiers");
+        }
+
+        /// <summary>
+        /// Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
+        /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
+        public DescribeContentIdentifiersResponse DescribeContentIdentifiersSync(DescribeContentIdentifiersRequest req)
+        {
+            return InternalRequestAsync<DescribeContentIdentifiersResponse>(req, "DescribeContentIdentifiers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query content management quotas.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentQuotaRequest"/></param>
@@ -1309,7 +1414,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
+        /// This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
         /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
@@ -1319,7 +1424,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query DNS records. Paging, sorting and filtering are supported.
+        /// This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
         /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
@@ -1414,7 +1519,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query detailed domain name configuration.
+        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -1424,7 +1529,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query detailed domain name configuration.
+        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -1515,6 +1620,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeL4ProxyRulesResponse DescribeL4ProxyRulesSync(DescribeL4ProxyRulesRequest req)
         {
             return InternalRequestAsync<DescribeL4ProxyRulesResponse>(req, "DescribeL4ProxyRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
+        /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
+        public Task<DescribeL7AccRulesResponse> DescribeL7AccRules(DescribeL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccRulesResponse>(req, "DescribeL7AccRules");
+        }
+
+        /// <summary>
+        /// This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
+        /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
+        public DescribeL7AccRulesResponse DescribeL7AccRulesSync(DescribeL7AccRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccRulesResponse>(req, "DescribeL7AccRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
+        /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
+        public Task<DescribeL7AccSettingResponse> DescribeL7AccSetting(DescribeL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccSettingResponse>(req, "DescribeL7AccSetting");
+        }
+
+        /// <summary>
+        /// This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
+        /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
+        public DescribeL7AccSettingResponse DescribeL7AccSettingSync(DescribeL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<DescribeL7AccSettingResponse>(req, "DescribeL7AccSetting")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1687,7 +1834,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the rules in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1697,7 +1844,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the rules in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1708,7 +1855,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -1718,7 +1865,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -1924,7 +2071,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the site configuration.
+        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -1934,7 +2081,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the site configuration.
+        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -2324,6 +2471,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
+        /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
+        public Task<ModifyContentIdentifierResponse> ModifyContentIdentifier(ModifyContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<ModifyContentIdentifierResponse>(req, "ModifyContentIdentifier");
+        }
+
+        /// <summary>
+        /// Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
+        /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
+        public ModifyContentIdentifierResponse ModifyContentIdentifierSync(ModifyContentIdentifierRequest req)
+        {
+            return InternalRequestAsync<ModifyContentIdentifierResponse>(req, "ModifyContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a custom response page.
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
@@ -2345,7 +2513,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this interface to batch modify DNS records.
+        /// This API is used to bulk modify DNS records.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
@@ -2355,7 +2523,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this interface to batch modify DNS records.
+        /// This API is used to bulk modify DNS records.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
@@ -2366,7 +2534,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+        /// You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
@@ -2376,7 +2544,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this interface to batch modify the status of DNS records, enabling and disabling records in bulk.
+        /// You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
@@ -2559,6 +2727,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
+        public Task<ModifyL7AccRuleResponse> ModifyL7AccRule(ModifyL7AccRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
+        public ModifyL7AccRuleResponse ModifyL7AccRuleSync(ModifyL7AccRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
+        /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
+        public Task<ModifyL7AccSettingResponse> ModifyL7AccSetting(ModifyL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccSettingResponse>(req, "ModifyL7AccSetting");
+        }
+
+        /// <summary>
+        /// This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
+        /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
+        public ModifyL7AccSettingResponse ModifyL7AccSettingSync(ModifyL7AccSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccSettingResponse>(req, "ModifyL7AccSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify LoadBalancer configuration. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerRequest"/></param>
@@ -2643,7 +2853,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a rule in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -2653,7 +2863,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a rule in the rule engine.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -2727,7 +2937,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the site configuration.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>
@@ -2737,7 +2947,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the site configuration.
+        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>

@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID. 
-        /// Note: ZoneId is only used as an output parameter and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is passed, it will be ignored.
+        /// Zone id.<br>note: zoneid is for output parameter use only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// DNS record ID.
+        /// DNS record id.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
@@ -44,57 +43,63 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// DNS record type, with possible values: <li>A: Points the domain name to an external IPv4 address, such as 8.8.8.8;</li> <li>AAAA: Points the domain name to an external IPv6 address;</li> <li>MX: Used for mail servers. When there are multiple MX records, the lower the priority value, the higher the priority;</li> <li>CNAME: Points the domain name to another domain name, which then resolves to the final IP address;</li> <li>TXT: Identifies and describes the domain name, commonly used for domain verification and SPF records (anti-spam);</li> <li>NS: If you need to delegate the subdomain to another DNS service provider for resolution, you need to add an NS record. NS records cannot be added to the root domain;</li> <li>CAA: Specifies the CA that can issue certificates for this site;</li> <li>SRV: Identifies a server that uses a specific service, commonly used in Microsoft's directory management.</li>
+        /// DNS record type. valid values are:.
+        /// <Li>A: point the domain to a public network ipv4 address, such as 8.8.8.8;</li>.
+        /// <Li>AAAA: point the domain to a public network ipv6 address;</li>.
+        /// <Li>MX: used for email servers. when there are multiple mx records, the lower the priority, the higher the precedence;</li>.
+        /// <Li>CNAME: point the domain to another domain name, which will resolve to the final ip address;</li>.
+        /// <Li>TXT: identify and describe the domain, commonly used for domain verification and spf records (anti-spam);</li>.
+        /// <Li>NS: if you need to delegate the resolution of a subdomain to another dns service provider, you need to add an ns record. ns records cannot be added to the root domain name;</li>.
+        /// <Li>CAA: specifies the ca that can issue certificates for this site;</li>.
+        /// <Li>SRV: indicates that a server is using a service, commonly seen in microsoft system directory management.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// DNS record resolution line. If not specified, the default is Default, which means the default resolution line and is effective for all regions. The resolution line configuration is only applicable when Type (DNS record type) is A, AAAA, or CNAME. For values, please refer to: [Resolution Line and Corresponding Code Enumeration](https://www.tencentcloud.com/zh/document/product/1145/67229).
+        /// DNS record resolution route, if not specified, defaults to default, indicating the default resolution route, effective in all regions.<br>resolution route configuration only applies when type (dns record type) is a, aaaa, or cname.<br>for valid values, refer to: [resolution routes and corresponding code enumeration](https://intl.cloud.tencent.com/document/product/1552/112542?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// DNS record content. Fill in the corresponding content according to the Type value.
+        /// DNS record content. fill in the corresponding content based on the type value.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Cache time, with a range of 60~86400. The smaller the value, the faster the record modification takes effect in various regions. Unit: seconds.
+        /// Cache time. value range: 60–86400. the smaller the value, the faster the record modification will take effect globally. unit: seconds.
         /// </summary>
         [JsonProperty("TTL")]
         public long? TTL{ get; set; }
 
         /// <summary>
-        /// DNS record weight, with a range of -1~100. A value of -1 means no weight is assigned, and a value of 0 means no resolution. Weight configuration is only applicable when Type (DNS record type) is A, AAAA, or CNAME.
+        /// DNS record weight. value range: -1–100. a value of -1 means no weight is assigned, and 0 means no parsing. weight configuration is only applicable when type (dns record type) is a, aaaa, or cname.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// MX record priority, with a range of 0~50. The smaller the value, the higher the priority.
+        /// MX record priority. value range: 0–50. the smaller the value, the higher the priority.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// DNS record resolution status, with possible values: <li>enable: Effective;</li> <li>disable: Disabled.</li> Note: Status is only used as an output parameter and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is passed, it will be ignored.
+        /// DNS record parsing status. valid values are: <li>enable: takes effect;</li><li>disable: disabled.</li> note: status is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The creation time.
-        /// Note: CreatedOn is only used as an output parameter and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is passed, it will be ignored.
+        /// Creation time.<br>note: createdon is only used as an output parameter and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// The modification time.
-        /// Note: ModifiedOn is only used as an output parameter and cannot be used as an input parameter in ModifyDnsRecords. If this parameter is passed, it will be ignored.
+        /// Modification time.<br>note: modifiedon is for output parameter only and cannot be used as an input parameter in modifydnsrecords. if this parameter is passed, it will be ignored.
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }

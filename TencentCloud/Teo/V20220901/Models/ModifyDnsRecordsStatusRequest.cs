@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone id.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of DNS record IDs to be enabled, with a limit of 200. Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable.
+        /// List of dns record ids to be enabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
         /// </summary>
         [JsonProperty("RecordsToEnable")]
         public string[] RecordsToEnable{ get; set; }
 
         /// <summary>
-        /// List of DNS record IDs to be disabled, with a limit of 200. Note: The same DNS record ID cannot exist in both RecordsToEnable and RecordsToDisable.
+        /// List of dns record ids to be disabled, upper limit: 200. <br>note: the same dns record id cannot exist in both recordstoenable and recordstodisable.
         /// </summary>
         [JsonProperty("RecordsToDisable")]
         public string[] RecordsToDisable{ get; set; }

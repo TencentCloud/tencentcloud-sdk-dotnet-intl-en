@@ -31,8 +31,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filter conditions. Each filter condition can have up to 20 entries. See below for details:
-        /// <li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+        /// Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
+        /// .
+        /// <Li>Rule-Id: filter by rule id.</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

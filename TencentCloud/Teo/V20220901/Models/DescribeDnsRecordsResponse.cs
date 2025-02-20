@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of DNS records.
+        /// Total number of dns records.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of DNS records
+        /// List of dns records.
         /// </summary>
         [JsonProperty("DnsRecords")]
         public DnsRecord[] DnsRecords{ get; set; }
