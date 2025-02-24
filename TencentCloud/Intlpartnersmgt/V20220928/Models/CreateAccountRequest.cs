@@ -86,6 +86,18 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("VerifyCode")]
         public string VerifyCode{ get; set; }
 
+        /// <summary>
+        /// Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+        /// </summary>
+        [JsonProperty("TradeOne")]
+        public string TradeOne{ get; set; }
+
+        /// <summary>
+        /// Layer-2 industry id. This is a required item and can be obtained via the [ GetTradeConfigList API](https://www.tencentcloud.com/zh/document/product/1085/68181).
+        /// </summary>
+        [JsonProperty("TradeTwo")]
+        public string TradeTwo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +113,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Extended", this.Extended);
             this.SetParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
+            this.SetParamSimple(map, prefix + "TradeOne", this.TradeOne);
+            this.SetParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
         }
     }
 }

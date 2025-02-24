@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1075";
+       private const string sdkVersion = "SDK_NET_3.0.1076";
 
         /// <summary>
         /// Client constructor.
@@ -131,8 +131,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// <summary>
         /// This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
         /// 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
-        /// 2.  Customers need to add personal information when logging in for the first time.
-        /// 3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// 2. Customers need to add personal information when logging in for the first time.
+        /// 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// 
+        /// Callable roles: distributor, second-level reseller, reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
@@ -144,8 +146,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// <summary>
         /// This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
         /// 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
-        /// 2.  Customers need to add personal information when logging in for the first time.
-        /// 3.  This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// 2. Customers need to add personal information when logging in for the first time.
+        /// 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
+        /// 
+        /// Callable roles: distributor, second-level reseller, reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
@@ -462,6 +466,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public GetCountryCodesResponse GetCountryCodesSync(GetCountryCodesRequest req)
         {
             return InternalRequestAsync<GetCountryCodesResponse>(req, "GetCountryCodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query industry information, including layer-1 industry and layer-2 industry.
+        /// </summary>
+        /// <param name="req"><see cref="GetTradeConfigListRequest"/></param>
+        /// <returns><see cref="GetTradeConfigListResponse"/></returns>
+        public Task<GetTradeConfigListResponse> GetTradeConfigList(GetTradeConfigListRequest req)
+        {
+            return InternalRequestAsync<GetTradeConfigListResponse>(req, "GetTradeConfigList");
+        }
+
+        /// <summary>
+        /// This API is used to query industry information, including layer-1 industry and layer-2 industry.
+        /// </summary>
+        /// <param name="req"><see cref="GetTradeConfigListRequest"/></param>
+        /// <returns><see cref="GetTradeConfigListResponse"/></returns>
+        public GetTradeConfigListResponse GetTradeConfigListSync(GetTradeConfigListRequest req)
+        {
+            return InternalRequestAsync<GetTradeConfigListResponse>(req, "GetTradeConfigList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
