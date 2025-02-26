@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1077";
+       private const string sdkVersion = "SDK_NET_3.0.1078";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Organization.V20210331
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to accept an invitation to join a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AcceptJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="AcceptJoinShareUnitInvitationResponse"/></returns>
+        public Task<AcceptJoinShareUnitInvitationResponse> AcceptJoinShareUnitInvitation(AcceptJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<AcceptJoinShareUnitInvitationResponse>(req, "AcceptJoinShareUnitInvitation");
+        }
+
+        /// <summary>
+        /// This API is used to accept an invitation to join a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AcceptJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="AcceptJoinShareUnitInvitationResponse"/></returns>
+        public AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitationSync(AcceptJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<AcceptJoinShareUnitInvitationResponse>(req, "AcceptJoinShareUnitInvitation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -113,6 +134,69 @@ namespace TencentCloud.Organization.V20210331
         public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfigurationSync(AddPermissionPolicyToRoleConfigurationRequest req)
         {
             return InternalRequestAsync<AddPermissionPolicyToRoleConfigurationResponse>(req, "AddPermissionPolicyToRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitRequest"/></param>
+        /// <returns><see cref="AddShareUnitResponse"/></returns>
+        public Task<AddShareUnitResponse> AddShareUnit(AddShareUnitRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResponse>(req, "AddShareUnit");
+        }
+
+        /// <summary>
+        /// This API is used to create a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitRequest"/></param>
+        /// <returns><see cref="AddShareUnitResponse"/></returns>
+        public AddShareUnitResponse AddShareUnitSync(AddShareUnitRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResponse>(req, "AddShareUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add a shared unit member.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitMembersRequest"/></param>
+        /// <returns><see cref="AddShareUnitMembersResponse"/></returns>
+        public Task<AddShareUnitMembersResponse> AddShareUnitMembers(AddShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitMembersResponse>(req, "AddShareUnitMembers");
+        }
+
+        /// <summary>
+        /// This API is used to add a shared unit member.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitMembersRequest"/></param>
+        /// <returns><see cref="AddShareUnitMembersResponse"/></returns>
+        public AddShareUnitMembersResponse AddShareUnitMembersSync(AddShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitMembersResponse>(req, "AddShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add resources to a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="AddShareUnitResourcesResponse"/></returns>
+        public Task<AddShareUnitResourcesResponse> AddShareUnitResources(AddShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources");
+        }
+
+        /// <summary>
+        /// This API is used to add resources to a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="AddShareUnitResourcesResponse"/></returns>
+        public AddShareUnitResourcesResponse AddShareUnitResourcesSync(AddShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitResourcesResponse>(req, "AddShareUnitResources")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +789,69 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to delete a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResponse"/></returns>
+        public Task<DeleteShareUnitResponse> DeleteShareUnit(DeleteShareUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResponse>(req, "DeleteShareUnit");
+        }
+
+        /// <summary>
+        /// This API is used to delete a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResponse"/></returns>
+        public DeleteShareUnitResponse DeleteShareUnitSync(DeleteShareUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResponse>(req, "DeleteShareUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a shared unit member.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitMembersResponse"/></returns>
+        public Task<DeleteShareUnitMembersResponse> DeleteShareUnitMembers(DeleteShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitMembersResponse>(req, "DeleteShareUnitMembers");
+        }
+
+        /// <summary>
+        /// This API is used to delete a shared unit member.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitMembersResponse"/></returns>
+        public DeleteShareUnitMembersResponse DeleteShareUnitMembersSync(DeleteShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitMembersResponse>(req, "DeleteShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete shared unit resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResourcesResponse"/></returns>
+        public Task<DeleteShareUnitResourcesResponse> DeleteShareUnitResources(DeleteShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResourcesResponse>(req, "DeleteShareUnitResources");
+        }
+
+        /// <summary>
+        /// This API is used to delete shared unit resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitResourcesResponse"/></returns>
+        public DeleteShareUnitResourcesResponse DeleteShareUnitResourcesSync(DeleteShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitResourcesResponse>(req, "DeleteShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a user.
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -890,6 +1037,90 @@ namespace TencentCloud.Organization.V20210331
         public DescribeOrganizationNodesResponse DescribeOrganizationNodesSync(DescribeOrganizationNodesRequest req)
         {
             return InternalRequestAsync<DescribeOrganizationNodesResponse>(req, "DescribeOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of shareable regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareAreasRequest"/></param>
+        /// <returns><see cref="DescribeShareAreasResponse"/></returns>
+        public Task<DescribeShareAreasResponse> DescribeShareAreas(DescribeShareAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeShareAreasResponse>(req, "DescribeShareAreas");
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of shareable regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareAreasRequest"/></param>
+        /// <returns><see cref="DescribeShareAreasResponse"/></returns>
+        public DescribeShareAreasResponse DescribeShareAreasSync(DescribeShareAreasRequest req)
+        {
+            return InternalRequestAsync<DescribeShareAreasResponse>(req, "DescribeShareAreas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the member list of a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitMembersResponse"/></returns>
+        public Task<DescribeShareUnitMembersResponse> DescribeShareUnitMembers(DescribeShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitMembersResponse>(req, "DescribeShareUnitMembers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the member list of a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitMembersRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitMembersResponse"/></returns>
+        public DescribeShareUnitMembersResponse DescribeShareUnitMembersSync(DescribeShareUnitMembersRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitMembersResponse>(req, "DescribeShareUnitMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the resource list of a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitResourcesResponse"/></returns>
+        public Task<DescribeShareUnitResourcesResponse> DescribeShareUnitResources(DescribeShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitResourcesResponse>(req, "DescribeShareUnitResources");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the resource list of a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitResourcesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitResourcesResponse"/></returns>
+        public DescribeShareUnitResourcesResponse DescribeShareUnitResourcesSync(DescribeShareUnitResourcesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitResourcesResponse>(req, "DescribeShareUnitResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of shared units.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitsRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitsResponse"/></returns>
+        public Task<DescribeShareUnitsResponse> DescribeShareUnits(DescribeShareUnitsRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitsResponse>(req, "DescribeShareUnits");
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of shared units.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitsRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitsResponse"/></returns>
+        public DescribeShareUnitsResponse DescribeShareUnitsSync(DescribeShareUnitsRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitsResponse>(req, "DescribeShareUnits")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1545,6 +1776,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to reject an invitation to join a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="RejectJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="RejectJoinShareUnitInvitationResponse"/></returns>
+        public Task<RejectJoinShareUnitInvitationResponse> RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<RejectJoinShareUnitInvitationResponse>(req, "RejectJoinShareUnitInvitation");
+        }
+
+        /// <summary>
+        /// This API is used to reject an invitation to join a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="RejectJoinShareUnitInvitationRequest"/></param>
+        /// <returns><see cref="RejectJoinShareUnitInvitationResponse"/></returns>
+        public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitationSync(RejectJoinShareUnitInvitationRequest req)
+        {
+            return InternalRequestAsync<RejectJoinShareUnitInvitationResponse>(req, "RejectJoinShareUnitInvitation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove SAML signing certificates.
         /// </summary>
         /// <param name="req"><see cref="RemoveExternalSAMLIdPCertificateRequest"/></param>
@@ -1793,6 +2045,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatusSync(UpdateSCIMSynchronizationStatusRequest req)
         {
             return InternalRequestAsync<UpdateSCIMSynchronizationStatusResponse>(req, "UpdateSCIMSynchronizationStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateShareUnitRequest"/></param>
+        /// <returns><see cref="UpdateShareUnitResponse"/></returns>
+        public Task<UpdateShareUnitResponse> UpdateShareUnit(UpdateShareUnitRequest req)
+        {
+            return InternalRequestAsync<UpdateShareUnitResponse>(req, "UpdateShareUnit");
+        }
+
+        /// <summary>
+        /// This API is used to update a shared unit.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateShareUnitRequest"/></param>
+        /// <returns><see cref="UpdateShareUnitResponse"/></returns>
+        public UpdateShareUnitResponse UpdateShareUnitSync(UpdateShareUnitRequest req)
+        {
+            return InternalRequestAsync<UpdateShareUnitResponse>(req, "UpdateShareUnit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

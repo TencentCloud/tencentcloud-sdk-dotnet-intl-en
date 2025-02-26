@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// [Match condition].
-        /// ](Https://Cloud.Tencent.Com/Document/Product/1552/90438#33f65828-C6c6-4b66-A011-25a20b548d5d).
+        /// [Match condition](https://www.tencentcloud.com/document/product/1145/54759).
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }

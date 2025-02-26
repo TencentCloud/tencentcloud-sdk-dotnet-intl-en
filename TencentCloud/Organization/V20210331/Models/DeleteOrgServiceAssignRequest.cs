@@ -25,16 +25,16 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("ServiceId")]
-        public ulong? ServiceId{ get; set; }
-
-        /// <summary>
         /// Uin of the delegated admin.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
+
+        /// <summary>
+        /// Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public ulong? ServiceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
         }
     }
 }

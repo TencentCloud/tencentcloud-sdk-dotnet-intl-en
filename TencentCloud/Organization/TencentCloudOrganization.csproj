@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1077</VersionPrefix>
+    <VersionPrefix>3.0.1078</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,12 +92,20 @@
     <Compile Include="V20181225\Models\UpdateOrganizationNodeRequest.cs" />
     <Compile Include="V20181225\Models\UpdateOrganizationNodeResponse.cs" />
     <Compile Include="V20210331\OrganizationClient.cs" />
+    <Compile Include="V20210331\Models\AcceptJoinShareUnitInvitationRequest.cs" />
+    <Compile Include="V20210331\Models\AcceptJoinShareUnitInvitationResponse.cs" />
     <Compile Include="V20210331\Models\AddExternalSAMLIdPCertificateRequest.cs" />
     <Compile Include="V20210331\Models\AddExternalSAMLIdPCertificateResponse.cs" />
     <Compile Include="V20210331\Models\AddOrganizationNodeRequest.cs" />
     <Compile Include="V20210331\Models\AddOrganizationNodeResponse.cs" />
     <Compile Include="V20210331\Models\AddPermissionPolicyToRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\AddPermissionPolicyToRoleConfigurationResponse.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitMembersRequest.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitRequest.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitResourcesRequest.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitResourcesResponse.cs" />
+    <Compile Include="V20210331\Models\AddShareUnitResponse.cs" />
     <Compile Include="V20210331\Models\AddUserToGroupRequest.cs" />
     <Compile Include="V20210331\Models\AddUserToGroupResponse.cs" />
     <Compile Include="V20210331\Models\AuthRelationFile.cs" />
@@ -155,6 +163,12 @@
     <Compile Include="V20210331\Models\DeleteRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\DeleteSCIMCredentialRequest.cs" />
     <Compile Include="V20210331\Models\DeleteSCIMCredentialResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitMembersRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitResourcesRequest.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitResourcesResponse.cs" />
+    <Compile Include="V20210331\Models\DeleteShareUnitResponse.cs" />
     <Compile Include="V20210331\Models\DeleteUserRequest.cs" />
     <Compile Include="V20210331\Models\DeleteUserResponse.cs" />
     <Compile Include="V20210331\Models\DeleteUserSyncProvisioningRequest.cs" />
@@ -173,6 +187,14 @@
     <Compile Include="V20210331\Models\DescribeOrganizationNodesResponse.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationRequest.cs" />
     <Compile Include="V20210331\Models\DescribeOrganizationResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeShareAreasRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeShareAreasResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitMembersRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitMembersResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitResourcesRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitResourcesResponse.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitsRequest.cs" />
+    <Compile Include="V20210331\Models\DescribeShareUnitsResponse.cs" />
     <Compile Include="V20210331\Models\DismantleRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\DismantleRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\GetExternalSAMLIdentityProviderRequest.cs" />
@@ -231,6 +253,7 @@
     <Compile Include="V20210331\Models\ListUserSyncProvisioningsResponse.cs" />
     <Compile Include="V20210331\Models\ListUsersRequest.cs" />
     <Compile Include="V20210331\Models\ListUsersResponse.cs" />
+    <Compile Include="V20210331\Models\ManagerShareUnit.cs" />
     <Compile Include="V20210331\Models\MemberIdentity.cs" />
     <Compile Include="V20210331\Models\MemberMainInfo.cs" />
     <Compile Include="V20210331\Models\MoveOrganizationNodeMembersRequest.cs" />
@@ -248,10 +271,13 @@
     <Compile Include="V20210331\Models\OrganizationServiceAssign.cs" />
     <Compile Include="V20210331\Models\OrganizationServiceAssignMember.cs" />
     <Compile Include="V20210331\Models\PolicyDetail.cs" />
+    <Compile Include="V20210331\Models\ProductResource.cs" />
     <Compile Include="V20210331\Models\ProvisionRoleConfigurationRequest.cs" />
     <Compile Include="V20210331\Models\ProvisionRoleConfigurationResponse.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationRequest.cs" />
     <Compile Include="V20210331\Models\QuitOrganizationResponse.cs" />
+    <Compile Include="V20210331\Models\RejectJoinShareUnitInvitationRequest.cs" />
+    <Compile Include="V20210331\Models\RejectJoinShareUnitInvitationResponse.cs" />
     <Compile Include="V20210331\Models\RemoveExternalSAMLIdPCertificateRequest.cs" />
     <Compile Include="V20210331\Models\RemoveExternalSAMLIdPCertificateResponse.cs" />
     <Compile Include="V20210331\Models\RemovePermissionPolicyFromRoleConfigurationRequest.cs" />
@@ -270,6 +296,11 @@
     <Compile Include="V20210331\Models\SCIMCredential.cs" />
     <Compile Include="V20210331\Models\SetExternalSAMLIdentityProviderRequest.cs" />
     <Compile Include="V20210331\Models\SetExternalSAMLIdentityProviderResponse.cs" />
+    <Compile Include="V20210331\Models\ShareArea.cs" />
+    <Compile Include="V20210331\Models\ShareMember.cs" />
+    <Compile Include="V20210331\Models\ShareResource.cs" />
+    <Compile Include="V20210331\Models\ShareUnitMember.cs" />
+    <Compile Include="V20210331\Models\ShareUnitResource.cs" />
     <Compile Include="V20210331\Models\Tag.cs" />
     <Compile Include="V20210331\Models\TaskInfo.cs" />
     <Compile Include="V20210331\Models\TaskStatus.cs" />
@@ -289,6 +320,8 @@
     <Compile Include="V20210331\Models\UpdateSCIMCredentialStatusResponse.cs" />
     <Compile Include="V20210331\Models\UpdateSCIMSynchronizationStatusRequest.cs" />
     <Compile Include="V20210331\Models\UpdateSCIMSynchronizationStatusResponse.cs" />
+    <Compile Include="V20210331\Models\UpdateShareUnitRequest.cs" />
+    <Compile Include="V20210331\Models\UpdateShareUnitResponse.cs" />
     <Compile Include="V20210331\Models\UpdateUserRequest.cs" />
     <Compile Include="V20210331\Models\UpdateUserResponse.cs" />
     <Compile Include="V20210331\Models\UpdateUserStatusRequest.cs" />

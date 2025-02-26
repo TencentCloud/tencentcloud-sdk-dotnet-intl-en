@@ -25,16 +25,16 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("ServiceId")]
-        public ulong? ServiceId{ get; set; }
-
-        /// <summary>
         /// Uin list of the delegated admins, including up to 20 items.
         /// </summary>
         [JsonProperty("MemberUins")]
         public long?[] MemberUins{ get; set; }
+
+        /// <summary>
+        /// Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("ServiceId")]
+        public ulong? ServiceId{ get; set; }
 
         /// <summary>
         /// Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members). Default value: 1.
@@ -60,8 +60,8 @@ namespace TencentCloud.Organization.V20210331.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
             this.SetParamSimple(map, prefix + "ManagementScope", this.ManagementScope);
             this.SetParamArraySimple(map, prefix + "ManagementScopeUins.", this.ManagementScopeUins);
             this.SetParamArraySimple(map, prefix + "ManagementScopeNodeIds.", this.ManagementScopeNodeIds);
