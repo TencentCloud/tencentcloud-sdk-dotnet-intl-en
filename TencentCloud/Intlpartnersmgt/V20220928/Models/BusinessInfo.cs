@@ -25,41 +25,37 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// ProductNote: This field may return null, indicating that no valid values can be obtained.
+        /// Product name.
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Product codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Product code.
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Original price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Voucher amount
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher amount.
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Daily deduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// RI deduction.
         /// </summary>
         [JsonProperty("RICost")]
         public string RICost{ get; set; }
 
         /// <summary>
-        /// Total amount
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total amount.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }

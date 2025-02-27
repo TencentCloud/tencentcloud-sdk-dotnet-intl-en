@@ -25,20 +25,21 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Cloud resource deployment task ID
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Task id, DeployRecordId of 0 indicates that the task is in progress. repeatedly requesting this api, when DeployRecordId returned is greater than 0, it indicates that the task is created successfully. if not created successfully, an exception will be thrown.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public ulong? DeployRecordId{ get; set; }
 
         /// <summary>
-        /// Deployment status. 1 indicates that the deployment succeeded, and 0 indicates that the deployment failed.
+        /// Status of the task; 1 indicates successful creation; 0 indicates that there is a task being updated currently, and no new update task has been created; the returned value DeployRecordId is the task id being updated.
         /// </summary>
         [JsonProperty("DeployStatus")]
         public long? DeployStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task Progress Details.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateSyncProgress")]
         public UpdateSyncProgress[] UpdateSyncProgress{ get; set; }

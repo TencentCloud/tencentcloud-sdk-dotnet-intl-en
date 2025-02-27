@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of requested logs. The default value is 20.
+        /// Number of requested logs, 20 by default, with a maximum value of 1000. if it exceeds 1000, it will be treated as 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -43,18 +43,22 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? IsMatch{ get; set; }
 
         /// <summary>
-        /// The certificates associated with the rule.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate data bound to the rule.
         /// </summary>
         [JsonProperty("Certificate")]
         public Certificate Certificate{ get; set; }
 
         /// <summary>
-        /// The list of non-matching domains.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain list not matched.
         /// </summary>
         [JsonProperty("NoMatchDomains")]
         public string[] NoMatchDomains{ get; set; }
+
+        /// <summary>
+        /// Rule binding path.
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsMatch", this.IsMatch);
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

@@ -36,6 +36,60 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
+        /// <summary>
+        /// Root account.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// Sub-Account.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// Certificate id.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// Each operation type corresponds to a specific operation description. the following is a textual explanation of each operation type and its description:.
+        /// 1. apply: indicates applying for a free cert.
+        /// 2. delete: indicates a deletion.
+        /// 3. download - represents the download operation.
+        /// 4. upload: indicates an upload operation.
+        /// 5. revoke: indicates revoking a cert.
+        /// 6. cancelRevoke - indicates canceling the revocation operation.
+        /// 7. updateAlias - indicates updating the remark information.
+        /// 8. changeProject - indicates assigning the certificate to a certain project.
+        /// 9. uploadConfirmLetter - indicates uploading the confirmation letter.
+        /// 10. cancel - indicates canceling the order operation.
+        /// 11. replace - specifies reissuing a certificate.
+        /// 12. downloadConfirmLetter - specifies downloading a certificate revocation confirmation letter.
+        /// 13. editRevokeLetter - specifies uploading a certificate revocation confirmation letter.
+        /// 14. renewVIP - specifies renewing a paid certificate.
+        /// 15. applyVIP - specifies applying for a paid certificate.
+        /// 16. submitInfo - specifies submitting documentation.
+        /// 17. downloadConfirmLetter - specifies downloading the confirmation letter template.
+        /// 18. uploadFromYunAPI - indicates uploading via the cloud api.
+        /// 19. transferIn - indicates the certificate transfer to operation.
+        /// 20. transferOut - indicates the certificate transfer operation.
+        /// 21. refund - indicates applying for a refund.
+        /// 22. multiYearsRenew - indicates multi-year auto-renewal.
+        /// 23. modifyDownloadLimit - indicates modifying the download limit switch.
+        /// 24. issued - indicates certificate issuance.
+        /// 25. domainValidationPassed - indicates domain verification completed.
+        /// 26. Resubmit - indicates reapplying for a certificate.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +98,10 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

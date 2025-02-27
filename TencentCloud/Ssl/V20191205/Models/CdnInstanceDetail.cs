@@ -37,13 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// The status of the domain.
+        /// Domain name status: rejected - the domain name failed the review or its registration has expired/been canceled; processing - deploying; online - started; offline - closed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The billing status of the domain.
+        /// Domain billing status, where on indicates enable and off indicates disable.
         /// </summary>
         [JsonProperty("HttpsBillingSwitch")]
         public string HttpsBillingSwitch{ get; set; }

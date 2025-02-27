@@ -25,42 +25,42 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// DV authentication key
+        /// Certificate domain name verification record key.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthKey")]
         public string DvAuthKey{ get; set; }
 
         /// <summary>
-        /// DV authentication value
+        /// Certificate domain name verification record value.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthValue")]
         public string DvAuthValue{ get; set; }
 
         /// <summary>
-        /// Domain name of the DV authentication value
+        /// Certificate domain name verification domain value.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthDomain")]
         public string DvAuthDomain{ get; set; }
 
         /// <summary>
-        /// Path of the DV authentication value
+        /// Certificate domain name verification file path, used only for file and file_proxy.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthPath")]
         public string DvAuthPath{ get; set; }
 
         /// <summary>
-        /// DV authentication sub-domain name
+        /// Certificate domain name verification subdomain.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuthKeySubDomain")]
         public string DvAuthKeySubDomain{ get; set; }
 
         /// <summary>
-        /// DV authentication information
+        /// Certificate domain verification information; multiple domain verifications use this field.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DvAuths")]

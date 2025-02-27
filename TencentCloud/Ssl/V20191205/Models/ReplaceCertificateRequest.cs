@@ -37,13 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ValidType{ get; set; }
 
         /// <summary>
-        /// Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+        /// Type. `Original`: original certificate CSR; `Upload`: uploaded manually; `Online`: generated online. The default value is original.
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// CSR content
+        /// CSR content, required when uploading manually.
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }

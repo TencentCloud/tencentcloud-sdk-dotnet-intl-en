@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Cloud resource type
+        /// Cloud resource types, which support clb, waf, api gateway, cos, tke, tse, and tcb.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+namespace TencentCloud.Ssl.V20191205.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryCreditQuotaResponse : AbstractModel
+    public class COSInstanceList : AbstractModel
     {
         
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Region.
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Instance details.
+        /// </summary>
+        [JsonProperty("InstanceList")]
+        public CosInstanceDetail[] InstanceList{ get; set; }
+
+        /// <summary>
+        /// Total number under the region.
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// Error message.
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

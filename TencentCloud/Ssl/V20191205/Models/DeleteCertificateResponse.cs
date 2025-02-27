@@ -31,7 +31,8 @@ namespace TencentCloud.Ssl.V20191205.Models
         public bool? DeleteResult{ get; set; }
 
         /// <summary>
-        /// 
+        /// Asynchronous deletion task id.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

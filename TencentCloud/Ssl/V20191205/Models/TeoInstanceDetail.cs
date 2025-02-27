@@ -44,7 +44,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The status of the domain.
+        /// Domain status.
+        /// `Deployed`: deployed;.
+        /// `Processing`: deploying;.
+        /// `Applying`: applying;.
+        /// `Failed`: application failed;.
+        /// `Issued`: binding failed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Certificate Usage/Source, such as CLB, CDN, WAF, LIVE, DDOS.
         /// </summary>
         [JsonProperty("CertificateUse")]
         public string CertificateUse{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether a certificate can be repeatedly uploaded.
+        /// Whether to allow duplicate upload of the same certificate, true: allow uploading certificates with the same fingerprint; false: do not allow uploading certificates with the same fingerprint. default value: true.
         /// </summary>
         [JsonProperty("Repeatable")]
         public bool? Repeatable{ get; set; }

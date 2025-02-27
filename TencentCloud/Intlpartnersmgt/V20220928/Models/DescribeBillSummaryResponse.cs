@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Detailed summary by billing dimensionNote: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed summary by billing dimension.
         /// </summary>
         [JsonProperty("SummaryDetail")]
         public SummaryDetails[] SummaryDetail{ get; set; }

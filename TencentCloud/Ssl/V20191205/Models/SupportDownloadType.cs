@@ -25,43 +25,43 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether the available format of nginx can be downloaded.
         /// </summary>
         [JsonProperty("NGINX")]
         public bool? NGINX{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the available format of apache can be downloaded.
         /// </summary>
         [JsonProperty("APACHE")]
         public bool? APACHE{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the available format of tomcat can be downloaded.
         /// </summary>
         [JsonProperty("TOMCAT")]
         public bool? TOMCAT{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the available format of iis can be downloaded.
         /// </summary>
         [JsonProperty("IIS")]
         public bool? IIS{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether the jks format can be downloaded.
         /// </summary>
         [JsonProperty("JKS")]
         public bool? JKS{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether other formats can be downloaded.
         /// </summary>
         [JsonProperty("OTHER")]
         public bool? OTHER{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether the root certificate can be downloaded.
         /// </summary>
         [JsonProperty("ROOT")]
         public bool? ROOT{ get; set; }

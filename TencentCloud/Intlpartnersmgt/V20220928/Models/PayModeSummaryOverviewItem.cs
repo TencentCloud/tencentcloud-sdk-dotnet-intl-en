@@ -25,43 +25,37 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Billing mode
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Payment mode.
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Billing mode name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Payment mode name.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// The actual total consumption amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Actual total consumption, up to 8 decimal places.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Bill details in each payment mode
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bill details in each payment mode.
         /// </summary>
         [JsonProperty("Detail")]
         public ActionSummaryOverviewItem[] Detail{ get; set; }
 
         /// <summary>
-        /// The deducted voucher amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher payment amount, up to 8 decimal places.
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Total consumption amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total consumption, up to 8 decimal places.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }

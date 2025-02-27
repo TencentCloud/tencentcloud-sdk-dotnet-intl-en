@@ -49,22 +49,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The information of the certificate bound to the listener.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data of certificate bound to the listener.
         /// </summary>
         [JsonProperty("Certificate")]
         public Certificate Certificate{ get; set; }
 
         /// <summary>
-        /// The list of the listener rules.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of listener rules.
         /// </summary>
         [JsonProperty("Rules")]
         public ClbListenerRule[] Rules{ get; set; }
 
         /// <summary>
-        /// The list of non-matching domains.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain list not matched.
         /// </summary>
         [JsonProperty("NoMatchDomains")]
         public string[] NoMatchDomains{ get; set; }

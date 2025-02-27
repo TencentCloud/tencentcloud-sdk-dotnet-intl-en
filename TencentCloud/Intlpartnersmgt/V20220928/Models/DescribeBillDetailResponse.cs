@@ -25,15 +25,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Data details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data details.
         /// </summary>
         [JsonProperty("DetailSet")]
         public CustomerBillDetailData[] DetailSet{ get; set; }
 
         /// <summary>
-        /// Total number of data entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

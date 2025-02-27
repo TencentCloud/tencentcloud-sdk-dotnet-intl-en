@@ -25,7 +25,7 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The task ID, which is required to query the result of associated cloud resources.
+        /// Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -37,19 +37,31 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Limit{ get; set; }
 
         /// <summary>
-        /// The current offset.
+        /// Current offset, default is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// The types of the resources to be queried. If no value is passed in, all types of resources will be queried.
+        /// Result detail of queried resource type. if not provided, all will be queried. valid values include:.
+        /// - clb.
+        /// - cdn.
+        /// - ddos.
+        /// - live.
+        /// - vod.
+        /// - waf.
+        /// - apigateway.
+        /// - teo.
+        /// - tke.
+        /// - cos.
+        /// - tse.
+        /// - tcb.
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// The regions of the resources to be queried. Only CLB, TKE, WAF, APIGATEWAY, and TCB resources support the query by region.
+        /// Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }

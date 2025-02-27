@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1078";
+       private const string sdkVersion = "SDK_NET_3.0.1079";
 
         /// <summary>
         /// Client constructor.
@@ -55,6 +55,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to allocate credit pools to second-level resellers by distributors.
+        /// Callable roles: Distributor
         /// </summary>
         /// <param name="req"><see cref="AllocateCreditPoolRequest"/></param>
         /// <returns><see cref="AllocateCreditPoolResponse"/></returns>
@@ -65,6 +66,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to allocate credit pools to second-level resellers by distributors.
+        /// Callable roles: Distributor
         /// </summary>
         /// <param name="req"><see cref="AllocateCreditPoolRequest"/></param>
         /// <returns><see cref="AllocateCreditPoolResponse"/></returns>
@@ -80,6 +82,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
         /// 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
         /// 4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="AllocateCustomerCreditRequest"/></param>
         /// <returns><see cref="AllocateCustomerCreditResponse"/></returns>
@@ -94,6 +98,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 2. The customer's service will be suspended when its available credit is set to 0, so caution should be exercised with this operation.
         /// 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
         /// 4. The set credit is an increment of the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates that it will be repossessed. The available credit can be set to 0 at the minimum.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="AllocateCustomerCreditRequest"/></param>
         /// <returns><see cref="AllocateCustomerCreditResponse"/></returns>
@@ -134,7 +140,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 2. Customers need to add personal information when logging in for the first time.
         /// 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
         /// 
-        /// Callable roles: distributor, second-level reseller, reseller
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
@@ -149,7 +155,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 2. Customers need to add personal information when logging in for the first time.
         /// 3. This interface needs to be applied for allowlist usage. Please contact the channel manager to initiate the application process.
         /// 
-        /// Callable roles: distributor, second-level reseller, reseller
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
         /// <returns><see cref="CreateAccountResponse"/></returns>
@@ -166,6 +172,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 3.You can review the customer's application in customer management  after submission.
         /// 
         /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
         /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
@@ -181,6 +189,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         /// 3.You can review the customer's application in customer management  after submission.
         /// 
         /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
         /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
@@ -191,7 +201,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query bill details by customers.
+        /// Description: End-customer queries its own bill details.
+        /// Callable role: End-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -201,7 +212,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query bill details by customers.
+        /// Description: End-customer queries its own bill details.
+        /// Callable role: End-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDetailRequest"/></param>
         /// <returns><see cref="DescribeBillDetailResponse"/></returns>
@@ -212,7 +224,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to download billing files and return billing file URLs by customers.
+        /// Description: This API is used to download billing files and return billing file URLs for sub-customers.
+        /// Callable role: Enb-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
@@ -222,7 +235,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to download billing files and return billing file URLs by customers.
+        /// Description: This API is used to download billing files and return billing file URLs for sub-customers.
+        /// Callable role: Enb-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBillDownloadUrlResponse"/></returns>
@@ -233,7 +247,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// External API for the L1 billing of the customer billing center
+        /// Description: External API for L1 billing of Sub-customer billing center.
+        /// Callable role: End-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
@@ -243,7 +258,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// External API for the L1 billing of the customer billing center
+        /// Description: External API for L1 billing of Sub-customer billing center.
+        /// Callable role: End-customer.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryResponse"/></returns>
@@ -255,6 +271,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to obtain the total amount of customer bills by payment mode.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
@@ -265,6 +282,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to obtain the total amount of customer bills by payment mode.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByPayModeRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByPayModeResponse"/></returns>
@@ -275,7 +293,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to obtain the total amount of customer bills by product.
+        /// Description: Obtain the summarized value of sub - account bills by product dimension.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByProductRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByProductResponse"/></returns>
@@ -285,7 +304,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to obtain the total amount of customer bills by product.
+        /// Description: Obtain the summarized value of sub - account bills by product dimension.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByProductRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByProductResponse"/></returns>
@@ -296,7 +316,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to obtain the total amount of customer bills by region.
+        /// Description: Obtain the summarized value of sub - account bills by region through API.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByRegionRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByRegionResponse"/></returns>
@@ -306,7 +327,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to obtain the total amount of customer bills by region.
+        /// Description: Obtain the summarized value of sub - account bills by region through API.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeBillSummaryByRegionRequest"/></param>
         /// <returns><see cref="DescribeBillSummaryByRegionResponse"/></returns>
@@ -318,6 +340,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the customer bill details by resellers.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
@@ -328,6 +351,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the customer bill details by resellers.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
@@ -364,6 +388,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the total amount of customer bills.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>
@@ -374,6 +399,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the total amount of customer bills.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>
@@ -385,6 +411,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the customer information.
+        /// 
+        /// Callable roles: Distributor, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
         /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
@@ -395,6 +423,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the customer information.
+        /// 
+        /// Callable roles: Distributor, Reseller
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
         /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
@@ -426,8 +456,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to set and cancel forced service suspension.
-        /// Note:Reseller need to be allowlisted to use the API, please contact your business representative to apply for allowlist.
+        /// Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="ForceQNRequest"/></param>
         /// <returns><see cref="ForceQNResponse"/></returns>
@@ -437,8 +468,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to set and cancel forced service suspension.
-        /// Note:Reseller need to be allowlisted to use the API, please contact your business representative to apply for allowlist.
+        /// Forced Service Suspension settings and cancellation can be used only after the reseller is whitelisted.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="ForceQNRequest"/></param>
         /// <returns><see cref="ForceQNResponse"/></returns>
@@ -471,6 +503,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query industry information, including layer-1 industry and layer-2 industry.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller,End-customer
         /// </summary>
         /// <param name="req"><see cref="GetTradeConfigListRequest"/></param>
         /// <returns><see cref="GetTradeConfigListResponse"/></returns>
@@ -481,6 +515,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query industry information, including layer-1 industry and layer-2 industry.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller,End-customer
         /// </summary>
         /// <param name="req"><see cref="GetTradeConfigListRequest"/></param>
         /// <returns><see cref="GetTradeConfigListResponse"/></returns>
@@ -492,6 +528,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to modify customer remarks.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="ModifyClientRemarkRequest"/></param>
         /// <returns><see cref="ModifyClientRemarkResponse"/></returns>
@@ -502,6 +540,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to modify customer remarks.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="ModifyClientRemarkRequest"/></param>
         /// <returns><see cref="ModifyClientRemarkResponse"/></returns>
@@ -513,6 +553,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the account verification status.
+        /// Callable roles: Distributor, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryAccountVerificationStatusRequest"/></param>
         /// <returns><see cref="QueryAccountVerificationStatusResponse"/></returns>
@@ -523,6 +564,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the account verification status.
+        /// Callable roles: Distributor, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryAccountVerificationStatusRequest"/></param>
         /// <returns><see cref="QueryAccountVerificationStatusResponse"/></returns>
@@ -534,6 +576,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query all the credit allocation records of a single customer.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCreditAllocationHistoryRequest"/></param>
         /// <returns><see cref="QueryCreditAllocationHistoryResponse"/></returns>
@@ -544,6 +587,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query all the credit allocation records of a single customer.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCreditAllocationHistoryRequest"/></param>
         /// <returns><see cref="QueryCreditAllocationHistoryResponse"/></returns>
@@ -555,6 +599,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the credit of users in the list.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCreditByUinListRequest"/></param>
         /// <returns><see cref="QueryCreditByUinListResponse"/></returns>
@@ -565,33 +610,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the credit of users in the list.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCreditByUinListRequest"/></param>
         /// <returns><see cref="QueryCreditByUinListResponse"/></returns>
         public QueryCreditByUinListResponse QueryCreditByUinListSync(QueryCreditByUinListRequest req)
         {
             return InternalRequestAsync<QueryCreditByUinListResponse>(req, "QueryCreditByUinList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query customer credits.
-        /// </summary>
-        /// <param name="req"><see cref="QueryCreditQuotaRequest"/></param>
-        /// <returns><see cref="QueryCreditQuotaResponse"/></returns>
-        public Task<QueryCreditQuotaResponse> QueryCreditQuota(QueryCreditQuotaRequest req)
-        {
-            return InternalRequestAsync<QueryCreditQuotaResponse>(req, "QueryCreditQuota");
-        }
-
-        /// <summary>
-        /// This API is used to query customer credits.
-        /// </summary>
-        /// <param name="req"><see cref="QueryCreditQuotaRequest"/></param>
-        /// <returns><see cref="QueryCreditQuotaResponse"/></returns>
-        public QueryCreditQuotaResponse QueryCreditQuotaSync(QueryCreditQuotaRequest req)
-        {
-            return InternalRequestAsync<QueryCreditQuotaResponse>(req, "QueryCreditQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -622,6 +647,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used for a partner to the credits and basic information of cutomers.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
@@ -632,6 +659,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used for a partner to the credits and basic information of cutomers.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryCustomersCreditResponse"/></returns>
@@ -643,6 +672,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the credits of direct customers.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryDirectCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryDirectCustomersCreditResponse"/></returns>
@@ -653,6 +683,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to query the credits of direct customers.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryDirectCustomersCreditRequest"/></param>
         /// <returns><see cref="QueryDirectCustomersCreditResponse"/></returns>
@@ -664,6 +695,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryPartnerCreditRequest"/></param>
         /// <returns><see cref="QueryPartnerCreditResponse"/></returns>
@@ -674,6 +707,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryPartnerCreditRequest"/></param>
         /// <returns><see cref="QueryPartnerCreditResponse"/></returns>
@@ -709,7 +744,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+        /// This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryPolicyProductListByCodeRequest"/></param>
         /// <returns><see cref="QueryPolicyProductListByCodeResponse"/></returns>
@@ -719,7 +755,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the product list information within the specified policy range. To call this API, contact your account manager to add it to the allowlist.
+        /// This API is used to query the product list information within the specified policy range. To call this API, contact your business manager to apply for adding it to the allowlist.
+        /// Callable roles: Distributor, Second-level reseller, Reseller
         /// </summary>
         /// <param name="req"><see cref="QueryPolicyProductListByCodeRequest"/></param>
         /// <returns><see cref="QueryPolicyProductListByCodeResponse"/></returns>
@@ -730,7 +767,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher quota based on the customer UIN.
+        /// This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
+        /// Callable roles: Reseller, Distributor, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherAmountByUinRequest"/></param>
         /// <returns><see cref="QueryVoucherAmountByUinResponse"/></returns>
@@ -740,7 +778,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher quota based on the customer UIN.
+        /// This API is used by primary/secondary resellers to query the voucher quota based on the customer UIN.
+        /// Callable roles: Reseller, Distributor, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherAmountByUinRequest"/></param>
         /// <returns><see cref="QueryVoucherAmountByUinResponse"/></returns>
@@ -751,7 +790,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher list based on the customer UIN.
+        /// This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.
+        /// Callable roles: Reseller, Distributor, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherListByUinRequest"/></param>
         /// <returns><see cref="QueryVoucherListByUinResponse"/></returns>
@@ -761,7 +801,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher list based on the customer UIN.
+        /// This API is used by primary/secondary resellers to query the voucher list based on the customer UIN.
+        /// Callable roles: Reseller, Distributor, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherListByUinRequest"/></param>
         /// <returns><see cref="QueryVoucherListByUinResponse"/></returns>
@@ -772,7 +813,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher quota pool.
+        /// This API is used by primary/secondary resellers to query the voucher quota pool.
+        /// Callable roles: Distributor, First-level reseller, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherPoolRequest"/></param>
         /// <returns><see cref="QueryVoucherPoolResponse"/></returns>
@@ -782,7 +824,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the voucher quota pool.
+        /// This API is used by primary/secondary resellers to query the voucher quota pool.
+        /// Callable roles: Distributor, First-level reseller, Second-level reseller
         /// </summary>
         /// <param name="req"><see cref="QueryVoucherPoolRequest"/></param>
         /// <returns><see cref="QueryVoucherPoolResponse"/></returns>
@@ -794,6 +837,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to send a verification code for account registration.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller,End-customer
         /// </summary>
         /// <param name="req"><see cref="SendVerifyCodeRequest"/></param>
         /// <returns><see cref="SendVerifyCodeResponse"/></returns>
@@ -804,6 +849,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
         /// <summary>
         /// This API is used to send a verification code for account registration.
+        /// 
+        /// Callable roles: Distributor, Second-level reseller, Reseller,End-customer
         /// </summary>
         /// <param name="req"><see cref="SendVerifyCodeRequest"/></param>
         /// <returns><see cref="SendVerifyCodeResponse"/></returns>

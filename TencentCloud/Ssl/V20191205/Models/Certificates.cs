@@ -25,373 +25,428 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// User UIN
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// User uin.
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Project id.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Certificate source
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate source:.
+        /// trustasia.
+        /// upload.
+        /// wosign.
+        /// sheca.
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// The certificate plan type. Valid values:
-        /// null: Certificates uploaded by users (no plan type)
-        /// `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate package type:.
+        /// Null: user uploads a certificate (without package type),.
+        /// 2: trustasia tls rsa ca,. 
+        /// 3: securesite enhanced enterprise edition (ev pro),. 
+        /// 4: securesite enhanced (ev). 
+        /// 5: securesite enterprise professional edition (ov pro).
+        /// 6: securesite enterprise (ov). 
+        /// 7: securesite enterprise (ov) wildcard. 
+        /// 8: geotrust enhanced (ev). 
+        /// 9: geotrust enterprise (ov) cert. 
+        /// 10: geotrust enterprise (ov) wildcard cert. 
+        /// 11: trustasia domain name-based multiple domain names ssl certificate. 
+        /// 12: trustasia domain name-based (dv) wildcard cert. 
+        /// 13: trustasia enterprise wildcard (ov) ssl certificate (d3). 
+        /// 14: trustasia enterprise (ov) ssl certificate (d3). 
+        /// 15: trustasia enterprise multiple domain names (ov) ssl certificate (d3). 
+        /// 16: trustasia enhanced (ev) ssl certificate (d3). 
+        /// 17: trustasia enhanced multiple domain names (ev) ssl certificate (d3). 
+        /// 18: globalsign enterprise (ov) ssl certificate. 
+        /// 19: globalsign enterprise wildcard (ov) ssl certificate. 
+        /// 20: globalsign enhanced (ev) ssl certificate. 
+        /// 21: trustasia enterprise wildcard multiple domain names (ov) ssl certificate (d3). 
+        /// 22: globalsign enterprise multiple domain names (ov) ssl certificate. 
+        /// 23: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+        /// 24: globalsign enhanced multiple domain name (ev) ssl certificate.
+        /// 25: wotrus domain name cert.
+        /// 26: wotrus domain name multiple domain name cert.
+        /// 27: wotrus domain name wildcard cert.
+        /// 28: wotrus enterprise cert.
+        /// 29: wotrus enterprise multi - domain name certificate.
+        /// 30: wotrus enterprise wildcard certificate.
+        /// 31: wotrus enhanced certificate.
+        /// 32: wotrus enhanced multi - domain name certificate.
+        /// 33: wotrus - national cryptography domain - type certificate.
+        /// 34: wotrus-national cryptography domain certificate (multiple domain names).
+        /// 35: wotrus-national cryptography domain certificate (wildcard).
+        /// 37: wotrus-national cryptography enterprise certificate.
+        /// 38: wotrus-national cryptography enterprise certificate (multiple domain names).
+        /// 39: wotrus-national cryptography enterprise certificate (wildcard).
+        /// 40: wotrus - enhanced national cryptography certificate.
+        /// 41: wotrus - enhanced national cryptography certificate (multiple domain names).
+        /// 42: trustasia - domain name type certificate (wildcard multiple domain names).
+        /// 43: DNSPod - enterprise (ov) ssl certificate.
+        /// 44: DNSPod - enterprise (ov) wildcard ssl certificate.
+        /// 45: DNSPod - enterprise (ov) multiple domain names ssl certificate.
+        /// 46: DNSPod - enhanced (ev) ssl certificate.
+        /// 47: DNSPod - enhanced (ev) multiple domain names ssl certificate.
+        /// 48: DNSPod - domain name-based (dv) ssl certificate.
+        /// 49: DNSPod - domain name-based (dv) wildcard ssl certificate.
+        /// 50: DNSPod - domain name-based (dv) multiple domain names ssl certificate.
+        /// 51: DNSPod (national cryptography) - enterprise (ov) ssl certificate.
+        /// 52: DNSPod (national cryptography) - enterprise (ov) wildcard ssl certificate.
+        /// 53: DNSPod (national cryptography) - enterprise (ov) multiple domain names ssl certificate.
+        /// 54: DNSPod (national cryptography) - domain name-based (dv) ssl certificate.
+        /// 55: DNSPod (national cryptography) - domain name-based (dv) wildcard ssl certificate.
+        /// 56: DNSPod (national cryptography) - domain name-based (dv) multiple domain names ssl certificate.
+        /// 57: securesite enterprise professional edition multiple domain names (ov pro).
+        /// 58: securesite enterprise multiple domain names (ov).
+        /// 59: securesite enhanced professional edition multiple domain names (ev pro).
+        /// 60: securesite enhanced multiple domain names (ev).
+        /// 61: geotrust enhanced multiple domain names (ev).
+        /// 75: securesite enterprise (ov).
+        /// 76: securesite enterprise (ov) wildcard.
+        /// 77: securesite enhanced (ev).
+        /// 78: geotrust enterprise (ov).
+        /// 79: geotrust enterprise wildcard (ov).
+        /// 80: geotrust enhanced (ev).
+        /// 81: globalsign enterprise (ov) ssl certificate.
+        /// 82: globalsign enterprise wildcard (ov) ssl certificate.
+        /// 83: trustasia c1 dv free.
+        /// 85: globalsign enhanced (ev) ssl certificate.
+        /// 88: globalsign enterprise wildcard multiple domain names (ov) ssl certificate.
+        /// 89: globalsign enterprise multiple domain names (ov) ssl certificate.
+        /// 90: globalsign enhanced multiple domain names (ev) ssl certificate.
+        /// 91: geotrust enhanced multiple domain names (ev).
+        /// 92: securesite enterprise pro multiple domain names (ov pro).
+        /// 93: securesite enterprise multiple domain names (ov).
+        /// 94: securesite enhanced pro multiple domain names (ev pro).
+        /// 95: securesite enhanced multiple domain names (ev).
+        /// 96: securesite ev pro.
+        /// 97: securesite enterprise professional edition (ov pro).
+        /// 98: cfca enterprise (ov) ssl certificate.
+        /// 99: cfca enterprise ov ssl certificate for multiple domain names.
+        /// 100: cfca ov wildcard ssl certificate.
+        /// 101: cfca enhanced (ev) ssl certificate.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Certificate type. `CA`: client certificate; `SVR`: server certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate type. ca = client certificate; svr = server certificate.
         /// </summary>
         [JsonProperty("CertificateType")]
         public string CertificateType{ get; set; }
 
         /// <summary>
-        /// Issuer
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate product name.
         /// </summary>
         [JsonProperty("ProductZhName")]
         public string ProductZhName{ get; set; }
 
         /// <summary>
-        /// Primary domain name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Primary domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Alias
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Remark name.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate status: 0 = under review, 1 = approved, 2 = review failed, 3 = expired, 4 = dns record added automatically, 5 = enterprise certificate, pending documentation submission, 6 = order cancellation in progress, 7 = canceled, 8 = documents submitted, pending upload of confirmation letter, 9 = certificate revocation in progress, 10 = revoked, 11 = reissue in progress, 12 = pending upload of revocation confirmation letter, 13 = free certificate pending documentation submission, 14 = certificate refunded, 15 = certificate migration in progress.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Extended information of the certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate extended information.
         /// </summary>
         [JsonProperty("CertificateExtra")]
         public CertificateExtra CertificateExtra{ get; set; }
 
         /// <summary>
-        /// Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability scanning status: INACTIVE = not enabled, ACTIVE = enabled.
         /// </summary>
         [JsonProperty("VulnerabilityStatus")]
         public string VulnerabilityStatus{ get; set; }
 
         /// <summary>
-        /// Status information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status information.
         /// </summary>
         [JsonProperty("StatusMsg")]
         public string StatusMsg{ get; set; }
 
         /// <summary>
-        /// Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Validation type: DNS_AUTO = automatic dns validation, DNS = manual dns validation, FILE = file verification, DNS_PROXY = dns proxy validation, FILE_PROXY = file proxy verification.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// Time when the certificate takes effect
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate validation time.
         /// </summary>
         [JsonProperty("CertBeginTime")]
         public string CertBeginTime{ get; set; }
 
         /// <summary>
-        /// Time when the certificate expires
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate expiration time.
         /// </summary>
         [JsonProperty("CertEndTime")]
         public string CertEndTime{ get; set; }
 
         /// <summary>
-        /// Validity period of the certificate, in months
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate validity period (month).
         /// </summary>
         [JsonProperty("ValidityPeriod")]
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// Creation time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Creation time.
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// Certificate ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate id.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Domain names associated with the certificate (including the primary domain name)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Multiple domain names contained in the certificate (including the primary domain name).
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// Certificate type name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Certificate type name.
         /// </summary>
         [JsonProperty("PackageTypeName")]
         public string PackageTypeName{ get; set; }
 
         /// <summary>
-        /// Status description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status name.
         /// </summary>
         [JsonProperty("StatusName")]
         public string StatusName{ get; set; }
 
         /// <summary>
-        /// Whether the customer is a VIP customer
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether the customer is a vip customer. true indicates yes and false indicates no.
         /// </summary>
         [JsonProperty("IsVip")]
         public bool? IsVip{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a DV certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether it is a dv version certificate. true indicates yes and false indicates no.
         /// </summary>
         [JsonProperty("IsDv")]
         public bool? IsDv{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a wildcard certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether it is a wildcard domain name certificate. true indicates yes and false indicates no.
         /// </summary>
         [JsonProperty("IsWildcard")]
         public bool? IsWildcard{ get; set; }
 
         /// <summary>
-        /// Whether the vulnerability scanning feature is enabled
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the vulnerability scanning feature is enabled.
         /// </summary>
         [JsonProperty("IsVulnerability")]
         public bool? IsVulnerability{ get; set; }
 
         /// <summary>
-        /// Whether it can be renewed 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Whether it is renewable.
         /// </summary>
         [JsonProperty("RenewAble")]
         public bool? RenewAble{ get; set; }
 
         /// <summary>
-        /// Project information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Project information.
         /// </summary>
         [JsonProperty("ProjectInfo")]
         public ProjectInfo ProjectInfo{ get; set; }
 
         /// <summary>
-        /// Associated Tencent Cloud services. Currently, this parameter is unavailable.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Associated cloud resources are temporarily unavailable.
         /// </summary>
         [JsonProperty("BoundResource")]
         public string[] BoundResource{ get; set; }
 
         /// <summary>
-        /// Whether the certificate can be deployed
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether it can be deployed.
         /// </summary>
         [JsonProperty("Deployable")]
         public bool? Deployable{ get; set; }
 
         /// <summary>
-        /// List of tags
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Tag list.
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether the expiration notification was ignored
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether expiration notice has been ignored.
         /// </summary>
         [JsonProperty("IsIgnore")]
         public bool? IsIgnore{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a Chinese SM certificate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is a China SM certificate.
         /// </summary>
         [JsonProperty("IsSM")]
         public bool? IsSM{ get; set; }
 
         /// <summary>
-        /// Certificate algorithm
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate algorithm.
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// Encryption algorithm of the uploaded CA certificate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Encryption algorithm for upload ca certificate.
         /// </summary>
         [JsonProperty("CAEncryptAlgorithms")]
         public string[] CAEncryptAlgorithms{ get; set; }
 
         /// <summary>
-        /// Expiration time of the uploaded CA certificate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration time for upload ca certificate.
         /// </summary>
         [JsonProperty("CAEndTimes")]
         public string[] CAEndTimes{ get; set; }
 
         /// <summary>
-        /// Generic name of the uploaded CA certificate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Common name of the upload ca certificate.
         /// </summary>
         [JsonProperty("CACommonNames")]
         public string[] CACommonNames{ get; set; }
 
         /// <summary>
-        /// Prereview information of the certificate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate prereview information.
         /// </summary>
         [JsonProperty("PreAuditInfo")]
         public PreAuditInfo PreAuditInfo{ get; set; }
 
         /// <summary>
-        /// Whether auto-renewal is enabled.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Whether to auto-renew.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// The hosting status. Valid values: `0` (hosting), `5` (replacing resources), `10` (hosting completed), and `-1` (not hosted). 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Hosting status: 0, hosting; 5, resource replacement; 10, hosting completed; -1, not hosted. 
         /// </summary>
         [JsonProperty("HostingStatus")]
         public long? HostingStatus{ get; set; }
 
         /// <summary>
-        /// The hosting completion time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Hosting completion time.
         /// </summary>
         [JsonProperty("HostingCompleteTime")]
         public string HostingCompleteTime{ get; set; }
 
         /// <summary>
-        /// The hosted new certificate ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Manage the new certificate id.
         /// </summary>
         [JsonProperty("HostingRenewCertId")]
         public string HostingRenewCertId{ get; set; }
 
         /// <summary>
-        /// Existing renewed certificate ID
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Existing renewal certificate id.
         /// </summary>
         [JsonProperty("HasRenewOrder")]
         public string HasRenewOrder{ get; set; }
 
         /// <summary>
-        /// Whether the original certificate is deleted when a certificate is reissued.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Indicates whether the original certificate is deleted during reissue.
         /// </summary>
         [JsonProperty("ReplaceOriCertIsDelete")]
         public bool? ReplaceOriCertIsDelete{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is expiring soon. A certificate is considered to be expiring soon when there are 30 days or less left.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Indicates whether it is about to expire. a certificate is about to expire if it will expire within 30 days.
         /// </summary>
         [JsonProperty("IsExpiring")]
         public bool? IsExpiring{ get; set; }
 
         /// <summary>
-        /// Validation expiration time for the addition of the DV certificate
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Add validation expiration date for DV certificate
         /// </summary>
         [JsonProperty("DVAuthDeadline")]
         public string DVAuthDeadline{ get; set; }
 
         /// <summary>
-        /// Domain name validation pass time
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Domain verification passed time.
         /// </summary>
         [JsonProperty("ValidationPassedTime")]
         public string ValidationPassedTime{ get; set; }
 
         /// <summary>
-        /// Multiple domain names with which the certificate is associated
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Multiple domain names associated with the certificate.
         /// </summary>
         [JsonProperty("CertSANs")]
         public string[] CertSANs{ get; set; }
 
         /// <summary>
-        /// Domain name validation rejection information
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Domain verification rejection information.
         /// </summary>
         [JsonProperty("AwaitingValidationMsg")]
         public string AwaitingValidationMsg{ get; set; }
 
         /// <summary>
-        /// Whether downloading is allowed
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Whether to allow downloading.
         /// </summary>
         [JsonProperty("AllowDownload")]
         public bool? AllowDownload{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether all certificate domain names are managed and resolved by dnspod.
         /// </summary>
         [JsonProperty("IsDNSPODResolve")]
         public bool? IsDNSPODResolve{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the certificate is purchased with benefit points.
         /// </summary>
         [JsonProperty("IsPackage")]
         public bool? IsPackage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether there is a private key password.
         /// </summary>
         [JsonProperty("KeyPasswordCustomFlag")]
         public bool? KeyPasswordCustomFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Types of web servers supported for download: nginx, apache, iis, tomcat, jks, root, other.
         /// </summary>
         [JsonProperty("SupportDownloadType")]
         public SupportDownloadType SupportDownloadType{ get; set; }
+
+        /// <summary>
+        /// Certificate revocation completion time.
+        /// </summary>
+        [JsonProperty("CertRevokedTime")]
+        public string CertRevokedTime{ get; set; }
+
+        /// <summary>
+        /// Hosted resource type list.
+        /// </summary>
+        [JsonProperty("HostingResourceTypes")]
+        public string[] HostingResourceTypes{ get; set; }
+
+        /// <summary>
+        /// Managed configuration information.
+        /// </summary>
+        [JsonProperty("HostingConfig")]
+        public HostingConfig HostingConfig{ get; set; }
 
 
         /// <summary>
@@ -452,6 +507,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsPackage", this.IsPackage);
             this.SetParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
             this.SetParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
+            this.SetParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
+            this.SetParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
+            this.SetParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
         }
     }
 }

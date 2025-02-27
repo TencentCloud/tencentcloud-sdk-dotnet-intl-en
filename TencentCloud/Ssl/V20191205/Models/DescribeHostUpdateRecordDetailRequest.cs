@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// One-click update record ID
+        /// Deployment record id, which is the record id returned by calling the UpdateCertificateInstance api, or the record id returned by calling the UpdateCertificateRecordRollback rollback api.
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public string DeployRecordId{ get; set; }
 
         /// <summary>
-        /// Number per page, 10 by default.
+        /// Number of items per page. the default is 10. the maximum value is 200.
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
         /// <summary>
-        /// Paging offset, starting from 0
+        /// Pagination offset, starting from 0. default is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }

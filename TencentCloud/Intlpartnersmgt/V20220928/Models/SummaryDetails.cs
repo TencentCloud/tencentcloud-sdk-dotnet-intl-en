@@ -25,49 +25,43 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Product information list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product information list.
         /// </summary>
         [JsonProperty("Business")]
         public BusinessInfo[] Business{ get; set; }
 
         /// <summary>
-        /// Original price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Voucher amount
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher amount.
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Daily deduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// RI deduction.
         /// </summary>
         [JsonProperty("RICost")]
         public string RICost{ get; set; }
 
         /// <summary>
-        /// Total amount
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <TOTAL_AMOUNT>.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// Summary key by classification dimension Note: This field may return null, indicating that no valid values can be obtained.
+        /// Classification dimension summary key.
         /// </summary>
         [JsonProperty("GroupKey")]
         public string GroupKey{ get; set; }
 
         /// <summary>
-        ///  Summary value by classification dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Summary value by classification dimension.
         /// </summary>
         [JsonProperty("GroupValue")]
         public string GroupValue{ get; set; }

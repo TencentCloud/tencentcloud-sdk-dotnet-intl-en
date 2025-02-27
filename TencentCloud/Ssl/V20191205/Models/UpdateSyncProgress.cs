@@ -25,19 +25,22 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// 
+        /// Resource type.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region result list.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateSyncProgressRegions")]
         public UpdateSyncProgressRegion[] UpdateSyncProgressRegions{ get; set; }
 
         /// <summary>
-        /// 
+        /// Asynchronous update progress status: 0, pending, 1 processed, 3 processing.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

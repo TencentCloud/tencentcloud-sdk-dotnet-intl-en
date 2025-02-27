@@ -37,15 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] DnsNames{ get; set; }
 
         /// <summary>
-        /// The root certificate ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Root certificate id.
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
-        /// The authentication type. Valid values: `UNIDIRECTIONAL` (one-way authentication) and `MUTUAL` (two-way authentication).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate authentication mode: unidirectional one-way authentication, mutual mutual authentication.
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }

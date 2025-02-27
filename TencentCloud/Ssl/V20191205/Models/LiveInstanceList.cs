@@ -37,6 +37,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("InstanceList")]
         public LiveInstanceDetail[] InstanceList{ get; set; }
 
+        /// <summary>
+        /// Whether to query exceptions.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

@@ -43,7 +43,11 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// Whether to disable the user’s audio and video. 0: Enable; 1: Disable.
+        /// Controls the activation state of audio and video.
+        /// 0: Enable audio and video,
+        /// 1: Disable audio and video,
+        /// 2: Disable audio only,
+        /// 3: Disable video only.
         /// </summary>
         [JsonProperty("IsMute")]
         public ulong? IsMute{ get; set; }

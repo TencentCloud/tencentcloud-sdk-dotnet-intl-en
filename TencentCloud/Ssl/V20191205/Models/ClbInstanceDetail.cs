@@ -37,8 +37,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// The list of CLB listeners.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLB listener list.
         /// </summary>
         [JsonProperty("Listeners")]
         public ClbListener[] Listeners{ get; set; }

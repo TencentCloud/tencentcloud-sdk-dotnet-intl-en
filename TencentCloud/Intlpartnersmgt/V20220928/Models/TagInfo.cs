@@ -25,13 +25,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Tag keyNote: This field may return null, indicating that no valid values can be obtained.
+        /// Tag key.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag valueNote: This field may return null, indicating that no valid values can be obtained.
+        /// Tag value.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

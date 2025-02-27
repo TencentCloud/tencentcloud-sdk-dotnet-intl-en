@@ -25,19 +25,31 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Deployment resource type
+        /// Type of cloud resource for updating old and new certs.
+        /// - clb.
+        /// - cdn.
+        /// - ddos.
+        /// - live.
+        /// - vod.
+        /// - waf.
+        /// - apigateway.
+        /// - teo.
+        /// - tke.
+        /// - cos.
+        /// - tse.
+        /// - tcb.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Deployment resource detail list
+        /// The update details of the cloud resource.
         /// </summary>
         [JsonProperty("List")]
         public UpdateRecordDetail[] List{ get; set; }
 
         /// <summary>
-        /// Total deployment resource count
+        /// The update of the total number of cloud resources.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

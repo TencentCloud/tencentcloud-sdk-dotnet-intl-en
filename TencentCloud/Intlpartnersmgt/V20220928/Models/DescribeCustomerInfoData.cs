@@ -25,59 +25,58 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Customer UIN Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sub-Account uin.
         /// </summary>
         [JsonProperty("CustomerUin")]
         public string CustomerUin{ get; set; }
 
         /// <summary>
-        /// Email Note: This field may return null, indicating that no valid values can be obtained.
+        /// Contact email.
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// Mobile number Note: This field may return null, indicating that no valid values can be obtained.
+        /// Contact phone number.
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// Remarks Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remarks.
         /// </summary>
         [JsonProperty("Mark")]
         public string Mark{ get; set; }
 
         /// <summary>
-        /// Displayed name Note: This field may return null, indicating that no valid values can be obtained.
+        /// Display name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Binding time Note: This field may return null, indicating that no valid values can be obtained.
+        /// Binding time.
         /// </summary>
         [JsonProperty("BindTime")]
         public string BindTime{ get; set; }
 
         /// <summary>
         /// Account status
-        /// 0: Normal
-        /// 1: Forcibly mandatory (this function is not supported yet)
-        /// 2. Mandatory arrears
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// .
+        /// 0: normal.
+        /// 1: forcibly mandatory (this function is not supported yet).
+        /// 2: mandatory arrears. 
         /// </summary>
         [JsonProperty("AccountStatus")]
         public string AccountStatus{ get; set; }
 
         /// <summary>
-        /// Identity verification status
-        /// -1: Files not uploaded
-        /// 0: Not submitted for review
-        /// 1: Under review
-        /// 2: Review error
-        /// 3: Approved
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Identity verification status.
+        /// -1: files not uploaded.
+        /// 0: not submitted for review.
+        /// 1: under review.
+        /// 2: review error.
+        /// 3: approved.
         /// </summary>
         [JsonProperty("AuthStatus")]
         public string AuthStatus{ get; set; }

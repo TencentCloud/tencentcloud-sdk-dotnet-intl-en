@@ -31,8 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// The list of APIGATEWAY instances.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API gateway instance details.	
         /// </summary>
         [JsonProperty("InstanceList")]
         public ApiGatewayInstanceDetail[] InstanceList{ get; set; }
@@ -43,6 +42,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
+        /// <summary>
+        /// Whether to query exceptions.
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +57,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

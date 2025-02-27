@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Pagination offset, starting from 0
+        /// Pagination offset, starting from 0. default is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: `20`. Maximum value: `1000`.
+        /// Number of items per page. default is 10. maximum value is 1000; values exceeding 1000 will be treated as 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+        /// Search keywords, supporting fuzzy match by certificate id, remark name, and certificate domain name.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+        /// Default sorting is by certificate application time in descending order. Sort by expiration date if the following values are passed: DESC for descending order of certificate expiration time, ASC for ascending order.
         /// </summary>
         [JsonProperty("ExpirationSort")]
         public string ExpirationSort{ get; set; }
 
         /// <summary>
-        /// Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+        /// Certificate status: 0=under review, 1=approved, 2=review failed, 3=expired, 4=dns record added, 5=enterprise certificate, pending submission, 6=order cancellation in progress, 7=canceled, 8=documents submitted, pending upload of confirmation letter, 9=certificate revocation in progress, 10=revoked, 11=reissue in progress, 12=pending upload of revocation confirmation letter, 13=free certificate pending document submission, 14=refunded, 15=certificate migration in progress.
         /// </summary>
         [JsonProperty("CertificateStatus")]
         public ulong?[] CertificateStatus{ get; set; }
@@ -108,6 +108,24 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Hostable")]
         public ulong? Hostable{ get; set; }
 
+        /// <summary>
+        /// Filter certificates with specified tags.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
+        /// <summary>
+        /// Whether to filter certificates pending issue: 1 for filtering, 0 and null for no filtering.
+        /// </summary>
+        [JsonProperty("IsPendingIssue")]
+        public long? IsPendingIssue{ get; set; }
+
+        /// <summary>
+        /// Filter certificates by the specified certificate id, only supports certificate ids with permission.
+        /// </summary>
+        [JsonProperty("CertIds")]
+        public string[] CertIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
             this.SetParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
             this.SetParamSimple(map, prefix + "Hostable", this.Hostable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsPendingIssue", this.IsPendingIssue);
+            this.SetParamArraySimple(map, prefix + "CertIds.", this.CertIds);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Detail record ID
+        /// Update detail record id.
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// New certificate ID
+        /// New and old certificate update - new certificate id.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Old certificate ID
+        /// Old and new certificate update - old certificate id.
         /// </summary>
         [JsonProperty("OldCertId")]
         public string OldCertId{ get; set; }
@@ -50,7 +50,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// Deployment resource type
+        /// Type of cloud resource for updating old and new certs.
+        /// - clb.
+        /// - cdn.
+        /// - ddos.
+        /// - live.
+        /// - vod.
+        /// - waf.
+        /// - apigateway.
+        /// - teo.
+        /// - tke.
+        /// - cos.
+        /// - tse.
+        /// - tcb.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -63,7 +75,14 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Deployment status
+        /// Deployment status. valid values:.
+        /// 0: To be deployed.
+        /// 1: Deployment successful.
+        /// 2: Deployment failed.
+        /// 3: Deploying.
+        /// 4: Rollback succeeded.
+        /// 5: Rollback failure.
+        /// 6: No resource, no need for deployment.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -171,6 +190,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("TCBType")]
         public string TCBType{ get; set; }
 
+        /// <summary>
+        /// Listener url (only for CLB).
+        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +225,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "TCBType", this.TCBType);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
         }
     }
 }

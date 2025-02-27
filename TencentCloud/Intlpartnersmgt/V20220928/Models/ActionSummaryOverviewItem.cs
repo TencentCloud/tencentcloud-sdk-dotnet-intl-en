@@ -25,36 +25,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Transaction type code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type code.
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Transaction type name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type name.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// The actual total consumption amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Actual total consumption, up to 8 decimal places.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// The deducted voucher amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher payment amount, up to 8 decimal places.
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Total consumption amount accurate down to eight decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total consumption, up to 8 decimal places.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }

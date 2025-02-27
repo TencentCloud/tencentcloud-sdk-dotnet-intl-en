@@ -49,8 +49,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public float? AllocatedCredit{ get; set; }
 
         /// <summary>
-        /// Available credits after allocation
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Available credits after allocation.
         /// </summary>
         [JsonProperty("ClientCreditAfter")]
         public float? ClientCreditAfter{ get; set; }

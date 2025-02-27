@@ -43,8 +43,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The certificate ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate id.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

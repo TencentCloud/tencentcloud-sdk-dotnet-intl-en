@@ -25,13 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// To-be-redeployed record ID
+        /// Record ID for pending retry deployment, which can be obtained through UpdateCertificateInstance. if this parameter is not provided, DeployRecordDetailId must be provided.
         /// </summary>
         [JsonProperty("DeployRecordId")]
         public long? DeployRecordId{ get; set; }
 
         /// <summary>
-        /// To-be-redeployed record detail ID
+        /// Detail ID for pending retry deployment record, which can be obtained through the DescribeHostUpdateRecordDetail api. if this parameter is not provided, DeployRecordId must be provided.
         /// </summary>
         [JsonProperty("DeployRecordDetailId")]
         public long? DeployRecordDetailId{ get; set; }

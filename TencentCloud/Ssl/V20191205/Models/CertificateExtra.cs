@@ -25,14 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Number of domain names which can be associated with the certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Quantity of configurable domain names for the certificate.
         /// </summary>
         [JsonProperty("DomainNumber")]
         public string DomainNumber{ get; set; }
 
         /// <summary>
-        /// Original certificate ID
+        /// Renew the original certificate id.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginCertificateId")]
@@ -46,29 +45,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ReplacedBy{ get; set; }
 
         /// <summary>
-        /// New ID of the new certificate
+        /// Reissue certificate id.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplacedFor")]
         public string ReplacedFor{ get; set; }
 
         /// <summary>
-        /// Certificate ID of the new order
+        /// Renewal certificate id.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewOrder")]
         public string RenewOrder{ get; set; }
 
         /// <summary>
-        /// Whether the certificate is a Chinese SM certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is a China SM certificate.
         /// </summary>
         [JsonProperty("SMCert")]
         public long? SMCert{ get; set; }
 
         /// <summary>
-        /// Company type
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Company type, valid values: 1 (individual); 2 (company).
         /// </summary>
         [JsonProperty("CompanyType")]
         public long? CompanyType{ get; set; }

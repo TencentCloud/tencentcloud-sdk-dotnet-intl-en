@@ -96,6 +96,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Generate", this.Generate);
             this.SetParamSimple(map, prefix + "KeyPassword", this.KeyPassword);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -25,16 +25,14 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status (deprecated).
         /// </summary>
         [JsonProperty("C")]
         [System.Obsolete]
         public long? C{ get; set; }
 
         /// <summary>
-        /// msg
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Msg (deprecated).
         /// </summary>
         [JsonProperty("M")]
         [System.Obsolete]

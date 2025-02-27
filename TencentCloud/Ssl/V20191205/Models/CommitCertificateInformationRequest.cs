@@ -25,13 +25,16 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Certificate ID
+        /// Paid certificate id of materials to be submitted.	
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// Domain validation method
+        /// Certificate domain name verification method:.
+        /// DNS_AUTO: automatically adds domain dns verification, requiring user domain name resolution to be hosted on [cloud dns](https://console.cloud.tencent.com/cns) and under the same tencent cloud account as the certificate application.
+        /// DNS: manually add domain dns verification, which requires users to manually add verification values to the domain resolution service provider.
+        /// FILE: manual addition of domain name file verification. requires the user to manually add a specified path file in the root directory of the domain site for file verification, and either http or https passing is acceptable; the domain site needs to be accessible by overseas ca institutions, with the specific access allowlist being: 64.78.193.238, 216.168.247.9, 216.168.249.9, 54.189.196.217.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }

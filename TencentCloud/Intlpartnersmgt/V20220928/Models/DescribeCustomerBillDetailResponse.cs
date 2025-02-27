@@ -31,8 +31,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Data details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data detailsNote: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DetailSet")]
         public BillDetailData[] DetailSet{ get; set; }

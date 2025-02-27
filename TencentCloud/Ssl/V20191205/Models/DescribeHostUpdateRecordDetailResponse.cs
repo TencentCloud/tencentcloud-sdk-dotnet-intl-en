@@ -25,36 +25,36 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Total count
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// If the total number cannot be obtained, return 0.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Certificate deployment record list
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Certificate deployment record list; returns an empty array if no value is obtained.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RecordDetailList")]
         public UpdateRecordDetails[] RecordDetailList{ get; set; }
 
         /// <summary>
-        /// Total successful deployments
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Total number of successes; returns 0 if unavailable.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuccessTotalCount")]
         public long? SuccessTotalCount{ get; set; }
 
         /// <summary>
-        /// Total failed deployments
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Total number of failures. if it cannot be obtained, return 0.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailedTotalCount")]
         public long? FailedTotalCount{ get; set; }
 
         /// <summary>
-        /// Total running deployments
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Total number of deployments in progress; returns 0 if unavailable.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RunningTotalCount")]
         public long? RunningTotalCount{ get; set; }

@@ -25,8 +25,8 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The list of EDGEONE instances.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Teo instance list. if no value is obtained, an empty array is returned.
+        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceList")]
         public TeoInstanceDetail[] InstanceList{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// 
+        /// When deleting, check whether the certificate is associated with cloud resources. By default, no check is performed. if you choose to check (the authorization service role SSL_QCSLinkedRoleInReplaceLoadCertificate is required), the deletion will become asynchronous, and the API will return an asynchronous task id. you need to use the DescribeDeleteCertificatesTaskResult API to check whether the deletion is successful.
         /// </summary>
         [JsonProperty("IsCheckResource")]
         public bool? IsCheckResource{ get; set; }

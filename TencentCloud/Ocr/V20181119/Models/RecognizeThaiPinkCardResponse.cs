@@ -49,6 +49,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EnName{ get; set; }
 
         /// <summary>
+        /// Surname in Thai
+        /// </summary>
+        [JsonProperty("ThaiSurName")]
+        public string ThaiSurName{ get; set; }
+
+        /// <summary>
         /// Date of birth in Thai
         /// </summary>
         [JsonProperty("ThaiDOB")]
@@ -137,6 +143,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IDNumber", this.IDNumber);
             this.SetParamSimple(map, prefix + "ThaiName", this.ThaiName);
             this.SetParamSimple(map, prefix + "EnName", this.EnName);
+            this.SetParamSimple(map, prefix + "ThaiSurName", this.ThaiSurName);
             this.SetParamSimple(map, prefix + "ThaiDOB", this.ThaiDOB);
             this.SetParamSimple(map, prefix + "EnDOB", this.EnDOB);
             this.SetParamSimple(map, prefix + "PhotoNumber", this.PhotoNumber);

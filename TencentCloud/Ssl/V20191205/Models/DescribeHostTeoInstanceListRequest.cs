@@ -34,6 +34,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// The type of resource for certificate deployment.
         /// </summary>
         [JsonProperty("ResourceType")]
+        [System.Obsolete]
         public string ResourceType{ get; set; }
 
         /// <summary>
@@ -55,19 +56,19 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// The pagination offset, starting from 0.
+        /// Paging offset. default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The number of instances on each page. Default value: 10.	
+        /// Number of items per page. default: 10. maximum value: 200.	
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Whether the query is asynchronous.
+        /// Asynchronous or not. 1 means yes, 0 means no. default: 0.
         /// </summary>
         [JsonProperty("AsyncCache")]
         public long? AsyncCache{ get; set; }

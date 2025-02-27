@@ -25,19 +25,19 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// One-click update old certificate ID
+        /// The old certificate id for one-click update. by querying the cloud resources bound to this certificate id, and then updating these cloud resources with the new certificate.
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
         /// <summary>
-        /// Type of the resource that needs to be deployed. The following parameter values are optional: clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, and tcb.
+        /// Resource types that need to be deployed, with optional parameter values (lowercase): clb, cdn, waf, live, ddos, teo, apigateway, vod, tke, tcb, tse, cos.
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// One-click update new certificate ID
+        /// New certificate id for one-click update. if this parameter is not provided, the public key certificate and private key certificate must be provided.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
@@ -50,49 +50,49 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] Regions{ get; set; }
 
         /// <summary>
-        /// List of regions for which cloud resources need to be deployed
+        /// List of regions where cloud resources need to be deployed. the cloud resource type of the supported region must be passed. valid values: clb, tke, apigateway, waf, tcb, tse, cos.
         /// </summary>
         [JsonProperty("ResourceTypesRegions")]
         public ResourceTypeRegions[] ResourceTypesRegions{ get; set; }
 
         /// <summary>
-        /// Public key of the certificate. If the public key of the certificate is uploaded, CertificateId does not need to be uploaded.
+        /// If a public key certificate is uploaded, the private key certificate must also be uploaded, and the CertificateId does not need to be transmitted.
         /// </summary>
         [JsonProperty("CertificatePublicKey")]
         public string CertificatePublicKey{ get; set; }
 
         /// <summary>
-        /// Private key of the certificate. If the public key of the certificate is uploaded, the private key of the certificate is required.
+        /// If a private key certificate is uploaded, then a public key certificate must be uploaded; CertificateId is not required.
         /// </summary>
         [JsonProperty("CertificatePrivateKey")]
         public string CertificatePrivateKey{ get; set; }
 
         /// <summary>
-        /// Whether an expiration reminder is ignored for the old certificate. 0: The notification is not ignored. 1: The notification is ignored.
+        /// Whether to ignore expiration reminder for old certificate  0: do not ignore the notification. 1: ignore the notification, ignore the expiration reminder of OldCertificateId.
         /// </summary>
         [JsonProperty("ExpiringNotificationSwitch")]
         public ulong? ExpiringNotificationSwitch{ get; set; }
 
         /// <summary>
-        /// Whether repeated uploading of the same certificate is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+        /// It specifies whether the same certificate is allowed to be uploaded repeatedly. If the public key and private key certificates are selected for upload, this parameter can be configured. If there are duplicate certificates, the update task will fail.
         /// </summary>
         [JsonProperty("Repeatable")]
         public bool? Repeatable{ get; set; }
 
         /// <summary>
-        /// Whether downloading is allowed. If the public key of the certificate is uploaded, this parameter can be configured.
+        /// Whether to allow downloading. If you choose to upload a public/private key certificate, this parameter can be configured.
         /// </summary>
         [JsonProperty("AllowDownload")]
         public bool? AllowDownload{ get; set; }
 
         /// <summary>
-        /// Tag list. If the public key of the certificate is uploaded, this parameter can be configured.
+        /// Tag list. If you choose to upload a public/private key certificate, you can configure this parameter.
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// Project ID. If the public key of the certificate is uploaded, this parameter can be configured.
+        /// Project id. If you choose to upload a public/private key certificate, you can configure this parameter.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

@@ -25,73 +25,76 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Certificate ID
+        /// Paid certificate id of materials to be submitted.
         /// </summary>
         [JsonProperty("CertificateId")]
         public string CertificateId{ get; set; }
 
         /// <summary>
-        /// CSR generation mode. `online`: generated online; `parse`: uploaded manually
+        /// This field is required. Generation method of CSR, valid values are:
+        /// online: tencent cloud generates the CSR and private key based on the submitted parameter information and stores them encryptedly.
+        /// parse: generate the CSR and private key by itself, and apply for a certificate by uploading the CSR.
         /// </summary>
         [JsonProperty("CsrType")]
         public string CsrType{ get; set; }
 
         /// <summary>
-        /// Uploaded CSR content
+        /// The content of the uploaded csr.
+        /// If CsrType is parse, this field is required.
         /// </summary>
         [JsonProperty("CsrContent")]
         public string CsrContent{ get; set; }
 
         /// <summary>
-        /// Domain name bound with the certificate
+        /// The common name bound to the certificate. if a CSR is uploaded, the domain name must be consistent with the common name resolved from the CSR.
         /// </summary>
         [JsonProperty("CertificateDomain")]
         public string CertificateDomain{ get; set; }
 
         /// <summary>
-        /// Uploaded domain name array (can be uploaded for a multi-domain certificate)
+        /// Other domain names bound to the certificate. not required for single domain and wildcard domain certificates. required for multiple domain names and multiple wildcard domain names.
         /// </summary>
         [JsonProperty("DomainList")]
         public string[] DomainList{ get; set; }
 
         /// <summary>
-        /// Password of the private key
+        /// Private key password, which is currently only used for the password when generating jks and pfx format certificates; other formats of private key certificates are not encrypted.	
         /// </summary>
         [JsonProperty("KeyPassword")]
         public string KeyPassword{ get; set; }
 
         /// <summary>
-        /// Organization name
+        /// This field is required. Company name.
         /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// Division name
+        /// This field is required.  Department name.
         /// </summary>
         [JsonProperty("OrganizationDivision")]
         public string OrganizationDivision{ get; set; }
 
         /// <summary>
-        /// Detailed address of the organization
+        /// This field is required. Company's detailed address.
         /// </summary>
         [JsonProperty("OrganizationAddress")]
         public string OrganizationAddress{ get; set; }
 
         /// <summary>
-        /// Country where the organization is located, for example, CN (China)
+        /// This field is required.Country name such as CN.
         /// </summary>
         [JsonProperty("OrganizationCountry")]
         public string OrganizationCountry{ get; set; }
 
         /// <summary>
-        /// City where the organization is located
+        /// This field is required, which specifies the city where the company is located.
         /// </summary>
         [JsonProperty("OrganizationCity")]
         public string OrganizationCity{ get; set; }
 
         /// <summary>
-        /// Province where the organization is located
+        /// This field is required, specifying the province where the company is located.
         /// </summary>
         [JsonProperty("OrganizationRegion")]
         public string OrganizationRegion{ get; set; }
@@ -103,82 +106,88 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Area code of the fixed-line phone number of the organization
+        /// This field is required, the company's fixed-line phone area code.
         /// </summary>
         [JsonProperty("PhoneAreaCode")]
         public string PhoneAreaCode{ get; set; }
 
         /// <summary>
-        /// Fixed-line phone number of the organization
+        /// This field is required, the company's landline number.
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
 
         /// <summary>
-        /// Certificate validation method
+        /// Certificate validation method. Validation types: DNS_AUTO = Automatic DNS validation (only supported for domains resolved by Tencent Cloud DNS with a normal resolution status), DNS = Manual DNS validation, FILE = File validation.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }
 
         /// <summary>
-        /// Last name of the administrator
+        /// This field is required, manager name.
         /// </summary>
         [JsonProperty("AdminFirstName")]
         public string AdminFirstName{ get; set; }
 
         /// <summary>
-        /// First name of the administrator
+        /// This field is required, the manager's surname.
         /// </summary>
         [JsonProperty("AdminLastName")]
         public string AdminLastName{ get; set; }
 
         /// <summary>
-        /// Mobile number of the administrator
+        /// This field is required, the manager's mobile phone number.
         /// </summary>
         [JsonProperty("AdminPhoneNum")]
         public string AdminPhoneNum{ get; set; }
 
         /// <summary>
-        /// Email of the administrator
+        /// This field is required, the manager's email address.
         /// </summary>
         [JsonProperty("AdminEmail")]
         public string AdminEmail{ get; set; }
 
         /// <summary>
-        /// Position of the administrator
+        /// This field is required, the manager position.
         /// </summary>
         [JsonProperty("AdminPosition")]
         public string AdminPosition{ get; set; }
 
         /// <summary>
-        /// Last name of the contact
+        /// This field is required, the contact person name.
         /// </summary>
         [JsonProperty("ContactFirstName")]
         public string ContactFirstName{ get; set; }
 
         /// <summary>
-        /// First name of the contact
+        /// This field is required, the contact person's surname.
         /// </summary>
         [JsonProperty("ContactLastName")]
         public string ContactLastName{ get; set; }
 
         /// <summary>
-        /// Email of the contact
+        /// This field is required, the contact person's email address.
         /// </summary>
         [JsonProperty("ContactEmail")]
         public string ContactEmail{ get; set; }
 
         /// <summary>
-        /// Mobile number of the contact
+        /// This field is required, the contact person's mobile phone number.
         /// </summary>
         [JsonProperty("ContactNumber")]
         public string ContactNumber{ get; set; }
 
         /// <summary>
-        /// Position of the contact
+        /// This field is required, the contact person position.
         /// </summary>
         [JsonProperty("ContactPosition")]
         public string ContactPosition{ get; set; }
+
+        /// <summary>
+        /// Indicates whether it is a dv certificate. default value is false.
+        /// </summary>
+        [JsonProperty("IsDV")]
+        public bool? IsDV{ get; set; }
 
 
         /// <summary>
@@ -212,6 +221,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ContactEmail", this.ContactEmail);
             this.SetParamSimple(map, prefix + "ContactNumber", this.ContactNumber);
             this.SetParamSimple(map, prefix + "ContactPosition", this.ContactPosition);
+            this.SetParamSimple(map, prefix + "IsDV", this.IsDV);
         }
     }
 }

@@ -25,225 +25,194 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Reseller account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// reseller account.
         /// </summary>
         [JsonProperty("PayerAccountId")]
         public long? PayerAccountId{ get; set; }
 
         /// <summary>
-        /// Customer account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subaccount.
         /// </summary>
         [JsonProperty("OwnerAccountId")]
         public long? OwnerAccountId{ get; set; }
 
         /// <summary>
-        /// Operator account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operator account.
         /// </summary>
         [JsonProperty("OperatorAccountId")]
         public long? OperatorAccountId{ get; set; }
 
         /// <summary>
-        /// Product name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product name.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// Billing mode
-        /// `Monthly subscription` (Monthly subscription)
-        /// `Pay-As-You-Go resources` (Pay-as-you-go)
-        /// `Standard RI` (Reserved instance)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// .
+        /// Monthly subscription (annual and monthly).
+        /// Pay-As-You-Go resources.
+        /// Standard ri reserved instance.
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// Project name
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Project name.
+        /// .
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Resource region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Resource AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource available zone.
         /// </summary>
         [JsonProperty("AvailabilityZone")]
         public string AvailabilityZone{ get; set; }
 
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Subproduct name
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sub-Product name
+        /// .
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
 
         /// <summary>
-        /// Settlement type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Settlement type.
         /// </summary>
         [JsonProperty("TransactionType")]
         public string TransactionType{ get; set; }
 
         /// <summary>
-        /// Transaction ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <Transaction id>.
         /// </summary>
         [JsonProperty("TransactionId")]
         public string TransactionId{ get; set; }
 
         /// <summary>
-        /// Settlement time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Settlement time.
         /// </summary>
         [JsonProperty("TransactionTime")]
         public string TransactionTime{ get; set; }
 
         /// <summary>
-        /// Start time of resource use
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <Resource start time>.
         /// </summary>
         [JsonProperty("UsageStartTime")]
         public string UsageStartTime{ get; set; }
 
         /// <summary>
-        /// End time of resource use
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <Resource end usage time>.
         /// </summary>
         [JsonProperty("UsageEndTime")]
         public string UsageEndTime{ get; set; }
 
         /// <summary>
-        /// Component
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component.
         /// </summary>
         [JsonProperty("ComponentType")]
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// Component name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component name.
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// Component list price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component list price.
         /// </summary>
         [JsonProperty("ComponentListPrice")]
         public string ComponentListPrice{ get; set; }
 
         /// <summary>
-        /// Price unit
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price unit.
         /// </summary>
         [JsonProperty("ComponentPriceMeasurementUnit")]
         public string ComponentPriceMeasurementUnit{ get; set; }
 
         /// <summary>
-        /// Component usage
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component usage.
         /// </summary>
         [JsonProperty("ComponentUsage")]
         public string ComponentUsage{ get; set; }
 
         /// <summary>
-        /// Component usage unit
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component usage unit.
         /// </summary>
         [JsonProperty("ComponentUsageUnit")]
         public string ComponentUsageUnit{ get; set; }
 
         /// <summary>
-        /// Resource usage duration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource usage duration.
         /// </summary>
         [JsonProperty("UsageDuration")]
         public string UsageDuration{ get; set; }
 
         /// <summary>
-        /// Duration unit
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// duration unit.
         /// </summary>
         [JsonProperty("DurationUnit")]
         public string DurationUnit{ get; set; }
 
         /// <summary>
-        /// Original cost
-        /// Original cost = component list price * component usage * usage duration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total original price.
+        /// Original cost = component list price * component usage * usage duration.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discount, which defaults to `1`, indicating there is no discount.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discount (default is 1).
         /// </summary>
         [JsonProperty("DiscountRate")]
         public string DiscountRate{ get; set; }
 
         /// <summary>
-        /// Currency
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Currency.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Discounted total
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total cost after discount.
         /// </summary>
         [JsonProperty("TotalAmountAfterDiscount")]
         public string TotalAmountAfterDiscount{ get; set; }
 
         /// <summary>
-        /// Voucher deduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher deduction amount.
         /// </summary>
         [JsonProperty("VoucherDeduction")]
         public string VoucherDeduction{ get; set; }
 
         /// <summary>
-        /// Total cost = discounted total - voucher deduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// = Total Amount After Discount - Voucher Deduction
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// ID
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Identifier (id).
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

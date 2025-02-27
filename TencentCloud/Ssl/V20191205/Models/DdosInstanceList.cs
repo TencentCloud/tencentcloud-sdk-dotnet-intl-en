@@ -31,11 +31,16 @@ namespace TencentCloud.Ssl.V20191205.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of DDOS instances.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// DDOS instance details.	
         /// </summary>
         [JsonProperty("InstanceList")]
         public DdosInstanceDetail[] InstanceList{ get; set; }
+
+        /// <summary>
+        /// Whether to query exceptions.
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
 
 
         /// <summary>
@@ -45,6 +50,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

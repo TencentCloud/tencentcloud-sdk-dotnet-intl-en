@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Bill month in the format of "yyyy-mm".
+        /// The month to which the bill belongs, formatted as YYYY-MM.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
