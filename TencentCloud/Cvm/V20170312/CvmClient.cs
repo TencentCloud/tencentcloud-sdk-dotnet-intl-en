@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1079";
+       private const string sdkVersion = "SDK_NET_3.0.1080";
 
         /// <summary>
         /// Client constructor.
@@ -261,6 +261,35 @@ namespace TencentCloud.Cvm.V20170312
         public CreateKeyPairResponse CreateKeyPairSync(CreateKeyPairRequest req)
         {
             return InternalRequestAsync<CreateKeyPairResponse>(req, "CreateKeyPair")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an instance launch template.
+        /// 
+        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// 
+        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public Task<CreateLaunchTemplateResponse> CreateLaunchTemplate(CreateLaunchTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLaunchTemplateResponse>(req, "CreateLaunchTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create an instance launch template.
+        /// 
+        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// 
+        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public CreateLaunchTemplateResponse CreateLaunchTemplateSync(CreateLaunchTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLaunchTemplateResponse>(req, "CreateLaunchTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
