@@ -185,6 +185,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
+        /// <summary>
+        /// Instance launch template tag description list. By specifying the TemplateTag parameter, you can bind tags to the instance launch template.
+        /// </summary>
+        [JsonProperty("LaunchTemplateTagSpecification")]
+        public TagSpecification[] LaunchTemplateTagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -217,6 +229,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
         }
     }
 }
