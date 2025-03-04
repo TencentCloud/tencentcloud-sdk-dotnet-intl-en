@@ -25,31 +25,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Dealer policy code.
+        /// Policy code.
         /// </summary>
         [JsonProperty("PolicyCode")]
         public string PolicyCode{ get; set; }
 
         /// <summary>
-        /// Product level 1 code.
+        /// The code of the ProductName field in the  bill data.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Product level 1 name.
+        /// The ProductName field value in the billing data.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Product level 2 code.
+        /// The code of the SubProductName field in the  bill data.
         /// </summary>
         [JsonProperty("SubProductCode")]
         public string SubProductCode{ get; set; }
 
         /// <summary>
-        /// Product level 2 name.
+        /// The SubProductName field value in the billing data.
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }

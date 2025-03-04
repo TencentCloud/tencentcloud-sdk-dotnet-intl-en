@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Dealer policy product list.
+        /// policy product list.
         /// </summary>
         [JsonProperty("ProductList")]
         public PolicyProductList[] ProductList{ get; set; }
