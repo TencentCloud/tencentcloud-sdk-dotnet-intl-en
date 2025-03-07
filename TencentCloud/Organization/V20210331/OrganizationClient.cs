@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Organization.V20210331
         public AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificateSync(AddExternalSAMLIdPCertificateRequest req)
         {
             return InternalRequestAsync<AddExternalSAMLIdPCertificateResponse>(req, "AddExternalSAMLIdPCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add an organization member's mailbox.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrganizationMemberEmailRequest"/></param>
+        /// <returns><see cref="AddOrganizationMemberEmailResponse"/></returns>
+        public Task<AddOrganizationMemberEmailResponse> AddOrganizationMemberEmail(AddOrganizationMemberEmailRequest req)
+        {
+            return InternalRequestAsync<AddOrganizationMemberEmailResponse>(req, "AddOrganizationMemberEmail");
+        }
+
+        /// <summary>
+        /// This API is used to add an organization member's mailbox.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrganizationMemberEmailRequest"/></param>
+        /// <returns><see cref="AddOrganizationMemberEmailResponse"/></returns>
+        public AddOrganizationMemberEmailResponse AddOrganizationMemberEmailSync(AddOrganizationMemberEmailRequest req)
+        {
+            return InternalRequestAsync<AddOrganizationMemberEmailResponse>(req, "AddOrganizationMemberEmail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -978,6 +999,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to query detailed information about member mailbox binding.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMemberEmailBindResponse"/></returns>
+        public Task<DescribeOrganizationMemberEmailBindResponse> DescribeOrganizationMemberEmailBind(DescribeOrganizationMemberEmailBindRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMemberEmailBindResponse>(req, "DescribeOrganizationMemberEmailBind");
+        }
+
+        /// <summary>
+        /// This API is used to query detailed information about member mailbox binding.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMemberEmailBindResponse"/></returns>
+        public DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBindSync(DescribeOrganizationMemberEmailBindRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMemberEmailBindResponse>(req, "DescribeOrganizationMemberEmailBind")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of authorization policies of an organization member.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationMemberPoliciesRequest"/></param>
@@ -1860,6 +1902,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to resend an email for activating the member's bound mailbox.
+        /// </summary>
+        /// <param name="req"><see cref="SendOrgMemberAccountBindEmailRequest"/></param>
+        /// <returns><see cref="SendOrgMemberAccountBindEmailResponse"/></returns>
+        public Task<SendOrgMemberAccountBindEmailResponse> SendOrgMemberAccountBindEmail(SendOrgMemberAccountBindEmailRequest req)
+        {
+            return InternalRequestAsync<SendOrgMemberAccountBindEmailResponse>(req, "SendOrgMemberAccountBindEmail");
+        }
+
+        /// <summary>
+        /// This API is used to resend an email for activating the member's bound mailbox.
+        /// </summary>
+        /// <param name="req"><see cref="SendOrgMemberAccountBindEmailRequest"/></param>
+        /// <returns><see cref="SendOrgMemberAccountBindEmailResponse"/></returns>
+        public SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmailSync(SendOrgMemberAccountBindEmailRequest req)
+        {
+            return InternalRequestAsync<SendOrgMemberAccountBindEmailResponse>(req, "SendOrgMemberAccountBindEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to configure the SAML identity provider information.
         /// </summary>
         /// <param name="req"><see cref="SetExternalSAMLIdentityProviderRequest"/></param>
@@ -1961,6 +2024,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationMemberResponse UpdateOrganizationMemberSync(UpdateOrganizationMemberRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationMemberResponse>(req, "UpdateOrganizationMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the mailbox of a bound member.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberEmailBindResponse"/></returns>
+        public Task<UpdateOrganizationMemberEmailBindResponse> UpdateOrganizationMemberEmailBind(UpdateOrganizationMemberEmailBindRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMemberEmailBindResponse>(req, "UpdateOrganizationMemberEmailBind");
+        }
+
+        /// <summary>
+        /// This API is used to modify the mailbox of a bound member.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMemberEmailBindRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMemberEmailBindResponse"/></returns>
+        public UpdateOrganizationMemberEmailBindResponse UpdateOrganizationMemberEmailBindSync(UpdateOrganizationMemberEmailBindRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMemberEmailBindResponse>(req, "UpdateOrganizationMemberEmailBind")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

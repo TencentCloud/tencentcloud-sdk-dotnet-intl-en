@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Mdp.V20200527
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Linear Assembly channel is bound to CDN playback domain name.
+        /// </summary>
+        /// <param name="req"><see cref="BindLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public Task<BindLinearAssemblyCDNDomainWithChannelResponse> BindLinearAssemblyCDNDomainWithChannel(BindLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<BindLinearAssemblyCDNDomainWithChannelResponse>(req, "BindLinearAssemblyCDNDomainWithChannel");
+        }
+
+        /// <summary>
+        /// Linear Assembly channel is bound to CDN playback domain name.
+        /// </summary>
+        /// <param name="req"><see cref="BindLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public BindLinearAssemblyCDNDomainWithChannelResponse BindLinearAssemblyCDNDomainWithChannelSync(BindLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<BindLinearAssemblyCDNDomainWithChannelResponse>(req, "BindLinearAssemblyCDNDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -470,6 +491,48 @@ namespace TencentCloud.Mdp.V20200527
         public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocationSync(DeleteStreamPackageSourceLocationRequest req)
         {
             return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the CDN domain name associated with the LinearAssembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="DescribeLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public Task<DescribeLinearAssemblyCDNDomainWithChannelResponse> DescribeLinearAssemblyCDNDomainWithChannel(DescribeLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeLinearAssemblyCDNDomainWithChannelResponse>(req, "DescribeLinearAssemblyCDNDomainWithChannel");
+        }
+
+        /// <summary>
+        /// Query the CDN domain name associated with the LinearAssembly channel.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="DescribeLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public DescribeLinearAssemblyCDNDomainWithChannelResponse DescribeLinearAssemblyCDNDomainWithChannelSync(DescribeLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeLinearAssemblyCDNDomainWithChannelResponse>(req, "DescribeLinearAssemblyCDNDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the CDN domain names associated with all LinearAssembly channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLinearAssemblyCDNDomainWithChannelsRequest"/></param>
+        /// <returns><see cref="DescribeLinearAssemblyCDNDomainWithChannelsResponse"/></returns>
+        public Task<DescribeLinearAssemblyCDNDomainWithChannelsResponse> DescribeLinearAssemblyCDNDomainWithChannels(DescribeLinearAssemblyCDNDomainWithChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeLinearAssemblyCDNDomainWithChannelsResponse>(req, "DescribeLinearAssemblyCDNDomainWithChannels");
+        }
+
+        /// <summary>
+        /// Query the CDN domain names associated with all LinearAssembly channels.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLinearAssemblyCDNDomainWithChannelsRequest"/></param>
+        /// <returns><see cref="DescribeLinearAssemblyCDNDomainWithChannelsResponse"/></returns>
+        public DescribeLinearAssemblyCDNDomainWithChannelsResponse DescribeLinearAssemblyCDNDomainWithChannelsSync(DescribeLinearAssemblyCDNDomainWithChannelsRequest req)
+        {
+            return InternalRequestAsync<DescribeLinearAssemblyCDNDomainWithChannelsResponse>(req, "DescribeLinearAssemblyCDNDomainWithChannels")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1079,6 +1142,27 @@ namespace TencentCloud.Mdp.V20200527
         public UnbindCdnDomainWithChannelResponse UnbindCdnDomainWithChannelSync(UnbindCdnDomainWithChannelRequest req)
         {
             return InternalRequestAsync<UnbindCdnDomainWithChannelResponse>(req, "UnbindCdnDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Unbind LinearAssembly channel with CDN domain name.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public Task<UnbindLinearAssemblyCDNDomainWithChannelResponse> UnbindLinearAssemblyCDNDomainWithChannel(UnbindLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<UnbindLinearAssemblyCDNDomainWithChannelResponse>(req, "UnbindLinearAssemblyCDNDomainWithChannel");
+        }
+
+        /// <summary>
+        /// Unbind LinearAssembly channel with CDN domain name.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindLinearAssemblyCDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindLinearAssemblyCDNDomainWithChannelResponse"/></returns>
+        public UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannelSync(UnbindLinearAssemblyCDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<UnbindLinearAssemblyCDNDomainWithChannelResponse>(req, "UnbindLinearAssemblyCDNDomainWithChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1083";
+       private const string sdkVersion = "SDK_NET_3.0.1084";
 
         /// <summary>
         /// Client constructor.
@@ -1445,6 +1445,33 @@ namespace TencentCloud.Cvm.V20170312
         public ModifyInstancesProjectResponse ModifyInstancesProjectSync(ModifyInstancesProjectRequest req)
         {
             return InternalRequestAsync<ModifyInstancesProjectResponse>(req, "ModifyInstancesProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the renewal flag of monthly subscription instances.
+        /// 
+        /// * After an instance is marked as auto-renewal, it will be automatically renewed for one month each time it expires.
+        /// * Batch operations are supported. The maximum number of instances for each request is 100.* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
+        public Task<ModifyInstancesRenewFlagResponse> ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesRenewFlagResponse>(req, "ModifyInstancesRenewFlag");
+        }
+
+        /// <summary>
+        /// This API is used to modify the renewal flag of monthly subscription instances.
+        /// 
+        /// * After an instance is marked as auto-renewal, it will be automatically renewed for one month each time it expires.
+        /// * Batch operations are supported. The maximum number of instances for each request is 100.* You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
+        public ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlagSync(ModifyInstancesRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesRenewFlagResponse>(req, "ModifyInstancesRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

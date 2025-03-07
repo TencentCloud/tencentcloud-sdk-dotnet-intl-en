@@ -43,7 +43,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         public EndpointAuthInfo AuthInfo{ get; set; }
 
         /// <summary>
-        /// Endpoint protocol.
+        /// Endpoint protocol, supports `HLS`, `CMAF`, `CMAF-HLS`.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -91,6 +91,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("CustomUrlParam")]
         public string CustomUrlParam{ get; set; }
 
+        /// <summary>
+        /// DRM switch. If it is turned on, only CMAF will take effect.
+        /// </summary>
+        [JsonProperty("DRMEnabled")]
+        public bool? DRMEnabled{ get; set; }
+
+        /// <summary>
+        /// DRM configuration information.
+        /// </summary>
+        [JsonProperty("DRMInfo")]
+        public DRMInfo DRMInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +120,8 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
             this.SetParamSimple(map, prefix + "CustomUrlParamIndex", this.CustomUrlParamIndex);
             this.SetParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
+            this.SetParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+            this.SetParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
         }
     }
 }

@@ -100,7 +100,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// <summary>
         /// Model API key, for authentication information, please refer to the respective model's official website
         /// 
-        /// - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [Hunyuan](https://intl.cloud.tencent.com/document/product/1729/111008?from_cn_redirect=1), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+        /// - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
         /// 
         /// - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
         /// 
@@ -171,7 +171,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] Callers{ get; set; }
 
         /// <summary>
-        /// Used to set the AI Agent Greeting.
+        /// Used to set the AI Agent Welcome Message.
         /// </summary>
         [JsonProperty("WelcomeMessage")]
         public string WelcomeMessage{ get; set; }
