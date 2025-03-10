@@ -28,7 +28,7 @@ namespace TencentCloud.Tms.V20201229
 
        private const string endpoint = "tms.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -70,7 +70,7 @@ namespace TencentCloud.Tms.V20201229
         /// ### Use limits
         /// - The submitted texts can not be longer than 10,000 unicode characters.
         /// - English letters, digits and Chinese characters are supported for moderation.
-        /// - The API request frequency limit: **1,000 times/second**. 
+        /// - The API request frequency limit: **1,000 times/second**.
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>
         /// <returns><see cref="TextModerationResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Tms.V20201229
         /// ### Use limits
         /// - The submitted texts can not be longer than 10,000 unicode characters.
         /// - English letters, digits and Chinese characters are supported for moderation.
-        /// - The API request frequency limit: **1,000 times/second**. 
+        /// - The API request frequency limit: **1,000 times/second**.
         /// </summary>
         /// <param name="req"><see cref="TextModerationRequest"/></param>
         /// <returns><see cref="TextModerationResponse"/></returns>

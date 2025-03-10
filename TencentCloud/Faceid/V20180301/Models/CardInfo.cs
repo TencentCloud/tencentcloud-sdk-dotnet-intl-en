@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Hong Kong ID Card
+        /// Hong Kong ID (China) Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HKIDCard")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public PhilippinesUMID PhilippinesUMID{ get; set; }
 
         /// <summary>
-        /// ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+        /// ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternationalIDPassport")]
@@ -116,14 +116,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public SingaporeIDCard SingaporeIDCard{ get; set; }
 
         /// <summary>
-        /// Macao ID Card
+        /// Macao (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MacaoIDCard")]
         public MacaoIDCard MacaoIDCard{ get; set; }
 
         /// <summary>
-        /// TaiWan ID Card
+        /// TaiWan (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaiWanIDCard")]

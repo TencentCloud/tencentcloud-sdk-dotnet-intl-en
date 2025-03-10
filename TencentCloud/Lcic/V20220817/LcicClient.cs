@@ -28,7 +28,7 @@ namespace TencentCloud.Lcic.V20220817
 
        private const string endpoint = "lcic.tencentcloudapi.com";
        private const string version = "2022-08-17";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -609,8 +609,6 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 有新接口替换
-        /// 
         /// A new API is offered for this action now.
         /// 
         /// This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.
@@ -623,8 +621,6 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
-        /// 有新接口替换
-        /// 
         /// A new API is offered for this action now.
         /// 
         /// This API is used to query courseware. It has been deprecated. Please use `BatchDescribeDocument` instead.

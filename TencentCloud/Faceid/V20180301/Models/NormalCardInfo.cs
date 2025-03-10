@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Hong Kong ID Card
+        /// Hong Kong (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HKIDCard")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public PhilippinesUMID PhilippinesUMID{ get; set; }
 
         /// <summary>
-        /// ID Cards of Hong Kong, Macao and Taiwan (China), and International Passport
+        /// ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternationalIDPassport")]
@@ -116,14 +116,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public SingaporeIDCard SingaporeIDCard{ get; set; }
 
         /// <summary>
-        /// Macao ID Card
+        /// Macao (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MacaoIDCard")]
         public MacaoIDCard MacaoIDCard{ get; set; }
 
         /// <summary>
-        /// Mainland ID Card
+        /// Mainland (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MainlandIDCard")]
@@ -137,14 +137,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public JapanIDCard JapanIDCard{ get; set; }
 
         /// <summary>
-        /// Taiwan ID Card
+        /// Taiwan (China) ID Card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaiWanIDCard")]
         public TaiWanIDCard TaiWanIDCard{ get; set; }
 
         /// <summary>
-        /// exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan.
+        /// exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HMTPermitCard")]

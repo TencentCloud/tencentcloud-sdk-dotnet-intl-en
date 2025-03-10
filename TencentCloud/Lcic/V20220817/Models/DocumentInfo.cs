@@ -142,6 +142,18 @@ namespace TencentCloud.Lcic.V20220817.Models
         [JsonProperty("Preview")]
         public string Preview{ get; set; }
 
+        /// <summary>
+        /// Document resolution.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
+
+        /// <summary>
+        /// Minimum resolution of a transcoded document, consistent with the parameters provided when the document is created.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +179,8 @@ namespace TencentCloud.Lcic.V20220817.Models
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "Cover", this.Cover);
             this.SetParamSimple(map, prefix + "Preview", this.Preview);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
         }
     }
 }

@@ -25,7 +25,9 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 
+        /// Chinese name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Example:  SAN, Nan
         /// </summary>
         [JsonProperty("CnName")]
         public string CnName{ get; set; }

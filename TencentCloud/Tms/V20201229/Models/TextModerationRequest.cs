@@ -54,6 +54,12 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Device")]
         public Device Device{ get; set; }
 
+        /// <summary>
+        /// This field Indicates the original language of the content.The enumeration values are ("en", "zh", ""), where en means English, zh means Chinese, and an empty string means the default language is Chinese. It is recommended to enter "en" only when the language of the content is clearly "English".
+        /// </summary>
+        [JsonProperty("SourceLanguage")]
+        public string SourceLanguage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
             this.SetParamObj(map, prefix + "User.", this.User);
             this.SetParamObj(map, prefix + "Device.", this.Device);
+            this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         }
     }
 }

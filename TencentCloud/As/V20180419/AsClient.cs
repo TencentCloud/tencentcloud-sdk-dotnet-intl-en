@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -1505,8 +1505,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
-        /// 
         /// There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
         /// This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
         /// * This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.
@@ -1520,8 +1518,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
-        /// 
         /// There is a replacement API: ModifyLaunchConfiguration. This API carries the risk of parameter overwriting, and it has currently been hidden on the official website.
         /// This API (UpgradeLaunchConfiguration) is used to upgrade the launch configuration.
         /// * This API is used to upgrade the launch configuration, adopting an "entirely overwrite" approach. Regardless of previous parameter settings, they will be uniformly replaced with new configurations as specified in the interface parameters. For non-mandatory fields, if not filled in, default values will be assigned.

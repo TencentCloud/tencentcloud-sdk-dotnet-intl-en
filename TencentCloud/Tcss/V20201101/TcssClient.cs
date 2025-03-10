@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1084";
+       private const string sdkVersion = "SDK_NET_3.0.1085";
 
         /// <summary>
         /// Client constructor.
@@ -1383,8 +1383,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 产品重构优化，这几个接口已经没有调用了
-        /// 
         /// This API is used to remove the specified check item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
@@ -1395,8 +1393,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 产品重构优化，这几个接口已经没有调用了
-        /// 
         /// This API is used to remove the specified check item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
