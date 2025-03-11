@@ -28,7 +28,7 @@ namespace TencentCloud.Apigateway.V20180808
 
        private const string endpoint = "apigateway.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1086";
+       private const string sdkVersion = "SDK_NET_3.0.1087";
 
         /// <summary>
         /// Client constructor.
@@ -1017,6 +1017,27 @@ namespace TencentCloud.Apigateway.V20180808
         public DescribeIPStrategysStatusResponse DescribeIPStrategysStatusSync(DescribeIPStrategysStatusRequest req)
         {
             return InternalRequestAsync<DescribeIPStrategysStatusResponse>(req, "DescribeIPStrategysStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the network configuration list of a dedicated instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNetworkConfigRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNetworkConfigResponse"/></returns>
+        public Task<DescribeInstancesNetworkConfigResponse> DescribeInstancesNetworkConfig(DescribeInstancesNetworkConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesNetworkConfigResponse>(req, "DescribeInstancesNetworkConfig");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the network configuration list of a dedicated instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesNetworkConfigRequest"/></param>
+        /// <returns><see cref="DescribeInstancesNetworkConfigResponse"/></returns>
+        public DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfigSync(DescribeInstancesNetworkConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesNetworkConfigResponse>(req, "DescribeInstancesNetworkConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
