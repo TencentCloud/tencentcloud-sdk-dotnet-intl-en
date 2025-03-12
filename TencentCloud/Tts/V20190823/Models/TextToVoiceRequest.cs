@@ -101,6 +101,24 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("SegmentRate")]
         public ulong? SegmentRate{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EmotionCategory")]
+        public string EmotionCategory{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EmotionIntensity")]
+        public long? EmotionIntensity{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +137,9 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
             this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
+            this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+            this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         }
     }
 }

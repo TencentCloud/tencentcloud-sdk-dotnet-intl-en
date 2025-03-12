@@ -124,6 +124,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsDedicatedAddressPool")]
+        public bool? IsDedicatedAddressPool{ get; set; }
+
+        /// <summary>
         /// Network egress. It defaults to `center_egress1`.
         /// </summary>
         [JsonProperty("Egress")]
@@ -160,6 +166,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "IsDedicatedAddressPool", this.IsDedicatedAddressPool);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
