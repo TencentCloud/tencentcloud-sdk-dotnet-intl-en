@@ -69,13 +69,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ProductDescription{ get; set; }
 
         /// <summary>
-        /// Upfront total cost, in USD.
+        /// Discount price for subsequent total cost, in USD/hr.
         /// </summary>
         [JsonProperty("DiscountUsagePrice")]
         public float? DiscountUsagePrice{ get; set; }
 
         /// <summary>
-        /// Discount price for subsequent total cost, in USD/hr.
+        /// Discount price for upfront total cost, in USD.
         /// </summary>
         [JsonProperty("DiscountFixedPrice")]
         public float? DiscountFixedPrice{ get; set; }

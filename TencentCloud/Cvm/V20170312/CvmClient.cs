@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1088";
+       private const string sdkVersion = "SDK_NET_3.0.1089";
 
         /// <summary>
         /// Client constructor.
@@ -865,7 +865,28 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+        /// This API is used to list the reserved instances purchased by the user.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public Task<DescribeReservedInstancesResponse> DescribeReservedInstances(DescribeReservedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesResponse>(req, "DescribeReservedInstances");
+        }
+
+        /// <summary>
+        /// This API is used to list the reserved instances purchased by the user.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReservedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeReservedInstancesResponse"/></returns>
+        public DescribeReservedInstancesResponse DescribeReservedInstancesSync(DescribeReservedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeReservedInstancesResponse>(req, "DescribeReservedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to describe reserved instance (RI) offerings.
         /// </summary>
         /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
         /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>
@@ -875,7 +896,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+        /// This API is used to describe reserved instance (RI) offerings.
         /// </summary>
         /// <param name="req"><see cref="DescribeReservedInstancesConfigInfosRequest"/></param>
         /// <returns><see cref="DescribeReservedInstancesConfigInfosResponse"/></returns>

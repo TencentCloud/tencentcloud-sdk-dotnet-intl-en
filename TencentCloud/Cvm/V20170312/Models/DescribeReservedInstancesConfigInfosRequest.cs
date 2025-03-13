@@ -25,19 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// zone
+        /// <li><strong>zone</li></strong>
         /// Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
         /// Type: String
         /// Required: no
         /// Valid values: list of regions/availability zones
         /// 
-        /// product-description
+        /// <li><strong>product-description</li></strong>
         /// Filters by the platform description (operating system) of the reserved instance, such as `linux`.
         /// Type: String
         /// Required: no
         /// Valid value: linux
         /// 
-        /// duration
+        /// <li><strong>duration</li></strong>
         /// Filters by the **validity** of the reserved instance, which is the purchased usage period. For example, `31536000`.
         /// Type: Integer
         /// Unit: second
