@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1089</VersionPrefix>
+    <VersionPrefix>3.0.1090</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -331,6 +331,10 @@
     <Compile Include="V20210820\Models\DescribeRealTimeTaskMetricOverviewResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRealTimeTaskSpeedRequest.cs" />
     <Compile Include="V20210820\Models\DescribeRealTimeTaskSpeedResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeReportTaskDetailRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeReportTaskDetailResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeReportTaskListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeReportTaskListResponse.cs" />
     <Compile Include="V20210820\Models\DescribeResourceManagePathTreesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeResourceManagePathTreesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRuleDimStatRequest.cs" />
@@ -446,6 +450,7 @@
     <Compile Include="V20210820\Models\DrInstanceOpsDtoPage.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskRequest.cs" />
     <Compile Include="V20210820\Models\DryRunDIOfflineTaskResponse.cs" />
+    <Compile Include="V20210820\Models\EngineTaskInfo.cs" />
     <Compile Include="V20210820\Models\EventBatchCaseDTO.cs" />
     <Compile Include="V20210820\Models\EventCaseAuditLogOptDto.cs" />
     <Compile Include="V20210820\Models\EventCaseAuditLogVOCollection.cs" />
@@ -588,6 +593,8 @@
     <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsRequest.cs" />
     <Compile Include="V20210820\Models\RemoveWorkflowDsResponse.cs" />
+    <Compile Include="V20210820\Models\ReportTaskDetail.cs" />
+    <Compile Include="V20210820\Models\ReportTaskListInfo.cs" />
     <Compile Include="V20210820\Models\ResourcePathTree.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskRequest.cs" />
     <Compile Include="V20210820\Models\ResumeIntegrationTaskResponse.cs" />
@@ -686,6 +693,7 @@
     <Compile Include="V20210820\Models\TaskByCycle.cs" />
     <Compile Include="V20210820\Models\TaskByStatus.cs" />
     <Compile Include="V20210820\Models\TaskExtInfo.cs" />
+    <Compile Include="V20210820\Models\TaskInfoVo.cs" />
     <Compile Include="V20210820\Models\TaskInnerInfo.cs" />
     <Compile Include="V20210820\Models\TaskInstanceCountDto.cs" />
     <Compile Include="V20210820\Models\TaskLockStatus.cs" />

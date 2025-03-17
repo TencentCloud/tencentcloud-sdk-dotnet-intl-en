@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1089";
+       private const string sdkVersion = "SDK_NET_3.0.1090";
 
         /// <summary>
         /// Client constructor.
@@ -2486,6 +2486,48 @@ namespace TencentCloud.Wedata.V20210820
         public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeedSync(DescribeRealTimeTaskSpeedRequest req)
         {
             return InternalRequestAsync<DescribeRealTimeTaskSpeedResponse>(req, "DescribeRealTimeTaskSpeed")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query task details for reports.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>
+        public Task<DescribeReportTaskDetailResponse> DescribeReportTaskDetail(DescribeReportTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskDetailResponse>(req, "DescribeReportTaskDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query task details for reports.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskDetailResponse"/></returns>
+        public DescribeReportTaskDetailResponse DescribeReportTaskDetailSync(DescribeReportTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskDetailResponse>(req, "DescribeReportTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the task submission list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskListRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskListResponse"/></returns>
+        public Task<DescribeReportTaskListResponse> DescribeReportTaskList(DescribeReportTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskListResponse>(req, "DescribeReportTaskList");
+        }
+
+        /// <summary>
+        /// This API is used to query the task submission list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportTaskListRequest"/></param>
+        /// <returns><see cref="DescribeReportTaskListResponse"/></returns>
+        public DescribeReportTaskListResponse DescribeReportTaskListSync(DescribeReportTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeReportTaskListResponse>(req, "DescribeReportTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

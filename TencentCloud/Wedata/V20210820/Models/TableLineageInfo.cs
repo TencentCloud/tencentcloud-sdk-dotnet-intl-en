@@ -206,6 +206,20 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("DatabaseId")]
         public string DatabaseId{ get; set; }
 
+        /// <summary>
+        /// Data source.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DataFromType")]
+        public string DataFromType{ get; set; }
+
+        /// <summary>
+        /// Collection id.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CollectJobId")]
+        public string CollectJobId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -238,6 +252,8 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+            this.SetParamSimple(map, prefix + "DataFromType", this.DataFromType);
+            this.SetParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
         }
     }
 }

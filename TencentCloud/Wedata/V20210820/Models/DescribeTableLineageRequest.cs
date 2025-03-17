@@ -25,7 +25,11 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// Query Direction, INPUT, OUTPUT, BOTH enumerated values
+        /// Enumeration value of query direction.
+        /// 
+        /// - INPUT
+        /// - OUTPUT
+        /// - BOTH
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
