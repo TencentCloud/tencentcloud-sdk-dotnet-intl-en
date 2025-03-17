@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM – Standard S1.
+        /// Subproduct name: The subcategory of a Tencent Cloud product purchased by the user, such as CVM Standard S1.
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -232,6 +232,24 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ReserveDetail")]
         public string ReserveDetail{ get; set; }
 
+        /// <summary>
+        /// the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+        /// </summary>
+        [JsonProperty("DiscountObject")]
+        public string DiscountObject{ get; set; }
+
+        /// <summary>
+        /// the discount type for the current consumption item, such as discount and contract price.
+        /// </summary>
+        [JsonProperty("DiscountType")]
+        public string DiscountType{ get; set; }
+
+        /// <summary>
+        /// supplementary description of the discount type, such as 0.2.
+        /// </summary>
+        [JsonProperty("DiscountContent")]
+        public string DiscountContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +290,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RegionType", this.RegionType);
             this.SetParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
             this.SetParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
+            this.SetParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+            this.SetParamSimple(map, prefix + "DiscountType", this.DiscountType);
+            this.SetParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
         }
     }
 }
