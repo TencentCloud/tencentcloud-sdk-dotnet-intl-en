@@ -26,9 +26,9 @@ namespace TencentCloud.Mdl.V20200326
 
    public class MdlClient : AbstractClient{
 
-       private const string endpoint = "mdl.tencentcloudapi.com";
+       private const string endpoint = "mdl.intl.tencentcloudapi.com";
        private const string version = "2020-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

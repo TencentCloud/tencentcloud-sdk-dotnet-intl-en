@@ -26,9 +26,9 @@ namespace TencentCloud.Ip.V20210409
 
    public class IpClient : AbstractClient{
 
-       private const string endpoint = "ip.tencentcloudapi.com";
+       private const string endpoint = "ip.intl.tencentcloudapi.com";
        private const string version = "2021-04-09";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

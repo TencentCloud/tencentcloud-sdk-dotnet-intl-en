@@ -26,9 +26,9 @@ namespace TencentCloud.Config.V20220802
 
    public class ConfigClient : AbstractClient{
 
-       private const string endpoint = "config.tencentcloudapi.com";
+       private const string endpoint = "config.intl.tencentcloudapi.com";
        private const string version = "2022-08-02";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

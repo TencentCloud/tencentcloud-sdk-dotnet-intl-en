@@ -26,9 +26,9 @@ namespace TencentCloud.Ses.V20201002
 
    public class SesClient : AbstractClient{
 
-       private const string endpoint = "ses.tencentcloudapi.com";
+       private const string endpoint = "ses.intl.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

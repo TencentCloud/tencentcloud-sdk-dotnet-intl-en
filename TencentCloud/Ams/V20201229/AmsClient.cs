@@ -26,9 +26,9 @@ namespace TencentCloud.Ams.V20201229
 
    public class AmsClient : AbstractClient{
 
-       private const string endpoint = "ams.tencentcloudapi.com";
+       private const string endpoint = "ams.intl.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

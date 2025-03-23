@@ -26,9 +26,9 @@ namespace TencentCloud.Mps.V20190612
 
    public class MpsClient : AbstractClient{
 
-       private const string endpoint = "mps.tencentcloudapi.com";
+       private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

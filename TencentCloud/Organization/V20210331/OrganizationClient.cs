@@ -26,9 +26,9 @@ namespace TencentCloud.Organization.V20210331
 
    public class OrganizationClient : AbstractClient{
 
-       private const string endpoint = "organization.tencentcloudapi.com";
+       private const string endpoint = "organization.intl.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

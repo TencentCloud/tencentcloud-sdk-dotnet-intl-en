@@ -26,9 +26,9 @@ namespace TencentCloud.Tcsas.V20250106
 
    public class TcsasClient : AbstractClient{
 
-       private const string endpoint = "tcsas.tencentcloudapi.com";
+       private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

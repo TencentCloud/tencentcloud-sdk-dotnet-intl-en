@@ -26,9 +26,9 @@ namespace TencentCloud.Wedata.V20210820
 
    public class WedataClient : AbstractClient{
 
-       private const string endpoint = "wedata.tencentcloudapi.com";
+       private const string endpoint = "wedata.intl.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

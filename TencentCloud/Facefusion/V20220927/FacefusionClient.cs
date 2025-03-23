@@ -26,9 +26,9 @@ namespace TencentCloud.Facefusion.V20220927
 
    public class FacefusionClient : AbstractClient{
 
-       private const string endpoint = "facefusion.tencentcloudapi.com";
+       private const string endpoint = "facefusion.intl.tencentcloudapi.com";
        private const string version = "2022-09-27";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

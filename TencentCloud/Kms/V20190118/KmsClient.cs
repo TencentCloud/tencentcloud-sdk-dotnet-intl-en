@@ -26,9 +26,9 @@ namespace TencentCloud.Kms.V20190118
 
    public class KmsClient : AbstractClient{
 
-       private const string endpoint = "kms.tencentcloudapi.com";
+       private const string endpoint = "kms.intl.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

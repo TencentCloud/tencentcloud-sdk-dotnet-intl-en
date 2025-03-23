@@ -26,9 +26,9 @@ namespace TencentCloud.Dc.V20180410
 
    public class DcClient : AbstractClient{
 
-       private const string endpoint = "dc.tencentcloudapi.com";
+       private const string endpoint = "dc.intl.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

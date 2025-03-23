@@ -26,9 +26,9 @@ namespace TencentCloud.Dlc.V20210125
 
    public class DlcClient : AbstractClient{
 
-       private const string endpoint = "dlc.tencentcloudapi.com";
+       private const string endpoint = "dlc.intl.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

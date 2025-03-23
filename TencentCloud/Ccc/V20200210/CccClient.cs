@@ -26,9 +26,9 @@ namespace TencentCloud.Ccc.V20200210
 
    public class CccClient : AbstractClient{
 
-       private const string endpoint = "ccc.tencentcloudapi.com";
+       private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

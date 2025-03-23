@@ -26,9 +26,9 @@ namespace TencentCloud.Tat.V20201028
 
    public class TatClient : AbstractClient{
 
-       private const string endpoint = "tat.tencentcloudapi.com";
+       private const string endpoint = "tat.intl.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

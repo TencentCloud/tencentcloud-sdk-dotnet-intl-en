@@ -26,9 +26,9 @@ namespace TencentCloud.Sqlserver.V20180328
 
    public class SqlserverClient : AbstractClient{
 
-       private const string endpoint = "sqlserver.tencentcloudapi.com";
+       private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

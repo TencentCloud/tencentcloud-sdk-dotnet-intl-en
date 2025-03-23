@@ -26,9 +26,9 @@ namespace TencentCloud.Advisor.V20200721
 
    public class AdvisorClient : AbstractClient{
 
-       private const string endpoint = "advisor.tencentcloudapi.com";
+       private const string endpoint = "advisor.intl.tencentcloudapi.com";
        private const string version = "2020-07-21";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

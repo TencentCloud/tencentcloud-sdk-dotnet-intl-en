@@ -26,9 +26,9 @@ namespace TencentCloud.Tem.V20210701
 
    public class TemClient : AbstractClient{
 
-       private const string endpoint = "tem.tencentcloudapi.com";
+       private const string endpoint = "tem.intl.tencentcloudapi.com";
        private const string version = "2021-07-01";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

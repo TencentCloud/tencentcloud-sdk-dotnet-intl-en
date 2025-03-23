@@ -26,9 +26,9 @@ namespace TencentCloud.Yunjing.V20180228
 
    public class YunjingClient : AbstractClient{
 
-       private const string endpoint = "yunjing.tencentcloudapi.com";
+       private const string endpoint = "yunjing.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

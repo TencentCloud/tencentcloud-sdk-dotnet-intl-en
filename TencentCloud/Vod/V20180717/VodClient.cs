@@ -26,9 +26,9 @@ namespace TencentCloud.Vod.V20180717
 
    public class VodClient : AbstractClient{
 
-       private const string endpoint = "vod.tencentcloudapi.com";
+       private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

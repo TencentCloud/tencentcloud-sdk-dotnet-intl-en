@@ -26,9 +26,9 @@ namespace TencentCloud.Tts.V20190823
 
    public class TtsClient : AbstractClient{
 
-       private const string endpoint = "tts.tencentcloudapi.com";
+       private const string endpoint = "tts.intl.tencentcloudapi.com";
        private const string version = "2019-08-23";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

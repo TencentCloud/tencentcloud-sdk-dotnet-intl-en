@@ -26,9 +26,9 @@ namespace TencentCloud.Teo.V20220901
 
    public class TeoClient : AbstractClient{
 
-       private const string endpoint = "teo.tencentcloudapi.com";
+       private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
@@ -1920,6 +1920,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the web and security protection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public Task<DescribeSecurityPolicyResponse> DescribeSecurityPolicy(DescribeSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityPolicyResponse>(req, "DescribeSecurityPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the web and security protection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
+        public DescribeSecurityPolicyResponse DescribeSecurityPolicySync(DescribeSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityPolicyResponse>(req, "DescribeSecurityPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

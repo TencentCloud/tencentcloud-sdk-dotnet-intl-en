@@ -90,6 +90,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("SlowPostConfig")]
         public SlowPostConfig SlowPostConfig{ get; set; }
 
+        /// <summary>
+        /// Detect the length limit configuration, output parameter only.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("DetectLengthLimitConfig")]
+        public DetectLengthLimitConfig DetectLengthLimitConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +113,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
             this.SetParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
             this.SetParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
+            this.SetParamObj(map, prefix + "DetectLengthLimitConfig.", this.DetectLengthLimitConfig);
         }
     }
 }

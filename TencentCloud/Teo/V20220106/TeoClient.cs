@@ -26,9 +26,9 @@ namespace TencentCloud.Teo.V20220106
 
    public class TeoClient : AbstractClient{
 
-       private const string endpoint = "teo.tencentcloudapi.com";
+       private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.

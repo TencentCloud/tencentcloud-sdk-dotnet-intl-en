@@ -26,9 +26,9 @@ namespace TencentCloud.Cdwdoris.V20211228
 
    public class CdwdorisClient : AbstractClient{
 
-       private const string endpoint = "cdwdoris.tencentcloudapi.com";
+       private const string endpoint = "cdwdoris.intl.tencentcloudapi.com";
        private const string version = "2021-12-28";
-       private const string sdkVersion = "SDK_NET_3.0.1094";
+       private const string sdkVersion = "SDK_NET_3.0.1095";
 
         /// <summary>
         /// Client constructor.
