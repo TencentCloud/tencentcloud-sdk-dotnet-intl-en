@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1095";
+       private const string sdkVersion = "SDK_NET_3.0.1096";
 
         /// <summary>
         /// Client constructor.
@@ -2765,6 +2765,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyL7AccRuleResponse ModifyL7AccRuleSync(ModifyL7AccRuleRequest req)
         {
             return InternalRequestAsync<ModifyL7AccRuleResponse>(req, "ModifyL7AccRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface is used to modify the priority of the rule list in the [Rule Engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). This interface requires the complete rule ID list under the site ID to be passed in. The rule ID list can be obtained through the [Query Seven-Layer Acceleration Rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1) interface. The final priority order will be adjusted to the order of the rule ID list, and will be executed from front to back.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
+        public Task<ModifyL7AccRulePriorityResponse> ModifyL7AccRulePriority(ModifyL7AccRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRulePriorityResponse>(req, "ModifyL7AccRulePriority");
+        }
+
+        /// <summary>
+        /// This interface is used to modify the priority of the rule list in the [Rule Engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). This interface requires the complete rule ID list under the site ID to be passed in. The rule ID list can be obtained through the [Query Seven-Layer Acceleration Rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1) interface. The final priority order will be adjusted to the order of the rule ID list, and will be executed from front to back.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
+        public ModifyL7AccRulePriorityResponse ModifyL7AccRulePrioritySync(ModifyL7AccRulePriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyL7AccRulePriorityResponse>(req, "ModifyL7AccRulePriority")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
