@@ -125,40 +125,46 @@ namespace TencentCloud.Tests
 
         private TencentCloud.Common.CommonClient CreateClient()
         {
-            // 必要步骤：
-            // 实例化一个认证对象，入参需要传入腾讯云账户密钥对secretId，secretKey。
-            // 这里采用的是从环境变量读取的方式，需要在环境变量中先设置这两个值。
-            // 你也可以直接在代码中写死密钥对，但是小心不要将代码复制、上传或者分享给他人，
-            // 以免泄露密钥对危及你的财产安全。
+            // Necessary steps:
+            // Instantiate an authentication object.
+            // The input parameters need to be the Tencent Cloud account key pair secretId and secretKey.
+            // The method used here is to read from environment variables,
+            // and these two values need to be set in the environment variables first.
+            // You can also write the key pair directly in the code, but be careful not to copy, upload or share the code with others.
+            // To avoid disclosing the key pair and endangering the security of your property.
             var cred = new Credential
             {
                 SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                 SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
             };
 
-            // 实例化一个client选项，可选的，没有特殊需求可以跳过
+            // Instantiate a ClientProfile, optional, can be skipped if there are no special requirements
             ClientProfile clientProfile = new ClientProfile();
-            // 指定签名算法(默认为HmacSHA256)
+            // Specify the signature algorithm (default is HmacSHA256)
             clientProfile.SignMethod = ClientProfile.SIGN_TC3SHA256;
-            // 非必要步骤
-            // 实例化一个客户端配置对象，可以指定超时时间等配置
+            // Optional
+            // Instantiate a client configuration object, which can specify configurations such as timeout and so on.
             HttpProfile httpProfile = new HttpProfile();
-            // SDK默认使用POST方法。
-            // 如果你一定要使用GET方法，可以在这里设置。GET方法无法处理一些较大的请求。
+            // The SDK uses the POST method by default.
+            // If you must use the GET method, you can set it here. The GET method cannot handle some larger requests.
             httpProfile.ReqMethod = "GET";
-            // SDK有默认的超时时间，非必要请不要进行调整。
-            // 如有需要请在代码中查阅以获取最新的默认值。
+            // The SDK has a default timeout, please do not adjust it unless necessary.
+            // Check in the code for the latest default values if necessary.
             httpProfile.Timeout = 10; // 请求连接超时时间，单位为秒(默认60秒)
-            // SDK会自动指定域名。通常是不需要特地指定域名的，但是如果你访问的是金融区的服务，
-            // 则必须手动指定域名，例如云服务器的上海金融区域名： cvm.ap-shanghai-fsi.tencentcloudapi.com
+            // The SDK will automatically specify the domain name.
+            // Usually there is no need to specify a domain name,
+            // but if you are accessing services in the financial district,
+            // You must manually specify the domain name, for example,
+            // the Shanghai financial region name of the cloud server: cvm.ap-shanghai-fsi.tencentcloudapi.com
             httpProfile.Endpoint = "cvm.tencentcloudapi.com";
-            // 代理服务器，当你的环境下有代理服务器时设定
+            // Proxy server, set when there is a proxy server in your environment
             httpProfile.WebProxy = Environment.GetEnvironmentVariable("HTTPS_PROXY");
 
             clientProfile.HttpProfile = httpProfile;
 
-            // 实例化要请求产品(以cvm为例)的client对象
-            // 第二个参数是地域信息，可以直接填写字符串ap-guangzhou，或者引用预设的常量，clientProfile是可选的
+            // Instantiate the client object to request the product (take cvm as an example)
+            // The second parameter is regional information. You can directly fill in the string ap-guangzhou,
+            // or refer to the preset constants. clientProfile is optional.
             return new TencentCloud.Common.CommonClient(
                 "cvm", "2017-03-12", cred, "ap-guangzhou", clientProfile);
         }
