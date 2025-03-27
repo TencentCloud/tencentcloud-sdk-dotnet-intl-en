@@ -72,7 +72,7 @@ namespace TencentCloudExamples
                 httpProfile.Timeout = 10; // Request connection timeout period in seconds (60 seconds by default)
                 // The SDK automatically specifies the domain name. Generally, you don't need to specify a domain name, but if you are accessing a service in a finance availability zone,
                 // you have to manually specify the domain name, such as cvm.ap-shanghai-fsi.tencentcloudapi.com for the Shanghai Finance availability zone in the CVM
-                httpProfile.Endpoint = ("cvm.tencentcloudapi.com");
+                httpProfile.Endpoint = ("cvm.intl.tencentcloudapi.com");
                 // Proxy server. Set it when there is a proxy server in your environment
                 httpProfile.WebProxy = Environment.GetEnvironmentVariable("HTTPS_PROXY");
 
