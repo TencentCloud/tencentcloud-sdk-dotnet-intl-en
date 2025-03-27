@@ -8,7 +8,7 @@ Tencent Cloud SDK for .NET helps .NET developers debug and use TencentCloud APIs
 
 1. Dependent environment: .NET Framework 4.5+ and .NET Core 2.1.
 2. Activate your product in the Tencent Cloud Console.
-3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
+3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.intl.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 4. Download the relevant materials and configure the relevant files.
 
 # Installation
@@ -72,7 +72,7 @@ namespace TencentCloudExamples
                 httpProfile.Timeout = 10; // Request connection timeout period in seconds (60 seconds by default)
                 // The SDK automatically specifies the domain name. Generally, you don't need to specify a domain name, but if you are accessing a service in a finance availability zone,
                 // you have to manually specify the domain name, such as cvm.ap-shanghai-fsi.tencentcloudapi.com for the Shanghai Finance availability zone in the CVM
-                httpProfile.Endpoint = ("cvm.tencentcloudapi.com");
+                httpProfile.Endpoint = ("cvm.intl.tencentcloudapi.com");
                 // Proxy server. Set it when there is a proxy server in your environment
                 httpProfile.WebProxy = Environment.GetEnvironmentVariable("HTTPS_PROXY");
 
@@ -148,3 +148,7 @@ In the example, as it is a console application, you can call the async APIs sync
 When developing ASP applications or Windows Forms applications, you cannot call the async APIs synchronously in the response method of UI controls; otherwise, the UI will stop responding.
 The solution is to change the response method of the UI controls to async and pay attention to the sync context.
 In addition, as async call immediately returns control to the user, it is prone to cause the user to click multiple times or perform unexpected operations. Such problems should be avoided in the program.
+
+# Compliance Notice
+
+Please prioritize using the ​default domain names configured in the SDK for each product. If using other domains, note that ​overseas domains may pose ​data compliance risks.
