@@ -8,7 +8,7 @@ Tencent Cloud SDK for .NET helps .NET developers debug and use TencentCloud APIs
 
 1. Dependent environment: .NET Framework 4.5+ and .NET Core 2.1.
 2. Activate your product in the Tencent Cloud Console.
-3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
+3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.intl.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.intl.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 4. Download the relevant materials and configure the relevant files.
 
 # Installation
