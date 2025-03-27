@@ -26,9 +26,9 @@ namespace TencentCloud.Sts.V20180813
 
    public class StsClient : AbstractClient{
 
-       private const string endpoint = "sts.tencentcloudapi.com";
+       private const string endpoint = "sts.intl.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

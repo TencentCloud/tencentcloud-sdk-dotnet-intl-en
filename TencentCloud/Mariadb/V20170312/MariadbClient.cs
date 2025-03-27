@@ -26,9 +26,9 @@ namespace TencentCloud.Mariadb.V20170312
 
    public class MariadbClient : AbstractClient{
 
-       private const string endpoint = "mariadb.tencentcloudapi.com";
+       private const string endpoint = "mariadb.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Controlcenter.V20230110
 
    public class ControlcenterClient : AbstractClient{
 
-       private const string endpoint = "controlcenter.tencentcloudapi.com";
+       private const string endpoint = "controlcenter.intl.tencentcloudapi.com";
        private const string version = "2023-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

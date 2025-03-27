@@ -26,9 +26,9 @@ namespace TencentCloud.Tdmq.V20200217
 
    public class TdmqClient : AbstractClient{
 
-       private const string endpoint = "tdmq.tencentcloudapi.com";
+       private const string endpoint = "tdmq.intl.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

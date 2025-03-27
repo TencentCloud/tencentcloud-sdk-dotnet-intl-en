@@ -26,9 +26,9 @@ namespace TencentCloud.Privatedns.V20201028
 
    public class PrivatednsClient : AbstractClient{
 
-       private const string endpoint = "privatedns.tencentcloudapi.com";
+       private const string endpoint = "privatedns.intl.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

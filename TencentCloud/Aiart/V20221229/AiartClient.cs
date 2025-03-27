@@ -26,9 +26,9 @@ namespace TencentCloud.Aiart.V20221229
 
    public class AiartClient : AbstractClient{
 
-       private const string endpoint = "aiart.tencentcloudapi.com";
+       private const string endpoint = "aiart.intl.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

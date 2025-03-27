@@ -26,9 +26,9 @@ namespace TencentCloud.Cwp.V20180228
 
    public class CwpClient : AbstractClient{
 
-       private const string endpoint = "cwp.tencentcloudapi.com";
+       private const string endpoint = "cwp.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Ocr.V20181119
 
    public class OcrClient : AbstractClient{
 
-       private const string endpoint = "ocr.tencentcloudapi.com";
+       private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.
@@ -450,6 +450,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeBrazilDriverLicenseOCRResponse RecognizeBrazilDriverLicenseOCRSync(RecognizeBrazilDriverLicenseOCRRequest req)
         {
             return InternalRequestAsync<RecognizeBrazilDriverLicenseOCRResponse>(req, "RecognizeBrazilDriverLicenseOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilIDCardOCRResponse"/></returns>
+        public Task<RecognizeBrazilIDCardOCRResponse> RecognizeBrazilIDCardOCR(RecognizeBrazilIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilIDCardOCRResponse>(req, "RecognizeBrazilIDCardOCR");
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilIDCardOCRResponse"/></returns>
+        public RecognizeBrazilIDCardOCRResponse RecognizeBrazilIDCardOCRSync(RecognizeBrazilIDCardOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilIDCardOCRResponse>(req, "RecognizeBrazilIDCardOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

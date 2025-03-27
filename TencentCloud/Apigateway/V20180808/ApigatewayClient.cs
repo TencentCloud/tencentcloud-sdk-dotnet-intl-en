@@ -26,9 +26,9 @@ namespace TencentCloud.Apigateway.V20180808
 
    public class ApigatewayClient : AbstractClient{
 
-       private const string endpoint = "apigateway.tencentcloudapi.com";
+       private const string endpoint = "apigateway.intl.tencentcloudapi.com";
        private const string version = "2018-08-08";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

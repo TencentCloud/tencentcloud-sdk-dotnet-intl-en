@@ -26,9 +26,9 @@ namespace TencentCloud.Tiw.V20190919
 
    public class TiwClient : AbstractClient{
 
-       private const string endpoint = "tiw.tencentcloudapi.com";
+       private const string endpoint = "tiw.intl.tencentcloudapi.com";
        private const string version = "2019-09-19";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Iotcloud.V20210408
 
    public class IotcloudClient : AbstractClient{
 
-       private const string endpoint = "iotcloud.tencentcloudapi.com";
+       private const string endpoint = "iotcloud.intl.tencentcloudapi.com";
        private const string version = "2021-04-08";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Eb.V20210416
 
    public class EbClient : AbstractClient{
 
-       private const string endpoint = "eb.tencentcloudapi.com";
+       private const string endpoint = "eb.intl.tencentcloudapi.com";
        private const string version = "2021-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

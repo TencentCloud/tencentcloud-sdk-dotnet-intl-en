@@ -26,9 +26,9 @@ namespace TencentCloud.Ssl.V20191205
 
    public class SslClient : AbstractClient{
 
-       private const string endpoint = "ssl.tencentcloudapi.com";
+       private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

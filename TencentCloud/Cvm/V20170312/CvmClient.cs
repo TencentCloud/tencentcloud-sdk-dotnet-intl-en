@@ -26,9 +26,9 @@ namespace TencentCloud.Cvm.V20170312
 
    public class CvmClient : AbstractClient{
 
-       private const string endpoint = "cvm.tencentcloudapi.com";
+       private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.
@@ -700,6 +700,27 @@ namespace TencentCloud.Cvm.V20170312
         public DescribeInstancesResponse DescribeInstancesSync(DescribeInstancesRequest req)
         {
             return InternalRequestAsync<DescribeInstancesResponse>(req, "DescribeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the attributes of specified instances. Currently, it supports querying the custom data UserData of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public Task<DescribeInstancesAttributesResponse> DescribeInstancesAttributes(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the attributes of specified instances. Currently, it supports querying the custom data UserData of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesAttributesRequest"/></param>
+        /// <returns><see cref="DescribeInstancesAttributesResponse"/></returns>
+        public DescribeInstancesAttributesResponse DescribeInstancesAttributesSync(DescribeInstancesAttributesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesAttributesResponse>(req, "DescribeInstancesAttributes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

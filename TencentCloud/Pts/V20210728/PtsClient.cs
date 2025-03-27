@@ -26,9 +26,9 @@ namespace TencentCloud.Pts.V20210728
 
    public class PtsClient : AbstractClient{
 
-       private const string endpoint = "pts.tencentcloudapi.com";
+       private const string endpoint = "pts.intl.tencentcloudapi.com";
        private const string version = "2021-07-28";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

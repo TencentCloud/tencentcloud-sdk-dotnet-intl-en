@@ -26,9 +26,9 @@ namespace TencentCloud.Ecdn.V20191012
 
    public class EcdnClient : AbstractClient{
 
-       private const string endpoint = "ecdn.tencentcloudapi.com";
+       private const string endpoint = "ecdn.intl.tencentcloudapi.com";
        private const string version = "2019-10-12";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

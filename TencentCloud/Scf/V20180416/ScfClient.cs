@@ -26,9 +26,9 @@ namespace TencentCloud.Scf.V20180416
 
    public class ScfClient : AbstractClient{
 
-       private const string endpoint = "scf.tencentcloudapi.com";
+       private const string endpoint = "scf.intl.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Tchd.V20230306
 
    public class TchdClient : AbstractClient{
 
-       private const string endpoint = "tchd.tencentcloudapi.com";
+       private const string endpoint = "tchd.intl.tencentcloudapi.com";
        private const string version = "2023-03-06";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Dayu.V20180709
 
    public class DayuClient : AbstractClient{
 
-       private const string endpoint = "dayu.tencentcloudapi.com";
+       private const string endpoint = "dayu.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

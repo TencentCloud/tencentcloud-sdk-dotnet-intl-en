@@ -26,9 +26,9 @@ namespace TencentCloud.Faceid.V20180301
 
    public class FaceidClient : AbstractClient{
 
-       private const string endpoint = "faceid.tencentcloudapi.com";
+       private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

@@ -26,9 +26,9 @@ namespace TencentCloud.Rum.V20210622
 
    public class RumClient : AbstractClient{
 
-       private const string endpoint = "rum.tencentcloudapi.com";
+       private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

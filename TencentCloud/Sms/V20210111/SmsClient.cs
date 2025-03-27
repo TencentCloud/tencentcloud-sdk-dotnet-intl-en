@@ -26,9 +26,9 @@ namespace TencentCloud.Sms.V20210111
 
    public class SmsClient : AbstractClient{
 
-       private const string endpoint = "sms.tencentcloudapi.com";
+       private const string endpoint = "sms.intl.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

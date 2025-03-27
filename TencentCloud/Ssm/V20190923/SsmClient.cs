@@ -26,9 +26,9 @@ namespace TencentCloud.Ssm.V20190923
 
    public class SsmClient : AbstractClient{
 
-       private const string endpoint = "ssm.tencentcloudapi.com";
+       private const string endpoint = "ssm.intl.tencentcloudapi.com";
        private const string version = "2019-09-23";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.

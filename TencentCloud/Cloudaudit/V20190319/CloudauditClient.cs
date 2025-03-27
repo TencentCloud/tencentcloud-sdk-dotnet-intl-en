@@ -26,9 +26,9 @@ namespace TencentCloud.Cloudaudit.V20190319
 
    public class CloudauditClient : AbstractClient{
 
-       private const string endpoint = "cloudaudit.tencentcloudapi.com";
+       private const string endpoint = "cloudaudit.intl.tencentcloudapi.com";
        private const string version = "2019-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.1092";
+       private const string sdkVersion = "SDK_NET_3.0.1098";
 
         /// <summary>
         /// Client constructor.
