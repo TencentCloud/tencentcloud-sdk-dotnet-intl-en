@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1100";
+       private const string sdkVersion = "SDK_NET_3.0.1101";
 
         /// <summary>
         /// Client constructor.
@@ -690,6 +690,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryDirectCustomersCreditResponse QueryDirectCustomersCreditSync(QueryDirectCustomersCreditRequest req)
         {
             return InternalRequestAsync<QueryDirectCustomersCreditResponse>(req, "QueryDirectCustomersCredit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query usage information of invitation link. Once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
+        /// Invokable role types: Distributor, Second-level reseller, Reseller.
+        /// </summary>
+        /// <param name="req"><see cref="QueryInvitationInfoRequest"/></param>
+        /// <returns><see cref="QueryInvitationInfoResponse"/></returns>
+        public Task<QueryInvitationInfoResponse> QueryInvitationInfo(QueryInvitationInfoRequest req)
+        {
+            return InternalRequestAsync<QueryInvitationInfoResponse>(req, "QueryInvitationInfo");
+        }
+
+        /// <summary>
+        /// Query usage information of invitation link. Once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
+        /// Invokable role types: Distributor, Second-level reseller, Reseller.
+        /// </summary>
+        /// <param name="req"><see cref="QueryInvitationInfoRequest"/></param>
+        /// <returns><see cref="QueryInvitationInfoResponse"/></returns>
+        public QueryInvitationInfoResponse QueryInvitationInfoSync(QueryInvitationInfoRequest req)
+        {
+            return InternalRequestAsync<QueryInvitationInfoResponse>(req, "QueryInvitationInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

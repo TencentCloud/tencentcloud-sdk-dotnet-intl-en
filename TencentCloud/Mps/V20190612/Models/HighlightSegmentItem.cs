@@ -49,6 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentTags")]
         public string[] SegmentTags{ get; set; }
 
+        /// <summary>
+        /// The live streaming segment corresponds to the live start time point, in the ISO date format.	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

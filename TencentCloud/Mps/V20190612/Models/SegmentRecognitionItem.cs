@@ -89,6 +89,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// Specifies the character ID.
+        /// </summary>
+        [JsonProperty("PersonId")]
+        public string PersonId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "PersonId", this.PersonId);
         }
     }
 }

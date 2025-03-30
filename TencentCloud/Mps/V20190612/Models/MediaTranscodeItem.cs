@@ -98,6 +98,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
+        /// <summary>
+        /// Enhancement items used for video transcoding. Descriptions of enhancement items:
+        /// <li>hdr: HDR configuration</li>
+        /// <li>wd_fps: configuration of frame interpolation for higher frame rate</li>
+        /// <li>video_super_resolution: 	super-resolution configuration</li>
+        /// <li>repair: comprehensive enhancement configuration</li>
+        /// <li>denoise: video denoising configuration</li>
+        /// <Li>color_enhance: color enhancement configuration</li>
+        /// <Li>scratch: scratch removal configuration</li>
+        /// <li>artifact: artifact (glitch) removal configuration</li>
+        /// <li>sharp: detail enhancement configuration</li>
+        /// <Li>low_light: low-light enhancement configuration</li>
+        /// <Li>face_enhance: face enhancement configuration</li>
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("CallBackExtInfo")]
+        public string CallBackExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +134,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+            this.SetParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
         }
     }
 }

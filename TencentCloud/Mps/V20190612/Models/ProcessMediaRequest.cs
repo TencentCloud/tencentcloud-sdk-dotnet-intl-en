@@ -120,6 +120,27 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
+        /// <summary>
+        /// Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Smart subtitle task.
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
+        /// Whether to skip metadata acquisition. Valid values:
+        /// 0: do not skip
+        /// 1: skip
+        /// Default value: 0		
+        /// </summary>
+        [JsonProperty("SkipMateData")]
+        public long? SkipMateData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +161,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+            this.SetParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
         }
     }
 }

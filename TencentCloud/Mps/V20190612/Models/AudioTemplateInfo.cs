@@ -74,6 +74,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
+        /// <summary>
+        /// Merge audio track information.
+        /// This field only takes effec in adaptive bitrate transcoding.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("TrackChannelInfo")]
+        public AudioTrackChannelInfo TrackChannelInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +92,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
         }
     }
 }

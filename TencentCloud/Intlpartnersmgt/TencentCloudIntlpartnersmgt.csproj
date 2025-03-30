@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9E1BD561-ED16-31A5-98EE-F902EDDA0693}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1100</VersionPrefix>
+    <VersionPrefix>3.0.1101</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,9 @@
     <Compile Include="V20220928\Models\QueryDirectCustomersCreditData.cs" />
     <Compile Include="V20220928\Models\QueryDirectCustomersCreditRequest.cs" />
     <Compile Include="V20220928\Models\QueryDirectCustomersCreditResponse.cs" />
+    <Compile Include="V20220928\Models\QueryInvitationInfoData.cs" />
+    <Compile Include="V20220928\Models\QueryInvitationInfoRequest.cs" />
+    <Compile Include="V20220928\Models\QueryInvitationInfoResponse.cs" />
     <Compile Include="V20220928\Models\QueryPartnerCreditRequest.cs" />
     <Compile Include="V20220928\Models\QueryPartnerCreditResponse.cs" />
     <Compile Include="V20220928\Models\QueryPendingClientsV2Request.cs" />

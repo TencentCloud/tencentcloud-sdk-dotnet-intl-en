@@ -25,9 +25,12 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The encryption type.
-        /// <li>`simpleaes`: AES-128 encryption.</li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Encryption type.
+        /// <li>simpleaes: AES-128 encryption</li>
+        /// <li> widevine</li>
+        /// <li>fairplay: not supported for DASH streams</li>
+        /// <li> playready</li>
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -39,6 +42,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }
 
+        /// <summary>
+        /// Information about FairPlay, WideVine, and PlayReady encryption.
+        /// </summary>
+        [JsonProperty("SpekeDrm")]
+        public SpekeDrm SpekeDrm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "SimpleAesDrm.", this.SimpleAesDrm);
+            this.SetParamObj(map, prefix + "SpekeDrm.", this.SpekeDrm);
         }
     }
 }

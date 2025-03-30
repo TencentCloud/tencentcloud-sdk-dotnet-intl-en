@@ -52,6 +52,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
+        /// <summary>
+        /// List of audio parameter information.
+        /// The parameter array has a maximum length of 64.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AudioList")]
+        public AudioTemplateInfo[] AudioList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "Video.", this.Video);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+            this.SetParamArrayObj(map, prefix + "AudioList.", this.AudioList);
         }
     }
 }

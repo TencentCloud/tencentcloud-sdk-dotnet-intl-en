@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1100";
+       private const string sdkVersion = "SDK_NET_3.0.1101";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplateSync(CreateAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<CreateAnimatedGraphicsTemplateResponse>(req, "CreateAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrHotwordsRequest"/></param>
+        /// <returns><see cref="CreateAsrHotwordsResponse"/></returns>
+        public Task<CreateAsrHotwordsResponse> CreateAsrHotwords(CreateAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<CreateAsrHotwordsResponse>(req, "CreateAsrHotwords");
+        }
+
+        /// <summary>
+        /// This API is used to create a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAsrHotwordsRequest"/></param>
+        /// <returns><see cref="CreateAsrHotwordsResponse"/></returns>
+        public CreateAsrHotwordsResponse CreateAsrHotwordsSync(CreateAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<CreateAsrHotwordsResponse>(req, "CreateAsrHotwords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -303,6 +324,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
         {
             return InternalRequestAsync<CreateScheduleResponse>(req, "CreateSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a custom smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartSubtitleTemplateResponse"/></returns>
+        public Task<CreateSmartSubtitleTemplateResponse> CreateSmartSubtitleTemplate(CreateSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartSubtitleTemplateResponse>(req, "CreateSmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a custom smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartSubtitleTemplateResponse"/></returns>
+        public CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplateSync(CreateSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartSubtitleTemplateResponse>(req, "CreateSmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -522,6 +564,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to delete a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DeleteAsrHotwordsResponse"/></returns>
+        public Task<DeleteAsrHotwordsResponse> DeleteAsrHotwords(DeleteAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrHotwordsResponse>(req, "DeleteAsrHotwords");
+        }
+
+        /// <summary>
+        /// This API is used to delete a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DeleteAsrHotwordsResponse"/></returns>
+        public DeleteAsrHotwordsResponse DeleteAsrHotwordsSync(DeleteAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DeleteAsrHotwordsResponse>(req, "DeleteAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom content moderation template.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
@@ -665,6 +728,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
         {
             return InternalRequestAsync<DeleteScheduleResponse>(req, "DeleteSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartSubtitleTemplateResponse"/></returns>
+        public Task<DeleteSmartSubtitleTemplateResponse> DeleteSmartSubtitleTemplate(DeleteSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartSubtitleTemplateResponse>(req, "DeleteSmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartSubtitleTemplateResponse"/></returns>
+        public DeleteSmartSubtitleTemplateResponse DeleteSmartSubtitleTemplateSync(DeleteSmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartSubtitleTemplateResponse>(req, "DeleteSmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -858,6 +942,48 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsResponse"/></returns>
+        public Task<DescribeAsrHotwordsResponse> DescribeAsrHotwords(DescribeAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsResponse>(req, "DescribeAsrHotwords");
+        }
+
+        /// <summary>
+        /// This API is used to query a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsResponse"/></returns>
+        public DescribeAsrHotwordsResponse DescribeAsrHotwordsSync(DescribeAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsResponse>(req, "DescribeAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the hotword lexicon list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsListRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsListResponse"/></returns>
+        public Task<DescribeAsrHotwordsListResponse> DescribeAsrHotwordsList(DescribeAsrHotwordsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsListResponse>(req, "DescribeAsrHotwordsList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the hotword lexicon list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsrHotwordsListRequest"/></param>
+        /// <returns><see cref="DescribeAsrHotwordsListResponse"/></returns>
+        public DescribeAsrHotwordsListResponse DescribeAsrHotwordsListSync(DescribeAsrHotwordsListRequest req)
+        {
+            return InternalRequestAsync<DescribeAsrHotwordsListResponse>(req, "DescribeAsrHotwordsList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1022,6 +1148,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
         {
             return InternalRequestAsync<DescribeSchedulesResponse>(req, "DescribeSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of smart subtitle templates based on template unique identifier. The returned result includes all matching user-defined smart subtitle templates and system preset smart subtitle templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartSubtitleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartSubtitleTemplatesResponse"/></returns>
+        public Task<DescribeSmartSubtitleTemplatesResponse> DescribeSmartSubtitleTemplates(DescribeSmartSubtitleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartSubtitleTemplatesResponse>(req, "DescribeSmartSubtitleTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of smart subtitle templates based on template unique identifier. The returned result includes all matching user-defined smart subtitle templates and system preset smart subtitle templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartSubtitleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartSubtitleTemplatesResponse"/></returns>
+        public DescribeSmartSubtitleTemplatesResponse DescribeSmartSubtitleTemplatesSync(DescribeSmartSubtitleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartSubtitleTemplatesResponse>(req, "DescribeSmartSubtitleTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1457,6 +1604,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to update a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAsrHotwordsRequest"/></param>
+        /// <returns><see cref="ModifyAsrHotwordsResponse"/></returns>
+        public Task<ModifyAsrHotwordsResponse> ModifyAsrHotwords(ModifyAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<ModifyAsrHotwordsResponse>(req, "ModifyAsrHotwords");
+        }
+
+        /// <summary>
+        /// This API is used to update a smart subtitle hotword lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAsrHotwordsRequest"/></param>
+        /// <returns><see cref="ModifyAsrHotwordsResponse"/></returns>
+        public ModifyAsrHotwordsResponse ModifyAsrHotwordsSync(ModifyAsrHotwordsRequest req)
+        {
+            return InternalRequestAsync<ModifyAsrHotwordsResponse>(req, "ModifyAsrHotwords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a custom content moderation template.
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
@@ -1600,6 +1768,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
         {
             return InternalRequestAsync<ModifyScheduleResponse>(req, "ModifySchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartSubtitleTemplateResponse"/></returns>
+        public Task<ModifySmartSubtitleTemplateResponse> ModifySmartSubtitleTemplate(ModifySmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartSubtitleTemplateResponse>(req, "ModifySmartSubtitleTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined smart subtitle template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartSubtitleTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartSubtitleTemplateResponse"/></returns>
+        public ModifySmartSubtitleTemplateResponse ModifySmartSubtitleTemplateSync(ModifySmartSubtitleTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartSubtitleTemplateResponse>(req, "ModifySmartSubtitleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1796,18 +1985,19 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-        /// 1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
-        /// 2. Animated image generating;
-        /// 3. Screenshot taking at specified time points;
-        /// 4. Sampled screenshot taking;
-        /// 5. Sprite screenshot taking;
-        /// 6. Transcoding to adaptive bitrate streaming;
-        /// 7. Intelligent auditing (porn detection and sensitive information detection);
-        /// 8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
-        /// 9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
-        /// 
+        /// This API is used to initiate a processing task for video URLs or media files in COS. Features include:
+        /// 1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement).
+        /// 2. Video-to-GIF conversion.
+        /// 3. Time point screenshot of videos.
+        /// 4. Sampled screenshot of videos.
+        /// 5. Image sprite of videos.
+        /// 6. Adaptive bitrate stream conversion for videos.
+        /// 7. Intelligent content moderation (pornography detection and sensitive information detection).
+        /// 8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+        /// 9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
         /// 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
+        /// 
+        /// 11. Smart subtitle (full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -1817,18 +2007,19 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-        /// 1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement);
-        /// 2. Animated image generating;
-        /// 3. Screenshot taking at specified time points;
-        /// 4. Sampled screenshot taking;
-        /// 5. Sprite screenshot taking;
-        /// 6. Transcoding to adaptive bitrate streaming;
-        /// 7. Intelligent auditing (porn detection and sensitive information detection);
-        /// 8. Intelligent analysis (tagging, classification, thumbnail generating, frame-by-frame tagging, video splitting, highlights generating, opening and closing segments recognition, and game timestamping);
-        /// 9. Intelligent identification (face, full text, text keyword, full speech, speech keyword, speech translation, and object recognition);
-        /// 
+        /// This API is used to initiate a processing task for video URLs or media files in COS. Features include:
+        /// 1. Video transcoding (standard transcoding, TSC transcoding, and audio/video enhancement).
+        /// 2. Video-to-GIF conversion.
+        /// 3. Time point screenshot of videos.
+        /// 4. Sampled screenshot of videos.
+        /// 5. Image sprite of videos.
+        /// 6. Adaptive bitrate stream conversion for videos.
+        /// 7. Intelligent content moderation (pornography detection and sensitive information detection).
+        /// 8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+        /// 9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
         /// 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
+        /// 
+        /// 11. Smart subtitle (full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
