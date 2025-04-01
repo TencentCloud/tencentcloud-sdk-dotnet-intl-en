@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.intl.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.
@@ -768,31 +768,6 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 接口变更
-        /// 
-        /// This API is used to get an Anti-DDoS IP blocklist/allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeBlackWhiteIpListResponse"/></returns>
-        public Task<DescribeBlackWhiteIpListResponse> DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req)
-        {
-            return InternalRequestAsync<DescribeBlackWhiteIpListResponse>(req, "DescribeBlackWhiteIpList");
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// This API is used to get an Anti-DDoS IP blocklist/allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DescribeBlackWhiteIpListResponse"/></returns>
-        public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpListSync(DescribeBlackWhiteIpListRequest req)
-        {
-            return InternalRequestAsync<DescribeBlackWhiteIpListResponse>(req, "DescribeBlackWhiteIpList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// Gets the list of CC protection levels
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
@@ -1209,31 +1184,6 @@ namespace TencentCloud.Antiddos.V20200309
         public DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfigSync(DescribeListPacketFilterConfigRequest req)
         {
             return InternalRequestAsync<DescribeListPacketFilterConfigResponse>(req, "DescribeListPacketFilterConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
-        /// <returns><see cref="DescribeListProtectThresholdConfigResponse"/></returns>
-        public Task<DescribeListProtectThresholdConfigResponse> DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeListProtectThresholdConfigResponse>(req, "DescribeListProtectThresholdConfig");
-        }
-
-        /// <summary>
-        /// 接口变更
-        /// 
-        /// This API is used to get a list of protection threshold configurations for AI protection switch, protection level, and CC threshold switch.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeListProtectThresholdConfigRequest"/></param>
-        /// <returns><see cref="DescribeListProtectThresholdConfigResponse"/></returns>
-        public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfigSync(DescribeListProtectThresholdConfigRequest req)
-        {
-            return InternalRequestAsync<DescribeListProtectThresholdConfigResponse>(req, "DescribeListProtectThresholdConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

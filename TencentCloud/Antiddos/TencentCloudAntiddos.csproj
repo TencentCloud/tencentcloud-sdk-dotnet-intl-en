@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1102</VersionPrefix>
+    <VersionPrefix>3.0.1103</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,8 +140,6 @@
     <Compile Include="V20200309\Models\DescribeBizHttpStatusResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
-    <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
-    <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCLevelListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCLevelListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
@@ -182,8 +180,6 @@
     <Compile Include="V20200309\Models\DescribeListListenerResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListPacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListPacketFilterConfigResponse.cs" />
-    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigRequest.cs" />
-    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListSchedulingDomainRequest.cs" />
@@ -217,7 +213,6 @@
     <Compile Include="V20200309\Models\L7RuleHealth.cs" />
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
-    <Compile Include="V20200309\Models\ListenerCcThreholdConfig.cs" />
     <Compile Include="V20200309\Models\ModifyCCPrecisionPolicyRequest.cs" />
     <Compile Include="V20200309\Models\ModifyCCPrecisionPolicyResponse.cs" />
     <Compile Include="V20200309\Models\ModifyCcBlackWhiteIpListRequest.cs" />
@@ -238,7 +233,6 @@
     <Compile Include="V20200309\Models\PacketFilterConfig.cs" />
     <Compile Include="V20200309\Models\PacketFilterRelation.cs" />
     <Compile Include="V20200309\Models\PortSegment.cs" />
-    <Compile Include="V20200309\Models\ProtectThresholdRelation.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockConfig.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockRelation.cs" />
     <Compile Include="V20200309\Models\ProtocolPort.cs" />

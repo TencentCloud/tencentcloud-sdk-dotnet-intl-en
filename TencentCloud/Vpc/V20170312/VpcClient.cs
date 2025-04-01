@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1102";
+       private const string sdkVersion = "SDK_NET_3.0.1103";
 
         /// <summary>
         /// Client constructor.
@@ -4032,6 +4032,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to disable enabled subnet routes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRoutesRequest"/></param>
+        /// <returns><see cref="DisableRoutesResponse"/></returns>
+        public Task<DisableRoutesResponse> DisableRoutes(DisableRoutesRequest req)
+        {
+            return InternalRequestAsync<DisableRoutesResponse>(req, "DisableRoutes");
+        }
+
+        /// <summary>
+        /// This API is used to disable enabled subnet routes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRoutesRequest"/></param>
+        /// <returns><see cref="DisableRoutesResponse"/></returns>
+        public DisableRoutesResponse DisableRoutesSync(DisableRoutesRequest req)
+        {
+            return InternalRequestAsync<DisableRoutesResponse>(req, "DisableRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable specified snapshot policies.
         /// </summary>
         /// <param name="req"><see cref="DisableSnapshotPoliciesRequest"/></param>
@@ -4296,6 +4317,29 @@ namespace TencentCloud.Vpc.V20170312
         public EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitorSync(EnableGatewayFlowMonitorRequest req)
         {
             return InternalRequestAsync<EnableGatewayFlowMonitorResponse>(req, "EnableGatewayFlowMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable disabled subnet routes.<br />
+        /// The API is used to verify whether the enabled route conflicts with existing routes. If they conflict, the new route cannot be enabled and will result in a failure. When a route conflict occurs, you need to first disable the conflicting route before you can enable the new one.
+        /// </summary>
+        /// <param name="req"><see cref="EnableRoutesRequest"/></param>
+        /// <returns><see cref="EnableRoutesResponse"/></returns>
+        public Task<EnableRoutesResponse> EnableRoutes(EnableRoutesRequest req)
+        {
+            return InternalRequestAsync<EnableRoutesResponse>(req, "EnableRoutes");
+        }
+
+        /// <summary>
+        /// This API is used to enable disabled subnet routes.<br />
+        /// The API is used to verify whether the enabled route conflicts with existing routes. If they conflict, the new route cannot be enabled and will result in a failure. When a route conflict occurs, you need to first disable the conflicting route before you can enable the new one.
+        /// </summary>
+        /// <param name="req"><see cref="EnableRoutesRequest"/></param>
+        /// <returns><see cref="EnableRoutesResponse"/></returns>
+        public EnableRoutesResponse EnableRoutesSync(EnableRoutesRequest req)
+        {
+            return InternalRequestAsync<EnableRoutesResponse>(req, "EnableRoutes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
