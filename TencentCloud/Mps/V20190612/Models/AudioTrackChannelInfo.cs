@@ -38,7 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Audio track input type. valid values:.
         /// trask: indicates usage of the audio track id.
-        /// Task_channel: indicates usage of the audio track id and sound channel id.
+        /// trask_channel: indicates usage of the audio track id and sound channel id.
         /// Default: trask.
         /// If the original aduio track is multichannel, recommend using trask_channel.
         /// Note: This field may return null, indicating that no valid value can be obtained.
