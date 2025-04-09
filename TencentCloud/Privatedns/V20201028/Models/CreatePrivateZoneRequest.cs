@@ -58,6 +58,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// Associates the private domain to a VPC when it is created
         /// </summary>
         [JsonProperty("Vpcs")]
+        [System.Obsolete]
         public VpcInfo[] Vpcs{ get; set; }
 
         /// <summary>
