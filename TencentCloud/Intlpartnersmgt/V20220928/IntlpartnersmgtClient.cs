@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1108";
+       private const string sdkVersion = "SDK_NET_3.0.1109";
 
         /// <summary>
         /// Client constructor.
@@ -786,6 +786,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryPolicyProductListByCodeResponse QueryPolicyProductListByCodeSync(QueryPolicyProductListByCodeRequest req)
         {
             return InternalRequestAsync<QueryPolicyProductListByCodeResponse>(req, "QueryPolicyProductListByCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the indirect sub-customers of a first-level distributor.
+        /// Invokable role type: first-level reseller.
+        /// </summary>
+        /// <param name="req"><see cref="QueryT1IndirectCustomersDetailRequest"/></param>
+        /// <returns><see cref="QueryT1IndirectCustomersDetailResponse"/></returns>
+        public Task<QueryT1IndirectCustomersDetailResponse> QueryT1IndirectCustomersDetail(QueryT1IndirectCustomersDetailRequest req)
+        {
+            return InternalRequestAsync<QueryT1IndirectCustomersDetailResponse>(req, "QueryT1IndirectCustomersDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the indirect sub-customers of a first-level distributor.
+        /// Invokable role type: first-level reseller.
+        /// </summary>
+        /// <param name="req"><see cref="QueryT1IndirectCustomersDetailRequest"/></param>
+        /// <returns><see cref="QueryT1IndirectCustomersDetailResponse"/></returns>
+        public QueryT1IndirectCustomersDetailResponse QueryT1IndirectCustomersDetailSync(QueryT1IndirectCustomersDetailRequest req)
+        {
+            return InternalRequestAsync<QueryT1IndirectCustomersDetailResponse>(req, "QueryT1IndirectCustomersDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

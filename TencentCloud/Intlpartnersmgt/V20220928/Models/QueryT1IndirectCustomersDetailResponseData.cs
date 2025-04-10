@@ -21,26 +21,26 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateCustomerCreditRequest : AbstractModel
+    public class QueryT1IndirectCustomersDetailResponseData : AbstractModel
     {
         
         /// <summary>
-        /// Specific value of the credit allocated to the customer
-        /// </summary>
-        [JsonProperty("AddedCredit")]
-        public float? AddedCredit{ get; set; }
-
-        /// <summary>
-        /// Customer UIN
+        /// Customer uin.
         /// </summary>
         [JsonProperty("ClientUin")]
-        public ulong? ClientUin{ get; set; }
+        public long? ClientUin{ get; set; }
 
         /// <summary>
-        /// Remark
+        /// Customer name.
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("ClientName")]
+        public string ClientName{ get; set; }
+
+        /// <summary>
+        /// The time when a sub-customer binds a second-level reseller, time zone: UTC+08:00.
+        /// </summary>
+        [JsonProperty("ClientBindTime")]
+        public string ClientBindTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AddedCredit", this.AddedCredit);
             this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "ClientName", this.ClientName);
+            this.SetParamSimple(map, prefix + "ClientBindTime", this.ClientBindTime);
         }
     }
 }

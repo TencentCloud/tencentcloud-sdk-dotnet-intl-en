@@ -21,26 +21,26 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AllocateCustomerCreditRequest : AbstractModel
+    public class QueryT1IndirectCustomersDetailRequest : AbstractModel
     {
         
         /// <summary>
-        /// Specific value of the credit allocated to the customer
+        /// Second-level reseller UIN.
         /// </summary>
-        [JsonProperty("AddedCredit")]
-        public float? AddedCredit{ get; set; }
+        [JsonProperty("SubAgentUin")]
+        public long? SubAgentUin{ get; set; }
 
         /// <summary>
-        /// Customer UIN
+        /// Pagination parameter: current page number. it starts from 1.
         /// </summary>
-        [JsonProperty("ClientUin")]
-        public ulong? ClientUin{ get; set; }
+        [JsonProperty("Page")]
+        public long? Page{ get; set; }
 
         /// <summary>
-        /// Remark
+        /// Pagination parameter, indicates the number of entries per page. supports [1, 100] data entries per request.
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AddedCredit", this.AddedCredit);
-            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "SubAgentUin", this.SubAgentUin);
+            this.SetParamSimple(map, prefix + "Page", this.Page);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

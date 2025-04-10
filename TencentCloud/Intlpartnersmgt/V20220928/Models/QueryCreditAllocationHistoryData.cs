@@ -54,6 +54,12 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("ClientCreditAfter")]
         public float? ClientCreditAfter{ get; set; }
 
+        /// <summary>
+        /// Remark
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "Credit", this.Credit);
             this.SetParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
             this.SetParamSimple(map, prefix + "ClientCreditAfter", this.ClientCreditAfter);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }
