@@ -178,11 +178,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? FpsDenominator{ get; set; }
 
         /// <summary>
-        /// 3D video splicing mode, which is only valid for MV-HEVC 3D videos. Valid values:
-        /// <li>side_by_side: side-by-side view.</li>
-        /// <li>top_bottom: top-bottom view.</li>
+        /// 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
+        /// <Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
+        /// <Li>Top_bottom: layout arrangement of the original video content from top to bottom.</li>.
+        /// The usage and charges will be reported based on the segmented resolution dimensions.
         /// Default value: side_by_side.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Stereo3dType")]
         public string Stereo3dType{ get; set; }

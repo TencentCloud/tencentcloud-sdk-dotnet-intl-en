@@ -53,8 +53,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// List of audio parameter information.
-        /// The parameter array has a maximum length of 64.
+        /// Audio parameter information list.
+        /// The parameter is only used when merging multiple audio tracks with self-adaptive transcoding. the maximum length of the parameter array is 64.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AudioList")]

@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable audio mix. valid values:.
-        /// 0: indicates not enabling audio mix.
-        /// 1: Indicates enabling audio mix.
+        /// Whether to enable the feature of multi-audio track mixing. valid values:
+        /// 0: indicates not enabling multi-audio track mix.
+        /// 1: Indicates enabling multi-audio track mixing.
         /// Default value: 0
         /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
@@ -36,11 +36,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? ChannelsRemix{ get; set; }
 
         /// <summary>
-        /// Audio track input type. valid values:.
-        /// trask: indicates usage of the audio track id.
-        /// trask_channel: indicates usage of the audio track id and sound channel id.
-        /// Default: trask.
-        /// If the original aduio track is multichannel, recommend using trask_channel.
+        /// Set the selector type for the input audio track. valid values:
+        /// Track: indicates the usage of audio track id;.
+        /// Track_channel: indicates the usage of the audio track id and sound channel id.
+        /// Default: track.
+        /// If the original video has multiple channels, it is recommended to use track_channel.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SelectType")]

@@ -25,22 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Resource ID.
+        /// Resource tagging. the field content is user-customized.
         /// It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Access address of the DRM vendor.
+        /// DRM manufacturer access address. the field content is obtained from the drm manufacturer.
         /// 
-        /// Note: Different DRM vendors have different limits on the number of substreams. For example, PallyCon limits the number of substreams to no more than 5, and DRMtoday supports encryption of up to 9 substreams.
+        /// Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
         /// </summary>
         [JsonProperty("KeyServerUrl")]
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// Initialization vector (32-byte string) for encryption.
+        /// Encryption initialization vector (32-byte string). the field content is user-customized.
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

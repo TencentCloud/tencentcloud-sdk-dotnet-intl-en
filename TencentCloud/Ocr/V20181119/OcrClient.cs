@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1110";
+       private const string sdkVersion = "SDK_NET_3.0.1111";
 
         /// <summary>
         /// Client constructor.
@@ -1021,7 +1021,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
-        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
         /// 
         /// A maximum of 10 requests can be initiated per second for this API.
         /// </summary>
@@ -1034,7 +1033,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
-        /// Currently, this API is not generally available. For more information, please [contact your sales rep](https://intl.cloud.tencent.com/about/connect?from_cn_redirect=1).
         /// 
         /// A maximum of 10 requests can be initiated per second for this API.
         /// </summary>
