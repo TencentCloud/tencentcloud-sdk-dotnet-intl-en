@@ -43,13 +43,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Video width. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+        /// Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Video height. Value range: (0,3000]. The value can only be a multiple of 4. If this parameter is left empty, the original value will be used.
+        /// Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

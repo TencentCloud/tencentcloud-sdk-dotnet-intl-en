@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1111";
+       private const string sdkVersion = "SDK_NET_3.0.1112";
 
         /// <summary>
         /// Client constructor.
@@ -1966,7 +1966,6 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * Use this API to return instances that are no longer required.
         /// * Pay-as-you-go instances can be returned directly through this API.
-        /// * When this API is called for the first time, the instance will be moved to the recycle bin. When this API is called for the second time, the instance will be terminated and cannot be recovered.
         /// * Batch operations are supported. The allowed maximum number of instances in each request is 100.
         /// </summary>
         /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
@@ -1981,7 +1980,6 @@ namespace TencentCloud.Cvm.V20170312
         /// 
         /// * Use this API to return instances that are no longer required.
         /// * Pay-as-you-go instances can be returned directly through this API.
-        /// * When this API is called for the first time, the instance will be moved to the recycle bin. When this API is called for the second time, the instance will be terminated and cannot be recovered.
         /// * Batch operations are supported. The allowed maximum number of instances in each request is 100.
         /// </summary>
         /// <param name="req"><see cref="TerminateInstancesRequest"/></param>

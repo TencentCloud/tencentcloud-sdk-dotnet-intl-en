@@ -103,6 +103,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("EndListTag")]
         public long? EndListTag{ get; set; }
 
+        /// <summary>
+        /// Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+        /// </summary>
+        [JsonProperty("AdMarkupType")]
+        public string AdMarkupType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "StreamOrder", this.StreamOrder);
             this.SetParamSimple(map, prefix + "VideoResolution", this.VideoResolution);
             this.SetParamSimple(map, prefix + "EndListTag", this.EndListTag);
+            this.SetParamSimple(map, prefix + "AdMarkupType", this.AdMarkupType);
         }
     }
 }

@@ -25,7 +25,16 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// Instance StatusNote: This field may return null, indicating that no valid value can be obtained.
+        /// Indicates the status of an instance.
+        /// -Indicates waiting for event.
+        /// -[12] indicates waiting for upstream.
+        /// -[6, 7, 9, 10, 18] indicates awaiting execution.
+        /// -1, 19, 22 indicate running.
+        /// -21: skip running.
+        /// -[3] indicates retry on failure.
+        /// -[8, 4, 5, 13] indicates a failure.
+        /// -[2] indicates a success.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
@@ -38,8 +47,17 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Instance Lifecycle Phase Status
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Instance lifecycle phase status.
+        /// 
+        /// -WAIT_UPSTREAM indicates waiting for event/upstream status.
+        /// -WAIT_RUN indicates a waiting for running status.
+        /// -RUNNING indicates a running state.
+        /// -COMPLETE indicates the final state - completed.
+        /// -FAILED indicates the final state - retry on failure.
+        /// -EXPIRED indicates the final state - failure.
+        /// -SKIP_RUNNING indicates the final state - a branch skipped by the upstream branch node.
+        /// -HISTORY indicates compatibility with historical instances.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DetailState")]
         public string DetailState{ get; set; }

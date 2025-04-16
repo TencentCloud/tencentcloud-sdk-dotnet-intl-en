@@ -104,6 +104,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("AdCDNPrefix")]
         public string AdCDNPrefix{ get; set; }
 
+        /// <summary>
+        /// Pre-roll ad decision service address.
+        /// </summary>
+        [JsonProperty("PreRollAdsUrl")]
+        public string PreRollAdsUrl{ get; set; }
+
+        /// <summary>
+        /// The maximum allowed duration of pre-roll ads, (0, 3600].
+        /// </summary>
+        [JsonProperty("PreRollMaxAllowedDuration")]
+        public long? PreRollMaxAllowedDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +133,8 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "DeliveryRestrictions", this.DeliveryRestrictions);
             this.SetParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
             this.SetParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
+            this.SetParamSimple(map, prefix + "PreRollAdsUrl", this.PreRollAdsUrl);
+            this.SetParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
         }
     }
 }

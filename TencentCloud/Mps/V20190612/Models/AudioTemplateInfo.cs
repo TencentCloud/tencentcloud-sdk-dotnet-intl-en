@@ -70,18 +70,19 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Audio channel mode. Valid values:
-        /// <li>1: single channel.</li>
-        /// <li>2: dual channel.</li>
-        /// <li>6: 5.1 surround sound.</li>
-        /// When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to 5.1 surround sound.
-        /// Default value: 2.
+        /// <li>1: mono-channel.</li>
+        /// <li>2: dual-channel.</li>
+        /// <li>6: 5.1 surround sound.
+        /// <li>Default value: 2.
+        /// When the container format is audio (flac, ogg, mp3, and m4a), the audio channel cannot be set to 5.1 surround sound.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
         /// <summary>
         /// Merge audio track information.
-        /// This field only takes effec in adaptive bitrate transcoding.
+        /// This field only takes effect in adaptive bitrate transcoding.
+        /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TrackChannelInfo")]

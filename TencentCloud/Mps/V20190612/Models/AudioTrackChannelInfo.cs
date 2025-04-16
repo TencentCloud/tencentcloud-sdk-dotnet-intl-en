@@ -25,10 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable the feature of multi-audio track mixing. valid values:
-        /// 0: indicates not enabling multi-audio track mix.
-        /// 1: Indicates enabling multi-audio track mixing.
-        /// Default value: 0
+        /// Whether to enable the feature of multi-audio track mixing. Valid values:
+        /// <li>0: To disable the multi-audio track mixing feature.
+        /// <li>1: To enable the multi-audio track mixing feature. 
+        /// <li>Default value: 0.
         /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -36,11 +36,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? ChannelsRemix{ get; set; }
 
         /// <summary>
-        /// Set the selector type for the input audio track. valid values:
-        /// Track: indicates the usage of audio track id;.
-        /// Track_channel: indicates the usage of the audio track id and sound channel id.
-        /// Default: track.
-        /// If the original video has multiple channels, it is recommended to use track_channel.
+        /// Set the selector type for the input audio track. Valid values:
+        /// <li>track: indicates the usage of audio track id to identify the track to be used.
+        /// <li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
+        /// <li>Default value: track.
+        /// If the original audio track has multiple sound channels, please use track_channel.
+        /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SelectType")]
@@ -48,6 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Audio track information.
+        /// 
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InputTrackInfo")]

@@ -150,6 +150,18 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("GroupByType")]
+        public long? GroupByType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsNewData")]
+        public long? IsNewData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "Browser", this.Browser);
             this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "GroupByType", this.GroupByType);
+            this.SetParamSimple(map, prefix + "IsNewData", this.IsNewData);
         }
     }
 }

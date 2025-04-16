@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.intl.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1111";
+       private const string sdkVersion = "SDK_NET_3.0.1112";
 
         /// <summary>
         /// Client constructor.
@@ -3735,6 +3735,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceLogRequest"/></param>
+        /// <returns><see cref="GetInstanceLogResponse"/></returns>
+        public Task<GetInstanceLogResponse> GetInstanceLog(GetInstanceLogRequest req)
+        {
+            return InternalRequestAsync<GetInstanceLogResponse>(req, "GetInstanceLog");
+        }
+
+        /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="GetInstanceLogRequest"/></param>
+        /// <returns><see cref="GetInstanceLogResponse"/></returns>
+        public GetInstanceLogResponse GetInstanceLogSync(GetInstanceLogRequest req)
+        {
+            return InternalRequestAsync<GetInstanceLogResponse>(req, "GetInstanceLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Extracting DataInLong Node Field Schema
         /// </summary>
         /// <param name="req"><see cref="GetIntegrationNodeColumnSchemaRequest"/></param>
@@ -3798,6 +3819,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
+        /// <returns><see cref="GetTaskInstanceResponse"/></returns>
+        public Task<GetTaskInstanceResponse> GetTaskInstance(GetTaskInstanceRequest req)
+        {
+            return InternalRequestAsync<GetTaskInstanceResponse>(req, "GetTaskInstance");
+        }
+
+        /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskInstanceRequest"/></param>
+        /// <returns><see cref="GetTaskInstanceResponse"/></returns>
+        public GetTaskInstanceResponse GetTaskInstanceSync(GetTaskInstanceRequest req)
+        {
+            return InternalRequestAsync<GetTaskInstanceResponse>(req, "GetTaskInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Batch Termination of Instances by Supplement Plan.
         /// </summary>
         /// <param name="req"><see cref="KillOpsMakePlanInstancesRequest"/></param>
@@ -3836,6 +3878,27 @@ namespace TencentCloud.Wedata.V20210820
         public KillScheduleInstancesResponse KillScheduleInstancesSync(KillScheduleInstancesRequest req)
         {
             return InternalRequestAsync<KillScheduleInstancesResponse>(req, "KillScheduleInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="ListInstancesRequest"/></param>
+        /// <returns><see cref="ListInstancesResponse"/></returns>
+        public Task<ListInstancesResponse> ListInstances(ListInstancesRequest req)
+        {
+            return InternalRequestAsync<ListInstancesResponse>(req, "ListInstances");
+        }
+
+        /// <summary>
+        /// This API is used to obtain instance lists.
+        /// </summary>
+        /// <param name="req"><see cref="ListInstancesRequest"/></param>
+        /// <returns><see cref="ListInstancesResponse"/></returns>
+        public ListInstancesResponse ListInstancesSync(ListInstancesRequest req)
+        {
+            return InternalRequestAsync<ListInstancesResponse>(req, "ListInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
