@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1112";
+       private const string sdkVersion = "SDK_NET_3.0.1113";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the maintenance time window of an instance based on its instance ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceSpanResponse"/></returns>
+        public Task<DescribeMaintenanceSpanResponse> DescribeMaintenanceSpan(DescribeMaintenanceSpanRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintenanceSpanResponse>(req, "DescribeMaintenanceSpan");
+        }
+
+        /// <summary>
+        /// This API is used to query the maintenance time window of an instance based on its instance ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceSpanResponse"/></returns>
+        public DescribeMaintenanceSpanResponse DescribeMaintenanceSpanSync(DescribeMaintenanceSpanRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintenanceSpanResponse>(req, "DescribeMaintenanceSpan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

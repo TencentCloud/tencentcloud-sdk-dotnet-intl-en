@@ -45,10 +45,9 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string CaptchaMsg{ get; set; }
 
         /// <summary>
-        /// This parameter returns the result of imperceptible verification. This parameter is not available for Tencent Cloud International yet.
+        /// This parameter returns the result of imperceptible verification. 
         /// `0`: The request is trusted.
         /// `100`: The request is malicious.
-        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("EvilLevel")]
         public long? EvilLevel{ get; set; }
@@ -74,7 +73,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? SubmitCaptchaTime{ get; set; }
 
         /// <summary>
-        /// Device Risk Category
+        /// Device Risk Category.
         /// </summary>
         [JsonProperty("DeviceRiskCategory")]
         public string DeviceRiskCategory{ get; set; }
