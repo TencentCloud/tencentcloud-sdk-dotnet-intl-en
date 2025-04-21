@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1113";
+       private const string sdkVersion = "SDK_NET_3.0.1114";
 
         /// <summary>
         /// Client constructor.
@@ -471,6 +471,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeBrazilIDCardOCRResponse RecognizeBrazilIDCardOCRSync(RecognizeBrazilIDCardOCRRequest req)
         {
             return InternalRequestAsync<RecognizeBrazilIDCardOCRResponse>(req, "RecognizeBrazilIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Brazil RNE document recognition Default interface request frequency limit: 5 times/second
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilRNEOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilRNEOCRResponse"/></returns>
+        public Task<RecognizeBrazilRNEOCRResponse> RecognizeBrazilRNEOCR(RecognizeBrazilRNEOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilRNEOCRResponse>(req, "RecognizeBrazilRNEOCR");
+        }
+
+        /// <summary>
+        /// Brazil RNE document recognition Default interface request frequency limit: 5 times/second
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilRNEOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilRNEOCRResponse"/></returns>
+        public RecognizeBrazilRNEOCRResponse RecognizeBrazilRNEOCRSync(RecognizeBrazilRNEOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilRNEOCRResponse>(req, "RecognizeBrazilRNEOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
