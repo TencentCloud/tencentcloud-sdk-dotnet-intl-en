@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// Total number of instances.
+        /// Total count of instances.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
@@ -39,7 +39,9 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public InstanceInfo[] InstancesList{ get; set; }
 
         /// <summary>
-        ///  -Note: This field may return null, indicating that no valid values can be obtained.
+        /// Error message.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

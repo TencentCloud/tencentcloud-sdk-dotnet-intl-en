@@ -32,73 +32,80 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// cn/dn or others.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Kernel version type.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance Name
-        /// .Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance Status ,such as  2
+        /// Cluster status.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Instance Status  Description ,such as Running.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster status details.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Instance State Infomation
+        /// Cluster status information.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceStateInfo")]
         public InstanceStateInfo InstanceStateInfo{ get; set; }
 
         /// <summary>
-        /// Instance ID 
+        /// Cluster ID.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// CreateTime ,such as 2022-09-05 20:00:01
+        /// Creation time.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Region ,such as ap-chongqing.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Zone : This field may return null, indicating that no valid values can be obtained.
+        /// Region.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Region.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region details.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionDesc")]
         public string RegionDesc{ get; set; }
 
         /// <summary>
-        /// Zone.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region details.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneDesc")]
         public string ZoneDesc{ get; set; }
@@ -110,7 +117,9 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Version.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Kernel version.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
@@ -137,56 +146,62 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public InstanceNodeGroup[] DNNodes{ get; set; }
 
         /// <summary>
-        ///  Region Id
+        /// Region ID.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Zone Id
+        /// Region ID.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Vpc Id
+        /// Virtual Private Cloud (VPC).
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet Id
+        /// Subnet.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Expire Time
+        /// Expiration time.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Pay Mode
+        /// Billing mode.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Renew Flag
+        /// Automatic renewal.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance Id
+        /// Cluster ID.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]

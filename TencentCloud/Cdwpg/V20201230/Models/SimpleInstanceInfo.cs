@@ -32,105 +32,113 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Instance Id
+        /// Cluster ID.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance Name
+        /// Cluster name.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Version
+        /// Kernel version.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Region
+        /// Region.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Zone
+        /// Region.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// User VPC ID
+        /// Virtual Private Cloud (VPC).
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserVPCID")]
         public string UserVPCID{ get; set; }
 
         /// <summary>
-        /// User Subnet ID
+        /// Subnet.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserSubnetID")]
         public string UserSubnetID{ get; set; }
 
         /// <summary>
-        /// CreateTime
+        /// Start time.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// ExpireTime
+        /// Expiration time.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Access Infomation
+        /// Access address.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AccessInfo")]
         public string AccessInfo{ get; set; }
 
         /// <summary>
-        /// Renew Flag
+        /// Automatic renewal switch. 0 indicates automatic renewal is not enabled, and 1 indicates automatic renewal is enabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Charge Properties
+        /// Billing mode.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChargeProperties")]
         public ChargeProperties ChargeProperties{ get; set; }
 
         /// <summary>
-        /// Resources
+        /// Resource collection.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceInfo[] Resources{ get; set; }
 
         /// <summary>
-        /// Tags
+        /// Tag list.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Cluster status.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]

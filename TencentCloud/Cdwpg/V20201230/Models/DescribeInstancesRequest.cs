@@ -25,25 +25,25 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// The name of the Instance ID for the search.
+        /// Searches by instance ID.
         /// </summary>
         [JsonProperty("SearchInstanceId")]
         public string SearchInstanceId{ get; set; }
 
         /// <summary>
-        /// The instance name for the search.
+        /// Searches by instance name.
         /// </summary>
         [JsonProperty("SearchInstanceName")]
         public string SearchInstanceName{ get; set; }
 
         /// <summary>
-        /// Pagination parameter. The first page is 0, and the second page is 10.
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination parameter. Pagination step length. It is 10 by default.
+        /// Limit.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

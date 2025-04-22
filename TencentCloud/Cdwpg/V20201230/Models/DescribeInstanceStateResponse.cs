@@ -49,7 +49,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public float? FlowProgress{ get; set; }
 
         /// <summary>
-        /// Cluster status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance status description. Example: running.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceStateDesc")]
         public string InstanceStateDesc{ get; set; }

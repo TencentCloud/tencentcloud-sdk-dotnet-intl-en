@@ -81,14 +81,14 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public long? BackupStatus{ get; set; }
 
         /// <summary>
-        /// Request Id
+        /// Request ID.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// Backup Open Status
+        /// Indicates whether there is a backup task in the cluster. 1 indicates yes and 0 indicates no.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOpenStatus")]

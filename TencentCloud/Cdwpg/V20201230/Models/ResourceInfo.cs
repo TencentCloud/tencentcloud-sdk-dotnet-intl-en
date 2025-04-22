@@ -46,7 +46,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
         public CBSSpecInfo DiskSpec{ get; set; }
 
         /// <summary>
-        /// Resource type.
+        /// Node type. Valid values: cn and dn.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]

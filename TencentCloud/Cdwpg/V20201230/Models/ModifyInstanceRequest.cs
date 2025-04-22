@@ -25,7 +25,7 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// InstanceId.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

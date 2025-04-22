@@ -25,32 +25,31 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// Search Instance Id
+        /// Searches by instance ID.
         /// </summary>
         [JsonProperty("SearchInstanceId")]
         public string SearchInstanceId{ get; set; }
 
         /// <summary>
-        /// Search Instance Name
+        /// Searches by instance name.
         /// </summary>
         [JsonProperty("SearchInstanceName")]
         public string SearchInstanceName{ get; set; }
 
         /// <summary>
-        /// 	
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit
+        /// Limit.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Search Tags
+        /// Searches by tag list.
         /// </summary>
         [JsonProperty("SearchTags")]
         public string[] SearchTags{ get; set; }

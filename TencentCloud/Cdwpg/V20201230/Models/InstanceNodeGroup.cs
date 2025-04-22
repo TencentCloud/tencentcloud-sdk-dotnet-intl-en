@@ -25,21 +25,23 @@ namespace TencentCloud.Cdwpg.V20201230.Models
     {
         
         /// <summary>
-        /// Spec Name
+        /// Model.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// Data Disk
+        /// Disk information.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpecPlus DataDisk{ get; set; }
 
         /// <summary>
-        /// Cvm Count
+        /// Number of machines.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CvmCount")]
