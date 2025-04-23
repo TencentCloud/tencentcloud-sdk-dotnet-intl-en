@@ -61,8 +61,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string BindTime{ get; set; }
 
         /// <summary>
-        /// Account status
-        /// .
+        /// Account status.
         /// 0: normal.
         /// 1: forcibly mandatory (this function is not supported yet).
         /// 2: mandatory arrears. 
@@ -71,15 +70,50 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string AccountStatus{ get; set; }
 
         /// <summary>
-        /// Identity verification status.
-        /// -1: files not uploaded.
-        /// 0: not submitted for review.
-        /// 1: under review.
-        /// 2: review error.
-        /// 3: approved.
+        /// Specifies the identity verification status.
+        /// -999: account information not found.
+        /// -1: file not uploaded.
+        /// 0: pending review.
+        /// Under review.
+        /// Error in review: 2.
+        /// 3: pass review.
         /// </summary>
         [JsonProperty("AuthStatus")]
         public string AuthStatus{ get; set; }
+
+        /// <summary>
+        /// Real-Name type.
+        /// -1: default value. no such information. 
+        /// 0: personal type. 
+        /// 1: enterprise type.
+        /// </summary>
+        [JsonProperty("AuthType")]
+        public long? AuthType{ get; set; }
+
+        /// <summary>
+        /// Specifies the registration time of the cid.
+        /// </summary>
+        [JsonProperty("CidRegisterTime")]
+        public string CidRegisterTime{ get; set; }
+
+        /// <summary>
+        /// Specifies the registration time of the uin.
+        /// </summary>
+        [JsonProperty("UinRegisterTime")]
+        public string UinRegisterTime{ get; set; }
+
+        /// <summary>
+        /// Time when real-name authentication passed.
+        /// </summary>
+        [JsonProperty("AuthPassTime")]
+        public string AuthPassTime{ get; set; }
+
+        /// <summary>
+        /// Whether there is consumption.
+        /// 0: no consumption; 1: consumption.
+        /// </summary>
+        [JsonProperty("HasExpense")]
+        public long? HasExpense{ get; set; }
 
 
         /// <summary>
@@ -95,6 +129,11 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "BindTime", this.BindTime);
             this.SetParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
             this.SetParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
+            this.SetParamSimple(map, prefix + "CidRegisterTime", this.CidRegisterTime);
+            this.SetParamSimple(map, prefix + "UinRegisterTime", this.UinRegisterTime);
+            this.SetParamSimple(map, prefix + "AuthPassTime", this.AuthPassTime);
+            this.SetParamSimple(map, prefix + "HasExpense", this.HasExpense);
         }
     }
 }

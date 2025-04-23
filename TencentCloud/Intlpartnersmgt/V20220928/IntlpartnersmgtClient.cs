@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1115";
+       private const string sdkVersion = "SDK_NET_3.0.1116";
 
         /// <summary>
         /// Client constructor.
@@ -410,9 +410,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer information.
-        /// 
-        /// Callable roles: Distributor, Reseller
+        /// This API is used to query sub-customer information.
+        /// Invocation roles: reseller, first-level distributor.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
         /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
@@ -422,9 +421,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer information.
-        /// 
-        /// Callable roles: Distributor, Reseller
+        /// This API is used to query sub-customer information.
+        /// Invocation roles: reseller, first-level distributor.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerInfoRequest"/></param>
         /// <returns><see cref="DescribeCustomerInfoResponse"/></returns>
