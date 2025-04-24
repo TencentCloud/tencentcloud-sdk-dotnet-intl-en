@@ -58,6 +58,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// User role id.
         /// </summary>
         [JsonProperty("RoleId")]
+        [System.Obsolete]
         public ulong? RoleId{ get; set; }
 
         /// <summary>

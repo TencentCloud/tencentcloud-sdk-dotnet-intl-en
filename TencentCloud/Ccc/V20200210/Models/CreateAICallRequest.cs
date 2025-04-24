@@ -37,6 +37,44 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
+        /// Model interface protocol types, currently compatible with three protocol types:
+        /// 
+        /// - OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
+        /// - Azure protocol:"azure"
+        /// - Minimax protocol:"minimax"
+        /// </summary>
+        [JsonProperty("LLMType")]
+        public string LLMType{ get; set; }
+
+        /// <summary>
+        /// Model API key, for authentication information, please refer to the respective model's official website
+        /// 
+        /// - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
+        /// 
+        /// - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
+        /// 
+        /// - Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
+        /// </summary>
+        [JsonProperty("APIKey")]
+        public string APIKey{ get; set; }
+
+        /// <summary>
+        /// Model interface address
+        /// 
+        /// - OpenAI protocol
+        /// GPT:"https://api.openai.com/v1/"
+        /// Deepseek:"https://api.deepseek.com/v1"
+        /// 
+        /// - Azure protocol
+        ///  "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
+        /// 
+        /// - Minimax protocol
+        /// "https://api.minimax.chat/v1"
+        /// </summary>
+        [JsonProperty("APIUrl")]
+        public string APIUrl{ get; set; }
+
+        /// <summary>
         /// ## Identity
         /// You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
         /// 
@@ -73,16 +111,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string SystemPrompt{ get; set; }
 
         /// <summary>
-        /// Model interface protocol types, currently compatible with three protocol types:
-        /// 
-        /// - OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-        /// - Azure protocol:"azure"
-        /// - Minimax protocol:"minimax"
-        /// </summary>
-        [JsonProperty("LLMType")]
-        public string LLMType{ get; set; }
-
-        /// <summary>
         /// Model name, such as
         /// 
         /// - OpenAI protocol
@@ -96,34 +124,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
-
-        /// <summary>
-        /// Model API key, for authentication information, please refer to the respective model's official website
-        /// 
-        /// - OpenAI protocol: [GPT](https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key), [DeepSeek](https://api-docs.deepseek.com/zh-cn/);
-        /// 
-        /// - Azure protocol: [Azure GPT](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Ctypescript%2Cpython-new&pivots=programming-language-studio#key-settings);
-        /// 
-        /// - Minimax:[Minimax](https://platform.minimaxi.com/document/Fast%20access?key=66701cf51d57f38758d581b2)
-        /// </summary>
-        [JsonProperty("APIKey")]
-        public string APIKey{ get; set; }
-
-        /// <summary>
-        /// Model interface address
-        /// 
-        /// - OpenAI protocol
-        /// GPT:"https://api.openai.com/v1/"
-        /// Deepseek:"https://api.deepseek.com/v1"
-        /// 
-        /// - Azure protocol
-        ///  "https://{your-resource-name}.openai.azure.com?api-version={api-version}"
-        /// 
-        /// - Minimax protocol
-        /// "https://api.minimax.chat/v1"
-        /// </summary>
-        [JsonProperty("APIUrl")]
-        public string APIUrl{ get; set; }
 
         /// <summary>
         /// The following voice parameter values are available by default. If you wish to customize the voice type, please leave VoiceType blank and configure it in the CustomTTSConfig parameter.
@@ -337,6 +337,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// Prompt word variable.
         /// </summary>
         [JsonProperty("PromptVariables")]
+        [System.Obsolete]
         public Variable[] PromptVariables{ get; set; }
 
         /// <summary>
@@ -359,11 +360,11 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
-            this.SetParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
             this.SetParamSimple(map, prefix + "LLMType", this.LLMType);
-            this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamSimple(map, prefix + "APIUrl", this.APIUrl);
+            this.SetParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);

@@ -52,6 +52,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// Prompt variable.
         /// </summary>
         [JsonProperty("PromptVariables")]
+        [System.Obsolete]
         public Variable[] PromptVariables{ get; set; }
 
 

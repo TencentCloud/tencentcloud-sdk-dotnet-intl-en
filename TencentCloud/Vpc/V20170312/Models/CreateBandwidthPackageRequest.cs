@@ -26,17 +26,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// The network type of the bandwidth package. Default value: `BGP`. Valid values:
-        /// `BGP` 
+        /// `BGP`
         /// `HIGH_QUALITY_BGP`
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
-        /// <li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
-        /// <li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
-        /// <li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+        /// The billing mode of the bandwidth package. Default value: `ENHANCED95_POSTPAID_BY_MONTH`. Valid values:
+        /// <li>`ENHANCED95_POSTPAID_BY_MONTH`: Pay-as-you-go - Enhanced 95th percentile</li>
+        /// <li>`PRIMARY_TRAFFIC_POSTPAID_BY_HOUR`: Postpaid - Main Traffic Billing</li>
+        /// <li>`BANDWIDTH_POSTPAID_BY_DAY`: General BGP, Pay-as-you-go - Bandwidth-based</li>
+        /// <li>`PEAK_BANDWIDTH_POSTPAID_BY_DAY`: Static single-line, Pay-as-you-go - Daily billed</li>
+        /// <li>`TOP5_POSTPAID_BY_MONTH`: Pay-as-you-go - Monthly top 5th, If you need to use this Bglling mode, please submit a ticket.</li>
+        /// 
         /// </summary>
         [JsonProperty("ChargeType")]
         public string ChargeType{ get; set; }
@@ -48,7 +51,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageName{ get; set; }
 
         /// <summary>
-        /// The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+        /// The number of bandwidth packages to create. Valid range: 1-20. It can only be "1" for bill-by-CVM accounts.
         /// </summary>
         [JsonProperty("BandwidthPackageCount")]
         public ulong? BandwidthPackageCount{ get; set; }
@@ -77,6 +80,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
+        /// <summary>
+        ///     Network egress. It defaults to `center_egress1`. Valid values:
+        /// center_egress1,center_egress2,center_egress3
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +101,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
         }
     }
 }
