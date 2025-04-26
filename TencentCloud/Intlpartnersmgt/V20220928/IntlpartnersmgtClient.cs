@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -450,6 +450,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerUinResponse DescribeCustomerUinSync(DescribeCustomerUinRequest req)
         {
             return InternalRequestAsync<DescribeCustomerUinResponse>(req, "DescribeCustomerUin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to download the commission bill file by resellers/agents. The file URL is returned.
+        /// Resellers/Agents can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebateDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeRebateDownloadUrlResponse"/></returns>
+        public Task<DescribeRebateDownloadUrlResponse> DescribeRebateDownloadUrl(DescribeRebateDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeRebateDownloadUrlResponse>(req, "DescribeRebateDownloadUrl");
+        }
+
+        /// <summary>
+        /// This API is used to download the commission bill file by resellers/agents. The file URL is returned.
+        /// Resellers/Agents can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebateDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeRebateDownloadUrlResponse"/></returns>
+        public DescribeRebateDownloadUrlResponse DescribeRebateDownloadUrlSync(DescribeRebateDownloadUrlRequest req)
+        {
+            return InternalRequestAsync<DescribeRebateDownloadUrlResponse>(req, "DescribeRebateDownloadUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

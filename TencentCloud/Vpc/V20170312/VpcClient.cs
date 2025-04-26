@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1117";
+       private const string sdkVersion = "SDK_NET_3.0.1118";
 
         /// <summary>
         /// Client constructor.
@@ -2939,6 +2939,33 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeIPv6AddressesResponse DescribeIPv6AddressesSync(DescribeIPv6AddressesRequest req)
         {
             return InternalRequestAsync<DescribeIPv6AddressesResponse>(req, "DescribeIPv6Addresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check whether Cloud Virtual Machines support jumbo frames.
+        /// Usage limits.
+        /// This API is used to perform operations that require CAM policy authorization and read access to the corresponding instance. The API accesses CVM instances, so it verifies whether there are CAM permissions for the instance. For example: CAM action allows vpc:DescribeInstanceJumbo; resource allows qcs::cvm:ap-guangzhou:uin/2126195383:instance/*.
+        /// This API is used to check the jumbo frame status before and after instance migration. The status returned by this API may be inconsistent before and after migration. You need to check whether the host machines of the instance before and after migration both support jumbo frames. One possible reason is that the instance has been migrated to a host machine that does not support jumbo frames.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceJumboRequest"/></param>
+        /// <returns><see cref="DescribeInstanceJumboResponse"/></returns>
+        public Task<DescribeInstanceJumboResponse> DescribeInstanceJumbo(DescribeInstanceJumboRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceJumboResponse>(req, "DescribeInstanceJumbo");
+        }
+
+        /// <summary>
+        /// This API is used to check whether Cloud Virtual Machines support jumbo frames.
+        /// Usage limits.
+        /// This API is used to perform operations that require CAM policy authorization and read access to the corresponding instance. The API accesses CVM instances, so it verifies whether there are CAM permissions for the instance. For example: CAM action allows vpc:DescribeInstanceJumbo; resource allows qcs::cvm:ap-guangzhou:uin/2126195383:instance/*.
+        /// This API is used to check the jumbo frame status before and after instance migration. The status returned by this API may be inconsistent before and after migration. You need to check whether the host machines of the instance before and after migration both support jumbo frames. One possible reason is that the instance has been migrated to a host machine that does not support jumbo frames.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceJumboRequest"/></param>
+        /// <returns><see cref="DescribeInstanceJumboResponse"/></returns>
+        public DescribeInstanceJumboResponse DescribeInstanceJumboSync(DescribeInstanceJumboRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceJumboResponse>(req, "DescribeInstanceJumbo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
