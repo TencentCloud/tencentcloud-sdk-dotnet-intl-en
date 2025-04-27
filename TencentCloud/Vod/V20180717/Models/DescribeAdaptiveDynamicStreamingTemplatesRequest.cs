@@ -25,33 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
+        /// Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public ulong?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Paged offset. Default value: 0.
+        /// Pagination offset. default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// Number of returned entries. default value: 10. maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Template type filter. Valid values:
-        /// <li>Preset: preset template;</li>
-        /// <li>Custom: custom template.</li>
+        /// Template type filter. valid values:.
+        /// <Li>Preset: system preset template;</li>.
+        /// <Li>Custom: user-defined template.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -31,16 +31,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
         /// </summary>
         [JsonProperty("RestoreDay")]
         public ulong? RestoreDay{ get; set; }
+
+        /// <summary>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
@@ -61,8 +61,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.intl.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1118";
+       private const string sdkVersion = "SDK_NET_3.0.1119";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Wedata.V20210820
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to add a user role to a project.
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectUserRoleRequest"/></param>
+        /// <returns><see cref="AddProjectUserRoleResponse"/></returns>
+        public Task<AddProjectUserRoleResponse> AddProjectUserRole(AddProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<AddProjectUserRoleResponse>(req, "AddProjectUserRole");
+        }
+
+        /// <summary>
+        /// This API is used to add a user role to a project.
+        /// </summary>
+        /// <param name="req"><see cref="AddProjectUserRoleRequest"/></param>
+        /// <returns><see cref="AddProjectUserRoleResponse"/></returns>
+        public AddProjectUserRoleResponse AddProjectUserRoleSync(AddProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<AddProjectUserRoleResponse>(req, "AddProjectUserRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -2553,6 +2574,27 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// This API is used to retrieve role list information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public Task<DescribeRoleListResponse> DescribeRoleList(DescribeRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve role list information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
+        /// <returns><see cref="DescribeRoleListResponse"/></returns>
+        public DescribeRoleListResponse DescribeRoleListSync(DescribeRoleListRequest req)
+        {
+            return InternalRequestAsync<DescribeRoleListResponse>(req, "DescribeRoleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Queries rule details
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleRequest"/></param>
@@ -4797,6 +4839,27 @@ namespace TencentCloud.Wedata.V20210820
         public UnlockIntegrationTaskResponse UnlockIntegrationTaskSync(UnlockIntegrationTaskRequest req)
         {
             return InternalRequestAsync<UnlockIntegrationTaskResponse>(req, "UnlockIntegrationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify user roles in a project.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectUserRoleRequest"/></param>
+        /// <returns><see cref="UpdateProjectUserRoleResponse"/></returns>
+        public Task<UpdateProjectUserRoleResponse> UpdateProjectUserRole(UpdateProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectUserRoleResponse>(req, "UpdateProjectUserRole");
+        }
+
+        /// <summary>
+        /// This API is used to modify user roles in a project.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectUserRoleRequest"/></param>
+        /// <returns><see cref="UpdateProjectUserRoleResponse"/></returns>
+        public UpdateProjectUserRoleResponse UpdateProjectUserRoleSync(UpdateProjectUserRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectUserRoleResponse>(req, "UpdateProjectUserRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -62,6 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CycleConfig")]
+        [System.Obsolete]
         public WatermarkCycleConfigForUpdate CycleConfig{ get; set; }
 
 
