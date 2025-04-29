@@ -37,7 +37,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// Lifecycle no.
+        /// Instance lifetime number, which identifies one-time execution of the instance.
+        /// 
+        /// For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
         /// </summary>
         [JsonProperty("LifeRoundNum")]
         public ulong? LifeRoundNum{ get; set; }
@@ -98,6 +100,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("EndLineCount")]
         public ulong? EndLineCount{ get; set; }
 
+        /// <summary>
+        /// Used when performing a paging query for logs. it has no specific business meaning.
+        /// 
+        /// Specifies that the value is null for the first query. 
+        /// Use the ExtInfo field value in the returned information from the previous query for the second and subsequent queries.
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +125,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
             this.SetParamSimple(map, prefix + "StartLineNum", this.StartLineNum);
             this.SetParamSimple(map, prefix + "EndLineCount", this.EndLineCount);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

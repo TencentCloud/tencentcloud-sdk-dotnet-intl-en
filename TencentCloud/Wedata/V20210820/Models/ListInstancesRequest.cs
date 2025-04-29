@@ -31,15 +31,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance plan scheduling time.
-        /// Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+        /// Filter criteria for instance planned scheduling time.
+        /// Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
         /// </summary>
         [JsonProperty("ScheduleTimeFrom")]
         public string ScheduleTimeFrom{ get; set; }
 
         /// <summary>
-        /// Instance plan scheduling time.
-        /// Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+        /// Filter criteria for instance planned scheduling time.
+        /// Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
         /// </summary>
         [JsonProperty("ScheduleTimeTo")]
         public string ScheduleTimeTo{ get; set; }
@@ -59,12 +59,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Field used to sort query results.
+        /// Sorting field for query results.
         /// 
-        /// -SCHEDULE_DATE indicates the planned scheduling time.
-        /// -START_TIME indicates the start execution time of an instance.
-        /// -END_TIME indicates the execution end time of the instance.
-        /// -COST_TIME indicates the execution duration of an instance.
+        /// -SCHEDULE_DATE indicates sorting based on the planned scheduling time.
+        /// -START_TIME indicates sorting by the instance's start execution time.
+        /// -END_TIME indicates sorting based on the instance execution end time.
+        /// -COST_TIME indicates sorting based on instance execution duration.
         /// </summary>
         [JsonProperty("SortColumn")]
         public string SortColumn{ get; set; }
@@ -81,9 +81,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Instance type.
         /// 
-        /// -0 indicates the supplementary entry type.
-        /// -1 indicates a periodic instance.
-        /// -2 indicates a non-periodic instance.
+        /// -0 indicates Replenished Instance.
+        /// -1 indicates Periodic Instance.
+        /// -2 indicates Non-Periodic instance.
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
@@ -92,10 +92,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// Instance execution status.
         /// Support filtering multiple items with an "or" relationship between conditions.
         /// 
-        /// -Indicates waiting for event.
+        /// -[0] Indicates waiting for event.
         /// -[12] indicates waiting for upstream.
         /// -[6, 7, 9, 10, 18] indicates awaiting execution.
-        /// -1, 19, 22 indicate running.
+        /// -[1, 19, 22] indicate running.
         /// -[21] indicates skipping running.
         /// -[3] indicates retry on failure.
         /// -[8, 4, 5, 13] indicates a failure.
@@ -168,15 +168,15 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string[] ExecutorGroupIdList{ get; set; }
 
         /// <summary>
-        /// **Start time**.
-        /// Filter start time. the time format is yyyy-MM-dd HH:MM:ss.
+        /// Instance execution start time filter criteria.
+        /// Specifies the start time for filtering. the time format is yyyy-MM-dd HH:MM:ss.
         /// </summary>
         [JsonProperty("StartTimeFrom")]
         public string StartTimeFrom{ get; set; }
 
         /// <summary>
-        /// **Start time**.
-        /// Filter expiration time. time format: yyyy-MM-dd HH:MM:ss.
+        /// Instance execution start time filter criteria.
+        /// Filter expiration time. the time format is yyyy-MM-dd HH:MM:ss.
         /// </summary>
         [JsonProperty("StartTimeTo")]
         public string StartTimeTo{ get; set; }

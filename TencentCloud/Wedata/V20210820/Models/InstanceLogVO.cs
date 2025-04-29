@@ -42,11 +42,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// **Instance status**.
         /// 
-        /// -Indicates waiting for event.
+        /// -[0] Indicates waiting for event.
         /// -[12] indicates waiting for upstream.
         /// -[6, 7, 9, 10, 18] indicates awaiting execution.
-        /// -1, 19, 22 indicate running.
-        /// -21: skip running.
+        /// -[1, 19, 22] indicate running.
+        /// -[21] skip running.
         /// -[3] indicates retry on failure.
         /// -[8, 4, 5, 13] indicates a failure.
         /// -[2] indicates a success.
@@ -58,12 +58,12 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Instance running trigger type.
         /// 
-        /// -RERUN indicates rerunning.
+        /// -RERUN indicates data replenishment.
         /// -ADDITION indicates supplementary recording.
         /// -PERIODIC indicates a period.
         /// -APERIODIC indicates non-periodic.
         /// -RERUN_SKIP_RUN means empty run for re-run.
-        /// -ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+        /// -ADDITION_SKIP_RUN indicates data replenishment - empty run.
         /// -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
         /// -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
         /// -MANUAL_TRIGGER indicates manual triggering.
@@ -132,7 +132,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? LineCount{ get; set; }
 
         /// <summary>
-        /// Execute platform log pagination query parameters, transparently input for each request. the value is an empty string when querying the first page.
+        /// Used when performing a paging query for logs. it has no specific business meaning.
+        /// 
+        /// Specifies that the value is null for the first query. 
+        /// Specifies that you can use the field value of ExtInfo in the returned information from the previous query for the second and subsequent queries.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtInfo")]

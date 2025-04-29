@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -492,6 +492,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeBrazilRNEOCRResponse RecognizeBrazilRNEOCRSync(RecognizeBrazilRNEOCRRequest req)
         {
             return InternalRequestAsync<RecognizeBrazilRNEOCRResponse>(req, "RecognizeBrazilRNEOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian RNM license. The default interface request frequency limit is 5 times per second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilRNMOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilRNMOCRResponse"/></returns>
+        public Task<RecognizeBrazilRNMOCRResponse> RecognizeBrazilRNMOCR(RecognizeBrazilRNMOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilRNMOCRResponse>(req, "RecognizeBrazilRNMOCR");
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Brazilian RNM license. The default interface request frequency limit is 5 times per second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilRNMOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilRNMOCRResponse"/></returns>
+        public RecognizeBrazilRNMOCRResponse RecognizeBrazilRNMOCRSync(RecognizeBrazilRNMOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilRNMOCRResponse>(req, "RecognizeBrazilRNMOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

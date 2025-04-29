@@ -34,11 +34,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Instance status.
         /// 
-        /// -Indicates waiting for event.
+        /// -[0] Indicates waiting for event.
         /// -[12] indicates waiting for upstream.
         /// -[6, 7, 9, 10, 18] indicates awaiting execution.
-        /// -1, 19, 22 indicate running.
-        /// -21: skip running.
+        /// -[1, 19, 22] indicate running.
+        /// -[21] skip running.
         /// -[3] indicates retry on failure.
         /// -[8, 4, 5, 13] indicates a failure.
         /// -[2] indicates a success.
@@ -48,7 +48,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? InstanceState{ get; set; }
 
         /// <summary>
-        /// Lifecycle no.
+        /// Instance lifetime number, which identifies one-time execution of the instance.
+        /// 
+        /// For example: the number of the first run of a periodic instance is 0. when the user reruns the instance later, the number of the second execution is 1.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LifeRoundNum")]
@@ -58,11 +60,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// Instance running trigger type.
         /// 
         /// -RERUN indicates rerunning.
-        /// -ADDITION indicates supplementary recording.
+        /// -ADDITION indicates data replenishment.
         /// -PERIODIC indicates a period.
         /// -APERIODIC indicates non-periodic.
         /// -RERUN_SKIP_RUN means empty run for re-run.
-        /// -ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+        /// -ADDITION_SKIP_RUN indicates data replenishment - empty run.
         /// -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
         /// -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
         /// -MANUAL_TRIGGER indicates manual triggering.
@@ -96,6 +98,8 @@ namespace TencentCloud.Wedata.V20210820.Models
 
         /// <summary>
         /// Dispatch execution ID.
+        /// The unified execution platform dispatches execution to the new version executor with a unique ID to identify a specific execution, while the existing old executors do not have this ID when dispatching execution.
+        /// If it is unknown whether the executor version supports this ID, contact tencent cloud's operations team.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecutionJobId")]

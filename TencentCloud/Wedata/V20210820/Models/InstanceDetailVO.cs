@@ -132,14 +132,14 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string ExecutorGroupName{ get; set; }
 
         /// <summary>
-        /// Standard data time.
+        /// Instance data time.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CurRunDate")]
         public string CurRunDate{ get; set; }
 
         /// <summary>
-        /// Next standard data time.
+        /// Next instance data time.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NextCurDate")]
@@ -167,7 +167,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         public ulong? TotalRunNum{ get; set; }
 
         /// <summary>
-        /// Lifecycle no.
+        /// Instance lifetime number, which identifies one-time execution of the instance.
+        /// 
+        /// For example: the number of the first run of a periodic instance is 0. after the user reruns the instance later, the number of the second execution is 1.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LifeRoundNum")]
@@ -176,9 +178,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Instance type.
         /// 
-        /// -0 indicates the supplementary entry type.
-        /// -1 indicates a periodic instance.
-        /// -2 indicates a non-periodic instance.
+        /// -0 indicates Replenished Instance.
+        /// -1 indicates Periodic Instance.
+        /// -2 indicates Non-Periodic Instance.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
@@ -187,11 +189,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Indicates the status of an instance.
         /// 
-        /// -Indicates waiting for event.
+        /// -[0] Indicates waiting for event.
         /// -[12] indicates waiting for upstream.
         /// -[6, 7, 9, 10, 18] indicates awaiting execution.
-        /// -1, 19, 22 indicate running.
-        /// -21: skip running.
+        /// -[1, 19, 22] indicate running.
+        /// -[21]: skip running.
         /// -[3] indicates retry on failure.
         /// -[8, 4, 5, 13] indicates a failure.
         /// -[2] indicates a success.
@@ -232,11 +234,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// Instance running trigger type.
         /// 
         /// -RERUN indicates rerunning.
-        /// -ADDITION indicates supplementary recording.
+        /// -ADDITION indicates data replenishment.
         /// -PERIODIC indicates a period.
         /// -APERIODIC indicates non-periodic.
         /// -RERUN_SKIP_RUN indicates re-run - empty run.
-        /// -ADDITION_SKIP_RUN indicates a supplementary run - empty run.
+        /// -ADDITION_SKIP_RUN indicates a data replenishment run - empty run.
         /// -PERIODIC_SKIP_RUN indicates an empty run in a periodic cycle.
         /// -APERIODIC_SKIP_RUN indicates a non-periodic empty run.
         /// -MANUAL_TRIGGER indicates manual triggering.

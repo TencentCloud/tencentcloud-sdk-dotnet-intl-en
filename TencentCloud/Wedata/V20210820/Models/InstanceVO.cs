@@ -117,7 +117,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string TaskCycleType{ get; set; }
 
         /// <summary>
-        /// Standard data time.
+        /// Instance data time.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CurRunDate")]
@@ -159,7 +159,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// <summary>
         /// Indicates the status of an instance.
         /// 
-        /// -Indicates waiting for event.
+        /// -[0]Indicates waiting for event.
         /// -[12] indicates waiting for upstream.
         /// -[6, 7, 9, 10, 18] indicates awaiting execution.
         /// -[1, 19, 22]: running.

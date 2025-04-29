@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1119";
+       private const string sdkVersion = "SDK_NET_3.0.1120";
 
         /// <summary>
         /// Client constructor.
@@ -807,6 +807,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryPolicyProductListByCodeResponse QueryPolicyProductListByCodeSync(QueryPolicyProductListByCodeRequest req)
         {
             return InternalRequestAsync<QueryPolicyProductListByCodeResponse>(req, "QueryPolicyProductListByCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query information of second-level resellers.
+        /// Invocation Role:Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="QuerySubAgentsDetailV2Request"/></param>
+        /// <returns><see cref="QuerySubAgentsDetailV2Response"/></returns>
+        public Task<QuerySubAgentsDetailV2Response> QuerySubAgentsDetailV2(QuerySubAgentsDetailV2Request req)
+        {
+            return InternalRequestAsync<QuerySubAgentsDetailV2Response>(req, "QuerySubAgentsDetailV2");
+        }
+
+        /// <summary>
+        /// This API is used to query information of second-level resellers.
+        /// Invocation Role:Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="QuerySubAgentsDetailV2Request"/></param>
+        /// <returns><see cref="QuerySubAgentsDetailV2Response"/></returns>
+        public QuerySubAgentsDetailV2Response QuerySubAgentsDetailV2Sync(QuerySubAgentsDetailV2Request req)
+        {
+            return InternalRequestAsync<QuerySubAgentsDetailV2Response>(req, "QuerySubAgentsDetailV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
