@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// The number of indirect sub-customers of a first-level distributor.
+        /// The number of indirect sub-customers of a distributor.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

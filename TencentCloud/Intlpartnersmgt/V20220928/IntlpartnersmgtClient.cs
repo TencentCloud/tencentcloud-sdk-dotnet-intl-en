@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1123";
+       private const string sdkVersion = "SDK_NET_3.0.1124";
 
         /// <summary>
         /// Client constructor.
@@ -834,8 +834,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the indirect sub-customers of a first-level distributor.
-        /// Invokable role type: first-level reseller.
+        /// This API is used to query the indirect sub-customers of a distributor.
+        /// Invokable role type: Distributor
         /// </summary>
         /// <param name="req"><see cref="QueryT1IndirectCustomersDetailRequest"/></param>
         /// <returns><see cref="QueryT1IndirectCustomersDetailResponse"/></returns>
@@ -845,8 +845,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the indirect sub-customers of a first-level distributor.
-        /// Invokable role type: first-level reseller.
+        /// This API is used to query the indirect sub-customers of a distributor.
+        /// Invokable role type: Distributor
         /// </summary>
         /// <param name="req"><see cref="QueryT1IndirectCustomersDetailRequest"/></param>
         /// <returns><see cref="QueryT1IndirectCustomersDetailResponse"/></returns>
