@@ -30,6 +30,22 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
+        /// <summary>
+        /// Invite a role.
+        /// Note: if no value is passed, it defaults to the sub - customer.
+        /// Client: customer.
+        /// SubAgent: second-level reseller.
+        /// </summary>
+        [JsonProperty("InvitationRole")]
+        public string InvitationRole{ get; set; }
+
+        /// <summary>
+        /// Specifies the application material.
+        /// Note: this field takes effect only in the scenario of inviting a second-level reseller.
+        /// </summary>
+        [JsonProperty("MaterialUrl")]
+        public string MaterialUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +53,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Email", this.Email);
+            this.SetParamSimple(map, prefix + "InvitationRole", this.InvitationRole);
+            this.SetParamSimple(map, prefix + "MaterialUrl", this.MaterialUrl);
         }
     }
 }

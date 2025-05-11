@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of successfully created instance launch template. This parameter will be returned when the instance launch template is created through the `CreateLaunchTemplate` API.
+        /// Specifies the ID of the successfully created instance launch template when this parameter is returned by creating an instance launch template through this interface.
         /// </summary>
         [JsonProperty("LaunchTemplateId")]
         public string LaunchTemplateId{ get; set; }

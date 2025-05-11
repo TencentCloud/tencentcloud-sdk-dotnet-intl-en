@@ -25,22 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Release address
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Release Address
         /// </summary>
         [JsonProperty("ReleaseAddress")]
         public bool? ReleaseAddress{ get; set; }
 
         /// <summary>
-        /// Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
         /// </summary>
         [JsonProperty("UnsupportNetworks")]
         public string[] UnsupportNetworks{ get; set; }
 
         /// <summary>
-        /// Attributes of local HDD storage
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Specifies the HDD local storage attributes.
         /// </summary>
         [JsonProperty("StorageBlockAttr")]
         public StorageBlock StorageBlockAttr{ get; set; }

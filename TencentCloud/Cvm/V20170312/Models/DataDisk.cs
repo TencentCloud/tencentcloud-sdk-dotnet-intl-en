@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+        /// Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -37,65 +37,47 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Data disk ID. Note that it's not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-        /// It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+        /// Specifies the data disk ID.
+        /// This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Whether the data disk is terminated with the Cloud Virtual Machine (CVM). Valid values:
-        /// 
-        /// <li>true: Terminate the data disk when the CVM is terminated. Only the pay-as-you-go cloud disk billed by hour is supported.</li>
-        /// <li>
-        ///   false: Retain the data disk when the CVM is terminated.<br />
-        ///   Default value: true.<br />
-        ///   This parameter is currently only used for the `RunInstances` API.
-        /// </li>
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// Whether a data disk is encrypted. Valid values:
-        /// <li>true: encrypted.</li>
-        /// <li>
-        ///   false: not encrypted.<br/>
-        ///   Default value: false.<br/>
-        ///   This parameter is currently used only in the `RunInstances` API.
-        /// </li>
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
 
         /// <summary>
-        /// ID of the custom CMK in the format of UUID or "kms-abcd1234". This parameter is used to encrypt cloud disks.
+        /// Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
         /// 
-        /// Currently, this parameter is only used in the `RunInstances` API.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// This parameter is currently only used for the `RunInstances` api.
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// Cloud disk performance, in MB/s
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
+        /// Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// ID of the dedicated cluster to which the instance belongs.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the exclusive cluster ID it belongs to.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
@@ -103,16 +85,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// Burst performance.
         /// 
-        ///  <b>Note: This field is in beta test.</b>
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// <B>Note: this feature is in beta test.</b>.
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }
 
         /// <summary>
-        /// Disk name, with a length of not more than 128 characters.
-        /// 
-        /// This parameter is in invite-only testing and is not yet open for use.
+        /// Disk name, with a length not exceeding 128 characters.
         /// </summary>
         [JsonProperty("DiskName")]
         public string DiskName{ get; set; }

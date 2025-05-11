@@ -25,22 +25,19 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Local HDD storage type. Value: LOCAL_PRO.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// HDD LOCAL storage type specifies the value: LOCAL_PRO.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Minimum capacity of local HDD storage
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Specifies the minimum HDD local storage capacity. measurement unit: GiB.
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// Maximum capacity of local HDD storage
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

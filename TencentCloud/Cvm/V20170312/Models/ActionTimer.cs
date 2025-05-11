@@ -25,44 +25,37 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Timer action. Valid value: `TerminateInstances`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Timer action currently only supports terminating one value: TerminateInstances.
         /// </summary>
         [JsonProperty("TimerAction")]
         public string TimerAction{ get; set; }
 
         /// <summary>
-        /// Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Execution time, in standard ISO8601 representation and using UTC time. format: YYYY-MM-DDThh:MM:ssZ. for example, 2018-05-29T11:26:40Z. the execution time must be later than the current time by 5 minutes.
         /// </summary>
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }
 
         /// <summary>
-        /// Extended data
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Extension data. only used as output usage.
         /// </summary>
         [JsonProperty("Externals")]
         public Externals Externals{ get; set; }
 
         /// <summary>
-        /// Timer ID.
+        /// Timer ID. only used as output usage.
         /// </summary>
         [JsonProperty("ActionTimerId")]
         public string ActionTimerId{ get; set; }
 
         /// <summary>
-        /// Timer status. Valid values:
-        /// 
-        /// UNDO: Not triggered.
-        /// DOING: Triggering.
-        /// DONE: Triggered already.
+        /// Timer status, for output usage only. value ranges from: <li>UNDO: unexecuted</li> <li>DOING: executing</li> <li>DONE: execution completed.</li>.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Instance ID corresponding to a timer.
+        /// Instance ID corresponding to a timer. used only for output.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

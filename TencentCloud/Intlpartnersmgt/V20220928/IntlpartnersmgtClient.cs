@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1125";
+       private const string sdkVersion = "SDK_NET_3.0.1126";
 
         /// <summary>
         /// Client constructor.
@@ -135,6 +135,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to approve applications for second-level resellers.
+        /// Invocation Role: Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="ApproveSubAgentApplyRequest"/></param>
+        /// <returns><see cref="ApproveSubAgentApplyResponse"/></returns>
+        public Task<ApproveSubAgentApplyResponse> ApproveSubAgentApply(ApproveSubAgentApplyRequest req)
+        {
+            return InternalRequestAsync<ApproveSubAgentApplyResponse>(req, "ApproveSubAgentApply");
+        }
+
+        /// <summary>
+        /// This API is used to approve applications for second-level resellers.
+        /// Invocation Role: Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="ApproveSubAgentApplyRequest"/></param>
+        /// <returns><see cref="ApproveSubAgentApplyResponse"/></returns>
+        public ApproveSubAgentApplyResponse ApproveSubAgentApplySync(ApproveSubAgentApplyRequest req)
+        {
+            return InternalRequestAsync<ApproveSubAgentApplyResponse>(req, "ApproveSubAgentApply")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create Tencent Cloud customer accounts for distributor/second-level resellers.After the account is created, it will be automatically bound to the partner account.Note:
         /// 1. Create a Tencent Cloud account. The entered email address and mobile phone number need to be verified by the partner for validity.
         /// 2. Customers need to add personal information when logging in for the first time.
@@ -166,14 +189,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
-        /// 1.This API is used to create an invitation link, which you can send to a specified email address.
-        /// 2.Customer need to click the invitation link in the email, fill in and submit the required information.
-        /// 3.You can review the customer's application in customer management  after submission.
+        /// This API is used to perform operations. Application for allowlist is required before usage. If needed, contact your business representative to request allowlisting. The specific usage process is as follows;.
+        /// This API is used to create an invitation link. You can send the invitation link to your designated email address.
+        /// 2. Customers need to click the invitation link in the mailbox, fill in and submit relevant information.
+        /// 3. After customer submission, you can view the application of this sub-customer on the customer management page and review it.
         /// 
-        /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
-        /// 
-        /// Callable roles: Distributor, Second-level reseller, Reseller
+        /// This API is used to handle cases where if the designated mailbox does not receive the invitation link, you can send the invitation link returned by the API to the customer manually.
+        /// Invocation roles: resellers, distributors, second-level reseller.
         /// </summary>
         /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
         /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
@@ -183,14 +205,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to apply for the allowlist. If needed, please contact your business representative.Directions:
-        /// 1.This API is used to create an invitation link, which you can send to a specified email address.
-        /// 2.Customer need to click the invitation link in the email, fill in and submit the required information.
-        /// 3.You can review the customer's application in customer management  after submission.
+        /// This API is used to perform operations. Application for allowlist is required before usage. If needed, contact your business representative to request allowlisting. The specific usage process is as follows;.
+        /// This API is used to create an invitation link. You can send the invitation link to your designated email address.
+        /// 2. Customers need to click the invitation link in the mailbox, fill in and submit relevant information.
+        /// 3. After customer submission, you can view the application of this sub-customer on the customer management page and review it.
         /// 
-        /// Note:This API is used to manually send the invitation link to the customer if the specified email does not receive it.
-        /// 
-        /// Callable roles: Distributor, Second-level reseller, Reseller
+        /// This API is used to handle cases where if the designated mailbox does not receive the invitation link, you can send the invitation link returned by the API to the customer manually.
+        /// Invocation roles: resellers, distributors, second-level reseller.
         /// </summary>
         /// <param name="req"><see cref="CreateAndSendClientInvitationMailRequest"/></param>
         /// <returns><see cref="CreateAndSendClientInvitationMailResponse"/></returns>
@@ -784,6 +805,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public QueryPendingClientsV2Response QueryPendingClientsV2Sync(QueryPendingClientsV2Request req)
         {
             return InternalRequestAsync<QueryPendingClientsV2Response>(req, "QueryPendingClientsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query information of second-level resellers in application.
+        /// Invocation Role: Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPendingSubAgentsV2Request"/></param>
+        /// <returns><see cref="QueryPendingSubAgentsV2Response"/></returns>
+        public Task<QueryPendingSubAgentsV2Response> QueryPendingSubAgentsV2(QueryPendingSubAgentsV2Request req)
+        {
+            return InternalRequestAsync<QueryPendingSubAgentsV2Response>(req, "QueryPendingSubAgentsV2");
+        }
+
+        /// <summary>
+        /// This API is used to query information of second-level resellers in application.
+        /// Invocation Role: Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="QueryPendingSubAgentsV2Request"/></param>
+        /// <returns><see cref="QueryPendingSubAgentsV2Response"/></returns>
+        public QueryPendingSubAgentsV2Response QueryPendingSubAgentsV2Sync(QueryPendingSubAgentsV2Request req)
+        {
+            return InternalRequestAsync<QueryPendingSubAgentsV2Response>(req, "QueryPendingSubAgentsV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

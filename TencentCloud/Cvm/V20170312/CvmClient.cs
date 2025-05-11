@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1125";
+       private const string sdkVersion = "SDK_NET_3.0.1126";
 
         /// <summary>
         /// Client constructor.
@@ -265,11 +265,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to create an instance launch template.
+        /// This interface (CreateLaunchTemplate) is used for instance launch template creation.
         /// 
-        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// An instance launch template is a configuration data and can be used to create instances. Its content includes configurations required to create instances, such as instance type, types and sizes of data disk and system disk, and security group and other information.
         /// 
-        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it's not specified, the default template version is used.
+        /// This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using CreateLaunchTemplateVersion (https://intl.cloud.tencent.com/document/product/213/66326?from_cn_redirect=1), and the version number will increment. By default, when specifying an instance launch template in RunInstances (https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1), if the template version number is not specified, the default version will be used.
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
         /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
@@ -279,11 +279,11 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// This API is used to create an instance launch template.
+        /// This interface (CreateLaunchTemplate) is used for instance launch template creation.
         /// 
-        /// An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+        /// An instance launch template is a configuration data and can be used to create instances. Its content includes configurations required to create instances, such as instance type, types and sizes of data disk and system disk, and security group and other information.
         /// 
-        /// When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it's not specified, the default template version is used.
+        /// This API is used to create an instance launch template. After the initial creation of the instance template, its template version is the default version 1. A new version can be created using CreateLaunchTemplateVersion (https://intl.cloud.tencent.com/document/product/213/66326?from_cn_redirect=1), and the version number will increment. By default, when specifying an instance launch template in RunInstances (https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1), if the template version number is not specified, the default version will be used.
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
         /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>

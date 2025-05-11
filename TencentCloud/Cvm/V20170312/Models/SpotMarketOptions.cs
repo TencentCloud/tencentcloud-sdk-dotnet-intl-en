@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Bidding price
+        /// Bid price.
         /// </summary>
         [JsonProperty("MaxPrice")]
         public string MaxPrice{ get; set; }
 
         /// <summary>
-        /// Bidding request type. Currently only "one-time" is supported.
+        /// Bid request type. valid values: one-time. currently, only the one-time type is supported.
         /// </summary>
         [JsonProperty("SpotInstanceType")]
         public string SpotInstanceType{ get; set; }

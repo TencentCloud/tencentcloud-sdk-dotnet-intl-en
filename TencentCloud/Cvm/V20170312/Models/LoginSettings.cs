@@ -38,8 +38,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] KeyIds{ get; set; }
 
         /// <summary>
-        /// Maintains the original settings of the image. This parameter cannot be specified simultaneously with Password or KeyIds.N. It can be set to true only when an instance is created with a custom image, shared image, or externally imported image. Valid values: <li>true: indicates that the login settings of the image are maintained</li><li>false: indicates that the login settings of the image are not maintained</li>Default value: false.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Retain the original settings of the image. this parameter cannot be specified simultaneously with Password or KeyIds.N. it can be set to true only when an instance is created with a custom image, shared image, or externally imported image. value ranges from true to false: <li>true: indicates that the login settings of the image are retained</li><li>false: indicates that the login settings of the image are not retained</li>. default value: false.
         /// </summary>
         [JsonProperty("KeepImageLogin")]
         public string KeepImageLogin{ get; set; }

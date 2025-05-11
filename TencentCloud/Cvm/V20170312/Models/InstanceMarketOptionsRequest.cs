@@ -25,15 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Spot-related options
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Relevant options for spot instances.
         /// </summary>
         [JsonProperty("SpotOptions")]
         public SpotMarketOptions SpotOptions{ get; set; }
 
         /// <summary>
-        /// Market type. Valid value: `spot`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Market option type. The value can only be spot currently.
         /// </summary>
         [JsonProperty("MarketType")]
         public string MarketType{ get; set; }

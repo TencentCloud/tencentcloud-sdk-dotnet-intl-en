@@ -25,15 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Resource type. Valid values: `instance` (CVM), `host` (CDH), `image` (for image), and `keypair` (for key).
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Tag-Bound resource type. "instance" for cloud virtual machine, "host" for cdh, "image" for mirror, and "keypair" for key.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Tag pairs
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Tag pair list
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
