@@ -37,11 +37,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Old parameter value, which is used only in output parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Old parameter value (useful only in output parameters).
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }
+
+        /// <summary>
+        /// libra component type.
+        /// </summary>
+        [JsonProperty("Component")]
+        public string Component{ get; set; }
 
 
         /// <summary>
@@ -52,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
             this.SetParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
             this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
+            this.SetParamSimple(map, prefix + "Component", this.Component);
         }
     }
 }

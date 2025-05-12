@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance group ID
+        /// Network group id (starting with the cynosdbmysql-grp- prefix) or cluster id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -31,18 +31,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether the audit is rule audit. Valid values: `true` (rule audit), `false` (full audit).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
         /// </summary>
         [JsonProperty("AuditRule")]
         public bool? AuditRule{ get; set; }
 
         /// <summary>
-        /// Audit rule details, which is valid only when `AuditRule` is `true`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the audit rule details. valid when AuditRule=true.
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
+
+        /// <summary>
+        /// Whether it is an audit policy.
+        /// </summary>
+        [JsonProperty("OldRule")]
+        public bool? OldRule{ get; set; }
+
+        /// <summary>
+        /// The rule template details of the instance application.
+        /// </summary>
+        [JsonProperty("RuleTemplates")]
+        public RuleTemplateInfo[] RuleTemplates{ get; set; }
 
 
         /// <summary>
@@ -53,6 +63,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "AuditRule", this.AuditRule);
             this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+            this.SetParamSimple(map, prefix + "OldRule", this.OldRule);
+            this.SetParamArrayObj(map, prefix + "RuleTemplates.", this.RuleTemplates);
         }
     }
 }

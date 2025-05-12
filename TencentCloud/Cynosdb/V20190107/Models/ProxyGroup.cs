@@ -62,21 +62,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Cluster ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// User `AppId`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User AppId
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Enabling read/write separation for database proxy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies that a read-write node activates the database proxy.
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

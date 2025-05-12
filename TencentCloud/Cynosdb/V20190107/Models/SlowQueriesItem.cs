@@ -90,6 +90,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SqlMd5")]
         public string SqlMd5{ get; set; }
 
+        /// <summary>
+        /// Remote reading count.
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncReadCountRemote")]
+        public long? SyncReadCountRemote{ get; set; }
+
+        /// <summary>
+        /// Number of remote read bytes.
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncReadBytesRemote")]
+        public long? SyncReadBytesRemote{ get; set; }
+
+        /// <summary>
+        /// Time spent on remote reads (µs).
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncReadTimeRemote")]
+        public long? SyncReadTimeRemote{ get; set; }
+
+        /// <summary>
+        /// Remote write count.
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncWriteCountRemote")]
+        public long? SyncWriteCountRemote{ get; set; }
+
+        /// <summary>
+        /// Specifies the number of remote written bytes.
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncWriteBytesRemote")]
+        public long? SyncWriteBytesRemote{ get; set; }
+
+        /// <summary>
+        /// Time spent on remote writing (µs).
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("SyncWriteTimeRemote")]
+        public long? SyncWriteTimeRemote{ get; set; }
+
+        /// <summary>
+        /// Transaction submission delay (µs).
+        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// </summary>
+        [JsonProperty("TrxCommitDelay")]
+        public long? TrxCommitDelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +156,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RowsSent", this.RowsSent);
             this.SetParamSimple(map, prefix + "SqlTemplate", this.SqlTemplate);
             this.SetParamSimple(map, prefix + "SqlMd5", this.SqlMd5);
+            this.SetParamSimple(map, prefix + "SyncReadCountRemote", this.SyncReadCountRemote);
+            this.SetParamSimple(map, prefix + "SyncReadBytesRemote", this.SyncReadBytesRemote);
+            this.SetParamSimple(map, prefix + "SyncReadTimeRemote", this.SyncReadTimeRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteCountRemote", this.SyncWriteCountRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteBytesRemote", this.SyncWriteBytesRemote);
+            this.SetParamSimple(map, prefix + "SyncWriteTimeRemote", this.SyncWriteTimeRemote);
+            this.SetParamSimple(map, prefix + "TrxCommitDelay", this.TrxCommitDelay);
         }
     }
 }

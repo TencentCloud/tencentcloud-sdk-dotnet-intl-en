@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database
+        /// Database.
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }

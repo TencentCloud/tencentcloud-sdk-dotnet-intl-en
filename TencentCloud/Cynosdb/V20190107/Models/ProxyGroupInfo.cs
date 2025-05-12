@@ -25,15 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database proxy group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database proxy group.
         /// </summary>
         [JsonProperty("ProxyGroup")]
         public ProxyGroup ProxyGroup{ get; set; }
 
         /// <summary>
-        /// Read/write separation information of the database proxy group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database proxy group read-write separation information.
         /// </summary>
         [JsonProperty("ProxyGroupRwInfo")]
         public ProxyGroupRwInfo ProxyGroupRwInfo{ get; set; }
@@ -46,8 +44,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyNodeInfo[] ProxyNodes{ get; set; }
 
         /// <summary>
-        /// Connection pool information for the database proxy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database proxy connection pool information.
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public ProxyConnectionPoolInfo ConnectionPool{ get; set; }
@@ -60,8 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public NetAddr[] NetAddrInfos{ get; set; }
 
         /// <summary>
-        /// Task set of the database proxy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database proxy task set.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }

@@ -25,77 +25,67 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Private network IP
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Private IP address
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Private network port number
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the private network port number.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Public network domain name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// Public network port number
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the public network port number.
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Network type (ro - read-only, rw/ha - read-write).
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the subnet ID.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the virtual private cloud ID.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description information
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Public network status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the public network status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }
 
         /// <summary>
-        /// Instance group ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance group ID
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }

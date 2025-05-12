@@ -83,246 +83,212 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Engine type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Engine type.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// User `appid`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// Cluster status description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Cluster creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster Creation Time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Payment mode. 0: pay-as-you-go; 1: monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// End time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration time.
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Cluster read-write VIP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster read/write vip.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Cluster read-write vport
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster read/write vport.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
         /// Project ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the virtual private cloud ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// TDSQL-C kernel version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the cynos kernel version.
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// Storage capacity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the storage capacity.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Renewal flag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Renewal Flag
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Task in progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task being processed.
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// Array of tasks in the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task array of the cluster.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Array of tags bound to the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Array of tags bound to the cluster.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values: `NORMAL`, `SERVERLESS`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Db type (NORMAL, SERVERLESS).
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-        /// `resume`
-        /// `pause`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
+        /// resume
+        /// pause
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Prepaid cluster storage capacity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster prepaid storage size.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Cluster storage ID used in prepaid storage modification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// The minimum storage corresponding to the compute specification of the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum storage value corresponding to cluster computing specifications.
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// The maximum storage corresponding to the compute specification of the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The maximum storage value corresponding to the cluster computing specification.
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Network information of the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the cluster network information.
         /// </summary>
         [JsonProperty("NetAddrs")]
         public NetAddr[] NetAddrs{ get; set; }
 
         /// <summary>
-        /// Physical AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Physical availability zone.
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Primary AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Primary AZ.
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// Whether there is a secondary AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether there is an availability zone.
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// Secondary AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Secondary AZ.
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// Business type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Business type.
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// Whether to freeze
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to freeze.
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// Order source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order Source
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// Capability
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Capacity.
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// Information of the resource pack bound to an instance when `packageType` is `DISK`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }

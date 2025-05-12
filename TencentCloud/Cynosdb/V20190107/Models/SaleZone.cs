@@ -65,8 +65,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Whether the user has AZ permission
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the user has AZ permission.
         /// </summary>
         [JsonProperty("HasPermission")]
         public bool? HasPermission{ get; set; }
@@ -76,6 +75,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("IsWholeRdmaZone")]
         public string IsWholeRdmaZone{ get; set; }
+
+        /// <summary>
+        /// Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+        /// </summary>
+        [JsonProperty("IsSupportCreateCluster")]
+        public long? IsSupportCreateCluster{ get; set; }
 
 
         /// <summary>
@@ -91,6 +96,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
             this.SetParamSimple(map, prefix + "HasPermission", this.HasPermission);
             this.SetParamSimple(map, prefix + "IsWholeRdmaZone", this.IsWholeRdmaZone);
+            this.SetParamSimple(map, prefix + "IsSupportCreateCluster", this.IsSupportCreateCluster);
         }
     }
 }

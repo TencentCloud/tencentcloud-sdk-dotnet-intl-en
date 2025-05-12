@@ -37,22 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Default{ get; set; }
 
         /// <summary>
-        /// The collection of valid value types when parameter type is `enum`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The collection of optional value types when the parameter type is `enum`.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Maximum value when parameter type is `float` or `integer`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The maximum value when the parameter type is float/integer.
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Minimum value when parameter type is `float` or `integer`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum value when the parameter type is float/integer.
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }

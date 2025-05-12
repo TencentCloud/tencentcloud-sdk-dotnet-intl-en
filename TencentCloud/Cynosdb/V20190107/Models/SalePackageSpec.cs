@@ -25,37 +25,40 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Region of the resource pack Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource package region of use.
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the resource package type.
+        /// CCU - compute resource package.
+        /// Storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource pack version.
+        /// base - basic version; common - general version; enterprise - enterprise edition.
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// Minimum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
         /// </summary>
         [JsonProperty("MinPackageSpec")]
         public float? MinPackageSpec{ get; set; }
 
         /// <summary>
-        /// Maximum number of resources for the current edition of the resource pack.  Unit of the compute resources: pcs.  Unit of the storage resources: GB. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
         /// </summary>
         [JsonProperty("MaxPackageSpec")]
         public float? MaxPackageSpec{ get; set; }
 
         /// <summary>
-        /// Validity period of a resource pack in days Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the resource pack validity period. the measurement unit is day.
         /// </summary>
         [JsonProperty("ExpireDay")]
         public long? ExpireDay{ get; set; }

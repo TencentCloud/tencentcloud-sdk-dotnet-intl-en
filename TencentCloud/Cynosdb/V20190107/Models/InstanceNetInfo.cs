@@ -25,77 +25,67 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Network type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network type.
         /// </summary>
         [JsonProperty("InstanceGroupType")]
         public string InstanceGroupType{ get; set; }
 
         /// <summary>
         /// Instance group ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the virtual private cloud ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Network type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// VPC IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// VPC IP.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// VPC port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// VPC port.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Public network domain name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public IP address
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Public network port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public network port.
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Public network status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public network enabled status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }

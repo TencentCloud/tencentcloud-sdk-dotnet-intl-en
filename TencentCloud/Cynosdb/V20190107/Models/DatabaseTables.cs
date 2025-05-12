@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Database name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// Table name list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Table name list.
         /// </summary>
         [JsonProperty("Tables")]
         public string[] Tables{ get; set; }

@@ -85,16 +85,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether `ParamType` is a `func` Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the type is a formula.
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Parameter configuration formula Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter configuration formula.
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
+
+        /// <summary>
+        /// The default formula style of parameters that support formulas.
+        /// </summary>
+        [JsonProperty("FuncPattern")]
+        public string FuncPattern{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);
+            this.SetParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
         }
     }
 }

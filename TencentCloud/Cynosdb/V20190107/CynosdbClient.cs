@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to remove the isolation of an instance to make it accessible again.
+        /// This interface (ActivateInstance) restores access to isolated instances.
         /// </summary>
         /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
         /// <returns><see cref="ActivateInstanceResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to remove the isolation of an instance to make it accessible again.
+        /// This interface (ActivateInstance) restores access to isolated instances.
         /// </summary>
         /// <param name="req"><see cref="ActivateInstanceRequest"/></param>
         /// <returns><see cref="ActivateInstanceResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to add the replica AZ.
+        /// This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="AddClusterSlaveZoneResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to add the replica AZ.
+        /// This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="AddClusterSlaveZoneResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to add an instance in a cluster.
+        /// This API is used to add instances to a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddInstancesRequest"/></param>
         /// <returns><see cref="AddInstancesResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to add an instance in a cluster.
+        /// This API is used to add instances to a cluster.
         /// </summary>
         /// <param name="req"><see cref="AddInstancesRequest"/></param>
         /// <returns><see cref="AddInstancesResponse"/></returns>
@@ -117,7 +117,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to bind a resource pack to a cluster.
+        /// This API is used to bind resource packages to a cluster.
         /// </summary>
         /// <param name="req"><see cref="BindClusterResourcePackagesRequest"/></param>
         /// <returns><see cref="BindClusterResourcePackagesResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to bind a resource pack to a cluster.
+        /// This API is used to bind resource packages to a cluster.
         /// </summary>
         /// <param name="req"><see cref="BindClusterResourcePackagesRequest"/></param>
         /// <returns><see cref="BindClusterResourcePackagesResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+        /// This API is used to close the database audit service for TDSQL-C MySQL instances.
         /// </summary>
         /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
         /// <returns><see cref="CloseAuditServiceResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+        /// This API is used to close the database audit service for TDSQL-C MySQL instances.
         /// </summary>
         /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
         /// <returns><see cref="CloseAuditServiceResponse"/></returns>
@@ -159,7 +159,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the password complexity for a cluster.
+        /// This API is used to close cluster password complexity.
         /// </summary>
         /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the password complexity for a cluster.
+        /// This API is used to close cluster password complexity.
         /// </summary>
         /// <param name="req"><see cref="CloseClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="CloseClusterPasswordComplexityResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the database proxy.
+        /// This API is used to close the database proxy service of a cluster.
         /// </summary>
         /// <param name="req"><see cref="CloseProxyRequest"/></param>
         /// <returns><see cref="CloseProxyResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the database proxy.
+        /// This API is used to close the database proxy service of a cluster.
         /// </summary>
         /// <param name="req"><see cref="CloseProxyRequest"/></param>
         /// <returns><see cref="CloseProxyResponse"/></returns>
@@ -201,7 +201,49 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the public network.
+        /// This API is used to close the database proxy connection address.
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
+        /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
+        public Task<CloseProxyEndPointResponse> CloseProxyEndPoint(CloseProxyEndPointRequest req)
+        {
+            return InternalRequestAsync<CloseProxyEndPointResponse>(req, "CloseProxyEndPoint");
+        }
+
+        /// <summary>
+        /// This API is used to close the database proxy connection address.
+        /// </summary>
+        /// <param name="req"><see cref="CloseProxyEndPointRequest"/></param>
+        /// <returns><see cref="CloseProxyEndPointResponse"/></returns>
+        public CloseProxyEndPointResponse CloseProxyEndPointSync(CloseProxyEndPointRequest req)
+        {
+            return InternalRequestAsync<CloseProxyEndPointResponse>(req, "CloseProxyEndPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to disable SSL encryption.
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public Task<CloseSSLResponse> CloseSSL(CloseSSLRequest req)
+        {
+            return InternalRequestAsync<CloseSSLResponse>(req, "CloseSSL");
+        }
+
+        /// <summary>
+        /// This API is used to disable SSL encryption.
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public CloseSSLResponse CloseSSLSync(CloseSSLRequest req)
+        {
+            return InternalRequestAsync<CloseSSLResponse>(req, "CloseSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (CloseWan) is used to disable public network.
         /// </summary>
         /// <param name="req"><see cref="CloseWanRequest"/></param>
         /// <returns><see cref="CloseWanResponse"/></returns>
@@ -211,7 +253,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to disable the public network.
+        /// This interface (CloseWan) is used to disable public network.
         /// </summary>
         /// <param name="req"><see cref="CloseWanRequest"/></param>
         /// <returns><see cref="CloseWanResponse"/></returns>
@@ -222,7 +264,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to replicate the password complexity for a cluster.
+        /// This API is used to copy the password complexity of a replication cluster.
         /// </summary>
         /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
@@ -232,7 +274,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to replicate the password complexity for a cluster.
+        /// This API is used to copy the password complexity of a replication cluster.
         /// </summary>
         /// <param name="req"><see cref="CopyClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="CopyClusterPasswordComplexityResponse"/></returns>
@@ -243,7 +285,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create an account.
+        /// This API is used to create user accounts.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -253,7 +295,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create an account.
+        /// This API is used to create user accounts.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -264,7 +306,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create an audit rule template.
+        /// This API is used to create audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
@@ -274,7 +316,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create an audit rule template.
+        /// This API is used to create audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
         /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
@@ -285,7 +327,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create manual backup.
+        /// This API is used to create a manual backup for a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>
         /// <returns><see cref="CreateBackupResponse"/></returns>
@@ -295,7 +337,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create manual backup.
+        /// This API is used to create a manual backup for a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateBackupRequest"/></param>
         /// <returns><see cref="CreateBackupResponse"/></returns>
@@ -327,7 +369,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a cluster.
+        /// This API is used to purchase new clusters.
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
         /// <returns><see cref="CreateClustersResponse"/></returns>
@@ -337,7 +379,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a cluster.
+        /// This API is used to purchase new clusters.
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>
         /// <returns><see cref="CreateClustersResponse"/></returns>
@@ -348,7 +390,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a parameter template.
+        /// This API is used to create parameter templates.
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -358,7 +400,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a parameter template.
+        /// This API is used to create parameter templates.
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -369,7 +411,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a database proxy.
+        /// This API is used to enable the database proxy of a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyRequest"/></param>
         /// <returns><see cref="CreateProxyResponse"/></returns>
@@ -379,7 +421,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a database proxy.
+        /// This API is used to enable the database proxy of a cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyRequest"/></param>
         /// <returns><see cref="CreateProxyResponse"/></returns>
@@ -390,7 +432,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a database proxy connection.
+        /// This API is used to create a database proxy connection point.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyEndPointRequest"/></param>
         /// <returns><see cref="CreateProxyEndPointResponse"/></returns>
@@ -400,7 +442,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to create a database proxy connection.
+        /// This API is used to create a database proxy connection point.
         /// </summary>
         /// <param name="req"><see cref="CreateProxyEndPointRequest"/></param>
         /// <returns><see cref="CreateProxyEndPointResponse"/></returns>
@@ -411,7 +453,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to purchase a resource pack.
+        /// This API is used to purchase new resource packets.
         /// </summary>
         /// <param name="req"><see cref="CreateResourcePackageRequest"/></param>
         /// <returns><see cref="CreateResourcePackageResponse"/></returns>
@@ -421,7 +463,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to purchase a resource pack.
+        /// This API is used to purchase new resource packets.
         /// </summary>
         /// <param name="req"><see cref="CreateResourcePackageRequest"/></param>
         /// <returns><see cref="CreateResourcePackageResponse"/></returns>
@@ -432,7 +474,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete an account.
+        /// This API is used to delete user accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
         /// <returns><see cref="DeleteAccountsResponse"/></returns>
@@ -442,7 +484,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete an account.
+        /// This API is used to delete user accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
         /// <returns><see cref="DeleteAccountsResponse"/></returns>
@@ -453,7 +495,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete an audit rule template.
+        /// This API is used to delete audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -463,7 +505,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete an audit rule template.
+        /// This API is used to delete audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
@@ -474,7 +516,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+        /// This API is used to delete manual backups for a cluster. Automatic backups cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -484,7 +526,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+        /// This API is used to delete manual backups for a cluster. Automatic backups cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteBackupRequest"/></param>
         /// <returns><see cref="DeleteBackupResponse"/></returns>
@@ -495,7 +537,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete a database.
+        /// This interface is used to delete a database.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
         /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
@@ -505,7 +547,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete a database.
+        /// This interface is used to delete a database.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
         /// <returns><see cref="DeleteClusterDatabaseResponse"/></returns>
@@ -537,7 +579,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the existing permissions of an account.
+        /// This API is used to query account privileges.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -547,7 +589,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the existing permissions of an account.
+        /// This API is used to query account privileges.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountPrivilegesRequest"/></param>
         /// <returns><see cref="DescribeAccountPrivilegesResponse"/></returns>
@@ -558,7 +600,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query database management accounts.
+        /// This API is used to query the database account list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -568,7 +610,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query database management accounts.
+        /// This API is used to query the database account list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
         /// <returns><see cref="DescribeAccountsResponse"/></returns>
@@ -579,7 +621,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query audit rule templates.
+        /// This API is used to query audit rule template information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -589,7 +631,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query audit rule templates.
+        /// This API is used to query audit rule template information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
@@ -600,7 +642,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to get the audit rule templates of an instance.
+        /// This API is used to obtain the audit rules of the instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
@@ -610,7 +652,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to get the audit rule templates of an instance.
+        /// This API is used to obtain the audit rules of the instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditRuleWithInstanceIdsRequest"/></param>
         /// <returns><see cref="DescribeAuditRuleWithInstanceIdsResponse"/></returns>
@@ -621,7 +663,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to get the backup configuration information of the specified cluster, including the full backup time range and backup file retention period.
+        /// This API is used to obtain the backup configuration information of a specified cluster, including the full backup time period and the backup file retention time.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeBackupConfigResponse"/></returns>
@@ -631,7 +673,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to get the backup configuration information of the specified cluster, including the full backup time range and backup file retention period.
+        /// This API is used to obtain the backup configuration information of a specified cluster, including the full backup time period and the backup file retention time.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupConfigRequest"/></param>
         /// <returns><see cref="DescribeBackupConfigResponse"/></returns>
@@ -642,7 +684,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the download address of a cluster backup file.
+        /// This API is used to query the download link of cluster backup files.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
@@ -652,7 +694,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the download address of a cluster backup file.
+        /// This API is used to query the download link of cluster backup files.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
@@ -663,7 +705,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of backup files.
+        /// This API is used to query the backup file list of a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupListRequest"/></param>
         /// <returns><see cref="DescribeBackupListResponse"/></returns>
@@ -673,7 +715,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of backup files.
+        /// This API is used to query the backup file list of a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupListRequest"/></param>
         /// <returns><see cref="DescribeBackupListResponse"/></returns>
@@ -684,7 +726,28 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the download address of a binlog.
+        /// This API is used to query binlog configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBinlogConfigResponse"/></returns>
+        public Task<DescribeBinlogConfigResponse> DescribeBinlogConfig(DescribeBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogConfigResponse>(req, "DescribeBinlogConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query binlog configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBinlogConfigResponse"/></returns>
+        public DescribeBinlogConfigResponse DescribeBinlogConfigSync(DescribeBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogConfigResponse>(req, "DescribeBinlogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the download address of Binlog.
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
@@ -694,7 +757,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the download address of a binlog.
+        /// This API is used to query the download address of Binlog.
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
         /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
@@ -726,7 +789,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of binlogs in a cluster.
+        /// This interface (DescribeBinlogs) queries the cluster binlog list.
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
         /// <returns><see cref="DescribeBinlogsResponse"/></returns>
@@ -736,7 +799,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of binlogs in a cluster.
+        /// This interface (DescribeBinlogs) queries the cluster binlog list.
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
         /// <returns><see cref="DescribeBinlogsResponse"/></returns>
@@ -747,7 +810,28 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to show the details of an instance.
+        /// This API is used to access the table list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabaseTablesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabaseTablesResponse"/></returns>
+        public Task<DescribeClusterDatabaseTablesResponse> DescribeClusterDatabaseTables(DescribeClusterDatabaseTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabaseTablesResponse>(req, "DescribeClusterDatabaseTables");
+        }
+
+        /// <summary>
+        /// This API is used to access the table list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabaseTablesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabaseTablesResponse"/></returns>
+        public DescribeClusterDatabaseTablesResponse DescribeClusterDatabaseTablesSync(DescribeClusterDatabaseTablesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabaseTablesResponse>(req, "DescribeClusterDatabaseTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to display cluster details.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
@@ -757,7 +841,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to show the details of an instance.
+        /// This API is used to display cluster details.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailResponse"/></returns>
@@ -768,7 +852,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the database list.
+        /// This API is used to query database list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
@@ -778,7 +862,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the database list.
+        /// This API is used to query database list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDetailDatabasesRequest"/></param>
         /// <returns><see cref="DescribeClusterDetailDatabasesResponse"/></returns>
@@ -810,7 +894,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the parameters of a cluster.
+        /// This API is used to query cluster parameters.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
         /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
@@ -820,7 +904,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the parameters of a cluster.
+        /// This API is used to query cluster parameters.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
         /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
@@ -831,7 +915,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the details of password complexity for a cluster.
+        /// This API is used to view the cluster password complexity details.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
@@ -841,7 +925,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the details of password complexity for a cluster.
+        /// This API is used to view the cluster password complexity details.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="DescribeClusterPasswordComplexityResponse"/></returns>
@@ -852,7 +936,28 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to the list of clusters.
+        /// This API is used to query cluster transparent encryption information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTransparentEncryptInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterTransparentEncryptInfoResponse"/></returns>
+        public Task<DescribeClusterTransparentEncryptInfoResponse> DescribeClusterTransparentEncryptInfo(DescribeClusterTransparentEncryptInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterTransparentEncryptInfoResponse>(req, "DescribeClusterTransparentEncryptInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query cluster transparent encryption information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterTransparentEncryptInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterTransparentEncryptInfoResponse"/></returns>
+        public DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfoSync(DescribeClusterTransparentEncryptInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterTransparentEncryptInfoResponse>(req, "DescribeClusterTransparentEncryptInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to describe clusters.
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>
         /// <returns><see cref="DescribeClustersResponse"/></returns>
@@ -862,7 +967,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to the list of clusters.
+        /// This API is used to describe clusters.
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>
         /// <returns><see cref="DescribeClustersResponse"/></returns>
@@ -873,7 +978,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the security group information of an instance.
+        /// This API is used to query instance security group information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -883,7 +988,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the security group information of an instance.
+        /// This API is used to query instance security group information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
@@ -936,7 +1041,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of error logs for an instance.
+        /// This API is used to query the list of instance error logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
@@ -946,7 +1051,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of error logs for an instance.
+        /// This API is used to query the list of instance error logs.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceErrorLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceErrorLogsResponse"/></returns>
@@ -957,7 +1062,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the parameter list of an instance.
+        /// This API is used to query the instance parameter list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -967,7 +1072,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the parameter list of an instance.
+        /// This API is used to query the instance parameter list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -999,7 +1104,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query instance specifications.
+        /// This interface (DescribeInstanceSpecs) is used to query the instance specifications available for purchase on the query purchase page.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSpecsRequest"/></param>
         /// <returns><see cref="DescribeInstanceSpecsResponse"/></returns>
@@ -1009,7 +1114,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query instance specifications.
+        /// This interface (DescribeInstanceSpecs) is used to query the instance specifications available for purchase on the query purchase page.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSpecsRequest"/></param>
         /// <returns><see cref="DescribeInstanceSpecsResponse"/></returns>
@@ -1041,7 +1146,49 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the instance maintenance window.
+        /// This API is used to query the instance list under the same cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
+        /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>
+        public Task<DescribeInstancesWithinSameClusterResponse> DescribeInstancesWithinSameCluster(DescribeInstancesWithinSameClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesWithinSameClusterResponse>(req, "DescribeInstancesWithinSameCluster");
+        }
+
+        /// <summary>
+        /// This API is used to query the instance list under the same cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesWithinSameClusterRequest"/></param>
+        /// <returns><see cref="DescribeInstancesWithinSameClusterResponse"/></returns>
+        public DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameClusterSync(DescribeInstancesWithinSameClusterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancesWithinSameClusterResponse>(req, "DescribeInstancesWithinSameCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface is used for querying the recycle bin instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>
+        public Task<DescribeIsolatedInstancesResponse> DescribeIsolatedInstances(DescribeIsolatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeIsolatedInstancesResponse>(req, "DescribeIsolatedInstances");
+        }
+
+        /// <summary>
+        /// This interface is used for querying the recycle bin instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIsolatedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeIsolatedInstancesResponse"/></returns>
+        public DescribeIsolatedInstancesResponse DescribeIsolatedInstancesSync(DescribeIsolatedInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeIsolatedInstancesResponse>(req, "DescribeIsolatedInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintainPeriodRequest"/></param>
         /// <returns><see cref="DescribeMaintainPeriodResponse"/></returns>
@@ -1051,7 +1198,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the instance maintenance window.
+        /// This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintainPeriodRequest"/></param>
         /// <returns><see cref="DescribeMaintainPeriodResponse"/></returns>
@@ -1062,7 +1209,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the details of a parameter template.
+        /// This API is used to query user parameter template details.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
@@ -1072,7 +1219,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the details of a parameter template.
+        /// This API is used to query user parameter template details.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateDetailRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateDetailResponse"/></returns>
@@ -1083,7 +1230,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query all parameter templates information of a user-specified product.
+        /// This API is used to query all parameter template information under the user-specified product.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1093,7 +1240,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query all parameter templates information of a user-specified product.
+        /// This API is used to query all parameter template information under the user-specified product.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1104,7 +1251,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the security group information of a project.
+        /// This API is used to query project security group information.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
@@ -1114,7 +1261,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the security group information of a project.
+        /// This API is used to query project security group information.
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
         /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
@@ -1125,7 +1272,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of database proxies.
+        /// This API is used to query agent list.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxiesRequest"/></param>
         /// <returns><see cref="DescribeProxiesResponse"/></returns>
@@ -1135,7 +1282,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of database proxies.
+        /// This API is used to query agent list.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxiesRequest"/></param>
         /// <returns><see cref="DescribeProxiesResponse"/></returns>
@@ -1167,7 +1314,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the specifications of a database proxy.
+        /// This API is used to query database proxy specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxySpecsRequest"/></param>
         /// <returns><see cref="DescribeProxySpecsResponse"/></returns>
@@ -1177,7 +1324,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the specifications of a database proxy.
+        /// This API is used to query database proxy specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeProxySpecsRequest"/></param>
         /// <returns><see cref="DescribeProxySpecsResponse"/></returns>
@@ -1188,7 +1335,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the usage details of a resource pack.
+        /// This API is used to query resource package usage details.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageDetailResponse"/></returns>
@@ -1198,7 +1345,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the usage details of a resource pack.
+        /// This API is used to query resource package usage details.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageDetailResponse"/></returns>
@@ -1209,7 +1356,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of the resource packs.
+        /// This API is used to query resource package list.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageListRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageListResponse"/></returns>
@@ -1219,7 +1366,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of the resource packs.
+        /// This API is used to query resource package list.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageListRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageListResponse"/></returns>
@@ -1230,7 +1377,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the specifications of a resource pack.
+        /// This API is used to query resource package specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageSaleSpecRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageSaleSpecResponse"/></returns>
@@ -1240,7 +1387,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the specifications of a resource pack.
+        /// This API is used to query resource package specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageSaleSpecRequest"/></param>
         /// <returns><see cref="DescribeResourcePackageSaleSpecResponse"/></returns>
@@ -1251,7 +1398,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of resources by billing order ID.
+        /// This interface (DescribeResourcesByDealName) is used to query order-associated instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
         /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
@@ -1261,7 +1408,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the list of resources by billing order ID.
+        /// This interface (DescribeResourcesByDealName) is used to query order-associated instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcesByDealNameRequest"/></param>
         /// <returns><see cref="DescribeResourcesByDealNameResponse"/></returns>
@@ -1272,7 +1419,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the valid rollback time range for the specified cluster.
+        /// This API is used to query the rollback time range.
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeRangeRequest"/></param>
         /// <returns><see cref="DescribeRollbackTimeRangeResponse"/></returns>
@@ -1282,7 +1429,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the valid rollback time range for the specified cluster.
+        /// This API is used to query the rollback time range.
         /// </summary>
         /// <param name="req"><see cref="DescribeRollbackTimeRangeRequest"/></param>
         /// <returns><see cref="DescribeRollbackTimeRangeResponse"/></returns>
@@ -1293,28 +1440,70 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query whether rollback is possible based on the specified time and cluster.
+        /// This API is used to query available specifications of Serverless instances.
         /// </summary>
-        /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>
-        /// <returns><see cref="DescribeRollbackTimeValidityResponse"/></returns>
-        public Task<DescribeRollbackTimeValidityResponse> DescribeRollbackTimeValidity(DescribeRollbackTimeValidityRequest req)
+        /// <param name="req"><see cref="DescribeServerlessInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeServerlessInstanceSpecsResponse"/></returns>
+        public Task<DescribeServerlessInstanceSpecsResponse> DescribeServerlessInstanceSpecs(DescribeServerlessInstanceSpecsRequest req)
         {
-            return InternalRequestAsync<DescribeRollbackTimeValidityResponse>(req, "DescribeRollbackTimeValidity");
+            return InternalRequestAsync<DescribeServerlessInstanceSpecsResponse>(req, "DescribeServerlessInstanceSpecs");
         }
 
         /// <summary>
-        /// This API is used to query whether rollback is possible based on the specified time and cluster.
+        /// This API is used to query available specifications of Serverless instances.
         /// </summary>
-        /// <param name="req"><see cref="DescribeRollbackTimeValidityRequest"/></param>
-        /// <returns><see cref="DescribeRollbackTimeValidityResponse"/></returns>
-        public DescribeRollbackTimeValidityResponse DescribeRollbackTimeValiditySync(DescribeRollbackTimeValidityRequest req)
+        /// <param name="req"><see cref="DescribeServerlessInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeServerlessInstanceSpecsResponse"/></returns>
+        public DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecsSync(DescribeServerlessInstanceSpecsRequest req)
         {
-            return InternalRequestAsync<DescribeRollbackTimeValidityResponse>(req, "DescribeRollbackTimeValidity")
+            return InternalRequestAsync<DescribeServerlessInstanceSpecsResponse>(req, "DescribeServerlessInstanceSpecs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
-        /// This API is used to query the supported database proxy versions.
+        /// This API is used to query serverless policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessStrategyRequest"/></param>
+        /// <returns><see cref="DescribeServerlessStrategyResponse"/></returns>
+        public Task<DescribeServerlessStrategyResponse> DescribeServerlessStrategy(DescribeServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessStrategyResponse>(req, "DescribeServerlessStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to query serverless policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerlessStrategyRequest"/></param>
+        /// <returns><see cref="DescribeServerlessStrategyResponse"/></returns>
+        public DescribeServerlessStrategyResponse DescribeServerlessStrategySync(DescribeServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeServerlessStrategyResponse>(req, "DescribeServerlessStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query from availability zones.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlaveZonesRequest"/></param>
+        /// <returns><see cref="DescribeSlaveZonesResponse"/></returns>
+        public Task<DescribeSlaveZonesResponse> DescribeSlaveZones(DescribeSlaveZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeSlaveZonesResponse>(req, "DescribeSlaveZones");
+        }
+
+        /// <summary>
+        /// This API is used to query from availability zones.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlaveZonesRequest"/></param>
+        /// <returns><see cref="DescribeSlaveZonesResponse"/></returns>
+        public DescribeSlaveZonesResponse DescribeSlaveZonesSync(DescribeSlaveZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeSlaveZonesResponse>(req, "DescribeSlaveZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query supported database proxy versions.
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
         /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
@@ -1324,7 +1513,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the supported database proxy versions.
+        /// This API is used to query supported database proxy versions.
         /// </summary>
         /// <param name="req"><see cref="DescribeSupportProxyVersionRequest"/></param>
         /// <returns><see cref="DescribeSupportProxyVersionResponse"/></returns>
@@ -1335,7 +1524,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the AZ information in a purchasable region.
+        /// This API is used to query marketable regional availability zone information.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1345,7 +1534,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the AZ information in a purchasable region.
+        /// This API is used to query marketable regional availability zone information.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -1377,7 +1566,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to export the slow logs of an instance.
+        /// This API is used to export instance slow logs.
         /// </summary>
         /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>
@@ -1387,7 +1576,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to export the slow logs of an instance.
+        /// This API is used to export instance slow logs.
         /// </summary>
         /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>
@@ -1398,7 +1587,28 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the purchasable price of a cluster.
+        /// This API is used to export the usage details of a resource package.
+        /// </summary>
+        /// <param name="req"><see cref="ExportResourcePackageDeductDetailsRequest"/></param>
+        /// <returns><see cref="ExportResourcePackageDeductDetailsResponse"/></returns>
+        public Task<ExportResourcePackageDeductDetailsResponse> ExportResourcePackageDeductDetails(ExportResourcePackageDeductDetailsRequest req)
+        {
+            return InternalRequestAsync<ExportResourcePackageDeductDetailsResponse>(req, "ExportResourcePackageDeductDetails");
+        }
+
+        /// <summary>
+        /// This API is used to export the usage details of a resource package.
+        /// </summary>
+        /// <param name="req"><see cref="ExportResourcePackageDeductDetailsRequest"/></param>
+        /// <returns><see cref="ExportResourcePackageDeductDetailsResponse"/></returns>
+        public ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetailsSync(ExportResourcePackageDeductDetailsRequest req)
+        {
+            return InternalRequestAsync<ExportResourcePackageDeductDetailsResponse>(req, "ExportResourcePackageDeductDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (InquirePriceCreate) is used for price inquiry of newly purchased clusters.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
         /// <returns><see cref="InquirePriceCreateResponse"/></returns>
@@ -1408,13 +1618,34 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the purchasable price of a cluster.
+        /// This interface (InquirePriceCreate) is used for price inquiry of newly purchased clusters.
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
         /// <returns><see cref="InquirePriceCreateResponse"/></returns>
         public InquirePriceCreateResponse InquirePriceCreateSync(InquirePriceCreateRequest req)
         {
             return InternalRequestAsync<InquirePriceCreateResponse>(req, "InquirePriceCreate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the price for modifying the specifications of a prepaid cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyResponse"/></returns>
+        public Task<InquirePriceModifyResponse> InquirePriceModify(InquirePriceModifyRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify");
+        }
+
+        /// <summary>
+        /// This API is used to query the price for modifying the specifications of a prepaid cluster.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceModifyRequest"/></param>
+        /// <returns><see cref="InquirePriceModifyResponse"/></returns>
+        public InquirePriceModifyResponse InquirePriceModifySync(InquirePriceModifyRequest req)
+        {
+            return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1440,7 +1671,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to isolate a cluster.
+        /// This interface (IsolateCluster) is used to isolate a cluster.
         /// </summary>
         /// <param name="req"><see cref="IsolateClusterRequest"/></param>
         /// <returns><see cref="IsolateClusterResponse"/></returns>
@@ -1450,7 +1681,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to isolate a cluster.
+        /// This interface (IsolateCluster) is used to isolate a cluster.
         /// </summary>
         /// <param name="req"><see cref="IsolateClusterRequest"/></param>
         /// <returns><see cref="IsolateClusterResponse"/></returns>
@@ -1503,7 +1734,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the account host.
+        /// This API is used to modify account hosts.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
         /// <returns><see cref="ModifyAccountHostResponse"/></returns>
@@ -1513,7 +1744,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the account host.
+        /// This API is used to modify account hosts.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
         /// <returns><see cref="ModifyAccountHostResponse"/></returns>
@@ -1524,7 +1755,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the account permissions.
+        /// This API is used to modify account database and table permissions.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -1534,7 +1765,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the account permissions.
+        /// This API is used to modify account database and table permissions.
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
         /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
@@ -1545,7 +1776,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify an audit rule template.
+        /// This API is used to modify audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
@@ -1555,7 +1786,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify an audit rule template.
+        /// This API is used to modify audit rule templates.
         /// </summary>
         /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
         /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
@@ -1587,7 +1818,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the backup configuration of the specified cluster.
+        /// This API is used to modify the backup configuration of a specified cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyBackupConfigResponse"/></returns>
@@ -1597,7 +1828,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the backup configuration of the specified cluster.
+        /// This API is used to modify the backup configuration of a specified cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyBackupConfigResponse"/></returns>
@@ -1629,6 +1860,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify Binlog configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyBinlogConfigResponse"/></returns>
+        public Task<ModifyBinlogConfigResponse> ModifyBinlogConfig(ModifyBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyBinlogConfigResponse>(req, "ModifyBinlogConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify Binlog configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyBinlogConfigResponse"/></returns>
+        public ModifyBinlogConfigResponse ModifyBinlogConfigSync(ModifyBinlogConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyBinlogConfigResponse>(req, "ModifyBinlogConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the binlog retention period in days.
         /// </summary>
         /// <param name="req"><see cref="ModifyBinlogSaveDaysRequest"/></param>
@@ -1650,7 +1902,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the database.
+        /// This API is used to modify account authorization of a database.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
         /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
@@ -1660,7 +1912,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the database.
+        /// This API is used to modify account authorization of a database.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
         /// <returns><see cref="ModifyClusterDatabaseResponse"/></returns>
@@ -1671,7 +1923,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify cluster name.
+        /// This API is used to modify cluster names.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
         /// <returns><see cref="ModifyClusterNameResponse"/></returns>
@@ -1681,7 +1933,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify cluster name.
+        /// This API is used to modify cluster names.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
         /// <returns><see cref="ModifyClusterNameResponse"/></returns>
@@ -1692,7 +1944,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the parameters of a cluster.
+        /// This API is used to modify cluster parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
         /// <returns><see cref="ModifyClusterParamResponse"/></returns>
@@ -1702,7 +1954,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the parameters of a cluster.
+        /// This API is used to modify cluster parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
         /// <returns><see cref="ModifyClusterParamResponse"/></returns>
@@ -1713,7 +1965,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify or enable the password complexity for a cluster.
+        /// This API is used to modify or enable cluster password complexity.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
@@ -1723,7 +1975,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify or enable the password complexity for a cluster.
+        /// This API is used to modify or enable cluster password complexity.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="ModifyClusterPasswordComplexityResponse"/></returns>
@@ -1734,7 +1986,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the replica AZ.
+        /// This API is used to modify the slave availability zone of a cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="ModifyClusterSlaveZoneResponse"/></returns>
@@ -1744,7 +1996,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the replica AZ.
+        /// This API is used to modify the slave availability zone of a cluster.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="ModifyClusterSlaveZoneResponse"/></returns>
@@ -1755,7 +2007,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the security groups bound to an instance.
+        /// This API is used to modify the security group bound to the instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -1765,7 +2017,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the security groups bound to an instance.
+        /// This API is used to modify the security group bound to the instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
@@ -1818,7 +2070,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the maintenance time configuration.
+        /// This API is used to modify maintenance time configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
         /// <returns><see cref="ModifyMaintainPeriodConfigResponse"/></returns>
@@ -1828,7 +2080,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the maintenance time configuration.
+        /// This API is used to modify maintenance time configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
         /// <returns><see cref="ModifyMaintainPeriodConfigResponse"/></returns>
@@ -1881,7 +2133,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to configure the read/write separation of a database proxy.
+        /// This API is used to configure read-write separation for database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyRwSplitRequest"/></param>
         /// <returns><see cref="ModifyProxyRwSplitResponse"/></returns>
@@ -1891,7 +2143,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to configure the read/write separation of a database proxy.
+        /// This API is used to configure read-write separation for database proxy.
         /// </summary>
         /// <param name="req"><see cref="ModifyProxyRwSplitRequest"/></param>
         /// <returns><see cref="ModifyProxyRwSplitResponse"/></returns>
@@ -1902,7 +2154,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to bind a resource pack to a cluster.
+        /// This API is used to modify the binding relationship between resource packages and clusters.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePackageClustersRequest"/></param>
         /// <returns><see cref="ModifyResourcePackageClustersResponse"/></returns>
@@ -1912,7 +2164,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to bind a resource pack to a cluster.
+        /// This API is used to modify the binding relationship between resource packages and clusters.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePackageClustersRequest"/></param>
         /// <returns><see cref="ModifyResourcePackageClustersResponse"/></returns>
@@ -1923,7 +2175,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the name of a resource pack.
+        /// This API is used to modify resource package name.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePackageNameRequest"/></param>
         /// <returns><see cref="ModifyResourcePackageNameResponse"/></returns>
@@ -1933,7 +2185,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the name of a resource pack.
+        /// This API is used to modify resource package name.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcePackageNameRequest"/></param>
         /// <returns><see cref="ModifyResourcePackageNameResponse"/></returns>
@@ -1944,7 +2196,49 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the IP and port of an instance group.
+        /// This API is used to modify the deduction priority of the bound resource package.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackagesDeductionPriorityRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackagesDeductionPriorityResponse"/></returns>
+        public Task<ModifyResourcePackagesDeductionPriorityResponse> ModifyResourcePackagesDeductionPriority(ModifyResourcePackagesDeductionPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePackagesDeductionPriorityResponse>(req, "ModifyResourcePackagesDeductionPriority");
+        }
+
+        /// <summary>
+        /// This API is used to modify the deduction priority of the bound resource package.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePackagesDeductionPriorityRequest"/></param>
+        /// <returns><see cref="ModifyResourcePackagesDeductionPriorityResponse"/></returns>
+        public ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPrioritySync(ModifyResourcePackagesDeductionPriorityRequest req)
+        {
+            return InternalRequestAsync<ModifyResourcePackagesDeductionPriorityResponse>(req, "ModifyResourcePackagesDeductionPriority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the serverless policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServerlessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyServerlessStrategyResponse"/></returns>
+        public Task<ModifyServerlessStrategyResponse> ModifyServerlessStrategy(ModifyServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyServerlessStrategyResponse>(req, "ModifyServerlessStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the serverless policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServerlessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyServerlessStrategyResponse"/></returns>
+        public ModifyServerlessStrategyResponse ModifyServerlessStrategySync(ModifyServerlessStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyServerlessStrategyResponse>(req, "ModifyServerlessStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the ip and port of an instance group.
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
         /// <returns><see cref="ModifyVipVportResponse"/></returns>
@@ -1954,7 +2248,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the IP and port of an instance group.
+        /// This API is used to modify the ip and port of an instance group.
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
         /// <returns><see cref="ModifyVipVportResponse"/></returns>
@@ -1965,7 +2259,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to deactivate a cluster.
+        /// This interface (OfflineCluster) is used to terminate clusters.
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -1975,7 +2269,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to deactivate a cluster.
+        /// This interface (OfflineCluster) is used to terminate clusters.
         /// </summary>
         /// <param name="req"><see cref="OfflineClusterRequest"/></param>
         /// <returns><see cref="OfflineClusterResponse"/></returns>
@@ -1986,7 +2280,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to deactivate an instance.
+        /// This interface (OfflineInstance) is used to terminate an instance.
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -1996,7 +2290,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to deactivate an instance.
+        /// This interface (OfflineInstance) is used to terminate an instance.
         /// </summary>
         /// <param name="req"><see cref="OfflineInstanceRequest"/></param>
         /// <returns><see cref="OfflineInstanceResponse"/></returns>
@@ -2007,7 +2301,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+        /// This API is used to enable database audit service for an instance.
         /// </summary>
         /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
         /// <returns><see cref="OpenAuditServiceResponse"/></returns>
@@ -2017,7 +2311,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+        /// This API is used to enable database audit service for an instance.
         /// </summary>
         /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
         /// <returns><see cref="OpenAuditServiceResponse"/></returns>
@@ -2028,7 +2322,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the password complexity for a cluster.
+        /// This API is used to enable the custom password complexity feature.
         /// </summary>
         /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
@@ -2038,7 +2332,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the password complexity for a cluster.
+        /// This API is used to enable the custom password complexity feature.
         /// </summary>
         /// <param name="req"><see cref="OpenClusterPasswordComplexityRequest"/></param>
         /// <returns><see cref="OpenClusterPasswordComplexityResponse"/></returns>
@@ -2049,7 +2343,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the access to read-only instance group.
+        /// This API is used to enable read-only instance group access.
         /// </summary>
         /// <param name="req"><see cref="OpenClusterReadOnlyInstanceGroupAccessRequest"/></param>
         /// <returns><see cref="OpenClusterReadOnlyInstanceGroupAccessResponse"/></returns>
@@ -2059,7 +2353,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the access to read-only instance group.
+        /// This API is used to enable read-only instance group access.
         /// </summary>
         /// <param name="req"><see cref="OpenClusterReadOnlyInstanceGroupAccessRequest"/></param>
         /// <returns><see cref="OpenClusterReadOnlyInstanceGroupAccessResponse"/></returns>
@@ -2070,7 +2364,28 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the dedicated access group for a read-only instance.
+        /// Enable transparent data encryption for the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterTransparentEncryptRequest"/></param>
+        /// <returns><see cref="OpenClusterTransparentEncryptResponse"/></returns>
+        public Task<OpenClusterTransparentEncryptResponse> OpenClusterTransparentEncrypt(OpenClusterTransparentEncryptRequest req)
+        {
+            return InternalRequestAsync<OpenClusterTransparentEncryptResponse>(req, "OpenClusterTransparentEncrypt");
+        }
+
+        /// <summary>
+        /// Enable transparent data encryption for the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClusterTransparentEncryptRequest"/></param>
+        /// <returns><see cref="OpenClusterTransparentEncryptResponse"/></returns>
+        public OpenClusterTransparentEncryptResponse OpenClusterTransparentEncryptSync(OpenClusterTransparentEncryptRequest req)
+        {
+            return InternalRequestAsync<OpenClusterTransparentEncryptResponse>(req, "OpenClusterTransparentEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (OpenReadOnlyInstanceExclusiveAccess) is used to enable the dedicated access access group for a read-only instance.
         /// </summary>
         /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
         /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
@@ -2080,7 +2395,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the dedicated access group for a read-only instance.
+        /// This interface (OpenReadOnlyInstanceExclusiveAccess) is used to enable the dedicated access access group for a read-only instance.
         /// </summary>
         /// <param name="req"><see cref="OpenReadOnlyInstanceExclusiveAccessRequest"/></param>
         /// <returns><see cref="OpenReadOnlyInstanceExclusiveAccessResponse"/></returns>
@@ -2091,7 +2406,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the public network.
+        /// This interface (OpenWan) is used to enable external network.
         /// </summary>
         /// <param name="req"><see cref="OpenWanRequest"/></param>
         /// <returns><see cref="OpenWanResponse"/></returns>
@@ -2101,7 +2416,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to enable the public network.
+        /// This interface (OpenWan) is used to enable external network.
         /// </summary>
         /// <param name="req"><see cref="OpenWanRequest"/></param>
         /// <returns><see cref="OpenWanResponse"/></returns>
@@ -2112,7 +2427,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to pause a serverless cluster.
+        /// This API is used to suspend a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="PauseServerlessRequest"/></param>
         /// <returns><see cref="PauseServerlessResponse"/></returns>
@@ -2122,7 +2437,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to pause a serverless cluster.
+        /// This API is used to suspend a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="PauseServerlessRequest"/></param>
         /// <returns><see cref="PauseServerlessResponse"/></returns>
@@ -2133,7 +2448,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to refund a resource pack.
+        /// This API is used to refund a resource package.
         /// </summary>
         /// <param name="req"><see cref="RefundResourcePackageRequest"/></param>
         /// <returns><see cref="RefundResourcePackageResponse"/></returns>
@@ -2143,7 +2458,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to refund a resource pack.
+        /// This API is used to refund a resource package.
         /// </summary>
         /// <param name="req"><see cref="RefundResourcePackageRequest"/></param>
         /// <returns><see cref="RefundResourcePackageResponse"/></returns>
@@ -2154,7 +2469,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to rebalance the load on the database proxy.
+        /// This API is used to reload the database proxy of Cloud Load Balancer.
         /// </summary>
         /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
         /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
@@ -2164,7 +2479,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to rebalance the load on the database proxy.
+        /// This API is used to reload the database proxy of Cloud Load Balancer.
         /// </summary>
         /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
         /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
@@ -2175,7 +2490,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete the replica AZ.
+        /// This API is used to disable multi-AZ deployment for a cluster.
         /// </summary>
         /// <param name="req"><see cref="RemoveClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="RemoveClusterSlaveZoneResponse"/></returns>
@@ -2185,7 +2500,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to delete the replica AZ.
+        /// This API is used to disable multi-AZ deployment for a cluster.
         /// </summary>
         /// <param name="req"><see cref="RemoveClusterSlaveZoneRequest"/></param>
         /// <returns><see cref="RemoveClusterSlaveZoneResponse"/></returns>
@@ -2196,7 +2511,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to reset the password of a TencentDB instance account.
+        /// This API is used to modify the database account password.
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
@@ -2206,7 +2521,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to reset the password of a TencentDB instance account.
+        /// This API is used to modify the database account password.
         /// </summary>
         /// <param name="req"><see cref="ResetAccountPasswordRequest"/></param>
         /// <returns><see cref="ResetAccountPasswordResponse"/></returns>
@@ -2217,7 +2532,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to restart an instance.
+        /// This API is used to reboot an instance.
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -2227,7 +2542,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to restart an instance.
+        /// This API is used to reboot an instance.
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -2238,7 +2553,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to resume a serverless cluster.
+        /// This API is used to restore a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
         /// <returns><see cref="ResumeServerlessResponse"/></returns>
@@ -2248,7 +2563,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to resume a serverless cluster.
+        /// This API is used to restore a serverless cluster.
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
         /// <returns><see cref="ResumeServerlessResponse"/></returns>
@@ -2259,7 +2574,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to search the list of cluster databases.
+        /// This API is used to search cluster database lists.
         /// </summary>
         /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
         /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
@@ -2269,7 +2584,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to search the list of cluster databases.
+        /// This API is used to search cluster database lists.
         /// </summary>
         /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
         /// <returns><see cref="SearchClusterDatabasesResponse"/></returns>
@@ -2280,7 +2595,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to search the list of cluster data tables.
+        /// This API is used to search cluster data table lists.
         /// </summary>
         /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
         /// <returns><see cref="SearchClusterTablesResponse"/></returns>
@@ -2290,7 +2605,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to search the list of cluster data tables.
+        /// This API is used to search cluster data table lists.
         /// </summary>
         /// <param name="req"><see cref="SearchClusterTablesRequest"/></param>
         /// <returns><see cref="SearchClusterTablesResponse"/></returns>
@@ -2301,7 +2616,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to set auto-renewal for an instance.
+        /// This API is used to set the auto-renewal feature of an instance.
         /// </summary>
         /// <param name="req"><see cref="SetRenewFlagRequest"/></param>
         /// <returns><see cref="SetRenewFlagResponse"/></returns>
@@ -2311,7 +2626,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to set auto-renewal for an instance.
+        /// This API is used to set the auto-renewal feature of an instance.
         /// </summary>
         /// <param name="req"><see cref="SetRenewFlagRequest"/></param>
         /// <returns><see cref="SetRenewFlagResponse"/></returns>
@@ -2322,7 +2637,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the cluster VPC.
+        /// This API is used to replace the cluster vpc.
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
         /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
@@ -2332,7 +2647,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the cluster VPC.
+        /// This API is used to replace the cluster vpc.
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterVpcRequest"/></param>
         /// <returns><see cref="SwitchClusterVpcResponse"/></returns>
@@ -2343,7 +2658,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to switch to the replica AZ.
+        /// This API is used to switch the primary and secondary AZs of a cluster.
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterZoneRequest"/></param>
         /// <returns><see cref="SwitchClusterZoneResponse"/></returns>
@@ -2353,7 +2668,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to switch to the replica AZ.
+        /// This API is used to switch the primary and secondary AZs of a cluster.
         /// </summary>
         /// <param name="req"><see cref="SwitchClusterZoneRequest"/></param>
         /// <returns><see cref="SwitchClusterZoneResponse"/></returns>
@@ -2364,7 +2679,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the database proxy VPC.
+        /// This API is used to replace the vpc of the database proxy.
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
         /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
@@ -2374,7 +2689,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to modify the database proxy VPC.
+        /// This API is used to replace the vpc of the database proxy.
         /// </summary>
         /// <param name="req"><see cref="SwitchProxyVpcRequest"/></param>
         /// <returns><see cref="SwitchProxyVpcResponse"/></returns>
@@ -2385,7 +2700,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to unbind a TDSQL-C for MySQL resource pack.
+        /// This API is used to unbind resource packages from clusters.
         /// </summary>
         /// <param name="req"><see cref="UnbindClusterResourcePackagesRequest"/></param>
         /// <returns><see cref="UnbindClusterResourcePackagesResponse"/></returns>
@@ -2395,7 +2710,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to unbind a TDSQL-C for MySQL resource pack.
+        /// This API is used to unbind resource packages from clusters.
         /// </summary>
         /// <param name="req"><see cref="UnbindClusterResourcePackagesRequest"/></param>
         /// <returns><see cref="UnbindClusterResourcePackagesResponse"/></returns>
@@ -2406,7 +2721,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the kernel version of a TDSQL-C for MySQL cluster.
+        /// This interface (UpgradeClusterVersion) is used to update the kernel minor version.
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -2416,7 +2731,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the kernel version of a TDSQL-C for MySQL cluster.
+        /// This interface (UpgradeClusterVersion) is used to update the kernel minor version.
         /// </summary>
         /// <param name="req"><see cref="UpgradeClusterVersionRequest"/></param>
         /// <returns><see cref="UpgradeClusterVersionResponse"/></returns>
@@ -2427,7 +2742,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade an instance.
+        /// This interface (UpgradeInstance) is used to upgrade instances.
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -2437,7 +2752,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade an instance.
+        /// This interface (UpgradeInstance) is used to upgrade instances.
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -2448,7 +2763,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the configuration of a database proxy.
+        /// This API is used to upgrade database proxy configuration.
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyRequest"/></param>
         /// <returns><see cref="UpgradeProxyResponse"/></returns>
@@ -2458,7 +2773,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the configuration of a database proxy.
+        /// This API is used to upgrade database proxy configuration.
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyRequest"/></param>
         /// <returns><see cref="UpgradeProxyResponse"/></returns>
@@ -2469,7 +2784,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the version of a database proxy.
+        /// This API is used to upgrade the database proxy version.
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
@@ -2479,7 +2794,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to upgrade the version of a database proxy.
+        /// This API is used to upgrade the database proxy version.
         /// </summary>
         /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
         /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>

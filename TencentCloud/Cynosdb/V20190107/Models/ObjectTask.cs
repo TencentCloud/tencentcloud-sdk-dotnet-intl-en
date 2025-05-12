@@ -25,36 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Auto-Incrementing task ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Task auto-increment ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
         /// Task type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task status
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status of tasks.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// Task ID (cluster ID | instance group ID | instance ID)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Task ID (cluster ID | instance group ID | instance ID).
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
         /// Task type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }

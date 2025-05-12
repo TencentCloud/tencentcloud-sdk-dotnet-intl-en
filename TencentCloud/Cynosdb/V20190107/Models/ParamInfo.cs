@@ -37,8 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Default{ get; set; }
 
         /// <summary>
-        /// List of valid values when parameter type is `enum`, `string` or `bool`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// If the parameter is of type enum/string/bool, the available options list.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
@@ -92,32 +91,34 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether it is global parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is a global parameter.
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
-        /// Whether the parameter can be modified
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the parameter is modifiable.
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
 
         /// <summary>
-        /// Whether it is a function
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is a function.
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Function
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Function.
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
+
+        /// <summary>
+        /// The default formula style of parameters that support formulas.
+        /// </summary>
+        [JsonProperty("FuncPattern")]
+        public string FuncPattern{ get; set; }
 
 
         /// <summary>
@@ -140,6 +141,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);
+            this.SetParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
         }
     }
 }

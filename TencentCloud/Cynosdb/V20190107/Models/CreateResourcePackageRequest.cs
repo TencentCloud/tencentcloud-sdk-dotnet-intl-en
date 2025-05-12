@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance type
+        /// Instance type. currently fixed to cynosdb-serverless.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+        /// Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }

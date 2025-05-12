@@ -73,15 +73,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MaxIoBandWidth{ get; set; }
 
         /// <summary>
-        /// Inventory information in a region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Regional inventory information.
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
         public ZoneStockInfo[] ZoneStockInfos{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Inventory quantity.
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }

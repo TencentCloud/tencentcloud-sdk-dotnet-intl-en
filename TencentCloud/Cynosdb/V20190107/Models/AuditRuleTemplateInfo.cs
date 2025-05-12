@@ -43,8 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// Description of a rule template
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule template description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -54,6 +53,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
+
+        /// <summary>
+        /// Rule template modification time.
+        /// </summary>
+        [JsonProperty("UpdateAt")]
+        public string UpdateAt{ get; set; }
+
+        /// <summary>
+        /// Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
+        /// Alarm policy. 0 - no alert, 1 - alert.
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public ulong? AlarmPolicy{ get; set; }
+
+        /// <summary>
+        /// Template status. 0 - no task, 1 - modifying.
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// Template application is used in which instances.
+        /// </summary>
+        [JsonProperty("AffectedInstances")]
+        public string[] AffectedInstances{ get; set; }
 
 
         /// <summary>
@@ -66,6 +95,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
+            this.SetParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "AffectedInstances.", this.AffectedInstances);
         }
     }
 }

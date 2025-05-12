@@ -25,16 +25,23 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+        /// The unique ID of the resource package.
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values:  `CCU` (compute resource pack),  `DISK`  (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource package type: CCU: compute resource package.
+        /// DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
+
+        /// <summary>
+        /// Deduction priority of the current resource package bound to the current instance.
+        /// </summary>
+        [JsonProperty("DeductionPriority")]
+        public long? DeductionPriority{ get; set; }
 
 
         /// <summary>
@@ -44,6 +51,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "DeductionPriority", this.DeductionPriority);
         }
     }
 }

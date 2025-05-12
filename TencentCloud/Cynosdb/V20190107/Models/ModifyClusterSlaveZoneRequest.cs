@@ -42,6 +42,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("NewSlaveZone")]
         public string NewSlaveZone{ get; set; }
 
+        /// <summary>
+        /// Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+        /// </summary>
+        [JsonProperty("BinlogSyncWay")]
+        public string BinlogSyncWay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "OldSlaveZone", this.OldSlaveZone);
             this.SetParamSimple(map, prefix + "NewSlaveZone", this.NewSlaveZone);
+            this.SetParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
         }
     }
 }

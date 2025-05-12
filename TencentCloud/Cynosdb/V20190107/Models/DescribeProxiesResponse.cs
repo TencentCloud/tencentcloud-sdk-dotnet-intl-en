@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of database proxy groups
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of database proxy groups.
         /// </summary>
         [JsonProperty("ProxyGroupInfos")]
         public ProxyGroupInfo[] ProxyGroupInfos{ get; set; }

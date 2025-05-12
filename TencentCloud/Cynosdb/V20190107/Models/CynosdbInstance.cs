@@ -273,8 +273,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Prepaid storage ID
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Prepayment storage Id.
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
@@ -292,22 +291,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Business type
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Business type.
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
         /// Task
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Whether to freeze
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to freeze.
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
@@ -320,8 +316,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Source AZ
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Primary AZ.
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
@@ -334,8 +329,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// Instance network information
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Network information of the instance.
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
@@ -345,6 +339,42 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
+
+        /// <summary>
+        /// Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+        /// </summary>
+        [JsonProperty("InstanceIndexMode")]
+        public string InstanceIndexMode{ get; set; }
+
+        /// <summary>
+        /// Supported capabilities of the existing instance.
+        /// </summary>
+        [JsonProperty("InstanceAbility")]
+        public InstanceAbility InstanceAbility{ get; set; }
+
+        /// <summary>
+        /// Instance machine type.
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// Specifies the instance storage type.
+        /// </summary>
+        [JsonProperty("InstanceStorageType")]
+        public string InstanceStorageType{ get; set; }
+
+        /// <summary>
+        /// Unknown field.
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
+
+        /// <summary>
+        /// Specifies the node information of libradb.
+        /// </summary>
+        [JsonProperty("NodeList")]
+        public string[] NodeList{ get; set; }
 
 
         /// <summary>
@@ -404,6 +434,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+            this.SetParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
+            this.SetParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+            this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         }
     }
 }

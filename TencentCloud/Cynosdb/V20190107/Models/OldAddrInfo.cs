@@ -26,21 +26,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// Port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Expected valid hours of old IPs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expect recycle time.
         /// </summary>
         [JsonProperty("ReturnTime")]
         public string ReturnTime{ get; set; }

@@ -21,26 +21,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRollbackTimeValidityRequest : AbstractModel
+    public class ServerlessZoneStockInfo : AbstractModel
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Availability zone
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Expected time point to roll back to
+        /// Specifies the stored amount.
         /// </summary>
-        [JsonProperty("ExpectTime")]
-        public string ExpectTime{ get; set; }
+        [JsonProperty("StockCount")]
+        public long? StockCount{ get; set; }
 
         /// <summary>
-        /// Error tolerance range for rollback time point
+        /// Whether it contains inventory.
         /// </summary>
-        [JsonProperty("ExpectTimeThresh")]
-        public ulong? ExpectTimeThresh{ get; set; }
+        [JsonProperty("HasStock")]
+        public bool? HasStock{ get; set; }
+
+        /// <summary>
+        /// Inventory information from availability zone.
+        /// </summary>
+        [JsonProperty("SlaveZoneStockInfos")]
+        public SlaveZoneStockInfo[] SlaveZoneStockInfos{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
-            this.SetParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "StockCount", this.StockCount);
+            this.SetParamSimple(map, prefix + "HasStock", this.HasStock);
+            this.SetParamArrayObj(map, prefix + "SlaveZoneStockInfos.", this.SlaveZoneStockInfos);
         }
     }
 }

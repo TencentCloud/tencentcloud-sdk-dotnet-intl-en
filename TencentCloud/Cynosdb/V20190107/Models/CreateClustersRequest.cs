@@ -77,6 +77,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
+        /// Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+        /// </summary>
+        [JsonProperty("InstanceCount")]
+        public long? InstanceCount{ get; set; }
+
+        /// <summary>
         /// This parameter has been deprecated.
         /// Storage capacity in GB
         /// </summary>
@@ -155,12 +161,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Number of Instances. Valid range: (0,16]
-        /// </summary>
-        [JsonProperty("InstanceCount")]
-        public long? InstanceCount{ get; set; }
-
-        /// <summary>
         /// Purchase duration of monthly subscription plan
         /// </summary>
         [JsonProperty("TimeSpan")]
@@ -173,7 +173,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+        /// Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+        /// 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -305,6 +306,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
@@ -317,7 +319,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
             this.SetParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
-            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);

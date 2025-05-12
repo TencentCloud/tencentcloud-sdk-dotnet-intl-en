@@ -79,44 +79,58 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// Execution start time in seconds from 0:00	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Execution start time (seconds from 0 o'clock).	
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// Duration in seconds	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the continuous time. the unit is second.	
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Execution time. Valid values: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, Sat`, `Sun`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }
 
         /// <summary>
-        /// Serverless instance enablement status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// serverless instance substatus.
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance task information.
         /// </summary>
         [JsonProperty("InstanceTasks")]
         public ObjectTask[] InstanceTasks{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance machine type.
         /// </summary>
         [JsonProperty("InstanceDeviceType")]
         public string InstanceDeviceType{ get; set; }
+
+        /// <summary>
+        /// Instance storage type.
+        /// </summary>
+        [JsonProperty("InstanceStorageType")]
+        public string InstanceStorageType{ get; set; }
+
+        /// <summary>
+        /// Database type.
+        /// </summary>
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
+
+        /// <summary>
+        /// Node list
+        /// </summary>
+        [JsonProperty("NodeList")]
+        public string[] NodeList{ get; set; }
 
 
         /// <summary>
@@ -139,6 +153,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
             this.SetParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
             this.SetParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
+            this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
+            this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
         }
     }
 }

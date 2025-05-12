@@ -91,6 +91,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
+        /// Serverless instance status. Valid values:
+        /// resume
+        /// pause
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
+        /// <summary>
         /// Database type
         /// </summary>
         [JsonProperty("DbType")]
@@ -223,12 +231,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Serverless instance status. Valid values:
-        /// resume
-        /// pause
+        /// Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
         /// </summary>
-        [JsonProperty("ServerlessStatus")]
-        public string ServerlessStatus{ get; set; }
+        [JsonProperty("DbMode")]
+        public string DbMode{ get; set; }
 
 
         /// <summary>
@@ -247,6 +253,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -269,7 +276,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
-            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
         }
     }
 }

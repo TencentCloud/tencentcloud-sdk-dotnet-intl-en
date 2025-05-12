@@ -25,77 +25,90 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AppID Note: This field may return null, indicating that no valid values can be obtained.
+        /// AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+        /// The unique ID of the resource package.
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Resource pack name Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource package name.
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the resource package type.
+        /// CCU: compute resource package. DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource package region of use.
+        /// China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack status. Valid values: `creating`, `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded). 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the status of the resource package.
+        /// creating - indicates that it is in the process of being created.
+        /// {using} specifies that it is in use.
+        /// expired-expired;.
+        /// normal_finish - specifies that it is used up.
+        /// `Apply_refund`: apply for a refund.
+        /// Specifies that the fee has been refunded.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Total number of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total resource package quantity.
         /// </summary>
         [JsonProperty("PackageTotalSpec")]
         public float? PackageTotalSpec{ get; set; }
 
         /// <summary>
-        /// Consumed usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+        /// Used amount of resource package.
         /// </summary>
         [JsonProperty("PackageUsedSpec")]
         public float? PackageUsedSpec{ get; set; }
 
         /// <summary>
-        /// Remaining usage of resource packs Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether there is inventory surplus.
         /// </summary>
         [JsonProperty("HasQuota")]
         public bool? HasQuota{ get; set; }
 
         /// <summary>
-        /// Information of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the bound instance information.
         /// </summary>
         [JsonProperty("BindInstanceInfos")]
         public BindInstanceInfo[] BindInstanceInfos{ get; set; }
 
         /// <summary>
-        /// Validity time:  2022-07-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the effective time: 2022-07-01 00:00:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Validity time:  2022-08-01 00:00:00 Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the expiration time: 2022-08-01 00:00:00.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Information of the instance historically bound (now unbound) to the resource pack.
+        /// </summary>
+        [JsonProperty("HistoryBindResourceInfos")]
+        public BindInstanceInfo[] HistoryBindResourceInfos{ get; set; }
 
 
         /// <summary>
@@ -115,6 +128,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "BindInstanceInfos.", this.BindInstanceInfos);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamArrayObj(map, prefix + "HistoryBindResourceInfos.", this.HistoryBindResourceInfos);
         }
     }
 }

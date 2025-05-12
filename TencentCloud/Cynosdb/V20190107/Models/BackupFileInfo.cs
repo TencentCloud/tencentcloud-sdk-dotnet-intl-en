@@ -79,21 +79,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// Backup ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup ID.
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
 
         /// <summary>
-        /// Backup file alias
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the remark of the backup file.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

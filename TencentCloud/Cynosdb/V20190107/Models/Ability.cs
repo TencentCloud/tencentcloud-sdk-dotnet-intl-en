@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IsSupportSlaveZone{ get; set; }
 
         /// <summary>
-        /// The reason why secondary AZ is not supported
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The causes for no support from an availability zone.
         /// </summary>
         [JsonProperty("NonsupportSlaveZoneReason")]
         public string NonsupportSlaveZoneReason{ get; set; }
@@ -44,11 +43,34 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IsSupportRo{ get; set; }
 
         /// <summary>
-        /// The reason why read-only instance is not supported
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reasons why RO instances are not supported.
         /// </summary>
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
+
+        /// <summary>
+        /// Whether manual snapshot backup initiation is supported.
+        /// </summary>
+        [JsonProperty("IsSupportManualSnapshot")]
+        public string IsSupportManualSnapshot{ get; set; }
+
+        /// <summary>
+        /// Whether transparent data encryption is supported.
+        /// </summary>
+        [JsonProperty("IsSupportTransparentDataEncryption")]
+        public string IsSupportTransparentDataEncryption{ get; set; }
+
+        /// <summary>
+        /// Reasons for no support of transparent data encryption.
+        /// </summary>
+        [JsonProperty("NoSupportTransparentDataEncryptionReason")]
+        public string NoSupportTransparentDataEncryptionReason{ get; set; }
+
+        /// <summary>
+        /// Whether manual initiation of logical backup is supported.
+        /// </summary>
+        [JsonProperty("IsSupportManualLogic")]
+        public string IsSupportManualLogic{ get; set; }
 
 
         /// <summary>
@@ -60,6 +82,10 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NonsupportSlaveZoneReason", this.NonsupportSlaveZoneReason);
             this.SetParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
             this.SetParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
+            this.SetParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
+            this.SetParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
+            this.SetParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
+            this.SetParamSimple(map, prefix + "IsSupportManualLogic", this.IsSupportManualLogic);
         }
     }
 }

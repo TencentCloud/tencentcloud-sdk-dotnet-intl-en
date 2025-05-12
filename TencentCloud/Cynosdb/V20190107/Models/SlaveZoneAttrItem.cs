@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Availability zone
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// binlog synchronization mode.
         /// </summary>
         [JsonProperty("BinlogSyncWay")]
         public string BinlogSyncWay{ get; set; }

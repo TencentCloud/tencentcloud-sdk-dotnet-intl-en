@@ -28,7 +28,7 @@ namespace TencentCloud.Trabbit.V20230418
 
        private const string endpoint = "trabbit.intl.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1126";
+       private const string sdkVersion = "SDK_NET_3.0.1127";
 
         /// <summary>
         /// Client constructor.

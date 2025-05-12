@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Log timestamp Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log timestamp.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Log level Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log level.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Log content Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log content.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

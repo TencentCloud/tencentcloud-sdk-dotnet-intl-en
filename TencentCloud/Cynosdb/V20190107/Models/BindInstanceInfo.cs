@@ -25,27 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// ID of the bound cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the bound cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Region of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+        /// The region where the bound instance is located.
         /// </summary>
         [JsonProperty("InstanceRegion")]
         public string InstanceRegion{ get; set; }
 
         /// <summary>
-        /// Type of the instance bound Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type of the bound instance.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// ID of the instance in the bound cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The instance ID under the bound cluster.
         /// </summary>
         [JsonProperty("ExtendIds")]
         public string[] ExtendIds{ get; set; }

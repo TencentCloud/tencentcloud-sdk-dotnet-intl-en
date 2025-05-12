@@ -25,49 +25,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Account ID of `AppId` Note: This field may return null, indicating that no valid values can be obtained.
+        /// AppId account ID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// The unique ID of a resource pack Note: This field may return null, indicating that no valid values can be obtained.
+        /// The unique ID of the resource package.
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The successfully deducted capacity Note: This field may return null, indicating that no valid values can be obtained.
+        /// Successfully deduct capacity.
         /// </summary>
         [JsonProperty("SuccessDeductSpec")]
         public float? SuccessDeductSpec{ get; set; }
 
         /// <summary>
-        /// Used capacity of a resource pack as of now Note: This field may return null, indicating that no valid values can be obtained.
+        /// The used capacity of the resource package up to the present.
         /// </summary>
         [JsonProperty("PackageTotalUsedSpec")]
         public float? PackageTotalUsedSpec{ get; set; }
 
         /// <summary>
-        /// Deduction start time Note: This field may return null, indicating that no valid values can be obtained.
+        /// Deduction start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Deduction end time Note: This field may return null, indicating that no valid values can be obtained.
+        /// Deduction end time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Extended information Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Information
         /// </summary>
         [JsonProperty("ExtendInfo")]
         public string ExtendInfo{ get; set; }

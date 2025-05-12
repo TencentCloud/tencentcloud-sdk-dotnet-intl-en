@@ -28,6 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// Instance group ID
         /// </summary>
         [JsonProperty("InstanceGrpId")]
+        [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
 

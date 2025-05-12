@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbUserName{ get; set; }
 
         /// <summary>
-        /// Client IP Note: This field may return null, indicating that no valid values can be obtained.
+        /// Client IP
         /// </summary>
         [JsonProperty("DbHost")]
         public string DbHost{ get; set; }
 
         /// <summary>
-        /// User permissions Note: This field may return null, indicating that no valid values can be obtained.
+        /// User permission
         /// </summary>
         [JsonProperty("DbPrivilege")]
         public string DbPrivilege{ get; set; }

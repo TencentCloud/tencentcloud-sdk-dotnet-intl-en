@@ -61,8 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// Whether to enable read-write node. Valid values: `yes`, `no`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable read-write nodes. valid values: yes, no.
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

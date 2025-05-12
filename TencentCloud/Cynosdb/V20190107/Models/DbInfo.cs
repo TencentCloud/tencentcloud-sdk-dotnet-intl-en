@@ -49,49 +49,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CollateRule{ get; set; }
 
         /// <summary>
-        /// Database remarks Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the remark of the database.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// User permissions Note: This field may return null, indicating that no valid values can be obtained.
+        /// User permission
         /// </summary>
         [JsonProperty("UserHostPrivileges")]
         public UserHostPrivilege[] UserHostPrivileges{ get; set; }
 
         /// <summary>
-        /// Database ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database ID
         /// </summary>
         [JsonProperty("DbId")]
         public long? DbId{ get; set; }
 
         /// <summary>
-        /// Creation time Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// User appid Note: This field may return null, indicating that no valid values can be obtained.
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// User Uin Note: This field may return null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Cluster ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

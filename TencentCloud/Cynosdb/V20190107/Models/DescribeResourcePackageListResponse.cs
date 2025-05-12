@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Resource pack details Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource pack details.
         /// </summary>
         [JsonProperty("Detail")]
         public Package[] Detail{ get; set; }

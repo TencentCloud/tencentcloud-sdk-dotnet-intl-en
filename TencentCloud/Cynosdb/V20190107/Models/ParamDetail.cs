@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Min{ get; set; }
 
         /// <summary>
-        /// Enumerated values of the parameter.  It is null if the parameter is non-enumerated. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
@@ -103,22 +103,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string MatchValue{ get; set; }
 
         /// <summary>
-        /// Whether it is a `func` type. Valid values: `true` (yes), `false` (no). Note: This field may return null, indicating that no valid values can be obtained.
+        /// true - indicates a formula. false - indicates it is not a formula.
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Formula content returned when `ParamType` is `func`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies that when the parameter is set as a formula, Func returns the set formula content.
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
-        /// Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the parameter is modifiable.
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
+
+        /// <summary>
+        /// The default formula style of parameters that support formulas.
+        /// </summary>
+        [JsonProperty("FuncPattern")]
+        public string FuncPattern{ get; set; }
 
 
         /// <summary>
@@ -142,6 +148,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);
             this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+            this.SetParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
         }
     }
 }

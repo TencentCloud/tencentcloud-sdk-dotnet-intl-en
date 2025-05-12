@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

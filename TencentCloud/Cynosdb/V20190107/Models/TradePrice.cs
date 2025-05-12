@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The non-discounted total price of monthly subscribed resources (unit: 0.000001 cent)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource total price under prepaid mode, excluding discounts. unit: cent.
         /// </summary>
         [JsonProperty("TotalPrice")]
         public long? TotalPrice{ get; set; }
@@ -38,22 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// The discounted total price of monthly subscribed resources (unit: 0.000001 cent). If a discount is applied, `TotalPriceDiscount` will be the product of `TotalPrice` and `Discount`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
         /// </summary>
         [JsonProperty("TotalPriceDiscount")]
         public long? TotalPriceDiscount{ get; set; }
 
         /// <summary>
-        /// The non-discounted unit price of pay-as-you-go resources (unit: 0.000001 cent)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unit resource price in postpaid mode, excluding discounts. unit: cent.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public long? UnitPrice{ get; set; }
 
         /// <summary>
-        /// The discounted unit price of pay-as-you-go resources (unit: 0.000001 cent). If a discount is applied, `UnitPriceDiscount` will be the product of `UnitPrice` and `Discount`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public long? UnitPriceDiscount{ get; set; }

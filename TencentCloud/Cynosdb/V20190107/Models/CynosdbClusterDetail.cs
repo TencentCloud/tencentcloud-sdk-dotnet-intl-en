@@ -49,8 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Physical AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Physical availability zone.
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
@@ -78,36 +77,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Storage ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage Id.
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Storage capacity in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage size in gb.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Maximum storage specification in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum storage specification, in gb.
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Minimum storage specification in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the minimum storage specification, in gb.
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -155,8 +149,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values: `normal`, `serverless`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
@@ -168,8 +161,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Maximum storage space
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the maximum storage space.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -199,57 +191,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Addr[] RoAddr{ get; set; }
 
         /// <summary>
-        /// Features supported by the cluster
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Functions supported by the cluster.
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// TDSQL-C version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the cynos version.
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// Business type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Business type.
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// Whether there is a secondary AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether there is an availability zone.
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// Whether to freeze
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to freeze.
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// Task list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task list.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Primary AZ
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Primary AZ.
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// Secondary AZ list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Availability zone list.
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
@@ -285,70 +269,70 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Proxy status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy status.
         /// </summary>
         [JsonProperty("ProxyStatus")]
         public string ProxyStatus{ get; set; }
 
         /// <summary>
-        /// Binlog switch. Valid values: `ON`, `OFF`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// binlog switch. valid values: ON, OFF.
         /// </summary>
         [JsonProperty("LogBin")]
         public string LogBin{ get; set; }
 
         /// <summary>
-        /// Whether to skip the transaction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether to skip the transaction.
         /// </summary>
         [JsonProperty("IsSkipTrade")]
         public string IsSkipTrade{ get; set; }
 
         /// <summary>
-        /// PITR type. Valid values: `normal`, `redo_pitr`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// PITR type: valid values: normal, redo_pitr.
         /// </summary>
         [JsonProperty("PitrType")]
         public string PitrType{ get; set; }
 
         /// <summary>
-        /// Whether to enable password complexity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable password complexity.
         /// </summary>
         [JsonProperty("IsOpenPasswordComplexity")]
         public string IsOpenPasswordComplexity{ get; set; }
 
         /// <summary>
-        /// Network type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network type.
         /// </summary>
         [JsonProperty("NetworkStatus")]
         public string NetworkStatus{ get; set; }
 
         /// <summary>
-        /// Information of the resource pack bound to a cluster Note: This field may return null, indicating that no valid values can be obtained.
+        /// The resource package information that is bound to the cluster.	
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// The auto-renewal flag. Valid values: `0`: (manual renewal, default), `1` (auto-renewal). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the node network type.
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Secondary availability zone property.
         /// </summary>
         [JsonProperty("SlaveZoneAttr")]
         public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
+
+        /// <summary>
+        /// Version Tag.
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
 
 
         /// <summary>
@@ -406,6 +390,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         }
     }
 }

@@ -55,10 +55,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+        /// Currently, this parameter does not support modification and is not required.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LogicBackupConfig")]
+        public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DeleteAutoLogicBackup")]
+        public bool? DeleteAutoLogicBackup{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
+            this.SetParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
+            this.SetParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
         }
     }
 }
