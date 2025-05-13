@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20210820
 
        private const string endpoint = "wedata.intl.tencentcloudapi.com";
        private const string version = "2021-08-20";
-       private const string sdkVersion = "SDK_NET_3.0.1127";
+       private const string sdkVersion = "SDK_NET_3.0.1128";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Wedata.V20210820
         public BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarmsSync(BatchCreateIntegrationTaskAlarmsRequest req)
         {
             return InternalRequestAsync<BatchCreateIntegrationTaskAlarmsResponse>(req, "BatchCreateIntegrationTaskAlarms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to asynchronously create task versions in batches.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
+        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
+        public Task<BatchCreateTaskVersionAsyncResponse> BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync");
+        }
+
+        /// <summary>
+        /// This API is used to asynchronously create task versions in batches.
+        /// </summary>
+        /// <param name="req"><see cref="BatchCreateTaskVersionAsyncRequest"/></param>
+        /// <returns><see cref="BatchCreateTaskVersionAsyncResponse"/></returns>
+        public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsyncSync(BatchCreateTaskVersionAsyncRequest req)
+        {
+            return InternalRequestAsync<BatchCreateTaskVersionAsyncResponse>(req, "BatchCreateTaskVersionAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,7 +810,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Creating task
+        /// This API is used to create a task. This API is deprecated. Use the CreateTaskNew API.
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -799,7 +820,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Creating task
+        /// This API is used to create a task. This API is deprecated. Use the CreateTaskNew API.
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -848,6 +869,27 @@ namespace TencentCloud.Wedata.V20210820
         public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
         {
             return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to aggregate task creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskNewRequest"/></param>
+        /// <returns><see cref="CreateTaskNewResponse"/></returns>
+        public Task<CreateTaskNewResponse> CreateTaskNew(CreateTaskNewRequest req)
+        {
+            return InternalRequestAsync<CreateTaskNewResponse>(req, "CreateTaskNew");
+        }
+
+        /// <summary>
+        /// This API is used to aggregate task creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskNewRequest"/></param>
+        /// <returns><see cref="CreateTaskNewResponse"/></returns>
+        public CreateTaskNewResponse CreateTaskNewSync(CreateTaskNewRequest req)
+        {
+            return InternalRequestAsync<CreateTaskNewResponse>(req, "CreateTaskNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4241,8 +4283,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Add Parent Task Dependency
+        /// <p style="color:red;">[Note: This version is only available to some whitelist customers in the Guangzhou zone]</p>.
+        /// Add parent task dependency. This API is deprecated. Use API ModifyTaskLinksDs.
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
@@ -4252,14 +4294,35 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Add Parent Task Dependency
+        /// <p style="color:red;">[Note: This version is only available to some whitelist customers in the Guangzhou zone]</p>.
+        /// Add parent task dependency. This API is deprecated. Use API ModifyTaskLinksDs.
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
         public ModifyTaskLinksResponse ModifyTaskLinksSync(ModifyTaskLinksRequest req)
         {
             return InternalRequestAsync<ModifyTaskLinksResponse>(req, "ModifyTaskLinks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add parent task dependency.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
+        public Task<ModifyTaskLinksDsResponse> ModifyTaskLinksDs(ModifyTaskLinksDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs");
+        }
+
+        /// <summary>
+        /// This API is used to add parent task dependency.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTaskLinksDsRequest"/></param>
+        /// <returns><see cref="ModifyTaskLinksDsResponse"/></returns>
+        public ModifyTaskLinksDsResponse ModifyTaskLinksDsSync(ModifyTaskLinksDsRequest req)
+        {
+            return InternalRequestAsync<ModifyTaskLinksDsResponse>(req, "ModifyTaskLinksDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4308,7 +4371,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Update Workflow Information
+        /// This API is used to update workflow information. (deprecated). Use API UpdateWorkflowInfo.
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -4318,7 +4381,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Update Workflow Information
+        /// This API is used to update workflow information. (deprecated). Use API UpdateWorkflowInfo.
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -4329,7 +4392,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Update Workflow Scheduling
+        /// This API is used to update workflow scheduling. This API is deprecated. Use the RenewWorkflowSchedulerInfoDs API instead.
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -4339,7 +4402,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Update Workflow Scheduling
+        /// This API is used to update workflow scheduling. This API is deprecated. Use the RenewWorkflowSchedulerInfoDs API instead.
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -4371,8 +4434,29 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Registration Event
+        /// This API is used to register an event.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
+        /// <returns><see cref="RegisterDsEventResponse"/></returns>
+        public Task<RegisterDsEventResponse> RegisterDsEvent(RegisterDsEventRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent");
+        }
+
+        /// <summary>
+        /// This API is used to register an event.
+        /// </summary>
+        /// <param name="req"><see cref="RegisterDsEventRequest"/></param>
+        /// <returns><see cref="RegisterDsEventResponse"/></returns>
+        public RegisterDsEventResponse RegisterDsEventSync(RegisterDsEventRequest req)
+        {
+            return InternalRequestAsync<RegisterDsEventResponse>(req, "RegisterDsEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[Note: This version is only available for partial allowlisted customers in the Guangzhou region]</p>.
+        /// This API is used to register events. This API is deprecated. Use API RegisterDsEvent.
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -4382,8 +4466,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Registration Event
+        /// <p style="color:red;">[Note: This version is only available for partial allowlisted customers in the Guangzhou region]</p>.
+        /// This API is used to register events. This API is deprecated. Use API RegisterDsEvent.
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -4434,6 +4518,48 @@ namespace TencentCloud.Wedata.V20210820
         public RemoveWorkflowDsResponse RemoveWorkflowDsSync(RemoveWorkflowDsRequest req)
         {
             return InternalRequestAsync<RemoveWorkflowDsResponse>(req, "RemoveWorkflowDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch update the task owner under a workflow.
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
+        public Task<RenewWorkflowOwnerDsResponse> RenewWorkflowOwnerDs(RenewWorkflowOwnerDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs");
+        }
+
+        /// <summary>
+        /// This API is used to batch update the task owner under a workflow.
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowOwnerDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowOwnerDsResponse"/></returns>
+        public RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDsSync(RenewWorkflowOwnerDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowOwnerDsResponse>(req, "RenewWorkflowOwnerDs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update task scheduling information under a workflow.
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
+        public Task<RenewWorkflowSchedulerInfoDsResponse> RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs");
+        }
+
+        /// <summary>
+        /// This API is used to update task scheduling information under a workflow.
+        /// </summary>
+        /// <param name="req"><see cref="RenewWorkflowSchedulerInfoDsRequest"/></param>
+        /// <returns><see cref="RenewWorkflowSchedulerInfoDsResponse"/></returns>
+        public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDsSync(RenewWorkflowSchedulerInfoDsRequest req)
+        {
+            return InternalRequestAsync<RenewWorkflowSchedulerInfoDsResponse>(req, "RenewWorkflowSchedulerInfoDs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4671,8 +4797,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Submit a Task
+        /// <p style="color:red;">[Note: This version is only available for partial whitelist customers in the Guangzhou zone]</p>.
+        /// This API is used to submit tasks. This API is deprecated. Use the CreateTaskVersionDs API.
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -4682,8 +4808,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Submit a Task
+        /// <p style="color:red;">[Note: This version is only available for partial whitelist customers in the Guangzhou zone]</p>.
+        /// This API is used to submit tasks. This API is deprecated. Use the CreateTaskVersionDs API.
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -4715,7 +4841,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Submit Workflow
+        /// Submit a workflow. This API is deprecated. Use the BatchCreateTaskVersionAsync API.
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -4725,7 +4851,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Submit Workflow
+        /// Submit a workflow. This API is deprecated. Use the BatchCreateTaskVersionAsync API.
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -4799,8 +4925,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Trigger events
+        /// <p style="color:red;">[Note: This version is only available to some allowlisted customers in the Guangzhou region]</p>.
+        /// This API is used to trigger event. This API is deprecated. Use API TriggerDsEvent.
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>
@@ -4810,8 +4936,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// <p style="color:red;">[Note: This version is only available to a portion of allowlist customers in the Guangzhou Region]</p>
-        /// Trigger events
+        /// <p style="color:red;">[Note: This version is only available to some allowlisted customers in the Guangzhou region]</p>.
+        /// This API is used to trigger event. This API is deprecated. Use API TriggerDsEvent.
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>
@@ -4864,7 +4990,30 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Modifying Workflow Person in Charge
+        /// This API is developed in ds.
+        /// This API is used to update a workflow, including its basic information and workflow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
+        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
+        public Task<UpdateWorkflowInfoResponse> UpdateWorkflowInfo(UpdateWorkflowInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo");
+        }
+
+        /// <summary>
+        /// This API is developed in ds.
+        /// This API is used to update a workflow, including its basic information and workflow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateWorkflowInfoRequest"/></param>
+        /// <returns><see cref="UpdateWorkflowInfoResponse"/></returns>
+        public UpdateWorkflowInfoResponse UpdateWorkflowInfoSync(UpdateWorkflowInfoRequest req)
+        {
+            return InternalRequestAsync<UpdateWorkflowInfoResponse>(req, "UpdateWorkflowInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the workflow owner. Deprecated. Use the RenewWorkflowOwnerDs API.
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowOwnerRequest"/></param>
         /// <returns><see cref="UpdateWorkflowOwnerResponse"/></returns>
@@ -4874,7 +5023,7 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// Modifying Workflow Person in Charge
+        /// This API is used to modify the workflow owner. Deprecated. Use the RenewWorkflowOwnerDs API.
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowOwnerRequest"/></param>
         /// <returns><see cref="UpdateWorkflowOwnerResponse"/></returns>

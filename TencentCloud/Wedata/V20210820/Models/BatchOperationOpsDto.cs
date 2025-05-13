@@ -45,6 +45,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
+        /// <summary>
+        /// Unique id of the asynchronous operation record.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AsyncActionId")]
+        public string AsyncActionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Wedata.V20210820.Models
             this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
             this.SetParamSimple(map, prefix + "FailedCount", this.FailedCount);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
         }
     }
 }

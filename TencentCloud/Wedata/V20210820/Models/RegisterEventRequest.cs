@@ -61,13 +61,13 @@ namespace TencentCloud.Wedata.V20210820.Models
         public string Owner{ get; set; }
 
         /// <summary>
-        /// Event Type, default value: TIME_SERIES
+        /// Required. event type. default value: TIME_SERIES.
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// Corresponding DAY: yyyyMMdd, Corresponding HOUR: yyyyMMddHH, Corresponding MIN: yyyyMMddHHmm, Corresponding SECOND: yyyyMMddHHmmss
+        /// Required. corresponds to day: yyyyMMdd, corresponds to HOUR: yyyyMMddHH, corresponds to MIN: yyyyMMddHHmm, corresponds to SECOND: yyyyMMddHHmmss. default value: yyyyMMdd.
         /// </summary>
         [JsonProperty("DimensionFormat")]
         public string DimensionFormat{ get; set; }
