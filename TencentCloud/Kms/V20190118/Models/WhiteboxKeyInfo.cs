@@ -91,8 +91,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Whether there is a device fingerprint bound to the current key
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether there is a device fingerprint bound to the current key.
         /// </summary>
         [JsonProperty("DeviceFingerprintBind")]
         public bool? DeviceFingerprintBind{ get; set; }

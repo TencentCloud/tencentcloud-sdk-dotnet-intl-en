@@ -26,42 +26,36 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// Instance ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Execution activity ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InvocationId")]
         public string InvocationId{ get; set; }
 
         /// <summary>
-        /// Execution task ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task ID.
         /// </summary>
         [JsonProperty("InvocationTaskId")]
         public string InvocationTaskId{ get; set; }
 
         /// <summary>
         /// Command ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// Execution Status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the execution task status.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// Execution exception information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the exception information during execution.
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }

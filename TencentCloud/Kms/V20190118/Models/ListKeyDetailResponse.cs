@@ -31,8 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of returned attribute information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the returned attribute information list.
         /// </summary>
         [JsonProperty("KeyMetadatas")]
         public KeyMetadata[] KeyMetadatas{ get; set; }

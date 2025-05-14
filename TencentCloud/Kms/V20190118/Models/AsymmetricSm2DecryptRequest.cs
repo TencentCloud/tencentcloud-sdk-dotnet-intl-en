@@ -31,7 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Base64-encoded ciphertext encrypted with `PublicKey`, whose length cannot exceed 256 bytes.
+        /// Specifies that the ciphertext encrypted with PublicKey is Base64 encoded. the original ciphertext format needs to be C1C3C2_ASN1. the length of the original ciphertext cannot exceed 256 bytes.
         /// </summary>
         [JsonProperty("Ciphertext")]
         public string Ciphertext{ get; set; }

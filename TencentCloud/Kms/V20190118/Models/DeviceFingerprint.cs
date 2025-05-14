@@ -31,8 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string Identity{ get; set; }
 
         /// <summary>
-        /// Description, such as IP and device name. Length limit: 1,024 bytes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Description information, such as IP and device name, with a maximum of 1024 bytes.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service’s features.
+        /// Resource/instance ID, which is stored as a string and defined by the caller based on the Tencent Cloud service's features.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Key attribute information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the attribute information of the key.
         /// </summary>
         [JsonProperty("KeyMetadata")]
         public KeyMetadata KeyMetadata{ get; set; }

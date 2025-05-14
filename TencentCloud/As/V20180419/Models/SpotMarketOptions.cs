@@ -31,8 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string MaxPrice{ get; set; }
 
         /// <summary>
-        /// Bid request type. Currently, only "one-time" type is supported. Default value: one-time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Spot instance type. The value can only be one-time currently. Default value: one-time.
         /// </summary>
         [JsonProperty("SpotInstanceType")]
         public string SpotInstanceType{ get; set; }

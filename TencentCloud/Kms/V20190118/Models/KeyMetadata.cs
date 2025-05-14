@@ -91,21 +91,19 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? NextRotateTime{ get; set; }
 
         /// <summary>
-        /// Scheduled deletion time
+        /// The time when scheduled deletion occurs.
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
         /// <summary>
-        /// CMK key material type. TENCENT_KMS: created by KMS; EXTERNAL: imported by user.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
         /// </summary>
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }
@@ -117,11 +115,22 @@ namespace TencentCloud.Kms.V20190118.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// HSM cluster ID (valid only for exclusive or managed version KMS service instances).
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
+
+        /// <summary>
+        /// Key rotation period (days).
+        /// </summary>
+        [JsonProperty("RotateDays")]
+        public ulong? RotateDays{ get; set; }
+
+        /// <summary>
+        /// Last disorderly rotation time (Unix timestamp).
+        /// </summary>
+        [JsonProperty("LastRotateTime")]
+        public ulong? LastRotateTime{ get; set; }
 
 
         /// <summary>
@@ -145,6 +154,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
+            this.SetParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
         }
     }
 }

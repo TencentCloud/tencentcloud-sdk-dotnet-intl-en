@@ -25,11 +25,10 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Whether [TCOP (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) is enabled. Valid values:
-        /// <li>TRUE: enabled</li>
-        /// <li>FALSE: disabled</li>
+        /// Whether to enable [Tencent Cloud Observability Platform (formerly Cloud Monitor)](https://intl.cloud.tencent.com/document/product/248?from_cn_redirect=1) (TCOP). Valid values:
+        /// <li>TRUE: enable TCOP.</li>
+        /// <li>FALSE: disable TCOP.</li>
         /// Default value: TRUE.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

@@ -31,8 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public SpotMarketOptions SpotOptions{ get; set; }
 
         /// <summary>
-        /// Market option type. Currently, this only supports the value "spot"
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Market option type. The value can only be spot currently.
         /// </summary>
         [JsonProperty("MarketType")]
         public string MarketType{ get; set; }

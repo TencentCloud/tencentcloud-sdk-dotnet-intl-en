@@ -25,7 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// CMK list array
+        /// CMK list array.
         /// </summary>
         [JsonProperty("Keys")]
         public Key[] Keys{ get; set; }

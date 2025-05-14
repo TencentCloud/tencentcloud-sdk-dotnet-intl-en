@@ -43,7 +43,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// CMK description
+        /// Specifies the description of the CMK.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -61,20 +61,19 @@ namespace TencentCloud.Kms.V20190118.Models
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// Tag operation return code. 0: success; 1: internal error; 2: business processing error
+        /// Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// Tag operation return information
+        /// Response information of Tag operation.
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }
 
         /// <summary>
-        /// ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// HSM cluster ID (valid only for exclusive or managed version KMS service instances).
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

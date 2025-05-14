@@ -25,8 +25,7 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// The list of supported regions
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Available region list.
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }

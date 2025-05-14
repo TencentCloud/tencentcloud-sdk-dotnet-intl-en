@@ -31,8 +31,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public WhiteboxKeyInfo[] KeyInfos{ get; set; }
 
         /// <summary>
-        /// Total white-box keys.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of white-box keys.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

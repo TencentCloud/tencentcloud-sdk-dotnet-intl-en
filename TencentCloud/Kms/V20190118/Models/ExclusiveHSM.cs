@@ -15,23 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunSecurityServiceEnabled : AbstractModel
+    public class ExclusiveHSM : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable [Cloud Workload Protection Platform (CWPP)](https://intl.cloud.tencent.com/document/product/296?from_cn_redirect=1). Valid values:
-        /// <li>TRUE: enable CWPP.</li>
-        /// <li>FALSE: disable CWPP.</li>
-        /// Default value: TRUE.
+        /// Dedicated cluster Id.
         /// </summary>
-        [JsonProperty("Enabled")]
-        public bool? Enabled{ get; set; }
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
+        /// <summary>
+        /// Dedicated cluster name.
+        /// </summary>
+        [JsonProperty("HsmClusterName")]
+        public string HsmClusterName{ get; set; }
 
 
         /// <summary>
@@ -39,7 +42,8 @@ namespace TencentCloud.As.V20180419.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+            this.SetParamSimple(map, prefix + "HsmClusterName", this.HsmClusterName);
         }
     }
 }

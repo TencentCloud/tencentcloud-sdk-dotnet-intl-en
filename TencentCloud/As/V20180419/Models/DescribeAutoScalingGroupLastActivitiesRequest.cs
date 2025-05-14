@@ -25,10 +25,16 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// ID list of an auto scaling group.
+        /// ID list of auto scaling groups.
         /// </summary>
         [JsonProperty("AutoScalingGroupIds")]
         public string[] AutoScalingGroupIds{ get; set; }
+
+        /// <summary>
+        /// Excludes cancelled type activities when querying. Default value is false, which means cancelled type activities are not excluded.
+        /// </summary>
+        [JsonProperty("ExcludeCancelledActivity")]
+        public bool? ExcludeCancelledActivity{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.As.V20180419.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+            this.SetParamSimple(map, prefix + "ExcludeCancelledActivity", this.ExcludeCancelledActivity);
         }
     }
 }
