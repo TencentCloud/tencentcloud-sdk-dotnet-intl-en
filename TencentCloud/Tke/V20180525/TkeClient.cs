@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.intl.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1133";
+       private const string sdkVersion = "SDK_NET_3.0.1134";
 
         /// <summary>
         /// Client constructor.
@@ -2234,6 +2234,27 @@ namespace TencentCloud.Tke.V20180525
         public GetClusterLevelPriceResponse GetClusterLevelPriceSync(GetClusterLevelPriceRequest req)
         {
             return InternalRequestAsync<GetClusterLevelPriceResponse>(req, "GetClusterLevelPrice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the App List supported by TKE.
+        /// </summary>
+        /// <param name="req"><see cref="GetTkeAppChartListRequest"/></param>
+        /// <returns><see cref="GetTkeAppChartListResponse"/></returns>
+        public Task<GetTkeAppChartListResponse> GetTkeAppChartList(GetTkeAppChartListRequest req)
+        {
+            return InternalRequestAsync<GetTkeAppChartListResponse>(req, "GetTkeAppChartList");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the App List supported by TKE.
+        /// </summary>
+        /// <param name="req"><see cref="GetTkeAppChartListRequest"/></param>
+        /// <returns><see cref="GetTkeAppChartListResponse"/></returns>
+        public GetTkeAppChartListResponse GetTkeAppChartListSync(GetTkeAppChartListRequest req)
+        {
+            return InternalRequestAsync<GetTkeAppChartListResponse>(req, "GetTkeAppChartList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

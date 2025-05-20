@@ -37,16 +37,28 @@ namespace TencentCloud.Tke.V20180525.Models
         public string AddonName{ get; set; }
 
         /// <summary>
-        /// Add-on version. The add-on version is not updated if this parameter is not specified.
+        /// addon version (default does not update if not passed. if AddonVersion is not passed, RawValues must be passed.).
         /// </summary>
         [JsonProperty("AddonVersion")]
         public string AddonVersion{ get; set; }
 
         /// <summary>
-        /// Add-on parameters in a base64-encoded JSON string. You can query add-on parameters via `DescribeAddonValues`.
+        /// Parameters of the addon, which is a base64-transcoded string in json format. (the addon parameters are obtained through DescribeAddonValues. when RawValues is not passed, AddonVersion must be provided.).
         /// </summary>
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }
+
+        /// <summary>
+        /// The update policy for the addon parameter supports two strategies: replace and merge. the default value is merge, which is compatible with old version apis. replace: use new RawValues to fully replace the original RawValues of the addon. merge: add or update the corresponding parameters in the original RawValues of the addon based on new RawValues.
+        /// </summary>
+        [JsonProperty("UpdateStrategy")]
+        public string UpdateStrategy{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to only perform an update check. when set to true, only the check is performed without updating the component.
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AddonName", this.AddonName);
             this.SetParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
             this.SetParamSimple(map, prefix + "RawValues", this.RawValues);
+            this.SetParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

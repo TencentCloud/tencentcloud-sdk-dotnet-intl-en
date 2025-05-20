@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID (only supported for standard tke clusters).
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("RawValues")]
         public string RawValues{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to perform only an installation check. when set to true, only checks are performed without installing components.
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "AddonName", this.AddonName);
             this.SetParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
             this.SetParamSimple(map, prefix + "RawValues", this.RawValues);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }
