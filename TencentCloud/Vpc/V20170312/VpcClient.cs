@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1134";
+       private const string sdkVersion = "SDK_NET_3.0.1135";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Vpc.V20170312
         public AddBandwidthPackageResourcesResponse AddBandwidthPackageResourcesSync(AddBandwidthPackageResourcesRequest req)
         {
             return InternalRequestAsync<AddBandwidthPackageResourcesResponse>(req, "AddBandwidthPackageResources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
+        /// <returns><see cref="AddTemplateMemberResponse"/></returns>
+        public Task<AddTemplateMemberResponse> AddTemplateMember(AddTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<AddTemplateMemberResponse>(req, "AddTemplateMember");
+        }
+
+        /// <summary>
+        /// This API is used to add a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
+        /// <returns><see cref="AddTemplateMemberResponse"/></returns>
+        public AddTemplateMemberResponse AddTemplateMemberSync(AddTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<AddTemplateMemberResponse>(req, "AddTemplateMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2205,6 +2226,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteSubnetResponse DeleteSubnetSync(DeleteSubnetRequest req)
         {
             return InternalRequestAsync<DeleteSubnetResponse>(req, "DeleteSubnet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
+        /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
+        public Task<DeleteTemplateMemberResponse> DeleteTemplateMember(DeleteTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteTemplateMemberResponse>(req, "DeleteTemplateMember");
+        }
+
+        /// <summary>
+        /// This API is used to delete a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
+        /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
+        public DeleteTemplateMemberResponse DeleteTemplateMemberSync(DeleteTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteTemplateMemberResponse>(req, "DeleteTemplateMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5542,6 +5584,27 @@ namespace TencentCloud.Vpc.V20170312
         public ModifySubnetAttributeResponse ModifySubnetAttributeSync(ModifySubnetAttributeRequest req)
         {
             return InternalRequestAsync<ModifySubnetAttributeResponse>(req, "ModifySubnetAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
+        /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>
+        public Task<ModifyTemplateMemberResponse> ModifyTemplateMember(ModifyTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<ModifyTemplateMemberResponse>(req, "ModifyTemplateMember");
+        }
+
+        /// <summary>
+        /// This API is used to modify a parameter template of the IP address, protocol port, IP address group, or protocol port group type.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
+        /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>
+        public ModifyTemplateMemberResponse ModifyTemplateMemberSync(ModifyTemplateMemberRequest req)
+        {
+            return InternalRequestAsync<ModifyTemplateMemberResponse>(req, "ModifyTemplateMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
