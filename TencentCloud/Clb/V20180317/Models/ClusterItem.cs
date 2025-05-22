@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

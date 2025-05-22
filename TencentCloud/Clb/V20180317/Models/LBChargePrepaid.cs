@@ -25,15 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Renewal type. AUTO_RENEW: automatic renewal; MANUAL_RENEW: manual renewal
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserved field.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Cycle, indicating the number of months (reserved field)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserved field.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
