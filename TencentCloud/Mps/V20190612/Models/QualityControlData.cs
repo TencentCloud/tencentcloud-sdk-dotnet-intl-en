@@ -39,11 +39,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public bool? NoVideo{ get; set; }
 
         /// <summary>
-        /// The no-reference video quality score. Value range: 0-100.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// No-reference quality score of the video (100 points in total).
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
+
+        /// <summary>
+        /// No-reference quality score of the video (MOS).
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("QualityEvaluationMeanOpinionScore")]
+        public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
         /// Exception items detected in content quality inspection.
@@ -68,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoAudio", this.NoAudio);
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
+            this.SetParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
             this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }

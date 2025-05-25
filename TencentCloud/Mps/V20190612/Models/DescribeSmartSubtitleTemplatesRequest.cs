@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Condition for filtering smart subtitle templates by unique identifier. The array can contain up to 10 unique identifiers.
+        /// Unique identifiers of smart subtitle templates for filtering. The array can contain up to 100 unique identifiers.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Image format. Valid values: JPG, BMP, GIF, PNG, and WebP. The default is the original image format.
+        /// Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Format")]

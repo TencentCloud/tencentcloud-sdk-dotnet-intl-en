@@ -33,10 +33,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Additional parameter. Its value is a serialized JSON string.
         /// Note: This parameter is used to meet customization requirements. References:
-        /// Smart erase: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
-        /// Video splitting: https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1
-        /// Intelligent highlights: https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1
-        /// Horizontal-to-vertical video transformation: https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1
+        /// [Smart Erase Tutorial]: https://intl.cloud.tencent.com/document/product/862/101530?from_cn_redirect=1
+        /// [Video Splitting (Long Videos to Short Videos) Tutorial](https://intl.cloud.tencent.com/document/product/862/112098?from_cn_redirect=1)
+        /// [Intelligent Highlights Tutorial](https://intl.cloud.tencent.com/document/product/862/107280?from_cn_redirect=1)
+        /// [Horizontal-to-Vertical Video Transformation Tutorial](https://intl.cloud.tencent.com/document/product/862/112112?from_cn_redirect=1)
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ExtendedParameter")]

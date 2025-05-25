@@ -61,9 +61,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// The sampling rate of the audio stream. the supported sampling rate options vary for different encoding standards. for details, see audio sampling rate support scope document https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53.
+        /// Audio stream sampling rate. Different sampling rate options are provided for different encoding standards. For details, see [Audio/Video Transcoding Template](https://intl.cloud.tencent.com/document/product/862/77166?from_cn_redirect=1#f3b039f1-d817-4a96-b4e4-90132d31cd53).
         /// Unit: Hz.
-        /// Please ensure that the sampling rate of the source audio stream is within the value range of the above options. otherwise, transcoding failure may occur.
+        /// Note: Make sure that the sampling rate of the source audio stream is among the above options. Otherwise, transcoding may fail.
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }

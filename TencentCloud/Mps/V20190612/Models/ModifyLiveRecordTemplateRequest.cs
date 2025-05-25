@@ -31,10 +31,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// HLS configuration parameters.
+        /// HLS configuration parameter. Either this parameter or MP4Configure should be specified.
         /// </summary>
         [JsonProperty("HLSConfigure")]
         public HLSConfigureInfo HLSConfigure{ get; set; }
+
+        /// <summary>
+        /// MP4 configuration parameter. Either this parameter or HLSConfigure should be specified.
+        /// </summary>
+        [JsonProperty("MP4Configure")]
+        public MP4ConfigureInfo MP4Configure{ get; set; }
 
         /// <summary>
         /// Recording template name. Length limit: 64 characters.
@@ -56,6 +62,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "HLSConfigure.", this.HLSConfigure);
+            this.SetParamObj(map, prefix + "MP4Configure.", this.MP4Configure);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
         }
