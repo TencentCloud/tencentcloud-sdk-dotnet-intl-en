@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1138";
+       private const string sdkVersion = "SDK_NET_3.0.1139";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
         {
             return InternalRequestAsync<DescribeAccountBalanceResponse>(req, "DescribeAccountBalance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the details of a cost allocation unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationUnitDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationUnitDetailResponse"/></returns>
+        public Task<DescribeAllocationUnitDetailResponse> DescribeAllocationUnitDetail(DescribeAllocationUnitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationUnitDetailResponse>(req, "DescribeAllocationUnitDetail");
+        }
+
+        /// <summary>
+        /// Query the details of a cost allocation unit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationUnitDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationUnitDetailResponse"/></returns>
+        public DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetailSync(DescribeAllocationUnitDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationUnitDetailResponse>(req, "DescribeAllocationUnitDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
