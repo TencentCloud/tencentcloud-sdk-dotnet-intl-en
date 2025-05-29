@@ -46,6 +46,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
+        [System.Obsolete]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>

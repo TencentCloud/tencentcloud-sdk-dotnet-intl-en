@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1140";
+       private const string sdkVersion = "SDK_NET_3.0.1141";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to create allocation units.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationUnitRequest"/></param>
+        /// <returns><see cref="CreateAllocationUnitResponse"/></returns>
+        public Task<CreateAllocationUnitResponse> CreateAllocationUnit(CreateAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit");
+        }
+
+        /// <summary>
+        /// This API is used to create allocation units.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationUnitRequest"/></param>
+        /// <returns><see cref="CreateAllocationUnitResponse"/></returns>
+        public CreateAllocationUnitResponse CreateAllocationUnitSync(CreateAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// u200cThis API is used to batch cancel cost allocation tags.
         /// </summary>
         /// <param name="req"><see cref="DeleteAllocationTagRequest"/></param>
@@ -92,6 +113,27 @@ namespace TencentCloud.Billing.V20180709
         public DeleteAllocationTagResponse DeleteAllocationTagSync(DeleteAllocationTagRequest req)
         {
             return InternalRequestAsync<DeleteAllocationTagResponse>(req, "DeleteAllocationTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a cost allocation unit.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationUnitRequest"/></param>
+        /// <returns><see cref="DeleteAllocationUnitResponse"/></returns>
+        public Task<DeleteAllocationUnitResponse> DeleteAllocationUnit(DeleteAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationUnitResponse>(req, "DeleteAllocationUnit");
+        }
+
+        /// <summary>
+        /// Delete a cost allocation unit.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationUnitRequest"/></param>
+        /// <returns><see cref="DeleteAllocationUnitResponse"/></returns>
+        public DeleteAllocationUnitResponse DeleteAllocationUnitSync(DeleteAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationUnitResponse>(req, "DeleteAllocationUnit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -646,6 +688,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetailsSync(DescribeVoucherUsageDetailsRequest req)
         {
             return InternalRequestAsync<DescribeVoucherUsageDetailsResponse>(req, "DescribeVoucherUsageDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify cost allocation unit information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationUnitRequest"/></param>
+        /// <returns><see cref="ModifyAllocationUnitResponse"/></returns>
+        public Task<ModifyAllocationUnitResponse> ModifyAllocationUnit(ModifyAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit");
+        }
+
+        /// <summary>
+        /// This API is used to modify cost allocation unit information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationUnitRequest"/></param>
+        /// <returns><see cref="ModifyAllocationUnitResponse"/></returns>
+        public ModifyAllocationUnitResponse ModifyAllocationUnitSync(ModifyAllocationUnitRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

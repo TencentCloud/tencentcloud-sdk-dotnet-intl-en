@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1140";
+       private const string sdkVersion = "SDK_NET_3.0.1141";
 
         /// <summary>
         /// Client constructor.
@@ -684,6 +684,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to query the download source limit of the default backup configured by the user in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadRestrictionResponse>(req, "DescribeBackupDownloadRestriction");
+        }
+
+        /// <summary>
+        /// This API is used to query the download source limit of the default backup configured by the user in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadRestrictionResponse>(req, "DescribeBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the download link of cluster backup files.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
@@ -701,6 +722,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrlSync(DescribeBackupDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeBackupDownloadUrlResponse>(req, "DescribeBackupDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the default backup download access restrictions of user-level settings in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUserRestrictionResponse"/></returns>
+        public Task<DescribeBackupDownloadUserRestrictionResponse> DescribeBackupDownloadUserRestriction(DescribeBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadUserRestrictionResponse>(req, "DescribeBackupDownloadUserRestriction");
+        }
+
+        /// <summary>
+        /// This API is used to query the default backup download access restrictions of user-level settings in the current region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUserRestrictionResponse"/></returns>
+        public DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestrictionSync(DescribeBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupDownloadUserRestrictionResponse>(req, "DescribeBackupDownloadUserRestriction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -932,6 +974,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexitySync(DescribeClusterPasswordComplexityRequest req)
         {
             return InternalRequestAsync<DescribeClusterPasswordComplexityResponse>(req, "DescribeClusterPasswordComplexity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the cluster read-only switch.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="DescribeClusterReadOnlyResponse"/></returns>
+        public Task<DescribeClusterReadOnlyResponse> DescribeClusterReadOnly(DescribeClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly");
+        }
+
+        /// <summary>
+        /// This API is used to query the cluster read-only switch.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="DescribeClusterReadOnlyResponse"/></returns>
+        public DescribeClusterReadOnlyResponse DescribeClusterReadOnlySync(DescribeClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1839,6 +1902,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the download source limit of the backup file for the user in the current region. It can be configured to allow downloads from both private and public networks, only the private network, or a designated vpc or ip within the private network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadRestrictionResponse>(req, "ModifyBackupDownloadRestriction");
+        }
+
+        /// <summary>
+        /// This API is used to modify the download source limit of the backup file for the user in the current region. It can be configured to allow downloads from both private and public networks, only the private network, or a designated vpc or ip within the private network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadRestrictionResponse>(req, "ModifyBackupDownloadRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the download source restrictions for backup files in the user's current region. It can be configured to allow downloads from both private and public networks, only from a private network, or from a designated vpc or ip within the private network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadUserRestrictionResponse"/></returns>
+        public Task<ModifyBackupDownloadUserRestrictionResponse> ModifyBackupDownloadUserRestriction(ModifyBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadUserRestrictionResponse>(req, "ModifyBackupDownloadUserRestriction");
+        }
+
+        /// <summary>
+        /// This API is used to modify the download source restrictions for backup files in the user's current region. It can be configured to allow downloads from both private and public networks, only from a private network, or from a designated vpc or ip within the private network.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadUserRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadUserRestrictionResponse"/></returns>
+        public ModifyBackupDownloadUserRestrictionResponse ModifyBackupDownloadUserRestrictionSync(ModifyBackupDownloadUserRestrictionRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupDownloadUserRestrictionResponse>(req, "ModifyBackupDownloadUserRestriction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to rename a backup file.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
@@ -1982,6 +2087,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexitySync(ModifyClusterPasswordComplexityRequest req)
         {
             return InternalRequestAsync<ModifyClusterPasswordComplexityResponse>(req, "ModifyClusterPasswordComplexity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the read-only switch of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyClusterReadOnlyResponse"/></returns>
+        public Task<ModifyClusterReadOnlyResponse> ModifyClusterReadOnly(ModifyClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterReadOnlyResponse>(req, "ModifyClusterReadOnly");
+        }
+
+        /// <summary>
+        /// This API is used to modify the read-only switch of a cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyClusterReadOnlyResponse"/></returns>
+        public ModifyClusterReadOnlyResponse ModifyClusterReadOnlySync(ModifyClusterReadOnlyRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterReadOnlyResponse>(req, "ModifyClusterReadOnly")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

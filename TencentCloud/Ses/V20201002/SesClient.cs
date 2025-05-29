@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.intl.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1140";
+       private const string sdkVersion = "SDK_NET_3.0.1141";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ses.V20201002
         public BatchSendEmailResponse BatchSendEmailSync(BatchSendEmailRequest req)
         {
             return InternalRequestAsync<BatchSendEmailResponse>(req, "BatchSendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an address-level unsubscribe configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="CreateAddressUnsubscribeConfigResponse"/></returns>
+        public Task<CreateAddressUnsubscribeConfigResponse> CreateAddressUnsubscribeConfig(CreateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<CreateAddressUnsubscribeConfigResponse>(req, "CreateAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create an address-level unsubscribe configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="CreateAddressUnsubscribeConfigResponse"/></returns>
+        public CreateAddressUnsubscribeConfigResponse CreateAddressUnsubscribeConfigSync(CreateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<CreateAddressUnsubscribeConfigResponse>(req, "CreateAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -178,6 +199,27 @@ namespace TencentCloud.Ses.V20201002
         public CreateReceiverDetailResponse CreateReceiverDetailSync(CreateReceiverDetailRequest req)
         {
             return InternalRequestAsync<CreateReceiverDetailResponse>(req, "CreateReceiverDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Remove address-level unsubscribe configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="DeleteAddressUnsubscribeConfigResponse"/></returns>
+        public Task<DeleteAddressUnsubscribeConfigResponse> DeleteAddressUnsubscribeConfig(DeleteAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteAddressUnsubscribeConfigResponse>(req, "DeleteAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// Remove address-level unsubscribe configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="DeleteAddressUnsubscribeConfigResponse"/></returns>
+        public DeleteAddressUnsubscribeConfigResponse DeleteAddressUnsubscribeConfigSync(DeleteAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteAddressUnsubscribeConfigResponse>(req, "DeleteAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -373,6 +415,27 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// This API is used to get the address and unsubscribe configuration list.
+        /// </summary>
+        /// <param name="req"><see cref="ListAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="ListAddressUnsubscribeConfigResponse"/></returns>
+        public Task<ListAddressUnsubscribeConfigResponse> ListAddressUnsubscribeConfig(ListAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<ListAddressUnsubscribeConfigResponse>(req, "ListAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// This API is used to get the address and unsubscribe configuration list.
+        /// </summary>
+        /// <param name="req"><see cref="ListAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="ListAddressUnsubscribeConfigResponse"/></returns>
+        public ListAddressUnsubscribeConfigResponse ListAddressUnsubscribeConfigSync(ListAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<ListAddressUnsubscribeConfigResponse>(req, "ListAddressUnsubscribeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// The API is used to get blocklisted addresses. In the case of a hard bounce, Tencent Cloud will blocklist the recipient address and do not allow any user to send emails to this address. If you confirm that this is a misjudgment, you can remove it from the blocklist.
         /// </summary>
         /// <param name="req"><see cref="ListBlackEmailAddressRequest"/></param>
@@ -516,6 +579,27 @@ namespace TencentCloud.Ses.V20201002
         public SendEmailResponse SendEmailSync(SendEmailRequest req)
         {
             return InternalRequestAsync<SendEmailResponse>(req, "SendEmail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update address-level unsubscribe configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="UpdateAddressUnsubscribeConfigResponse"/></returns>
+        public Task<UpdateAddressUnsubscribeConfigResponse> UpdateAddressUnsubscribeConfig(UpdateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateAddressUnsubscribeConfigResponse>(req, "UpdateAddressUnsubscribeConfig");
+        }
+
+        /// <summary>
+        /// This API is used to update address-level unsubscribe configurations.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAddressUnsubscribeConfigRequest"/></param>
+        /// <returns><see cref="UpdateAddressUnsubscribeConfigResponse"/></returns>
+        public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfigSync(UpdateAddressUnsubscribeConfigRequest req)
+        {
+            return InternalRequestAsync<UpdateAddressUnsubscribeConfigResponse>(req, "UpdateAddressUnsubscribeConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
