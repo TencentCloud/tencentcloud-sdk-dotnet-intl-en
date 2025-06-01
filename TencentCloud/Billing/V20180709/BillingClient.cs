@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1141";
+       private const string sdkVersion = "SDK_NET_3.0.1142";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Billing.V20180709
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Create a sharing rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationRuleRequest"/></param>
+        /// <returns><see cref="CreateAllocationRuleResponse"/></returns>
+        public Task<CreateAllocationRuleResponse> CreateAllocationRule(CreateAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationRuleResponse>(req, "CreateAllocationRule");
+        }
+
+        /// <summary>
+        /// Create a sharing rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAllocationRuleRequest"/></param>
+        /// <returns><see cref="CreateAllocationRuleResponse"/></returns>
+        public CreateAllocationRuleResponse CreateAllocationRuleSync(CreateAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<CreateAllocationRuleResponse>(req, "CreateAllocationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -92,6 +113,48 @@ namespace TencentCloud.Billing.V20180709
         public CreateAllocationUnitResponse CreateAllocationUnitSync(CreateAllocationUnitRequest req)
         {
             return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatherRuleRequest"/></param>
+        /// <returns><see cref="CreateGatherRuleResponse"/></returns>
+        public Task<CreateGatherRuleResponse> CreateGatherRule(CreateGatherRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule");
+        }
+
+        /// <summary>
+        /// Create a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateGatherRuleRequest"/></param>
+        /// <returns><see cref="CreateGatherRuleResponse"/></returns>
+        public CreateGatherRuleResponse CreateGatherRuleSync(CreateGatherRuleRequest req)
+        {
+            return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete sharing rule interface.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationRuleRequest"/></param>
+        /// <returns><see cref="DeleteAllocationRuleResponse"/></returns>
+        public Task<DeleteAllocationRuleResponse> DeleteAllocationRule(DeleteAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationRuleResponse>(req, "DeleteAllocationRule");
+        }
+
+        /// <summary>
+        /// Delete sharing rule interface.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAllocationRuleRequest"/></param>
+        /// <returns><see cref="DeleteAllocationRuleResponse"/></returns>
+        public DeleteAllocationRuleResponse DeleteAllocationRuleSync(DeleteAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAllocationRuleResponse>(req, "DeleteAllocationRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -138,6 +201,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// Delete a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatherRuleRequest"/></param>
+        /// <returns><see cref="DeleteGatherRuleResponse"/></returns>
+        public Task<DeleteGatherRuleResponse> DeleteGatherRule(DeleteGatherRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGatherRuleResponse>(req, "DeleteGatherRule");
+        }
+
+        /// <summary>
+        /// Delete a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGatherRuleRequest"/></param>
+        /// <returns><see cref="DeleteGatherRuleResponse"/></returns>
+        public DeleteGatherRuleResponse DeleteGatherRuleSync(DeleteGatherRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteGatherRuleResponse>(req, "DeleteGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to check the Tencent Cloud account balance.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountBalanceRequest"/></param>
@@ -155,6 +239,69 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAccountBalanceResponse DescribeAccountBalanceSync(DescribeAccountBalanceRequest req)
         {
             return InternalRequestAsync<DescribeAccountBalanceResponse>(req, "DescribeAccountBalance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query sharing rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleDetailResponse"/></returns>
+        public Task<DescribeAllocationRuleDetailResponse> DescribeAllocationRuleDetail(DescribeAllocationRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleDetailResponse>(req, "DescribeAllocationRuleDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query sharing rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleDetailResponse"/></returns>
+        public DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetailSync(DescribeAllocationRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleDetailResponse>(req, "DescribeAllocationRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query all sharing rule overviews.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleSummaryResponse"/></returns>
+        public Task<DescribeAllocationRuleSummaryResponse> DescribeAllocationRuleSummary(DescribeAllocationRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleSummaryResponse>(req, "DescribeAllocationRuleSummary");
+        }
+
+        /// <summary>
+        /// This API is used to query all sharing rule overviews.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeAllocationRuleSummaryResponse"/></returns>
+        public DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummarySync(DescribeAllocationRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationRuleSummaryResponse>(req, "DescribeAllocationRuleSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the cost tree.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTreeRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTreeResponse"/></returns>
+        public Task<DescribeAllocationTreeResponse> DescribeAllocationTree(DescribeAllocationTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTreeResponse>(req, "DescribeAllocationTree");
+        }
+
+        /// <summary>
+        /// This API is used to query the cost tree.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTreeRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTreeResponse"/></returns>
+        public DescribeAllocationTreeResponse DescribeAllocationTreeSync(DescribeAllocationTreeRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTreeResponse>(req, "DescribeAllocationTree")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -629,6 +776,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to query the collection rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeGatherRuleDetailResponse"/></returns>
+        public Task<DescribeGatherRuleDetailResponse> DescribeGatherRuleDetail(DescribeGatherRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherRuleDetailResponse>(req, "DescribeGatherRuleDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the collection rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeGatherRuleDetailResponse"/></returns>
+        public DescribeGatherRuleDetailResponse DescribeGatherRuleDetailSync(DescribeGatherRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherRuleDetailResponse>(req, "DescribeGatherRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get cost allocation tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagListRequest"/></param>
@@ -692,6 +860,27 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// Edit sharing rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationRuleRequest"/></param>
+        /// <returns><see cref="ModifyAllocationRuleResponse"/></returns>
+        public Task<ModifyAllocationRuleResponse> ModifyAllocationRule(ModifyAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationRuleResponse>(req, "ModifyAllocationRule");
+        }
+
+        /// <summary>
+        /// Edit sharing rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAllocationRuleRequest"/></param>
+        /// <returns><see cref="ModifyAllocationRuleResponse"/></returns>
+        public ModifyAllocationRuleResponse ModifyAllocationRuleSync(ModifyAllocationRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyAllocationRuleResponse>(req, "ModifyAllocationRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify cost allocation unit information.
         /// </summary>
         /// <param name="req"><see cref="ModifyAllocationUnitRequest"/></param>
@@ -709,6 +898,27 @@ namespace TencentCloud.Billing.V20180709
         public ModifyAllocationUnitResponse ModifyAllocationUnitSync(ModifyAllocationUnitRequest req)
         {
             return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Edit a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatherRuleRequest"/></param>
+        /// <returns><see cref="ModifyGatherRuleResponse"/></returns>
+        public Task<ModifyGatherRuleResponse> ModifyGatherRule(ModifyGatherRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGatherRuleResponse>(req, "ModifyGatherRule");
+        }
+
+        /// <summary>
+        /// Edit a collection rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGatherRuleRequest"/></param>
+        /// <returns><see cref="ModifyGatherRuleResponse"/></returns>
+        public ModifyGatherRuleResponse ModifyGatherRuleSync(ModifyGatherRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyGatherRuleResponse>(req, "ModifyGatherRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

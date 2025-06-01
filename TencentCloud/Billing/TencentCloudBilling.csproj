@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1141</VersionPrefix>
+    <VersionPrefix>3.0.1142</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,12 @@
     <Compile Include="V20180709\BillingClient.cs" />
     <Compile Include="V20180709\Models\ActionSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\AdjustInfoDetail.cs" />
+    <Compile Include="V20180709\Models\AllocationRationExpression.cs" />
+    <Compile Include="V20180709\Models\AllocationRuleExpression.cs" />
+    <Compile Include="V20180709\Models\AllocationRuleOverview.cs" />
+    <Compile Include="V20180709\Models\AllocationRulesSummary.cs" />
+    <Compile Include="V20180709\Models\AllocationTree.cs" />
+    <Compile Include="V20180709\Models\AllocationUnit.cs" />
     <Compile Include="V20180709\Models\AnalyseActionTypeDetail.cs" />
     <Compile Include="V20180709\Models\AnalyseAmountDetail.cs" />
     <Compile Include="V20180709\Models\AnalyseBusinessDetail.cs" />
@@ -90,17 +96,31 @@
     <Compile Include="V20180709\Models\CosDetailSets.cs" />
     <Compile Include="V20180709\Models\CostComponentSet.cs" />
     <Compile Include="V20180709\Models\CostDetail.cs" />
+    <Compile Include="V20180709\Models\CreateAllocationRuleRequest.cs" />
+    <Compile Include="V20180709\Models\CreateAllocationRuleResponse.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagRequest.cs" />
     <Compile Include="V20180709\Models\CreateAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\CreateAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\CreateAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\CreateGatherRuleRequest.cs" />
+    <Compile Include="V20180709\Models\CreateGatherRuleResponse.cs" />
     <Compile Include="V20180709\Models\Deal.cs" />
+    <Compile Include="V20180709\Models\DeleteAllocationRuleRequest.cs" />
+    <Compile Include="V20180709\Models\DeleteAllocationRuleResponse.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationTagRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationTagResponse.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\DeleteGatherRuleRequest.cs" />
+    <Compile Include="V20180709\Models\DeleteGatherRuleResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAccountBalanceResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationRuleDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationRuleDetailResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationRuleSummaryRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationRuleSummaryResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationTreeRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeAllocationTreeResponse.cs" />
     <Compile Include="V20180709\Models\DescribeAllocationUnitDetailRequest.cs" />
     <Compile Include="V20180709\Models\DescribeAllocationUnitDetailResponse.cs" />
     <Compile Include="V20180709\Models\DescribeBillAdjustInfoRequest.cs" />
@@ -145,6 +165,8 @@
     <Compile Include="V20180709\Models\DescribeDealsByCondResponse.cs" />
     <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateRequest.cs" />
     <Compile Include="V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
+    <Compile Include="V20180709\Models\DescribeGatherRuleDetailRequest.cs" />
+    <Compile Include="V20180709\Models\DescribeGatherRuleDetailResponse.cs" />
     <Compile Include="V20180709\Models\DescribeTagListRequest.cs" />
     <Compile Include="V20180709\Models\DescribeTagListResponse.cs" />
     <Compile Include="V20180709\Models\DescribeVoucherInfoRequest.cs" />
@@ -153,8 +175,13 @@
     <Compile Include="V20180709\Models\DescribeVoucherUsageDetailsResponse.cs" />
     <Compile Include="V20180709\Models\DistributionBillDetail.cs" />
     <Compile Include="V20180709\Models\ExcludedProducts.cs" />
+    <Compile Include="V20180709\Models\GatherRuleSummary.cs" />
+    <Compile Include="V20180709\Models\ModifyAllocationRuleRequest.cs" />
+    <Compile Include="V20180709\Models\ModifyAllocationRuleResponse.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationUnitRequest.cs" />
     <Compile Include="V20180709\Models\ModifyAllocationUnitResponse.cs" />
+    <Compile Include="V20180709\Models\ModifyGatherRuleRequest.cs" />
+    <Compile Include="V20180709\Models\ModifyGatherRuleResponse.cs" />
     <Compile Include="V20180709\Models\PayModeSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\ProductInfo.cs" />
     <Compile Include="V20180709\Models\ProjectSummaryOverviewItem.cs" />
