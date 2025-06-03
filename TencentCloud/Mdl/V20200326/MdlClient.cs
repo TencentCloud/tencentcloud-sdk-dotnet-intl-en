@@ -28,7 +28,7 @@ namespace TencentCloud.Mdl.V20200326
 
        private const string endpoint = "mdl.intl.tencentcloudapi.com";
        private const string version = "2020-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1142";
+       private const string sdkVersion = "SDK_NET_3.0.1143";
 
         /// <summary>
         /// Client constructor.
@@ -575,6 +575,27 @@ namespace TencentCloud.Mdl.V20200326
         public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarksSync(DescribeStreamLiveWatermarksRequest req)
         {
             return InternalRequestAsync<DescribeStreamLiveWatermarksResponse>(req, "DescribeStreamLiveWatermarks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get AB watermark play url.
+        /// </summary>
+        /// <param name="req"><see cref="GetAbWatermarkPlayUrlRequest"/></param>
+        /// <returns><see cref="GetAbWatermarkPlayUrlResponse"/></returns>
+        public Task<GetAbWatermarkPlayUrlResponse> GetAbWatermarkPlayUrl(GetAbWatermarkPlayUrlRequest req)
+        {
+            return InternalRequestAsync<GetAbWatermarkPlayUrlResponse>(req, "GetAbWatermarkPlayUrl");
+        }
+
+        /// <summary>
+        /// Get AB watermark play url.
+        /// </summary>
+        /// <param name="req"><see cref="GetAbWatermarkPlayUrlRequest"/></param>
+        /// <returns><see cref="GetAbWatermarkPlayUrlResponse"/></returns>
+        public GetAbWatermarkPlayUrlResponse GetAbWatermarkPlayUrlSync(GetAbWatermarkPlayUrlRequest req)
+        {
+            return InternalRequestAsync<GetAbWatermarkPlayUrlResponse>(req, "GetAbWatermarkPlayUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
