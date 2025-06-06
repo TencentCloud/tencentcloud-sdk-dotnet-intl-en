@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetAbWatermarkPlayUrlRequest : AbstractModel
+    public class DescribeRecordRequest : AbstractModel
     {
         
         /// <summary>
-        /// Client UUID, 32-bit unsigned integer, [0, 4294967295].
+        /// Private domain ID.
         /// </summary>
-        [JsonProperty("Uuid")]
-        public ulong? Uuid{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Channel ID of Stream Package.
+        /// Record ID
         /// </summary>
-        [JsonProperty("StreamPackageChannelId")]
-        public string StreamPackageChannelId{ get; set; }
-
-        /// <summary>
-        /// Original play URL.
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
-            this.SetParamSimple(map, prefix + "StreamPackageChannelId", this.StreamPackageChannelId);
-            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
         }
     }
 }
