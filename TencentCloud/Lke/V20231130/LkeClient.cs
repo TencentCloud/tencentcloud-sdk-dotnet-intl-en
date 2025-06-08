@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.intl.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1145";
+       private const string sdkVersion = "SDK_NET_3.0.1146";
 
         /// <summary>
         /// Client constructor.
@@ -1087,7 +1087,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// This API is used to save a knowledge base document Q&As. 
+        /// This API is used to save a knowledge base document Q&As.
         /// Three steps to store a file in the knowledge library of the application: 
         /// 1. Obtain a temporary key. For more information, see [API Documentation](https://cloud.tencent.com/document/product/1759/105050). Different parameter combinations of the temporary key have different permissions. For more information, see [Tencent Cloud Agent Development Platform/TCADP COS Guide](https://cloud.tencent.com/document/product/1759/116238). 
         /// 2. Call the COS storage API provided by Tencent Cloud to store the file in the COS of TCADP. For details, see [COS SDK Overview](https://cloud.tencent.com/document/product/436/6474). Note that the temporary key method is used to operate COS. 
@@ -1102,7 +1102,7 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// This API is used to save a knowledge base document Q&As. 
+        /// This API is used to save a knowledge base document Q&As.
         /// Three steps to store a file in the knowledge library of the application: 
         /// 1. Obtain a temporary key. For more information, see [API Documentation](https://cloud.tencent.com/document/product/1759/105050). Different parameter combinations of the temporary key have different permissions. For more information, see [Tencent Cloud Agent Development Platform/TCADP COS Guide](https://cloud.tencent.com/document/product/1759/116238). 
         /// 2. Call the COS storage API provided by Tencent Cloud to store the file in the COS of TCADP. For details, see [COS SDK Overview](https://cloud.tencent.com/document/product/436/6474). Note that the temporary key method is used to operate COS. 
