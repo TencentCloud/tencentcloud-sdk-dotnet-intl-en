@@ -31,6 +31,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public SuperResolutionConfig SuperResolution{ get; set; }
 
         /// <summary>
+        /// Denoising configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Denoise")]
+        public ImageDenoiseConfig Denoise{ get; set; }
+
+        /// <summary>
+        /// Comprehensive enhancement configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ImageQualityEnhance")]
+        public ImageQualityEnhanceConfig ImageQualityEnhance{ get; set; }
+
+        /// <summary>
         /// Color enhancement configuration.
         /// </summary>
         [JsonProperty("ColorEnhance")]
@@ -48,6 +62,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FaceEnhance")]
         public FaceEnhanceConfig FaceEnhance{ get; set; }
 
+        /// <summary>
+        /// Low-light enhancement configuration.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("LowLightEnhance")]
+        public LowLightEnhanceConfig LowLightEnhance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +76,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+            this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
+            this.SetParamObj(map, prefix + "ImageQualityEnhance.", this.ImageQualityEnhance);
             this.SetParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
             this.SetParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
             this.SetParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);
+            this.SetParamObj(map, prefix + "LowLightEnhance.", this.LowLightEnhance);
         }
     }
 }

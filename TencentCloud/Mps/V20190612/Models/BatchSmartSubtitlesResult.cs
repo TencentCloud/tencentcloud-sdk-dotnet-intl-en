@@ -21,27 +21,22 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageEraseLogoConfig : AbstractModel
+    public class BatchSmartSubtitlesResult : AbstractModel
     {
         
         /// <summary>
-        /// Capability configuration enabling status. Valid values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled</li>
-        /// Default value: ON.
+        /// Input information for smart subtitle tasks.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("Input")]
+        public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// 
+        /// Output information for smart subtitle tasks.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("ImageAreaBoxes")]
-        public ImageAreaBoxInfo[] ImageAreaBoxes{ get; set; }
+        [JsonProperty("Outputs")]
+        public SmartSubtitleTaskBatchOutput[] Outputs{ get; set; }
 
 
         /// <summary>
@@ -49,8 +44,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
+            this.SetParamArrayObj(map, prefix + "Outputs.", this.Outputs);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1150";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,29 @@ namespace TencentCloud.Mps.V20190612
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to initiate batch processing tasks for URL video links, with features including:
+        /// Smart subtitle (full speech, speech hotword, and speech translation)
+        /// </summary>
+        /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
+        /// <returns><see cref="BatchProcessMediaResponse"/></returns>
+        public Task<BatchProcessMediaResponse> BatchProcessMedia(BatchProcessMediaRequest req)
+        {
+            return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia");
+        }
+
+        /// <summary>
+        /// This API is used to initiate batch processing tasks for URL video links, with features including:
+        /// Smart subtitle (full speech, speech hotword, and speech translation)
+        /// </summary>
+        /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
+        /// <returns><see cref="BatchProcessMediaResponse"/></returns>
+        public BatchProcessMediaResponse BatchProcessMediaSync(BatchProcessMediaRequest req)
+        {
+            return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -984,6 +1007,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeBatchTaskDetailResponse"/></returns>
+        public Task<DescribeBatchTaskDetailResponse> DescribeBatchTaskDetail(DescribeBatchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchTaskDetailResponse>(req, "DescribeBatchTaskDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeBatchTaskDetailResponse"/></returns>
+        public DescribeBatchTaskDetailResponse DescribeBatchTaskDetailSync(DescribeBatchTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeBatchTaskDetailResponse>(req, "DescribeBatchTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1022,6 +1066,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplatesSync(DescribeImageSpriteTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeImageSpriteTemplatesResponse>(req, "DescribeImageSpriteTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskDetailResponse"/></returns>
+        public Task<DescribeImageTaskDetailResponse> DescribeImageTaskDetail(DescribeImageTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of the task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageTaskDetailResponse"/></returns>
+        public DescribeImageTaskDetailResponse DescribeImageTaskDetailSync(DescribeImageTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1923,9 +1988,10 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate image processing. Its features include:
-        /// 1. Format conversion;
-        /// 2. Image enhancement;
+        /// This API is used to initiate image processing, with features including:
+        /// 1. Format conversion.
+        /// 2. Image enhancement.
+        /// 3. Image erasure.
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>
@@ -1935,9 +2001,10 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate image processing. Its features include:
-        /// 1. Format conversion;
-        /// 2. Image enhancement;
+        /// This API is used to initiate image processing, with features including:
+        /// 1. Format conversion.
+        /// 2. Image enhancement.
+        /// 3. Image erasure.
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>

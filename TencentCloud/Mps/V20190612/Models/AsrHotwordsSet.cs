@@ -33,8 +33,8 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-        /// If the Status value is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-        /// If the Status value is not 0, it indicates that the hotword lexicon cannot be deleted.
+        /// If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
+        /// If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Status")]

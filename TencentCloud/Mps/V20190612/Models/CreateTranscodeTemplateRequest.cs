@@ -85,7 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Additional parameter, which is a serialized JSON string.
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

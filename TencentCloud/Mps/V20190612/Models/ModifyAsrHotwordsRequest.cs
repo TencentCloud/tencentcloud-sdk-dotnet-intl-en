@@ -27,8 +27,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Hotword lexicon ID. 
         ///  
-        /// Either Name or Content should be specified if the hotword lexicon is a text-based hotword lexicon.
-        /// One of Name, FileContent, and FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+        /// Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
+        /// Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
         /// </summary>
         [JsonProperty("HotwordsId")]
         public string HotwordsId{ get; set; }

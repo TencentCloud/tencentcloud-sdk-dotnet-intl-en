@@ -21,35 +21,36 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageAreaBoxInfo : AbstractModel
+    public class ImageProcessTaskResult : AbstractModel
     {
         
         /// <summary>
-        /// Type of the box selection area in the image. Valid values:
-        /// <li>logo: icon.</li>
-        /// <li>Text: text.</li>
-        /// Default value: logo.
+        /// Task status, including PROCESSING, SUCCESS, and FAIL.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Coordinates (pixel-level) of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner.
-        /// For example, [101, 85, 111, 95].
+        /// Error message.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("AreaCoordSet")]
-        public long?[] AreaCoordSet{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
-        /// Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
-        ///  - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
-        ///  -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+        /// Transcoding task output.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("BoundingBox")]
-        public float?[] BoundingBox{ get; set; }
+        [JsonProperty("Output")]
+        public ImageProcessTaskOutput Output{ get; set; }
+
+        /// <summary>
+        /// Transcoding progress, with a value range of [0-100].
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
 
 
         /// <summary>
@@ -57,9 +58,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
-            this.SetParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

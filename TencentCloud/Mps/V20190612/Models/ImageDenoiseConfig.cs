@@ -21,27 +21,27 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageEraseLogoConfig : AbstractModel
+    public class ImageDenoiseConfig : AbstractModel
     {
         
         /// <summary>
         /// Capability configuration enabling status. Valid values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled</li>
+        /// <li>ON: enabled.</li>
+        /// <li>OFF: disabled.</li>
         /// Default value: ON.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// 
+        /// Type, with valid values including:
+        /// <li>weak</li>
+        /// <li>strong</li>
+        /// Default value: weak.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("ImageAreaBoxes")]
-        public ImageAreaBoxInfo[] ImageAreaBoxes{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArrayObj(map, prefix + "ImageAreaBoxes.", this.ImageAreaBoxes);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

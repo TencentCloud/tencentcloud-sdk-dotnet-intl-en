@@ -26,9 +26,10 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Smart subtitle language type.
-        /// 0: source language1: target language
+        /// 0: source language
+        /// 1: target language
         /// 2: source language + target language
-        /// The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+        /// The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
         /// </summary>
         [JsonProperty("SubtitleType")]
         public long? SubtitleType{ get; set; }
@@ -46,7 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// vi: Vietnamese
         /// ms: Malay
         /// id: Indonesian
-        /// fli: Filipino
+        /// fil: Filipino
         /// th: Thai
         /// pt: Portuguese
         /// tr: Turkish

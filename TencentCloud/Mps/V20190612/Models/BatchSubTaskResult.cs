@@ -21,35 +21,29 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageAreaBoxInfo : AbstractModel
+    public class BatchSubTaskResult : AbstractModel
     {
         
         /// <summary>
-        /// Type of the box selection area in the image. Valid values:
-        /// <li>logo: icon.</li>
-        /// <li>Text: text.</li>
-        /// Default value: logo.
+        /// Input information for a batch task.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("InputInfos")]
+        public MediaInputInfo[] InputInfos{ get; set; }
 
         /// <summary>
-        /// Coordinates (pixel-level) of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner.
-        /// For example, [101, 85, 111, 95].
+        /// Metadata of the original video.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("AreaCoordSet")]
-        public long?[] AreaCoordSet{ get; set; }
+        [JsonProperty("Metadatas")]
+        public MediaMetaData[] Metadatas{ get; set; }
 
         /// <summary>
-        /// Coordinates of the box selection area in the image. Format: [x1, y1, x2, y2], which indicates the coordinates of the top left corner and the bottom right corner. This parameter takes effect when AreaCoordSet is not specified.
-        ///  - [0.1, 0.1, 0.3, 0.3]: Indicates the ratio (values are less than 1).
-        ///  -[50, 50, 350, 280]: Indicates the pixel (values are greater than or equal to 1).
+        /// Execution result of the smart subtitle task.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("BoundingBox")]
-        public float?[] BoundingBox{ get; set; }
+        [JsonProperty("SmartSubtitlesTaskResult")]
+        public BatchSmartSubtitlesResult SmartSubtitlesTaskResult{ get; set; }
 
 
         /// <summary>
@@ -57,9 +51,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
-            this.SetParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
+            this.SetParamArrayObj(map, prefix + "InputInfos.", this.InputInfos);
+            this.SetParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
         }
     }
 }

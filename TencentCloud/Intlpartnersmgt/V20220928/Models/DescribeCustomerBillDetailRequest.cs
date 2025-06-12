@@ -31,7 +31,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public ulong? CustomerUin{ get; set; }
 
         /// <summary>
-        /// Inquiry month, in the format of YYYY-MM, such as 2023-01
+        /// Inquiry month, in the format of YYYY-MM, such as 2023-01.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
