@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.intl.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1152";
 
         /// <summary>
         /// Client constructor.
@@ -54,6 +54,90 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to check if the label name under an attribute exist.
+        /// </summary>
+        /// <param name="req"><see cref="CheckAttributeLabelExistRequest"/></param>
+        /// <returns><see cref="CheckAttributeLabelExistResponse"/></returns>
+        public Task<CheckAttributeLabelExistResponse> CheckAttributeLabelExist(CheckAttributeLabelExistRequest req)
+        {
+            return InternalRequestAsync<CheckAttributeLabelExistResponse>(req, "CheckAttributeLabelExist");
+        }
+
+        /// <summary>
+        /// This API is used to check if the label name under an attribute exist.
+        /// </summary>
+        /// <param name="req"><see cref="CheckAttributeLabelExistRequest"/></param>
+        /// <returns><see cref="CheckAttributeLabelExistResponse"/></returns>
+        public CheckAttributeLabelExistResponse CheckAttributeLabelExistSync(CheckAttributeLabelExistRequest req)
+        {
+            return InternalRequestAsync<CheckAttributeLabelExistResponse>(req, "CheckAttributeLabelExist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check attribute label references.
+        /// </summary>
+        /// <param name="req"><see cref="CheckAttributeLabelReferRequest"/></param>
+        /// <returns><see cref="CheckAttributeLabelReferResponse"/></returns>
+        public Task<CheckAttributeLabelReferResponse> CheckAttributeLabelRefer(CheckAttributeLabelReferRequest req)
+        {
+            return InternalRequestAsync<CheckAttributeLabelReferResponse>(req, "CheckAttributeLabelRefer");
+        }
+
+        /// <summary>
+        /// This API is used to check attribute label references.
+        /// </summary>
+        /// <param name="req"><see cref="CheckAttributeLabelReferRequest"/></param>
+        /// <returns><see cref="CheckAttributeLabelReferResponse"/></returns>
+        public CheckAttributeLabelReferResponse CheckAttributeLabelReferSync(CheckAttributeLabelReferRequest req)
+        {
+            return InternalRequestAsync<CheckAttributeLabelReferResponse>(req, "CheckAttributeLabelRefer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create knowledge engine applications.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
+        public Task<CreateAppResponse> CreateApp(CreateAppRequest req)
+        {
+            return InternalRequestAsync<CreateAppResponse>(req, "CreateApp");
+        }
+
+        /// <summary>
+        /// This API is used to create knowledge engine applications.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppRequest"/></param>
+        /// <returns><see cref="CreateAppResponse"/></returns>
+        public CreateAppResponse CreateAppSync(CreateAppRequest req)
+        {
+            return InternalRequestAsync<CreateAppResponse>(req, "CreateApp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create attributes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAttributeLabelRequest"/></param>
+        /// <returns><see cref="CreateAttributeLabelResponse"/></returns>
+        public Task<CreateAttributeLabelResponse> CreateAttributeLabel(CreateAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<CreateAttributeLabelResponse>(req, "CreateAttributeLabel");
+        }
+
+        /// <summary>
+        /// This API is used to create attributes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAttributeLabelRequest"/></param>
+        /// <returns><see cref="CreateAttributeLabelResponse"/></returns>
+        public CreateAttributeLabelResponse CreateAttributeLabelSync(CreateAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<CreateAttributeLabelResponse>(req, "CreateAttributeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create enterprises.
         /// </summary>
         /// <param name="req"><see cref="CreateCorpRequest"/></param>
@@ -71,6 +155,69 @@ namespace TencentCloud.Lke.V20231130
         public CreateCorpResponse CreateCorpSync(CreateCorpRequest req)
         {
             return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create doc categories.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocCateRequest"/></param>
+        /// <returns><see cref="CreateDocCateResponse"/></returns>
+        public Task<CreateDocCateResponse> CreateDocCate(CreateDocCateRequest req)
+        {
+            return InternalRequestAsync<CreateDocCateResponse>(req, "CreateDocCate");
+        }
+
+        /// <summary>
+        /// This API is used to create doc categories.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocCateRequest"/></param>
+        /// <returns><see cref="CreateDocCateResponse"/></returns>
+        public CreateDocCateResponse CreateDocCateSync(CreateDocCateRequest req)
+        {
+            return InternalRequestAsync<CreateDocCateResponse>(req, "CreateDocCate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enter Q&As.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQARequest"/></param>
+        /// <returns><see cref="CreateQAResponse"/></returns>
+        public Task<CreateQAResponse> CreateQA(CreateQARequest req)
+        {
+            return InternalRequestAsync<CreateQAResponse>(req, "CreateQA");
+        }
+
+        /// <summary>
+        /// This API is used to enter Q&As.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQARequest"/></param>
+        /// <returns><see cref="CreateQAResponse"/></returns>
+        public CreateQAResponse CreateQASync(CreateQARequest req)
+        {
+            return InternalRequestAsync<CreateQAResponse>(req, "CreateQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create Q&A categories.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQACateRequest"/></param>
+        /// <returns><see cref="CreateQACateResponse"/></returns>
+        public Task<CreateQACateResponse> CreateQACate(CreateQACateRequest req)
+        {
+            return InternalRequestAsync<CreateQACateResponse>(req, "CreateQACate");
+        }
+
+        /// <summary>
+        /// This API is used to create Q&A categories.
+        /// </summary>
+        /// <param name="req"><see cref="CreateQACateRequest"/></param>
+        /// <returns><see cref="CreateQACateResponse"/></returns>
+        public CreateQACateResponse CreateQACateSync(CreateQACateRequest req)
+        {
+            return InternalRequestAsync<CreateQACateResponse>(req, "CreateQACate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -96,6 +243,27 @@ namespace TencentCloud.Lke.V20231130
         public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlowSync(CreateReconstructDocumentFlowRequest req)
         {
             return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create rejected questions.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRejectedQuestionRequest"/></param>
+        /// <returns><see cref="CreateRejectedQuestionResponse"/></returns>
+        public Task<CreateRejectedQuestionResponse> CreateRejectedQuestion(CreateRejectedQuestionRequest req)
+        {
+            return InternalRequestAsync<CreateRejectedQuestionResponse>(req, "CreateRejectedQuestion");
+        }
+
+        /// <summary>
+        /// This API is used to create rejected questions.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRejectedQuestionRequest"/></param>
+        /// <returns><see cref="CreateRejectedQuestionResponse"/></returns>
+        public CreateRejectedQuestionResponse CreateRejectedQuestionSync(CreateRejectedQuestionRequest req)
+        {
+            return InternalRequestAsync<CreateRejectedQuestionResponse>(req, "CreateRejectedQuestion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -142,6 +310,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to delete attribute labels.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAttributeLabelRequest"/></param>
+        /// <returns><see cref="DeleteAttributeLabelResponse"/></returns>
+        public Task<DeleteAttributeLabelResponse> DeleteAttributeLabel(DeleteAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<DeleteAttributeLabelResponse>(req, "DeleteAttributeLabel");
+        }
+
+        /// <summary>
+        /// This API is used to delete attribute labels.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAttributeLabelRequest"/></param>
+        /// <returns><see cref="DeleteAttributeLabelResponse"/></returns>
+        public DeleteAttributeLabelResponse DeleteAttributeLabelSync(DeleteAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<DeleteAttributeLabelResponse>(req, "DeleteAttributeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete documents.
         /// </summary>
         /// <param name="req"><see cref="DeleteDocRequest"/></param>
@@ -159,6 +348,27 @@ namespace TencentCloud.Lke.V20231130
         public DeleteDocResponse DeleteDocSync(DeleteDocRequest req)
         {
             return InternalRequestAsync<DeleteDocResponse>(req, "DeleteDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete Doc categories.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocCateRequest"/></param>
+        /// <returns><see cref="DeleteDocCateResponse"/></returns>
+        public Task<DeleteDocCateResponse> DeleteDocCate(DeleteDocCateRequest req)
+        {
+            return InternalRequestAsync<DeleteDocCateResponse>(req, "DeleteDocCate");
+        }
+
+        /// <summary>
+        /// This API is used to delete Doc categories.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDocCateRequest"/></param>
+        /// <returns><see cref="DeleteDocCateResponse"/></returns>
+        public DeleteDocCateResponse DeleteDocCateSync(DeleteDocCateRequest req)
+        {
+            return InternalRequestAsync<DeleteDocCateResponse>(req, "DeleteDocCate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +432,27 @@ namespace TencentCloud.Lke.V20231130
         public DeleteRejectedQuestionResponse DeleteRejectedQuestionSync(DeleteRejectedQuestionRequest req)
         {
             return InternalRequestAsync<DeleteRejectedQuestionResponse>(req, "DeleteRejectedQuestion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain application details under the corporate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppRequest"/></param>
+        /// <returns><see cref="DescribeAppResponse"/></returns>
+        public Task<DescribeAppResponse> DescribeApp(DescribeAppRequest req)
+        {
+            return InternalRequestAsync<DescribeAppResponse>(req, "DescribeApp");
+        }
+
+        /// <summary>
+        /// This API is used to obtain application details under the corporate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppRequest"/></param>
+        /// <returns><see cref="DescribeAppResponse"/></returns>
+        public DescribeAppResponse DescribeAppSync(DescribeAppRequest req)
+        {
+            return InternalRequestAsync<DescribeAppResponse>(req, "DescribeApp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -310,6 +541,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to query corporate details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
+        /// <returns><see cref="DescribeCorpResponse"/></returns>
+        public Task<DescribeCorpResponse> DescribeCorp(DescribeCorpRequest req)
+        {
+            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp");
+        }
+
+        /// <summary>
+        /// This API is used to query corporate details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
+        /// <returns><see cref="DescribeCorpResponse"/></returns>
+        public DescribeCorpResponse DescribeCorpSync(DescribeCorpRequest req)
+        {
+            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query document details.
         /// </summary>
         /// <param name="req"><see cref="DescribeDocRequest"/></param>
@@ -373,6 +625,48 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to query Q&A details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQARequest"/></param>
+        /// <returns><see cref="DescribeQAResponse"/></returns>
+        public Task<DescribeQAResponse> DescribeQA(DescribeQARequest req)
+        {
+            return InternalRequestAsync<DescribeQAResponse>(req, "DescribeQA");
+        }
+
+        /// <summary>
+        /// This API is used to query Q&A details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQARequest"/></param>
+        /// <returns><see cref="DescribeQAResponse"/></returns>
+        public DescribeQAResponse DescribeQASync(DescribeQARequest req)
+        {
+            return InternalRequestAsync<DescribeQAResponse>(req, "DescribeQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the reference source details list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReferRequest"/></param>
+        /// <returns><see cref="DescribeReferResponse"/></returns>
+        public Task<DescribeReferResponse> DescribeRefer(DescribeReferRequest req)
+        {
+            return InternalRequestAsync<DescribeReferResponse>(req, "DescribeRefer");
+        }
+
+        /// <summary>
+        /// This API is used to get the reference source details list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReferRequest"/></param>
+        /// <returns><see cref="DescribeReferResponse"/></returns>
+        public DescribeReferResponse DescribeReferSync(DescribeReferRequest req)
+        {
+            return InternalRequestAsync<DescribeReferResponse>(req, "DescribeRefer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query release details.
         /// </summary>
         /// <param name="req"><see cref="DescribeReleaseRequest"/></param>
@@ -390,6 +684,27 @@ namespace TencentCloud.Lke.V20231130
         public DescribeReleaseResponse DescribeReleaseSync(DescribeReleaseRequest req)
         {
             return InternalRequestAsync<DescribeReleaseResponse>(req, "DescribeRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pull the release button status and last release time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReleaseInfoRequest"/></param>
+        /// <returns><see cref="DescribeReleaseInfoResponse"/></returns>
+        public Task<DescribeReleaseInfoResponse> DescribeReleaseInfo(DescribeReleaseInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReleaseInfoResponse>(req, "DescribeReleaseInfo");
+        }
+
+        /// <summary>
+        /// This API is used to pull the release button status and last release time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReleaseInfoRequest"/></param>
+        /// <returns><see cref="DescribeReleaseInfoResponse"/></returns>
+        public DescribeReleaseInfoResponse DescribeReleaseInfoSync(DescribeReleaseInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReleaseInfoResponse>(req, "DescribeReleaseInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +747,48 @@ namespace TencentCloud.Lke.V20231130
         public DescribeSearchStatsGraphResponse DescribeSearchStatsGraphSync(DescribeSearchStatsGraphRequest req)
         {
             return InternalRequestAsync<DescribeSearchStatsGraphResponse>(req, "DescribeSearchStatsGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get fragment details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeSegmentsResponse"/></returns>
+        public Task<DescribeSegmentsResponse> DescribeSegments(DescribeSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeSegmentsResponse>(req, "DescribeSegments");
+        }
+
+        /// <summary>
+        /// This API is used to get fragment details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSegmentsRequest"/></param>
+        /// <returns><see cref="DescribeSegmentsResponse"/></returns>
+        public DescribeSegmentsResponse DescribeSegmentsSync(DescribeSegmentsRequest req)
+        {
+            return InternalRequestAsync<DescribeSegmentsResponse>(req, "DescribeSegments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the temporary key for file upload.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageCredentialRequest"/></param>
+        /// <returns><see cref="DescribeStorageCredentialResponse"/></returns>
+        public Task<DescribeStorageCredentialResponse> DescribeStorageCredential(DescribeStorageCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeStorageCredentialResponse>(req, "DescribeStorageCredential");
+        }
+
+        /// <summary>
+        /// This API is used to get the temporary key for file upload.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageCredentialRequest"/></param>
+        /// <returns><see cref="DescribeStorageCredentialResponse"/></returns>
+        public DescribeStorageCredentialResponse DescribeStorageCredentialSync(DescribeStorageCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeStorageCredentialResponse>(req, "DescribeStorageCredential")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -499,6 +856,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to export attribute labels.
+        /// </summary>
+        /// <param name="req"><see cref="ExportAttributeLabelRequest"/></param>
+        /// <returns><see cref="ExportAttributeLabelResponse"/></returns>
+        public Task<ExportAttributeLabelResponse> ExportAttributeLabel(ExportAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<ExportAttributeLabelResponse>(req, "ExportAttributeLabel");
+        }
+
+        /// <summary>
+        /// This API is used to export attribute labels.
+        /// </summary>
+        /// <param name="req"><see cref="ExportAttributeLabelRequest"/></param>
+        /// <returns><see cref="ExportAttributeLabelResponse"/></returns>
+        public ExportAttributeLabelResponse ExportAttributeLabelSync(ExportAttributeLabelRequest req)
+        {
+            return InternalRequestAsync<ExportAttributeLabelResponse>(req, "ExportAttributeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to export Q&A list.
         /// </summary>
         /// <param name="req"><see cref="ExportQAListRequest"/></param>
@@ -562,6 +940,111 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to get response type data statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetAnswerTypeDataCountRequest"/></param>
+        /// <returns><see cref="GetAnswerTypeDataCountResponse"/></returns>
+        public Task<GetAnswerTypeDataCountResponse> GetAnswerTypeDataCount(GetAnswerTypeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetAnswerTypeDataCountResponse>(req, "GetAnswerTypeDataCount");
+        }
+
+        /// <summary>
+        /// This API is used to get response type data statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetAnswerTypeDataCountRequest"/></param>
+        /// <returns><see cref="GetAnswerTypeDataCountResponse"/></returns>
+        public GetAnswerTypeDataCountResponse GetAnswerTypeDataCountSync(GetAnswerTypeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetAnswerTypeDataCountResponse>(req, "GetAnswerTypeDataCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get a model list.
+        /// </summary>
+        /// <param name="req"><see cref="GetAppKnowledgeCountRequest"/></param>
+        /// <returns><see cref="GetAppKnowledgeCountResponse"/></returns>
+        public Task<GetAppKnowledgeCountResponse> GetAppKnowledgeCount(GetAppKnowledgeCountRequest req)
+        {
+            return InternalRequestAsync<GetAppKnowledgeCountResponse>(req, "GetAppKnowledgeCount");
+        }
+
+        /// <summary>
+        /// This API is used to get a model list.
+        /// </summary>
+        /// <param name="req"><see cref="GetAppKnowledgeCountRequest"/></param>
+        /// <returns><see cref="GetAppKnowledgeCountResponse"/></returns>
+        public GetAppKnowledgeCountResponse GetAppKnowledgeCountSync(GetAppKnowledgeCountRequest req)
+        {
+            return InternalRequestAsync<GetAppKnowledgeCountResponse>(req, "GetAppKnowledgeCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get application secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="GetAppSecretRequest"/></param>
+        /// <returns><see cref="GetAppSecretResponse"/></returns>
+        public Task<GetAppSecretResponse> GetAppSecret(GetAppSecretRequest req)
+        {
+            return InternalRequestAsync<GetAppSecretResponse>(req, "GetAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to get application secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="GetAppSecretRequest"/></param>
+        /// <returns><see cref="GetAppSecretResponse"/></returns>
+        public GetAppSecretResponse GetAppSecretSync(GetAppSecretRequest req)
+        {
+            return InternalRequestAsync<GetAppSecretResponse>(req, "GetAppSecret")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get document preview information.
+        /// </summary>
+        /// <param name="req"><see cref="GetDocPreviewRequest"/></param>
+        /// <returns><see cref="GetDocPreviewResponse"/></returns>
+        public Task<GetDocPreviewResponse> GetDocPreview(GetDocPreviewRequest req)
+        {
+            return InternalRequestAsync<GetDocPreviewResponse>(req, "GetDocPreview");
+        }
+
+        /// <summary>
+        /// This API is used to get document preview information.
+        /// </summary>
+        /// <param name="req"><see cref="GetDocPreviewRequest"/></param>
+        /// <returns><see cref="GetDocPreviewResponse"/></returns>
+        public GetDocPreviewResponse GetDocPreviewSync(GetDocPreviewRequest req)
+        {
+            return InternalRequestAsync<GetDocPreviewResponse>(req, "GetDocPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get likes and dislikes data statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetLikeDataCountRequest"/></param>
+        /// <returns><see cref="GetLikeDataCountResponse"/></returns>
+        public Task<GetLikeDataCountResponse> GetLikeDataCount(GetLikeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetLikeDataCountResponse>(req, "GetLikeDataCount");
+        }
+
+        /// <summary>
+        /// This API is used to get likes and dislikes data statistics.
+        /// </summary>
+        /// <param name="req"><see cref="GetLikeDataCountRequest"/></param>
+        /// <returns><see cref="GetLikeDataCountResponse"/></returns>
+        public GetLikeDataCountResponse GetLikeDataCountSync(GetLikeDataCountRequest req)
+        {
+            return InternalRequestAsync<GetLikeDataCountResponse>(req, "GetLikeDataCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain chat history based on the session ID (only historical session data within the past 180 days will be retained).
         /// </summary>
         /// <param name="req"><see cref="GetMsgRecordRequest"/></param>
@@ -579,6 +1062,27 @@ namespace TencentCloud.Lke.V20231130
         public GetMsgRecordResponse GetMsgRecordSync(GetMsgRecordRequest req)
         {
             return InternalRequestAsync<GetMsgRecordResponse>(req, "GetMsgRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This is an asynchronous APIs, used to get document parsing task results.
+        /// </summary>
+        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
+        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
+        public Task<GetReconstructDocumentResultResponse> GetReconstructDocumentResult(GetReconstructDocumentResultRequest req)
+        {
+            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult");
+        }
+
+        /// <summary>
+        /// This is an asynchronous APIs, used to get document parsing task results.
+        /// </summary>
+        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
+        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
+        public GetReconstructDocumentResultResponse GetReconstructDocumentResultSync(GetReconstructDocumentResultRequest req)
+        {
+            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -625,6 +1129,48 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// DocGroup.
+        /// </summary>
+        /// <param name="req"><see cref="GroupDocRequest"/></param>
+        /// <returns><see cref="GroupDocResponse"/></returns>
+        public Task<GroupDocResponse> GroupDoc(GroupDocRequest req)
+        {
+            return InternalRequestAsync<GroupDocResponse>(req, "GroupDoc");
+        }
+
+        /// <summary>
+        /// DocGroup.
+        /// </summary>
+        /// <param name="req"><see cref="GroupDocRequest"/></param>
+        /// <returns><see cref="GroupDocResponse"/></returns>
+        public GroupDocResponse GroupDocSync(GroupDocRequest req)
+        {
+            return InternalRequestAsync<GroupDocResponse>(req, "GroupDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Q&A Group.
+        /// </summary>
+        /// <param name="req"><see cref="GroupQARequest"/></param>
+        /// <returns><see cref="GroupQAResponse"/></returns>
+        public Task<GroupQAResponse> GroupQA(GroupQARequest req)
+        {
+            return InternalRequestAsync<GroupQAResponse>(req, "GroupQA");
+        }
+
+        /// <summary>
+        /// Q&A Group.
+        /// </summary>
+        /// <param name="req"><see cref="GroupQARequest"/></param>
+        /// <returns><see cref="GroupQAResponse"/></returns>
+        public GroupQAResponse GroupQASync(GroupQARequest req)
+        {
+            return InternalRequestAsync<GroupQAResponse>(req, "GroupQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to ignore dissatisfied responses.
         /// </summary>
         /// <param name="req"><see cref="IgnoreUnsatisfiedReplyRequest"/></param>
@@ -667,6 +1213,48 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to get list of application types.
+        /// </summary>
+        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
+        /// <returns><see cref="ListAppCategoryResponse"/></returns>
+        public Task<ListAppCategoryResponse> ListAppCategory(ListAppCategoryRequest req)
+        {
+            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory");
+        }
+
+        /// <summary>
+        /// This API is used to get list of application types.
+        /// </summary>
+        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
+        /// <returns><see cref="ListAppCategoryResponse"/></returns>
+        public ListAppCategoryResponse ListAppCategorySync(ListAppCategoryRequest req)
+        {
+            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the knowledge base capacity details in a list.
+        /// </summary>
+        /// <param name="req"><see cref="ListAppKnowledgeDetailRequest"/></param>
+        /// <returns><see cref="ListAppKnowledgeDetailResponse"/></returns>
+        public Task<ListAppKnowledgeDetailResponse> ListAppKnowledgeDetail(ListAppKnowledgeDetailRequest req)
+        {
+            return InternalRequestAsync<ListAppKnowledgeDetailResponse>(req, "ListAppKnowledgeDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the knowledge base capacity details in a list.
+        /// </summary>
+        /// <param name="req"><see cref="ListAppKnowledgeDetailRequest"/></param>
+        /// <returns><see cref="ListAppKnowledgeDetailResponse"/></returns>
+        public ListAppKnowledgeDetailResponse ListAppKnowledgeDetailSync(ListAppKnowledgeDetailRequest req)
+        {
+            return InternalRequestAsync<ListAppKnowledgeDetailResponse>(req, "ListAppKnowledgeDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query attribute label lists.
         /// </summary>
         /// <param name="req"><see cref="ListAttributeLabelRequest"/></param>
@@ -684,6 +1272,90 @@ namespace TencentCloud.Lke.V20231130
         public ListAttributeLabelResponse ListAttributeLabelSync(ListAttributeLabelRequest req)
         {
             return InternalRequestAsync<ListAttributeLabelResponse>(req, "ListAttributeLabel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get document list.
+        /// </summary>
+        /// <param name="req"><see cref="ListDocRequest"/></param>
+        /// <returns><see cref="ListDocResponse"/></returns>
+        public Task<ListDocResponse> ListDoc(ListDocRequest req)
+        {
+            return InternalRequestAsync<ListDocResponse>(req, "ListDoc");
+        }
+
+        /// <summary>
+        /// This API is used to get document list.
+        /// </summary>
+        /// <param name="req"><see cref="ListDocRequest"/></param>
+        /// <returns><see cref="ListDocResponse"/></returns>
+        public ListDocResponse ListDocSync(ListDocRequest req)
+        {
+            return InternalRequestAsync<ListDocResponse>(req, "ListDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get document category.
+        /// </summary>
+        /// <param name="req"><see cref="ListDocCateRequest"/></param>
+        /// <returns><see cref="ListDocCateResponse"/></returns>
+        public Task<ListDocCateResponse> ListDocCate(ListDocCateRequest req)
+        {
+            return InternalRequestAsync<ListDocCateResponse>(req, "ListDocCate");
+        }
+
+        /// <summary>
+        /// This API is used to get document category.
+        /// </summary>
+        /// <param name="req"><see cref="ListDocCateRequest"/></param>
+        /// <returns><see cref="ListDocCateResponse"/></returns>
+        public ListDocCateResponse ListDocCateSync(ListDocCateRequest req)
+        {
+            return InternalRequestAsync<ListDocCateResponse>(req, "ListDocCate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the model list.
+        /// </summary>
+        /// <param name="req"><see cref="ListModelRequest"/></param>
+        /// <returns><see cref="ListModelResponse"/></returns>
+        public Task<ListModelResponse> ListModel(ListModelRequest req)
+        {
+            return InternalRequestAsync<ListModelResponse>(req, "ListModel");
+        }
+
+        /// <summary>
+        /// This API is used to get the model list.
+        /// </summary>
+        /// <param name="req"><see cref="ListModelRequest"/></param>
+        /// <returns><see cref="ListModelResponse"/></returns>
+        public ListModelResponse ListModelSync(ListModelRequest req)
+        {
+            return InternalRequestAsync<ListModelResponse>(req, "ListModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query Q&A lists.
+        /// </summary>
+        /// <param name="req"><see cref="ListQARequest"/></param>
+        /// <returns><see cref="ListQAResponse"/></returns>
+        public Task<ListQAResponse> ListQA(ListQARequest req)
+        {
+            return InternalRequestAsync<ListQAResponse>(req, "ListQA");
+        }
+
+        /// <summary>
+        /// This API is used to query Q&A lists.
+        /// </summary>
+        /// <param name="req"><see cref="ListQARequest"/></param>
+        /// <returns><see cref="ListQAResponse"/></returns>
+        public ListQAResponse ListQASync(ListQARequest req)
+        {
+            return InternalRequestAsync<ListQAResponse>(req, "ListQA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -730,6 +1402,48 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to release a preview of rejected questions.
+        /// </summary>
+        /// <param name="req"><see cref="ListRejectedQuestionPreviewRequest"/></param>
+        /// <returns><see cref="ListRejectedQuestionPreviewResponse"/></returns>
+        public Task<ListRejectedQuestionPreviewResponse> ListRejectedQuestionPreview(ListRejectedQuestionPreviewRequest req)
+        {
+            return InternalRequestAsync<ListRejectedQuestionPreviewResponse>(req, "ListRejectedQuestionPreview");
+        }
+
+        /// <summary>
+        /// This API is used to release a preview of rejected questions.
+        /// </summary>
+        /// <param name="req"><see cref="ListRejectedQuestionPreviewRequest"/></param>
+        /// <returns><see cref="ListRejectedQuestionPreviewResponse"/></returns>
+        public ListRejectedQuestionPreviewResponse ListRejectedQuestionPreviewSync(ListRejectedQuestionPreviewRequest req)
+        {
+            return InternalRequestAsync<ListRejectedQuestionPreviewResponse>(req, "ListRejectedQuestionPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the release list.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseRequest"/></param>
+        /// <returns><see cref="ListReleaseResponse"/></returns>
+        public Task<ListReleaseResponse> ListRelease(ListReleaseRequest req)
+        {
+            return InternalRequestAsync<ListReleaseResponse>(req, "ListRelease");
+        }
+
+        /// <summary>
+        /// This API is used to get the release list.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseRequest"/></param>
+        /// <returns><see cref="ListReleaseResponse"/></returns>
+        public ListReleaseResponse ListReleaseSync(ListReleaseRequest req)
+        {
+            return InternalRequestAsync<ListReleaseResponse>(req, "ListRelease")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to preview the release configuration items.
         /// </summary>
         /// <param name="req"><see cref="ListReleaseConfigPreviewRequest"/></param>
@@ -747,6 +1461,48 @@ namespace TencentCloud.Lke.V20231130
         public ListReleaseConfigPreviewResponse ListReleaseConfigPreviewSync(ListReleaseConfigPreviewRequest req)
         {
             return InternalRequestAsync<ListReleaseConfigPreviewResponse>(req, "ListReleaseConfigPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to preview released documents.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseDocPreviewRequest"/></param>
+        /// <returns><see cref="ListReleaseDocPreviewResponse"/></returns>
+        public Task<ListReleaseDocPreviewResponse> ListReleaseDocPreview(ListReleaseDocPreviewRequest req)
+        {
+            return InternalRequestAsync<ListReleaseDocPreviewResponse>(req, "ListReleaseDocPreview");
+        }
+
+        /// <summary>
+        /// This API is used to preview released documents.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseDocPreviewRequest"/></param>
+        /// <returns><see cref="ListReleaseDocPreviewResponse"/></returns>
+        public ListReleaseDocPreviewResponse ListReleaseDocPreviewSync(ListReleaseDocPreviewRequest req)
+        {
+            return InternalRequestAsync<ListReleaseDocPreviewResponse>(req, "ListReleaseDocPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// List of documents.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseQAPreviewRequest"/></param>
+        /// <returns><see cref="ListReleaseQAPreviewResponse"/></returns>
+        public Task<ListReleaseQAPreviewResponse> ListReleaseQAPreview(ListReleaseQAPreviewRequest req)
+        {
+            return InternalRequestAsync<ListReleaseQAPreviewResponse>(req, "ListReleaseQAPreview");
+        }
+
+        /// <summary>
+        /// List of documents.
+        /// </summary>
+        /// <param name="req"><see cref="ListReleaseQAPreviewRequest"/></param>
+        /// <returns><see cref="ListReleaseQAPreviewResponse"/></returns>
+        public ListReleaseQAPreviewResponse ListReleaseQAPreviewSync(ListReleaseQAPreviewRequest req)
+        {
+            return InternalRequestAsync<ListReleaseQAPreviewResponse>(req, "ListReleaseQAPreview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1020,6 +1776,27 @@ namespace TencentCloud.Lke.V20231130
         public RateMsgRecordResponse RateMsgRecordSync(RateMsgRecordRequest req)
         {
             return InternalRequestAsync<RateMsgRecordResponse>(req, "RateMsgRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to rename a document.
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public Task<RenameDocResponse> RenameDoc(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc");
+        }
+
+        /// <summary>
+        /// This API is used to rename a document.
+        /// </summary>
+        /// <param name="req"><see cref="RenameDocRequest"/></param>
+        /// <returns><see cref="RenameDocResponse"/></returns>
+        public RenameDocResponse RenameDocSync(RenameDocRequest req)
+        {
+            return InternalRequestAsync<RenameDocResponse>(req, "RenameDoc")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
