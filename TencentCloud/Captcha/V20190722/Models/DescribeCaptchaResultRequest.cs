@@ -25,7 +25,7 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// It must be `9` here.
+        /// Fill with fixed value: 9.
         /// </summary>
         [JsonProperty("CaptchaType")]
         public ulong? CaptchaType{ get; set; }
