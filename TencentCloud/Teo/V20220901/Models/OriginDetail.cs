@@ -83,6 +83,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
+        /// current configured origin HOST header.
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
+        /// <summary>
         /// MO sub-application ID
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
@@ -103,6 +109,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
+        /// <summary>
+        /// VOD origin-pull range. this parameter returns a value when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the VodBucketId parameter.</li>.
+        /// </li>
+        /// </summary>
+        [JsonProperty("VodOriginScope")]
+        public string VodOriginScope{ get; set; }
+
+        /// <summary>
+        /// VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional application.
+        /// </summary>
+        [JsonProperty("VodBucketId")]
+        public string VodBucketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,9 +135,12 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackOriginGroupName", this.BackOriginGroupName);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
             this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
             this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+            this.SetParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+            this.SetParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
         }
     }
 }

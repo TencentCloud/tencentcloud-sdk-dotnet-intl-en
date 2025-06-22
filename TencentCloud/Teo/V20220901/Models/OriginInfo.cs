@@ -72,6 +72,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
+        /// Custom origin HOST header, this parameter only takes effect when OriginType=IP_DOMAIN. 
+        /// 
+        /// - If OriginType=COS or AWS_S3, the origin HOST header will be consistent with the origin domain name. 
+        /// - If OriginType=ORIGIN_GROUP, the origin HOST header follows the configuration within the origin group;if not configured, it defaults to the acceleration domain name. 
+        /// - If OriginType=VOD or SPACE, there is no need to configure this header, and it will take effect according to the corresponding origin domain name.
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
+        /// <summary>
         /// VODEO sub-application ID. This parameter is required when OriginType is VODEO.
         /// </summary>
         [JsonProperty("VodeoSubAppId")]
@@ -94,6 +104,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [System.Obsolete]
         public string VodeoBucketId{ get; set; }
 
+        /// <summary>
+        /// VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
+        /// </li>
+        /// </summary>
+        [JsonProperty("VodOriginScope")]
+        public string VodOriginScope{ get; set; }
+
+        /// <summary>
+        /// VOD bucket ID. this parameter is required when OriginType = VOD and VodOriginScope = bucket. data source: storage ID of the bucket under the VOD professional edition application.
+        /// </summary>
+        [JsonProperty("VodBucketId")]
+        public string VodBucketId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,9 +128,12 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "BackupOrigin", this.BackupOrigin);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamArrayObj(map, prefix + "PrivateParameters.", this.PrivateParameters);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
             this.SetParamSimple(map, prefix + "VodeoSubAppId", this.VodeoSubAppId);
             this.SetParamSimple(map, prefix + "VodeoDistributionRange", this.VodeoDistributionRange);
             this.SetParamSimple(map, prefix + "VodeoBucketId", this.VodeoBucketId);
+            this.SetParamSimple(map, prefix + "VodOriginScope", this.VodOriginScope);
+            this.SetParamSimple(map, prefix + "VodBucketId", this.VodBucketId);
         }
     }
 }

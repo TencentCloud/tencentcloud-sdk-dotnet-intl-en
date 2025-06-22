@@ -49,7 +49,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup storage policy. 0: Follow the custom backup retention policy; 1: Follow the instance lifecycle until the instance is eliminated. Default value: 0.
         /// </summary>
         [JsonProperty("StorageStrategy")]
         public long? StorageStrategy{ get; set; }
