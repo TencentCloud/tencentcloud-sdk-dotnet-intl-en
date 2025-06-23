@@ -41,7 +41,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// The scheme type. Valid values:
         ///  <li>`Preset`</li>
         /// <li>`Custom` </li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

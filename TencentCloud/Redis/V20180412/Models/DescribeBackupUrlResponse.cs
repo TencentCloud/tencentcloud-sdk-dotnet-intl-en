@@ -28,12 +28,14 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Public network download address (valid for six hours). This field will be disused soon.
         /// </summary>
         [JsonProperty("DownloadUrl")]
+        [System.Obsolete]
         public string[] DownloadUrl{ get; set; }
 
         /// <summary>
         /// Private network download address (valid for six hours). This field will be disused soon.
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
+        [System.Obsolete]
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Filenames")]
+        [System.Obsolete]
         public string[] Filenames{ get; set; }
 
         /// <summary>

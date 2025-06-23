@@ -33,7 +33,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The audio enhancement configuration.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioEnhance")]
         public AudioEnhanceConfig AudioEnhance{ get; set; }

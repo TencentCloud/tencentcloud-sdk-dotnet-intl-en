@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a sampled screencapturing template.
+        /// Unique ID of a sampled screenshot template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Name of a sampled screencapturing template.
+        /// Name of a sampled screenshot template.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Format{ get; set; }
 
         /// <summary>
-        /// Sampled screencapturing type.
+        /// Sampled screenshot type.
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// The container. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }

@@ -26,28 +26,28 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// The region of the SQS queue.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SQSRegion")]
         public string SQSRegion{ get; set; }
 
         /// <summary>
         /// The name of the SQS queue.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SQSQueueName")]
         public string SQSQueueName{ get; set; }
 
         /// <summary>
         /// The key ID required to read from/write to the SQS queue.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
         /// The key required to read from/write to the SQS queue.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

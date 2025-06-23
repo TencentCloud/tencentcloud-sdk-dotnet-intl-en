@@ -60,7 +60,6 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 
         /// <summary>
         /// Project name.
-        /// .
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
@@ -182,7 +181,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discount (default is 1).
+        /// Discount (default is 1) - abandoned.
         /// </summary>
         [JsonProperty("DiscountRate")]
         public string DiscountRate{ get; set; }
@@ -216,6 +215,12 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
+
+        /// <summary>
+        /// customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+        /// </summary>
+        [JsonProperty("CustomerDiscountRate")]
+        public string CustomerDiscountRate{ get; set; }
 
 
         /// <summary>
@@ -254,6 +259,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "VoucherDeduction", this.VoucherDeduction);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "CustomerDiscountRate", this.CustomerDiscountRate);
         }
     }
 }

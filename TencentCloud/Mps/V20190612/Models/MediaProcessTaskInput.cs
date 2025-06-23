@@ -31,25 +31,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public TranscodeTaskInput[] TranscodeTaskSet{ get; set; }
 
         /// <summary>
-        /// List of animated image generating tasks.
+        /// List of animated image screenshot tasks.
         /// </summary>
         [JsonProperty("AnimatedGraphicTaskSet")]
         public AnimatedGraphicTaskInput[] AnimatedGraphicTaskSet{ get; set; }
 
         /// <summary>
-        /// List of time point screencapturing tasks.
+        /// List of time point screenshot tasks.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTaskSet")]
         public SnapshotByTimeOffsetTaskInput[] SnapshotByTimeOffsetTaskSet{ get; set; }
 
         /// <summary>
-        /// List of sampled screencapturing tasks.
+        /// List of sampled screenshot tasks.
         /// </summary>
         [JsonProperty("SampleSnapshotTaskSet")]
         public SampleSnapshotTaskInput[] SampleSnapshotTaskSet{ get; set; }
 
         /// <summary>
-        /// List of image sprite generating tasks.
+        /// List of image sprite screenshot tasks.
         /// </summary>
         [JsonProperty("ImageSpriteTaskSet")]
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }

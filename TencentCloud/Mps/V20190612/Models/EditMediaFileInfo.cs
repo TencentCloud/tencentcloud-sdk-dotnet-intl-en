@@ -46,7 +46,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// The ID of the material associated with an element. This parameter is required for video compositing tasks.
         /// 
         /// Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

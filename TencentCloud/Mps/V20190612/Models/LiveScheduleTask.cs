@@ -26,7 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// The ID of a live scheme subtask.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -35,35 +35,35 @@ namespace TencentCloud.Mps.V20190612.Models
         /// The task status. Valid values:
         /// <li>`PROCESSING`</li>
         /// <li>`FINISH` </li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// If the value returned is not `0`, there was a source error. If `0` is returned, refer to the error codes of the corresponding task type.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
         /// If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// The URL of the live stream.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
         /// The task output.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LiveActivityResultSet")]
         public LiveActivityResult[] LiveActivityResultSet{ get; set; }

@@ -166,9 +166,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? FpsDenominator{ get; set; }
 
         /// <summary>
-        /// 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:.
-        /// <Li>Side_by_side: the original video content is arranged in a left-right layout.</li>.
-        /// <li>top_bottom: vertical layout arrangement of original video content.</li>.
+        /// 3D video splicing mode, applicable only to mv-hevc and effective for 3d videos. valid values:
+        /// <Li>side_by_side: the original video content is arranged in a left-right layout.</li>
+        /// <li>top_bottom: vertical layout arrangement of original video content.</li>
         /// Submit the amount and cost based on the segmented resolution size.
         /// Default value: side_by_side.
         /// Note: This field may return null, indicating that no valid value can be obtained.

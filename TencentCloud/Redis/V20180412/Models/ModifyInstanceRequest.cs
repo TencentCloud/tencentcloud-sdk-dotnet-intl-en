@@ -65,18 +65,21 @@ namespace TencentCloud.Redis.V20180412.Models
         /// This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
         /// </summary>
         [JsonProperty("InstanceId")]
+        [System.Obsolete]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Disused
         /// </summary>
         [JsonProperty("InstanceName")]
+        [System.Obsolete]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("AutoRenew")]
+        [System.Obsolete]
         public long? AutoRenew{ get; set; }
 
 

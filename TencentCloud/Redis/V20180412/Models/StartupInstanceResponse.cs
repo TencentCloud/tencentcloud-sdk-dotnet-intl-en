@@ -28,6 +28,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// This parameter has been deprecated. Determine whether the instance has been deisolated based on the status obtained through the instance query API.
         /// </summary>
         [JsonProperty("TaskId")]
+        [System.Obsolete]
         public long? TaskId{ get; set; }
 
         /// <summary>

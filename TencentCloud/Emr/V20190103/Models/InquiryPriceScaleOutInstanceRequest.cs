@@ -87,6 +87,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
 
+        /// <summary>
+        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+        /// </summary>
+        [JsonProperty("ResourceBaseType")]
+        public string ResourceBaseType{ get; set; }
+
+        /// <summary>
+        /// Computing resource ID.
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
+        /// <summary>
+        /// Scale-out resource type.
+        /// </summary>
+        [JsonProperty("HardwareResourceType")]
+        public string HardwareResourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +121,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RouterCount", this.RouterCount);
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
+            this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         }
     }
 }

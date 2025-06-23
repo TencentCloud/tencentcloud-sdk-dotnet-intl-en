@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// ID of a time point screencapturing template.
+        /// ID of a time point screenshot template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

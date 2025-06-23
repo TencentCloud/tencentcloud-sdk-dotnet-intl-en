@@ -26,7 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// The output of a live recording task.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LiveRecordTask")]
         public LiveScheduleLiveRecordTaskResult LiveRecordTask{ get; set; }

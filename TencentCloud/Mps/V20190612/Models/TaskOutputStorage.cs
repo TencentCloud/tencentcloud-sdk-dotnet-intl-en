@@ -27,7 +27,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// The storage type for a media processing output file. Valid values:
         /// <li>`COS`: Tencent Cloud COS</li>
-        /// <li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+        /// <li>`AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

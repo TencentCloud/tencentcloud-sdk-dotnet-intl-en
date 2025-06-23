@@ -34,6 +34,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Slow query log details. This parameter has been deprecated and will be replaced by InstanceSlowLogDetail because it is not properly named.
         /// </summary>
         [JsonProperty("InstanceSlowlogDetail")]
+        [System.Obsolete]
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1157";
 
         /// <summary>
         /// Client constructor.
@@ -474,6 +474,48 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// This API is used to query the record list of cloud resource updates for certificates (certificate ID unchanged).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordResponse"/></returns>
+        public Task<DescribeHostUploadUpdateRecordResponse> DescribeHostUploadUpdateRecord(DescribeHostUploadUpdateRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordResponse>(req, "DescribeHostUploadUpdateRecord");
+        }
+
+        /// <summary>
+        /// This API is used to query the record list of cloud resource updates for certificates (certificate ID unchanged).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordResponse"/></returns>
+        public DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecordSync(DescribeHostUploadUpdateRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordResponse>(req, "DescribeHostUploadUpdateRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the deployment record details of certificate update records (certificate ID unchanged).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordDetailResponse"/></returns>
+        public Task<DescribeHostUploadUpdateRecordDetailResponse> DescribeHostUploadUpdateRecordDetail(DescribeHostUploadUpdateRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordDetailResponse>(req, "DescribeHostUploadUpdateRecordDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the deployment record details of certificate update records (certificate ID unchanged).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostUploadUpdateRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeHostUploadUpdateRecordDetailResponse"/></returns>
+        public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetailSync(DescribeHostUploadUpdateRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeHostUploadUpdateRecordDetailResponse>(req, "DescribeHostUploadUpdateRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to download a certificate.
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>
@@ -575,6 +617,27 @@ namespace TencentCloud.Ssl.V20191205
         public ModifyCertificateResubmitResponse ModifyCertificateResubmitSync(ModifyCertificateResubmitRequest req)
         {
             return InternalRequestAsync<ModifyCertificateResubmitResponse>(req, "ModifyCertificateResubmit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify to ignore certificate expiration notifications. Enable or disable certificate expiration notifications.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificatesExpiringNotificationSwitchRequest"/></param>
+        /// <returns><see cref="ModifyCertificatesExpiringNotificationSwitchResponse"/></returns>
+        public Task<ModifyCertificatesExpiringNotificationSwitchResponse> ModifyCertificatesExpiringNotificationSwitch(ModifyCertificatesExpiringNotificationSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyCertificatesExpiringNotificationSwitchResponse>(req, "ModifyCertificatesExpiringNotificationSwitch");
+        }
+
+        /// <summary>
+        /// Modify to ignore certificate expiration notifications. Enable or disable certificate expiration notifications.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCertificatesExpiringNotificationSwitchRequest"/></param>
+        /// <returns><see cref="ModifyCertificatesExpiringNotificationSwitchResponse"/></returns>
+        public ModifyCertificatesExpiringNotificationSwitchResponse ModifyCertificatesExpiringNotificationSwitchSync(ModifyCertificatesExpiringNotificationSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyCertificatesExpiringNotificationSwitchResponse>(req, "ModifyCertificatesExpiringNotificationSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -722,6 +785,69 @@ namespace TencentCloud.Ssl.V20191205
         public UploadConfirmLetterResponse UploadConfirmLetterSync(UploadConfirmLetterRequest req)
         {
             return InternalRequestAsync<UploadConfirmLetterResponse>(req, "UploadConfirmLetter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>
+        public Task<UploadUpdateCertificateInstanceResponse> UploadUpdateCertificateInstance(UploadUpdateCertificateInstanceRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateInstanceResponse>(req, "UploadUpdateCertificateInstance");
+        }
+
+        /// <summary>
+        /// This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>
+        public UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstanceSync(UploadUpdateCertificateInstanceRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateInstanceResponse>(req, "UploadUpdateCertificateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cloud Resource Update (Certificate ID Unchanged) Deployment Retry Record.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRetryResponse"/></returns>
+        public Task<UploadUpdateCertificateRecordRetryResponse> UploadUpdateCertificateRecordRetry(UploadUpdateCertificateRecordRetryRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRetryResponse>(req, "UploadUpdateCertificateRecordRetry");
+        }
+
+        /// <summary>
+        /// Cloud Resource Update (Certificate ID Unchanged) Deployment Retry Record.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRetryRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRetryResponse"/></returns>
+        public UploadUpdateCertificateRecordRetryResponse UploadUpdateCertificateRecordRetrySync(UploadUpdateCertificateRecordRetryRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRetryResponse>(req, "UploadUpdateCertificateRecordRetry")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to roll back the full task when cloud resource update succeeds with unchanged certificate ID.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRollbackResponse"/></returns>
+        public Task<UploadUpdateCertificateRecordRollbackResponse> UploadUpdateCertificateRecordRollback(UploadUpdateCertificateRecordRollbackRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRollbackResponse>(req, "UploadUpdateCertificateRecordRollback");
+        }
+
+        /// <summary>
+        /// This API is used to roll back the full task when cloud resource update succeeds with unchanged certificate ID.
+        /// </summary>
+        /// <param name="req"><see cref="UploadUpdateCertificateRecordRollbackRequest"/></param>
+        /// <returns><see cref="UploadUpdateCertificateRecordRollbackResponse"/></returns>
+        public UploadUpdateCertificateRecordRollbackResponse UploadUpdateCertificateRecordRollbackSync(UploadUpdateCertificateRecordRollbackRequest req)
+        {
+            return InternalRequestAsync<UploadUpdateCertificateRecordRollbackResponse>(req, "UploadUpdateCertificateRecordRollback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

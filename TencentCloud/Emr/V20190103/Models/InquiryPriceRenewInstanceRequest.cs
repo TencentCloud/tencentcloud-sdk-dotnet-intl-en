@@ -31,22 +31,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
-        /// </summary>
-        [JsonProperty("ResourceIds")]
-        public string[] ResourceIds{ get; set; }
-
-        /// <summary>
-        /// Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
-        /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
-
-        /// <summary>
         /// Instance billing mode.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+        /// </summary>
+        [JsonProperty("ResourceIds")]
+        public string[] ResourceIds{ get; set; }
 
         /// <summary>
         /// Unit of time for instance renewal.
@@ -61,10 +55,28 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Currency{ get; set; }
 
         /// <summary>
+        /// Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// </summary>
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
+
+        /// <summary>
         /// Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
         /// </summary>
         [JsonProperty("ModifyPayMode")]
         public long? ModifyPayMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NeedDetail")]
+        public bool? NeedDetail{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -73,12 +85,14 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
-            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
+            this.SetParamSimple(map, prefix + "NeedDetail", this.NeedDetail);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

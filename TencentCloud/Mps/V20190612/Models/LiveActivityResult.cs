@@ -35,7 +35,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The task output.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LiveActivityResItem")]
         public LiveActivityResItem LiveActivityResItem{ get; set; }

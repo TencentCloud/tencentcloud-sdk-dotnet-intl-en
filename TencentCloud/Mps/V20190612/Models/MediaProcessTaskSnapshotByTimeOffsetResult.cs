@@ -49,17 +49,29 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for a time point screencapturing task.
+        /// Input for a time point screenshot task.
         /// </summary>
         [JsonProperty("Input")]
         public SnapshotByTimeOffsetTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of a time point screencapturing task.
+        /// Output of a time point screenshot task.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }
+
+        /// <summary>
+        /// The time when the task started executing, in ISO date format.
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// The time when the task finished, in ISO date format.
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
 
 
         /// <summary>
@@ -73,6 +85,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Sub-account UIN
+        /// Sub-account UIN.
         /// </summary>
         [JsonProperty("CustomerUin")]
         public ulong? CustomerUin{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The AES-128 encryption details.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }

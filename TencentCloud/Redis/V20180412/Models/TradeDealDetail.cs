@@ -85,7 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Actual total price of the order in 0.01 CNY
+        /// Order actual total price (in cents)
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

@@ -82,7 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The key used to generate the callback signature.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

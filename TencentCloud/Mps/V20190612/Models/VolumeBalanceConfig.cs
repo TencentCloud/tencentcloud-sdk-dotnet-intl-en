@@ -38,7 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`loudNorm`: Loudness normalization.</li>
         /// <li>`gainControl`: Volume leveling.</li>
         /// Default value: `loudNorm`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

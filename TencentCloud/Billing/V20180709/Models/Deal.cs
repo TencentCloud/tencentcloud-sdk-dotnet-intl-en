@@ -122,8 +122,6 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Product code
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
@@ -141,15 +139,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BigDealId{ get; set; }
 
         /// <summary>
-        /// Refund formula
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Refund formula.
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
-        /// Refund involves order information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Refund involves order information.
         /// </summary>
         [JsonProperty("RefReturnDeals")]
         public string RefReturnDeals{ get; set; }
@@ -163,33 +159,30 @@ namespace TencentCloud.Billing.V20180709.Models
         /// <summary>
         /// Transaction type
         /// 
-        /// `modifyNetworkMode`: Adjusting bandwidth mode
-        /// `modifyNetworkSize`: Adjusting bandwidth size
-        /// `refund`: Refund
-        /// `downgrade`: Downgrade
-        /// upgrade (upgrade)
-        /// renew
-        /// purchase
-        /// preMoveOut annual and monthly subscription resources
-        /// preMoveIn annual and monthly subscription resources
-        /// preToPost prepaid to postpaid
-        /// postMoveOut move out pay-as-you-go resources
-        /// postMoveIn move in pay-as-you-go resources
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Modify network mode adjust bandwidth mode.
+        /// Adjust bandwidth size.
+        /// `Refund`: refund.
+        /// downgrade.
+        /// upgrade configuration.
+        /// renew.
+        /// purchase.
+        /// preMoveOut monthly subscription resource migration out.
+        /// preMoveIn specifies the monthly subscription resources to migrate.
+        /// preToPost specifies the prepaid to postpaid conversion.
+        /// postMoveOut specifies the pay-as-you-go resources to be migrated out.
+        /// postMoveIn specifies the pay-as-you-go resources for inbound migration.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Product code Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product code chinese name.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Subproduct code Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sub-Product code chinese name.
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }

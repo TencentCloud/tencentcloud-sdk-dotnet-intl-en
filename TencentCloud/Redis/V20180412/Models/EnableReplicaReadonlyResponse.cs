@@ -29,6 +29,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
+        [System.Obsolete]
         public string Status{ get; set; }
 
         /// <summary>

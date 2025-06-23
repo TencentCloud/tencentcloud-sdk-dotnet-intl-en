@@ -32,14 +32,14 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The storage of the recording file. If this parameter is left empty, the `OutputStorage` value of the parent folder will be inherited.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
         /// The output path of the recording file.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

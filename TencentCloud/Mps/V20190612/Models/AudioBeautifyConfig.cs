@@ -38,7 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`declick`: Noise removal.</li>
         /// <li>`deesser`: De-essing.</li>
         /// Default: `declick`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }

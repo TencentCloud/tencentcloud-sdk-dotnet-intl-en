@@ -38,7 +38,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`normal`: Separate voice and background audio.</li>
         /// <li>`music`: Separate vocals and instrumentals.</li>
         /// Default value: `normal`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>`vocal`: Voice.</li>
         /// <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
         /// Default value: `vocal`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }

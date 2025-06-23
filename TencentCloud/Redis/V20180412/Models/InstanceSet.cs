@@ -106,6 +106,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SizeUsed")]
+        [System.Obsolete]
         public float? SizeUsed{ get; set; }
 
         /// <summary>

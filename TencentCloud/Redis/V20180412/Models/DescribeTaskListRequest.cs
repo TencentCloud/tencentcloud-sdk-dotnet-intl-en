@@ -146,6 +146,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// The field `OperatorUin` has been disused and replaced by `OperateUin`.
         /// </summary>
         [JsonProperty("OperatorUin")]
+        [System.Obsolete]
         public long?[] OperatorUin{ get; set; }
 
         /// <summary>
