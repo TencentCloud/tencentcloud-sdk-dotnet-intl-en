@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.intl.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1158";
 
         /// <summary>
         /// Client constructor.
@@ -321,7 +321,6 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>
@@ -346,7 +345,6 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// >     
         /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
-        /// 
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>
