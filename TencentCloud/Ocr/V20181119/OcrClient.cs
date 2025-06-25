@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1159";
 
         /// <summary>
         /// Client constructor.
@@ -901,6 +901,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeMainlandIDCardOCRResponse RecognizeMainlandIDCardOCRSync(RecognizeMainlandIDCardOCRRequest req)
         {
             return InternalRequestAsync<RecognizeMainlandIDCardOCRResponse>(req, "RecognizeMainlandIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Mexican Voter ID Card. The default interface request frequency limit is 5 times per second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMexicoVTIDRequest"/></param>
+        /// <returns><see cref="RecognizeMexicoVTIDResponse"/></returns>
+        public Task<RecognizeMexicoVTIDResponse> RecognizeMexicoVTID(RecognizeMexicoVTIDRequest req)
+        {
+            return InternalRequestAsync<RecognizeMexicoVTIDResponse>(req, "RecognizeMexicoVTID");
+        }
+
+        /// <summary>
+        /// This interface supports identification of the front and back of Mexican Voter ID Card. The default interface request frequency limit is 5 times per second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMexicoVTIDRequest"/></param>
+        /// <returns><see cref="RecognizeMexicoVTIDResponse"/></returns>
+        public RecognizeMexicoVTIDResponse RecognizeMexicoVTIDSync(RecognizeMexicoVTIDRequest req)
+        {
+            return InternalRequestAsync<RecognizeMexicoVTIDResponse>(req, "RecognizeMexicoVTID")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
