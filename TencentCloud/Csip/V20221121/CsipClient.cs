@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -306,6 +306,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Check group account details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
+        public Task<DescribeOrganizationInfoResponse> DescribeOrganizationInfo(DescribeOrganizationInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationInfoResponse>(req, "DescribeOrganizationInfo");
+        }
+
+        /// <summary>
+        /// Check group account details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
+        public DescribeOrganizationInfoResponse DescribeOrganizationInfoSync(DescribeOrganizationInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationInfoResponse>(req, "DescribeOrganizationInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query group account user list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
+        public Task<DescribeOrganizationUserInfoResponse> DescribeOrganizationUserInfo(DescribeOrganizationUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationUserInfoResponse>(req, "DescribeOrganizationUserInfo");
+        }
+
+        /// <summary>
+        /// Query group account user list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
+        public DescribeOrganizationUserInfoResponse DescribeOrganizationUserInfoSync(DescribeOrganizationUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationUserInfoResponse>(req, "DescribeOrganizationUserInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of public IP assets.
         /// </summary>
         /// <param name="req"><see cref="DescribePublicIpAssetsRequest"/></param>
@@ -554,6 +596,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeSearchBugInfoResponse DescribeSearchBugInfoSync(DescribeSearchBugInfoRequest req)
         {
             return InternalRequestAsync<DescribeSearchBugInfoResponse>(req, "DescribeSearchBugInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the group's sub-account list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
+        public Task<DescribeSubUserInfoResponse> DescribeSubUserInfo(DescribeSubUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserInfoResponse>(req, "DescribeSubUserInfo");
+        }
+
+        /// <summary>
+        /// Query the group's sub-account list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
+        /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
+        public DescribeSubUserInfoResponse DescribeSubUserInfoSync(DescribeSubUserInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSubUserInfoResponse>(req, "DescribeSubUserInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

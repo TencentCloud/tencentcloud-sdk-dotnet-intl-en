@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1157";
+       private const string sdkVersion = "SDK_NET_3.0.1160";
 
         /// <summary>
         /// Client constructor.
@@ -379,6 +379,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerBillDetailResponse DescribeCustomerBillDetailSync(DescribeCustomerBillDetailRequest req)
         {
             return InternalRequestAsync<DescribeCustomerBillDetailResponse>(req, "DescribeCustomerBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the daily bill expenditure of cu by resellers.
+        /// Invocation Role: first-level reseller, second-level reseller, reseller.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDetailByDayRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDetailByDayResponse"/></returns>
+        public Task<DescribeCustomerBillDetailByDayResponse> DescribeCustomerBillDetailByDay(DescribeCustomerBillDetailByDayRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerBillDetailByDayResponse>(req, "DescribeCustomerBillDetailByDay");
+        }
+
+        /// <summary>
+        /// This API is used to query the daily bill expenditure of cu by resellers.
+        /// Invocation Role: first-level reseller, second-level reseller, reseller.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerBillDetailByDayRequest"/></param>
+        /// <returns><see cref="DescribeCustomerBillDetailByDayResponse"/></returns>
+        public DescribeCustomerBillDetailByDayResponse DescribeCustomerBillDetailByDaySync(DescribeCustomerBillDetailByDayRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerBillDetailByDayResponse>(req, "DescribeCustomerBillDetailByDay")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

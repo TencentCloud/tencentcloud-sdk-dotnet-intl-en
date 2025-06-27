@@ -25,19 +25,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
+        /// Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance memory size in GB
+        /// Instance memory size in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance storage capacity in GB
+        /// Instance storage capacity in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -49,43 +49,43 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Number of instances purchased this time. Default value: 1. Maximum value: 10
+        /// Number of instances purchased this time. Default value: 1. Maximum value: 10.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously
+        /// VPC subnet ID in the format of subnet-bdoe83fa. `SubnetId` and `VpcId` should be set or ignored simultaneously.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously
+        /// VPC ID in the format of vpc-dsp338hz. `SubnetId` and `VpcId` should be set or ignored simultaneously.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48
+        /// Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use voucher. 0: no, 1: yes. Default value: no
+        /// Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Array of voucher IDs (currently, only one voucher can be used per order)
+        /// Array of voucher IDs (currently, only one voucher can be used per order).
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? MultiZones{ get; set; }
 
         /// <summary>
-        /// Tags associated with the instances to be created
+        /// Tags associated with the instances to be created.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
@@ -155,6 +155,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+        /// </summary>
+        [JsonProperty("MultiNodes")]
+        public bool? MultiNodes{ get; set; }
+
+        /// <summary>
+        /// The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public string[] DrZones{ get; set; }
 
 
         /// <summary>
@@ -184,6 +196,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+            this.SetParamArraySimple(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

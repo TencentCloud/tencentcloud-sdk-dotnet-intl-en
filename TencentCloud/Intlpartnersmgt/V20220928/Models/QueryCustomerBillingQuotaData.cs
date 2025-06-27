@@ -25,26 +25,25 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Total credit limit (unit: cny), accurate down to two decimal places.
+        /// Total credit limit (unit: usd), accurate down to two decimal places.
         /// </summary>
         [JsonProperty("TotalCredit")]
         public float? TotalCredit{ get; set; }
 
         /// <summary>
-        /// Remaining credit limit (unit: cny), accurate down to two decimal places.
+        /// Remaining credit limit (unit: usd), accurate down to two decimal places.
         /// </summary>
         [JsonProperty("RemainingCredit")]
         public float? RemainingCredit{ get; set; }
 
         /// <summary>
-        /// Remaining total voucher amount (unit: cny), accurate down to two decimal places.
+        /// Remaining total voucher amount (unit: usd), accurate down to two decimal places.
         /// </summary>
         [JsonProperty("RemainingVoucher")]
         public float? RemainingVoucher{ get; set; }
 
         /// <summary>
-        /// Forced status
-        /// .
+        /// Forced status.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Force")]
