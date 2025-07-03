@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Customer service user id usually refers to the customer service email.
+        /// Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] Callers{ get; set; }
 
         /// <summary>
-        /// Whether to force the use of cell phone outbound call or not, currently only supports true, if true, please ensure that the allowlist has been configured.
+        /// Whether to force the use of mobile outbound call. currently only supports true. if set to true, ensure the allowlist is configured. https://intl.cloud.tencent.com/document/product/679/76744?from_cn_redirect=1#.E6.93.8D.E4.BD.9C.E6.AD.A5.E9.AA.A4.
         /// </summary>
         [JsonProperty("IsForceUseMobile")]
         public bool? IsForceUseMobile{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Start time. Time range: 30 days.
+        /// The start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time. Time range: 30 days.
+        /// The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// ZoneId set. This parameter is required.
+        /// Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

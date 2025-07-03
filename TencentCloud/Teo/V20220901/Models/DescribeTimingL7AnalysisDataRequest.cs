@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time.
+        /// The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// Zone ID set. This parameter is required.
+        /// Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>min: 1 minute;</li>
         /// <li>5min: 5 minutes;</li>
         /// <li>hour: 1 hour;</li>
-        /// <li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 2 hours, no more than 2 days, no more than 7 days, and over 7 days.
+        /// <li>day: 1 day.</li>If this parameter is not filled in, the granularity will be automatically calculated based on the interval between the start time and end time. Specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

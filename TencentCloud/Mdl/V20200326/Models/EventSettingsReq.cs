@@ -78,6 +78,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("TimedMetadataSetting")]
         public TimedMetadataInfo TimedMetadataSetting{ get; set; }
 
+        /// <summary>
+        /// Static image activate setting.
+        /// </summary>
+        [JsonProperty("StaticImageActivateSetting")]
+        public StaticImageActivateSetting StaticImageActivateSetting{ get; set; }
+
+        /// <summary>
+        /// Static image deactivate setting.
+        /// </summary>
+        [JsonProperty("StaticImageDeactivateSetting")]
+        public StaticImageDeactivateSetting StaticImageDeactivateSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "SpliceEventID", this.SpliceEventID);
             this.SetParamSimple(map, prefix + "SpliceDuration", this.SpliceDuration);
             this.SetParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
+            this.SetParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
+            this.SetParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
         }
     }
 }

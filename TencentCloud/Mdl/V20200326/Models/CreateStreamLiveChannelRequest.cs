@@ -108,6 +108,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("FrameCaptureTemplates")]
         public FrameCaptureTemplate[] FrameCaptureTemplates{ get; set; }
 
+        /// <summary>
+        /// General settings.
+        /// </summary>
+        [JsonProperty("GeneralSettings")]
+        public GeneralSetting GeneralSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "InputAnalysisSettings.", this.InputAnalysisSettings);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "FrameCaptureTemplates.", this.FrameCaptureTemplates);
+            this.SetParamObj(map, prefix + "GeneralSettings.", this.GeneralSettings);
         }
     }
 }

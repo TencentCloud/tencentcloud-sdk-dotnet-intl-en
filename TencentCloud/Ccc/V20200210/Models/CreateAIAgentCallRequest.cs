@@ -55,6 +55,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         [System.Obsolete]
         public Variable[] PromptVariables{ get; set; }
 
+        /// <summary>
+        /// <P>Prompt variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+        /// 
+        /// dify-inputs-xxx specifies the inputs variable for dify.
+        /// 2. the dify-inputs-user specifies the user value for dify.
+        /// 3. dify-inputs-conversation_id is the conversation_id value of dify.
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +76,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1162";
 
         /// <summary>
         /// Client constructor.
@@ -140,7 +140,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
         /// 
-        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://www.tencentcloud.com/document/product/1229/70681).
         /// </summary>
         /// <param name="req"><see cref="CreateAIAgentCallRequest"/></param>
         /// <returns><see cref="CreateAIAgentCallResponse"/></returns>
@@ -152,7 +152,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
         /// 
-        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://intl.cloud.tencent.com/document/product/679/112100?from_cn_redirect=1).
+        /// Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://www.tencentcloud.com/document/product/1229/70681).
         /// </summary>
         /// <param name="req"><see cref="CreateAIAgentCallRequest"/></param>
         /// <returns><see cref="CreateAIAgentCallResponse"/></returns>
@@ -272,7 +272,11 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to create outbound sessions. Currently, only dual call is supported. That is, firstly, please use the platform number to call the agent's cell phone. After the agent answers, then please make outbound calls to the user. Due to ISP frequency restrictions, the agent's phone number must first be added to the allowlist to avoid frequency control which may lead to the failure of the outbound call.
+        /// This API is used to create an outbound call session. Currently, only dual calls are supported. That is, first use the platform number to call the agent mobile phone. After the agent answers, then make an outbound call to the user. Moreover, due to ISP frequency restrictions, the agent phone number must be added to the allowlist first to avoid frequency control leading to the failure of the outbound call. Therefore, before calling this API, the following operations have been completed.
+        /// 1. The agent specified by UserId has already bound the mobile number. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+        /// 2. The agent's bound mobile number has applied for and passed the outbound call allowlist.
+        /// This API is used to make calls. Currently, the agent side can only call the user's mobile phone, so the IsForceMobile field must be true.
+        /// 4. Do not fill in the mobile number bound to the current UserId for the callee, otherwise it can lead to call failure due to a busy line.
         /// </summary>
         /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>
         /// <returns><see cref="CreateCallOutSessionResponse"/></returns>
@@ -282,7 +286,11 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// This API is used to create outbound sessions. Currently, only dual call is supported. That is, firstly, please use the platform number to call the agent's cell phone. After the agent answers, then please make outbound calls to the user. Due to ISP frequency restrictions, the agent's phone number must first be added to the allowlist to avoid frequency control which may lead to the failure of the outbound call.
+        /// This API is used to create an outbound call session. Currently, only dual calls are supported. That is, first use the platform number to call the agent mobile phone. After the agent answers, then make an outbound call to the user. Moreover, due to ISP frequency restrictions, the agent phone number must be added to the allowlist first to avoid frequency control leading to the failure of the outbound call. Therefore, before calling this API, the following operations have been completed.
+        /// 1. The agent specified by UserId has already bound the mobile number. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+        /// 2. The agent's bound mobile number has applied for and passed the outbound call allowlist.
+        /// This API is used to make calls. Currently, the agent side can only call the user's mobile phone, so the IsForceMobile field must be true.
+        /// 4. Do not fill in the mobile number bound to the current UserId for the callee, otherwise it can lead to call failure due to a busy line.
         /// </summary>
         /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>
         /// <returns><see cref="CreateCallOutSessionResponse"/></returns>
@@ -419,6 +427,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// This API is used to delete a skill group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="DeleteCCCSkillGroupResponse"/></returns>
+        public Task<DeleteCCCSkillGroupResponse> DeleteCCCSkillGroup(DeleteCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCCCSkillGroupResponse>(req, "DeleteCCCSkillGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete a skill group.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="DeleteCCCSkillGroupResponse"/></returns>
+        public DeleteCCCSkillGroupResponse DeleteCCCSkillGroupSync(DeleteCCCSkillGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCCCSkillGroupResponse>(req, "DeleteCCCSkillGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete telephone accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteExtensionRequest"/></param>
@@ -499,6 +528,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeAICallExtractResultResponse DescribeAICallExtractResultSync(DescribeAICallExtractResultRequest req)
         {
             return InternalRequestAsync<DescribeAICallExtractResultResponse>(req, "DescribeAICallExtractResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain AI latency information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILatencyRequest"/></param>
+        /// <returns><see cref="DescribeAILatencyResponse"/></returns>
+        public Task<DescribeAILatencyResponse> DescribeAILatency(DescribeAILatencyRequest req)
+        {
+            return InternalRequestAsync<DescribeAILatencyResponse>(req, "DescribeAILatency");
+        }
+
+        /// <summary>
+        /// This API is used to obtain AI latency information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAILatencyRequest"/></param>
+        /// <returns><see cref="DescribeAILatencyResponse"/></returns>
+        public DescribeAILatencyResponse DescribeAILatencySync(DescribeAILatencyRequest req)
+        {
+            return InternalRequestAsync<DescribeAILatencyResponse>(req, "DescribeAILatency")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -965,6 +1015,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// This API is used to force customer service to go offline.
+        /// </summary>
+        /// <param name="req"><see cref="ForceMemberOfflineRequest"/></param>
+        /// <returns><see cref="ForceMemberOfflineResponse"/></returns>
+        public Task<ForceMemberOfflineResponse> ForceMemberOffline(ForceMemberOfflineRequest req)
+        {
+            return InternalRequestAsync<ForceMemberOfflineResponse>(req, "ForceMemberOffline");
+        }
+
+        /// <summary>
+        /// This API is used to force customer service to go offline.
+        /// </summary>
+        /// <param name="req"><see cref="ForceMemberOfflineRequest"/></param>
+        /// <returns><see cref="ForceMemberOfflineResponse"/></returns>
+        public ForceMemberOfflineResponse ForceMemberOfflineSync(ForceMemberOfflineRequest req)
+        {
+            return InternalRequestAsync<ForceMemberOfflineResponse>(req, "ForceMemberOffline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to hang up the phone.
         /// </summary>
         /// <param name="req"><see cref="HangUpCallRequest"/></param>
@@ -1112,6 +1183,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// This API is used to restore customer service to go live.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMemberOnlineRequest"/></param>
+        /// <returns><see cref="RestoreMemberOnlineResponse"/></returns>
+        public Task<RestoreMemberOnlineResponse> RestoreMemberOnline(RestoreMemberOnlineRequest req)
+        {
+            return InternalRequestAsync<RestoreMemberOnlineResponse>(req, "RestoreMemberOnline");
+        }
+
+        /// <summary>
+        /// This API is used to restore customer service to go live.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMemberOnlineRequest"/></param>
+        /// <returns><see cref="RestoreMemberOnlineResponse"/></returns>
+        public RestoreMemberOnlineResponse RestoreMemberOnlineSync(RestoreMemberOnlineRequest req)
+        {
+            return InternalRequestAsync<RestoreMemberOnlineResponse>(req, "RestoreMemberOnline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to resume the predictive outbound call task.
         /// </summary>
         /// <param name="req"><see cref="ResumePredictiveDialingCampaignRequest"/></param>
@@ -1150,6 +1242,27 @@ namespace TencentCloud.Ccc.V20200210
         public StopAutoCalloutTaskResponse StopAutoCalloutTaskSync(StopAutoCalloutTaskRequest req)
         {
             return InternalRequestAsync<StopAutoCalloutTaskResponse>(req, "StopAutoCalloutTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to transfer a session to an agent in specific scenarios.
+        /// </summary>
+        /// <param name="req"><see cref="TransferToManualRequest"/></param>
+        /// <returns><see cref="TransferToManualResponse"/></returns>
+        public Task<TransferToManualResponse> TransferToManual(TransferToManualRequest req)
+        {
+            return InternalRequestAsync<TransferToManualResponse>(req, "TransferToManual");
+        }
+
+        /// <summary>
+        /// This API is used to transfer a session to an agent in specific scenarios.
+        /// </summary>
+        /// <param name="req"><see cref="TransferToManualRequest"/></param>
+        /// <returns><see cref="TransferToManualResponse"/></returns>
+        public TransferToManualResponse TransferToManualSync(TransferToManualRequest req)
+        {
+            return InternalRequestAsync<TransferToManualResponse>(req, "TransferToManual")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

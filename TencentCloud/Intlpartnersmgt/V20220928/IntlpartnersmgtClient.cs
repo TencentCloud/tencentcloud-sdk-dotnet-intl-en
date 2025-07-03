@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1160";
+       private const string sdkVersion = "SDK_NET_3.0.1162";
 
         /// <summary>
         /// Client constructor.
@@ -383,7 +383,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the daily bill expenditure of cu by resellers.
+        /// This API is used to query the daily bill expenditure of customer by resellers.
         /// Invocation Role: first-level reseller, second-level reseller, reseller.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailByDayRequest"/></param>
@@ -394,7 +394,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the daily bill expenditure of cu by resellers.
+        /// This API is used to query the daily bill expenditure of customer by resellers.
         /// Invocation Role: first-level reseller, second-level reseller, reseller.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailByDayRequest"/></param>

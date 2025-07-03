@@ -49,6 +49,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Direction{ get; set; }
 
         /// <summary>
+        /// Call Type: 1. Voice outbound call 2. Voice Inbound call 3. Audio Inbound 5 Predictive Dialing Call 6. Internal Call between Staff
+        /// </summary>
+        [JsonProperty("CallType")]
+        public long? CallType{ get; set; }
+
+        /// <summary>
         /// Call duration.
         /// </summary>
         [JsonProperty("Duration")]
@@ -73,60 +79,60 @@ namespace TencentCloud.Ccc.V20200210.Models
         public SeatUserInfo SeatUser{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
+        /// EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
         /// 
-        /// **Scenario	EndStatus	EndStatusString	Status description**.
+        /// **Scenario         EndStatus         EndStatusString         status description**.
         /// 
-        /// Inbound call & call	1	ok	end properly.
+        /// Incoming and outgoing calls.
         /// 
-        /// Inbound call & call | 0 | error | system error.
+        /// Incoming and outgoing calls	0	error	exception termination.
         /// 
-        /// Inbound call | 102 | ivrgiveup | user gives up during ivr.
+        /// Inbound call 102 ivrGiveUp user hang up during IVR.
         /// 
-        /// Inbound call | 103 | waitinggiveup | user gives up during session queue.
+        /// Inbound call 103 waitingGiveUp user gives up while queuing.
         /// 
-        /// Inbound call | 104 | ringinggiveup | user gives up during session ringing.
+        /// Inbound call 104 ringingGiveUp user give up during ringing.
         /// 
-        /// Inbound call | 105 | noseatonline | no agent online.
+        /// Inbound call 105 no agent online.
         /// 
-        /// Inbound call              106	       non - working hour      non - working hour.   
+        /// Inbound call 106 notWorkTime outside working hours.   
         /// 
-        /// Inbound call              107	       ivrend                   end directly after ivr.
+        /// Inbound call 107 ivrEnd ends after IVR.
         /// 
-        /// Inbound call              100	       blocklist call - in      call - in blocklist. 
+        /// Inbound call 100 blackList. 
         /// 
-        /// Outgoing call            2                 unconnected            unconnected.
+        /// Outbound call 2 unconnected unanswered.
         /// 
-        /// Outgoing call            108           restricted callee      callee restricted due to high - risk.
+        /// Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
         /// 
-        /// Outgoing call         109        toomanyrequest        overfrequency.
+        /// Outbound call 109 too many requests outbound over-frequency limit.
         /// 
-        /// Outgoing call         110        restrictedarea        outbound blind area.
+        /// Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
         /// 
-        /// Outgoing call         111        restrictedtime        outbound time restriction.
+        /// Outbound call 111 restrictedTime outgoing call time limit.
         ///                          
-        /// Outgoing call         201        unknown               unknown status.
+        /// Outbound call 201 unknown unknown status.
         /// 
-        /// Outgoing call         202        notanswer             unanswered.
+        /// Outgoing call 202 not answered the callee did not answer.
         /// 
-        /// Outgoing call - 203 - userreject: reject call.
+        /// Outgoing call            203	    userReject	callee rejects and hangs up.
         /// 
-        /// Outgoing call - 204 - poweroff: power off.
+        /// Outbound call 204 powerOff callee is powered off.
         /// 
-        /// Outgoing call - 205 - numbernotexist: nonexistent number.
+        /// Outbound call 205 number does not exist the callee's number is non - existent.
         /// 
-        /// Outgoing call - 206 - busy: call in progress.
+        /// Outbound call 206 busy callee is busy.
         /// 
-        /// Outgoing call - 207 - outofcredit: arrears.
+        /// Outbound call 207 arrears callee in arrears.
         /// 
-        /// Outgoing call - 208 - operatorerror - ISP line exception.
+        /// Outbound call 208 operator channel exception.
         /// 
-        /// Outgoing call - 209 - callercancel - caller cancellation.
+        /// Outbound call 209 callerCancel call cancellation by the caller.
         /// 
-        /// Outgoing call - 210 - notinservice - not in service area.
+        /// Outgoing call 210 notInService callee out of service area.
         /// 
-        /// Inbound and outgoing call - 211 - clienterror - client error.
-        /// Outgoing call - 212 - carrierblocked - ISP blocking.
+        /// Incoming and outgoing calls 211 clientError client errors.
+        /// Outbound call 212 carrier blocked.
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
@@ -192,60 +198,60 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// EndStatus corresponds one-to-one with endstatusstring, with specific enumerations as follows:.
+        /// EndStatus corresponds one-to-one with EndStatusString. the specific enumeration is as follows:.
         /// 
-        /// **Scenario	EndStatus	EndStatusString	Status description**.
+        /// **Scenario         EndStatus         EndStatusString         status description**.
         /// 
-        /// Inbound call & call	1	ok	end properly.
+        /// Incoming and outgoing calls.
         /// 
-        /// Inbound call & call | 0 | error | system error.
+        /// Incoming and outgoing calls	0	error	exception termination.
         /// 
-        /// Inbound call | 102 | ivrgiveup | user gives up during ivr.
+        /// Inbound call 102 ivrGiveUp user hang up during IVR.
         /// 
-        /// Inbound call | 103 | waitinggiveup | user gives up during session queue.
+        /// Inbound call 103 waitingGiveUp user gives up while queuing.
         /// 
-        /// Inbound call | 104 | ringinggiveup | user gives up during session ringing.
+        /// Inbound call 104 ringingGiveUp user give up during ringing.
         /// 
-        /// Inbound call | 105 | noseatonline | no agent online.
+        /// Inbound call 105 no agent online.
         /// 
-        /// Inbound call              106	       non - working hour      non - working hour.   
+        /// Inbound call 106 notWorkTime outside working hours.   
         /// 
-        /// Inbound call              107	       ivrend                   end directly after ivr.
+        /// Inbound call 107 ivrEnd ends after IVR.
         /// 
-        /// Inbound call              100	       blocklist call - in      call - in blocklist. 
+        /// Inbound call 100 blackList. 
         /// 
-        /// Outgoing call            2                 unconnected            unconnected.
+        /// Outbound call 2 unconnected unanswered.
         /// 
-        /// Outgoing call            108           restricted callee      callee restricted due to high - risk.
+        /// Outgoing call        108        restrictedCallee    the callee is restricted due to high risk.
         /// 
-        /// Outgoing call         109        toomanyrequest        overfrequency.
+        /// Outbound call 109 too many requests outbound over-frequency limit.
         /// 
-        /// Outgoing call         110        restrictedarea        outbound blind area.
+        /// Outgoing call             110	        restrictedArea	    valid values for the area where outgoing calls are restricted.
         /// 
-        /// Outgoing call         111        restrictedtime        outbound time restriction.
+        /// Outbound call 111 restrictedTime outgoing call time limit.
         ///                          
-        /// Outgoing call         201        unknown               unknown status.
+        /// Outgoing call 201 unknown unknown status.
         /// 
-        /// Outgoing call         202        notanswer             unanswered.
+        /// Outgoing call 202 notAnswer callee not answered.
         /// 
-        /// Outgoing call - 203 - userreject: reject call.
+        /// Outgoing call            203	    userReject	callee rejects and hangs up.
         /// 
-        /// Outgoing call - 204 - poweroff: power off.
+        /// Outbound call 204 powerOff callee is powered off.
         /// 
-        /// Outgoing call - 205 - numbernotexist: nonexistent number.
+        /// Outbound call 205 number does not exist the callee's number is non - existent.
         /// 
-        /// Outgoing call - 206 - busy: call in progress.
+        /// Outgoing call 206 busy callee is busy.
         /// 
-        /// Outgoing call - 207 - outofcredit: arrears.
+        /// Outbound call 207 out of credit callee in arrears.
         /// 
-        /// Outgoing call - 208 - operatorerror - ISP line exception.
+        /// Outbound call 208 operator channel exception.
         /// 
-        /// Outgoing call - 209 - callercancel - caller cancellation.
+        /// Outgoing call 209 callerCancel call cancellation by the caller.
         /// 
-        /// Outgoing call - 210 - notinservice - not in service area.
+        /// Outgoing call 210 notInService callee out of service area.
         /// 
-        /// Inbound and outgoing call - 211 - clienterror - client error.
-        /// Outgoing call - 212 - carrierblocked - ISP blocking.
+        /// Incoming and outgoing calls 211 clientError client errors.
+        /// Outbound call 212 carrier blocked.
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }
@@ -369,6 +375,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "CallType", this.CallType);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "RecordURL", this.RecordURL);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);

@@ -37,11 +37,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Model interface protocol types, currently compatible with three protocol types:
+        /// Model API protocol type. currently compatible with four protocol types:.
         /// 
-        /// - OpenAI protocol (including GPT, DeepSeek, etc.):"openai"
-        /// - Azure protocol:"azure"
-        /// - Minimax protocol:"minimax"
+        /// -OpenAI protocol (including GPT, hunyuan, DeepSeek, etc.): "OpenAI".
+        /// -Azure protocol: "azure".
+        /// -Specifies the "Minimax" protocol.
+        /// -Dify protocol: "dify".
         /// </summary>
         [JsonProperty("LLMType")]
         public string LLMType{ get; set; }
@@ -352,6 +353,22 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtractConfig")]
         public AICallExtractConfigElement[] ExtractConfig{ get; set; }
 
+        /// <summary>
+        /// Model temperature control.
+        /// </summary>
+        [JsonProperty("Temperature")]
+        public float? Temperature{ get; set; }
+
+        /// <summary>
+        /// Common variable: <p>prompt content variable</p> <p>welcome message variable</p> <p>welcome message delay playback (in seconds): welcome-message-delay</p> <p>dify variable</p>.  
+        /// 
+        /// dify-inputs-xxx specifies the inputs variable for dify.
+        /// 2. the dify-inputs-user specifies the user value for dify.
+        /// 3. dify-inputs-conversation_id is the conversation_id value of dify.
+        /// </summary>
+        [JsonProperty("Variables")]
+        public Variable[] Variables{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -385,6 +402,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
             this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
+            this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
+            this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
         }
     }
 }

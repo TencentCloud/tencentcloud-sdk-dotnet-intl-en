@@ -56,10 +56,24 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// User role id.
+        /// When a user is bound to multiple roles, RoleIdList shall prevail.
         /// </summary>
         [JsonProperty("RoleId")]
         [System.Obsolete]
         public ulong? RoleId{ get; set; }
+
+        /// <summary>
+        /// User role id list.
+        /// </summary>
+        [JsonProperty("RoleIdList")]
+        [System.Obsolete]
+        public ulong? RoleIdList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RoleList")]
+        public ulong?[] RoleList{ get; set; }
 
         /// <summary>
         /// Affiliated skill group list.
@@ -91,6 +105,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
+            this.SetParamSimple(map, prefix + "RoleIdList", this.RoleIdList);
+            this.SetParamArraySimple(map, prefix + "RoleList.", this.RoleList);
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);

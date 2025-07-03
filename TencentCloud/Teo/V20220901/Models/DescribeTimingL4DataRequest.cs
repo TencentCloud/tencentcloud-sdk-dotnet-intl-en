@@ -31,23 +31,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time.
+        /// The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Query indicator. Values: 
-        /// <li>l4Flow_connections: Number of access connections;</li>
-        /// <li>l4Flow_flux: Total access traffic;</li>
-        /// <li>l4Flow_inFlux: Ingress access traffic;</li>
-        /// <li>l4Flow_outFlux: Egress access traffic. </li>
+        /// Metric list. Valid values:
+        /// <Li>l4Flow_connections: number of concurrent connections;</li>
+        /// <Li>l4Flow_flux: total traffic;</li>
+        /// <Li>l4Flow_inFlux: inbound traffic;</li>
+        /// <Li>l4Flow_outFlux: outbound traffic.</li>
+        /// <Li>l4Flow_inBandwidth: inbound peak bandwidth.</li>
+        /// <Li>l4Flow_outBandwidth: outbound peak bandwidth.</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// ZoneId set. This parameter is required.
+        /// Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -63,24 +65,21 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>`min`: 1 minute;</li>
         /// <li>`5min`: 5 minutes;</li>
         /// <li>`hour`: 1 hour;</li>
-        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period ≤ 1 hour: `min`; <br>1 hour < Period ≤ 2 days: `5min`; <br>2 days < period ≤ 7 days: `hour`; <br>Period > 7 days: `day`.
+        /// <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The detailed Key values of filter criteria are as follows:
-        /// <li>ruleId: Filter by forwarding rule ID.</li>
-        /// <li>proxyId: Filter by L4 proxy instance ID.</li>
+        /// Filter criteria. The detailed key values of filter criteria are as follows:
+        /// <li>ruleId: filter by forwarding rule ID.</li>
+        /// <li>proxyId: filter by L4 proxy instance ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
 
         /// <summary>
-        /// Geolocation scope. Values:
-        /// <li>`overseas`: Regions outside the Chinese mainland</li>
-        /// <li>`mainland`: Chinese mainland</li>
-        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+        /// Data ownership region. This parameter is deprecated. Please filter data by client region in Filters.country.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

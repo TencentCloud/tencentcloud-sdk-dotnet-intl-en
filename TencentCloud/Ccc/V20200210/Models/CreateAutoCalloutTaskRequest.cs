@@ -49,7 +49,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string[] Callers{ get; set; }
 
         /// <summary>
-        /// IVR used for calling.
+        /// IVR Id used for calling. if not filled, AIAgentId needs to be filled.
         /// </summary>
         [JsonProperty("IvrId")]
         public ulong? IvrId{ get; set; }
@@ -96,6 +96,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CalleeAttributes")]
         public CalleeAttribute[] CalleeAttributes{ get; set; }
 
+        /// <summary>
+        /// IANA time zone name. see https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones.
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// Available time period.
+        /// </summary>
+        [JsonProperty("AvailableTime")]
+        public TimeRange[] AvailableTime{ get; set; }
+
+        /// <summary>
+        /// Intelligent agent ID. if not filled, IvrId needs to be filled.
+        /// </summary>
+        [JsonProperty("AIAgentId")]
+        public long? AIAgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +132,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
             this.SetParamSimple(map, prefix + "UUI", this.UUI);
             this.SetParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
+            this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         }
     }
 }

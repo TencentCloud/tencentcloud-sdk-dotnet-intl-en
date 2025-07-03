@@ -88,6 +88,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         /// Device ID at the NB-IoT ISP
         /// </summary>
         [JsonProperty("NbiotDeviceID")]
+        [System.Obsolete]
         public string NbiotDeviceID{ get; set; }
 
         /// <summary>

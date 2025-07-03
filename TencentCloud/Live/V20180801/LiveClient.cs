@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.intl.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1147";
+       private const string sdkVersion = "SDK_NET_3.0.1162";
 
         /// <summary>
         /// Client constructor.
@@ -2594,6 +2594,27 @@ namespace TencentCloud.Live.V20180801
         public ResumeLiveStreamResponse ResumeLiveStreamSync(ResumeLiveStreamRequest req)
         {
             return InternalRequestAsync<ResumeLiveStreamResponse>(req, "ResumeLiveStream")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Call this API to switch the live broadcast to standby footage.
+        /// </summary>
+        /// <param name="req"><see cref="StartLivePadStreamRequest"/></param>
+        /// <returns><see cref="StartLivePadStreamResponse"/></returns>
+        public Task<StartLivePadStreamResponse> StartLivePadStream(StartLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StartLivePadStreamResponse>(req, "StartLivePadStream");
+        }
+
+        /// <summary>
+        /// Call this API to switch the live broadcast to standby footage.
+        /// </summary>
+        /// <param name="req"><see cref="StartLivePadStreamRequest"/></param>
+        /// <returns><see cref="StartLivePadStreamResponse"/></returns>
+        public StartLivePadStreamResponse StartLivePadStreamSync(StartLivePadStreamRequest req)
+        {
+            return InternalRequestAsync<StartLivePadStreamResponse>(req, "StartLivePadStream")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
