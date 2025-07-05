@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -50,6 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// Number of IPv6 addresses randomly generated for the ENI.
+        /// If IPv6AddressType is specified under InternetAccessible, this parameter must not be set to 0.
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public ulong? Ipv6AddressCount{ get; set; }

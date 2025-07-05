@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,6 +48,57 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
+        /// <summary>
+        /// The EIP line type. 
+        ///  <li>BGP Default: BGP</li>
+        /// 
+        /// For a user who has activated the static single-line IP allowlist, possible values are:
+        /// 
+        ///  <li>CMCC: China Mobile</li>
+        ///  <li>CTCC: China Telecom</li>
+        ///  <li>CUCC: China Unicom</li>
+        /// 
+        /// Note: Only certain regions support static single-line IP addresses.
+        /// </summary>
+        [JsonProperty("InternetServiceProvider")]
+        public string InternetServiceProvider{ get; set; }
+
+        /// <summary>
+        /// AddressType. Default value: `WanIP`.
+        /// 
+        /// For beta users of dedicated IP, the value can be:
+        /// <li>HighQualityEIP: Dedicated IP</li>
+        /// Note that dedicated IPs are only available in partial regions.
+        /// 
+        /// For beta users of Anti-DDoS IP, the value can be:
+        /// <li>AntiDDoSEIP: Anti-DDoS EIP</li>
+        /// Note that Anti-DDoS IPs are only available in partial regions.
+        /// 
+        /// This feature is currently in gradually released phase. To access it, please contact us.
+        /// </summary>
+        [JsonProperty("IPv4AddressType")]
+        public string IPv4AddressType{ get; set; }
+
+        /// <summary>
+        /// Indicates the type of EIPv6. Valid values:
+        /// 
+        /// <li>EIPv6: common IPv6</li>
+        /// <li>HighQualityEIPv6: dedicated IPv6</li>
+        /// Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
+        /// 
+        /// Default: `EIPv6`
+        /// 
+        /// This feature is currently in gradually released phase. To access it, please contact us.
+        /// </summary>
+        [JsonProperty("IPv6AddressType")]
+        public string IPv6AddressType{ get; set; }
+
+        /// <summary>
+        /// Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+        /// </summary>
+        [JsonProperty("AntiDDoSPackageId")]
+        public string AntiDDoSPackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +109,10 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "IPv4AddressType", this.IPv4AddressType);
+            this.SetParamSimple(map, prefix + "IPv6AddressType", this.IPv6AddressType);
+            this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// The instance model. 
-        /// <br><li>To view specific values for `POSTPAID_BY_HOUR` instances, you can call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). If this parameter is not specified, `S1.SMALL1` will be used by default.<br><li>For `CDHPAID` instances, the value of this parameter is in the format of `CDH_XCXG` based on the number of CPU cores and memory capacity. For example, if you want to create a CDH instance with a single-core CPU and 1 GB memory, specify this parameter as `CDH_1C1G`.
+        /// <br><li>To view specific values for `POSTPAID_BY_HOUR` instances, you can call [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) or refer to [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1). <br><li>For `CDHPAID` instances, the value of this parameter is in the format of `CDH_XCXG` based on the number of CPU cores and memory capacity. For example, if you want to create a CDH instance with a single-core CPU and 1 GB memory, specify this parameter as `CDH_1C1G`.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -154,6 +154,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string UserData{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
         /// Whether the request is a dry run only.
         /// `true`: dry run only. The request will not create instance(s). A dry run can check whether all the required parameters are specified, whether the request format is right, whether the request exceeds service limits, and whether the specified CVMs are available.
         /// If the dry run fails, the corresponding error code will be returned.
@@ -205,6 +211,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EnableJumboFrame")]
+        public bool? EnableJumboFrame{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -232,6 +244,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
@@ -240,6 +253,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
         }
     }
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -281,6 +281,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("LatestOperationErrorMsg")]
         public string LatestOperationErrorMsg{ get; set; }
 
+        /// <summary>
+        /// Public IPv6 address of the instance.
+        /// Note: this field may return null, indicating that no valid value was found.
+        /// </summary>
+        [JsonProperty("PublicIPv6Addresses")]
+        public string[] PublicIPv6Addresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -328,6 +335,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
             this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+            this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         }
     }
 }
