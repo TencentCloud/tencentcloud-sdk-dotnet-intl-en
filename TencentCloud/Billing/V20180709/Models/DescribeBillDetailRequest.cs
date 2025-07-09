@@ -84,6 +84,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// Queries information on a specified product
         /// </summary>
         [JsonProperty("ProductCode")]
+        [System.Obsolete]
         public string ProductCode{ get; set; }
 
         /// <summary>

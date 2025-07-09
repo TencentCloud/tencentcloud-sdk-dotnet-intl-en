@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.intl.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1167";
 
         /// <summary>
         /// Client constructor.
@@ -115,6 +115,27 @@ namespace TencentCloud.Emr.V20190103
         public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
         {
             return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
+        /// <returns><see cref="CreateSLInstanceResponse"/></returns>
+        public Task<CreateSLInstanceResponse> CreateSLInstance(CreateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateSLInstanceResponse>(req, "CreateSLInstance");
+        }
+
+        /// <summary>
+        /// This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
+        /// <returns><see cref="CreateSLInstanceResponse"/></returns>
+        public CreateSLInstanceResponse CreateSLInstanceSync(CreateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateSLInstanceResponse>(req, "CreateSLInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -262,6 +283,48 @@ namespace TencentCloud.Emr.V20190103
         public DescribeResourceScheduleResponse DescribeResourceScheduleSync(DescribeResourceScheduleRequest req)
         {
             return InternalRequestAsync<DescribeResourceScheduleResponse>(req, "DescribeResourceSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the basic information of Serverless HBase instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
+        public Task<DescribeSLInstanceResponse> DescribeSLInstance(DescribeSLInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceResponse>(req, "DescribeSLInstance");
+        }
+
+        /// <summary>
+        /// This API is used to query the basic information of Serverless HBase instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
+        public DescribeSLInstanceResponse DescribeSLInstanceSync(DescribeSLInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceResponse>(req, "DescribeSLInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information of the Serverless HBase instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
+        public Task<DescribeSLInstanceListResponse> DescribeSLInstanceList(DescribeSLInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceListResponse>(req, "DescribeSLInstanceList");
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information of the Serverless HBase instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
+        public DescribeSLInstanceListResponse DescribeSLInstanceListSync(DescribeSLInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeSLInstanceListResponse>(req, "DescribeSLInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -436,6 +499,48 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceResponse"/></returns>
+        public Task<ModifySLInstanceResponse> ModifySLInstance(ModifySLInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceResponse>(req, "ModifySLInstance");
+        }
+
+        /// <summary>
+        /// This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceResponse"/></returns>
+        public ModifySLInstanceResponse ModifySLInstanceSync(ModifySLInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceResponse>(req, "ModifySLInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the Serverless HBase instance name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
+        public Task<ModifySLInstanceBasicResponse> ModifySLInstanceBasic(ModifySLInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceBasicResponse>(req, "ModifySLInstanceBasic");
+        }
+
+        /// <summary>
+        /// This API is used to modify the Serverless HBase instance name.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
+        /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
+        public ModifySLInstanceBasicResponse ModifySLInstanceBasicSync(ModifySLInstanceBasicRequest req)
+        {
+            return InternalRequestAsync<ModifySLInstanceBasicResponse>(req, "ModifySLInstanceBasic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to change user password (user management).
         /// </summary>
         /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
@@ -558,6 +663,27 @@ namespace TencentCloud.Emr.V20190103
         public TerminateInstanceResponse TerminateInstanceSync(TerminateInstanceRequest req)
         {
             return InternalRequestAsync<TerminateInstanceResponse>(req, "TerminateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate a Serverless HBase instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
+        /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
+        public Task<TerminateSLInstanceResponse> TerminateSLInstance(TerminateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<TerminateSLInstanceResponse>(req, "TerminateSLInstance");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a Serverless HBase instance.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
+        /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
+        public TerminateSLInstanceResponse TerminateSLInstanceSync(TerminateSLInstanceRequest req)
+        {
+            return InternalRequestAsync<TerminateSLInstanceResponse>(req, "TerminateSLInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

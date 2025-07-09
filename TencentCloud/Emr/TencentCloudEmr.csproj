@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1164</VersionPrefix>
+    <VersionPrefix>3.0.1167</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20190103\Models\CreateClusterResponse.cs" />
     <Compile Include="V20190103\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\CreateSLInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\CreateSLInstanceResponse.cs" />
     <Compile Include="V20190103\Models\CustomMetaDBInfo.cs" />
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="V20190103\Models\CustomServiceDefine.cs" />
@@ -81,6 +83,10 @@
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
     <Compile Include="V20190103\Models\DescribeResourceScheduleResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeSLInstanceListRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeSLInstanceListResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeSLInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeSLInstanceResponse.cs" />
     <Compile Include="V20190103\Models\DescribeUsersForUserManagerRequest.cs" />
     <Compile Include="V20190103\Models\DescribeUsersForUserManagerResponse.cs" />
     <Compile Include="V20190103\Models\DiskSpecInfo.cs" />
@@ -110,6 +116,10 @@
     <Compile Include="V20190103\Models\ModifyResourceTags.cs" />
     <Compile Include="V20190103\Models\ModifyResourcesTagsRequest.cs" />
     <Compile Include="V20190103\Models\ModifyResourcesTagsResponse.cs" />
+    <Compile Include="V20190103\Models\ModifySLInstanceBasicRequest.cs" />
+    <Compile Include="V20190103\Models\ModifySLInstanceBasicResponse.cs" />
+    <Compile Include="V20190103\Models\ModifySLInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\ModifySLInstanceResponse.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdRequest.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdResponse.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
@@ -123,6 +133,7 @@
     <Compile Include="V20190103\Models\OpScope.cs" />
     <Compile Include="V20190103\Models\OutterResource.cs" />
     <Compile Include="V20190103\Models\PartDetailPriceItem.cs" />
+    <Compile Include="V20190103\Models\Period.cs" />
     <Compile Include="V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="V20190103\Models\Placement.cs" />
     <Compile Include="V20190103\Models\PodNewParameter.cs" />
@@ -132,10 +143,12 @@
     <Compile Include="V20190103\Models\PodSpecInfo.cs" />
     <Compile Include="V20190103\Models\PodVolume.cs" />
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
+    <Compile Include="V20190103\Models\PrePaySetting.cs" />
     <Compile Include="V20190103\Models\PriceDetail.cs" />
     <Compile Include="V20190103\Models\PriceResource.cs" />
     <Compile Include="V20190103\Models\RenewPriceDetail.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
+    <Compile Include="V20190103\Models\SLInstanceInfo.cs" />
     <Compile Include="V20190103\Models\ScaleOutClusterRequest.cs" />
     <Compile Include="V20190103\Models\ScaleOutClusterResponse.cs" />
     <Compile Include="V20190103\Models\ScaleOutInstanceRequest.cs" />
@@ -157,6 +170,8 @@
     <Compile Include="V20190103\Models\TerminateClusterNodesResponse.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\TerminateInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\TerminateSLInstanceRequest.cs" />
+    <Compile Include="V20190103\Models\TerminateSLInstanceResponse.cs" />
     <Compile Include="V20190103\Models\TerminateTasksRequest.cs" />
     <Compile Include="V20190103\Models\TerminateTasksResponse.cs" />
     <Compile Include="V20190103\Models\TopologyInfo.cs" />
@@ -168,5 +183,6 @@
     <Compile Include="V20190103\Models\VirtualPrivateCloud.cs" />
     <Compile Include="V20190103\Models\ZoneDetailPriceResult.cs" />
     <Compile Include="V20190103\Models\ZoneResourceConfiguration.cs" />
+    <Compile Include="V20190103\Models\ZoneSetting.cs" />
   </ItemGroup>
 </Project>
