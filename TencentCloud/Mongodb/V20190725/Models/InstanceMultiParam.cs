@@ -25,49 +25,53 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Current value
+        /// Current parameter value.
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default parameter value.
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Acceptable values
+        /// Reference value range.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+        /// Whether a restart is required for the parameters to take effect after modification.
+        ///  - 1: Restart is required for the parameters to take effect.
+        ///  - 0: Restart is not required. Once set, the parameters take effect immediately.
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+        /// Whether the parameter values are used during running.
+        ///  - 1. parameter values used during running.
+        ///  - 0: parameter values not used during running.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Parameter description
+        /// Parameter description.
         /// </summary>
         [JsonProperty("Tips")]
         public string[] Tips{ get; set; }
 
         /// <summary>
-        /// Data type of the current value. Default value: `multi`
+        /// Describes the type of the current values. Default value: multi.
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }

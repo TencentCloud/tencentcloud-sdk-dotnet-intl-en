@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1168";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to specify the project to which a TencentDB instance belongs.
+        /// This API is used to specify the project of a TencentDB for MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="AssignProjectRequest"/></param>
         /// <returns><see cref="AssignProjectResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to specify the project to which a TencentDB instance belongs.
+        /// This API is used to specify the project of a TencentDB for MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="AssignProjectRequest"/></param>
         /// <returns><see cref="AssignProjectResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create instance backups.
+        /// This API is used to back up an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
         /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create instance backups.
+        /// This API is used to back up an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateBackupDBInstanceRequest"/></param>
         /// <returns><see cref="CreateBackupDBInstanceResponse"/></returns>
@@ -159,7 +159,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query async task status.
+        /// This API is used to query the asynchronous task status.
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
         /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query async task status.
+        /// This API is used to query the asynchronous task status.
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
         /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
@@ -201,7 +201,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
+        /// This API is used to query the client connection information on an instance, including the IP address for connection and the number of connections.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
+        /// This API is used to query the client connection information on an instance, including the IP address for connection and the number of connections.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
         /// <returns><see cref="DescribeClientConnectionsResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+        /// This API is used to get order details of purchase, renewal, and specification adjustment of a MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+        /// This API is used to get order details of purchase, renewal, and specification adjustment of a MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceDealRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceDealResponse"/></returns>
@@ -264,7 +264,28 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+        /// This API is used to query the table information on a database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public Task<DescribeDBInstanceNamespaceResponse> DescribeDBInstanceNamespace(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace");
+        }
+
+        /// <summary>
+        /// This API is used to query the table information on a database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNamespaceRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNamespaceResponse"/></returns>
+        public DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespaceSync(DescribeDBInstanceNamespaceRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -274,7 +295,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+        /// This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -285,7 +306,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the modifiable parameter list of an instance.
+        /// This API is used to query the list of parameters that can be modified for the current instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -295,7 +316,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the modifiable parameter list of an instance.
+        /// This API is used to query the list of parameters that can be modified for the current instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
@@ -306,7 +327,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the security groups associated with an instance.
+        /// This API is used to query security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
@@ -316,7 +337,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the security groups associated with an instance.
+        /// This API is used to query security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
@@ -495,7 +516,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+        /// This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNetworkAddressRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceNetworkAddressResponse"/></returns>
@@ -505,7 +526,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+        /// This API is used to modify the network information on a TencentDB for MongoDB instance. It supports switching from a basic network to a VPC network or from one VPC network to another VPC network.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNetworkAddressRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceNetworkAddressResponse"/></returns>
@@ -516,7 +537,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify the security groups associated with an instance.
+        /// This API is used to modify security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupResponse"/></returns>
@@ -526,7 +547,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify the security groups associated with an instance.
+        /// This API is used to modify security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSecurityGroupResponse"/></returns>
@@ -537,7 +558,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
+        /// This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -547,7 +568,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
+        /// This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>

@@ -85,7 +85,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+        /// Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -253,57 +253,49 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string RealInstanceId{ get; set; }
 
         /// <summary>
-        /// Number of mongos nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Mongos nodes.
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
-        /// mongos node memory
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mongos node memory.
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// Number of mongos nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Mongos node CPU cores.
         /// </summary>
         [JsonProperty("MongosCpuNum")]
         public ulong? MongosCpuNum{ get; set; }
 
         /// <summary>
-        /// Number of ConfigServer nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of ConfigServer nodes.
         /// </summary>
         [JsonProperty("ConfigServerNodeNum")]
         public ulong? ConfigServerNodeNum{ get; set; }
 
         /// <summary>
-        /// Memory of ConfigServer node
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ConfigServer node memory.
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
-        /// Disk size of ConfigServer node
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ConfigServer node disk size.
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }
 
         /// <summary>
-        /// CPU number of ConfigServer node
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of ConfigServer node CPU cores.
         /// </summary>
         [JsonProperty("ConfigServerCpuNum")]
         public ulong? ConfigServerCpuNum{ get; set; }
 
         /// <summary>
-        /// Number of read-only nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of read-only nodes.
         /// </summary>
         [JsonProperty("ReadonlyNodeNum")]
         public ulong? ReadonlyNodeNum{ get; set; }

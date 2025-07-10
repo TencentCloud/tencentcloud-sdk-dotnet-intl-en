@@ -25,20 +25,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
-        /// (This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+        /// Instance purchase duration. Unit: months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36. Default value: 1.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Valid values:
-        /// `NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
-        /// `NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
-        /// `DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
-        /// 
-        /// Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
-        /// (This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+        /// Automatic renewal flag. Valid values:
+        ///  - NOTIFY_AND_AUTO_RENEW: A notification is sent upon expiration, and the instance is renewed automatically. If the account balance is sufficient, the instance will be renewed automatically on a monthly basis after expiration.
+        ///  - NOTIFY_AND_MANUAL_RENEW: A notification is sent upon expiration, but the instance is not renewed automatically. Default value: NOTIFY_AND_MANUAL_RENEW.
+        ///  - DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification is sent upon expiration, and the instance is not renewed automatically.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

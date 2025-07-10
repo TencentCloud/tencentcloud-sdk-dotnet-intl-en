@@ -26,7 +26,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// Unit price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
@@ -38,7 +37,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// Discount price.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

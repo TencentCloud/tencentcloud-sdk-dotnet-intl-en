@@ -21,14 +21,20 @@ namespace TencentCloud.Mongodb.V20190725.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupRequest : AbstractModel
+    public class DescribeDBInstanceNamespaceRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID. For example, cmgo-p8vn****.
+        /// Specifies the instance ID for querying the database. Batch querying is supported. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Specifies the database name for querying. If this parameter is left blank, a list of all databases of the current instance is returned.
+        /// </summary>
+        [JsonProperty("DbName")]
+        public string DbName{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "DbName", this.DbName);
         }
     }
 }

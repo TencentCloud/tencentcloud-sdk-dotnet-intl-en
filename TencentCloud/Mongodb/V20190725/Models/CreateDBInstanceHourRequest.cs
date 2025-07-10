@@ -25,45 +25,47 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance memory size in GB
+        /// Instance memory size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain specific saleable memory specifications.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB
+        /// Instance disk size. Unit: GB. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Number of replica sets
-        /// - Number of the replica set instances to be created. Valid value: `1`.
-        /// - Number of sharded cluster instances to be created. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+        ///  - Specifies the number of replica sets during replica set instance creation. This parameter can only be set to 1.
+        ///  - Specifies the number of shards during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to query the range of shard quantity. The parameters MinReplicateSetNum and MaxReplicateSetNum in the returned data structure SpecItems correspond to the minimum value and maximum value, respectively.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// The number of nodes in each replica set. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
+        ///  - Specifies the number of primary and secondary nodes for each replica set during replica set instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each replica set.
+        ///  - Specifies the number of primary and secondary nodes for each shard during sharded cluster instance creation. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain the maximum and minimum number of nodes supported for each shard.
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Version information. You can get the specific purchasable specifications through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-        /// - MONGO_36_WT：MongoDB 3.6 WiredTiger storage engine
-        /// - MONGO_40_WT：MongoDB 4.0 WiredTiger storage engine
-        /// - MONGO_42_WT：MongoDB 4.2 WiredTiger storage engine
-        /// - MONGO_44_WT：MongoDB 4.4 WiredTiger storage engine
+        /// Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
+        ///  - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+        ///  - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+        ///  - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+        ///  - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+        ///  - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+        ///  - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// Machine type
-        /// - HIO: High IO
-        /// - HIO10G: 10-Gigabit high IO
+        /// Product specification type.
+        ///  - HIO10G: general high-I/O 10GE type.
+        ///  - HCD: cloud disk type.
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }
@@ -91,27 +93,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID. If `VpcId` is set, then `SubnetId` will be required.
+        /// VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance password
-        /// - If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-        /// - The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+        /// Instance password. The requirements are as follows:
+        ///  - The number of characters should be in the range of [8, 32].
+        ///  - Characters within the ranges [A,Z], [a,z], and [0,9] are allowed.
+        ///  - Special characters that can be entered include exclamation marks (!), at signs (@), number signs (#), percent signs (%), carets (^), asterisks (\*), brackets (()), and underscores (_).
+        ///  - It cannot contain only the same letters or digits.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Project ID. If it is left empty, `Default project` will be used.
+        /// Project ID. - The default project is used if this parameter is not specified.
+        ///  - The project ID can be obtained on the [project management page in the TencentDB for MongoDB console](https://console.cloud.tencent.com/project).
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -123,10 +128,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values:
-        /// - `1`: Primary instance
-        /// - `3`: Read-only instance
-        /// - `4`: Disaster recovery instance
+        /// Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
@@ -138,7 +140,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Father{ get; set; }
 
         /// <summary>
-        /// Security group
+        /// Security group ID.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
@@ -158,47 +160,45 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// List of multi-AZ deployed nodes. For more information, query through the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API.
-        /// - Nodes of a multi-AZ instance must be deployed across three AZs. Most nodes of the cluster can’t be deployed in the same AZ. For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.
-        /// - MongoDB 4.2 and later versions do not support multi-AZ deployment.
-        /// - Read-only and disaster recovery instances do not support multi-AZ deployment.
-        /// -Instances in the classic network do not support multi-AZ deployment.
+        /// Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
+        ///  - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+        ///  - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+        ///  - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
         /// </summary>
         [JsonProperty("AvailabilityZoneList")]
         public string[] AvailabilityZoneList{ get; set; }
 
         /// <summary>
-        /// Number of Mongos CPU cores
-        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+        /// Number of Mongos node CPU cores. Valid values: 1, 2, 4, 8, and 16. This parameter is required during sharded cluster instance purchase.
         /// </summary>
         [JsonProperty("MongosCpu")]
         public ulong? MongosCpu{ get; set; }
 
         /// <summary>
-        /// Mongos memory size
-        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+        /// Mongos node memory size.
+        ///  - This parameter is required during sharded cluster instance purchase.
+        ///  - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
+        /// 
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
 
         /// <summary>
-        /// Number of Monogs
-        /// - This parameter is not required for a sharded cluster instance of MongoDB 3.6 WiredTiger or later.
-        /// - If this parameter is not configured, the mongos specification will be configured based on the mongod specification, and the default specification is free of charge.
+        /// Number of Mongos nodes. This parameter is required during sharded cluster instance purchase.
+        ///  - For instances in single-AZ deployment mode, the value range is [3,32].
+        ///  - For instances in multi-AZ deployment mode, the value range is [6,32].
         /// </summary>
         [JsonProperty("MongosNodeNum")]
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
-        /// Number of read-only nodes. Value range: 0-5.
+        /// Number of read-only nodes. Value ranges: [0,5].
         /// </summary>
         [JsonProperty("ReadonlyNodeNum")]
         public ulong? ReadonlyNodeNum{ get; set; }
 
         /// <summary>
-        /// AZ of read-only nodes, which is required when `ReadonlyNodeNum` is not `0` in cross-AZ instance deployment.
+        /// Array of AZs of read-only nodes. This parameter is required for instances in multi-AZ deployment mode when **ReadonlyNodeNum** is not set to **0**.
         /// </summary>
         [JsonProperty("ReadonlyNodeAvailabilityZoneList")]
         public string[] ReadonlyNodeAvailabilityZoneList{ get; set; }
@@ -208,6 +208,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("HiddenZone")]
         public string HiddenZone{ get; set; }
+
+        /// <summary>
+        /// Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public string ParamTemplateId{ get; set; }
 
 
         /// <summary>
@@ -241,6 +247,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
             this.SetParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
             this.SetParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

@@ -25,19 +25,21 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Valid values: 0 (logical backup), 1 (physical backup)
+        /// Sets the backup method.
+        ///  - 0: logical backup.
+        ///  - 1: physical backup.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// Backup remarks
+        /// Backup remarks information.
         /// </summary>
         [JsonProperty("BackupRemark")]
         public string BackupRemark{ get; set; }

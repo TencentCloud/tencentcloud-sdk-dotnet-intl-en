@@ -25,127 +25,149 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Specification information identifier
+        /// Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
+        ///  - Node types are as follows:
+        ///  - mongo: Mongod node.
+        ///  - mongos: Mongos node.
+        ///  - cfgstr: ConfigServer node.
+        ///  - Specification types are as follows:
+        ///  - HIO10G: general high-I/O 10GE type.
+        ///  - HCD: cloud disk type.
+        ///  - Memory specifications are as follows:
+        ///  - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
+        ///  - Unit: g, indicating GB. 128g means 128 GB.
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+        /// Saleable specification status flag. Valid values are as follows:
+        ///  - 0: selling stopped.
+        ///  - 1: available for sale.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Computing resource specification in terms of CPU core
+        /// Computing resource specification, indicating the number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size in MB
+        /// Memory specification. Unit: MB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Default disk size in MB
+        /// Default disk specification. Unit: MB.
         /// </summary>
         [JsonProperty("DefaultStorage")]
         public ulong? DefaultStorage{ get; set; }
 
         /// <summary>
-        /// Maximum disk size in MB
+        /// Maximum disk specification. Unit: MB.
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// Minimum disk size in MB
+        /// Minimum disk specification. Unit: MB.
         /// </summary>
         [JsonProperty("MinStorage")]
         public ulong? MinStorage{ get; set; }
 
         /// <summary>
-        /// Maximum QPS
+        /// Maximum number of requests per second. Unit: requests/second.
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// Maximum number of connections
+        /// Maximum number of connections supported for the specification.
         /// </summary>
         [JsonProperty("Conns")]
         public ulong? Conns{ get; set; }
 
         /// <summary>
-        /// MongoDB version information of an instance
+        /// Storage engine version information on instances.
+        ///  - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+        ///  - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+        ///  - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+        ///  - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+        ///  - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+        ///  - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersionCode")]
         public string MongoVersionCode{ get; set; }
 
         /// <summary>
-        /// MongoDB version number of an instance
+        /// Digital version corresponding to the instance version.
         /// </summary>
         [JsonProperty("MongoVersionValue")]
         public ulong? MongoVersionValue{ get; set; }
 
         /// <summary>
-        /// MongoDB version number of an instance (short)
+        /// Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Storage engine
+        /// Storage engine.
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// Cluster type. Valid values: 1 (sharding cluster), 0 (replica set cluster)
+        /// Cluster type. Valid values are as follows:
+        ///  - 1: sharded cluster.
+        ///  - 0: replica set cluster.
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
 
         /// <summary>
-        /// Minimum number of secondary nodes in a replica set
+        /// Minimum number of nodes for each replica set.
         /// </summary>
         [JsonProperty("MinNodeNum")]
         public ulong? MinNodeNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of secondary nodes in a replica set
+        /// Maximum number of nodes for each replica set.
         /// </summary>
         [JsonProperty("MaxNodeNum")]
         public ulong? MaxNodeNum{ get; set; }
 
         /// <summary>
-        /// Minimum number of shards
+        /// Minimum number of shards.
         /// </summary>
         [JsonProperty("MinReplicateSetNum")]
         public ulong? MinReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of shards
+        /// Maximum number of shards.
         /// </summary>
         [JsonProperty("MaxReplicateSetNum")]
         public ulong? MaxReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// Minimum number of secondary nodes in a shard
+        /// Minimum number of nodes for each shard.
         /// </summary>
         [JsonProperty("MinReplicateSetNodeNum")]
         public ulong? MinReplicateSetNodeNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of secondary nodes in a shard
+        /// Maximum number of nodes for each shard.
         /// </summary>
         [JsonProperty("MaxReplicateSetNodeNum")]
         public ulong? MaxReplicateSetNodeNum{ get; set; }
 
         /// <summary>
-        /// Server type. Valid values: 0 (HIO), 4 (HIO10G)
+        /// Cluster specification type. Valid values are as follows:
+        ///  - HIO10G: general high-I/O 10GE type.
+        ///  - HCD: cloud disk type.
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

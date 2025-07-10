@@ -21,14 +21,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSecurityGroupRequest : AbstractModel
+    public class AddNodeList : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID. For example, cmgo-p8vn****.
+        /// Roles of nodes to be added.
+        ///  - SECONDARY: Mongod node.
+        ///  - READONLY: read-only node.
+        ///  - MONGOS: Mongos node.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// AZs corresponding to the nodes.
+        ///  - Single AZ: All nodes are in the same AZ.
+        ///  - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be added should be specified. After addition, the number of nodes in any two AZs should be larger than that in the third AZ.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -36,7 +47,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

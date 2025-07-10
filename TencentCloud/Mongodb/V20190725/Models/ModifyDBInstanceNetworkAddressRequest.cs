@@ -25,31 +25,33 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Specifies the ID of the instance for modifying the network. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Old IP retention period in minutes. The old IP will be released after the specified time, and both the old and new IPs can be accessed before the release. The value `0` indicates that the old IP will be reclaimed immediately.
+        /// Retention period of the original IP address.
+        ///  - Unit: minutes. 0 means that the IP address is immediately repossessed.
+        ///  - The original IP address will be released after a scheduled period. Both the original and new IP addresses are accessible before release.
         /// </summary>
         [JsonProperty("OldIpExpiredTime")]
         public ulong? OldIpExpiredTime{ get; set; }
 
         /// <summary>
-        /// ID of the VPC to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+        /// VPC ID after the switch. If the instance is using a basic network, this field is not required.
         /// </summary>
         [JsonProperty("NewUniqVpcId")]
         public string NewUniqVpcId{ get; set; }
 
         /// <summary>
-        /// ID of the subnet to which the new IP belongs after the switch. When it is classic network, this field will be empty.
+        /// VPC subnet ID after the switch. If the instance is using a basic network, this field is not required.
         /// </summary>
         [JsonProperty("NewUniqSubnetId")]
         public string NewUniqSubnetId{ get; set; }
 
         /// <summary>
-        /// IP information to be modified
+        /// IP address information, including the new IP address and the original IP address.
         /// </summary>
         [JsonProperty("NetworkAddresses")]
         public ModifyNetworkAddress[] NetworkAddresses{ get; set; }

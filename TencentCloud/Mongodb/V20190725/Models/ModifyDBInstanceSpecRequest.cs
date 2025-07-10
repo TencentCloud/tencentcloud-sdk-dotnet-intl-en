@@ -25,46 +25,80 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
+        /// Memory size after instance configuration modification. - Unit: GB. The current instance memory size is used by default if this parameter is left blank.<br>Note: Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
+        /// Disk capacity after instance configuration modification. Unit: GB. The current instance disk capacity is used by default if this parameter is left blank.
+        ///  - Memory and disk configurations should be upgraded or downgraded at the same time, meaning that Memory and Volume should be modified at the same time.
+        ///  - During configuration downgrading, the disk capacity after modification should be greater than 1.2 times the used disk capacity.
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+        /// (Deprecated) Use the independent API ResizeOplog.
+        /// 
+        /// Oplog size after instance configuration modification.
+        ///  - Unit: GB.
+        ///  - By default, the capacity occupied by Oplog is 10% of the disk capacity. The range of capacity occupied by Oplog supported by the system is [10%,90%] of the disk capacity.
         /// </summary>
         [JsonProperty("OplogSize")]
+        [System.Obsolete]
         public ulong? OplogSize{ get; set; }
 
         /// <summary>
-        /// Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+        /// Number of Mongod nodes after instance modification (excluding read-only nodes).
+        ///  - When the CPU and memory specifications of Mongod nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+        ///  - When the CPU and memory specifications of Mongos nodes are modified, this parameter can be left blank or set to the current number of Mongod nodes (excluding read-only nodes).
+        ///  - During node modification (all types), this parameter can be left blank or set to the number of Mongod nodes (excluding read-only nodes) after modification.
+        ///  - Number of replica set nodes: Confirm the range of the number of nodes based on the MinNodeNum and MaxNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
+        ///  - Number of nodes for each shard in a sharded cluster: Confirm the range of the number of nodes based on the MinReplicateSetNodeNum and MaxReplicateSetNodeNum parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38565?from_cn_redirect=1) API for querying saleable TencenDB for MongoDB specifications.
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+        /// Number of shards after instance modification.
+        ///  - The value range can be obtained from the **MinReplicateSetNum** and **MaxReplicateSetNum** parameters returned by the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API for querying saleable TencentDB for MongoDB specifications. - The value of this parameter can only be increased but not decreased.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public ulong? ReplicateSetNum{ get; set; }
 
         /// <summary>
-        /// Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the quantity of nodes or shards is modified, the value will be `0`.
+        /// Switch time for instance configuration modification.
+        ///  - 0: Execute the configuration modification task immediately after the adjustment is completed. Default value: 0.
+        ///  - 1: Execute the configuration modification task within the maintenance window.
+        /// **Note**: Adjusting the number of nodes and shards is unsupported <b>within the maintenance window</b>.
         /// </summary>
         [JsonProperty("InMaintenance")]
         public ulong? InMaintenance{ get; set; }
+
+        /// <summary>
+        /// Mongos node memory size after the sharded cluster instance configuration is modified. Unit: GB.
+        /// </summary>
+        [JsonProperty("MongosMemory")]
+        public string MongosMemory{ get; set; }
+
+        /// <summary>
+        /// List of nodes to be added, containing the node type and AZ information.
+        /// </summary>
+        [JsonProperty("AddNodeList")]
+        public AddNodeList[] AddNodeList{ get; set; }
+
+        /// <summary>
+        /// List of nodes to be deleted. Note: According to the consistency principle for nodes of each shard on a sharded cluster instance, specify the nodes on shard 0 for node deletion from the sharded cluster instance. For example, cmgo-9nl1czif_0-node-readonly0 will delete the first read-only node of each shard.
+        /// </summary>
+        [JsonProperty("RemoveNodeList")]
+        public RemoveNodeList[] RemoveNodeList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +113,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
             this.SetParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
+            this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+            this.SetParamArrayObj(map, prefix + "AddNodeList.", this.AddNodeList);
+            this.SetParamArrayObj(map, prefix + "RemoveNodeList.", this.RemoveNodeList);
         }
     }
 }

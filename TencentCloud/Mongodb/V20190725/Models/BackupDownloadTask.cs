@@ -79,11 +79,22 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// Backup description you set when starting a backup task
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the remarks for backup.
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
+
+        /// <summary>
+        /// Region information.
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Bucket information.
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
 
 
         /// <summary>
@@ -101,6 +112,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,29 +43,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// Backup remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup remarks.
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
 
         /// <summary>
-        /// Backup file size in KB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup file size. Unit: KB.
         /// </summary>
         [JsonProperty("BackupSize")]
         public ulong? BackupSize{ get; set; }
 
         /// <summary>
-        /// Backup start time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup end time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup end time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -82,6 +78,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
 
+        /// <summary>
+        /// Backup record ID.
+        /// </summary>
+        [JsonProperty("BackId")]
+        public long? BackId{ get; set; }
+
+        /// <summary>
+        /// Backup deletion time.
+        /// </summary>
+        [JsonProperty("DeleteTime")]
+        public string DeleteTime{ get; set; }
+
+        /// <summary>
+        /// Region for cross-region backup.
+        /// </summary>
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +111,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackId", this.BackId);
+            this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
         }
     }
 }
