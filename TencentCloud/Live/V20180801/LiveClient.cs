@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.intl.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1166";
+       private const string sdkVersion = "SDK_NET_3.0.1169";
 
         /// <summary>
         /// Client constructor.
@@ -234,6 +234,48 @@ namespace TencentCloud.Live.V20180801
         public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplateSync(CreateLiveCallbackTemplateRequest req)
         {
             return InternalRequestAsync<CreateLiveCallbackTemplateResponse>(req, "CreateLiveCallbackTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// create a live pad rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadRuleRequest"/></param>
+        /// <returns><see cref="CreateLivePadRuleResponse"/></returns>
+        public Task<CreateLivePadRuleResponse> CreateLivePadRule(CreateLivePadRuleRequest req)
+        {
+            return InternalRequestAsync<CreateLivePadRuleResponse>(req, "CreateLivePadRule");
+        }
+
+        /// <summary>
+        /// create a live pad rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadRuleRequest"/></param>
+        /// <returns><see cref="CreateLivePadRuleResponse"/></returns>
+        public CreateLivePadRuleResponse CreateLivePadRuleSync(CreateLivePadRuleRequest req)
+        {
+            return InternalRequestAsync<CreateLivePadRuleResponse>(req, "CreateLivePadRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// create a live pad template
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadTemplateRequest"/></param>
+        /// <returns><see cref="CreateLivePadTemplateResponse"/></returns>
+        public Task<CreateLivePadTemplateResponse> CreateLivePadTemplate(CreateLivePadTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLivePadTemplateResponse>(req, "CreateLivePadTemplate");
+        }
+
+        /// <summary>
+        /// create a live pad template
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePadTemplateRequest"/></param>
+        /// <returns><see cref="CreateLivePadTemplateResponse"/></returns>
+        public CreateLivePadTemplateResponse CreateLivePadTemplateSync(CreateLivePadTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateLivePadTemplateResponse>(req, "CreateLivePadTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
