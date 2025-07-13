@@ -48,6 +48,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
+        /// <summary>
+        /// Specifies the retention days of full backup files. unit: day.
+        /// </summary>
+        [JsonProperty("BackupStorageDays")]
+        public long? BackupStorageDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
             this.SetParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
             this.SetParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
+            this.SetParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
         }
     }
 }
