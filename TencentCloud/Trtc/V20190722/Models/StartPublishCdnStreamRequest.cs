@@ -90,6 +90,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("FeedBackRoomParams")]
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }
 
+        /// <summary>
+        /// Relay Recording Parameters.
+        /// Example value:{"UniRecord":1,"RecordKey": "test_recore_key_a"}
+        /// </summary>
+        [JsonProperty("RecordParams")]
+        public McuRecordParams RecordParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
             this.SetParamObj(map, prefix + "SeiParams.", this.SeiParams);
             this.SetParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
+            this.SetParamObj(map, prefix + "RecordParams.", this.RecordParams);
         }
     }
 }
