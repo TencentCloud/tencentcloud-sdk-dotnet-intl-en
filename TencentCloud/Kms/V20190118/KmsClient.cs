@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.intl.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1172";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Kms.V20190118
         public BindCloudResourceResponse BindCloudResourceSync(BindCloudResourceRequest req)
         {
             return InternalRequestAsync<BindCloudResourceResponse>(req, "BindCloudResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to cancel scheduled deletion for a data key.
+        /// </summary>
+        /// <param name="req"><see cref="CancelDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="CancelDataKeyDeletionResponse"/></returns>
+        public Task<CancelDataKeyDeletionResponse> CancelDataKeyDeletion(CancelDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<CancelDataKeyDeletionResponse>(req, "CancelDataKeyDeletion");
+        }
+
+        /// <summary>
+        /// This API is used to cancel scheduled deletion for a data key.
+        /// </summary>
+        /// <param name="req"><see cref="CancelDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="CancelDataKeyDeletionResponse"/></returns>
+        public CancelDataKeyDeletionResponse CancelDataKeyDeletionSync(CancelDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<CancelDataKeyDeletionResponse>(req, "CancelDataKeyDeletion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -285,6 +306,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to retrieve data key details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDataKeyResponse"/></returns>
+        public Task<DescribeDataKeyResponse> DescribeDataKey(DescribeDataKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeyResponse>(req, "DescribeDataKey");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve data key details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDataKeyResponse"/></returns>
+        public DescribeDataKeyResponse DescribeDataKeySync(DescribeDataKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeyResponse>(req, "DescribeDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to return the key attribute information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeysRequest"/></param>
+        /// <returns><see cref="DescribeDataKeysResponse"/></returns>
+        public Task<DescribeDataKeysResponse> DescribeDataKeys(DescribeDataKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeysResponse>(req, "DescribeDataKeys");
+        }
+
+        /// <summary>
+        /// This API is used to return the key attribute information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataKeysRequest"/></param>
+        /// <returns><see cref="DescribeDataKeysResponse"/></returns>
+        public DescribeDataKeysResponse DescribeDataKeysSync(DescribeDataKeysRequest req)
+        {
+            return InternalRequestAsync<DescribeDataKeysResponse>(req, "DescribeDataKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the attribute details of the CMK with a specified `KeyId`.
         /// </summary>
         /// <param name="req"><see cref="DescribeKeyRequest"/></param>
@@ -432,6 +495,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to disable the data key.
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeyRequest"/></param>
+        /// <returns><see cref="DisableDataKeyResponse"/></returns>
+        public Task<DisableDataKeyResponse> DisableDataKey(DisableDataKeyRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeyResponse>(req, "DisableDataKey");
+        }
+
+        /// <summary>
+        /// This API is used to disable the data key.
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeyRequest"/></param>
+        /// <returns><see cref="DisableDataKeyResponse"/></returns>
+        public DisableDataKeyResponse DisableDataKeySync(DisableDataKeyRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeyResponse>(req, "DisableDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch disable data keys.
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeysRequest"/></param>
+        /// <returns><see cref="DisableDataKeysResponse"/></returns>
+        public Task<DisableDataKeysResponse> DisableDataKeys(DisableDataKeysRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeysResponse>(req, "DisableDataKeys");
+        }
+
+        /// <summary>
+        /// This API is used to batch disable data keys.
+        /// </summary>
+        /// <param name="req"><see cref="DisableDataKeysRequest"/></param>
+        /// <returns><see cref="DisableDataKeysResponse"/></returns>
+        public DisableDataKeysResponse DisableDataKeysSync(DisableDataKeysRequest req)
+        {
+            return InternalRequestAsync<DisableDataKeysResponse>(req, "DisableDataKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable a master key. The disabled key cannot be used for encryption and decryption operations.
         /// </summary>
         /// <param name="req"><see cref="DisableKeyRequest"/></param>
@@ -533,6 +638,48 @@ namespace TencentCloud.Kms.V20190118
         public DisableWhiteBoxKeysResponse DisableWhiteBoxKeysSync(DisableWhiteBoxKeysRequest req)
         {
             return InternalRequestAsync<DisableWhiteBoxKeysResponse>(req, "DisableWhiteBoxKeys")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable the data key.
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeyRequest"/></param>
+        /// <returns><see cref="EnableDataKeyResponse"/></returns>
+        public Task<EnableDataKeyResponse> EnableDataKey(EnableDataKeyRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeyResponse>(req, "EnableDataKey");
+        }
+
+        /// <summary>
+        /// This API is used to enable the data key.
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeyRequest"/></param>
+        /// <returns><see cref="EnableDataKeyResponse"/></returns>
+        public EnableDataKeyResponse EnableDataKeySync(EnableDataKeyRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeyResponse>(req, "EnableDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch enable data keys.
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeysRequest"/></param>
+        /// <returns><see cref="EnableDataKeysResponse"/></returns>
+        public Task<EnableDataKeysResponse> EnableDataKeys(EnableDataKeysRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeysResponse>(req, "EnableDataKeys");
+        }
+
+        /// <summary>
+        /// This API is used to batch enable data keys.
+        /// </summary>
+        /// <param name="req"><see cref="EnableDataKeysRequest"/></param>
+        /// <returns><see cref="EnableDataKeysResponse"/></returns>
+        public EnableDataKeysResponse EnableDataKeysSync(EnableDataKeysRequest req)
+        {
+            return InternalRequestAsync<EnableDataKeysResponse>(req, "EnableDataKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -726,6 +873,48 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// This API is used to download the encrypted data key.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyCiphertextBlobRequest"/></param>
+        /// <returns><see cref="GetDataKeyCiphertextBlobResponse"/></returns>
+        public Task<GetDataKeyCiphertextBlobResponse> GetDataKeyCiphertextBlob(GetDataKeyCiphertextBlobRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyCiphertextBlobResponse>(req, "GetDataKeyCiphertextBlob");
+        }
+
+        /// <summary>
+        /// This API is used to download the encrypted data key.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyCiphertextBlobRequest"/></param>
+        /// <returns><see cref="GetDataKeyCiphertextBlobResponse"/></returns>
+        public GetDataKeyCiphertextBlobResponse GetDataKeyCiphertextBlobSync(GetDataKeyCiphertextBlobRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyCiphertextBlobResponse>(req, "GetDataKeyCiphertextBlob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the key plaintext.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyPlaintextRequest"/></param>
+        /// <returns><see cref="GetDataKeyPlaintextResponse"/></returns>
+        public Task<GetDataKeyPlaintextResponse> GetDataKeyPlaintext(GetDataKeyPlaintextRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyPlaintextResponse>(req, "GetDataKeyPlaintext");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the key plaintext.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataKeyPlaintextRequest"/></param>
+        /// <returns><see cref="GetDataKeyPlaintextResponse"/></returns>
+        public GetDataKeyPlaintextResponse GetDataKeyPlaintextSync(GetDataKeyPlaintextRequest req)
+        {
+            return InternalRequestAsync<GetDataKeyPlaintextResponse>(req, "GetDataKeyPlaintext")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query whether the specified CMK has the key rotation function.
         /// </summary>
         /// <param name="req"><see cref="GetKeyRotationStatusRequest"/></param>
@@ -831,6 +1020,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// Data key import API, managed by KMS.
+        /// </summary>
+        /// <param name="req"><see cref="ImportDataKeyRequest"/></param>
+        /// <returns><see cref="ImportDataKeyResponse"/></returns>
+        public Task<ImportDataKeyResponse> ImportDataKey(ImportDataKeyRequest req)
+        {
+            return InternalRequestAsync<ImportDataKeyResponse>(req, "ImportDataKey");
+        }
+
+        /// <summary>
+        /// Data key import API, managed by KMS.
+        /// </summary>
+        /// <param name="req"><see cref="ImportDataKeyRequest"/></param>
+        /// <returns><see cref="ImportDataKeyResponse"/></returns>
+        public ImportDataKeyResponse ImportDataKeySync(ImportDataKeyRequest req)
+        {
+            return InternalRequestAsync<ImportDataKeyResponse>(req, "ImportDataKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to import key material into an EXTERNAL CMK. The key obtained through the `GetParametersForImport` API is used to encrypt the key material. You can only reimport the same key material into the specified CMK and set a new expiration time. After the CMK key material is imported, it cannot be replaced. After the key material is expired or deleted, the CMK will remain unavailable until the same key material is reimported. CMKs are independent, which means that the same key material can be imported into different CMKs, but data encrypted by one CMK cannot be decrypted by another one.
         /// Key material can only be imported into CMKs in `Enabled` and `PendingImport` status.
         /// </summary>
@@ -871,6 +1081,48 @@ namespace TencentCloud.Kms.V20190118
         public ListAlgorithmsResponse ListAlgorithmsSync(ListAlgorithmsRequest req)
         {
             return InternalRequestAsync<ListAlgorithmsResponse>(req, "ListAlgorithms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve data key list details based on specified Offset and Limit.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeyDetailRequest"/></param>
+        /// <returns><see cref="ListDataKeyDetailResponse"/></returns>
+        public Task<ListDataKeyDetailResponse> ListDataKeyDetail(ListDataKeyDetailRequest req)
+        {
+            return InternalRequestAsync<ListDataKeyDetailResponse>(req, "ListDataKeyDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve data key list details based on specified Offset and Limit.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeyDetailRequest"/></param>
+        /// <returns><see cref="ListDataKeyDetailResponse"/></returns>
+        public ListDataKeyDetailResponse ListDataKeyDetailSync(ListDataKeyDetailRequest req)
+        {
+            return InternalRequestAsync<ListDataKeyDetailResponse>(req, "ListDataKeyDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of data keys.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeysRequest"/></param>
+        /// <returns><see cref="ListDataKeysResponse"/></returns>
+        public Task<ListDataKeysResponse> ListDataKeys(ListDataKeysRequest req)
+        {
+            return InternalRequestAsync<ListDataKeysResponse>(req, "ListDataKeys");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of data keys.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataKeysRequest"/></param>
+        /// <returns><see cref="ListDataKeysResponse"/></returns>
+        public ListDataKeysResponse ListDataKeysSync(ListDataKeysRequest req)
+        {
+            return InternalRequestAsync<ListDataKeysResponse>(req, "ListDataKeys")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1043,6 +1295,27 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
+        /// Schedule deletion for a data key.
+        /// </summary>
+        /// <param name="req"><see cref="ScheduleDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="ScheduleDataKeyDeletionResponse"/></returns>
+        public Task<ScheduleDataKeyDeletionResponse> ScheduleDataKeyDeletion(ScheduleDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<ScheduleDataKeyDeletionResponse>(req, "ScheduleDataKeyDeletion");
+        }
+
+        /// <summary>
+        /// Schedule deletion for a data key.
+        /// </summary>
+        /// <param name="req"><see cref="ScheduleDataKeyDeletionRequest"/></param>
+        /// <returns><see cref="ScheduleDataKeyDeletionResponse"/></returns>
+        public ScheduleDataKeyDeletionResponse ScheduleDataKeyDeletionSync(ScheduleDataKeyDeletionRequest req)
+        {
+            return InternalRequestAsync<ScheduleDataKeyDeletionResponse>(req, "ScheduleDataKeyDeletion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
         /// </summary>
         /// <param name="req"><see cref="ScheduleKeyDeletionRequest"/></param>
@@ -1125,6 +1398,48 @@ namespace TencentCloud.Kms.V20190118
         public UpdateAliasResponse UpdateAliasSync(UpdateAliasRequest req)
         {
             return InternalRequestAsync<UpdateAliasResponse>(req, "UpdateAlias")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of a data key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyDescriptionRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyDescriptionResponse"/></returns>
+        public Task<UpdateDataKeyDescriptionResponse> UpdateDataKeyDescription(UpdateDataKeyDescriptionRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyDescriptionResponse>(req, "UpdateDataKeyDescription");
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of a data key.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyDescriptionRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyDescriptionResponse"/></returns>
+        public UpdateDataKeyDescriptionResponse UpdateDataKeyDescriptionSync(UpdateDataKeyDescriptionRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyDescriptionResponse>(req, "UpdateDataKeyDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the data key name.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyNameRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyNameResponse"/></returns>
+        public Task<UpdateDataKeyNameResponse> UpdateDataKeyName(UpdateDataKeyNameRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyNameResponse>(req, "UpdateDataKeyName");
+        }
+
+        /// <summary>
+        /// This API is used to modify the data key name.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataKeyNameRequest"/></param>
+        /// <returns><see cref="UpdateDataKeyNameResponse"/></returns>
+        public UpdateDataKeyNameResponse UpdateDataKeyNameSync(UpdateDataKeyNameRequest req)
+        {
+            return InternalRequestAsync<UpdateDataKeyNameResponse>(req, "UpdateDataKeyName")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

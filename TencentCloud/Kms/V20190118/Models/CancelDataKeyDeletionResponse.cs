@@ -21,30 +21,11 @@ namespace TencentCloud.Kms.V20190118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GenerateDataKeyResponse : AbstractModel
+    public class CancelDataKeyDeletionResponse : AbstractModel
     {
         
         /// <summary>
-        /// Globally unique CMK ID
-        /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
-
-        /// <summary>
-        /// If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
-        /// If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
-        /// </summary>
-        [JsonProperty("Plaintext")]
-        public string Plaintext{ get; set; }
-
-        /// <summary>
-        /// Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
-        /// </summary>
-        [JsonProperty("CiphertextBlob")]
-        public string CiphertextBlob{ get; set; }
-
-        /// <summary>
-        /// Globally unique id of the data key, returned when KMS hosting is enabled.
+        /// The unique identifier of the data key scheduled for deletion.
         /// </summary>
         [JsonProperty("DataKeyId")]
         public string DataKeyId{ get; set; }
@@ -61,9 +42,6 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "Plaintext", this.Plaintext);
-            this.SetParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
             this.SetParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

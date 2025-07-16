@@ -60,6 +60,30 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("EncryptionAlgorithm")]
         public string EncryptionAlgorithm{ get; set; }
 
+        /// <summary>
+        /// Indicates whether the data generated key is managed by KMS. 1 means the key is managed and saved by KMS. 0 means the key is not managed by KMS.
+        /// </summary>
+        [JsonProperty("IsHostedByKms")]
+        public ulong? IsHostedByKms{ get; set; }
+
+        /// <summary>
+        /// Name of the data key. required when IsHostedByKms is 1. optional when IsHostedByKms is 0 as KMS does not manage it.
+        /// </summary>
+        [JsonProperty("DataKeyName")]
+        public string DataKeyName{ get; set; }
+
+        /// <summary>
+        /// Describes the data key. maximum 100 bytes.
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// HSM cluster ID corresponding to the KMS exclusive edition. if HsmClusterId is specified, it indicates the root key is in this cluster and verifies whether KeyId corresponds to HsmClusterId.
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +96,10 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
             this.SetParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
             this.SetParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
+            this.SetParamSimple(map, prefix + "IsHostedByKms", this.IsHostedByKms);
+            this.SetParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         }
     }
 }

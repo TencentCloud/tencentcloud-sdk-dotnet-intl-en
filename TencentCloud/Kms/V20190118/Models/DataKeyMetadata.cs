@@ -21,119 +21,89 @@ namespace TencentCloud.Kms.V20190118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class KeyMetadata : AbstractModel
+    public class DataKeyMetadata : AbstractModel
     {
         
         /// <summary>
-        /// Globally unique CMK ID
+        /// DataKey globally unique id.
+        /// </summary>
+        [JsonProperty("DataKeyId")]
+        public string DataKeyId{ get; set; }
+
+        /// <summary>
+        /// Globally unique id of the CMK.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Alias that makes a key more recognizable and understandable
+        /// Key name as a more recognizable and understandable data key.
         /// </summary>
-        [JsonProperty("Alias")]
-        public string Alias{ get; set; }
+        [JsonProperty("DataKeyName")]
+        public string DataKeyName{ get; set; }
 
         /// <summary>
-        /// Key creation time
+        /// Specifies the length of the data key in bytes.
+        /// </summary>
+        [JsonProperty("NumberOfBytes")]
+        public ulong? NumberOfBytes{ get; set; }
+
+        /// <summary>
+        /// Key key creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// CMK description
+        /// DataKey description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+        /// DataKey status. valid values: Enabled, Disabled, PendingDelete.
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
-        /// </summary>
-        [JsonProperty("KeyUsage")]
-        public string KeyUsage{ get; set; }
-
-        /// <summary>
-        /// CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
-        /// </summary>
-        [JsonProperty("Type")]
-        public long? Type{ get; set; }
-
-        /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// Whether key rotation is enabled
-        /// </summary>
-        [JsonProperty("KeyRotationEnabled")]
-        public bool? KeyRotationEnabled{ get; set; }
-
-        /// <summary>
-        /// CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+        /// Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// Time of next rotation if key rotation is enabled
-        /// </summary>
-        [JsonProperty("NextRotateTime")]
-        public ulong? NextRotateTime{ get; set; }
-
-        /// <summary>
-        /// The time when scheduled deletion occurs.
+        /// The time when schedule deletion.
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
         /// <summary>
-        /// CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+        /// Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
-        /// </summary>
-        [JsonProperty("ValidTo")]
-        public ulong? ValidTo{ get; set; }
-
-        /// <summary>
-        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
-        /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
-
-        /// <summary>
-        /// HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+        /// HSM cluster ID (only applicable to KMS exclusive/managed service instance).
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
         /// <summary>
-        /// Key rotation period (days).
+        /// Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
         /// </summary>
-        [JsonProperty("RotateDays")]
-        public ulong? RotateDays{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Last disorderly rotation time (Unix timestamp).
-        /// </summary>
-        [JsonProperty("LastRotateTime")]
-        public ulong? LastRotateTime{ get; set; }
-
-        /// <summary>
-        /// Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+        /// Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
         /// </summary>
         [JsonProperty("IsSyncReplica")]
         public long? IsSyncReplica{ get; set; }
@@ -151,7 +121,7 @@ namespace TencentCloud.Kms.V20190118.Models
         public long? SyncStatus{ get; set; }
 
         /// <summary>
-        /// Describes the synchronous result.
+        /// Sresult description}.
         /// </summary>
         [JsonProperty("SyncMessages")]
         public string SyncMessages{ get; set; }
@@ -180,24 +150,19 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
             this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+            this.SetParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "KeyState", this.KeyState);
-            this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CreatorUin", this.CreatorUin);
-            this.SetParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
             this.SetParamSimple(map, prefix + "Owner", this.Owner);
-            this.SetParamSimple(map, prefix + "NextRotateTime", this.NextRotateTime);
             this.SetParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
-            this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
-            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
-            this.SetParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "IsSyncReplica", this.IsSyncReplica);
             this.SetParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
             this.SetParamSimple(map, prefix + "SyncStatus", this.SyncStatus);
