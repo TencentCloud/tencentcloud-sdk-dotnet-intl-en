@@ -25,13 +25,15 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Scaling group ID
+        /// Scaling group ID. obtain available scaling group ids in the following ways:.
+        /// <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+        /// <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Number of instances to be reduced
+        /// Number of resource instances to scale in. this parameter has a static value range of [1,2000] and must not be larger than the difference between the desired number and the minimum value. for example, if the scaling group desired number is 100 and the minimum value is 20, the permissible range is [1,80].
         /// </summary>
         [JsonProperty("ScaleInNumber")]
         public ulong? ScaleInNumber{ get; set; }

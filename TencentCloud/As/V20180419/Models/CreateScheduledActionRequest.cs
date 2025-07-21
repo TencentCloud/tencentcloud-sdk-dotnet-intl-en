@@ -25,7 +25,9 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Scaling group ID. obtain available scaling group ids in the following ways:.
+        /// <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+        /// <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
@@ -67,7 +69,7 @@ namespace TencentCloud.As.V20180419.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Repeating mode of the scheduled task, which is in standard cron format. <br><br>This parameter and `EndTime` need to be specified at the same time.
+        /// The repeating mode of a scheduled task follows the standard Cron format. the [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) in a scheduled task consist of 5 fields separated by spaces, with the structure: minute, hour, date, month, week. this parameter must be simultaneously specified with `EndTime`.
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }

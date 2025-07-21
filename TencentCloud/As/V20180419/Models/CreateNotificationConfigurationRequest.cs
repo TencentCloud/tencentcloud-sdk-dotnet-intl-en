@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Auto scaling group ID.
+        /// Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
@@ -43,18 +43,18 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationTypes{ get; set; }
 
         /// <summary>
-        /// Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+        /// Notification GROUP ID, which is the USER GROUP ID collection. USER GROUP ID can be accessed through [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1). this parameter is valid only when TargetType is USER_GROUP.
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// Notification receiver type. Valid values:
-        /// <br><li>USER_GROUP:User group
-        /// <br><li>CMQ_QUEUE:CMQ queue
-        /// <br><li>CMQ_TOPIC:CMQ topic
-        /// <br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
-        /// <br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+        /// Notification receiver type. values as follows:.
+        /// <Li>USER_GROUP: user group</li>.
+        /// <Li>TDMQ_CMQ_TOPIC: tdmq cmq topic</li>.
+        /// <Li>TDMQ_CMQ_QUEUE: tdmq cmq queue</li>.
+        /// <li>CMQ_QUEUE: CMQ QUEUE. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, only TDMQ CMQ is recommended.</li>.
+        /// <li>CMQ_TOPIC: specifies the CMQ TOPIC. [CMQ is offline](https://intl.cloud.tencent.com/document/product/1496/83970?from_cn_redirect=1). currently, TDMQ CMQ is recommended for use.</li>.
         /// 
         /// Default value: `USER_GROUP`.
         /// </summary>
@@ -62,13 +62,13 @@ namespace TencentCloud.As.V20180419.Models
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+        /// TDMQ CMQ QUEUE name. this field is required if TargetType value is `TDMQ_CMQ_QUEUE`.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+        /// TDMQ CMQ TOPIC name. this field is required when `TargetType` is `TDMQ_CMQ_TOPIC`.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

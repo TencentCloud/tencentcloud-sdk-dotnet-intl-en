@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1175";
 
         /// <summary>
         /// Client constructor.
@@ -675,6 +675,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to create a security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
+        public Task<CreateWebSecurityTemplateResponse> CreateWebSecurityTemplate(CreateWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateWebSecurityTemplateResponse>(req, "CreateWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
+        public CreateWebSecurityTemplateResponse CreateWebSecurityTemplateSync(CreateWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateWebSecurityTemplateResponse>(req, "CreateWebSecurityTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
         /// 
         /// If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
@@ -1074,6 +1095,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteSharedCNAMEResponse DeleteSharedCNAMESync(DeleteSharedCNAMERequest req)
         {
             return InternalRequestAsync<DeleteSharedCNAMEResponse>(req, "DeleteSharedCNAME")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
+        public Task<DeleteWebSecurityTemplateResponse> DeleteWebSecurityTemplate(DeleteWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteWebSecurityTemplateResponse>(req, "DeleteWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
+        public DeleteWebSecurityTemplateResponse DeleteWebSecurityTemplateSync(DeleteWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteWebSecurityTemplateResponse>(req, "DeleteWebSecurityTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2113,6 +2155,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query security policy configuration template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
+        public Task<DescribeWebSecurityTemplateResponse> DescribeWebSecurityTemplate(DescribeWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplateResponse>(req, "DescribeWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to query security policy configuration template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
+        public DescribeWebSecurityTemplateResponse DescribeWebSecurityTemplateSync(DescribeWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplateResponse>(req, "DescribeWebSecurityTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the security policy configuration template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
+        public Task<DescribeWebSecurityTemplatesResponse> DescribeWebSecurityTemplates(DescribeWebSecurityTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplatesResponse>(req, "DescribeWebSecurityTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to query the security policy configuration template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
+        public DescribeWebSecurityTemplatesResponse DescribeWebSecurityTemplatesSync(DescribeWebSecurityTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeWebSecurityTemplatesResponse>(req, "DescribeWebSecurityTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
@@ -3071,6 +3155,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifySecurityPolicyResponse ModifySecurityPolicySync(ModifySecurityPolicyRequest req)
         {
             return InternalRequestAsync<ModifySecurityPolicyResponse>(req, "ModifySecurityPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
+        public Task<ModifyWebSecurityTemplateResponse> ModifyWebSecurityTemplate(ModifyWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyWebSecurityTemplateResponse>(req, "ModifyWebSecurityTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify the security policy configuration template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
+        /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
+        public ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplateSync(ModifyWebSecurityTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyWebSecurityTemplateResponse>(req, "ModifyWebSecurityTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

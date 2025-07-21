@@ -25,7 +25,9 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Launch configuration ID
+        /// Launch configuration ID. obtain in the following ways:.
+        /// <li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+        /// <li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }

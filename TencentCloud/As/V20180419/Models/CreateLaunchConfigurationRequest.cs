@@ -37,8 +37,8 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Project ID of the launch configuration. The default project is used if it is left blank.
-        /// Note that this project ID is not the same as the project ID of the scaling group. 
+        /// Project ID of the launch configuration. default value is 0, indicating usage of the default project. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1).
+        /// Note: the instance's project ID within the scaling group takes the project ID of the scaling group, which is irrelevant here.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -108,24 +108,24 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
-        /// List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
-        /// `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
+        /// Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
+        /// The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+        /// CAM role name. you can obtain it from the roleName in the return value from the API [DescribeRoleList](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// InstanceType verification policy, whose valid values include ALL and ANY, with the default value being ANY.
-        /// <li>ALL: Verification passes if all InstanceTypes are available; otherwise, a verification error will be reported.</li>
-        /// <li>ANY: Verification passes if any InstanceType is available; otherwise, a verification error will be reported.</li>
+        /// Instance type validation policy. valid values include ALL and ANY. default value: ANY. this parameter is valid only when the InstanceTypes parameter contains multiple instance types.
+        /// <li>ALL: verification passes if ALL instancetypes are available; otherwise, a verification error will be reported.</li>.
+        /// <li>ANY: verification passes if ANY InstanceType is available; otherwise, a verification error will be reported.</li>.
         /// 
-        /// Common reasons for unavailable InstanceTypes include the InstanceType being sold out, and the corresponding cloud disk being sold out.
+        /// Common reasons for unavailable instancetypes include the instancetype being sold out and the corresponding cloud disk being sold out.
         /// If a model in InstanceTypes does not exist or has been abolished, a verification error will be reported regardless of the valid values set for InstanceTypesCheckPolicy.
         /// </summary>
         [JsonProperty("InstanceTypesCheckPolicy")]
@@ -171,8 +171,8 @@ namespace TencentCloud.As.V20180419.Models
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// HPC ID<br>
-        /// Note: This field is default to empty
+        /// High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+        /// Note: this field is empty by default.
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
@@ -190,13 +190,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// Image family name. Either image ID or image family name should be filled in, and only one of which can be filled.
+        /// Image family name. one and only one must be filled in between image Id and image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
         /// <summary>
-        /// CDC ID.
+        /// Local exclusive cluster ID. this parameter can be obtained through the [DescribeDedicatedClusters](https://intl.cloud.tencent.com/document/product/1346/73758?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

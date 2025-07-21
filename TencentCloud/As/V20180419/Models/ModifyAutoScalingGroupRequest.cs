@@ -25,7 +25,9 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Scaling group ID. obtain available scaling group ids in the following ways:.
+        /// <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+        /// <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
@@ -37,43 +39,45 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// Default cooldown period in seconds. Default value: 300
+        /// Default cooldown period in seconds. value ranges from 0 to 3600. default value: 300.
         /// </summary>
         [JsonProperty("DefaultCooldown")]
         public ulong? DefaultCooldown{ get; set; }
 
         /// <summary>
-        /// Desired number of instances. The number should be no larger than the maximum and no smaller than minimum number of instances
+        /// Expected number of instances, value ranges from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// Launch configuration ID
+        /// Launch configuration ID. obtain available launch configuration ids in the following ways:.
+        /// <li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
+        /// <li>Specifies the launch configuration ID obtained by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.</li>.
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// Maximum number of instances. Value range: 0-2,000.
+        /// Maximum number of instances, value range from 0 to 2000. to meet maximum value greater than or equal to expected value, expected value greater than or equal to minimum value.
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// Minimum number of instances. Value range: 0-2,000.
+        /// Minimum number of instances. value range [0,2000]. to meet maximum value equal to or greater than expected value, expected value equal to or greater than minimum value.
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID. obtain this parameter by calling [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1), `ProjectId` field in the return value. default value is 0, indicates usage of the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// List of subnet IDs
+        /// subnet ID list. you can obtain a valid vpc subnet ID by logging in to the [console](https://console.cloud.tencent.com/vpc/subnet). you can also call the API [DescribeSubnets](https://intl.cloud.tencent.com/document/product/215/15784?from_cn_redirect=1) and retrieve the valid vpc subnet ID from the SubnetId field in the API response.
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
@@ -87,7 +91,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] TerminationPolicies{ get; set; }
 
         /// <summary>
-        /// VPC ID. This field is left empty for basic networks. You need to specify SubnetIds when modifying the network of the auto scaling group to a VPC with a specified VPC ID. Specify Zones when modifying the network to a basic network.
+        /// vpc ID. when modifying the vpc, you need to change the SubnetIds parameter to the subnet of this vpc. effective VpcId can be queried by logging in to the console (https://console.cloud.tencent.com/vpc/vpc) or obtained from the VpcId field in the api response by calling the DescribeVpc api (https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -125,7 +129,7 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses that an instance has. Valid values: 0 and 1.
+        /// The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }

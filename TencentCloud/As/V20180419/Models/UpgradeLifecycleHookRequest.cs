@@ -25,25 +25,29 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Lifecycle hook ID
+        /// Lifecycle hook ID. you can call the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieve the LifecycleHookId from the returned information to obtain the lifecycle hook ID.
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }
 
         /// <summary>
-        /// Lifecycle hook name
+        /// Lifecycle hook name, which can contain chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 characters.
         /// </summary>
         [JsonProperty("LifecycleHookName")]
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
+        /// Scenario for performing the lifecycle hook. valid values:.
+        /// `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+        /// `INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
+        /// Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values are as follows:.
+        /// Default value, means CONTINUE to execute capacity expansion or reduction.
+        /// * ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand will be released directly or removed. for scale-in hooks, scale-in activities will continue.
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
@@ -55,7 +59,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+        /// Additional information sent by auto scaling to notification targets, used when configuring a notification (default value: ""). NotificationMetadata and LifecycleCommand are mutually exclusive parameters and cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
@@ -73,7 +77,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
-        /// Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+        /// Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` are mutually exclusive and cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

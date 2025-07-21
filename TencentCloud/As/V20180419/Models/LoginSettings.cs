@@ -34,7 +34,7 @@ namespace TencentCloud.As.V20180419.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// List of key IDs. After an instance is associated with a key, you can access the instance with the private key in the key pair. You can call `DescribeKeyPairs` to obtain `KeyId`. Key and password cannot be specified at the same time. Windows instances do not support keys. Currently, you can only specify one key when purchasing an instance.
+        /// List of key ids. after associating a key, you can access the instance through the corresponding private key. KeyId can be obtained by calling the api [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1). key and password cannot be specified simultaneously. the Windows operating system does not support specifying a key. currently, only one key can be specified during purchase.
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }

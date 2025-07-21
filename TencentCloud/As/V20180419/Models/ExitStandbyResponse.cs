@@ -26,7 +26,6 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// Scaling activity ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ActivityId")]
         public string ActivityId{ get; set; }

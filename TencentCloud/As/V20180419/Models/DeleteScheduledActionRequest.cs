@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// ID of the scheduled task to be deleted.
+        /// Scheduled task ID to be deleted. obtain the scheduled task ID by calling the api [DescribeScheduledActions](https://intl.cloud.tencent.com/document/api/377/20450?from_cn_redirect=1) and retrieving the ScheduledActionId from the returned information.
         /// </summary>
         [JsonProperty("ScheduledActionId")]
         public string ScheduledActionId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Launch configuration ID
+        /// Launch configuration ID. obtain the launch configuration ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/config) or calling the api DescribeLaunchConfigurations (https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the return information.
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
@@ -37,8 +37,8 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-        /// The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
+        /// Types of cvm instances. different instance models specify different resource specifications. supports up to 10 instance models.
+        /// The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. specifying the `InstanceTypes` field will invalidate the original `InstanceType`. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -151,14 +151,14 @@ namespace TencentCloud.As.V20180419.Models
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+        /// Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// HPC ID<br>
-        /// Note: This field is default to empty
+        /// High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+        /// Note: this field is empty by default.
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
@@ -170,7 +170,7 @@ namespace TencentCloud.As.V20180419.Models
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Placement group ID. Only one is allowed.
+        /// Placement group id. only one can be specified. obtain through the API [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
@@ -189,7 +189,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Image family name.
+        /// Image family name. this parameter can be obtained by calling the [DescribeImages](https://intl.cloud.tencent.com/document/product/213/15715?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }

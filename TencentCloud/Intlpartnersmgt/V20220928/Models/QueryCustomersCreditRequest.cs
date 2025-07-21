@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Search condition type. You can only search by customer ID, name, remarks, or email.
+        /// Search condition type. You can only search by ClientUin, Name, Remark, or Email.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Port
+        /// Port. value range: [1,65535]. as an input parameter, this parameter is required.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Weight
+        /// Weight. value range: [0,100]. this parameter is required as an input parameter.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

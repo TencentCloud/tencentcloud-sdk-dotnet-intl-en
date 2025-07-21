@@ -25,16 +25,16 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Queries by one or more scheduled task IDs in the format of asst-am691zxo. The maximum number of instances per request is 100. This parameter does not support specifying both ScheduledActionIds` and `Filters` at the same time.
+        /// Query by one or more scheduled task ids. you can obtain the scheduled task ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). the maximum number of instances per request is 100. parameters ScheduledActionIds and Filters must not be specified simultaneously.
         /// </summary>
         [JsonProperty("ScheduledActionIds")]
         public string[] ScheduledActionIds{ get; set; }
 
         /// <summary>
-        /// Filter.
-        /// <li> scheduled-action-id - String - Required: No - (Filter) Filter by scheduled task ID.</li>
-        /// <li> scheduled-action-name - String - Required: No - (Filter) Filter by scheduled task name.</li>
-        /// <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
+        /// Filter criteria. obtain the scheduled task ID, scheduled task name, and scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group).
+        /// <li> scheduled-action-id - String - required: no - (filter) filter by scheduled task id.</li>.
+        /// <li> scheduled-action-name - String - required: no - (filter criteria) filters by scheduled task name.</li>.
+        /// <li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id.</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -92,7 +92,7 @@ namespace TencentCloud.As.V20180419.Models
         public string UserData{ get; set; }
 
         /// <summary>
-        /// Creation time of the launch configuration.
+        /// Specifies the startup configuration creation time. uses UTC standard time.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -116,7 +116,11 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationStatus{ get; set; }
 
         /// <summary>
-        /// Instance billing type, with the CVM default value processed as POSTPAID_BY_HOUR. <li>POSTPAID_BY_HOUR: Hourly postpaid billing.</li> <li>SPOTPAID: Spot billing.</li>
+        /// Instance billing type. valid values:.
+        /// <Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
+        /// <Li>SPOTPAID: spot payment</li>.
+        /// <Li>PREPAID: prepaid, i.e., monthly subscription</li>.
+        /// <Li>CDCPAID: dedicated cluster payment</li>.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -141,8 +145,7 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Tag list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -154,13 +157,13 @@ namespace TencentCloud.As.V20180419.Models
         public long? VersionNumber{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last update time is in standard UTC time.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+        /// Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
@@ -216,7 +219,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Image family name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }

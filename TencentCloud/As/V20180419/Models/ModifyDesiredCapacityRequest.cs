@@ -25,25 +25,25 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Auto scaling group ID
+        /// Scaling group ID. obtain the scaling group ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1), and retrieve AutoScalingGroupId from the returned information.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Desired capacity
+        /// Expected number of instances, value ranges from 0 to 2000, to meet MaxSize >= DesiredCapacity >= MinSize.
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// Minimum number of instances. Value range: 0-2000.
+        /// Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// Maximum number of instances. Value range: 0-2000.
+        /// Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

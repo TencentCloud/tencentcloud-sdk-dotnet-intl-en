@@ -31,12 +31,13 @@ namespace TencentCloud.As.V20180419.Models
         public string[] AutoScalingPolicyIds{ get; set; }
 
         /// <summary>
-        /// Filters.
-        /// <li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
-        /// <li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
-        /// <li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
-        /// <li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
-        /// The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
+        /// Filter criteria
+        /// 
+        /// <li> auto-scaling-policy-id - String - required: no - (filter) filter by alert policy id.</li>.
+        /// <li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. obtain the scaling group id by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group) or calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+        /// <li>scaling-policy-name - String - required: no - (filter condition) filters by Alarm policy name.</li>.
+        /// <li>scaling-policy-type - String - required: no - (filter criteria) filters by Alarm policy type. valid values: SIMPLE, TARGET_TRACKING, representing SIMPLE policy and TARGET TRACKING policy respectively.</li>.
+        /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingPolicyIds` and `Filters` parameters cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

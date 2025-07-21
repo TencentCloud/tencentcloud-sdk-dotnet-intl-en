@@ -38,16 +38,16 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Scaling activity type. Valid values:
-        /// <li>SCALE_OUT: Scale out an instance.</li>
-        /// <li>SCALE_IN: Scale in an instance.</li>
-        /// <li>ATTACH_INSTANCES: Add an instance.</li>
-        /// <li>REMOVE_INSTANCES: Terminate an instance.</li>
-        /// <li>DETACH_INSTANCES: Remove an instance.</li>
-        /// <li>TERMINATE_INSTANCES_UNEXPECTEDLY: Terminate an instance in the CVM console.</li>
-        /// <li>REPLACE_UNHEALTHY_INSTANCE: Replace an unhealthy instance.</li>
-        /// <li>START_INSTANCES: Start an instance.</li>
-        /// <li>STOP_INSTANCES: Stop an instance.</li>
-        /// <li>INVOKE_COMMAND: Execute a command.</li>
+        /// <li>SCALE_OUT: Scale out instance(s).</li>
+        /// <li>SCALE_IN: Scale in instance(s).</li>
+        /// <li>ATTACH_INSTANCES: Add instance(s).</li>
+        /// <li>REMOVE_INSTANCES: Terminate instance(s).</li>
+        /// <li>DETACH_INSTANCES: Remove instance(s).</li>
+        /// <li>TERMINATE_INSTANCES_UNEXPECTEDLY: Instance(s) unexpectedly terminated in the CVM console.</li>
+        /// <li>REPLACE_UNHEALTHY_INSTANCE: Replace unhealthy instance(s).</li>
+        /// <li>START_INSTANCES: Start instance(s).</li>
+        /// <li>STOP_INSTANCES: Stop instance(s).</li>
+        /// <li>INVOKE_COMMAND: Execute a command in instance(s).</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
@@ -83,19 +83,19 @@ namespace TencentCloud.As.V20180419.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Start time of the scaling activity.
+        /// Start time of the auto scaling activity in UTC standard time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the scaling activity.
+        /// End time of the scaling activity in UTC standard time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Creation time of the scaling activity.
+        /// Create time of the scaling activity in UTC standard time.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -120,7 +120,7 @@ namespace TencentCloud.As.V20180419.Models
         public LifecycleActionResultInfo[] LifecycleActionResultSet{ get; set; }
 
         /// <summary>
-        /// Detailed description of scaling activity status
+        /// Detailed description of the scaling activity status
         /// </summary>
         [JsonProperty("DetailedStatusMessageSet")]
         public DetailedStatusMessage[] DetailedStatusMessageSet{ get; set; }
@@ -132,7 +132,7 @@ namespace TencentCloud.As.V20180419.Models
         public InvocationResult[] InvocationResultSet{ get; set; }
 
         /// <summary>
-        /// Information set of the instances related to the scaling activity.
+        /// Related instance information set of the scaling activity.
         /// </summary>
         [JsonProperty("RelatedInstanceSet")]
         public RelatedInstance[] RelatedInstanceSet{ get; set; }

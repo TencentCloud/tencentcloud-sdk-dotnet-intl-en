@@ -25,29 +25,29 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Lifecycle hook ID.
+        /// Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the LifecycleHookId from the returned information.
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }
 
         /// <summary>
-        /// Lifecycle hook name.
+        /// Lifecycle hook name. Name only supports chinese, english, digits, underscore (_), hyphen (-), decimal point (.), maximum length cannot exceed 128.
         /// </summary>
         [JsonProperty("LifecycleHookName")]
         public string LifecycleHookName{ get; set; }
 
         /// <summary>
-        /// Scenario for entering the lifecycle hook. Valid values:
-        /// <li>INSTANCE_LAUNCHING: after the instance is launched.</li>
-        /// <li>INSTANCE_TERMINATING: before the instance is terminated.</li>
+        /// Scenario for entering the lifecycle hook. valid values:.
+        /// `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+        /// `INSTANCE_TERMINATING`: the lifecycle hook is being scaled in.
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
 
         /// <summary>
-        /// Action to be taken by the scaling group in case of lifecycle hook timeout. Valid values:
-        /// <li>CONTINUE: Continue the scaling activity after timeout.</li>
-        /// <li>ABANDON: Terminate the scaling activity after timeout.</li>
+        /// Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+        /// Default value means CONTINUE to execute capacity expansion or reduction.
+        /// * ABANDON: for scale-out hooks, cvms that time out or fail to execute LifecycleCommand are released directly or removed. for scale-in hooks, scale-in activities continue.
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// Additional information sent by AS to the notification target.
+        /// Specifies the additional information sent by auto scaling to the notification target. NotificationMetadata and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
@@ -71,13 +71,13 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
-        /// Information of the notification target.
+        /// Notify the target information. NotificationTarget and LifecycleCommand are mutually exclusive. the two cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
 
         /// <summary>
-        /// Remote command execution object.
+        /// Remote command execution object. `NotificationMetadata`, `NotificationTarget`, and `LifecycleCommand` cannot be specified at the same time.
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

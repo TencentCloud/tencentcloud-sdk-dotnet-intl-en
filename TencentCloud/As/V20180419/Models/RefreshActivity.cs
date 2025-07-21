@@ -37,8 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string RefreshActivityId{ get; set; }
 
         /// <summary>
-        /// Original refresh activity ID, which exists only in the rollback refresh activity.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Original refresh activity ID. exists only in rollback refresh activity.
         /// </summary>
         [JsonProperty("OriginRefreshActivityId")]
         public string OriginRefreshActivityId{ get; set; }
@@ -50,7 +49,9 @@ namespace TencentCloud.As.V20180419.Models
         public RefreshBatch[] RefreshBatchSet{ get; set; }
 
         /// <summary>
-        /// Refresh mode.
+        /// Refresh mode. valid values as follows:.
+        /// <Li>ROLLING_UPDATE_RESET: reinstall the system for rolling updates.</li>.
+        /// <li>ROLLING_UPDATE_REPLACE: Create an instance and replace the old instance with it for rolling updates. This mode does not support the rollback API currently.</li>
         /// </summary>
         [JsonProperty("RefreshMode")]
         public string RefreshMode{ get; set; }
@@ -84,29 +85,27 @@ namespace TencentCloud.As.V20180419.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Current refresh batch number. For example, a value of 2 indicates that the current activity is refreshing the second batch of instances.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Current refresh batch number. for example, 2 indicates the second batch of instances is being refreshed by the current activity.
         /// </summary>
         [JsonProperty("CurrentRefreshBatchNum")]
         public ulong? CurrentRefreshBatchNum{ get; set; }
 
         /// <summary>
-        /// Refresh activity start time.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// The activity start time is refreshed in standard `UTC` time, in the format `YYYY-MM-DDTHH:MM:ssZ`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Refresh activity end time.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Refresh activity end time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Refresh activity creation time.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Refresh activity creation time, in standard UTC time, in the format YYYY-MM-DDTHH:MM:ssZ.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

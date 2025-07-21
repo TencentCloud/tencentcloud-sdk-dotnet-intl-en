@@ -63,7 +63,7 @@ namespace TencentCloud.As.V20180419.Models
         public long? AdjustmentValue{ get; set; }
 
         /// <summary>
-        /// Cooldown period. This parameter is only applicable to a simple policy.
+        /// Cooldown duration in seconds, applies only to simple policies. value range [0,3600]. default cooldown: 300 seconds.
         /// </summary>
         [JsonProperty("Cooldown")]
         public ulong? Cooldown{ get; set; }

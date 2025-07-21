@@ -25,12 +25,15 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// System disk type. For restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-        /// <li>LOCAL_BASIC: Local Disk.</li>
-        /// <li>LOCAL_SSD: Local SSD.</li>
-        /// <li>CLOUD_BASIC: Basic Cloud Disk.</li>
-        /// <li>CLOUD_PREMIUM: Premium Disk.</li>
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
+        /// System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+        /// <Li>LOCAL_BASIC: local hard disk.</li>.
+        /// <Li>LOCAL_SSD: local ssd.</li>.
+        /// <Li>CLOUD_BASIC: general cloud disk.</li>.
+        /// <Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+        /// <Li>CLOUD_SSD: cloud ssd</li>.
+        /// <Li>CLOUD_BSSD: universal ssd cloud disk</li>.
+        /// <Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+        /// <Li>CLOUD_TSSD: ultra ssd.</li>.
         /// <li>Default value: CLOUD_PREMIUM.</li>
         /// </summary>
         [JsonProperty("DiskType")]

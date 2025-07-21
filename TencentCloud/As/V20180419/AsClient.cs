@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.intl.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1175";
 
         /// <summary>
         /// Client constructor.
@@ -54,9 +54,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to add CVM instances to an auto scaling group.
+        /// This interface (AttachInstances) is used to add CVM instances to a scaling group.
         /// * Only CVM instances in `RUNNING` or `STOPPED` status can be added.
-        /// * The added CVM instances must in the same VPC as the scaling group.
+        /// This API is used to ensure added CVM instances match the VPC network of the scaling group.
         /// </summary>
         /// <param name="req"><see cref="AttachInstancesRequest"/></param>
         /// <returns><see cref="AttachInstancesResponse"/></returns>
@@ -66,9 +66,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to add CVM instances to an auto scaling group.
+        /// This interface (AttachInstances) is used to add CVM instances to a scaling group.
         /// * Only CVM instances in `RUNNING` or `STOPPED` status can be added.
-        /// * The added CVM instances must in the same VPC as the scaling group.
+        /// This API is used to ensure added CVM instances match the VPC network of the scaling group.
         /// </summary>
         /// <param name="req"><see cref="AttachInstancesRequest"/></param>
         /// <returns><see cref="AttachInstancesResponse"/></returns>
@@ -101,10 +101,11 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to cancel the instance refresh activity of the scaling group.
-        /// * The batches that have already been refreshed or are currently being refreshed remain unaffected, but the batches pending refresh will be canceled.
-        /// * If a refresh fails, the affected instances will remain in the secondary status, and require manual intervention to exit the secondary status or terminate the instances.
-        /// * Rollback operations are not allowed after cancellation, and recovery is also unsupported.
-        /// * The instances temporarily scaled out due to the MaxSurge parameter are automatically terminated after cancellation.
+        /// * The batches that have already been refreshed remain unaffected, but the batches pending refresh will be canceled.
+        /// * If a batch is currently refreshing, cancellation is not allowed. You can suspend the event and wait until the current batch finishes before canceling.
+        /// This API is used to refresh the failed instances. If a refresh fails, the affected instances will remain in standby status, and require manual intervention to exit the standby status or terminate the instances.
+        /// * Rollback operations are not allowed after cancellation, and recovery is unsupported.
+        /// Temporarily expanded instances due to the maxSurge parameter are automatically destroyed after cancellation.
         /// * During scale-in, all instances have already been updated and cannot be canceled.
         /// </summary>
         /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
@@ -116,10 +117,11 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to cancel the instance refresh activity of the scaling group.
-        /// * The batches that have already been refreshed or are currently being refreshed remain unaffected, but the batches pending refresh will be canceled.
-        /// * If a refresh fails, the affected instances will remain in the secondary status, and require manual intervention to exit the secondary status or terminate the instances.
-        /// * Rollback operations are not allowed after cancellation, and recovery is also unsupported.
-        /// * The instances temporarily scaled out due to the MaxSurge parameter are automatically terminated after cancellation.
+        /// * The batches that have already been refreshed remain unaffected, but the batches pending refresh will be canceled.
+        /// * If a batch is currently refreshing, cancellation is not allowed. You can suspend the event and wait until the current batch finishes before canceling.
+        /// This API is used to refresh the failed instances. If a refresh fails, the affected instances will remain in standby status, and require manual intervention to exit the standby status or terminate the instances.
+        /// * Rollback operations are not allowed after cancellation, and recovery is unsupported.
+        /// Temporarily expanded instances due to the maxSurge parameter are automatically destroyed after cancellation.
         /// * During scale-in, all instances have already been updated and cannot be canceled.
         /// </summary>
         /// <param name="req"><see cref="CancelInstanceRefreshRequest"/></param>
@@ -223,11 +225,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create a launch configuration.
+        /// This interface (CreateLaunchConfiguration) is used to create new launch configuration.
         /// 
-        /// * To modify a launch configuration, please use `ModifyLaunchConfigurationAttributes`.
+        /// * To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.
         /// 
-        /// * Up to 20 launch configurations can be created for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+        /// By default, 50 launch configurations can be created per region. For details, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
         /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>
@@ -237,11 +239,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create a launch configuration.
+        /// This interface (CreateLaunchConfiguration) is used to create new launch configuration.
         /// 
-        /// * To modify a launch configuration, please use `ModifyLaunchConfigurationAttributes`.
+        /// * To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.
         /// 
-        /// * Up to 20 launch configurations can be created for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+        /// By default, 50 launch configurations can be created per region. For details, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
         /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>
@@ -252,11 +254,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create a lifecycle hook.
+        /// This interface (CreateLifecycleHook) is used for creating a lifecycle hook.
         /// 
-        /// * You can configure notifications or automation commands (TAT) for the lifecycle hook.
+        /// * You can configure notifications or automation commands for the lifecycle hook.
         /// 
-        /// If you configured a notification, Auto Scaling will notify the TDMQ queue of the following information:
+        /// If you configured a notification, Auto Scaling will notify the TDMQ Message Queue of the following information:.
         /// 
         /// ```
         /// {
@@ -264,11 +266,11 @@ namespace TencentCloud.As.V20180419
         /// 	"Time": "2019-03-14T10:15:11Z",
         /// 	"AppId": "1251783334",
         /// 	"ActivityId": "asa-fznnvrja",
-        /// 	"AutoScalingGroupId": "asg-rrrrtttt",
-        /// 	"LifecycleHookId": "ash-xxxxyyyy",
+        /// 	"AutoScalingGroupId": "asg-ft6y7u8n",
+        /// 	"LifecycleHookId": "ash-p9i7y6t5",
         /// 	"LifecycleHookName": "my-hook",
         /// 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-        /// 	"InstanceId": "ins-aaaabbbb",
+        /// 	"InstanceId": "ins-y6dr5e43",
         /// 	"LifecycleTransition": "INSTANCE_LAUNCHING",
         /// 	"NotificationMetadata": ""
         /// }
@@ -282,11 +284,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to create a lifecycle hook.
+        /// This interface (CreateLifecycleHook) is used for creating a lifecycle hook.
         /// 
-        /// * You can configure notifications or automation commands (TAT) for the lifecycle hook.
+        /// * You can configure notifications or automation commands for the lifecycle hook.
         /// 
-        /// If you configured a notification, Auto Scaling will notify the TDMQ queue of the following information:
+        /// If you configured a notification, Auto Scaling will notify the TDMQ Message Queue of the following information:.
         /// 
         /// ```
         /// {
@@ -294,11 +296,11 @@ namespace TencentCloud.As.V20180419
         /// 	"Time": "2019-03-14T10:15:11Z",
         /// 	"AppId": "1251783334",
         /// 	"ActivityId": "asa-fznnvrja",
-        /// 	"AutoScalingGroupId": "asg-rrrrtttt",
-        /// 	"LifecycleHookId": "ash-xxxxyyyy",
+        /// 	"AutoScalingGroupId": "asg-ft6y7u8n",
+        /// 	"LifecycleHookId": "ash-p9i7y6t5",
         /// 	"LifecycleHookName": "my-hook",
         /// 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-        /// 	"InstanceId": "ins-aaaabbbb",
+        /// 	"InstanceId": "ins-y6dr5e43",
         /// 	"LifecycleTransition": "INSTANCE_LAUNCHING",
         /// 	"NotificationMetadata": ""
         /// }
@@ -453,7 +455,7 @@ namespace TencentCloud.As.V20180419
         /// <summary>
         /// This API (DeleteLaunchConfiguration) is used to delete a launch configuration.
         /// 
-        /// * If the launch configuration is active in an auto scaling group, it cannot be deleted.
+        /// * If the launch configuration is active in a scaling group, it cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteLaunchConfigurationRequest"/></param>
         /// <returns><see cref="DeleteLaunchConfigurationResponse"/></returns>
@@ -465,7 +467,7 @@ namespace TencentCloud.As.V20180419
         /// <summary>
         /// This API (DeleteLaunchConfiguration) is used to delete a launch configuration.
         /// 
-        /// * If the launch configuration is active in an auto scaling group, it cannot be deleted.
+        /// * If the launch configuration is active in a scaling group, it cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteLaunchConfigurationRequest"/></param>
         /// <returns><see cref="DeleteLaunchConfigurationResponse"/></returns>
@@ -964,6 +966,33 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// This API is used to set instances within the scaling group to standby status.
+        /// Instances in standby status have a CLB weight value of 0 and will not be selected for scaling in, unhealthy replacement, or refresh operation.
+        /// This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+        /// The instance enters standby status, and the scaling group attempts to lower the expected number of instances, which will not be less than the minimum value.
+        /// </summary>
+        /// <param name="req"><see cref="EnterStandbyRequest"/></param>
+        /// <returns><see cref="EnterStandbyResponse"/></returns>
+        public Task<EnterStandbyResponse> EnterStandby(EnterStandbyRequest req)
+        {
+            return InternalRequestAsync<EnterStandbyResponse>(req, "EnterStandby");
+        }
+
+        /// <summary>
+        /// This API is used to set instances within the scaling group to standby status.
+        /// Instances in standby status have a CLB weight value of 0 and will not be selected for scaling in, unhealthy replacement, or refresh operation.
+        /// This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+        /// The instance enters standby status, and the scaling group attempts to lower the expected number of instances, which will not be less than the minimum value.
+        /// </summary>
+        /// <param name="req"><see cref="EnterStandbyRequest"/></param>
+        /// <returns><see cref="EnterStandbyResponse"/></returns>
+        public EnterStandbyResponse EnterStandbySync(EnterStandbyRequest req)
+        {
+            return InternalRequestAsync<EnterStandbyResponse>(req, "EnterStandby")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to execute a scaling policy.
         /// 
         /// * The scaling policy can be executed based on the scaling policy ID.
@@ -993,9 +1022,10 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to exit instances from the standby status in the scaling group.
-        /// * When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
-        /// * Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+        /// This API is used to exit instances from standby status in the scaling group.
+        /// * After exiting standby status, the instance enters running state and the CLB weight value is restored to the default value.
+        /// This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+        /// After instances exit standby status, the scaling group will raise the expected number of instances. The new expected number cannot exceed the maximum value.
         /// </summary>
         /// <param name="req"><see cref="ExitStandbyRequest"/></param>
         /// <returns><see cref="ExitStandbyResponse"/></returns>
@@ -1005,9 +1035,10 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API is used to exit instances from the standby status in the scaling group.
-        /// * When an instance is in standby status, its load balancer weight is set to 0. Upon exiting the standby status, the weight value automatically gets restored.
-        /// * Initiating power-on/power-off actions on instances that are in standby status also results in them exiting from the standby status.
+        /// This API is used to exit instances from standby status in the scaling group.
+        /// * After exiting standby status, the instance enters running state and the CLB weight value is restored to the default value.
+        /// This API is used to call the Auto Scaling power-on/power-off API which may change the standby status, while the Cloud Virtual Machine server power on/off API will not affect it.
+        /// After instances exit standby status, the scaling group will raise the expected number of instances. The new expected number cannot exceed the maximum value.
         /// </summary>
         /// <param name="req"><see cref="ExitStandbyRequest"/></param>
         /// <returns><see cref="ExitStandbyResponse"/></returns>
@@ -1060,10 +1091,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (ModifyLaunchConfigurationAttributes) is used to modify some attributes of a launch configuration.
+        /// This API (ModifyLaunchConfigurationAttributes) is used to modify part of a launch configuration's attributes.
         /// 
-        /// * The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
-        /// * This API supports modifying certain simple types of attributes.
+        /// This API is used to modify the startup configuration. Existing instances scaled out using this configuration will not change, while newly added instances using this launch configuration will scale out according to the new configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyLaunchConfigurationAttributesRequest"/></param>
         /// <returns><see cref="ModifyLaunchConfigurationAttributesResponse"/></returns>
@@ -1073,10 +1103,9 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (ModifyLaunchConfigurationAttributes) is used to modify some attributes of a launch configuration.
+        /// This API (ModifyLaunchConfigurationAttributes) is used to modify part of a launch configuration's attributes.
         /// 
-        /// * The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
-        /// * This API supports modifying certain simple types of attributes.
+        /// This API is used to modify the startup configuration. Existing instances scaled out using this configuration will not change, while newly added instances using this launch configuration will scale out according to the new configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyLaunchConfigurationAttributesRequest"/></param>
         /// <returns><see cref="ModifyLaunchConfigurationAttributesResponse"/></returns>

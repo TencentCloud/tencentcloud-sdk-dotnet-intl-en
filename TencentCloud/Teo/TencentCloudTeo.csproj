@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1164</VersionPrefix>
+    <VersionPrefix>3.0.1175</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -353,6 +353,7 @@
     <Compile Include="V20220901\Models\AclConfig.cs" />
     <Compile Include="V20220901\Models\AclUserRule.cs" />
     <Compile Include="V20220901\Models\Action.cs" />
+    <Compile Include="V20220901\Models\AdaptiveFrequencyControl.cs" />
     <Compile Include="V20220901\Models\Addresses.cs" />
     <Compile Include="V20220901\Models\AdvancedFilter.cs" />
     <Compile Include="V20220901\Models\AiRule.cs" />
@@ -361,12 +362,15 @@
     <Compile Include="V20220901\Models\AlgDetectRule.cs" />
     <Compile Include="V20220901\Models\AlgDetectSession.cs" />
     <Compile Include="V20220901\Models\AliasDomain.cs" />
+    <Compile Include="V20220901\Models\AllowActionParameters.cs" />
     <Compile Include="V20220901\Models\ApplicationProxy.cs" />
     <Compile Include="V20220901\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220901\Models\AscriptionInfo.cs" />
     <Compile Include="V20220901\Models\AuthenticationParameters.cs" />
+    <Compile Include="V20220901\Models\BandwidthAbuseDefense.cs" />
     <Compile Include="V20220901\Models\BillingData.cs" />
     <Compile Include="V20220901\Models\BillingDataFilter.cs" />
+    <Compile Include="V20220901\Models\BindDomainInfo.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityRequest.cs" />
     <Compile Include="V20220901\Models\BindSecurityTemplateToEntityResponse.cs" />
     <Compile Include="V20220901\Models\BindSharedCNAMEMap.cs" />
@@ -378,6 +382,7 @@
     <Compile Include="V20220901\Models\BotConfig.cs" />
     <Compile Include="V20220901\Models\BotExtendAction.cs" />
     <Compile Include="V20220901\Models\BotManagedRule.cs" />
+    <Compile Include="V20220901\Models\BotManagement.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
     <Compile Include="V20220901\Models\BotUserRule.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
@@ -397,9 +402,13 @@
     <Compile Include="V20220901\Models\CachePrefreshParameters.cs" />
     <Compile Include="V20220901\Models\CacheTag.cs" />
     <Compile Include="V20220901\Models\CertificateInfo.cs" />
+    <Compile Include="V20220901\Models\ChallengeActionParameters.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusRequest.cs" />
     <Compile Include="V20220901\Models\CheckCnameStatusResponse.cs" />
     <Compile Include="V20220901\Models\CheckRegionHealthStatus.cs" />
+    <Compile Include="V20220901\Models\ClientAttestationRule.cs" />
+    <Compile Include="V20220901\Models\ClientAttestationRules.cs" />
+    <Compile Include="V20220901\Models\ClientFiltering.cs" />
     <Compile Include="V20220901\Models\ClientIPCountryParameters.cs" />
     <Compile Include="V20220901\Models\ClientIPHeaderParameters.cs" />
     <Compile Include="V20220901\Models\ClientIpCountry.cs" />
@@ -460,6 +469,8 @@
     <Compile Include="V20220901\Models\CreateSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\CreateSharedCNAMEResponse.cs" />
+    <Compile Include="V20220901\Models\CreateWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\CreateWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220901\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220901\Models\CurrentOriginACL.cs" />
@@ -511,9 +522,12 @@
     <Compile Include="V20220901\Models\DeleteSecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMERequest.cs" />
     <Compile Include="V20220901\Models\DeleteSharedCNAMEResponse.cs" />
+    <Compile Include="V20220901\Models\DeleteWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\DeleteWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220901\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220901\Models\DeliveryCondition.cs" />
+    <Compile Include="V20220901\Models\DenyActionParameters.cs" />
     <Compile Include="V20220901\Models\DeployConfigGroupVersionRequest.cs" />
     <Compile Include="V20220901\Models\DeployConfigGroupVersionResponse.cs" />
     <Compile Include="V20220901\Models\DeployRecord.cs" />
@@ -611,6 +625,10 @@
     <Compile Include="V20220901\Models\DescribeTopL7AnalysisDataResponse.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7CacheDataRequest.cs" />
     <Compile Include="V20220901\Models\DescribeTopL7CacheDataResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplateResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplatesRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeWebSecurityTemplatesResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultRequest.cs" />
     <Compile Include="V20220901\Models\DescribeZoneConfigImportResultResponse.cs" />
     <Compile Include="V20220901\Models\DescribeZoneSettingRequest.cs" />
@@ -623,6 +641,7 @@
     <Compile Include="V20220901\Models\DetectLengthLimitCondition.cs" />
     <Compile Include="V20220901\Models\DetectLengthLimitConfig.cs" />
     <Compile Include="V20220901\Models\DetectLengthLimitRule.cs" />
+    <Compile Include="V20220901\Models\DeviceProfile.cs" />
     <Compile Include="V20220901\Models\DiffIPWhitelist.cs" />
     <Compile Include="V20220901\Models\DisableOriginACLRequest.cs" />
     <Compile Include="V20220901\Models\DisableOriginACLResponse.cs" />
@@ -645,6 +664,8 @@
     <Compile Include="V20220901\Models\ExceptUserRule.cs" />
     <Compile Include="V20220901\Models\ExceptUserRuleCondition.cs" />
     <Compile Include="V20220901\Models\ExceptUserRuleScope.cs" />
+    <Compile Include="V20220901\Models\ExceptionRule.cs" />
+    <Compile Include="V20220901\Models\ExceptionRules.cs" />
     <Compile Include="V20220901\Models\ExportZoneConfigRequest.cs" />
     <Compile Include="V20220901\Models\ExportZoneConfigResponse.cs" />
     <Compile Include="V20220901\Models\FailReason.cs" />
@@ -673,6 +694,7 @@
     <Compile Include="V20220901\Models\HostHeaderParameters.cs" />
     <Compile Include="V20220901\Models\HostName.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
+    <Compile Include="V20220901\Models\HttpDDoSProtection.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
     <Compile Include="V20220901\Models\IPGroup.cs" />
     <Compile Include="V20220901\Models\IPRegionInfo.cs" />
@@ -707,6 +729,7 @@
     <Compile Include="V20220901\Models\ManagedRules.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
     <Compile Include="V20220901\Models\MaxAgeParameters.cs" />
+    <Compile Include="V20220901\Models\MinimalRequestBodyTransferRate.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainResponse.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainStatusesRequest.cs" />
@@ -772,6 +795,8 @@
     <Compile Include="V20220901\Models\ModifySecurityIPGroupResponse.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220901\Models\ModifySecurityPolicyResponse.cs" />
+    <Compile Include="V20220901\Models\ModifyWebSecurityTemplateRequest.cs" />
+    <Compile Include="V20220901\Models\ModifyWebSecurityTemplateResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneRequest.cs" />
     <Compile Include="V20220901\Models\ModifyZoneResponse.cs" />
     <Compile Include="V20220901\Models\ModifyZoneSettingRequest.cs" />
@@ -818,11 +843,15 @@
     <Compile Include="V20220901\Models\RateLimitTemplate.cs" />
     <Compile Include="V20220901\Models\RateLimitTemplateDetail.cs" />
     <Compile Include="V20220901\Models\RateLimitUserRule.cs" />
+    <Compile Include="V20220901\Models\RateLimitingRule.cs" />
+    <Compile Include="V20220901\Models\RateLimitingRules.cs" />
     <Compile Include="V20220901\Models\RealtimeLogDeliveryTask.cs" />
     <Compile Include="V20220901\Models\RedirectActionParameters.cs" />
     <Compile Include="V20220901\Models\RenewFlag.cs" />
     <Compile Include="V20220901\Models\RenewPlanRequest.cs" />
     <Compile Include="V20220901\Models\RenewPlanResponse.cs" />
+    <Compile Include="V20220901\Models\RequestBodyTransferTimeout.cs" />
+    <Compile Include="V20220901\Models\RequestFieldsForException.cs" />
     <Compile Include="V20220901\Models\Resource.cs" />
     <Compile Include="V20220901\Models\ResponseSpeedLimitParameters.cs" />
     <Compile Include="V20220901\Models\ReturnCustomPageActionParameters.cs" />
@@ -848,11 +877,13 @@
     <Compile Include="V20220901\Models\SecurityAction.cs" />
     <Compile Include="V20220901\Models\SecurityConfig.cs" />
     <Compile Include="V20220901\Models\SecurityPolicy.cs" />
+    <Compile Include="V20220901\Models\SecurityPolicyTemplateInfo.cs" />
     <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
     <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
+    <Compile Include="V20220901\Models\SlowAttackDefense.cs" />
     <Compile Include="V20220901\Models\SlowPostConfig.cs" />
     <Compile Include="V20220901\Models\SlowRateConfig.cs" />
     <Compile Include="V20220901\Models\SmartRouting.cs" />

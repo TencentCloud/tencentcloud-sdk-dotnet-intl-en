@@ -25,25 +25,25 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Load balancer ID
+        /// ID of the load balancer. this parameter is required as an input parameter. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Application load balancer listener ID
+        /// CLB listener ID. as an input parameter, this parameter is required. you can obtain it through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// List of target rule attributes
+        /// Target rule attribute list. as an input parameter, this parameter is required.
         /// </summary>
         [JsonProperty("TargetAttributes")]
         public TargetAttribute[] TargetAttributes{ get; set; }
 
         /// <summary>
-        /// ID of a forwarding rule. This parameter is required for layer-7 listeners.
+        /// The forwarding rule ID. note: this parameter is required for layer-7 (http/https) listeners. it can be obtained through the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

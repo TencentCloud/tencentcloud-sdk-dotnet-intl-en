@@ -46,20 +46,27 @@ namespace TencentCloud.As.V20180419.Models
         public bool? ReplaceLoadBalancerUnhealthy{ get; set; }
 
         /// <summary>
-        /// Replace mode of unhealthy replacement service. Valid values:
-        /// RECREATE: Rebuild an instance to replace the original unhealthy instance.
-        /// RESET: Performing a system reinstallation on unhealthy instances to keep information such as data disks, private IP addresses, and instance IDs unchanged. The instance login settings, HostName, enhanced services, and UserData will remain consistent with the current launch configuration.
+        /// Replacement mode of the unhealthy replacement service. valid values:.
+        /// RECREATE: rebuild an instance to replace the unhealthy instance.
+        /// RESET: performs a system reinstallation on unhealthy instances while keeping the data disk, private IP address, instance id, and other information unchanged. the instance login settings, hostname, enhanced services, and UserData remain consistent with the current launch configuration.
         /// Default value: RECREATE.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplaceMode")]
         public string ReplaceMode{ get; set; }
 
         /// <summary>
-        /// Automatic instance tag update. The default value is false. If this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (This feature takes effect for tag creation and editing but not tag deletion.) The update does not take effect immediately due to certain latency.
+        /// Automatic instance Tag update. the default value is False. if this feature is enabled, tags of running instances in a scaling group will be updated as well if the scaling group tags are updated. (this feature takes effect for Tag creation and editing but not Tag deletion.) the update does not take effect immediately due to certain latency.
         /// </summary>
         [JsonProperty("AutoUpdateInstanceTags")]
         public bool? AutoUpdateInstanceTags{ get; set; }
+
+        /// <summary>
+        /// Expected number of instances sync minimum and maximum value. default value is False. this parameter only takes effect in scenarios where the expected number is not passed in to modify scaling group api.
+        /// <Li>True: when modifying the maximum or minimum value, if a conflict exists with the current expected value, synchronously adjust the expected value. for example, if the input minimum value is 2 while the current expected value is 1, the expected value will be synchronously adjusted to 2.</li>.
+        /// <Li>False: if a conflict exists between the current expected value when modifying the maximum or minimum value, an error message indicates it is not allowed to be modified.</li>.
+        /// </summary>
+        [JsonProperty("DesiredCapacitySyncWithMaxMinSize")]
+        public bool? DesiredCapacitySyncWithMaxMinSize{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
             this.SetParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
             this.SetParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
+            this.SetParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
         }
     }
 }

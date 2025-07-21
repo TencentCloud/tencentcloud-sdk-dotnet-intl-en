@@ -25,13 +25,13 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Alarm policy ID.
+        /// Specifies the alert policy ID. obtain the alert policy ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeScalingPolicies (https://intl.cloud.tencent.com/document/api/377/33178?from_cn_redirect=1), and retrieve the AutoScalingPolicyId from the returned information.
         /// </summary>
         [JsonProperty("AutoScalingPolicyId")]
         public string AutoScalingPolicyId{ get; set; }
 
         /// <summary>
-        /// Alarm policy name.
+        /// The Alarm policy name must be unique in your account. the name length cannot exceed 60 characters. the name only supports chinese, english, digits, underscores, hyphens, and decimal separators.
         /// </summary>
         [JsonProperty("ScalingPolicyName")]
         public string ScalingPolicyName{ get; set; }

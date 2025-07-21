@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Rolling update settings parameters. RefreshMode is the rolling update. This parameter must be filled in.Note: This field may return null, indicating that no valid value can be obtained.
+        /// Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
         /// </summary>
         [JsonProperty("RollingUpdateSettings")]
         public RollingUpdateSettings RollingUpdateSettings{ get; set; }

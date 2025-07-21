@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Repeating mode of the scheduled task.
+        /// Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? MinSize{ get; set; }
 
         /// <summary>
-        /// Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+        /// The creation time of the scheduled task. value is in standard `UTC` time, formatted as `YYYY-MM-DDThh:MM:ssZ` according to the `ISO8601` standard.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }

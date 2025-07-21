@@ -45,6 +45,15 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MaxSurge")]
         public long? MaxSurge{ get; set; }
 
+        /// <summary>
+        /// Failure handling strategy. default value: AUTO_PAUSE. valid values:.
+        /// <Li>AUTO_PAUSE: suspended after refresh fails</li>.
+        /// <li>AUTO_ROLLBACK: roll back after a refresh fails. each batch rolls back one instance during ROLLBACK, and the CheckInstanceTargetHealth parameter value matches the original refresh activity. no need to roll back if the shrinkage process introduced by the MaxSurge parameter fails. a cancel action will replace the ROLLBACK.</li>.
+        /// <Li>AUTO_CANCEL: cancel after refresh fails</li>.
+        /// </summary>
+        [JsonProperty("FailProcess")]
+        public string FailProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +63,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "BatchNumber", this.BatchNumber);
             this.SetParamSimple(map, prefix + "BatchPause", this.BatchPause);
             this.SetParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
+            this.SetParamSimple(map, prefix + "FailProcess", this.FailProcess);
         }
     }
 }

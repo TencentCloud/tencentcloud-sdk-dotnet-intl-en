@@ -25,25 +25,28 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Lifecycle hook ID
+        /// Lifecycle hook ID. you can get the lifecycle hook ID by calling the api [DescribeLifecycleHooks](https://intl.cloud.tencent.com/document/api/377/34452?from_cn_redirect=1) and retrieving the `LifecycleHookId` from the returned information.
         /// </summary>
         [JsonProperty("LifecycleHookId")]
         public string LifecycleHookId{ get; set; }
 
         /// <summary>
-        /// Result of the lifecycle action. Value range: "CONTINUE", "ABANDON"
+        /// Describes the result of the lifecycle action. valid values are as follows:.
+        /// <Li>CONTINUE: default value, means continue execution of capacity expansion or reduction</li>.
+        /// <li>ABANDON: for scale-out hooks, CVM instances with hook timeout or failed LifecycleCommand execution will be released directly or moved; for scale-in hooks, scale-in activities will continue.</li>.
         /// </summary>
         [JsonProperty("LifecycleActionResult")]
         public string LifecycleActionResult{ get; set; }
 
         /// <summary>
-        /// Instance ID. Either "InstanceId" or "LifecycleActionToken" must be specified
+        /// One of the parameters `InstanceId` or `LifecycleActionToken` is required. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Either "InstanceId" or "LifecycleActionToken" must be specified
+        /// Lifecycle action token. specifies that one of `InstanceId` or `LifecycleActionToken` must be filled.
+        /// The method for accessing the parameter is as follows: when the hook of the `NotificationTarget` parameter is triggered, deliver a message containing the token to the message queue specified in the `NotificationTarget` parameter. the message queue consumer can obtain the token from the message.
         /// </summary>
         [JsonProperty("LifecycleActionToken")]
         public string LifecycleActionToken{ get; set; }

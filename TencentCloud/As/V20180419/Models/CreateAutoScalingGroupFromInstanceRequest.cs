@@ -31,25 +31,25 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupName{ get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// Instance ID. you can get the instance ID by logging in to the [console](https://console.cloud.tencent.com/cvm/index) or making an api call to [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and retrieving the `InstanceId` from the returned information.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The minimum number of instances. Value range: 0-2000.
+        /// Minimum number of instances. value range: [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize at the same time.
         /// </summary>
         [JsonProperty("MinSize")]
         public long? MinSize{ get; set; }
 
         /// <summary>
-        /// The maximum number of instances. Value range: 0-2000.
+        /// Maximum instance count. value range [0,2000]. to meet MaxSize >= DesiredCapacity >= MinSize.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }
 
         /// <summary>
-        /// The desired capacity. Its value must be greater than the minimum and smaller than the maximum.
+        /// Expected number of instances, value ranges from 0 to 2000, default value equals current MinSize, to meet MaxSize >= DesiredCapacity >= MinSize.
         /// </summary>
         [JsonProperty("DesiredCapacity")]
         public long? DesiredCapacity{ get; set; }

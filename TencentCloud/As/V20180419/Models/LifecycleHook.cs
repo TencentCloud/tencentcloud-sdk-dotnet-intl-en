@@ -43,19 +43,23 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Default result of the lifecycle hook
+        /// Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
+        /// -CONTINUE execution by default means capacity expansion or reduction.
+        /// -For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
 
         /// <summary>
-        /// Wait timeout period of the lifecycle hook
+        /// Specifies the timeout waiting time of the lifecycle hook in seconds. value range: 30 to 7200.
         /// </summary>
         [JsonProperty("HeartbeatTimeout")]
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// Applicable scenario of the lifecycle hook
+        /// Scenario for entering the lifecycle hook. valid values:.
+        /// -`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+        /// -INSTANCE_TERMINATING: scale-in lifecycle hook.
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }
@@ -67,7 +71,7 @@ namespace TencentCloud.As.V20180419.Models
         public string NotificationMetadata{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time. uses UTC for timing.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -79,14 +83,14 @@ namespace TencentCloud.As.V20180419.Models
         public NotificationTarget NotificationTarget{ get; set; }
 
         /// <summary>
-        /// Applicable scenario of the lifecycle hook
+        /// Specifies the scenario type for performing the lifecycle hook. valid values: NORMAL and EXTENSION. default value: NORMAL.
+        /// Description: when set to `EXTENSION`, the lifecycle hook will be triggered during `AttachInstances`, `DetachInstances`, or `RemoveInstances` API calls. if set to `NORMAL`, the lifecycle hook will not be triggered by these apis.
         /// </summary>
         [JsonProperty("LifecycleTransitionType")]
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
         /// Remote command execution object.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }

@@ -31,22 +31,20 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Refresh instance status. If an instance is removed or destroyed during the refresh process, its status will be updated to NOT_FOUND. Valid values: <br><li>WAITING: pending refresh.</li> <li>INIT: Initializing.</li> <li>RUNNING: Refreshing in progress.</li> <li>FAILED: Refresh failed.</li> <li>CANCELLED: Canceled.</li> <li>SUCCESSFUL: Refreshed.</li> <li>NOT_FOUND: Instance not found.
+        /// Refresh instance status. if the instance is removed or terminated during refresh, the status will be updated to NOT_FOUND. valid values: <li>WAITING: pending refresh;</li> <li>INIT: initializing;</li> <li>RUNNING: refreshing;</li> <li>FAILED: refresh FAILED;</li> <li>CANCELLED: CANCELLED;</li> <li>SUCCESSFUL: refresh SUCCESSFUL;</li> <li>NOT_FOUND: instance does NOT exist.</li>.
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities API.
+        /// The most recent scaling activity ID during instance refresh can be queried via the DescribeAutoScalingActivities api.
         /// Please note that scaling activities differ from instance refresh activities; a single instance refresh activity may involve multiple scaling activities.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("LastActivityId")]
         public string LastActivityId{ get; set; }
 
         /// <summary>
-        /// Instance refresh status information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Describes the instance refresh status.
         /// </summary>
         [JsonProperty("InstanceStatusMessage")]
         public string InstanceStatusMessage{ get; set; }

@@ -137,13 +137,15 @@ namespace TencentCloud.As.V20180419.Models
         public string[] SubnetIdSet{ get; set; }
 
         /// <summary>
-        /// Termination policy
+        /// Destruction policy. valid values are as follows:.
+        /// <Li>OLDEST_INSTANCE: terminate the oldest instance in the scaling group first, default value.</li>.
+        /// <Li>NEWEST_INSTANCE: terminate the newest instance in the scaling group first.</li>.
         /// </summary>
         [JsonProperty("TerminationPolicySet")]
         public string[] TerminationPolicySet{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -155,7 +157,10 @@ namespace TencentCloud.As.V20180419.Models
         public string[] ZoneSet{ get; set; }
 
         /// <summary>
-        /// Retry policy
+        /// Retry policy. a partially successful scaling operation is considered a failed activity. valid values are as follows:.
+        /// <Li>IMMEDIATE_RETRY: default value, means retry immediately, attempting retries in rapid succession over a short period. cease further retries after a certain number of consecutive failures (5).</li>.
+        /// <Li>INCREMENTAL_INTERVALS: specifies incremental interval retry. with the number of consecutive failures, the retry interval gradually increases. the first 10 retries are quick retry, and the follow-up retry interval gradually expands to 10 minutes, 30 minutes, 60 minutes, and one day.</li>.
+        /// <Li>NO_RETRY: there will be no retry until another user call or Alarm information is received.</li>.
         /// </summary>
         [JsonProperty("RetryPolicy")]
         public string RetryPolicy{ get; set; }
@@ -179,7 +184,7 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses that an instance has.
+        /// The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
@@ -201,7 +206,8 @@ namespace TencentCloud.As.V20180419.Models
         public string HealthCheckType{ get; set; }
 
         /// <summary>
-        /// Grace period of the CLB health check
+        /// Grace period of the CLB health check. the scaled-out instances IN `IN_SERVICE` will not be marked as `CLB_UNHEALTHY` within the specified time range.
+        /// Default value: 0. value range: [0, 7200]. measurement unit: seconds.
         /// </summary>
         [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
@@ -231,7 +237,6 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Instance name sequencing settings.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InstanceNameIndexSettings")]
         public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Time.
+        /// Data timestamp.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -36,6 +36,31 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Value")]
         public ulong? Value{ get; set; }
 
+        /// <summary>
+        /// Zone ID (or content identifier if enabled).
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// Domain name.
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
+        /// <summary>
+        /// Layer-4 proxy instance ID.
+        /// </summary>
+        [JsonProperty("ProxyId")]
+        public string ProxyId{ get; set; }
+
+        /// <summary>
+        /// Billing region (based on EdgeOne node location). Values: 
+        /// <li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public string RegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +69,10 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
         }
     }
 }

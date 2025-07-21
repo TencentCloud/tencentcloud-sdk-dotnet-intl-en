@@ -25,13 +25,15 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Scaling group ID.
+        /// Scaling group ID. obtain available scaling group ids in the following ways:.
+        /// <li>Query the scaling group ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/group).</li>.
+        /// <li>Specifies the scaling group ID obtained by calling the api [DescribeAutoScalingGroups](https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the return information.</li>.
         /// </summary>
         [JsonProperty("AutoScalingGroupId")]
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// Refresh activity ID.
+        /// Refresh activity ID. you can obtain the instance refresh activity ID by calling the api [DescribeRefreshActivities](https://intl.cloud.tencent.com/document/api/377/99175?from_cn_redirect=1) and retrieving the RefreshActivityId from the returned information.
         /// </summary>
         [JsonProperty("RefreshActivityId")]
         public string RefreshActivityId{ get; set; }

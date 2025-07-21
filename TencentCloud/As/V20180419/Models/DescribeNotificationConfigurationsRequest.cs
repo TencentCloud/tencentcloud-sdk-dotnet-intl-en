@@ -25,16 +25,17 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Queries by one or more notification IDs in the format of asn-2sestqbr. The maximum number of instances per request is 100. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+        /// Query by one or more notification ids. the list length limit is 100. you can obtain the notification ID by logging in to the console (https://console.cloud.tencent.com/autoscaling/group). parameters AutoScalingNotificationIds and Filters must not be specified simultaneously.
         /// </summary>
         [JsonProperty("AutoScalingNotificationIds")]
         public string[] AutoScalingNotificationIds{ get; set; }
 
         /// <summary>
-        /// Filter.
-        /// <li> auto-scaling-notification-id - String - Required: No - (Filter) Filter by notification ID.</li>
-        /// <li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-        /// The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingNotificationIds` and `Filters` at the same time.
+        /// Filter criteria
+        /// 
+        /// <li> auto-scaling-notification-id - String - required: no - (filter) filter by notification id.</li>.
+        /// <li> auto-scaling-group-id - String - required: no - (filter) filter by auto scaling group id. you can obtain the scaling group id by logging in to the console (https://console.cloud.tencent.com/autoscaling/group) or calling the api DescribeAutoScalingGroups (https://intl.cloud.tencent.com/document/api/377/20438?from_cn_redirect=1) and retrieving the AutoScalingGroupId from the returned information.</li>.
+        /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `AutoScalingNotificationIds` and `Filters` parameters cannot be specified simultaneously.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

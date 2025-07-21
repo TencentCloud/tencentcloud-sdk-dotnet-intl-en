@@ -37,8 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// Resource type bound with tags. Valid values: auto-scaling-group and launch-configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

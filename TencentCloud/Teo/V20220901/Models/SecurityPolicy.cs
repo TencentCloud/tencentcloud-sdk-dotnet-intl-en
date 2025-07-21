@@ -38,6 +38,30 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ManagedRules")]
         public ManagedRules ManagedRules{ get; set; }
 
+        /// <summary>
+        /// HTTP DDOS protection configuration.
+        /// </summary>
+        [JsonProperty("HttpDDoSProtection")]
+        public HttpDDoSProtection HttpDDoSProtection{ get; set; }
+
+        /// <summary>
+        /// Configures the rate limiting rule.
+        /// </summary>
+        [JsonProperty("RateLimitingRules")]
+        public RateLimitingRules RateLimitingRules{ get; set; }
+
+        /// <summary>
+        /// Exception rule configuration.
+        /// </summary>
+        [JsonProperty("ExceptionRules")]
+        public ExceptionRules ExceptionRules{ get; set; }
+
+        /// <summary>
+        /// Bot management configuration.
+        /// </summary>
+        [JsonProperty("BotManagement")]
+        public BotManagement BotManagement{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +70,10 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamObj(map, prefix + "CustomRules.", this.CustomRules);
             this.SetParamObj(map, prefix + "ManagedRules.", this.ManagedRules);
+            this.SetParamObj(map, prefix + "HttpDDoSProtection.", this.HttpDDoSProtection);
+            this.SetParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
+            this.SetParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
+            this.SetParamObj(map, prefix + "BotManagement.", this.BotManagement);
         }
     }
 }

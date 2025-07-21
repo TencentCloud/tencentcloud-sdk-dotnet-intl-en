@@ -25,27 +25,28 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Data disk type. For restrictions on the data disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). Valid values:
-        /// <li>LOCAL_BASIC: Local Disk.</li>
-        /// <li>LOCAL_SSD: Local SSD.</li>
-        /// <li>CLOUD_BASIC: Basic Cloud Disk.</li>
-        /// <li>CLOUD_PREMIUM: Premium Disk.</li>
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
-        /// <li>CLOUD_HSSD: Enhanced SSD.</li>
-        /// <li>CLOUD_TSSD: Tremendous SSD.</li>
+        /// Data disk type. for restrictions on data disk types, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
+        /// <Li>LOCAL_BASIC: local hard disk.</li>.
+        /// <Li>LOCAL_SSD: local ssd.</li>.
+        /// <Li>CLOUD_BASIC: general cloud disk.</li>.
+        /// <Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
+        /// <Li>CLOUD_SSD: cloud ssd</li>.
+        /// <Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
+        /// <Li>CLOUD_TSSD: ultra ssd.</li>.
+        /// <Li>CLOUD_BSSD: universal ssd cloud disk</li>.
         /// The default value is consistent with the system disk type (SystemDisk.DiskType).
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Data disk size, in GB. The minimum adjustment step size is 10 GB. The value range varies according to the data disk type. For specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Default value: 0, which means that no data disk is purchased. For more restrictions, see the product documentation.
+        /// Data disk size, in GB. the value range varies according to the data disk type. for specific restrictions, see [CVM instance configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). default value: 0, which means no data disk is purchased. for more restrictions, see the [product documentation](https://intl.cloud.tencent.com/document/product/362/5145?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Data disk snapshot ID, such as `snap-l8psqwnt`.
+        /// The data disk snapshot ID can be obtained through the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) api.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotId")]
@@ -78,9 +79,8 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// Burst performance: Whether to enable burst performance. The default value is false.
-        /// 
-        /// Note: This feature is in beta test and requires a ticket to be submitted for usage.
+        /// Burst performance. specifies whether to enable burst performance. default value is false. this parameter only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD) with capacity > 460GB.
+        /// Note: this feature is in beta test and requires a ticket to be submitted for usage.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BurstPerformance")]

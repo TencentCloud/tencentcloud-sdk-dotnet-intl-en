@@ -25,29 +25,56 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specific action name for security operation. Values:
-        /// <li>`Deny`: block</li> <li>`Monitor`: monitor</li> <li>`ReturnCustomPage`: block with customized page</li> <li>`Redirect`: Redirect to URL</li> <li>`BlockIP`: IP block</li> <li>`JSChallenge`: javaScript challenge</li> <li>`ManagedChallenge`: managed challenge</li> <li>`Disabled`: disabled</li> <li>`Allow`: allow</li>.
+        /// Safe execution actions. valid values:.
+        /// <Li>Deny: block request to access site resource;</li>.
+        /// <Li>`Monitor`: observe; only record logs</li>.
+        /// <li>`Redirect`: Redirect to URL</li>.
+        /// <Li>Disabled: disabled; specify rule is not enabled.</li>.
+        /// <Li>Allow: allow access but delay processing the request.</li>.
+        /// <Li>Challenge: challenge, respond to challenge content;</li>.
+        /// <Li>BlockIP: to be deprecated, ip block;</li>.
+        /// <Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+        /// <li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
+        /// <Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Additional parameter when Name is BlockIP.
+        /// Additional parameters when Name is Deny.
         /// </summary>
-        [JsonProperty("BlockIPActionParameters")]
-        public BlockIPActionParameters BlockIPActionParameters{ get; set; }
-
-        /// <summary>
-        /// Additional parameter when Name is ReturnCustomPage.
-        /// </summary>
-        [JsonProperty("ReturnCustomPageActionParameters")]
-        public ReturnCustomPageActionParameters ReturnCustomPageActionParameters{ get; set; }
+        [JsonProperty("DenyActionParameters")]
+        public DenyActionParameters DenyActionParameters{ get; set; }
 
         /// <summary>
         /// Additional parameter when Name is Redirect.
         /// </summary>
         [JsonProperty("RedirectActionParameters")]
         public RedirectActionParameters RedirectActionParameters{ get; set; }
+
+        /// <summary>
+        /// Additional parameters when Name is Allow.
+        /// </summary>
+        [JsonProperty("AllowActionParameters")]
+        public AllowActionParameters AllowActionParameters{ get; set; }
+
+        /// <summary>
+        /// Additional parameter when Name is Challenge.
+        /// </summary>
+        [JsonProperty("ChallengeActionParameters")]
+        public ChallengeActionParameters ChallengeActionParameters{ get; set; }
+
+        /// <summary>
+        /// To be deprecated, additional parameter when Name is BlockIP.
+        /// </summary>
+        [JsonProperty("BlockIPActionParameters")]
+        public BlockIPActionParameters BlockIPActionParameters{ get; set; }
+
+        /// <summary>
+        /// To be deprecated, additional parameter when Name is ReturnCustomPage.
+        /// </summary>
+        [JsonProperty("ReturnCustomPageActionParameters")]
+        public ReturnCustomPageActionParameters ReturnCustomPageActionParameters{ get; set; }
 
 
         /// <summary>
@@ -56,9 +83,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamObj(map, prefix + "DenyActionParameters.", this.DenyActionParameters);
+            this.SetParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
+            this.SetParamObj(map, prefix + "AllowActionParameters.", this.AllowActionParameters);
+            this.SetParamObj(map, prefix + "ChallengeActionParameters.", this.ChallengeActionParameters);
             this.SetParamObj(map, prefix + "BlockIPActionParameters.", this.BlockIPActionParameters);
             this.SetParamObj(map, prefix + "ReturnCustomPageActionParameters.", this.ReturnCustomPageActionParameters);
-            this.SetParamObj(map, prefix + "RedirectActionParameters.", this.RedirectActionParameters);
         }
     }
 }
