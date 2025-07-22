@@ -48,6 +48,30 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SteadyState")]
+        public bool? SteadyState{ get; set; }
+
+        /// <summary>
+        /// User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);
             this.SetParamSimple(map, prefix + "EndPtsTime", this.EndPtsTime);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SteadyState", this.SteadyState);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

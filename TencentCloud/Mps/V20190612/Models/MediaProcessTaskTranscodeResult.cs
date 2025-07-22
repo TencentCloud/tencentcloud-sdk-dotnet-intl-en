@@ -62,8 +62,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaTranscodeItem Output{ get; set; }
 
         /// <summary>
-        /// Transcoding progress. Value range: 0-100
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Transcoding progress, with a value range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

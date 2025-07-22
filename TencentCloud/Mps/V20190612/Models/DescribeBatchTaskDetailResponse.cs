@@ -65,8 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Video processing task information. This field has a value only when TaskType is BatchTask.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Video processing task information. this field has a value only when TaskType is BatchTask.
         /// </summary>
         [JsonProperty("BatchTaskResult")]
         public BatchSubTaskResult BatchTaskResult{ get; set; }

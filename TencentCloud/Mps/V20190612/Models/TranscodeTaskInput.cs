@@ -31,8 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Custom video transcoding parameter, which is valid if `Definition` is 0.
-        /// This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+        /// Custom video transcoding parameter. valid when Definition is set to 0.
+        /// This parameter is used in high customization scenarios. it is recommended that you preferentially use Definition to specify transcoding parameters.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawTranscodeParameter RawParameter{ get; set; }
@@ -47,8 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public OverrideTranscodeParameter OverrideParameter{ get; set; }
 
         /// <summary>
-        /// List of up to 10 image or text watermarks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }

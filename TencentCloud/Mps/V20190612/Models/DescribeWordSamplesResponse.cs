@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Number of eligible entries.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of qualified records.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

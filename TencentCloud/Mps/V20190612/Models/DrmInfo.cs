@@ -26,11 +26,24 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Encryption type.
-        /// <li>simpleaes: AES-128 encryption</li>
-        /// <li> widevine</li>
-        /// <li>fairplay: not supported for DASH streams</li>
-        /// <li> playready</li>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
+        /// - simpleaes
+        /// Can only be used for HLS. format support ts and mp4.
+        /// Only can be used in slice mode. cannot be used in singlefile mode.
+        /// 
+        /// - fairplay:
+        /// Can only be used for HLS. valid values: mp4.
+        /// Available for use in slice mode or singlefile mode.
+        /// 
+        /// - widevine:
+        /// Can be used for HLS and DASH. format can only be mp4.
+        /// Output HLS: available for use in slice mode or singlefile mode.
+        /// Output DASH: can only be in singlefile mode.
+        /// 
+        /// - playready:
+        /// Can be used for HLS and DASH. format can only be mp4.
+        /// Output HLS: available for use in slice mode or singlefile mode.
+        /// Output DASH: can only be singlefile mode.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

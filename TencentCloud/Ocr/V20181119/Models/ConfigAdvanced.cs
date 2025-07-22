@@ -21,32 +21,14 @@ namespace TencentCloud.Ocr.V20181119.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WordItem : AbstractModel
+    public class ConfigAdvanced : AbstractModel
     {
         
         /// <summary>
-        /// The text content.
+        /// Single attribute configuration of a template.
         /// </summary>
-        [JsonProperty("DetectedText")]
-        public string DetectedText{ get; set; }
-
-        /// <summary>
-        /// The coordinates of the four vertices.
-        /// </summary>
-        [JsonProperty("Coord")]
-        public Polygon Coord{ get; set; }
-
-        /// <summary>
-        /// Description.
-        /// </summary>
-        [JsonProperty("AdvancedInfo")]
-        public string AdvancedInfo{ get; set; }
-
-        /// <summary>
-        /// Specifies the four-point coordinate of the word.
-        /// </summary>
-        [JsonProperty("WordCoord")]
-        public WordPolygon[] WordCoord{ get; set; }
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DetectedText", this.DetectedText);
-            this.SetParamObj(map, prefix + "Coord.", this.Coord);
-            this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
-            this.SetParamArrayObj(map, prefix + "WordCoord.", this.WordCoord);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

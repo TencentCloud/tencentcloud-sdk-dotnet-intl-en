@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The notification type. Valid values:
-        /// <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-        /// <li>`TDMQ-CMQ`: Message queue</li>
-        /// <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-        /// <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
-        /// <li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
-        /// <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
+        /// Notification type. available values:.
+        /// <li>CMQ: offline. switch to TDMQ-CMQ.</li>.
+        /// <Li>TDMQ-CMQ: message queue</li>.
+        /// <li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
+        /// <Li>SCF: not recommended. additional configuration is required in the console.</li>.
+        /// <Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
+        /// <font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
@@ -81,8 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AwsSQS AwsSQS{ get; set; }
 
         /// <summary>
-        /// The key used to generate the callback signature.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// key used to generate a callback signature.
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

@@ -49,29 +49,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Recognition task input.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Input of the recognition task.
         /// </summary>
         [JsonProperty("Input")]
         public SmartSubtitlesTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Recognition task output.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Output of the identification task.
         /// </summary>
         [JsonProperty("Output")]
         public SmartSubtitlesResult[] Output{ get; set; }
 
         /// <summary>
         /// Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
         /// Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

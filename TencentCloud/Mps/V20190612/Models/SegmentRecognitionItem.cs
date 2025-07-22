@@ -43,28 +43,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the split segment URL.
         /// </summary>
         [JsonProperty("SegmentUrl")]
         public string SegmentUrl{ get; set; }
 
         /// <summary>
-        /// Segment cover.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the segment cover.
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
 
         /// <summary>
         /// Segment title.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// Segment summary.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the segment summary.
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
@@ -76,15 +73,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// The start time of a live streaming segment, in the ISO date format.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the start time of a live streaming segment in the ISO date format.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// The end time of a live streaming segment, in the ISO date format.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the end time of a live streaming segment in the ISO date format.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

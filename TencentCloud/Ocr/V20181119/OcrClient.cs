@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1176";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,35 @@ namespace TencentCloud.Ocr.V20181119
         public BankCardOCRResponse BankCardOCRSync(BankCardOCRRequest req)
         {
             return InternalRequestAsync<BankCardOCRResponse>(req, "BankCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
+        /// 
+        /// This API is used to set the alias SmartStructuralPro.
+        /// 
+        /// The default API request rate limit is 5 requests per second.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractDocMultiRequest"/></param>
+        /// <returns><see cref="ExtractDocMultiResponse"/></returns>
+        public Task<ExtractDocMultiResponse> ExtractDocMulti(ExtractDocMultiRequest req)
+        {
+            return InternalRequestAsync<ExtractDocMultiResponse>(req, "ExtractDocMulti");
+        }
+
+        /// <summary>
+        /// This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
+        /// 
+        /// This API is used to set the alias SmartStructuralPro.
+        /// 
+        /// The default API request rate limit is 5 requests per second.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractDocMultiRequest"/></param>
+        /// <returns><see cref="ExtractDocMultiResponse"/></returns>
+        public ExtractDocMultiResponse ExtractDocMultiSync(ExtractDocMultiRequest req)
+        {
+            return InternalRequestAsync<ExtractDocMultiResponse>(req, "ExtractDocMulti")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

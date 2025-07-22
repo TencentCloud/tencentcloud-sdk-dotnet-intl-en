@@ -66,29 +66,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
-        /// The subtitle settings.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subtitle stream configuration parameter.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// The information of the external audio track to add.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the external audio track parameter.
         /// </summary>
         [JsonProperty("AddonAudioStream")]
         public MediaInputInfo[] AddonAudioStream{ get; set; }
 
         /// <summary>
-        /// An extended field for transcoding.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension field for transcoding.
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// The subtitle file to add.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subtitle file to be inserted.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }

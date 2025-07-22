@@ -51,70 +51,61 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskFaceSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// The person’s gender.
-        /// <li>Male</li>
-        /// <li>Female</li>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Gender of the person.
+        /// <Li>Male: man.</li>.
+        /// <Li>Female: specifies the woman.</li>.
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }
 
         /// <summary>
-        /// The person’s birth date.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Date of birth.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// The person’s job or job title.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Occupation or position of a person.
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// The college the person graduated from.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the graduation institution of the person.
         /// </summary>
         [JsonProperty("SchoolOfGraduation")]
         public string SchoolOfGraduation{ get; set; }
 
         /// <summary>
-        /// The person’s profile.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Description of the person.
         /// </summary>
         [JsonProperty("Abstract")]
         public string Abstract{ get; set; }
 
         /// <summary>
-        /// The person’s place of birth.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the birthplace or place of origin.
         /// </summary>
         [JsonProperty("PlaceOfBirth")]
         public string PlaceOfBirth{ get; set; }
 
         /// <summary>
-        /// Whether the person is a politician or artist.
-        /// <li>Politician</li>
-        /// <li>Artist</li>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Person type.
+        /// <Li>Politician: specifies the official.</li>.
+        /// <Li>Artist: specifies the artist.</li>.
         /// </summary>
         [JsonProperty("PersonType")]
         public string PersonType{ get; set; }
 
         /// <summary>
-        /// Sensitivity
-        /// <li>Normal</li>
-        /// <li>Sensitive</li>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Sensitivity labeling.
+        /// <Li>Normal: specifies the scaling group is normal.</li>.
+        /// <Li>Sensitive: specifies sensitivity.</li>.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// The screenshot URL.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the screenshot link.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

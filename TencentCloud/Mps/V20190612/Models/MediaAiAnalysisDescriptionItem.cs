@@ -55,6 +55,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Paragraphs")]
         public AiParagraphInfo[] Paragraphs{ get; set; }
 
+        /// <summary>
+        /// Address of the mind map of a summary task.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("MindMapUrl")]
+        public string MindMapUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Title", this.Title);
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
+            this.SetParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
         }
     }
 }

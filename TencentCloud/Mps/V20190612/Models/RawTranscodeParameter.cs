@@ -68,7 +68,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Additional parameter, which is a serialized JSON string.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

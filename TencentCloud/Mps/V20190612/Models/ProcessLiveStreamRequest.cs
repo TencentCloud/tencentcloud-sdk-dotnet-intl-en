@@ -25,7 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Live stream URL, which must be a live stream file address. RTMP, HLS, and FLV are supported.
+        /// Live stream URL. (It should be a live streaming file address. RTMP, HLS, FLV, and TRTC addresses are supported.)
+        /// A TRTC address is as follows:
+        ///  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+        /// `<roomid>` is the TRTC room ID, which is a number.
+        /// `<sdkappid>` is the SDK app ID of TRTC.
+        /// `<userid>` is the user ID for accessing a room, which can be used to distinguish robots.
+        /// <`usersig>` is the TRTC user signature.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ComposeSubtitleItem : AbstractModel
+    public class StopWebRecordRequest : AbstractModel
     {
         
         /// <summary>
-        /// The subtitle style ID, which corresponds to the `Id` field of `ComposeStyles`.
+        /// The ID of the task that needs to be stopped
         /// </summary>
-        [JsonProperty("StyleId")]
-        public string StyleId{ get; set; }
-
-        /// <summary>
-        /// Subtitle text. note: long text may exceed the frame. recommend using \n for line breaks.
-        /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
-
-        /// <summary>
-        /// The time of the element in the timeline. If this is not specified, the element will follow the previous element.	
-        /// </summary>
-        [JsonProperty("TrackTime")]
-        public ComposeTrackTime TrackTime{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StyleId", this.StyleId);
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamObj(map, prefix + "TrackTime.", this.TrackTime);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

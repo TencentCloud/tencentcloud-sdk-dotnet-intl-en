@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Path of a subtitle file extracted from a video.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginSubtitlePath")]
         public string OriginSubtitlePath{ get; set; }
 
         /// <summary>
         /// Path of a subtitle translation file extracted from a video.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranslateSubtitlePath")]
         public string TranslateSubtitlePath{ get; set; }

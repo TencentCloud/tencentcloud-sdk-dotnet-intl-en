@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1171";
+       private const string sdkVersion = "SDK_NET_3.0.1176";
 
         /// <summary>
         /// Client constructor.
@@ -658,6 +658,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// Queries the status of a web-page recording task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
+        /// <returns><see cref="DescribeWebRecordResponse"/></returns>
+        public Task<DescribeWebRecordResponse> DescribeWebRecord(DescribeWebRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeWebRecordResponse>(req, "DescribeWebRecord");
+        }
+
+        /// <summary>
+        /// Queries the status of a web-page recording task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
+        /// <returns><see cref="DescribeWebRecordResponse"/></returns>
+        public DescribeWebRecordResponse DescribeWebRecordSync(DescribeWebRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeWebRecordResponse>(req, "DescribeWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
         /// </summary>
         /// <param name="req"><see cref="DismissRoomRequest"/></param>
@@ -1005,6 +1026,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This interface can be used to initiate a web-page recording task. In the interface parameters, specify the recording URL, recording resolution, recording result storage and other parameters. If there are parameter or API logic problems, the result will be returned immediately. If there are page problems, such as the page cannot be accessed, the result will be returned in the callback. Please pay attention.
+        /// </summary>
+        /// <param name="req"><see cref="StartWebRecordRequest"/></param>
+        /// <returns><see cref="StartWebRecordResponse"/></returns>
+        public Task<StartWebRecordResponse> StartWebRecord(StartWebRecordRequest req)
+        {
+            return InternalRequestAsync<StartWebRecordResponse>(req, "StartWebRecord");
+        }
+
+        /// <summary>
+        /// This interface can be used to initiate a web-page recording task. In the interface parameters, specify the recording URL, recording resolution, recording result storage and other parameters. If there are parameter or API logic problems, the result will be returned immediately. If there are page problems, such as the page cannot be accessed, the result will be returned in the callback. Please pay attention.
+        /// </summary>
+        /// <param name="req"><see cref="StartWebRecordRequest"/></param>
+        /// <returns><see cref="StartWebRecordResponse"/></returns>
+        public StartWebRecordResponse StartWebRecordSync(StartWebRecordRequest req)
+        {
+            return InternalRequestAsync<StartWebRecordResponse>(req, "StartWebRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Stop AI conversation task
         /// </summary>
         /// <param name="req"><see cref="StopAIConversationRequest"/></param>
@@ -1085,6 +1127,27 @@ namespace TencentCloud.Trtc.V20190722
         public StopStreamIngestResponse StopStreamIngestSync(StopStreamIngestRequest req)
         {
             return InternalRequestAsync<StopStreamIngestResponse>(req, "StopStreamIngest")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Stop an web-page recording task
+        /// </summary>
+        /// <param name="req"><see cref="StopWebRecordRequest"/></param>
+        /// <returns><see cref="StopWebRecordResponse"/></returns>
+        public Task<StopWebRecordResponse> StopWebRecord(StopWebRecordRequest req)
+        {
+            return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord");
+        }
+
+        /// <summary>
+        /// Stop an web-page recording task
+        /// </summary>
+        /// <param name="req"><see cref="StopWebRecordRequest"/></param>
+        /// <returns><see cref="StopWebRecordResponse"/></returns>
+        public StopWebRecordResponse StopWebRecordSync(StopWebRecordRequest req)
+        {
+            return InternalRequestAsync<StopWebRecordResponse>(req, "StopWebRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

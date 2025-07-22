@@ -55,20 +55,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public SnapshotByTimeOffsetTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of a time point screenshot task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the output of a screenshot task at specified time points for a video.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }
 
         /// <summary>
-        /// The time when the task started executing, in ISO date format.
+        /// Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// The time when the task finished, in ISO date format.
+        /// Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

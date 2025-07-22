@@ -31,32 +31,27 @@ namespace TencentCloud.Mps.V20190612.Models
         public string HotwordsId{ get; set; }
 
         /// <summary>
-        /// Current status of the hotword lexicon corresponding to the ID. The value 0 indicates that no template is bound to this hotword lexicon when the query is performed and that the hotword lexicon can be deleted.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Hotword lexicon name.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Name of the hot lexicon.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
-        /// The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
+        /// Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
+        /// Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
         /// 
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// Name of the uploaded hotword file.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -71,42 +66,36 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Hotword text, which depends on the value of Type.
         /// If the value of Type is 0, the hotword string is returned.
         /// If the value of Type is 1, the base64-encoded content of the hotword file is returned.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
         /// Number of words contained in the hotword lexicon.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("WordCount")]
         public ulong? WordCount{ get; set; }
 
         /// <summary>
         /// Paging offset. Default value: 0.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
         /// Number of returned entries. Default value: 10. Maximum value: 100.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".Note: This field may return null, indicating that no valid value can be obtained.
+        /// Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time of the hotword lexicon in ISO datetime format (UTC time). For example, "2006-01-02T15:04:05Z".
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

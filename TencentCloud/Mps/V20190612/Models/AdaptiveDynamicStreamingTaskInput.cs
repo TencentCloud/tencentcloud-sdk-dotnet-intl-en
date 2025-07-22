@@ -77,19 +77,23 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Drm information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
 
         /// <summary>
         /// Adaptive transcoding template type.
-        /// Common: audio-video.
+        /// Common: audio/video type.
         /// PureAudio: audio-only.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefinitionType")]
         public string DefinitionType{ get; set; }
+
+        /// <summary>
+        /// Subtitle setting.
+        /// </summary>
+        [JsonProperty("SubtitleTemplate")]
+        public string SubtitleTemplate{ get; set; }
 
 
         /// <summary>
@@ -106,6 +110,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
             this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
+            this.SetParamSimple(map, prefix + "SubtitleTemplate", this.SubtitleTemplate);
         }
     }
 }

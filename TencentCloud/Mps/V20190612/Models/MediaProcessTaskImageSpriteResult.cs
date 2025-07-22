@@ -55,11 +55,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public ImageSpriteTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of an image sprite generating task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the output of an image sprite task for a video.
         /// </summary>
         [JsonProperty("Output")]
         public MediaImageSpriteItem Output{ get; set; }
+
+        /// <summary>
+        /// Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
 
 
         /// <summary>
@@ -73,6 +84,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

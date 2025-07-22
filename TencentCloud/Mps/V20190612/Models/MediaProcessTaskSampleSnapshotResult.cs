@@ -56,20 +56,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public SampleSnapshotTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of a sampled screenshot task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the output of a sampling screenshot task for a video.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSampleSnapshotItem Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task execution start time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task execution completion time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
