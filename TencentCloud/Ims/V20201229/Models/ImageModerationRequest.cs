@@ -72,6 +72,12 @@ namespace TencentCloud.Ims.V20201229.Models
         [JsonProperty("Device")]
         public Device Device{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "MaxFrames", this.MaxFrames);
             this.SetParamObj(map, prefix + "User.", this.User);
             this.SetParamObj(map, prefix + "Device.", this.Device);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.intl.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1175";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -201,8 +201,6 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to create launch configurations and scaling groups based on an instance.
-        /// 
-        /// Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
         /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>
@@ -213,8 +211,6 @@ namespace TencentCloud.As.V20180419
 
         /// <summary>
         /// This API is used to create launch configurations and scaling groups based on an instance.
-        /// 
-        /// Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoScalingGroupFromInstanceRequest"/></param>
         /// <returns><see cref="CreateAutoScalingGroupFromInstanceResponse"/></returns>

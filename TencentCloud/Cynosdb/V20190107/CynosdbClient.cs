@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -2633,6 +2633,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RemoveClusterSlaveZoneResponse RemoveClusterSlaveZoneSync(RemoveClusterSlaveZoneRequest req)
         {
             return InternalRequestAsync<RemoveClusterSlaveZoneResponse>(req, "RemoveClusterSlaveZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to replay instance audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
+        /// <returns><see cref="ReplayInstanceAuditLogResponse"/></returns>
+        public Task<ReplayInstanceAuditLogResponse> ReplayInstanceAuditLog(ReplayInstanceAuditLogRequest req)
+        {
+            return InternalRequestAsync<ReplayInstanceAuditLogResponse>(req, "ReplayInstanceAuditLog");
+        }
+
+        /// <summary>
+        /// This API is used to replay instance audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
+        /// <returns><see cref="ReplayInstanceAuditLogResponse"/></returns>
+        public ReplayInstanceAuditLogResponse ReplayInstanceAuditLogSync(ReplayInstanceAuditLogRequest req)
+        {
+            return InternalRequestAsync<ReplayInstanceAuditLogResponse>(req, "ReplayInstanceAuditLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1167";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -919,6 +919,27 @@ namespace TencentCloud.Billing.V20180709
         public ModifyGatherRuleResponse ModifyGatherRuleSync(ModifyGatherRuleRequest req)
         {
             return InternalRequestAsync<ModifyGatherRuleResponse>(req, "ModifyGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pay for an order.
+        /// </summary>
+        /// <param name="req"><see cref="PayDealsRequest"/></param>
+        /// <returns><see cref="PayDealsResponse"/></returns>
+        public Task<PayDealsResponse> PayDeals(PayDealsRequest req)
+        {
+            return InternalRequestAsync<PayDealsResponse>(req, "PayDeals");
+        }
+
+        /// <summary>
+        /// This API is used to pay for an order.
+        /// </summary>
+        /// <param name="req"><see cref="PayDealsRequest"/></param>
+        /// <returns><see cref="PayDealsResponse"/></returns>
+        public PayDealsResponse PayDealsSync(PayDealsRequest req)
+        {
+            return InternalRequestAsync<PayDealsResponse>(req, "PayDeals")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

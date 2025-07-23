@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+        /// The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen "-" and periods. It cannot exceed 55 bytes.
         /// </summary>
         [JsonProperty("AutoScalingGroupName")]
         public string AutoScalingGroupName{ get; set; }

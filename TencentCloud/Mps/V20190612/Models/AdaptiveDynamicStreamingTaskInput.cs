@@ -90,10 +90,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// Subtitle setting.
+        /// Specifies the subtitle parameter.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
-        public string SubtitleTemplate{ get; set; }
+        public SubtitleTemplate SubtitleTemplate{ get; set; }
 
 
         /// <summary>
@@ -110,7 +111,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AddOnSubtitles.", this.AddOnSubtitles);
             this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
-            this.SetParamSimple(map, prefix + "SubtitleTemplate", this.SubtitleTemplate);
+            this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tms.V20201229
 
        private const string endpoint = "tms.intl.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -58,7 +58,7 @@ namespace TencentCloud.Tms.V20201229
         /// 
         /// ### Notes
         /// - Before invoking this API, be sure you have activated Tencent Cloud Text Moderation System in the [Content Moderation - Text Moderation System](https://console.cloud.tencent.com/cms/text/package) console.
-        /// - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://intl.cloud.tencent.com/product/tms/pricing?from_cn_redirect=1).
+        /// - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://www.tencentcloud.com/document/product/1121/43752).
         /// 
         ///  
         ///  
@@ -84,7 +84,7 @@ namespace TencentCloud.Tms.V20201229
         /// 
         /// ### Notes
         /// - Before invoking this API, be sure you have activated Tencent Cloud Text Moderation System in the [Content Moderation - Text Moderation System](https://console.cloud.tencent.com/cms/text/package) console.
-        /// - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://intl.cloud.tencent.com/product/tms/pricing?from_cn_redirect=1).
+        /// - This is a paid API. For the billing details, see [Text Moderation System Pricing](https://www.tencentcloud.com/document/product/1121/43752).
         /// 
         ///  
         ///  

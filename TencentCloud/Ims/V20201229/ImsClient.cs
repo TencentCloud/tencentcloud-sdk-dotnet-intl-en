@@ -28,7 +28,7 @@ namespace TencentCloud.Ims.V20201229
 
        private const string endpoint = "ims.intl.tencentcloudapi.com";
        private const string version = "2020-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1177";
 
         /// <summary>
         /// Client constructor.
@@ -57,7 +57,7 @@ namespace TencentCloud.Ims.V20201229
         /// This API is used to submit an image for smart moderation. Before using it, you need to log in to the console with the Tencent Cloud root account [to activate IMS](https://console.cloud.tencent.com/cms/image/package) and adjust the business configuration.
         /// ### API use instructions
         /// - Go to the "[CMS console - IMS](https://console.cloud.tencent.com/cms/image/package)" to activate IMS.
-        /// - This API is a paid API. For its billing mode, see [IMS Pricing](https://intl.cloud.tencent.com/product/ims/pricing?from_cn_redirect=1).
+        /// - This API is a paid API. For its billing mode, see [IMS Pricing](https://www.tencentcloud.com/document/product/1122/43810).
         /// 
         /// ### API feature description
         /// - It can detect images or links and recognize content that may be offensive, unsafe, or inappropriate based on the deep learning technology;
@@ -97,7 +97,7 @@ namespace TencentCloud.Ims.V20201229
         /// This API is used to submit an image for smart moderation. Before using it, you need to log in to the console with the Tencent Cloud root account [to activate IMS](https://console.cloud.tencent.com/cms/image/package) and adjust the business configuration.
         /// ### API use instructions
         /// - Go to the "[CMS console - IMS](https://console.cloud.tencent.com/cms/image/package)" to activate IMS.
-        /// - This API is a paid API. For its billing mode, see [IMS Pricing](https://intl.cloud.tencent.com/product/ims/pricing?from_cn_redirect=1).
+        /// - This API is a paid API. For its billing mode, see [IMS Pricing](https://www.tencentcloud.com/document/product/1122/43810).
         /// 
         /// ### API feature description
         /// - It can detect images or links and recognize content that may be offensive, unsafe, or inappropriate based on the deep learning technology;
