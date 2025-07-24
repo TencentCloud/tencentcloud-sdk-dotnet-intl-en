@@ -33,7 +33,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 
         /// <summary>
         /// Date.
-        /// Such as" 2025-06-25"
+        /// Such as" 2025-06-25".
+        /// Please note: Historical daily bill dated before "2025-06-01",cannot be queried.
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
