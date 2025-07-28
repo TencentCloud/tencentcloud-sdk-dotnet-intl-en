@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.intl.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1175";
+       private const string sdkVersion = "SDK_NET_3.0.1180";
 
         /// <summary>
         /// Client constructor.
@@ -319,8 +319,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// 4. Face fusion: this is to ensure the quality of the uploaded face images to improve the fusion effect.
         /// 
-        /// >     
-        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// >- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>
@@ -343,8 +342,7 @@ namespace TencentCloud.Iai.V20200303
         /// 
         /// 4. Face fusion: this is to ensure the quality of the uploaded face images to improve the fusion effect.
         /// 
-        /// >     
-        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// >- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// </summary>
         /// <param name="req"><see cref="DetectFaceRequest"/></param>
         /// <returns><see cref="DetectFaceResponse"/></returns>
