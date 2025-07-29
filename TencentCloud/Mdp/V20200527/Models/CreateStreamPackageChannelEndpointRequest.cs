@@ -66,6 +66,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("TimeShiftDuration")]
         public ulong? TimeShiftDuration{ get; set; }
 
+        /// <summary>
+        /// Enable DRM. This is only effective for CMAF protocol.
+        /// </summary>
+        [JsonProperty("DRMEnabled")]
+        public bool? DRMEnabled{ get; set; }
+
+        /// <summary>
+        /// DRM configuration information.
+        /// </summary>
+        [JsonProperty("DRMInfo")]
+        public DRMInfo DRMInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "Manifest", this.Manifest);
             this.SetParamSimple(map, prefix + "TimeShiftEnable", this.TimeShiftEnable);
             this.SetParamSimple(map, prefix + "TimeShiftDuration", this.TimeShiftDuration);
+            this.SetParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+            this.SetParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
         }
     }
 }

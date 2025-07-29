@@ -92,6 +92,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("CustomUrlParam")]
         public string CustomUrlParam{ get; set; }
 
+        /// <summary>
+        /// Enable DRM. This is only effective for CMAF protocol.
+        /// </summary>
+        [JsonProperty("DRMEnabled")]
+        public bool? DRMEnabled{ get; set; }
+
+        /// <summary>
+        /// DRM configuration information
+        /// </summary>
+        [JsonProperty("DRMInfo")]
+        public DRMInfo DRMInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +121,8 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
             this.SetParamSimple(map, prefix + "CustomUrlParamIndex", this.CustomUrlParamIndex);
             this.SetParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
+            this.SetParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
+            this.SetParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
         }
     }
 }
