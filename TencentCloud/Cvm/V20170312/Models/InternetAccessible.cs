@@ -25,7 +25,10 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
+        /// Network connection billing plan. Valid value:
+        /// 
+        /// <li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+        /// <li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
@@ -49,32 +52,21 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// The EIP line type. 
+        /// Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
         ///  <li>BGP Default: BGP</li>
-        /// 
         /// For a user who has activated the static single-line IP allowlist, possible values are:
-        /// 
-        ///  <li>CMCC: China Mobile</li>
-        ///  <li>CTCC: China Telecom</li>
-        ///  <li>CUCC: China Unicom</li>
-        /// 
+        ///  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
         /// Note: Only certain regions support static single-line IP addresses.
         /// </summary>
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
         /// <summary>
-        /// AddressType. Default value: `WanIP`.
+        /// Type of public IP address.
         /// 
-        /// For beta users of dedicated IP, the value can be:
-        /// <li>HighQualityEIP: Dedicated IP</li>
-        /// Note that dedicated IPs are only available in partial regions.
-        /// 
-        /// For beta users of Anti-DDoS IP, the value can be:
-        /// <li>AntiDDoSEIP: Anti-DDoS EIP</li>
-        /// Note that Anti-DDoS IPs are only available in partial regions.
-        /// 
-        /// This feature is currently in gradually released phase. To access it, please contact us.
+        /// <li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
+        /// Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
+        /// This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
         /// </summary>
         [JsonProperty("IPv4AddressType")]
         public string IPv4AddressType{ get; set; }
@@ -83,12 +75,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// Indicates the type of EIPv6. Valid values:
         /// 
         /// <li>EIPv6: common IPv6</li>
-        /// <li>HighQualityEIPv6: dedicated IPv6</li>
+        /// <li>HighQualityEIPv6: High Quality EIPv6</li>
         /// Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
         /// 
         /// Default: `EIPv6`
         /// 
-        /// This feature is currently in gradually released phase. To access it, please contact us.
+        /// This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
         /// </summary>
         [JsonProperty("IPv6AddressType")]
         public string IPv6AddressType{ get; set; }

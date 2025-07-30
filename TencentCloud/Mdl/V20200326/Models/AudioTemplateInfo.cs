@@ -50,7 +50,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Audio language code, whose length is always 3 characters.
+        /// Audio language code, which length is between 2 and 20.
         /// </summary>
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }
@@ -73,6 +73,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AudioCodecDetails")]
         public AudioCodecDetail AudioCodecDetails{ get; set; }
 
+        /// <summary>
+        /// Audio language description, which maximum length is 100.
+        /// </summary>
+        [JsonProperty("LanguageDescription")]
+        public string LanguageDescription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "AudioNormalization.", this.AudioNormalization);
             this.SetParamSimple(map, prefix + "AudioSampleRate", this.AudioSampleRate);
             this.SetParamObj(map, prefix + "AudioCodecDetails.", this.AudioCodecDetails);
+            this.SetParamSimple(map, prefix + "LanguageDescription", this.LanguageDescription);
         }
     }
 }

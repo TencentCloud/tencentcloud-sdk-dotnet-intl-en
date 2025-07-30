@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.intl.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1180";
+       private const string sdkVersion = "SDK_NET_3.0.1184";
 
         /// <summary>
         /// Client constructor.
@@ -113,8 +113,7 @@ namespace TencentCloud.Iai.V20200303
 
         /// <summary>
         /// This API is used to copy a person in a group to another group (without copying the description). One person can exist in up to 100 groups at the same time.
-        /// >     
-        /// - Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
+        /// >- Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
         /// </summary>
         /// <param name="req"><see cref="CopyPersonRequest"/></param>
         /// <returns><see cref="CopyPersonResponse"/></returns>
@@ -125,8 +124,7 @@ namespace TencentCloud.Iai.V20200303
 
         /// <summary>
         /// This API is used to copy a person in a group to another group (without copying the description). One person can exist in up to 100 groups at the same time.
-        /// >     
-        /// - Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
+        /// >- Note: in the case that the version of the algorithm model was 2.0 when the person was created, the copy operation will fail if the target group is not of algorithm model 2.0.
         /// </summary>
         /// <param name="req"><see cref="CopyPersonRequest"/></param>
         /// <returns><see cref="CopyPersonResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.intl.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1181";
+       private const string sdkVersion = "SDK_NET_3.0.1184";
 
         /// <summary>
         /// Client constructor.
@@ -785,6 +785,27 @@ namespace TencentCloud.Mdp.V20200527
         public DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannelsSync(DescribeStreamPackageSSAIChannelsRequest req)
         {
             return InternalRequestAsync<DescribeStreamPackageSSAIChannelsResponse>(req, "DescribeStreamPackageSSAIChannels")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query SSAI ad replacement usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIUsageResponse"/></returns>
+        public Task<DescribeStreamPackageSSAIUsageResponse> DescribeStreamPackageSSAIUsage(DescribeStreamPackageSSAIUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIUsageResponse>(req, "DescribeStreamPackageSSAIUsage");
+        }
+
+        /// <summary>
+        /// This API is used to query SSAI ad replacement usage.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageSSAIUsageRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageSSAIUsageResponse"/></returns>
+        public DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsageSync(DescribeStreamPackageSSAIUsageRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageSSAIUsageResponse>(req, "DescribeStreamPackageSSAIUsage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

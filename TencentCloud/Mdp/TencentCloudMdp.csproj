@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1181</VersionPrefix>
+    <VersionPrefix>3.0.1184</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -129,6 +129,8 @@
     <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSSAIChannelsResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIUsageRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageSSAIUsageResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceAlertsResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceLocationAlertsRequest.cs" />
@@ -179,6 +181,7 @@
     <Compile Include="V20200527\Models\ProgramScheduleInfo.cs" />
     <Compile Include="V20200527\Models\SSAIChannelInfo.cs" />
     <Compile Include="V20200527\Models\SSAIConf.cs" />
+    <Compile Include="V20200527\Models\SSAIUsageInfo.cs" />
     <Compile Include="V20200527\Models\SegmentDeliverInfo.cs" />
     <Compile Include="V20200527\Models\SlateInfo.cs" />
     <Compile Include="V20200527\Models\SourceAlert.cs" />
@@ -196,5 +199,6 @@
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelResponse.cs" />
+    <Compile Include="V20200527\Models\UsageDetail.cs" />
   </ItemGroup>
 </Project>
