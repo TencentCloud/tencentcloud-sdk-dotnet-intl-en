@@ -68,6 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// This field has been disused. Please use `PicUrlExpireTime`.
         /// </summary>
         [JsonProperty("PicUrlExpireTimeStamp")]
+        [System.Obsolete]
         public long? PicUrlExpireTimeStamp{ get; set; }
 
         /// <summary>

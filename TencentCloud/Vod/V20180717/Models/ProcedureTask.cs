@@ -43,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrCode")]
+        [System.Obsolete]
         public long? ErrCode{ get; set; }
 
         /// <summary>
@@ -50,6 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Message")]
+        [System.Obsolete]
         public string Message{ get; set; }
 
         /// <summary>

@@ -34,6 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("Uid")]
+        [System.Obsolete]
         public string Uid{ get; set; }
 
 
