@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BinlogSyncWay")]
         public string BinlogSyncWay{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SemiSyncTimeout")]
+        public long? SemiSyncTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OldSlaveZone", this.OldSlaveZone);
             this.SetParamSimple(map, prefix + "NewSlaveZone", this.NewSlaveZone);
             this.SetParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+            this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
         }
     }
 }

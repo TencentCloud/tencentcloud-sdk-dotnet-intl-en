@@ -132,6 +132,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoLoadBalance")]
+        public bool? AutoLoadBalance{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +168,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
+            this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
         }
     }
 }

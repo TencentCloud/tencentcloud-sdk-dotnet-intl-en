@@ -1,0 +1,99 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeCustomerOwnVoucherItem : AbstractModel
+    {
+        
+        /// <summary>
+        /// Voucher ID.
+        /// </summary>
+        [JsonProperty("VoucherId")]
+        public long? VoucherId{ get; set; }
+
+        /// <summary>
+        /// Sub-account UIN
+        /// </summary>
+        [JsonProperty("CustomerUin")]
+        public long? CustomerUin{ get; set; }
+
+        /// <summary>
+        /// Voucher status: Issued/Used/Expired/Invalidated.
+        /// </summary>
+        [JsonProperty("VoucherStatus")]
+        public string VoucherStatus{ get; set; }
+
+        /// <summary>
+        /// Remaining amount.
+        /// </summary>
+        [JsonProperty("RemainingAmount")]
+        public float? RemainingAmount{ get; set; }
+
+        /// <summary>
+        /// Denomination.
+        /// </summary>
+        [JsonProperty("TotalAmount")]
+        public float? TotalAmount{ get; set; }
+
+        /// <summary>
+        /// Payment mode. valid values: AllPayment, Prepaid, and Postpaid.
+        /// </summary>
+        [JsonProperty("PaymentMode")]
+        public string PaymentMode{ get; set; }
+
+        /// <summary>
+        /// Applicable product: AllProducts/SpecifyProducts/SpecifyProductsBlacklist.
+        /// </summary>
+        [JsonProperty("ProductScope")]
+        public string ProductScope{ get; set; }
+
+        /// <summary>
+        /// Start time.
+        /// </summary>
+        [JsonProperty("EffectiveTime")]
+        public string EffectiveTime{ get; set; }
+
+        /// <summary>
+        /// End time.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "VoucherId", this.VoucherId);
+            this.SetParamSimple(map, prefix + "CustomerUin", this.CustomerUin);
+            this.SetParamSimple(map, prefix + "VoucherStatus", this.VoucherStatus);
+            this.SetParamSimple(map, prefix + "RemainingAmount", this.RemainingAmount);
+            this.SetParamSimple(map, prefix + "TotalAmount", this.TotalAmount);
+            this.SetParamSimple(map, prefix + "PaymentMode", this.PaymentMode);
+            this.SetParamSimple(map, prefix + "ProductScope", this.ProductScope);
+            this.SetParamSimple(map, prefix + "EffectiveTime", this.EffectiveTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        }
+    }
+}
+

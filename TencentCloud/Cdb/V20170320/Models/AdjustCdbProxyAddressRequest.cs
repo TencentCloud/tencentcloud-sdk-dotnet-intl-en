@@ -96,6 +96,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoLoadBalance")]
+        public bool? AutoLoadBalance{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "TransSplit", this.TransSplit);
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
             this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+            this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
         }
     }
 }

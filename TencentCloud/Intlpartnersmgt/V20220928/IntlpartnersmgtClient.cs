@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1178";
+       private const string sdkVersion = "SDK_NET_3.0.1185";
 
         /// <summary>
         /// Client constructor.
@@ -477,6 +477,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
+        /// This API is used to query the voucher list by Customer. 
+        /// Callable roles: Customer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnVoucherListRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnVoucherListResponse"/></returns>
+        public Task<DescribeCustomerOwnVoucherListResponse> DescribeCustomerOwnVoucherList(DescribeCustomerOwnVoucherListRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnVoucherListResponse>(req, "DescribeCustomerOwnVoucherList");
+        }
+
+        /// <summary>
+        /// This API is used to query the voucher list by Customer. 
+        /// Callable roles: Customer.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnVoucherListRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnVoucherListResponse"/></returns>
+        public DescribeCustomerOwnVoucherListResponse DescribeCustomerOwnVoucherListSync(DescribeCustomerOwnVoucherListRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnVoucherListResponse>(req, "DescribeCustomerOwnVoucherList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of customer UINs.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerUinRequest"/></param>
@@ -494,6 +517,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerUinResponse DescribeCustomerUinSync(DescribeCustomerUinRequest req)
         {
             return InternalRequestAsync<DescribeCustomerUinResponse>(req, "DescribeCustomerUin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the customer voucher list by Reseller, Second-level Reseller or Distributor.
+        /// Callable roles: Reseller, Second-level Reseller or Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerVoucherListRequest"/></param>
+        /// <returns><see cref="DescribeCustomerVoucherListResponse"/></returns>
+        public Task<DescribeCustomerVoucherListResponse> DescribeCustomerVoucherList(DescribeCustomerVoucherListRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerVoucherListResponse>(req, "DescribeCustomerVoucherList");
+        }
+
+        /// <summary>
+        /// This API is used to query the customer voucher list by Reseller, Second-level Reseller or Distributor.
+        /// Callable roles: Reseller, Second-level Reseller or Distributor.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerVoucherListRequest"/></param>
+        /// <returns><see cref="DescribeCustomerVoucherListResponse"/></returns>
+        public DescribeCustomerVoucherListResponse DescribeCustomerVoucherListSync(DescribeCustomerVoucherListRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerVoucherListResponse>(req, "DescribeCustomerVoucherList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

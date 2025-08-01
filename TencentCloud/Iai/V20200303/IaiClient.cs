@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303
 
        private const string endpoint = "iai.intl.tencentcloudapi.com";
        private const string version = "2020-03-03";
-       private const string sdkVersion = "SDK_NET_3.0.1184";
+       private const string sdkVersion = "SDK_NET_3.0.1185";
 
         /// <summary>
         /// Client constructor.
@@ -56,8 +56,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// This API is used to perform facial feature localization (aka facial keypoint localization) on a given image and calculate 90 facial keypoints that make up the contour of the face, including eyebrows (8 points on the left and 8 on the right), eyes (8 points on the left and 8 on the right), nose (13 points), mouth (22 points), face contour (21 points), and eyeballs or pupils (2 points).
         /// 
-        /// >     
-        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// >- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// </summary>
         /// <param name="req"><see cref="AnalyzeFaceRequest"/></param>
         /// <returns><see cref="AnalyzeFaceResponse"/></returns>
@@ -69,8 +68,7 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// This API is used to perform facial feature localization (aka facial keypoint localization) on a given image and calculate 90 facial keypoints that make up the contour of the face, including eyebrows (8 points on the left and 8 on the right), eyes (8 points on the left and 8 on the right), nose (13 points), mouth (22 points), face contour (21 points), and eyeballs or pupils (2 points).
         /// 
-        /// >     
-        /// - Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+        /// >- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
         /// </summary>
         /// <param name="req"><see cref="AnalyzeFaceRequest"/></param>
         /// <returns><see cref="AnalyzeFaceResponse"/></returns>

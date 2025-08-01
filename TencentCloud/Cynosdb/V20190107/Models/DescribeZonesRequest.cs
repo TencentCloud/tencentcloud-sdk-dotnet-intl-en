@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Whether the virtual zone is included.–
+        /// Whether the virtual zone is included.
         /// </summary>
         [JsonProperty("IncludeVirtualZones")]
         public bool? IncludeVirtualZones{ get; set; }
 
         /// <summary>
-        /// Whether to display all AZs in a region and the user’s permissions in each AZ.
+        /// Whether to display all AZs in a region and the user's permissions in each AZ.
         /// </summary>
         [JsonProperty("ShowPermission")]
         public bool? ShowPermission{ get; set; }
