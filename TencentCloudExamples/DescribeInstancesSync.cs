@@ -23,7 +23,7 @@ using TencentCloud.Cvm.V20170312.Models;
 
 namespace TencentCloudExamples
 {
-    public class DescribeInstances
+    public class DescribeInstancesSync
     {
         public static void Run(string[] args)
         {
@@ -90,7 +90,8 @@ namespace TencentCloudExamples
                 Filter nameFilter = new Filter();
                 nameFilter.Name = "instance-name";
                 nameFilter.Values = new string[] { "中文测试" };
-                req.Filters = new Filter[] { zoneFilter, nameFilter }; // Filters is a list whose members are Filter objects.
+                req.Filters = new Filter[]
+                    { zoneFilter, nameFilter }; // Filters is a list whose members are Filter objects.
 
                 //// The request parameters also support being assigned using a standard JSON format string. The code below is equivalent to the parameter assignment above.
                 //string strParams = "{\"Filters\":[{\"Name\":\"zone\",\"Values\":[\"ap-guangzhou-1\",\"ap-guangzhou-2\"]}]}";
@@ -98,8 +99,7 @@ namespace TencentCloudExamples
 
                 // Call the DescribeInstances method via the client object to initiate the request. Note that the method name corresponds to the request object.
                 // The returned 'resp' is an instance of the DescribeInstancesResponse class, which corresponds to the request object.
-                DescribeInstancesResponse resp = client.DescribeInstances(req).ConfigureAwait(false).GetAwaiter()
-                    .GetResult();
+                DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
 
                 // Print the JSON format response string.
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
