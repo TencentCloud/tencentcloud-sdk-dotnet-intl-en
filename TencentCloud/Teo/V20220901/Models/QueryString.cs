@@ -33,17 +33,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Specifies how to use query strings in the cache key. Values:
-        /// <li>`includeCustom`: `Include partial query strings.</li>
-        /// <li>`excludeCustom`: Exclude partial query strings.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CacheKey usage via QueryString, valid values:.
+        /// <li>includeCustom: use partial url parameter;</li>.
+        /// <li>excludeCustom: exclude partial url parameters.</li>.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Array of query strings used/excluded
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the url parameter array for usage/exclusion.
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

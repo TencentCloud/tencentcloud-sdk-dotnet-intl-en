@@ -33,8 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The cache prefresh percentage. Values: 1-99
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cache pre-refresh percentage. value range: 1-99.
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }

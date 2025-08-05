@@ -43,20 +43,20 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Node cache purge method, with values:
-        /// <li>invalidate: Marks as expired. A back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; if the origin server responds with 304, the cache will not be updated;</li>
-        /// <li>delete: Directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Node cache purge method. valid values:.
+        /// <li>invalidate: marks as expired. a back-to-origin validation is triggered upon user request, sending an HTTP conditional request with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node will fetch new resources from the origin and update the cache; If the origin server responds with 304, the cache will not be updated;</li>.
+        /// <Li>Delete: directly deletes the node's cache, triggering a resource fetch from the origin upon user request.</li>.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// Status. Valid values:
-        /// <li>processing: Processing;</li>
-        /// <li>success: Succeeded;</li>
-        /// <li>failed: Failed;</li>
-        /// <li>timeout: Timed out. </li>
+        /// Status. valid values:.
+        /// <li>processing: indicates the operation is in progress.</li>.
+        /// <Li>Success: specifies the success status.</li>.
+        /// <li>failed: indicates a failure.</li>.
+        /// <Li>Timeout: specifies the timeout period.</li>.
+        /// <Li>Canceled: canceled.</li>.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -73,6 +73,23 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Refresh and preheat failure type. valid values:.
+        /// <li>taskFailed: specifies the task failure.</li>.
+        /// <li>quotaExceeded: specifies the quota exceeded status.</li>.
+        /// <li>downloadManifestFailed: specifies the file failed to download.</li>.
+        /// <li>accessDenied: specifies access denied.</li>.
+        /// <li>originPullFailed: specifies the origin-pull failure.</li>.
+        /// </summary>
+        [JsonProperty("FailType")]
+        public string FailType{ get; set; }
+
+        /// <summary>
+        /// Failure description for refresh and preheating.
+        /// </summary>
+        [JsonProperty("FailMessage")]
+        public string FailMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +103,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "FailType", this.FailType);
+            this.SetParamSimple(map, prefix + "FailMessage", this.FailMessage);
         }
     }
 }

@@ -77,8 +77,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// The rule name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the rule name.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

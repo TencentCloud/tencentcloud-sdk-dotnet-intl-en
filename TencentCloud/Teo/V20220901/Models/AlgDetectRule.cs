@@ -49,8 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public AclCondition[] AlgConditions{ get; set; }
 
         /// <summary>
-        /// Validate Cookie when the condition is satisfied.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Checksum of the Cookie and behavior analysis of the session.
         /// </summary>
         [JsonProperty("AlgDetectSession")]
         public AlgDetectSession AlgDetectSession{ get; set; }

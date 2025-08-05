@@ -58,8 +58,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MatchFromType{ get; set; }
 
         /// <summary>
-        /// The value that matches the key.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Match the Key value.
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string[] MatchFrom{ get; set; }
@@ -73,8 +72,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MatchContentType{ get; set; }
 
         /// <summary>
-        /// The value that matches the content.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Match the Value.
         /// </summary>
         [JsonProperty("MatchContent")]
         public string[] MatchContent{ get; set; }

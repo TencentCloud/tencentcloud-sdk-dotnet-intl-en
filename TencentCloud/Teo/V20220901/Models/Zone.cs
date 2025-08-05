@@ -147,8 +147,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ActiveStatus{ get; set; }
 
         /// <summary>
-        /// The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

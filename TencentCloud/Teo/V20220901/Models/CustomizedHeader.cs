@@ -25,15 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Custom header key.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Specifies the custom header Key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Custom header value.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Set custom headers Value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

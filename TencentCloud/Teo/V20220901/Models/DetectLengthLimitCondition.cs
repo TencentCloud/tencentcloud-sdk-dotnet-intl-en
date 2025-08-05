@@ -32,11 +32,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parameter value of the matched condition, used in pairs with the `Name` parameter.
-        /// When the `Name` value is body_depth, `Values` only support passing in a single value. Values:
-        /// <li>`8KB`;</li>
-        /// <li>`64KB`;</li>
-        /// <li>`128KB`.</li>
+        /// The parameter value of the match condition. the value is used in pairs with Name.
+        /// When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+        /// <li>10KB;</li>
+        /// <li>64KB;</li>
+        /// <li>128KB.</li>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

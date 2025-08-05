@@ -25,7 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site.
+        /// Zone ID.
+        /// 
+        /// If you wish to quickly submit Targets urls under different sites, you can fill in * as the value. but the premise is that the account calling this API must have the permission to all site resources under the root account.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -51,6 +53,22 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Headers")]
         public Header[] Headers{ get; set; }
 
+        /// <summary>
+        /// Media fragment preheating control. valid values:.
+        /// <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
+        /// <Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
+        /// 
+        /// Notes:.
+        /// 1. the supported description file is M3U8, and the corresponding shard is TS.
+        /// Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
+        /// Recursive resolution depth is no more than 3.
+        /// Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
+        /// 
+        /// This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+        /// </summary>
+        [JsonProperty("PrefetchMediaSegments")]
+        public string PrefetchMediaSegments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +79,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
+            this.SetParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);
         }
     }
 }

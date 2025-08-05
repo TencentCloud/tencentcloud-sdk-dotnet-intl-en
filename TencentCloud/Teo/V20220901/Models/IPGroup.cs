@@ -37,10 +37,26 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP group content. Only supports IP and IP mask.
+        /// IP group content, supports ip and ip range.
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }
+
+        /// <summary>
+        /// Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+        /// </summary>
+        [JsonProperty("IPTotalCount")]
+        public long? IPTotalCount{ get; set; }
+
+        /// <summary>
+        /// Specifies the scheduled expiration information of the IP.
+        /// Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
+        /// As an output parameter, contains the following two categories of information.
+        /// <Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
+        /// <Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+        /// </summary>
+        [JsonProperty("IPExpireInfo")]
+        public IPExpireInfo[] IPExpireInfo{ get; set; }
 
 
         /// <summary>
@@ -51,6 +67,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "IPTotalCount", this.IPTotalCount);
+            this.SetParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
         }
     }
 }

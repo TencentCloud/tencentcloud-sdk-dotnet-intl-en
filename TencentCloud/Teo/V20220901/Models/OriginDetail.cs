@@ -83,7 +83,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
-        /// current configured origin HOST header.
+        /// Specifies the current configuration of the origin-pull HOST header.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }

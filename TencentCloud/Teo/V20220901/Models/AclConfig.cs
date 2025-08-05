@@ -39,8 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public AclUserRule[] AclUserRules{ get; set; }
 
         /// <summary>
-        /// Custom managed rules
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Managed custom rules.
         /// </summary>
         [JsonProperty("Customizes")]
         public AclUserRule[] Customizes{ get; set; }

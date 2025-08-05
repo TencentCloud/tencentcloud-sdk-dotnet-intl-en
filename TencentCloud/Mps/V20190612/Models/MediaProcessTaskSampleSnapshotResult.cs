@@ -56,7 +56,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public SampleSnapshotTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Specifies the output of a sampling screenshot task for a video.
+        /// Output of the sampled screenshot task for videos.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSampleSnapshotItem Output{ get; set; }

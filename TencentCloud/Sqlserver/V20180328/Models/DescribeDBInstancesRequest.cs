@@ -103,7 +103,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] VersionSet{ get; set; }
 
         /// <summary>
-        /// Instance availability zone, such as ap-guangzhou-2
+        /// Instance availability zone, such as ap-guangzhou-3
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] UidSet{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+        /// Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: dual-server high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pagination query method. offset - pagination query by offset; pageNumber - pagination query by number of pages. The default value is pageNumber.
         /// </summary>
         [JsonProperty("PaginationType")]
         public string PaginationType{ get; set; }

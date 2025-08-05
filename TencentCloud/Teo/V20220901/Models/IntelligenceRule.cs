@@ -25,17 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Switch. valid values:.
+        /// <li>`on`: Enable;</li>
+        /// 
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Items in a bot intelligence rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the rule detail.
         /// </summary>
         [JsonProperty("IntelligenceRuleItems")]
         public IntelligenceRuleItem[] IntelligenceRuleItems{ get; set; }

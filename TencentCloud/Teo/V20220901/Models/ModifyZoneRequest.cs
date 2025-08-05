@@ -46,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public VanityNameServers VanityNameServers{ get; set; }
 
         /// <summary>
-        /// The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+        /// Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

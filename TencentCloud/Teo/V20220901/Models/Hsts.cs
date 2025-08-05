@@ -33,26 +33,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// MaxAge (in seconds). The maximum value is 1 day. 
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// MaxAge value. expressed in seconds, maximum value is 1 day.
         /// </summary>
         [JsonProperty("MaxAge")]
         public long? MaxAge{ get; set; }
 
         /// <summary>
-        /// Whether to contain subdomain names. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether the subdomain is included. valid values:.
+        /// <li>`on`: Enable;</li>
+        /// 
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("IncludeSubDomains")]
         public string IncludeSubDomains{ get; set; }
 
         /// <summary>
-        /// Whether to enable preloading. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable preloading. valid values:.
+        /// <li>`on`: Enable;</li>
+        /// 
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Preload")]
         public string Preload{ get; set; }

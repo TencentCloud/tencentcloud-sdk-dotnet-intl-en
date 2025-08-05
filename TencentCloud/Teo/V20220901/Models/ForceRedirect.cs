@@ -33,10 +33,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Redirect status code. Values:
-        /// <li>`301`: 301 redirect</li>
-        /// <li>`302`: 302 redirect</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Redirection status code. valid values:.
+        /// <Li>`301`: 301 redirect</li>.
+        /// <Li>`302`: 302 redirect</li>.
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }

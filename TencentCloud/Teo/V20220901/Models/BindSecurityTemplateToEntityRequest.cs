@@ -37,18 +37,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] Entities{ get; set; }
 
         /// <summary>
-        /// Action options. Values include:
-        /// <li>`bind`: Bind the domain names to the specified policy template </li>
-        /// <li>`unbind-keep-policy`: Unbind a domain name from a policy template and keep the current policy when unbinding</li>
-        /// <li>`unbind-use-default`: Unbind domain names from policy templates and use default blank policy.</li> Note: Only one domain name can be unbound at one time. When `Operate` is `unbind-keep-policy` or `unbind-use-default`, there can only be one domain name specified in `Entities`.
+        /// Bind or unbind operation option. valid values:.
+        /// <Li>`Bind`: bind the domain name to the policy template.</li>.
+        /// <li>unbind-keep-policy: unbind a domain name from the policy template while retaining the current policy.</li>.
+        /// <li>unbind-use-default: unbind a domain name from the policy template and use the default blank policy.</li> note: the unbinding operation currently only supports unbinding a single domain name. that is, when the Operate parameter value is unbind-keep-policy or unbind-use-default, the Entities parameter list only supports filling in one domain name.
         /// </summary>
         [JsonProperty("Operate")]
         public string Operate{ get; set; }
 
         /// <summary>
-        /// Specifies the ID of the policy template or the site's global policy to be bound or unbound.
-        /// - To bind to a policy template, or unbind from it, specify the policy template ID.
-        /// - To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.
+        /// Specifies the ID of the policy template or the site global policy to be bound or unbound.
+        /// <li>To bind to a policy template, or unbind from it, specify the policy template ID.</li>.
+        /// <li>To bind to the site's global policy, or unbind from it, use the @ZoneLevel@domain parameter value.</li>.
         /// 
         /// Note: After unbinding, the domain name will use an independent policy and rule quota will be calculated separately. Please make sure there is sufficient rule quota before unbinding.
         /// </summary>
@@ -56,9 +56,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Whether to replace the existing policy template bound with the domain name. Values: 
-        /// <li>`true`: Replace the template bound to the domain. </li>
-        /// <li>`false`: Do not replace the template.</li> Note: In this case, the API returns an error if there is already a policy template bound to the specified domain name.
+        /// If the imported domain name has already been bound to a policy template (including a site-level security policy), this parameter indicates whether to replace the template by setting it. the default value is true. values: <li>`true`: replace the template currently bound to the domain.</li> <li>`false`: do not replace the template currently bound to the domain.</li> note: when set to false, if the imported domain name has already been bound to a policy template, the API will return an error; a site-level security policy is also a type of policy template.
         /// </summary>
         [JsonProperty("OverWrite")]
         public bool? OverWrite{ get; set; }

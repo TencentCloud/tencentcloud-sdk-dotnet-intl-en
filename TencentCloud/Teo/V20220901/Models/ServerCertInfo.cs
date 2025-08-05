@@ -25,54 +25,46 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
-        /// 
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Alias of the certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate remark name.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Type of the certificate. Values:
-        /// u200c<li>`default`: Default certificate</li>
-        /// u200c<li>`upload`: Custom certificate</li>
-        /// u200c<li>`managed`: Tencent Cloud-managed certificate</li>
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Certificate type. valid values:.
+        /// <Li>Specifies the default certificate.</li>.
+        /// <Li>Upload: user upload;</li>.
+        /// <li>managed: tencent cloud hosted.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Time when the certificate expires.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Time when the certificate is deployed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the cert deployment time.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
 
         /// <summary>
         /// Signature algorithm.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }
 
         /// <summary>
         /// Domain name of the certificate.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }

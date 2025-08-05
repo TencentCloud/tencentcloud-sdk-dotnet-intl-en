@@ -145,7 +145,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (private consumption)
+        /// Instance disaster recovery type. 1: dual-server high availability; 2: single-node; 3: cross-AZ; 4: cross-AZ cluster; 5: cluster; 6: multi-node cluster; 7: multi-node cross-AZ cluster.
         /// </summary>
         [JsonProperty("Model")]
         public long? Model{ get; set; }
@@ -217,25 +217,25 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance isolation operation.
         /// </summary>
         [JsonProperty("IsolateOperator")]
         public string IsolateOperator{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Publishing/Subscription flag. SUB: subscription instance; PUB: publishing instance. If this parameter is left blank, the instance is an ordinary instance that does not involve publishing or subscription.
         /// </summary>
         [JsonProperty("SubFlag")]
         public string SubFlag{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read-only flag. RO: read-only instance; MASTER: primary instance bound to a read-only instance. If this parameter is left blank, the instance is not a read-only instance and is not in any read-only group.
         /// </summary>
         [JsonProperty("ROFlag")]
         public string ROFlag{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Disaster recovery type. MIRROR: image; ALWAYSON: Always On; SINGLE: single instance.
         /// </summary>
         [JsonProperty("HAFlag")]
         public string HAFlag{ get; set; }
@@ -247,13 +247,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup mode. master_pkg: backup on the primary node (default value); master_no_pkg: no backup on the primary node; slave_pkg: backup on secondary nodes (valid for Always On clusters); slave_no_pkg: no backup on secondary nodes (valid for Always On clusters). This parameter is invalid for read-only instances.
         /// </summary>
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance backup information.
         /// </summary>
         [JsonProperty("InstanceNote")]
         public string InstanceNote{ get; set; }
@@ -277,7 +277,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? BackupSaveDays{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+        /// Instance type. HA: high-availability instance; RO: read-only instance; SI: basic edition instance; BI: business intelligence service instance; cvmHA: high-availability instance with cloud disk; cvmRO: read-only instance with cloud disk; MultiHA: multi-node instance; cvmMultiHA: multi-node instance with cloud disk.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -331,22 +331,28 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsDrZone{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Secondary AZ information on the two-node instance.
         /// </summary>
         [JsonProperty("SlaveZones")]
         public SlaveZones SlaveZones{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Architecture flag. SINGLE: single-node; DOUBLE: two-node.
         /// </summary>
         [JsonProperty("Architecture")]
         public string Architecture{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type flag. EXCLUSIVE: exclusive; SHARED: shared.
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MultiSlaveZones")]
+        public SlaveZones[] MultiSlaveZones{ get; set; }
 
 
         /// <summary>
@@ -408,6 +414,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
             this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
             this.SetParamSimple(map, prefix + "Style", this.Style);
+            this.SetParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
         }
     }
 }

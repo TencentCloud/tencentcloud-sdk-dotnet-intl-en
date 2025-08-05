@@ -45,8 +45,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public BotPortraitRule BotPortraitRule{ get; set; }
 
         /// <summary>
-        /// The bot intelligence settings. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bot intelligent analysis. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("IntelligenceRule")]
         public IntelligenceRule IntelligenceRule{ get; set; }
@@ -64,8 +63,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public AlgDetectRule[] AlgDetectRule{ get; set; }
 
         /// <summary>
-        /// Settings of the bot managed rule. It is only used for output.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Bot managed custom policy. optional input. output usage only.
         /// </summary>
         [JsonProperty("Customizes")]
         public BotUserRule[] Customizes{ get; set; }

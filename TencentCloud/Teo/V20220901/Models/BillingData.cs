@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Data timestamp.
+        /// Specifies the data timestamp.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -37,26 +37,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Value{ get; set; }
 
         /// <summary>
-        /// Zone ID (or content identifier if enabled).
+        /// Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Domain name.
+        /// Specifies the domain name of the data point.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy instance ID.
+        /// Specifies the layer-4 proxy instance ID the data point belongs to.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Billing region (based on EdgeOne node location). Values: 
-        /// <li>CH: Mainland China</li> <li>AF: Africa</li> <li>AS1: Asia Pacific Region 1</li> <li>AS2: Asia Pacific Region 2</li> <li>AS3: Asia Pacific Region 3</li> <li>EU: Europe</li> <li>MidEast: Middle East</li> <li>NA: North America</li> <li>SA: South America</li>
+        /// Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }

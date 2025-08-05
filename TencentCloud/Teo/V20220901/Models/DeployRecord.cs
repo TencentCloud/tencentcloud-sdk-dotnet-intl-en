@@ -52,8 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Release record ID. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Release record ID.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

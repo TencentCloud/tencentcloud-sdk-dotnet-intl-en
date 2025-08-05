@@ -38,10 +38,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// The CNAME status. Values:
-        /// <li>`active`: Activated</li>
-        /// <li>`moved`: Not activated </li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CNAME status. valid values:.
+        /// <li>`active`: activated</li>.
+        /// <li>`moved`: not effective;</li>.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

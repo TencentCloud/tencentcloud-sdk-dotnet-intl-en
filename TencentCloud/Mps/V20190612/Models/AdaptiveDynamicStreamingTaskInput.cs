@@ -97,7 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// Extension field for transcoding.
+        /// Transcoding parameter extension field.
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

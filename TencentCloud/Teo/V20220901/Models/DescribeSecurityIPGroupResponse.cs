@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Detailed configuration information of security IP groups, including the ID, name, and IP/IP range list information of each security IP group.
+        /// Detailed configuration information of security IP groups, including the ID, name, total number of IP/IP ranges, IP/IP range list information, and expiration time of each security IP group.
         /// </summary>
         [JsonProperty("IPGroups")]
         public IPGroup[] IPGroups{ get; set; }

@@ -81,7 +81,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// List of Layer-4 proxy instances bound to a LoadBalancer.
+        /// Specifies the list of l4 proxy instances bound to the load balancing instance.
         /// </summary>
         [JsonProperty("L4UsedList")]
         public string[] L4UsedList{ get; set; }

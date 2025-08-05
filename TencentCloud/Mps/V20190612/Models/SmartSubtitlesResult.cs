@@ -26,8 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <Li>AsrFullTextRecognition: full speech recognition</li>
-        /// <Li>TransTextRecognition: speech translation</li>
+        /// <li>AsrFullTextRecognition: full speech recognition</li>
+        /// <li>TransTextRecognition: speech translation</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

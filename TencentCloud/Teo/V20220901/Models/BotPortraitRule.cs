@@ -39,29 +39,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "JavaScript challenge" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The rule ID of JS challenge. default all rules without configuring JS challenge.
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Managed challenge" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Observe" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID for observation. by default, observation is not configured for all rules.
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Block" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID for interception. default to all rules with no configuration interception.
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }

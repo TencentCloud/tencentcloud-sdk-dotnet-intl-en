@@ -48,6 +48,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TranslateSubtitlePath")]
         public string TranslateSubtitlePath{ get; set; }
 
+        /// <summary>
+        /// Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SubtitlePos")]
+        public SubtitlePosition SubtitlePos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
             this.SetParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
+            this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
         }
     }
 }

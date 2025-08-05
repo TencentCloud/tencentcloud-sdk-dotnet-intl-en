@@ -33,10 +33,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Compression algorithm. Values:
-        /// <li>`brotli`: Brotli algorithm</li>
-        /// <li>`gzip`: Gzip algorithm</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Supported compression algorithm list. valid values:.
+        /// <Li>Brotli: specifies the brotli algorithm.</li>.
+        /// <Li>Gzip: specifies the gzip algorithm.</li>.
         /// </summary>
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }

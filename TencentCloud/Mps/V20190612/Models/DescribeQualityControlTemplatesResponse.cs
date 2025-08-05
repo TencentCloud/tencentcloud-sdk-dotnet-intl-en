@@ -31,8 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Media quality inspection template details list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of media quality inspection templates.
         /// </summary>
         [JsonProperty("QualityControlTemplateSet")]
         public QualityControlTemplate[] QualityControlTemplateSet{ get; set; }

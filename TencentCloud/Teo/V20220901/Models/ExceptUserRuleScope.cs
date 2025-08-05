@@ -33,27 +33,24 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The module to be activated. Values:
-        /// <li>`waf`: Tencent Cloud-managed rules</li>
-        /// <li>`rate`: Rate limiting rules</li>
-        /// <li>`acl`: Custom rule</li>
-        /// <li>`cc`: CC attack defense</li>
-        /// <li>`bot`: Bot protection</li>
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// Effective module. the field value can be:.
+        /// <li>`waf`: tencent cloud-managed rules</li>.
+        /// <Li>`Rate`: rate limit</li>.
+        /// <li>`acl`: custom rule</li>.
+        /// <Li>`Cc`: cc attack defense</li>.
+        /// <Li>`Bot`: bot protection</li>.
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }
 
         /// <summary>
-        /// Module settings of the exception rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Skip exception rule details for some rule ids. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("PartialModules")]
         public PartialModule[] PartialModules{ get; set; }
 
         /// <summary>
-        /// Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("SkipConditions")]
         public SkipCondition[] SkipConditions{ get; set; }

@@ -55,7 +55,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ImageSpriteTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Specifies the output of an image sprite task for a video.
+        /// Output of the image sprite task for videos.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public MediaImageSpriteItem Output{ get; set; }

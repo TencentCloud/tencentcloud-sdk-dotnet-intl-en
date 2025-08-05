@@ -69,8 +69,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Origin-pull host header
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Specifies the origin-pull Host Header.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }

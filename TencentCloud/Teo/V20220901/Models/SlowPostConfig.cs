@@ -33,31 +33,27 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Detect slow attacks by the transfer period of the first 8 KB of requests
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// First packet configuration.
         /// </summary>
         [JsonProperty("FirstPartConfig")]
         public FirstPartConfig FirstPartConfig{ get; set; }
 
         /// <summary>
-        /// Detect slow attacks by the data rate of the main body (excluding the first 8 KB) of requests
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the basic configuration.
         /// </summary>
         [JsonProperty("SlowRateConfig")]
         public SlowRateConfig SlowRateConfig{ get; set; }
 
         /// <summary>
-        /// The action to taken when a slow attack is detected. Values:
-        /// <li>`monitor`: Observe</li>
-        /// <li>`drop`: Block the request</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Handling action for slow attack. valid values:.
+        /// <li>`monitor`: observe</li>.
+        /// <li>`drop`: block the request.</li>.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// ID of the rule
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the Id of this rule.
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }

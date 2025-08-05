@@ -33,9 +33,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Cache expiration time setting.
-        /// Unit: second. The maximum value is 365 days.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the cache expiration time settings.
+        /// Unit: seconds. the maximum settable value is 365 days.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }

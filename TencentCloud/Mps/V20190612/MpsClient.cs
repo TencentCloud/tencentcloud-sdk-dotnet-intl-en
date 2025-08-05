@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1184";
+       private const string sdkVersion = "SDK_NET_3.0.1187";
 
         /// <summary>
         /// Client constructor.
@@ -2059,12 +2059,11 @@ namespace TencentCloud.Mps.V20190612
         /// 4. Sampled screenshot of videos.
         /// 5. Image sprite of videos.
         /// 6. Adaptive bitrate stream conversion for videos.
-        /// 7. Intelligent content moderation (pornography detection and sensitive information detection).
-        /// 8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
-        /// 9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
-        /// 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
-        /// 
-        /// 11. Smart subtitle (full speech, speech hotword, and speech translation).
+        /// 7. Intelligent content moderation (such as pornography detection and sensitive information detection).
+        /// 8. Intelligent content analysis (such as tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+        /// 9. Intelligent content recognition (such as human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
+        /// 10. Media quality inspection, such as media format diagnosis, audio/visual content moderation (such as jitter, blur, low lighting, overexposure, black edge, white edge, black screen, white screen, screen glitch, noise, mosaic, and QR code), and no-reference quality scoring.
+        /// 11. Smart subtitle (such as full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>
@@ -2081,12 +2080,11 @@ namespace TencentCloud.Mps.V20190612
         /// 4. Sampled screenshot of videos.
         /// 5. Image sprite of videos.
         /// 6. Adaptive bitrate stream conversion for videos.
-        /// 7. Intelligent content moderation (pornography detection and sensitive information detection).
-        /// 8. Intelligent content analysis (tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
-        /// 9. Intelligent content recognition (human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
-        /// 10. Media quality inspection (live stream format diagnosis, audio and video content detection (jitter, blur, low light, overexposure, black and white edges, black and white screens, screen glitch, noise, mosaic, QR code, and more), and no-reference scoring).
-        /// 
-        /// 11. Smart subtitle (full speech, speech hotword, and speech translation).
+        /// 7. Intelligent content moderation (such as pornography detection and sensitive information detection).
+        /// 8. Intelligent content analysis (such as tag, category, cover, frame tag, video splitting, highlight, opening and ending clips, and game tracking).
+        /// 9. Intelligent content recognition (such as human face, full text, text keyword, full speech, speech keyword, speech translation, and object).
+        /// 10. Media quality inspection, such as media format diagnosis, audio/visual content moderation (such as jitter, blur, low lighting, overexposure, black edge, white edge, black screen, white screen, screen glitch, noise, mosaic, and QR code), and no-reference quality scoring.
+        /// 11. Smart subtitle (such as full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
         /// <returns><see cref="ProcessMediaResponse"/></returns>

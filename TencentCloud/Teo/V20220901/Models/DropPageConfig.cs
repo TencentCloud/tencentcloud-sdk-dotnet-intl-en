@@ -33,15 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The settings of the block page that applies managed rules. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
         /// </summary>
         [JsonProperty("WafDropPageDetail")]
         public DropPageDetail WafDropPageDetail{ get; set; }
 
         /// <summary>
-        /// The settings of the block page that applies custom rules. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Interception page configuration for custom pages. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("AclDropPageDetail")]
         public DropPageDetail AclDropPageDetail{ get; set; }

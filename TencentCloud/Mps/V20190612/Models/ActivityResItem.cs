@@ -95,6 +95,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ScheduleQualityControlTaskResult QualityControlTask{ get; set; }
 
         /// <summary>
+        /// Conditional judgment task output.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("ExecRuleTask")]
+        public ScheduleExecRuleTaskResult ExecRuleTask{ get; set; }
+
+        /// <summary>
         /// Smart subtitle task output.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -117,6 +124,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
             this.SetParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
             this.SetParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
+            this.SetParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
             this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         }
     }

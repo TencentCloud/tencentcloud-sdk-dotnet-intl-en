@@ -53,10 +53,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BestFrame{ get; set; }
 
         /// <summary>
-        /// The video file (Base64) for verification.
+        /// The video file (Base64) for verification.Used for verification, contains specific color reflection effects.
         /// </summary>
         [JsonProperty("Video")]
         public string Video{ get; set; }
+
+        /// <summary>
+        /// Records the specific action performed by the user, used for AI Face Shield analysis.
+        /// </summary>
+        [JsonProperty("ActionVideo")]
+        public string ActionVideo{ get; set; }
 
         /// <summary>
         /// The similarity, with a value range of 0-100. A greater value indicates higher similarity. This parameter is returned only in the `compare` (selfie verification) mode.
@@ -88,6 +94,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "BestFrame", this.BestFrame);
             this.SetParamSimple(map, prefix + "Video", this.Video);
+            this.SetParamSimple(map, prefix + "ActionVideo", this.ActionVideo);
             this.SetParamSimple(map, prefix + "Similarity", this.Similarity);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

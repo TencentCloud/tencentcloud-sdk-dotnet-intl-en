@@ -25,28 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Type of the custom log filed, which indicates extracting data from a specified position in HTTP requests and responses. Valid values:
-        /// <li>ReqHeader: Extract the value of a specified field from an HTTP request header;</li>
-        /// <li>RspHeader: Extract the value of a specified field from an HTTP response header;</li>
-        /// <li>Cookie: Extract the value of a specified field from a cookie;</li>
-        /// <li>ReqBody: Extract specified content from an HTTP request body using a Google RE2 regular expression.</li>
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Type of the custom log field, which indicates extracting data from specified positions in HTTP requests and responses. valid values:.
+        /// <li>ReqHeader: extract the value of a specified field from an HTTP request header;</li>.
+        /// <li>RspHeader: extracts the value of a specified field from an HTTP response header.</li>.
+        /// <Li>Cookie: extract the specified field value from a cookie;</li>.
+        /// <li>ReqBody: extract specified content from an HTTP request body using a Google RE2 regular expression.</li>.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Enter the definition of the field value based on the field type (Name). This parameter is case-sensitive.
-        /// <li>When the field type is ReqHeader, RspHeader, or Cookie, enter the name of the parameter for which you need to extract the value, such as Accept-Language. You can enter 1-100 characters. The name should start with a letter, contain letters, digits, and hyphens (-) in the middle, and end with a letter or digit.</li>
-        /// <li>When the field type is ReqBody, enter the Google RE2 regular expression. The maximum length of the regular expression is 4 KB.</li>
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Enter the field value definition based on the field type (Name). this parameter is case-sensitive.
+        /// <li>When the field type is ReqHeader, RspHeader, or Cookie, enter the parameter name for value extraction, such as Accept-Language. you can enter 1-100 characters. the name must start with a letter, contain letters, digits, or hyphens (-) in the middle, and end with a letter or digit.</li>.
+        /// <li>When the field type is ReqBody, enter the Google RE2 regular expression. the maximum length of the regular expression is 4 KB.</li>.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Indicates whether to deliver this field. If not filled in, this field will not be delivered.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to deliver this field. leave blank to skip delivery.
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }

@@ -33,8 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Maximum size. Value range: 1-500 MB.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum limit. value range between 1MB and 500MB. byte.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

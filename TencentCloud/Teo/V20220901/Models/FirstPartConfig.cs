@@ -25,17 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Switch. valid values:.
+        /// <li>`on`: Enable;</li>
+        /// 
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The transfer period threshold of the first 8 KB. If the threshold is reached, it’s considered a slow attack. Default: `5`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
         /// </summary>
         [JsonProperty("StatTime")]
         public ulong? StatTime{ get; set; }

@@ -56,21 +56,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// Ports for http origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is http or follow.
+        /// The HTTP origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTP or follow.
         /// </summary>
         [JsonProperty("HTTPOriginPort")]
         public long? HTTPOriginPort{ get; set; }
 
         /// <summary>
-        /// Ports for https origin-pull requests. value range: 1-65535. this parameter takes effect only when the origin-pull protocol originprotocol is https or follow.
+        /// The HTTPS origin port, value ranges from 1 to 65535. this parameter is required when the origin-pull protocol OriginProtocol is HTTPS or follow.
         /// </summary>
         [JsonProperty("HTTPSOriginPort")]
         public long? HTTPSOriginPort{ get; set; }
 
         /// <summary>
-        /// Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type origintype is COS or awss3. valid values:.
+        /// Specifies whether access to the private object storage origin server is allowed. this parameter is required when the origin server type OriginType is COS or AWSS3. valid values:.
         /// <Li>On: enable private authentication;</li>.
-        /// <Li>Off: disable private authentication.</li> if not specified, the default value is off.
+        /// <li>off: disable private authentication.</li>.
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }

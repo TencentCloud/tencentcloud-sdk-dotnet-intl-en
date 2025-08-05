@@ -38,8 +38,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Action{ get; set; }
 
         /// <summary>
-        /// The probability for triggering the action. Value range: 0-100.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The probability for triggering the action. value range: 0-100.
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }

@@ -41,36 +41,31 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Allow" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID to allow. defaults to no rules configured for allowance.
         /// </summary>
         [JsonProperty("TransManagedIds")]
         public long?[] TransManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "JavaScript challenge" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Managed challenge" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The rule ID for digit verification code. by default, all rules do not configure digit verification code.
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Observe" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID for observation. by default, observation is not configured for all rules.
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
-        /// The ID of the rule that applies the "Block" action.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID for interception. by default, all rules have no configuration interception.
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }

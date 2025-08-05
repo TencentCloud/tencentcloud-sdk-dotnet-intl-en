@@ -39,16 +39,17 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Type of a real-time log delivery task. Valid values:
         /// <li>cls: push to Tencent Cloud CLS;</li>
-        /// <li>custom_endpoint: push to a custom HTTP(S) address;</li>
-        /// <li>s3: push to an AWS S3-compatible bucket address.</li>
+        /// <li>custom_endpoint: push to a custom HTTP(S) endpoint;</li>
+        /// <li>s3: push to an AWS S3-compatible bucket.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// List of entities (L7 domain names or L4 proxy instances) corresponding to a real-time log delivery task. Valid value examples:
-        /// <li>L7 domain name: domain.example.com;</li>
-        /// <li>L4 proxy instance: sid-2s69eb5wcms7.</li>
+        /// List of entities associated with the real-time log delivery task. Valid value examples:
+        /// <li>L7 domain name: domain.example.com</li>
+        /// <li>L4 proxy instance: sid-2s69eb5wcms7</li>
+        /// <li>Edge Function instance: test-zone-2mxigizoh9l9-1257626257</li>
         /// </summary>
         [JsonProperty("EntityList")]
         public string[] EntityList{ get; set; }
@@ -57,7 +58,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Dataset type. Valid values:
         /// <li>domain: site acceleration logs;</li>
         /// <li>application: L4 proxy logs;</li>
-        /// <li>web-rateLiming: rate limit and CC attack defense logs;</li>
+        /// <li>function: Edge Function execution log;</li>
+        /// <li>web-rateLiming: rate limiting and CC attack protection logs;</li>
         /// <li>web-attack: managed rule logs;</li>
         /// <li>web-rule: custom rule logs;</li>
         /// <li>web-bot: Bot management logs.</li>
@@ -74,19 +76,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// List of predefined fields for delivery.
+        /// Pre-defined log fields to be delivered. Refer to:
+        /// <li>[Site acceleration log (L7 access log)](https://www.tencentcloud.com/document/product/1145/61300)</li>
+        /// <li>[L4 proxy log](https://www.tencentcloud.com/document/product/1145/61301)</li>
+        /// <li>[Edge Function execution log](https://www.tencentcloud.com/document/product/1145/67840)</li>
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (LogType=domain) support custom fields.
+        /// The list of custom fields for log delivery, which supports extracting specified content from HTTP request headers, response headers, cookies, and request bodies. Custom field names must be unique. The number of custom fields cannot exceed a maximum of 200. A single real-time log delivery task can configure up to 5 custom fields of the request body type. Currently, only site acceleration logs (`LogType`=`domain`) support custom fields.
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// Filter criteria of log delivery. If this parameter is not specified, all logs will be shipped.
+        /// Filter criteria of log delivery. If this parameter is not specified, all logs will be delivered.
         /// </summary>
         [JsonProperty("DeliveryConditions")]
         public DeliveryCondition[] DeliveryConditions{ get; set; }
@@ -99,26 +104,26 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Output format for log delivery. If this field is not specified, the default format is used, which works as follows:
-        /// <li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
-        /// <li>When TaskType is 's3', the default format is JSON Lines;</li>Specifically, when TaskType is 'cls', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
+        /// <li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, with each JSON object representing a log entry;</li>
+        /// <li>When `TaskType` is `s3`, the default format is JSON Lines;</li>Specifically, when `TaskType` is `cls`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to input `LogFormat`.
         /// </summary>
         [JsonProperty("LogFormat")]
         public LogFormat LogFormat{ get; set; }
 
         /// <summary>
-        /// Configuration information of CLS. This parameter is required when TaskType is cls.
+        /// Configuration information of CLS. This parameter is required when `TaskType` is `cls`.
         /// </summary>
         [JsonProperty("CLS")]
         public CLSTopic CLS{ get; set; }
 
         /// <summary>
-        /// Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.
+        /// Configuration information of the custom HTTP endpoint. This parameter is required when `TaskType` is `custom_endpoint`.
         /// </summary>
         [JsonProperty("CustomEndpoint")]
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.
+        /// Configuration information of the AWS S3-compatible bucket. This parameter is required when `TaskType` is `s3`.
         /// </summary>
         [JsonProperty("S3")]
         public S3 S3{ get; set; }

@@ -51,22 +51,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The update time. If it is null, the current date and time is recorded.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Last update time. if null, the underlying layer generates it using the current system time by default.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// The matching condition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExceptUserRuleConditions")]
         public ExceptUserRuleCondition[] ExceptUserRuleConditions{ get; set; }
 
         /// <summary>
-        /// The scope to which the exception rule applies.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scope where the rule takes effect.
         /// </summary>
         [JsonProperty("ExceptUserRuleScope")]
         public ExceptUserRuleScope ExceptUserRuleScope{ get; set; }

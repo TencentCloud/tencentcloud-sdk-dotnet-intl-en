@@ -34,13 +34,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Rate-Limiting value, in kb/s. enter a numerical value to specify the rate limit.
+        /// The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
         /// </summary>
         [JsonProperty("MaxSpeed")]
         public string MaxSpeed{ get; set; }
 
         /// <summary>
-        /// Rate-Limiting start value, which can be the download size or specified duration, in kb or s. this parameter is required when mode is set to limitafterspecificbytesdownloaded or limitafterspecificsecondsdownloaded. enter a numerical value to specify the download size or duration.
+        /// The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+        /// 
+        /// -When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+        /// 
+        /// -When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }

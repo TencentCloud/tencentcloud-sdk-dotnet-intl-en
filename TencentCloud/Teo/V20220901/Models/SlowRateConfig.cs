@@ -33,15 +33,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The sampling interval in seconds. In this way, the first 8 KB of the request is ignored. The rest of data is separated in to multiple parts according to this interval for slow attack measurement.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The statistics interval in seconds. after the first packet transfer, the data transmission axis is split by this parameter for separate computing of slow attacks on each shard.
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// The transfer rate threshold in bps. When the transfer rate of a sample is lower than the threshold, it’s considered a slow attack and handled according to the specified `Action`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the rate threshold applied during statistics in bps. if the transmission rate in this shard does not reach the parameter value, it is identified as a slow attack and the slow attack handling method is applied.
         /// </summary>
         [JsonProperty("Threshold")]
         public ulong? Threshold{ get; set; }

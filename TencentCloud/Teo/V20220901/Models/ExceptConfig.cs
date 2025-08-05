@@ -33,8 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The settings of the exception rule. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The settings of the exception rule. if it is null, the settings that were last configured will be used.
         /// </summary>
         [JsonProperty("ExceptUserRules")]
         public ExceptUserRule[] ExceptUserRules{ get; set; }

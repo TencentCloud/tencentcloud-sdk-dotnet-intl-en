@@ -25,77 +25,69 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the server certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the server certificate ID.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Alias of the certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate remark name.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Type of the certificate. Values:
+        /// Certificate type. valid values:.
         /// <li>`default`: Default certificate;</li>
-        /// <li>`upload`: Custom certificate;</li>
-        /// <li>`managed`: Tencent Cloud-managed certificate.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// <li>`upload`: External certificate;</li>
+        /// 
+        /// <li>`managed`: Tencent Cloud managed certificate.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Time when the certificate expires.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Time when the certificate takes effect.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate Validation Time.
         /// </summary>
         [JsonProperty("EffectiveTime")]
         public string EffectiveTime{ get; set; }
 
         /// <summary>
-        /// Common name of the certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Common name of the cert.
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }
 
         /// <summary>
-        /// Domain names added to the SAN certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the SAN domain of the certificate.
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// Deployment status. Values:
-        /// <li>`processing`: Deployment in progress</li>
-        /// <li>`deployed`: Deployed</li>
-        /// <li>`failed`: Deployment failed</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Deployment state. valid values:.
+        /// <li>processing: deployment in progress;</li>.
+        /// <Li>Deployed: deployed</li>.
+        /// <Li>`Failed`: deployment failed</li>.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Failure description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates the failure reason when the Status is failed.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
         /// Certificate algorithm.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SignAlgo")]
         public string SignAlgo{ get; set; }

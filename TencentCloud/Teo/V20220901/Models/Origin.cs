@@ -25,34 +25,30 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Primary origin server list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Origin server list.
         /// </summary>
         [JsonProperty("Origins")]
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// The list of backup origin servers.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup origin list.
         /// </summary>
         [JsonProperty("BackupOrigins")]
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// Origin-pull protocol configuration. Values:
-        /// <li>`http`: Force HTTP for origin-pull.</li>
-        /// <li>`follow`: Follow protocol.</li>
-        /// <li>`https`: Force HTTPS for origin-pull.</li>
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Origin server protocol configuration. valid values:.
+        /// <Li>Http: forced http back to source;</li>.
+        /// <Li>`Follow`: follow protocol.</li>.
+        /// <Li>Https: enforce https origin-pull.</li>.
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// Whether to allow private access to buckets when `OriginType=cos`. Valid values: 
-        /// <li>`on`: Private access;</li>
-        /// <li>`off`: Public access.</li>
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
+        /// <li>`on`: private network access;</li>.
+        /// <li>`off`: public access.</li>.
         /// </summary>
         [JsonProperty("CosPrivateAccess")]
         public string CosPrivateAccess{ get; set; }

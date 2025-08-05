@@ -31,8 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The subdomain name to be verified. To verify the ownership of a site, leave it blank.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// The subdomain name to be verified. to verify the ownership of a site, leave it blank.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -52,8 +51,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public AscriptionInfo Ascription{ get; set; }
 
         /// <summary>
-        /// The NS record of the domain name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the current NS record of the domain name.
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }

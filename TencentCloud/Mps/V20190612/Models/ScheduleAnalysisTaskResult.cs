@@ -55,11 +55,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of the content analysis task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Analysis task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisResult[] Output{ get; set; }
+
+        /// <summary>
+        /// Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
 
 
         /// <summary>
@@ -73,6 +84,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamArrayObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

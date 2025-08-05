@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1184</VersionPrefix>
+    <VersionPrefix>3.0.1187</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -360,6 +360,8 @@
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\ExecRuleTaskData.cs" />
+    <Compile Include="V20190612\Models\ExecRulesTask.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
@@ -528,6 +530,7 @@
     <Compile Include="V20190612\Models\QualityControlItem.cs" />
     <Compile Include="V20190612\Models\QualityControlItemConfig.cs" />
     <Compile Include="V20190612\Models\QualityControlResult.cs" />
+    <Compile Include="V20190612\Models\QualityControlStrategy.cs" />
     <Compile Include="V20190612\Models\QualityControlTemplate.cs" />
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
     <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />
@@ -535,11 +538,14 @@
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\ResetWorkflowResponse.cs" />
+    <Compile Include="V20190612\Models\RuleConditionItem.cs" />
+    <Compile Include="V20190612\Models\Rules.cs" />
     <Compile Include="V20190612\Models\S3InputInfo.cs" />
     <Compile Include="V20190612\Models\S3OutputStorage.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20190612\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20190612\Models\ScheduleAnalysisTaskResult.cs" />
+    <Compile Include="V20190612\Models\ScheduleExecRuleTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleQualityControlTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleRecognitionTaskResult.cs" />
     <Compile Include="V20190612\Models\ScheduleReviewTaskResult.cs" />
@@ -566,6 +572,7 @@
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />
+    <Compile Include="V20190612\Models\SubtitlePosition.cs" />
     <Compile Include="V20190612\Models\SubtitleTemplate.cs" />
     <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInput.cs" />
@@ -585,6 +592,7 @@
     <Compile Include="V20190612\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInput.cs" />
     <Compile Include="V20190612\Models\TextWatermarkTemplateInputForUpdate.cs" />
+    <Compile Include="V20190612\Models\TimeSpotCheck.cs" />
     <Compile Include="V20190612\Models\TrackInfo.cs" />
     <Compile Include="V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />

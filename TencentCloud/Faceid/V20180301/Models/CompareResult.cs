@@ -52,10 +52,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         public FileInfo LiveData{ get; set; }
 
         /// <summary>
-        /// The download URL of the video used for verification, which is valid for 10 minutes.
+        /// The download URL of the video used for verification, which contains specific color reflection effects, is valid for 10 minutes.
         /// </summary>
         [JsonProperty("LiveVideo")]
         public FileInfo LiveVideo{ get; set; }
+
+        /// <summary>
+        /// Records the specific action performed by the user, used for AI Face Shield analysis.
+        /// </summary>
+        [JsonProperty("ActionVideo")]
+        public FileInfo ActionVideo{ get; set; }
 
         /// <summary>
         /// The liveness detection result code.
@@ -142,6 +148,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamObj(map, prefix + "LiveData.", this.LiveData);
             this.SetParamObj(map, prefix + "LiveVideo.", this.LiveVideo);
+            this.SetParamObj(map, prefix + "ActionVideo.", this.ActionVideo);
             this.SetParamSimple(map, prefix + "LiveErrorCode", this.LiveErrorCode);
             this.SetParamSimple(map, prefix + "LiveErrorMsg", this.LiveErrorMsg);
             this.SetParamObj(map, prefix + "BestFrame.", this.BestFrame);

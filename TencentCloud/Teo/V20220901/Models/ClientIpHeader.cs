@@ -33,8 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Specifies the request header name containing the client IP For origin-pull. this parameter is required when Switch is on. X-Forwarded-For is not allowed For this parameter.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

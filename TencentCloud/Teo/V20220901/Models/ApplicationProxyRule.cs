@@ -95,8 +95,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// Duration for session persistence. The value takes effect only when SessionPersist is true.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Duration for session persistence. the value takes effect only when SessionPersist is true.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
@@ -110,8 +109,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginPort{ get; set; }
 
         /// <summary>
-        /// Rule tag.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Tag of the rule.
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

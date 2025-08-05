@@ -25,7 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Operation Name. the Name must correspond to the parameter structure, for example, if Name=Cache, CacheParameters is required.
+        /// <li>Cache: specifies the node Cache TTL.</li>.
+        /// <Li>CacheKey: specifies the custom cache key.</li>.
+        /// <Li>CachePrefresh: cache pre-refresh;</li>.
+        /// <Li>AccessURLRedirect: url redirection;</li>.
+        /// <Li>UpstreamURLRewrite: specifies the origin-pull url rewrite.</li>.
+        /// <li>QUIC:QUIC;</li>
+        /// <li>WebSocket:WebSocket;</li>
+        /// <li>Authentication: Token Authentication;</li>.
+        /// <li>MaxAge: browser caching TTL;</li>.
+        /// <li>StatusCodeCache: specifies the status code cache TTL.</li>.
+        /// <Li>OfflineCache: offline caching;</li>.
+        /// <Li>SmartRouting: smart acceleration;</li>.
+        /// <Li>RangeOriginPull: range-based origin pull;</li>.
+        /// <Li>UpstreamHTTP2: http/2 origin pull;</li>.
+        /// <Li>HostHeader: host header rewrite;</li>.
+        /// <Li>`ForceRedirectHTTPS`: force https redirect configuration for access protocol.</li>.
+        /// <li>OriginPullProtocol: HTTPS origin pull;</li>.
+        /// <Li>Compression: intelligent compression configuration;</li>.
+        /// <li>HSTS:HSTS;</li>
+        /// <Li>ClientIPHeader: configuration for storing client request ip in header information;</li>.
+        /// <Li>OCSPStapling: ocsp stapling;</li>.
+        /// <Li>HTTP2: http/2 integration;</li>.
+        /// <li>PostMaxSize: maximum size of the file uploaded for streaming via a POST request;</li>.
+        /// <Li>ClientIPCountry: region of the client ip during origin-pull;</li>.
+        /// <Li>UpstreamFollowRedirect: specifies the parameter configuration for redirection during origin pull.</li>.
+        /// <Li>UpstreamRequest: origin pull request parameter;</li>.
+        /// <li>TLSConfig: specifies SSL/TLS security.</li>.
+        /// <Li>ModifyOrigin: modify origin server;</li>.
+        /// <Li>HTTPUpstreamTimeout: specifies the layer 7 origin pull timeout configuration.</li>.
+        /// <li>HttpResponse: HTTP response;</li>.
+        /// <Li>ErrorPage: specifies the custom error page.</li>.
+        /// <li>ModifyResponseHeader: modifies the HTTP node response header.</li>.
+        /// <li>ModifyRequestHeader: modifies the HTTP node request header.</li>.
+        /// <Li>ResponseSpeedLimit: download speed limit for a single connection;</li>.
+        /// <Li>SetContentIdentifier: sets the content identifier;</li>.
+        /// <Li>Vary: vary feature configuration.</li>.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -262,12 +298,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public ResponseSpeedLimitParameters ResponseSpeedLimitParameters{ get; set; }
 
         /// <summary>
-        /// Content identification configuration parameter. this parameter is required when name is httpresponse.
+        /// Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
         /// 
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("SetContentIdentifierParameters")]
         public SetContentIdentifierParameters SetContentIdentifierParameters{ get; set; }
+
+        /// <summary>
+        /// Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+        /// </summary>
+        [JsonProperty("VaryParameters")]
+        public VaryParameters VaryParameters{ get; set; }
 
 
         /// <summary>
@@ -310,6 +352,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ModifyRequestHeaderParameters.", this.ModifyRequestHeaderParameters);
             this.SetParamObj(map, prefix + "ResponseSpeedLimitParameters.", this.ResponseSpeedLimitParameters);
             this.SetParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
+            this.SetParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
         }
     }
 }

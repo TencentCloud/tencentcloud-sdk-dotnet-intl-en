@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+        /// End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// Zone ID set. This parameter is required. A maximum of 100 zone IDs can be passed in. If you need to query data for all zones under the Tencent Cloud main account, please use "*" instead. To query account-level data, you need to have full resource permissions for all zones of this interface.
+        /// Site ID set. this parameter is required. a maximum of 100 site ids can be imported. use `*` to query data for all sites under the tencent cloud root account. to query account-level data, you must have resource permissions for all sites in this api.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

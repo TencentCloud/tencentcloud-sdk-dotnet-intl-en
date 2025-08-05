@@ -25,37 +25,35 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The mode of configurating origin ACLs for L7 acceleration domains.
-        /// - all: configurate origin ACLs for all L7 acceleration domains under the site.
-        /// - specific: configurate origin ACLs for designated L7 acceleration domains under the site.
-        /// When the parameter is empty, it defaults to specific.
+        /// L7 acceleration domain name activation in origin protection mode.
+        /// <li>`all`: enable layer-7 acceleration domain names for the site.</li>.
+        /// <Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
         /// </summary>
         [JsonProperty("L7EnableMode")]
         public string L7EnableMode{ get; set; }
 
         /// <summary>
-        /// The list of L7 acceleration domains that require enabling the origin ACLs. This list must be empty when the request parameter L7EnableMode is set to 'all'. A maximum of 200 domains are supported at a time.
+        /// Enable the list of layer-7 acceleration domain names with origin protection. this parameter is valid only when L7EnableMode is set to specific. when L7EnableMode is set to all, retain this parameter as empty. only supports up to 200 layer-7 acceleration domain names in a single operation.
         /// </summary>
         [JsonProperty("L7Hosts")]
         public string[] L7Hosts{ get; set; }
 
         /// <summary>
-        /// The mode of configurating origin ACLs for L4 proxy Instances.
-        /// - all: configurate origin ACLs for all L4 proxy Instances under the site.
-        /// - specific: configurate origin ACLs for designated  L4 proxy Instances under the site.
-        /// When the parameter is empty, it defaults to specific.
+        /// Specifies the origin protection mode of the l4 proxy instance.
+        /// <Li>ALL: enable for all l4 proxy instances under the site.</li>.
+        /// <Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
         /// </summary>
         [JsonProperty("L4EnableMode")]
         public string L4EnableMode{ get; set; }
 
         /// <summary>
-        /// The list of L4 proxy Instances that require enabling origin ACLs. This list must be empty when the request parameter L4EnableMode is set to 'all'. A maximum of 100 instances are supported at a time.
+        /// The list of L4 proxy instances with origin protection enabled. this parameter is valid only when L4EnableMode is set to specific. retain this parameter empty when L4EnableMode is set to all. only supports up to 100 layer-4 proxy instances per operation.
         /// </summary>
         [JsonProperty("L4ProxyIds")]
         public string[] L4ProxyIds{ get; set; }

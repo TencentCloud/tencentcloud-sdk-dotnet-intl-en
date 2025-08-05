@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Number of AZs returned
+        /// Number of AZs returned.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Array of AZs
+        /// Array of AZs.
         /// </summary>
         [JsonProperty("ZoneSet")]
         public ZoneInfo[] ZoneSet{ get; set; }

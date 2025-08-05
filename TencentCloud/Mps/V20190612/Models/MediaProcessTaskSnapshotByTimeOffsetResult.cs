@@ -55,7 +55,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public SnapshotByTimeOffsetTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Specifies the output of a screenshot task at specified time points for a video.
+        /// Output of the time point screenshot task for videos.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }

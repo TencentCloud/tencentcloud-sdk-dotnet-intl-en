@@ -39,22 +39,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public RateLimitUserRule[] RateLimitUserRules{ get; set; }
 
         /// <summary>
-        /// The settings of the rate limiting template. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The rate limit template feature. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitTemplate")]
         public RateLimitTemplate RateLimitTemplate{ get; set; }
 
         /// <summary>
-        /// The client filtering settings. If it is null, the settings that were last configured will be used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intelligent client filtering. if null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitIntelligence")]
         public RateLimitIntelligence RateLimitIntelligence{ get; set; }
 
         /// <summary>
-        /// The custom rate limiting rules. If it is `null`, the previous settings is used.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// The custom rate limiting rules. if it is `null`, the previous settings is used.
         /// </summary>
         [JsonProperty("RateLimitCustomizes")]
         public RateLimitUserRule[] RateLimitCustomizes{ get; set; }

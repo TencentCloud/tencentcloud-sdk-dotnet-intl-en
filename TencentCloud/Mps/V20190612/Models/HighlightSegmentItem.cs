@@ -50,15 +50,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] SegmentTags{ get; set; }
 
         /// <summary>
-        /// The live streaming segment corresponds to the live start time point, in the ISO date format.	
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Start time of the live streaming segment in ISO date and time format.	
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// The live streaming segment corresponds to the live streaming end time, in the ISO date format.	
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// End time of the live streaming segment in ISO date and time format.	
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1175";
+       private const string sdkVersion = "SDK_NET_3.0.1187";
 
         /// <summary>
         /// Client constructor.
@@ -185,6 +185,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -195,6 +196,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -394,6 +396,31 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
+        /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
+        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public Task<CreateJustInTimeTranscodeTemplateResponse> CreateJustInTimeTranscodeTemplate(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate");
+        }
+
+        /// <summary>
+        /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
+        /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
+        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
+        /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
+        public CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplateSync(CreateJustInTimeTranscodeTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateJustInTimeTranscodeTemplateResponse>(req, "CreateJustInTimeTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create Layer 4 proxy instances.
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
@@ -474,6 +501,69 @@ namespace TencentCloud.Teo.V20220901
         public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
         {
             return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
+        public Task<CreateMultiPathGatewayResponse> CreateMultiPathGateway(CreateMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayResponse>(req, "CreateMultiPathGateway");
+        }
+
+        /// <summary>
+        /// Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
+        public CreateMultiPathGatewayResponse CreateMultiPathGatewaySync(CreateMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayResponse>(req, "CreateMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create lines integrated with the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
+        public Task<CreateMultiPathGatewayLineResponse> CreateMultiPathGatewayLine(CreateMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayLineResponse>(req, "CreateMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// This API is used to create lines integrated with the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
+        public CreateMultiPathGatewayLineResponse CreateMultiPathGatewayLineSync(CreateMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewayLineResponse>(req, "CreateMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API creates an access key for the multi-channel security acceleration gateway. Customers use the access key to sign requests for accessing the gateway. Each site can have only one key, which is applicable to all gateways under that site. Query the key via the DescribeMultiPathGatewaySecretKey API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<CreateMultiPathGatewaySecretKeyResponse> CreateMultiPathGatewaySecretKey(CreateMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewaySecretKeyResponse>(req, "CreateMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// This API creates an access key for the multi-channel security acceleration gateway. Customers use the access key to sign requests for accessing the gateway. Each site can have only one key, which is applicable to all gateways under that site. Query the key via the DescribeMultiPathGatewaySecretKey API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
+        public CreateMultiPathGatewaySecretKeyResponse CreateMultiPathGatewaySecretKeySync(CreateMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMultiPathGatewaySecretKeyResponse>(req, "CreateMultiPathGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -589,8 +679,15 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a real-time log delivery task. The following limits apply:
-        /// An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
+        /// This API is used to create a real-time log delivery task.
+        /// The following restrictions apply:
+        /// 
+        /// - When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
+        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
+        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
+        /// - When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
+        /// 
+        /// Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -600,8 +697,15 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a real-time log delivery task. The following limits apply:
-        /// An entity (a Layer 7 domain name or a Layer 4 proxy instance) under the combination of the same data delivery type (LogType) and data delivery area (Area) can be added to only one real-time log delivery task. It is recommended to first query the real-time log delivery task list by entity through the [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) API to check whether the entity has been added to another real-time log delivery task.
+        /// This API is used to create a real-time log delivery task.
+        /// The following restrictions apply:
+        /// 
+        /// - When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
+        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
+        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
+        /// - When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
+        /// 
+        /// Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -612,7 +716,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
+        /// This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -622,13 +726,76 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).
+        /// This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
         public CreateRuleResponse CreateRuleSync(CreateRuleRequest req)
         {
             return InternalRequestAsync<CreateRuleResponse>(req, "CreateRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an API resource.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
+        public Task<CreateSecurityAPIResourceResponse> CreateSecurityAPIResource(CreateSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIResourceResponse>(req, "CreateSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// This API is used to create an API resource.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
+        public CreateSecurityAPIResourceResponse CreateSecurityAPIResourceSync(CreateSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIResourceResponse>(req, "CreateSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an API service.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
+        public Task<CreateSecurityAPIServiceResponse> CreateSecurityAPIService(CreateSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIServiceResponse>(req, "CreateSecurityAPIService");
+        }
+
+        /// <summary>
+        /// This API is used to create an API service.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
+        public CreateSecurityAPIServiceResponse CreateSecurityAPIServiceSync(CreateSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityAPIServiceResponse>(req, "CreateSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
+        public Task<CreateSecurityClientAttesterResponse> CreateSecurityClientAttester(CreateSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityClientAttesterResponse>(req, "CreateSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// This API is used to create client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
+        public CreateSecurityClientAttesterResponse CreateSecurityClientAttesterSync(CreateSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityClientAttesterResponse>(req, "CreateSecurityClientAttester")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -650,6 +817,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateSecurityIPGroupResponse CreateSecurityIPGroupSync(CreateSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<CreateSecurityIPGroupResponse>(req, "CreateSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a JavaScript injection rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
+        public Task<CreateSecurityJSInjectionRuleResponse> CreateSecurityJSInjectionRule(CreateSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityJSInjectionRuleResponse>(req, "CreateSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// This API is used to create a JavaScript injection rule.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
+        public CreateSecurityJSInjectionRuleResponse CreateSecurityJSInjectionRuleSync(CreateSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<CreateSecurityJSInjectionRuleResponse>(req, "CreateSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -743,6 +931,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to delete an alias domain name.
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -753,6 +942,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to delete an alias domain name.
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -910,6 +1100,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
+        public Task<DeleteJustInTimeTranscodeTemplatesResponse> DeleteJustInTimeTranscodeTemplates(DeleteJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteJustInTimeTranscodeTemplatesResponse>(req, "DeleteJustInTimeTranscodeTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
+        public DeleteJustInTimeTranscodeTemplatesResponse DeleteJustInTimeTranscodeTemplatesSync(DeleteJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteJustInTimeTranscodeTemplatesResponse>(req, "DeleteJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a Layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
@@ -994,6 +1205,48 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to delete a multi-channel security acceleration gateway, including private gateways and Cloud Gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
+        public Task<DeleteMultiPathGatewayResponse> DeleteMultiPathGateway(DeleteMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayResponse>(req, "DeleteMultiPathGateway");
+        }
+
+        /// <summary>
+        /// This API is used to delete a multi-channel security acceleration gateway, including private gateways and Cloud Gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
+        public DeleteMultiPathGatewayResponse DeleteMultiPathGatewaySync(DeleteMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayResponse>(req, "DeleteMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete lines integrated with the multi-channel security acceleration gateway. Only custom lines support deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
+        public Task<DeleteMultiPathGatewayLineResponse> DeleteMultiPathGatewayLine(DeleteMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayLineResponse>(req, "DeleteMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// This API is used to delete lines integrated with the multi-channel security acceleration gateway. Only custom lines support deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
+        public DeleteMultiPathGatewayLineResponse DeleteMultiPathGatewayLineSync(DeleteMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DeleteMultiPathGatewayLineResponse>(req, "DeleteMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
@@ -1036,7 +1289,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
+        /// This interface is the old version of the rule engine deletion interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule deletion interface, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).<0>Note: Starting from January 21, 2025, the earlier version API will no longer be updated. Subsequent new features will only be provided in the latest version interface. The original capabilities supported by the earlier version API will not be affected. To avoid field conflicts when using the earlier version API, it is recommended that you migrate to the new version rule engine API as soon as possible.</0>.
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -1046,13 +1299,76 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).
+        /// This interface is the old version of the rule engine deletion interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule deletion interface, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).<0>Note: Starting from January 21, 2025, the earlier version API will no longer be updated. Subsequent new features will only be provided in the latest version interface. The original capabilities supported by the earlier version API will not be affected. To avoid field conflicts when using the earlier version API, it is recommended that you migrate to the new version rule engine API as soon as possible.</0>.
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
         public DeleteRulesResponse DeleteRulesSync(DeleteRulesRequest req)
         {
             return InternalRequestAsync<DeleteRulesResponse>(req, "DeleteRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete API resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
+        public Task<DeleteSecurityAPIResourceResponse> DeleteSecurityAPIResource(DeleteSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIResourceResponse>(req, "DeleteSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// This API is used to delete API resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
+        public DeleteSecurityAPIResourceResponse DeleteSecurityAPIResourceSync(DeleteSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIResourceResponse>(req, "DeleteSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the API service.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
+        public Task<DeleteSecurityAPIServiceResponse> DeleteSecurityAPIService(DeleteSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIServiceResponse>(req, "DeleteSecurityAPIService");
+        }
+
+        /// <summary>
+        /// This API is used to delete the API service.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
+        public DeleteSecurityAPIServiceResponse DeleteSecurityAPIServiceSync(DeleteSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityAPIServiceResponse>(req, "DeleteSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
+        public Task<DeleteSecurityClientAttesterResponse> DeleteSecurityClientAttester(DeleteSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityClientAttesterResponse>(req, "DeleteSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// This API is used to delete client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
+        public DeleteSecurityClientAttesterResponse DeleteSecurityClientAttesterSync(DeleteSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityClientAttesterResponse>(req, "DeleteSecurityClientAttester")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1074,6 +1390,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteSecurityIPGroupResponse DeleteSecurityIPGroupSync(DeleteSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<DeleteSecurityIPGroupResponse>(req, "DeleteSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityJSInjectionRuleResponse"/></returns>
+        public Task<DeleteSecurityJSInjectionRuleResponse> DeleteSecurityJSInjectionRule(DeleteSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityJSInjectionRuleResponse>(req, "DeleteSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// This API is used to delete JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DeleteSecurityJSInjectionRuleResponse"/></returns>
+        public DeleteSecurityJSInjectionRuleResponse DeleteSecurityJSInjectionRuleSync(DeleteSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteSecurityJSInjectionRuleResponse>(req, "DeleteSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1183,7 +1520,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the information of alias domain names.
+        /// This API is used to query the alias domain name information list.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -1193,7 +1531,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the information of alias domain names.
+        /// This API is used to query the alias domain name information list.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -1435,6 +1774,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to search for site exclusive Anti-DDoS information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
+        /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
+        public Task<DescribeDDoSProtectionResponse> DescribeDDoSProtection(DescribeDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<DescribeDDoSProtectionResponse>(req, "DescribeDDoSProtection");
+        }
+
+        /// <summary>
+        /// This API is used to search for site exclusive Anti-DDoS information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
+        /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
+        public DescribeDDoSProtectionResponse DescribeDDoSProtectionSync(DescribeDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<DescribeDDoSProtectionResponse>(req, "DescribeDDoSProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a list of default certificates.
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
@@ -1645,6 +2005,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public Task<DescribeJustInTimeTranscodeTemplatesResponse> DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
+        public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplatesSync(DescribeJustInTimeTranscodeTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeJustInTimeTranscodeTemplatesResponse>(req, "DescribeJustInTimeTranscodeTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a Layer 4 proxy instance list.
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
@@ -1750,6 +2131,111 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
+        public Task<DescribeMultiPathGatewayResponse> DescribeMultiPathGateway(DescribeMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayResponse>(req, "DescribeMultiPathGateway");
+        }
+
+        /// <summary>
+        /// This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
+        public DescribeMultiPathGatewayResponse DescribeMultiPathGatewaySync(DescribeMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayResponse>(req, "DescribeMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Use this API to query the lines integrated with the multi-channel security acceleration gateway, including direct connection lines, EdgeOne Layer-4 proxy lines, and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
+        public Task<DescribeMultiPathGatewayLineResponse> DescribeMultiPathGatewayLine(DescribeMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayLineResponse>(req, "DescribeMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// Use this API to query the lines integrated with the multi-channel security acceleration gateway, including direct connection lines, EdgeOne Layer-4 proxy lines, and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
+        public DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLineSync(DescribeMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayLineResponse>(req, "DescribeMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
+        public Task<DescribeMultiPathGatewayRegionsResponse> DescribeMultiPathGatewayRegions(DescribeMultiPathGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayRegionsResponse>(req, "DescribeMultiPathGatewayRegions");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
+        public DescribeMultiPathGatewayRegionsResponse DescribeMultiPathGatewayRegionsSync(DescribeMultiPathGatewayRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayRegionsResponse>(req, "DescribeMultiPathGatewayRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<DescribeMultiPathGatewaySecretKeyResponse> DescribeMultiPathGatewaySecretKey(DescribeMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaySecretKeyResponse>(req, "DescribeMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>
+        public DescribeMultiPathGatewaySecretKeyResponse DescribeMultiPathGatewaySecretKeySync(DescribeMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaySecretKeyResponse>(req, "DescribeMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the multi-channel security acceleration gateway list created by the user through this interface. Supports pagination.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
+        public Task<DescribeMultiPathGatewaysResponse> DescribeMultiPathGateways(DescribeMultiPathGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaysResponse>(req, "DescribeMultiPathGateways");
+        }
+
+        /// <summary>
+        /// Query the multi-channel security acceleration gateway list created by the user through this interface. Supports pagination.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
+        public DescribeMultiPathGatewaysResponse DescribeMultiPathGatewaysSync(DescribeMultiPathGatewaysRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewaysResponse>(req, "DescribeMultiPathGateways")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginACLRequest"/></param>
@@ -1813,7 +2299,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the origin protection configuration.
+        /// This API is used to query origin protection on an earlier version. EdgeOne comprehensively upgraded relevant APIs for origin protection on June 27, 2025. For details on the new version, see [DescribeOriginACL](https://intl.cloud.tencent.com/document/product/1552/120408?from_cn_redirect=1).
+        /// 
+        /// Note: Starting from June 27, 2025, the legacy version APIs will stop updating. New features will only be provided in the latest version APIs. To avoid data field conflicts when using legacy version APIs, it is recommended to migrate to the new version origin protection APIs as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
         /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
@@ -1823,7 +2311,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the origin protection configuration.
+        /// This API is used to query origin protection on an earlier version. EdgeOne comprehensively upgraded relevant APIs for origin protection on June 27, 2025. For details on the new version, see [DescribeOriginACL](https://intl.cloud.tencent.com/document/product/1552/120408?from_cn_redirect=1).
+        /// 
+        /// Note: Starting from June 27, 2025, the legacy version APIs will stop updating. New features will only be provided in the latest version APIs. To avoid data field conflicts when using legacy version APIs, it is recommended to migrate to the new version origin protection APIs as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
         /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
@@ -1851,6 +2341,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeOverviewL7DataResponse DescribeOverviewL7DataSync(DescribeOverviewL7DataRequest req)
         {
             return InternalRequestAsync<DescribeOverviewL7DataResponse>(req, "DescribeOverviewL7Data")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query package information list with pagination support.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlansRequest"/></param>
+        /// <returns><see cref="DescribePlansResponse"/></returns>
+        public Task<DescribePlansResponse> DescribePlans(DescribePlansRequest req)
+        {
+            return InternalRequestAsync<DescribePlansResponse>(req, "DescribePlans");
+        }
+
+        /// <summary>
+        /// This API is used to query package information list with pagination support.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePlansRequest"/></param>
+        /// <returns><see cref="DescribePlansResponse"/></returns>
+        public DescribePlansResponse DescribePlansSync(DescribePlansRequest req)
+        {
+            return InternalRequestAsync<DescribePlansResponse>(req, "DescribePlans")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1918,7 +2429,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// This API is on an earlier version to query engine rules. EdgeOne has comprehensively upgraded relevant APIs of the rule engine on January 21, 2025. For details about the new version API to query layer-7 acceleration rules, see DescribeL7AccRules(https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1928,7 +2440,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// This API is on an earlier version to query engine rules. EdgeOne has comprehensively upgraded relevant APIs of the rule engine on January 21, 2025. For details about the new version API to query layer-7 acceleration rules, see DescribeL7AccRules(https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -1960,7 +2473,70 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+        /// This API is used to query API resources under a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
+        public Task<DescribeSecurityAPIResourceResponse> DescribeSecurityAPIResource(DescribeSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIResourceResponse>(req, "DescribeSecurityAPIResource");
+        }
+
+        /// <summary>
+        /// This API is used to query API resources under a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
+        public DescribeSecurityAPIResourceResponse DescribeSecurityAPIResourceSync(DescribeSecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIResourceResponse>(req, "DescribeSecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query API services under a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
+        public Task<DescribeSecurityAPIServiceResponse> DescribeSecurityAPIService(DescribeSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIServiceResponse>(req, "DescribeSecurityAPIService");
+        }
+
+        /// <summary>
+        /// This API is used to query API services under a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
+        public DescribeSecurityAPIServiceResponse DescribeSecurityAPIServiceSync(DescribeSecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityAPIServiceResponse>(req, "DescribeSecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query client authentication option configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
+        public Task<DescribeSecurityClientAttesterResponse> DescribeSecurityClientAttester(DescribeSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityClientAttesterResponse>(req, "DescribeSecurityClientAttester");
+        }
+
+        /// <summary>
+        /// This API is used to query client authentication option configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
+        public DescribeSecurityClientAttesterResponse DescribeSecurityClientAttesterSync(DescribeSecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityClientAttesterResponse>(req, "DescribeSecurityClientAttester")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the configuration information of a security IP group, including the ID, name and content of the security IP group. The query result of this API only returns up to 2000 IPs or CIDR blocks for each IP group. If there is a very large IP group exceeding 2000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent to perform a paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
@@ -1970,13 +2546,34 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a security IP group, including the ID, name, and content of the security IP group.
+        /// This API is used to query the configuration information of a security IP group, including the ID, name and content of the security IP group. The query result of this API only returns up to 2000 IPs or CIDR blocks for each IP group. If there is a very large IP group exceeding 2000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent to perform a paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
         public DescribeSecurityIPGroupResponse DescribeSecurityIPGroupSync(DescribeSecurityIPGroupRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupResponse>(req, "DescribeSecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to perform a paging query for the IP address list in a designated IP group. When the number of IP addresses in the group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
+        public Task<DescribeSecurityIPGroupContentResponse> DescribeSecurityIPGroupContent(DescribeSecurityIPGroupContentRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupContentResponse>(req, "DescribeSecurityIPGroupContent");
+        }
+
+        /// <summary>
+        /// This API is used to perform a paging query for the IP address list in a designated IP group. When the number of IP addresses in the group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
+        /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
+        public DescribeSecurityIPGroupContentResponse DescribeSecurityIPGroupContentSync(DescribeSecurityIPGroupContentRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityIPGroupContentResponse>(req, "DescribeSecurityIPGroupContent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2004,6 +2601,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfoSync(DescribeSecurityIPGroupInfoRequest req)
         {
             return InternalRequestAsync<DescribeSecurityIPGroupInfoResponse>(req, "DescribeSecurityIPGroupInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DescribeSecurityJSInjectionRuleResponse"/></returns>
+        public Task<DescribeSecurityJSInjectionRuleResponse> DescribeSecurityJSInjectionRule(DescribeSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityJSInjectionRuleResponse>(req, "DescribeSecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// This API is used to query JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="DescribeSecurityJSInjectionRuleResponse"/></returns>
+        public DescribeSecurityJSInjectionRuleResponse DescribeSecurityJSInjectionRuleSync(DescribeSecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityJSInjectionRuleResponse>(req, "DescribeSecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2358,13 +2976,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable 'Origin Protection' for Layer 4 or Layer 7 instances. The number of enabled instances has an upper limit: 200 for Layer 7 domains and 100 for Layer 4 proxy instances. The total number of instances cannot exceed 200, otherwise an error reminder will be triggered. You can first enable the maximum allowed number and use the ModifyOriginACL API to set the excess quantity.
+        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
         /// 
-        /// This API is used to enable 'Origin Protection' for the site for the first time. Once enabled, EdgeOne will use specific origin IP ranges for L7 acceleration domains and L4 proxy instances. The maximum number of L7 acceleration domain that can be submitted in a single request is 200, and the maximum number of L4 proxy instance is 100. Mixed submissions of L7 acceleration domains and L4 proxy instances are supported, with a total maximum of 200 instances. If you need to enable more than 200 instances, you can first enable the maximum number by specifying the instances, and then enable the remaining instances through the API ModifyOriginACL. Any subsequent addition of  L7 acceleration domains or L4 proxy instances should be configured through the API ModifyOriginACL.
-        /// 
-        /// Note:
-        /// - Calling this API is considered as agreeing to [Origin Protection Enablement Conditions of Use](https://www.tencentcloud.com/document/product/1145/70561?!longPreview).
-        /// - The origin IP ranges may change periodically. EdgeOne will notify you of changes to the origin IP ranges 14 days, 7 days, 3 days, and 1 day in advance through one or more methods such as internal messages, SMS, and email. To ensure you receive notifications about changes to the origin IP ranges, please make sure that you have selected the relevant product service notifications for the Edge Security Acceleration Platform (EO) in [Tencent Cloud Message Center](https://console.tencentcloud.com/message/subscription) and have configured the correct message recipients. For configuration details, please refer to Message [Subscription Management](https://www.tencentcloud.com/document/product/1233/60778).
+        /// Create and bind policy Query instance Reset instance access password.
+        /// -Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
+        /// -The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -2374,13 +2990,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable 'Origin Protection' for Layer 4 or Layer 7 instances. The number of enabled instances has an upper limit: 200 for Layer 7 domains and 100 for Layer 4 proxy instances. The total number of instances cannot exceed 200, otherwise an error reminder will be triggered. You can first enable the maximum allowed number and use the ModifyOriginACL API to set the excess quantity.
+        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
         /// 
-        /// This API is used to enable 'Origin Protection' for the site for the first time. Once enabled, EdgeOne will use specific origin IP ranges for L7 acceleration domains and L4 proxy instances. The maximum number of L7 acceleration domain that can be submitted in a single request is 200, and the maximum number of L4 proxy instance is 100. Mixed submissions of L7 acceleration domains and L4 proxy instances are supported, with a total maximum of 200 instances. If you need to enable more than 200 instances, you can first enable the maximum number by specifying the instances, and then enable the remaining instances through the API ModifyOriginACL. Any subsequent addition of  L7 acceleration domains or L4 proxy instances should be configured through the API ModifyOriginACL.
-        /// 
-        /// Note:
-        /// - Calling this API is considered as agreeing to [Origin Protection Enablement Conditions of Use](https://www.tencentcloud.com/document/product/1145/70561?!longPreview).
-        /// - The origin IP ranges may change periodically. EdgeOne will notify you of changes to the origin IP ranges 14 days, 7 days, 3 days, and 1 day in advance through one or more methods such as internal messages, SMS, and email. To ensure you receive notifications about changes to the origin IP ranges, please make sure that you have selected the relevant product service notifications for the Edge Security Acceleration Platform (EO) in [Tencent Cloud Message Center](https://console.tencentcloud.com/message/subscription) and have configured the correct message recipients. For configuration details, please refer to Message [Subscription Management](https://www.tencentcloud.com/document/product/1233/60778).
+        /// Create and bind policy Query instance Reset instance access password.
+        /// -Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
+        /// -The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -2543,6 +3157,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify an alias domain name.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -2553,6 +3168,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify an alias domain name.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -2564,6 +3180,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify the status of an alias domain name.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -2574,6 +3191,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify the status of an alias domain name.
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -2710,6 +3328,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify site exclusive Anti-DDoS protection.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
+        public Task<ModifyDDoSProtectionResponse> ModifyDDoSProtection(ModifyDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDDoSProtectionResponse>(req, "ModifyDDoSProtection");
+        }
+
+        /// <summary>
+        /// This API is used to modify site exclusive Anti-DDoS protection.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
+        public ModifyDDoSProtectionResponse ModifyDDoSProtectionSync(ModifyDDoSProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDDoSProtectionResponse>(req, "ModifyDDoSProtection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3012,6 +3651,69 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP and port.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
+        public Task<ModifyMultiPathGatewayResponse> ModifyMultiPathGateway(ModifyMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayResponse>(req, "ModifyMultiPathGateway");
+        }
+
+        /// <summary>
+        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP and port.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
+        public ModifyMultiPathGatewayResponse ModifyMultiPathGatewaySync(ModifyMultiPathGatewayRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayResponse>(req, "ModifyMultiPathGateway")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the access lines of the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy lines and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
+        public Task<ModifyMultiPathGatewayLineResponse> ModifyMultiPathGatewayLine(ModifyMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayLineResponse>(req, "ModifyMultiPathGatewayLine");
+        }
+
+        /// <summary>
+        /// This API is used to modify the access lines of the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy lines and custom lines.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
+        public ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLineSync(ModifyMultiPathGatewayLineRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayLineResponse>(req, "ModifyMultiPathGatewayLine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the access key for the multi-channel security acceleration gateway.The access key is used by customers to sign requests for gateway access. The original key becomes invalid after modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<ModifyMultiPathGatewaySecretKeyResponse> ModifyMultiPathGatewaySecretKey(ModifyMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// This API is used to modify the access key for the multi-channel security acceleration gateway.The access key is used by customers to sign requests for gateway access. The original key becomes invalid after modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
+        public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKeySync(ModifyMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
@@ -3096,7 +3798,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -3106,13 +3809,77 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccRule](https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
         public ModifyRuleResponse ModifyRuleSync(ModifyRuleRequest req)
         {
             return InternalRequestAsync<ModifyRuleResponse>(req, "ModifyRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify an API resource.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
+        public Task<ModifySecurityAPIResourceResponse> ModifySecurityAPIResource(ModifySecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIResourceResponse>(req, "ModifySecurityAPIResource");
+        }
+
+        /// <summary>
+        /// This API is used to modify an API resource.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
+        public ModifySecurityAPIResourceResponse ModifySecurityAPIResourceSync(ModifySecurityAPIResourceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIResourceResponse>(req, "ModifySecurityAPIResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify an API service.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
+        public Task<ModifySecurityAPIServiceResponse> ModifySecurityAPIService(ModifySecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIServiceResponse>(req, "ModifySecurityAPIService");
+        }
+
+        /// <summary>
+        /// This API is used to modify an API service.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
+        /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
+        public ModifySecurityAPIServiceResponse ModifySecurityAPIServiceSync(ModifySecurityAPIServiceRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityAPIServiceResponse>(req, "ModifySecurityAPIService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
+        public Task<ModifySecurityClientAttesterResponse> ModifySecurityClientAttester(ModifySecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityClientAttesterResponse>(req, "ModifySecurityClientAttester");
+        }
+
+        /// <summary>
+        /// This API is used to modify client authentication options.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
+        /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
+        public ModifySecurityClientAttesterResponse ModifySecurityClientAttesterSync(ModifySecurityClientAttesterRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityClientAttesterResponse>(req, "ModifySecurityClientAttester")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3134,6 +3901,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifySecurityIPGroupResponse ModifySecurityIPGroupSync(ModifySecurityIPGroupRequest req)
         {
             return InternalRequestAsync<ModifySecurityIPGroupResponse>(req, "ModifySecurityIPGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="ModifySecurityJSInjectionRuleResponse"/></returns>
+        public Task<ModifySecurityJSInjectionRuleResponse> ModifySecurityJSInjectionRule(ModifySecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityJSInjectionRuleResponse>(req, "ModifySecurityJSInjectionRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify JavaScript injection rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityJSInjectionRuleRequest"/></param>
+        /// <returns><see cref="ModifySecurityJSInjectionRuleResponse"/></returns>
+        public ModifySecurityJSInjectionRuleResponse ModifySecurityJSInjectionRuleSync(ModifySecurityJSInjectionRuleRequest req)
+        {
+            return InternalRequestAsync<ModifySecurityJSInjectionRuleResponse>(req, "ModifySecurityJSInjectionRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3239,6 +4027,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneStatusResponse ModifyZoneStatusSync(ModifyZoneStatusRequest req)
         {
             return InternalRequestAsync<ModifyZoneStatusResponse>(req, "ModifyZoneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
+        public Task<RefreshMultiPathGatewaySecretKeyResponse> RefreshMultiPathGatewaySecretKey(RefreshMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<RefreshMultiPathGatewaySecretKeyResponse>(req, "RefreshMultiPathGatewaySecretKey");
+        }
+
+        /// <summary>
+        /// This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
+        /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
+        public RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKeySync(RefreshMultiPathGatewaySecretKeyRequest req)
+        {
+            return InternalRequestAsync<RefreshMultiPathGatewaySecretKeyResponse>(req, "RefreshMultiPathGatewaySecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

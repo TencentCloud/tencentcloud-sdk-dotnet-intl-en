@@ -25,43 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether there is an audio track. `true` indicates that there isn't.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// When this field is set to true, it indicates that the video has no audio track.
         /// </summary>
         [JsonProperty("NoAudio")]
         public bool? NoAudio{ get; set; }
 
         /// <summary>
-        /// Whether there is a video track. `true` indicates that there isn't.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// When this field is set to true, it indicates that the video has no video track.
         /// </summary>
         [JsonProperty("NoVideo")]
         public bool? NoVideo{ get; set; }
 
         /// <summary>
         /// No-reference quality score of the video (100 points in total).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
         /// No-reference quality score of the video (MOS).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("QualityEvaluationMeanOpinionScore")]
         public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
-        /// Exception items detected in content quality inspection.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Exception items identified in content quality inspection.
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// Exception items detected in format diagnosis.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Exception items identified in format diagnosis.
         /// </summary>
         [JsonProperty("ContainerDiagnoseResultSet")]
         public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
