@@ -45,7 +45,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ChargeUnit{ get; set; }
 
         /// <summary>
-        /// Original price. Unit: CNY. Returned only for prepaid price inquiry.
+        /// Original price. Unit: USD. Returned only for prepaid price inquiry.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }

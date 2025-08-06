@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1176";
+       private const string sdkVersion = "SDK_NET_3.0.1189";
 
         /// <summary>
         /// Client constructor.
@@ -118,6 +118,35 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// API description:
+        /// This API is used to enable the cloud slicing feature, completing audio and video slicing tasks in the room, and uploading them to the specified cloud storage.
+        /// This API is used to achieve the following goals:
+        /// * This API is used to specify the slicing parameter (SliceParams) to define the blocklist or allowlist of the anchors that require slicing.
+        /// * This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="CreateCloudSliceTaskResponse"/></returns>
+        public Task<CreateCloudSliceTaskResponse> CreateCloudSliceTask(CreateCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCloudSliceTaskResponse>(req, "CreateCloudSliceTask");
+        }
+
+        /// <summary>
+        /// API description:
+        /// This API is used to enable the cloud slicing feature, completing audio and video slicing tasks in the room, and uploading them to the specified cloud storage.
+        /// This API is used to achieve the following goals:
+        /// * This API is used to specify the slicing parameter (SliceParams) to define the blocklist or allowlist of the anchors that require slicing.
+        /// * This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="CreateCloudSliceTaskResponse"/></returns>
+        public CreateCloudSliceTaskResponse CreateCloudSliceTaskSync(CreateCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCloudSliceTaskResponse>(req, "CreateCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to stop a recording task. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
@@ -135,6 +164,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudRecordingResponse DeleteCloudRecordingSync(DeleteCloudRecordingRequest req)
         {
             return InternalRequestAsync<DeleteCloudRecordingResponse>(req, "DeleteCloudRecording")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to stop the slicing task after it is started. Successfully stopping the slicing does not mean that all files are fully transmitted; if the transmission is not completed, the backend will continue to upload files. After the upload is successful, a notification is sent to the customer, prompting that all files have been transmitted, through the event callback.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="DeleteCloudSliceTaskResponse"/></returns>
+        public Task<DeleteCloudSliceTaskResponse> DeleteCloudSliceTask(DeleteCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudSliceTaskResponse>(req, "DeleteCloudSliceTask");
+        }
+
+        /// <summary>
+        /// This API is used to stop the slicing task after it is started. Successfully stopping the slicing does not mean that all files are fully transmitted; if the transmission is not completed, the backend will continue to upload files. After the upload is successful, a notification is sent to the customer, prompting that all files have been transmitted, through the event callback.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="DeleteCloudSliceTaskResponse"/></returns>
+        public DeleteCloudSliceTaskResponse DeleteCloudSliceTaskSync(DeleteCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudSliceTaskResponse>(req, "DeleteCloudSliceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -227,6 +277,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCloudRecordingResponse DescribeCloudRecordingSync(DescribeCloudRecordingRequest req)
         {
             return InternalRequestAsync<DescribeCloudRecordingResponse>(req, "DescribeCloudRecording")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the status of the slicing task after it is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudSliceTaskResponse"/></returns>
+        public Task<DescribeCloudSliceTaskResponse> DescribeCloudSliceTask(DescribeCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudSliceTaskResponse>(req, "DescribeCloudSliceTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the status of the slicing task after it is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudSliceTaskResponse"/></returns>
+        public DescribeCloudSliceTaskResponse DescribeCloudSliceTaskSync(DescribeCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudSliceTaskResponse>(req, "DescribeCloudSliceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -738,6 +809,27 @@ namespace TencentCloud.Trtc.V20190722
         public ModifyCloudRecordingResponse ModifyCloudRecordingSync(ModifyCloudRecordingRequest req)
         {
             return InternalRequestAsync<ModifyCloudRecordingResponse>(req, "ModifyCloudRecording")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the slicing task after it is started. It can be used to update the allowlist or blocklist for the specified subscription stream.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="ModifyCloudSliceTaskResponse"/></returns>
+        public Task<ModifyCloudSliceTaskResponse> ModifyCloudSliceTask(ModifyCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudSliceTaskResponse>(req, "ModifyCloudSliceTask");
+        }
+
+        /// <summary>
+        /// This API is used to update the slicing task after it is started. It can be used to update the allowlist or blocklist for the specified subscription stream.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudSliceTaskRequest"/></param>
+        /// <returns><see cref="ModifyCloudSliceTaskResponse"/></returns>
+        public ModifyCloudSliceTaskResponse ModifyCloudSliceTaskSync(ModifyCloudSliceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudSliceTaskResponse>(req, "ModifyCloudSliceTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
