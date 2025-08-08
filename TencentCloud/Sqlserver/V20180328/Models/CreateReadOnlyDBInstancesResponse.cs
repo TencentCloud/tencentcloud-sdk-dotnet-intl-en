@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Order name in array.
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

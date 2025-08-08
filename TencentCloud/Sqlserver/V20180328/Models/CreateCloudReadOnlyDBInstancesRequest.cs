@@ -43,19 +43,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? ReadOnlyGroupType{ get; set; }
 
         /// <summary>
-        /// Instance memory size in GB
+        /// Instance memory size in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB
+        /// Instance disk size in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Number of instance cores
+        /// Number of instance cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
@@ -145,28 +145,34 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Array of voucher IDs (currently, only one voucher can be used per order)
+        /// Array of voucher IDs (currently, only one voucher can be used per order).
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// Tags associated with the instances to be created
+        /// Tags associated with the instances to be created.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Collation of system character sets. Default value:  Chinese_PRC_CI_AS
+        /// Collation of system character sets. Default value:  Chinese_PRC_CI_AS.
         /// </summary>
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
         /// <summary>
-        /// System time zone. Default value:  `China Standard Time`
+        /// System time zone. Default value:  `China Standard Time`.
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// Disk encryption identification, 0 - no encryption, 1 - encryption.
+        /// </summary>
+        [JsonProperty("DiskEncryptFlag")]
+        public long? DiskEncryptFlag{ get; set; }
 
 
         /// <summary>
@@ -198,6 +204,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
         }
     }
 }

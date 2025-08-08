@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.intl.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1190";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Dnspod.V20210323
         public CreateDomainGroupResponse CreateDomainGroupSync(CreateDomainGroupRequest req)
         {
             return InternalRequestAsync<CreateDomainGroupResponse>(req, "CreateDomainGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable a paid plan on the international website.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePackageOrderRequest"/></param>
+        /// <returns><see cref="CreatePackageOrderResponse"/></returns>
+        public Task<CreatePackageOrderResponse> CreatePackageOrder(CreatePackageOrderRequest req)
+        {
+            return InternalRequestAsync<CreatePackageOrderResponse>(req, "CreatePackageOrder");
+        }
+
+        /// <summary>
+        /// This API is used to enable a paid plan on the international website.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePackageOrderRequest"/></param>
+        /// <returns><see cref="CreatePackageOrderResponse"/></returns>
+        public CreatePackageOrderResponse CreatePackageOrderSync(CreatePackageOrderRequest req)
+        {
+            return InternalRequestAsync<CreatePackageOrderResponse>(req, "CreatePackageOrder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

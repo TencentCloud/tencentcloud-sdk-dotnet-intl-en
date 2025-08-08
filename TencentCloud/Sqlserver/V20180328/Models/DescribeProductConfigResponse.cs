@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Specification information array
+        /// Specification information array.
         /// </summary>
         [JsonProperty("SpecInfoList")]
         public SpecInfo[] SpecInfoList{ get; set; }
 
         /// <summary>
-        /// Number of date entries returned
+        /// Number of date entries returned.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

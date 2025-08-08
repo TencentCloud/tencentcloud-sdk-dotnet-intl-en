@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter by instance ID
+        /// Filter by instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// The list of instance version numbers
+        /// The list of instance version numbers.
         /// </summary>
         [JsonProperty("VersionSet")]
         public string[] VersionSet{ get; set; }
 
         /// <summary>
-        /// Instance AZ ID in the format of ap-guangzhou-2
+        /// Instance AZ ID in the format of ap-guangzhou-3.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
