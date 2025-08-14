@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1189";
+       private const string sdkVersion = "SDK_NET_3.0.1193";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,37 @@ namespace TencentCloud.Trtc.V20190722
         public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
         {
             return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// API description:
+        /// This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
+        /// 
+        /// This API is used to achieve the following goals:
+        /// * This API is used to specify the moderation parameters (ModerationParams) to specify the detailed parameters required for moderation.
+        /// * This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload the file complying with the moderation policy to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudModerationRequest"/></param>
+        /// <returns><see cref="CreateCloudModerationResponse"/></returns>
+        public Task<CreateCloudModerationResponse> CreateCloudModeration(CreateCloudModerationRequest req)
+        {
+            return InternalRequestAsync<CreateCloudModerationResponse>(req, "CreateCloudModeration");
+        }
+
+        /// <summary>
+        /// API description:
+        /// This API is used to enable the cloud moderation feature to complete audio and video slicing, video frame extraction, and audio stream recording in the room, and submit them to the specified moderation supplier for completing the moderation.
+        /// 
+        /// This API is used to achieve the following goals:
+        /// * This API is used to specify the moderation parameters (ModerationParams) to specify the detailed parameters required for moderation.
+        /// * This API is used to specify the storage parameter (SliceStorageParams) to specify the cloud storage you want to upload the file complying with the moderation policy to. Currently, Tencent Cloud Object Storage (COS) and third-party AWS are supported.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudModerationRequest"/></param>
+        /// <returns><see cref="CreateCloudModerationResponse"/></returns>
+        public CreateCloudModerationResponse CreateCloudModerationSync(CreateCloudModerationRequest req)
+        {
+            return InternalRequestAsync<CreateCloudModerationResponse>(req, "CreateCloudModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -143,6 +174,27 @@ namespace TencentCloud.Trtc.V20190722
         public CreateCloudSliceTaskResponse CreateCloudSliceTaskSync(CreateCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<CreateCloudSliceTaskResponse>(req, "CreateCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to stop submission for moderation after the cloud moderation task is successfully started.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
+        /// <returns><see cref="DeleteCloudModerationResponse"/></returns>
+        public Task<DeleteCloudModerationResponse> DeleteCloudModeration(DeleteCloudModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudModerationResponse>(req, "DeleteCloudModeration");
+        }
+
+        /// <summary>
+        /// This API is used to stop submission for moderation after the cloud moderation task is successfully started.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
+        /// <returns><see cref="DeleteCloudModerationResponse"/></returns>
+        public DeleteCloudModerationResponse DeleteCloudModerationSync(DeleteCloudModerationRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudModerationResponse>(req, "DeleteCloudModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -254,6 +306,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCallDetailInfoResponse DescribeCallDetailInfoSync(DescribeCallDetailInfoRequest req)
         {
             return InternalRequestAsync<DescribeCallDetailInfoResponse>(req, "DescribeCallDetailInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the status of the moderation task and information about the subscription blocklist and allowlist after the task is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudModerationRequest"/></param>
+        /// <returns><see cref="DescribeCloudModerationResponse"/></returns>
+        public Task<DescribeCloudModerationResponse> DescribeCloudModeration(DescribeCloudModerationRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudModerationResponse>(req, "DescribeCloudModeration");
+        }
+
+        /// <summary>
+        /// This API is used to query the status of the moderation task and information about the subscription blocklist and allowlist after the task is started, which is valid only when the task is in progress. An error will be returned if the task is exited.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudModerationRequest"/></param>
+        /// <returns><see cref="DescribeCloudModerationResponse"/></returns>
+        public DescribeCloudModerationResponse DescribeCloudModerationSync(DescribeCloudModerationRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudModerationResponse>(req, "DescribeCloudModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -788,6 +861,27 @@ namespace TencentCloud.Trtc.V20190722
         public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomIdSync(DismissRoomByStrRoomIdRequest req)
         {
             return InternalRequestAsync<DismissRoomByStrRoomIdResponse>(req, "DismissRoomByStrRoomId")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the subscription blocklist and allowlist after the cloud moderation task is successfully started.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudModerationRequest"/></param>
+        /// <returns><see cref="ModifyCloudModerationResponse"/></returns>
+        public Task<ModifyCloudModerationResponse> ModifyCloudModeration(ModifyCloudModerationRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudModerationResponse>(req, "ModifyCloudModeration");
+        }
+
+        /// <summary>
+        /// This API is used to update the subscription blocklist and allowlist after the cloud moderation task is successfully started.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudModerationRequest"/></param>
+        /// <returns><see cref="ModifyCloudModerationResponse"/></returns>
+        public ModifyCloudModerationResponse ModifyCloudModerationSync(ModifyCloudModerationRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudModerationResponse>(req, "ModifyCloudModeration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

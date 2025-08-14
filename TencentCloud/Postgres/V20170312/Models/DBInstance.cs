@@ -92,7 +92,7 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// The major PostgreSQL version number, which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API. Valid values: `10`, `11`, `12`, `13`, `14`, `15`.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
@@ -105,7 +105,7 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// PostgreSQL kernel version number (like v12.7_r1.8), which can be queried by the [DescribeDBVersions](https://intl.cloud.tencent.com/document/api/409/89018?from_cn_redirect=1) API.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
@@ -207,42 +207,42 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// The information of tags associated with instances
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
         /// <summary>
         /// Primary instance information, which is returned only when the instance is read-only.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
         /// Number of read-only instances
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReadOnlyInstanceNum")]
         public long? ReadOnlyInstanceNum{ get; set; }
 
         /// <summary>
         /// The status of a read-only instance in a read-only group
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusInReadonlyGroup")]
         public string StatusInReadonlyGroup{ get; set; }
 
         /// <summary>
         /// Offline time
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
         /// Instance node information
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }

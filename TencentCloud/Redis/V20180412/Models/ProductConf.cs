@@ -120,10 +120,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? EnableRepicaReadOnly{ get; set; }
 
         /// <summary>
-        /// Whether the Read-Only Replica is supported.
-        /// - true: Supported.
-        /// - false: Not supported.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Whether read-only replica is supported.
+        ///  - true: read-only replica supported.
+        ///  - false: not supported.
         /// </summary>
         [JsonProperty("EnableReplicaReadOnly")]
         public bool? EnableReplicaReadOnly{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Task ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

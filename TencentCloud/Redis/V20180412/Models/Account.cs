@@ -26,56 +26,51 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Instance ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Account name.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
         /// Account description.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Read/write permission policy.
+        /// Read/Write permission policy.
         /// - r: read-only.
-        /// - w: write-only.
+        /// 
+        ///  - w: write-only.
         /// - rw: read/write.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
         /// Read-only routing policy.
-        /// - master: primary node.
-        /// - replication: secondary node.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        ///  - master: primary node.
+        ///  - replication: replica node.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
         /// Sub-account status.
-        /// - 1: changing.
-        /// - 2: valid.
-        /// - 4: deleted.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        ///  - 1: account under modification.
+        ///  - 2: valid account.
+        ///  - 4: account deleted.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Creation time.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

@@ -213,6 +213,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string KMSRegion{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("KMSClusterId")]
+        public string KMSClusterId{ get; set; }
+
+        /// <summary>
         /// Database engine, which supports:
         /// <li>`postgresql`: TencentDB for PostgreSQL</li>
         /// <li>`mssql_compatible`: MSSQL compatible - TencentDB for PostgreSQL</li>
@@ -285,6 +291,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
             this.SetParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
             this.SetParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
+            this.SetParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
             this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);

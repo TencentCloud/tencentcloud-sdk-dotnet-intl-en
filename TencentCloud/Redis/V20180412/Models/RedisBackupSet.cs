@@ -62,21 +62,18 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Internal field, which can be ignored.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
         /// Internal field, which can be ignored.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FullBackup")]
         public long? FullBackup{ get; set; }
 
         /// <summary>
         /// Internal field, which can be ignored.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }

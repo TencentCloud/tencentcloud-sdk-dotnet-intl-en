@@ -26,15 +26,17 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Instance type.
-        /// - 2: Redis 2.8 Memory Edition (standard architecture).
-        /// - 6: Redis 4.0 Memory Edition (standard architecture).
-        /// - 7: Redis 4.0 Memory Edition (cluster architecture).
-        /// - 8: Redis 5.0 Memory Edition (standard architecture).
-        /// - 9: Redis 5.0 Memory Edition (cluster architecture).
-        /// - 15: Redis 6.2 Memory Edition (standard architecture).
-        /// - 16: Redis 6.2 Memory Edition (cluster architecture).
-        /// - 17: Redis 7.0 Memory Edition (standard architecture).
-        /// - 18: Redis 7.0 Memory Edition (cluster architecture).
+        /// 
+        /// - 2: Redis 2.8 memory edition (standard architecture).
+        /// - 6: Redis 4.0 memory edition (standard architecture).
+        /// - 7: Redis 4.0 memory edition (cluster architecture).
+        /// - 8: Redis 5.0 memory edition (standard architecture).
+        /// - 9: Redis 5.0 memory edition (cluster architecture).
+        /// - 15: Redis 6.2 memory edition (standard architecture).
+        /// - 16: Redis 6.2 memory edition (cluster architecture).
+        /// - 17: Redis 7.0 memory edition (standard architecture).
+        /// - 18: Redis 7.0 memory edition (cluster architecture).
+        /// - 200: Memcached 1.6 memory edition (cluster architecture).
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }

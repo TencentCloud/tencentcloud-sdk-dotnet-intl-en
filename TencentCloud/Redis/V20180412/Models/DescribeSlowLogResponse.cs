@@ -38,7 +38,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public InstanceSlowlogDetail[] InstanceSlowlogDetail{ get; set; }
 
         /// <summary>
-        /// Details of slow queries.
+        /// Slow query details. Note: If the value of TotalCount is greater than 10,000, indicating that the number of slow logs exceeds 10,000, log details cannot be returned. Instead, the returned data is empty. It is recommended to reduce the interval between BeginTime and EndTime and perform multiple queries.
         /// </summary>
         [JsonProperty("InstanceSlowLogDetail")]
         public InstanceSlowlogDetail[] InstanceSlowLogDetail{ get; set; }

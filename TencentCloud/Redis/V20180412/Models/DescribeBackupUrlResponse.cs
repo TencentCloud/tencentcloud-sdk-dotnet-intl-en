@@ -47,8 +47,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] Filenames{ get; set; }
 
         /// <summary>
-        /// List of backup file information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup file information list.
         /// </summary>
         [JsonProperty("BackupInfos")]
         public BackupDownloadInfo[] BackupInfos{ get; set; }

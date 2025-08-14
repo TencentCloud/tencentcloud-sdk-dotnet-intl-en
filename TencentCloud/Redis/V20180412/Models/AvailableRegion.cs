@@ -26,15 +26,12 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Region
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// AZ information
         /// </summary>
         [JsonProperty("AvailableZones")]
         public string[] AvailableZones{ get; set; }

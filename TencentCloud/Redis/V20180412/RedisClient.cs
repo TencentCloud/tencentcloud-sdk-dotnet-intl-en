@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.intl.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1170";
+       private const string sdkVersion = "SDK_NET_3.0.1193";
 
         /// <summary>
         /// Client constructor.
@@ -579,7 +579,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the supported regions for global replication.
+        /// This API is used to query the information on regions supported for global replication.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
         /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
@@ -589,7 +589,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the supported regions for global replication.
+        /// This API is used to query the information on regions supported for global replication.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalReplicationAreaRequest"/></param>
         /// <returns><see cref="DescribeGlobalReplicationAreaResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the access source information of an instance.
+        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://intl.cloud.tencent.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the access source information of an instance.
+        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://intl.cloud.tencent.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query an instance access command.
+        /// This API is used to query instance access commands.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query an instance access command.
+        /// This API is used to query instance access commands.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorTopNCmdRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorTopNCmdResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of parameter modifications.
+        /// This API is used to query the parameter modification record list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of parameter modifications.
+        /// This API is used to query the parameter modification record list.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
         /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of parameter templates.
+        /// This API is used to query the parameter template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the list of parameter templates.
+        /// This API is used to query the parameter template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -1331,6 +1331,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeSSLStatusResponse DescribeSSLStatusSync(DescribeSSLStatusRequest req)
         {
             return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the second-level backup information on an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
+        public Task<DescribeSecondLevelBackupInfoResponse> DescribeSecondLevelBackupInfo(DescribeSecondLevelBackupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecondLevelBackupInfoResponse>(req, "DescribeSecondLevelBackupInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the second-level backup information on an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
+        /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
+        public DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfoSync(DescribeSecondLevelBackupInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSecondLevelBackupInfoResponse>(req, "DescribeSecondLevelBackupInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1776,6 +1797,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to modify the instance backup mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
+        public Task<ModifyInstanceBackupModeResponse> ModifyInstanceBackupMode(ModifyInstanceBackupModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBackupModeResponse>(req, "ModifyInstanceBackupMode");
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance backup mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
+        public ModifyInstanceBackupModeResponse ModifyInstanceBackupModeSync(ModifyInstanceBackupModeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceBackupModeResponse>(req, "ModifyInstanceBackupMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the operations event execution schedule of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceEventRequest"/></param>
@@ -2007,6 +2049,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to delete a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
+        /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>
+        public Task<RemoveReplicationGroupResponse> RemoveReplicationGroup(RemoveReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveReplicationGroupResponse>(req, "RemoveReplicationGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete a replication group.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveReplicationGroupRequest"/></param>
+        /// <returns><see cref="RemoveReplicationGroupResponse"/></returns>
+        public RemoveReplicationGroupResponse RemoveReplicationGroupSync(RemoveReplicationGroupRequest req)
+        {
+            return InternalRequestAsync<RemoveReplicationGroupResponse>(req, "RemoveReplicationGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove instances from a replication group.
         /// </summary>
         /// <param name="req"><see cref="RemoveReplicationInstanceRequest"/></param>
@@ -2070,7 +2133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to restore a Redis instance.
+        /// This API is used to restore an instance.
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>
@@ -2080,7 +2143,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to restore a Redis instance.
+        /// This API is used to restore an instance.
         /// </summary>
         /// <param name="req"><see cref="RestoreInstanceRequest"/></param>
         /// <returns><see cref="RestoreInstanceResponse"/></returns>

@@ -32,21 +32,20 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Region ID.
-        /// - 1: Guangzhou.
-        /// - 4: Shanghai.
-        /// - 5: Hong Kong (China).
-        /// - 7: Shanghai Finance.
-        /// - 8: Beijing.
-        /// - 9: Singapore.
-        /// - 11: Shenzhen Finance.
-        /// - 15: Western United States (Silicon Valley).
-        /// - 16: Chengdu.
-        /// - 17: Germany.
-        /// - 18: South Korea.
-        /// - 19: Chongqing.
-        /// - 21: India.
-        /// - 22: Eastern United States (Virginia).
-        /// - 23: Thailand.
+        ///  - 1: Guangzhou.
+        ///  - 4: Shanghai.
+        ///  - 5: Hong Kong (China).
+        ///  - 7: Shanghai Finance.
+        ///  - 8: Beijing.
+        ///  - 9: Singapore.
+        ///  - 11: Shenzhen Finance.
+        ///  - 15: Western US (Silicon Valley).
+        ///  - 16: Chengdu.
+        ///  - 17: Germany.
+        ///  - 18: South Korea.
+        ///  - 19: Chongqing.
+        ///  - 22: Eastern US (Virginia).
+        ///  - 23: Thailand.
         /// - 25: Japan.
         /// </summary>
         [JsonProperty("RegionId")]
@@ -59,8 +58,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Replication group name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Replication group name.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
@@ -83,15 +81,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Instance information in replication groups
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance information on the replication group.
         /// </summary>
         [JsonProperty("Instances")]
         public Instances[] Instances{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remark information.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

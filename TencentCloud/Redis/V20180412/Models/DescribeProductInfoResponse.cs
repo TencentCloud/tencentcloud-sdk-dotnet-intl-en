@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Sale information of a region.
+        /// Selling information on the region. The selling information on all regions is returned even if a region is specified.
         /// </summary>
         [JsonProperty("RegionSet")]
         public RegionConf[] RegionSet{ get; set; }

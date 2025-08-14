@@ -63,22 +63,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// Maximum value of the parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum parameter value allowed.
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Minimum value of the parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum parameter value allowed.
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// Enumerated values of the parameter. It is null if the parameter is non-enumerated
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Optional enumeration values of a parameter. For non-enumeration parameters, it is empty.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }

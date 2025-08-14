@@ -45,25 +45,25 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// ID of the shipped logset, which can be obtained through the sub-parameter **LogsetId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+        /// ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// ID of the shipped log topic, which can be obtained through the sub-parameter **TopicId** of the response parameter **SlowLog** of the API [DescribeInstanceLogDelivery](https://intl.cloud.tencent.com/document/product/239/110878?from_cn_redirect=1).
+        /// ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Logset name. If **LogsetId** is not specified, this parameter needs to be configured and the system will automatically create a logset with the specified name.
+        /// Logset name. It is required when **LogsetId** is left blank. The system will create a logset with the value of LogsetName and ship logs.
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// Log topic name. This parameter is required when TopicId is empty, and the system will automatically create a log topic.
+        /// Log topic name. It is required when **TopicId** is left blank. The system will create a log topic with the value of TopicName and ship logs.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

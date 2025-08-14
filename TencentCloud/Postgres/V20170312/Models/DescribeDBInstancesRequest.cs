@@ -38,7 +38,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned per page. Value range: 1-100. Default: `10`
+        /// The maximum number of results returned per page. Value range: 1-100. Default: `10`.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+        /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

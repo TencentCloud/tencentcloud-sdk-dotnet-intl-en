@@ -25,30 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Whether log shipping is enabled. true: enabled; false: disabled.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Enabling status of log shipping. true: enabled; false: disabled.
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// Logset ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Log set ID.
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
         /// Log topic ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// Logset region
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("LogRegion")]
         public string LogRegion{ get; set; }

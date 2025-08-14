@@ -25,15 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Node ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node ID.
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// AZ ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// AZ ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }

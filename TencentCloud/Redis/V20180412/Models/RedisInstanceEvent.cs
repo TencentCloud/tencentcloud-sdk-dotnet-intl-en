@@ -26,84 +26,86 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Event ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Instance ID.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be only set to **InstanceMigration**.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event type. Currently, the type can only be related to instance migration, resource movement, and IDC deletion. This parameter can be set only to **InstanceMigration**.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Event levels are divided into Critical, High, Medium, and Low events according to the severity and urgency.- Critical
-        /// - High
-        /// - Middle
-        /// - Low
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event level. The levels are divided into critical, important, medium, and general based on severity and urgency.
+        ///  - Critical: critical.
+        ///  - High: important.
+        ///  - Middle: medium.
+        ///  - Low.
         /// </summary>
         [JsonProperty("Grade")]
         public string Grade{ get; set; }
 
         /// <summary>
-        /// Scheduled event execution date.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scheduled event execution date.
         /// </summary>
         [JsonProperty("ExecutionDate")]
         public string ExecutionDate{ get; set; }
 
         /// <summary>
-        /// Scheduled start time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start date of scheduled event execution.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Scheduled end time of event execution.Note: This field may return null, indicating that no valid values can be obtained.
+        /// End date of scheduled event execution.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The latest execution date of the operations event. Event execution must be completed before this date. Otherwise, the business may be affected.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Latest execution date of the Ops event. The event should be completed before this date. Otherwise, the business may be affected.
         /// </summary>
         [JsonProperty("LatestExecutionDate")]
         public string LatestExecutionDate{ get; set; }
 
         /// <summary>
-        /// Current event status.- Waiting: The event is waiting for execution on the execution date or during the operations period.- Running: The event is being executed during the operations period.- Finished: Execution of the event operations is completed.- Canceled: Execution of the event is canceled.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Current event status.
+        ///  - Waiting: event not reached the execution date or not within the maintenance window.
+        ///  - Running: event within the maintenance window and under maintenance execution.
+        ///  - Finished: event with maintenance completed.
+        /// - Canceled: Execution of the event is canceled.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// Completion time of the event execution task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskEndTime")]
         public string TaskEndTime{ get; set; }
 
         /// <summary>
-        /// Impact of the event.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event impact information.
         /// </summary>
         [JsonProperty("EffectInfo")]
         public string EffectInfo{ get; set; }
 
         /// <summary>
-        /// Initial scheduled execution date of the event.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Initial scheduled event execution date.
         /// </summary>
         [JsonProperty("InitialExecutionDate")]
         public string InitialExecutionDate{ get; set; }

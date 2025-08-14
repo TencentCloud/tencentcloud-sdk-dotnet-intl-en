@@ -154,10 +154,17 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+        /// (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
         /// </summary>
         [JsonProperty("DBVersion")]
+        [System.Obsolete]
         public string DBVersion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
 
         /// <summary>
@@ -185,6 +192,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

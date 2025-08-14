@@ -73,8 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? RedisShardSize{ get; set; }
 
         /// <summary>
-        /// Instance disk size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance disk size.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -98,15 +97,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Due to the naming irregularity of this parameter, it is recommended to use the parameter IPv6 instead. Internal parameters, which can be ignored by users.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// Internal parameters, which can be ignored by users.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Internal parameter, which can be ignored.
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }

@@ -79,8 +79,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Parameter unit
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter unit.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
