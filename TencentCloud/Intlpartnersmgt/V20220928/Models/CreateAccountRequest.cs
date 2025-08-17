@@ -81,12 +81,6 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string VerifyCode{ get; set; }
 
         /// <summary>
-        /// Extension field, which is left empty by default.
-        /// </summary>
-        [JsonProperty("Extended")]
-        public string Extended{ get; set; }
-
-        /// <summary>
         /// Layer-1 industry id. This is a required item and can be obtained via the [ GetTradeConfigList  API](https://www.tencentcloud.com/zh/document/product/1085/68181),
         /// such as "kghy_01".
         /// </summary>
@@ -99,6 +93,12 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// </summary>
         [JsonProperty("TradeTwo")]
         public string TradeTwo{ get; set; }
+
+        /// <summary>
+        /// Extension field, which is left empty by default.
+        /// </summary>
+        [JsonProperty("Extended")]
+        public string Extended{ get; set; }
 
 
         /// <summary>
@@ -114,9 +114,9 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "VerifyCode", this.VerifyCode);
-            this.SetParamSimple(map, prefix + "Extended", this.Extended);
             this.SetParamSimple(map, prefix + "TradeOne", this.TradeOne);
             this.SetParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
+            this.SetParamSimple(map, prefix + "Extended", this.Extended);
         }
     }
 }
