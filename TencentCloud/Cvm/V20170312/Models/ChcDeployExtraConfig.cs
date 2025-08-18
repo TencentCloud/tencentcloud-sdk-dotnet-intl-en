@@ -24,12 +24,40 @@ namespace TencentCloud.Cvm.V20170312.Models
     public class ChcDeployExtraConfig : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MiniOsType")]
+        public string MiniOsType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BootType")]
+        public string BootType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BootFile")]
+        public string BootFile{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NextServerAddress")]
+        public string NextServerAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MiniOsType", this.MiniOsType);
+            this.SetParamSimple(map, prefix + "BootType", this.BootType);
+            this.SetParamSimple(map, prefix + "BootFile", this.BootFile);
+            this.SetParamSimple(map, prefix + "NextServerAddress", this.NextServerAddress);
         }
     }
 }

@@ -25,143 +25,124 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// The original unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Original price of subsequent total costs, postpaid billing mode usage, unit: usd. <li>if other time interval items are returned, such as UnitPriceSecondStep, this item represents the time interval (0, 96) hr. if no other time interval items are returned, this item represents the full period (0, ∞) hr.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Billing unit for pay-as-you-go mode. Valid values: <br><li>HOUR: billed on an hourly basis. It's used for hourly postpaid instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill by traffic in GB. It's used for postpaid products that are billed by the hourly traffic (`TRAFFIC_POSTPAID_BY_HOUR`).
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Billing unit for pay-as-you-go mode. valid values: <br><li>HOUR: billed on an hourly basis. it's used for hourly POSTPAID instances (`POSTPAID_BY_HOUR`). <br><li>GB: bill BY TRAFFIC in GB. it's used for POSTPAID products that are billed BY the hourly TRAFFIC (`TRAFFIC_POSTPAID_BY_HOUR`).
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
         /// <summary>
-        /// The original price of a pay-in-advance instance, in USD.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Original price of total prepaid costs. measurement unit: usd.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount price of a prepaid instance, in USD.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Discount price of total prepaid costs. unit: usd.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Discount, such as 20.0 representing 80% off.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to that the unit price for unlimited usage.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Discounted price of subsequent total cost, postpaid billing mode usage, unit: usd <li>if other time interval items are returned, such as UnitPriceDiscountSecondStep, this item represents the time interval (0, 96) hr; if no other time interval items are returned, this item represents the full period (0, ∞) hr.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Original unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Original price of subsequent total costs for usage time range (96, 360) hr in postpaid billing mode. unit: usd.
         /// </summary>
         [JsonProperty("UnitPriceSecondStep")]
         public float? UnitPriceSecondStep{ get; set; }
 
         /// <summary>
-        /// Discounted unit price for the usage between 96 to 360 hours in USD. It's applicable to pay-as-you-go mode.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Discounted price of subsequent total cost for usage time interval (96, 360) hr in postpaid billing mode. unit: usd.
         /// </summary>
         [JsonProperty("UnitPriceDiscountSecondStep")]
         public float? UnitPriceDiscountSecondStep{ get; set; }
 
         /// <summary>
-        /// Original unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Specifies the original price of subsequent total costs with a usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
         /// </summary>
         [JsonProperty("UnitPriceThirdStep")]
         public float? UnitPriceThirdStep{ get; set; }
 
         /// <summary>
-        /// Discounted unit price for the usage after 360 hours in USD. It's applicable to pay-as-you-go mode.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Discounted price of subsequent total cost for usage time interval exceeding 360 hr in postpaid billing mode. measurement unit: usd.
         /// </summary>
         [JsonProperty("UnitPriceDiscountThirdStep")]
         public float? UnitPriceDiscountThirdStep{ get; set; }
 
         /// <summary>
-        /// Original 3-year payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the original price of total 3-year prepaid costs in prepaid billing mode. measurement unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("OriginalPriceThreeYear")]
         public float? OriginalPriceThreeYear{ get; set; }
 
         /// <summary>
-        /// Discounted 3-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the discount price for an advance payment of the total fee for three years, prepaid mode usage, measurement unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountPriceThreeYear")]
         public float? DiscountPriceThreeYear{ get; set; }
 
         /// <summary>
-        /// Discount for 3-year upfront payment. For example, 20.0 indicates 80% off.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the discount for a 3-year advance payment, for example 20.0 represents 80% off.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountThreeYear")]
         public float? DiscountThreeYear{ get; set; }
 
         /// <summary>
-        /// Original 5-year payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the original price of the 5-year total cost with advance payment, using prepaid billing mode. measurement unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("OriginalPriceFiveYear")]
         public float? OriginalPriceFiveYear{ get; set; }
 
         /// <summary>
-        /// Discounted 5-year upfront payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Prepaid 5-year total cost discount price, prepaid billing mode usage. unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountPriceFiveYear")]
         public float? DiscountPriceFiveYear{ get; set; }
 
         /// <summary>
-        /// Discount for 5-year upfront payment. For example, 20.0 indicates 80% off.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the discount for 5-year advance payment, such as 20.0 for 80% off.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountFiveYear")]
         public float? DiscountFiveYear{ get; set; }
 
         /// <summary>
-        /// Original 1-year payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Original price of one-year advance payment total cost. prepaid mode usage. unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("OriginalPriceOneYear")]
         public float? OriginalPriceOneYear{ get; set; }
 
         /// <summary>
-        /// Discounted 1-year payment, in USD. This parameter is only available to upfront payment mode.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Discount price for total advance payment for one year. specifies prepaid mode usage. measurement unit: usd.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountPriceOneYear")]
         public float? DiscountPriceOneYear{ get; set; }
 
         /// <summary>
-        /// Discount for 1-year upfront payment. For example, 20.0 indicates 80% off.
-        /// Note: this field may return `null`, indicating that no valid value was found.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Specifies the discount for a one-year advance payment, such as 20.0 for 80% off.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DiscountOneYear")]
         public float? DiscountOneYear{ get; set; }

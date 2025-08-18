@@ -193,6 +193,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EnableJumboFrame")]
+        public bool? EnableJumboFrame{ get; set; }
+
+        /// <summary>
         /// Description list of tags. by specifying this parameter, tags can be bound to the instance launch template.
         /// </summary>
         [JsonProperty("LaunchTemplateTagSpecification")]
@@ -248,6 +254,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
             this.SetParamArrayObj(map, prefix + "LaunchTemplateTagSpecification.", this.LaunchTemplateTagSpecification);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
