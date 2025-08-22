@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Resource ID set.
         /// </summary>
         [JsonProperty("DealInstance")]
         public DealInstance[] DealInstance{ get; set; }

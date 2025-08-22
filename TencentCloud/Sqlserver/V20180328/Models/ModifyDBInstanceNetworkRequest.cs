@@ -25,19 +25,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ID of the new VPC
+        /// ID of the new VPC.
         /// </summary>
         [JsonProperty("NewVpcId")]
         public string NewVpcId{ get; set; }
 
         /// <summary>
-        /// ID of the new subnet
+        /// ID of the new subnet.
         /// </summary>
         [JsonProperty("NewSubnetId")]
         public string NewSubnetId{ get; set; }
@@ -49,16 +49,22 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? OldIpRetainTime{ get; set; }
 
         /// <summary>
-        /// New VIP
+        /// New VIP.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target node. 0 - modify the primary node network; 1 - modify the secondary node network. The default value is 0.
         /// </summary>
         [JsonProperty("DRNetwork")]
         public ulong? DRNetwork{ get; set; }
+
+        /// <summary>
+        /// Secondary server resource ID. It is required when DRNetwork = 1.
+        /// </summary>
+        [JsonProperty("DrInstanceId")]
+        public string DrInstanceId{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "DRNetwork", this.DRNetwork);
+            this.SetParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
         }
     }
 }

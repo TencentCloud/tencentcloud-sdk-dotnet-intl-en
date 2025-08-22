@@ -84,6 +84,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// Secondary node AZ of the multi-node architecture instance. The default value is null. It should be specified when modifying the AZ of the specified secondary node needs to be performed during configuration adjustment. When MultiZones = MultiZones, the AZs of the primary nodes and secondary nodes cannot all be the same. The collection of AZs of the secondary node can include 2-5 AZs.
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public DrZoneInfo[] DrZones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamArrayObj(map, prefix + "DrZones.", this.DrZones);
         }
     }
 }

@@ -25,136 +25,142 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance memory size in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance storage capacity in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC subnet ID in the format of subnet-bdoe83fa.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC ID in the format of vpc-dsp338hz.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Host type of purchased instances. CLOUD_PREMIUM: Premium Disk for virtual machines; CLOUD_SSD: Cloud SSD for virtual machines; CLOUD_HSSD: Enhanced SSD for virtual machines; CLOUD_BSSD: Balanced SSD for virtual machines.
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Billing mode. Valid value: POSTPAID (pay-as-you-go).
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of instances purchased this time. Default value: 1. Maximum value: 10.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQL Server version. Valid values: `2008R2` (SQL Server 2008 R2 Enterprise), `2012SP3` (SQL Server 2012 Enterprise), `201202` (SQL Server 2012 Standard), `2014SP2` (SQL Server 2014 Enterprise), 201402 (SQL Server 2014 Standard), `2016SP1` (SQL Server 2016 Enterprise), `201602` (SQL Server 2016 Standard), `2017` (SQL Server 2017 Enterprise), `201702` (SQL Server 2017 Standard), `2019` (SQL Server 2019 Enterprise), `201902` (SQL Server 2019 Standard). Default value: `2008R2`. The available version varies by region, and you can pull the version information by calling the `DescribeProductConfig` API.
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Length of purchase of instance. The default value is 1, indicating one month. The value cannot exceed 48.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security group list, which contains security group IDs in the format of sg-xxx.
         /// </summary>
         [JsonProperty("SecurityGroupList")]
         public string[] SecurityGroupList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Auto-renewal flag. 0: normal renewal, 1: auto-renewal. Default value: 1.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to automatically use voucher. 0: no, 1: yes. Default value: no.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 
+        /// Array of voucher IDs (currently, only one voucher can be used per order).
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
         /// </summary>
         [JsonProperty("Weekly")]
         public long?[] Weekly{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the start time of daily maintenance.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the maintenance window, which specifies the maintenance duration in hours.
         /// </summary>
         [JsonProperty("Span")]
         public long? Span{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tags associated with the instances to be created.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
         /// </summary>
         [JsonProperty("Collation")]
         public string Collation{ get; set; }
 
         /// <summary>
-        /// 
+        /// System time zone. Default value: `China Standard Time`.
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// Disk encryption identifier, 0-unencrypted, 1-encrypted.
+        /// </summary>
+        [JsonProperty("DiskEncryptFlag")]
+        public long? DiskEncryptFlag{ get; set; }
 
 
         /// <summary>
@@ -184,6 +190,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
         }
     }
 }

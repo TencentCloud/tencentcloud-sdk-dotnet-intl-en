@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1190";
+       private const string sdkVersion = "SDK_NET_3.0.1197";
 
         /// <summary>
         /// Client constructor.
@@ -642,6 +642,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the character set and time zone supported by the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCollationTimeZoneRequest"/></param>
+        /// <returns><see cref="DescribeCollationTimeZoneResponse"/></returns>
+        public Task<DescribeCollationTimeZoneResponse> DescribeCollationTimeZone(DescribeCollationTimeZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeCollationTimeZoneResponse>(req, "DescribeCollationTimeZone");
+        }
+
+        /// <summary>
+        /// This API is used to query the character set and time zone supported by the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCollationTimeZoneRequest"/></param>
+        /// <returns><see cref="DescribeCollationTimeZoneResponse"/></returns>
+        public DescribeCollationTimeZoneResponse DescribeCollationTimeZoneSync(DescribeCollationTimeZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeCollationTimeZoneResponse>(req, "DescribeCollationTimeZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the database character sets supported by an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
@@ -1062,6 +1083,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecSellStatusRequest"/></param>
+        /// <returns><see cref="DescribeSpecSellStatusResponse"/></returns>
+        public Task<DescribeSpecSellStatusResponse> DescribeSpecSellStatus(DescribeSpecSellStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecSellStatusResponse>(req, "DescribeSpecSellStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the status information on specifications, including the sales status and reference price. (The actual price is subject to the result returned by price querying APIs.)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecSellStatusRequest"/></param>
+        /// <returns><see cref="DescribeSpecSellStatusResponse"/></returns>
+        public DescribeSpecSellStatusResponse DescribeSpecSellStatusSync(DescribeSpecSellStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecSellStatusResponse>(req, "DescribeSpecSellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a backup upload permission.
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadBackupInfoRequest"/></param>
@@ -1146,7 +1188,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade prices of a monthly subscribed instance
+        /// This API is used to query the upgrade prices of a monthly subscribed instance.
         /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
@@ -1157,7 +1199,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade prices of a monthly subscribed instance
+        /// This API is used to query the upgrade prices of a monthly subscribed instance.
         /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>

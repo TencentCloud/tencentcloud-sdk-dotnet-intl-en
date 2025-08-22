@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1194";
+       private const string sdkVersion = "SDK_NET_3.0.1197";
 
         /// <summary>
         /// Client constructor.
@@ -805,7 +805,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// Query usage information of invitation link. Once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
+        /// Query usage information of invitation link. Invitation link is valid for 30 days.And once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
         /// Invokable role types: Distributor, Second-level reseller, Reseller.
         /// </summary>
         /// <param name="req"><see cref="QueryInvitationInfoRequest"/></param>
@@ -816,7 +816,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// Query usage information of invitation link. Once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
+        /// Query usage information of invitation link. Invitation link is valid for 30 days.And once created, the data will only be retained for 60 days, and the system will automatically delete the invitation link after 60 days.
         /// Invokable role types: Distributor, Second-level reseller, Reseller.
         /// </summary>
         /// <param name="req"><see cref="QueryInvitationInfoRequest"/></param>

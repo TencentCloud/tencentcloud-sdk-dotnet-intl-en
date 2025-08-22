@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+        /// Price before discount. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD
+        /// The actual price to be paid. This value divided by 100 indicates the price; for example, 10094 means 100.94 USD.
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }

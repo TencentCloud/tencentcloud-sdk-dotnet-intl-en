@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Order name
+        /// Order name.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

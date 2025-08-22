@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1190</VersionPrefix>
+    <VersionPrefix>3.0.1197</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20180328\Models\DescribeBackupsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeBusinessIntelligenceFileRequest.cs" />
     <Compile Include="V20180328\Models\DescribeBusinessIntelligenceFileResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeCollationTimeZoneRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeCollationTimeZoneResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBCharsetsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="V20180328\Models\DescribeDBInstanceInterRequest.cs" />
@@ -168,6 +170,8 @@
     <Compile Include="V20180328\Models\DescribeRollbackTimeResponse.cs" />
     <Compile Include="V20180328\Models\DescribeSlowlogsRequest.cs" />
     <Compile Include="V20180328\Models\DescribeSlowlogsResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeSpecSellStatusRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeSpecSellStatusResponse.cs" />
     <Compile Include="V20180328\Models\DescribeUploadBackupInfoRequest.cs" />
     <Compile Include="V20180328\Models\DescribeUploadBackupInfoResponse.cs" />
     <Compile Include="V20180328\Models\DescribeXEventsRequest.cs" />
@@ -175,6 +179,7 @@
     <Compile Include="V20180328\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20180328\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20180328\Models\DrReadableInfo.cs" />
+    <Compile Include="V20180328\Models\DrZoneInfo.cs" />
     <Compile Include="V20180328\Models\EventConfig.cs" />
     <Compile Include="V20180328\Models\Events.cs" />
     <Compile Include="V20180328\Models\FileAction.cs" />
@@ -236,6 +241,7 @@
     <Compile Include="V20180328\Models\ParamRecord.cs" />
     <Compile Include="V20180328\Models\Parameter.cs" />
     <Compile Include="V20180328\Models\ParameterDetail.cs" />
+    <Compile Include="V20180328\Models\Price.cs" />
     <Compile Include="V20180328\Models\RecycleDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\RecycleDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\RegionInfo.cs" />
@@ -256,6 +262,7 @@
     <Compile Include="V20180328\Models\SlowLog.cs" />
     <Compile Include="V20180328\Models\SlowlogInfo.cs" />
     <Compile Include="V20180328\Models\SpecInfo.cs" />
+    <Compile Include="V20180328\Models\SpecSellStatus.cs" />
     <Compile Include="V20180328\Models\StartBackupMigrationRequest.cs" />
     <Compile Include="V20180328\Models\StartBackupMigrationResponse.cs" />
     <Compile Include="V20180328\Models\StartIncrementalMigrationRequest.cs" />
@@ -268,5 +275,6 @@
     <Compile Include="V20180328\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="V20180328\Models\UpgradeDBInstanceResponse.cs" />
     <Compile Include="V20180328\Models\ZoneInfo.cs" />
+    <Compile Include="V20180328\Models\ZoneStatus.cs" />
   </ItemGroup>
 </Project>

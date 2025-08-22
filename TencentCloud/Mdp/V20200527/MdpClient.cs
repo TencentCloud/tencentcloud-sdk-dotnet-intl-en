@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.intl.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1184";
+       private const string sdkVersion = "SDK_NET_3.0.1197";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Create VodRemuxTask
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageVodRemuxTaskResponse"/></returns>
+        public Task<CreateStreamPackageVodRemuxTaskResponse> CreateStreamPackageVodRemuxTask(CreateStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageVodRemuxTaskResponse>(req, "CreateStreamPackageVodRemuxTask");
+        }
+
+        /// <summary>
+        /// Create VodRemuxTask
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="CreateStreamPackageVodRemuxTaskResponse"/></returns>
+        public CreateStreamPackageVodRemuxTaskResponse CreateStreamPackageVodRemuxTaskSync(CreateStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<CreateStreamPackageVodRemuxTaskResponse>(req, "CreateStreamPackageVodRemuxTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete endpoints from a StreamPackage channel in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteStreamPackageChannelEndpointsRequest"/></param>
@@ -491,6 +512,48 @@ namespace TencentCloud.Mdp.V20200527
         public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocationSync(DeleteStreamPackageSourceLocationRequest req)
         {
             return InternalRequestAsync<DeleteStreamPackageSourceLocationResponse>(req, "DeleteStreamPackageSourceLocation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete Vod remux task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageVodRemuxTaskResponse"/></returns>
+        public Task<DeleteStreamPackageVodRemuxTaskResponse> DeleteStreamPackageVodRemuxTask(DeleteStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageVodRemuxTaskResponse>(req, "DeleteStreamPackageVodRemuxTask");
+        }
+
+        /// <summary>
+        /// Delete Vod remux task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageVodRemuxTaskResponse"/></returns>
+        public DeleteStreamPackageVodRemuxTaskResponse DeleteStreamPackageVodRemuxTaskSync(DeleteStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageVodRemuxTaskResponse>(req, "DeleteStreamPackageVodRemuxTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete VOD remux tasks in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageVodRemuxTasksRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageVodRemuxTasksResponse"/></returns>
+        public Task<DeleteStreamPackageVodRemuxTasksResponse> DeleteStreamPackageVodRemuxTasks(DeleteStreamPackageVodRemuxTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageVodRemuxTasksResponse>(req, "DeleteStreamPackageVodRemuxTasks");
+        }
+
+        /// <summary>
+        /// Delete VOD remux tasks in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStreamPackageVodRemuxTasksRequest"/></param>
+        /// <returns><see cref="DeleteStreamPackageVodRemuxTasksResponse"/></returns>
+        public DeleteStreamPackageVodRemuxTasksResponse DeleteStreamPackageVodRemuxTasksSync(DeleteStreamPackageVodRemuxTasksRequest req)
+        {
+            return InternalRequestAsync<DeleteStreamPackageVodRemuxTasksResponse>(req, "DeleteStreamPackageVodRemuxTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -936,6 +999,48 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
+        /// Query VOD remux task information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageVodRemuxTaskResponse"/></returns>
+        public Task<DescribeStreamPackageVodRemuxTaskResponse> DescribeStreamPackageVodRemuxTask(DescribeStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageVodRemuxTaskResponse>(req, "DescribeStreamPackageVodRemuxTask");
+        }
+
+        /// <summary>
+        /// Query VOD remux task information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageVodRemuxTaskResponse"/></returns>
+        public DescribeStreamPackageVodRemuxTaskResponse DescribeStreamPackageVodRemuxTaskSync(DescribeStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageVodRemuxTaskResponse>(req, "DescribeStreamPackageVodRemuxTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query VOD remux tasks informations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageVodRemuxTasksRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageVodRemuxTasksResponse"/></returns>
+        public Task<DescribeStreamPackageVodRemuxTasksResponse> DescribeStreamPackageVodRemuxTasks(DescribeStreamPackageVodRemuxTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageVodRemuxTasksResponse>(req, "DescribeStreamPackageVodRemuxTasks");
+        }
+
+        /// <summary>
+        /// Query VOD remux tasks informations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStreamPackageVodRemuxTasksRequest"/></param>
+        /// <returns><see cref="DescribeStreamPackageVodRemuxTasksResponse"/></returns>
+        public DescribeStreamPackageVodRemuxTasksResponse DescribeStreamPackageVodRemuxTasksSync(DescribeStreamPackageVodRemuxTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeStreamPackageVodRemuxTasksResponse>(req, "DescribeStreamPackageVodRemuxTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a StreamPackage channel.
         /// </summary>
         /// <param name="req"><see cref="ModifyStreamPackageChannelRequest"/></param>
@@ -1121,6 +1226,27 @@ namespace TencentCloud.Mdp.V20200527
         public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannelSync(StartStreamPackageLinearAssemblyChannelRequest req)
         {
             return InternalRequestAsync<StartStreamPackageLinearAssemblyChannelResponse>(req, "StartStreamPackageLinearAssemblyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Start VOD remux task.
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="StartStreamPackageVodRemuxTaskResponse"/></returns>
+        public Task<StartStreamPackageVodRemuxTaskResponse> StartStreamPackageVodRemuxTask(StartStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageVodRemuxTaskResponse>(req, "StartStreamPackageVodRemuxTask");
+        }
+
+        /// <summary>
+        /// Start VOD remux task.
+        /// </summary>
+        /// <param name="req"><see cref="StartStreamPackageVodRemuxTaskRequest"/></param>
+        /// <returns><see cref="StartStreamPackageVodRemuxTaskResponse"/></returns>
+        public StartStreamPackageVodRemuxTaskResponse StartStreamPackageVodRemuxTaskSync(StartStreamPackageVodRemuxTaskRequest req)
+        {
+            return InternalRequestAsync<StartStreamPackageVodRemuxTaskResponse>(req, "StartStreamPackageVodRemuxTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1184</VersionPrefix>
+    <VersionPrefix>3.0.1197</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20200527\Models\ChannelInfo.cs" />
     <Compile Include="V20200527\Models\ClipRangeInfo.cs" />
     <Compile Include="V20200527\Models\ConfigAliasesInfo.cs" />
+    <Compile Include="V20200527\Models\CosInputInfo.cs" />
+    <Compile Include="V20200527\Models\CosOutputStorage.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelEndpointResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageChannelRequest.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="V20200527\Models\CreateStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceRequest.cs" />
     <Compile Include="V20200527\Models\CreateStreamPackageSourceResponse.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageVodRemuxTaskRequest.cs" />
+    <Compile Include="V20200527\Models\CreateStreamPackageVodRemuxTaskResponse.cs" />
     <Compile Include="V20200527\Models\DRMInfo.cs" />
     <Compile Include="V20200527\Models\DashManifestInfo.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageChannelEndpointsRequest.cs" />
@@ -101,6 +105,10 @@
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceLocationResponse.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceRequest.cs" />
     <Compile Include="V20200527\Models\DeleteStreamPackageSourceResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageVodRemuxTaskRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageVodRemuxTaskResponse.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageVodRemuxTasksRequest.cs" />
+    <Compile Include="V20200527\Models\DeleteStreamPackageVodRemuxTasksResponse.cs" />
     <Compile Include="V20200527\Models\DescribeLinearAssemblyCDNDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\DescribeLinearAssemblyCDNDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\DescribeLinearAssemblyCDNDomainWithChannelsRequest.cs" />
@@ -143,11 +151,16 @@
     <Compile Include="V20200527\Models\DescribeStreamPackageSourceResponse.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourcesRequest.cs" />
     <Compile Include="V20200527\Models\DescribeStreamPackageSourcesResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageVodRemuxTaskRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageVodRemuxTaskResponse.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageVodRemuxTasksRequest.cs" />
+    <Compile Include="V20200527\Models\DescribeStreamPackageVodRemuxTasksResponse.cs" />
     <Compile Include="V20200527\Models\DomainRecordInfo.cs" />
     <Compile Include="V20200527\Models\EndpointAuthInfo.cs" />
     <Compile Include="V20200527\Models\EndpointInfo.cs" />
     <Compile Include="V20200527\Models\HarvestJobResp.cs" />
     <Compile Include="V20200527\Models\InputAuthInfo.cs" />
+    <Compile Include="V20200527\Models\InputFileInfo.cs" />
     <Compile Include="V20200527\Models\InputInfo.cs" />
     <Compile Include="V20200527\Models\LinearAssemblyChannelInfo.cs" />
     <Compile Include="V20200527\Models\LinearAssemblyProgramInfo.cs" />
@@ -173,6 +186,7 @@
     <Compile Include="V20200527\Models\NameServer.cs" />
     <Compile Include="V20200527\Models\OutputInfo.cs" />
     <Compile Include="V20200527\Models\OutputReq.cs" />
+    <Compile Include="V20200527\Models\OutputStorage.cs" />
     <Compile Include="V20200527\Models\PlaybackInfo.cs" />
     <Compile Include="V20200527\Models\PlaybackInfoReq.cs" />
     <Compile Include="V20200527\Models\PointInfo.cs" />
@@ -191,6 +205,8 @@
     <Compile Include="V20200527\Models\SpliceInsertInfo.cs" />
     <Compile Include="V20200527\Models\StartStreamPackageLinearAssemblyChannelRequest.cs" />
     <Compile Include="V20200527\Models\StartStreamPackageLinearAssemblyChannelResponse.cs" />
+    <Compile Include="V20200527\Models\StartStreamPackageVodRemuxTaskRequest.cs" />
+    <Compile Include="V20200527\Models\StartStreamPackageVodRemuxTaskResponse.cs" />
     <Compile Include="V20200527\Models\StopStreamPackageLinearAssemblyChannelRequest.cs" />
     <Compile Include="V20200527\Models\StopStreamPackageLinearAssemblyChannelResponse.cs" />
     <Compile Include="V20200527\Models\TimeShiftInfo.cs" />
@@ -200,5 +216,6 @@
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\UsageDetail.cs" />
+    <Compile Include="V20200527\Models\VodRemuxTaskInfo.cs" />
   </ItemGroup>
 </Project>
