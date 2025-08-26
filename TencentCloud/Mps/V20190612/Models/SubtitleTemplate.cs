@@ -43,6 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? StreamIndex{ get; set; }
 
         /// <summary>
+        /// Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubtitleFileInput")]
+        public MediaInputInfo SubtitleFileInput{ get; set; }
+
+        /// <summary>
         /// Font type. valid values:.
         /// <li>hei.ttf: simhei.</li>.
         /// <li>song.ttf: simsun.</li>.
@@ -157,6 +164,62 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("BoardAlpha")]
         public float? BoardAlpha{ get; set; }
 
+        /// <summary>
+        /// Stroke width.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OutlineWidth")]
+        public float? OutlineWidth{ get; set; }
+
+        /// <summary>
+        /// Stroke color. The value should be a 6-digit hexadecimal RGB value.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OutlineColor")]
+        public string OutlineColor{ get; set; }
+
+        /// <summary>
+        /// Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OutlineAlpha")]
+        public float? OutlineAlpha{ get; set; }
+
+        /// <summary>
+        /// Shadow width. The value should be a floating-point number in the range of [0, 1000].
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShadowWidth")]
+        public float? ShadowWidth{ get; set; }
+
+        /// <summary>
+        /// Shadow color. The value should be a 6-digit hexadecimal RGB value.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShadowColor")]
+        public string ShadowColor{ get; set; }
+
+        /// <summary>
+        /// Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShadowAlpha")]
+        public float? ShadowAlpha{ get; set; }
+
+        /// <summary>
+        /// Line spacing. The value should be a positive integer in the range of [0, 1000].
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LineSpacing")]
+        public long? LineSpacing{ get; set; }
+
+        /// <summary>
+        /// Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Alignment")]
+        public string Alignment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -165,6 +228,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
+            this.SetParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
             this.SetParamSimple(map, prefix + "FontType", this.FontType);
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -175,6 +239,14 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "BoardHeight", this.BoardHeight);
             this.SetParamSimple(map, prefix + "BoardColor", this.BoardColor);
             this.SetParamSimple(map, prefix + "BoardAlpha", this.BoardAlpha);
+            this.SetParamSimple(map, prefix + "OutlineWidth", this.OutlineWidth);
+            this.SetParamSimple(map, prefix + "OutlineColor", this.OutlineColor);
+            this.SetParamSimple(map, prefix + "OutlineAlpha", this.OutlineAlpha);
+            this.SetParamSimple(map, prefix + "ShadowWidth", this.ShadowWidth);
+            this.SetParamSimple(map, prefix + "ShadowColor", this.ShadowColor);
+            this.SetParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
+            this.SetParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
+            this.SetParamSimple(map, prefix + "Alignment", this.Alignment);
         }
     }
 }

@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Lke.V20231130.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LiveStreamAiAnalysisResultItem : AbstractModel
+    public class DuplicateFileHandle : AbstractModel
     {
         
         /// <summary>
-        /// Result type. Valid values:
-        /// <li>SegmentRecognition: video splitting.</li>
-        /// <li>Highlight: highlight.</li>
+        /// 
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("CheckType")]
+        public ulong? CheckType{ get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("SegmentResultSet")]
-        public SegmentRecognitionItem[] SegmentResultSet{ get; set; }
-
-        /// <summary>
-        /// Highlight result. This field is valid when Type is set to Highlight.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("HighlightResultSet")]
-        public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }
+        [JsonProperty("HandleType")]
+        public ulong? HandleType{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
-            this.SetParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+            this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
+            this.SetParamSimple(map, prefix + "HandleType", this.HandleType);
         }
     }
 }

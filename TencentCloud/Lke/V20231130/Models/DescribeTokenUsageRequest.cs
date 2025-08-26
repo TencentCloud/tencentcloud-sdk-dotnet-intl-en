@@ -43,7 +43,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string LoginSubAccountUin{ get; set; }
 
         /// <summary>
-        /// Sub-business types of Tencent Cloud Agent Development Platform/TCADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
+        /// Sub-business types of Tencent Cloud Agent Development Platform/ADP: FileParse (document parsing), embedding, Rewrite (multi-round rewriting), Concurrency, KnowledgeSummary (knowledge summary), KnowledgeQA (knowledge Q&A), KnowledgeCapacity (knowledge base capacity), SearchEngine (search engine).
         /// </summary>
         [JsonProperty("SubBizType")]
         public string SubBizType{ get; set; }
@@ -78,6 +78,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SubScenes")]
         public string[] SubScenes{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

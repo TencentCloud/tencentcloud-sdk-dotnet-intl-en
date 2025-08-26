@@ -25,12 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Notification type:
+        /// Notification Type:
+        /// TDMQ-CMQ: TDMQ for CMQ.
+        /// "URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.comom/document/product/862/39229?from_cn_redirect=1).
         /// 
-        /// "CMQ": Callback messages are written to the CMQ queue; 
-        /// "URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://intl.cloud.tencent.com/document/product/862/39229?from_cn_redirect=1).
-        /// 
-        /// <font color="red">Note: If left blank, it is CMQ by default. To use the other type, you need to fill in the corresponding type value.</font>
+        /// <font color="red">Note: If it is left blank, TDMQ-CMQ is used by default. To use other types, fill in the corresponding type value.</font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
@@ -42,25 +41,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+        /// Queue and Topic models are provided.
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// CMQ region, such as `sh` and `bj`.
+        /// Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
+        /// This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+        /// This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

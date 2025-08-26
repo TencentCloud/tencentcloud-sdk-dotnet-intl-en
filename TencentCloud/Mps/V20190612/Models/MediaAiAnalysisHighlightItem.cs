@@ -54,6 +54,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SegmentSet")]
         public HighlightSegmentItem[] SegmentSet{ get; set; }
 
+        /// <summary>
+        /// Intelligent highlight address.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HighlightUrl")]
+        public string HighlightUrl{ get; set; }
+
+        /// <summary>
+        /// Intelligent highlight cover address.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CovImgUrl")]
+        public string CovImgUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +79,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "HighlightUrl", this.HighlightUrl);
+            this.SetParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
         }
     }
 }

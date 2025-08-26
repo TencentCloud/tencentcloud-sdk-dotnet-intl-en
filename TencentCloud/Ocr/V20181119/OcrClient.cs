@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1182";
+       private const string sdkVersion = "SDK_NET_3.0.1200";
 
         /// <summary>
         /// Client constructor.
@@ -458,6 +458,31 @@ namespace TencentCloud.Ocr.V20181119
         public PermitOCRResponse PermitOCRSync(PermitOCRRequest req)
         {
             return InternalRequestAsync<PermitOCRResponse>(req, "PermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to identify Brazil RNE documents.
+        /// 
+        /// This API is used to set the default request rate limit to 5 requests/second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilCommonOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilCommonOCRResponse"/></returns>
+        public Task<RecognizeBrazilCommonOCRResponse> RecognizeBrazilCommonOCR(RecognizeBrazilCommonOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilCommonOCRResponse>(req, "RecognizeBrazilCommonOCR");
+        }
+
+        /// <summary>
+        /// This API is used to identify Brazil RNE documents.
+        /// 
+        /// This API is used to set the default request rate limit to 5 requests/second.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeBrazilCommonOCRRequest"/></param>
+        /// <returns><see cref="RecognizeBrazilCommonOCRResponse"/></returns>
+        public RecognizeBrazilCommonOCRResponse RecognizeBrazilCommonOCRSync(RecognizeBrazilCommonOCRRequest req)
+        {
+            return InternalRequestAsync<RecognizeBrazilCommonOCRResponse>(req, "RecognizeBrazilCommonOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

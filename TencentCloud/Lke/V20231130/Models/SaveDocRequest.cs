@@ -116,7 +116,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public bool? IsRefer{ get; set; }
 
         /// <summary>
-        /// Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/TCADP page.
+        /// Document operation type: 1: batch import (import Q&A pairs in batches); 2: document import (normally import a single document). The default value is 1.<br>Please note that when opt = 1, please download the Excel template from the Tencent Cloud Agent Development Platform/ADP page.
         /// </summary>
         [JsonProperty("Opt")]
         public ulong? Opt{ get; set; }
@@ -126,6 +126,30 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("CateBizId")]
         public string CateBizId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsDownload")]
+        public bool? IsDownload{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DuplicateFileHandles")]
+        public DuplicateFileHandle[] DuplicateFileHandles{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SplitRule")]
+        public string SplitRule{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UpdatePeriodInfo")]
+        public UpdatePeriodInfo UpdatePeriodInfo{ get; set; }
 
 
         /// <summary>
@@ -150,6 +174,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "IsRefer", this.IsRefer);
             this.SetParamSimple(map, prefix + "Opt", this.Opt);
             this.SetParamSimple(map, prefix + "CateBizId", this.CateBizId);
+            this.SetParamSimple(map, prefix + "IsDownload", this.IsDownload);
+            this.SetParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
+            this.SetParamSimple(map, prefix + "SplitRule", this.SplitRule);
+            this.SetParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
         }
     }
 }

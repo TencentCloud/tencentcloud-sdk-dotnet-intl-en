@@ -15,35 +15,42 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class LiveStreamAiAnalysisResultItem : AbstractModel
+    public class BrazilCardInfo : AbstractModel
     {
         
         /// <summary>
-        /// Result type. Valid values:
-        /// <li>SegmentRecognition: video splitting.</li>
-        /// <li>Highlight: highlight.</li>
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("SegmentResultSet")]
-        public SegmentRecognitionItem[] SegmentResultSet{ get; set; }
-
-        /// <summary>
-        /// Highlight result. This field is valid when Type is set to Highlight.
+        /// RNE document.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("HighlightResultSet")]
-        public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }
+        [JsonProperty("RNE")]
+        public BrazilRNEInfo RNE{ get; set; }
+
+        /// <summary>
+        /// Specifies the document.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RNM")]
+        public BrazilRNMInfo RNM{ get; set; }
+
+        /// <summary>
+        /// Driver license document.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DriverLicense")]
+        public BrazilDriverLicenseInfo DriverLicense{ get; set; }
+
+        /// <summary>
+        /// ID card document.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IDCard")]
+        public BrazilIDCardInfo IDCard{ get; set; }
 
 
         /// <summary>
@@ -51,9 +58,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
-            this.SetParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+            this.SetParamObj(map, prefix + "RNE.", this.RNE);
+            this.SetParamObj(map, prefix + "RNM.", this.RNM);
+            this.SetParamObj(map, prefix + "DriverLicense.", this.DriverLicense);
+            this.SetParamObj(map, prefix + "IDCard.", this.IDCard);
         }
     }
 }
