@@ -27,7 +27,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// The detection mode. Valid values:
         /// `liveness`: Liveness detection only.
-        /// `compare`: Selfie verification.
+        /// `compare`: Selfie Verification(liveness detection and face comparison).
         /// Default value: `liveness`.
         /// </summary>
         [JsonProperty("CheckMode")]
@@ -71,6 +71,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("ActionList")]
         public string ActionList{ get; set; }
 
+        /// <summary>
+        /// ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+        /// </summary>
+        [JsonProperty("SdkVersion")]
+        public string SdkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
+            this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1197";
+       private const string sdkVersion = "SDK_NET_3.0.1201";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CloseInterCommunicationResponse CloseInterCommunicationSync(CloseInterCommunicationRequest req)
         {
             return InternalRequestAsync<CloseInterCommunicationResponse>(req, "CloseInterCommunication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
+        /// </summary>
+        /// <param name="req"><see cref="CompleteExpansionRequest"/></param>
+        /// <returns><see cref="CompleteExpansionResponse"/></returns>
+        public Task<CompleteExpansionResponse> CompleteExpansion(CompleteExpansionRequest req)
+        {
+            return InternalRequestAsync<CompleteExpansionResponse>(req, "CompleteExpansion");
+        }
+
+        /// <summary>
+        /// This API is used to complete the instance upgrade and switch immediately without waiting for the maintenance window when the instance status is "upgrade pending switch" after scale-out is initiated. This API needs to be called during off-peak hours of the instance. Some databases cannot be accessed before the switch is completed.
+        /// </summary>
+        /// <param name="req"><see cref="CompleteExpansionRequest"/></param>
+        /// <returns><see cref="CompleteExpansionResponse"/></returns>
+        public CompleteExpansionResponse CompleteExpansionSync(CompleteExpansionRequest req)
+        {
+            return InternalRequestAsync<CompleteExpansionResponse>(req, "CompleteExpansion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -365,6 +386,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstancesSync(CreateReadOnlyDBInstancesRequest req)
         {
             return InternalRequestAsync<CreateReadOnlyDBInstancesResponse>(req, "CreateReadOnlyDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to manually cut block logs and deadlock logs.
+        /// </summary>
+        /// <param name="req"><see cref="CutXEventsRequest"/></param>
+        /// <returns><see cref="CutXEventsResponse"/></returns>
+        public Task<CutXEventsResponse> CutXEvents(CutXEventsRequest req)
+        {
+            return InternalRequestAsync<CutXEventsResponse>(req, "CutXEvents");
+        }
+
+        /// <summary>
+        /// This API is used to manually cut block logs and deadlock logs.
+        /// </summary>
+        /// <param name="req"><see cref="CutXEventsRequest"/></param>
+        /// <returns><see cref="CutXEventsResponse"/></returns>
+        public CutXEventsResponse CutXEventsSync(CutXEventsRequest req)
+        {
+            return InternalRequestAsync<CutXEventsResponse>(req, "CutXEvents")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +705,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionZoneResponse"/></returns>
+        public Task<DescribeCrossRegionZoneResponse> DescribeCrossRegionZone(DescribeCrossRegionZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossRegionZoneResponse>(req, "DescribeCrossRegionZone");
+        }
+
+        /// <summary>
+        /// This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionZoneResponse"/></returns>
+        public DescribeCrossRegionZoneResponse DescribeCrossRegionZoneSync(DescribeCrossRegionZoneRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossRegionZoneResponse>(req, "DescribeCrossRegionZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the database character sets supported by an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
@@ -789,6 +852,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases");
+        }
+
+        /// <summary>
+        /// This API is used to query the database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query flow status.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowStatusRequest"/></param>
@@ -890,6 +974,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of asynchronous tasks related to an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTasksRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTasksResponse"/></returns>
+        public Task<DescribeInstanceTasksResponse> DescribeInstanceTasks(DescribeInstanceTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTasksResponse>(req, "DescribeInstanceTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of asynchronous tasks related to an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTasksRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTasksResponse"/></returns>
+        public DescribeInstanceTasksResponse DescribeInstanceTasksSync(DescribeInstanceTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTasksResponse>(req, "DescribeInstanceTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the instance billing parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTradeParameterRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTradeParameterResponse"/></returns>
+        public Task<DescribeInstanceTradeParameterResponse> DescribeInstanceTradeParameter(DescribeInstanceTradeParameterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTradeParameterResponse>(req, "DescribeInstanceTradeParameter");
+        }
+
+        /// <summary>
+        /// This API is used to query the instance billing parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceTradeParameterRequest"/></param>
+        /// <returns><see cref="DescribeInstanceTradeParameterResponse"/></returns>
+        public DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameterSync(DescribeInstanceTradeParameterRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceTradeParameterResponse>(req, "DescribeInstanceTradeParameter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1100,6 +1226,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeSpecSellStatusResponse DescribeSpecSellStatusSync(DescribeSpecSellStatusRequest req)
         {
             return InternalRequestAsync<DescribeSpecSellStatusResponse>(req, "DescribeSpecSellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeInstanceCheckRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeInstanceCheckResponse"/></returns>
+        public Task<DescribeUpgradeInstanceCheckResponse> DescribeUpgradeInstanceCheck(DescribeUpgradeInstanceCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeInstanceCheckResponse>(req, "DescribeUpgradeInstanceCheck");
+        }
+
+        /// <summary>
+        /// This API is used to pre-check the impact of the instance configuration adjustment before the adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpgradeInstanceCheckRequest"/></param>
+        /// <returns><see cref="DescribeUpgradeInstanceCheckResponse"/></returns>
+        public DescribeUpgradeInstanceCheckResponse DescribeUpgradeInstanceCheckSync(DescribeUpgradeInstanceCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeUpgradeInstanceCheckResponse>(req, "DescribeUpgradeInstanceCheck")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1354,6 +1501,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetworkSync(ModifyDBInstanceNetworkRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceNetworkResponse>(req, "ModifyDBInstanceNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNoteRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNoteResponse"/></returns>
+        public Task<ModifyDBInstanceNoteResponse> ModifyDBInstanceNote(ModifyDBInstanceNoteRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceNoteResponse>(req, "ModifyDBInstanceNote");
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance remarks.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNoteRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNoteResponse"/></returns>
+        public ModifyDBInstanceNoteResponse ModifyDBInstanceNoteSync(ModifyDBInstanceNoteRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceNoteResponse>(req, "ModifyDBInstanceNote")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

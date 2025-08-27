@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1195</VersionPrefix>
+    <VersionPrefix>3.0.1201</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,8 @@
     <Compile Include="V20170312\Models\ImportKeyPairResponse.cs" />
     <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingRequest.cs" />
     <Compile Include="V20170312\Models\InquirePricePurchaseReservedInstancesOfferingResponse.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\InquiryPriceRenewInstancesResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetInstanceRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetInstanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceResetInstancesInternetMaxBandwidthRequest.cs" />
@@ -227,6 +229,8 @@
     <Compile Include="V20170312\Models\RemoveChcAssistVpcResponse.cs" />
     <Compile Include="V20170312\Models\RemoveChcDeployVpcRequest.cs" />
     <Compile Include="V20170312\Models\RemoveChcDeployVpcResponse.cs" />
+    <Compile Include="V20170312\Models\RenewInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\RenewInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceConfigInfoItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstanceFamilyItem.cs" />
     <Compile Include="V20170312\Models\ReservedInstancePrice.cs" />

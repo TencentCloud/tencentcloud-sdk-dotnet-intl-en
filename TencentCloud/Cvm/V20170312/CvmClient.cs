@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1195";
+       private const string sdkVersion = "SDK_NET_3.0.1201";
 
         /// <summary>
         /// Client constructor.
@@ -1177,6 +1177,31 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to inquire about the price for renewing a monthly subscription instance.
+        /// 
+        /// This API is used to query the renewal price of monthly subscription instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstancesResponse"/></returns>
+        public Task<InquiryPriceRenewInstancesResponse> InquiryPriceRenewInstances(InquiryPriceRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewInstancesResponse>(req, "InquiryPriceRenewInstances");
+        }
+
+        /// <summary>
+        /// This API is used to inquire about the price for renewing a monthly subscription instance.
+        /// 
+        /// This API is used to query the renewal price of monthly subscription instances.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewInstancesResponse"/></returns>
+        public InquiryPriceRenewInstancesResponse InquiryPriceRenewInstancesSync(InquiryPriceRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewInstancesResponse>(req, "InquiryPriceRenewInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to inquire about the price for reinstalling an instance.
         /// 
         /// * If you have specified the parameter `ImageId`, inquire about the price for reinstallation by using the specified image. Otherwise, inquire about the price for reinstallation based on the image currently used by the instance.
@@ -1689,6 +1714,35 @@ namespace TencentCloud.Cvm.V20170312
         public RemoveChcDeployVpcResponse RemoveChcDeployVpcSync(RemoveChcDeployVpcRequest req)
         {
             return InternalRequestAsync<RemoveChcDeployVpcResponse>(req, "RemoveChcDeployVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to renew annual and monthly subscription instances.
+        /// 
+        /// This API is used to operate on monthly subscription instances only.
+        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.comom/document/product/555/20253?from_cn_redirect=1).
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public Task<RenewInstancesResponse> RenewInstances(RenewInstancesRequest req)
+        {
+            return InternalRequestAsync<RenewInstancesResponse>(req, "RenewInstances");
+        }
+
+        /// <summary>
+        /// This API is used to renew annual and monthly subscription instances.
+        /// 
+        /// This API is used to operate on monthly subscription instances only.
+        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.comom/document/product/555/20253?from_cn_redirect=1).
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public RenewInstancesResponse RenewInstancesSync(RenewInstancesRequest req)
+        {
+            return InternalRequestAsync<RenewInstancesResponse>(req, "RenewInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
