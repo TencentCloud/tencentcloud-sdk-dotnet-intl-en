@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1201";
+       private const string sdkVersion = "SDK_NET_3.0.1202";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,48 @@ namespace TencentCloud.Sqlserver.V20180328
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to bind security groups to instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to bind security groups to instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public AssociateSecurityGroupsResponse AssociateSecurityGroupsSync(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to balance the routing weight of each read-only instance according to the predefined weights. The DescribeReadOnlyGroupAutoWeight API is used to query the predefined weights.
+        /// </summary>
+        /// <param name="req"><see cref="BalanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="BalanceReadOnlyGroupResponse"/></returns>
+        public Task<BalanceReadOnlyGroupResponse> BalanceReadOnlyGroup(BalanceReadOnlyGroupRequest req)
+        {
+            return InternalRequestAsync<BalanceReadOnlyGroupResponse>(req, "BalanceReadOnlyGroup");
+        }
+
+        /// <summary>
+        /// This API is used to balance the routing weight of each read-only instance according to the predefined weights. The DescribeReadOnlyGroupAutoWeight API is used to query the predefined weights.
+        /// </summary>
+        /// <param name="req"><see cref="BalanceReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="BalanceReadOnlyGroupResponse"/></returns>
+        public BalanceReadOnlyGroupResponse BalanceReadOnlyGroupSync(BalanceReadOnlyGroupRequest req)
+        {
+            return InternalRequestAsync<BalanceReadOnlyGroupResponse>(req, "BalanceReadOnlyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -369,6 +411,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to create a publish/subscribe relationship between two databases. A subscriber cannot act as a publisher, and a publisher can have multiple subscriber instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublishSubscribeRequest"/></param>
+        /// <returns><see cref="CreatePublishSubscribeResponse"/></returns>
+        public Task<CreatePublishSubscribeResponse> CreatePublishSubscribe(CreatePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreatePublishSubscribeResponse>(req, "CreatePublishSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to create a publish/subscribe relationship between two databases. A subscriber cannot act as a publisher, and a publisher can have multiple subscriber instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePublishSubscribeRequest"/></param>
+        /// <returns><see cref="CreatePublishSubscribeResponse"/></returns>
+        public CreatePublishSubscribeResponse CreatePublishSubscribeSync(CreatePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreatePublishSubscribeResponse>(req, "CreatePublishSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create read-only instances (local disk).
         /// </summary>
         /// <param name="req"><see cref="CreateReadOnlyDBInstancesRequest"/></param>
@@ -495,6 +558,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to release SQL server instances (eliminated immediately) in the recycle bin. The released instances will be physically terminated after being retained for a period of time. Their publish-subscribe relationships will be automatically disassociated, and their RO replicas will be automatically released.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBInstanceRequest"/></param>
+        /// <returns><see cref="DeleteDBInstanceResponse"/></returns>
+        public Task<DeleteDBInstanceResponse> DeleteDBInstance(DeleteDBInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteDBInstanceResponse>(req, "DeleteDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to release SQL server instances (eliminated immediately) in the recycle bin. The released instances will be physically terminated after being retained for a period of time. Their publish-subscribe relationships will be automatically disassociated, and their RO replicas will be automatically released.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBInstanceRequest"/></param>
+        /// <returns><see cref="DeleteDBInstanceResponse"/></returns>
+        public DeleteDBInstanceResponse DeleteDBInstanceSync(DeleteDBInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteDBInstanceResponse>(req, "DeleteDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete an incremental backup import task.
         /// </summary>
         /// <param name="req"><see cref="DeleteIncrementalMigrationRequest"/></param>
@@ -537,6 +621,48 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to delete the publish/subscribe relationship between two databases.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DeletePublishSubscribeResponse"/></returns>
+        public Task<DeletePublishSubscribeResponse> DeletePublishSubscribe(DeletePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeletePublishSubscribeResponse>(req, "DeletePublishSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to delete the publish/subscribe relationship between two databases.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DeletePublishSubscribeResponse"/></returns>
+        public DeletePublishSubscribeResponse DeletePublishSubscribeSync(DeletePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeletePublishSubscribeResponse>(req, "DeletePublishSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query information on the account and permissions associated with the database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegeByDBRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegeByDBResponse"/></returns>
+        public Task<DescribeAccountPrivilegeByDBResponse> DescribeAccountPrivilegeByDB(DescribeAccountPrivilegeByDBRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountPrivilegeByDBResponse>(req, "DescribeAccountPrivilegeByDB");
+        }
+
+        /// <summary>
+        /// This API is used to query information on the account and permissions associated with the database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountPrivilegeByDBRequest"/></param>
+        /// <returns><see cref="DescribeAccountPrivilegeByDBResponse"/></returns>
+        public DescribeAccountPrivilegeByDBResponse DescribeAccountPrivilegeByDBSync(DescribeAccountPrivilegeByDBRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountPrivilegeByDBResponse>(req, "DescribeAccountPrivilegeByDB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to pull the list of instance accounts.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
@@ -554,6 +680,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
         {
             return InternalRequestAsync<DescribeAccountsResponse>(req, "DescribeAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the created backup details through the backup creation process ID. The process ID can be obtained through the CreateBackup API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupByFlowIdRequest"/></param>
+        /// <returns><see cref="DescribeBackupByFlowIdResponse"/></returns>
+        public Task<DescribeBackupByFlowIdResponse> DescribeBackupByFlowId(DescribeBackupByFlowIdRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupByFlowIdResponse>(req, "DescribeBackupByFlowId");
+        }
+
+        /// <summary>
+        /// This API is used to query the created backup details through the backup creation process ID. The process ID can be obtained through the CreateBackup API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupByFlowIdRequest"/></param>
+        /// <returns><see cref="DescribeBackupByFlowIdResponse"/></returns>
+        public DescribeBackupByFlowIdResponse DescribeBackupByFlowIdSync(DescribeBackupByFlowIdRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupByFlowIdResponse>(req, "DescribeBackupByFlowId")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +764,69 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeBackupMigrationResponse DescribeBackupMigrationSync(DescribeBackupMigrationRequest req)
         {
             return InternalRequestAsync<DescribeBackupMigrationResponse>(req, "DescribeBackupMigration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query backup space usage details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMonitorRequest"/></param>
+        /// <returns><see cref="DescribeBackupMonitorResponse"/></returns>
+        public Task<DescribeBackupMonitorResponse> DescribeBackupMonitor(DescribeBackupMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupMonitorResponse>(req, "DescribeBackupMonitor");
+        }
+
+        /// <summary>
+        /// This API is used to query backup space usage details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupMonitorRequest"/></param>
+        /// <returns><see cref="DescribeBackupMonitorResponse"/></returns>
+        public DescribeBackupMonitorResponse DescribeBackupMonitorSync(DescribeBackupMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupMonitorResponse>(req, "DescribeBackupMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the real-time statistics list of backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStatisticalRequest"/></param>
+        /// <returns><see cref="DescribeBackupStatisticalResponse"/></returns>
+        public Task<DescribeBackupStatisticalResponse> DescribeBackupStatistical(DescribeBackupStatisticalRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupStatisticalResponse>(req, "DescribeBackupStatistical");
+        }
+
+        /// <summary>
+        /// This API is used to query the real-time statistics list of backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupStatisticalRequest"/></param>
+        /// <returns><see cref="DescribeBackupStatisticalResponse"/></returns>
+        public DescribeBackupStatisticalResponse DescribeBackupStatisticalSync(DescribeBackupStatisticalRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupStatisticalResponse>(req, "DescribeBackupStatistical")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the backup overview information of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBackupSummaryResponse"/></returns>
+        public Task<DescribeBackupSummaryResponse> DescribeBackupSummary(DescribeBackupSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupSummaryResponse>(req, "DescribeBackupSummary");
+        }
+
+        /// <summary>
+        /// This API is used to query the backup overview information of databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupSummaryRequest"/></param>
+        /// <returns><see cref="DescribeBackupSummaryResponse"/></returns>
+        public DescribeBackupSummaryResponse DescribeBackupSummarySync(DescribeBackupSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupSummaryResponse>(req, "DescribeBackupSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +915,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the real-time statistics list of cross-region backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBackupStatisticalRequest"/></param>
+        /// <returns><see cref="DescribeCrossBackupStatisticalResponse"/></returns>
+        public Task<DescribeCrossBackupStatisticalResponse> DescribeCrossBackupStatistical(DescribeCrossBackupStatisticalRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossBackupStatisticalResponse>(req, "DescribeCrossBackupStatistical");
+        }
+
+        /// <summary>
+        /// This API is used to query the real-time statistics list of cross-region backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBackupStatisticalRequest"/></param>
+        /// <returns><see cref="DescribeCrossBackupStatisticalResponse"/></returns>
+        public DescribeCrossBackupStatisticalResponse DescribeCrossBackupStatisticalSync(DescribeCrossBackupStatisticalRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossBackupStatisticalResponse>(req, "DescribeCrossBackupStatistical")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the disaster recovery region and AZ of the secondary node based on the primary instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
@@ -722,6 +953,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeCrossRegionZoneResponse DescribeCrossRegionZoneSync(DescribeCrossRegionZoneRequest req)
         {
             return InternalRequestAsync<DescribeCrossRegionZoneResponse>(req, "DescribeCrossRegionZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the target region for cross-region backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionsRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionsResponse"/></returns>
+        public Task<DescribeCrossRegionsResponse> DescribeCrossRegions(DescribeCrossRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossRegionsResponse>(req, "DescribeCrossRegions");
+        }
+
+        /// <summary>
+        /// This API is used to query the target region for cross-region backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossRegionsRequest"/></param>
+        /// <returns><see cref="DescribeCrossRegionsResponse"/></returns>
+        public DescribeCrossRegionsResponse DescribeCrossRegionsSync(DescribeCrossRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCrossRegionsResponse>(req, "DescribeCrossRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,6 +1062,69 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query information on the databases and permissions associated with the account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPrivilegeByAccountRequest"/></param>
+        /// <returns><see cref="DescribeDBPrivilegeByAccountResponse"/></returns>
+        public Task<DescribeDBPrivilegeByAccountResponse> DescribeDBPrivilegeByAccount(DescribeDBPrivilegeByAccountRequest req)
+        {
+            return InternalRequestAsync<DescribeDBPrivilegeByAccountResponse>(req, "DescribeDBPrivilegeByAccount");
+        }
+
+        /// <summary>
+        /// This API is used to query information on the databases and permissions associated with the account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBPrivilegeByAccountRequest"/></param>
+        /// <returns><see cref="DescribeDBPrivilegeByAccountResponse"/></returns>
+        public DescribeDBPrivilegeByAccountResponse DescribeDBPrivilegeByAccountSync(DescribeDBPrivilegeByAccountRequest req)
+        {
+            return InternalRequestAsync<DescribeDBPrivilegeByAccountResponse>(req, "DescribeDBPrivilegeByAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query databases that can be rolled back.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBRestoreTimeRequest"/></param>
+        /// <returns><see cref="DescribeDBRestoreTimeResponse"/></returns>
+        public Task<DescribeDBRestoreTimeResponse> DescribeDBRestoreTime(DescribeDBRestoreTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeDBRestoreTimeResponse>(req, "DescribeDBRestoreTime");
+        }
+
+        /// <summary>
+        /// This API is used to query databases that can be rolled back.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBRestoreTimeRequest"/></param>
+        /// <returns><see cref="DescribeDBRestoreTimeResponse"/></returns>
+        public DescribeDBRestoreTimeResponse DescribeDBRestoreTimeSync(DescribeDBRestoreTimeRequest req)
+        {
+            return InternalRequestAsync<DescribeDBRestoreTimeResponse>(req, "DescribeDBRestoreTime")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the security group details of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query the security group details of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
+        public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSecurityGroupsResponse>(req, "DescribeDBSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of databases
         /// </summary>
         /// <param name="req"><see cref="DescribeDBsRequest"/></param>
@@ -852,6 +1167,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query the database name associated with the account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseNamesRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseNamesResponse"/></returns>
+        public Task<DescribeDatabaseNamesResponse> DescribeDatabaseNames(DescribeDatabaseNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseNamesResponse>(req, "DescribeDatabaseNames");
+        }
+
+        /// <summary>
+        /// This API is used to query the database name associated with the account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseNamesRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseNamesResponse"/></returns>
+        public DescribeDatabaseNamesResponse DescribeDatabaseNamesSync(DescribeDatabaseNamesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabaseNamesResponse>(req, "DescribeDatabaseNames")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the database list.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
@@ -873,6 +1209,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query database configuration information. This API does not contain accounts associated with databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesNormalRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesNormalResponse"/></returns>
+        public Task<DescribeDatabasesNormalResponse> DescribeDatabasesNormal(DescribeDatabasesNormalRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesNormalResponse>(req, "DescribeDatabasesNormal");
+        }
+
+        /// <summary>
+        /// This API is used to query database configuration information. This API does not contain accounts associated with databases.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesNormalRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesNormalResponse"/></returns>
+        public DescribeDatabasesNormalResponse DescribeDatabasesNormalSync(DescribeDatabasesNormalRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesNormalResponse>(req, "DescribeDatabasesNormal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query flow status.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowStatusRequest"/></param>
@@ -890,6 +1247,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeFlowStatusResponse DescribeFlowStatusSync(DescribeFlowStatusRequest req)
         {
             return InternalRequestAsync<DescribeFlowStatusResponse>(req, "DescribeFlowStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to perform the manual primary-secondary switch.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHASwitchLogRequest"/></param>
+        /// <returns><see cref="DescribeHASwitchLogResponse"/></returns>
+        public Task<DescribeHASwitchLogResponse> DescribeHASwitchLog(DescribeHASwitchLogRequest req)
+        {
+            return InternalRequestAsync<DescribeHASwitchLogResponse>(req, "DescribeHASwitchLog");
+        }
+
+        /// <summary>
+        /// This API is used to perform the manual primary-secondary switch.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHASwitchLogRequest"/></param>
+        /// <returns><see cref="DescribeHASwitchLogResponse"/></returns>
+        public DescribeHASwitchLogResponse DescribeHASwitchLogSync(DescribeHASwitchLogRequest req)
+        {
+            return InternalRequestAsync<DescribeHASwitchLogResponse>(req, "DescribeHASwitchLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1125,6 +1503,132 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query security group details of a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
+        public Task<DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectSecurityGroupsResponse>(req, "DescribeProjectSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query security group details of a project.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DescribeProjectSecurityGroupsResponse"/></returns>
+        public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroupsSync(DescribeProjectSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeProjectSecurityGroupsResponse>(req, "DescribeProjectSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the publish/subscribe relationship list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DescribePublishSubscribeResponse"/></returns>
+        public Task<DescribePublishSubscribeResponse> DescribePublishSubscribe(DescribePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<DescribePublishSubscribeResponse>(req, "DescribePublishSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to query the publish/subscribe relationship list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishSubscribeRequest"/></param>
+        /// <returns><see cref="DescribePublishSubscribeResponse"/></returns>
+        public DescribePublishSubscribeResponse DescribePublishSubscribeSync(DescribePublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<DescribePublishSubscribeResponse>(req, "DescribePublishSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the automatic weight assignment result of the read-only group. The BalanceReadOnlyGroup API is used to perform routing weight assignment according to the automatic weight assignment result.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupAutoWeightRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupAutoWeightResponse"/></returns>
+        public Task<DescribeReadOnlyGroupAutoWeightResponse> DescribeReadOnlyGroupAutoWeight(DescribeReadOnlyGroupAutoWeightRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupAutoWeightResponse>(req, "DescribeReadOnlyGroupAutoWeight");
+        }
+
+        /// <summary>
+        /// This API is used to query the automatic weight assignment result of the read-only group. The BalanceReadOnlyGroup API is used to perform routing weight assignment according to the automatic weight assignment result.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupAutoWeightRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupAutoWeightResponse"/></returns>
+        public DescribeReadOnlyGroupAutoWeightResponse DescribeReadOnlyGroupAutoWeightSync(DescribeReadOnlyGroupAutoWeightRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupAutoWeightResponse>(req, "DescribeReadOnlyGroupAutoWeight")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the read-only group where the read-only instance is located by its ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupByReadOnlyInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupByReadOnlyInstanceResponse"/></returns>
+        public Task<DescribeReadOnlyGroupByReadOnlyInstanceResponse> DescribeReadOnlyGroupByReadOnlyInstance(DescribeReadOnlyGroupByReadOnlyInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupByReadOnlyInstanceResponse>(req, "DescribeReadOnlyGroupByReadOnlyInstance");
+        }
+
+        /// <summary>
+        /// This API is used to query the read-only group where the read-only instance is located by its ID.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupByReadOnlyInstanceRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupByReadOnlyInstanceResponse"/></returns>
+        public DescribeReadOnlyGroupByReadOnlyInstanceResponse DescribeReadOnlyGroupByReadOnlyInstanceSync(DescribeReadOnlyGroupByReadOnlyInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupByReadOnlyInstanceResponse>(req, "DescribeReadOnlyGroupByReadOnlyInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query read-only group details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupDetailsResponse"/></returns>
+        public Task<DescribeReadOnlyGroupDetailsResponse> DescribeReadOnlyGroupDetails(DescribeReadOnlyGroupDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupDetailsResponse>(req, "DescribeReadOnlyGroupDetails");
+        }
+
+        /// <summary>
+        /// This API is used to query read-only group details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupDetailsResponse"/></returns>
+        public DescribeReadOnlyGroupDetailsResponse DescribeReadOnlyGroupDetailsSync(DescribeReadOnlyGroupDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupDetailsResponse>(req, "DescribeReadOnlyGroupDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the read-only group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupListRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupListResponse"/></returns>
+        public Task<DescribeReadOnlyGroupListResponse> DescribeReadOnlyGroupList(DescribeReadOnlyGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupListResponse>(req, "DescribeReadOnlyGroupList");
+        }
+
+        /// <summary>
+        /// This API is used to query the read-only group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReadOnlyGroupListRequest"/></param>
+        /// <returns><see cref="DescribeReadOnlyGroupListResponse"/></returns>
+        public DescribeReadOnlyGroupListResponse DescribeReadOnlyGroupListSync(DescribeReadOnlyGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeReadOnlyGroupListResponse>(req, "DescribeReadOnlyGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query purchasable regions.
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
@@ -1142,6 +1646,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
             return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the scheduled backup retention plans of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegularBackupPlanRequest"/></param>
+        /// <returns><see cref="DescribeRegularBackupPlanResponse"/></returns>
+        public Task<DescribeRegularBackupPlanResponse> DescribeRegularBackupPlan(DescribeRegularBackupPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeRegularBackupPlanResponse>(req, "DescribeRegularBackupPlan");
+        }
+
+        /// <summary>
+        /// This API is used to query the scheduled backup retention plans of instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegularBackupPlanRequest"/></param>
+        /// <returns><see cref="DescribeRegularBackupPlanResponse"/></returns>
+        public DescribeRegularBackupPlanResponse DescribeRegularBackupPlanSync(DescribeRegularBackupPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeRegularBackupPlanResponse>(req, "DescribeRegularBackupPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of rollback tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTaskRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTaskResponse"/></returns>
+        public Task<DescribeRestoreTaskResponse> DescribeRestoreTask(DescribeRestoreTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTaskResponse>(req, "DescribeRestoreTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of rollback tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRestoreTaskRequest"/></param>
+        /// <returns><see cref="DescribeRestoreTaskResponse"/></returns>
+        public DescribeRestoreTaskResponse DescribeRestoreTaskSync(DescribeRestoreTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRestoreTaskResponse>(req, "DescribeRestoreTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1314,6 +1860,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to unbind security groups from instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to unbind security groups from instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the price of requested instances.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateDBInstancesRequest"/></param>
@@ -1421,6 +1988,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to modify the name of a backup task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public Task<ModifyBackupNameResponse> ModifyBackupName(ModifyBackupNameRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupNameResponse>(req, "ModifyBackupName");
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of a backup task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public ModifyBackupNameResponse ModifyBackupNameSync(ModifyBackupNameRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupNameResponse>(req, "ModifyBackupName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the backup policy.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupStrategyRequest"/></param>
@@ -1438,6 +2026,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyBackupStrategyResponse ModifyBackupStrategySync(ModifyBackupStrategyRequest req)
         {
             return InternalRequestAsync<ModifyBackupStrategyResponse>(req, "ModifyBackupStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to disable the public network for the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloseWanIpRequest"/></param>
+        /// <returns><see cref="ModifyCloseWanIpResponse"/></returns>
+        public Task<ModifyCloseWanIpResponse> ModifyCloseWanIp(ModifyCloseWanIpRequest req)
+        {
+            return InternalRequestAsync<ModifyCloseWanIpResponse>(req, "ModifyCloseWanIp");
+        }
+
+        /// <summary>
+        /// This API is used to disable the public network for the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloseWanIpRequest"/></param>
+        /// <returns><see cref="ModifyCloseWanIpResponse"/></returns>
+        public ModifyCloseWanIpResponse ModifyCloseWanIpSync(ModifyCloseWanIpRequest req)
+        {
+            return InternalRequestAsync<ModifyCloseWanIpResponse>(req, "ModifyCloseWanIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable cross-region backup policies.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCrossBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyCrossBackupStrategyResponse"/></returns>
+        public Task<ModifyCrossBackupStrategyResponse> ModifyCrossBackupStrategy(ModifyCrossBackupStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyCrossBackupStrategyResponse>(req, "ModifyCrossBackupStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable cross-region backup policies.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCrossBackupStrategyRequest"/></param>
+        /// <returns><see cref="ModifyCrossBackupStrategyResponse"/></returns>
+        public ModifyCrossBackupStrategyResponse ModifyCrossBackupStrategySync(ModifyCrossBackupStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyCrossBackupStrategyResponse>(req, "ModifyCrossBackupStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1543,6 +2173,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDBInstanceProjectResponse ModifyDBInstanceProjectSync(ModifyDBInstanceProjectRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceProjectResponse>(req, "ModifyDBInstanceProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable/update SSL encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>
+        public Task<ModifyDBInstanceSSLResponse> ModifyDBInstanceSSL(ModifyDBInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSSLResponse>(req, "ModifyDBInstanceSSL");
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable/update SSL encryption.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSSLRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSSLResponse"/></returns>
+        public ModifyDBInstanceSSLResponse ModifyDBInstanceSSLSync(ModifyDBInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSSLResponse>(req, "ModifyDBInstanceSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify security groups bound to an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public Task<ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSecurityGroupsResponse>(req, "ModifyDBInstanceSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to modify security groups bound to an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSecurityGroupsResponse"/></returns>
+        public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroupsSync(ModifyDBInstanceSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceSecurityGroupsResponse>(req, "ModifyDBInstanceSecurityGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1673,6 +2345,48 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to modify instance database permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabasePrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyDatabasePrivilegeResponse"/></returns>
+        public Task<ModifyDatabasePrivilegeResponse> ModifyDatabasePrivilege(ModifyDatabasePrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabasePrivilegeResponse>(req, "ModifyDatabasePrivilege");
+        }
+
+        /// <summary>
+        /// This API is used to modify instance database permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabasePrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyDatabasePrivilegeResponse"/></returns>
+        public ModifyDatabasePrivilegeResponse ModifyDatabasePrivilegeSync(ModifyDatabasePrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabasePrivilegeResponse>(req, "ModifyDatabasePrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to shrink the database mdf (Shrink mdf).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseShrinkMDFRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseShrinkMDFResponse"/></returns>
+        public Task<ModifyDatabaseShrinkMDFResponse> ModifyDatabaseShrinkMDF(ModifyDatabaseShrinkMDFRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabaseShrinkMDFResponse>(req, "ModifyDatabaseShrinkMDF");
+        }
+
+        /// <summary>
+        /// This API is used to shrink the database mdf (Shrink mdf).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseShrinkMDFRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseShrinkMDFResponse"/></returns>
+        public ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDFSync(ModifyDatabaseShrinkMDFRequest req)
+        {
+            return InternalRequestAsync<ModifyDatabaseShrinkMDFResponse>(req, "ModifyDatabaseShrinkMDF")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify an incremental backup import task.
         /// </summary>
         /// <param name="req"><see cref="ModifyIncrementalMigrationRequest"/></param>
@@ -1740,6 +2454,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to modify the maintenance window of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceSpanResponse"/></returns>
+        public Task<ModifyMaintenanceSpanResponse> ModifyMaintenanceSpan(ModifyMaintenanceSpanRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintenanceSpanResponse>(req, "ModifyMaintenanceSpan");
+        }
+
+        /// <summary>
+        /// This API is used to modify the maintenance window of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceSpanRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceSpanResponse"/></returns>
+        public ModifyMaintenanceSpanResponse ModifyMaintenanceSpanSync(ModifyMaintenanceSpanRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintenanceSpanResponse>(req, "ModifyMaintenanceSpan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify an existing migration task.
         /// </summary>
         /// <param name="req"><see cref="ModifyMigrationRequest"/></param>
@@ -1757,6 +2492,90 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyMigrationResponse ModifyMigrationSync(ModifyMigrationRequest req)
         {
             return InternalRequestAsync<ModifyMigrationResponse>(req, "ModifyMigration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network for the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOpenWanIpRequest"/></param>
+        /// <returns><see cref="ModifyOpenWanIpResponse"/></returns>
+        public Task<ModifyOpenWanIpResponse> ModifyOpenWanIp(ModifyOpenWanIpRequest req)
+        {
+            return InternalRequestAsync<ModifyOpenWanIpResponse>(req, "ModifyOpenWanIp");
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network for the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOpenWanIpRequest"/></param>
+        /// <returns><see cref="ModifyOpenWanIpResponse"/></returns>
+        public ModifyOpenWanIpResponse ModifyOpenWanIpSync(ModifyOpenWanIpRequest req)
+        {
+            return InternalRequestAsync<ModifyOpenWanIpResponse>(req, "ModifyOpenWanIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the publish/subscribe relationship of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeResponse"/></returns>
+        public Task<ModifyPublishSubscribeResponse> ModifyPublishSubscribe(ModifyPublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyPublishSubscribeResponse>(req, "ModifyPublishSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to modify the publish/subscribe relationship of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeResponse"/></returns>
+        public ModifyPublishSubscribeResponse ModifyPublishSubscribeSync(ModifyPublishSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyPublishSubscribeResponse>(req, "ModifyPublishSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the publish/subscribe names.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeNameResponse"/></returns>
+        public Task<ModifyPublishSubscribeNameResponse> ModifyPublishSubscribeName(ModifyPublishSubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifyPublishSubscribeNameResponse>(req, "ModifyPublishSubscribeName");
+        }
+
+        /// <summary>
+        /// This API is used to modify the publish/subscribe names.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublishSubscribeNameRequest"/></param>
+        /// <returns><see cref="ModifyPublishSubscribeNameResponse"/></returns>
+        public ModifyPublishSubscribeNameResponse ModifyPublishSubscribeNameSync(ModifyPublishSubscribeNameRequest req)
+        {
+            return InternalRequestAsync<ModifyPublishSubscribeNameResponse>(req, "ModifyPublishSubscribeName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify read-only group details.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupDetailsResponse"/></returns>
+        public Task<ModifyReadOnlyGroupDetailsResponse> ModifyReadOnlyGroupDetails(ModifyReadOnlyGroupDetailsRequest req)
+        {
+            return InternalRequestAsync<ModifyReadOnlyGroupDetailsResponse>(req, "ModifyReadOnlyGroupDetails");
+        }
+
+        /// <summary>
+        /// This API is used to modify read-only group details.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReadOnlyGroupDetailsRequest"/></param>
+        /// <returns><see cref="ModifyReadOnlyGroupDetailsResponse"/></returns>
+        public ModifyReadOnlyGroupDetailsResponse ModifyReadOnlyGroupDetailsSync(ModifyReadOnlyGroupDetailsRequest req)
+        {
+            return InternalRequestAsync<ModifyReadOnlyGroupDetailsResponse>(req, "ModifyReadOnlyGroupDetails")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1799,6 +2618,69 @@ namespace TencentCloud.Sqlserver.V20180328
         public RecycleDBInstanceResponse RecycleDBInstanceSync(RecycleDBInstanceRequest req)
         {
             return InternalRequestAsync<RecycleDBInstanceResponse>(req, "RecycleDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reclaim resources of read-only groups immediately. The resources, such as VIP, occupied by the read-only group will be released immediately and cannot be recovered.
+        /// </summary>
+        /// <param name="req"><see cref="RecycleReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RecycleReadOnlyGroupResponse"/></returns>
+        public Task<RecycleReadOnlyGroupResponse> RecycleReadOnlyGroup(RecycleReadOnlyGroupRequest req)
+        {
+            return InternalRequestAsync<RecycleReadOnlyGroupResponse>(req, "RecycleReadOnlyGroup");
+        }
+
+        /// <summary>
+        /// This API is used to reclaim resources of read-only groups immediately. The resources, such as VIP, occupied by the read-only group will be released immediately and cannot be recovered.
+        /// </summary>
+        /// <param name="req"><see cref="RecycleReadOnlyGroupRequest"/></param>
+        /// <returns><see cref="RecycleReadOnlyGroupResponse"/></returns>
+        public RecycleReadOnlyGroupResponse RecycleReadOnlyGroupSync(RecycleReadOnlyGroupRequest req)
+        {
+            return InternalRequestAsync<RecycleReadOnlyGroupResponse>(req, "RecycleReadOnlyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete backup files created by users manually. The backup policy to be deleted can be instance backup or multi-database backup.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
+        /// <returns><see cref="RemoveBackupsResponse"/></returns>
+        public Task<RemoveBackupsResponse> RemoveBackups(RemoveBackupsRequest req)
+        {
+            return InternalRequestAsync<RemoveBackupsResponse>(req, "RemoveBackups");
+        }
+
+        /// <summary>
+        /// This API is used to delete backup files created by users manually. The backup policy to be deleted can be instance backup or multi-database backup.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveBackupsRequest"/></param>
+        /// <returns><see cref="RemoveBackupsResponse"/></returns>
+        public RemoveBackupsResponse RemoveBackupsSync(RemoveBackupsRequest req)
+        {
+            return InternalRequestAsync<RemoveBackupsResponse>(req, "RemoveBackups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
+        /// </summary>
+        /// <param name="req"><see cref="RenewPostpaidDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewPostpaidDBInstanceResponse"/></returns>
+        public Task<RenewPostpaidDBInstanceResponse> RenewPostpaidDBInstance(RenewPostpaidDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewPostpaidDBInstanceResponse>(req, "RenewPostpaidDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
+        /// </summary>
+        /// <param name="req"><see cref="RenewPostpaidDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewPostpaidDBInstanceResponse"/></returns>
+        public RenewPostpaidDBInstanceResponse RenewPostpaidDBInstanceSync(RenewPostpaidDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewPostpaidDBInstanceResponse>(req, "RenewPostpaidDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1967,6 +2849,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public StartInstanceXEventResponse StartInstanceXEventSync(StartInstanceXEventRequest req)
         {
             return InternalRequestAsync<StartInstanceXEventResponse>(req, "StartInstanceXEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to manually switch between primary and secondary.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCloudInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchCloudInstanceHAResponse"/></returns>
+        public Task<SwitchCloudInstanceHAResponse> SwitchCloudInstanceHA(SwitchCloudInstanceHARequest req)
+        {
+            return InternalRequestAsync<SwitchCloudInstanceHAResponse>(req, "SwitchCloudInstanceHA");
+        }
+
+        /// <summary>
+        /// This API is used to manually switch between primary and secondary.
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCloudInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchCloudInstanceHAResponse"/></returns>
+        public SwitchCloudInstanceHAResponse SwitchCloudInstanceHASync(SwitchCloudInstanceHARequest req)
+        {
+            return InternalRequestAsync<SwitchCloudInstanceHAResponse>(req, "SwitchCloudInstanceHA")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

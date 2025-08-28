@@ -60,6 +60,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
+        /// <summary>
+        /// Sorting field. Size - sort by backup size; DBs - sort by database name. The default value is size.
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }
 }

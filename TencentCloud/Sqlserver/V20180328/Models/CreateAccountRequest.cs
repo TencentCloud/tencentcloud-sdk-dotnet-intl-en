@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// Database instance ID in the format of mssql-njj2mtpl
+        /// Database instance ID in the format of mssql-njj2mtpl.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database instance account information
+        /// Database instance account information.
         /// </summary>
         [JsonProperty("Accounts")]
         public AccountCreateInfo[] Accounts{ get; set; }

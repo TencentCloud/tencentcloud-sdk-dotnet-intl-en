@@ -38,7 +38,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Returned error code.
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }

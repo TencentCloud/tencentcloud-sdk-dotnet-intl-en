@@ -55,7 +55,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string BackupModel{ get; set; }
 
         /// <summary>
-        /// The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+        /// The days of the week on which backup will be performed when "BackupType" is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
         /// </summary>
         [JsonProperty("BackupCycle")]
         public ulong?[] BackupCycle{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string RegularBackupEnable{ get; set; }
 
         /// <summary>
-        /// Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+        /// Archive backup retention days. Value range: 90-3650 days. Default value: 365 days.
         /// </summary>
         [JsonProperty("RegularBackupSaveDays")]
         public ulong? RegularBackupSaveDays{ get; set; }

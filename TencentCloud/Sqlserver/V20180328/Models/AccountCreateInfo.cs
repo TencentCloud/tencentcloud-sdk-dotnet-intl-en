@@ -67,10 +67,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string AccountType{ get; set; }
 
         /// <summary>
-        /// Whether CAM authentication is enabled
+        /// Whether CAM authentication is enabled.
         /// </summary>
         [JsonProperty("IsCam")]
         public bool? IsCam{ get; set; }
+
+        /// <summary>
+        /// Encryption key version number. 0: disable encryption.
+        /// </summary>
+        [JsonProperty("EncryptedVersion")]
+        public long? EncryptedVersion{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "IsCam", this.IsCam);
+            this.SetParamSimple(map, prefix + "EncryptedVersion", this.EncryptedVersion);
         }
     }
 }
