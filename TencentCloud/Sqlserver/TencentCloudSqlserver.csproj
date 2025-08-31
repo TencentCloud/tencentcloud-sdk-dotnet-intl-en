@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2307E4EA-035A-39F3-B9A5-B4AA2A71E20D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1202</VersionPrefix>
+    <VersionPrefix>3.0.1203</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,6 +68,8 @@
     <Compile Include="V20180328\Models\CloseInterCommunicationResponse.cs" />
     <Compile Include="V20180328\Models\CompleteExpansionRequest.cs" />
     <Compile Include="V20180328\Models\CompleteExpansionResponse.cs" />
+    <Compile Include="V20180328\Models\CompleteMigrationRequest.cs" />
+    <Compile Include="V20180328\Models\CompleteMigrationResponse.cs" />
     <Compile Include="V20180328\Models\CosUploadBackupFile.cs" />
     <Compile Include="V20180328\Models\CreateAccountRequest.cs" />
     <Compile Include="V20180328\Models\CreateAccountResponse.cs" />
@@ -207,6 +209,8 @@
     <Compile Include="V20180328\Models\DescribeInstanceTradeParameterResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanRequest.cs" />
     <Compile Include="V20180328\Models\DescribeMaintenanceSpanResponse.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationDatabasesRequest.cs" />
+    <Compile Include="V20180328\Models\DescribeMigrationDatabasesResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMigrationDetailRequest.cs" />
     <Compile Include="V20180328\Models\DescribeMigrationDetailResponse.cs" />
     <Compile Include="V20180328\Models\DescribeMigrationsRequest.cs" />

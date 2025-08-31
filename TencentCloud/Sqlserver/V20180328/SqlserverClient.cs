@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1202";
+       private const string sdkVersion = "SDK_NET_3.0.1203";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public CompleteExpansionResponse CompleteExpansionSync(CompleteExpansionRequest req)
         {
             return InternalRequestAsync<CompleteExpansionResponse>(req, "CompleteExpansion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to complete a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="CompleteMigrationRequest"/></param>
+        /// <returns><see cref="CompleteMigrationResponse"/></returns>
+        public Task<CompleteMigrationResponse> CompleteMigration(CompleteMigrationRequest req)
+        {
+            return InternalRequestAsync<CompleteMigrationResponse>(req, "CompleteMigration");
+        }
+
+        /// <summary>
+        /// This API is used to complete a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="CompleteMigrationRequest"/></param>
+        /// <returns><see cref="CompleteMigrationResponse"/></returns>
+        public CompleteMigrationResponse CompleteMigrationSync(CompleteMigrationRequest req)
+        {
+            return InternalRequestAsync<CompleteMigrationResponse>(req, "CompleteMigration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1415,6 +1436,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DescribeMaintenanceSpanResponse DescribeMaintenanceSpanSync(DescribeMaintenanceSpanRequest req)
         {
             return InternalRequestAsync<DescribeMaintenanceSpanResponse>(req, "DescribeMaintenanceSpan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of databases to be migrated.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeMigrationDatabasesResponse"/></returns>
+        public Task<DescribeMigrationDatabasesResponse> DescribeMigrationDatabases(DescribeMigrationDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrationDatabasesResponse>(req, "DescribeMigrationDatabases");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of databases to be migrated.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMigrationDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeMigrationDatabasesResponse"/></returns>
+        public DescribeMigrationDatabasesResponse DescribeMigrationDatabasesSync(DescribeMigrationDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeMigrationDatabasesResponse>(req, "DescribeMigrationDatabases")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
