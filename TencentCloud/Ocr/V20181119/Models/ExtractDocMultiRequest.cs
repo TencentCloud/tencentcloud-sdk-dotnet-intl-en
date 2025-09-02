@@ -81,6 +81,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// -- MultiRealEstateCertificate
         /// -- MultiRealEstateMaterial
         /// -- HongKongUtilityBill
+        /// -- OverseasCheques
+        /// -- RegistrationCertificate
+        /// -- GridPhoto
+        /// -- SignaturePage
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
