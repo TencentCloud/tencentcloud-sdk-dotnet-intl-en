@@ -25,31 +25,25 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Days in each month for execution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Execution day of each month.
         /// </summary>
         [JsonProperty("Days")]
         public ulong?[] Days{ get; set; }
 
         /// <summary>
-        /// Days of each week for execution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Execution day of each week.
         /// </summary>
         [JsonProperty("WDays")]
         public ulong?[] WDays{ get; set; }
 
         /// <summary>
-        /// Start time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// End time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

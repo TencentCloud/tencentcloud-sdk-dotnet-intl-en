@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1201";
+       private const string sdkVersion = "SDK_NET_3.0.1208";
 
         /// <summary>
         /// Client constructor.
@@ -1481,6 +1481,29 @@ namespace TencentCloud.Cvm.V20170312
         public ModifyInstancesAttributeResponse ModifyInstancesAttributeSync(ModifyInstancesAttributeRequest req)
         {
             return InternalRequestAsync<ModifyInstancesAttributeResponse>(req, "ModifyInstancesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to adjust the placement group of an instance.
+        /// * Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyInstancesDisasterRecoverGroupResponse"/></returns>
+        public Task<ModifyInstancesDisasterRecoverGroupResponse> ModifyInstancesDisasterRecoverGroup(ModifyInstancesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesDisasterRecoverGroupResponse>(req, "ModifyInstancesDisasterRecoverGroup");
+        }
+
+        /// <summary>
+        /// This API is used to adjust the placement group of an instance.
+        /// * Currently only basic networks or Virtual Private Cloud (VPC) instances are supported.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyInstancesDisasterRecoverGroupResponse"/></returns>
+        public ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroupSync(ModifyInstancesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesDisasterRecoverGroupResponse>(req, "ModifyInstancesDisasterRecoverGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

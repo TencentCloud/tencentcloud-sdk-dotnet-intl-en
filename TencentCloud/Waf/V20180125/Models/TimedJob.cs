@@ -25,15 +25,13 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Start timestamp, in seconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start timestamp, in seconds.
         /// </summary>
         [JsonProperty("StartDateTime")]
         public ulong? StartDateTime{ get; set; }
 
         /// <summary>
-        /// End timestamp, in seconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// End timestamp, in seconds.
         /// </summary>
         [JsonProperty("EndDateTime")]
         public ulong? EndDateTime{ get; set; }

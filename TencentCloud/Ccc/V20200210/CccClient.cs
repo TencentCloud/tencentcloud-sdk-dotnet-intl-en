@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1208";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// This API is used to bind a number to a callback API for incoming calls.
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallInInterfaceRequest"/></param>
+        /// <returns><see cref="BindNumberCallInInterfaceResponse"/></returns>
+        public Task<BindNumberCallInInterfaceResponse> BindNumberCallInInterface(BindNumberCallInInterfaceRequest req)
+        {
+            return InternalRequestAsync<BindNumberCallInInterfaceResponse>(req, "BindNumberCallInInterface");
+        }
+
+        /// <summary>
+        /// This API is used to bind a number to a callback API for incoming calls.
+        /// </summary>
+        /// <param name="req"><see cref="BindNumberCallInInterfaceRequest"/></param>
+        /// <returns><see cref="BindNumberCallInInterfaceResponse"/></returns>
+        public BindNumberCallInInterfaceResponse BindNumberCallInInterfaceSync(BindNumberCallInInterfaceRequest req)
+        {
+            return InternalRequestAsync<BindNumberCallInInterfaceResponse>(req, "BindNumberCallInInterface")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to bind outbound skill group of number.
         /// </summary>
         /// <param name="req"><see cref="BindNumberCallOutSkillGroupRequest"/></param>
@@ -134,6 +155,27 @@ namespace TencentCloud.Ccc.V20200210
         public BindStaffSkillGroupListResponse BindStaffSkillGroupListSync(BindStaffSkillGroupListRequest req)
         {
             return InternalRequestAsync<BindStaffSkillGroupListResponse>(req, "BindStaffSkillGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to provide server-side robot control feature.
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public Task<ControlAIConversationResponse> ControlAIConversation(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation");
+        }
+
+        /// <summary>
+        /// This API is used to provide server-side robot control feature.
+        /// </summary>
+        /// <param name="req"><see cref="ControlAIConversationRequest"/></param>
+        /// <returns><see cref="ControlAIConversationResponse"/></returns>
+        public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
+        {
+            return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -423,6 +465,27 @@ namespace TencentCloud.Ccc.V20200210
         public CreateStaffResponse CreateStaffSync(CreateStaffRequest req)
         {
             return InternalRequestAsync<CreateStaffResponse>(req, "CreateStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a user data signature.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSigRequest"/></param>
+        /// <returns><see cref="CreateUserSigResponse"/></returns>
+        public Task<CreateUserSigResponse> CreateUserSig(CreateUserSigRequest req)
+        {
+            return InternalRequestAsync<CreateUserSigResponse>(req, "CreateUserSig");
+        }
+
+        /// <summary>
+        /// This API is used to create a user data signature.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSigRequest"/></param>
+        /// <returns><see cref="CreateUserSigResponse"/></returns>
+        public CreateUserSigResponse CreateUserSigSync(CreateUserSigRequest req)
+        {
+            return InternalRequestAsync<CreateUserSigResponse>(req, "CreateUserSig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -847,6 +910,27 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// This API is used to query call detail.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
+        /// <returns><see cref="DescribeSessionDetailResponse"/></returns>
+        public Task<DescribeSessionDetailResponse> DescribeSessionDetail(DescribeSessionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionDetailResponse>(req, "DescribeSessionDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query call detail.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionDetailRequest"/></param>
+        /// <returns><see cref="DescribeSessionDetailResponse"/></returns>
+        public DescribeSessionDetailResponse DescribeSessionDetailSync(DescribeSessionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionDetailResponse>(req, "DescribeSessionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to access the skill group information list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillGroupInfoListRequest"/></param>
@@ -885,6 +969,27 @@ namespace TencentCloud.Ccc.V20200210
         public DescribeStaffInfoListResponse DescribeStaffInfoListSync(DescribeStaffInfoListRequest req)
         {
             return InternalRequestAsync<DescribeStaffInfoListResponse>(req, "DescribeStaffInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query agent status history.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusHistoryRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusHistoryResponse"/></returns>
+        public Task<DescribeStaffStatusHistoryResponse> DescribeStaffStatusHistory(DescribeStaffStatusHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeStaffStatusHistoryResponse>(req, "DescribeStaffStatusHistory");
+        }
+
+        /// <summary>
+        /// This API is used to query agent status history.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusHistoryRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusHistoryResponse"/></returns>
+        public DescribeStaffStatusHistoryResponse DescribeStaffStatusHistorySync(DescribeStaffStatusHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeStaffStatusHistoryResponse>(req, "DescribeStaffStatusHistory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

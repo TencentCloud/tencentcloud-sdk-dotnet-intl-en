@@ -55,8 +55,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffNumber{ get; set; }
 
         /// <summary>
-        /// User role id.
-        /// When a user is bound to multiple roles, RoleIdList shall prevail.
+        /// User role ID. if a user is bound to multiple roles, RoleIdList takes precedence.
         /// </summary>
         [JsonProperty("RoleId")]
         [System.Obsolete]
@@ -70,7 +69,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? RoleIdList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the user role id list.
         /// </summary>
         [JsonProperty("RoleList")]
         public ulong?[] RoleList{ get; set; }
@@ -93,6 +92,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ExtensionNumber")]
         public string ExtensionNumber{ get; set; }
 
+        /// <summary>
+        /// Call forwarding configuration.
+        /// </summary>
+        [JsonProperty("ForwardingConfig")]
+        public ForwardingConfig ForwardingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +115,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
             this.SetParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
+            this.SetParamObj(map, prefix + "ForwardingConfig.", this.ForwardingConfig);
         }
     }
 }

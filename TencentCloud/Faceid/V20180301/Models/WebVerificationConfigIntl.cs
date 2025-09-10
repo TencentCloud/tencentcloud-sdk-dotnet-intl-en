@@ -131,6 +131,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("LivenessRetryLimit")]
         public long? LivenessRetryLimit{ get; set; }
 
+        /// <summary>
+        /// Specifies the liveness detection timeout period in seconds. value range: (0,600].
+        /// </summary>
+        [JsonProperty("LivenessTimeout")]
+        public ulong? LivenessTimeout{ get; set; }
+
+        /// <summary>
+        /// Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+        /// </summary>
+        [JsonProperty("SelectedWarningCodes")]
+        public string SelectedWarningCodes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +162,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "AutoDowngrade", this.AutoDowngrade);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
             this.SetParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
+            this.SetParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
+            this.SetParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
         }
     }
 }

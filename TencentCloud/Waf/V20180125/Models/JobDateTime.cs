@@ -25,22 +25,19 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Time parameters for scheduled execution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time parameter for scheduled execution.
         /// </summary>
         [JsonProperty("Timed")]
         public TimedJob[] Timed{ get; set; }
 
         /// <summary>
-        /// Time parameters for periodic execution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time parameter for periodic execution.
         /// </summary>
         [JsonProperty("Cron")]
         public CronJob[] Cron{ get; set; }
 
         /// <summary>
-        /// Time zone
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the time zone.
         /// </summary>
         [JsonProperty("TimeTZone")]
         public string TimeTZone{ get; set; }

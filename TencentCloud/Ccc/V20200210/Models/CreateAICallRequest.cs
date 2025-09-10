@@ -185,7 +185,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? WelcomeType{ get; set; }
 
         /// <summary>
-        /// 0: interruptible by default, 1: high priority and not interruptible.
+        /// 0: interruptible by default, 2: high priority non-interruptible.
         /// </summary>
         [JsonProperty("WelcomeMessagePriority")]
         public long? WelcomeMessagePriority{ get; set; }
@@ -369,6 +369,33 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
+        /// <summary>
+        /// Specifies the model topP.
+        /// </summary>
+        [JsonProperty("TopP")]
+        public float? TopP{ get; set; }
+
+        /// <summary>
+        /// The vad far-field voice suppression capacity (does not impact asr recognition performance). value range: [0, 3]. default is 0. recommended setting: 2 for better far-field voice suppression.
+        /// </summary>
+        [JsonProperty("VadLevel")]
+        public ulong? VadLevel{ get; set; }
+
+        /// <summary>
+        /// Transition.
+        /// </summary>
+        [JsonProperty("ToneWord")]
+        public ToneWordInfo ToneWord{ get; set; }
+
+        /// <summary>
+        /// Compliance prompt sound. 
+        /// This parameter specifies whether to play morse code during call initiation (default: true), indicating the conversation content is AI-generated.
+        /// This parameter signifies disabled when set to false. the parameter indicates you understand and agree to the following protocol:.
+        /// Our side fully acknowledges and understands that according to the laws and regulations including the "cybersecurity law" (https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm), "provision on administration of deep synthesis of internet-based information service" (https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm), "interim measures for the management of generative artificial intelligence services" (https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm), and "measures for the identification of artificial intelligence-generated synthetic content" (https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm), explicit and implicit identification shall be added to ai-generated synthetic content. based on business needs, we request tencent cloud not to add explicit identification to generated synthetic content. we commit to lawful and compliant use of such content to avoid confusion or misunderstanding. if the ai-generated synthetic content is used to provide services to the public or spread over networks, we will proactively add explicit identification compliant with legal provisions and national standard requirements and bear the legal obligations for ai-generated synthetic content identification. if we fail to properly fulfill the identification obligations for ai-generated content, resulting in adverse consequences or penalties from the competent department, we will fully assume all related responsibilities.
+        /// </summary>
+        [JsonProperty("EnableComplianceAudio")]
+        public bool? EnableComplianceAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -404,6 +431,10 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "ExtractConfig.", this.ExtractConfig);
             this.SetParamSimple(map, prefix + "Temperature", this.Temperature);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "TopP", this.TopP);
+            this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
+            this.SetParamObj(map, prefix + "ToneWord.", this.ToneWord);
+            this.SetParamSimple(map, prefix + "EnableComplianceAudio", this.EnableComplianceAudio);
         }
     }
 }

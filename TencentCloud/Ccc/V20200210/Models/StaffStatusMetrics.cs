@@ -122,6 +122,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("LastStatusTimestamp")]
         public long? LastStatusTimestamp{ get; set; }
 
+        /// <summary>
+        /// Specifies the endpoint information for customer service logon.
+        /// </summary>
+        [JsonProperty("ClientInfo")]
+        public ClientInfo[] ClientInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
             this.SetParamSimple(map, prefix + "LastOnlineTimestamp", this.LastOnlineTimestamp);
             this.SetParamSimple(map, prefix + "LastStatusTimestamp", this.LastStatusTimestamp);
+            this.SetParamArrayObj(map, prefix + "ClientInfo.", this.ClientInfo);
         }
     }
 }
