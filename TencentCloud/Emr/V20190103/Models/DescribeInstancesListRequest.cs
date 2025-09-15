@@ -37,7 +37,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results per page. Default value: `10`; maximum value: `100`.
+        /// Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+        /// If both limit and offset are 0, all records will be queried.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -49,13 +50,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sort according to OrderField in ascending or descending order. Valid range:<li>0: Descending order.</li><li>1: Ascending order.</li>Default: 0.
+        /// Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
 
         /// <summary>
-        /// Custom query
+        /// Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

@@ -67,13 +67,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ModifyPayMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the renewal price for every node is required.
         /// </summary>
         [JsonProperty("NeedDetail")]
         public bool? NeedDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

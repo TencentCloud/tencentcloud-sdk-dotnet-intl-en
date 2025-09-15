@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The node type. Valid values: `master`, `core`, `task`, `common`, `router`, `mysql`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node type: Master, Core, Task, Common, Router, and MySQL.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }

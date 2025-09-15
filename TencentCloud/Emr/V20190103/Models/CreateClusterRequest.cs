@@ -40,7 +40,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// The instance name.
-        /// <li>Length limit: 6–36 characters.</li>
+        /// <li>Length limit: 6-36 characters.</li>
         /// <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
         /// </summary>
         [JsonProperty("InstanceName")]
@@ -86,7 +86,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ScriptBootstrapActionConfig[] ScriptBootstrapActionConfig{ get; set; }
 
         /// <summary>
-        /// A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae360632808`.
+        /// Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-****-****-****-fae360632808.
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
@@ -162,6 +162,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ZoneResourceConfiguration")]
         public ZoneResourceConfiguration[] ZoneResourceConfiguration{ get; set; }
 
+        /// <summary>
+        /// COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
+        /// <summary>
+        /// Node identifier information: currently used only in Terraform.
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark[] NodeMarks{ get; set; }
+
+        /// <summary>
+        /// clb id
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +206,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
             this.SetParamArrayObj(map, prefix + "DependService.", this.DependService);
             this.SetParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
+            this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         }
     }
 }

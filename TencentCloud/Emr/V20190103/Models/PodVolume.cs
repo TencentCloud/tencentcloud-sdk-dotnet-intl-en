@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Storage type. Valid values: `pvc` and `hostpath`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage type, which can be "pvc" or "hostpath".
         /// </summary>
         [JsonProperty("VolumeType")]
         public string VolumeType{ get; set; }

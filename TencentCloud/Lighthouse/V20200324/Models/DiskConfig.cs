@@ -31,7 +31,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Cloud disk type.
+        /// Cloud disk type. valid values are as follows:.
+        /// 
+        /// <Li>CLOUD_BASIC: basic cloud disk.</li>.
+        /// <Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
+        /// <Li>CLOUD_SSD: ssd cloud disk</li>.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

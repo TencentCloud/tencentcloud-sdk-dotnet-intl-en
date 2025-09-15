@@ -67,6 +67,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ClientCertInfo")]
         public MutualTLS ClientCertInfo{ get; set; }
 
+        /// <summary>
+        /// Configures the certificate presented by the EO node during origin-pull for mutual TLS authentication. Disabled by default; leaving the field blank will retain the current configuration. This feature is currently in beta testing. please [contact us](https://cloud.tencent.com/online-service) to request access.
+        /// </summary>
+        [JsonProperty("UpstreamCertInfo")]
+        public UpstreamCertInfo UpstreamCertInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
             this.SetParamSimple(map, prefix + "ApplyType", this.ApplyType);
             this.SetParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+            this.SetParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
         }
     }
 }

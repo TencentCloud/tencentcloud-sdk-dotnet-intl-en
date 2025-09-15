@@ -25,19 +25,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Sorting field. Valid values:
-        /// <li>`ZONE`: Sort by the availability zone.
-        /// <li>`INSTANCE_DISPLAY_LABEL`: Sort by visibility labels (`HIDDEN`, `NORMAL` and `SELECTED`). Default: ['HIDDEN', 'NORMAL', 'SELECTED'].
-        /// The default value is `ZONE`.
+        /// Field on which the AZ list is sorted. value range:.
+        /// <Li>ZONE: sorted based on availability zone.</li>.
+        /// INSTANCE_DISPLAY_LABEL: specifies the Tag DISPLAY sorting order based on availability zone. valid values: HIDDEN (hide), NORMAL (ordinary), SELECTED (chosen by default). defaults to ascending order: ['HIDDEN', 'NORMAL', 'SELECTED'].
+        /// Specifies the default sorting order by availability zone.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Specifies how availability zones are listed. Valid values:
-        /// <li>ASC: Ascending sort. 
-        /// <li>DESC: Descending sort.
-        /// The default value is `ASC`.
+        /// Outputs the sorting order of the availability zone list. value range:.
+        /// <Li>ASC: ascending order.</li>.
+        /// <Li>DESC: sort in descending order.</li>.
+        /// Specifies the default ascending order.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

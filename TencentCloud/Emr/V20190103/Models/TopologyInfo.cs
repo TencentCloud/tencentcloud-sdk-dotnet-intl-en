@@ -25,15 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// AZ ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Availability zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// AZ information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Availability information.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

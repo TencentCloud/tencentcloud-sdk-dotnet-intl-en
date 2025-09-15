@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

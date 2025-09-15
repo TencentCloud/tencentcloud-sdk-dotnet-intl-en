@@ -25,43 +25,37 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The type. Valid values: `node` (node); `rootDisk` (system disk); `dataDisk` and `metaDB` (cloud data disk)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Rate (original)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unit price (original price).
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// Rate (discounted)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unit price (discounted price).
         /// </summary>
         [JsonProperty("RealCost")]
         public float? RealCost{ get; set; }
 
         /// <summary>
-        /// Total price (discounted)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total price (discounted price).
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public float? RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Discount
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discount.
         /// </summary>
         [JsonProperty("Policy")]
         public float? Policy{ get; set; }
 
         /// <summary>
-        /// Quantity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Quantity.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }

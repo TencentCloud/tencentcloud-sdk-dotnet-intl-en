@@ -45,13 +45,20 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeFlag{ get; set; }
 
         /// <summary>
+        /// Whether to carry CDB information when all node information is exported in CSV format.
+        /// </summary>
+        [JsonProperty("ExportDb")]
+        public bool? ExportDb{ get; set; }
+
+        /// <summary>
         /// Page number. Default value: 0, indicating the first page.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results per page. Default value: 100. Maximum value: 100
+        /// Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+        /// If both offset and limit are not set, or both are set to 0, all data will be returned.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -69,13 +76,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public SearchItem[] SearchFields{ get; set; }
 
         /// <summary>
-        /// None
+        /// Order field.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// None
+        /// Ascending or not. 1: ascending; 0: descending.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
@@ -88,6 +95,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
+            this.SetParamSimple(map, prefix + "ExportDb", this.ExportDb);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);

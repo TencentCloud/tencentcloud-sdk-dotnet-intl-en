@@ -25,29 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Dependency. `0`: Other clusters depend on the current cluster. `1`: The current cluster depends on other clusters.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
         /// </summary>
         [JsonProperty("DependType")]
         public long? DependType{ get; set; }
 
         /// <summary>
-        /// Shared component
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Shared component.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// Sharing cluster
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Shared cluster.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Sharing cluster status
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Shared cluster status.
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }

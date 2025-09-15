@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Searchable type
+        /// Searchable type.
         /// </summary>
         [JsonProperty("SearchType")]
         public string SearchType{ get; set; }
 
         /// <summary>
-        /// Searchable value
+        /// Searchable value.
         /// </summary>
         [JsonProperty("SearchValue")]
         public string SearchValue{ get; set; }

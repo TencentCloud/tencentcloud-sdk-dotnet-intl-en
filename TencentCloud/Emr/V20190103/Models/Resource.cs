@@ -25,60 +25,53 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node specification description, such as CVM.SA2
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Node specifications description, such as CVM.SA2.
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Storage type
+        /// Storage type.
         /// Valid values:
-        /// <li>4: SSD</li>
-        /// <li>5: Premium Cloud Storage</li>
-        /// <li>6: Enhanced SSD</li>
-        /// <li>11: High-Throughput cloud disk</li>
-        /// <li>12: Tremendous SSD</li>
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <li>4: Cloud SSD.</li>
+        /// <li>5: Premium Cloud Disk.</li>
+        /// <li>6: Enhanced SSD.</li>
+        /// <li>11: Throughput HDD.</li>
+        /// <li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// Disk type
-        /// Valid values:
-        /// <li>`CLOUD_SSD`: SSD</li>
-        /// <li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
-        /// <li>`CLOUD_BASIC`: HDD</li>
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Disk type.
+        /// Valid values.
+        /// <li>CLOUD_SSD: Cloud SSD.</li>
+        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+        /// <li>CLOUD_BASIC: Cloud Disk.</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Memory capacity in MB
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Memory capacity, in MB.
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Data disk capacity
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Data disk capacity.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// System disk capacity
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// System disk capacity.
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
@@ -98,25 +91,28 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Specification type, such as S2.MEDIUM8
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifications type, such as S2.MEDIUM8.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Number of local disks. This field has been disused.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of local disks. This field is deprecated.
         /// </summary>
         [JsonProperty("LocalDiskNum")]
         public ulong? LocalDiskNum{ get; set; }
 
         /// <summary>
-        /// Number of local disks, such as 2
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of local disks, such as 2.
         /// </summary>
         [JsonProperty("DiskNum")]
         public ulong? DiskNum{ get; set; }
+
+        /// <summary>
+        /// GPU information.
+        /// </summary>
+        [JsonProperty("GpuDesc")]
+        public string GpuDesc{ get; set; }
 
 
         /// <summary>
@@ -136,6 +132,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         }
     }
 }

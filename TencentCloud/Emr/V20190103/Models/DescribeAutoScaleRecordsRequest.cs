@@ -31,7 +31,10 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Parameter for record filtration. Valid values: "StartTime", "EndTime" and "StrategyName". StartTime and EndTime support the time format of 2006-01-02 15:04:05 or 2006/01/02 15:04:05.
+        /// Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
+        /// Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
+        /// ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
+        /// ScaleAction: 1 (scale out), 2 (scale in).
         /// </summary>
         [JsonProperty("Filters")]
         public KeyValue[] Filters{ get; set; }
@@ -48,6 +51,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Whether it is automatic scaling (0) or managed scaling (1)
+        /// </summary>
+        [JsonProperty("RecordSource")]
+        public long? RecordSource{ get; set; }
+
+        /// <summary>
+        /// Ascending or not. 1: ascending, 0: descending.
+        /// </summary>
+        [JsonProperty("Asc")]
+        public long? Asc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +73,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "RecordSource", this.RecordSource);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

@@ -25,15 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Subnet information (name)
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Subnet information (name).
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// Subnet information (ID)
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Subnet information (ID).
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

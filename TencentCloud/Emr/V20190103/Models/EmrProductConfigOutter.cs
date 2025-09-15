@@ -123,8 +123,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? SecurityOn{ get; set; }
 
         /// <summary>
-        /// Security group name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Initial security group ID of the cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
@@ -144,8 +144,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ApplicationRole{ get; set; }
 
         /// <summary>
-        /// Security groups
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Security group ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }

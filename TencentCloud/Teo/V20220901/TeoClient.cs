@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1209";
+       private const string sdkVersion = "SDK_NET_3.0.1210";
 
         /// <summary>
         /// Client constructor.
@@ -3472,7 +3472,6 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
         /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
-        ///  
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>
@@ -3484,7 +3483,6 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
         /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
-        ///  
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>

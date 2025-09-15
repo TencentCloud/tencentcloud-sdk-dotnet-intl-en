@@ -53,6 +53,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("StrategyConfig")]
         public StrategyConfig StrategyConfig{ get; set; }
 
+        /// <summary>
+        /// Parameters used for suspending services.
+        /// </summary>
+        [JsonProperty("StopParams")]
+        public StopParams StopParams{ get; set; }
+
+        /// <summary>
+        /// This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+        /// </summary>
+        [JsonProperty("KeepMonitorButNotRecoverProcess")]
+        public bool? KeepMonitorButNotRecoverProcess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +75,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OpType", this.OpType);
             this.SetParamObj(map, prefix + "OpScope.", this.OpScope);
             this.SetParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
+            this.SetParamObj(map, prefix + "StopParams.", this.StopParams);
+            this.SetParamSimple(map, prefix + "KeepMonitorButNotRecoverProcess", this.KeepMonitorButNotRecoverProcess);
         }
     }
 }

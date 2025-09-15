@@ -25,14 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Process ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Flow ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public ulong? FlowId{ get; set; }

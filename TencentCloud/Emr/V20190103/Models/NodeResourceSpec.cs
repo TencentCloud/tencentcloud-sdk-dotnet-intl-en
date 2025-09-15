@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The spec type, such as `S2.MEDIUM8`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// specifications type, such as S2.MEDIUM8.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

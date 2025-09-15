@@ -25,22 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The published price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// The discounted price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discounted price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public string DiscountCost{ get; set; }
 
         /// <summary>
-        /// The unit of the billable item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unit.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
@@ -54,7 +51,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Whether spot instances are supported.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SupportSpotPaid")]
         public bool? SupportSpotPaid{ get; set; }

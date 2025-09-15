@@ -31,8 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Status description
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Common status: cluster in production, cluster running, cluster creating, cluster closed, and cluster deleted.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
@@ -92,50 +91,43 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Product ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Product ID.
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public ulong? SubnetId{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Network ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public ulong? VpcId{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Status code
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Status code. Valid values: -2 (cluster deleted), -1 (cluster closed), 0 (cluster in production), 2 (cluster running), 3 (cluster creating).
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -148,64 +140,55 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Alarm information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Alarm information.
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
-        /// Whether it is a Woodpecker cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether it is a Woodpecker cluster.
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public ulong? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
-        /// VPC name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// VPC name in Chinese.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// Subnet name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Subnet in Chinese.
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// VPC ID string
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// String VpcId.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID string
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// String subnet.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Cluster type
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Cluster type.
         /// </summary>
         [JsonProperty("ClusterClass")]
         public string ClusterClass{ get; set; }
 
         /// <summary>
-        /// Whether it is a multi-AZ cluster
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether it is a cross-AZ cluster.
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
-        /// Whether it is a manually deployed cluster
-        /// Note: This field may return null, indicating that no valid value can be obtained. 
+        /// Whether it is a cluster created by a cluster CVM.
         /// </summary>
         [JsonProperty("IsHandsCluster")]
         public bool? IsHandsCluster{ get; set; }
@@ -218,11 +201,22 @@ namespace TencentCloud.Emr.V20190103.Models
         public SoftDependInfo[] OutSideSoftInfo{ get; set; }
 
         /// <summary>
-        /// Whether the current cluster supports external clients.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the current cluster's scenarios support external clients.
         /// </summary>
         [JsonProperty("IsSupportOutsideCluster")]
         public bool? IsSupportOutsideCluster{ get; set; }
+
+        /// <summary>
+        /// Whether the cluster is used in a dedicated cluster scenario.
+        /// </summary>
+        [JsonProperty("IsDedicatedCluster")]
+        public bool? IsDedicatedCluster{ get; set; }
+
+        /// <summary>
+        /// Cluster supports for cloning.
+        /// </summary>
+        [JsonProperty("IsSupportClone")]
+        public bool? IsSupportClone{ get; set; }
 
 
         /// <summary>
@@ -260,6 +254,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
             this.SetParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
             this.SetParamSimple(map, prefix + "IsSupportOutsideCluster", this.IsSupportOutsideCluster);
+            this.SetParamSimple(map, prefix + "IsDedicatedCluster", this.IsDedicatedCluster);
+            this.SetParamSimple(map, prefix + "IsSupportClone", this.IsSupportClone);
         }
     }
 }

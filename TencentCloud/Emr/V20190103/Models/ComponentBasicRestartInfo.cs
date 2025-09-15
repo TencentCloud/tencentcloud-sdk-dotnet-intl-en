@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The process name (required), such as NameNode.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process name which is required, such as NameNode.
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }

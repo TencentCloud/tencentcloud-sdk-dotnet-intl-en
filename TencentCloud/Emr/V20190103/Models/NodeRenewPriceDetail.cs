@@ -25,49 +25,49 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 
+        /// Billing type (1: monthly subscription, 3: committed use).
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// EMR resource ID.
         /// </summary>
         [JsonProperty("EmrResourceId")]
         public string EmrResourceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node type.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node private network IP.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Current expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// 
+        /// Discount price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node component renewal pricing list.
         /// </summary>
         [JsonProperty("RenewPriceDetails")]
         public RenewPriceDetail[] RenewPriceDetails{ get; set; }

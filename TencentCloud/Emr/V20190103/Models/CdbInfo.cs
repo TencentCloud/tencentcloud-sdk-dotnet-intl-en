@@ -25,106 +25,91 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Database instance
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database instance.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Database IP
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Database port
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Database memory specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database memory specifications.
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Database disk specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database disk specifications.
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Service flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Service identifier.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// Expiration time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Application time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Application time.
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Payment type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Billing type.
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// Expiration flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Expiration flag.
         /// </summary>
         [JsonProperty("ExpireFlag")]
         public bool? ExpireFlag{ get; set; }
 
         /// <summary>
-        /// Database status
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Renewal flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Renewal flag.
         /// </summary>
         [JsonProperty("IsAutoRenew")]
         public long? IsAutoRenew{ get; set; }
 
         /// <summary>
-        /// Database string
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database string.
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
         /// ZoneId
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
         /// RegionId
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }

@@ -26,31 +26,33 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
         /// Task ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 1: Pending; 20: Running; 30: Failed; 60: Succeeded 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 1: Pending; 20: Running; 30: Failed; 60: Succeeded
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
         /// Task status message
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskMsg")]
         public string TaskMsg{ get; set; }
+
+        /// <summary>
+        /// Mini program version ID (returned when compilation succeeds)
+        /// </summary>
+        [JsonProperty("MNPVersionId")]
+        public long? MNPVersionId{ get; set; }
 
 
         /// <summary>
@@ -62,6 +64,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "TaskMsg", this.TaskMsg);
+            this.SetParamSimple(map, prefix + "MNPVersionId", this.MNPVersionId);
         }
     }
 }

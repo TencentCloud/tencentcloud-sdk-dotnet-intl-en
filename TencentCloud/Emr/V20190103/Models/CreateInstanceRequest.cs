@@ -143,7 +143,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Client token.
+        /// Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
@@ -254,6 +254,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("MultiZoneSettings")]
         public MultiZoneSetting[] MultiZoneSettings{ get; set; }
 
+        /// <summary>
+        /// COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+        /// </summary>
+        [JsonProperty("CosBucket")]
+        public string CosBucket{ get; set; }
+
+        /// <summary>
+        /// Node identifier information: currently used only in Terraform.
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark[] NodeMarks{ get; set; }
+
+        /// <summary>
+        /// CLB id
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +310,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
             this.SetParamSimple(map, prefix + "MultiZone", this.MultiZone);
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+            this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
+            this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         }
     }
 }

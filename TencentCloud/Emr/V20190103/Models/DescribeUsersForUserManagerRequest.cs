@@ -37,7 +37,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// Page size
+        /// Pagination size.
+        /// All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

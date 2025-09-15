@@ -25,14 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// ValueNote: This field may return null, indicating that no valid values can be obtained.
+        /// Value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

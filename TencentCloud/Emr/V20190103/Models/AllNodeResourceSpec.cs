@@ -53,29 +53,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public NodeResourceSpec CommonResourceSpec{ get; set; }
 
         /// <summary>
-        /// The number of master nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Master nodes.
         /// </summary>
         [JsonProperty("MasterCount")]
         public long? MasterCount{ get; set; }
 
         /// <summary>
-        /// The number of core nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of core nodes.
         /// </summary>
         [JsonProperty("CoreCount")]
         public long? CoreCount{ get; set; }
 
         /// <summary>
-        /// The number of task nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of task nodes.
         /// </summary>
         [JsonProperty("TaskCount")]
         public long? TaskCount{ get; set; }
 
         /// <summary>
-        /// The number of common nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of common nodes.
         /// </summary>
         [JsonProperty("CommonCount")]
         public long? CommonCount{ get; set; }

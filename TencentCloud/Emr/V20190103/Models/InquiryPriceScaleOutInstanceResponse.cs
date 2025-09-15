@@ -26,22 +26,19 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Original price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
         /// Discounted price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public string DiscountCost{ get; set; }
 
         /// <summary>
-        /// Time unit of scale-out. Valid value:
-        /// <li>s: Second.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time unit of scale-out. Valid values.
+        /// <li>s: second.</li>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

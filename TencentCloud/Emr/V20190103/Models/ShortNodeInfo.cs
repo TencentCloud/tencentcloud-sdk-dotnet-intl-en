@@ -25,15 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node type: Master/Core/Task/Router/Common
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Node type: Master/Core/Task/Router/Common.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Number of nodes
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Number of nodes.
         /// </summary>
         [JsonProperty("NodeSize")]
         public ulong? NodeSize{ get; set; }

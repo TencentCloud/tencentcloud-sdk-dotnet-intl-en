@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1203";
+       private const string sdkVersion = "SDK_NET_3.0.1210";
 
         /// <summary>
         /// Client constructor.
@@ -2639,6 +2639,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public OpenInterCommunicationResponse OpenInterCommunicationSync(OpenInterCommunicationRequest req)
         {
             return InternalRequestAsync<OpenInterCommunicationResponse>(req, "OpenInterCommunication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of the migration verification task, inquiry of migration check task progress, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+        /// </summary>
+        /// <param name="req"><see cref="QueryMigrationCheckProcessRequest"/></param>
+        /// <returns><see cref="QueryMigrationCheckProcessResponse"/></returns>
+        public Task<QueryMigrationCheckProcessResponse> QueryMigrationCheckProcess(QueryMigrationCheckProcessRequest req)
+        {
+            return InternalRequestAsync<QueryMigrationCheckProcessResponse>(req, "QueryMigrationCheckProcess");
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of the migration verification task, inquiry of migration check task progress, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+        /// </summary>
+        /// <param name="req"><see cref="QueryMigrationCheckProcessRequest"/></param>
+        /// <returns><see cref="QueryMigrationCheckProcessResponse"/></returns>
+        public QueryMigrationCheckProcessResponse QueryMigrationCheckProcessSync(QueryMigrationCheckProcessRequest req)
+        {
+            return InternalRequestAsync<QueryMigrationCheckProcessResponse>(req, "QueryMigrationCheckProcess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

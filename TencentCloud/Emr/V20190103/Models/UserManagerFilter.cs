@@ -25,11 +25,22 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Username
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Username.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
+
+        /// <summary>
+        /// User source.
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
+        /// <summary>
+        /// Group name.
+        /// </summary>
+        [JsonProperty("Groups")]
+        public string Groups{ get; set; }
 
 
         /// <summary>
@@ -38,6 +49,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "Groups", this.Groups);
         }
     }
 }

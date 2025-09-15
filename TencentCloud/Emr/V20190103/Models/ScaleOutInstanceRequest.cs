@@ -114,7 +114,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Resource type selected for scaling. Valid values: `host` (general CVM resource) and `pod` (resource provided by TKE or EKS cluster).
+        /// Resource type selected for scale-out. Valid values: "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
@@ -188,6 +188,30 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
+        /// <summary>
+        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+        /// </summary>
+        [JsonProperty("ResourceBaseType")]
+        public string ResourceBaseType{ get; set; }
+
+        /// <summary>
+        /// Computing resource ID.
+        /// </summary>
+        [JsonProperty("ComputeResourceId")]
+        public string ComputeResourceId{ get; set; }
+
+        /// <summary>
+        /// Advanced settings of computing resources.
+        /// </summary>
+        [JsonProperty("ComputeResourceAdvanceParams")]
+        public ComputeResourceAdvanceParams ComputeResourceAdvanceParams{ get; set; }
+
+        /// <summary>
+        /// Node tag information: currently used only in Terraform.
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark NodeMarks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +244,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
+            this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
+            this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         }
     }
 }

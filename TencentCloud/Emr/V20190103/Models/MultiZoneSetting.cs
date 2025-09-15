@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// "master", "standby", "third-party"
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// "master", "standby" or "third-party".
         /// </summary>
         [JsonProperty("ZoneTag")]
         public string ZoneTag{ get; set; }

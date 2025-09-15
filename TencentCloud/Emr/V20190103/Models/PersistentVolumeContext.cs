@@ -26,24 +26,27 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Disk size in GB.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Disk type. Valid values: `CLOUD_PREMIUM` and `CLOUD_SSD`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Disk type, CLOUD_PREMIUM or CLOUD_SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
         /// Number of disks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskNum")]
         public long? DiskNum{ get; set; }
+
+        /// <summary>
+        /// Additional performance of cloud disks.
+        /// </summary>
+        [JsonProperty("ExtraPerformance")]
+        public long? ExtraPerformance{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
+            this.SetParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
         }
     }
 }

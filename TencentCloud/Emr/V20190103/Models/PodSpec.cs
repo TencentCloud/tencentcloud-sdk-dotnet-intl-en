@@ -86,22 +86,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public DynamicPodSpec DynamicPodSpec{ get; set; }
 
         /// <summary>
-        /// Unique VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of VPC network.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Unique VPC subnet ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of a VPC subnet.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// pod name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }

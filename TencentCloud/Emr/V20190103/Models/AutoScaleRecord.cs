@@ -79,30 +79,40 @@ namespace TencentCloud.Emr.V20190103.Models
         public string SpecInfo{ get; set; }
 
         /// <summary>
-        /// Compensatory scale-out. Valid values: 0 (disabled), 1 (enabled).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Compensatory scale-out. 0: disable, 1: enable.
         /// </summary>
         [JsonProperty("CompensateFlag")]
         public long? CompensateFlag{ get; set; }
 
         /// <summary>
-        /// Number of compensations
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of compensations.
         /// </summary>
         [JsonProperty("CompensateCount")]
         public long? CompensateCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of retries.
         /// </summary>
         [JsonProperty("RetryCount")]
         public ulong? RetryCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Retry information.
         /// </summary>
         [JsonProperty("RetryInfo")]
         public string RetryInfo{ get; set; }
+
+        /// <summary>
+        /// Retry description in English.
+        /// </summary>
+        [JsonProperty("RetryEnReason")]
+        public string RetryEnReason{ get; set; }
+
+        /// <summary>
+        /// Retry description.
+        /// </summary>
+        [JsonProperty("RetryReason")]
+        public string RetryReason{ get; set; }
 
 
         /// <summary>
@@ -123,6 +133,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CompensateCount", this.CompensateCount);
             this.SetParamSimple(map, prefix + "RetryCount", this.RetryCount);
             this.SetParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
+            this.SetParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
+            this.SetParamSimple(map, prefix + "RetryReason", this.RetryReason);
         }
     }
 }

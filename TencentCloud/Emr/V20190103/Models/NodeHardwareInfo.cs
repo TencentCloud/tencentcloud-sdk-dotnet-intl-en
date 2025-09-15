@@ -25,212 +25,182 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// User `APPID`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// User AppID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Serial number
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Serial number.
         /// </summary>
         [JsonProperty("SerialNo")]
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// Machine instance ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Machine instance ID.
         /// </summary>
         [JsonProperty("OrderNo")]
         public string OrderNo{ get; set; }
 
         /// <summary>
-        /// Public IP bound to master node
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Public network IP address bound for the Master node.
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// Node type. 0: common node; 1: master node;
-        /// 2: core node; 3: task node
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node type. 0: Common node; 1: Master node.
+        ///  2: Core node; 3: Task node.
         /// </summary>
         [JsonProperty("Flag")]
         public long? Flag{ get; set; }
 
         /// <summary>
-        /// Node specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node specifications.
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Number of node cores
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of node cores.
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// Node memory size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node memory (bytes).
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Node memory description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node memory (GB).
         /// </summary>
         [JsonProperty("MemDesc")]
         public string MemDesc{ get; set; }
 
         /// <summary>
-        /// Node region
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The region where the node is located.
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Node AZ
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The zone where the node is located.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Application time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Application time.
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Release time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Release time.
         /// </summary>
         [JsonProperty("FreeTime")]
         public string FreeTime{ get; set; }
 
         /// <summary>
-        /// Disk size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk size.
         /// </summary>
         [JsonProperty("DiskSize")]
         public string DiskSize{ get; set; }
 
         /// <summary>
-        /// Node description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node description.
         /// </summary>
         [JsonProperty("NameTag")]
         public string NameTag{ get; set; }
 
         /// <summary>
-        /// Services deployed on node
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node deployment service.
         /// </summary>
         [JsonProperty("Services")]
         public string Services{ get; set; }
 
         /// <summary>
-        /// Disk type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput SSD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// System disk size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// System disk size (GB).
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
-        /// Payment type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Payment type. Valid values: 0 (pay-as-you-go); 1 (yearly/monthly subscription).
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// Database IP
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database IP address.
         /// </summary>
         [JsonProperty("CdbIp")]
         public string CdbIp{ get; set; }
 
         /// <summary>
-        /// Database port
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database port.
         /// </summary>
         [JsonProperty("CdbPort")]
         public long? CdbPort{ get; set; }
 
         /// <summary>
-        /// Disk capacity
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk capacity (bytes).
         /// </summary>
         [JsonProperty("HwDiskSize")]
         public long? HwDiskSize{ get; set; }
 
         /// <summary>
-        /// Disk capacity description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk capacity description.
         /// </summary>
         [JsonProperty("HwDiskSizeDesc")]
         public string HwDiskSizeDesc{ get; set; }
 
         /// <summary>
-        /// Memory capacity
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Memory capacity (bytes).
         /// </summary>
         [JsonProperty("HwMemSize")]
         public long? HwMemSize{ get; set; }
 
         /// <summary>
-        /// Memory capacity description
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Memory capacity description.
         /// </summary>
         [JsonProperty("HwMemSizeDesc")]
         public string HwMemSizeDesc{ get; set; }
 
         /// <summary>
-        /// Expiration time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Node resource ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node resource ID.
         /// </summary>
         [JsonProperty("EmrResourceId")]
         public string EmrResourceId{ get; set; }
 
         /// <summary>
-        /// Renewal flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Renewal flag.
         /// </summary>
         [JsonProperty("IsAutoRenew")]
         public long? IsAutoRenew{ get; set; }
 
         /// <summary>
-        /// Device flag
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Device identification.
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// Support for configuration adjustment
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Supporting resizing.
         /// </summary>
         [JsonProperty("Mutable")]
         public long? Mutable{ get; set; }
@@ -250,15 +220,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public CdbInfo CdbNodeInfo{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Private network IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Whether this node can be terminated. 1: yes, 0: no
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether this node can be terminated. 1: Yes, 0: No.
         /// </summary>
         [JsonProperty("Destroyable")]
         public long? Destroyable{ get; set; }
@@ -271,49 +239,43 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+        /// Whether it is an automatic scaling node. 0: common node, 1: automatic scaling node.
         /// </summary>
         [JsonProperty("AutoFlag")]
         public long? AutoFlag{ get; set; }
 
         /// <summary>
-        /// Resource type. Valid values: host, pod
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Resource type, with the valid values of "host" and "pod".
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// Whether floating specification is used. `1`: yes; `0`: no
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether it is a floating specification. 1: Yes, 0: No.
         /// </summary>
         [JsonProperty("IsDynamicSpec")]
         public long? IsDynamicSpec{ get; set; }
 
         /// <summary>
-        /// Floating specification in JSON string
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Floating specification value in the JSON string format.
         /// </summary>
         [JsonProperty("DynamicPodSpec")]
         public string DynamicPodSpec{ get; set; }
 
         /// <summary>
-        /// Whether to support billing mode change. `0`: no; `1`: yes
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the billing type can be changed. 1: Yes, 0: No.
         /// </summary>
         [JsonProperty("SupportModifyPayMode")]
         public long? SupportModifyPayMode{ get; set; }
 
         /// <summary>
-        /// System disk type
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// System disk type. Valid values: 1 (Local Disk), 2 (Cloud Disk), 3 (Local SSD), 4 (Cloud SSD), 5 (Premium Cloud Disk), 6 (Enhanced SSD), 11 (Throughput HDD), 12 (Tremendous SSD), 13 (Balanced SSD), 14 (Big Data Cloud Disk), 15 (High IO Cloud Disk), and 16 (Remote SSD).
         /// </summary>
         [JsonProperty("RootStorageType")]
         public long? RootStorageType{ get; set; }
 
         /// <summary>
-        /// AZ information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Availability information.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -326,60 +288,106 @@ namespace TencentCloud.Emr.V20190103.Models
         public SubnetInfo SubnetInfo{ get; set; }
 
         /// <summary>
-        /// Client
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Client.
         /// </summary>
         [JsonProperty("Clients")]
         public string Clients{ get; set; }
 
         /// <summary>
-        /// The current system time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Current system time.
         /// </summary>
         [JsonProperty("CurrentTime")]
         public string CurrentTime{ get; set; }
 
         /// <summary>
-        /// Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates whether it is for federation. 1: Yes, 0: No.
         /// </summary>
         [JsonProperty("IsFederation")]
         public long? IsFederation{ get; set; }
 
         /// <summary>
-        /// Device name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Device name.
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// Service
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Service.
         /// </summary>
         [JsonProperty("ServiceClient")]
         public string ServiceClient{ get; set; }
 
         /// <summary>
-        /// Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether instance protection is enabled. True: enabled, false: disabled.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
-        /// The billing version. Valid values: `0` (original billing) and `1` (new billing)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: old billing, 1: new billing.
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
-        /// Status of each component. Zookeeper: STARTED; ResourceManager: STARTED. STARTED indicates "already in operation"; STOPPED indicates "ceased".
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component status. ZooKeeper: STARTED, ResourceManager: STARTED, STARTED: Component is running, STOPPED: Component is halted.
         /// </summary>
         [JsonProperty("ServicesStatus")]
         public string ServicesStatus{ get; set; }
+
+        /// <summary>
+        /// Remarks.
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// Shared cluster ID.
+        /// </summary>
+        [JsonProperty("SharedClusterId")]
+        public string SharedClusterId{ get; set; }
+
+        /// <summary>
+        /// Shared cluster ID description.
+        /// </summary>
+        [JsonProperty("SharedClusterIdDesc")]
+        public string SharedClusterIdDesc{ get; set; }
+
+        /// <summary>
+        /// Whether the resource is set for scheduled termination.
+        /// </summary>
+        [JsonProperty("TimingResource")]
+        public bool? TimingResource{ get; set; }
+
+        /// <summary>
+        /// Corresponding TKE cluster ID in the case that the resource type (HardwareResourceType) is pod.
+        /// </summary>
+        [JsonProperty("TkeClusterId")]
+        public string TkeClusterId{ get; set; }
+
+        /// <summary>
+        /// Name list of services that can be configured when a new disk is mounted.
+        /// </summary>
+        [JsonProperty("ConfigurableServices")]
+        public string[] ConfigurableServices{ get; set; }
+
+        /// <summary>
+        /// Node labeling information: currently used only in the Terraform.
+        /// </summary>
+        [JsonProperty("NodeMark")]
+        public string NodeMark{ get; set; }
+
+        /// <summary>
+        /// Whether auto-renewal is available for committed use resources.
+        /// </summary>
+        [JsonProperty("UnderwriteSetAutoRenew")]
+        public bool? UnderwriteSetAutoRenew{ get; set; }
+
+        /// <summary>
+        /// GPU information.
+        /// </summary>
+        [JsonProperty("GpuDesc")]
+        public string GpuDesc{ get; set; }
 
 
         /// <summary>
@@ -438,6 +446,15 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
             this.SetParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
+            this.SetParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
+            this.SetParamSimple(map, prefix + "TimingResource", this.TimingResource);
+            this.SetParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+            this.SetParamArraySimple(map, prefix + "ConfigurableServices.", this.ConfigurableServices);
+            this.SetParamSimple(map, prefix + "NodeMark", this.NodeMark);
+            this.SetParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
+            this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
         }
     }
 }

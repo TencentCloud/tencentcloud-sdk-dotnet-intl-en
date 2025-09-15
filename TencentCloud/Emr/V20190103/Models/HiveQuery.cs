@@ -25,40 +25,37 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Query statementNote: This field may return null, indicating that no valid values can be obtained.
+        /// Query statement.
         /// </summary>
         [JsonProperty("Statement")]
         public string Statement{ get; set; }
 
         /// <summary>
-        /// Execution Duration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Execution duration.
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
-        /// Start Time in Milliseconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start time in milliseconds.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End Time in Milliseconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// End time in milliseconds.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// StatusNote: This field may return null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// UserNote: This field may return null, indicating that no valid values can be obtained.
+        /// User.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
@@ -71,15 +68,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] JobIds{ get; set; }
 
         /// <summary>
-        /// Execution Engine
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Execution engine.
         /// </summary>
         [JsonProperty("ExecutionEngine")]
         public string ExecutionEngine{ get; set; }
 
         /// <summary>
-        /// Query ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Query ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 
+        /// Billing item name.
         /// </summary>
         [JsonProperty("BillingName")]
         public string BillingName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Discount.
         /// </summary>
         [JsonProperty("Policy")]
         public float? Policy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Quantity.
         /// </summary>
         [JsonProperty("Quantity")]
         public long? Quantity{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// 
+        /// Discount price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }

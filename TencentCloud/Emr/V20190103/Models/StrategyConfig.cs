@@ -25,33 +25,36 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// `0`: Disable rolling restart
-        /// `1`: Enable rolling restart
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: disable rolling restart.
+        /// 1: enable rolling start.
         /// </summary>
         [JsonProperty("RollingRestartSwitch")]
         public long? RollingRestartSwitch{ get; set; }
 
         /// <summary>
-        /// The quantity of restarts per batch during a rolling restart, with the maximum number of restarts being 99999
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rolling restart quantity per batch, which is up to 99999.
         /// </summary>
         [JsonProperty("BatchSize")]
         public long? BatchSize{ get; set; }
 
         /// <summary>
-        /// The wait time (in seconds) per batch in rolling restart, with a maximum value of 5 minutes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
         /// </summary>
         [JsonProperty("TimeWait")]
         public long? TimeWait{ get; set; }
 
         /// <summary>
-        /// The failure handling policy. Valid values: `0` (blocks the process) and `1` (skips).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
         /// </summary>
         [JsonProperty("DealOnFail")]
         public long? DealOnFail{ get; set; }
+
+        /// <summary>
+        /// Parameters required in the instruction.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Args")]
+        public Arg[] Args{ get; set; }
 
 
         /// <summary>
@@ -63,6 +66,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "BatchSize", this.BatchSize);
             this.SetParamSimple(map, prefix + "TimeWait", this.TimeWait);
             this.SetParamSimple(map, prefix + "DealOnFail", this.DealOnFail);
+            this.SetParamArrayObj(map, prefix + "Args.", this.Args);
         }
     }
 }

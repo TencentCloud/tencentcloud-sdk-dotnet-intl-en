@@ -25,40 +25,47 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The number of disks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of disks.
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// The system disk type. Valid values:
-        /// <li>`CLOUD_SSD`: Cloud SSD</li>
-        /// <li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-        /// <li>`CLOUD_BASIC`: Cloud HDD</li>
-        /// <li>`LOCAL_BASIC`: Local disk</li>
-        /// <li>`LOCAL_SSD`: Local SSD</li>
+        /// Valid values of the system disk type:
+        /// <li>CLOUD_SSD: Cloud SSD.</li>
+        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+        /// <li>CLOUD_BASIC: Cloud Disk.</li>
+        /// <li>LOCAL_BASIC: Local Disk.</li>
+        /// <li>LOCAL_SSD: Local SSD.</li>
         /// 
-        /// The data disk type. Valid values:
-        /// <li>`CLOUD_SSD`: Cloud SSD</li>
-        /// <li>`CLOUD_PREMIUM`: Premium cloud disk</li>
-        /// <li>`CLOUD_BASIC`: Cloud HDD</li>
-        /// <li>`LOCAL_BASIC`: Local disk</li>
-        /// <li>`LOCAL_SSD`: Local SSD</li>
-        /// <li>`CLOUD_HSSD`: Enhanced SSD</li>
-        /// <li>`CLOUD_THROUGHPUT`: Throughput HDD</li>
-        /// <li>CLOUD_TSSD: ulTra SSD</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Valid values of the data disk type.
+        /// <li>CLOUD_SSD: Cloud SSD.</li>
+        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
+        /// <li>CLOUD_BASIC: Cloud Disk.</li>
+        /// <li>LOCAL_BASIC: Local Disk.</li>
+        /// <li>LOCAL_SSD: Local SSD.</li>
+        /// <li>CLOUD_HSSD: Enhanced SSD.</li>
+        /// <li>CLOUD_THROUGHPUT: Throughput HDD.</li>
+        /// <li>CLOUD_TSSD: Tremendous SSD.</li>
+        /// <li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
+        /// <li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
+        /// <li>CLOUD_BSSD: Balanced SSD.</li>
+        /// <li>REMOTE_SSD: Remote SSD.</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// The disk capacity in GB.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data capacity in GB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// Additional performance.
+        /// </summary>
+        [JsonProperty("ExtraPerformance")]
+        public long? ExtraPerformance{ get; set; }
 
 
         /// <summary>
@@ -69,6 +76,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
         }
     }
 }

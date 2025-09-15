@@ -33,121 +33,127 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// The cluster instance ID.
+        /// Cluster instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The type and number of nodes to be added.
+        /// Scale-up node type and quantity.
         /// </summary>
         [JsonProperty("ScaleOutNodeConfig")]
         public ScaleOutNodeConfig ScaleOutNodeConfig{ get; set; }
 
         /// <summary>
-        /// A unique random token, which is valid for 5 minutes and needs to be specified by the caller to prevent the client from repeatedly creating resources. An example value is `a9a90aa6-751a-41b6-aad6-fae36063280`.
+        /// Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// The details of the monthly subscription, including the instance period and auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+        /// Setting of parameters related to monthly subscription. Through this parameter, you can specify the duration of purchase for monthly subscription instances, whether to set auto-renewal, and other attributes. This parameter is required when the specified instance is subject to the payment mode of prepaid.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// The [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings.
+        /// [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
         /// </summary>
         [JsonProperty("ScriptBootstrapActionConfig")]
         public ScriptBootstrapActionConfig[] ScriptBootstrapActionConfig{ get; set; }
 
         /// <summary>
-        /// The services to be deployed for new nodes. By default, new nodes will inherit services deployed for the current node type, including default optional services. This parameter only supports the inclusion of optional services. For example, if HDFS, YARN, and Impala have been deployed for existing task nodes, when using the API for task node scale-out without deploying Impala, only HDFS and YARN are included in with this parameter. 
+        /// Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public long?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// The processes to be deployed. All processes for services to be added are deployed by default. Deployed processes can be changed. For example, HDFS, YARN, and Impala have been deployed for current task nodes, and default services are DataNode, NodeManager, and ImpalaServer; if you want to change deployed processes, you can set this parameter to DataNode,NodeManager,ImpalaServerCoordinator or DataNode,NodeManager,ImpalaServerExecutor. 
+        /// Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public long?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
-        /// The list of spread placement group IDs. Only one can be specified.
-        /// You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/product/213/17810?from_cn_redirect=1) API and obtain this parameter from the `DisasterRecoverGroupId` field in the response.
+        /// Spread placement group ID list. Only one can be specified currently.
+        /// This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// The list of tags bound to added nodes.
+        /// List of tags bound to scale-out nodes.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// The type of resources to add. Valid values: `host` (general CVM resources) and `pod` (resources provided by a TKE or EKS cluster).
+        /// Resource type selected for scale-out with valid values "HOST","POD","MNode", where HOST indicates an ordinary CVM resource, POD indicates a resource provided by the TKE cluster or EKS cluster, and MNode indicates a fully managed resource type.
         /// </summary>
         [JsonProperty("HardwareSourceType")]
         public string HardwareSourceType{ get; set; }
 
         /// <summary>
-        /// The pod resource information.
+        /// Pod-related resource information.
         /// </summary>
         [JsonProperty("PodSpecInfo")]
         public PodSpecInfo PodSpecInfo{ get; set; }
 
         /// <summary>
-        /// The server group name selected for ClickHouse cluster scale-out.
+        /// Machine group name selected for ClickHouse cluster scale-out.
         /// </summary>
         [JsonProperty("ClickHouseClusterName")]
         public string ClickHouseClusterName{ get; set; }
 
         /// <summary>
-        /// The server group type selected for ClickHouse cluster scale-out. Valid values: `new` (create a group) and `old` (select an existing group).
+        /// Machine group type selected for ClickHouse cluster scale-out. "New" indicates creating a group type, and "old" indicates using an existing group type.
         /// </summary>
         [JsonProperty("ClickHouseClusterType")]
         public string ClickHouseClusterType{ get; set; }
 
         /// <summary>
-        /// The YARN node label specified for scale-out.
+        /// Specified Yarn Node Label for scale-out.
         /// </summary>
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
         /// <summary>
-        /// Whether to start services after scale-out.
-        /// <li>`true`: Yes</li>
-        /// <li>`false` (default): No</li>
+        /// Whether to start a service after scale-out (default: false).
+        /// <li>true: yes</li>.
+        /// <li>false: no</li>.
         /// </summary>
         [JsonProperty("EnableStartServiceFlag")]
         public bool? EnableStartServiceFlag{ get; set; }
 
         /// <summary>
-        /// The spec settings.
+        /// Specifications settings.
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NodeResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// The ID of the AZ where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+        /// Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// The subnet, which defaults to the subnet used when the cluster is created.
+        /// Subnet, which is the subnet at the time of cluster creation by default.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration group specified for scale-out.
         /// </summary>
         [JsonProperty("ScaleOutServiceConfGroupsInfo")]
         public ScaleOutServiceConfGroupsInfo[] ScaleOutServiceConfGroupsInfo{ get; set; }
+
+        /// <summary>
+        /// Node tag information: currently used only in Terraform.
+        /// </summary>
+        [JsonProperty("NodeMarks")]
+        public NodeMark NodeMarks{ get; set; }
 
 
         /// <summary>
@@ -175,6 +181,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
+            this.SetParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         }
     }
 }

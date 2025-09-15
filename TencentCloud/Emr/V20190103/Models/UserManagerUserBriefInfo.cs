@@ -43,8 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string UserType{ get; set; }
 
         /// <summary>
-        /// Account creation time
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// User creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -56,8 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? SupportDownLoadKeyTab{ get; set; }
 
         /// <summary>
-        /// Download link of the Keytab file
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Download address of the keytab file.
         /// </summary>
         [JsonProperty("DownLoadKeyTabUrl")]
         public string DownLoadKeyTabUrl{ get; set; }
