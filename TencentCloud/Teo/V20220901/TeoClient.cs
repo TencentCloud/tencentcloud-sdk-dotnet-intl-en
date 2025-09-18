@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -1184,7 +1184,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
@@ -1194,7 +1194,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>

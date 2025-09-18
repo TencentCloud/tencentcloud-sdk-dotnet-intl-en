@@ -28,7 +28,7 @@ namespace TencentCloud.Dnspod.V20210323
 
        private const string endpoint = "dnspod.intl.tencentcloudapi.com";
        private const string version = "2021-03-23";
-       private const string sdkVersion = "SDK_NET_3.0.1190";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -285,6 +285,27 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// This API is used to disable the paid plan on the international website.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePackageOrderRequest"/></param>
+        /// <returns><see cref="DeletePackageOrderResponse"/></returns>
+        public Task<DeletePackageOrderResponse> DeletePackageOrder(DeletePackageOrderRequest req)
+        {
+            return InternalRequestAsync<DeletePackageOrderResponse>(req, "DeletePackageOrder");
+        }
+
+        /// <summary>
+        /// This API is used to disable the paid plan on the international website.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePackageOrderRequest"/></param>
+        /// <returns><see cref="DeletePackageOrderResponse"/></returns>
+        public DeletePackageOrderResponse DeletePackageOrderSync(DeletePackageOrderRequest req)
+        {
+            return InternalRequestAsync<DeletePackageOrderResponse>(req, "DeletePackageOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a record.
         /// </summary>
         /// <param name="req"><see cref="DeleteRecordRequest"/></param>
@@ -533,6 +554,27 @@ namespace TencentCloud.Dnspod.V20210323
         public DescribeRecordGroupListResponse DescribeRecordGroupListSync(DescribeRecordGroupListRequest req)
         {
             return InternalRequestAsync<DescribeRecordGroupListResponse>(req, "DescribeRecordGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to return a line list by category.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordLineCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeRecordLineCategoryListResponse"/></returns>
+        public Task<DescribeRecordLineCategoryListResponse> DescribeRecordLineCategoryList(DescribeRecordLineCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordLineCategoryListResponse>(req, "DescribeRecordLineCategoryList");
+        }
+
+        /// <summary>
+        /// This API is used to return a line list by category.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordLineCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeRecordLineCategoryListResponse"/></returns>
+        public DescribeRecordLineCategoryListResponse DescribeRecordLineCategoryListSync(DescribeRecordLineCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordLineCategoryListResponse>(req, "DescribeRecordLineCategoryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

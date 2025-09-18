@@ -73,13 +73,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// Template creation time. uses [ISO date format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template last modified time. uses [ISO date format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

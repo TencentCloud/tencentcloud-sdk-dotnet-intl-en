@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1213";
 
         /// <summary>
         /// Client constructor.
@@ -1177,6 +1177,33 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// This API is used to inquire about the price for switching billing modes of instance.
+        /// 
+        /// 
+        /// This API is used to indicate that instances with no charge when shut down, instances of the model families Batch Computing BC1 and Batch Computing BS1, instances of scheduled termination, and spot instances do not support this operation.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyInstancesChargeTypeResponse"/></returns>
+        public Task<InquiryPriceModifyInstancesChargeTypeResponse> InquiryPriceModifyInstancesChargeType(InquiryPriceModifyInstancesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyInstancesChargeTypeResponse>(req, "InquiryPriceModifyInstancesChargeType");
+        }
+
+        /// <summary>
+        /// This API is used to inquire about the price for switching billing modes of instance.
+        /// 
+        /// 
+        /// This API is used to indicate that instances with no charge when shut down, instances of the model families Batch Computing BC1 and Batch Computing BS1, instances of scheduled termination, and spot instances do not support this operation.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="InquiryPriceModifyInstancesChargeTypeResponse"/></returns>
+        public InquiryPriceModifyInstancesChargeTypeResponse InquiryPriceModifyInstancesChargeTypeSync(InquiryPriceModifyInstancesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceModifyInstancesChargeTypeResponse>(req, "InquiryPriceModifyInstancesChargeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to inquire about the price for renewing a monthly subscription instance.
         /// 
         /// This API is used to query the renewal price of monthly subscription instances.
@@ -1481,6 +1508,33 @@ namespace TencentCloud.Cvm.V20170312
         public ModifyInstancesAttributeResponse ModifyInstancesAttributeSync(ModifyInstancesAttributeRequest req)
         {
             return InternalRequestAsync<ModifyInstancesAttributeResponse>(req, "ModifyInstancesAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to switch the billing mode of an instance.
+        /// 
+        /// This API is used to perform operations that do not support instances with no charge when shut down, instances of the model families Batch Compute BC1 and Batch Compute BS1, or instances of scheduled termination.
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesChargeTypeResponse"/></returns>
+        public Task<ModifyInstancesChargeTypeResponse> ModifyInstancesChargeType(ModifyInstancesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesChargeTypeResponse>(req, "ModifyInstancesChargeType");
+        }
+
+        /// <summary>
+        /// This API is used to switch the billing mode of an instance.
+        /// 
+        /// This API is used to perform operations that do not support instances with no charge when shut down, instances of the model families Batch Compute BC1 and Batch Compute BS1, or instances of scheduled termination.
+        /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesChargeTypeResponse"/></returns>
+        public ModifyInstancesChargeTypeResponse ModifyInstancesChargeTypeSync(ModifyInstancesChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancesChargeTypeResponse>(req, "ModifyInstancesChargeType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
