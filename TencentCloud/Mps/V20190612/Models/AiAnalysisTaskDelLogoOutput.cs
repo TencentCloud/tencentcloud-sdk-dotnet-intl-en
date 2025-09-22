@@ -55,6 +55,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitlePos")]
         public SubtitlePosition SubtitlePos{ get; set; }
 
+        /// <summary>
+        /// Specifies the file url of the video after voice cloning.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VoiceClonedVideo")]
+        public string VoiceClonedVideo{ get; set; }
+
+        /// <summary>
+        /// Specifies the file address of the voice type clone annotation.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VoiceClonedMarkFile")]
+        public string VoiceClonedMarkFile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +80,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
             this.SetParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
             this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
+            this.SetParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
+            this.SetParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
         }
     }
 }

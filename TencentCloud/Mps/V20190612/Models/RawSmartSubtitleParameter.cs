@@ -35,37 +35,39 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? SubtitleType{ get; set; }
 
         /// <summary>
-        /// Source language of the video with smart subtitles.
-        /// Supported languages:
-        /// zh: Simplified Chinese
-        /// en: English
-        /// ja: Japanese
-        /// ko: Korean
-        /// zh-PY: Chinese-English-Cantonese
-        /// zh-medical: Medical Chinese
-        /// yue: Cantonese
-        /// vi: Vietnamese
-        /// ms: Malay
-        /// id: Indonesian
-        /// fil: Filipino
-        /// th: Thai
-        /// pt: Portuguese
-        /// tr: Turkish
-        /// ar: Arabic
-        /// es: Spanish
+        /// Video source language for intelligent caption.
+        /// Valid values: 
+        /// zh: Simplified Chinese.
+        /// en: Eenglish.
+        /// Ja: Japanese.
+        /// Ko: Korean.
+        /// zh-PY: Simplified Chinese, English and Cantonese.
+        /// zh-medical: Medical Chinese.
+        /// yue: Cantonese.
+        /// Vi: Vietnamese.
+        /// ms: Malay.
+        /// id: Indonesian.
+        /// fil: Filipino.
+        /// th: Thai.
+        /// pt: Portuguese.
+        /// tr: Turkish.
+        /// ar: Arabic.
+        /// es: Spanish.
         /// hi: Hindi
-        /// fr: French
-        /// de: German
+        /// Fr: French.
+        /// de: German.
         /// zh-dialect: Chinese dialect
+        /// zh_en: Simplified Chinese and English
+        /// prime_zh: Simplified Chinese, Chinese Dialect and English.
         /// </summary>
         [JsonProperty("VideoSrcLanguage")]
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
-        /// Smart subtitle file format.
-        /// vtt: WebVTT format
+        /// Intelligent subtitle file format.
+        /// vtt: WebVTT format.
+        /// srt: SRT format.
         /// If this field is left blank, no subtitle file will be generated.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }

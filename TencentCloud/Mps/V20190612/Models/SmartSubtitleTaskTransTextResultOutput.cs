@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
+        /// <summary>
+        /// Subtitle file storage location.
+        /// </summary>
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }
 }

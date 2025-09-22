@@ -102,6 +102,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SmartSubtitlesTaskResult")]
         public SmartSubtitlesResult[] SmartSubtitlesTaskResult{ get; set; }
 
+        /// <summary>
+        /// Execution result of the smart erasure task.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("SmartEraseTaskResult")]
+        public SmartEraseTaskResult SmartEraseTaskResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
             this.SetParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
             this.SetParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
+            this.SetParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
         }
     }
 }

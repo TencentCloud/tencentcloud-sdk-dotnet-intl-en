@@ -21,38 +21,41 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TaskOutputStorage : AbstractModel
+    public class RawSmartEraseParameter : AbstractModel
     {
         
         /// <summary>
-        /// Specifies the type of storage location for the media processing service output object. valid values:.
-        /// <Li>COS: cos storage.</li>.
-        /// <Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-        /// <Li>VOD: video-on-demand (vod) pro edition</li>.
+        /// Specifies the removal type.
+        /// -subtitle removal.
+        /// -Remove watermark.
+        /// -privacy protection.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("EraseType")]
+        public string EraseType{ get; set; }
 
         /// <summary>
-        /// The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+        /// Subtitle erasure configuration.
+        /// When EraseType is subtitle, this field is required.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("CosOutputStorage")]
-        public CosOutputStorage CosOutputStorage{ get; set; }
+        [JsonProperty("EraseSubtitleConfig")]
+        public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+        /// Specifies the watermark removal configuration.
+        /// When EraseType is watermark, this field is required.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("S3OutputStorage")]
-        public S3OutputStorage S3OutputStorage{ get; set; }
+        [JsonProperty("EraseWatermarkConfig")]
+        public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
+        /// Privacy protection configuration.
+        /// When EraseType is privacy, this field is required.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
-        [JsonProperty("VODOutputStorage")]
-        public VODOutputStorage VODOutputStorage{ get; set; }
+        [JsonProperty("ErasePrivacyConfig")]
+        public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
 
 
         /// <summary>
@@ -60,10 +63,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
-            this.SetParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
-            this.SetParamObj(map, prefix + "VODOutputStorage.", this.VODOutputStorage);
+            this.SetParamSimple(map, prefix + "EraseType", this.EraseType);
+            this.SetParamObj(map, prefix + "EraseSubtitleConfig.", this.EraseSubtitleConfig);
+            this.SetParamObj(map, prefix + "EraseWatermarkConfig.", this.EraseWatermarkConfig);
+            this.SetParamObj(map, prefix + "ErasePrivacyConfig.", this.ErasePrivacyConfig);
         }
     }
 }

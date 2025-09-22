@@ -89,6 +89,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiQualityControlTaskInput AiQualityControlTask{ get; set; }
 
         /// <summary>
+        /// Smart subtitle task.
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
+        /// Smart erase task parameter.
+        /// </summary>
+        [JsonProperty("SmartEraseTask")]
+        public SmartEraseTaskInput SmartEraseTask{ get; set; }
+
+        /// <summary>
         /// Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -127,12 +139,6 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Smart subtitle task.
-        /// </summary>
-        [JsonProperty("SmartSubtitlesTask")]
-        public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
-
-        /// <summary>
         /// Whether to skip metadata acquisition. Valid values:
         /// 0: do not skip
         /// 1: skip
@@ -156,13 +162,14 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+            this.SetParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
-            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
         }
     }

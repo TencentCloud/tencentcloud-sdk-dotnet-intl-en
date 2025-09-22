@@ -25,15 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. Valid values:
-        /// <li>Classification: intelligent classification.</li>
-        /// <li>Cover: intelligent thumbnail generating.</li>
-        /// <li>Tag: intelligent tagging.</li>
-        /// <li>FrameTag: intelligent frame-by-frame tagging.</li>
-        /// <li>Highlight: intelligent highlights generating.</li>
-        /// 
-        /// <li>DeLogo: intelligent removal.</li>
+        /// Task type. valid values:.
+        /// <Li>Classification: intelligent classification.</li>.
+        /// <Li>Cover: specifies the intelligent cover.</li>.
+        /// <Li>Tag: intelligent tag.</li>.
+        /// <Li>FrameTag: specifies intelligent frame-by-frame tagging.</li>.
+        /// <Li>Highlight: intelligent highlights</li>.
+        /// <Li>DeLogo: intelligent removal.</li>.
         /// <li>Description: large model summarization.</li>
+        /// 
+        /// <Li>Dubbing: intelligent dubbing.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -104,6 +105,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HorizontalToVerticalTask")]
         public AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask{ get; set; }
 
+        /// <summary>
+        /// The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DubbingTask")]
+        public AiAnalysisTaskDubbingResult DubbingTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +129,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
             this.SetParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
             this.SetParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
+            this.SetParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
         }
     }
 }

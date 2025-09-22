@@ -25,10 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The input type. Valid values:
-        /// <li>`COS`: A COS bucket address.</li>
-        /// <li> `URL`: A URL.</li>
-        /// <li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+        /// Type of input source object. valid values:.
+        /// <Li>COS: specifies the cos origin.</li>
+        /// <Li>URL: the url source.</li>
+        /// <Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
+        /// <Li>VOD: video-on-demand pro edition (VOD Pro). </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -53,6 +54,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("S3InputInfo")]
         public S3InputInfo S3InputInfo{ get; set; }
 
+        /// <summary>
+        /// The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("VODInputInfo")]
+        public VODInputInfo VODInputInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
             this.SetParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
             this.SetParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
+            this.SetParamObj(map, prefix + "VODInputInfo.", this.VODInputInfo);
         }
     }
 }

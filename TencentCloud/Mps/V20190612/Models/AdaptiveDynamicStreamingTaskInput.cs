@@ -69,14 +69,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// Subtitle file to be inserted.
+        /// External subtitle feature specifies the subtitle file to be inserted.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// Drm information.
+        /// Specifies the Drm information.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
@@ -90,7 +91,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// Specifies the subtitle parameter.
+        /// Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]

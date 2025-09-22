@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cdz.V20221123.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskAsrFullTextResultOutput : AbstractModel
+    public class ExtraInfo : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for full speech recognition.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Cloud dedicated zone local time this monday date.
         /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
+        [JsonProperty("ThisMondayLocalDate")]
+        public string ThisMondayLocalDate{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// Cloud dedicated zone local time last monday date.
         /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
-
-        /// <summary>
-        /// Subtitle file storage location.
-        /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("LastMondayLocalDate")]
+        public string LastMondayLocalDate{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "ThisMondayLocalDate", this.ThisMondayLocalDate);
+            this.SetParamSimple(map, prefix + "LastMondayLocalDate", this.LastMondayLocalDate);
         }
     }
 }

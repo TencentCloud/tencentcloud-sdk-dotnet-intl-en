@@ -15,33 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Cdz.V20221123.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskAsrFullTextResultOutput : AbstractModel
+    public class CloudDedicatedZoneResourceSummaryInfo : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for full speech recognition.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Product name
         /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// Subproduct name
         /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
+        [JsonProperty("SubProductName")]
+        public string SubProductName{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// Statistical detail of the resource.
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("Statistics")]
+        public CloudDedicatedZoneResourceStatisticsInfo[] Statistics{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
+            this.SetParamArrayObj(map, prefix + "Statistics.", this.Statistics);
         }
     }
 }

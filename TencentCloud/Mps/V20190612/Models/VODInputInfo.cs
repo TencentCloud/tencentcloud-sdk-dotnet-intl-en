@@ -21,27 +21,32 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskAsrFullTextResultOutput : AbstractModel
+    public class VODInputInfo : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for full speech recognition.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the Bucket ID where the input file resides.
         /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// Specifies the region where the input file's Bucket resides.
         /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// Path of the input file.
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("Object")]
+        public string Object{ get; set; }
+
+        /// <summary>
+        /// VOD Pro application Id.
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Object", this.Object);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

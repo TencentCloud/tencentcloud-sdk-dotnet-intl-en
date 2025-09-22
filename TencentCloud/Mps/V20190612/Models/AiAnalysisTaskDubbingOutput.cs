@@ -21,24 +21,23 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskAsrFullTextResultOutput : AbstractModel
+    public class AiAnalysisTaskDubbingOutput : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for full speech recognition.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Specifies the video path for translation.
         /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
+        [JsonProperty("VideoPath")]
+        public string VideoPath{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// Specifies the file path of the tag.
         /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
+        [JsonProperty("SpeakerPath")]
+        public string SpeakerPath{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// Specifies the storage location of the transcoded video.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -49,8 +48,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+            this.SetParamSimple(map, prefix + "VideoPath", this.VideoPath);
+            this.SetParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }

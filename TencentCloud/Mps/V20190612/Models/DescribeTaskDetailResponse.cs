@@ -78,6 +78,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamProcessTask LiveStreamProcessTask{ get; set; }
 
         /// <summary>
+        /// Extracts digital watermark task information. this field has a value only when TaskType is ExtractBlindWatermark.
+        /// </summary>
+        [JsonProperty("ExtractBlindWatermarkTask")]
+        public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }
+
+        /// <summary>
         /// Event notification information of a task.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -117,7 +123,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// The information of a live scheme. This parameter is valid only if `TaskType` is `LiveScheduleTask`.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LiveScheduleTask")]
         public LiveScheduleTask LiveScheduleTask{ get; set; }
@@ -142,6 +148,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
             this.SetParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
             this.SetParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
+            this.SetParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1200</VersionPrefix>
+    <VersionPrefix>3.0.1214</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskDescriptionResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskDubbingResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskFrameTagResult.cs" />
@@ -360,10 +363,14 @@
     <Compile Include="V20190612\Models\EnableWorkflowRequest.cs" />
     <Compile Include="V20190612\Models\EnableWorkflowResponse.cs" />
     <Compile Include="V20190612\Models\EnhanceConfig.cs" />
+    <Compile Include="V20190612\Models\EraseArea.cs" />
+    <Compile Include="V20190612\Models\EraseTimeArea.cs" />
     <Compile Include="V20190612\Models\ExecRuleTaskData.cs" />
     <Compile Include="V20190612\Models\ExecRulesTask.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20190612\Models\ExecuteFunctionResponse.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkTask.cs" />
+    <Compile Include="V20190612\Models\ExtractBlindWatermarkTaskConfig.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />
@@ -533,6 +540,7 @@
     <Compile Include="V20190612\Models\QualityControlStrategy.cs" />
     <Compile Include="V20190612\Models\QualityControlTemplate.cs" />
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
+    <Compile Include="V20190612\Models\RawSmartEraseParameter.cs" />
     <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />
     <Compile Include="V20190612\Models\RawTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\RawWatermarkParameter.cs" />
@@ -558,6 +566,11 @@
     <Compile Include="V20190612\Models\SegmentSpecificInfo.cs" />
     <Compile Include="V20190612\Models\SharpEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\SimpleAesDrm.cs" />
+    <Compile Include="V20190612\Models\SmartErasePrivacyConfig.cs" />
+    <Compile Include="V20190612\Models\SmartEraseSubtitleConfig.cs" />
+    <Compile Include="V20190612\Models\SmartEraseTaskInput.cs" />
+    <Compile Include="V20190612\Models\SmartEraseTaskResult.cs" />
+    <Compile Include="V20190612\Models\SmartEraseWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResult.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextResultOutput.cs" />
     <Compile Include="V20190612\Models\SmartSubtitleTaskAsrFullTextSegmentItem.cs" />
@@ -606,6 +619,8 @@
     <Compile Include="V20190612\Models\UserDefineFaceReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineOcrTextReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\VODInputInfo.cs" />
+    <Compile Include="V20190612\Models\VODOutputStorage.cs" />
     <Compile Include="V20190612\Models\VideoDenoiseConfig.cs" />
     <Compile Include="V20190612\Models\VideoEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\VideoTemplateInfo.cs" />

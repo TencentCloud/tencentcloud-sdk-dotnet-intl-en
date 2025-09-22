@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -119,7 +119,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for a BizToken before calling the web-based verification service each time. This token is required for initiating a verification process and getting the result after the verification is completed.
+        /// This API is used to obtain a BizToken before each call to the Web verification service. Save the BizToken to initiate the verification process and retrieve the result upon completion. The BizToken is valid for 10 minutes.
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
@@ -129,7 +129,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to apply for a BizToken before calling the web-based verification service each time. This token is required for initiating a verification process and getting the result after the verification is completed.
+        /// This API is used to obtain a BizToken before each call to the Web verification service. Save the BizToken to initiate the verification process and retrieve the result upon completion. The BizToken is valid for 10 minutes.
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for two hours (2*3,600s) after generation and can be called multiple times.
+        /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for 72 hours (72*3600s) after generation and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdResultIntlResponse"/></returns>
@@ -303,7 +303,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for two hours (2*3,600s) after generation and can be called multiple times.
+        /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for 72 hours (72*3600s) after generation and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultIntlRequest"/></param>
         /// <returns><see cref="GetFaceIdResultIntlResponse"/></returns>

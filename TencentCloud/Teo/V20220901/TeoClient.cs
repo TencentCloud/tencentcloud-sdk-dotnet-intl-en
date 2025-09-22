@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1213";
+       private const string sdkVersion = "SDK_NET_3.0.1214";
 
         /// <summary>
         /// Client constructor.
@@ -185,7 +185,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -196,7 +196,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
+        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
@@ -494,7 +494,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service).
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
@@ -3192,7 +3192,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify the status of an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -3203,7 +3203,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to modify the status of an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://intl.cloud.tencent.com/online?from_cn_redirect=1-service?from=connect-us).
+        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>

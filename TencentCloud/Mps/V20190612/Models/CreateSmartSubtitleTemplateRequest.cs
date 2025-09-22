@@ -32,37 +32,40 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Source language of the video with smart subtitles.
-        /// Supported languages:
-        /// zh: Simplified Chinese
-        /// en: English
-        /// ja: Japanese
-        /// ko: Korean
-        /// zh-PY: Chinese-English-Cantonese
-        /// zh-medical: Medical Chinese
-        /// yue: Cantonese
-        /// vi: Vietnamese
-        /// ms: Malay
-        /// id: Indonesian
-        /// fil: Filipino
-        /// th: Thai
-        /// pt: Portuguese
-        /// tr: Turkish
-        /// ar: Arabic
-        /// es: Spanish
+        /// Video source language for intelligent caption.
+        /// Valid values: 
+        /// zh: Simplified Chinese.
+        /// en: Eenglish.
+        /// Ja: Japanese.
+        /// Ko: Korean.
+        /// zh-PY: Simplified Chinese, English and Cantonese.
+        /// zh-medical: Medical Chinese.
+        /// yue: Cantonese.
+        /// Vi: Vietnamese.
+        /// ms: Malay.
+        /// id: Indonesian.
+        /// fil: Filipino.
+        /// th: Thai.
+        /// pt: Portuguese.
+        /// tr: Turkish.
+        /// ar: Arabic.
+        /// es: Spanish.
         /// hi: Hindi
-        /// fr: French
-        /// de: German
+        /// Fr: French.
+        /// de: German.
         /// zh-dialect: Chinese dialect
+        /// zh_en: Simplified Chinese and English
+        /// prime_zh: Simplified Chinese, Chinese Dialect and English.
         /// </summary>
         [JsonProperty("VideoSrcLanguage")]
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
         /// Smart subtitle language type.
-        /// 0: source language1: target language
+        /// 0: source language
+        /// 1: target language
         /// 2: source language + target language
-        /// The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+        /// The value can only be 0 when TranslateSwitch is set to OFF. The value can only be 1 or 2 when TranslateSwitch is set to ON.
         /// </summary>
         [JsonProperty("SubtitleType")]
         public long? SubtitleType{ get; set; }
@@ -75,8 +78,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Smart subtitle file format.
-        /// vtt: WebVTT format
+        /// Intelligent subtitle file format.
+        /// vtt: WebVTT format.
+        /// srt: SRT format.
         /// If this field is left blank, no subtitle file will be generated.
         /// </summary>
         [JsonProperty("SubtitleFormat")]
