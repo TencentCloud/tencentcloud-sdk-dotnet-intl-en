@@ -61,8 +61,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public long? WriteNum{ get; set; }
 
         /// <summary>
-        /// Version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }

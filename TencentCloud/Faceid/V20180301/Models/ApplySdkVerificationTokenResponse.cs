@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The token used to identify an SDK-based verification process. It is valid for 7,200s and can be used to get the verification result after the process is completed.
+        /// A token that identifies an SDK verification process. the validity time is 10 minutes. after the process is complete, the token can be used to retrieve the verification result.
         /// </summary>
         [JsonProperty("SdkToken")]
         public string SdkToken{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// CKafka address
+        /// Kafka address
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// CKafka topic
+        /// Kafka topic
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }

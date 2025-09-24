@@ -46,20 +46,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? SecurityLevel{ get; set; }
 
         /// <summary>
-        /// Card Types Supported for Authentication: Currently supported types are as follows:
-        /// 1.HK (Default): Hong Kong (China) Identity Card
-        /// 2.ML: Malaysia Identity Card
-        /// 3.IndonesiaIDCard: Indonesia Identity Card
-        /// 4.PhilippinesVoteID: Philippines Voter ID
-        /// 5.PhilippinesDrivingLicense: Philippines Driving License
-        /// 6.PhilippinesTinID: Philippines Tin ID
-        /// 7.PhilippinesSSSID: Philippines SSS ID
-        /// 8.PhilippinesUMID: Philippines UMID
-        /// 9.MLIDPassport: Passports of Hong Kong, Macao, Taiwan Regions (China) and Foreign Countries
-        /// 10.ThailandIDCard: Thailand Identity Card
-        /// 11.MainlandIDCard: Mainland China Identity Card
-        /// 12.SingaporeIDCard: Singapore Identity Card
-        /// 13.HMTPermit: Exit-Entry Permit for Travel to and from Hong Kong, Macao and Taiwan (China)
+        /// Specifies the identity document type used for authentication. valid values:.  
+        /// 
+        /// HK (default): hong kong (china) identity card.
+        /// 2. ML: malaysian identity card.
+        /// Indonesian identity card.
+        /// 4. PhilippinesVoteID: specifies the voter card in the philippines.
+        /// 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
+        /// 6. PhilippinesTinID: specifies the philippines tin id.
+        /// 7. PhilippinesSSSID: specifies the SSSID in the philippines.
+        /// 8. philippines UMID: specifies the philippines UMID.
+        /// 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
+        /// ThailandIDCard: specifies the thai identity card.
+        /// Mainland id card.
+        /// 12. SingaporeIDCard: specifies the Singapore id card.
+        /// 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
@@ -91,13 +92,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? DisableCheckOcrWarnings{ get; set; }
 
         /// <summary>
+        /// Customize which alarm codes to block. If left blank, all alarm codes will be blocked by default.
+        /// Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photocopying), -9103 (screen capture by camera), -9104 (image editing/PS modification), -9107 (glare/reflection), -9108 (blurriness), -9901 (other alarms).
+        /// </summary>
+        [JsonProperty("SelectedWarningCodes")]
+        public long?[] SelectedWarningCodes{ get; set; }
+
+        /// <summary>
         /// A passthrough field, which is returned together with the verification result and can contain up to 1,024 bits.
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// ENHANCED: Enhanced Version, BASIC: Basic Version (Default)
+        /// ENHANCED: enhanced.
+        /// BASIC: basic version (default).
         /// </summary>
         [JsonProperty("SdkVersion")]
         public string SdkVersion{ get; set; }
@@ -130,6 +139,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "NeedVerifyIdCard", this.NeedVerifyIdCard);
             this.SetParamSimple(map, prefix + "DisableChangeOcrResult", this.DisableChangeOcrResult);
             this.SetParamSimple(map, prefix + "DisableCheckOcrWarnings", this.DisableCheckOcrWarnings);
+            this.SetParamArraySimple(map, prefix + "SelectedWarningCodes.", this.SelectedWarningCodes);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
