@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.intl.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1217";
 
         /// <summary>
         /// Client constructor.
@@ -1142,6 +1142,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeResultDownloadResponse DescribeResultDownloadSync(DescribeResultDownloadRequest req)
         {
             return InternalRequestAsync<DescribeResultDownloadResponse>(req, "DescribeResultDownload")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve all built-in images of all minor versions under a specified major version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionImageVersionRequest"/></param>
+        /// <returns><see cref="DescribeSessionImageVersionResponse"/></returns>
+        public Task<DescribeSessionImageVersionResponse> DescribeSessionImageVersion(DescribeSessionImageVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionImageVersionResponse>(req, "DescribeSessionImageVersion");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve all built-in images of all minor versions under a specified major version.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSessionImageVersionRequest"/></param>
+        /// <returns><see cref="DescribeSessionImageVersionResponse"/></returns>
+        public DescribeSessionImageVersionResponse DescribeSessionImageVersionSync(DescribeSessionImageVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeSessionImageVersionResponse>(req, "DescribeSessionImageVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
