@@ -28,7 +28,7 @@ namespace TencentCloud.Quota.V20241204
 
        private const string endpoint = "quota.intl.tencentcloudapi.com";
        private const string version = "2024-12-04";
-       private const string sdkVersion = "SDK_NET_3.0.1215";
+       private const string sdkVersion = "SDK_NET_3.0.1218";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,90 @@ namespace TencentCloud.Quota.V20241204
         public CreateAlarmResponse CreateAlarmSync(CreateAlarmRequest req)
         {
             return InternalRequestAsync<CreateAlarmResponse>(req, "CreateAlarm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deletes alarm rules
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmRequest"/></param>
+        /// <returns><see cref="DeleteAlarmResponse"/></returns>
+        public Task<DeleteAlarmResponse> DeleteAlarm(DeleteAlarmRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmResponse>(req, "DeleteAlarm");
+        }
+
+        /// <summary>
+        /// Deletes alarm rules
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAlarmRequest"/></param>
+        /// <returns><see cref="DeleteAlarmResponse"/></returns>
+        public DeleteAlarmResponse DeleteAlarmSync(DeleteAlarmRequest req)
+        {
+            return InternalRequestAsync<DeleteAlarmResponse>(req, "DeleteAlarm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the alarm rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmsResponse"/></returns>
+        public Task<DescribeAlarmsResponse> DescribeAlarms(DescribeAlarmsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmsResponse>(req, "DescribeAlarms");
+        }
+
+        /// <summary>
+        /// This API is used to query the alarm rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
+        /// <returns><see cref="DescribeAlarmsResponse"/></returns>
+        public DescribeAlarmsResponse DescribeAlarmsSync(DescribeAlarmsRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmsResponse>(req, "DescribeAlarms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable alarm rules.
+        /// </summary>
+        /// <param name="req"><see cref="EnableAlarmRequest"/></param>
+        /// <returns><see cref="EnableAlarmResponse"/></returns>
+        public Task<EnableAlarmResponse> EnableAlarm(EnableAlarmRequest req)
+        {
+            return InternalRequestAsync<EnableAlarmResponse>(req, "EnableAlarm");
+        }
+
+        /// <summary>
+        /// This API is used to enable alarm rules.
+        /// </summary>
+        /// <param name="req"><see cref="EnableAlarmRequest"/></param>
+        /// <returns><see cref="EnableAlarmResponse"/></returns>
+        public EnableAlarmResponse EnableAlarmSync(EnableAlarmRequest req)
+        {
+            return InternalRequestAsync<EnableAlarmResponse>(req, "EnableAlarm")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modifies alarm rules
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlarmRequest"/></param>
+        /// <returns><see cref="UpdateAlarmResponse"/></returns>
+        public Task<UpdateAlarmResponse> UpdateAlarm(UpdateAlarmRequest req)
+        {
+            return InternalRequestAsync<UpdateAlarmResponse>(req, "UpdateAlarm");
+        }
+
+        /// <summary>
+        /// Modifies alarm rules
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlarmRequest"/></param>
+        /// <returns><see cref="UpdateAlarmResponse"/></returns>
+        public UpdateAlarmResponse UpdateAlarmSync(UpdateAlarmRequest req)
+        {
+            return InternalRequestAsync<UpdateAlarmResponse>(req, "UpdateAlarm")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

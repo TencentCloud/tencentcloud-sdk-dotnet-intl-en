@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7A5A0C51-587C-3AD6-ABB4-B435A011064B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1215</VersionPrefix>
+    <VersionPrefix>3.0.1218</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,16 @@
 
   <ItemGroup>
     <Compile Include="V20241204\QuotaClient.cs" />
+    <Compile Include="V20241204\Models\Alarm.cs" />
     <Compile Include="V20241204\Models\CreateAlarmRequest.cs" />
     <Compile Include="V20241204\Models\CreateAlarmResponse.cs" />
+    <Compile Include="V20241204\Models\DeleteAlarmRequest.cs" />
+    <Compile Include="V20241204\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="V20241204\Models\DescribeAlarmsRequest.cs" />
+    <Compile Include="V20241204\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="V20241204\Models\EnableAlarmRequest.cs" />
+    <Compile Include="V20241204\Models\EnableAlarmResponse.cs" />
+    <Compile Include="V20241204\Models\UpdateAlarmRequest.cs" />
+    <Compile Include="V20241204\Models\UpdateAlarmResponse.cs" />
   </ItemGroup>
 </Project>
