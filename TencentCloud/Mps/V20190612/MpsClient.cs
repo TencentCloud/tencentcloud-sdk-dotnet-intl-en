@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1216";
+       private const string sdkVersion = "SDK_NET_3.0.1220";
 
         /// <summary>
         /// Client constructor.
@@ -357,6 +357,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateScheduleResponse CreateScheduleSync(CreateScheduleRequest req)
         {
             return InternalRequestAsync<CreateScheduleResponse>(req, "CreateSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a custom smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartEraseTemplateResponse"/></returns>
+        public Task<CreateSmartEraseTemplateResponse> CreateSmartEraseTemplate(CreateSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartEraseTemplateResponse>(req, "CreateSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a custom smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="CreateSmartEraseTemplateResponse"/></returns>
+        public CreateSmartEraseTemplateResponse CreateSmartEraseTemplateSync(CreateSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSmartEraseTemplateResponse>(req, "CreateSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -761,6 +782,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteScheduleResponse DeleteScheduleSync(DeleteScheduleRequest req)
         {
             return InternalRequestAsync<DeleteScheduleResponse>(req, "DeleteSchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartEraseTemplateResponse"/></returns>
+        public Task<DeleteSmartEraseTemplateResponse> DeleteSmartEraseTemplate(DeleteSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartEraseTemplateResponse>(req, "DeleteSmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSmartEraseTemplateResponse"/></returns>
+        public DeleteSmartEraseTemplateResponse DeleteSmartEraseTemplateSync(DeleteSmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSmartEraseTemplateResponse>(req, "DeleteSmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1223,6 +1265,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeSchedulesResponse DescribeSchedulesSync(DescribeSchedulesRequest req)
         {
             return InternalRequestAsync<DescribeSchedulesResponse>(req, "DescribeSchedules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of smart erasing template details based on the unique identifier of the template. The returned result includes all matching user-defined smart erasing templates and system preset smart erasing templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartEraseTemplatesResponse"/></returns>
+        public Task<DescribeSmartEraseTemplatesResponse> DescribeSmartEraseTemplates(DescribeSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartEraseTemplatesResponse>(req, "DescribeSmartEraseTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of smart erasing template details based on the unique identifier of the template. The returned result includes all matching user-defined smart erasing templates and system preset smart erasing templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmartEraseTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSmartEraseTemplatesResponse"/></returns>
+        public DescribeSmartEraseTemplatesResponse DescribeSmartEraseTemplatesSync(DescribeSmartEraseTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSmartEraseTemplatesResponse>(req, "DescribeSmartEraseTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1843,6 +1906,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyScheduleResponse ModifyScheduleSync(ModifyScheduleRequest req)
         {
             return InternalRequestAsync<ModifyScheduleResponse>(req, "ModifySchedule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartEraseTemplateResponse"/></returns>
+        public Task<ModifySmartEraseTemplateResponse> ModifySmartEraseTemplate(ModifySmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartEraseTemplateResponse>(req, "ModifySmartEraseTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined smart erasing template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySmartEraseTemplateRequest"/></param>
+        /// <returns><see cref="ModifySmartEraseTemplateResponse"/></returns>
+        public ModifySmartEraseTemplateResponse ModifySmartEraseTemplateSync(ModifySmartEraseTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySmartEraseTemplateResponse>(req, "ModifySmartEraseTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

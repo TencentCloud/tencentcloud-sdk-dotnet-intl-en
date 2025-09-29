@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18B8B6A9-26F9-3537-BC24-EEBEC5421791}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1164</VersionPrefix>
+    <VersionPrefix>3.0.1220</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210420\CiamClient.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsRequest.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
+    <Compile Include="V20210420\Models\Pageable.cs" />
+    <Compile Include="V20210420\Models\UserGroup.cs" />
     <Compile Include="V20220331\CiamClient.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobRequest.cs" />
     <Compile Include="V20220331\Models\CreateApiImportUserJobResponse.cs" />
@@ -93,10 +98,5 @@
     <Compile Include="V20220331\Models\UpdateUserStatusRequest.cs" />
     <Compile Include="V20220331\Models\UpdateUserStatusResponse.cs" />
     <Compile Include="V20220331\Models\User.cs" />
-    <Compile Include="V20210420\CiamClient.cs" />
-    <Compile Include="V20210420\Models\ListUserGroupsRequest.cs" />
-    <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
-    <Compile Include="V20210420\Models\Pageable.cs" />
-    <Compile Include="V20210420\Models\UserGroup.cs" />
   </ItemGroup>
 </Project>
