@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Custom metadata key. it must comply with the regular expression ^[a-zA-Z0-9_-]+$. the length is less than or equal to 128 bytes (case-sensitive).
+        /// Custom metadata key, consisting of uppercase letters (A-Z), lowercase letters (A-Z), digits (0-9), underscores (_), or hyphens (-), with a size limit of 128 bytes.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Specifies a custom metadata value. it supports any data . The size is &le; 256 KB. it is case-sensitive.
+        /// Custom metadata value. The upper limit of message size is 256 KB.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? CPU{ get; set; }
 
         /// <summary>
-        /// Memory capacity; unit: `GB`.
+        /// Instance memory capacity. unit: GiB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: <br><li>NORMAL: instance is normal. <br><li>EXPIRED: instance expired. <br><li>PROTECTIVELY_ISOLATED: instance is protectively isolated.
+        /// Instance business status. valid values:<br><li>NORMAL: indicates an instance in the NORMAL state</li><li>EXPIRED: indicates an EXPIRED instance</li><li>PROTECTIVELY_ISOLATED: PROTECTIVELY ISOLATED instance</li>.
         /// </summary>
         [JsonProperty("RestrictState")]
         public string RestrictState{ get; set; }
@@ -116,8 +116,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
-        /// <br><li>Note: this parameter is `null` for postpaid instances.
+        /// AUTO-Renewal flag. valid values:<br><li>`NOTIFY_AND_MANUAL_RENEW`: indicates that a notification of impending expiration is made but AUTO-renewal is not performed</li><li>`NOTIFY_AND_AUTO_RENEW`: indicates that a notification of impending expiration is made AND AUTO-renewal is performed</li><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: indicates that notification that it is about to expire is not made AND AUTO-renewal is not performed.
+        /// Note: this field is null in postpaid mode.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
@@ -153,7 +153,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Instance state. Valid values: <br><li>PENDING: creating <br></li><li>LAUNCH_FAILED: creation failed <br></li><li>RUNNING: running <br></li><li>STOPPED: shut down <br></li><li>STARTING: starting <br></li><li>STOPPING: shutting down <br></li><li>REBOOTING: rebooting <br></li><li>SHUTDOWN: shut down and to be terminated <br></li><li>TERMINATING: terminating. <br></li>
+        /// Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
@@ -165,8 +165,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance billing method after shutdown.
-        /// Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>STOP_CHARGING: billing stops after shutdown <li>NOT_APPLICABLE: the instance is not shut down or stopping billing after shutdown is not applicable to the instance. <br>
+        /// Shutdown billing mode of an instance.
+        /// 
+        /// Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown</li><li>STOP_CHARGING: billing stops after shutdown</li><li>NOT_APPLICABLE: the instance is NOT shut down or stopping billing after shutdown is NOT APPLICABLE to the instance</li>.
         /// </summary>
         [JsonProperty("StopChargingMode")]
         public string StopChargingMode{ get; set; }
@@ -184,7 +185,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+        /// The latest operation status of the instance. valid values:<br><li>SUCCESS: indicates that the operation succeeded</li><li>OPERATING: indicates that the operation is in progress</li><li>FAILED: indicates that the operation FAILED</li>.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
@@ -196,8 +198,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
-        /// ID of a spread placement group.
-        /// Note: this field may return null, indicating that no valid value is obtained.
+        /// Spread placement group ID.
         /// </summary>
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
@@ -217,8 +218,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// HPC cluster ID.
-        /// Note: this field may return null, indicating that no valid value was found.
+        /// High-performance computing cluster ID.
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
@@ -231,21 +231,19 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] RdmaIpAddresses{ get; set; }
 
         /// <summary>
-        /// 
+        /// Dedicated cluster ID where the instance is located.
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
-        /// Note: this field may return null, indicating that no valid value was found.
+        /// Instance isolation type. valid values:<br><li>ARREAR: indicates arrears isolation<br></li><li>EXPIRE: indicates isolation upon expiration<br></li><li>MANMADE: indicates voluntarily refunded isolation<br></li><li>NOTISOLATED: indicates unisolated<br></li>.
         /// </summary>
         [JsonProperty("IsolatedSource")]
         public string IsolatedSource{ get; set; }
 
         /// <summary>
-        /// GPU information. This field is only returned for GPU instances.
-        /// Note: this field may return null, indicating that no valid value was found.
+        /// GPU information. if it is a gpu type instance, this value will be returned. for other type instances, it does not return.
         /// </summary>
         [JsonProperty("GPUInfo")]
         public GPUInfo GPUInfo{ get; set; }
@@ -257,7 +255,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LicenseType{ get; set; }
 
         /// <summary>
-        /// Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+        /// Instance destruction protection flag indicates whether an instance is allowed to be deleted through an api. value ranges from:<br><li>true: indicates that instance protection is enabled, deletion through apis is not allowed</li><li>false: indicates that instance protection is disabled, allow passage</li><br>default value: false.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
         public bool? DisableApiTermination{ get; set; }
@@ -282,8 +280,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperationErrorMsg{ get; set; }
 
         /// <summary>
-        /// Public IPv6 address of the instance.
-        /// Note: this field may return null, indicating that no valid value was found.
+        /// Custom metadata. this parameter corresponds to the metadata information specified when creating a CVM. **note: in beta test**.
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public Metadata Metadata{ get; set; }
+
+        /// <summary>
+        /// Specifies the public IPv6 address bound to the instance.
         /// </summary>
         [JsonProperty("PublicIPv6Addresses")]
         public string[] PublicIPv6Addresses{ get; set; }
@@ -335,6 +338,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
             this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
         }
     }

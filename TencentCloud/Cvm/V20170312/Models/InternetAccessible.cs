@@ -52,41 +52,44 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// Describes the line type. for details, refer to [EIP IP address types](https://www.tencentcloud.com/zh/document/product/213/5733). default value: `BGP`.
-        ///  <li>BGP Default: BGP</li>
-        /// For a user who has activated the static single-line IP allowlist, possible values are:
-        ///  <li>CMCC: China Mobile</li> <li>CTCC: China Telecom</li> <li>CUCC: China Unicom</li>
-        /// Note: Only certain regions support static single-line IP addresses.
+        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+        /// <Li>BGP: specifies the general bgp line.</li>.
+        /// For a user with static single-line IP allowlist enabled, valid values include:.
+        /// <Li>CMCC: china mobile.</li>.
+        /// <Li>CTCC: china telecom</li>.
+        /// <Li>CUCC: china unicom</li>.
+        /// Note: The static single-line IP is only supported in some regions.
+        /// 
         /// </summary>
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
         /// <summary>
-        /// Type of public IP address.
+        /// Specifies the public IP type.
         /// 
-        /// <li> WanIP: Ordinary public IP address. </li> <li> HighQualityEIP: High Quality EIP is supported only in Singapore and Hong Kong. </li> <li> AntiDDoSEIP: Anti-DDoS IP is supported only in specific regions. For details, see [EIP Product Overview](https://www.tencentcloud.com/zh/document/product/213/5733). </li> 
-        /// Specify the type of public IPv4 address to assign a public IPv4 address to the resource. HighQualityEIP and AntiDDoSEIP features are gradually released in select regions.
-        /// This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+        /// <Li>WanIP: specifies the public ip address.</li>.
+        /// <Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+        /// <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>.
+        /// If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
+        /// 
+        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
         /// </summary>
         [JsonProperty("IPv4AddressType")]
         public string IPv4AddressType{ get; set; }
 
         /// <summary>
-        /// Indicates the type of EIPv6. Valid values:
+        /// Indicates the type of elastic public IPv6.
+        /// <Li>EIPv6: elastic ip version 6.</li>.
+        /// <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+        /// If needed, assign an elastic IPv6 address for resource allocation.
         /// 
-        /// <li>EIPv6: common IPv6</li>
-        /// <li>HighQualityEIPv6: High Quality EIPv6</li>
-        /// Note: Contact the product team to enable the dedicated IPv6 allowlist. The dedicated IPv6 is only supported in some regions. 
-        /// 
-        /// Default: `EIPv6`
-        /// 
-        /// This feature is currently in gradually released phase. To access it, please [contact us](https://console.tencentcloud.com/workorder).
+        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
         /// </summary>
         [JsonProperty("IPv6AddressType")]
         public string IPv6AddressType{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS service package ID. This is required when you want to request an Anti-DDoS IP.
+        /// DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
         /// </summary>
         [JsonProperty("AntiDDoSPackageId")]
         public string AntiDDoSPackageId{ get; set; }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GPUInfo : AbstractModel
+    public class CreateDataMaskStrategyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+        /// Masking policy description.
         /// </summary>
-        [JsonProperty("GPUCount")]
-        public float? GPUCount{ get; set; }
-
-        /// <summary>
-        /// Specifies the GPU address of the instance.
-        /// </summary>
-        [JsonProperty("GPUId")]
-        public string[] GPUId{ get; set; }
-
-        /// <summary>
-        /// Specifies the GPU type of the instance.
-        /// </summary>
-        [JsonProperty("GPUType")]
-        public string GPUType{ get; set; }
+        [JsonProperty("Strategy")]
+        public DataMaskStrategyInfo Strategy{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GPUCount", this.GPUCount);
-            this.SetParamArraySimple(map, prefix + "GPUId.", this.GPUId);
-            this.SetParamSimple(map, prefix + "GPUType", this.GPUType);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
         }
     }
 }

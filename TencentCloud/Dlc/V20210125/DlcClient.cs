@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.intl.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1217";
+       private const string sdkVersion = "SDK_NET_3.0.1221";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Dlc.V20210125
         public AlterDMSDatabaseResponse AlterDMSDatabaseSync(AlterDMSDatabaseRequest req)
         {
             return InternalRequestAsync<AlterDMSDatabaseResponse>(req, "AlterDMSDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind a DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="AttachDataMaskPolicyRequest"/></param>
+        /// <returns><see cref="AttachDataMaskPolicyResponse"/></returns>
+        public Task<AttachDataMaskPolicyResponse> AttachDataMaskPolicy(AttachDataMaskPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachDataMaskPolicyResponse>(req, "AttachDataMaskPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to bind a DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="AttachDataMaskPolicyRequest"/></param>
+        /// <returns><see cref="AttachDataMaskPolicyResponse"/></returns>
+        public AttachDataMaskPolicyResponse AttachDataMaskPolicySync(AttachDataMaskPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachDataMaskPolicyResponse>(req, "AttachDataMaskPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +407,27 @@ namespace TencentCloud.Dlc.V20210125
         public CreateDataEngineResponse CreateDataEngineSync(CreateDataEngineRequest req)
         {
             return InternalRequestAsync<CreateDataEngineResponse>(req, "CreateDataEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDataMaskStrategyResponse"/></returns>
+        public Task<CreateDataMaskStrategyResponse> CreateDataMaskStrategy(CreateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDataMaskStrategyResponse>(req, "CreateDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to create a DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="CreateDataMaskStrategyResponse"/></returns>
+        public CreateDataMaskStrategyResponse CreateDataMaskStrategySync(CreateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateDataMaskStrategyResponse>(req, "CreateDataMaskStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

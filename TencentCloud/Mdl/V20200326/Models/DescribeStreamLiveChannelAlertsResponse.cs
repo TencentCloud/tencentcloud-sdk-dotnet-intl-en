@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Alarm information of the channel’s two pipelines
+        /// Alarm information of the channel's two pipelines
         /// </summary>
         [JsonProperty("Infos")]
         public ChannelAlertInfos Infos{ get; set; }

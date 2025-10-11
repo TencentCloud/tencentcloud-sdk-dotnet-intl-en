@@ -25,19 +25,19 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// The name of the target database. `*` represents all databases in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any database.
+        /// The database name requiring authorization. use * to represent all databases under the current Catalog. for administrator level authorization type, only * is allowed. for data connection level authorization type, leave it blank. for other types, any specified database is allowed.
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// The name of the target data source. To grant admin permission, it must be `*` (all resources at this level); to grant data source and database permissions, it must be `COSDataCatalog` or `*`; to grant table permissions, it can be a custom data source; if it is left empty, `DataLakeCatalog` is used. Note: To grant permissions on a custom data source, the permissions that can be managed in the Data Lake Compute console are subsets of the account permissions granted when you connect the data source to the console.
+        /// Specifies the name of the data source requiring authorization. at administrator level, only * is supported (representing all resources at this level). for database-level or data source-level authentication, only COSDataCatalog or * is supported. for table-level authentication, user-defined data sources can be filled. defaults to DataLakeCatalog if left blank. note: if authenticating a user-defined data source, the permissions DLC can manage are a subset of the account provided when the user accesses the data source.
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
         /// <summary>
-        /// The name of the target table. `*` represents all tables in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any table.
+        /// Specifies the table name requiring authorization. use * to represent all tables in the current Database. for administrator-level authorization type, only * is allowed. for data connection level or Database-level authorization type, leave it blank. for other types, any specific data table can be specified.
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
@@ -55,28 +55,28 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// The name of the target function. `*` represents all functions in the current catalog. To grant admin permissions, it must be `*`; to grant data connection permissions, it must be null; to grant other permissions, it can be any function.
+        /// Name of the function requiring authorization. use * to represent all functions in the current Catalog. for administrator-level authorization type, only * is allowed. for data connection-level authorization type, leave it blank. for other types, any function can be specified.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Function")]
         public string Function{ get; set; }
 
         /// <summary>
-        /// The name of the target view. `*` represents all views in the current database. To grant admin permissions, it must be `*`; to grant data connection and database permissions, it must be null; to grant other permissions, it can be any view.
+        /// Authorization is required for the view. fill in * to represent all views under the current Database. when the authorization type is administrator level, only * is allowed. when the authorization type is data connection level or Database level, only blank is allowed. for other types, any view can be specified.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("View")]
         public string View{ get; set; }
 
         /// <summary>
-        /// The name of the target column. `*` represents all columns. To grant admin permissions, it must be `*`.
+        /// Columns requiring authorization. use * to represent all current columns. when the authorization type is administrator level, only * is allowed.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Column")]
         public string Column{ get; set; }
 
         /// <summary>
-        /// The name of the target data engine. `*` represents all engines. To grant admin permissions, it must be `*`.
+        /// The data engine requiring authorization. use * to represent all current engines. when the authorization type is administrator level, only * is allowed.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataEngine")]
@@ -138,6 +138,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
+        /// <summary>
+        /// Specifies the engine type.
+        /// </summary>
+        [JsonProperty("EngineGeneration")]
+        public string EngineGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         }
     }
 }

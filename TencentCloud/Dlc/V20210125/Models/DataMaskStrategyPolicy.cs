@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cvm.V20170312.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GPUInfo : AbstractModel
+    public class DataMaskStrategyPolicy : AbstractModel
     {
         
         /// <summary>
-        /// Specifies the GPU count of the instance. a value less than 1 indicates VGPU type, and a value larger than 1 indicates GPU passthrough type.
+        /// Masking permission object.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GPUCount")]
-        public float? GPUCount{ get; set; }
+        [JsonProperty("PolicyInfo")]
+        public Policy PolicyInfo{ get; set; }
 
         /// <summary>
-        /// Specifies the GPU address of the instance.
+        /// Masking policy ID. specifies the ID of the data masking policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GPUId")]
-        public string[] GPUId{ get; set; }
+        [JsonProperty("DataMaskStrategyId")]
+        public string DataMaskStrategyId{ get; set; }
 
         /// <summary>
-        /// Specifies the GPU type of the instance.
+        /// Bound field type.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("GPUType")]
-        public string GPUType{ get; set; }
+        [JsonProperty("ColumnType")]
+        public string ColumnType{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GPUCount", this.GPUCount);
-            this.SetParamArraySimple(map, prefix + "GPUId.", this.GPUId);
-            this.SetParamSimple(map, prefix + "GPUType", this.GPUType);
+            this.SetParamObj(map, prefix + "PolicyInfo.", this.PolicyInfo);
+            this.SetParamSimple(map, prefix + "DataMaskStrategyId", this.DataMaskStrategyId);
+            this.SetParamSimple(map, prefix + "ColumnType", this.ColumnType);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("PackageConfs")]
         public SourcePackageConf[] PackageConfs{ get; set; }
 
+        /// <summary>
+        /// The sourcetag allows ADS to deliver more precise ads based on the Source Tag information
+        /// </summary>
+        [JsonProperty("SourceTags")]
+        public SourceTag[] SourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "PackageConfs.", this.PackageConfs);
+            this.SetParamArrayObj(map, prefix + "SourceTags.", this.SourceTags);
         }
     }
 }

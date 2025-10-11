@@ -31,7 +31,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Channel protocol. Valid values: HLS, DASH, CMAF.
+        /// Channel protocol. Valid values: HLS/DASH.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

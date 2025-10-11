@@ -34,6 +34,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// Offset, valid when Type is SpecifyTimeRange.
         /// </summary>
         [JsonProperty("Offset")]
+        [System.Obsolete]
         public ulong? Offset{ get; set; }
 
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1184</VersionPrefix>
+    <VersionPrefix>3.0.1221</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="V20200326\MdlClient.cs" />
     <Compile Include="V20200326\Models\AVTemplate.cs" />
+    <Compile Include="V20200326\Models\AbWatermarkSettingsReq.cs" />
     <Compile Include="V20200326\Models\AdditionalRateSetting.cs" />
     <Compile Include="V20200326\Models\AmazonS3Settings.cs" />
     <Compile Include="V20200326\Models\AttachedInput.cs" />

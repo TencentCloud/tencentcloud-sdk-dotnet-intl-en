@@ -48,6 +48,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("TextSettings")]
         public CreateTextSettings TextSettings{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AbWatermarkSettings")]
+        public AbWatermarkSettingsReq AbWatermarkSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "ImageSettings.", this.ImageSettings);
             this.SetParamObj(map, prefix + "TextSettings.", this.TextSettings);
+            this.SetParamObj(map, prefix + "AbWatermarkSettings.", this.AbWatermarkSettings);
         }
     }
 }

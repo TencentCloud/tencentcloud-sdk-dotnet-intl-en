@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Data disk type. For the detailed restrictions on the data disk type, refer to [Storage Overview](https://cloud.tencent.com/document/product/213/4952). Valid values: <br /><li>LOCAL_BASIC: Local Disk <br /><li>LOCAL_SSD: Local SSD <br /><li>LOCAL_NVME: Local NVMe Disk, which is strongly related with InstanceType and can not be specified <br /><li>LOCAL_PRO: Local HDD, which is strongly related with InstanceType and can not be specified <br /><li>CLOUD_BASIC: Basic Cloud Disk <br /><li>CLOUD_PREMIUM: Premium Disk <br /><li>CLOUD_SSD: Cloud SSD <br /><li>CLOUD_HSSD: Enhanced SSD <br /><li>CLOUD_TSSD: Tremendous SSD <br /><li>CLOUD_BSSD: Balanced SSD <br /><br />Default value: LOCAL_BASIC. <br /><br />This parameter is invalid for the `ResizeInstanceDisk` API.</li></li></li> </li> </li></li></li></li></li></li>
+        /// Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.comom/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -62,30 +62,33 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? Encrypt{ get; set; }
 
         /// <summary>
-        /// Custom CMK's corresponding ID, with a value of UUID or something similar to kms - abcd1234. used for encrypting cloud disks.
+        /// Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
         /// 
         /// This parameter is currently only used for the `RunInstances` api.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// Specifies the cloud disk performance (unit: MiB/s). using this parameter allows you to purchase additional performance for the cloud disk.
-        /// Currently only supports ultra-fast CLOUD disk (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+        /// Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+        /// Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public long? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// Specifies the exclusive cluster ID it belongs to.
+        /// Specifies the dedicated cluster ID belonging to.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// Burst performance.
+        /// Burstable performance.
         /// 
-        /// <B>Note: this feature is in beta test.</b>.
+        /// <B>Note: this field is in beta test.</b>.
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }

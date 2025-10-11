@@ -40,8 +40,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Specifies the system disk ID.
-        /// This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+        /// System disk ID.
+        /// Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
@@ -53,7 +53,8 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Specifies the exclusive cluster ID it belongs to.
+        /// Specifies the dedicated cluster ID belonging to.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
