@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.intl.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -684,6 +684,27 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// This API is used to delete a data masking policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDataMaskStrategyResponse"/></returns>
+        public Task<DeleteDataMaskStrategyResponse> DeleteDataMaskStrategy(DeleteDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to delete a data masking policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="DeleteDataMaskStrategyResponse"/></returns>
+        public DeleteDataMaskStrategyResponse DeleteDataMaskStrategySync(DeleteDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteDataMaskStrategyResponse>(req, "DeleteDataMaskStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a Spark job.
         /// </summary>
         /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
@@ -995,6 +1016,27 @@ namespace TencentCloud.Dlc.V20210125
         public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetailSync(DescribeDataEnginesScaleDetailRequest req)
         {
             return InternalRequestAsync<DescribeDataEnginesScaleDetailResponse>(req, "DescribeDataEnginesScaleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the DMask list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataMaskStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeDataMaskStrategiesResponse"/></returns>
+        public Task<DescribeDataMaskStrategiesResponse> DescribeDataMaskStrategies(DescribeDataMaskStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataMaskStrategiesResponse>(req, "DescribeDataMaskStrategies");
+        }
+
+        /// <summary>
+        /// This API is used to query the DMask list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataMaskStrategiesRequest"/></param>
+        /// <returns><see cref="DescribeDataMaskStrategiesResponse"/></returns>
+        public DescribeDataMaskStrategiesResponse DescribeDataMaskStrategiesSync(DescribeDataMaskStrategiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDataMaskStrategiesResponse>(req, "DescribeDataMaskStrategies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2213,6 +2255,27 @@ namespace TencentCloud.Dlc.V20210125
         public UpdateDataEngineConfigResponse UpdateDataEngineConfigSync(UpdateDataEngineConfigRequest req)
         {
             return InternalRequestAsync<UpdateDataEngineConfigResponse>(req, "UpdateDataEngineConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="UpdateDataMaskStrategyResponse"/></returns>
+        public Task<UpdateDataMaskStrategyResponse> UpdateDataMaskStrategy(UpdateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<UpdateDataMaskStrategyResponse>(req, "UpdateDataMaskStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to update the DMask policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataMaskStrategyRequest"/></param>
+        /// <returns><see cref="UpdateDataMaskStrategyResponse"/></returns>
+        public UpdateDataMaskStrategyResponse UpdateDataMaskStrategySync(UpdateDataMaskStrategyRequest req)
+        {
+            return InternalRequestAsync<UpdateDataMaskStrategyResponse>(req, "UpdateDataMaskStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -49,7 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+        /// Recording type. Valid values: 
+        /// 
+        /// - video: audio and video recording; 
+        /// - audio: audio recording; 
+        /// - auto: automatic detection;
+        /// 
+        /// If it is left blank, "video" will be used as the default value.
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }

@@ -30,6 +30,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("StaticImageSettings")]
         public StaticImageSettings StaticImageSettings{ get; set; }
 
+        /// <summary>
+        /// Dynamic graphic overlay configuration.
+        /// </summary>
+        [JsonProperty("MotionGraphicsSettings")]
+        public MotionGraphicsSetting MotionGraphicsSettings{ get; set; }
+
+        /// <summary>
+        /// Thumbnail Configuration.
+        /// </summary>
+        [JsonProperty("ThumbnailSettings")]
+        public ThumbnailSettings ThumbnailSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "StaticImageSettings.", this.StaticImageSettings);
+            this.SetParamObj(map, prefix + "MotionGraphicsSettings.", this.MotionGraphicsSettings);
+            this.SetParamObj(map, prefix + "ThumbnailSettings.", this.ThumbnailSettings);
         }
     }
 }

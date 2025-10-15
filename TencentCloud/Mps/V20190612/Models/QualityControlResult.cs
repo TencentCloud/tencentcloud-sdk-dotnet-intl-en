@@ -25,23 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The issue type. Valid values:
-        /// `Jitter`
-        /// `Blur`
-        /// `LowLighting`
-        /// `HighLighting` (overexposure)
-        /// `CrashScreen` (video corruption)
-        /// `BlackWhiteEdge`
-        /// `SolidColorScreen` (blank screen)
-        /// `Noise`
-        /// `Mosaic` (pixelation)
-        /// `QRCode`
-        /// `AppletCode` (Weixin Mini Program code)
-        /// `BarCode`
-        /// `LowVoice`
-        /// `HighVoice`
-        /// `NoVoice`
-        /// `LowEvaluation` (low no-reference video quality score)
+        /// Exception type. valid values:.
+        /// Jitter: jitter.
+        /// Blur: specifies the blur effect.
+        /// LowLighting: specifies low light.
+        /// HighLighting: overexposure.
+        /// CrashScreen: specifies screen glitch.
+        /// BlackWhiteEdge: specifies the black and white edges.
+        /// SolidColorScreen: specifies the solid color screen.
+        /// Noise: specifies the noise.
+        /// Mosaic: mosaic.
+        /// QRCode: specifies the qr code.
+        /// AppletCode: specifies the mini program code.
+        /// BarCode: specifies the barcode.
+        /// LowVoice: specifies the bass.
+        /// HighVoice: specifies high voice detection.
+        /// NoVoice: specifies mute.
+        /// LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
+        /// AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
+        /// AudioNoise: specifies the audio noise.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

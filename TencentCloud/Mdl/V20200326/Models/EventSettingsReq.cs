@@ -90,6 +90,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("StaticImageDeactivateSetting")]
         public StaticImageDeactivateSetting StaticImageDeactivateSetting{ get; set; }
 
+        /// <summary>
+        /// Dynamic graphic overlay activate configuration
+        /// </summary>
+        [JsonProperty("MotionGraphicsActivateSetting")]
+        public MotionGraphicsActivateSetting MotionGraphicsActivateSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "TimedMetadataSetting.", this.TimedMetadataSetting);
             this.SetParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
             this.SetParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
+            this.SetParamObj(map, prefix + "MotionGraphicsActivateSetting.", this.MotionGraphicsActivateSetting);
         }
     }
 }

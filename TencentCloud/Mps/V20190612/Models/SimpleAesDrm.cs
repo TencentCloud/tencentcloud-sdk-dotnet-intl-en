@@ -32,15 +32,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Uri{ get; set; }
 
         /// <summary>
-        /// The encryption key (a 32-byte string).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Encryption key (32-byte hexadecimal string).
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// The initialization vector for encryption (a 32-byte string).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Initialization vector for encryption (32-byte hexadecimal string).
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

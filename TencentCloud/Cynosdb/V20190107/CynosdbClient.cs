@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1185";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -386,6 +386,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CreateClustersResponse CreateClustersSync(CreateClustersRequest req)
         {
             return InternalRequestAsync<CreateClustersResponse>(req, "CreateClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a newly purchased cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrateClusterRequest"/></param>
+        /// <returns><see cref="CreateIntegrateClusterResponse"/></returns>
+        public Task<CreateIntegrateClusterResponse> CreateIntegrateCluster(CreateIntegrateClusterRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrateClusterResponse>(req, "CreateIntegrateCluster");
+        }
+
+        /// <summary>
+        /// This API is used to create a newly purchased cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateIntegrateClusterRequest"/></param>
+        /// <returns><see cref="CreateIntegrateClusterResponse"/></returns>
+        public CreateIntegrateClusterResponse CreateIntegrateClusterSync(CreateIntegrateClusterRequest req)
+        {
+            return InternalRequestAsync<CreateIntegrateClusterResponse>(req, "CreateIntegrateCluster")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1226,6 +1247,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameClusterSync(DescribeInstancesWithinSameClusterRequest req)
         {
             return InternalRequestAsync<DescribeInstancesWithinSameClusterResponse>(req, "DescribeInstancesWithinSameCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query cluster tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrateTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrateTaskResponse"/></returns>
+        public Task<DescribeIntegrateTaskResponse> DescribeIntegrateTask(DescribeIntegrateTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeIntegrateTaskResponse>(req, "DescribeIntegrateTask");
+        }
+
+        /// <summary>
+        /// This API is used to query cluster tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIntegrateTaskRequest"/></param>
+        /// <returns><see cref="DescribeIntegrateTaskResponse"/></returns>
+        public DescribeIntegrateTaskResponse DescribeIntegrateTaskSync(DescribeIntegrateTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeIntegrateTaskResponse>(req, "DescribeIntegrateTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

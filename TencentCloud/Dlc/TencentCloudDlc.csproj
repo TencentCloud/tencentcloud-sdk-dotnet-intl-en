@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1221</VersionPrefix>
+    <VersionPrefix>3.0.1223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,12 +128,15 @@
     <Compile Include="V20210125\Models\DataEngineScaleInfo.cs" />
     <Compile Include="V20210125\Models\DataEngineScaleInfoDetail.cs" />
     <Compile Include="V20210125\Models\DataGovernPolicy.cs" />
+    <Compile Include="V20210125\Models\DataMaskStrategy.cs" />
     <Compile Include="V20210125\Models\DataMaskStrategyInfo.cs" />
     <Compile Include="V20210125\Models\DataMaskStrategyPolicy.cs" />
     <Compile Include="V20210125\Models\DeleteCHDFSBindingProductRequest.cs" />
     <Compile Include="V20210125\Models\DeleteCHDFSBindingProductResponse.cs" />
     <Compile Include="V20210125\Models\DeleteDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\DeleteDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\DeleteDataMaskStrategyRequest.cs" />
+    <Compile Include="V20210125\Models\DeleteDataMaskStrategyResponse.cs" />
     <Compile Include="V20210125\Models\DeleteSparkAppRequest.cs" />
     <Compile Include="V20210125\Models\DeleteSparkAppResponse.cs" />
     <Compile Include="V20210125\Models\DeleteThirdPartyAccessUserRequest.cs" />
@@ -164,6 +167,8 @@
     <Compile Include="V20210125\Models\DescribeDataEngineResponse.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesScaleDetailRequest.cs" />
     <Compile Include="V20210125\Models\DescribeDataEnginesScaleDetailResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeDataMaskStrategiesRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeDataMaskStrategiesResponse.cs" />
     <Compile Include="V20210125\Models\DescribeEngineUsageInfoRequest.cs" />
     <Compile Include="V20210125\Models\DescribeEngineUsageInfoResponse.cs" />
     <Compile Include="V20210125\Models\DescribeForbiddenTableProRequest.cs" />
@@ -325,6 +330,8 @@
     <Compile Include="V20210125\Models\UpdateDataEngineConfigResponse.cs" />
     <Compile Include="V20210125\Models\UpdateDataEngineRequest.cs" />
     <Compile Include="V20210125\Models\UpdateDataEngineResponse.cs" />
+    <Compile Include="V20210125\Models\UpdateDataMaskStrategyRequest.cs" />
+    <Compile Include="V20210125\Models\UpdateDataMaskStrategyResponse.cs" />
     <Compile Include="V20210125\Models\UpdateRowFilterRequest.cs" />
     <Compile Include="V20210125\Models\UpdateRowFilterResponse.cs" />
     <Compile Include="V20210125\Models\UpdateUserDataEngineConfigRequest.cs" />

@@ -49,6 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }
 
+        /// <summary>
+        /// Output format of the subtitle. valid values: "WebVTT", "TTML".
+        /// Default value: "WebVTT".
+        /// </summary>
+        [JsonProperty("OutputFormat")]
+        public string OutputFormat{ get; set; }
+
+        /// <summary>
+        /// Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
+        /// Default value: `false`.
+        /// </summary>
+        [JsonProperty("DefaultTrack")]
+        public bool? DefaultTrack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
             this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+            this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }
     }
 }

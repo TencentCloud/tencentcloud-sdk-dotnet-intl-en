@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1221</VersionPrefix>
+    <VersionPrefix>3.0.1223</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,8 @@
     <Compile Include="V20200326\Models\ModifyStreamLiveInputSecurityGroupResponse.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveWatermarkRequest.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveWatermarkResponse.cs" />
+    <Compile Include="V20200326\Models\MotionGraphicsActivateSetting.cs" />
+    <Compile Include="V20200326\Models\MotionGraphicsSetting.cs" />
     <Compile Include="V20200326\Models\OutputInfo.cs" />
     <Compile Include="V20200326\Models\OutputsStatistics.cs" />
     <Compile Include="V20200326\Models\PipelineInputSettingsInfo.cs" />
@@ -195,6 +197,7 @@
     <Compile Include="V20200326\Models\SubtitleConf.cs" />
     <Compile Include="V20200326\Models\SubtitleFontConf.cs" />
     <Compile Include="V20200326\Models\Tag.cs" />
+    <Compile Include="V20200326\Models\ThumbnailSettings.cs" />
     <Compile Include="V20200326\Models\TimeShiftSettingsInfo.cs" />
     <Compile Include="V20200326\Models\TimedMetadataInfo.cs" />
     <Compile Include="V20200326\Models\TimedMetadataSettingInfo.cs" />

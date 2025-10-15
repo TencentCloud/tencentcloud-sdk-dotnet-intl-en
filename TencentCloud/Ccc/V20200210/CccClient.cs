@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -570,6 +570,27 @@ namespace TencentCloud.Ccc.V20200210
         public DeleteStaffResponse DeleteStaffSync(DeleteStaffRequest req)
         {
             return InternalRequestAsync<DeleteStaffResponse>(req, "DeleteStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain AI Conversation Analytics results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisResultRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisResultResponse"/></returns>
+        public Task<DescribeAIAnalysisResultResponse> DescribeAIAnalysisResult(DescribeAIAnalysisResultRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisResultResponse>(req, "DescribeAIAnalysisResult");
+        }
+
+        /// <summary>
+        /// This API is used to obtain AI Conversation Analytics results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAnalysisResultRequest"/></param>
+        /// <returns><see cref="DescribeAIAnalysisResultResponse"/></returns>
+        public DescribeAIAnalysisResultResponse DescribeAIAnalysisResultSync(DescribeAIAnalysisResultRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAnalysisResultResponse>(req, "DescribeAIAnalysisResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

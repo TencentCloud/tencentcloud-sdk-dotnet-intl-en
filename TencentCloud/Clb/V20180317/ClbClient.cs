@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.intl.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1223";
 
         /// <summary>
         /// Client constructor.
@@ -383,8 +383,8 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DeleteLoadBalancer) is used to delete one or more specified CLB instances.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to delete one or more specified CLB instances. After successful deletion, the listeners and forwarding rules under the CLB instance will be deleted together, and the backend service will be unbound.
+        /// This API is asynchronous. After it returns the result successfully, you can call the [DescribeTaskStatus](https://www.tencentcloud.comom/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
@@ -394,8 +394,8 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (DeleteLoadBalancer) is used to delete one or more specified CLB instances.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This API is used to delete one or more specified CLB instances. After successful deletion, the listeners and forwarding rules under the CLB instance will be deleted together, and the backend service will be unbound.
+        /// This API is asynchronous. After it returns the result successfully, you can call the [DescribeTaskStatus](https://www.tencentcloud.comom/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
@@ -522,7 +522,7 @@ namespace TencentCloud.Clb.V20180317
         /// <br/>Limits: 
         /// 
         /// - Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
-        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1).
+        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. 
         /// - SCF functions cannot be bound with classic CLB instances.
         /// - SCF functions cannot be bound with classic network-based CLB instances.
         /// - SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
@@ -543,7 +543,7 @@ namespace TencentCloud.Clb.V20180317
         /// <br/>Limits: 
         /// 
         /// - Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
-        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1).
+        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. 
         /// - SCF functions cannot be bound with classic CLB instances.
         /// - SCF functions cannot be bound with classic network-based CLB instances.
         /// - SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
@@ -1673,7 +1673,7 @@ namespace TencentCloud.Clb.V20180317
         /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.<br/>
         /// **Limits:**
         /// - Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
-        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1). 
+        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. 
         /// - SCF functions cannot be bound with classic CLB instances.
         /// - SCF functions cannot be bound with classic network-based CLB instances.
         /// - SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
@@ -1693,7 +1693,7 @@ namespace TencentCloud.Clb.V20180317
         /// This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.<br/>
         /// **Limits:**
         /// - Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
-        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1). 
+        /// - SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. 
         /// - SCF functions cannot be bound with classic CLB instances.
         /// - SCF functions cannot be bound with classic network-based CLB instances.
         /// - SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.

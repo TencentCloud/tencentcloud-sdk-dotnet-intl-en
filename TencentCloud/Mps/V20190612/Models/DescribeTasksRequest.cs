@@ -25,10 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+        /// Filters task status. available values:.
+        /// -WAITING.
+        /// -PROCESSING (processing).
+        /// -FINISH (completed).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// Indicates whether there is a subtask failure when the task is complete.
+        /// </summary>
+        [JsonProperty("SubTaskHasFailed")]
+        public bool? SubTaskHasFailed{ get; set; }
 
         /// <summary>
         /// Number of returned entries. Default value: 10. Maximum value: 100.
@@ -61,6 +70,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SubTaskHasFailed", this.SubTaskHasFailed);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

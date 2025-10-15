@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// Encryption initialization vector (32-byte string). the field content is user-customized.
+        /// Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }
