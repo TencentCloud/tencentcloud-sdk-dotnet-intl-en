@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID list, with the array length ranging from 0 to 100, for example, ["crs-f2ho5rsz\n"].
+        /// Instance ID list. The array length limit is [0, 100]. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

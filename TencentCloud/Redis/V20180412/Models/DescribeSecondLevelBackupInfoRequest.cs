@@ -25,13 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Specifies the instance ID. For example, crs-xjhsdj****. Log in to the TencentDB for Redis® console and copy the instance ID from the instance list.
+        /// Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Second-level backup timestamp. The corresponding time should be within the last 7 days.
+        /// Second-level backup timestamp.
+        /// - Setting range: support any second-level time point within 7 days.
+        /// - Timestamp format: UNIX timestamp.
         /// </summary>
         [JsonProperty("BackupTimestamp")]
         public long? BackupTimestamp{ get; set; }

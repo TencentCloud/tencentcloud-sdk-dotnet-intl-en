@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Replication group ID.
+        /// Replication group ID. Log in to the [Redis console and go to the global replication](https://console.cloud.tencent.com/redis/replication) page to obtain the ID.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

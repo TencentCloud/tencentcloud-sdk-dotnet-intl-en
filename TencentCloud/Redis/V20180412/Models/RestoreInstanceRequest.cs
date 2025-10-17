@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+        /// ID of the instance to be operated, which can be obtained through the response parameter InstanceId of the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+        /// Backup ID, which can be obtained through the response parameter RedisBackupSet of the [DescribeInstanceBackups](https://www.tencentcloud.comom/document/product/239/20011?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of entries per page
+        /// Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+        /// Pagination offset, which is an integer multiple of Limit. Offset = Limit x (Page number – 1). The default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

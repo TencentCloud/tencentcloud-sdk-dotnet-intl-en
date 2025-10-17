@@ -55,18 +55,24 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// The read/write permission of the account supports the selection of read-only and read/write permissions.
-        /// - r: read-only
-        /// - rw: Read/Write permission.
+        /// Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
+        /// - r: read-only.
+        /// - rw: read-write.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Sub-account description information, with a length of [0, 64] bytes, supports Chinese characters.
+        /// Description information about account remarks, with a length of [0, 64] bytes.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Whether to encrypt the password.
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
 
 
         /// <summary>
@@ -80,6 +86,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

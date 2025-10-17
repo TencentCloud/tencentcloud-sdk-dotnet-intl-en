@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance to be deisolated from the recycle bin.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

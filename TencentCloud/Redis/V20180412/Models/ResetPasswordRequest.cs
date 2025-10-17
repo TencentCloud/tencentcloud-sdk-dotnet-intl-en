@@ -31,18 +31,29 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Reset password. This parameter can be left blank when a password-free instance is used. It is required in other cases.
+        /// Reset password. This parameter can be left unspecified when a password-free instance is used.
+        /// - It should contain 8 to 32 characters. 12 or more characters are recommended.
+        /// - It cannot start with a forward slash (/).
+        /// - It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()~!@#$%^&*-+=_|{}[]:;<>,.?/).
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
         /// Whether to switch to a password-free instance.
-        /// - false: Switch to a non-password-free instance.
-        /// - true: Switch to a password-free instance. Default value: false.
+        /// - false: switch to an instance that requires a password. The default value is false.
+        /// - true: switch to a password-free instance.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
+
+        /// <summary>
+        /// Whether to encrypt the password.
+        /// - false: non-encrypted password. The default value is false.
+        /// - true: encrypted password.
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
 
 
         /// <summary>
@@ -53,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

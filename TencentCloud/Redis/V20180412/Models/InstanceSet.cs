@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// App ID of a user, which is an application ID that uniquely corresponds to the account ID. Some Tencent Cloud products use this app ID.
+        /// App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
@@ -235,6 +235,8 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Read weight of a secondary node.
+        /// - 0: disable read-only replicas.
+        /// - 100: enable read-only replicas.
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }
@@ -403,6 +405,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
+        /// <summary>
+        /// Deletion protection switch. 0: disabled; 1: enabled.
+        /// </summary>
+        [JsonProperty("DeleteProtectionSwitch")]
+        public long? DeleteProtectionSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -469,6 +477,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
             this.SetParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
             this.SetParamSimple(map, prefix + "BackupMode", this.BackupMode);
+            this.SetParamSimple(map, prefix + "DeleteProtectionSwitch", this.DeleteProtectionSwitch);
         }
     }
 }

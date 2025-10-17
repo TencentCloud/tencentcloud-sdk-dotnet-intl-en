@@ -25,15 +25,15 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID, which can contain 12 to 36 characters.
+        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Backup mode:
-        ///  - SecondLevelBackup: second-level backup.
-        ///  - NormalLevelBackup: ordinary backup.
+        /// - SecondLevelBackup: second-level backup.
+        /// - NormalLevelBackup: ordinary backup.
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }

@@ -33,8 +33,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// <summary>
         /// Read-only routing policy.
         /// - master: read-only routing to the primary node.
-        /// - replication: read-only routing to the secondary node.
-        /// - Default policy: writing to the primary node and reading from the secondary node.
+        /// - replication: read-only routing to the secondary node. The default value is replication.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }

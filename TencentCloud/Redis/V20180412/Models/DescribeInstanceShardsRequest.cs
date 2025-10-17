@@ -31,7 +31,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to filter out the replica node information. Valid values: `true` (yes),  `false` (no).
+        /// Specifies whether to filter out secondary node information.
+        /// - true: filter out secondary nodes.
+        /// - false: filtering not required. The default value is false.
         /// </summary>
         [JsonProperty("FilterSlave")]
         public bool? FilterSlave{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of instances returned per page. Default value: `20`.
+        /// Size of the output instance list per page. The value is a positive integer greater than 0, and the default value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

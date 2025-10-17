@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Parameter template name.
+        /// Parameter template name, which can contain [2, 64] characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -38,7 +38,6 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Product type.
-        /// - 2: Redis 2.8 Memory Edition (standard architecture).
         /// - 6: Redis 4.0 Memory Edition (standard architecture).
         /// - 7: Redis 4.0 Memory Edition (cluster architecture).
         /// - 8: Redis 5.0 Memory Edition (standard architecture).

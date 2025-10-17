@@ -31,7 +31,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Additional bandwidth in MB, which should be greater than 0.
+        /// Additional bandwidth, in MB, which should be greater than 0.
+        /// **Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
@@ -40,6 +41,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Total number of connections per shard.
         /// - When read-only replicas are not enabled, the lower limit is 10,000 and the upper limit is 40,000.
         /// - When read-only replicas are enabled, the lower limit is 10,000, and the upper limit is calculated as follows: 10,000 x (Number of read-only replicas + 3).
+        /// **Note**: The Bandwidth and ClientLimit parameters cannot be empty simultaneously. You should select at least one of them for configuration.
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.intl.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1193";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -600,7 +600,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the information of an instance sub-account.
+        /// This API is used to view instance account information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -610,7 +610,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the information of an instance sub-account.
+        /// This API is used to view instance account information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAccountRequest"/></param>
         /// <returns><see cref="DescribeInstanceAccountResponse"/></returns>
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the second-level backup information on an instance.
+        /// This API is used to query second-level backup information for the instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
         /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to query the second-level backup information on an instance.
+        /// This API is used to query second-level backup information for the instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecondLevelBackupInfoRequest"/></param>
         /// <returns><see cref="DescribeSecondLevelBackupInfoResponse"/></returns>
@@ -1755,7 +1755,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify the instance sub-account.
+        /// This API is used to modify an instance account.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
@@ -1765,7 +1765,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify the instance sub-account.
+        /// This API is used to modify an instance account.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceAccountRequest"/></param>
         /// <returns><see cref="ModifyInstanceAccountResponse"/></returns>
@@ -1797,7 +1797,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify the instance backup mode.
+        /// This API is used to modify the backup mode of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
         /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>
@@ -1807,7 +1807,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to modify the instance backup mode.
+        /// This API is used to modify the backup mode of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBackupModeRequest"/></param>
         /// <returns><see cref="ModifyInstanceBackupModeResponse"/></returns>

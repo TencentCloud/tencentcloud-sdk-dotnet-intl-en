@@ -37,7 +37,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of shards. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+        /// Number of shards.
+        /// - The instance adopts the standard architecture. The default value of RedisShardNum is 1.
+        /// - This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }

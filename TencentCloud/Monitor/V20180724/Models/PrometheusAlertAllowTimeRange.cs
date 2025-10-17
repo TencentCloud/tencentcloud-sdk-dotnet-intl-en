@@ -15,20 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DestroyPostpaidInstanceRequest : AbstractModel
+    public class PrometheusAlertAllowTimeRange : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the pay-as-you-go instance ID from the instance list.
+        /// Seconds from 00:00:00.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Start")]
+        public string Start{ get; set; }
+
+        /// <summary>
+        /// Seconds from 00:00:00.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("End")]
+        public string End{ get; set; }
 
 
         /// <summary>
@@ -36,7 +44,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Start", this.Start);
+            this.SetParamSimple(map, prefix + "End", this.End);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.intl.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1224";
 
         /// <summary>
         /// Client constructor.
@@ -327,6 +327,33 @@ namespace TencentCloud.Monitor.V20180724
         public CreatePrometheusAgentResponse CreatePrometheusAgentSync(CreatePrometheusAgentRequest req)
         {
             return InternalRequestAsync<CreatePrometheusAgentResponse>(req, "CreatePrometheusAgent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus alert rule groups.
+        /// 
+        /// This API is used to group alert rules, which can include multiple alert rules. Alert messages within the group are sent via the alert group's notification template.
+        /// This API is used to enable individually creating enabled/disabled alert rules under an alert group.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertGroupResponse"/></returns>
+        public Task<CreatePrometheusAlertGroupResponse> CreatePrometheusAlertGroup(CreatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusAlertGroupResponse>(req, "CreatePrometheusAlertGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create a Prometheus alert rule groups.
+        /// 
+        /// This API is used to group alert rules, which can include multiple alert rules. Alert messages within the group are sent via the alert group's notification template.
+        /// This API is used to enable individually creating enabled/disabled alert rules under an alert group.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertGroupResponse"/></returns>
+        public CreatePrometheusAlertGroupResponse CreatePrometheusAlertGroupSync(CreatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<CreatePrometheusAlertGroupResponse>(req, "CreatePrometheusAlertGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -730,6 +757,27 @@ namespace TencentCloud.Monitor.V20180724
         public DeletePolicyGroupResponse DeletePolicyGroupSync(DeletePolicyGroupRequest req)
         {
             return InternalRequestAsync<DeletePolicyGroupResponse>(req, "DeletePolicyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete Prometheus alert rule groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertGroupsResponse"/></returns>
+        public Task<DeletePrometheusAlertGroupsResponse> DeletePrometheusAlertGroups(DeletePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DeletePrometheusAlertGroupsResponse>(req, "DeletePrometheusAlertGroups");
+        }
+
+        /// <summary>
+        /// This API is used to delete Prometheus alert rule groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertGroupsResponse"/></returns>
+        public DeletePrometheusAlertGroupsResponse DeletePrometheusAlertGroupsSync(DeletePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DeletePrometheusAlertGroupsResponse>(req, "DeletePrometheusAlertGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1616,6 +1664,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribePrometheusAgentsResponse DescribePrometheusAgentsSync(DescribePrometheusAgentsRequest req)
         {
             return InternalRequestAsync<DescribePrometheusAgentsResponse>(req, "DescribePrometheusAgents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query alarm groups under a given prometheus.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertGroupsResponse"/></returns>
+        public Task<DescribePrometheusAlertGroupsResponse> DescribePrometheusAlertGroups(DescribePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertGroupsResponse>(req, "DescribePrometheusAlertGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query alarm groups under a given prometheus.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusAlertGroupsRequest"/></param>
+        /// <returns><see cref="DescribePrometheusAlertGroupsResponse"/></returns>
+        public DescribePrometheusAlertGroupsResponse DescribePrometheusAlertGroupsSync(DescribePrometheusAlertGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribePrometheusAlertGroupsResponse>(req, "DescribePrometheusAlertGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3005,6 +3074,48 @@ namespace TencentCloud.Monitor.V20180724
         public UpdatePrometheusAgentStatusResponse UpdatePrometheusAgentStatusSync(UpdatePrometheusAgentStatusRequest req)
         {
             return InternalRequestAsync<UpdatePrometheusAgentStatusResponse>(req, "UpdatePrometheusAgentStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update Prometheus alert rule groups.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupResponse"/></returns>
+        public Task<UpdatePrometheusAlertGroupResponse> UpdatePrometheusAlertGroup(UpdatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupResponse>(req, "UpdatePrometheusAlertGroup");
+        }
+
+        /// <summary>
+        /// This API is used to update Prometheus alert rule groups.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupResponse"/></returns>
+        public UpdatePrometheusAlertGroupResponse UpdatePrometheusAlertGroupSync(UpdatePrometheusAlertGroupRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupResponse>(req, "UpdatePrometheusAlertGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch update the status of alarm groups and set all rules grouped in them to the target status.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupStateRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupStateResponse"/></returns>
+        public Task<UpdatePrometheusAlertGroupStateResponse> UpdatePrometheusAlertGroupState(UpdatePrometheusAlertGroupStateRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupStateResponse>(req, "UpdatePrometheusAlertGroupState");
+        }
+
+        /// <summary>
+        /// This API is used to batch update the status of alarm groups and set all rules grouped in them to the target status.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePrometheusAlertGroupStateRequest"/></param>
+        /// <returns><see cref="UpdatePrometheusAlertGroupStateResponse"/></returns>
+        public UpdatePrometheusAlertGroupStateResponse UpdatePrometheusAlertGroupStateSync(UpdatePrometheusAlertGroupStateRequest req)
+        {
+            return InternalRequestAsync<UpdatePrometheusAlertGroupStateResponse>(req, "UpdatePrometheusAlertGroupState")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

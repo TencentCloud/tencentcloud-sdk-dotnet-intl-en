@@ -43,19 +43,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The average execution time threshold of slow query  in microseconds
+        /// Average execution time threshold for slow queries, in milliseconds. The value is a positive integer greater than 0
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// Number of slow query logs displayed per page. Default value: 20. Maximum value: 100.
+        /// Number of slow query results displayed per page. The default value is 20, the minimum value is 1, and the maximum value is 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Slow query offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+        /// Offset of the number of slow queries. The value is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

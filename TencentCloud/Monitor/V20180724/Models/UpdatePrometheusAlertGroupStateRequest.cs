@@ -15,28 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeVersionToMultiAvailabilityZonesRequest : AbstractModel
+    public class UpdatePrometheusAlertGroupStateRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
+        /// TMP instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies whether the nearby access feature is supported after an upgrade to multi-AZ.
-        /// - true: support the nearby access feature. The upgrade process requires simultaneous upgrades of the proxy version and Redis kernel minor version, which involves data migration and may take several hours.
-        /// - false: no need to support the nearby access feature. Upgrade to multi-AZ only involves metadata migration management, with no impact on the service. The upgrade process is usually completed within 3 minutes, and the default value is false.
+        /// Alarm group ID list, such as alert-xxxx.
         /// </summary>
-        [JsonProperty("UpgradeProxyAndRedisServer")]
-        public bool? UpgradeProxyAndRedisServer{ get; set; }
+        [JsonProperty("GroupIds")]
+        public string[] GroupIds{ get; set; }
+
+        /// <summary>
+        /// Describes the group status of the alarm.
+        /// 2 - enable.
+        /// 3 - disabled.
+        /// </summary>
+        [JsonProperty("GroupState")]
+        public long? GroupState{ get; set; }
 
 
         /// <summary>
@@ -45,7 +51,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UpgradeProxyAndRedisServer", this.UpgradeProxyAndRedisServer);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "GroupState", this.GroupState);
         }
     }
 }

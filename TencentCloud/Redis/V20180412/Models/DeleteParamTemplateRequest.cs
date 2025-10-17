@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Parameter template ID.
+        /// Parameter template ID. Log in to the [Redis console and go to the parameter template page](https://console.cloud.tencent.com/redis/templates) to obtain the template ID.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

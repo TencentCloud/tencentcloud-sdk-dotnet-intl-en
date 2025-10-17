@@ -15,33 +15,46 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyMaintenanceWindowRequest : AbstractModel
+    public class DescribePrometheusAlertGroupsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// prometheus instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time of the maintenance window, for example, 17:00.
+        /// Number of returned results. defaults to 20. maximum value is 100.
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// End time of the maintenance window, for example, 19:00.
-        /// **Note:** Maintenance window duration. Valid values: 30 minutes, 1 hour, 1.5 hours, 2 hours, and 3 hours.
+        /// Offset. default value: 0.
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Alert group ID, such as alert-xxxx.
+        /// List the alert group with the given ID.
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// Specifies the alert group name.
+        /// List alert groups which name contains the given string.
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
 
 
         /// <summary>
@@ -50,8 +63,10 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

@@ -25,16 +25,16 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Specify the instance ID.
-        ///  For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
-        /// Sample value: crs-asdasdas.
+        /// Specifies the instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Feature names.
-        /// - Read-local-node-only: Proximity access feature.- multi-account: Multiple accounts feature.
+        /// The features that support queries are as follows.
+        /// - read-local-node-only: nearby access.
+        /// - multi-account: multi-account management.
+        /// - auto-failback: fault recovery scenario, such as whether automatic failback is enabled for the primary node.
         /// </summary>
         [JsonProperty("FeatureName")]
         public string FeatureName{ get; set; }

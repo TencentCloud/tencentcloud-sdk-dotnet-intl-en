@@ -69,19 +69,22 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+        /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Number of instance shards. For the standard architecture of 2.8, the number of shards does not need to be configured. For the standard architecture of other versions, the number of shards should be set to 1. For the cluster architecture, the number of shards to be purchased needs to be specified.
+        /// Number of instance shards.
+        /// - The number of shards is required to be set to 1 for the standard architecture.
+        /// - The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Number of instance replicas. For the standard architecture of 2.8, the number of replicas does not need to be configured.
+        /// Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
@@ -95,7 +98,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+        /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Maximum number of results returned per page
+        /// Pagination size. The default value is 100, and the maximum value is 200.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integral multiple of `Limit`.
+        /// Offset, which is an integer multiple of Limit. Calculation formula: Offset = Limit x (Page number – 1). The default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

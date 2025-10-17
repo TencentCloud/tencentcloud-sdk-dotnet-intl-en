@@ -61,7 +61,7 @@ namespace TencentCloud.Quota.V20241204.Models
         public long? Frequency{ get; set; }
 
         /// <summary>
-        ///   Member UIN
+        ///   Member UIN.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }

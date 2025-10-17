@@ -57,7 +57,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Security group ID, which can be obtained on the <b>Security Group</b> page in the console.
+        /// Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }
@@ -149,6 +149,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("CloneTime")]
         public string CloneTime{ get; set; }
 
+        /// <summary>
+        /// Whether to encrypt the password.
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -175,6 +181,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
             this.SetParamSimple(map, prefix + "CloneTime", this.CloneTime);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

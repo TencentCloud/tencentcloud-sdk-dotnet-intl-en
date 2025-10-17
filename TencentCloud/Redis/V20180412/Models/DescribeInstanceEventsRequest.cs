@@ -43,13 +43,17 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of events displayed per page. Default value: 10. Maximum value: 100.
+        /// Outputs the number of events displayed per page.
+        /// - Default value: 10.
+        /// - Value range: [1, 100].
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Configures the page number for querying events. You can query events on a certain page by specifying PageNo and PageSize. Default value: 1.
+        /// Configures the output page number for querying events. You can query events on a certain page by specifying PageNo (page number) and PageSize (number of output results per page).
+        /// - Default value: 1.
+        /// - Value range: positive integers greater than 0.
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }

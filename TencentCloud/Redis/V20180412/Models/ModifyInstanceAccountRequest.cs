@@ -31,47 +31,55 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-account name. If you want to change it to the root account, fill in root.
+        /// Specifies the account that needs modification.
+        /// - root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
+        /// - Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Sub-account password.
+        /// Specifies the access password for the account to be modified.
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Sub-account description information
+        /// Account description information.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Account read/write routing policy.
-        /// - master: primary node.
-        /// - replication: secondary node.
+        /// Specifies the read-write request routing policies for the account to be modified.
+        /// - master: read-write request routing to the primary node.
+        /// - replication: read-write request routing to the secondary node.
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Sub-account read/write policy.
+        /// Specifies the read-write permissions for the account to be modified.
         /// - r: read-only.
         /// - w: write-only.
-        /// - rw: read/write.
+        /// - rw: read-write.
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Whether to switch the root account to a password-free account. This applies only to the root account. Sub-accounts do not support password-free access.
-        /// - true: Switch the root account to a password-free account.
-        /// - false: Do not switch it.
+        /// Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
+        /// - true: set the default account (root) to a password-free account.
+        /// - false: not set the default account (root) to a password-free account.
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to encrypt the password for the account to be modified.
+        /// </summary>
+        [JsonProperty("EncryptPassword")]
+        public bool? EncryptPassword{ get; set; }
 
 
         /// <summary>
@@ -86,6 +94,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
+            this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
         }
     }
 }

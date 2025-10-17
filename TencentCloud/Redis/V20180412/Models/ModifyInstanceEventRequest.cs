@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Event ID. Obtain the ID of the event to be modified using DescribeInstanceEvents.
+        /// Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }

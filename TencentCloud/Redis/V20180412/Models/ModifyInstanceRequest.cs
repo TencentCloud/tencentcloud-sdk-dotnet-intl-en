@@ -26,9 +26,10 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Instance modification operation. Valid values:
-        /// - rename: Rename the instance.
-        /// - modifyProject: Modify the project to which the instance belongs.
-        /// - modifyAutoRenew: Modify the instance renewal flag.
+        /// - rename: rename an instance.
+        /// - modifyProject: modify the project to which the instance belongs.
+        /// - modifyAutoRenew: modify the instance renewal flag.
+        /// - modifyDeleteProtectionSwitch: modify the instance deletion protection switch status.
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
@@ -40,7 +41,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// New name of the instance.
+        /// New name of the instance. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. The length can be up to 60 characters.
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
@@ -60,6 +61,12 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         [JsonProperty("AutoRenews")]
         public long?[] AutoRenews{ get; set; }
+
+        /// <summary>
+        /// Deletion protection switch. - 0: disabled by default; - 1: enabled.
+        /// </summary>
+        [JsonProperty("DeleteProtectionSwitches")]
+        public long?[] DeleteProtectionSwitches{ get; set; }
 
         /// <summary>
         /// This parameter is currently being deprecated and can still be used by existing users. It is recommended that new users use InstanceIds.
@@ -93,6 +100,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
+            this.SetParamArraySimple(map, prefix + "DeleteProtectionSwitches.", this.DeleteProtectionSwitches);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
