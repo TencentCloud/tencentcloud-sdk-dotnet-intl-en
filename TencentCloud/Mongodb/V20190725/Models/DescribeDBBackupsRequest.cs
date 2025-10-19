@@ -25,13 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+        /// Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup mode. Valid values: `0` (logical backup), `1` (physical backup), `2` (both modes). Default value: `0`.
+        /// Backup method.
+        /// - 0: logical backup.
+        /// - 1: physical backup.
+        /// - 3: snapshot backup.
+        /// **Note**:
+        /// 1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+        /// 2. Physical backup is not supported when storage encryption is enabled for the instance.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }

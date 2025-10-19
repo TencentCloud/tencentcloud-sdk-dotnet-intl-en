@@ -25,31 +25,44 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Order status. Valid values: 1 (unpaid), 2 (paid), 3 (delivering), 4 (delivered), 5 (delivery failed), 6 (refunded), 7 (order closed), 8 (order closed because it failed to be paid within timeout period).
+        /// Order status.
+        /// - 1: unpaid.
+        /// - 2: paid.
+        /// - 3: delivering.
+        /// - 4: delivered successfully.
+        /// - 5: delivery failed.
+        /// - 6: refund.
+        /// - 7: order closed.
+        /// - 8: closed due to unpaid timeout.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Original price of the order.
+        /// Original price of the order, in USD.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discounted price of the order.
+        /// Discount price of the order, in USD.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Operation performed by the order. Valid values: purchase, renew, upgrade, downgrade, refund.
+        /// Order operation behavior.
+        /// - purchase: newly purchased.
+        /// - renew: renewed.
+        /// - upgrade: configuration upgraded.
+        /// - downgrade: configuration downgraded.
+        /// - refund: return and refund.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Resource ID of the current order.
+        /// Instance ID of the current order.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -32,8 +32,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Sets the backup method.
-        ///  - 0: logical backup.
-        ///  - 1: physical backup.
+        /// - 0: logical backup.
+        /// - 1: physical backup.
+        /// - 3: snapshot backup.
+        /// **Note**:
+        /// 1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+        /// 2. Physical backup is not supported when storage encryption is enabled for the instance.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }

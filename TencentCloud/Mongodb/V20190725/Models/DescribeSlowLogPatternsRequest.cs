@@ -25,19 +25,23 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
+        /// Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+        /// Slow log start time.
+        /// - Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-01 10:00:00.
+        /// - The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
+        /// Slow log end time.
+        /// - Format: yyyy-mm-dd hh:mm:ss. For example, 2019-06-02 12:00:00.
+        /// - The query start and end time interval cannot exceed 24 hours. Only slow logs within the last 7 days can be queried.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

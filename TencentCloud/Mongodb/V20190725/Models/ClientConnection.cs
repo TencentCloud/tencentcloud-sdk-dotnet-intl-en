@@ -25,19 +25,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Client IP of a connection
+        /// IP address of the connected client.
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// Number of connections corresponding to a client IP
+        /// Number of connections corresponding to the client IP address.
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Whether it is the Tencent Cloud IP for automated testing
+        /// Whether it is an internal IP address.
         /// </summary>
         [JsonProperty("InternalService")]
         public bool? InternalService{ get; set; }

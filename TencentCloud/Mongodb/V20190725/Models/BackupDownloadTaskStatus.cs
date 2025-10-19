@@ -25,13 +25,18 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Shard name
+        /// Shard name.
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+        /// Current status of the task.
+        /// - 0: wait for execution.
+        /// - 1: downloading.
+        /// - 2: download completed.
+        /// - 3: download failed.
+        /// - 4: wait for retry.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -21,20 +21,20 @@ namespace TencentCloud.Mongodb.V20190725.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignProjectRequest : AbstractModel
+    public class SetDBInstanceDeletionProtectionRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+        /// Instance ID list, in the format of cmgo-p8vnipr5. It is the same as the format of the instance ID displayed on the TencentDB for MongoDB console page.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+        /// Instance termination protection switch. Valid values: 0 - disabled; 1 - enabled.
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
+        [JsonProperty("EnableDeletionProtection")]
+        public ulong? EnableDeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

@@ -25,25 +25,38 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID list. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+        /// Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Specifies the instance type for querying.<ul><li>0: all instances.</li><li>1: formal instance.</li><li>3: read-only instance.</li><li>4: disaster recovery instance.</li></ul>
+        /// Specifies the instance type for querying. Valid values:
+        /// - 0: all instances.
+        /// - 1: formal instance.
+        /// - 2: temporary instance.
+        /// - 3: read-only instance.
+        /// - -1: the query range includes the formal, read-only, and disaster recovery instances simultaneously.
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster type of the queried instance.<ul><li>0: replica set instance.</li><li>1: sharded cluster instance.</li><li>-1: replica set and sharded cluster instance.</li></ul>
+        /// Specifies the cluster type of the instance to be queried. Valid values:
+        /// - 0: replica set instance.
+        /// - 1: sharded cluster instance.
+        /// - -1: replica set and sharded cluster instance.
         /// </summary>
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
         /// <summary>
-        /// Specify the current status of the queried instance.<ul><li>0: pending initialization.</li><li>1: processing, such as modifying specifications or modifying parameters.</li><li>2: instance running normally.</li><li>-2: instance expired.</li></ul>
+        /// Specifies the current status of the instance to be queried. Valid values:
+        /// - 0: to be initialized.
+        /// - 1: processing, such as specification changes and parameter modifications.
+        /// - 2: running normally.
+        /// - -2: isolated (yearly/monthly subscription).
+        /// - -3: isolated (pay-as-you-go).
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -71,7 +84,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Number of results returned per request. Default value: `20`. Value range: [1,100].
+        /// Number of entries returned per request. The default value is 20, and the value range is (1, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

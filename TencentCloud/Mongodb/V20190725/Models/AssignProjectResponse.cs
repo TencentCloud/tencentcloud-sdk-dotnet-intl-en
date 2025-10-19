@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// List of the returned async task IDs
+        /// Lists async task ids returned.
         /// </summary>
         [JsonProperty("FlowIds")]
         public ulong?[] FlowIds{ get; set; }

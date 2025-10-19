@@ -25,25 +25,31 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Slow log pattern
+        /// Slow log output format: database name.table name.command.
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// Maximum execution time
+        /// queryHash value carried during slow log recording. It can be used to identify a query type.
+        /// </summary>
+        [JsonProperty("QueryHash")]
+        public string QueryHash{ get; set; }
+
+        /// <summary>
+        /// Maximum execution time, in milliseconds.
         /// </summary>
         [JsonProperty("MaxTime")]
         public ulong? MaxTime{ get; set; }
 
         /// <summary>
-        /// Average execution time
+        /// Average execution time, in milliseconds.
         /// </summary>
         [JsonProperty("AverageTime")]
         public ulong? AverageTime{ get; set; }
 
         /// <summary>
-        /// Number of slow logs in this pattern
+        /// Number of slow logs.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
@@ -55,6 +61,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "QueryHash", this.QueryHash);
             this.SetParamSimple(map, prefix + "MaxTime", this.MaxTime);
             this.SetParamSimple(map, prefix + "AverageTime", this.AverageTime);
             this.SetParamSimple(map, prefix + "Total", this.Total);

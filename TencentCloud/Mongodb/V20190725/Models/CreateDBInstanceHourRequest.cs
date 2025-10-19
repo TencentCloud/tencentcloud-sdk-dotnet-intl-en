@@ -51,13 +51,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Information on the specific supported versions. Call the [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API to obtain such versions.
-        ///  - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
-        ///  - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
-        ///  - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
-        ///  - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
-        ///  - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
-        ///  - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+        /// Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+        /// - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+        /// - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+        /// - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+        /// - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+        /// - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+        /// - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MachineCode{ get; set; }
 
         /// <summary>
-        /// Number of instances. Value range: 1-10.
+        /// Number of instances. The minimum value is 1, and the maximum value is 30.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
@@ -93,13 +93,17 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// VPC ID. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to query the correct ID. Example value: vpc-pxyzim13.
+        /// VPC ID.
+        /// - Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
+        /// - After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet. Log in to the [VPC console](https://console.cloud.tencent.com/VPC) to query the subnet list and confirm the correct ID. Example value: subnet-7jbabche.
+        /// Subnet ID of the VPC.
+        /// - A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
+        /// - After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -128,19 +132,25 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance type. 1: formal instance; 3: read-only instance; 4: disaster recovery instance; 5: cloned instance. Note: For a cloned instance, RestoreTime is required.
+        /// Instance type.
+        /// - 1: formal instance.
+        /// - 3: read-only instance.
+        /// - 4: disaster recovery instance.
+        /// - 5. cloned instance. Note: For a cloned instance, RestoreTime is required.
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// Parent instance ID. It is required if the `Clone` is `3` or `4`, that is, read-only instance or disaster recovery instance
+        /// Parent instance ID.
+        /// - This parameter is required when the value of the **Clone** parameter is set to 3 or 4, indicating a read-only or disaster recovery instance.
+        /// - Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the parent instance ID from the instance list.
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
 
         /// <summary>
-        /// Security group ID.
+        /// Security group ID. Log in to the [security group console](https://console.cloud.tencent.com/vpc/security-group) to obtain the ID of the security group in the same region as the database instance.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
@@ -154,16 +164,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string RestoreTime{ get; set; }
 
         /// <summary>
-        /// Instance name, which can contain up to 60 letters, digits, and symbols (_-).
+        /// Instance name. Only Chinese characters, letters, digits, underscores (_), and delimiters (-) are supported, with a length of 128 characters. When database instances are purchased in batches, the automatic ascending feature is supported through the custom naming pattern string and numeric suffix to set instance names efficiently.
+        /// - Basic mode: prefix + automatic ascending number (starting from 1 by default). Only a custom instance name prefix is required for **lnstanceName**. For example, it can be set to cmgo. If the purchase quantity is set to 5, after purchase, the instances will be sequentially named cmgo1, cmgo2, cmgo3, cmgo4, and cmgo5, respectively.
+        /// - Custom starting number mode: prefix + {R:x} (x is the custom starting number). Prefix{R:x} is required for **InstanceName**. For example, cmgo{R:3}. If the purchase quantity is set to 5, the instance names will be sequentially named cmgo3, cmgo4, cmgo5, cmgo6, and cmgo7.
+        /// - Composite pattern string: prefix 1{R:x} + prefix 2{R:y}+ ⋯ + fixed suffix, where x and y are the starting numbers of each prefix. A composite pattern string is required for **instanceName**. For example, cmgo{R:10}\_node{R:12}\_db. If the batch purchase quantity is set to 5, the instances will be sequentially named cmgo10\_node12\_db, cmgo11\_node13\_db, cmgo12\_node14\_db, cmgo13\_node15\_db, and cmgo14\_node16\_db.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Specifies the list of AZs during multi-AZ deployment of TencentDB for MongoDB instances.
-        ///  - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
-        ///  - The [DescribeSpecInfo](https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
-        ///  - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
+        /// - For instances in multi-AZ deployment mode, the **Zone** parameter specifies the primary AZ, and **AvailabilityZoneList** specifies all AZs, including the primary AZ. Format: [ap-guangzhou-2,ap-guangzhou-3,ap-guangzhou-4].
+        /// - The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain AZs planned for TencentDB for MongoDB instances in different regions, helping you specify valid AZs.
+        /// - Nodes in multi-AZ deployment mode can only be deployed in 3 different AZs. Deploying most nodes of a cluster in the same AZ is not supported. For example, a 3-node cluster does not support deploying 2 nodes in the same AZ.
         /// </summary>
         [JsonProperty("AvailabilityZoneList")]
         public string[] AvailabilityZoneList{ get; set; }
@@ -176,9 +189,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Mongos node memory size.
-        ///  - This parameter is required during sharded cluster instance purchase.
-        ///  - Unit: GB. 1-core 2GB, 2-core 4GB, 4-core 8GB, 8-core 16GB, and 16-core 32GB are supported.
-        /// 
+        /// - This parameter is required during sharded cluster instance purchase.
+        /// - Unit: GB. 1-core 2 GB, 2-core 4 GB, 4-core 8 GB, 8-core 16 GB, and 16-core 32 GB are supported.
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
@@ -210,7 +222,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string HiddenZone{ get; set; }
 
         /// <summary>
-        /// Parameter template ID. A parameter template is a collection of MongoDB parameters with preset values. You can save a group of parameters and values with the same requirements as a template. When you create an instance, you can directly reference these parameter values in the instance. Proper use of parameter templates can improve the efficiency of operations on TencentDB for MongoDB databases. The template list can be obtained by calling the DescribeDBInstanceParamTpl API. Pay attention to the database versions supported by templates.
+        /// Parameter template ID.
+        /// - A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
+        /// - The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }

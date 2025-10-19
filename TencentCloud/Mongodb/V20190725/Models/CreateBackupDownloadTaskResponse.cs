@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Download task status
+        /// Status of the download task.
         /// </summary>
         [JsonProperty("Tasks")]
         public BackupDownloadTaskStatus[] Tasks{ get; set; }

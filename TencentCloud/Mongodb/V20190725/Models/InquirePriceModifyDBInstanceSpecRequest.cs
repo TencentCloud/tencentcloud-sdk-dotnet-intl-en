@@ -25,31 +25,35 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+        /// Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance memory size in GB after specification adjustment.
+        /// Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB after specification adjustment.
+        /// Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+        /// Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+        /// - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
+        /// - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
+        /// **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+        /// Sharded cluster instance, which refers to the number of shards for the instance after configuration changes. Value range: [2, 36].
+        /// **Note**: The number of shards after changes cannot be less than the current number. Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
         /// </summary>
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }

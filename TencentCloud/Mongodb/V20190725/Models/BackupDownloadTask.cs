@@ -25,61 +25,72 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Task creation time
+        /// Task creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Backup name
+        /// Backup file name.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// Shard name
+        /// Shard name.
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }
 
         /// <summary>
-        /// Backup size in bytes
+        /// Backup data size, in bytes.
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
+        /// Task status.
+        /// - 0: wait for execution.
+        /// - 1: downloading.
+        /// - 2: download completed.
+        /// - 3: download failed.
+        /// - 4: wait for retry.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Task progress in percentage
+        /// Task progress percentage.
         /// </summary>
         [JsonProperty("Percent")]
         public long? Percent{ get; set; }
 
         /// <summary>
-        /// Task duration in seconds
+        /// Duration, in seconds.
         /// </summary>
         [JsonProperty("TimeSpend")]
         public long? TimeSpend{ get; set; }
 
         /// <summary>
-        /// Backup download address
+        /// Download link for backup data.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+        /// Backup method.
+        /// - 0: logical backup.
+        /// - 1: physical backup.
+        /// - 3: snapshot backup.
+        /// **Note**:
+        /// 1. The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+        /// 2. Physical backup is not supported when storage encryption is enabled for the instance.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public long? BackupMethod{ get; set; }
 
         /// <summary>
-        /// Specifies the remarks for backup.
+        /// Specified remarks for initiating backup tasks.
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }

@@ -26,16 +26,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// Specification information identifier. Format: mongo.HIO10G.128G. It consists of three parts: node type, specification type, and memory specification.
-        ///  - Node types are as follows:
-        ///  - mongo: Mongod node.
-        ///  - mongos: Mongos node.
-        ///  - cfgstr: ConfigServer node.
-        ///  - Specification types are as follows:
-        ///  - HIO10G: general high-I/O 10GE type.
-        ///  - HCD: cloud disk type.
-        ///  - Memory specifications are as follows:
-        ///  - Valid values: 4, 8, 16, 32, 64, 128, 240, and 512.
-        ///  - Unit: g, indicating GB. 128g means 128 GB.
+        /// - Node type: **mongo** indicates a Mongod node; **mongos** indicates a Mongos node; **cfgstr** indicates a ConfigServer node.
+        /// - Specification type: **HIO10G** indicates the general HIO 10GE type; **HCD** indicates the Cloud Disk Edition type.
+        /// - Memory specification, in GB. Valid values: 4, 8, 16, 32, 64, 128, 240, and 512. 128g indicates 128 GB.
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
@@ -92,12 +85,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Storage engine version information on instances.
-        ///  - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
-        ///  - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
-        ///  - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
-        ///  - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
-        ///  - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
-        ///  - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+        /// - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+        /// - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+        /// - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+        /// - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+        /// - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+        /// - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersionCode")]
         public string MongoVersionCode{ get; set; }
@@ -109,7 +102,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? MongoVersionValue{ get; set; }
 
         /// <summary>
-        /// Instance version information. Valid values: 3.6, 4.2, 4.4, 5.0, and 6.0.
+        /// Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }

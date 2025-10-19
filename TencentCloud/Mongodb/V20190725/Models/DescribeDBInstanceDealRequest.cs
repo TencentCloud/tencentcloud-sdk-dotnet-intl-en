@@ -25,7 +25,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Order ID. It is returned by the `CreateDBInstance` and other APIs.
+        /// Order ID.
+        /// - Pay-as-you-go instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstanceHour](https://www.tencentcloud.comom/document/product/240/38570?from_cn_redirect=1) API.
+        /// - Yearly/monthly subscription instance. It can be obtained through the output parameter **DealId** of the [CreateDBInstance](https://www.tencentcloud.comom/document/product/240/38571?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }

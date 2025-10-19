@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1168";
+       private const string sdkVersion = "SDK_NET_3.0.1226";
 
         /// <summary>
         /// Client constructor.
@@ -117,7 +117,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -180,7 +180,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query backup download task information.
+        /// This API is used to query information about the backup download task.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query backup download task information.
+        /// This API is used to query information about the backup download task.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
         /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
@@ -306,6 +306,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to query slow log details of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
+        public Task<DescribeDetailedSlowLogsResponse> DescribeDetailedSlowLogs(DescribeDetailedSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDetailedSlowLogsResponse>(req, "DescribeDetailedSlowLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query slow log details of the instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDetailedSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDetailedSlowLogsResponse"/></returns>
+        public DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogsSync(DescribeDetailedSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDetailedSlowLogsResponse>(req, "DescribeDetailedSlowLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of parameters that can be modified for the current instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
@@ -390,7 +411,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the purchasable instance specifications.
+        /// This API is used to query the sales specification of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecInfoRequest"/></param>
         /// <returns><see cref="DescribeSpecInfoResponse"/></returns>
@@ -400,7 +421,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to query the purchasable instance specifications.
+        /// This API is used to query the sales specification of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecInfoRequest"/></param>
         /// <returns><see cref="DescribeSpecInfoResponse"/></returns>
@@ -495,7 +516,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+        /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -505,7 +526,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
+        /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -558,7 +579,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
+        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -568,7 +589,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the configuration of a TencentDB for MongoDB instance. Saleable specifications supported for this API can be obtained from the DescribeSpecInfo API for querying saleable TencentDB for MongoDB specifications.
+        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -642,7 +663,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify instance password.
+        /// This API is used to reset the instance access password.
         /// </summary>
         /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
         /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
@@ -652,13 +673,55 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to modify instance password.
+        /// This API is used to reset the instance access password.
         /// </summary>
         /// <param name="req"><see cref="ResetDBInstancePasswordRequest"/></param>
         /// <returns><see cref="ResetDBInstancePasswordResponse"/></returns>
         public ResetDBInstancePasswordResponse ResetDBInstancePasswordSync(ResetDBInstancePasswordRequest req)
         {
             return InternalRequestAsync<ResetDBInstancePasswordResponse>(req, "ResetDBInstancePassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set instance termination protection.
+        /// </summary>
+        /// <param name="req"><see cref="SetDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="SetDBInstanceDeletionProtectionResponse"/></returns>
+        public Task<SetDBInstanceDeletionProtectionResponse> SetDBInstanceDeletionProtection(SetDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<SetDBInstanceDeletionProtectionResponse>(req, "SetDBInstanceDeletionProtection");
+        }
+
+        /// <summary>
+        /// This API is used to set instance termination protection.
+        /// </summary>
+        /// <param name="req"><see cref="SetDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="SetDBInstanceDeletionProtectionResponse"/></returns>
+        public SetDBInstanceDeletionProtectionResponse SetDBInstanceDeletionProtectionSync(SetDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<SetDBInstanceDeletionProtectionResponse>(req, "SetDBInstanceDeletionProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate monthly subscription billing instances.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
+        public Task<TerminateDBInstancesResponse> TerminateDBInstances(TerminateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to terminate monthly subscription billing instances.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
+        public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

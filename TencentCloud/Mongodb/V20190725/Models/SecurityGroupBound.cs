@@ -25,49 +25,51 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Execution rule. Valid values: `ACCEPT`, `DROP`
+        /// Execution policy.
+        /// - ACCEPT: allow. Access requests for the port can be released.
+        /// - DROP: reject. Data packets are discarded without any response.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// IP range
+        /// Inbound IP address or IP range for database access.
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
 
         /// <summary>
-        /// Port range
+        /// Port for database access.
         /// </summary>
         [JsonProperty("PortRange")]
         public string PortRange{ get; set; }
 
         /// <summary>
-        /// Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+        /// Transport layer protocol: TCP.
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// All the addresses that the security group ID represents
+        /// Security group ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// All the addresses that the address group ID represents
+        /// Parameter template ID for the IP address or IP address group. Log in to the [parameter template console](https://console.cloud.tencent.com/vpc/template/ip) to obtain the parameter template IP address details.
         /// </summary>
         [JsonProperty("AddressModule")]
         public string AddressModule{ get; set; }
 
         /// <summary>
-        /// All the protocols and ports that the service group ID represents
+        /// Parameter template ID for the protocol port or protocol port group. Log in to the [parameter template console](https://console.cloud.tencent.com/vpc/template/protoport) to obtain the parameter template protocol port details.
         /// </summary>
         [JsonProperty("ServiceModule")]
         public string ServiceModule{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Security group description information.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }

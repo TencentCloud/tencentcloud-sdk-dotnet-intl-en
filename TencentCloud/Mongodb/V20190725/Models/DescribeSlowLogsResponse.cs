@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Total number of slow logs
+        /// Total number of slow logs.
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

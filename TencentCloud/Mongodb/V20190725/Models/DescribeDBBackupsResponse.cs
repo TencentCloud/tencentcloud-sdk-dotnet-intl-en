@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Backup list
+        /// Backup list.
         /// </summary>
         [JsonProperty("BackupList")]
         public BackupInfo[] BackupList{ get; set; }
 
         /// <summary>
-        /// Total number of backups
+        /// Number of backups.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

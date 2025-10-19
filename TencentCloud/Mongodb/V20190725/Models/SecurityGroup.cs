@@ -25,43 +25,43 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Project ID
+        /// Associated project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Security group creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Inbound rule
+        /// Security group inbound rule.
         /// </summary>
         [JsonProperty("Inbound")]
         public SecurityGroupBound[] Inbound{ get; set; }
 
         /// <summary>
-        /// Outbound rule
+        /// Security group outbound rule.
         /// </summary>
         [JsonProperty("Outbound")]
         public SecurityGroupBound[] Outbound{ get; set; }
 
         /// <summary>
-        /// Security group ID
+        /// Security group ID.
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// Security group name
+        /// Security group name.
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
-        /// Security group remarks
+        /// Security group remarks.
         /// </summary>
         [JsonProperty("SecurityGroupRemark")]
         public string SecurityGroupRemark{ get; set; }

@@ -25,55 +25,64 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+        /// Instance ID. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The name of a backup file with download tasks to be queried
+        /// Specifies the backup file name for filtering download tasks of the specified file. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain the backup file name.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
+        /// Specifies the task within the query time range, and StartTime specifies the start time. If not specified, there are no limitations on the start time by default.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+        /// Specifies the task within the query time range, and EndTime specifies the end time. If not specified, there are no limitations on the end time by default.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
+        /// Number of entries returned for this query. Value range: 1–100. The default value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset for pagination. Default value: `0`.
+        /// Specifies the number of pages returned for this query. The default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The field used to sort the results. Valid values: `createTime` (default), `finishTime`.
+        /// Sorting field.
+        /// - createTime: sort by the creation time of the backup download task. The default value is createTime.
+        /// - finishTime: sort by the completion time of the backup download task.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sort order. Valid values: `asc`, `desc` (default).
+        /// Sorting method.
+        /// - asc: ascending order.
+        /// - desc: descending order. The default value is desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// The status of the tasks to be queried. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry). If it is left empty, tasks in any status will be returned.
+        /// Specifies the task status for filtering download tasks. If this parameter is not configured, tasks of all status types will be returned.
+        /// - 0: wait for execution.
+        /// - 1: downloading.
+        /// - 2: download completed.
+        /// - 3: download failed.
+        /// - 4: wait for retry.
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }

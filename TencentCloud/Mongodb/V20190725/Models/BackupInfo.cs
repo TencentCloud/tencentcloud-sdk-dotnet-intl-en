@@ -31,25 +31,27 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup mode. 0: automatic backup; 1: manual backup
+        /// Backup method.
+        /// - 0: automatic backup.
+        /// - 1: manual backup.
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }
 
         /// <summary>
-        /// Backup name
+        /// Backup file name.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// Backup remarks.
+        /// Backup task remarks.
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
 
         /// <summary>
-        /// Backup file size. Unit: KB.
+        /// Backup file size, in KB.
         /// </summary>
         [JsonProperty("BackupSize")]
         public ulong? BackupSize{ get; set; }
@@ -67,13 +69,21 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup status. 1: backing up; 2: backed up successful
+        /// Backup status.
+        /// - 1: backing up.
+        /// - 2: backup successful.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Backup method. 0: logical backup; 1: physical backup
+        /// Backup method.
+        /// - 0: logical backup.
+        /// - 1: physical backup.
+        /// - 3: snapshot backup.
+        /// **Note:**
+        /// - The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
+        /// - Physical backup is not supported when storage encryption is enabled for the instance.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
@@ -91,10 +101,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// Region for cross-region backup.
+        /// Cross-region backup region.
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
+
+        /// <summary>
+        /// Rollback time supported by the backup.
+        /// </summary>
+        [JsonProperty("RestoreTime")]
+        public string RestoreTime{ get; set; }
 
 
         /// <summary>
@@ -114,6 +130,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "BackId", this.BackId);
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+            this.SetParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
         }
     }
 }

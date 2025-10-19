@@ -25,25 +25,27 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Region information
+        /// Region information.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ information
+        /// AZ information.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Purchasable specification information
+        /// Sales specification information.
         /// </summary>
         [JsonProperty("SpecItems")]
         public SpecItem[] SpecItems{ get; set; }
 
         /// <summary>
-        /// Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+        /// Whether cross-AZ deployment is supported.
+        /// - 1: supported.
+        /// - 0: not supported.
         /// </summary>
         [JsonProperty("SupportMultiAZ")]
         public long? SupportMultiAZ{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Replica set ID
+        /// Replica set ID.
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }

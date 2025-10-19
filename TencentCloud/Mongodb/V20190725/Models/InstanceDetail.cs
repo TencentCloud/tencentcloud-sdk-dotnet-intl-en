@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,13 +43,15 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+        /// Cluster type.
+        /// - 0: replica set instance.
+        /// - 1: sharded cluster instance.
         /// </summary>
         [JsonProperty("ClusterType")]
         public ulong? ClusterType{ get; set; }
@@ -67,7 +69,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Network type. Valid values: 0 (basic network), 1 (VPC)
+        /// Network type.
+        /// - 0: basic network.
+        /// - 1: VPC.
         /// </summary>
         [JsonProperty("NetType")]
         public ulong? NetType{ get; set; }
@@ -85,7 +89,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: 0: creating; 1: processing; 2: running; -2: expired.
+        /// Instance status.
+        /// - 0: to be initialized.
+        /// - 1: processing, such as specification changes and parameter modifications.
+        /// - 2: running normally.
+        /// - -2: isolated (yearly/monthly subscription).
+        /// - -3: isolated (pay-as-you-go).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -115,31 +124,40 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string DeadLine{ get; set; }
 
         /// <summary>
-        /// Instance version information
+        /// Storage engine version information on instances.
+        /// - MONGO_36_WT: version of the MongoDB 3.6 WiredTiger storage engine.
+        /// - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
+        /// - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
+        /// - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
+        /// - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
+        /// - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
+        /// - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// Instance memory size in MB
+        /// Instance memory specification, in MB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in MB
+        /// Instance disk specification, in MB.
         /// </summary>
         [JsonProperty("Volume")]
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores of an instance
+        /// Number of the instance CPU cores.
         /// </summary>
         [JsonProperty("CpuNum")]
         public ulong? CpuNum{ get; set; }
 
         /// <summary>
-        /// Instance machine type
+        /// Instance machine type.
+        /// - HIO10G: general HIO 10GE type.
+        /// - HCD: Cloud Disk Edition type.
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -157,13 +175,16 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ReplicationSetNum{ get; set; }
 
         /// <summary>
-        /// Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+        /// Automatic renewal flag for the instance.
+        /// - 0: manual renewal.
+        /// - 1: automatic renewal.
+        /// - 2: no renewal after confirmation.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Used capacity in MB
+        /// Used capacity, in MB.
         /// </summary>
         [JsonProperty("UsedVolume")]
         public ulong? UsedVolume{ get; set; }
@@ -229,25 +250,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ClusterVer{ get; set; }
 
         /// <summary>
-        /// Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+        /// Protocol information: mongodb.
         /// </summary>
         [JsonProperty("Protocol")]
         public ulong? Protocol{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: 1 (promoted instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance)
+        /// Instance type.
+        /// - 0: all instances.
+        /// - 1: formal instance.
+        /// - 2: temporary instance.
+        /// - 3: read-only instance.
+        /// - -1: include the formal, read-only, and disaster recovery instance simultaneously.
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance status description
+        /// Instance status description.
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// Physical instance ID. For an instance that has been rolled back and replaced, its InstanceId and RealInstanceId are different. The physical instance ID is needed in such scenarios as getting monitoring data from Barad
+        /// Physical instance ID corresponding to the instance. The instances that have been rolled back and replaced have different InstanceIds and RealInstanceIds, which need to be obtained through the physical ID in scenarios such as obtaining monitoring data from Barad.
         /// </summary>
         [JsonProperty("RealInstanceId")]
         public string RealInstanceId{ get; set; }
@@ -259,7 +285,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? MongosNodeNum{ get; set; }
 
         /// <summary>
-        /// Mongos node memory.
+        /// Mongos node memory, in MB.
         /// </summary>
         [JsonProperty("MongosMemory")]
         public ulong? MongosMemory{ get; set; }
@@ -277,13 +303,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? ConfigServerNodeNum{ get; set; }
 
         /// <summary>
-        /// ConfigServer node memory.
+        /// Config Server node memory, in MB.
         /// </summary>
         [JsonProperty("ConfigServerMemory")]
         public ulong? ConfigServerMemory{ get; set; }
 
         /// <summary>
-        /// ConfigServer node disk size.
+        /// Config Server node disk size, in MB.
         /// </summary>
         [JsonProperty("ConfigServerVolume")]
         public ulong? ConfigServerVolume{ get; set; }

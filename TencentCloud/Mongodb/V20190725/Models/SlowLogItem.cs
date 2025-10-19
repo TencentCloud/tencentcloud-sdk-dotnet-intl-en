@@ -21,20 +21,26 @@ namespace TencentCloud.Mongodb.V20190725.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssignProjectRequest : AbstractModel
+    public class SlowLogItem : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID list. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/MongoDB) and copy the instance ID from the instance list.
+        /// Slow log details.
         /// </summary>
-        [JsonProperty("InstanceIds")]
-        public string[] InstanceIds{ get; set; }
+        [JsonProperty("Log")]
+        public string Log{ get; set; }
 
         /// <summary>
-        /// Project ID, the unique ID of the project created by the user. Go to the [project management](https://console.cloud.tencent.com/project) area of the account center in the console to copy the project ID.
+        /// Node name.
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
+        [JsonProperty("NodeName")]
+        public string NodeName{ get; set; }
+
+        /// <summary>
+        /// Queries the hash value.
+        /// </summary>
+        [JsonProperty("QueryHash")]
+        public string QueryHash{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Log", this.Log);
+            this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "QueryHash", this.QueryHash);
         }
     }
 }
