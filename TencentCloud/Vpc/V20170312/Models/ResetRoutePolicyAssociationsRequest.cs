@@ -21,20 +21,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class ResetRoutePolicyAssociationsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key
+        /// Routing table instance ID, e.g., rtb-azd4dt1c.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// The list of routing policy binding objects (RoutePolicyAssociation). note: the route table instance ID (RouteTableId) in the binding must match the RouteTableId parameter of this API (that is, this API only supports modifying the strategy binding relationship and priority within the same route table instance).
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RoutePolicyAssociationSet")]
+        public RoutePolicyAssociation[] RoutePolicyAssociationSet{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+            this.SetParamArrayObj(map, prefix + "RoutePolicyAssociationSet.", this.RoutePolicyAssociationSet);
         }
     }
 }

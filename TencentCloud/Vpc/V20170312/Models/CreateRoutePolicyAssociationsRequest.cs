@@ -21,20 +21,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class CreateRoutePolicyAssociationsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key
+        /// Route reception policy binding object list.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
-
-        /// <summary>
-        /// Tag value
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RoutePolicyAssociationSet")]
+        public RoutePolicyAssociation[] RoutePolicyAssociationSet{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArrayObj(map, prefix + "RoutePolicyAssociationSet.", this.RoutePolicyAssociationSet);
         }
     }
 }

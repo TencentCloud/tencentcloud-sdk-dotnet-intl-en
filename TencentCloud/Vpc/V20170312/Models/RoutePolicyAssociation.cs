@@ -21,20 +21,26 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class RoutePolicyAssociation : AbstractModel
     {
         
         /// <summary>
-        /// Tag key
+        /// Unique route table ID.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// Specifies the unique ID of the route reception policy.
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RoutePolicyId")]
+        public string RoutePolicyId{ get; set; }
+
+        /// <summary>
+        /// Priority.
+        /// </summary>
+        [JsonProperty("Priority")]
+        public ulong? Priority{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+            this.SetParamSimple(map, prefix + "RoutePolicyId", this.RoutePolicyId);
+            this.SetParamSimple(map, prefix + "Priority", this.Priority);
         }
     }
 }

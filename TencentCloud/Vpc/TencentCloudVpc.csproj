@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1189</VersionPrefix>
+    <VersionPrefix>3.0.1228</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -164,6 +164,12 @@
     <Compile Include="V20170312\Models\CreateNetworkInterfaceResponse.cs" />
     <Compile Include="V20170312\Models\CreateReserveIpAddressesRequest.cs" />
     <Compile Include="V20170312\Models\CreateReserveIpAddressesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyAssociationsRequest.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyAssociationsResponse.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyEntriesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyRequest.cs" />
+    <Compile Include="V20170312\Models\CreateRoutePolicyResponse.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\CreateRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\CreateRoutesRequest.cs" />
@@ -241,6 +247,12 @@
     <Compile Include="V20170312\Models\DeleteNetworkInterfaceResponse.cs" />
     <Compile Include="V20170312\Models\DeleteReserveIpAddressesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteReserveIpAddressesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyAssociationsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyAssociationsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyEntriesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteRoutePolicyResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableRequest.cs" />
     <Compile Include="V20170312\Models\DeleteRouteTableResponse.cs" />
     <Compile Include="V20170312\Models\DeleteRoutesRequest.cs" />
@@ -359,6 +371,8 @@
     <Compile Include="V20170312\Models\DescribeNetworkInterfacesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReserveIpAddressesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeReserveIpAddressesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeRoutePolicyEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeRoutePolicyEntriesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRouteTablesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSecurityGroupAssociationStatisticsRequest.cs" />
@@ -579,6 +593,8 @@
     <Compile Include="V20170312\Models\ModifyPrivateIpAddressesAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyReserveIpAddressRequest.cs" />
     <Compile Include="V20170312\Models\ModifyReserveIpAddressResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyRoutePolicyAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyRoutePolicyAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyRouteTableAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifySecurityGroupAttributeRequest.cs" />
@@ -647,6 +663,10 @@
     <Compile Include="V20170312\Models\RenewVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceDirectConnectGatewayCcnRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutePolicyAssociationsRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutePolicyAssociationsResponse.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutePolicyEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\ReplaceRoutePolicyEntriesResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationRequest.cs" />
     <Compile Include="V20170312\Models\ReplaceRouteTableAssociationResponse.cs" />
     <Compile Include="V20170312\Models\ReplaceRoutesRequest.cs" />
@@ -660,6 +680,10 @@
     <Compile Include="V20170312\Models\ResetAttachCcnInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ResetNatGatewayConnectionRequest.cs" />
     <Compile Include="V20170312\Models\ResetNatGatewayConnectionResponse.cs" />
+    <Compile Include="V20170312\Models\ResetRoutePolicyAssociationsRequest.cs" />
+    <Compile Include="V20170312\Models\ResetRoutePolicyAssociationsResponse.cs" />
+    <Compile Include="V20170312\Models\ResetRoutePolicyEntriesRequest.cs" />
+    <Compile Include="V20170312\Models\ResetRoutePolicyEntriesResponse.cs" />
     <Compile Include="V20170312\Models\ResetRoutesRequest.cs" />
     <Compile Include="V20170312\Models\ResetRoutesResponse.cs" />
     <Compile Include="V20170312\Models\ResetVpnConnectionRequest.cs" />
@@ -675,6 +699,9 @@
     <Compile Include="V20170312\Models\ReturnNormalAddressesRequest.cs" />
     <Compile Include="V20170312\Models\ReturnNormalAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Route.cs" />
+    <Compile Include="V20170312\Models\RoutePolicy.cs" />
+    <Compile Include="V20170312\Models\RoutePolicyAssociation.cs" />
+    <Compile Include="V20170312\Models\RoutePolicyEntry.cs" />
     <Compile Include="V20170312\Models\RouteTable.cs" />
     <Compile Include="V20170312\Models\RouteTableAssociation.cs" />
     <Compile Include="V20170312\Models\SecurityGroup.cs" />

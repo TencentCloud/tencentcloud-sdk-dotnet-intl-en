@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1189";
+       private const string sdkVersion = "SDK_NET_3.0.1228";
 
         /// <summary>
         /// Client constructor.
@@ -1172,6 +1172,69 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a VPC route reception policy, including name, description and policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyResponse"/></returns>
+        public Task<CreateRoutePolicyResponse> CreateRoutePolicy(CreateRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyResponse>(req, "CreateRoutePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create a VPC route reception policy, including name, description and policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyResponse"/></returns>
+        public CreateRoutePolicyResponse CreateRoutePolicySync(CreateRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyResponse>(req, "CreateRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create route reception policy bindings (the binding relationship between policy instances and route table instances as well as set priorities).
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyAssociationsResponse"/></returns>
+        public Task<CreateRoutePolicyAssociationsResponse> CreateRoutePolicyAssociations(CreateRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyAssociationsResponse>(req, "CreateRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// This API is used to create route reception policy bindings (the binding relationship between policy instances and route table instances as well as set priorities).
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyAssociationsResponse"/></returns>
+        public CreateRoutePolicyAssociationsResponse CreateRoutePolicyAssociationsSync(CreateRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyAssociationsResponse>(req, "CreateRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create route reception policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyEntriesResponse"/></returns>
+        public Task<CreateRoutePolicyEntriesResponse> CreateRoutePolicyEntries(CreateRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyEntriesResponse>(req, "CreateRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// This API is used to create route reception policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="CreateRoutePolicyEntriesResponse"/></returns>
+        public CreateRoutePolicyEntriesResponse CreateRoutePolicyEntriesSync(CreateRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<CreateRoutePolicyEntriesResponse>(req, "CreateRoutePolicyEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a route table.
         /// * After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
         /// * You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
@@ -2048,6 +2111,69 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteReserveIpAddressesResponse DeleteReserveIpAddressesSync(DeleteReserveIpAddressesRequest req)
         {
             return InternalRequestAsync<DeleteReserveIpAddressesResponse>(req, "DeleteReserveIpAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a route reception policy and entries.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyResponse"/></returns>
+        public Task<DeleteRoutePolicyResponse> DeleteRoutePolicy(DeleteRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyResponse>(req, "DeleteRoutePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to delete a route reception policy and entries.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyResponse"/></returns>
+        public DeleteRoutePolicyResponse DeleteRoutePolicySync(DeleteRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyResponse>(req, "DeleteRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete route reception policy bindings (the binding relationship between route reception policy objects and route tables).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyAssociationsResponse"/></returns>
+        public Task<DeleteRoutePolicyAssociationsResponse> DeleteRoutePolicyAssociations(DeleteRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyAssociationsResponse>(req, "DeleteRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// This API is used to delete route reception policy bindings (the binding relationship between route reception policy objects and route tables).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyAssociationsResponse"/></returns>
+        public DeleteRoutePolicyAssociationsResponse DeleteRoutePolicyAssociationsSync(DeleteRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyAssociationsResponse>(req, "DeleteRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete route reception policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyEntriesResponse"/></returns>
+        public Task<DeleteRoutePolicyEntriesResponse> DeleteRoutePolicyEntries(DeleteRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyEntriesResponse>(req, "DeleteRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// This API is used to delete route reception policy entries.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DeleteRoutePolicyEntriesResponse"/></returns>
+        public DeleteRoutePolicyEntriesResponse DeleteRoutePolicyEntriesSync(DeleteRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DeleteRoutePolicyEntriesResponse>(req, "DeleteRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3327,6 +3453,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeReserveIpAddressesResponse DescribeReserveIpAddressesSync(DescribeReserveIpAddressesRequest req)
         {
             return InternalRequestAsync<DescribeReserveIpAddressesResponse>(req, "DescribeReserveIpAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the route reception policy entry list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePolicyEntriesResponse"/></returns>
+        public Task<DescribeRoutePolicyEntriesResponse> DescribeRoutePolicyEntries(DescribeRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePolicyEntriesResponse>(req, "DescribeRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// This API is used to query the route reception policy entry list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="DescribeRoutePolicyEntriesResponse"/></returns>
+        public DescribeRoutePolicyEntriesResponse DescribeRoutePolicyEntriesSync(DescribeRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<DescribeRoutePolicyEntriesResponse>(req, "DescribeRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5411,6 +5558,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the route reception policy attribute.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutePolicyAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRoutePolicyAttributeResponse"/></returns>
+        public Task<ModifyRoutePolicyAttributeResponse> ModifyRoutePolicyAttribute(ModifyRoutePolicyAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutePolicyAttributeResponse>(req, "ModifyRoutePolicyAttribute");
+        }
+
+        /// <summary>
+        /// This API is used to modify the route reception policy attribute.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutePolicyAttributeRequest"/></param>
+        /// <returns><see cref="ModifyRoutePolicyAttributeResponse"/></returns>
+        public ModifyRoutePolicyAttributeResponse ModifyRoutePolicyAttributeSync(ModifyRoutePolicyAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutePolicyAttributeResponse>(req, "ModifyRoutePolicyAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.
         /// </summary>
         /// <param name="req"><see cref="ModifyRouteTableAttributeRequest"/></param>
@@ -5984,6 +6152,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the binding Priority (Priority) based on the route reception policy instance ID (RoutePolicyId) and route table instance ID (RouteTableId), supporting batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyAssociationsResponse"/></returns>
+        public Task<ReplaceRoutePolicyAssociationsResponse> ReplaceRoutePolicyAssociations(ReplaceRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyAssociationsResponse>(req, "ReplaceRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// This API is used to modify the binding Priority (Priority) based on the route reception policy instance ID (RoutePolicyId) and route table instance ID (RouteTableId), supporting batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyAssociationsResponse"/></returns>
+        public ReplaceRoutePolicyAssociationsResponse ReplaceRoutePolicyAssociationsSync(ReplaceRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyAssociationsResponse>(req, "ReplaceRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify specified routing policy entries based on route reception policy rule ID and supports batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyEntriesResponse"/></returns>
+        public Task<ReplaceRoutePolicyEntriesResponse> ReplaceRoutePolicyEntries(ReplaceRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyEntriesResponse>(req, "ReplaceRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// This API is used to modify specified routing policy entries based on route reception policy rule ID and supports batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ReplaceRoutePolicyEntriesResponse"/></returns>
+        public ReplaceRoutePolicyEntriesResponse ReplaceRoutePolicyEntriesSync(ReplaceRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutePolicyEntriesResponse>(req, "ReplaceRoutePolicyEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
         /// * A subnet can only be associated with one route table.
         /// </summary>
@@ -6112,6 +6322,48 @@ namespace TencentCloud.Vpc.V20170312
         public ResetNatGatewayConnectionResponse ResetNatGatewayConnectionSync(ResetNatGatewayConnectionRequest req)
         {
             return InternalRequestAsync<ResetNatGatewayConnectionResponse>(req, "ResetNatGatewayConnection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind the routing policy instance already bound to a specific route table instance, set up alarms for the new binding routing policy and priority.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyAssociationsResponse"/></returns>
+        public Task<ResetRoutePolicyAssociationsResponse> ResetRoutePolicyAssociations(ResetRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyAssociationsResponse>(req, "ResetRoutePolicyAssociations");
+        }
+
+        /// <summary>
+        /// This API is used to unbind the routing policy instance already bound to a specific route table instance, set up alarms for the new binding routing policy and priority.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyAssociationsRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyAssociationsResponse"/></returns>
+        public ResetRoutePolicyAssociationsResponse ResetRoutePolicyAssociationsSync(ResetRoutePolicyAssociationsRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyAssociationsResponse>(req, "ResetRoutePolicyAssociations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset the designated route reception policy entry based on the rule ID and supports batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyEntriesResponse"/></returns>
+        public Task<ResetRoutePolicyEntriesResponse> ResetRoutePolicyEntries(ResetRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyEntriesResponse>(req, "ResetRoutePolicyEntries");
+        }
+
+        /// <summary>
+        /// This API is used to reset the designated route reception policy entry based on the rule ID and supports batch modification.
+        /// </summary>
+        /// <param name="req"><see cref="ResetRoutePolicyEntriesRequest"/></param>
+        /// <returns><see cref="ResetRoutePolicyEntriesResponse"/></returns>
+        public ResetRoutePolicyEntriesResponse ResetRoutePolicyEntriesSync(ResetRoutePolicyEntriesRequest req)
+        {
+            return InternalRequestAsync<ResetRoutePolicyEntriesResponse>(req, "ResetRoutePolicyEntries")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

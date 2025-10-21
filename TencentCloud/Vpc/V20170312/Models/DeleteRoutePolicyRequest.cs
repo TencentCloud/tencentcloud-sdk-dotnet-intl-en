@@ -21,20 +21,14 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class DeleteRoutePolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key
+        /// Specifies the unique ID of the route reception policy.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
-
-        /// <summary>
-        /// Tag value
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RoutePolicyId")]
+        public string RoutePolicyId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RoutePolicyId", this.RoutePolicyId);
         }
     }
 }

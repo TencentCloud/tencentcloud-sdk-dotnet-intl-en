@@ -21,20 +21,20 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class ReplaceRoutePolicyEntriesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key
+        /// Instance ID of the routing strategy, such as rrp-azd4dt1c.
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("RoutePolicyId")]
+        public string RoutePolicyId{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// Rule list of the routing strategy. requires specifying the policy rule ID (RoutePolicyEntryId).
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RoutePolicyEntrySet")]
+        public RoutePolicyEntry[] RoutePolicyEntrySet{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RoutePolicyId", this.RoutePolicyId);
+            this.SetParamArrayObj(map, prefix + "RoutePolicyEntrySet.", this.RoutePolicyEntrySet);
         }
     }
 }
