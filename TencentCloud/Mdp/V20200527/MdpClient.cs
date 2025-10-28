@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.intl.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// BindSSAICDNDomainWithChannel
+        /// This API is used to bind a CDN playback domain to a channel.
         /// </summary>
         /// <param name="req"><see cref="BindSSAICDNDomainWithChannelRequest"/></param>
         /// <returns><see cref="BindSSAICDNDomainWithChannelResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// BindSSAICDNDomainWithChannel
+        /// This API is used to bind a CDN playback domain to a channel.
         /// </summary>
         /// <param name="req"><see cref="BindSSAICDNDomainWithChannelRequest"/></param>
         /// <returns><see cref="BindSSAICDNDomainWithChannelResponse"/></returns>
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// UnbindSSAICDNDomainWithChannel
+        /// This API is used to cancel the correlation between a channel and a CDN playback domain.
         /// </summary>
         /// <param name="req"><see cref="UnbindSSAICDNDomainWithChannelRequest"/></param>
         /// <returns><see cref="UnbindSSAICDNDomainWithChannelResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Mdp.V20200527
         }
 
         /// <summary>
-        /// UnbindSSAICDNDomainWithChannel
+        /// This API is used to cancel the correlation between a channel and a CDN playback domain.
         /// </summary>
         /// <param name="req"><see cref="UnbindSSAICDNDomainWithChannelRequest"/></param>
         /// <returns><see cref="UnbindSSAICDNDomainWithChannelResponse"/></returns>

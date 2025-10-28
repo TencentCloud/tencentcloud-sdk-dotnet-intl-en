@@ -26,49 +26,42 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Team role type 1-Mini program team 2-Application team
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Team role type 1-mini program team 2-application team
         /// </summary>
         [JsonProperty("TeamRoleType")]
         public long? TeamRoleType{ get; set; }
 
         /// <summary>
-        /// Admin account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Administrator account
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Number of team members
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
 
         /// <summary>
         /// Number of bound mini program teams
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BindMiniTeamCount")]
         public long? BindMiniTeamCount{ get; set; }
@@ -86,10 +79,22 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string RegisterLink{ get; set; }
 
         /// <summary>
-        /// Application name. It’s required when querying details of a mini program team.
+        /// Application name. It Is required when querying details of a mini program team.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
+
+        /// <summary>
+        /// Team expiration time. 0 means never expire.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Team status. valid values: 1: normal; 2: disabled; 3: expired.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -107,6 +112,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "BindTeamName", this.BindTeamName);
             this.SetParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

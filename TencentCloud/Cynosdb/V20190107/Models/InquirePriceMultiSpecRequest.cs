@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcsas.V20250106.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTeamListRequest : AbstractModel
+    public class InquirePriceMultiSpecRequest : AbstractModel
     {
         
         /// <summary>
-        /// Pagination offset
+        /// Availability zone. specifies the best practice for region provision.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Page size
+        /// Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("InstancePayMode")]
+        public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Storage purchase type. available values are: PREPAID, POSTPAID.
         /// </summary>
-        [JsonProperty("PlatformId")]
-        public string PlatformId{ get; set; }
+        [JsonProperty("StoragePayMode")]
+        public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// Team name to be queried
+        /// Specifies the product specification.
         /// </summary>
-        [JsonProperty("Keyword")]
-        public string Keyword{ get; set; }
+        [JsonProperty("GoodsSpecs")]
+        public GoodsSpec[] GoodsSpecs{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
-            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "InstancePayMode", this.InstancePayMode);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamArrayObj(map, prefix + "GoodsSpecs.", this.GoodsSpecs);
         }
     }
 }

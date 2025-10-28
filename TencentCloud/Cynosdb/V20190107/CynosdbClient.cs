@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1230";
 
         /// <summary>
         /// Client constructor.
@@ -1751,6 +1751,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public InquirePriceModifyResponse InquirePriceModifySync(InquirePriceModifyRequest req)
         {
             return InternalRequestAsync<InquirePriceModifyResponse>(req, "InquirePriceModify")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to inquire prices in batch.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceMultiSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceMultiSpecResponse"/></returns>
+        public Task<InquirePriceMultiSpecResponse> InquirePriceMultiSpec(InquirePriceMultiSpecRequest req)
+        {
+            return InternalRequestAsync<InquirePriceMultiSpecResponse>(req, "InquirePriceMultiSpec");
+        }
+
+        /// <summary>
+        /// This API is used to inquire prices in batch.
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceMultiSpecRequest"/></param>
+        /// <returns><see cref="InquirePriceMultiSpecResponse"/></returns>
+        public InquirePriceMultiSpecResponse InquirePriceMultiSpecSync(InquirePriceMultiSpecRequest req)
+        {
+            return InternalRequestAsync<InquirePriceMultiSpecResponse>(req, "InquirePriceMultiSpec")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -26,42 +26,36 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Admin ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Administrator user ID
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }
 
         /// <summary>
-        /// Admin account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Administrator account
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
-        /// Admin username
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Administrator username
         /// </summary>
         [JsonProperty("AdminUserName")]
         public string AdminUserName{ get; set; }
 
         /// <summary>
         /// Number of team members
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
@@ -74,7 +68,6 @@ namespace TencentCloud.Tcsas.V20250106.Models
 
         /// <summary>
         /// Team permission type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamRoleTypeList")]
         public long?[] TeamRoleTypeList{ get; set; }
@@ -84,6 +77,18 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         [JsonProperty("RelatedTeamId")]
         public long? RelatedTeamId{ get; set; }
+
+        /// <summary>
+        /// Team expiration time. 0 means never expire.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Team status. valid values: 1: normal; 2: disabled; 3: expired.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -100,6 +105,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "RegisterLink", this.RegisterLink);
             this.SetParamArraySimple(map, prefix + "TeamRoleTypeList.", this.TeamRoleTypeList);
             this.SetParamSimple(map, prefix + "RelatedTeamId", this.RelatedTeamId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

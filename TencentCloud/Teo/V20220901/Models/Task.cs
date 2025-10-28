@@ -85,7 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FailType{ get; set; }
 
         /// <summary>
-        /// Failure description for refresh and preheating.
+        /// Description of the reason for cache purge or warm cache failure.
         /// </summary>
         [JsonProperty("FailMessage")]
         public string FailMessage{ get; set; }

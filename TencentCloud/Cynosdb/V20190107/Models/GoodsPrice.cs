@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcsas.V20250106.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTeamListRequest : AbstractModel
+    public class GoodsPrice : AbstractModel
     {
         
         /// <summary>
-        /// Pagination offset
+        /// Specifies the instance price.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("InstancePrice")]
+        public TradePrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// Page size
+        /// Specifies the storage price.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("StoragePrice")]
+        public TradePrice StoragePrice{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Specifies the product specification.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("PlatformId")]
-        public string PlatformId{ get; set; }
-
-        /// <summary>
-        /// Team name to be queried
-        /// </summary>
-        [JsonProperty("Keyword")]
-        public string Keyword{ get; set; }
+        [JsonProperty("GoodsSpec")]
+        public GoodsSpec GoodsSpec{ get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
-            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+            this.SetParamObj(map, prefix + "StoragePrice.", this.StoragePrice);
+            this.SetParamObj(map, prefix + "GoodsSpec.", this.GoodsSpec);
         }
     }
 }

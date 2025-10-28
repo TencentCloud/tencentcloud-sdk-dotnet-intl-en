@@ -25,13 +25,13 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// Channel Id
+        /// Channel Id.
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
         /// <summary>
-        /// The domain name for CDN playback.
+        /// Specifies the playback domain of CDN.
         /// </summary>
         [JsonProperty("CdnDomain")]
         public string CdnDomain{ get; set; }
