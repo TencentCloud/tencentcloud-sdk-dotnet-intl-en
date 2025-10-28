@@ -28,7 +28,7 @@ namespace TencentCloud.Mdp.V20200527
 
        private const string endpoint = "mdp.intl.tencentcloudapi.com";
        private const string version = "2020-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Mdp.V20200527
         public BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannelSync(BindNewLVBDomainWithChannelRequest req)
         {
             return InternalRequestAsync<BindNewLVBDomainWithChannelResponse>(req, "BindNewLVBDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// BindSSAICDNDomainWithChannel
+        /// </summary>
+        /// <param name="req"><see cref="BindSSAICDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindSSAICDNDomainWithChannelResponse"/></returns>
+        public Task<BindSSAICDNDomainWithChannelResponse> BindSSAICDNDomainWithChannel(BindSSAICDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<BindSSAICDNDomainWithChannelResponse>(req, "BindSSAICDNDomainWithChannel");
+        }
+
+        /// <summary>
+        /// BindSSAICDNDomainWithChannel
+        /// </summary>
+        /// <param name="req"><see cref="BindSSAICDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="BindSSAICDNDomainWithChannelResponse"/></returns>
+        public BindSSAICDNDomainWithChannelResponse BindSSAICDNDomainWithChannelSync(BindSSAICDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<BindSSAICDNDomainWithChannelResponse>(req, "BindSSAICDNDomainWithChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1310,6 +1331,27 @@ namespace TencentCloud.Mdp.V20200527
         public UnbindLinearAssemblyCDNDomainWithChannelResponse UnbindLinearAssemblyCDNDomainWithChannelSync(UnbindLinearAssemblyCDNDomainWithChannelRequest req)
         {
             return InternalRequestAsync<UnbindLinearAssemblyCDNDomainWithChannelResponse>(req, "UnbindLinearAssemblyCDNDomainWithChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// UnbindSSAICDNDomainWithChannel
+        /// </summary>
+        /// <param name="req"><see cref="UnbindSSAICDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindSSAICDNDomainWithChannelResponse"/></returns>
+        public Task<UnbindSSAICDNDomainWithChannelResponse> UnbindSSAICDNDomainWithChannel(UnbindSSAICDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<UnbindSSAICDNDomainWithChannelResponse>(req, "UnbindSSAICDNDomainWithChannel");
+        }
+
+        /// <summary>
+        /// UnbindSSAICDNDomainWithChannel
+        /// </summary>
+        /// <param name="req"><see cref="UnbindSSAICDNDomainWithChannelRequest"/></param>
+        /// <returns><see cref="UnbindSSAICDNDomainWithChannelResponse"/></returns>
+        public UnbindSSAICDNDomainWithChannelResponse UnbindSSAICDNDomainWithChannelSync(UnbindSSAICDNDomainWithChannelRequest req)
+        {
+            return InternalRequestAsync<UnbindSSAICDNDomainWithChannelResponse>(req, "UnbindSSAICDNDomainWithChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

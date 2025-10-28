@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BF413AB8-34F1-3A58-AE2E-D9BAEC23A97A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1221</VersionPrefix>
+    <VersionPrefix>3.0.1229</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,8 @@
     <Compile Include="V20200527\Models\BindLinearAssemblyCDNDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\BindNewLVBDomainWithChannelResponse.cs" />
+    <Compile Include="V20200527\Models\BindSSAICDNDomainWithChannelRequest.cs" />
+    <Compile Include="V20200527\Models\BindSSAICDNDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\CacheInfo.cs" />
     <Compile Include="V20200527\Models\CacheInfoInfo.cs" />
     <Compile Include="V20200527\Models\CdnDomainInfo.cs" />
@@ -216,6 +218,8 @@
     <Compile Include="V20200527\Models\UnbindCdnDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelRequest.cs" />
     <Compile Include="V20200527\Models\UnbindLinearAssemblyCDNDomainWithChannelResponse.cs" />
+    <Compile Include="V20200527\Models\UnbindSSAICDNDomainWithChannelRequest.cs" />
+    <Compile Include="V20200527\Models\UnbindSSAICDNDomainWithChannelResponse.cs" />
     <Compile Include="V20200527\Models\UsageDetail.cs" />
     <Compile Include="V20200527\Models\VodRemuxTaskInfo.cs" />
   </ItemGroup>

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1226";
+       private const string sdkVersion = "SDK_NET_3.0.1229";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeDBInstanceNamespaceResponse DescribeDBInstanceNamespaceSync(DescribeDBInstanceNamespaceRequest req)
         {
             return InternalRequestAsync<DescribeDBInstanceNamespaceResponse>(req, "DescribeDBInstanceNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query node attributes, such as the AZ, node name, address, role, status, delay between primary and secondary nodes, priority, voting right, and tags.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNodePropertyRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNodePropertyResponse"/></returns>
+        public Task<DescribeDBInstanceNodePropertyResponse> DescribeDBInstanceNodeProperty(DescribeDBInstanceNodePropertyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNodePropertyResponse>(req, "DescribeDBInstanceNodeProperty");
+        }
+
+        /// <summary>
+        /// This API is used to query node attributes, such as the AZ, node name, address, role, status, delay between primary and secondary nodes, priority, voting right, and tags.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceNodePropertyRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceNodePropertyResponse"/></returns>
+        public DescribeDBInstanceNodePropertyResponse DescribeDBInstanceNodePropertySync(DescribeDBInstanceNodePropertyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceNodePropertyResponse>(req, "DescribeDBInstanceNodeProperty")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
