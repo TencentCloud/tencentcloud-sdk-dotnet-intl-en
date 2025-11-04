@@ -97,11 +97,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// The secondary CIDR block.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Auxiliary CIDR
         /// </summary>
         [JsonProperty("AssistantCidrSet")]
         public AssistantCidr[] AssistantCidrSet{ get; set; }
+
+        /// <summary>
+        /// Vpc association with CCN route publish policy. true: enables cidr route publishing. false: enables subnet route publishing. default is subnet route publishing when creating a vpc. to select cidr route publishing, submit a ticket for adding to allowlist.
+        /// </summary>
+        [JsonProperty("EnableRouteVpcPublish")]
+        public bool? EnableRouteVpcPublish{ get; set; }
+
+        /// <summary>
+        /// Returns the multi-operator IPv6 Cidr Block.
+        /// </summary>
+        [JsonProperty("Ipv6CidrBlockSet")]
+        public ISPIPv6CidrBlock[] Ipv6CidrBlockSet{ get; set; }
 
 
         /// <summary>
@@ -122,6 +133,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
+            this.SetParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
+            this.SetParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
         }
     }
 }

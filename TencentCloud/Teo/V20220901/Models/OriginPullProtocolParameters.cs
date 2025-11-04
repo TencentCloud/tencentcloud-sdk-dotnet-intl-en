@@ -21,22 +21,14 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PostMaxSize : AbstractModel
+    public class OriginPullProtocolParameters : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-        /// <li>`on`: Enable;</li>
-        /// <li>`off`: Disable.</li>
+        /// 
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public long? MaxSize{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

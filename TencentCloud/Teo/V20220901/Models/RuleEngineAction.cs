@@ -179,6 +179,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OriginPullProtocolParameters")]
+        public OriginPullProtocolParameters OriginPullProtocolParameters{ get; set; }
+
+        /// <summary>
         /// Intelligent compression configuration. this parameter is required when name is set to compression.
         /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
@@ -334,6 +340,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
             this.SetParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
             this.SetParamObj(map, prefix + "ForceRedirectHTTPSParameters.", this.ForceRedirectHTTPSParameters);
+            this.SetParamObj(map, prefix + "OriginPullProtocolParameters.", this.OriginPullProtocolParameters);
             this.SetParamObj(map, prefix + "CompressionParameters.", this.CompressionParameters);
             this.SetParamObj(map, prefix + "HSTSParameters.", this.HSTSParameters);
             this.SetParamObj(map, prefix + "ClientIPHeaderParameters.", this.ClientIPHeaderParameters);

@@ -21,32 +21,26 @@ namespace TencentCloud.Vpc.V20170312.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AssistantCidr : AbstractModel
+    public class ISPIPv6CidrBlock : AbstractModel
     {
         
         /// <summary>
-        /// The `ID` of a `VPC` instance, such as `vpc-6v2ht8q5`.
+        /// IPv6 CIdr Block
         /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
+        [JsonProperty("IPv6CidrBlock")]
+        public string IPv6CidrBlock{ get; set; }
 
         /// <summary>
-        /// The secondary CIDR, such as `172.16.0.0/16`.
+        /// Network operator type. valid values: 'BGP' (default), 'CMCC' (china mobile), 'CTCC' (china telecom), 'CUCC' (china unicom).
         /// </summary>
-        [JsonProperty("CidrBlock")]
-        public string CidrBlock{ get; set; }
+        [JsonProperty("ISPType")]
+        public string ISPType{ get; set; }
 
         /// <summary>
-        /// The secondary CIDR block type. 0: common secondary CIDR block. 1: container secondary CIDR block. Default: 0.
+        /// Specifies the type of IPv6 Cidr: `GUA` (global unicast address), `ULA` (unique local address).
         /// </summary>
-        [JsonProperty("AssistantType")]
-        public long? AssistantType{ get; set; }
-
-        /// <summary>
-        /// Subnet Split by Auxiliary CIDR
-        /// </summary>
-        [JsonProperty("SubnetSet")]
-        public Subnet[] SubnetSet{ get; set; }
+        [JsonProperty("AddressType")]
+        public string AddressType{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
-            this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
-            this.SetParamSimple(map, prefix + "AssistantType", this.AssistantType);
-            this.SetParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
+            this.SetParamSimple(map, prefix + "IPv6CidrBlock", this.IPv6CidrBlock);
+            this.SetParamSimple(map, prefix + "ISPType", this.ISPType);
+            this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
         }
     }
 }

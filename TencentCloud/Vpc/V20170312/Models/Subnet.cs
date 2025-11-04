@@ -115,15 +115,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// CDC instance ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// CDC instance ID.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
         /// <summary>
-        /// Whether it is a CDC subnet. Valid values: 0: no; 1: yes
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the subnet is associated with CDC. valid values: 0 (no), 1 (yes).
         /// </summary>
         [JsonProperty("IsCdcSubnet")]
         public long? IsCdcSubnet{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Security group can be named freely, but cannot exceed 60 characters.
+        /// VPC instance ID, in the format of vpc-f49l6u0z.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -55,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string DomainName{ get; set; }
 
         /// <summary>
+        /// Vpc association with CCN route publish policy. true enables cidr route publishing. false enables subnet route publishing. the default is subnet route publishing when creating a vpc. to use cidr route publishing, submit a ticket to add to allowlist.
+        /// </summary>
+        [JsonProperty("EnableRouteVpcPublish")]
+        public bool? EnableRouteVpcPublish{ get; set; }
+
+        /// <summary>
         /// Whether to publish the CDC subnet to CCN. `true`: Publish; `false`: Do not publish
         /// </summary>
         [JsonProperty("EnableCdcPublish")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
             this.SetParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
             this.SetParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
         }
     }
