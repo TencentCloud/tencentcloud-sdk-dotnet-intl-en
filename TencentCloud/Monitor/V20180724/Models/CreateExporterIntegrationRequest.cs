@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type
+        /// Type (obtain through the DescribePrometheusIntegrations api, using the ExporterType field of each item).
         /// </summary>
         [JsonProperty("Kind")]
         public string Kind{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Kubernetes cluster type. Valid values:
-        /// <li> 1 = TKE </li>
-        /// <li> 2 = EKS </li>
-        /// <li> 3 = MEKS </li>
+        /// Kubernetes cluster type, optional, valid values are as follows:.
+        /// <li>1 = TKE</li>
+        /// <li>2 = EKS</li>
+        /// <li>3 = MEKS</li>
         /// </summary>
         [JsonProperty("KubeType")]
         public long? KubeType{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID, optional.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
