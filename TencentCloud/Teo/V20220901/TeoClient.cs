@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1232";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Teo.V20220901
         public CheckCnameStatusResponse CheckCnameStatusSync(CheckCnameStatusRequest req)
         {
             return InternalRequestAsync<CheckCnameStatusResponse>(req, "CheckCnameStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
+        public Task<ConfirmMultiPathGatewayOriginACLResponse> ConfirmMultiPathGatewayOriginACL(ConfirmMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<ConfirmMultiPathGatewayOriginACLResponse>(req, "ConfirmMultiPathGatewayOriginACL");
+        }
+
+        /// <summary>
+        /// This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
+        public ConfirmMultiPathGatewayOriginACLResponse ConfirmMultiPathGatewayOriginACLSync(ConfirmMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<ConfirmMultiPathGatewayOriginACLResponse>(req, "ConfirmMultiPathGatewayOriginACL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2173,6 +2194,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
+        public Task<DescribeMultiPathGatewayOriginACLResponse> DescribeMultiPathGatewayOriginACL(DescribeMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayOriginACLResponse>(req, "DescribeMultiPathGatewayOriginACL");
+        }
+
+        /// <summary>
+        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
+        /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
+        public DescribeMultiPathGatewayOriginACLResponse DescribeMultiPathGatewayOriginACLSync(DescribeMultiPathGatewayOriginACLRequest req)
+        {
+            return InternalRequestAsync<DescribeMultiPathGatewayOriginACLResponse>(req, "DescribeMultiPathGatewayOriginACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
@@ -3720,6 +3762,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKeySync(ModifyMultiPathGatewaySecretKeyRequest req)
         {
             return InternalRequestAsync<ModifyMultiPathGatewaySecretKeyResponse>(req, "ModifyMultiPathGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a multi-channel security gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
+        public Task<ModifyMultiPathGatewayStatusResponse> ModifyMultiPathGatewayStatus(ModifyMultiPathGatewayStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayStatusResponse>(req, "ModifyMultiPathGatewayStatus");
+        }
+
+        /// <summary>
+        /// This API is used to update the status of a multi-channel security gateway.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
+        /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
+        public ModifyMultiPathGatewayStatusResponse ModifyMultiPathGatewayStatusSync(ModifyMultiPathGatewayStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMultiPathGatewayStatusResponse>(req, "ModifyMultiPathGatewayStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

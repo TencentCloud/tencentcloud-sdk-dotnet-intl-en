@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1230";
+       private const string sdkVersion = "SDK_NET_3.0.1234";
 
         /// <summary>
         /// Client constructor.
@@ -348,6 +348,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to create log delivery.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliveryRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliveryResponse"/></returns>
+        public Task<CreateCLSDeliveryResponse> CreateCLSDelivery(CreateCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliveryResponse>(req, "CreateCLSDelivery");
+        }
+
+        /// <summary>
+        /// This API is used to create log delivery.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliveryRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliveryResponse"/></returns>
+        public CreateCLSDeliveryResponse CreateCLSDeliverySync(CreateCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliveryResponse>(req, "CreateCLSDelivery")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a database.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterDatabaseRequest"/></param>
@@ -558,6 +579,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to delete log delivery.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliveryRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliveryResponse"/></returns>
+        public Task<DeleteCLSDeliveryResponse> DeleteCLSDelivery(DeleteCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliveryResponse>(req, "DeleteCLSDelivery");
+        }
+
+        /// <summary>
+        /// This API is used to delete log delivery.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliveryRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliveryResponse"/></returns>
+        public DeleteCLSDeliveryResponse DeleteCLSDeliverySync(DeleteCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliveryResponse>(req, "DeleteCLSDelivery")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This interface is used to delete a database.
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterDatabaseRequest"/></param>
@@ -638,6 +680,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
         {
             return InternalRequestAsync<DescribeAccountsResponse>(req, "DescribeAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance list of database audit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance list of database audit.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +936,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// this interface is used for querying parameter comparison after specification adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangedParamsAfterUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeChangedParamsAfterUpgradeResponse"/></returns>
+        public Task<DescribeChangedParamsAfterUpgradeResponse> DescribeChangedParamsAfterUpgrade(DescribeChangedParamsAfterUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeChangedParamsAfterUpgradeResponse>(req, "DescribeChangedParamsAfterUpgrade");
+        }
+
+        /// <summary>
+        /// this interface is used for querying parameter comparison after specification adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChangedParamsAfterUpgradeRequest"/></param>
+        /// <returns><see cref="DescribeChangedParamsAfterUpgradeResponse"/></returns>
+        public DescribeChangedParamsAfterUpgradeResponse DescribeChangedParamsAfterUpgradeSync(DescribeChangedParamsAfterUpgradeRequest req)
+        {
+            return InternalRequestAsync<DescribeChangedParamsAfterUpgradeResponse>(req, "DescribeChangedParamsAfterUpgrade")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to access the table list.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterDatabaseTablesRequest"/></param>
@@ -890,6 +974,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterDatabaseTablesResponse DescribeClusterDatabaseTablesSync(DescribeClusterDatabaseTablesRequest req)
         {
             return InternalRequestAsync<DescribeClusterDatabaseTablesResponse>(req, "DescribeClusterDatabaseTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain cluster database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
+        public Task<DescribeClusterDatabasesResponse> DescribeClusterDatabases(DescribeClusterDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabasesResponse>(req, "DescribeClusterDatabases");
+        }
+
+        /// <summary>
+        /// This API is used to obtain cluster database list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeClusterDatabasesResponse"/></returns>
+        public DescribeClusterDatabasesResponse DescribeClusterDatabasesSync(DescribeClusterDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterDatabasesResponse>(req, "DescribeClusterDatabases")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1100,6 +1205,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeFlowResponse DescribeFlowSync(DescribeFlowRequest req)
         {
             return InternalRequestAsync<DescribeFlowResponse>(req, "DescribeFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance log delivery information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceCLSLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceCLSLogDeliveryResponse"/></returns>
+        public Task<DescribeInstanceCLSLogDeliveryResponse> DescribeInstanceCLSLogDelivery(DescribeInstanceCLSLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceCLSLogDeliveryResponse>(req, "DescribeInstanceCLSLogDelivery");
+        }
+
+        /// <summary>
+        /// This API is used to query instance log delivery information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceCLSLogDeliveryRequest"/></param>
+        /// <returns><see cref="DescribeInstanceCLSLogDeliveryResponse"/></returns>
+        public DescribeInstanceCLSLogDeliveryResponse DescribeInstanceCLSLogDeliverySync(DescribeInstanceCLSLogDeliveryRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceCLSLogDeliveryResponse>(req, "DescribeInstanceCLSLogDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1625,6 +1751,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeSupportProxyVersionResponse DescribeSupportProxyVersionSync(DescribeSupportProxyVersionRequest req)
         {
             return InternalRequestAsync<DescribeSupportProxyVersionResponse>(req, "DescribeSupportProxyVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query task lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public Task<DescribeTasksResponse> DescribeTasks(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query task lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTasksRequest"/></param>
+        /// <returns><see cref="DescribeTasksResponse"/></returns>
+        public DescribeTasksResponse DescribeTasksSync(DescribeTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeTasksResponse>(req, "DescribeTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2259,6 +2406,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the time limit for upgrading the kernel minor version of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
+        /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
+        public Task<ModifyInstanceUpgradeLimitDaysResponse> ModifyInstanceUpgradeLimitDays(ModifyInstanceUpgradeLimitDaysRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceUpgradeLimitDaysResponse>(req, "ModifyInstanceUpgradeLimitDays");
+        }
+
+        /// <summary>
+        /// This API is used to modify the time limit for upgrading the kernel minor version of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceUpgradeLimitDaysRequest"/></param>
+        /// <returns><see cref="ModifyInstanceUpgradeLimitDaysResponse"/></returns>
+        public ModifyInstanceUpgradeLimitDaysResponse ModifyInstanceUpgradeLimitDaysSync(ModifyInstanceUpgradeLimitDaysRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceUpgradeLimitDaysResponse>(req, "ModifyInstanceUpgradeLimitDays")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify maintenance time configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
@@ -2700,6 +2868,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to renew the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="RenewClustersRequest"/></param>
+        /// <returns><see cref="RenewClustersResponse"/></returns>
+        public Task<RenewClustersResponse> RenewClusters(RenewClustersRequest req)
+        {
+            return InternalRequestAsync<RenewClustersResponse>(req, "RenewClusters");
+        }
+
+        /// <summary>
+        /// This API is used to renew the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="RenewClustersRequest"/></param>
+        /// <returns><see cref="RenewClustersResponse"/></returns>
+        public RenewClustersResponse RenewClustersSync(RenewClustersRequest req)
+        {
+            return InternalRequestAsync<RenewClustersResponse>(req, "RenewClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to replay instance audit logs.
         /// </summary>
         /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
@@ -2784,6 +2973,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to perform cluster rollback.
+        /// </summary>
+        /// <param name="req"><see cref="RollBackClusterRequest"/></param>
+        /// <returns><see cref="RollBackClusterResponse"/></returns>
+        public Task<RollBackClusterResponse> RollBackCluster(RollBackClusterRequest req)
+        {
+            return InternalRequestAsync<RollBackClusterResponse>(req, "RollBackCluster");
+        }
+
+        /// <summary>
+        /// This API is used to perform cluster rollback.
+        /// </summary>
+        /// <param name="req"><see cref="RollBackClusterRequest"/></param>
+        /// <returns><see cref="RollBackClusterResponse"/></returns>
+        public RollBackClusterResponse RollBackClusterSync(RollBackClusterRequest req)
+        {
+            return InternalRequestAsync<RollBackClusterResponse>(req, "RollBackCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to roll back to a new cluster.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackToNewClusterRequest"/></param>
+        /// <returns><see cref="RollbackToNewClusterResponse"/></returns>
+        public Task<RollbackToNewClusterResponse> RollbackToNewCluster(RollbackToNewClusterRequest req)
+        {
+            return InternalRequestAsync<RollbackToNewClusterResponse>(req, "RollbackToNewCluster");
+        }
+
+        /// <summary>
+        /// This API is used to roll back to a new cluster.
+        /// </summary>
+        /// <param name="req"><see cref="RollbackToNewClusterRequest"/></param>
+        /// <returns><see cref="RollbackToNewClusterResponse"/></returns>
+        public RollbackToNewClusterResponse RollbackToNewClusterSync(RollbackToNewClusterRequest req)
+        {
+            return InternalRequestAsync<RollbackToNewClusterResponse>(req, "RollbackToNewCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to search cluster database lists.
         /// </summary>
         /// <param name="req"><see cref="SearchClusterDatabasesRequest"/></param>
@@ -2843,6 +3074,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public SetRenewFlagResponse SetRenewFlagSync(SetRenewFlagRequest req)
         {
             return InternalRequestAsync<SetRenewFlagResponse>(req, "SetRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (StartCLSDelivery) is used to enable log delivery functionality.
+        /// </summary>
+        /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
+        public Task<StartCLSDeliveryResponse> StartCLSDelivery(StartCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StartCLSDeliveryResponse>(req, "StartCLSDelivery");
+        }
+
+        /// <summary>
+        /// This interface (StartCLSDelivery) is used to enable log delivery functionality.
+        /// </summary>
+        /// <param name="req"><see cref="StartCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StartCLSDeliveryResponse"/></returns>
+        public StartCLSDeliveryResponse StartCLSDeliverySync(StartCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StartCLSDeliveryResponse>(req, "StartCLSDelivery")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to stop the log delivery feature.
+        /// </summary>
+        /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
+        public Task<StopCLSDeliveryResponse> StopCLSDelivery(StopCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StopCLSDeliveryResponse>(req, "StopCLSDelivery");
+        }
+
+        /// <summary>
+        /// This API is used to stop the log delivery feature.
+        /// </summary>
+        /// <param name="req"><see cref="StopCLSDeliveryRequest"/></param>
+        /// <returns><see cref="StopCLSDeliveryResponse"/></returns>
+        public StopCLSDeliveryResponse StopCLSDeliverySync(StopCLSDeliveryRequest req)
+        {
+            return InternalRequestAsync<StopCLSDeliveryResponse>(req, "StopCLSDelivery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

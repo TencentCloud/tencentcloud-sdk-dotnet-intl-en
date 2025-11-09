@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1230</VersionPrefix>
+    <VersionPrefix>3.0.1234</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
+    <Compile Include="V20190107\Models\AuditInstanceFilters.cs" />
+    <Compile Include="V20190107\Models\AuditInstanceInfo.cs" />
     <Compile Include="V20190107\Models\AuditRuleFilters.cs" />
     <Compile Include="V20190107\Models\AuditRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
@@ -69,6 +71,10 @@
     <Compile Include="V20190107\Models\BindInstanceInfo.cs" />
     <Compile Include="V20190107\Models\BinlogConfigInfo.cs" />
     <Compile Include="V20190107\Models\BinlogItem.cs" />
+    <Compile Include="V20190107\Models\BizTaskInfo.cs" />
+    <Compile Include="V20190107\Models\BizTaskModifyInstanceParam.cs" />
+    <Compile Include="V20190107\Models\BizTaskModifyParamsData.cs" />
+    <Compile Include="V20190107\Models\CLSInfo.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\CloseClusterPasswordComplexityRequest.cs" />
@@ -83,6 +89,7 @@
     <Compile Include="V20190107\Models\CloseWanResponse.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\ClusterReadOnlyValue.cs" />
+    <Compile Include="V20190107\Models\ClusterSlaveData.cs" />
     <Compile Include="V20190107\Models\ClusterTaskId.cs" />
     <Compile Include="V20190107\Models\CopyClusterPasswordComplexityRequest.cs" />
     <Compile Include="V20190107\Models\CopyClusterPasswordComplexityResponse.cs" />
@@ -92,8 +99,11 @@
     <Compile Include="V20190107\Models\CreateAuditRuleTemplateResponse.cs" />
     <Compile Include="V20190107\Models\CreateBackupRequest.cs" />
     <Compile Include="V20190107\Models\CreateBackupResponse.cs" />
+    <Compile Include="V20190107\Models\CreateCLSDeliveryRequest.cs" />
+    <Compile Include="V20190107\Models\CreateCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\CreateClusterDatabaseRequest.cs" />
     <Compile Include="V20190107\Models\CreateClusterDatabaseResponse.cs" />
+    <Compile Include="V20190107\Models\CreateClustersData.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CreateIntegrateClusterRequest.cs" />
@@ -106,6 +116,7 @@
     <Compile Include="V20190107\Models\CreateProxyResponse.cs" />
     <Compile Include="V20190107\Models\CreateResourcePackageRequest.cs" />
     <Compile Include="V20190107\Models\CreateResourcePackageResponse.cs" />
+    <Compile Include="V20190107\Models\CrossRegionBackupItem.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
     <Compile Include="V20190107\Models\CynosdbClusterDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbErrorLogItem.cs" />
@@ -121,14 +132,19 @@
     <Compile Include="V20190107\Models\DeleteAuditRuleTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DeleteBackupRequest.cs" />
     <Compile Include="V20190107\Models\DeleteBackupResponse.cs" />
+    <Compile Include="V20190107\Models\DeleteCLSDeliveryRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseRequest.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseResponse.cs" />
     <Compile Include="V20190107\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\DeleteParamTemplateResponse.cs" />
+    <Compile Include="V20190107\Models\DeliverSummary.cs" />
     <Compile Include="V20190107\Models\DescribeAccountPrivilegesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditInstanceListRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditInstanceListResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleWithInstanceIdsRequest.cs" />
@@ -151,8 +167,12 @@
     <Compile Include="V20190107\Models\DescribeBinlogSaveDaysResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBinlogsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBinlogsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeChangedParamsAfterUpgradeRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeChangedParamsAfterUpgradeResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDatabaseTablesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDatabaseTablesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterDatabasesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterDatabasesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDetailDatabasesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDetailDatabasesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDetailRequest.cs" />
@@ -173,6 +193,8 @@
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20190107\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceCLSLogDeliveryRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceCLSLogDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceErrorLogsRequest.cs" />
@@ -223,9 +245,13 @@
     <Compile Include="V20190107\Models\DescribeSlaveZonesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeSupportProxyVersionRequest.cs" />
     <Compile Include="V20190107\Models\DescribeSupportProxyVersionResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20190107\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20190107\Models\ErrorLogItemExport.cs" />
+    <Compile Include="V20190107\Models\ExchangeInstanceInfo.cs" />
+    <Compile Include="V20190107\Models\ExchangeRoGroupInfo.cs" />
     <Compile Include="V20190107\Models\ExportInstanceErrorLogsRequest.cs" />
     <Compile Include="V20190107\Models\ExportInstanceErrorLogsResponse.cs" />
     <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
@@ -245,6 +271,8 @@
     <Compile Include="V20190107\Models\InquirePriceRenewResponse.cs" />
     <Compile Include="V20190107\Models\InstanceAbility.cs" />
     <Compile Include="V20190107\Models\InstanceAuditRule.cs" />
+    <Compile Include="V20190107\Models\InstanceAuditStatus.cs" />
+    <Compile Include="V20190107\Models\InstanceCLSDeliveryInfo.cs" />
     <Compile Include="V20190107\Models\InstanceInitInfo.cs" />
     <Compile Include="V20190107\Models\InstanceNameWeight.cs" />
     <Compile Include="V20190107\Models\InstanceNetInfo.cs" />
@@ -257,6 +285,7 @@
     <Compile Include="V20190107\Models\IsolateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\LogicBackupConfigInfo.cs" />
+    <Compile Include="V20190107\Models\ManualBackupData.cs" />
     <Compile Include="V20190107\Models\ModifiableInfo.cs" />
     <Compile Include="V20190107\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20190107\Models\ModifyAccountDescriptionResponse.cs" />
@@ -294,15 +323,20 @@
     <Compile Include="V20190107\Models\ModifyClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyDbVersionData.cs" />
+    <Compile Include="V20190107\Models\ModifyInstanceData.cs" />
     <Compile Include="V20190107\Models\ModifyInstanceNameRequest.cs" />
     <Compile Include="V20190107\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyInstanceParamRequest.cs" />
     <Compile Include="V20190107\Models\ModifyInstanceParamResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyInstanceUpgradeLimitDaysRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyInstanceUpgradeLimitDaysResponse.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
     <Compile Include="V20190107\Models\ModifyParamItem.cs" />
     <Compile Include="V20190107\Models\ModifyParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\ModifyParamTemplateResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyParamsData.cs" />
     <Compile Include="V20190107\Models\ModifyProxyDescRequest.cs" />
     <Compile Include="V20190107\Models\ModifyProxyDescResponse.cs" />
     <Compile Include="V20190107\Models\ModifyProxyRwSplitRequest.cs" />
@@ -345,6 +379,7 @@
     <Compile Include="V20190107\Models\ParamInfo.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
     <Compile Include="V20190107\Models\ParamItemDetail.cs" />
+    <Compile Include="V20190107\Models\ParamItemInfo.cs" />
     <Compile Include="V20190107\Models\ParamTemplateListInfo.cs" />
     <Compile Include="V20190107\Models\PauseServerlessRequest.cs" />
     <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
@@ -368,6 +403,8 @@
     <Compile Include="V20190107\Models\ReloadBalanceProxyNodeResponse.cs" />
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneRequest.cs" />
     <Compile Include="V20190107\Models\RemoveClusterSlaveZoneResponse.cs" />
+    <Compile Include="V20190107\Models\RenewClustersRequest.cs" />
+    <Compile Include="V20190107\Models\RenewClustersResponse.cs" />
     <Compile Include="V20190107\Models\ReplayInstanceAuditLogRequest.cs" />
     <Compile Include="V20190107\Models\ReplayInstanceAuditLogResponse.cs" />
     <Compile Include="V20190107\Models\ResetAccountPasswordRequest.cs" />
@@ -377,7 +414,18 @@
     <Compile Include="V20190107\Models\RestartInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
+    <Compile Include="V20190107\Models\RollBackClusterRequest.cs" />
+    <Compile Include="V20190107\Models\RollBackClusterResponse.cs" />
+    <Compile Include="V20190107\Models\RollbackData.cs" />
+    <Compile Include="V20190107\Models\RollbackDatabase.cs" />
+    <Compile Include="V20190107\Models\RollbackInstanceInfo.cs" />
+    <Compile Include="V20190107\Models\RollbackProcessInfo.cs" />
+    <Compile Include="V20190107\Models\RollbackRoGroupInfo.cs" />
+    <Compile Include="V20190107\Models\RollbackTable.cs" />
+    <Compile Include="V20190107\Models\RollbackTableInfo.cs" />
     <Compile Include="V20190107\Models\RollbackTimeRange.cs" />
+    <Compile Include="V20190107\Models\RollbackToNewClusterRequest.cs" />
+    <Compile Include="V20190107\Models\RollbackToNewClusterResponse.cs" />
     <Compile Include="V20190107\Models\RuleFilters.cs" />
     <Compile Include="V20190107\Models\RuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\SalePackageSpec.cs" />
@@ -395,6 +443,11 @@
     <Compile Include="V20190107\Models\SlaveZoneAttrItem.cs" />
     <Compile Include="V20190107\Models\SlaveZoneStockInfo.cs" />
     <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
+    <Compile Include="V20190107\Models\StartCLSDeliveryRequest.cs" />
+    <Compile Include="V20190107\Models\StartCLSDeliveryResponse.cs" />
+    <Compile Include="V20190107\Models\StopCLSDeliveryRequest.cs" />
+    <Compile Include="V20190107\Models\StopCLSDeliveryResponse.cs" />
+    <Compile Include="V20190107\Models\SwitchClusterLogBin.cs" />
     <Compile Include="V20190107\Models\SwitchClusterVpcRequest.cs" />
     <Compile Include="V20190107\Models\SwitchClusterVpcResponse.cs" />
     <Compile Include="V20190107\Models\SwitchClusterZoneRequest.cs" />
@@ -403,6 +456,8 @@
     <Compile Include="V20190107\Models\SwitchProxyVpcResponse.cs" />
     <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
+    <Compile Include="V20190107\Models\TaskMaintainInfo.cs" />
+    <Compile Include="V20190107\Models\TaskProgressInfo.cs" />
     <Compile Include="V20190107\Models\TemplateParamInfo.cs" />
     <Compile Include="V20190107\Models\TradePrice.cs" />
     <Compile Include="V20190107\Models\UnbindClusterResourcePackagesRequest.cs" />
