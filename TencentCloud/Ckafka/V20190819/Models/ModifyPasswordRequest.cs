@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -41,7 +41,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+        /// Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
@@ -67,11 +67,44 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? DomainPort{ get; set; }
 
         /// <summary>
-        /// Timestamp
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Timestamp.
         /// </summary>
         [JsonProperty("DeleteTimestamp")]
         public string DeleteTimestamp{ get; set; }
+
+        /// <summary>
+        /// Specifies the subnet Id.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Subnet")]
+        public string Subnet{ get; set; }
+
+        /// <summary>
+        /// Virtual IP list (1:1 broker node).
+        /// </summary>
+        [JsonProperty("BrokerVipList")]
+        public VipEntity[] BrokerVipList{ get; set; }
+
+        /// <summary>
+        /// VPC Id. specifies the Id of the vpc.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// Remarks
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
+        /// <summary>
+        /// Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -86,6 +119,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DomainPort", this.DomainPort);
             this.SetParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
+            this.SetParamSimple(map, prefix + "Subnet", this.Subnet);
+            this.SetParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

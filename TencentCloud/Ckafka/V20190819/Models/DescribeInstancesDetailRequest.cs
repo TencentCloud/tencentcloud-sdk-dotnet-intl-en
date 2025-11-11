@@ -70,6 +70,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// This parameter has been deprecated and replaced with `InstanceIdList`.
         /// </summary>
         [JsonProperty("InstanceIds")]
+        [System.Obsolete]
         public string InstanceIds{ get; set; }
 
         /// <summary>

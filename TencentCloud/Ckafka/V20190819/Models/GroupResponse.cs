@@ -25,22 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Count
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Counting.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// GroupList
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupList")]
         public DescribeGroup[] GroupList{ get; set; }
 
         /// <summary>
-        /// Consumer group quota
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the consumer group quota.
         /// </summary>
         [JsonProperty("GroupCountQuota")]
         public ulong? GroupCountQuota{ get; set; }

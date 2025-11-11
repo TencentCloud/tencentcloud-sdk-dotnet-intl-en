@@ -25,14 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// FlowId11
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Flow ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// RouteIdDto Note: This field may return null, indicating that no valid values can be obtained.
+        /// RouteIdDto
         /// </summary>
         [JsonProperty("RouteDTO")]
         public RouteDTO RouteDTO{ get; set; }

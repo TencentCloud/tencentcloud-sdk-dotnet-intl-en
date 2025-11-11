@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance Id. you can obtain it by calling the DescribeInstances api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+        /// Can only contain letters, digits, underscores, "-", or ".".
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -67,37 +67,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+        /// Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// Default value: 1
+        /// Minimum number of synchronous replicas, defaults to 1.
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
+        /// Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+        /// Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+        /// Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+        /// Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+        /// Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }

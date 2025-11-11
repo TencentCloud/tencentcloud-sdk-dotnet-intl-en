@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Group name.
+        /// Consumer group name.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Topic name. You must specify the name of an existing topic for either `TopicName` or `TopicNameList`.
+        /// Topic name. one of TopicName or TopicNameList must display a specified existing topic name.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Topic name array.
+        /// Topic name list.
         /// </summary>
         [JsonProperty("TopicNameList")]
         public string[] TopicNameList{ get; set; }

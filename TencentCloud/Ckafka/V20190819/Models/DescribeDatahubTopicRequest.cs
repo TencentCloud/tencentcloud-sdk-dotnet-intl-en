@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Name
+        /// Elastic topic name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

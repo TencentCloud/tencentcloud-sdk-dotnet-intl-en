@@ -48,6 +48,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// Reason for break.
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
+        /// <summary>
+        /// Agent email.
+        /// </summary>
+        [JsonProperty("StaffEmail")]
+        public string StaffEmail{ get; set; }
+
+        /// <summary>
+        /// Agent id.
+        /// </summary>
+        [JsonProperty("StaffNo")]
+        public string StaffNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "StaffEmail", this.StaffEmail);
+            this.SetParamSimple(map, prefix + "StaffNo", this.StaffNo);
         }
     }
 }

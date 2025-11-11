@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Information of assigned partition
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Allocates partition info.
         /// </summary>
         [JsonProperty("Partitions")]
         public long?[] Partitions{ get; set; }

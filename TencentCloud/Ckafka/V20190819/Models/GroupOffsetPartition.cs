@@ -37,8 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Metadata can be passed in for other purposes when the consumer submits messages. Currently, this parameter is usually an empty string
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Supports consumers to submit messages with imported metadata for other purposes, currently an empty string.
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }

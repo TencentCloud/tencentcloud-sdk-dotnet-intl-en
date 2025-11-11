@@ -43,36 +43,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string AreaName{ get; set; }
 
         /// <summary>
-        /// Region code
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Region code.
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
         /// <summary>
-        /// Region code (v3)
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Region code (V3 version).
         /// </summary>
         [JsonProperty("RegionCodeV3")]
         public string RegionCodeV3{ get; set; }
 
         /// <summary>
-        /// NONE: no special models are supported by default.\nCVM: the CVM type is supported.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the default value does not support any special type instance type.
         /// </summary>
         [JsonProperty("Support")]
         public string Support{ get; set; }
 
         /// <summary>
-        /// Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Whether ipv6 is supported. 0: indicates no support. 1: indicates support.
         /// </summary>
         [JsonProperty("Ipv6")]
         public long? Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Whether cross-az is supported. valid values: 0 (unsupported), 1 (supported).
         /// </summary>
         [JsonProperty("MultiZone")]
         public long? MultiZone{ get; set; }

@@ -55,53 +55,70 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Price MessagePrice{ get; set; }
 
         /// <summary>
-        /// Cluster information dedicated to a user
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the user-exclusive cluster info.
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
-        /// Purchase of Standard Edition configurations
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Purchase the standard version configuration.
         /// </summary>
         [JsonProperty("Standard")]
         public string Standard{ get; set; }
 
         /// <summary>
-        /// Purchase of Standard S2 Edition configurations
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Purchase the standard version S2 configuration.
         /// </summary>
         [JsonProperty("StandardS2")]
         public string StandardS2{ get; set; }
 
         /// <summary>
-        /// Purchase of Pro Edition configurations
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the configuration for purchasing the professional edition.
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// Purchase of Physical Dedicated Edition configurations
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Purchase physical dedicated edition configuration.
         /// </summary>
         [JsonProperty("Physical")]
         public string Physical{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public string PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth configuration.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Configures the public network bandwidth.
         /// </summary>
         [JsonProperty("PublicNetworkLimit")]
         public string PublicNetworkLimit{ get; set; }
+
+        /// <summary>
+        /// Request ID.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+        /// <summary>
+        /// Pagination Offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Pagination Limit
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Mandatory. input tag.
+        /// </summary>
+        [JsonProperty("ForceCheckTag")]
+        public bool? ForceCheckTag{ get; set; }
 
 
         /// <summary>
@@ -121,6 +138,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Physical", this.Physical);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ForceCheckTag", this.ForceCheckTag);
         }
     }
 }

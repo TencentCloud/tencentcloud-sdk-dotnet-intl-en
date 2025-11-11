@@ -49,29 +49,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InSyncReplica{ get; set; }
 
         /// <summary>
-        /// Starting offset
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Start Offset.
         /// </summary>
         [JsonProperty("BeginOffset")]
         public ulong? BeginOffset{ get; set; }
 
         /// <summary>
-        /// Ending offset
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// End Offset.
         /// </summary>
         [JsonProperty("EndOffset")]
         public ulong? EndOffset{ get; set; }
 
         /// <summary>
-        /// Number of messages
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Message count.
         /// </summary>
         [JsonProperty("MessageCount")]
         public ulong? MessageCount{ get; set; }
 
         /// <summary>
-        /// Unsynced replica set
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Unsynced replica.
         /// </summary>
         [JsonProperty("OutOfSyncReplica")]
         public string OutOfSyncReplica{ get; set; }

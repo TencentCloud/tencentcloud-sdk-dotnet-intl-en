@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name.
+        /// Topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -67,16 +67,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-        /// </summary>
-        [JsonProperty("SegmentMs")]
-        public long? SegmentMs{ get; set; }
-
-        /// <summary>
         /// Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
+
+        /// <summary>
+        /// Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+        /// </summary>
+        [JsonProperty("SegmentMs")]
+        public long? SegmentMs{ get; set; }
 
         /// <summary>
         /// Message deletion policy. Valid values: delete, compact
@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// Name of the preset ACL rule.
+        /// ACL rule name.
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
@@ -115,19 +115,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Production throttling in MB/sec.
+        /// Production traffic throttling in MB/s. set to -1 to disable throttling.
         /// </summary>
         [JsonProperty("QuotaProducerByteRate")]
         public long? QuotaProducerByteRate{ get; set; }
 
         /// <summary>
-        /// Consumption throttling in MB/sec.
+        /// Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
         /// </summary>
         [JsonProperty("QuotaConsumerByteRate")]
         public long? QuotaConsumerByteRate{ get; set; }
 
         /// <summary>
-        /// The number of topic replicas.
+        /// Number of topic replicas. valid values: 1, 3.
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
@@ -145,8 +145,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MinInsyncReplicas", this.MinInsyncReplicas);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
-            this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+            this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
             this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);

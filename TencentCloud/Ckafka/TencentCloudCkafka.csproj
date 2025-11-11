@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1164</VersionPrefix>
+    <VersionPrefix>3.0.1236</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,15 +79,17 @@
     <Compile Include="V20190819\Models\CreateDatahubTopicRequest.cs" />
     <Compile Include="V20190819\Models\CreateDatahubTopicResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostData.cs" />
-    <Compile Include="V20190819\Models\CreateInstancePostRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePostResp.cs" />
-    <Compile Include="V20190819\Models\CreateInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePreRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResp.cs" />
+    <Compile Include="V20190819\Models\CreateInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="V20190819\Models\CreatePostPaidInstanceRequest.cs" />
     <Compile Include="V20190819\Models\CreatePostPaidInstanceResponse.cs" />
+    <Compile Include="V20190819\Models\CreateRouteRequest.cs" />
+    <Compile Include="V20190819\Models\CreateRouteResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicRequest.cs" />
@@ -95,11 +97,14 @@
     <Compile Include="V20190819\Models\CreateTopicResponse.cs" />
     <Compile Include="V20190819\Models\CreateUserRequest.cs" />
     <Compile Include="V20190819\Models\CreateUserResponse.cs" />
+    <Compile Include="V20190819\Models\CvmAndIpInfo.cs" />
     <Compile Include="V20190819\Models\DatahubTopicDTO.cs" />
     <Compile Include="V20190819\Models\DatahubTopicResp.cs" />
     <Compile Include="V20190819\Models\DealInstanceDTO.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteInstancePostRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\DeleteRouteRequest.cs" />
@@ -123,6 +128,8 @@
     <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeConsumerGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeCvmInfoRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeCvmInfoResponse.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTopicRequest.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTopicResp.cs" />
     <Compile Include="V20190819\Models\DescribeDatahubTopicResponse.cs" />
@@ -146,6 +153,8 @@
     <Compile Include="V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeRouteRequest.cs" />
     <Compile Include="V20190819\Models\DescribeRouteResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeSecurityGroupRoutesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeSecurityGroupRoutesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTaskStatusRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicAttributesRequest.cs" />
@@ -160,6 +169,8 @@
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTypeInstancesRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTypeInstancesResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
     <Compile Include="V20190819\Models\DynamicDiskConfig.cs" />
@@ -168,6 +179,8 @@
     <Compile Include="V20190819\Models\FetchMessageByOffsetResponse.cs" />
     <Compile Include="V20190819\Models\FetchMessageListByOffsetRequest.cs" />
     <Compile Include="V20190819\Models\FetchMessageListByOffsetResponse.cs" />
+    <Compile Include="V20190819\Models\FetchMessageListByTimestampRequest.cs" />
+    <Compile Include="V20190819\Models\FetchMessageListByTimestampResponse.cs" />
     <Compile Include="V20190819\Models\Filter.cs" />
     <Compile Include="V20190819\Models\Group.cs" />
     <Compile Include="V20190819\Models\GroupInfoMember.cs" />
@@ -189,11 +202,14 @@
     <Compile Include="V20190819\Models\InstanceAttributesResponse.cs" />
     <Compile Include="V20190819\Models\InstanceChargeParam.cs" />
     <Compile Include="V20190819\Models\InstanceConfigDO.cs" />
+    <Compile Include="V20190819\Models\InstanceDeleteResponse.cs" />
     <Compile Include="V20190819\Models\InstanceDetail.cs" />
     <Compile Include="V20190819\Models\InstanceDetailResponse.cs" />
     <Compile Include="V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="V20190819\Models\InstanceResponse.cs" />
+    <Compile Include="V20190819\Models\InstanceRoute.cs" />
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
+    <Compile Include="V20190819\Models\ListCvmAndIpInfoRsp.cs" />
     <Compile Include="V20190819\Models\ModifyAclRuleRequest.cs" />
     <Compile Include="V20190819\Models\ModifyAclRuleResponse.cs" />
     <Compile Include="V20190819\Models\ModifyDatahubTopicRequest.cs" />
@@ -217,8 +233,11 @@
     <Compile Include="V20190819\Models\Region.cs" />
     <Compile Include="V20190819\Models\Route.cs" />
     <Compile Include="V20190819\Models\RouteDTO.cs" />
+    <Compile Include="V20190819\Models\RouteFilter.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
+    <Compile Include="V20190819\Models\SecurityGroupRoute.cs" />
+    <Compile Include="V20190819\Models\SecurityGroupRouteResp.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />
     <Compile Include="V20190819\Models\SendMessageResponse.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />

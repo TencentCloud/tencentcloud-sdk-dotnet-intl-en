@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Unique task ID
+        /// Flow ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

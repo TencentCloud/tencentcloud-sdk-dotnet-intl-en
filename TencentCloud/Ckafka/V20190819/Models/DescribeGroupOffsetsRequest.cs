@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// (Filter) filter by instance ID
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

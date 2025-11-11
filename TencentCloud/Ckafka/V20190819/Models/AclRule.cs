@@ -26,91 +26,78 @@ namespace TencentCloud.Ckafka.V20190819.Models
         
         /// <summary>
         /// ACL rule name.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Instance ID.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Matching type. Currently, only prefix match is supported. Enumerated value list: PREFIXED
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// ACL rule-based matching type. currently only supports prefix match. valid values: PREFIXED.
         /// </summary>
         [JsonProperty("PatternType")]
         public string PatternType{ get; set; }
 
         /// <summary>
-        /// Prefix value for prefix match.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Indicates the prefix value for prefix match.
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// ACL resource type. Only “Topic” is supported. Enumerated value list: Topic.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Acl resource type, currently only support Topic. valid values: Topic.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// ACL information contained in the rule.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the ACL information contained in the rule.
         /// </summary>
         [JsonProperty("AclList")]
         public string AclList{ get; set; }
 
         /// <summary>
-        /// Creation time of the rule.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the time when the rule was created.
         /// </summary>
         [JsonProperty("CreateTimeStamp")]
         public string CreateTimeStamp{ get; set; }
 
         /// <summary>
-        /// A parameter used to specify whether the preset ACL rule is applied to new topics.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies whether to apply the preset ACL rule to newly-added topics.
         /// </summary>
         [JsonProperty("IsApplied")]
         public long? IsApplied{ get; set; }
 
         /// <summary>
         /// Rule update time.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTimeStamp")]
         public string UpdateTimeStamp{ get; set; }
 
         /// <summary>
-        /// Remarks of the rule.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the remark of the rule.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// One of the corresponding topic names that is displayed.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// One of the displayed corresponding TopicName.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// The number of topics that apply this ACL rule.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Number of topics to which the ACL rule is applied.
         /// </summary>
         [JsonProperty("TopicCount")]
         public long? TopicCount{ get; set; }
 
         /// <summary>
-        /// Name of rule type.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the pattern type.
         /// </summary>
         [JsonProperty("PatternTypeTitle")]
         public string PatternTypeTitle{ get; set; }

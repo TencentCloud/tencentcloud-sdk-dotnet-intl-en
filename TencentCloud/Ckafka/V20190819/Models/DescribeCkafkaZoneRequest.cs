@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Cloud Dedicated Cluster (CDC) business parameter.
+        /// cdc cluster Id.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

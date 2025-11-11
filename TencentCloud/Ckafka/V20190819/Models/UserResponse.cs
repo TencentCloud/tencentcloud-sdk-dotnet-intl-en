@@ -25,8 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// List of eligible users
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the eligible users list.
         /// </summary>
         [JsonProperty("Users")]
         public User[] Users{ get; set; }

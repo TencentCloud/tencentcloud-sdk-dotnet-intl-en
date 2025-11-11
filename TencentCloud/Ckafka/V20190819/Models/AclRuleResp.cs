@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// ACL rule list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// AclRule list.
         /// </summary>
         [JsonProperty("AclRuleList")]
         public AclRule[] AclRuleList{ get; set; }

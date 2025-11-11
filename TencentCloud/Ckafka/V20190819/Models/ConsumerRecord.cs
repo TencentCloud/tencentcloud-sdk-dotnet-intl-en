@@ -57,8 +57,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// Message timestamp
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Message timestamp.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }

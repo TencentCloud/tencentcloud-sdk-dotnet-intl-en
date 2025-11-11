@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Topic ID
+        /// Topic Id.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -43,14 +43,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// Number of replicas
+        /// Number of topic replicas. valid values: 1, 3.
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Remarks.
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
@@ -74,8 +73,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? IpWhiteListCount{ get; set; }
 
         /// <summary>
-        /// COS bucket for data backup: address of the destination COS bucket
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Data backup cos bucket. specifies the bucket address for archiving to cos.
         /// </summary>
         [JsonProperty("ForwardCosBucket")]
         public string ForwardCosBucket{ get; set; }
@@ -93,22 +91,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ForwardInterval{ get; set; }
 
         /// <summary>
-        /// Advanced configuration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Advanced configuration.
         /// </summary>
         [JsonProperty("Config")]
         public Config Config{ get; set; }
 
         /// <summary>
-        /// Message retention time configuration (for recording the latest retention time)
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Message retention period configuration (used for dynamic configuration change records).
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public TopicRetentionTimeConfigRsp RetentionTimeConfig{ get; set; }
 
         /// <summary>
-        /// `0`: normal, `1`: deleted, `2`: deleting
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// 0: normal. 1: deleted. 2: deleting.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

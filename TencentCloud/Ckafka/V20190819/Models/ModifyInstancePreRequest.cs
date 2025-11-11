@@ -25,25 +25,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance name.
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Estimated disk capacity, which can be increased by increment.
+        /// Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
+        /// Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Estimated bandwidth, which can be increased by increment.
+        /// Peak bandwidth in MB/s.
+        /// Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// Estimated partition count, which can be increased by increment.
+        /// Partition upper bound. maximum value of 40000. step length of 100.
+        /// Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

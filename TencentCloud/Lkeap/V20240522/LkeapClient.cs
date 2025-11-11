@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.intl.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1206";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -161,6 +161,27 @@ namespace TencentCloud.Lkeap.V20240522
         public QueryRewriteResponse QueryRewriteSync(QueryRewriteRequest req)
         {
             return InternalRequestAsync<QueryRewriteResponse>(req, "QueryRewrite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used for quasi-real-time document parsing, using HTTP SSE protocol for communication.
+        /// </summary>
+        /// <param name="req"><see cref="ReconstructDocumentSSERequest"/></param>
+        /// <returns><see cref="ReconstructDocumentSSEResponse"/></returns>
+        public Task<ReconstructDocumentSSEResponse> ReconstructDocumentSSE(ReconstructDocumentSSERequest req)
+        {
+            return InternalRequestAsync<ReconstructDocumentSSEResponse>(req, "ReconstructDocumentSSE");
+        }
+
+        /// <summary>
+        /// This API is used for quasi-real-time document parsing, using HTTP SSE protocol for communication.
+        /// </summary>
+        /// <param name="req"><see cref="ReconstructDocumentSSERequest"/></param>
+        /// <returns><see cref="ReconstructDocumentSSEResponse"/></returns>
+        public ReconstructDocumentSSEResponse ReconstructDocumentSSESync(ReconstructDocumentSSERequest req)
+        {
+            return InternalRequestAsync<ReconstructDocumentSSEResponse>(req, "ReconstructDocumentSSE")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

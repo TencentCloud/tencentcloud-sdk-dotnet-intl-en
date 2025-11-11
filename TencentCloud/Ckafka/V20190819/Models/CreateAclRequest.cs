@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID information
+        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Operation{ get; set; }
 
         /// <summary>
-        /// Permission type (`2`: DENY, `3`: ALLOW). CKafka currently supports `ALLOW`, which is equivalent to allowlist. `DENY` will be supported for ACLs compatible with open-source Kafka.
+        /// Permission type (2:DENY, 3:ALLOW). currently ckafka supports ALLOW (equivalent to allowlist), others used when compatible with open-source kafka acl.
         /// </summary>
         [JsonProperty("PermissionType")]
         public long? PermissionType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
+        /// Defaults to *, indicating any host is accessible in the entire region. supports filling in ips or ranges, and uses ";" for separation.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

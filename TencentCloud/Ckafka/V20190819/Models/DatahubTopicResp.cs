@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// TopicId
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Topic Id.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

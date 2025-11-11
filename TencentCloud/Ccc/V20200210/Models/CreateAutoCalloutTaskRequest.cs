@@ -79,13 +79,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? Tries{ get; set; }
 
         /// <summary>
-        /// Custom variables (supported only in advanced versions).
+        /// Custom variable (advanced edition support). using the same variable in the CalleeAttributes field will overwrite here.
         /// </summary>
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
         /// <summary>
-        /// UUI
+        /// User-Defined data. specifies that using UUI in the CalleeAttributes field will overwrite here.
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }

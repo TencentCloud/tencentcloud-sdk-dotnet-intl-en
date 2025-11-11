@@ -25,8 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// List of returned topic details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of returned topic details.
         /// </summary>
         [JsonProperty("TopicList")]
         public TopicDetail[] TopicList{ get; set; }

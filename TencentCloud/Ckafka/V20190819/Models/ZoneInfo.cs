@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Zone ID
+        /// Availability zone
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? IsInternalApp{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// Application identifier
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Flag
+        /// Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// Zone name
+        /// Availability zone name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Zone status
+        /// Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public long? ZoneStatus{ get; set; }
@@ -64,20 +64,26 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// Extra flag
         /// </summary>
         [JsonProperty("Exflag")]
+        [System.Obsolete]
         public string Exflag{ get; set; }
 
         /// <summary>
-        /// JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+        /// Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
         /// </summary>
         [JsonProperty("SoldOut")]
         public string SoldOut{ get; set; }
 
         /// <summary>
-        /// Information on whether Standard Edition has been sold out.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the sell-out information of the standard version.
         /// </summary>
         [JsonProperty("SalesInfo")]
         public SaleInfo[] SalesInfo{ get; set; }
+
+        /// <summary>
+        /// Additional flag.
+        /// </summary>
+        [JsonProperty("ExtraFlag")]
+        public string ExtraFlag{ get; set; }
 
 
         /// <summary>
@@ -94,6 +100,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Exflag", this.Exflag);
             this.SetParamSimple(map, prefix + "SoldOut", this.SoldOut);
             this.SetParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
+            this.SetParamSimple(map, prefix + "ExtraFlag", this.ExtraFlag);
         }
     }
 }

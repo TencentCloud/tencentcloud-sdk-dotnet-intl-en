@@ -25,7 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Modification time.
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Modifies the scheduled time for deleting routes.
         /// </summary>
         [JsonProperty("DelayTime")]
         public string DelayTime{ get; set; }
@@ -36,6 +42,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DelayTime", this.DelayTime);
         }
     }

@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Unique instance ID.
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Route ID.
+        /// Route id, obtain through the API [DescribeRoute](https://www.tencentcloud.comom/document/product/597/45484?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? CallerAppid{ get; set; }
 
         /// <summary>
-        /// The time when a route was deleted.
+        /// Sets the scheduled deletion time for routes. only public network routes support scheduled deletion. available for any time within the next 24 hours.
         /// </summary>
         [JsonProperty("DeleteRouteTime")]
         public string DeleteRouteTime{ get; set; }

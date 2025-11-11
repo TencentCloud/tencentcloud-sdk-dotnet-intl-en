@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

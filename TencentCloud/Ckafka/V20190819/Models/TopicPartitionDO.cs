@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Partition ID
+        /// Partition ID. specifies the Partition ID.
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Leader running status
+        /// Leader running status. 0 means running normally.
         /// </summary>
         [JsonProperty("LeaderStatus")]
         public long? LeaderStatus{ get; set; }

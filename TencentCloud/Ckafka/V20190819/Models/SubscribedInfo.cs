@@ -31,22 +31,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Subscribed partition
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the subscription partition.
         /// </summary>
         [JsonProperty("Partition")]
         public long?[] Partition{ get; set; }
 
         /// <summary>
-        /// Partition offset information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the partition offset information.
         /// </summary>
         [JsonProperty("PartitionOffset")]
         public PartitionOffset[] PartitionOffset{ get; set; }
 
         /// <summary>
-        /// ID of the subscribed topic. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Subscribed topic ID.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

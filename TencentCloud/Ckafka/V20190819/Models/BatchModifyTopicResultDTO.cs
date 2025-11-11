@@ -25,28 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Status code.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Operation return code.
         /// </summary>
         [JsonProperty("ReturnCode")]
         public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// Message status.
+        /// Returned information.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

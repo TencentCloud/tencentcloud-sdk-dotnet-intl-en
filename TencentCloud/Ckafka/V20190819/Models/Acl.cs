@@ -37,15 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// User list. The default value is `User:*`, which means that any user can access. The current user can only be one included in the user list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of users, defaults to User:*, means any User is accessible in the entire region. the current User can only be the User in the list of users.
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }
 
         /// <summary>
-        /// The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Defaults to *, indicating any host is accessible in the entire region. currently, ckafka does not support * as the host, however, the following open-source kafka productization will directly support it.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

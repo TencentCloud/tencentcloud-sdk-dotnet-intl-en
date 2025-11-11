@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Array of partitions in the topic, where each element is a JSON object
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The topic partition array, where each element is a json object.
         /// </summary>
         [JsonProperty("TopicList")]
         public GroupOffsetTopic[] TopicList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. This value must be greater than 0
+        /// Number of returned results. default: 20. value must be above 0.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -53,6 +53,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
+
+        /// <summary>
+        /// Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 0 - sequential, 1 - reverse order. default value: 0.
+        /// </summary>
+        [JsonProperty("OrderType")]
+        public long? OrderType{ get; set; }
+
+        /// <summary>
+        /// Currently supports ReplicaNum (number of replicas) filter criteria.
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -65,6 +83,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

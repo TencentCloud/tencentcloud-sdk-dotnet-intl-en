@@ -31,19 +31,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// Permission types: `Deny`, `Allow`.
+        /// Permission type. Deny: Deny. Allow: permission.
         /// </summary>
         [JsonProperty("PermissionType")]
         public string PermissionType{ get; set; }
 
         /// <summary>
-        /// The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+        /// Indicates any host is accessible in the entire region.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
+        /// The User. User:* means any User is accessible in the entire region. the current User can only be the User in the list of users. the input format requires the [User:] prefix. for example, for User A, input User:A.
         /// </summary>
         [JsonProperty("Principal")]
         public string Principal{ get; set; }

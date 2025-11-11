@@ -25,22 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Expected value, i.e., the topic message retention time (min) configured
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Expected value, the message retention period (in minutes) set by user configuration.
         /// </summary>
         [JsonProperty("Expect")]
         public long? Expect{ get; set; }
 
         /// <summary>
-        /// Current value (min), i.e., the retention time currently in effect, which may be dynamically adjusted
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Current value, which is the current effective value (may contain dynamic adjustment in minutes).
         /// </summary>
         [JsonProperty("Current")]
         public long? Current{ get; set; }
 
         /// <summary>
-        /// Last modified time
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Last modified time.
         /// </summary>
         [JsonProperty("ModTimeStamp")]
         public long? ModTimeStamp{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the instance price.
         /// </summary>
         [JsonProperty("InstancePrice")]
         public InquiryPrice InstancePrice{ get; set; }

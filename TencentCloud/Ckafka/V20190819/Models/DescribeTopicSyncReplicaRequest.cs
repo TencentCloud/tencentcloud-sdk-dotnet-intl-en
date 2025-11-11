@@ -43,7 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+        /// Number of returned results. default value: 20. must be greater than 0.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

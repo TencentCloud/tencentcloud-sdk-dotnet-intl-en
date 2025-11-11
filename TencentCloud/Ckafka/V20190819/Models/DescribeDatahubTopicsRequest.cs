@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Keyword for query
+        /// Search term.
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
@@ -42,6 +42,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to query the topic list from the connection.
+        /// </summary>
+        [JsonProperty("QueryFromConnectResource")]
+        public bool? QueryFromConnectResource{ get; set; }
+
+        /// <summary>
+        /// Connection ID.
+        /// </summary>
+        [JsonProperty("ConnectResourceId")]
+        public string ConnectResourceId{ get; set; }
+
+        /// <summary>
+        /// topic resource expression.
+        /// </summary>
+        [JsonProperty("TopicRegularExpression")]
+        public string TopicRegularExpression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "QueryFromConnectResource", this.QueryFromConnectResource);
+            this.SetParamSimple(map, prefix + "ConnectResourceId", this.ConnectResourceId);
+            this.SetParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
         }
     }
 }

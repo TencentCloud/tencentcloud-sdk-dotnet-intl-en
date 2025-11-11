@@ -37,9 +37,10 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Control command. currently supports the following commands:.
+        /// Control command. currently supported commands are as follows:.
         /// 
-        /// -ServerPushText. specifies the text sent by the server to the AI robot. the AI robot will broadcast the text.
+        /// -ServerPushText. specifies the text sent by the server to the AI robot for broadcast.
+        /// -InvokeLLM. specifies the server sends text to the large model to trigger a dialogue.
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -49,6 +50,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("ServerPushText")]
         public ServerPushText ServerPushText{ get; set; }
+
+        /// <summary>
+        /// The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content to the large model and adds X-Invoke-LLM="1" to the header.
+        /// </summary>
+        [JsonProperty("InvokeLLM")]
+        public InvokeLLM InvokeLLM{ get; set; }
 
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+            this.SetParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
         }
     }
 }

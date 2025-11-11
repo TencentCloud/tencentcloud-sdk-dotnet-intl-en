@@ -42,6 +42,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("CallInInterface")]
         public Interface CallInInterface{ get; set; }
 
+        /// <summary>
+        /// Bind number type. specifies the type of the bind number. inner: internal number | number: line number.
+        /// </summary>
+        [JsonProperty("NumberType")]
+        public string NumberType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamObj(map, prefix + "CallInInterface.", this.CallInInterface);
+            this.SetParamSimple(map, prefix + "NumberType", this.NumberType);
         }
     }
 }

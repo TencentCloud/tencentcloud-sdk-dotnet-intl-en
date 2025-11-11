@@ -25,8 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Message retention period
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Message retention period in milliseconds.
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
@@ -47,8 +46,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// Segment rolling duration
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Duration of Segment shard scrolling in milliseconds.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
@@ -61,25 +60,32 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Number of bytes for segment rolling
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Segment specifies the number of bytes for sharding scroll. unit: bytes.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentBytes")]
         public long? SegmentBytes{ get; set; }
 
         /// <summary>
-        /// Maximum number of message bytes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum message byte size. unit: bytes.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// Message retention file size.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the message retention file size in Bytes.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
+
+        /// <summary>
+        /// The time type for message saving. CreateTime means the time when the producer created this message. LogAppendTime means the time when the broker received the message.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LogMsgTimestampType")]
+        public string LogMsgTimestampType{ get; set; }
 
 
         /// <summary>
@@ -95,6 +101,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+            this.SetParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
         }
     }
 }

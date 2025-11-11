@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// RouteId11 Note: This field may return null, indicating that no valid values can be obtained.
+        /// Route ID
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }

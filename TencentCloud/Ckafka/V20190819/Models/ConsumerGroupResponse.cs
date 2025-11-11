@@ -31,50 +31,43 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Topic list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Topic list.
         /// </summary>
         [JsonProperty("TopicList")]
         public ConsumerGroupTopic[] TopicList{ get; set; }
 
         /// <summary>
-        /// Consumer group list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the consumption group List.
         /// </summary>
         [JsonProperty("GroupList")]
         public ConsumerGroup[] GroupList{ get; set; }
 
         /// <summary>
-        /// Total number of partitions
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of partitions.
         /// </summary>
         [JsonProperty("TotalPartition")]
         public long? TotalPartition{ get; set; }
 
         /// <summary>
-        /// List of monitored partitions
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Monitored partition list.
         /// </summary>
         [JsonProperty("PartitionListForMonitor")]
         public Partition[] PartitionListForMonitor{ get; set; }
 
         /// <summary>
-        /// Total number of topics
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of topics.
         /// </summary>
         [JsonProperty("TotalTopic")]
         public long? TotalTopic{ get; set; }
 
         /// <summary>
-        /// List of monitored topics
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Monitored topic list.
         /// </summary>
         [JsonProperty("TopicListForMonitor")]
         public ConsumerGroupTopic[] TopicListForMonitor{ get; set; }
 
         /// <summary>
-        /// List of monitored groups
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Monitored group list.
         /// </summary>
         [JsonProperty("GroupListForMonitor")]
         public Group[] GroupListForMonitor{ get; set; }

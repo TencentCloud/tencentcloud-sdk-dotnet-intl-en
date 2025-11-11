@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// groupId
+        /// Consumer group name.
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }

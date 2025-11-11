@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Topic list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Topic list.
         /// </summary>
         [JsonProperty("TopicList")]
         public DatahubTopicDTO[] TopicList{ get; set; }

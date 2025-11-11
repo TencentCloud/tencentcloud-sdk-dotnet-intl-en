@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Output information Note: This field may return null, indicating that no valid values can be obtained.
+        /// Output information.
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }

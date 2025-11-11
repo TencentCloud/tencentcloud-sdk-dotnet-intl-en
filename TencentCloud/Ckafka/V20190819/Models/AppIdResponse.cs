@@ -31,8 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of eligible `AppId`
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the App Id list that meets the requirements.
         /// </summary>
         [JsonProperty("AppIdList")]
         public long?[] AppIdList{ get; set; }

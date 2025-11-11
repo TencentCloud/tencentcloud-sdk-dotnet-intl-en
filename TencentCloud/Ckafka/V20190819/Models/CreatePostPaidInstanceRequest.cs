@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance name, which is a string of up to 64 letters, digits, and hyphens (-). It must start with a letter.
-        /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
-
-        /// <summary>
-        /// ID of the VPC where the default access point of the created instance resides.  This parameter is required as instances cannot be created in the classic network currently.
+        /// VPC Id, obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// ID of the subnet  where the default access point of the created instance resides.
+        /// Subnet Id. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance specification.  This parameter is required for a Standard Edition instance but not for a Pro Edition instance.  Valid values:  `1` (Small),  `2` (Standard),  `3` (Advanced),  `4` (Large),  `5` (Xlarge L1),  `6` (Xlarge L2),  `7` (Xlarge L3),  `8` (Xlarge L4),  
+        /// Specifies the cluster instance name of ckafka, an arbitrary character with length not exceeding 128.
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
@@ -61,49 +61,49 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance version.  Valid values: `0.10.2`, `1.1.1`, `2.4.2`, and `2.8.1`.
+        /// Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value "2.4.1". "2.4.1" and "2.4.2" belong to the same version. any one can be passed.
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// Instance type. `standard` (Standard Edition),  `profession`  (Pro Edition)
+        /// Instance type. "standard": standard version. "profession": pro edition. (standard version is only supported on the international site. currently, the chinese site supports pro edition.).
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
 
         /// <summary>
-        /// Instance disk type.  `CLOUD_BASIC` (Premium Cloud Storage),  `CLOUD_SSD` (SSD).  If this parameter is left empty, the default value `CLOUD_BASIC` will be used.
+        /// Specifies the disk type for a pro edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Private network peak bandwidth of an instance  in MB/sec.  If you create a Standard Edition instance, pass in the corresponding peak bandwidth for the current instance specification.  If you create a Pro Edition instance, configure the peak bandwidth, partition count, and other parameters as required by Pro Edition.
+        /// Specifies the peak bandwidth of the instance private network, with a default value of 40 MB/s. for standard version, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configuration such as peak bandwidth and number of partitions should meet the billing specification of the professional edition. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// Instance disk size, which must meet the requirement of the instance’s specification.
+        /// Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// The maximum number of partitions of the instance, which must meet the requirement of the instance’s specification.
+        /// Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// The maximum number of topics of the instance, which must meet the requirement of the instance’s specification.
+        /// Maximum number of topics for the instance should meet the billing specification of the current instance. default value is 800, step length is set to 100.
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// AZ of the instance.  When a multi-AZ instance is created, the value of this parameter is the AZ ID of the subnet where the instance’s default access point resides.
+        /// Specifies the availability zone of the instance. when creating a multi-az instance, this parameter is the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? MultiZoneFlag{ get; set; }
 
         /// <summary>
-        /// This parameter indicates the list of AZ IDs when the instance is deployed in multiple AZs.  Note that `ZoneId` must be included in the array of this parameter.
+        /// Specifies the multi-az id list when the instance is a multi-az instance. note that the multi-az corresponding to parameter ZoneId must be included in this parameter array. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the [DescribeCkafkaZone](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
@@ -132,15 +132,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }
 
+        /// <summary>
+        /// Tag.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Elastic bandwidth switch. valid values: 0 (disable, default), 1 (enable).
+        /// </summary>
+        [JsonProperty("ElasticBandwidthSwitch")]
+        public long? ElasticBandwidthSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
@@ -156,6 +168,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
             this.SetParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         }
     }
 }

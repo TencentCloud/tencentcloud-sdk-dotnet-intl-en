@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Matching type. Valid values: `PREFIXED`(match by prefix), `PRESET` (match by preset policy).
+        /// ACL rule-based matching type. currently supports prefix match and PRESET policy. valid values: PREFIXED/PRESET.
         /// </summary>
         [JsonProperty("PatternType")]
         public string PatternType{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public AclRuleInfo[] RuleList{ get; set; }
 
         /// <summary>
-        /// Prefix value for prefix match
+        /// Indicates the prefix for prefix match. this parameter is required when PatternType value is PREFIXED.
         /// </summary>
         [JsonProperty("Pattern")]
         public string Pattern{ get; set; }
 
         /// <summary>
-        /// A parameter used to specify whether the preset ACL rule is applied to new topics
+        /// Specifies whether to apply the preset ACL rule to newly-added topics. defaults to 0, which means no. a value of 1 means yes.
         /// </summary>
         [JsonProperty("IsApplied")]
         public long? IsApplied{ get; set; }

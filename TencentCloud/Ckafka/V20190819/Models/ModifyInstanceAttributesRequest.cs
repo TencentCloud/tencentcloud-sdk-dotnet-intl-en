@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
+        /// Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
 
         /// <summary>
-        /// Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+        /// Specifies the Name of the ckafka cluster instance.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
 
         /// <summary>
-        /// Modification of the rebalancing time after upgrade
+        /// Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth
+        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
@@ -70,13 +70,26 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// Dynamic disk expansion policy configuration.
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
+        [System.Obsolete]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// The size of a single message in bytes at the instance level.
+        /// Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
         /// </summary>
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }
+
+        /// <summary>
+        /// Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+        /// </summary>
+        [JsonProperty("UncleanLeaderElectionEnable")]
+        public long? UncleanLeaderElectionEnable{ get; set; }
+
+        /// <summary>
+        /// Instance deletion protection switch. 1: enabled; 0: disabled.
+        /// </summary>
+        [JsonProperty("DeleteProtectionEnable")]
+        public long? DeleteProtectionEnable{ get; set; }
 
 
         /// <summary>
@@ -93,6 +106,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
             this.SetParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
+            this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+            this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
         }
     }
 }

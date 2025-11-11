@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Order list.  Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order transaction.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// ID list of the purchased CKafka instances corresponding to the order list.  Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order transaction corresponds to the list of purchased CKafka instance ids.
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }

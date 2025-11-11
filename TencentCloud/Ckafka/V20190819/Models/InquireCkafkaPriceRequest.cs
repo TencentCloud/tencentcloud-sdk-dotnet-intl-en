@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// `standard`: Standard Edition; `profession`: Pro Edition
+        /// Chinese site standard version fill in standards2 international site standard version fill in standard pro edition fill in profession advanced edition fill in premium.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// Private network bandwidth in MB/sec, which is required when you purchase an instance.
+        /// Specifies the internal network bandwidth size of the instance, in MB/s (required when purchased; bandwidth information is required for pro edition/advanced edition inquiries).
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Disk type and size, which is required when you purchase an instance.
+        /// Specifies the purchase type and size of the hard disk of the instance. required when purchased. disk information is required for pro edition or advanced edition inquiries.
         /// </summary>
         [JsonProperty("InquiryDiskParam")]
         public InquiryDiskParam InquiryDiskParam{ get; set; }
@@ -67,7 +67,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Topic{ get; set; }
 
         /// <summary>
-        /// The number of instance partitions to be purchased, which is required when you purchase an instance.
+        /// Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
+        /// Partition upper limit. maximum value of 40000. step length of 100.
+        /// Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
@@ -91,7 +93,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string BillType{ get; set; }
 
         /// <summary>
-        /// Billing mode for public network bandwidth, which is required when you purchase public network bandwidth. Currently, public network bandwidth is only supported for Pro Edition.
+        /// Public network bandwidth billing mode. currently only the pro edition supports public network bandwidth. required when purchasing public network bandwidth. value must be a multiple of 3.
         /// </summary>
         [JsonProperty("PublicNetworkParam")]
         public InquiryPublicNetworkParam PublicNetworkParam{ get; set; }

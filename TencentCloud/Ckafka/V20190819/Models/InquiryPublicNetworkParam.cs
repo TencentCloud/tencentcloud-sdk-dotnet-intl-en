@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth in MB
+        /// Public network bandwidth, in MB. value must be 0 or a multiple of 3.
         /// </summary>
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }

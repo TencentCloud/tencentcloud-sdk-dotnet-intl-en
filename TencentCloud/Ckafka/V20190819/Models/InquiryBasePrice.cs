@@ -25,36 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Original unit price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original price unit.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Discounted unit price
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discount unit price.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Original price in total
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total original price.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discounted price in total
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total discount price.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Discount (%)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Discount (unit: %).
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
@@ -95,8 +90,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Purchase quantity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Purchase quantity.
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

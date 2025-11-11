@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Specifies the Name of the ckafka cluster instance.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string Vport{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: creating, 1: running, 2: deleting
+        /// Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -146,108 +146,166 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Tag array
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// Expiration time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Cross-AZ
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Availability Zone List
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Kafka version information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the ckafka cluster instance version.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Maximum number of groups
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum number of groups.
         /// </summary>
         [JsonProperty("MaxGroupNum")]
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
-        /// Offering type. `0`: Standard Edition; `1`: Professional Edition
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Sale type. valid values: 0 (standard version), 1 (pro edition).
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// Type.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Instance type. valid values:. 
+        /// Specifies the pro edition.    
+        /// Standard version.
+        /// premium. specifies the advanced edition.
+        /// Specifies the serverless version.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// Dynamic message retention policy
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Dynamic message retention policy.
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
         /// <summary>
-        /// Maximum number of connections
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum number of connections.
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
         /// <summary>
         /// Public network bandwidth
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Time
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the deprecated field with no actual meaning.
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable partitions
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of remaining creatable partitions.
         /// </summary>
         [JsonProperty("RemainingPartitions")]
         public long? RemainingPartitions{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable topics
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of remaining creatable topics.
         /// </summary>
         [JsonProperty("RemainingTopics")]
         public long? RemainingTopics{ get; set; }
 
         /// <summary>
-        /// Dynamic disk expansion policy.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Scaling policy for dynamic disk.
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
+
+        /// <summary>
+        /// Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the elastic bandwidth allowlist.   
+        /// Indicates the allowlist feature with elastic bandwidth enabled.
+        /// 0: elastic bandwidth allowlist feature is disabled.
+        /// </summary>
+        [JsonProperty("ElasticBandwidthSwitch")]
+        public long? ElasticBandwidthSwitch{ get; set; }
+
+        /// <summary>
+        /// Indicates the elastic bandwidth activation status.
+        /// 1: indicates elastic bandwidth is disabled.
+        /// Enable elastic bandwidth.
+        /// Enable elastic bandwidth successfully.
+        /// 33: disabling elastic bandwidth.
+        /// Indicates that the elastic bandwidth is successfully disabled.
+        /// Enable elastic bandwidth failed.
+        /// Bandwidth failure.
+        /// </summary>
+        [JsonProperty("ElasticBandwidthOpenStatus")]
+        public long? ElasticBandwidthOpenStatus{ get; set; }
+
+        /// <summary>
+        /// Cluster type.  
+        /// CLOUD_IDC idc cluster.
+        /// CLOUD_CVM_SHARE shared cluster.
+        /// CLOUD_CVM_YUNTI yunti cvm cluster.
+        /// CLOUD_CVM. specifies the cvm cluster.
+        /// CLOUD_CDC cdc cluster.
+        /// CLOUD_EKS_TSE eks cluster.
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// Number of free partitions.
+        /// </summary>
+        [JsonProperty("FreePartitionNumber")]
+        public long? FreePartitionNumber{ get; set; }
+
+        /// <summary>
+        /// Specifies the elastic bandwidth upper limit.
+        /// </summary>
+        [JsonProperty("ElasticFloatBandwidth")]
+        public long? ElasticFloatBandwidth{ get; set; }
+
+        /// <summary>
+        /// ssl custom certificate id. only returned for instance clusters with custom certificates.
+        /// </summary>
+        [JsonProperty("CustomCertId")]
+        public string CustomCertId{ get; set; }
+
+        /// <summary>
+        /// Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+        /// </summary>
+        [JsonProperty("UncleanLeaderElectionEnable")]
+        public long? UncleanLeaderElectionEnable{ get; set; }
+
+        /// <summary>
+        /// Instance deletion protection switch. 1: enabled; 0: disabled.
+        /// </summary>
+        [JsonProperty("DeleteProtectionEnable")]
+        public long? DeleteProtectionEnable{ get; set; }
 
 
         /// <summary>
@@ -290,6 +348,15 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
+            this.SetParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
+            this.SetParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
+            this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
+            this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
+            this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
         }
     }
 }

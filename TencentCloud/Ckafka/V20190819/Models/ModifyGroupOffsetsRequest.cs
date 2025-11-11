@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Kafka instance ID
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kafka consumer group
+        /// Consumer group name. obtain through the API [DescribeConsumerGroup](https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// Offset resetting policy. Meanings of the input parameters: 0: equivalent to the `shift-by` parameter, which indicates to shift the offset forward or backward by the value of the `shift`. 1: equivalent to `by-duration`, `to-datetime`, `to-earliest`, or `to-latest`, which indicates to move the offset to the specified timestamp. 2: equivalent to `to-offset`, which indicates to move the offset to the specified offset position
+        /// Reset offset strategy. parameter meaning: 0. align with the shift-by parameter, move the offset forward or backward by shift entries. 1. alignment reference (by-duration, to-datetime, to-earliest, to-latest), move the offset to the specified timestamp position. 2. alignment reference (to-offset), move the offset to the specified offset position.
         /// </summary>
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
 
         /// <summary>
-        /// Indicates the topics to be reset. If this parameter is left empty, all topics will be reset
+        /// Specifies the topic name list that needs to reset.
         /// </summary>
         [JsonProperty("Topics")]
         public string[] Topics{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Shift{ get; set; }
 
         /// <summary>
-        /// Unit: ms. When `strategy` is 1, this field is required, where -2 indicates to reset the offset to the initial position, -1 indicates to reset to the latest position (equivalent to emptying), and other values represent the specified time, i.e., the offset of the topic at the specified time will be obtained and then reset. Note that if there is no message at the specified time, the last offset will be obtained
+        /// In milliseconds. when strategy is 1, must include this field. among them, -2 means reset offset to the start position, -1 means reset to the latest position (equivalent to clearing), other values represent the specified time. obtain the offset at the specified time in the topic and reset. notably, if no message exists at the specified time, get the last offset.
         /// </summary>
         [JsonProperty("ShiftTimestamp")]
         public long? ShiftTimestamp{ get; set; }

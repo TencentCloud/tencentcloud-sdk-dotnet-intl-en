@@ -31,14 +31,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Specifies the unix second-level timestamp of the creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// Topic remarks
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Describes the topic remark.
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
@@ -74,29 +73,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public TopicPartitionDO[] Partitions{ get; set; }
 
         /// <summary>
-        /// Switch of the preset ACL rule. `1`: enable, `0`: disable.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// ACL preset policy switch. valid values: 1 (on); 0 (off).
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// Preset ACL rule list.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Preset policy list.
         /// </summary>
         [JsonProperty("AclRuleList")]
         public AclRule[] AclRuleList{ get; set; }
 
         /// <summary>
-        /// Traffic throttling policy in topic dimension.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// topic throttling policy.
         /// </summary>
         [JsonProperty("QuotaConfig")]
         public InstanceQuotaConfigResp QuotaConfig{ get; set; }
 
         /// <summary>
         /// Number of replicas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }

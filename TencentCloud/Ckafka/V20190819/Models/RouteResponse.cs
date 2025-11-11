@@ -25,8 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Route information list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Route Information List
         /// </summary>
         [JsonProperty("Routers")]
         public Route[] Routers{ get; set; }

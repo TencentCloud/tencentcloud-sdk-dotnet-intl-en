@@ -49,14 +49,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? PartitionNum{ get; set; }
 
         /// <summary>
-        /// Expiration time
+        /// Expiration time in milliseconds.
         /// </summary>
         [JsonProperty("RetentionMs")]
         public ulong? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remarks.
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
@@ -80,8 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Service routing address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the service routing address.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }

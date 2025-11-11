@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// CKafka cluster instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+        /// Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Instance storage capacity in GB
+        /// Specifies the ckafka cluster instance disk size in gb.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -139,92 +139,79 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Kafka version information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// kafka version information.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Cross-AZ
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cross-Availability zone.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// CKafka sale type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// ckafka sales type.
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// CKafka instance type
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the cluster instance type of ckafka.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Disk type
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Specifies the ckafka cluster instance disk type.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Maximum number of topics for the current instance
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Maximum number of topics for current specifications.
         /// </summary>
         [JsonProperty("MaxTopicNumber")]
         public long? MaxTopicNumber{ get; set; }
 
         /// <summary>
-        /// Maximum number of partitions for the current instance
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Maximum number of partitions for current specifications.
         /// </summary>
         [JsonProperty("MaxPartitionNumber")]
         public long? MaxPartitionNumber{ get; set; }
 
         /// <summary>
-        /// Time of scheduled upgrade
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Scheduled configuration upgrade time.
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public string RebalanceTime{ get; set; }
 
         /// <summary>
-        /// Number of partitions in the current instance.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the number of partitions in the current instance.
         /// </summary>
         [JsonProperty("PartitionNumber")]
         public ulong? PartitionNumber{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth type.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the public network bandwidth type of the ckafka cluster instance.
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Instance type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the underlying cluster type of the ckafka cluster instance.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
         /// Instance feature list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }

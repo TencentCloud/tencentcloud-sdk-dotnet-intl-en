@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1223";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -570,6 +570,27 @@ namespace TencentCloud.Ccc.V20200210
         public DeleteStaffResponse DeleteStaffSync(DeleteStaffRequest req)
         {
             return InternalRequestAsync<DeleteStaffResponse>(req, "DeleteStaff")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the list of Intelligent Agents.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentInfoListResponse"/></returns>
+        public Task<DescribeAIAgentInfoListResponse> DescribeAIAgentInfoList(DescribeAIAgentInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentInfoListResponse>(req, "DescribeAIAgentInfoList");
+        }
+
+        /// <summary>
+        /// This API is used to get the list of Intelligent Agents.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentInfoListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentInfoListResponse"/></returns>
+        public DescribeAIAgentInfoListResponse DescribeAIAgentInfoListSync(DescribeAIAgentInfoListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentInfoListResponse>(req, "DescribeAIAgentInfoList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1347,6 +1368,27 @@ namespace TencentCloud.Ccc.V20200210
         public ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaignSync(ResumePredictiveDialingCampaignRequest req)
         {
             return InternalRequestAsync<ResumePredictiveDialingCampaignResponse>(req, "ResumePredictiveDialingCampaign")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set staff status.
+        /// </summary>
+        /// <param name="req"><see cref="SetStaffStatusRequest"/></param>
+        /// <returns><see cref="SetStaffStatusResponse"/></returns>
+        public Task<SetStaffStatusResponse> SetStaffStatus(SetStaffStatusRequest req)
+        {
+            return InternalRequestAsync<SetStaffStatusResponse>(req, "SetStaffStatus");
+        }
+
+        /// <summary>
+        /// This API is used to set staff status.
+        /// </summary>
+        /// <param name="req"><see cref="SetStaffStatusRequest"/></param>
+        /// <returns><see cref="SetStaffStatusResponse"/></returns>
+        public SetStaffStatusResponse SetStaffStatusSync(SetStaffStatusRequest req)
+        {
+            return InternalRequestAsync<SetStaffStatusResponse>(req, "SetStaffStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

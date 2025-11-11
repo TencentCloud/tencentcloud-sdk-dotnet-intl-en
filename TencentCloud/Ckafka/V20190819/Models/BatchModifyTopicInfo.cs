@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Topic name.
+        /// Topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Message retention size in topic dimension. Value range: 1 MB - 1024 GB.
+        /// Specifies the message retention size in the topic dimension in bytes. value range: 1 GB to 1024 GB.
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// Segment rolling duration in milliseconds. Value range: 1-90 days.
+        /// Duration of Segment shard scrolling in milliseconds. value range: 1 day to 90 days.
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
@@ -89,6 +89,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
+
+        /// <summary>
+        /// Specifies the time type for message storage: CreateTime/LogAppendTime.
+        /// </summary>
+        [JsonProperty("LogMsgTimestampType")]
+        public string LogMsgTimestampType{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+            this.SetParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
         }
     }
 }

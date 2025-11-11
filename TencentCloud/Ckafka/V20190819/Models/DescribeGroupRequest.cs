@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

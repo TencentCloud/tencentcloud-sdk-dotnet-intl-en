@@ -67,7 +67,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Expected call drop rate, percentage, 5 - 50.
+        /// Expected call drop rate. value range: 0-50%.
         /// </summary>
         [JsonProperty("ExpectedAbandonRate")]
         public long? ExpectedAbandonRate{ get; set; }

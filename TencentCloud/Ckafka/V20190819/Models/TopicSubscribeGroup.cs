@@ -37,15 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string StatusCountInfo{ get; set; }
 
         /// <summary>
-        /// Consumer group information
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Consumer group information.
         /// </summary>
         [JsonProperty("GroupsInfo")]
         public GroupInfoResponse[] GroupsInfo{ get; set; }
 
         /// <summary>
-        /// Whether a request is asynchronous. If there are fewer consumer groups in the instances, the result will be returned directly, and status code is 1. When there are many consumer groups in the instances, cache will be updated asynchronously. When status code is 0, grouping information will not be returned until cache update is completed and status code becomes 1.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Indicates whether the request is asynchronous. instances with fewer groups will return results directly with Status as 1. when there are more groups, the cache will be updated asynchronously. no group information will be returned when Status is 0 until the update is complete and results are returned with Status as 1.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

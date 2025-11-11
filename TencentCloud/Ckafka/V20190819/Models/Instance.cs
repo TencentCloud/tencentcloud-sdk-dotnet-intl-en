@@ -25,26 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// The ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Specifies the Name of the ckafka cluster instance.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+        /// Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Whether it is an open-source instance. true: yes, false: no
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether the instance is open-source. valid values: true (open-source), false (not open-source).
         /// </summary>
         [JsonProperty("IfCommunity")]
         public bool? IfCommunity{ get; set; }

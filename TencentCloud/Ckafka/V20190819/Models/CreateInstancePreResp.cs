@@ -37,8 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ReturnMessage{ get; set; }
 
         /// <summary>
-        /// Data returned by the operation.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the Data returned by the operation.
         /// </summary>
         [JsonProperty("Data")]
         public CreateInstancePreData Data{ get; set; }

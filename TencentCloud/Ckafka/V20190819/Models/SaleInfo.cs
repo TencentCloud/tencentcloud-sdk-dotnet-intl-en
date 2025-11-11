@@ -25,29 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Manually set flag.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// The manually configured flag. valid values: true (sold-out), false (available).
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// CKafka version (v1.1.1/2.4.2/0.10.2）
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the ckafka version number (1.1.1/2.4.2/0.10.2).
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Whether it is Pro Edition or Standard Edition.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Pro edition, standard version flag.
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// Whether it has been sold out. `true`: sold out.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies whether the item is sold-out. valid values: true (sold-out).
         /// </summary>
         [JsonProperty("SoldOut")]
         public bool? SoldOut{ get; set; }

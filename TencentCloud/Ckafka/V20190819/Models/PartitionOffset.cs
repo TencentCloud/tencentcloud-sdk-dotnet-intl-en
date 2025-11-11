@@ -25,15 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Partition, such as "0" or "1"
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Partition
         /// </summary>
         [JsonProperty("Partition")]
         public string Partition{ get; set; }
 
         /// <summary>
-        /// Offset, such as 100
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

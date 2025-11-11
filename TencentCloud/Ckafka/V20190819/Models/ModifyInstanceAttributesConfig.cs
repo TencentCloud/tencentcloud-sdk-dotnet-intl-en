@@ -31,13 +31,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? AutoCreateTopicEnable{ get; set; }
 
         /// <summary>
-        /// Optional. If `auto.create.topic.enable` is set to `true` and this value is not set, 3 will be used by default
+        /// Default number of partitions for a newly created topic. if AutoCreateTopicEnable is set to true and no value is set, defaults to 3.
         /// </summary>
         [JsonProperty("DefaultNumPartitions")]
         public long? DefaultNumPartitions{ get; set; }
 
         /// <summary>
-        /// If `auto.create.topic.enable` is set to `true` but this value is not set, 2 will be used by default
+        /// Default number of replicas for a newly created topic. if AutoCreateTopicEnable is set to true and not specified, defaults to 2.
         /// </summary>
         [JsonProperty("DefaultReplicationFactor")]
         public long? DefaultReplicationFactor{ get; set; }

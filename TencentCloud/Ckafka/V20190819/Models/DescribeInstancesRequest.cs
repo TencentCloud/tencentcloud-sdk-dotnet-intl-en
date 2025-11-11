@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// (Filter) filter by instance ID
+        /// (Query condition) filter by the ckafka cluster instance Id.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// (Filter) filter by instance name. Fuzzy search is supported
+        /// Search term. example: (query condition) filter by instance name. fuzzy query is supported.
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+        /// Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
@@ -58,10 +58,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// Tag key value (this field has been deprecated).
         /// </summary>
         [JsonProperty("TagKey")]
+        [System.Obsolete]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// (Query condition) VPC Id.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

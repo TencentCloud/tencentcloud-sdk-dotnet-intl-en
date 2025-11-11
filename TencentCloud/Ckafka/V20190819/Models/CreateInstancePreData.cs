@@ -25,27 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The value returned by `CreateInstancePre` is 0, which is fixed and cannot be used as the query condition of `CheckTaskStatus`. It is only used to ensure the consistency with the backend data structure.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Order number list.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Order ID list
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Instance ID. When multiple instances are purchased, the ID of the first one is returned by default . Note: This field may return null, indicating that no valid values can be obtained.
+        /// The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Mapping between orders and the purchased instances.  Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order and purchase mapping list corresponding to the instance.
         /// </summary>
         [JsonProperty("DealNameInstanceIdMapping")]
         public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.intl.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1236";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a DataHub topic.
+        /// This API is used to create a DIP topic.
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
@@ -190,7 +190,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a DataHub topic.
+        /// This API is used to create a DIP topic.
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTopicRequest"/></param>
         /// <returns><see cref="CreateDatahubTopicResponse"/></returns>
@@ -201,23 +201,23 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
+        /// This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
         /// </summary>
-        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
-        /// <returns><see cref="CreateInstancePostResponse"/></returns>
-        public Task<CreateInstancePostResponse> CreateInstancePost(CreateInstancePostRequest req)
+        /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
+        /// <returns><see cref="CreateInstancePreResponse"/></returns>
+        public Task<CreateInstancePreResponse> CreateInstancePre(CreateInstancePreRequest req)
         {
-            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost");
+            return InternalRequestAsync<CreateInstancePreResponse>(req, "CreateInstancePre");
         }
 
         /// <summary>
-        /// This API is used to create a pay-as-you-go instance.  It will be deprecated in future versions. We recommend that you use the `CreatePostPaidInstance` API instead.  You can call this API via SDK or the TencentCloud API console to create a pay-as-you-go CKafka instance,  which is an alternate option for making a purchase in the console.
+        /// This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
         /// </summary>
-        /// <param name="req"><see cref="CreateInstancePostRequest"/></param>
-        /// <returns><see cref="CreateInstancePostResponse"/></returns>
-        public CreateInstancePostResponse CreateInstancePostSync(CreateInstancePostRequest req)
+        /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
+        /// <returns><see cref="CreateInstancePreResponse"/></returns>
+        public CreateInstancePreResponse CreateInstancePreSync(CreateInstancePreRequest req)
         {
-            return InternalRequestAsync<CreateInstancePostResponse>(req, "CreateInstancePost")
+            return InternalRequestAsync<CreateInstancePreResponse>(req, "CreateInstancePre")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -260,6 +260,27 @@ namespace TencentCloud.Ckafka.V20190819
         public CreatePostPaidInstanceResponse CreatePostPaidInstanceSync(CreatePostPaidInstanceRequest req)
         {
             return InternalRequestAsync<CreatePostPaidInstanceResponse>(req, "CreatePostPaidInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add instance routes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteRequest"/></param>
+        /// <returns><see cref="CreateRouteResponse"/></returns>
+        public Task<CreateRouteResponse> CreateRoute(CreateRouteRequest req)
+        {
+            return InternalRequestAsync<CreateRouteResponse>(req, "CreateRoute");
+        }
+
+        /// <summary>
+        /// This API is used to add instance routes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteRequest"/></param>
+        /// <returns><see cref="CreateRouteResponse"/></returns>
+        public CreateRouteResponse CreateRouteSync(CreateRouteRequest req)
+        {
+            return InternalRequestAsync<CreateRouteResponse>(req, "CreateRoute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,7 +369,28 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to delete a monthly subscribed (prepaid) instance.
+        /// This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
+        /// <returns><see cref="DeleteInstancePostResponse"/></returns>
+        public Task<DeleteInstancePostResponse> DeleteInstancePost(DeleteInstancePostRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancePostResponse>(req, "DeleteInstancePost");
+        }
+
+        /// <summary>
+        /// This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
+        /// <returns><see cref="DeleteInstancePostResponse"/></returns>
+        public DeleteInstancePostResponse DeleteInstancePostSync(DeleteInstancePostRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancePostResponse>(req, "DeleteInstancePost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>
@@ -358,7 +400,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to delete a monthly subscribed (prepaid) instance.
+        /// This API is used to delete prepaid instances. It performs isolation and deletion actions on the instance. After successful execution, the instance will be directly deleted and terminated. By calling API deletion, it directly performs instance termination without associating connectors and tasks in pre-check.
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
         /// <returns><see cref="DeleteInstancePreResponse"/></returns>
@@ -579,7 +621,28 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get the DataHub topic attributes.
+        /// This API is used to get instance information corresponding to backend CVM, including cvmId and ip. It is for Pro Edition, while Standard Edition returns empty data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmInfoRequest"/></param>
+        /// <returns><see cref="DescribeCvmInfoResponse"/></returns>
+        public Task<DescribeCvmInfoResponse> DescribeCvmInfo(DescribeCvmInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCvmInfoResponse>(req, "DescribeCvmInfo");
+        }
+
+        /// <summary>
+        /// This API is used to get instance information corresponding to backend CVM, including cvmId and ip. It is for Pro Edition, while Standard Edition returns empty data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmInfoRequest"/></param>
+        /// <returns><see cref="DescribeCvmInfoResponse"/></returns>
+        public DescribeCvmInfoResponse DescribeCvmInfoSync(DescribeCvmInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCvmInfoResponse>(req, "DescribeCvmInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve DIP topic attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
@@ -589,7 +652,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get the DataHub topic attributes.
+        /// This API is used to retrieve DIP topic attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeDatahubTopicRequest"/></param>
         /// <returns><see cref="DescribeDatahubTopicResponse"/></returns>
@@ -684,7 +747,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get instance attributes. 
+        /// This API is used to obtain instance attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
@@ -694,7 +757,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get instance attributes. 
+        /// This API is used to obtain instance attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
@@ -705,7 +768,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get the list of CKafka instances under a user account.
+        /// This API is used to search for a list of TDMQ CKafka instances under a user account.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -715,7 +778,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get the list of CKafka instances under a user account.
+        /// This API is used to search for a list of TDMQ CKafka instances under a user account.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -789,6 +852,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to retrieve the security group route information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRoutesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRoutesResponse"/></returns>
+        public Task<DescribeSecurityGroupRoutesResponse> DescribeSecurityGroupRoutes(DescribeSecurityGroupRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRoutesResponse>(req, "DescribeSecurityGroupRoutes");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the security group route information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRoutesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupRoutesResponse"/></returns>
+        public DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutesSync(DescribeSecurityGroupRoutesRequest req)
+        {
+            return InternalRequestAsync<DescribeSecurityGroupRoutesResponse>(req, "DescribeSecurityGroupRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the task status.
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskStatusRequest"/></param>
@@ -833,7 +917,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get topic attributes.
+        /// This API is used to retrieve topic attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicAttributesRequest"/></param>
         /// <returns><see cref="DescribeTopicAttributesResponse"/></returns>
@@ -843,7 +927,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to get topic attributes.
+        /// This API is used to retrieve topic attributes.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicAttributesRequest"/></param>
         /// <returns><see cref="DescribeTopicAttributesResponse"/></returns>
@@ -938,6 +1022,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to search for a list of TDMQ CKafka instances of the specified type under a user account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTypeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTypeInstancesResponse"/></returns>
+        public Task<DescribeTypeInstancesResponse> DescribeTypeInstances(DescribeTypeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTypeInstancesResponse>(req, "DescribeTypeInstances");
+        }
+
+        /// <summary>
+        /// This API is used to search for a list of TDMQ CKafka instances of the specified type under a user account.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTypeInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTypeInstancesResponse"/></returns>
+        public DescribeTypeInstancesResponse DescribeTypeInstancesSync(DescribeTypeInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTypeInstancesResponse>(req, "DescribeTypeInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query user information.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>
@@ -1001,6 +1106,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to query a message list by timestamp.
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public Task<FetchMessageListByTimestampResponse> FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req)
+        {
+            return InternalRequestAsync<FetchMessageListByTimestampResponse>(req, "FetchMessageListByTimestamp");
+        }
+
+        /// <summary>
+        /// This API is used to query a message list by timestamp.
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageListByTimestampRequest"/></param>
+        /// <returns><see cref="FetchMessageListByTimestampResponse"/></returns>
+        public FetchMessageListByTimestampResponse FetchMessageListByTimestampSync(FetchMessageListByTimestampRequest req)
+        {
+            return InternalRequestAsync<FetchMessageListByTimestampResponse>(req, "FetchMessageListByTimestamp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to purchase a CKafka instance or query the instance renewal price.
         /// </summary>
         /// <param name="req"><see cref="InquireCkafkaPriceRequest"/></param>
@@ -1022,7 +1148,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+        /// This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>
@@ -1032,7 +1158,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+        /// This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
         /// <returns><see cref="ModifyAclRuleResponse"/></returns>
@@ -1043,7 +1169,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to modify the DataHub topic attributes.
+        /// This API is used to modify DIP topic attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
@@ -1053,7 +1179,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to modify the DataHub topic attributes.
+        /// This API is used to modify DIP topic attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyDatahubTopicRequest"/></param>
         /// <returns><see cref="ModifyDatahubTopicResponse"/></returns>
@@ -1106,7 +1232,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+        /// This API is used to change the configuration of prepaid instances, adjust disks, modify bandwidth, and manage partitions.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancePreRequest"/></param>
         /// <returns><see cref="ModifyInstancePreResponse"/></returns>
@@ -1116,7 +1242,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+        /// This API is used to change the configuration of prepaid instances, adjust disks, modify bandwidth, and manage partitions.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstancePreRequest"/></param>
         /// <returns><see cref="ModifyInstancePreResponse"/></returns>

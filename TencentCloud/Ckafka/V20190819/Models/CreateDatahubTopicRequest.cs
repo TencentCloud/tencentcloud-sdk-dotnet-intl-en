@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+        /// Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// CKafka instance ID.
+        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name of the group to be queried, which is optional.
+        /// Specifies the group name you want to query.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Name of the corresponding topic in the group to be queried, which is optional. If this parameter is specified but `group` is not specified, this parameter will be ignored.
+        /// Specifies the corresponding topic name in the group to be queried by the user. if this parameter is specified while the group is unspecified, ignore this parameter.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned in this request
+        /// Returns the limit quantity of the consumption group. supports a maximum of 50.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset position
+        /// Specifies the starting offset amount of the consumer group list.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

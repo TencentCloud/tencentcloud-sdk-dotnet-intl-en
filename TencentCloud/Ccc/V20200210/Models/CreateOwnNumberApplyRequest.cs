@@ -48,6 +48,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
+        /// <summary>
+        /// Domestic long-distance mobile phone prefix.
+        /// </summary>
+        [JsonProperty("MobileNddPrefix")]
+        public string MobileNddPrefix{ get; set; }
+
+        /// <summary>
+        /// Removes the area code for local calls.
+        /// </summary>
+        [JsonProperty("LocalNumberTrimAC")]
+        public bool? LocalNumberTrimAC{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SipTrunkId", this.SipTrunkId);
             this.SetParamArrayObj(map, prefix + "DetailList.", this.DetailList);
             this.SetParamSimple(map, prefix + "Prefix", this.Prefix);
+            this.SetParamSimple(map, prefix + "MobileNddPrefix", this.MobileNddPrefix);
+            this.SetParamSimple(map, prefix + "LocalNumberTrimAC", this.LocalNumberTrimAC);
         }
     }
 }

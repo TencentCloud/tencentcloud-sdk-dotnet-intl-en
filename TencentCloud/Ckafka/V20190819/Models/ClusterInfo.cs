@@ -37,43 +37,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// The cluster’s maximum disk capacity in GB
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Maximum disk of the cluster (unit: GB).
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
-        /// The cluster’s maximum bandwidth in MB/s
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Maximum bandwidth of the cluster. unit: MB/s.
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public long? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// The cluster’s available disk capacity in GB
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Current availability of cluster disk (unit: GB).
         /// </summary>
         [JsonProperty("AvailableDiskSize")]
         public long? AvailableDiskSize{ get; set; }
 
         /// <summary>
-        /// The cluster’s available bandwidth in MB/s
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Available bandwidth of the cluster. unit: MB/s.
         /// </summary>
         [JsonProperty("AvailableBandWidth")]
         public long? AvailableBandWidth{ get; set; }
 
         /// <summary>
-        /// The AZ where the cluster resides
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// Indicates the AZ to which the cluster belongs.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
-        /// Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+        /// The AZ where the cluster nodes are located. If the cluster is a cross-AZ cluster, it includes multiple AZs where the cluster nodes are located.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

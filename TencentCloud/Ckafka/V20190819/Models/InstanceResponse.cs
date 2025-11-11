@@ -25,15 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// List of eligible instances
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the list of instances meeting the conditions.
         /// </summary>
         [JsonProperty("InstanceList")]
         public Instance[] InstanceList{ get; set; }
 
         /// <summary>
-        /// Total number of eligible results
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total results that meet the conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
