@@ -54,6 +54,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

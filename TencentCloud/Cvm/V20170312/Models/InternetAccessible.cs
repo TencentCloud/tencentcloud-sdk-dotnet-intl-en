@@ -52,7 +52,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://cloud.tencent.com/document/product/1199/41646). default value: BGP.
         /// <Li>BGP: specifies the general bgp line.</li>.
         /// For a user with static single-line IP allowlist enabled, valid values include:.
         /// <Li>CMCC: china mobile.</li>.

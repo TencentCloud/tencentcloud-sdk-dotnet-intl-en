@@ -21,36 +21,18 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskTransTextResultOutput : AbstractModel
+    public class PureSubtitleTransResultOutput : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for translation.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskTransTextSegmentItem[] SegmentSet{ get; set; }
-
-        /// <summary>
-        /// Subtitle file path.
-        /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
-
-        /// <summary>
-        /// Subtitle file storage location.
+        /// Storage location of the subtitle file.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Subtitle file URL.
-        /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
-
-        /// <summary>
-        /// Returned translation result during multilingual translation.	
+        /// Result set of multilingual translation.
         /// </summary>
         [JsonProperty("SubtitleResults")]
         public SubtitleTransResultItem[] SubtitleResults{ get; set; }
@@ -61,10 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamArrayObj(map, prefix + "SubtitleResults.", this.SubtitleResults);
         }
     }

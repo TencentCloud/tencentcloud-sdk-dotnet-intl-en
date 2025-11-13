@@ -26,9 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Currently, the valid values include:
-        /// <Li>WorkflowTask: workflow processing task.</li>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <li>WorkflowTask: workflow processing task.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -42,6 +41,24 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// Error code when the task fails.
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
+
+        /// <summary>
+        /// Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// Task exception message.
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
         /// <summary>
         /// Execution status and results of the image processing task.
@@ -78,6 +95,9 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);

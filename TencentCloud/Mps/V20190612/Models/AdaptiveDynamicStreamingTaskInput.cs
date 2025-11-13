@@ -103,6 +103,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
+        /// <summary>
+        /// Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("KeyPTSList")]
+        public long?[] KeyPTSList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "DefinitionType", this.DefinitionType);
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
+            this.SetParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
         }
     }
 }

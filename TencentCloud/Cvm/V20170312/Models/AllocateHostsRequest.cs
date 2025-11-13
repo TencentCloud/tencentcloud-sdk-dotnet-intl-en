@@ -37,13 +37,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
+        /// Not supported. Configuration of prepaid instances. You can use the parameter to specify the attributes of prepaid instances, such as the subscription period and the auto-renewal plan. This parameter is required for prepaid instances.
         /// </summary>
         [JsonProperty("HostChargePrepaid")]
         public ChargePrepaid HostChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+        /// Instance [billing type](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1). <br><li>`POSTPAID_BY_HOUR`: Hourly-based pay-as-you-go <br>
         /// </summary>
         [JsonProperty("HostChargeType")]
         public string HostChargeType{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1231";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -55,7 +55,6 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// This API is used to create CDH instances with specified configuration.
-        /// * When HostChargeType is PREPAID, the HostChargePrepaid parameter must be specified.
         /// </summary>
         /// <param name="req"><see cref="AllocateHostsRequest"/></param>
         /// <returns><see cref="AllocateHostsResponse"/></returns>
@@ -66,7 +65,6 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// This API is used to create CDH instances with specified configuration.
-        /// * When HostChargeType is PREPAID, the HostChargePrepaid parameter must be specified.
         /// </summary>
         /// <param name="req"><see cref="AllocateHostsRequest"/></param>
         /// <returns><see cref="AllocateHostsResponse"/></returns>

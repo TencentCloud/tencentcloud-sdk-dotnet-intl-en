@@ -153,7 +153,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Instance status. for specific status types, see the instance status table (https://www.tencentcloud.comom/document/api/213/15753?from_cn_redirect=1#InstanceStatus).
+        /// Instance status. for specific status types, see the  [instance status table](https://www.tencentcloud.com/document/product/213/15753#instancestatus)
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }

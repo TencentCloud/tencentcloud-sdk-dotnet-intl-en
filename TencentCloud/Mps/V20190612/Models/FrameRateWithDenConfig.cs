@@ -21,29 +21,31 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HdrConfig : AbstractModel
+    public class FrameRateWithDenConfig : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// Capability configuration switch. Valid values:
+        /// <li>ON: enabled.</li>
+        /// <li>OFF: disabled.</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:
-        /// <li>HDR10</li>
-        /// <li>HLG</li>
-        /// Default value: HDR10.
-        /// Note: The video encoding method should be h264 or h265.
-        /// Note: The video encoding bit depth is 10.
+        /// Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("FpsNum")]
+        public long? FpsNum{ get; set; }
+
+        /// <summary>
+        /// Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FpsDen")]
+        public long? FpsDen{ get; set; }
 
 
         /// <summary>
@@ -52,7 +54,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "FpsNum", this.FpsNum);
+            this.SetParamSimple(map, prefix + "FpsDen", this.FpsDen);
         }
     }
 }

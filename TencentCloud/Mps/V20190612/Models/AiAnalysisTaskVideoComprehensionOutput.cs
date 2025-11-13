@@ -21,29 +21,14 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HdrConfig : AbstractModel
+    public class AiAnalysisTaskVideoComprehensionOutput : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
-        /// Default value: ON.
+        /// Details of the video (audio) recognition output content.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// Type. Valid values:
-        /// <li>HDR10</li>
-        /// <li>HLG</li>
-        /// Default value: HDR10.
-        /// Note: The video encoding method should be h264 or h265.
-        /// Note: The video encoding bit depth is 10.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("VideoComprehensionAnalysisResult")]
+        public string VideoComprehensionAnalysisResult{ get; set; }
 
 
         /// <summary>
@@ -51,8 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "VideoComprehensionAnalysisResult", this.VideoComprehensionAnalysisResult);
         }
     }
 }

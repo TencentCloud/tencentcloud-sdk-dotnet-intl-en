@@ -21,25 +21,24 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HdrConfig : AbstractModel
+    public class DiffusionEnhanceConfig : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
-        /// Default value: ON.
+        /// Capability configuration switch. Valid values:
+        /// ON: enabled.
+        /// OFF: disabled.
+        /// Default value: OFF.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:
-        /// <li>HDR10</li>
-        /// <li>HLG</li>
-        /// Default value: HDR10.
-        /// Note: The video encoding method should be h264 or h265.
-        /// Note: The video encoding bit depth is 10.
+        /// Strength type. Valid values:
+        /// weak
+        /// normal
+        /// strong
+        /// Default value: normal.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]

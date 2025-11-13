@@ -56,6 +56,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// Subtitle processing type.
+        /// - 0: ASR recognition subtitle.
+        /// - 1: pure subtitle translation.
+        /// </summary>
+        [JsonProperty("ProcessType")]
+        public ulong? ProcessType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
         }
     }
 }

@@ -25,17 +25,17 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. valid values:.
-        /// <Li>Classification: intelligent classification.</li>.
-        /// <Li>Cover: specifies the intelligent cover.</li>.
-        /// <Li>Tag: intelligent tagging.</li>.
-        /// <Li>FrameTag: intelligent frame-by-frame tagging.</li>.
-        /// <Li>Highlight: intelligent highlights</li>.
-        /// <Li>DeLogo: intelligent removal.</li>.
-        /// <li>Description: large model summarization.</li>
-        /// 
-        /// <Li>Dubbing: intelligent dubbing.</li>.
-        /// <Li>VideoRemake: specifies video deduplication.</li>.
+        /// Task type. Valid values:
+        /// <li>Classification: smart classification.</li>
+        /// <li>Cover: smart cover.</li>
+        /// <li>Tag: smart tag.</li>
+        /// <li>FrameTag: smart frame tag.</li>
+        /// <li>Highlight: smart highlights.</li>
+        /// <li>DeLogo: smart erasing.</li>
+        /// <li>Description: LLM summary.</li>
+        /// <li>Dubbing: smart dubbing.</li>
+        /// <li>VideoRemake: video deduplication.</li>
+        /// <li>VideoComprehension: video (audio) recognition.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -120,6 +120,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VideoRemakeTask")]
         public AiAnalysisTaskVideoRemakeResult VideoRemakeTask{ get; set; }
 
+        /// <summary>
+        /// Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VideoComprehensionTask")]
+        public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +146,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
             this.SetParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
             this.SetParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
+            this.SetParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
         }
     }
 }

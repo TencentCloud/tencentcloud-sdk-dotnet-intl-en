@@ -37,6 +37,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string InputAttachment{ get; set; }
 
         /// <summary>
+        /// When the type is FIXED_PTS, it is mandatory and defaults to 0
+        /// </summary>
+        [JsonProperty("PipelineId")]
+        public long? PipelineId{ get; set; }
+
+        /// <summary>
         /// Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
         /// </summary>
         [JsonProperty("OutputGroupName")]
@@ -104,6 +110,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "InputAttachment", this.InputAttachment);
+            this.SetParamSimple(map, prefix + "PipelineId", this.PipelineId);
             this.SetParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
             this.SetParamSimple(map, prefix + "ManifestName", this.ManifestName);
             this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);

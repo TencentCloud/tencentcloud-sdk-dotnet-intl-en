@@ -75,20 +75,20 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 1. StreamInfos.N.RemoveVideo=1
         /// 2. StreamInfos.N.RemoveAudio=0
         /// 3. StreamInfos.N.Video.Codec=copy
+        /// 
         /// When the value is 0.
         /// 1. StreamInfos.N.Video.Codec cannot be copy.
         /// 2. StreamInfos.N.Video.Fps cannot be null.
         /// 
         /// Note:
-        /// 
         /// This value only distinguishes template types. The task uses the values of RemoveAudio and RemoveVideo.
         /// </summary>
         [JsonProperty("PureAudio")]
         public ulong? PureAudio{ get; set; }
 
         /// <summary>
-        /// HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-        /// Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+        /// Sharding type. available values: <li>ts-segment: HLS+ts segment</li> <li>ts-byterange: HLS+ts byte range</li> <li>mp4-segment: HLS+mp4 segment</li> <li>mp4-byterange: HLS+mp4 byte range</li> <li>ts-packed-audio: ts+packed audio</li> <li>mp4-packed-audio: mp4+packed audio</li> default value: ts-segment. 
+        /// Note: the shard format of the adaptive bitrate stream is based on this field.
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }

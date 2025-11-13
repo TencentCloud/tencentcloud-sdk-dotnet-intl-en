@@ -21,29 +21,24 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HdrConfig : AbstractModel
+    public class UpdateSmartErasePrivacyConfig : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
-        /// Default value: ON.
+        /// Erasing method of privacy protection.
+        /// - blur
+        /// - mosaic
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("PrivacyModel")]
+        public string PrivacyModel{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:
-        /// <li>HDR10</li>
-        /// <li>HLG</li>
-        /// Default value: HDR10.
-        /// Note: The video encoding method should be h264 or h265.
-        /// Note: The video encoding bit depth is 10.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Privacy protection target. (When API Explorer is used, it is not required to specify an array. Add the corresponding items and enter the corresponding values.)
+        /// - face: human face.
+        /// - plate: license plate.
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("PrivacyTargets")]
+        public string[] PrivacyTargets{ get; set; }
 
 
         /// <summary>
@@ -51,8 +46,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "PrivacyModel", this.PrivacyModel);
+            this.SetParamArraySimple(map, prefix + "PrivacyTargets.", this.PrivacyTargets);
         }
     }
 }

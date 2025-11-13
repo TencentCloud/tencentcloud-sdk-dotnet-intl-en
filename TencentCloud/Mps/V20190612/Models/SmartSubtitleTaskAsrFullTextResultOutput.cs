@@ -34,6 +34,12 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Subtitle file path.
         /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// Subtitle file path.
+        /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }

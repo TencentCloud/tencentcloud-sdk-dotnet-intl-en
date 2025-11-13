@@ -34,6 +34,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// (Disused. Please use `StopType` instead.) Whether to forcibly shut down an instance after a normal shutdown fails. Valid values: <br><li>`TRUE`: yes;<br><li>`FALSE`: no<br><br>Default value: `FALSE`. 
         /// </summary>
         [JsonProperty("ForceStop")]
+        [System.Obsolete]
         public bool? ForceStop{ get; set; }
 
         /// <summary>

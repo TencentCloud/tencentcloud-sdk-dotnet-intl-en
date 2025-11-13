@@ -46,7 +46,14 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// Whether to perform forced shutdown.
         /// </summary>
         [JsonProperty("ForceStop")]
+        [System.Obsolete]
         public bool? ForceStop{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StopType")]
+        public string StopType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "ForceStop", this.ForceStop);
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }

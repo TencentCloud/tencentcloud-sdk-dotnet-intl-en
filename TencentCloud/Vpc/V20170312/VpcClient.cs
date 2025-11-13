@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1231";
+       private const string sdkVersion = "SDK_NET_3.0.1237";
 
         /// <summary>
         /// Client constructor.
@@ -2721,7 +2721,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
+        /// This API is used to query the list of resources in a Bandwidth Package according to its unique ID, support conditional filtering of query results and paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>
@@ -2731,7 +2731,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
+        /// This API is used to query the list of resources in a Bandwidth Package according to its unique ID, support conditional filtering of query results and paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeBandwidthPackageResourcesRequest"/></param>
         /// <returns><see cref="DescribeBandwidthPackageResourcesResponse"/></returns>

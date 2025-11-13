@@ -21,27 +21,28 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SmartSubtitleTaskTransTextResultOutput : AbstractModel
+    public class SubtitleTransResultItem : AbstractModel
     {
         
         /// <summary>
-        /// List of segments for translation.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Translation marker.
+        /// - Success
+        /// - Error
         /// </summary>
-        [JsonProperty("SegmentSet")]
-        public SmartSubtitleTaskTransTextSegmentItem[] SegmentSet{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// Source language (such as "en").
         /// </summary>
-        [JsonProperty("SubtitlePath")]
-        public string SubtitlePath{ get; set; }
+        [JsonProperty("TransSrc")]
+        public string TransSrc{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// Target language (such as "zh").
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("TransDst")]
+        public string TransDst{ get; set; }
 
         /// <summary>
         /// Subtitle file URL.
@@ -49,23 +50,16 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
-        /// <summary>
-        /// Returned translation result during multilingual translation.	
-        /// </summary>
-        [JsonProperty("SubtitleResults")]
-        public SubtitleTransResultItem[] SubtitleResults{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
-            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TransSrc", this.TransSrc);
+            this.SetParamSimple(map, prefix + "TransDst", this.TransDst);
             this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamArrayObj(map, prefix + "SubtitleResults.", this.SubtitleResults);
         }
     }
 }

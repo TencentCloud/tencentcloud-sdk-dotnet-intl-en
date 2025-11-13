@@ -25,8 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Resource tagging. the field content is user-customized.
+        /// Resource ID. The field content is user-defined.
         /// It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+        /// This field corresponds to the cid field in the Speke request.
+        /// Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -46,10 +48,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Vector{ get; set; }
 
         /// <summary>
-        /// Encryption method. cbcs: default method of FairPlay; cenc: default method of PlayReady and Widevine.
+        /// Encryption method. Options:  
+        /// - **cbcs**: Supports PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.  
+        /// - **cenc**: Supports PlayReady, Widevine, and Widevine+PlayReady.  
         /// 
-        /// cbcs: supported by PlayReady, Widevine, and FairPlay
-        /// cenc: supported by PlayReady and Widevine
+        /// If not specified:  
+        /// - FairPlay defaults to **cbcs**.  
+        /// - PlayReady and Widevine default to **cenc**.  
+        /// - Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay default to **cbcs**.  
+        /// - Widevine+PlayReady defaults to **cenc**.
         /// </summary>
         [JsonProperty("EncryptionMethod")]
         public string EncryptionMethod{ get; set; }

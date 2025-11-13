@@ -38,6 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawSmartEraseParameter RawParameter{ get; set; }
 
         /// <summary>
+        /// Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+        /// </summary>
+        [JsonProperty("OverrideParameter")]
+        public OverrideEraseParameter OverrideParameter{ get; set; }
+
+        /// <summary>
         /// Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -67,6 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         }

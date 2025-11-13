@@ -63,13 +63,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? Traditional{ get; set; }
 
         /// <summary>
-        /// Offset. Default: 0. For more information on Offset, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+        /// Offset. Default: 0. For more information on Offset, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/api/213/11646?from_cn_redirect=1).
+        /// Number of returned results. Default: 20. Maximum: 100. For more information on Limit, see the relevant section in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688).
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

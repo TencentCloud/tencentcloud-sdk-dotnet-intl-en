@@ -28,22 +28,31 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Encryption type.
         /// 
         /// - simpleaes
-        /// Can only be used for HLS. format support ts and mp4.
+        /// Can only be used for HLS. format support: ts and mp4.
         /// Only can be used in slice mode. cannot be used in singlefile mode.
         /// 
         /// - fairplay:
-        /// Can only be used for HLS. valid values: mp4.
-        /// Available for use in slice mode or singlefile mode.
+        /// Can only be used for HLS. the segment format can only be mp4.
+        /// Supports slice mode or singlefile mode.
         /// 
         /// - widevine:
-        /// Can be used for HLS and DASH. format can only be mp4.
-        /// Output HLS: available for use in slice mode or singlefile mode.
-        /// Output DASH: can only be in singlefile mode.
+        /// Can be used for HLS and DASH. the slice format can only be mp4.
+        /// Output HLS: specifies the slicing or singlefile mode can be used.
+        /// OutputOutput DASH]: can only be in singlefile mode.
         /// 
         /// - playready:
-        /// Can be used for HLS and DASH. format can only be mp4.
-        /// Output HLS: available for use in slice mode or singlefile mode.
-        /// Output DASH: can only be singlefile mode.
+        /// Can be used for HLS and DASH. the slice format can only be mp4.
+        /// Output HLS: specifies the slicing or singlefile mode can be used.
+        /// Output DASH: can only be in singlefile mode.
+        /// 
+        /// - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
+        /// Can only be used for HLS. valid values: mp4.
+        /// Supports slice mode or single file mode.
+        /// 
+        /// - widevine+playready:
+        /// Applicable to HLS and MPEG-DASH. the format can only be mp4.
+        /// HLS format can use slice mode or single file mode.
+        /// Specifies that only singlefile mode can be used for MPEG-DASH.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

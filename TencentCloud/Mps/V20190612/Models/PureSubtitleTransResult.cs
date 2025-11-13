@@ -21,42 +21,54 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskResult : AbstractModel
+    public class PureSubtitleTransResult : AbstractModel
     {
         
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Task status (the three valid values are as follows):
+        /// - PROCESSING
+        /// - SUCCESS 
+        /// - FAIL
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+        /// Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
         /// </summary>
-        [JsonProperty("ErrMsg")]
-        public string ErrMsg{ get; set; }
+        [JsonProperty("ErrCodeExt")]
+        public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error message.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public long? ErrCode{ get; set; }
+
+        /// <summary>
+        /// Error message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Transcoding task output.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Translation task input information.
         /// </summary>
-        [JsonProperty("Output")]
-        public ImageProcessTaskOutput Output{ get; set; }
+        [JsonProperty("Input")]
+        public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// Transcoding progress, with a value range of [0-100].
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Translation output result of pure subtitle files.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Output")]
+        public PureSubtitleTransResultOutput Output{ get; set; }
+
+        /// <summary>
+        /// Task progress.
         /// </summary>
         [JsonProperty("Progress")]
-        public long? Progress{ get; set; }
+        public ulong? Progress{ get; set; }
 
 
         /// <summary>
@@ -65,8 +77,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }

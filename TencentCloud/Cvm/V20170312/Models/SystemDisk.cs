@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). value range:<br>
+        /// Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
         /// <li>LOCAL_BASIC: Local SATA disk</li>
         /// <li>LOCAL_SSD: Local NVMe SSD</li>
         /// <li>CLOUD_BASIC: Cloud SATA disk</li>
@@ -41,7 +41,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// System disk ID.
-        /// Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.comom/document/product/213/15728?from_cn_redirect=1) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.comom/document/product/213/15730?from_cn_redirect=1).
+        /// Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

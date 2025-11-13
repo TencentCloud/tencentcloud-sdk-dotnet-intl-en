@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1223</VersionPrefix>
+    <VersionPrefix>3.0.1237</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20190612\Models\AdaptiveDynamicStreamingTemplate.cs" />
     <Compile Include="V20190612\Models\AdaptiveStreamTemplate.cs" />
     <Compile Include="V20190612\Models\AddOnSubtitle.cs" />
+    <Compile Include="V20190612\Models\AdvancedSuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\AiAnalysisResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskClassificationInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskClassificationOutput.cs" />
@@ -94,6 +95,9 @@
     <Compile Include="V20190612\Models\AiAnalysisTaskTagInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskTagOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskTagResult.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskVideoComprehensionInput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskVideoComprehensionOutput.cs" />
+    <Compile Include="V20190612\Models\AiAnalysisTaskVideoComprehensionResult.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskVideoRemakeInput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskVideoRemakeOutput.cs" />
     <Compile Include="V20190612\Models\AiAnalysisTaskVideoRemakeResult.cs" />
@@ -355,6 +359,7 @@
     <Compile Include="V20190612\Models\DescribeWorkflowsRequest.cs" />
     <Compile Include="V20190612\Models\DescribeWorkflowsResponse.cs" />
     <Compile Include="V20190612\Models\DiagnoseResult.cs" />
+    <Compile Include="V20190612\Models\DiffusionEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\DisableScheduleRequest.cs" />
     <Compile Include="V20190612\Models\DisableScheduleResponse.cs" />
     <Compile Include="V20190612\Models\DisableWorkflowRequest.cs" />
@@ -384,6 +389,7 @@
     <Compile Include="V20190612\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\FaceEnhanceConfig.cs" />
     <Compile Include="V20190612\Models\FrameRateConfig.cs" />
+    <Compile Include="V20190612\Models\FrameRateWithDenConfig.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfo.cs" />
     <Compile Include="V20190612\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\HLSConfigureInfo.cs" />
@@ -511,6 +517,7 @@
     <Compile Include="V20190612\Models\OcrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfo.cs" />
     <Compile Include="V20190612\Models\OcrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\OverrideEraseParameter.cs" />
     <Compile Include="V20190612\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationRequest.cs" />
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationResponse.cs" />
@@ -544,6 +551,8 @@
     <Compile Include="V20190612\Models\ProhibitedConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\ProhibitedOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20190612\Models\PureSubtitleTransResult.cs" />
+    <Compile Include="V20190612\Models\PureSubtitleTransResultOutput.cs" />
     <Compile Include="V20190612\Models\QualityControlData.cs" />
     <Compile Include="V20190612\Models\QualityControlItem.cs" />
     <Compile Include="V20190612\Models\QualityControlItemConfig.cs" />
@@ -599,6 +608,7 @@
     <Compile Include="V20190612\Models\SpekeDrm.cs" />
     <Compile Include="V20190612\Models\SubtitlePosition.cs" />
     <Compile Include="V20190612\Models\SubtitleTemplate.cs" />
+    <Compile Include="V20190612\Models\SubtitleTransResultItem.cs" />
     <Compile Include="V20190612\Models\SuperResolutionConfig.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInput.cs" />
     <Compile Include="V20190612\Models\SvgWatermarkInputForUpdate.cs" />
@@ -622,6 +632,9 @@
     <Compile Include="V20190612\Models\TranscodeTaskInput.cs" />
     <Compile Include="V20190612\Models\TranscodeTemplate.cs" />
     <Compile Include="V20190612\Models\TranslateConfigureInfo.cs" />
+    <Compile Include="V20190612\Models\UpdateSmartErasePrivacyConfig.cs" />
+    <Compile Include="V20190612\Models\UpdateSmartEraseSubtitleConfig.cs" />
+    <Compile Include="V20190612\Models\UpdateSmartEraseWatermarkConfig.cs" />
     <Compile Include="V20190612\Models\UrlInputInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="V20190612\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
