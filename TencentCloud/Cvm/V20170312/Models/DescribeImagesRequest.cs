@@ -46,7 +46,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li><strong>tag-value</strong></li>
         /// <p style="padding-left: 30px;">Filter by the <strong>tag value</strong>.</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// <li><strong>tag:tag-key</strong></li>
-        /// <p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace “tag-key” with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+        /// <p style="padding-left: 30px;">Filter by the <strong>tag key-value pair</strong>. Replace "tag-key" with the actual value. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Instance type, e.g. `S1.SMALL1`
+        /// Instance type, e.g. `SA5.MEDIUM2`
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

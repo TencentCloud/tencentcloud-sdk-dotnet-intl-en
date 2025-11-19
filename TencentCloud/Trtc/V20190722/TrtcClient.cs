@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1234";
+       private const string sdkVersion = "SDK_NET_3.0.1240";
 
         /// <summary>
         /// Client constructor.
@@ -1190,6 +1190,7 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// This API is used to stop a relaying task.
+        /// You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
         /// </summary>
         /// <param name="req"><see cref="StopPublishCdnStreamRequest"/></param>
         /// <returns><see cref="StopPublishCdnStreamResponse"/></returns>
@@ -1200,6 +1201,7 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// This API is used to stop a relaying task.
+        /// You can create a relay task before the anchor enters the room. When the relay task is finished, you need to call the stop interface actively. If you do not call the Stop Relay Task Interface, Tencent Cloud will automatically stop the mix relay task when all users participating in the mix have no data uploaded for a period of time exceeding the timeout (AgentParams.MaxIdleTime) set when starting the relay task.
         /// </summary>
         /// <param name="req"><see cref="StopPublishCdnStreamRequest"/></param>
         /// <returns><see cref="StopPublishCdnStreamResponse"/></returns>

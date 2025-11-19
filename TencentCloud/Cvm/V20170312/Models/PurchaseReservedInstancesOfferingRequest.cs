@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+        /// Reserved instance name.<br><li>The RI name defaults to "unnamed" if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
         /// </summary>
         [JsonProperty("ReservedInstanceName")]
         public string ReservedInstanceName{ get; set; }
