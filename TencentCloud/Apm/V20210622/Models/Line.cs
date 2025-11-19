@@ -54,6 +54,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Metric data unit
+        /// </summary>
+        [JsonProperty("MetricUnit")]
+        public string MetricUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArraySimple(map, prefix + "TimeSerial.", this.TimeSerial);
             this.SetParamArraySimple(map, prefix + "DataSerial.", this.DataSerial);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "MetricUnit", this.MetricUnit);
         }
     }
 }

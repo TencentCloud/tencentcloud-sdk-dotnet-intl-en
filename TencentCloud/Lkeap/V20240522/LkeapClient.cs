@@ -28,7 +28,7 @@ namespace TencentCloud.Lkeap.V20240522
 
        private const string endpoint = "lkeap.intl.tencentcloudapi.com";
        private const string version = "2024-05-22";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Lkeap.V20240522
         public CreateSplitDocumentFlowResponse CreateSplitDocumentFlowSync(CreateSplitDocumentFlowRequest req)
         {
             return InternalRequestAsync<CreateSplitDocumentFlowResponse>(req, "CreateSplitDocumentFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to call the text representation model to convert text into a vector represented by numbers, which can be used in scenarios such as text retrieval, information recommendation, and knowledge mining. There is a single-account call limit control for this API. If you need to increase the concurrency limit, please contact us (https://cloud.tencent.com/act/event/Online_service).
+        /// </summary>
+        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
+        /// <returns><see cref="GetEmbeddingResponse"/></returns>
+        public Task<GetEmbeddingResponse> GetEmbedding(GetEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding");
+        }
+
+        /// <summary>
+        /// This API is used to call the text representation model to convert text into a vector represented by numbers, which can be used in scenarios such as text retrieval, information recommendation, and knowledge mining. There is a single-account call limit control for this API. If you need to increase the concurrency limit, please contact us (https://cloud.tencent.com/act/event/Online_service).
+        /// </summary>
+        /// <param name="req"><see cref="GetEmbeddingRequest"/></param>
+        /// <returns><see cref="GetEmbeddingResponse"/></returns>
+        public GetEmbeddingResponse GetEmbeddingSync(GetEmbeddingRequest req)
+        {
+            return InternalRequestAsync<GetEmbeddingResponse>(req, "GetEmbedding")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

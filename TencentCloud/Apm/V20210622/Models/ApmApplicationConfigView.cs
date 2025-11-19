@@ -138,6 +138,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("TraceSquash")]
         public bool? TraceSquash{ get; set; }
 
+        /// <summary>
+        /// Specifies the memory threshold for probe fusing.
+        /// </summary>
+        [JsonProperty("DisableMemoryUsed")]
+        public long? DisableMemoryUsed{ get; set; }
+
+        /// <summary>
+        /// Specifies the CPU threshold for probe fusing.
+        /// </summary>
+        [JsonProperty("DisableCpuUsed")]
+        public long? DisableCpuUsed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "AgentEnable", this.AgentEnable);
             this.SetParamArrayObj(map, prefix + "InstrumentList.", this.InstrumentList);
             this.SetParamSimple(map, prefix + "TraceSquash", this.TraceSquash);
+            this.SetParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
+            this.SetParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
         }
     }
 }

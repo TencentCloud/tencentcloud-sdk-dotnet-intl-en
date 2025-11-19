@@ -62,6 +62,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("CompareVal")]
         public string CompareVal{ get; set; }
 
+        /// <summary>
+        /// Metric Chinese Name
+        /// </summary>
+        [JsonProperty("NameCN")]
+        public string NameCN{ get; set; }
+
+        /// <summary>
+        /// Metric English name
+        /// </summary>
+        [JsonProperty("NameEN")]
+        public string NameEN{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +86,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "CompareVals.", this.CompareVals);
             this.SetParamArrayObj(map, prefix + "LastPeriodValue.", this.LastPeriodValue);
             this.SetParamSimple(map, prefix + "CompareVal", this.CompareVal);
+            this.SetParamSimple(map, prefix + "NameCN", this.NameCN);
+            this.SetParamSimple(map, prefix + "NameEN", this.NameEN);
         }
     }
 }

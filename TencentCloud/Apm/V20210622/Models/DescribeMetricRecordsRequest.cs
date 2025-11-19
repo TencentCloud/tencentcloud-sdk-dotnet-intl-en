@@ -49,6 +49,12 @@ namespace TencentCloud.Apm.V20210622.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
+        /// Aggregation dimension.
+        /// </summary>
+        [JsonProperty("GroupBy")]
+        public string[] GroupBy{ get; set; }
+
+        /// <summary>
         /// Filter criteria.
         /// </summary>
         [JsonProperty("Filters")]
@@ -59,12 +65,6 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         [JsonProperty("OrFilters")]
         public Filter[] OrFilters{ get; set; }
-
-        /// <summary>
-        /// Aggregation dimension.
-        /// </summary>
-        [JsonProperty("GroupBy")]
-        public string[] GroupBy{ get; set; }
 
         /// <summary>
         /// Sort
@@ -129,9 +129,9 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
-            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
             this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
             this.SetParamSimple(map, prefix + "Type", this.Type);

@@ -31,10 +31,16 @@ namespace TencentCloud.Apm.V20210622.Models
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// Filter by business system name.
+        /// Filters by business system name, and fuzzy search is supported.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// Filters by business system ID, and fuzzy search is supported.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// Filter by business system id.
@@ -62,6 +68,7 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
             this.SetParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);

@@ -168,6 +168,114 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
+        /// <summary>
+        /// Whether to enable detection of the remote command attack.
+        /// </summary>
+        [JsonProperty("IsRemoteCommandExecutionAnalysis")]
+        public long? IsRemoteCommandExecutionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable detection of Java webshell.
+        /// </summary>
+        [JsonProperty("IsMemoryHijackingAnalysis")]
+        public long? IsMemoryHijackingAnalysis{ get; set; }
+
+        /// <summary>
+        /// CLS index type. (0 = full-text index; 1 = key-value index).
+        /// </summary>
+        [JsonProperty("LogIndexType")]
+        public long? LogIndexType{ get; set; }
+
+        /// <summary>
+        /// Index key of traceId. It is valid when the CLS index type is key-value index.
+        /// </summary>
+        [JsonProperty("LogTraceIdKey")]
+        public string LogTraceIdKey{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+        /// </summary>
+        [JsonProperty("IsDeleteAnyFileAnalysis")]
+        public long? IsDeleteAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+        /// </summary>
+        [JsonProperty("IsReadAnyFileAnalysis")]
+        public long? IsReadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+        /// </summary>
+        [JsonProperty("IsUploadAnyFileAnalysis")]
+        public long? IsUploadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+        /// </summary>
+        [JsonProperty("IsIncludeAnyFileAnalysis")]
+        public long? IsIncludeAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+        /// </summary>
+        [JsonProperty("IsDirectoryTraversalAnalysis")]
+        public long? IsDirectoryTraversalAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+        /// </summary>
+        [JsonProperty("IsTemplateEngineInjectionAnalysis")]
+        public long? IsTemplateEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+        /// </summary>
+        [JsonProperty("IsScriptEngineInjectionAnalysis")]
+        public long? IsScriptEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+        /// </summary>
+        [JsonProperty("IsExpressionInjectionAnalysis")]
+        public long? IsExpressionInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+        /// </summary>
+        [JsonProperty("IsJNDIInjectionAnalysis")]
+        public long? IsJNDIInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+        /// </summary>
+        [JsonProperty("IsJNIInjectionAnalysis")]
+        public long? IsJNIInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+        /// </summary>
+        [JsonProperty("IsWebshellBackdoorAnalysis")]
+        public long? IsWebshellBackdoorAnalysis{ get; set; }
+
+        /// <summary>
+        /// Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+        /// </summary>
+        [JsonProperty("IsDeserializationAnalysis")]
+        public long? IsDeserializationAnalysis{ get; set; }
+
+        /// <summary>
+        /// Convergence threshold for URL long segments.
+        /// </summary>
+        [JsonProperty("UrlLongSegmentThreshold")]
+        public long? UrlLongSegmentThreshold{ get; set; }
+
+        /// <summary>
+        /// Convergence threshold for URL numerical segments.
+        /// </summary>
+        [JsonProperty("UrlNumberSegmentThreshold")]
+        public long? UrlNumberSegmentThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +306,24 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
             this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
             this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+            this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+            this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+            this.SetParamSimple(map, prefix + "LogIndexType", this.LogIndexType);
+            this.SetParamSimple(map, prefix + "LogTraceIdKey", this.LogTraceIdKey);
+            this.SetParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsIncludeAnyFileAnalysis", this.IsIncludeAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsDirectoryTraversalAnalysis", this.IsDirectoryTraversalAnalysis);
+            this.SetParamSimple(map, prefix + "IsTemplateEngineInjectionAnalysis", this.IsTemplateEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsScriptEngineInjectionAnalysis", this.IsScriptEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsExpressionInjectionAnalysis", this.IsExpressionInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJNDIInjectionAnalysis", this.IsJNDIInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJNIInjectionAnalysis", this.IsJNIInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
+            this.SetParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+            this.SetParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
+            this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         }
     }
 }

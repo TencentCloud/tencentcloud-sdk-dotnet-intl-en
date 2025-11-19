@@ -37,12 +37,6 @@ namespace TencentCloud.Apm.V20210622.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filter criteria.
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
-
-        /// <summary>
         /// Start time (unit: sec).
         /// </summary>
         [JsonProperty("StartTime")]
@@ -53,6 +47,12 @@ namespace TencentCloud.Apm.V20210622.Models
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// Filter criteria.
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
         /// <summary>
         /// Or filter criteria.
@@ -74,9 +74,9 @@ namespace TencentCloud.Apm.V20210622.Models
         {
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }

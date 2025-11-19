@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1206";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -567,6 +567,27 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeBrazilRNMOCRResponse RecognizeBrazilRNMOCRSync(RecognizeBrazilRNMOCRRequest req)
         {
             return InternalRequestAsync<RecognizeBrazilRNMOCRResponse>(req, "RecognizeBrazilRNMOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recognize the coordinates of four corners of cards.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeDetectCardCoordsRequest"/></param>
+        /// <returns><see cref="RecognizeDetectCardCoordsResponse"/></returns>
+        public Task<RecognizeDetectCardCoordsResponse> RecognizeDetectCardCoords(RecognizeDetectCardCoordsRequest req)
+        {
+            return InternalRequestAsync<RecognizeDetectCardCoordsResponse>(req, "RecognizeDetectCardCoords");
+        }
+
+        /// <summary>
+        /// This API is used to recognize the coordinates of four corners of cards.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeDetectCardCoordsRequest"/></param>
+        /// <returns><see cref="RecognizeDetectCardCoordsResponse"/></returns>
+        public RecognizeDetectCardCoordsResponse RecognizeDetectCardCoordsSync(RecognizeDetectCardCoordsRequest req)
+        {
+            return InternalRequestAsync<RecognizeDetectCardCoordsResponse>(req, "RecognizeDetectCardCoords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

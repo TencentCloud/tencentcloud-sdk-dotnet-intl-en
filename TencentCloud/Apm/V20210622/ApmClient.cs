@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1239";
 
         /// <summary>
         /// Client constructor.
@@ -75,6 +75,90 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// This API is used to create metric match rules between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="CreateApmPrometheusRuleResponse"/></returns>
+        public Task<CreateApmPrometheusRuleResponse> CreateApmPrometheusRule(CreateApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<CreateApmPrometheusRuleResponse>(req, "CreateApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// This API is used to create metric match rules between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="CreateApmPrometheusRuleResponse"/></returns>
+        public CreateApmPrometheusRuleResponse CreateApmPrometheusRuleSync(CreateApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<CreateApmPrometheusRuleResponse>(req, "CreateApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmSampleConfigRequest"/></param>
+        /// <returns><see cref="CreateApmSampleConfigResponse"/></returns>
+        public Task<CreateApmSampleConfigResponse> CreateApmSampleConfig(CreateApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApmSampleConfigResponse>(req, "CreateApmSampleConfig");
+        }
+
+        /// <summary>
+        /// Create sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmSampleConfigRequest"/></param>
+        /// <returns><see cref="CreateApmSampleConfigResponse"/></returns>
+        public CreateApmSampleConfigResponse CreateApmSampleConfigSync(CreateApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApmSampleConfigResponse>(req, "CreateApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an event task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProfileTaskRequest"/></param>
+        /// <returns><see cref="CreateProfileTaskResponse"/></returns>
+        public Task<CreateProfileTaskResponse> CreateProfileTask(CreateProfileTaskRequest req)
+        {
+            return InternalRequestAsync<CreateProfileTaskResponse>(req, "CreateProfileTask");
+        }
+
+        /// <summary>
+        /// This API is used to create an event task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProfileTaskRequest"/></param>
+        /// <returns><see cref="CreateProfileTaskResponse"/></returns>
+        public CreateProfileTaskResponse CreateProfileTaskSync(CreateProfileTaskRequest req)
+        {
+            return InternalRequestAsync<CreateProfileTaskResponse>(req, "CreateProfileTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DeleteApmSampleConfigResponse"/></returns>
+        public Task<DeleteApmSampleConfigResponse> DeleteApmSampleConfig(DeleteApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteApmSampleConfigResponse>(req, "DeleteApmSampleConfig");
+        }
+
+        /// <summary>
+        /// Delete sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DeleteApmSampleConfigResponse"/></returns>
+        public DeleteApmSampleConfigResponse DeleteApmSampleConfigSync(DeleteApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteApmSampleConfigResponse>(req, "DeleteApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Obtaining APM Access Point.
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>
@@ -96,6 +180,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// This API is used to query application configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmApplicationConfigResponse"/></returns>
+        public Task<DescribeApmApplicationConfigResponse> DescribeApmApplicationConfig(DescribeApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmApplicationConfigResponse>(req, "DescribeApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query application configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmApplicationConfigResponse"/></returns>
+        public DescribeApmApplicationConfigResponse DescribeApmApplicationConfigSync(DescribeApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmApplicationConfigResponse>(req, "DescribeApmApplicationConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the relationship between apm Business System and other product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAssociationRequest"/></param>
+        /// <returns><see cref="DescribeApmAssociationResponse"/></returns>
+        public Task<DescribeApmAssociationResponse> DescribeApmAssociation(DescribeApmAssociationRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAssociationResponse>(req, "DescribeApmAssociation");
+        }
+
+        /// <summary>
+        /// This API is used to query the relationship between apm Business System and other product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAssociationRequest"/></param>
+        /// <returns><see cref="DescribeApmAssociationResponse"/></returns>
+        public DescribeApmAssociationResponse DescribeApmAssociationSync(DescribeApmAssociationRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAssociationResponse>(req, "DescribeApmAssociation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of APM business systems.
         /// </summary>
         /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
@@ -113,6 +239,69 @@ namespace TencentCloud.Apm.V20210622
         public DescribeApmInstancesResponse DescribeApmInstancesSync(DescribeApmInstancesRequest req)
         {
             return InternalRequestAsync<DescribeApmInstancesResponse>(req, "DescribeApmInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the match rule for metrics between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="DescribeApmPrometheusRuleResponse"/></returns>
+        public Task<DescribeApmPrometheusRuleResponse> DescribeApmPrometheusRule(DescribeApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeApmPrometheusRuleResponse>(req, "DescribeApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// This API is used to query the match rule for metrics between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="DescribeApmPrometheusRuleResponse"/></returns>
+        public DescribeApmPrometheusRuleResponse DescribeApmPrometheusRuleSync(DescribeApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeApmPrometheusRuleResponse>(req, "DescribeApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query sampling configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmSampleConfigResponse"/></returns>
+        public Task<DescribeApmSampleConfigResponse> DescribeApmSampleConfig(DescribeApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSampleConfigResponse>(req, "DescribeApmSampleConfig");
+        }
+
+        /// <summary>
+        /// Query sampling configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSampleConfigRequest"/></param>
+        /// <returns><see cref="DescribeApmSampleConfigResponse"/></returns>
+        public DescribeApmSampleConfigResponse DescribeApmSampleConfigSync(DescribeApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSampleConfigResponse>(req, "DescribeApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of APM application metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmServiceMetricRequest"/></param>
+        /// <returns><see cref="DescribeApmServiceMetricResponse"/></returns>
+        public Task<DescribeApmServiceMetricResponse> DescribeApmServiceMetric(DescribeApmServiceMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeApmServiceMetricResponse>(req, "DescribeApmServiceMetric");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of APM application metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmServiceMetricRequest"/></param>
+        /// <returns><see cref="DescribeApmServiceMetricResponse"/></returns>
+        public DescribeApmServiceMetricResponse DescribeApmServiceMetricSync(DescribeApmServiceMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeApmServiceMetricResponse>(req, "DescribeApmServiceMetric")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -266,6 +455,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// Modify application configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmApplicationConfigResponse"/></returns>
+        public Task<ModifyApmApplicationConfigResponse> ModifyApmApplicationConfig(ModifyApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmApplicationConfigResponse>(req, "ModifyApmApplicationConfig");
+        }
+
+        /// <summary>
+        /// Modify application configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmApplicationConfigResponse"/></returns>
+        public ModifyApmApplicationConfigResponse ModifyApmApplicationConfigSync(ModifyApmApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmApplicationConfigResponse>(req, "ModifyApmApplicationConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the relationship between the apm Business System and other products, including deletion.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmAssociationRequest"/></param>
+        /// <returns><see cref="ModifyApmAssociationResponse"/></returns>
+        public Task<ModifyApmAssociationResponse> ModifyApmAssociation(ModifyApmAssociationRequest req)
+        {
+            return InternalRequestAsync<ModifyApmAssociationResponse>(req, "ModifyApmAssociation");
+        }
+
+        /// <summary>
+        /// This API is used to modify the relationship between the apm Business System and other products, including deletion.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmAssociationRequest"/></param>
+        /// <returns><see cref="ModifyApmAssociationResponse"/></returns>
+        public ModifyApmAssociationResponse ModifyApmAssociationSync(ModifyApmAssociationRequest req)
+        {
+            return InternalRequestAsync<ModifyApmAssociationResponse>(req, "ModifyApmAssociation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the APM business system.
         /// </summary>
         /// <param name="req"><see cref="ModifyApmInstanceRequest"/></param>
@@ -283,6 +514,48 @@ namespace TencentCloud.Apm.V20210622
         public ModifyApmInstanceResponse ModifyApmInstanceSync(ModifyApmInstanceRequest req)
         {
             return InternalRequestAsync<ModifyApmInstanceResponse>(req, "ModifyApmInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify metric match rules between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="ModifyApmPrometheusRuleResponse"/></returns>
+        public Task<ModifyApmPrometheusRuleResponse> ModifyApmPrometheusRule(ModifyApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApmPrometheusRuleResponse>(req, "ModifyApmPrometheusRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify metric match rules between apm Business System and Prometheus Instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmPrometheusRuleRequest"/></param>
+        /// <returns><see cref="ModifyApmPrometheusRuleResponse"/></returns>
+        public ModifyApmPrometheusRuleResponse ModifyApmPrometheusRuleSync(ModifyApmPrometheusRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyApmPrometheusRuleResponse>(req, "ModifyApmPrometheusRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmSampleConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmSampleConfigResponse"/></returns>
+        public Task<ModifyApmSampleConfigResponse> ModifyApmSampleConfig(ModifyApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig");
+        }
+
+        /// <summary>
+        /// Modify sampling configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmSampleConfigRequest"/></param>
+        /// <returns><see cref="ModifyApmSampleConfigResponse"/></returns>
+        public ModifyApmSampleConfigResponse ModifyApmSampleConfigSync(ModifyApmSampleConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -72,6 +72,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Affinity")]
+        public long? Affinity{ get; set; }
+
+        /// <summary>
         /// List of tags associated with the placement group.
         /// </summary>
         [JsonProperty("Tags")]
@@ -90,6 +96,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CurrentNum", this.CurrentNum);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Affinity", this.Affinity);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }

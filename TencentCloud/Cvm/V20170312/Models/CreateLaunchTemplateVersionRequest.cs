@@ -199,6 +199,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("EnableJumboFrame")]
+        public bool? EnableJumboFrame{ get; set; }
+
+        /// <summary>
         /// Custom metadata. specifies that custom metadata key-value pairs can be added when creating a CVM.
         /// Note: this field is in beta test.
         /// </summary>
@@ -249,6 +255,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+            this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
         }
