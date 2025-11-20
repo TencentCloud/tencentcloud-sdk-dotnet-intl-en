@@ -37,6 +37,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
+        /// List of real servers for which to modify the weights
+        /// </summary>
+        [JsonProperty("Targets")]
+        public Target[] Targets{ get; set; }
+
+        /// <summary>
         /// Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
         /// </summary>
         [JsonProperty("LocationId")]
@@ -55,12 +61,6 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// List of real servers for which to modify the weights
-        /// </summary>
-        [JsonProperty("Targets")]
-        public Target[] Targets{ get; set; }
-
-        /// <summary>
         /// New forwarding weight of a real server. Value range: 0-100. Default value: 10. If the Targets.Weight parameter is set, this parameter will not take effect.
         /// </summary>
         [JsonProperty("Weight")]
@@ -74,10 +74,10 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }

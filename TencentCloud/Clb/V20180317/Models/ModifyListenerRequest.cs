@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID
+        /// ID of the CLB instance. You can call the [DescribeLoadBalancers](https://intl.cloud.tencent.com/document/product/214/30685?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB listener ID
+        /// ID of the CLB instance listener. You can call the [DescribeListeners](https://intl.cloud.tencent.com/document/product/214/30686?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// New listener name
+        /// New listener name. The maximum length is 255 characters.
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
@@ -61,7 +61,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// Listener forwarding method. Valid values: WRR, LEAST_CONN.These values respectively indicate weighted round robin and least connections. The default value is WRR.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
+        /// Listener forwarding method. Valid values: WRR (weighted round-robin), LEAST_CONN (least connections), and IP_HASH (IP address hash).
+        /// They indicate weighted round-robin and least connections, respectively. Default value: WRR.
+        /// Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners. The balancing method for Layer-7 listeners should be modified in the forwarding rules.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -79,19 +81,26 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// Whether to enable long connections. This parameter applies only to HTTP and HTTPS listeners.The default value is 0, indicating disabled, and 1 indicates enabled.
+        /// Whether to enable the persistent connection feature. This parameter applies only to HTTP/HTTPS listeners.
+        /// The default value is 0, indicating disabled, and 1 indicates enabled.
+        /// 
+        /// Enable this feature with caution if the maximum number of connections is limited for real servers. This feature is in beta testing. To use it, submit a [beta testing application](https://intl.cloud.tencent.com/apply/p/tsodp6qm21?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+        /// Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
+        /// True: send an RST packet to the client; False: do not send an RST packet to the client.
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
-        /// Session persistence type. NORMAL indicates the default session persistence type, and QUIC_CID indicates session persistence by QUIC connection ID. QUIC_CID only supports UDP protocols.Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+        /// Session persistence type. NORMAL: default session persistence type; QUIC_CID: perform session persistence based on QUIC connection ID. If the value is set to QUIC_CID, only the UDP protocol is supported.
+        /// Use cases: This applies to TCP/UDP/TCP_SSL/QUIC listeners.
+        /// 
+        /// Default value: NORMAL.
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
@@ -104,27 +113,43 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Maximum number of concurrent connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of concurrent connections for the instance specification. -1 indicates that no limit is set on the concurrent connections at the listener level. Classic network instances do not support this parameter.
+        /// 
+        /// Default value: -1, which indicates no limit.
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
         /// Maximum number of new connections at the listener level. This parameter is supported only for LCU-supported instances with TCP/UDP/TCP_SSL/QUIC listeners currently. Value range: 1 to the maximum number of new connections for the instance specification. -1 indicates that no limit is set on the new connections at the listener level. Classic network instances do not support this parameter.
+        /// 
+        /// Default value: -1, which indicates no limit.
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
 
         /// <summary>
-        /// Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900. To set a period longer than 2000 seconds (up to 3600 seconds), please submit a [submit](https://console.cloud.tencent.com/workorder/category). 
+        /// Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// Whether to enable SNAT.
+        /// 
+        /// </summary>
+        [JsonProperty("ProxyProtocol")]
+        public bool? ProxyProtocol{ get; set; }
+
+        /// <summary>
+        /// Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
+
+        /// <summary>
+        /// Data compression mode.
+        /// </summary>
+        [JsonProperty("DataCompressMode")]
+        public string DataCompressMode{ get; set; }
 
 
         /// <summary>
@@ -148,7 +173,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxConn", this.MaxConn);
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
+            this.SetParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+            this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
         }
     }
 }

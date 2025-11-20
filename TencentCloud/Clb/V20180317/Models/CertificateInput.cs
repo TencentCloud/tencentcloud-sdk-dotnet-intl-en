@@ -25,13 +25,20 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
+        /// Authentication type. UNIDIRECTIONAL: one-way authentication; MUTUAL: mutual authentication.
+        /// Default value: UNIDIRECTIONAL.
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// ID of a server certificate. If you leave this parameter empty, you must upload the certificate, including CertContent, CertKey, and CertName.
+        /// Whether to enable client authentication for mutual authentication. ON: enable it; OPTIONAL: client certificate not required. Default value: ON.
+        /// </summary>
+        [JsonProperty("SSLVerifyClient")]
+        public string SSLVerifyClient{ get; set; }
+
+        /// <summary>
+        /// Server certificate ID. If this parameter is not specified, you need to upload a certificate and specify CertContent (server certificate content), CertKey (server certificate key), and CertName (server certificate name).
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -79,6 +86,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
+            this.SetParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "CertCaId", this.CertCaId);
             this.SetParamSimple(map, prefix + "CertName", this.CertName);

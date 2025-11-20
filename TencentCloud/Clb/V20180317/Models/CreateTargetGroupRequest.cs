@@ -48,6 +48,30 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
         }
     }
 }

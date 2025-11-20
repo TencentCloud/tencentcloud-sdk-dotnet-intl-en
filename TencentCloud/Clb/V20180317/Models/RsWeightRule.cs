@@ -46,12 +46,14 @@ namespace TencentCloud.Clb.V20180317.Models
         /// Target rule domain name. This parameter does not take effect if LocationId is specified
         /// </summary>
         [JsonProperty("Domain")]
+        [System.Obsolete]
         public string Domain{ get; set; }
 
         /// <summary>
         /// Target rule URL. This parameter does not take effect if LocationId is specified
         /// </summary>
         [JsonProperty("Url")]
+        [System.Obsolete]
         public string Url{ get; set; }
 
         /// <summary>

@@ -67,6 +67,24 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AssociatedRule")]
         public AssociationItem[] AssociatedRule{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +98,9 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamArrayObj(map, prefix + "AssociatedRule.", this.AssociatedRule);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         }
     }
 }

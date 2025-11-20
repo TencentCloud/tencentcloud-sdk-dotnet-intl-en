@@ -28,7 +28,7 @@ namespace TencentCloud.Clb.V20180317
 
        private const string endpoint = "clb.intl.tencentcloudapi.com";
        private const string version = "2018-03-17";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1241";
 
         /// <summary>
         /// Client constructor.
@@ -225,7 +225,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to create a listener for a CLB instance.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This is an asynchronous API. After it returns the result successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="CreateListenerRequest"/></param>
         /// <returns><see cref="CreateListenerResponse"/></returns>
@@ -236,7 +236,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// This API is used to create a listener for a CLB instance.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
+        /// This is an asynchronous API. After it returns the result successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="CreateListenerRequest"/></param>
         /// <returns><see cref="CreateListenerResponse"/></returns>
@@ -1435,8 +1435,8 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// This API is used to modify the attributes of a CLB instance listener, including the listener name, health check parameters, certificate information, and forwarding policy. This API does not support classic CLB instances.
+        /// This is an asynchronous API. After it returns the result successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyListenerRequest"/></param>
         /// <returns><see cref="ModifyListenerResponse"/></returns>
@@ -1446,8 +1446,8 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
-        /// This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+        /// This API is used to modify the attributes of a CLB instance listener, including the listener name, health check parameters, certificate information, and forwarding policy. This API does not support classic CLB instances.
+        /// This is an asynchronous API. After it returns the result successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestId as an input parameter to query whether the task is successful.
         /// </summary>
         /// <param name="req"><see cref="ModifyListenerRequest"/></param>
         /// <returns><see cref="ModifyListenerResponse"/></returns>

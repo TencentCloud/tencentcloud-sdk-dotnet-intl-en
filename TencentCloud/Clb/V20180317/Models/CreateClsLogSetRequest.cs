@@ -34,6 +34,7 @@ namespace TencentCloud.Clb.V20180317.Models
         /// Logset retention period (in days)
         /// </summary>
         [JsonProperty("Period")]
+        [System.Obsolete]
         public ulong? Period{ get; set; }
 
         /// <summary>
