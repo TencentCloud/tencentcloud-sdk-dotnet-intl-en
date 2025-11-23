@@ -21,7 +21,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRouteRequest : AbstractModel
+    public class UpgradeBrokerVersionRequest : AbstractModel
     {
         
         /// <summary>
@@ -31,16 +31,28 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Route ID
+        /// 1. smooth configuration upgrade 2. vertical configuration upgrade.
         /// </summary>
-        [JsonProperty("RouteId")]
-        public long? RouteId{ get; set; }
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
 
         /// <summary>
-        /// Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+        /// Version number
         /// </summary>
-        [JsonProperty("MainRouteFlag")]
-        public bool? MainRouteFlag{ get; set; }
+        [JsonProperty("SourceVersion")]
+        public string SourceVersion{ get; set; }
+
+        /// <summary>
+        /// Version number
+        /// </summary>
+        [JsonProperty("TargetVersion")]
+        public string TargetVersion{ get; set; }
+
+        /// <summary>
+        /// Delay time.
+        /// </summary>
+        [JsonProperty("DelayTimeStamp")]
+        public string DelayTimeStamp{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
-            this.SetParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "SourceVersion", this.SourceVersion);
+            this.SetParamSimple(map, prefix + "TargetVersion", this.TargetVersion);
+            this.SetParamSimple(map, prefix + "DelayTimeStamp", this.DelayTimeStamp);
         }
     }
 }

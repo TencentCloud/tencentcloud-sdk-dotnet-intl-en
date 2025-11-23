@@ -21,26 +21,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRouteRequest : AbstractModel
+    public class DeleteAclRuleRequest : AbstractModel
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// Instance id information. you can obtain it through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Route ID
+        /// acl rule name, obtain through the API DescribeAclRule.
         /// </summary>
-        [JsonProperty("RouteId")]
-        public long? RouteId{ get; set; }
-
-        /// <summary>
-        /// Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
-        /// </summary>
-        [JsonProperty("MainRouteFlag")]
-        public bool? MainRouteFlag{ get; set; }
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
 
         /// <summary>
@@ -49,8 +43,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
-            this.SetParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }
 }

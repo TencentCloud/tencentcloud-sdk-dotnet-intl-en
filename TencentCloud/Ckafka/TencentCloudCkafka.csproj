@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1236</VersionPrefix>
+    <VersionPrefix>3.0.1242</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,7 +53,6 @@
     <Compile Include="V20190819\Models\AclRule.cs" />
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AclRuleResp.cs" />
-    <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
     <Compile Include="V20190819\Models\BatchContent.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclRequest.cs" />
@@ -103,6 +102,10 @@
     <Compile Include="V20190819\Models\DealInstanceDTO.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteAclRuleRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteAclRuleResponse.cs" />
+    <Compile Include="V20190819\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20190819\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePostRequest.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePostResponse.cs" />
     <Compile Include="V20190819\Models\DeleteInstancePreRequest.cs" />
@@ -121,8 +124,8 @@
     <Compile Include="V20190819\Models\DescribeACLResponse.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleRequest.cs" />
     <Compile Include="V20190819\Models\DescribeAclRuleResponse.cs" />
-    <Compile Include="V20190819\Models\DescribeAppInfoRequest.cs" />
-    <Compile Include="V20190819\Models\DescribeAppInfoResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeCkafkaVersionRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeCkafkaVersionResponse.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneRequest.cs" />
     <Compile Include="V20190819\Models\DescribeCkafkaZoneResponse.cs" />
     <Compile Include="V20190819\Models\DescribeConnectInfoResultDTO.cs" />
@@ -208,6 +211,8 @@
     <Compile Include="V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="V20190819\Models\InstanceResponse.cs" />
     <Compile Include="V20190819\Models\InstanceRoute.cs" />
+    <Compile Include="V20190819\Models\InstanceScalingDownRequest.cs" />
+    <Compile Include="V20190819\Models\InstanceScalingDownResponse.cs" />
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
     <Compile Include="V20190819\Models\ListCvmAndIpInfoRsp.cs" />
     <Compile Include="V20190819\Models\ModifyAclRuleRequest.cs" />
@@ -223,6 +228,8 @@
     <Compile Include="V20190819\Models\ModifyInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordRequest.cs" />
     <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
+    <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskRequest.cs" />
+    <Compile Include="V20190819\Models\ModifyRoutineMaintenanceTaskResponse.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\OperateResponseData.cs" />
@@ -236,6 +243,7 @@
     <Compile Include="V20190819\Models\RouteFilter.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
+    <Compile Include="V20190819\Models\ScalingDownResp.cs" />
     <Compile Include="V20190819\Models\SecurityGroupRoute.cs" />
     <Compile Include="V20190819\Models\SecurityGroupRouteResp.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />
@@ -253,6 +261,8 @@
     <Compile Include="V20190819\Models\TopicResult.cs" />
     <Compile Include="V20190819\Models\TopicRetentionTimeConfigRsp.cs" />
     <Compile Include="V20190819\Models\TopicSubscribeGroup.cs" />
+    <Compile Include="V20190819\Models\UpgradeBrokerVersionRequest.cs" />
+    <Compile Include="V20190819\Models\UpgradeBrokerVersionResponse.cs" />
     <Compile Include="V20190819\Models\User.cs" />
     <Compile Include="V20190819\Models\UserResponse.cs" />
     <Compile Include="V20190819\Models\VipEntity.cs" />

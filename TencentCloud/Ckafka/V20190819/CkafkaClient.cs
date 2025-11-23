@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.intl.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1236";
+       private const string sdkVersion = "SDK_NET_3.0.1242";
 
         /// <summary>
         /// Client constructor.
@@ -369,6 +369,48 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to delete an ACL rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteAclRuleResponse"/></returns>
+        public Task<DeleteAclRuleResponse> DeleteAclRule(DeleteAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAclRuleResponse>(req, "DeleteAclRule");
+        }
+
+        /// <summary>
+        /// This API is used to delete an ACL rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteAclRuleResponse"/></returns>
+        public DeleteAclRuleResponse DeleteAclRuleSync(DeleteAclRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteAclRuleResponse>(req, "DeleteAclRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete consumer groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup");
+        }
+
+        /// <summary>
+        /// Delete consumer groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePostRequest"/></param>
@@ -558,23 +600,23 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to query the user list.
+        /// This API is used to query instance version information.
         /// </summary>
-        /// <param name="req"><see cref="DescribeAppInfoRequest"/></param>
-        /// <returns><see cref="DescribeAppInfoResponse"/></returns>
-        public Task<DescribeAppInfoResponse> DescribeAppInfo(DescribeAppInfoRequest req)
+        /// <param name="req"><see cref="DescribeCkafkaVersionRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaVersionResponse"/></returns>
+        public Task<DescribeCkafkaVersionResponse> DescribeCkafkaVersion(DescribeCkafkaVersionRequest req)
         {
-            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo");
+            return InternalRequestAsync<DescribeCkafkaVersionResponse>(req, "DescribeCkafkaVersion");
         }
 
         /// <summary>
-        /// This API is used to query the user list.
+        /// This API is used to query instance version information.
         /// </summary>
-        /// <param name="req"><see cref="DescribeAppInfoRequest"/></param>
-        /// <returns><see cref="DescribeAppInfoResponse"/></returns>
-        public DescribeAppInfoResponse DescribeAppInfoSync(DescribeAppInfoRequest req)
+        /// <param name="req"><see cref="DescribeCkafkaVersionRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaVersionResponse"/></returns>
+        public DescribeCkafkaVersionResponse DescribeCkafkaVersionSync(DescribeCkafkaVersionRequest req)
         {
-            return InternalRequestAsync<DescribeAppInfoResponse>(req, "DescribeAppInfo")
+            return InternalRequestAsync<DescribeCkafkaVersionResponse>(req, "DescribeCkafkaVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1148,6 +1190,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to perform downsizing on a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceScalingDownRequest"/></param>
+        /// <returns><see cref="InstanceScalingDownResponse"/></returns>
+        public Task<InstanceScalingDownResponse> InstanceScalingDown(InstanceScalingDownRequest req)
+        {
+            return InternalRequestAsync<InstanceScalingDownResponse>(req, "InstanceScalingDown");
+        }
+
+        /// <summary>
+        /// This API is used to perform downsizing on a pay-as-you-go instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceScalingDownRequest"/></param>
+        /// <returns><see cref="InstanceScalingDownResponse"/></returns>
+        public InstanceScalingDownResponse InstanceScalingDownSync(InstanceScalingDownRequest req)
+        {
+            return InternalRequestAsync<InstanceScalingDownResponse>(req, "InstanceScalingDown")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.
         /// </summary>
         /// <param name="req"><see cref="ModifyAclRuleRequest"/></param>
@@ -1274,6 +1337,27 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// This API is used to set automated ops attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutineMaintenanceTaskRequest"/></param>
+        /// <returns><see cref="ModifyRoutineMaintenanceTaskResponse"/></returns>
+        public Task<ModifyRoutineMaintenanceTaskResponse> ModifyRoutineMaintenanceTask(ModifyRoutineMaintenanceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutineMaintenanceTaskResponse>(req, "ModifyRoutineMaintenanceTask");
+        }
+
+        /// <summary>
+        /// This API is used to set automated ops attributes.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoutineMaintenanceTaskRequest"/></param>
+        /// <returns><see cref="ModifyRoutineMaintenanceTaskResponse"/></returns>
+        public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTaskSync(ModifyRoutineMaintenanceTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRoutineMaintenanceTaskResponse>(req, "ModifyRoutineMaintenanceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify topic attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicAttributesRequest"/></param>
@@ -1312,6 +1396,27 @@ namespace TencentCloud.Ckafka.V20190819
         public SendMessageResponse SendMessageSync(SendMessageRequest req)
         {
             return InternalRequestAsync<SendMessageResponse>(req, "SendMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the broker version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeBrokerVersionRequest"/></param>
+        /// <returns><see cref="UpgradeBrokerVersionResponse"/></returns>
+        public Task<UpgradeBrokerVersionResponse> UpgradeBrokerVersion(UpgradeBrokerVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeBrokerVersionResponse>(req, "UpgradeBrokerVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the broker version.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeBrokerVersionRequest"/></param>
+        /// <returns><see cref="UpgradeBrokerVersionResponse"/></returns>
+        public UpgradeBrokerVersionResponse UpgradeBrokerVersionSync(UpgradeBrokerVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeBrokerVersionResponse>(req, "UpgradeBrokerVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

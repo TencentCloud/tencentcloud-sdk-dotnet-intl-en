@@ -25,97 +25,97 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Zone list
+        /// <P>Specifies the zone list.</p>.
         /// </summary>
         [JsonProperty("ZoneList")]
         public ZoneInfo[] ZoneList{ get; set; }
 
         /// <summary>
-        /// Maximum number of instances to be purchased
+        /// <P>Maximum number of instances that can be purchased.</p>.
         /// </summary>
         [JsonProperty("MaxBuyInstanceNum")]
         public long? MaxBuyInstanceNum{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth in MB/S
+        /// <p>Maximum purchase bandwidth in Mb/s.</p>.
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// Pay-as-you-go unit price
+        /// <P>Unit price for postpayment.</p>.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public Price UnitPrice{ get; set; }
 
         /// <summary>
-        /// Pay-as-you-go unit message price
+        /// <P>Message unit price for postpayment.</p>.
         /// </summary>
         [JsonProperty("MessagePrice")]
         public Price MessagePrice{ get; set; }
 
         /// <summary>
-        /// Specifies the user-exclusive cluster info.
+        /// <P>User-Exclusive cluster information.</p>.
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
-        /// Purchase the standard version configuration.
+        /// <P>Specifies the standard version configuration to purchase.</p>.
         /// </summary>
         [JsonProperty("Standard")]
         public string Standard{ get; set; }
 
         /// <summary>
-        /// Purchase the standard version S2 configuration.
+        /// <P>Specifies the purchase of standard version s2 configuration.</p>.
         /// </summary>
         [JsonProperty("StandardS2")]
         public string StandardS2{ get; set; }
 
         /// <summary>
-        /// Specifies the configuration for purchasing the professional edition.
+        /// <P>Specifies the configuration for purchasing professional edition.</p>.
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// Purchase physical dedicated edition configuration.
+        /// <P>Purchase physical dedicated edition configuration.</p>.
         /// </summary>
         [JsonProperty("Physical")]
         public string Physical{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. abandoned, meaningless.
+        /// <p>Specifies the public network bandwidth. valid values: 3Mbps to 999Mbps. only supported in pro edition. abandoned, meaningless.</p>.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public string PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Configures the public network bandwidth.
+        /// <P>Public network bandwidth configuration.</p>.
         /// </summary>
         [JsonProperty("PublicNetworkLimit")]
         public string PublicNetworkLimit{ get; set; }
 
         /// <summary>
-        /// Request ID.
+        /// <p>Request Id.</p>.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// Pagination Offset
+        /// <P>Specifies the pagination offset.</p>.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination Limit
+        /// <P>Specifies the pagination limit.</p>.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Mandatory. input tag.
+        /// <P>Specifies whether the tag is mandatory.</p>.
         /// </summary>
         [JsonProperty("ForceCheckTag")]
         public bool? ForceCheckTag{ get; set; }

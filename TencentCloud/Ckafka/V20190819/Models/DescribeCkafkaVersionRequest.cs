@@ -21,7 +21,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRouteRequest : AbstractModel
+    public class DescribeCkafkaVersionRequest : AbstractModel
     {
         
         /// <summary>
@@ -30,18 +30,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
-        /// <summary>
-        /// Route ID
-        /// </summary>
-        [JsonProperty("RouteId")]
-        public long? RouteId{ get; set; }
-
-        /// <summary>
-        /// Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
-        /// </summary>
-        [JsonProperty("MainRouteFlag")]
-        public bool? MainRouteFlag{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,8 +37,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
-            this.SetParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
         }
     }
 }
