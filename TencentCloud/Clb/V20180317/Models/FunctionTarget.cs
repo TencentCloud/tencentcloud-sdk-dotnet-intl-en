@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// SCF related information
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// SCF information
         /// </summary>
         [JsonProperty("Function")]
         public FunctionInfo Function{ get; set; }

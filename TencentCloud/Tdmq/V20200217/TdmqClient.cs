@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmq.V20200217
 
        private const string endpoint = "tdmq.intl.tencentcloudapi.com";
        private const string version = "2020-02-17";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -243,6 +243,48 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This api is used to create a professional cluster with prepayment via api calls.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProClusterRequest"/></param>
+        /// <returns><see cref="CreateProClusterResponse"/></returns>
+        public Task<CreateProClusterResponse> CreateProCluster(CreateProClusterRequest req)
+        {
+            return InternalRequestAsync<CreateProClusterResponse>(req, "CreateProCluster");
+        }
+
+        /// <summary>
+        /// This api is used to create a professional cluster with prepayment via api calls.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProClusterRequest"/></param>
+        /// <returns><see cref="CreateProClusterResponse"/></returns>
+        public CreateProClusterResponse CreateProClusterSync(CreateProClusterRequest req)
+        {
+            return InternalRequestAsync<CreateProClusterResponse>(req, "CreateProCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ routing relationship.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQBindingResponse"/></returns>
+        public Task<CreateRabbitMQBindingResponse> CreateRabbitMQBinding(CreateRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<CreateRabbitMQBindingResponse>(req, "CreateRabbitMQBinding");
+        }
+
+        /// <summary>
+        /// This API is used to create a TDMQ for RabbitMQ routing relationship.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="CreateRabbitMQBindingResponse"/></returns>
+        public CreateRabbitMQBindingResponse CreateRabbitMQBindingSync(CreateRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<CreateRabbitMQBindingResponse>(req, "CreateRabbitMQBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a TDMQ for RabbitMQ user.
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQUserRequest"/></param>
@@ -264,7 +306,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to create a TDMQ for RabbitMQ exclusive instance.
+        /// This API is used to create a RabbitMQ managed instance.
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
@@ -274,7 +316,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to create a TDMQ for RabbitMQ exclusive instance.
+        /// This API is used to create a RabbitMQ managed instance.
         /// </summary>
         /// <param name="req"><see cref="CreateRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="CreateRabbitMQVipInstanceResponse"/></returns>
@@ -327,6 +369,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Creates environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
+        public Task<CreateRocketMQEnvironmentRoleResponse> CreateRocketMQEnvironmentRole(CreateRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQEnvironmentRoleResponse>(req, "CreateRocketMQEnvironmentRole");
+        }
+
+        /// <summary>
+        /// Creates environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQEnvironmentRoleResponse"/></returns>
+        public CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRoleSync(CreateRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQEnvironmentRoleResponse>(req, "CreateRocketMQEnvironmentRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a RocketMQ consumer group.
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
@@ -369,6 +432,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to create a role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
+        public Task<CreateRocketMQRoleResponse> CreateRocketMQRole(CreateRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRoleResponse>(req, "CreateRocketMQRole");
+        }
+
+        /// <summary>
+        /// This API is used to create a role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQRoleRequest"/></param>
+        /// <returns><see cref="CreateRocketMQRoleResponse"/></returns>
+        public CreateRocketMQRoleResponse CreateRocketMQRoleSync(CreateRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQRoleResponse>(req, "CreateRocketMQRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a RocketMQ topic.
         /// </summary>
         /// <param name="req"><see cref="CreateRocketMQTopicRequest"/></param>
@@ -386,6 +470,27 @@ namespace TencentCloud.Tdmq.V20200217
         public CreateRocketMQTopicResponse CreateRocketMQTopicSync(CreateRocketMQTopicRequest req)
         {
             return InternalRequestAsync<CreateRocketMQTopicResponse>(req, "CreateRocketMQTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a RocketMQ Exclusive Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQVipInstanceResponse"/></returns>
+        public Task<CreateRocketMQVipInstanceResponse> CreateRocketMQVipInstance(CreateRocketMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQVipInstanceResponse>(req, "CreateRocketMQVipInstance");
+        }
+
+        /// <summary>
+        /// This API is used to create a RocketMQ Exclusive Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQVipInstanceResponse"/></returns>
+        public CreateRocketMQVipInstanceResponse CreateRocketMQVipInstanceSync(CreateRocketMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateRocketMQVipInstanceResponse>(req, "CreateRocketMQVipInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -579,6 +684,69 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to delete a professional cluster with prepayment via API calls.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProClusterRequest"/></param>
+        /// <returns><see cref="DeleteProClusterResponse"/></returns>
+        public Task<DeleteProClusterResponse> DeleteProCluster(DeleteProClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteProClusterResponse>(req, "DeleteProCluster");
+        }
+
+        /// <summary>
+        /// This API is used to delete a professional cluster with prepayment via API calls.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProClusterRequest"/></param>
+        /// <returns><see cref="DeleteProClusterResponse"/></returns>
+        public DeleteProClusterResponse DeleteProClusterSync(DeleteProClusterRequest req)
+        {
+            return InternalRequestAsync<DeleteProClusterResponse>(req, "DeleteProCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind RabbitMQ routing relationships.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQBindingResponse"/></returns>
+        public Task<DeleteRabbitMQBindingResponse> DeleteRabbitMQBinding(DeleteRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQBindingResponse>(req, "DeleteRabbitMQBinding");
+        }
+
+        /// <summary>
+        /// This API is used to unbind RabbitMQ routing relationships.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQBindingRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQBindingResponse"/></returns>
+        public DeleteRabbitMQBindingResponse DeleteRabbitMQBindingSync(DeleteRabbitMQBindingRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQBindingResponse>(req, "DeleteRabbitMQBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQPermissionResponse"/></returns>
+        public Task<DeleteRabbitMQPermissionResponse> DeleteRabbitMQPermission(DeleteRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQPermissionResponse>(req, "DeleteRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// This API is used to delete RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DeleteRabbitMQPermissionResponse"/></returns>
+        public DeleteRabbitMQPermissionResponse DeleteRabbitMQPermissionSync(DeleteRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DeleteRabbitMQPermissionResponse>(req, "DeleteRabbitMQPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a TDMQ for RabbitMQ user.
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQUserRequest"/></param>
@@ -600,7 +768,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+        /// This API is used to delete a RabbitMQ managed instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
@@ -610,7 +778,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to delete a TDMQ for RabbitMQ exclusive instance.
+        /// This API is used to delete a RabbitMQ managed instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteRabbitMQVipInstanceRequest"/></param>
         /// <returns><see cref="DeleteRabbitMQVipInstanceResponse"/></returns>
@@ -663,6 +831,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Deletes environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
+        public Task<DeleteRocketMQEnvironmentRolesResponse> DeleteRocketMQEnvironmentRoles(DeleteRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQEnvironmentRolesResponse>(req, "DeleteRocketMQEnvironmentRoles");
+        }
+
+        /// <summary>
+        /// Deletes environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQEnvironmentRolesResponse"/></returns>
+        public DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRolesSync(DeleteRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQEnvironmentRolesResponse>(req, "DeleteRocketMQEnvironmentRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a RocketMQ consumer group.
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
@@ -705,6 +894,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Deletes roles. Batch deletion is supported.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
+        public Task<DeleteRocketMQRolesResponse> DeleteRocketMQRoles(DeleteRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQRolesResponse>(req, "DeleteRocketMQRoles");
+        }
+
+        /// <summary>
+        /// Deletes roles. Batch deletion is supported.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQRolesResponse"/></returns>
+        public DeleteRocketMQRolesResponse DeleteRocketMQRolesSync(DeleteRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQRolesResponse>(req, "DeleteRocketMQRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a RocketMQ topic.
         /// </summary>
         /// <param name="req"><see cref="DeleteRocketMQTopicRequest"/></param>
@@ -722,6 +932,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DeleteRocketMQTopicResponse DeleteRocketMQTopicSync(DeleteRocketMQTopicRequest req)
         {
             return InternalRequestAsync<DeleteRocketMQTopicResponse>(req, "DeleteRocketMQTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a RocketMQ Exclusive Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQVipInstanceResponse"/></returns>
+        public Task<DeleteRocketMQVipInstanceResponse> DeleteRocketMQVipInstance(DeleteRocketMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQVipInstanceResponse>(req, "DeleteRocketMQVipInstance");
+        }
+
+        /// <summary>
+        /// This API is used to delete a RocketMQ Exclusive Edition instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQVipInstanceResponse"/></returns>
+        public DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstanceSync(DeleteRocketMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteRocketMQVipInstanceResponse>(req, "DeleteRocketMQVipInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -869,27 +1100,6 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeClustersResponse DescribeClustersSync(DescribeClustersRequest req)
         {
             return InternalRequestAsync<DescribeClustersResponse>(req, "DescribeClusters")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to enumerate the source queues of a CMQ dead letter queue.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
-        public Task<DescribeCmqDeadLetterSourceQueuesResponse> DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req)
-        {
-            return InternalRequestAsync<DescribeCmqDeadLetterSourceQueuesResponse>(req, "DescribeCmqDeadLetterSourceQueues");
-        }
-
-        /// <summary>
-        /// This API is used to enumerate the source queues of a CMQ dead letter queue.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
-        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
-        public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueuesSync(DescribeCmqDeadLetterSourceQueuesRequest req)
-        {
-            return InternalRequestAsync<DescribeCmqDeadLetterSourceQueuesResponse>(req, "DescribeCmqDeadLetterSourceQueues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +1272,69 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMqMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMqMsgTraceResponse"/></returns>
+        public Task<DescribeMqMsgTraceResponse> DescribeMqMsgTrace(DescribeMqMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMqMsgTraceResponse>(req, "DescribeMqMsgTrace");
+        }
+
+        /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMqMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMqMsgTraceResponse"/></returns>
+        public DescribeMqMsgTraceResponse DescribeMqMsgTraceSync(DescribeMqMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMqMsgTraceResponse>(req, "DescribeMqMsgTrace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get message details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRequest"/></param>
+        /// <returns><see cref="DescribeMsgResponse"/></returns>
+        public Task<DescribeMsgResponse> DescribeMsg(DescribeMsgRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgResponse>(req, "DescribeMsg");
+        }
+
+        /// <summary>
+        /// This API is used to get message details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRequest"/></param>
+        /// <returns><see cref="DescribeMsgResponse"/></returns>
+        public DescribeMsgResponse DescribeMsgSync(DescribeMsgRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgResponse>(req, "DescribeMsg")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
+        public Task<DescribeMsgTraceResponse> DescribeMsgTrace(DescribeMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgTraceResponse>(req, "DescribeMsgTrace");
+        }
+
+        /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeMsgTraceResponse"/></returns>
+        public DescribeMsgTraceResponse DescribeMsgTraceSync(DescribeMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgTraceResponse>(req, "DescribeMsgTrace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain message production overview information.
         /// </summary>
         /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
@@ -1146,7 +1419,49 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+        /// This API is used to query the list of RabbitMQ route relations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQBindingsRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQBindingsResponse"/></returns>
+        public Task<DescribeRabbitMQBindingsResponse> DescribeRabbitMQBindings(DescribeRabbitMQBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQBindingsResponse>(req, "DescribeRabbitMQBindings");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of RabbitMQ route relations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQBindingsRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQBindingsResponse"/></returns>
+        public DescribeRabbitMQBindingsResponse DescribeRabbitMQBindingsSync(DescribeRabbitMQBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQBindingsResponse>(req, "DescribeRabbitMQBindings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exchanges.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQExchangesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQExchangesResponse"/></returns>
+        public Task<DescribeRabbitMQExchangesResponse> DescribeRabbitMQExchanges(DescribeRabbitMQExchangesRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQExchangesResponse>(req, "DescribeRabbitMQExchanges");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ exchanges.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQExchangesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQExchangesResponse"/></returns>
+        public DescribeRabbitMQExchangesResponse DescribeRabbitMQExchangesSync(DescribeRabbitMQExchangesRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQExchangesResponse>(req, "DescribeRabbitMQExchanges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the RabbitMQ managed node list.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>
@@ -1156,13 +1471,76 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+        /// This API is used to query the RabbitMQ managed node list.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQNodeListRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQNodeListResponse"/></returns>
         public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeListSync(DescribeRabbitMQNodeListRequest req)
         {
             return InternalRequestAsync<DescribeRabbitMQNodeListResponse>(req, "DescribeRabbitMQNodeList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQPermissionResponse"/></returns>
+        public Task<DescribeRabbitMQPermissionResponse> DescribeRabbitMQPermission(DescribeRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQPermissionResponse>(req, "DescribeRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQPermissionResponse"/></returns>
+        public DescribeRabbitMQPermissionResponse DescribeRabbitMQPermissionSync(DescribeRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQPermissionResponse>(req, "DescribeRabbitMQPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of RabbitMQ queues.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueueDetailResponse"/></returns>
+        public Task<DescribeRabbitMQQueueDetailResponse> DescribeRabbitMQQueueDetail(DescribeRabbitMQQueueDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQQueueDetailResponse>(req, "DescribeRabbitMQQueueDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of RabbitMQ queues.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueueDetailResponse"/></returns>
+        public DescribeRabbitMQQueueDetailResponse DescribeRabbitMQQueueDetailSync(DescribeRabbitMQQueueDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQQueueDetailResponse>(req, "DescribeRabbitMQQueueDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ queues.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueuesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueuesResponse"/></returns>
+        public Task<DescribeRabbitMQQueuesResponse> DescribeRabbitMQQueues(DescribeRabbitMQQueuesRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQQueuesResponse>(req, "DescribeRabbitMQQueues");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of TDMQ for RabbitMQ queues.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQQueuesRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQQueuesResponse"/></returns>
+        public DescribeRabbitMQQueuesResponse DescribeRabbitMQQueuesSync(DescribeRabbitMQQueuesRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQQueuesResponse>(req, "DescribeRabbitMQQueues")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1188,7 +1566,28 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+        /// This API is used to obtain information about one RabbitMQ managed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
+        public Task<DescribeRabbitMQVipInstanceResponse> DescribeRabbitMQVipInstance(DescribeRabbitMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQVipInstanceResponse>(req, "DescribeRabbitMQVipInstance");
+        }
+
+        /// <summary>
+        /// This API is used to obtain information about one RabbitMQ managed instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRabbitMQVipInstanceRequest"/></param>
+        /// <returns><see cref="DescribeRabbitMQVipInstanceResponse"/></returns>
+        public DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstanceSync(DescribeRabbitMQVipInstanceRequest req)
+        {
+            return InternalRequestAsync<DescribeRabbitMQVipInstanceResponse>(req, "DescribeRabbitMQVipInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the RabbitMQ managed instance list of user purchases.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>
@@ -1198,7 +1597,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+        /// This API is used to query the RabbitMQ managed instance list of user purchases.
         /// </summary>
         /// <param name="req"><see cref="DescribeRabbitMQVipInstancesRequest"/></param>
         /// <returns><see cref="DescribeRabbitMQVipInstancesResponse"/></returns>
@@ -1226,27 +1625,6 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHostSync(DescribeRabbitMQVirtualHostRequest req)
         {
             return InternalRequestAsync<DescribeRabbitMQVirtualHostResponse>(req, "DescribeRabbitMQVirtualHost")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
-        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
-        public Task<DescribeRabbitMQVirtualHostListResponse> DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req)
-        {
-            return InternalRequestAsync<DescribeRabbitMQVirtualHostListResponse>(req, "DescribeRabbitMQVirtualHostList");
-        }
-
-        /// <summary>
-        /// This API is used to query the list of TDMQ for RabbitMQ exclusive vhosts.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRabbitMQVirtualHostListRequest"/></param>
-        /// <returns><see cref="DescribeRabbitMQVirtualHostListResponse"/></returns>
-        public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostListSync(DescribeRabbitMQVirtualHostListRequest req)
-        {
-            return InternalRequestAsync<DescribeRabbitMQVirtualHostListResponse>(req, "DescribeRabbitMQVirtualHostList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1293,6 +1671,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Obtains the namespace role list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
+        public Task<DescribeRocketMQEnvironmentRolesResponse> DescribeRocketMQEnvironmentRoles(DescribeRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQEnvironmentRolesResponse>(req, "DescribeRocketMQEnvironmentRoles");
+        }
+
+        /// <summary>
+        /// Obtains the namespace role list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQEnvironmentRolesResponse"/></returns>
+        public DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRolesSync(DescribeRocketMQEnvironmentRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQEnvironmentRolesResponse>(req, "DescribeRocketMQEnvironmentRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of RocketMQ consumer groups.
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
@@ -1335,6 +1734,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
+        public Task<DescribeRocketMQMsgTraceResponse> DescribeRocketMQMsgTrace(DescribeRocketMQMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQMsgTraceResponse>(req, "DescribeRocketMQMsgTrace");
+        }
+
+        /// <summary>
+        /// Queries message trajectory
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQMsgTraceRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQMsgTraceResponse"/></returns>
+        public DescribeRocketMQMsgTraceResponse DescribeRocketMQMsgTraceSync(DescribeRocketMQMsgTraceRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQMsgTraceResponse>(req, "DescribeRocketMQMsgTrace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of RocketMQ namespaces.
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
@@ -1356,6 +1776,174 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to query the producer client list under a specified topic in RocketMQ.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQProducersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQProducersResponse"/></returns>
+        public Task<DescribeRocketMQProducersResponse> DescribeRocketMQProducers(DescribeRocketMQProducersRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQProducersResponse>(req, "DescribeRocketMQProducers");
+        }
+
+        /// <summary>
+        /// This API is used to query the producer client list under a specified topic in RocketMQ.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQProducersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQProducersResponse"/></returns>
+        public DescribeRocketMQProducersResponse DescribeRocketMQProducersSync(DescribeRocketMQProducersRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQProducersResponse>(req, "DescribeRocketMQProducers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pull public network metric monitoring data from TCOP. Currently, only inbound bandwidth and outbound bandwidth metrics from client to LB are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessMonitorDataResponse"/></returns>
+        public Task<DescribeRocketMQPublicAccessMonitorDataResponse> DescribeRocketMQPublicAccessMonitorData(DescribeRocketMQPublicAccessMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessMonitorDataResponse>(req, "DescribeRocketMQPublicAccessMonitorData");
+        }
+
+        /// <summary>
+        /// This API is used to pull public network metric monitoring data from TCOP. Currently, only inbound bandwidth and outbound bandwidth metrics from client to LB are supported.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessMonitorDataResponse"/></returns>
+        public DescribeRocketMQPublicAccessMonitorDataResponse DescribeRocketMQPublicAccessMonitorDataSync(DescribeRocketMQPublicAccessMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessMonitorDataResponse>(req, "DescribeRocketMQPublicAccessMonitorData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the public network access information of RocketMQ instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessPointResponse"/></returns>
+        public Task<DescribeRocketMQPublicAccessPointResponse> DescribeRocketMQPublicAccessPoint(DescribeRocketMQPublicAccessPointRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessPointResponse>(req, "DescribeRocketMQPublicAccessPoint");
+        }
+
+        /// <summary>
+        /// This API is used to query the public network access information of RocketMQ instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQPublicAccessPointResponse"/></returns>
+        public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPointSync(DescribeRocketMQPublicAccessPointRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQPublicAccessPointResponse>(req, "DescribeRocketMQPublicAccessPoint")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtains the list of roles
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
+        public Task<DescribeRocketMQRolesResponse> DescribeRocketMQRoles(DescribeRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQRolesResponse>(req, "DescribeRocketMQRoles");
+        }
+
+        /// <summary>
+        /// Obtains the list of roles
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQRolesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQRolesResponse"/></returns>
+        public DescribeRocketMQRolesResponse DescribeRocketMQRolesSync(DescribeRocketMQRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQRolesResponse>(req, "DescribeRocketMQRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Used to obtain the RocketMQ metric sorting list, such as sorting topics under a cluster instance by the most occupied storage space.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public Task<DescribeRocketMQTopUsagesResponse> DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages");
+        }
+
+        /// <summary>
+        /// Used to obtain the RocketMQ metric sorting list, such as sorting topics under a cluster instance by the most occupied storage space.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopUsagesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopUsagesResponse"/></returns>
+        public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsagesSync(DescribeRocketMQTopUsagesRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopUsagesResponse>(req, "DescribeRocketMQTopUsages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain RocketMQ topic details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicResponse"/></returns>
+        public Task<DescribeRocketMQTopicResponse> DescribeRocketMQTopic(DescribeRocketMQTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicResponse>(req, "DescribeRocketMQTopic");
+        }
+
+        /// <summary>
+        /// This API is used to obtain RocketMQ topic details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicResponse"/></returns>
+        public DescribeRocketMQTopicResponse DescribeRocketMQTopicSync(DescribeRocketMQTopicRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicResponse>(req, "DescribeRocketMQTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query RocketMQ messages.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
+        public Task<DescribeRocketMQTopicMsgsResponse> DescribeRocketMQTopicMsgs(DescribeRocketMQTopicMsgsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicMsgsResponse>(req, "DescribeRocketMQTopicMsgs");
+        }
+
+        /// <summary>
+        /// Query RocketMQ messages.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicMsgsResponse"/></returns>
+        public DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgsSync(DescribeRocketMQTopicMsgsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicMsgsResponse>(req, "DescribeRocketMQTopicMsgs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the topic production details list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
+        public Task<DescribeRocketMQTopicStatsResponse> DescribeRocketMQTopicStats(DescribeRocketMQTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicStatsResponse>(req, "DescribeRocketMQTopicStats");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the topic production details list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicStatsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicStatsResponse"/></returns>
+        public DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStatsSync(DescribeRocketMQTopicStatsRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicStatsResponse>(req, "DescribeRocketMQTopicStats")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of RocketMQ topics.
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
@@ -1373,6 +1961,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeRocketMQTopicsResponse DescribeRocketMQTopicsSync(DescribeRocketMQTopicsRequest req)
         {
             return InternalRequestAsync<DescribeRocketMQTopicsResponse>(req, "DescribeRocketMQTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtains the list of topics subscribed under a specified consumer group
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
+        public Task<DescribeRocketMQTopicsByGroupResponse> DescribeRocketMQTopicsByGroup(DescribeRocketMQTopicsByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicsByGroupResponse>(req, "DescribeRocketMQTopicsByGroup");
+        }
+
+        /// <summary>
+        /// Obtains the list of topics subscribed under a specified consumer group
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsByGroupRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsByGroupResponse"/></returns>
+        public DescribeRocketMQTopicsByGroupResponse DescribeRocketMQTopicsByGroupSync(DescribeRocketMQTopicsByGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeRocketMQTopicsByGroupResponse>(req, "DescribeRocketMQTopicsByGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +2070,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to query messages.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMsgsResponse"/></returns>
+        public Task<DescribeTopicMsgsResponse> DescribeTopicMsgs(DescribeTopicMsgsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMsgsResponse>(req, "DescribeTopicMsgs");
+        }
+
+        /// <summary>
+        /// This API is used to query messages.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMsgsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMsgsResponse"/></returns>
+        public DescribeTopicMsgsResponse DescribeTopicMsgsSync(DescribeTopicMsgsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMsgsResponse>(req, "DescribeTopicMsgs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of topics under an environment.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
@@ -1478,6 +2108,27 @@ namespace TencentCloud.Tdmq.V20200217
         public DescribeTopicsResponse DescribeTopicsSync(DescribeTopicsRequest req)
         {
             return InternalRequestAsync<DescribeTopicsResponse>(req, "DescribeTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Export the RocketMQ message details.
+        /// </summary>
+        /// <param name="req"><see cref="ExportRocketMQMessageDetailRequest"/></param>
+        /// <returns><see cref="ExportRocketMQMessageDetailResponse"/></returns>
+        public Task<ExportRocketMQMessageDetailResponse> ExportRocketMQMessageDetail(ExportRocketMQMessageDetailRequest req)
+        {
+            return InternalRequestAsync<ExportRocketMQMessageDetailResponse>(req, "ExportRocketMQMessageDetail");
+        }
+
+        /// <summary>
+        /// Export the RocketMQ message details.
+        /// </summary>
+        /// <param name="req"><see cref="ExportRocketMQMessageDetailRequest"/></param>
+        /// <returns><see cref="ExportRocketMQMessageDetailResponse"/></returns>
+        public ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetailSync(ExportRocketMQMessageDetailRequest req)
+        {
+            return InternalRequestAsync<ExportRocketMQMessageDetailResponse>(req, "ExportRocketMQMessageDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1608,6 +2259,48 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// This API is used to modify the public network security policy for pulsar Pro Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkSecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkSecurityPolicyResponse"/></returns>
+        public Task<ModifyPublicNetworkSecurityPolicyResponse> ModifyPublicNetworkSecurityPolicy(ModifyPublicNetworkSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyPublicNetworkSecurityPolicyResponse>(req, "ModifyPublicNetworkSecurityPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the public network security policy for pulsar Pro Edition.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPublicNetworkSecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifyPublicNetworkSecurityPolicyResponse"/></returns>
+        public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicySync(ModifyPublicNetworkSecurityPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyPublicNetworkSecurityPolicyResponse>(req, "ModifyPublicNetworkSecurityPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQPermissionResponse"/></returns>
+        public Task<ModifyRabbitMQPermissionResponse> ModifyRabbitMQPermission(ModifyRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyRabbitMQPermissionResponse>(req, "ModifyRabbitMQPermission");
+        }
+
+        /// <summary>
+        /// This API is used to modify RabbitMQ permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRabbitMQPermissionRequest"/></param>
+        /// <returns><see cref="ModifyRabbitMQPermissionResponse"/></returns>
+        public ModifyRabbitMQPermissionResponse ModifyRabbitMQPermissionSync(ModifyRabbitMQPermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyRabbitMQPermissionResponse>(req, "ModifyRabbitMQPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a TDMQ for RabbitMQ user.
         /// </summary>
         /// <param name="req"><see cref="ModifyRabbitMQUserRequest"/></param>
@@ -1671,6 +2364,27 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// Modifies environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
+        public Task<ModifyRocketMQEnvironmentRoleResponse> ModifyRocketMQEnvironmentRole(ModifyRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQEnvironmentRoleResponse>(req, "ModifyRocketMQEnvironmentRole");
+        }
+
+        /// <summary>
+        /// Modifies environment role authorization
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQEnvironmentRoleResponse"/></returns>
+        public ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRoleSync(ModifyRocketMQEnvironmentRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQEnvironmentRoleResponse>(req, "ModifyRocketMQEnvironmentRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update a RocketMQ consumer group.
         /// </summary>
         /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
@@ -1688,6 +2402,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyRocketMQGroupResponse ModifyRocketMQGroupSync(ModifyRocketMQGroupRequest req)
         {
             return InternalRequestAsync<ModifyRocketMQGroupResponse>(req, "ModifyRocketMQGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the RocketMQ dedicated instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceResponse"/></returns>
+        public Task<ModifyRocketMQInstanceResponse> ModifyRocketMQInstance(ModifyRocketMQInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQInstanceResponse>(req, "ModifyRocketMQInstance");
+        }
+
+        /// <summary>
+        /// Modify the RocketMQ dedicated instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQInstanceResponse"/></returns>
+        public ModifyRocketMQInstanceResponse ModifyRocketMQInstanceSync(ModifyRocketMQInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQInstanceResponse>(req, "ModifyRocketMQInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1730,6 +2465,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespaceSync(ModifyRocketMQNamespaceRequest req)
         {
             return InternalRequestAsync<ModifyRocketMQNamespaceResponse>(req, "ModifyRocketMQNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modifies roles
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
+        public Task<ModifyRocketMQRoleResponse> ModifyRocketMQRole(ModifyRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQRoleResponse>(req, "ModifyRocketMQRole");
+        }
+
+        /// <summary>
+        /// Modifies roles
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQRoleRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQRoleResponse"/></returns>
+        public ModifyRocketMQRoleResponse ModifyRocketMQRoleSync(ModifyRocketMQRoleRequest req)
+        {
+            return InternalRequestAsync<ModifyRocketMQRoleResponse>(req, "ModifyRocketMQRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1818,26 +2574,26 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
+        /// This API is used to receive messages sent to a specified Partitioned Topic. It supports only Partitioned Topic type. When there are no messages in the Partitioned Topic but the API is still called, it throws a ReceiveTimeout exception.
         /// 
-        /// Instructions on how to use `BatchReceivePolicy`:
+        /// This API is used to batch receive policies.
         /// 
-        /// `BatchReceive` has three parameters:
+        /// This API is used to provide the following three parameters:.
         /// 
-        /// ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
-        /// ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.
-        /// ● `Timeout`: The maximum timeout period (in milliseconds) of calling `Receive` when `BatchReceive` is used.
+        /// MaxNumMessages: The maximum number of messages returned by the Receive API each time when using BatchReceive.
+        /// MaxNumBytes: the maximum size of messages returned by the Receive API in a single BatchReceive operation, in bytes.
+        /// Timeout: The maximum timeout period for each Receive API call when using BatchReceive is how long, in MS.
         /// 
-        /// By default, if you don’t specify any of the three parameters, the `BatchReceive` feature is disabled; if one of the three parameter values is above zero, `BatchReceive` is enabled. `BatchReceive` will be disabled when any of the three parameter values reaches the threshold you specify.
+        /// This API is used to disable the BatchReceive feature if none of the three parameters are specified. If any one of the three parameters has a value greater than 0, BatchReceive is enabled. BatchReceive completes when reaching the threshold specified in any one of the three parameters.
         /// 
-        /// Note: The values of both `MaxNumMessages` and `MaxNumBytes` are subject to the value of `ReceiveQueueSize`. If the values of `ReceiveQueueSize` and `MaxNumMessages` are 5 and 10, respectively, you can receive up to five rather than 10 messages when `BatchReceive` is used.
+        /// Note: MaxNumMessages and MaxNumBytes are subject to the size of ReceiveQueueSize for each receipt of messages. If ReceiveQueueSize is set to 5 and MaxNumMessages is set to 10, then BatchReceive will receive at most 5 messages at once rather than 10.
         /// 
         /// 
         /// 
-        /// The API configured with `BatchReceivePolicy` returns multiple messages at a time.
+        /// This API is used to return multiple messages at one time.
         /// 
-        /// 1. These messages are separated by “###”. After receiving them, you can separate them with split tools in different languages.
-        /// 2. MessageIDs are separated by “###”. After receiving the messages, you can separate the MessageIDs with split tools in different languages, so that you can obtain the `MessageID` field information required for calling the `AcknowledgeMessage` API.
+        /// This API is used to Split multiple messages with the special character '###', allowing the business side to use Split tools in different languages to separate messages after receiving them.
+        /// Multiple MessageIDs use the special character '###' to separate with each other. After receiving the message, the business side can leverage the Split tool provided by different languages to separate different messages. (Used for filling in the necessary MessageID field information when calling the AcknowledgeMessage API.).
         /// </summary>
         /// <param name="req"><see cref="ReceiveMessageRequest"/></param>
         /// <returns><see cref="ReceiveMessageResponse"/></returns>
@@ -1847,26 +2603,26 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
+        /// This API is used to receive messages sent to a specified Partitioned Topic. It supports only Partitioned Topic type. When there are no messages in the Partitioned Topic but the API is still called, it throws a ReceiveTimeout exception.
         /// 
-        /// Instructions on how to use `BatchReceivePolicy`:
+        /// This API is used to batch receive policies.
         /// 
-        /// `BatchReceive` has three parameters:
+        /// This API is used to provide the following three parameters:.
         /// 
-        /// ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
-        /// ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.
-        /// ● `Timeout`: The maximum timeout period (in milliseconds) of calling `Receive` when `BatchReceive` is used.
+        /// MaxNumMessages: The maximum number of messages returned by the Receive API each time when using BatchReceive.
+        /// MaxNumBytes: the maximum size of messages returned by the Receive API in a single BatchReceive operation, in bytes.
+        /// Timeout: The maximum timeout period for each Receive API call when using BatchReceive is how long, in MS.
         /// 
-        /// By default, if you don’t specify any of the three parameters, the `BatchReceive` feature is disabled; if one of the three parameter values is above zero, `BatchReceive` is enabled. `BatchReceive` will be disabled when any of the three parameter values reaches the threshold you specify.
+        /// This API is used to disable the BatchReceive feature if none of the three parameters are specified. If any one of the three parameters has a value greater than 0, BatchReceive is enabled. BatchReceive completes when reaching the threshold specified in any one of the three parameters.
         /// 
-        /// Note: The values of both `MaxNumMessages` and `MaxNumBytes` are subject to the value of `ReceiveQueueSize`. If the values of `ReceiveQueueSize` and `MaxNumMessages` are 5 and 10, respectively, you can receive up to five rather than 10 messages when `BatchReceive` is used.
+        /// Note: MaxNumMessages and MaxNumBytes are subject to the size of ReceiveQueueSize for each receipt of messages. If ReceiveQueueSize is set to 5 and MaxNumMessages is set to 10, then BatchReceive will receive at most 5 messages at once rather than 10.
         /// 
         /// 
         /// 
-        /// The API configured with `BatchReceivePolicy` returns multiple messages at a time.
+        /// This API is used to return multiple messages at one time.
         /// 
-        /// 1. These messages are separated by “###”. After receiving them, you can separate them with split tools in different languages.
-        /// 2. MessageIDs are separated by “###”. After receiving the messages, you can separate the MessageIDs with split tools in different languages, so that you can obtain the `MessageID` field information required for calling the `AcknowledgeMessage` API.
+        /// This API is used to Split multiple messages with the special character '###', allowing the business side to use Split tools in different languages to separate messages after receiving them.
+        /// Multiple MessageIDs use the special character '###' to separate with each other. After receiving the message, the business side can leverage the Split tool provided by different languages to separate different messages. (Used for filling in the necessary MessageID field information when calling the AcknowledgeMessage API.).
         /// </summary>
         /// <param name="req"><see cref="ReceiveMessageRequest"/></param>
         /// <returns><see cref="ReceiveMessageResponse"/></returns>
@@ -1915,6 +2671,27 @@ namespace TencentCloud.Tdmq.V20200217
         public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSetSync(ResetRocketMQConsumerOffSetRequest req)
         {
             return InternalRequestAsync<ResetRocketMQConsumerOffSetResponse>(req, "ResetRocketMQConsumerOffSet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Resend the RocketMQ dead letter messages.
+        /// </summary>
+        /// <param name="req"><see cref="RetryRocketMQDlqMessageRequest"/></param>
+        /// <returns><see cref="RetryRocketMQDlqMessageResponse"/></returns>
+        public Task<RetryRocketMQDlqMessageResponse> RetryRocketMQDlqMessage(RetryRocketMQDlqMessageRequest req)
+        {
+            return InternalRequestAsync<RetryRocketMQDlqMessageResponse>(req, "RetryRocketMQDlqMessage");
+        }
+
+        /// <summary>
+        /// Resend the RocketMQ dead letter messages.
+        /// </summary>
+        /// <param name="req"><see cref="RetryRocketMQDlqMessageRequest"/></param>
+        /// <returns><see cref="RetryRocketMQDlqMessageResponse"/></returns>
+        public RetryRocketMQDlqMessageResponse RetryRocketMQDlqMessageSync(RetryRocketMQDlqMessageRequest req)
+        {
+            return InternalRequestAsync<RetryRocketMQDlqMessageResponse>(req, "RetryRocketMQDlqMessage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2030,7 +2807,7 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This document is used to send a TDMQ for RocketMQ message.
+        /// This API is used to send messages through RocketMQ. It is only used for sending a small number of test messages from the console and does not provide SLA. Cloud API is subject to traffic throttling. In real business scenarios, use the RocketMQ SDK to send messages.
         /// </summary>
         /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
         /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
@@ -2040,13 +2817,34 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// This document is used to send a TDMQ for RocketMQ message.
+        /// This API is used to send messages through RocketMQ. It is only used for sending a small number of test messages from the console and does not provide SLA. Cloud API is subject to traffic throttling. In real business scenarios, use the RocketMQ SDK to send messages.
         /// </summary>
         /// <param name="req"><see cref="SendRocketMQMessageRequest"/></param>
         /// <returns><see cref="SendRocketMQMessageResponse"/></returns>
         public SendRocketMQMessageResponse SendRocketMQMessageSync(SendRocketMQMessageRequest req)
         {
             return InternalRequestAsync<SendRocketMQMessageResponse>(req, "SendRocketMQMessage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable public network access, and set the security access policy.
+        /// </summary>
+        /// <param name="req"><see cref="SetRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="SetRocketMQPublicAccessPointResponse"/></returns>
+        public Task<SetRocketMQPublicAccessPointResponse> SetRocketMQPublicAccessPoint(SetRocketMQPublicAccessPointRequest req)
+        {
+            return InternalRequestAsync<SetRocketMQPublicAccessPointResponse>(req, "SetRocketMQPublicAccessPoint");
+        }
+
+        /// <summary>
+        /// This API is used to enable/disable public network access, and set the security access policy.
+        /// </summary>
+        /// <param name="req"><see cref="SetRocketMQPublicAccessPointRequest"/></param>
+        /// <returns><see cref="SetRocketMQPublicAccessPointResponse"/></returns>
+        public SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPointSync(SetRocketMQPublicAccessPointRequest req)
+        {
+            return InternalRequestAsync<SetRocketMQPublicAccessPointResponse>(req, "SetRocketMQPublicAccessPoint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

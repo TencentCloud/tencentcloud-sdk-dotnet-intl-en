@@ -124,6 +124,39 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxBandWidth")]
         public ulong? MaxBandWidth{ get; set; }
 
+        /// <summary>
+        /// Tag list of the cluster
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Cluster Creation Time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Specifies the different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillingLabelVersion")]
+        public string BillingLabelVersion{ get; set; }
+
+        /// <summary>
+        /// Custom tenant.
+        /// </summary>
+        [JsonProperty("Tenant")]
+        public string Tenant{ get; set; }
+
+        /// <summary>
+        /// Certificate list of the cluster.
+        /// </summary>
+        [JsonProperty("CertificateList")]
+        public CertificateInfo[] CertificateList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -146,6 +179,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "MaxBandWidth", this.MaxBandWidth);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+            this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamArrayObj(map, prefix + "CertificateList.", this.CertificateList);
         }
     }
 }

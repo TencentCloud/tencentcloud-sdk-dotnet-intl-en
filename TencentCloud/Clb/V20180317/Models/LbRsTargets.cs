@@ -43,15 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// VPC ID of the real server.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// vpcId of RS
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Weight of the real server.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// RS weight
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

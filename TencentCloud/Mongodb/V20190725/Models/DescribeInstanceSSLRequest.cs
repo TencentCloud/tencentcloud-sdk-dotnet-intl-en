@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RabbitMQPrivateVirtualHost : AbstractModel
+    public class DescribeInstanceSSLRequest : AbstractModel
     {
         
         /// <summary>
-        /// Vhost name
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Instance ID, in the format of cmgo-p8vnipr5. It is the same as the format of the instance ID displayed on the TencentDB for MongoDB console page.
         /// </summary>
-        [JsonProperty("VirtualHostName")]
-        public string VirtualHostName{ get; set; }
-
-        /// <summary>
-        /// Vhost description
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VirtualHostName", this.VirtualHostName);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

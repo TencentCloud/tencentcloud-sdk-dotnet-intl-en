@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,48 @@ namespace TencentCloud.Mongodb.V20190725
         public CreateDBInstanceHourResponse CreateDBInstanceHourSync(CreateDBInstanceHourRequest req)
         {
             return InternalRequestAsync<CreateDBInstanceHourResponse>(req, "CreateDBInstanceHour")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public Task<CreateLogDownloadTaskResponse> CreateLogDownloadTask(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public CreateLogDownloadTaskResponse CreateLogDownloadTaskSync(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public Task<DeleteLogDownloadTaskResponse> DeleteLogDownloadTask(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public DeleteLogDownloadTaskResponse DeleteLogDownloadTaskSync(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +411,69 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public Task<DescribeInstanceSSLResponse> DescribeInstanceSSL(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL");
+        }
+
+        /// <summary>
+        /// This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public DescribeInstanceSSLResponse DescribeInstanceSSLSync(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public Task<DescribeLogDownloadTasksResponse> DescribeLogDownloadTasks(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public DescribeLogDownloadTasksResponse DescribeLogDownloadTasksSync(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query running logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public Task<DescribeMongodbLogsResponse> DescribeMongodbLogs(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query running logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public DescribeMongodbLogsResponse DescribeMongodbLogsSync(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
@@ -533,6 +638,27 @@ namespace TencentCloud.Mongodb.V20190725
         public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstancesSync(InquirePriceRenewDBInstancesRequest req)
         {
             return InternalRequestAsync<InquirePriceRenewDBInstancesResponse>(req, "InquirePriceRenewDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set the SSL status for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public Task<InstanceEnableSSLResponse> InstanceEnableSSL(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL");
+        }
+
+        /// <summary>
+        /// This API is used to set the SSL status for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public InstanceEnableSSLResponse InstanceEnableSSLSync(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -743,6 +869,48 @@ namespace TencentCloud.Mongodb.V20190725
         public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
         {
             return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of the database instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of the database instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionSync(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public Task<UpgradeDbInstanceVersionResponse> UpgradeDbInstanceVersion(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersionSync(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

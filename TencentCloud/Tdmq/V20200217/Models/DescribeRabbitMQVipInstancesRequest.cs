@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The maximum number of queried items, which defaults to 20.
+        /// Maximum number of items for query. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Start offset for query
+        /// Starting position of the query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

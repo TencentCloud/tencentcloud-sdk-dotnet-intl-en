@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Real server type. Valid values: CVM, ENI, CCN.
+        /// Specifies the backend service type. valid values: CVM, ENI, CCN, EVM, GLOBALROUTE, NAT, SRV.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Listening port of a real server
+        /// Specifies the listening port of the backend service. if it is a full listening target group bound to a port range listener, this port returns 0, indicating an invalid port. the port of the bound backend service follows the listener port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -56,8 +56,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// Private IP of a real server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Private network IP of the real server
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
@@ -70,8 +69,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Bound time of a real server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Real server binding time
         /// </summary>
         [JsonProperty("RegisteredTime")]
         public string RegisteredTime{ get; set; }
@@ -84,7 +82,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string EniId{ get; set; }
 
         /// <summary>
-        /// Tag.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }

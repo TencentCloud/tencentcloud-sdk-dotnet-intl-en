@@ -37,10 +37,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+        /// The input parameter is 1, which means creating a non-partitioned topic with no partition. if the input parameter is greater than 1, it indicates the number of partitions for a partitioned topic, and the maximum cannot exceed 32.
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
+
+        /// <summary>
+        /// Pulsar cluster ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// Remarks (up to 128 characters).
@@ -60,12 +66,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? TopicType{ get; set; }
 
         /// <summary>
-        /// Pulsar cluster ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// Pulsar topic type.
         /// `0`: Non-persistent and non-partitioned
         /// `1`: Non-persistent and partitioned
@@ -74,6 +74,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("PulsarTopicType")]
         public long? PulsarTopicType{ get; set; }
+
+        /// <summary>
+        /// Retention period for unconsumed messages in seconds. value ranges from 60 seconds to 15 days.
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy means dynamically adjust the maximum unacknowledged messages of the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+        /// </summary>
+        [JsonProperty("UnackPolicy")]
+        public string UnackPolicy{ get; set; }
+
+        /// <summary>
+        /// Whether exception consumer isolation is enabled.
+        /// </summary>
+        [JsonProperty("IsolateConsumerEnable")]
+        public bool? IsolateConsumerEnable{ get; set; }
+
+        /// <summary>
+        /// Specifies the consumer Ack timeout period in seconds. value range: 60-(3600*24).
+        /// </summary>
+        [JsonProperty("AckTimeOut")]
+        public long? AckTimeOut{ get; set; }
 
 
         /// <summary>
@@ -84,10 +108,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
+            this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+            this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         }
     }
 }

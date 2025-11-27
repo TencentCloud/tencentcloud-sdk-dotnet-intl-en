@@ -43,22 +43,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Topic name.
-        /// </summary>
-        [JsonProperty("Topic")]
-        public string Topic{ get; set; }
-
-        /// <summary>
         /// Reset method. 0: Start from the latest offset; 1: Start from specified time point.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
+        /// Topic name.
+        /// </summary>
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
+
+        /// <summary>
         /// The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
         /// </summary>
         [JsonProperty("ResetTimestamp")]
         public ulong? ResetTimestamp{ get; set; }
+
+        /// <summary>
+        /// Whether the reset flag is retry topic.
+        /// </summary>
+        [JsonProperty("RetryFlag")]
+        public bool? RetryFlag{ get; set; }
 
 
         /// <summary>
@@ -69,9 +75,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "ResetTimestamp", this.ResetTimestamp);
+            this.SetParamSimple(map, prefix + "RetryFlag", this.RetryFlag);
         }
     }
 }

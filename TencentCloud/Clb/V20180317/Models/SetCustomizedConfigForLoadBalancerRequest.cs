@@ -25,31 +25,38 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Operation type: `ADD`, `DELETE`, `UPDATE`, `BIND`, `UNBIND`
+        /// Operation type.
+        /// -ADD. specifies the creation.
+        /// - DELETE: DELETE.
+        /// -UPDATE: modify.
+        /// -BIND: specifies the binding status.
+        /// -UNBIND: unbind.
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// This field is required except for creating custom configurations, such as "pz-1234abcd".
+        /// Personalized configuration ID. this field is required except when creating a custom configuration, for example: pz-1234abcd.
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }
 
         /// <summary>
-        /// This field is required when creating or modifying custom configurations.
+        /// Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
+        /// Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// This field is required when creating or renaming custom configurations.
+        /// Custom configuration name. specifies the name when creating or modifying a custom configuration. this field is required.
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// This field is required when binding/unbinding resources.
+        /// CLB instance ID. this field is required for bind/unbind operations.
+        /// Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

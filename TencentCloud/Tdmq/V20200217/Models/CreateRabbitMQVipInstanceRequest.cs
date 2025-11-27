@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// vpc ID, such as vpc-xxx. valid VpcId can be obtained by logging in to the virtual private cloud console (https://console.cloud.tencent.com/vpc/vpc?rid=1) or via api call to DescribeVpcEx (https://www.tencentcloud.comom/document/api/215/1372?from_cn_redirect=1), retrieving the unVpcId field from the api response. if both VpcId and SubnetId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID
+        /// The subnet ID of the vpc, such as subnet-xxx. valid subnet ids can be queried by logging in to the subnet console (https://console.cloud.tencent.com/vpc/subnet?rid=1) or by calling the api [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) and obtaining the unSubnetId field from the api response. if both SubnetId and VpcId are set to DEFAULT when creating an instance, the DEFAULT vpc network will be forcibly used.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -49,7 +49,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Node specification (`rabbit-vip-basic-1`: Basic; `rabbit-vip-basic-2`: Standard; `rabbit-vip-basic-3`: Advanced I; `rabbit-vip-basic-4`: Advanced II). If this parameter is left empty, the default value is `rabbit-vip-basic-1`.
+        /// Node specification of the cluster. need to enter the corresponding specification flag.
+        /// 2C8G:rabbit-vip-profession-2c8g
+        /// 4C16G:rabbit-vip-profession-4c16g
+        /// 8C32G:rabbit-vip-profession-8c32g
+        /// 16C32G:rabbit-vip-basic-4
+        /// 16C64G:rabbit-vip-profession-16c64g
+        /// 2C4G:rabbit-vip-basic-5
+        /// 4C8G:rabbit-vip-basic-1
+        /// 8C16G (sold out): rabbit-vip-basic-2.
+        /// Specifies the default value as 4C8G: rabbit-vip-basic-1.
         /// </summary>
         [JsonProperty("NodeSpec")]
         public string NodeSpec{ get; set; }
@@ -67,13 +76,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? StorageSize{ get; set; }
 
         /// <summary>
-        /// Whether to enable mirrored queue. Default value: `false`.
+        /// Whether the default image queue is enabled. true means enabled, false means not enabled. defaults to false if not specified.
         /// </summary>
         [JsonProperty("EnableCreateDefaultHaMirrorQueue")]
         public bool? EnableCreateDefaultHaMirrorQueue{ get; set; }
 
         /// <summary>
-        /// Whether to enable auto-renewal. Default value: `true`.
+        /// Only applies to prepaid clusters (when PayMode parameter is 1). specifies whether the cluster is automatically renewed. true means auto-renewal is enabled. the default is true if not specified.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public bool? AutoRenewFlag{ get; set; }
@@ -83,6 +92,48 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// Payment mode. 0: postpaid, (pay-as-you-go); 1: prepaid (monthly subscription). Monthly subscription is used by default.
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public ulong? PayMode{ get; set; }
+
+        /// <summary>
+        /// Specifies the cluster edition. defaults to 3.8.30. valid values: 3.8.30, 3.11.8, 3.13.7.
+        /// </summary>
+        [JsonProperty("ClusterVersion")]
+        public string ClusterVersion{ get; set; }
+
+        /// <summary>
+        /// Whether the request is from the international website. Default value: false.
+        /// </summary>
+        [JsonProperty("IsIntl")]
+        public bool? IsIntl{ get; set; }
+
+        /// <summary>
+        /// Resource tag list.
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public Tag[] ResourceTags{ get; set; }
+
+        /// <summary>
+        /// Specifies the public bandwidth size in Mbps.
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// Whether to enable public network access. If this parameter is not specified, the value is false by default.
+        /// </summary>
+        [JsonProperty("EnablePublicAccess")]
+        public bool? EnablePublicAccess{ get; set; }
+
+        /// <summary>
+        /// Whether to enable cluster deletion protection. if this parameter is not specified, the value is false by default.
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -100,6 +151,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnableCreateDefaultHaMirrorQueue", this.EnableCreateDefaultHaMirrorQueue);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+            this.SetParamSimple(map, prefix + "IsIntl", this.IsIntl);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         }
     }
 }

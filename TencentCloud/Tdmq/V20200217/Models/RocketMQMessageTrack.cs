@@ -31,7 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Group{ get; set; }
 
         /// <summary>
-        /// Consumption status
+        /// Consumption status.
+        /// CONSUMED.
+        /// CONSUMED BUT FILTERED.
+        /// NOT_CONSUME: specifies unconsumed.
+        /// ENTER_RETRY: specifies whether to enter the retry queue.
+        /// ENTER_DLQ: specifies whether the message enters the dead letter queue.
+        /// Consumption status UNKNOWN.
         /// </summary>
         [JsonProperty("ConsumeStatus")]
         public string ConsumeStatus{ get; set; }
@@ -44,7 +50,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Exception information
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExceptionDesc")]
         public string ExceptionDesc{ get; set; }

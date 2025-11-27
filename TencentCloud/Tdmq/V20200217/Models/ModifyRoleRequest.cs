@@ -31,16 +31,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string RoleName{ get; set; }
 
         /// <summary>
+        /// Cluster ID (required)
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// Remarks (up to 128 characters).
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Cluster ID (required)
+        /// Batch binds namespace information.
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("EnvironmentRoleSets")]
+        public EnvironmentRoleSet[] EnvironmentRoleSets{ get; set; }
+
+        /// <summary>
+        /// Unbinds all namespaces. set to true.
+        /// </summary>
+        [JsonProperty("UnbindAllEnvironment")]
+        public bool? UnbindAllEnvironment{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
+            this.SetParamSimple(map, prefix + "UnbindAllEnvironment", this.UnbindAllEnvironment);
         }
     }
 }

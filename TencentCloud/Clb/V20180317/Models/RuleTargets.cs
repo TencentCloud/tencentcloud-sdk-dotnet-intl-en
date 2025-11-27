@@ -44,14 +44,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Real server information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Targets")]
         public Backend[] Targets{ get; set; }
 
         /// <summary>
-        /// Information about backend SCF functions.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the backend cloud function info.
         /// </summary>
         [JsonProperty("FunctionTargets")]
         public FunctionTarget[] FunctionTargets{ get; set; }

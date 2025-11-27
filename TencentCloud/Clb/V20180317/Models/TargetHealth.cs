@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+        /// Describes the detailed information of the current health status. for example: Alive, Dead, Unknown, Close. Alive status is healthy, Dead state is abnormal, Unknown status includes not started, checking, Unknown status, Close means health check disabled or listener status stop.
         /// </summary>
         [JsonProperty("HealthStatusDetail")]
         public string HealthStatusDetail{ get; set; }
@@ -60,6 +60,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthStatusDetial")]
         [System.Obsolete]
         public string HealthStatusDetial{ get; set; }
+
+        /// <summary>
+        /// Target group unique ID.
+        /// </summary>
+        [JsonProperty("TargetGroupId")]
+        public string TargetGroupId{ get; set; }
+
+        /// <summary>
+        /// Specifies the weight of the Target.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
 
 
         /// <summary>
@@ -73,6 +85,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetId", this.TargetId);
             this.SetParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
             this.SetParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
+            this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

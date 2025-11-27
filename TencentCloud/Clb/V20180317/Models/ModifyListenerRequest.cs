@@ -90,8 +90,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// Whether to send an RST packet to the client when a listener is unbound from a real server. This parameter applies only to TCP listeners.
-        /// True: send an RST packet to the client; False: do not send an RST packet to the client.
+        /// Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
@@ -128,19 +127,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? MaxCps{ get; set; }
 
         /// <summary>
-        /// Idle connection timeout, in seconds. This parameter applies only to TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances. To set a value greater than 2000, [submit a ticket for application](https://console.cloud.tencent.com/workorder/category). The maximum value can be 3600.
+        /// Specifies the idle connection timeout in seconds. this parameter applies only to TCP/UDP listeners. default value: 900 for TCP listeners and 300 for UDP listeners. value range: 10–900 for shared instances and dedicated instances and 10–1980 for lcu-supported instances. to set a value exceeding 1980, [submit a ticket application](https://console.cloud.tencent.com/workorder/category). the maximum settable value is 3600.
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies whether PP is supported for TCP_SSL and QUIC.
         /// </summary>
         [JsonProperty("ProxyProtocol")]
         public bool? ProxyProtocol{ get; set; }
 
         /// <summary>
-        /// Whether to enable SNAT. True: enable SNAT; False: do not enable SNAT.
+        /// Whether SNAT (source IP replacement) is enabled. valid values: True (enabled), False (disabled). disabled by default. note: when SnatEnable is enabled, the client source IP will be replaced, at this point the `pass through client source IP` option is disabled, and vice versa.
         /// </summary>
         [JsonProperty("SnatEnable")]
         public bool? SnatEnable{ get; set; }
@@ -150,6 +149,36 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }
+
+        /// <summary>
+        /// Reschedules when setting backend server weight to 0. only supported for TCP/UDP listeners. toggle on to enable this feature.
+        /// </summary>
+        [JsonProperty("RescheduleTargetZeroWeight")]
+        public bool? RescheduleTargetZeroWeight{ get; set; }
+
+        /// <summary>
+        /// Reschedules when health check exceptions occur on real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthy")]
+        public bool? RescheduleUnhealthy{ get; set; }
+
+        /// <summary>
+        /// Reschedules when adding or removing backend servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+        /// </summary>
+        [JsonProperty("RescheduleExpandTarget")]
+        public bool? RescheduleExpandTarget{ get; set; }
+
+        /// <summary>
+        /// Specifies the trigger start time for rescheduling. value range: 0-3600s. supported only by TCP/UDP listeners.
+        /// </summary>
+        [JsonProperty("RescheduleStartTime")]
+        public long? RescheduleStartTime{ get; set; }
+
+        /// <summary>
+        /// Rescheduling trigger duration. valid values: 0-3600s. only TCP/UDP listeners support this.
+        /// </summary>
+        [JsonProperty("RescheduleInterval")]
+        public long? RescheduleInterval{ get; set; }
 
 
         /// <summary>
@@ -176,6 +205,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ProxyProtocol", this.ProxyProtocol);
             this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
             this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+            this.SetParamSimple(map, prefix + "RescheduleTargetZeroWeight", this.RescheduleTargetZeroWeight);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+            this.SetParamSimple(map, prefix + "RescheduleExpandTarget", this.RescheduleExpandTarget);
+            this.SetParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
+            this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
         }
     }
 }

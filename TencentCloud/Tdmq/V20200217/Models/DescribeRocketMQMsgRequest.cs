@@ -58,7 +58,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// The value of this parameter is `true` when you query a dead letter queue. It only applies to TDMQ for RocketMQ.
         /// </summary>
         [JsonProperty("QueryDlqMsg")]
+        [System.Obsolete]
         public bool? QueryDlqMsg{ get; set; }
+
+        /// <summary>
+        /// The value is true when querying dead letters, and only valid for RocketMQ.
+        /// </summary>
+        [JsonProperty("QueryDeadLetterMessage")]
+        public bool? QueryDeadLetterMessage{ get; set; }
+
+        /// <summary>
+        /// Pagination offset
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Pagination limit
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// Filters consumption details based on the consumer group name.
+        /// </summary>
+        [JsonProperty("FilterTrackGroup")]
+        public string FilterTrackGroup{ get; set; }
 
 
         /// <summary>
@@ -72,6 +97,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgId", this.MsgId);
             this.SetParamSimple(map, prefix + "PulsarMsgId", this.PulsarMsgId);
             this.SetParamSimple(map, prefix + "QueryDlqMsg", this.QueryDlqMsg);
+            this.SetParamSimple(map, prefix + "QueryDeadLetterMessage", this.QueryDeadLetterMessage);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FilterTrackGroup", this.FilterTrackGroup);
         }
     }
 }

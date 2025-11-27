@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string MsgContent{ get; set; }
 
         /// <summary>
-        /// Delay time
+        /// Delay time. expressed in seconds, default value is 0, cannot exceed the max message unacknowledgement time in queue configuration.
         /// </summary>
         [JsonProperty("DelaySeconds")]
         public long? DelaySeconds{ get; set; }

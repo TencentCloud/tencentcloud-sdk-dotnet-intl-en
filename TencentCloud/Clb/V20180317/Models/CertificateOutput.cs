@@ -31,6 +31,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SSLMode{ get; set; }
 
         /// <summary>
+        /// Specifies whether client certificate verification is enabled. this parameter is valid only when mutual authentication is enabled.
+        /// </summary>
+        [JsonProperty("SSLVerifyClient")]
+        public string SSLVerifyClient{ get; set; }
+
+        /// <summary>
         /// Server certificate ID.
         /// </summary>
         [JsonProperty("CertId")]
@@ -38,14 +44,12 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Client certificate ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
-        /// IDs of extra server certificates
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the server certificate ID for multi-server certificate scenario expansion.
         /// </summary>
         [JsonProperty("ExtCertIds")]
         public string[] ExtCertIds{ get; set; }
@@ -57,6 +61,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SSLMode", this.SSLMode);
+            this.SetParamSimple(map, prefix + "SSLVerifyClient", this.SSLVerifyClient);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
             this.SetParamSimple(map, prefix + "CertCaId", this.CertCaId);
             this.SetParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);

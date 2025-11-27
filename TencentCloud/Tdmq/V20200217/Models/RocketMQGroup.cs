@@ -40,12 +40,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// Consumption TPS.
         /// </summary>
         [JsonProperty("TPS")]
+        [System.Obsolete]
         public ulong? TPS{ get; set; }
 
         /// <summary>
         /// The total number of heaped messages.
         /// </summary>
         [JsonProperty("TotalAccumulative")]
+        [System.Obsolete]
         public long? TotalAccumulative{ get; set; }
 
         /// <summary>
@@ -119,6 +121,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RetryMaxTimes")]
         public ulong? RetryMaxTimes{ get; set; }
 
+        /// <summary>
+        /// Instance ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Namespace
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// Number of subscribed topics.
+        /// </summary>
+        [JsonProperty("SubscribeTopicNum")]
+        public long? SubscribeTopicNum{ get; set; }
+
+        /// <summary>
+        /// List of bound tags
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +168,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

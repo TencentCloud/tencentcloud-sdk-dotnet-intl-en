@@ -25,15 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Whether to enable VIP direct connection
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable VIP Direct Connect
         /// </summary>
         [JsonProperty("ZhiTong")]
         public bool? ZhiTong{ get; set; }
 
         /// <summary>
         /// TgwGroup name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TgwGroupName")]
         public string TgwGroupName{ get; set; }

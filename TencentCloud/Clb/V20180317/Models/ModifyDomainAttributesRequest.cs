@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID
+        /// ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB listener ID
+        /// ID of the CLB instance listener. You can call the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+        /// Domain name (must be a domain name under a created forwarding rule). if it is multiple domains, you can specify any one of the domain name list. it can be accessed through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -55,19 +55,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public CertificateInput Certificate{ get; set; }
 
         /// <summary>
-        /// Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+        /// Specifies whether to enable HTTP/2. note that only HTTPS domain names support HTTP/2.
+        /// True: enable HTTP2. false: disable HTTP2.
         /// </summary>
         [JsonProperty("Http2")]
         public bool? Http2{ get; set; }
 
         /// <summary>
-        /// Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
+        /// Whether to set as the default domain name. Note: Only one default domain name can be set under a listener.
+        /// True: set as default domain name. false: do not set as default domain name.
         /// </summary>
         [JsonProperty("DefaultServer")]
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+        /// Specifies whether QUIC is enabled. note that QUIC can only be enabled for HTTPS domains.
+        /// True: enable QUIC. False: disable.
         /// </summary>
         [JsonProperty("Quic")]
         public bool? Quic{ get; set; }

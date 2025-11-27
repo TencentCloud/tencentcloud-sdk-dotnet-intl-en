@@ -81,6 +81,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
+        /// <summary>
+        /// Weight associated with the target group. this parameter takes effect only for the new version v2 target group.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
+        /// <summary>
+        /// Advanced routing rule ID.
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +108,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }
 }

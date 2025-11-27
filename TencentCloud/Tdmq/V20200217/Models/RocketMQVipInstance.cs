@@ -37,8 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance version.
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
@@ -99,7 +98,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -111,25 +109,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// The maximum message retention period in hours
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Maximum configurable message retention time, in hours
         /// </summary>
         [JsonProperty("MaxRetention")]
         public long? MaxRetention{ get; set; }
 
         /// <summary>
-        /// The minimum message retention period in hours
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Minimum configurable message retention time, in hours
         /// </summary>
         [JsonProperty("MinRetention")]
         public long? MinRetention{ get; set; }
 
         /// <summary>
-        /// Instance message retention period in hours
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Instance message retention time, in hours
         /// </summary>
         [JsonProperty("Retention")]
         public long? Retention{ get; set; }
+
+        /// <summary>
+        /// Whether to enable ACL authentication.
+        /// </summary>
+        [JsonProperty("AclEnabled")]
+        public bool? AclEnabled{ get; set; }
+
+        /// <summary>
+        /// Destruction time.
+        /// </summary>
+        [JsonProperty("DestroyTime")]
+        public ulong? DestroyTime{ get; set; }
 
 
         /// <summary>
@@ -154,6 +161,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
             this.SetParamSimple(map, prefix + "MinRetention", this.MinRetention);
             this.SetParamSimple(map, prefix + "Retention", this.Retention);
+            this.SetParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
+            this.SetParamSimple(map, prefix + "DestroyTime", this.DestroyTime);
         }
     }
 }

@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Real server list
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Real server list.
         /// </summary>
         [JsonProperty("Targets")]
         public ClassicalTarget[] Targets{ get; set; }

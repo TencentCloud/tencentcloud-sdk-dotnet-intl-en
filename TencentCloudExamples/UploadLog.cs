@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing,
  * software distributed under the License is distributed on an
@@ -25,14 +25,14 @@ using TencentCloud.Common.Profile;
 
 namespace TencentCloudExamples
 {
-    class UploadLog
+    public class UploadLog
     {
-        static void UploadLogMain(string[] args)
+        public static void Run(string[] args)
         {
-            // The customer's actual topicId needs to be used here, and topicname cannot be entered.
-            // For details, please refer to: https://www.tencentcloud.com/document/product/614/42787?lang=en
+            // The customer's actual topicId should be used here, not the topic name.
+            // For details, refer to: https://cloud.tencent.com/document/product/614/59470
             string topicId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
-            // It needs to be filled in according to the actual region of the customer.
+            // The region needs to be filled in by the customer according to their actual region
             string region = "xx";
 
             Credential cred = new Credential
@@ -52,12 +52,12 @@ namespace TencentCloudExamples
             UploadLogRequest req = new UploadLogRequest();
 
             req.TopicId = topicId;
-            // Set binary data through OctetBody
+            // Set binary data via OctetBody
             req.OctetBody = BuildLogBody();
 
             UploadLogResponse resp = client.UploadLog(req).Result;
 
-            // Output string return packet in json format
+            // Output the JSON format response string
             Console.WriteLine(AbstractModel.ToJsonString(resp));
         }
 
@@ -76,7 +76,7 @@ namespace TencentCloudExamples
 
             LogGroupList list = new LogGroupList();
             list.LogGroupList_.Add(group);
-            
+
             return list.ToByteArray();
         }
     }

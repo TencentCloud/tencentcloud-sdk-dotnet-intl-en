@@ -21,26 +21,38 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRabbitMQVirtualHostListRequest : AbstractModel
+    public class DescribeRabbitMQPermissionRequest : AbstractModel
     {
         
         /// <summary>
-        /// A default parameter that won’t be used
+        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("User")]
+        public string User{ get; set; }
 
         /// <summary>
-        /// The maximum number of entries per page
+        /// VirtualHost name, such as testvhost. valid VirtualHost names can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking Vhost in the left sidebar, and finding the Vhost name in the Vhost list.
+        /// </summary>
+        [JsonProperty("VirtualHost")]
+        public string VirtualHost{ get; set; }
+
+        /// <summary>
+        /// Specifies the page Offset. default is 0.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// Page Limit. default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        public long? Limit{ get; set; }
 
 
         /// <summary>
@@ -49,6 +61,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

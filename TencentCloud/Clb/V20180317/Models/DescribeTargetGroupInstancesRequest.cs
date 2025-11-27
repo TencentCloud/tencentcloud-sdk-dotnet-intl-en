@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+        /// Filter criteria, currently supported by multiple conditions combined as TargetGroupId, BindIP, and InstanceId.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

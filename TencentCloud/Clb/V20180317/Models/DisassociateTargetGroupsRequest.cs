@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Array of rules to be unbound
+        /// Specifies the relationship array of rules to be unbound, supports batch operations for multiple listeners with a maximum of 20 per bulk removal.
         /// </summary>
         [JsonProperty("Associations")]
         public TargetGroupAssociation[] Associations{ get; set; }

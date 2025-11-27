@@ -9,19 +9,19 @@ namespace TencentCloudExamples
         /// <summary>
         /// Usage instructions:
         /// Command line arguments:
-        ///  - The first command line argument (args[0]) specifies the name of the example class to run.
+        ///  - The first command line argument (args[0]) specifies the name of the example class to execute.
         ///  - If this argument is not provided, DescribeZones is used as the default class name.
-        ///  - The remaining command line arguments (args[1:]) are passed as parameters to the Run method of the example class.
+        ///  - The remaining command line arguments (args[1:]) will be passed as parameters to the Run method of the example class.
         ///
         /// Example:
         ///   Running the DescribeZones example class:
-        ///   Assume there is a class named TencentCloudExamples.DescribeZones with a static Run method.
+        ///   Assume there is a class TencentCloudExamples.DescribeZones, and it has a static Run method.
         ///   Use the following command to run the example class:
         ///   TENCENTCLOUD_SECRET_ID=xxx TENCENTCLOUD_SECRET_KEY=yyy dotnet run DescribeZones arg1 arg2 arg3
         ///   The program will then:
         ///   1. Load the TencentCloudExamples.DescribeZones class.
         ///   2. Call the Run method.
-        ///   3. Pass arg1, arg2, and arg3 as parameters to the Run method.
+        ///   3. Pass arg1 arg2 arg3 as arguments to the Run method.
         /// </summary>
         static void Main(string[] args)
         {

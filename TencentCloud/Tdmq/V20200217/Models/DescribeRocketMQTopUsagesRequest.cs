@@ -21,32 +21,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCmqDeadLetterSourceQueuesRequest : AbstractModel
+    public class DescribeRocketMQTopUsagesRequest : AbstractModel
     {
         
         /// <summary>
-        /// Dead letter queue name
+        /// Cluster ID
         /// </summary>
-        [JsonProperty("DeadLetterQueueName")]
-        public string DeadLetterQueueName{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Starting position of the list of topics to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default.
+        /// Metric name. support the following:.
+        /// consumeLag. specifies the consumer group backlog count.
+        /// deadLetterCount. specifies the dead letter count.
+        /// Topic production rate.
+        /// Topic consumption rate. specifies the Topic consumption rate.
+        /// topicStorageSize. specifies the Topic storage space.
+        /// Topic API call count.
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
+        /// <summary>
+        /// Sort quantity. The maximum value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// Number of topics to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// Filter by `SourceQueueName`
-        /// </summary>
-        [JsonProperty("SourceQueueName")]
-        public string SourceQueueName{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DeadLetterQueueName", this.DeadLetterQueueName);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "SourceQueueName", this.SourceQueueName);
         }
     }
 }

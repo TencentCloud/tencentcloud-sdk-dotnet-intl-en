@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+        /// Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -48,6 +48,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
+        /// <summary>
+        /// Queue name. Endpoint of bound subscription
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// Query type. valid values: (1) topic; (2) queue.
+        /// Default value is topic. if queryType is topic, query subscriptions under the topic. if queryType is queue, query subscriptions bound to the queue.
+        /// </summary>
+        [JsonProperty("QueryType")]
+        public string QueryType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +71,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
         }
     }
 }

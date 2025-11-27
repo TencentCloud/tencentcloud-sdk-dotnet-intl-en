@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public Listener[] Listeners{ get; set; }
 
         /// <summary>
-        /// Total number of listeners (with filters of port, protocol, and listener ID applied).
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Total number of listeners (filtered by port, protocol, and listener ID).
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

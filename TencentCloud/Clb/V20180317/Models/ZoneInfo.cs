@@ -25,43 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Unique AZ ID in a numeric form, such as 100001
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of the AZ in numeric form, such as 100001
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Unique AZ ID in a string form, such as ap-guangzhou-1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of the AZ in string format, such as ap-guangzhou-1
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// AZ name, such as Guangzhou Zone 1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// AZ name, such as Guangzhou 1
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// AZ region, e.g., ap-guangzhou.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the region of the availability zone, for example: ap-guangzhou.
         /// </summary>
         [JsonProperty("ZoneRegion")]
         public string ZoneRegion{ get; set; }
 
         /// <summary>
-        /// Whether the AZ is the `LocalZone`, e.g., false.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Indicates whether the AZ is a LocalZone az, for example: false.
         /// </summary>
         [JsonProperty("LocalZone")]
         public bool? LocalZone{ get; set; }
 
         /// <summary>
-        /// Whether the AZ is an edge zone. Values: `true`, `false`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Indicates whether the AZ is an EdgeZone az, for example: false.
         /// </summary>
         [JsonProperty("EdgeZone")]
         public bool? EdgeZone{ get; set; }

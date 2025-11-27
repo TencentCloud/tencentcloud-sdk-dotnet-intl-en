@@ -25,6 +25,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
+        /// Cluster ID (required)
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
         /// Fuzzy query by role name
         /// </summary>
         [JsonProperty("RoleName")]
@@ -43,12 +49,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Cluster ID (required)
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
         /// * RoleName
         /// Filter by role name for exact query.
         /// Type: String
@@ -63,10 +63,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }

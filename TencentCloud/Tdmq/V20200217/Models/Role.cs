@@ -54,6 +54,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+        /// </summary>
+        [JsonProperty("PermType")]
+        public string PermType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "PermType", this.PermType);
         }
     }
 }

@@ -33,7 +33,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Message queue name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

@@ -37,10 +37,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Number of partitions, which must be equal to or greater than the original number of partitions. To maintain the original number of partitions, enter the original number. Modifying the number of partitions will take effect only for non-globally sequential messages. There can be up to 128 partitions.
+        /// Specifies the number of partitions, which must be greater than or equal to the original partition count. if you want to maintain the original number of partitions, please enter the original number. changing the number of partitions is only effective for non-global sequential messages and cannot exceed 32 partitions.
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
+
+        /// <summary>
+        /// Pulsar cluster ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// Remarks (up to 128 characters).
@@ -49,10 +55,28 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Pulsar cluster ID
+        /// Unconsumed message expiration time. measurement unit: seconds. value range: 60 seconds to 15 days.
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// Default if not passed is native policy. DefaultPolicy means when the subscription reaches the maximum unacknowledged messages of 5000, the server will stop pushing messages to all consumers under the current subscription. DynamicPolicy refers to dynamically adjusting the maximum unacknowledged messages under the subscription, with the specific quota being the maximum between 5000 and the number of consumers multiplied by 20. the default maximum unacknowledged message count per consumer is 20. exceeding this limit only affects that consumer and does not affect other consumers.
+        /// </summary>
+        [JsonProperty("UnackPolicy")]
+        public string UnackPolicy{ get; set; }
+
+        /// <summary>
+        /// Whether exception consumer isolation is enabled.
+        /// </summary>
+        [JsonProperty("IsolateConsumerEnable")]
+        public bool? IsolateConsumerEnable{ get; set; }
+
+        /// <summary>
+        /// Consumer Ack timeout period in seconds. value range: 60-(3600*24).
+        /// </summary>
+        [JsonProperty("AckTimeOut")]
+        public long? AckTimeOut{ get; set; }
 
 
         /// <summary>
@@ -63,8 +87,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
+            this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+            this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         }
     }
 }

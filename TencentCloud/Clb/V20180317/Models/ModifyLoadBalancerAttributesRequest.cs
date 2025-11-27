@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Unique CLB ID
+        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB instance name
+        /// Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
@@ -49,28 +49,37 @@ namespace TencentCloud.Clb.V20180317.Models
         public InternetAccessible InternetChargeInfo{ get; set; }
 
         /// <summary>
-        /// Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+        /// Specifies whether to allow CLB traffic to the Target.
+        /// Enable pass-through (true): verify security groups on CLB only.
+        /// Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
+        /// Specifies no modification if left blank.
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// Whether to enable cross-region binding 2.0
+        /// Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable deletion protection.
+        /// Specifies whether to enable deletion protection. leave it blank to keep the current setting.
         /// </summary>
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
         /// <summary>
-        /// Modifies the second-level domain name of CLB from mycloud.com to tencentclb.com. Note that the sub-domain names will be changed as well. After the modification, mycloud.com will be invalidated. 
+        /// Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
         /// </summary>
         [JsonProperty("ModifyClassicDomain")]
         public bool? ModifyClassicDomain{ get; set; }
+
+        /// <summary>
+        /// The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+        /// </summary>
+        [JsonProperty("AssociateEndpoint")]
+        public string AssociateEndpoint{ get; set; }
 
 
         /// <summary>
@@ -86,6 +95,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
             this.SetParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
+            this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
         }
     }
 }

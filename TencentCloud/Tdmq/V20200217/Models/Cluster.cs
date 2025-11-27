@@ -203,6 +203,26 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// Project ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// Project name
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
+
+        /// <summary>
+        /// Specifies whether the pro edition instance can be upgraded.
+        /// </summary>
+        [JsonProperty("UpgradeProInstance")]
+        public bool? UpgradeProInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -236,6 +256,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "UpgradeProInstance", this.UpgradeProInstance);
         }
     }
 }

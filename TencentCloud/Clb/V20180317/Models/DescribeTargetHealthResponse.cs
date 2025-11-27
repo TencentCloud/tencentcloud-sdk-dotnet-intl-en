@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance list
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// LoadBalancer list.
         /// </summary>
         [JsonProperty("LoadBalancers")]
         public LoadBalancerHealth[] LoadBalancers{ get; set; }

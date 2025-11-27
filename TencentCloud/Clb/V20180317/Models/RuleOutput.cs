@@ -31,15 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// Domain name of the forwarding rule.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain name of the forwarding rule
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Forwarding rule path.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path of forwarding rules.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -51,8 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Health check information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Health Check Information
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -77,8 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Redirect target information of a forwarding rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Redirection target information of the forwarding rule
         /// </summary>
         [JsonProperty("RewriteTarget")]
         public RewriteTarget RewriteTarget{ get; set; }
@@ -133,35 +129,31 @@ namespace TencentCloud.Clb.V20180317.Models
         public BasicTargetGroupInfo TargetGroup{ get; set; }
 
         /// <summary>
-        /// WAF instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// WAF instance ID.
         /// </summary>
         [JsonProperty("WafDomainId")]
         public string WafDomainId{ get; set; }
 
         /// <summary>
-        /// TRPC callee server route, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Called server routing. valid when ForwardType is TRPC. currently not yet available.
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// TRPC calling service API, which is valid when `ForwardType` is `TRPC`. This is now only for internal usage.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// TRPC calling service api. valid when ForwardType is TRPC. currently not yet available.
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }
 
         /// <summary>
-        /// QUIC status. QUIC_ACTIVE indicates enabled, and QUIC_INACTIVE indicates disabled. Note: QUIC can be enabled only for HTTPS domain names.Note: This field may return null, indicating that no valid values can be obtained.
+        /// QUIC status. QUIC_ACTIVE means enabled, QUIC_INACTIVE means not enabled. note that only HTTPS domain names can enable QUIC.
         /// </summary>
         [JsonProperty("QuicStatus")]
         public string QuicStatus{ get; set; }
 
         /// <summary>
-        /// List of domain names associated with the forwarding rule
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the domain name list of the forwarding rule.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
@@ -174,10 +166,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
 
         /// <summary>
-        /// OAuth configuration status information.Note: This field may return null, indicating that no valid values can be obtained.
+        /// OAuth configuration status.
         /// </summary>
         [JsonProperty("OAuth")]
         public OAuth OAuth{ get; set; }
+
+        /// <summary>
+        /// Specifies the custom cookie name.
+        /// </summary>
+        [JsonProperty("CookieName")]
+        public string CookieName{ get; set; }
 
 
         /// <summary>
@@ -209,6 +207,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
             this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
+            this.SetParamSimple(map, prefix + "CookieName", this.CookieName);
         }
     }
 }

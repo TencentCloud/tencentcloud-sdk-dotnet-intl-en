@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Listening port of real server
+        /// Specifies the listening port of the backend service. for a port range listener, this field returns 0, representing an invalid port, indicating settings not supported.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -55,22 +55,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// Public IP of real server
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Public network IP of the real server
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// Private IP of real server
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Private network IP of the real server
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// Real server instance name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Instance name of the real server
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -83,15 +80,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string RegisteredTime{ get; set; }
 
         /// <summary>
-        /// Unique ENI ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Unique ID of the ENI
         /// </summary>
         [JsonProperty("EniId")]
         public string EniId{ get; set; }
 
         /// <summary>
-        /// AZ ID of the real server
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the availability zone ID of the backend service.
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }

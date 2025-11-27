@@ -40,7 +40,15 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Bandwidth package type, such as SINGLEISP (single-line) and BGP (multi-line).Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bandwidth package type, for example BGP (multi-line).
+        /// Type as follows:.
+        /// SINGLEISP: single isp.
+        /// BGP: multi-line.
+        /// HIGH_QUALITY_BGP: specifies a dedicated bgp bandwidth package.
+        /// SINGLEISP_CMCC: specifies a cmcc bandwidth package.
+        /// SINGLEISP_CTCC: specifies the ctcc bandwidth package.
+        /// SINGLEISP_CUCC: specifies the china unicom bandwidth package.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BandwidthpkgSubType")]
         public string BandwidthpkgSubType{ get; set; }

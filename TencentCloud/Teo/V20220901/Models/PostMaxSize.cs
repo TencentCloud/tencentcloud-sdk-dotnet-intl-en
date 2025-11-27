@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Maximum limit.Takes effect only when Switch is on. Range:1 MB - 800 MB (bytes).
+        /// Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

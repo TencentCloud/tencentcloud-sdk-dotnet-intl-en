@@ -59,6 +59,64 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RouteType")]
         public ulong? RouteType{ get; set; }
 
+        /// <summary>
+        /// 0: local region access. since cross-region disaster recovery is not configured, this type of access point cannot perform cross-region switchover or switch back from remote access.
+        /// Local region access. due to the configuration of cross-region disaster recovery, switchover can be performed at any time in a different location. this state is used for the primary cluster access point.
+        /// Cross-Region access, completed offsite switchover, this state is used for the access point of the source cluster. the access point in this state is non-deletable.
+        /// 3: cross-region access can be switched back from remote access at any time. this state is for the access point of the target cluster. the access point in this state is non-deletable.
+        /// Cross-Region access. the target cluster has completed offsite switchback and is in the state of waiting for deletion.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public ulong? OperationType{ get; set; }
+
+        /// <summary>
+        /// Access point type.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AccessPointsType")]
+        public string AccessPointsType{ get; set; }
+
+        /// <summary>
+        /// Bandwidth. currently only public network has this value.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public long? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// Class.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SecurityPolicy")]
+        public SecurityPolicy[] SecurityPolicy{ get; set; }
+
+        /// <summary>
+        /// Indicates whether it is a standard access point. valid values: true (standard), false (not standard).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StandardAccessPoint")]
+        public bool? StandardAccessPoint{ get; set; }
+
+        /// <summary>
+        /// AZ information
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// Specifies whether TLS encryption is enabled.
+        /// </summary>
+        [JsonProperty("Tls")]
+        public bool? Tls{ get; set; }
+
+        /// <summary>
+        /// Access point custom domain name.
+        /// </summary>
+        [JsonProperty("CustomUrl")]
+        public string CustomUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +128,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+            this.SetParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "Tls", this.Tls);
+            this.SetParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
         }
     }
 }

@@ -157,6 +157,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public Grpc Grpc{ get; set; }
 
         /// <summary>
+        /// Network Error Logging configuration. The original configuration will apply if it is not specified.
+        /// </summary>
+        [JsonProperty("NetworkErrorLogging")]
+        public NetworkErrorLogging NetworkErrorLogging{ get; set; }
+
+        /// <summary>
         /// Image optimization. 
         /// It is disabled if this parameter is not specified.
         /// </summary>
@@ -200,6 +206,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
+            this.SetParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
             this.SetParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
             this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
             this.SetParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);

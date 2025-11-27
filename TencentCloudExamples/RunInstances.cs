@@ -16,6 +16,8 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Text;
 using TencentCloud.Common;
 using TencentCloud.Common.Profile;
 using TencentCloud.Cvm.V20170312;
@@ -26,40 +28,43 @@ namespace TencentCloudExamples
     public class RunInstances
     {
         // For this example to run successfully, you need to modify some network and security group settings.
-        // Please exercise caution when running this example, as you will be charged after a successful creation.
+        // Please exercise caution when running this example, as successful creation will result in charges.
         public static void Run(string[] args)
         {
             try
             {
-                // Mandatory steps:
-                // Instantiate an authentication object. You need to pass your Tencent Cloud account's secretId and secretKey as parameters.
-                // This example reads them from environment variables. You need to set these two values in your environment first.
-                // You can also hardcode the key pair directly in your code, but be careful not to copy, upload, or share the code with others
-                // to avoid leaking the key pair and jeopardizing your assets.
+                // Essential step:
+                // Instantiate an authentication object, which requires the Tencent Cloud account key pair
+                // secretId and secretKey as input parameters.
+                // Here, we read them from environment variables, so these two values need to be set
+                // in the environment variables first.
+                // You can also hardcode the key pair directly in the code, but be careful not to copy,
+                // upload, or share the code with others,
+                // to avoid exposing the key pair and jeopardizing your property security.
                 Credential cred = new Credential
                 {
                     SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                     SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
                 };
 
-                // Instantiate a client profile object (optional; can be skipped if there are no special requirements).
+                // Instantiate a client option, which is optional. You can skip it if there are no special requirements.
                 ClientProfile clientProfile = new ClientProfile();
-                // Optional step:
-                // Instantiate a client configuration object, which allows you to set the timeout period and other configurations.
+                // Non-essential step
+                // Instantiate a client configuration object, which allows specifying configurations like timeout.
                 HttpProfile httpProfile = new HttpProfile();
-                // Proxy server; set this if you are in an environment with a proxy server.
+                // Proxy server, set this if you have a proxy server in your environment
                 httpProfile.WebProxy = Environment.GetEnvironmentVariable("HTTPS_PROXY");
 
                 clientProfile.HttpProfile = httpProfile;
 
-                // Instantiate the client object for the product you want to request (using CVM as an example).
-                // The second parameter is the region information, which can be a string like "ap-guangzhou" or a predefined constant. clientProfile is optional.
+                // Instantiate the client object for the product to be requested (taking cvm as an example)
+                // The second parameter is region information, which can be a string like ap-guangzhou or a predefined constant. clientProfile is optional.
                 CvmClient client = new CvmClient(cred, "ap-guangzhou", clientProfile);
 
-                // Instantiate a request object. Based on the API being called and the actual situation, you can further set the request parameters.
-                // You can check the SDK source code directly to see what properties can be set for DescribeZonesRequest.
-                // Properties can be a basic type or reference another data structure.
-                // It is recommended to use an IDE for development, as it allows for convenient jumping to and reviewing the documentation for various APIs and data structures.
+                // Instantiate a request object. Request parameters can be further set according to the called interface and actual situation.
+                // You can directly check the SDK source code to determine which properties of DescribeZonesRequest can be set.
+                // Properties may be basic types or refer to another data structure.
+                // It is recommended to use an IDE for development, as it allows for easy jumping to and viewing of the documentation for various interfaces and data structures.
                 RunInstancesRequest req = new RunInstancesRequest();
 
                 Placement placement = new Placement();
@@ -93,11 +98,11 @@ namespace TencentCloudExamples
                 vpc.SubnetId = "subnet-b1wk8b10";
                 req.VirtualPrivateCloud = vpc;
 
-                // Call the RunInstances method via the client object to initiate the request. Note that the method name corresponds to the request object.
-                // The returned 'resp' is an instance of the RunInstancesResponse class, which corresponds to the request object.
+                // Call the RunInstancesSync method via the client object to initiate the request. Note that the request method name corresponds to the request object.
+                // The returned resp is an instance of the RunInstancesResponse class, corresponding to the request object.
                 RunInstancesResponse resp = client.RunInstancesSync(req);
 
-                // Print the JSON format response string.
+                // Output the JSON format response string
                 Console.WriteLine(AbstractModel.ToJsonString(resp));
             }
             catch (Exception e)

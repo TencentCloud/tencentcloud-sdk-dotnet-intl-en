@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+        /// Filter condition array, mutually exclusive with TargetGroupIds, supports TargetGroupVpcId (vpc ID), TargetGroupName (target group name), and Tag.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

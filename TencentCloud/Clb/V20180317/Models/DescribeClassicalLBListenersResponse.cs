@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Listener list
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the listener list.
         /// </summary>
         [JsonProperty("Listeners")]
         public ClassicalListener[] Listeners{ get; set; }

@@ -49,16 +49,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? IsIdempotent{ get; set; }
 
         /// <summary>
-        /// Remarks (up to 128 characters).
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
-        /// <summary>
         /// Pulsar cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Remarks (up to 128 characters).
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
         /// <summary>
         /// Whether to automatically create a dead letter topic and a retry letter topic. true: yes (default value); false: no.
@@ -82,8 +82,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
             this.SetParamSimple(map, prefix + "IsIdempotent", this.IsIdempotent);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "AutoCreatePolicyTopic", this.AutoCreatePolicyTopic);
             this.SetParamSimple(map, prefix + "PostFixPattern", this.PostFixPattern);
         }

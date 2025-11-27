@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] FailListenerIdSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Failed to unbind error reason information.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

@@ -37,8 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance version
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Instance version.
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
@@ -80,7 +79,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// Instance expiration time in milliseconds
+        /// Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
@@ -92,26 +91,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Payment mode. `0`: Postpaid; `1`: Prepaid.
+        /// 1 indicates prepaid mode, 0 indicates postpaid.
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Instance specification ID
+        /// Node specification of the cluster. specifies the corresponding flag.
+        /// 2C8G:rabbit-vip-profession-2c8g
+        /// 4C16G:rabbit-vip-profession-4c16g
+        /// 8C32G:rabbit-vip-profession-8c32g
+        /// 16C32G:rabbit-vip-basic-4
+        /// 16C64G:rabbit-vip-profession-16c64g
+        /// 2C4G:rabbit-vip-basic-5
+        /// 4C8G:rabbit-vip-basic-1
+        /// 8C16G (sold out): rabbit-vip-basic-2.
+        /// Specifies the default value as 4C8G: rabbit-vip-basic-1.
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// Cluster exception
+        /// Cluster exception information.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExceptionInformation")]
@@ -123,6 +130,49 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
+
+        /// <summary>
+        /// Public network access point.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PublicAccessEndpoint")]
+        public string PublicAccessEndpoint{ get; set; }
+
+        /// <summary>
+        /// VPC access point list.
+        /// </summary>
+        [JsonProperty("Vpcs")]
+        public VpcEndpointInfo[] Vpcs{ get; set; }
+
+        /// <summary>
+        /// Creation time in milliseconds. unix timestamp.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// Instance type. valid values: 0 (managed), 1 (Serverless).
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public ulong? InstanceType{ get; set; }
+
+        /// <summary>
+        /// Isolation time, in milliseconds. unix timestamp.
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public ulong? IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// Whether deletion protection is enabled.
+        /// </summary>
+        [JsonProperty("EnableDeletionProtection")]
+        public bool? EnableDeletionProtection{ get; set; }
+
+        /// <summary>
+        /// Tag list
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -146,6 +196,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SpecName", this.SpecName);
             this.SetParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
+            this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

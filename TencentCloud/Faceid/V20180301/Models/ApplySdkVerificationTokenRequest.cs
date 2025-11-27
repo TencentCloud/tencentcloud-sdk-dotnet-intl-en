@@ -126,6 +126,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("ActionList")]
         public string ActionList{ get; set; }
 
+        /// <summary>
+        /// Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+        /// true (default value): Expired HKID is allowed to enter the liveness process.
+        /// false : Expired HKID is rejected and cannot enter the liveness process.
+        /// </summary>
+        [JsonProperty("AllowExpiredDocument")]
+        public bool? AllowExpiredDocument{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +151,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
+            this.SetParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
         }
     }
 }

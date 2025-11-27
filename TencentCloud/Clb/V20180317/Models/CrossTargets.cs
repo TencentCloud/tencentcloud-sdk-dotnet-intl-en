@@ -55,15 +55,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string EniId{ get; set; }
 
         /// <summary>
-        /// ID of the CVM instance
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Submachine instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name of the CVM instance
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Submachine instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// If it is an empty string, no error occurred.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// If "", it indicates that there is no error return. otherwise return specific error information.
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }

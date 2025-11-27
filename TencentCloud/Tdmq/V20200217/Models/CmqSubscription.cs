@@ -25,15 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Subscription name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Subscription name, which must be unique under the same account and same topic in a single region. the name is a string of no more than 64 characters, beginning with a letter, and the remaining part may contain letters, numbers, and hyphens (-).
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }
 
         /// <summary>
-        /// Subscription ID, which will be used during monitoring data pull.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Subscription ID. The subscription ID is used when monitoring data is pulled.
         /// </summary>
         [JsonProperty("SubscriptionId")]
         public string SubscriptionId{ get; set; }
@@ -46,22 +44,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? TopicOwner{ get; set; }
 
         /// <summary>
-        /// Number of messages to be delivered in the subscription.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The number of messages waiting for shipping for this subscription.
         /// </summary>
         [JsonProperty("MsgCount")]
         public ulong? MsgCount{ get; set; }
 
         /// <summary>
-        /// Time when the subscription attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The last time the subscription attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
-        /// Subscription creation time. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The time when the subscription was created. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
@@ -74,43 +69,44 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string[] BindingKey{ get; set; }
 
         /// <summary>
-        /// Endpoint that receives notifications, which varies by `protocol`: for HTTP, the endpoint must start with `http://`, and the `host` can be a domain or IP; for `queue`, `queueName` should be entered.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The endpoint that receives notifications is differentiated by protocol: For HTTP, the endpoint must start with http://, and the host can be a domain name or IP; for queue, fill in queueName.
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// Filtering policy selected when a subscription is created:
-        /// If `filterType` is 1, `filterTag` will be used for filtering.
-        /// If `filterType` is 2, `bindingKey` will be used for filtering.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Describes the filtering policy selected by users when creating subscriptions.
+        /// filterType = 1 indicates Tag filtering when users use filterTag.
+        /// filterType = 2 indicates user use bindingKey for filtering.
         /// </summary>
         [JsonProperty("FilterTags")]
         public string[] FilterTags{ get; set; }
 
         /// <summary>
-        /// Subscription protocol. Currently, two protocols are supported: HTTP and queue. To use the HTTP protocol, you need to build your own web server to receive messages. With the queue protocol, messages are automatically pushed to a CMQ queue and you can pull them concurrently.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The subscription protocol, currently supports two protocols: HTTP and queue. When the HTTP protocol is used, users need to set up their own web server to accept messages. When the queue protocol is used, messages will automatically be pushed to CMQ queues, and users can pull messages concurrently.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// CMQ push server retry policy in case an error occurs while pushing a message to the endpoint. Valid values:
-        /// (1) BACKOFF_RETRY: backoff retry, which is to retry at a fixed interval, discard the message after a certain number of retries, and continue to push the next message.
-        /// (2) EXPONENTIAL_DECAY_RETRY: exponential decay retry, which is to retry at an exponentially increasing interval, such as 1s, 2s, 4s, 8s, and so on. As a message can be retained in a topic for one day, failed messages will be discarded at most after one day of retry. Default value: EXPONENTIAL_DECAY_RETRY.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the CMQ push server retry policy when an error occurs while pushing messages to an endpoint. valid values:.
+        /// BACKOFF_RETRY, backoff retry. retry at regular intervals, discard the message after a certain number of retries, and continue to push the next message.
+        /// (2) EXPONENTIAL_DECAY_RETRY, EXPONENTIAL DECAY RETRY. the interval between retries increases exponentially, for example starting at 1s, followed by 2s, 4s, 8s... since the Topic message period is one day, RETRY for at most one day then discard the message. default value is EXPONENTIAL_DECAY_RETRY.
         /// </summary>
         [JsonProperty("NotifyStrategy")]
         public string NotifyStrategy{ get; set; }
 
         /// <summary>
-        /// Push content format. Valid values: 1. JSON; 2. SIMPLIFIED, i.e., the raw format. If `protocol` is `queue`, this value must be `SIMPLIFIED`. If `protocol` is `HTTP`, both values are acceptable, and the default value is `JSON`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The format of the push content. Values: (1) JSON; (2) SIMPLIFIED, i.e., raw format. If protocol is queue, the value must be SIMPLIFIED. If protocol is HTTP, both values are acceptable, with the default being JSON.
         /// </summary>
         [JsonProperty("NotifyContentFormat")]
         public string NotifyContentFormat{ get; set; }
+
+        /// <summary>
+        /// Topic Name of the Subscription
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
 
 
         /// <summary>
@@ -130,6 +126,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
             this.SetParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

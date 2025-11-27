@@ -25,38 +25,33 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Listener ID of a redirect target
-        /// Note: This field may return null, indicating that there is no redirection.
+        /// Listener ID of the redirection target. this field is valid only when redirection is configured.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetListenerId")]
         public string TargetListenerId{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID of a redirect target
-        /// Note: This field may return null, indicating that there is no redirection.
+        /// Specifies the forwarding rule ID of redirection target. field is valid only when redirection is configured.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetLocationId")]
         public string TargetLocationId{ get; set; }
 
         /// <summary>
-        /// Redirection status code
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the redirection status code.
         /// </summary>
         [JsonProperty("RewriteCode")]
         public long? RewriteCode{ get; set; }
 
         /// <summary>
-        /// Whether the matched URL is carried in redirection.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the matched URL is carried in redirection
         /// </summary>
         [JsonProperty("TakeUrl")]
         public bool? TakeUrl{ get; set; }
 
         /// <summary>
-        /// Redirection type. Manual: manual redirection; Auto: automatic redirection.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Redirection type. Manual: Manual redirection; Auto: Automatic redirection
         /// </summary>
         [JsonProperty("RewriteType")]
         public string RewriteType{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username, which is used for login.
+        /// Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, which is used for login.
+        /// Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -49,7 +49,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tag, which defines a user's permission scope for accessing RabbitMQ Management. If this parameter is not passed in, it won't be modified.
+        /// User tag, used to determine the access permission of the user for RabbitMQ Management.
+        /// management: ordinary console user. monitoring: administrative console user. other value: non-console user.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

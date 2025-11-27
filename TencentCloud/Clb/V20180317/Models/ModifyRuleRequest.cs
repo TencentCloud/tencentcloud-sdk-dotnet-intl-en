@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB instance ID
+        /// ID of the CLB instance. You can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB listener ID
+        /// ID of the clb listener. can be obtained through the [DescribeListeners](https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// ID of the forwarding rule to be modified.
+        /// Specifies the rule ID of the forwarding rule to be modified, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
@@ -63,6 +63,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Session persistence duration, in seconds. Value range: 0 or 30-86400.
+        /// Defaults to 0.
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
@@ -91,6 +92,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("OAuth")]
         public OAuth OAuth{ get; set; }
 
+        /// <summary>
+        /// Specifies the custom cookie name.
+        /// </summary>
+        [JsonProperty("CookieName")]
+        public string CookieName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamObj(map, prefix + "OAuth.", this.OAuth);
+            this.SetParamSimple(map, prefix + "CookieName", this.CookieName);
         }
     }
 }

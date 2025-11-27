@@ -62,7 +62,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Forwarding protocol between the CLB instance and backend service. Values: `HTTP`, `HTTPS`, `GRPC` and `TRPC` (only for internal usage). It defaults to `HTTP`.
+        /// Specifies the forwarding protocol between cloud load balancer and backend service. currently supports HTTP/HTTPS/GRPC/GRPCS/TRPC. TRPC is not yet available. default HTTP.
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
@@ -115,6 +115,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("MultiCertInfo")]
         public MultiCertInfo MultiCertInfo{ get; set; }
 
+        /// <summary>
+        /// Specifies the custom cookie name.
+        /// </summary>
+        [JsonProperty("CookieName")]
+        public string CookieName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Quic", this.Quic);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+            this.SetParamSimple(map, prefix + "CookieName", this.CookieName);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// TDMQ for RabbitMQ cluster ID
+        /// Instance ID, such as amqp-xxxxxxxx. specifies the effective InstanceId that can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset, default value 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The maximum entries per page
+        /// Page limit. default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -49,17 +49,17 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Name and value of a filter.
-        /// Currently, only the `nodeStatus` filter is supported.
-        /// Valid values: `running`, `down`.
-        /// It is an array type and can contain multiple filters.
+        /// Filter parameter name and value. currently only support filtering based on node status.
+        /// "Name": "nodeStatus"
+        /// "Value": running or down
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Sorting by a specified element.
-        /// Valid values: `cpuUsage`, `diskUsage`.
+        /// Sorts by the specified element. only 2 are present.
+        /// CPU usage: specifies the CPU utilization of the node.
+        /// diskUsage: specifies the node disk utilization.
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }

@@ -55,8 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public float? OutBandwidth{ get; set; }
 
         /// <summary>
-        /// CLB domain name
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the CLB domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

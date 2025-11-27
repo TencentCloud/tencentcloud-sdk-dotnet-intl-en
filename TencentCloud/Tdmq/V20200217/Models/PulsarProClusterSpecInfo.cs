@@ -61,6 +61,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ScalableTps")]
         public ulong? ScalableTps{ get; set; }
 
+        /// <summary>
+        /// 32 or 128.
+        /// Maximum number of partitions for topics in the current cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxPartitions")]
+        public ulong? MaxPartitions{ get; set; }
+
+        /// <summary>
+        /// Maximum delayed message count for the product. 0 indicates no limit.	
+        /// </summary>
+        [JsonProperty("MaxDelayedMessages")]
+        public long? MaxDelayedMessages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +87,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxNamespaces", this.MaxNamespaces);
             this.SetParamSimple(map, prefix + "MaxTopics", this.MaxTopics);
             this.SetParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
+            this.SetParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
+            this.SetParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
         }
     }
 }

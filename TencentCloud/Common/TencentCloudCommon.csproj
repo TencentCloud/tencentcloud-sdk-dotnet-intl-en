@@ -1,10 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <AssemblyName>TencentCloudSDKIntlEN.Common</AssemblyName>
     <RootNamespace>TencentCloud</RootNamespace>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0C5CE89-418D-399D-AED0-9B87D308C5C7}</ProjectGuid>
-    <VersionPrefix>3.0.1243</VersionPrefix>
+    <VersionPrefix>3.0.1244</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -25,10 +24,18 @@
     <DefineConstants>NS2</DefineConstants>
   </PropertyGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.1351" />
   </ItemGroup>
 
 </Project>
-

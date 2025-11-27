@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+        /// Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction, and DelayScheduled. Transaction is only supported in the Exclusive Edition.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

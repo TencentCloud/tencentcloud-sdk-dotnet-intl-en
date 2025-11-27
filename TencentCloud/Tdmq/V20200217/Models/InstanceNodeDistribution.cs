@@ -42,6 +42,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
+        /// <summary>
+        /// This flag is true if there is a scheduling task with no switchback AZs.
+        /// </summary>
+        [JsonProperty("NodePermWipeFlag")]
+        public bool? NodePermWipeFlag{ get; set; }
+
+        /// <summary>
+        /// Availability zone status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ZoneStatus")]
+        public string ZoneStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +64,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
+            this.SetParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
         }
     }
 }

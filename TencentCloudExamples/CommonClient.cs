@@ -1,4 +1,5 @@
-﻿/*
+﻿
+/*
  * Copyright (c) 2018 Tencent. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,10 +32,10 @@ namespace TencentCloudExamples
         {
             var client = BuildClient();
 
-            // Demonstrate how to build a CommonRequest from a JSON string
+            // Demonstrate how to build a CommonRequest via JsonString
             JsonStrRequest(client).Wait();
 
-            // Demonstrate how to build a CommonRequest from a Dictionary
+            // Demonstrate how to build a CommonRequest via Dictionary
             DictionaryRequest(client).Wait();
 
             // Demonstrate how to customize the Request type
@@ -46,8 +47,8 @@ namespace TencentCloudExamples
 
         static async Task JsonStrRequest(TencentCloud.Common.CommonClient client)
         {
-            var limit = 1;
-            var filterName = "zone";
+            var limit       = 1;
+            var filterName  = "zone";
             var filterValue = "ap-guangzhou-1";
             var reqJson = $@"
     {{
@@ -89,14 +90,14 @@ namespace TencentCloudExamples
         {
             internal class Filter
             {
-                public string Name;
+                public string   Name;
                 public string[] Values;
             }
 
             public string[] InstanceIds;
             public Filter[] Filters;
-            public int Offset;
-            public int Limit;
+            public int      Offset;
+            public int      Limit;
         }
 
         static async Task CustomRequest(TencentCloud.Common.CommonClient client)
@@ -108,11 +109,11 @@ namespace TencentCloudExamples
                     {
                         new DescribeInstancesReq.Filter
                         {
-                            Name = "zone",
+                            Name   = "zone",
                             Values = new[] { "ap-guangzhou-1" }
                         }
                     },
-                    Limit = 5,
+                    Limit  = 5,
                     Offset = 0,
                 }
             );
@@ -124,7 +125,7 @@ namespace TencentCloudExamples
         class DescribeInstancesRep
         {
             public string RequestId;
-            public int TotalCount;
+            public int    TotalCount;
             public JArray ZoneSet;
         }
 
@@ -137,40 +138,44 @@ namespace TencentCloudExamples
 
         static TencentCloud.Common.CommonClient BuildClient()
         {
-            // Mandatory steps:
-            // Instantiate an authentication object. You need to pass your Tencent Cloud account's secretId and secretKey as parameters.
-            // This example reads them from environment variables. You need to set these two values in your environment first.
-            // You can also hardcode the key pair directly in your code, but be careful not to copy, upload, or share the code with others
-            // to avoid leaking the key pair and jeopardizing your assets.
+            // Essential step:
+            // Instantiate an authentication object, which requires the Tencent Cloud account key pair
+            // secretId and secretKey as input parameters.
+            // Here, we read them from environment variables, so these two values need to be set
+            // in the environment variables first.
+            // You can also hardcode the key pair directly in the code, but be careful not to copy,
+            // upload, or share the code with others,
+            // to avoid exposing the key pair and jeopardizing your property security.
             var cred = new Credential
             {
-                SecretId = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
+                SecretId  = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_ID"),
                 SecretKey = Environment.GetEnvironmentVariable("TENCENTCLOUD_SECRET_KEY")
             };
 
-            // Instantiate a client profile object (optional; can be skipped if there are no special requirements).
+            // Instantiate a client option, which is optional. You can skip it if there are no special requirements.
             ClientProfile clientProfile = new ClientProfile();
-            // Specify the signing algorithm (default is HmacSHA256).
+            // Specify the signature algorithm (default is HmacSHA256)
             clientProfile.SignMethod = ClientProfile.SIGN_TC3SHA256;
-            // Optional step:
-            // Instantiate a client configuration object, which allows you to set the timeout period and other configurations.
+            // Non-essential step
+            // Instantiate a client configuration object, which allows specifying configurations like timeout.
             HttpProfile httpProfile = new HttpProfile();
-            // The SDK defaults to using the POST method.
+            // The SDK uses the POST method by default.
             // If you must use the GET method, you can set it here. The GET method cannot handle some larger requests.
             httpProfile.ReqMethod = "GET";
-            // The SDK has a default timeout period. Do not adjust it unless necessary.
-            // If you need to, please check the code for the latest default value.
-            httpProfile.Timeout = 10; // Request connection timeout, in seconds (default is 60 seconds).
-            // The SDK automatically specifies the domain name. It is usually not necessary to specify a domain name, but if you are accessing a service in a financial zone,
-            // you must manually specify the domain name, for example, for a CVM in the Shanghai financial zone: cvm.ap-shanghai-fsi.tencentcloudapi.com
+            // The SDK has a default timeout. Please do not adjust it unless necessary.
+            // If needed, check the code for the latest default value.
+            httpProfile.Timeout = 10; // Request connection timeout, in seconds (default is 60 seconds)
+            // The SDK will automatically specify the domain name. It is usually not necessary to specify the domain name,
+            // but if you are accessing a service in the financial region,
+            // you must manually specify the domain name, for example, the domain name for CVM in the Shanghai Financial Region: cvm.ap-shanghai-fsi.tencentcloudapi.com
             httpProfile.Endpoint = "cvm.tencentcloudapi.com";
-            // Proxy server; set this if you are in an environment with a proxy server.
+            // Proxy server, set this if you have a proxy server in your environment
             httpProfile.WebProxy = Environment.GetEnvironmentVariable("HTTPS_PROXY");
 
             clientProfile.HttpProfile = httpProfile;
 
-            // Instantiate the client object for the product you want to request (using CVM as an example).
-            // The second parameter is the region information, which can be a string like "ap-guangzhou" or a predefined constant. clientProfile is optional.
+            // Instantiate the client object for the product to be requested (taking cvm as an example)
+            // The second parameter is region information, which can be a string like ap-guangzhou or a predefined constant. clientProfile is optional.
             return new TencentCloud.Common.CommonClient(
                 "cvm", "2017-03-12", cred, "ap-guangzhou", clientProfile);
         }
