@@ -27,6 +27,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// Indicates the status. valid values: 
         /// PASSED
+        /// PROCESSING
         /// WARNING
         /// </summary>
         [JsonProperty("Status")]

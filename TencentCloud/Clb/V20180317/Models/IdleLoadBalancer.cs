@@ -68,8 +68,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// The load balancing hostname.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the clb domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

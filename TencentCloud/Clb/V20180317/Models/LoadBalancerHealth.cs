@@ -31,15 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the name of the load balancing instance.
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// List of listeners
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Listener list
         /// </summary>
         [JsonProperty("Listeners")]
         public ListenerHealth[] Listeners{ get; set; }

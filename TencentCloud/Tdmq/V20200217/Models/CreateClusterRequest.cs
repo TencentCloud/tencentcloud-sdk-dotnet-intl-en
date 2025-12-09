@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
+        /// Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

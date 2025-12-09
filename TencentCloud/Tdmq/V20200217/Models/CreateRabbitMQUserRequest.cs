@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, which is used for login.
+        /// Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
+        /// User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
         /// Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
         /// </summary>
         [JsonProperty("Tags")]

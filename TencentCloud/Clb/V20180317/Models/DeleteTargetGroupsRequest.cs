@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Target group ID array
+        /// Specifies the ID array of the target group. supports up to 20 deletions.
         /// </summary>
         [JsonProperty("TargetGroupIds")]
         public string[] TargetGroupIds{ get; set; }

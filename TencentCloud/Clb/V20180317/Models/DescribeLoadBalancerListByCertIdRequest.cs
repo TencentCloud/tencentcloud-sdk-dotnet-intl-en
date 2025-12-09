@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Server or client certificate ID
+        /// Specifies the server certificate ID or client certificate ID. can be accessed through the [DescribeCertificate](https://www.tencentcloud.comom/document/api/400/41674?from_cn_redirect=1) api.
+        /// Specifies the maximum length of the array is 20.
         /// </summary>
         [JsonProperty("CertIds")]
         public string[] CertIds{ get; set; }

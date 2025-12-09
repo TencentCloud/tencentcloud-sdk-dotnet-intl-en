@@ -28,6 +28,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Result type. Valid values:
         /// <li>SegmentRecognition: video splitting.</li>
         /// <li>Highlight: highlight.</li>
+        /// <li>Description: summary.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,6 +46,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("HighlightResultSet")]
         public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }
 
+        /// <summary>
+        /// Summary result. It is valid when Type is Description.
+        /// </summary>
+        [JsonProperty("DescriptionResult")]
+        public LiveAiAnalysisDescriptionItem DescriptionResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
             this.SetParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+            this.SetParamObj(map, prefix + "DescriptionResult.", this.DescriptionResult);
         }
     }
 }

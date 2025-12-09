@@ -169,6 +169,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public GrpcParameters Grpc{ get; set; }
 
         /// <summary>
+        /// Network Error Logging configuration.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("NetworkErrorLogging")]
+        public NetworkErrorLoggingParameters NetworkErrorLogging{ get; set; }
+
+        /// <summary>
         /// Accelerate optimization and configuration in mainland china.
         /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
@@ -209,6 +216,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "ClientIPHeader.", this.ClientIPHeader);
             this.SetParamObj(map, prefix + "ClientIPCountry.", this.ClientIPCountry);
             this.SetParamObj(map, prefix + "Grpc.", this.Grpc);
+            this.SetParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
             this.SetParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
             this.SetParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         }

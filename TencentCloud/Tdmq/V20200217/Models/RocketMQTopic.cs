@@ -67,6 +67,47 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
 
+        /// <summary>
+        /// Instance ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Namespace
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// Last write time, in seconds.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LastUpdateTime")]
+        public long? LastUpdateTime{ get; set; }
+
+        /// <summary>
+        /// Number of Subscriptions
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubscriptionCount")]
+        public long? SubscriptionCount{ get; set; }
+
+        /// <summary>
+        /// Subscribe to the relationship list.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SubscriptionData")]
+        public RocketMQSubscription[] SubscriptionData{ get; set; }
+
+        /// <summary>
+        /// List of bound tags
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +121,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+            this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
+            this.SetParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

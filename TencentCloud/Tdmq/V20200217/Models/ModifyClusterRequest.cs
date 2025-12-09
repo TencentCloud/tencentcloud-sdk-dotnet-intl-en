@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Remarks.
+        /// Description information. length limit is 128 bytes.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

@@ -37,15 +37,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Isp{ get; set; }
 
         /// <summary>
-        /// Available resources
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Available resources.
         /// </summary>
         [JsonProperty("AvailabilitySet")]
         public ResourceAvailability[] AvailabilitySet{ get; set; }
 
         /// <summary>
-        /// ISP Type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operator type info.
         /// </summary>
         [JsonProperty("TypeSet")]
         public TypeInfo[] TypeSet{ get; set; }

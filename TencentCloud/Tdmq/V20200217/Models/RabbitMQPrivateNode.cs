@@ -32,8 +32,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Node status
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Node status. running indicates the node is active. down indicates an exception.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeStatus")]
         public string NodeStatus{ get; set; }

@@ -25,15 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// First lookback time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// First recheck time.
         /// </summary>
         [JsonProperty("FirstQueryInterval")]
         public ulong? FirstQueryInterval{ get; set; }
 
         /// <summary>
-        /// Maximum number of queries.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum query times.
         /// </summary>
         [JsonProperty("MaxQueryCount")]
         public ulong? MaxQueryCount{ get; set; }

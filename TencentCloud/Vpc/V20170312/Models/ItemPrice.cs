@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The pay-as-you-go billing method. Unit: CNY.
+        /// The pay-as-you-go billing method. Unit: USD.
         /// </summary>
         [JsonProperty("UnitPrice")]
         public float? UnitPrice{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ChargeUnit{ get; set; }
 
         /// <summary>
-        /// Original price of the prepaid product. Unit: CNY.
+        /// Original price of the prepaid product. Unit: USD.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount price of the prepaid product. Unit: CNY.
+        /// Discount price of the prepaid product. Unit: USD.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

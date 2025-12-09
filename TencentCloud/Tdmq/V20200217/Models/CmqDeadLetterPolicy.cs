@@ -26,28 +26,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// Dead letter queue.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DeadLetterQueue")]
         public string DeadLetterQueue{ get; set; }
 
         /// <summary>
-        /// Dead letter queue policy.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Dead letter queue policy. 0: maximum number of receipt. 1: maximum unconsumed time.
         /// </summary>
         [JsonProperty("Policy")]
         public ulong? Policy{ get; set; }
 
         /// <summary>
-        /// Maximum period in seconds before an unconsumed message expires, which is required if `Policy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum unconsumed expiration time. Required if policy is 1. Range: 300-43,200 seconds, must be less than the maximum message retention time MsgRetentionSeconds.
         /// </summary>
         [JsonProperty("MaxTimeToLive")]
         public ulong? MaxTimeToLive{ get; set; }
 
         /// <summary>
-        /// Maximum number of receipts.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum number of receipt. required when Policy is 0. value range: 1 to 1000.
         /// </summary>
         [JsonProperty("MaxReceiveCount")]
         public ulong? MaxReceiveCount{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Information of real servers bound to the listener
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Information of real servers bound to the listener.
         /// </summary>
         [JsonProperty("Listeners")]
         public ListenerBackend[] Listeners{ get; set; }

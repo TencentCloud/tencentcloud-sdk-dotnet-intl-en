@@ -25,7 +25,8 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Binding relationship array. A single request supports up to 20 items.
+        /// Specifies the binding relationship array. the target group type should be the same.
+        /// Specifies the maximum number of requests supported in a single request is 20.
         /// </summary>
         [JsonProperty("Associations")]
         public TargetGroupAssociation[] Associations{ get; set; }

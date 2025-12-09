@@ -68,13 +68,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CertContent{ get; set; }
 
         /// <summary>
-        /// Name of the uploaded client CA certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+        /// Upload client CA certificate name. if SSLMode=MUTUAL and there is no CertCaId, this parameter is required.
         /// </summary>
         [JsonProperty("CertCaName")]
         public string CertCaName{ get; set; }
 
         /// <summary>
-        /// Content of the uploaded client certificate. When SSLMode = mutual, if there is no CertCaId, this parameter is required.
+        /// Upload client certificate content. if SSLMode is MUTUAL and there is no CertCaId, this parameter is required.
         /// </summary>
         [JsonProperty("CertCaContent")]
         public string CertCaContent{ get; set; }

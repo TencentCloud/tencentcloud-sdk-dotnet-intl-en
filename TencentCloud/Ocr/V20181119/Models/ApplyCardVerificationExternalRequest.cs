@@ -100,6 +100,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrlBack")]
         public string ImageUrlBack{ get; set; }
 
+        /// <summary>
+        /// Whether to extract the ID portrait. Default value: false.
+        /// </summary>
+        [JsonProperty("ReturnHeadImage")]
+        public bool? ReturnHeadImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -112,6 +118,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64Back", this.ImageBase64Back);
             this.SetParamSimple(map, prefix + "ImageUrlFront", this.ImageUrlFront);
             this.SetParamSimple(map, prefix + "ImageUrlBack", this.ImageUrlBack);
+            this.SetParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
         }
     }
 }

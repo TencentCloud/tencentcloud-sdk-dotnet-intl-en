@@ -29,7 +29,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Partitions")]
-        public ulong? Partitions{ get; set; }
+        public long? Partitions{ get; set; }
 
         /// <summary>
         /// The number of messages.

@@ -69,20 +69,20 @@ namespace TencentCloud.Clb.V20180317.Models
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// Number of CLBs to be created. Default value: 1.
+        /// Specifies the count of cloud load balancers to create, with a default value of 1. the count must not exceed the maximum value allowed for the account, with a default creation maximum value of 20.
         /// </summary>
         [JsonProperty("Number")]
         public ulong? Number{ get; set; }
 
         /// <summary>
-        /// Applicable only to public network IPv4 CLB instances. This parameter specifies the primary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-        /// Note: The primary AZ sustains traffic. The secondary AZ does not sustain traffic by default and is used only when the primary AZ is unavailable. Currently, primary and secondary AZs are supported only for IPv4 CLB instances in Guangzhou, Shanghai, Nanjing, Beijing, Chengdu, Shenzhen Finance, Hong Kong (China), Seoul, Frankfurt, and Singapore regions. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// Applicable only to public network IPv4 cloud load balancer instances. specifies the primary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+        /// Note: the primary AZ loads traffic. the secondary AZ does not load traffic by default and is used only if the primary AZ becomes unavailable.
         /// </summary>
         [JsonProperty("MasterZoneId")]
         public string MasterZoneId{ get; set; }
 
         /// <summary>
-        /// Applicable only to public network IPv4 CLB instances. This parameter specifies the AZ ID for creating a CLB instance. For example, ap-guangzhou-1.
+        /// Applicable only to public network IPv4 clb instances. specifies the AZ ID or availability zone name for creating a clb instance. for example, 100001 or ap-guangzhou-1.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -113,7 +113,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Bandwidth package ID. If this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) will only support billing by bandwidth package (BANDWIDTH_PACKAGE). The attributes of the bandwidth package determine the settlement method. For IPv6 CLB instances purchased by bill-by-CVM users, if the ISP type is not BGP, the bandwidth package ID cannot be specified.
+        /// BANDWIDTH PACKAGE ID, which can be obtained through the [DescribeBandwidthPackages](https://www.tencentcloud.comom/document/api/215/19209?from_cn_redirect=1) api. specifies the BANDWIDTH PACKAGE ID. when this parameter is specified, the network billing mode (InternetAccessible.InternetChargeType) supports only billing by BANDWIDTH PACKAGE (BANDWIDTH_PACKAGE). the attributes of the BANDWIDTH PACKAGE determine the settlement method. for IPv6 clb instances purchased by non-promoted users, if the operator type is not BGP, the BANDWIDTH PACKAGE ID cannot be specified.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
@@ -161,20 +161,20 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterTag{ get; set; }
 
         /// <summary>
-        /// Applicable only to public network IPv4 CLB instances. This parameter specifies the secondary AZ ID for cross-AZ disaster recovery. For example, 100001 or ap-guangzhou-1.
-        /// Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://intl.cloud.tencent.com/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// Applicable only to public network IPv4 clb instances. specifies the secondary AZ ID for cross-az disaster recovery. both AZ ID and name are supported, such as 100001 or ap-guangzhou-1.
+        /// Note: The secondary AZ sustains traffic when the primary AZ encounters faults. You can call the [DescribeResources](https://www.tencentcloud.comom/document/api/214/70213?from_cn_redirect=1) API to query the list of primary/secondary AZs in a region. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
         /// </summary>
         [JsonProperty("SlaveZoneId")]
         public string SlaveZoneId{ get; set; }
 
         /// <summary>
-        /// Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+        /// The unique ID of EIP, which can be queried through the DescribeAddresses API (https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1). format: EIP-qhx8udkc. applicable only to private network clb binding EIP.
         /// </summary>
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }
 
         /// <summary>
-        /// Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+        /// Specifies whether to allow CLB traffic to the Target. enable (true): verify security groups on CLB. disable (false): verify security groups on both CLB and backend instances. IPv6 CLB security group default permit, this parameter is not required.
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
@@ -208,6 +208,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("AccessLogTopicId")]
         public string AccessLogTopicId{ get; set; }
+
+        /// <summary>
+        /// Whether layer-7 advanced routing is enabled.
+        /// </summary>
+        [JsonProperty("AdvancedRoute")]
+        public bool? AdvancedRoute{ get; set; }
 
 
         /// <summary>
@@ -245,6 +251,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
             this.SetParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
             this.SetParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
+            this.SetParamSimple(map, prefix + "AdvancedRoute", this.AdvancedRoute);
         }
     }
 }

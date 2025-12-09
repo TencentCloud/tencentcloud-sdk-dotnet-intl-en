@@ -53,6 +53,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// Digital watermark parameter.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// List of blurs. Up to 10 ones can be supported.
         /// </summary>
         [JsonProperty("MosaicSet")]
@@ -125,6 +132,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
             this.SetParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

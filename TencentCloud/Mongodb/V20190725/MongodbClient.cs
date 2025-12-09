@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1229";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mongodb.V20190725
         public AssignProjectResponse AssignProjectSync(AssignProjectRequest req)
         {
             return InternalRequestAsync<AssignProjectResponse>(req, "AssignProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to customize an account to access the instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
+        /// <returns><see cref="CreateAccountUserResponse"/></returns>
+        public Task<CreateAccountUserResponse> CreateAccountUser(CreateAccountUserRequest req)
+        {
+            return InternalRequestAsync<CreateAccountUserResponse>(req, "CreateAccountUser");
+        }
+
+        /// <summary>
+        /// This API is used to customize an account to access the instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountUserRequest"/></param>
+        /// <returns><see cref="CreateAccountUserResponse"/></returns>
+        public CreateAccountUserResponse CreateAccountUserSync(CreateAccountUserRequest req)
+        {
+            return InternalRequestAsync<CreateAccountUserResponse>(req, "CreateAccountUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -159,6 +180,69 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to create a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public Task<CreateLogDownloadTaskResponse> CreateLogDownloadTask(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogDownloadTaskResponse"/></returns>
+        public CreateLogDownloadTaskResponse CreateLogDownloadTaskSync(CreateLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogDownloadTaskResponse>(req, "CreateLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a custom account of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountUserRequest"/></param>
+        /// <returns><see cref="DeleteAccountUserResponse"/></returns>
+        public Task<DeleteAccountUserResponse> DeleteAccountUser(DeleteAccountUserRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountUserResponse>(req, "DeleteAccountUser");
+        }
+
+        /// <summary>
+        /// This API is used to delete a custom account of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountUserRequest"/></param>
+        /// <returns><see cref="DeleteAccountUserResponse"/></returns>
+        public DeleteAccountUserResponse DeleteAccountUserSync(DeleteAccountUserRequest req)
+        {
+            return InternalRequestAsync<DeleteAccountUserResponse>(req, "DeleteAccountUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public Task<DeleteLogDownloadTaskResponse> DeleteLogDownloadTask(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogDownloadTaskRequest"/></param>
+        /// <returns><see cref="DeleteLogDownloadTaskResponse"/></returns>
+        public DeleteLogDownloadTaskResponse DeleteLogDownloadTaskSync(DeleteLogDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the asynchronous task status.
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
@@ -201,6 +285,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to obtain the automatic backup configuration information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRulesRequest"/></param>
+        /// <returns><see cref="DescribeBackupRulesResponse"/></returns>
+        public Task<DescribeBackupRulesResponse> DescribeBackupRules(DescribeBackupRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupRulesResponse>(req, "DescribeBackupRules");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the automatic backup configuration information of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupRulesRequest"/></param>
+        /// <returns><see cref="DescribeBackupRulesResponse"/></returns>
+        public DescribeBackupRulesResponse DescribeBackupRulesSync(DescribeBackupRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupRulesResponse>(req, "DescribeBackupRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the client connection information on an instance, including the IP address for connection and the number of connections.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientConnectionsRequest"/></param>
@@ -218,6 +323,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeClientConnectionsResponse DescribeClientConnectionsSync(DescribeClientConnectionsRequest req)
         {
             return InternalRequestAsync<DescribeClientConnectionsResponse>(req, "DescribeClientConnections")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the operation currently being performed on a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
+        /// <returns><see cref="DescribeCurrentOpResponse"/></returns>
+        public Task<DescribeCurrentOpResponse> DescribeCurrentOp(DescribeCurrentOpRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentOpResponse>(req, "DescribeCurrentOp");
+        }
+
+        /// <summary>
+        /// This API is used to query the operation currently being performed on a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurrentOpRequest"/></param>
+        /// <returns><see cref="DescribeCurrentOpResponse"/></returns>
+        public DescribeCurrentOpResponse DescribeCurrentOpSync(DescribeCurrentOpRequest req)
+        {
+            return InternalRequestAsync<DescribeCurrentOpResponse>(req, "DescribeCurrentOp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +495,69 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public Task<DescribeInstanceSSLResponse> DescribeInstanceSSL(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL");
+        }
+
+        /// <summary>
+        /// This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLResponse"/></returns>
+        public DescribeInstanceSSLResponse DescribeInstanceSSLSync(DescribeInstanceSSLRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public Task<DescribeLogDownloadTasksResponse> DescribeLogDownloadTasks(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query a log download task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogDownloadTasksResponse"/></returns>
+        public DescribeLogDownloadTasksResponse DescribeLogDownloadTasksSync(DescribeLogDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogDownloadTasksResponse>(req, "DescribeLogDownloadTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query running logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public Task<DescribeMongodbLogsResponse> DescribeMongodbLogs(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query running logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMongodbLogsRequest"/></param>
+        /// <returns><see cref="DescribeMongodbLogsResponse"/></returns>
+        public DescribeMongodbLogsResponse DescribeMongodbLogsSync(DescribeMongodbLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeMongodbLogsResponse>(req, "DescribeMongodbLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
@@ -449,6 +638,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeSpecInfoResponse DescribeSpecInfoSync(DescribeSpecInfoRequest req)
         {
             return InternalRequestAsync<DescribeSpecInfoResponse>(req, "DescribeSpecInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
+        /// </summary>
+        /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
+        /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
+        public Task<EnableTransparentDataEncryptionResponse> EnableTransparentDataEncryption(EnableTransparentDataEncryptionRequest req)
+        {
+            return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption");
+        }
+
+        /// <summary>
+        /// This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
+        /// </summary>
+        /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
+        /// <returns><see cref="EnableTransparentDataEncryptionResponse"/></returns>
+        public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryptionSync(EnableTransparentDataEncryptionRequest req)
+        {
+            return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -537,6 +747,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to set the SSL status for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public Task<InstanceEnableSSLResponse> InstanceEnableSSL(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL");
+        }
+
+        /// <summary>
+        /// This API is used to set the SSL status for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="InstanceEnableSSLRequest"/></param>
+        /// <returns><see cref="InstanceEnableSSLResponse"/></returns>
+        public InstanceEnableSSLResponse InstanceEnableSSLSync(InstanceEnableSSLRequest req)
+        {
+            return InternalRequestAsync<InstanceEnableSSLResponse>(req, "InstanceEnableSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. After isolation, the instance is retained in the recycle bin, and data cannot be written into it. After a certain period of isolation, the instance is deleted permanently. For the retention time in the recycle bin, see the pay-as-you-go service terms. The deleted pay-as-you-go instance cannot be recovered. Proceed with caution.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
@@ -554,6 +785,27 @@ namespace TencentCloud.Mongodb.V20190725
         public IsolateDBInstanceResponse IsolateDBInstanceSync(IsolateDBInstanceRequest req)
         {
             return InternalRequestAsync<IsolateDBInstanceResponse>(req, "IsolateDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate a specific operation performed on a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="KillOpsRequest"/></param>
+        /// <returns><see cref="KillOpsResponse"/></returns>
+        public Task<KillOpsResponse> KillOps(KillOpsRequest req)
+        {
+            return InternalRequestAsync<KillOpsResponse>(req, "KillOps");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a specific operation performed on a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="KillOpsRequest"/></param>
+        /// <returns><see cref="KillOpsResponse"/></returns>
+        public KillOpsResponse KillOpsSync(KillOpsRequest req)
+        {
+            return InternalRequestAsync<KillOpsResponse>(req, "KillOps")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -617,6 +869,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecSync(ModifyDBInstanceSpecRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceSpecResponse>(req, "ModifyDBInstanceSpec")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the parameter configuration of a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
+        public Task<ModifyInstanceParamsResponse> ModifyInstanceParams(ModifyInstanceParamsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams");
+        }
+
+        /// <summary>
+        /// This API is used to modify the parameter configuration of a TencentDB for MongoDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
+        public ModifyInstanceParamsResponse ModifyInstanceParamsSync(ModifyInstanceParamsRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +978,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to set the account permissions of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
+        /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
+        public Task<SetAccountUserPrivilegeResponse> SetAccountUserPrivilege(SetAccountUserPrivilegeRequest req)
+        {
+            return InternalRequestAsync<SetAccountUserPrivilegeResponse>(req, "SetAccountUserPrivilege");
+        }
+
+        /// <summary>
+        /// This API is used to set the account permissions of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
+        /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
+        public SetAccountUserPrivilegeResponse SetAccountUserPrivilegeSync(SetAccountUserPrivilegeRequest req)
+        {
+            return InternalRequestAsync<SetAccountUserPrivilegeResponse>(req, "SetAccountUserPrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to set instance termination protection.
         /// </summary>
         /// <param name="req"><see cref="SetDBInstanceDeletionProtectionRequest"/></param>
@@ -726,6 +1020,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to set the instance maintenance window.
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceMaintenanceRequest"/></param>
+        /// <returns><see cref="SetInstanceMaintenanceResponse"/></returns>
+        public Task<SetInstanceMaintenanceResponse> SetInstanceMaintenance(SetInstanceMaintenanceRequest req)
+        {
+            return InternalRequestAsync<SetInstanceMaintenanceResponse>(req, "SetInstanceMaintenance");
+        }
+
+        /// <summary>
+        /// This API is used to set the instance maintenance window.
+        /// </summary>
+        /// <param name="req"><see cref="SetInstanceMaintenanceRequest"/></param>
+        /// <returns><see cref="SetInstanceMaintenanceResponse"/></returns>
+        public SetInstanceMaintenanceResponse SetInstanceMaintenanceSync(SetInstanceMaintenanceRequest req)
+        {
+            return InternalRequestAsync<SetInstanceMaintenanceResponse>(req, "SetInstanceMaintenance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to terminate monthly subscription billing instances.
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
@@ -743,6 +1058,48 @@ namespace TencentCloud.Mongodb.V20190725
         public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
         {
             return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of the database instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public Task<UpgradeDBInstanceKernelVersionResponse> UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the kernel version of the database instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDBInstanceKernelVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDBInstanceKernelVersionResponse"/></returns>
+        public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersionSync(UpgradeDBInstanceKernelVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDBInstanceKernelVersionResponse>(req, "UpgradeDBInstanceKernelVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public Task<UpgradeDbInstanceVersionResponse> UpgradeDbInstanceVersion(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
+        /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
+        public UpgradeDbInstanceVersionResponse UpgradeDbInstanceVersionSync(UpgradeDbInstanceVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeDbInstanceVersionResponse>(req, "UpgradeDbInstanceVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

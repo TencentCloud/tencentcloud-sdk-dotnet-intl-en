@@ -57,8 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public LbRsTargets[] Targets{ get; set; }
 
         /// <summary>
-        /// End port of the listener.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// End port of a port range for a listener
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }

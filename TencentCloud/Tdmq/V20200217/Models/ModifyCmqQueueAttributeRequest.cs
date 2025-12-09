@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
+        /// Queue name, which must be unique under the same account in the same region. A queue name is a string of up to 64 characters, starting with a letter, and the remaining part can include letters, digits, and hyphens (-).
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string DeadLetterQueueName{ get; set; }
 
         /// <summary>
-        /// Maximum period in seconds before an unconsumed message expires, which is required if `MaxTimeToLivepolicy` is 1. Value range: 300–43200. This value should be smaller than `MsgRetentionSeconds` (maximum message retention period)
+        /// Specifies the essential parameter when policy is 1. maximum unconsumed expiration time. value range: 300-43200 in seconds, must be less than the maximum message retention time MsgRetentionSeconds.
         /// </summary>
         [JsonProperty("MaxTimeToLive")]
         public ulong? MaxTimeToLive{ get; set; }

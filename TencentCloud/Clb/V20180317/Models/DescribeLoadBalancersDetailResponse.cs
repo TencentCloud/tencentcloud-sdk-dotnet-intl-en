@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of CLB instance details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Load balancing detail list.
         /// </summary>
         [JsonProperty("LoadBalancerDetailSet")]
         public LoadBalancerDetail[] LoadBalancerDetailSet{ get; set; }

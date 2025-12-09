@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SearchUser{ get; set; }
 
         /// <summary>
-        /// Pagination offset
+        /// Specifies the page Offset. default is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination limit
+        /// Page Limit. default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -55,7 +55,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string User{ get; set; }
 
         /// <summary>
-        /// User tag, which is used to filter users.
+        /// User tag, used to determine the access permission of the user for RabbitMQ Management.
+        /// management: ordinary console user. monitoring: administrative console user. other value: non-console user.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

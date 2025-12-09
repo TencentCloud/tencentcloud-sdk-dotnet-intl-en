@@ -89,8 +89,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string HttpCheckMethod{ get; set; }
 
         /// <summary>
-        /// A custom check parameter, representing the health check port, which is the port of the real server by default. Unless you want to specify a port, it is recommended to leave it empty. (Applicable only to TCP/UDP listeners)
-        /// 
+        /// Custom check parameters. health check port, defaults to the port of the backend service unless you want to specify a specific port, otherwise leave it blank. pass the parameter value -1 to restore default settings. (applicable only to TCP/UDP listener).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CheckPort")]

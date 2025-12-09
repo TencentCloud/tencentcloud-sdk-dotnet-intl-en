@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
+        /// <summary>
+        /// Target'S network, in the format of 86323 for a private network, or 0 if it is a basic network.
+        /// </summary>
+        [JsonProperty("NumericalVpcId")]
+        public long? NumericalVpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         }
     }
 }

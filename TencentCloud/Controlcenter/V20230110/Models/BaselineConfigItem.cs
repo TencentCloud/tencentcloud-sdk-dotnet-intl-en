@@ -25,13 +25,13 @@ namespace TencentCloud.Controlcenter.V20230110.Models
     {
         
         /// <summary>
-        /// A unique identifier for an Account Factory baseline item, which can only contain English letters, digits, and @,._[]-:()+=. It must be 2-128 characters long.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// Account Factory baseline item configuration. Different items have different parameters.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account factory baseline item configuration. different baseline item configuration parameters.
         /// </summary>
         [JsonProperty("Configuration")]
         public string Configuration{ get; set; }

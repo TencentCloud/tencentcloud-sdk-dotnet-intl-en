@@ -25,12 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Live stream processing result type, including:
-        /// <li>AiReviewResult: content auditing result.</li>
+        /// Live stream processing result type. Valid values:
+        /// <li>AiReviewResult: content review result.</li>
         /// <li>AiRecognitionResult: content recognition result.</li>
-        /// <li>LiveRecordResult: live recording result.</li>
-        /// <li>AiQualityControlResult: media quality inspection result.</li>
-        /// <li>ProcessEof: live stream processing result.</li>
+        /// <li>LiveRecordResult: live streaming recording result.</li>
+        /// <li>AiQualityControlResult: media live quality control result.</li>
+        /// <li>AiAnalysisResult: content analysis result.</li>
+        /// <li>ProcessEof: end of live stream processing.</li>
         /// </summary>
         [JsonProperty("NotificationType")]
         public string NotificationType{ get; set; }

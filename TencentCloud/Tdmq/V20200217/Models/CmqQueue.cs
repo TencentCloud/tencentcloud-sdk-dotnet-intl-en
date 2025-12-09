@@ -37,22 +37,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Limit on the number of messages produced per second. The size of consumed messages is 1.1 times this value.
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
         /// Bandwidth limit.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Bps")]
         public ulong? Bps{ get; set; }
 
         /// <summary>
-        /// Maximum retention period for inflight messages.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the maximum retention time for in-flight messages, which must be less than the message retention period.
         /// </summary>
         [JsonProperty("MaxDelaySeconds")]
         public ulong? MaxDelaySeconds{ get; set; }
@@ -64,64 +61,55 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxMsgHeapNum{ get; set; }
 
         /// <summary>
-        /// Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Long polling waiting time for message receipt. Value range 0-30 seconds, default value 0.
         /// </summary>
         [JsonProperty("PollingWaitSeconds")]
         public ulong? PollingWaitSeconds{ get; set; }
 
         /// <summary>
-        /// Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Message retention period. The value range is 60-1,296,000 seconds (1 min-15 days), with a default value of 345,600 seconds (4 days).
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Message visibility timeout period. The value range is 1-43,200 seconds (within 12 hours), with a default value of 30.
         /// </summary>
         [JsonProperty("VisibilityTimeout")]
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
-        /// Maximum message length. Value range: 1024–1048576 bytes (i.e., 1–1024 KB). Default value: 65536.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum message length. Range: 1,024-1,048,576 bytes (i.e., 1K-1,024K). Default value is 65,536.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// Maximum time range during which a message can be rewound in the queue, which ranges from 0 to 43,200 seconds. 0 indicates that message rewind is disabled.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum message backtracking time for backtracking queues, range 0-43,200 seconds. 0 means message backtracking is not enabled.
         /// </summary>
         [JsonProperty("RewindSeconds")]
         public ulong? RewindSeconds{ get; set; }
 
         /// <summary>
-        /// Queue creation time. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Creation time of queues. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Time when the queue attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The last time the queue attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
-        /// Total number of messages in `Active` status (i.e., unconsumed) in the queue, which is an approximate value.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of active messages (not being consumed) in queue, an approximate value.
         /// </summary>
         [JsonProperty("ActiveMsgNum")]
         public ulong? ActiveMsgNum{ get; set; }
 
         /// <summary>
-        /// Total number of messages in `Inactive` status (i.e., being consumed) in the queue, which is an approximate value.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Total number of inactive messages (being consumed) in queue, an approximate value.
         /// </summary>
         [JsonProperty("InactiveMsgNum")]
         public ulong? InactiveMsgNum{ get; set; }
@@ -198,42 +186,36 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Tenant ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
-        /// Namespace name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the namespace name.
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// The maximum number of unacknowledged messages.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Maximum Number of Unacknowledged Messages
         /// </summary>
         [JsonProperty("MaxUnackedMsgNum")]
         public long? MaxUnackedMsgNum{ get; set; }
 
         /// <summary>
-        /// Maximum size of heaped messages in bytes.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Maximum Message Backlog Size (bytes)
         /// </summary>
         [JsonProperty("MaxMsgBacklogSize")]
         public long? MaxMsgBacklogSize{ get; set; }
 
         /// <summary>
-        /// Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Queue retrospective storage space. Value range: 1024 MB to 10240 MB. 0 indicates disabled.
         /// </summary>
         [JsonProperty("RetentionSizeInMB")]
         public ulong? RetentionSizeInMB{ get; set; }

@@ -143,6 +143,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("SelectedWarningCodes")]
         public string SelectedWarningCodes{ get; set; }
 
+        /// <summary>
+        /// Whether expired identity documents are permitted to proceed to the liveness detection process. This parameter only takes effect when the document type is Hong Kong Identity Card (HKID).
+        /// true (default value): Expired HKID is allowed to enter the liveness process.
+        /// false : Expired HKID is rejected and cannot enter the liveness process.
+        /// </summary>
+        [JsonProperty("AllowExpiredDocument")]
+        public bool? AllowExpiredDocument{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +172,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "LivenessRetryLimit", this.LivenessRetryLimit);
             this.SetParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
             this.SetParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
+            this.SetParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
         }
     }
 }

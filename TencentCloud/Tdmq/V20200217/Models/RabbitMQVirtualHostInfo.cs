@@ -37,63 +37,82 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Vhost description
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Vhost description information.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Vhost tag
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Vhost tags.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// Creation time
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Modification time.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Statistics of vhost overview
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Vhost overview statistics information.
         /// </summary>
         [JsonProperty("VirtualHostStatistics")]
         public RabbitMQVirtualHostStatistics VirtualHostStatistics{ get; set; }
 
         /// <summary>
-        /// 
+        /// Message trace enabling status. true: enabled; false: disabled.
+        /// </summary>
+        [JsonProperty("TraceFlag")]
+        public bool? TraceFlag{ get; set; }
+
+        /// <summary>
+        /// Vhost status, which corresponds to status in the native product console. Valid values: running, partial, stopped, and unknown.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Message backlog count.
         /// </summary>
         [JsonProperty("MessageHeapCount")]
         public long? MessageHeapCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Message input rate.
         /// </summary>
         [JsonProperty("MessageRateIn")]
         public float? MessageRateIn{ get; set; }
 
         /// <summary>
-        /// 
+        /// Message output rate.
         /// </summary>
         [JsonProperty("MessageRateOut")]
         public float? MessageRateOut{ get; set; }
+
+        /// <summary>
+        /// Whether an image queue policy exists. true: Exists; false: Does not exist.
+        /// </summary>
+        [JsonProperty("MirrorQueuePolicyFlag")]
+        public bool? MirrorQueuePolicyFlag{ get; set; }
+
+        /// <summary>
+        /// Creation timestamp.
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// Modification timestamp.
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
 
 
         /// <summary>
@@ -108,10 +127,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+            this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
             this.SetParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);
             this.SetParamSimple(map, prefix + "MessageRateOut", this.MessageRateOut);
+            this.SetParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

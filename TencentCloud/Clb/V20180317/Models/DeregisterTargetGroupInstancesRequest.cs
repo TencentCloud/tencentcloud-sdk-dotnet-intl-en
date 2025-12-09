@@ -31,7 +31,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// Information of server to be unbound
+        /// Specifies information on server to be unbound. supports bulk removal with the largest quantity of 20 per operation.
+        /// Port is a required item in this api.
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

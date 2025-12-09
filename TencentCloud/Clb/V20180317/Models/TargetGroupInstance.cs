@@ -31,19 +31,21 @@ namespace TencentCloud.Clb.V20180317.Models
         public string BindIP{ get; set; }
 
         /// <summary>
-        /// Port of target group instance
+        /// Port of target group instance. this field is not supported for full listen target groups.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Weight of target group instance
+        /// Weight of a target group instance
+        /// Specifies that the Weight must be configured for a v2 target group. when calling the CreateTargetGroup API for target group creation, this parameter is used in combination with the Weight parameter in the create api, and one of them is required.
+        /// Valid values: 0-100.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// New port of target group instance
+        /// The new port of the target group instance. this field is not supported for full listen target groups.
         /// </summary>
         [JsonProperty("NewPort")]
         public ulong? NewPort{ get; set; }

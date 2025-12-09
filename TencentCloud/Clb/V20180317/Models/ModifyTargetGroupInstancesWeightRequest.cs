@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// Array of servers for which to modify weights
+        /// Array of servers whose weight is to be modified. Port is a required item in this api.
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

@@ -37,9 +37,9 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// CLB instance network type:
-        /// Public: public network; Private: private network.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Network type of the load balancing instance.
+        /// Public: Public network attribute. Private: Private network attribute. for Private network cloud load balancer, bind EIP for Public network access. refer to EIP document.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
@@ -281,33 +281,35 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SniSwitch{ get; set; }
 
         /// <summary>
-        /// Domain name of the CLB instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the domain name of the load balancing instance.
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
         /// <summary>
-        /// Network egress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Specifies the network outbound.
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the attributes of cloud load balancer.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AttributeFlags")]
         public string[] AttributeFlags{ get; set; }
 
         /// <summary>
+        /// Specification type information for load balancing instances <ul><li>clb.c1.small: minimalist specification</li> <li>clb.c2.medium: standard specification</li> <li>clb.c3.small: advanced type 1 specification</li> <li>clb.c3.medium: advanced type 2 specification</li> <li>clb.c4.small: ultra type 1 specification</li> <li>clb.c4.medium: ultra type 2 specification</li> <li>clb.c4.large: ultra type 3 specification</li> <li>clb.c4.xlarge: ultra type 4 specification</li> <li>"" : non-lcu-supported instance</li></ul>.
         /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
 
         /// <summary>
-        /// 
+        /// 0 means non-dedicated instance. 1 means dedicated instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Exclusive")]
         public ulong? Exclusive{ get; set; }

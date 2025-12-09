@@ -26,7 +26,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// The IDs of the bound namespaces cannot be delicate and the namespaces must contain resources
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
@@ -34,7 +34,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// <summary>
         /// Permissions to be bound to a namespace. Enumerated values: `consume`, `produce`, and `consume, produce`. This parameter cannot be left empty.
         /// 
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Permissions")]
         public string[] Permissions{ get; set; }

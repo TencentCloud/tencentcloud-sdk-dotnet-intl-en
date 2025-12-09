@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -44,14 +44,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// User description
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tag, which defines a user's permission scope for accessing RabbitMQ Managementu200d.
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
@@ -74,6 +72,32 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// Maximum number of available connections per user.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxConnections")]
+        public long? MaxConnections{ get; set; }
+
+        /// <summary>
+        /// Maximum number of available channels per user.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxChannels")]
+        public long? MaxChannels{ get; set; }
+
+        /// <summary>
+        /// Creation timestamp.
+        /// </summary>
+        [JsonProperty("CreateTs")]
+        public ulong? CreateTs{ get; set; }
+
+        /// <summary>
+        /// Modification timestamp.
+        /// </summary>
+        [JsonProperty("ModifyTs")]
+        public ulong? ModifyTs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +112,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
+            this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+            this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
+            this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
         }
     }
 }

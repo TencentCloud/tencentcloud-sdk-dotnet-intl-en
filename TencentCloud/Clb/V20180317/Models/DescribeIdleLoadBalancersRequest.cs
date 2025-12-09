@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// CLB instance region
+        /// The Region of the cloud load balancer can be obtained through the `RegionSet.Region` field in the API return value of [DescribeRegions](https://www.tencentcloud.comom/document/product/1596/77930?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LoadBalancerRegion")]
         public string LoadBalancerRegion{ get; set; }

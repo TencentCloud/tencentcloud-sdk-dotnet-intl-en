@@ -31,43 +31,37 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Specifies the ID of listener to be bound
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// ID of the listener bound to the configuration
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Specifies the domain name to be bound
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Domain name bound to the configuration
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Sets the bound rule.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Rule bound to the configuration
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// Listener name.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Listener name
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// Listener protocol.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Listener protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener port.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Listener port
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -81,7 +75,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Configuration ID.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }

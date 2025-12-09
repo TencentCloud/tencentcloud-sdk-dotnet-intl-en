@@ -61,13 +61,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisResult[] Output{ get; set; }
 
         /// <summary>
-        /// Task execution start time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+        /// Task execution start time in ISO date and time format.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task execution completion time in [ISO date and time format](https://www.tencentcloud.comom/document/product/862/37710?from_cn_redirect=1#52).
+        /// Task execution completion time in ISO date and time format.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? VisibilityTimeout{ get; set; }
 
         /// <summary>
-        /// Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+        /// Maximum message length. value range: 1024-1048576 Byte (1-1024K). default value: 1048576.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }

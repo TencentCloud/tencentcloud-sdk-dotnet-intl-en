@@ -25,13 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Enable or disable authentication.True: Enable;False: Disable.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether to turn on or off authentication.
+        /// True: enable.
+        /// False: disabled.
+        /// Disabled by default.
         /// </summary>
         [JsonProperty("OAuthEnable")]
         public bool? OAuthEnable{ get; set; }
 
         /// <summary>
-        /// Whether to reject or allow the request if all IAPs fail. BYPASS: Allow;REJECT: Reject.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Deny requests or allow when all iaps fail.
+        /// BYPASS: specifies the bypass.
+        /// REJECT.
+        /// Defaults to BYPASS.
         /// </summary>
         [JsonProperty("OAuthFailureStatus")]
         public string OAuthFailureStatus{ get; set; }

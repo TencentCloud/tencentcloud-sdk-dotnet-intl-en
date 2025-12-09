@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Listener name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Listener name.
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// List of forwarding rules of the listener
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Rules")]
         public RuleHealth[] Rules{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+        /// Namespace name, which can contain 3 - 64 letters, digits, hyphens, and underscores.
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days. This parameter is disused.
+        /// Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds - 15 days. This parameter is disused.
         /// </summary>
         [JsonProperty("Ttl")]
         public ulong? Ttl{ get; set; }
@@ -65,7 +65,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Internal access point address
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternalEndpoint")]
         public string InternalEndpoint{ get; set; }

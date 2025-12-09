@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigType{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default: 0.
+        /// Pagination offset. defaults to 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page. Default: 20.
+        /// Number of results. default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -49,15 +49,23 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// Configuration ID.
+        /// Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("UconfigIds")]
         public string[] UconfigIds{ get; set; }
 
         /// <summary>
-        /// The filters are:
-        /// <li> loadbalancer-id - String - Required: no - (filter) CLB instance ID, such as "lb-12345678". </li>
-        /// <li> vip - String - Required: no - (filter) CLB instance VIP, such as "1.1.1.1" and "2204::22:3". </li>
+        /// Filter criteria as follows:.
+        /// - loadbalancer-id
+        /// Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
+        /// Type: String.
+        /// Required: No
+        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+        /// - vip
+        /// Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
+        /// Type: String.
+        /// Required: No
+        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

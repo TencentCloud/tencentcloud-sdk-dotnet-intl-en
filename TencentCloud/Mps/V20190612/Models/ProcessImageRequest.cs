@@ -44,7 +44,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Output path, which can be a relative or an absolute path.
-        /// The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.comom/document/product/862/37039?from_cn_redirect=1).
+        /// The path must end with `.{format}`. For details, please refer to the [Filename Variable](https://www.tencentcloud.com/document/product/1041/33495).
         /// **Relative path example:**
         /// <Li>`Filename_{Variablename}.{format}`.</li>
         /// <Li>`Filename.{format}`.</li>
@@ -56,6 +56,18 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("OutputPath")]
         public string OutputPath{ get; set; }
+
+        /// <summary>
+        /// Unique identifier of the image processing template.
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
+        /// <summary>
+        /// Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
         /// Image processing parameter.
@@ -73,6 +85,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputDir", this.OutputDir);
             this.SetParamSimple(map, prefix + "OutputPath", this.OutputPath);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
         }
     }

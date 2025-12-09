@@ -25,8 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Instance price.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Describes the instance pricing.
         /// </summary>
         [JsonProperty("InstancePrice")]
         public ItemPrice InstancePrice{ get; set; }

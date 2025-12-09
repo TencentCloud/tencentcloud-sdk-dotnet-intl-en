@@ -84,6 +84,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
+        /// <summary>
+        /// Tag list. valid at that time when parameter IsHostedByKms=1 and the data key is hosted by kms.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -26,65 +26,56 @@ namespace TencentCloud.Tdmq.V20200217.Models
         
         /// <summary>
         /// Topic ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// Topic name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Maximum lifecycle of message in topic. After the period specified by this parameter has elapsed since a message is sent to the topic, the message will be deleted no matter whether it has been successfully pushed to the user. This parameter is measured in seconds and defaulted to one day (86,400 seconds), which cannot be modified.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum lifetime of messages in a topic. After the time specified by this parameter has elapsed since sending to this topic, the message will be deleted whether or not it has been successfully pushed to the user. Measured in seconds and fixed at one day (86,400 seconds). This attribute cannot be modified.
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// Maximum message size, which ranges from 1,024 to 1,048,576 bytes (i.e., 1–1,024 KB). The default value is 65,536.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Maximum message length. value range: 1024-1048576 bytes (1-1024 kb). default value: 1048576.
         /// </summary>
         [JsonProperty("MaxMsgSize")]
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
         /// Number of messages published per second.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// Filtering policy selected when a subscription is created:
-        /// If `filterType` is 1, `FilterTag` will be used for filtering.
-        /// If `filterType` is 2, `BindingKey` will be used for filtering.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Describes the filtering policy selected by users when creating subscriptions.
+        /// FilterType = 1 means when users use Tag filtering with FilterTag.
+        /// FilterType = 2 indicates user use BindingKey for filtering.
         /// </summary>
         [JsonProperty("FilterType")]
         public ulong? FilterType{ get; set; }
 
         /// <summary>
-        /// Topic creation time. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Topic creation time. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Time when the topic attribute is last modified. A Unix timestamp accurate down to the millisecond will be returned.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// The last time the topic attribute was modified. Returns a Unix timestamp, accurate to milliseconds.
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
-        /// Number of current messages in the topic (number of retained messages).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of messages in the current topic (message backlog).
         /// </summary>
         [JsonProperty("MsgCount")]
         public ulong? MsgCount{ get; set; }
@@ -112,31 +103,33 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Tenant ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TenantId")]
         public string TenantId{ get; set; }
 
         /// <summary>
-        /// Namespace name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the namespace name.
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Cluster status. 0: Creating, 1: Normal, 2: Deleting, 3: Deleted, 4: Isolating, 5: Creation failed, 6: Deletion failed
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Valid values: `0` (Pulsar), `1` (RocketMQ).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: Pulsar, 1: RocketMQ
         /// </summary>
         [JsonProperty("BrokerType")]
         public long? BrokerType{ get; set; }
+
+        /// <summary>
+        /// Number of Subscriptions
+        /// </summary>
+        [JsonProperty("SubscriptionCount")]
+        public long? SubscriptionCount{ get; set; }
 
 
         /// <summary>
@@ -160,6 +153,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "BrokerType", this.BrokerType);
+            this.SetParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         }
     }
 }

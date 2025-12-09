@@ -31,14 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string UconfigId{ get; set; }
 
         /// <summary>
-        /// Configuration type.
+        /// Configuration type. available values: CLB (instance dimension configuration), SERVER (service dimension configuration), LOCATION (rule dimension configuration).
         /// </summary>
         [JsonProperty("ConfigType")]
         public string ConfigType{ get; set; }
 
         /// <summary>
-        /// Configuration name.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Configuration name
         /// </summary>
         [JsonProperty("ConfigName")]
         public string ConfigName{ get; set; }
@@ -50,13 +49,15 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigContent{ get; set; }
 
         /// <summary>
-        /// Creates configuration time.
+        /// Specifies the configured creation time.
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// </summary>
         [JsonProperty("CreateTimestamp")]
         public string CreateTimestamp{ get; set; }
 
         /// <summary>
-        /// Modifies configuration time.
+        /// Specifies the modification time of the configuration.
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// </summary>
         [JsonProperty("UpdateTimestamp")]
         public string UpdateTimestamp{ get; set; }

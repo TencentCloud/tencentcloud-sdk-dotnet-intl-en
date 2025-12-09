@@ -28,7 +28,7 @@ namespace TencentCloud.Controlcenter.V20230110
 
        private const string endpoint = "controlcenter.intl.tencentcloudapi.com";
        private const string version = "2023-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,90 @@ namespace TencentCloud.Controlcenter.V20230110
         public BatchApplyAccountBaselinesResponse BatchApplyAccountBaselinesSync(BatchApplyAccountBaselinesRequest req)
         {
             return InternalRequestAsync<BatchApplyAccountBaselinesResponse>(req, "BatchApplyAccountBaselines")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user baseline configuration data.
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="GetAccountFactoryBaselineResponse"/></returns>
+        public Task<GetAccountFactoryBaselineResponse> GetAccountFactoryBaseline(GetAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<GetAccountFactoryBaselineResponse>(req, "GetAccountFactoryBaseline");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user baseline configuration data.
+        /// </summary>
+        /// <param name="req"><see cref="GetAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="GetAccountFactoryBaselineResponse"/></returns>
+        public GetAccountFactoryBaselineResponse GetAccountFactoryBaselineSync(GetAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<GetAccountFactoryBaselineResponse>(req, "GetAccountFactoryBaseline")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain account factory system baseline items.
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
+        /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>
+        public Task<ListAccountFactoryBaselineItemsResponse> ListAccountFactoryBaselineItems(ListAccountFactoryBaselineItemsRequest req)
+        {
+            return InternalRequestAsync<ListAccountFactoryBaselineItemsResponse>(req, "ListAccountFactoryBaselineItems");
+        }
+
+        /// <summary>
+        /// This API is used to obtain account factory system baseline items.
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
+        /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>
+        public ListAccountFactoryBaselineItemsResponse ListAccountFactoryBaselineItemsSync(ListAccountFactoryBaselineItemsRequest req)
+        {
+            return InternalRequestAsync<ListAccountFactoryBaselineItemsResponse>(req, "ListAccountFactoryBaselineItems")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the application history of a certain baseline item.
+        /// </summary>
+        /// <param name="req"><see cref="ListDeployStepTasksRequest"/></param>
+        /// <returns><see cref="ListDeployStepTasksResponse"/></returns>
+        public Task<ListDeployStepTasksResponse> ListDeployStepTasks(ListDeployStepTasksRequest req)
+        {
+            return InternalRequestAsync<ListDeployStepTasksResponse>(req, "ListDeployStepTasks");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the application history of a certain baseline item.
+        /// </summary>
+        /// <param name="req"><see cref="ListDeployStepTasksRequest"/></param>
+        /// <returns><see cref="ListDeployStepTasksResponse"/></returns>
+        public ListDeployStepTasksResponse ListDeployStepTasksSync(ListDeployStepTasksRequest req)
+        {
+            return InternalRequestAsync<ListDeployStepTasksResponse>(req, "ListDeployStepTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the current baseline item configuration of a user. The baseline configuration will be overwritten with the current configuration. When adding new baseline items, the newly-added baseline configuration needs to be added to the existing configuration. When deleting baseline items, the deleted baseline configuration needs to be removed from the existing configuration, then save the latest baseline configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="UpdateAccountFactoryBaselineResponse"/></returns>
+        public Task<UpdateAccountFactoryBaselineResponse> UpdateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<UpdateAccountFactoryBaselineResponse>(req, "UpdateAccountFactoryBaseline");
+        }
+
+        /// <summary>
+        /// This API is used to update the current baseline item configuration of a user. The baseline configuration will be overwritten with the current configuration. When adding new baseline items, the newly-added baseline configuration needs to be added to the existing configuration. When deleting baseline items, the deleted baseline configuration needs to be removed from the existing configuration, then save the latest baseline configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAccountFactoryBaselineRequest"/></param>
+        /// <returns><see cref="UpdateAccountFactoryBaselineResponse"/></returns>
+        public UpdateAccountFactoryBaselineResponse UpdateAccountFactoryBaselineSync(UpdateAccountFactoryBaselineRequest req)
+        {
+            return InternalRequestAsync<UpdateAccountFactoryBaselineResponse>(req, "UpdateAccountFactoryBaseline")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

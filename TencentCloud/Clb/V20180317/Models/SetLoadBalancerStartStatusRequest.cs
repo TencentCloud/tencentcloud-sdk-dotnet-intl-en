@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// CLB instance ID.
+        /// ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }

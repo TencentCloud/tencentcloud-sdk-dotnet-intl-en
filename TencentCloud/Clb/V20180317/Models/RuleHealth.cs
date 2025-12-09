@@ -45,8 +45,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Health status of the real server bound to this rule
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Advanced routing rule ID.
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
+
+        /// <summary>
+        /// Indicates the health check status of the backend service bound to this rule.
         /// </summary>
         [JsonProperty("Targets")]
         public TargetHealth[] Targets{ get; set; }
@@ -60,6 +65,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
         }
     }

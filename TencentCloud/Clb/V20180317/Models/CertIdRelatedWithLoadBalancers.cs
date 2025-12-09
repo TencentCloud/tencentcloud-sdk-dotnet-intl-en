@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// List of CLB instances associated with certificate
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of CLB instances associated with the certificate
         /// </summary>
         [JsonProperty("LoadBalancers")]
         public LoadBalancer[] LoadBalancers{ get; set; }

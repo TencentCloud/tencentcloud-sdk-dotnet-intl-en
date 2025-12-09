@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Maximum size of the file uploaded for streaming via a post request. Takes effect only when Switch is on. Range: 1 MB - 800 MB (bytes).
+        /// Specifies the maximum limit for file streaming transmission in POST request upload. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

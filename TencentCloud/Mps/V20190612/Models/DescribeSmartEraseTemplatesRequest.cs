@@ -51,6 +51,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// Erasing type filtering conditions for the smart erasing template.
+        /// - subtitle: subtitle removal.
+        /// - watermark: watermark removal.
+        /// - privacy: privacy protection.
+        /// </summary>
+        [JsonProperty("EraseType")]
+        public string EraseType{ get; set; }
+
+        /// <summary>
         /// Filtering condition for the smart erasing template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
@@ -66,6 +75,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "EraseType", this.EraseType);
             this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }

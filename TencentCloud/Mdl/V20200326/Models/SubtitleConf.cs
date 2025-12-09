@@ -43,13 +43,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string CaptionSource{ get; set; }
 
         /// <summary>
-        /// Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `.
+        /// Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
         /// </summary>
         [JsonProperty("ContentType")]
         public ulong? ContentType{ get; set; }
 
         /// <summary>
-        /// Output mode: 1 Burn in, 2 Embedded. Support `2` when CaptionSource selects `INPUT`. Support `1` when CaptionSource selects `ANALYSIS `.
+        /// Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public SubtitleFontConf FontStyle{ get; set; }
 
         /// <summary>
-        /// There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `.
+        /// There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
         /// </summary>
         [JsonProperty("StateEffectMode")]
         public string StateEffectMode{ get; set; }
@@ -85,6 +85,30 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         [JsonProperty("SteadyStateDelayedTime")]
         public ulong? SteadyStateDelayedTime{ get; set; }
+
+        /// <summary>
+        /// Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+        /// </summary>
+        [JsonProperty("AudioSelectorName")]
+        public string AudioSelectorName{ get; set; }
+
+        /// <summary>
+        /// Format configuration for speech recognition output on WebVTT.
+        /// </summary>
+        [JsonProperty("WebVTTFontStyle")]
+        public WebVTTFontStyle WebVTTFontStyle{ get; set; }
+
+        /// <summary>
+        /// Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+        /// </summary>
+        [JsonProperty("LanguageCode")]
+        public string LanguageCode{ get; set; }
+
+        /// <summary>
+        /// Language description, less than 100 characters in length.
+        /// </summary>
+        [JsonProperty("LanguageDescription")]
+        public string LanguageDescription{ get; set; }
 
 
         /// <summary>
@@ -102,6 +126,10 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "FontStyle.", this.FontStyle);
             this.SetParamSimple(map, prefix + "StateEffectMode", this.StateEffectMode);
             this.SetParamSimple(map, prefix + "SteadyStateDelayedTime", this.SteadyStateDelayedTime);
+            this.SetParamSimple(map, prefix + "AudioSelectorName", this.AudioSelectorName);
+            this.SetParamObj(map, prefix + "WebVTTFontStyle.", this.WebVTTFontStyle);
+            this.SetParamSimple(map, prefix + "LanguageCode", this.LanguageCode);
+            this.SetParamSimple(map, prefix + "LanguageDescription", this.LanguageDescription);
         }
     }
 }

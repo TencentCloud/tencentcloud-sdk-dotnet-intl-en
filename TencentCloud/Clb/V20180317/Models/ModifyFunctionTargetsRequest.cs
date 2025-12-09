@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// The backend cloud functions to modify
+        /// Specifies the backend SCF service list to modify. only Event function type is supported.
         /// </summary>
         [JsonProperty("FunctionTargets")]
         public FunctionTarget[] FunctionTargets{ get; set; }

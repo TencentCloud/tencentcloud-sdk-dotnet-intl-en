@@ -55,13 +55,17 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public Filter Filters{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specifies the sorting field.
+        /// MessageHeapCount - specifies the message backlog count.
+        /// MessageRateInOut - total production and consumption rate.
+        /// MessageRateIn - production rate.
+        /// MessageRateOut - consumption rate.
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sorting order. Valid values: ascend and descend.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

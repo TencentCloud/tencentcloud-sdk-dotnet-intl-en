@@ -33,8 +33,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FollowOrigin{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum amount of time (in seconds). Value range: 0 to 315360000.
-        /// Note: The value `0` means not to cache.
+        /// MaxAge specifies the time setting in seconds. value range: 0–315360000.
+        /// Specifies the time when the cache is disabled if set to 0.
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public long? MaxAgeTime{ get; set; }

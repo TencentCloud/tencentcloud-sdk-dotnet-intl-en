@@ -44,13 +44,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Forward{ get; set; }
 
         /// <summary>
-        /// CLB instance name.
+        /// Specifies the name of the clb instance. fuzzy query is supported.
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// The domain name that Tencent Cloud assigned for the CLB instance.
+        /// Tencent cloud assigns a domain name to the cloud load balancer instance. fuzzy query is supported.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -86,25 +86,31 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.
+        /// Sorting parameter. supports the following fields:.
+        /// - LoadBalancerName
+        /// - CreateTime
+        /// - Domain
+        /// - LoadBalancerType
+        /// 
+        /// Defaults to CreateTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 1: reverse; 0: sequential. Default value: reverse by creation time |
+        /// 1 for descending, 0 for ascending, defaults to 1, sorted by creation time in descending order.
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// Search field which fuzzy matches name, domain name, or VIP.
+        /// Specifies the fuzzy search field for fuzzy matching the name, domain name, VIP address, or ID of a cloud load balancer instance.
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API.
+        /// Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -116,14 +122,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? WithRs{ get; set; }
 
         /// <summary>
-        /// VPC where a CLB instance resides, such as vpc-bhqkbhdx.
-        /// Basic network does not support queries by VpcId.
+        /// Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+        /// Searches for cloud load balancer of basic network type. allows input '0'.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Security group ID, e.g., `sg-m1cc****`.
+        /// Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
@@ -140,6 +146,13 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Specifies the expanded fields to return. not specified, expanded fields do not return by default. supported expanded fields are as follows:.
+        /// <Li>TargetCount: specifies the number of real servers bound to it.</li>.
+        /// </summary>
+        [JsonProperty("AdditionalFields")]
+        public string[] AdditionalFields{ get; set; }
 
 
         /// <summary>
@@ -166,6 +179,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "AdditionalFields.", this.AdditionalFields);
         }
     }
 }

@@ -37,10 +37,41 @@ namespace TencentCloud.Clb.V20180317.Models
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// New default port of target group
+        /// The new default port of the target group. this parameter is not supported for full listen target groups.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
+
+        /// <summary>
+        /// Scheduling algorithm. this parameter is valid only for target groups of the new version V2 when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
+        /// <ur><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li><li>default is WRR.</li></ur>.
+        /// </summary>
+        [JsonProperty("ScheduleAlgorithm")]
+        public string ScheduleAlgorithm{ get; set; }
+
+        /// <summary>
+        /// Health check details.
+        /// </summary>
+        [JsonProperty("HealthCheck")]
+        public TargetGroupHealthCheck HealthCheck{ get; set; }
+
+        /// <summary>
+        /// Default Weight for backend service. among them: <ul><li>value ranges from 0 to 100.</li><li>after setting this value, when adding a backend service to the target group, if the backend service does not set Weight separately, use the default Weight here.</li><li>Weight parameter settings not supported for v1 target group type.</li></ul>.
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable the persistent connection feature. this parameter applies only to HTTP and HTTPS target groups. true: disable; false: enable. this feature is off by default.
+        /// </summary>
+        [JsonProperty("KeepaliveEnable")]
+        public bool? KeepaliveEnable{ get; set; }
+
+        /// <summary>
+        /// Specifies the session persistence time in seconds. value range: 30-3600. default: 0 (disabled). this parameter is unsupported for TCP/UDP target groups.
+        /// </summary>
+        [JsonProperty("SessionExpireTime")]
+        public ulong? SessionExpireTime{ get; set; }
 
 
         /// <summary>
@@ -51,6 +82,11 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
             this.SetParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
+            this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         }
     }
 }

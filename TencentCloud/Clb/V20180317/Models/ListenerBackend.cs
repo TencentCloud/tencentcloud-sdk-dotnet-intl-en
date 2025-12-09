@@ -44,21 +44,18 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Information of rules under a listener (applicable only to HTTP/HTTPS listeners)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Rules")]
         public RuleTargets[] Rules{ get; set; }
 
         /// <summary>
-        /// List of real servers bound to a listener (applicable only to TCP/UDP/TCP_SSL listeners)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of real servers bound to the listener (applicable only to TCP/UDP/TCP_SSL listener)
         /// </summary>
         [JsonProperty("Targets")]
         public Backend[] Targets{ get; set; }
 
         /// <summary>
-        /// Ending port in port range if port range is supported; 0 if port range is not supported
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// End port in a port range if port range is supported, or 0 if port range is not supported
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }

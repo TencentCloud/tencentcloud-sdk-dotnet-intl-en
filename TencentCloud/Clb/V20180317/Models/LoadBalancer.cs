@@ -37,8 +37,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// CLB instance network type:
-        /// OPEN: public network; INTERNAL: private network.
+        /// Network type of the load balancing instance.
+        /// OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
@@ -50,36 +50,34 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Forward{ get; set; }
 
         /// <summary>
-        /// Domain name of the CLB instance. This field is provided only for classic public network CLB instances and domain name-based CLB instances. It is being gradually phased out, so use LoadBalancerDomain instead.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The domain name of the cloud load balancer instance. this field is only provided for public network classic and domain name-based load balancing instances. it is being gradually phased out. we recommend using LoadBalancerDomain instead.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
         /// List of VIPs of a CLB instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoadBalancerVips")]
         public string[] LoadBalancerVips{ get; set; }
 
         /// <summary>
-        /// CLB instance status, including:
-        /// 0: creating; 1: running.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the state of the load balancing instance, including.
+        /// 0: creating. 1: normal operation.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// CLB instance creation time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLB instance creation time
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last status change time of a CLB instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last status transition time of the CLB instance.
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// </summary>
         [JsonProperty("StatusTime")]
         public string StatusTime{ get; set; }
@@ -92,28 +90,24 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Protective CLB identifier. Value range: 1 (protective), 0 (non-protective).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
         /// </summary>
         [JsonProperty("OpenBgp")]
         public ulong? OpenBgp{ get; set; }
 
         /// <summary>
-        /// SNAT is enabled for all private network classic CLB created before December 2016.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether SNAT is enabled. for traditional private network clbs before december 2016, SNAT was enabled.
         /// </summary>
         [JsonProperty("Snat")]
         public bool? Snat{ get; set; }
 
         /// <summary>
-        /// 0: not isolated; 1: isolated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether isolated. 0 means not isolated. 1 means isolated.
         /// </summary>
         [JsonProperty("Isolation")]
         public ulong? Isolation{ get; set; }
@@ -127,56 +121,55 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Log{ get; set; }
 
         /// <summary>
-        /// Subnet where a CLB instance resides (meaningful only for private network VPC CLB)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// CLB instance tag information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Security group of a CLB instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Security group of the CLB instance
         /// </summary>
         [JsonProperty("SecureGroups")]
         public string[] SecureGroups{ get; set; }
 
         /// <summary>
-        /// Basic information of a backend server bound to a CLB instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Basic information of real servers bound to the CLB instance
         /// </summary>
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
         /// <summary>
-        /// Anycast CLB publishing region. For non-anycast CLB, this field returns an empty string.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
         /// </summary>
         [JsonProperty("AnycastZone")]
         public string AnycastZone{ get; set; }
 
         /// <summary>
-        /// IP version. Valid values: ipv4, ipv6
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// IP Version, ipv4 | ipv6
         /// </summary>
         [JsonProperty("AddressIPVersion")]
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// VPC ID in a numeric form
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public ulong? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// ISP for the IP address of the CLB instance. Valid values: BGP, CMCC, CTCC, CUCC.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the ISP of the load balancer IP address.
+        /// 
+        /// -BGP (multi-line).
+        /// - CMCC: CMCC single line network.
+        /// -CTCC: ctcc single-line.
+        /// - CUCC: china unicom single-line.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VipIsp")]
         public string VipIsp{ get; set; }
@@ -196,7 +189,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public ZoneInfo[] BackupZoneSet{ get; set; }
 
         /// <summary>
-        /// CLB instance isolation time
+        /// Specifies the isolation time of the cloud load balancer instance.
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolatedTime")]
@@ -231,15 +225,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public LBChargePrepaid PrepaidAttributes{ get; set; }
 
         /// <summary>
-        /// Logset ID of CLB Log Service (CLS)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log set ID of Cloud Log Service (CLS) for CLB
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// Log topic ID of CLB Log Service (CLS)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log topic ID of Cloud Log Service (CLS) for CLB
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
@@ -260,75 +252,70 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Whether an Anti-DDoS Pro instance can be bound
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDDos")]
         public bool? IsDDos{ get; set; }
 
         /// <summary>
-        /// Custom configuration ID at the CLB instance level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom configuration IDs of CLB instances
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }
 
         /// <summary>
-        /// Whether a real server opens the traffic from a CLB instance to the internet
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether the real server allows traffic from CLB
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// Private network dedicated cluster
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Exclusive cluster on the private network
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
-        /// This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the field is meaningful when the IP address version is ipv6. valid values: ipv6Nat64 | ipv6FullChain.
+        /// IPv6Nat64: specifies a load balancer based on Nat64 IPv6 transition technology.
+        /// IPv6FullChain: specifies a cloud load balancer implemented based on ipv6 single-stack technology.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IPv6Mode")]
         public string IPv6Mode{ get; set; }
 
         /// <summary>
-        /// Whether to enable SnatPro.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether SnatPro is enabled.
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// `SnatIp` list after SnatPro load balancing is enabled.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Enables the SnatIp list after turning on SnatPro load balancing.
         /// </summary>
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
         /// <summary>
-        /// Specification of the LCU-supported instance. <ul><li> clb.c2.medium: Standard </li><li> clb.c3.small: Advanced 1 </li><li> clb.c3.medium: Advanced 2 </li><li> clb.c4.small: Super Large 1 </li><li> clb.c4.medium: Super Large 2 </li><li> clb.c4.large: Super Large 3 </li><li> clb.c4.xlarge: Super Large 4 </li><li>null: Shared instance</li></ul>Note: This field may return null, indicating that no valid values can be obtained.
+        /// Performance capacity specification. <ul><li> clb.c1.small: minimalist specification </li> <li> clb.c2.medium: standard specification </li> <li> clb.c3.small: advanced type 1 specification </li> <li> clb.c3.medium: advanced type 2 specification </li> <li> clb.c4.small: super type 1 specification </li> <li> clb.c4.medium: super type 2 specification </li> <li> clb.c4.large: super type 3 specification </li> <li> clb.c4.xlarge: super type 4 specification </li> <li>"" : non-performance capacity instance</li></ul>.
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }
 
         /// <summary>
         /// Whether VIP is blocked
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsBlock")]
         public bool? IsBlock{ get; set; }
 
         /// <summary>
-        /// Time blocked or unblocked
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifies the blocking or unblocking time.
+        /// Format: YYYY-MM-DD HH:MM:ss.
         /// </summary>
         [JsonProperty("IsBlockTime")]
         public string IsBlockTime{ get; set; }
 
         /// <summary>
-        /// Whether the IP type is the local BGP
+        /// Whether the IP type is Local BGP
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
@@ -341,8 +328,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterTag{ get; set; }
 
         /// <summary>
-        /// If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
         /// </summary>
         [JsonProperty("MixIpTarget")]
         public bool? MixIpTarget{ get; set; }
@@ -362,15 +348,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string NfvInfo{ get; set; }
 
         /// <summary>
-        /// Health check logset ID of CLB CLS
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Health check log set ID of Cloud Log Service (CLS) for CLB
         /// </summary>
         [JsonProperty("HealthLogSetId")]
         public string HealthLogSetId{ get; set; }
 
         /// <summary>
-        /// Health check log topic ID of CLB CLS
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Health check log topic ID of Cloud Log Service (CLS) for CLB
         /// </summary>
         [JsonProperty("HealthLogTopicId")]
         public string HealthLogTopicId{ get; set; }
@@ -383,31 +367,62 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// CLB attribute
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Attributes of cloud load balancer, input an array of strings to determine whether it is enabled.
+        /// DeleteProtect: specifies deletion protection. once enabled, it prevents the cloud load balancer from being accidentally deleted. 
+        /// UserInVisible: invisible to users, controls load balancing visibility to users. 
+        /// BlockStatus: specifies the blockage status, used to limit certain operations or traffic for cloud load balancer. 
+        /// NoLBNat: disables the NAT feature of cloud load balancer for direct forwarding of traffic in specific scenarios. 
+        /// BanStatus: specifies the blocking status for suspending the clb service or restricting access. 
+        /// ShiftupFlag: specifies the upgrade flag used to identify if the cloud load balancer requires a configuration upgrade or performance improvement. 
+        /// Specifies the stopped status. once enabled, the cloud load balancer suspends service. 
+        /// NoVpcGw: specifies not to use VPC gateway to bypass the gateway for direct traffic handling. 
+        /// SgInTgw: specifies the security group in TGW (Transit Gateway) involving network security policy configuration. 
+        /// SharedLimitFlag: specifies the shared limit flag used to control the resource constraints of cloud load balancer. 
+        /// WafFlag: specifies the Web application firewall (WAF) flag. enabled to enable WAF protection. 
+        /// IsDomainCLB: indicates whether the cloud load balancer is domain name-based for traffic distribution. 
+        /// IPv6Snat: IPv6 source address translation (Snat), used for source address processing in IPv6 networks. 
+        /// HideDomain. specifies whether to hide the domain name for privacy protection or to avoid exposing it in specific scenarios. 
+        /// JumboFrame: specifies giant frame support. once enabled, it supports larger data frames to improve network efficiency. 
+        /// NoLBNatL4IPdc: specifies layer 4 IP direct connection without NAT, used for direct forwarding of IP traffic in layer 4 load balancing. 
+        /// VpcGwL3Service: specifies the VPC gateway layer-3 Service, which involves the gateway feature of the layer-3 network. 
+        /// Ipv62Flag: specifies the Ipv6 expansion Flag for specific feature support. 
+        /// Ipv62ExclusiveFlag: specifies the Ipv6 exclusive flag used for exclusive Ipv6 traffic processing. 
+        /// BgpPro: specifies BGP Pro support. 
+        /// ToaClean: TOA (TCP Option Address) cleanup. clears Address information in TCP options. 
         /// </summary>
         [JsonProperty("AttributeFlags")]
         public string[] AttributeFlags{ get; set; }
 
         /// <summary>
-        /// Domain name of the CLB instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the domain name of the load balancing instance.
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }
 
         /// <summary>
-        /// Network egress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Specifies the network outbound.
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether the instance type is dedicated. 1: dedicated instance. 0: non-dedicated instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Exclusive")]
         public ulong? Exclusive{ get; set; }
+
+        /// <summary>
+        /// Specifies the number of bound backend services.
+        /// </summary>
+        [JsonProperty("TargetCount")]
+        public ulong? TargetCount{ get; set; }
+
+        /// <summary>
+        /// Specifies the Endpoint id associated with the clb instance.
+        /// </summary>
+        [JsonProperty("AssociateEndpoint")]
+        public string AssociateEndpoint{ get; set; }
 
 
         /// <summary>
@@ -471,6 +486,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
             this.SetParamSimple(map, prefix + "Egress", this.Egress);
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
+            this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
+            this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
         }
     }
 }

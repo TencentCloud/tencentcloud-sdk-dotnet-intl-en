@@ -25,7 +25,11 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Live streaming analysis subtask result. Valid values:
+        /// <li>Live streaming video splitting.</li>
+        /// <li>Live streaming highlight.</li>
+        /// <li>Live streaming summary.</li>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResultSet")]
         public LiveStreamAiAnalysisResultItem[] ResultSet{ get; set; }

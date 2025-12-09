@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// List of resources
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource list.
         /// </summary>
         [JsonProperty("ResourceSet")]
         public Resource[] ResourceSet{ get; set; }
@@ -75,8 +74,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? EdgeZone{ get; set; }
 
         /// <summary>
-        /// Network egress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Specifies the network outbound.
         /// </summary>
         [JsonProperty("Egress")]
         public string Egress{ get; set; }

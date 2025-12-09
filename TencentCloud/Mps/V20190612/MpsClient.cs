@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1237";
+       private const string sdkVersion = "SDK_NET_3.0.1244";
 
         /// <summary>
         /// Client constructor.
@@ -182,6 +182,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to create a user-defined digital watermark template with an upper limit of 1000.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public Task<CreateBlindWatermarkTemplateResponse> CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a user-defined digital watermark template with an upper limit of 1000.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplateSync(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
@@ -262,6 +283,27 @@ namespace TencentCloud.Mps.V20190612
         public CreatePersonSampleResponse CreatePersonSampleSync(CreatePersonSampleRequest req)
         {
             return InternalRequestAsync<CreatePersonSampleResponse>(req, "CreatePersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageTemplateResponse"/></returns>
+        public Task<CreateProcessImageTemplateResponse> CreateProcessImageTemplate(CreateProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="CreateProcessImageTemplateResponse"/></returns>
+        public CreateProcessImageTemplateResponse CreateProcessImageTemplateSync(CreateProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -639,6 +681,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to delete a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public Task<DeleteBlindWatermarkTemplateResponse> DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplateSync(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom content moderation template.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
@@ -719,6 +782,27 @@ namespace TencentCloud.Mps.V20190612
         public DeletePersonSampleResponse DeletePersonSampleSync(DeletePersonSampleRequest req)
         {
             return InternalRequestAsync<DeletePersonSampleResponse>(req, "DeletePersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageTemplateResponse"/></returns>
+        public Task<DeleteProcessImageTemplateResponse> DeleteProcessImageTemplate(DeleteProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageTemplateResponse>(req, "DeleteProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteProcessImageTemplateResponse"/></returns>
+        public DeleteProcessImageTemplateResponse DeleteProcessImageTemplateSync(DeleteProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteProcessImageTemplateResponse>(req, "DeleteProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1080,6 +1164,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query a user-defined digital watermark template, and the pagination query is supported based on conditions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public Task<DescribeBlindWatermarkTemplatesResponse> DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to query a user-defined digital watermark template, and the pagination query is supported based on conditions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplatesSync(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1202,6 +1307,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribePersonSamplesResponse DescribePersonSamplesSync(DescribePersonSamplesRequest req)
         {
             return InternalRequestAsync<DescribePersonSamplesResponse>(req, "DescribePersonSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of image processing templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageTemplatesResponse"/></returns>
+        public Task<DescribeProcessImageTemplatesResponse> DescribeProcessImageTemplates(DescribeProcessImageTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageTemplatesResponse>(req, "DescribeProcessImageTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of image processing templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProcessImageTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeProcessImageTemplatesResponse"/></returns>
+        public DescribeProcessImageTemplatesResponse DescribeProcessImageTemplatesSync(DescribeProcessImageTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeProcessImageTemplatesResponse>(req, "DescribeProcessImageTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1633,6 +1759,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public Task<ExtractBlindWatermarkResponse> ExtractBlindWatermark(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark");
+        }
+
+        /// <summary>
+        /// This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public ExtractBlindWatermarkResponse ExtractBlindWatermarkSync(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to manage initiated tasks.
         /// </summary>
         /// <param name="req"><see cref="ManageTaskRequest"/></param>
@@ -1763,6 +1910,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public Task<ModifyBlindWatermarkTemplateResponse> ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplateSync(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a custom content moderation template.
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
@@ -1843,6 +2011,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifyPersonSampleResponse ModifyPersonSampleSync(ModifyPersonSampleRequest req)
         {
             return InternalRequestAsync<ModifyPersonSampleResponse>(req, "ModifyPersonSample")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageTemplateResponse"/></returns>
+        public Task<ModifyProcessImageTemplateResponse> ModifyProcessImageTemplate(ModifyProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageTemplateResponse>(req, "ModifyProcessImageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify an image processing template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProcessImageTemplateRequest"/></param>
+        /// <returns><see cref="ModifyProcessImageTemplateResponse"/></returns>
+        public ModifyProcessImageTemplateResponse ModifyProcessImageTemplateSync(ModifyProcessImageTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyProcessImageTemplateResponse>(req, "ModifyProcessImageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

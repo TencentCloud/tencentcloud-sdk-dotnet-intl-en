@@ -31,8 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of CLB instance IDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLB instance ID list
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

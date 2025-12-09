@@ -25,7 +25,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Query condition filter
+        /// Query condition filter. supported query conditions are as follows:.
+        /// Instance ids - specifies the instance ids.
+        /// Instance name - specifies the instance name.
+        /// Status - specifies the instance status.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

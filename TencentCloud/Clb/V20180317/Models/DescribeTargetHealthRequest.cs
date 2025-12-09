@@ -30,6 +30,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
+        /// <summary>
+        /// Specifies the listener ID list to query.
+        /// </summary>
+        [JsonProperty("ListenerIds")]
+        public string[] ListenerIds{ get; set; }
+
+        /// <summary>
+        /// Specifies the list of rule ids to be queried.
+        /// </summary>
+        [JsonProperty("LocationIds")]
+        public string[] LocationIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+            this.SetParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);
+            this.SetParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
         }
     }
 }

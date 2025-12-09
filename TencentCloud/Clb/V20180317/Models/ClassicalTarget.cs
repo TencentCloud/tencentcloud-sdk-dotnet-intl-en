@@ -43,30 +43,26 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Public IP of a real server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public network IP of the real server
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string[] PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// Private IP of a real server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Private network IP of the real server
         /// </summary>
         [JsonProperty("PrivateIpAddresses")]
         public string[] PrivateIpAddresses{ get; set; }
 
         /// <summary>
-        /// Real server instance names
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name of the real server
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Real server status
-        /// 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backend service status.
+        /// 1: failed; 2: running; 3: creating; 4: shut down; 5: returned; 6: returning; 7: restarting; 8: starting; 9: shutting down; 10: resetting password; 11: formatting; 12: making image; 13: setting bandwidth; 14: reinstalling system; 19: upgrading; 21: hot migrating.
         /// </summary>
         [JsonProperty("RunFlag")]
         public long? RunFlag{ get; set; }

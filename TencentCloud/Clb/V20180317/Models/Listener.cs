@@ -31,13 +31,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Listener protocol
+        /// Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener port
+        /// Listener port. value range: 1-65535.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -63,15 +63,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Session persistence time
+        /// Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable SNI. `1`: Enable; `0`: Do not enable. This parameter is only meaningful for HTTPS listeners.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
@@ -85,27 +84,24 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Listener name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
         /// Listener creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// End port of a port range
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// End port of the port range. value range: 2-65535.
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }
 
         /// <summary>
-        /// Real server type
+        /// Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetType")]
@@ -119,8 +115,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public BasicTargetGroupInfo TargetGroup{ get; set; }
 
         /// <summary>
-        /// Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
@@ -133,22 +128,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// Only the NAT64 CLB TCP listeners are supported.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Supports Nat64 CLB TCP listeners only
         /// </summary>
         [JsonProperty("Toa")]
         public bool? Toa{ get; set; }
 
         /// <summary>
-        /// Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
-        /// Attribute of listener
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Describes the attributes of the listener.
         /// </summary>
         [JsonProperty("AttrFlags")]
         public string[] AttrFlags{ get; set; }
@@ -161,15 +153,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
 
         /// <summary>
-        /// Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
@@ -182,10 +172,22 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// Scheduling time. After forced rescheduling is triggered, long connections will be disconnected and reassigned within the set scheduling time.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
         /// </summary>
         [JsonProperty("RescheduleInterval")]
         public ulong? RescheduleInterval{ get; set; }
+
+        /// <summary>
+        /// Data compression mode.
+        /// </summary>
+        [JsonProperty("DataCompressMode")]
+        public string DataCompressMode{ get; set; }
+
+        /// <summary>
+        /// Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+        /// </summary>
+        [JsonProperty("RescheduleStartTime")]
+        public long? RescheduleStartTime{ get; set; }
 
 
         /// <summary>
@@ -217,6 +219,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MaxCps", this.MaxCps);
             this.SetParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
             this.SetParamSimple(map, prefix + "RescheduleInterval", this.RescheduleInterval);
+            this.SetParamSimple(map, prefix + "DataCompressMode", this.DataCompressMode);
+            this.SetParamSimple(map, prefix + "RescheduleStartTime", this.RescheduleStartTime);
         }
     }
 }

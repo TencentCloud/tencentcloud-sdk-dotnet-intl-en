@@ -37,6 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
+        /// Digital watermark parameter.	
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
         /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
@@ -118,6 +125,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);

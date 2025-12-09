@@ -187,6 +187,38 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PulsarTopicType")]
         public long? PulsarTopicType{ get; set; }
 
+        /// <summary>
+        /// Retention period for unconsumed messages in seconds.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MsgTTL")]
+        public ulong? MsgTTL{ get; set; }
+
+        /// <summary>
+        /// Cluster ID
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Tenant alias customized by users. if there is no, reuse the professional cluster ID.
+        /// </summary>
+        [JsonProperty("Tenant")]
+        public string Tenant{ get; set; }
+
+        /// <summary>
+        /// Whether exception consumer isolation is enabled.
+        /// </summary>
+        [JsonProperty("IsolateConsumerEnable")]
+        public bool? IsolateConsumerEnable{ get; set; }
+
+        /// <summary>
+        /// Specifies the consumer Ack timeout period in seconds.
+        /// </summary>
+        [JsonProperty("AckTimeOut")]
+        public long? AckTimeOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +247,11 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
             this.SetParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
             this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
+            this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
+            this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         }
     }
 }

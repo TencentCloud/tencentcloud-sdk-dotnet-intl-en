@@ -75,10 +75,51 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Whether the route can be modified
-        /// Note: u200dThis field may return null, indicating that no valid values can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CanEditRoute")]
         public bool? CanEditRoute{ get; set; }
+
+        /// <summary>
+        /// Specifies different billing specifications for pro edition and small-scale professional edition: PULSAR.P1 fixed storage and PULSAR.P2 elastic storage.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BillingLabelVersion")]
+        public string BillingLabelVersion{ get; set; }
+
+        /// <summary>
+        /// Instance expiration timestamp, accurate to the millisecond level.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Whether to enable automatic topic creation.
+        /// true indicates enabled. false indicates disabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AutoCreateTopicStatus")]
+        public bool? AutoCreateTopicStatus{ get; set; }
+
+        /// <summary>
+        /// Specifies the default number of partitions for automatic topic creation. valid values: 0 if not enabled.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DefaultPartitionNumber")]
+        public long? DefaultPartitionNumber{ get; set; }
+
+        /// <summary>
+        /// User-Defined tenant alias. if there is no, reuse the professional cluster ID.
+        /// </summary>
+        [JsonProperty("Tenant")]
+        public string Tenant{ get; set; }
+
+        /// <summary>
+        /// Deletion protection switch flag.
+        /// </summary>
+        [JsonProperty("DeleteProtection")]
+        public long? DeleteProtection{ get; set; }
 
 
         /// <summary>
@@ -95,6 +136,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
             this.SetParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
+            this.SetParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
+            this.SetParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
+            this.SetParamSimple(map, prefix + "Tenant", this.Tenant);
+            this.SetParamSimple(map, prefix + "DeleteProtection", this.DeleteProtection);
         }
     }
 }
