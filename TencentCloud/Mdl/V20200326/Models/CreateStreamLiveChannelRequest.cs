@@ -61,7 +61,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AVTemplate[] AVTemplates{ get; set; }
 
         /// <summary>
-        /// Subtitle template configuration, only AVTemplates are valid.
+        /// Subtitle template configuration.
         /// </summary>
         [JsonProperty("CaptionTemplates")]
         public SubtitleConf[] CaptionTemplates{ get; set; }
