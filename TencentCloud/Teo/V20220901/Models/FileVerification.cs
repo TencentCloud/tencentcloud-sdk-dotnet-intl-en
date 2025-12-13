@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// EdgeOne obtains the file verification information in the format of "Scheme + Host + URL Path", (e.g. https://www.example.com/.well-known/teo-verification/z12h416twn.txt). This field is the URL path section of the URL you need to create.
+        /// EdgeOne backend server will get file verification information via http://{Host}{URL Path} (for example http://www.example.com/.well-known/teo-verification/z12h416twn.txt). among them, this field specifies the URL Path part you need to create, and Host indicates the current accelerated domain.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
