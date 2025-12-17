@@ -72,8 +72,6 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ActionList{ get; set; }
 
         /// <summary>
-        /// PLUS: Plus Version.
-        /// ENHANCED: Enhanced Version.
         /// BASIC: Basic Version (Default).
         /// </summary>
         [JsonProperty("SdkVersion")]

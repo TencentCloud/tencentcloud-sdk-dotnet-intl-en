@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID filter of video content recognition templates. Array length limit: 10.
+        /// Filter condition for the unique identifier of the video content recognition template. The array can contain up to 100 unique identifiers.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

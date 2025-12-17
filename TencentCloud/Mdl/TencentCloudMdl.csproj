@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1245</VersionPrefix>
+    <VersionPrefix>3.0.1248</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
   <ItemGroup>
     <Compile Include="V20200326\MdlClient.cs" />
     <Compile Include="V20200326\Models\AVTemplate.cs" />
+    <Compile Include="V20200326\Models\AbWatermarkDetectionInfo.cs" />
+    <Compile Include="V20200326\Models\AbWatermarkInputInfo.cs" />
     <Compile Include="V20200326\Models\AbWatermarkSettingsReq.cs" />
     <Compile Include="V20200326\Models\AdditionalRateSetting.cs" />
     <Compile Include="V20200326\Models\AmazonS3Settings.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="V20200326\Models\CreateStreamLiveWatermarkRequest.cs" />
     <Compile Include="V20200326\Models\CreateStreamLiveWatermarkResponse.cs" />
     <Compile Include="V20200326\Models\CreateTextSettings.cs" />
+    <Compile Include="V20200326\Models\CreateWatermarkDetectionRequest.cs" />
+    <Compile Include="V20200326\Models\CreateWatermarkDetectionResponse.cs" />
     <Compile Include="V20200326\Models\DashRemuxSettingsInfo.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveChannelRequest.cs" />
     <Compile Include="V20200326\Models\DeleteStreamLiveChannelResponse.cs" />
@@ -124,6 +128,10 @@
     <Compile Include="V20200326\Models\DescribeStreamLiveWatermarksResponse.cs" />
     <Compile Include="V20200326\Models\DescribeTextSettings.cs" />
     <Compile Include="V20200326\Models\DescribeTranscodeDetailInfo.cs" />
+    <Compile Include="V20200326\Models\DescribeWatermarkDetectionRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeWatermarkDetectionResponse.cs" />
+    <Compile Include="V20200326\Models\DescribeWatermarkDetectionsRequest.cs" />
+    <Compile Include="V20200326\Models\DescribeWatermarkDetectionsResponse.cs" />
     <Compile Include="V20200326\Models\DescribeWatermarkInfo.cs" />
     <Compile Include="V20200326\Models\DestinationInfo.cs" />
     <Compile Include="V20200326\Models\DrmKey.cs" />
@@ -141,6 +149,7 @@
     <Compile Include="V20200326\Models\HighlightInfo.cs" />
     <Compile Include="V20200326\Models\HlsRemuxSettingsInfo.cs" />
     <Compile Include="V20200326\Models\InputAnalysisInfo.cs" />
+    <Compile Include="V20200326\Models\InputFileInfo.cs" />
     <Compile Include="V20200326\Models\InputInfo.cs" />
     <Compile Include="V20200326\Models\InputLossBehaviorInfo.cs" />
     <Compile Include="V20200326\Models\InputSecurityGroupInfo.cs" />
@@ -197,6 +206,7 @@
     <Compile Include="V20200326\Models\SubtitleConf.cs" />
     <Compile Include="V20200326\Models\SubtitleFontConf.cs" />
     <Compile Include="V20200326\Models\Tag.cs" />
+    <Compile Include="V20200326\Models\TaskNotifyConfig.cs" />
     <Compile Include="V20200326\Models\ThumbnailSettings.cs" />
     <Compile Include="V20200326\Models\TimeShiftSettingsInfo.cs" />
     <Compile Include="V20200326\Models\TimedMetadataInfo.cs" />
@@ -204,6 +214,7 @@
     <Compile Include="V20200326\Models\TimedRecordSettings.cs" />
     <Compile Include="V20200326\Models\TimingSettingsReq.cs" />
     <Compile Include="V20200326\Models\TimingSettingsResp.cs" />
+    <Compile Include="V20200326\Models\UrlInputInfo.cs" />
     <Compile Include="V20200326\Models\VideoCodecDetail.cs" />
     <Compile Include="V20200326\Models\VideoEnhanceSetting.cs" />
     <Compile Include="V20200326\Models\VideoPipelineInputStatistics.cs" />

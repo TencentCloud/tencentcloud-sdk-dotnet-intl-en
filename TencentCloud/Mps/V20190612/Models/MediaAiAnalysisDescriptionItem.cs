@@ -62,6 +62,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("MindMapUrl")]
         public string MindMapUrl{ get; set; }
 
+        /// <summary>
+        /// Path of the mind map of a summary task.
+        /// </summary>
+        [JsonProperty("MindMapPath")]
+        public string MindMapPath{ get; set; }
+
+        /// <summary>
+        /// Subtitle file path of the video.
+        /// </summary>
+        [JsonProperty("SubtitlePath")]
+        public string SubtitlePath{ get; set; }
+
+        /// <summary>
+        /// Storage location of the summary file.
+        /// </summary>
+        [JsonProperty("OutputStorage")]
+        public TaskOutputStorage OutputStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +92,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Keywords.", this.Keywords);
             this.SetParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
             this.SetParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
+            this.SetParamSimple(map, prefix + "MindMapPath", this.MindMapPath);
+            this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }
 }

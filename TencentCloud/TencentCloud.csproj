@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1247</VersionPrefix>
+    <VersionPrefix>3.0.1248</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -39,12 +39,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.1360" />
+    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.1361" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="Common\**\*.cs" />
     <Compile Include="Advisor\**\*.cs" />
+    <Compile Include="Ai3d\**\*.cs" />
     <Compile Include="Aiart\**\*.cs" />
     <Compile Include="Ams\**\*.cs" />
     <Compile Include="Antiddos\**\*.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Gpm\**\*.cs" />
     <Compile Include="Gse\**\*.cs" />
     <Compile Include="Gwlb\**\*.cs" />
+    <Compile Include="Hunyuan\**\*.cs" />
     <Compile Include="Iai\**\*.cs" />
     <Compile Include="Iap\**\*.cs" />
     <Compile Include="Ims\**\*.cs" />

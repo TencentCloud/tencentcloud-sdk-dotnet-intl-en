@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1247";
+       private const string sdkVersion = "SDK_NET_3.0.1248";
 
         /// <summary>
         /// Client constructor.
@@ -2839,6 +2839,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheDataSync(DescribeTimingL7CacheDataRequest req)
         {
             return InternalRequestAsync<DescribeTimingL7CacheDataResponse>(req, "DescribeTimingL7CacheData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query time series data for layer-7 domain services' origin-pull data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
+        public Task<DescribeTimingL7OriginPullDataResponse> DescribeTimingL7OriginPullData(DescribeTimingL7OriginPullDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData");
+        }
+
+        /// <summary>
+        /// This API is used to query time series data for layer-7 domain services' origin-pull data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
+        public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullDataSync(DescribeTimingL7OriginPullDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

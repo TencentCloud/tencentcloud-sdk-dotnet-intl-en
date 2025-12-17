@@ -95,8 +95,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? PureAudio{ get; set; }
 
         /// <summary>
-        /// HLS segment type. Valid values: <li>ts-segment: HLS+TS segment.</li> <li>ts-byterange: HLS+TS byte range.</li> <li>mp4-segment: HLS+MP4 segment.</li> <li>mp4-byterange: HLS+MP4 byte range.</li> <li>ts-packed-audio: TS+Packed audio.</li> <li>mp4-packed-audio: MP4+Packed audio.</li> Default value: ts-segment.
-        /// Note: The HLS segment format for adaptive bitrate streaming is based on this field.
+        /// Segment type. Valid values: <li>ts-segment: HLS+TS segment</li>; <li>ts-byterange: HLS+TS byte range</li>; <li>mp4-segment: HLS+MP4 segment</li>; <li>mp4-byterange: HLS/DASH+MP4 byte range</li>; <li>ts-packed-audio: TS+Packed Audio</li>; <li>mp4-packed-audio: MP4+Packed Audio</li>. The default value is ts-segment.
+        /// Note: The HLS segment format for the adaptive bitrate streaming is based on this field. The value of SegmentType can only be mp4-byterange in DASH format.
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }

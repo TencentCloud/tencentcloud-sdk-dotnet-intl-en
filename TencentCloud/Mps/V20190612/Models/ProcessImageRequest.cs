@@ -59,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Unique identifier of the image processing template.
+        /// The image template feature is in beta testing. If you want to use it, submit a ticket for application.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

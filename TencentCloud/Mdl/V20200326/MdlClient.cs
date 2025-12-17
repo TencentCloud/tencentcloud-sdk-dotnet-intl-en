@@ -28,7 +28,7 @@ namespace TencentCloud.Mdl.V20200326
 
        private const string endpoint = "mdl.intl.tencentcloudapi.com";
        private const string version = "2020-03-26";
-       private const string sdkVersion = "SDK_NET_3.0.1245";
+       private const string sdkVersion = "SDK_NET_3.0.1248";
 
         /// <summary>
         /// Client constructor.
@@ -155,6 +155,27 @@ namespace TencentCloud.Mdl.V20200326
         public CreateStreamLiveWatermarkResponse CreateStreamLiveWatermarkSync(CreateStreamLiveWatermarkRequest req)
         {
             return InternalRequestAsync<CreateStreamLiveWatermarkResponse>(req, "CreateStreamLiveWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="CreateWatermarkDetectionRequest"/></param>
+        /// <returns><see cref="CreateWatermarkDetectionResponse"/></returns>
+        public Task<CreateWatermarkDetectionResponse> CreateWatermarkDetection(CreateWatermarkDetectionRequest req)
+        {
+            return InternalRequestAsync<CreateWatermarkDetectionResponse>(req, "CreateWatermarkDetection");
+        }
+
+        /// <summary>
+        /// Create a watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="CreateWatermarkDetectionRequest"/></param>
+        /// <returns><see cref="CreateWatermarkDetectionResponse"/></returns>
+        public CreateWatermarkDetectionResponse CreateWatermarkDetectionSync(CreateWatermarkDetectionRequest req)
+        {
+            return InternalRequestAsync<CreateWatermarkDetectionResponse>(req, "CreateWatermarkDetection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -575,6 +596,48 @@ namespace TencentCloud.Mdl.V20200326
         public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarksSync(DescribeStreamLiveWatermarksRequest req)
         {
             return InternalRequestAsync<DescribeStreamLiveWatermarksResponse>(req, "DescribeStreamLiveWatermarks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Describe watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWatermarkDetectionRequest"/></param>
+        /// <returns><see cref="DescribeWatermarkDetectionResponse"/></returns>
+        public Task<DescribeWatermarkDetectionResponse> DescribeWatermarkDetection(DescribeWatermarkDetectionRequest req)
+        {
+            return InternalRequestAsync<DescribeWatermarkDetectionResponse>(req, "DescribeWatermarkDetection");
+        }
+
+        /// <summary>
+        /// Describe watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWatermarkDetectionRequest"/></param>
+        /// <returns><see cref="DescribeWatermarkDetectionResponse"/></returns>
+        public DescribeWatermarkDetectionResponse DescribeWatermarkDetectionSync(DescribeWatermarkDetectionRequest req)
+        {
+            return InternalRequestAsync<DescribeWatermarkDetectionResponse>(req, "DescribeWatermarkDetection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch Describe watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWatermarkDetectionsRequest"/></param>
+        /// <returns><see cref="DescribeWatermarkDetectionsResponse"/></returns>
+        public Task<DescribeWatermarkDetectionsResponse> DescribeWatermarkDetections(DescribeWatermarkDetectionsRequest req)
+        {
+            return InternalRequestAsync<DescribeWatermarkDetectionsResponse>(req, "DescribeWatermarkDetections");
+        }
+
+        /// <summary>
+        /// Batch Describe watermark detection task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWatermarkDetectionsRequest"/></param>
+        /// <returns><see cref="DescribeWatermarkDetectionsResponse"/></returns>
+        public DescribeWatermarkDetectionsResponse DescribeWatermarkDetectionsSync(DescribeWatermarkDetectionsRequest req)
+        {
+            return InternalRequestAsync<DescribeWatermarkDetectionsResponse>(req, "DescribeWatermarkDetections")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
