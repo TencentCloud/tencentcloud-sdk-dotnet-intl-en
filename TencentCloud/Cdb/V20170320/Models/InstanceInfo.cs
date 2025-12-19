@@ -43,8 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
@@ -68,8 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Information of a secondary server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Secondary server information.
         /// </summary>
         [JsonProperty("SlaveInfo")]
         public SlaveInfo SlaveInfo{ get; set; }
@@ -99,8 +97,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Details of a read-only group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed information about the read-only group.
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
@@ -148,8 +145,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// Details of a primary instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed information about the primary instance.
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
@@ -173,8 +169,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Details of a disaster recovery instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed information about the disaster recovery instance.
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }
@@ -258,22 +253,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Physical machine model
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Physical server model.
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// Placement group ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Placement group ID.
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// AZ ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// AZ ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
@@ -285,31 +277,62 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? InstanceNodes{ get; set; }
 
         /// <summary>
-        /// List of tags
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Tag list.
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfoItem[] TagList{ get; set; }
 
         /// <summary>
-        /// Engine type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Engine type.
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// Maximum delay threshold
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum delay threshold.
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
-        /// Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+        /// Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
+        /// Note:
+        /// 1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
+        /// 2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
+        /// 3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
+
+        /// <summary>
+        /// Current number of CPU cores for scale-out.
+        /// </summary>
+        [JsonProperty("ExpandCpu")]
+        public long? ExpandCpu{ get; set; }
+
+        /// <summary>
+        /// Cluster Edition instance node information.
+        /// </summary>
+        [JsonProperty("ClusterInfo")]
+        public ClusterInfo[] ClusterInfo{ get; set; }
+
+        /// <summary>
+        /// Analysis engine node list.
+        /// </summary>
+        [JsonProperty("AnalysisNodeInfos")]
+        public AnalysisNodeInfo[] AnalysisNodeInfos{ get; set; }
+
+        /// <summary>
+        /// Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+        /// </summary>
+        [JsonProperty("DeviceBandwidth")]
+        public ulong? DeviceBandwidth{ get; set; }
+
+        /// <summary>
+        /// Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+        /// </summary>
+        [JsonProperty("DestroyProtect")]
+        public string DestroyProtect{ get; set; }
 
 
         /// <summary>
@@ -363,6 +386,11 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+            this.SetParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
+            this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
+            this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
+            this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
         }
     }
 }

@@ -32,6 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// Read-only group ID.
+        /// Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
         /// </summary>
         [JsonProperty("RoGroupId")]
         public string RoGroupId{ get; set; }
@@ -49,7 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? RoOfflineDelay{ get; set; }
 
         /// <summary>
-        /// Latency threshold
+        /// Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
         /// </summary>
         [JsonProperty("RoMaxDelayTime")]
         public long? RoMaxDelayTime{ get; set; }
@@ -91,36 +92,31 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// VPC ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Virtual Private Cloud (VPC) ID.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
         /// Subnet ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Read-only group region.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Region of the read-only group.
         /// </summary>
         [JsonProperty("RoGroupRegion")]
         public string RoGroupRegion{ get; set; }
 
         /// <summary>
-        /// Read-only group AZ.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// AZ of the read-only group.
         /// </summary>
         [JsonProperty("RoGroupZone")]
         public string RoGroupZone{ get; set; }
 
         /// <summary>
-        /// Replication delay.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
         /// </summary>
         [JsonProperty("DelayReplicationTime")]
         public long? DelayReplicationTime{ get; set; }

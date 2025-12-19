@@ -21,20 +21,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SlaveInfo : AbstractModel
+    public class ClusterInfo : AbstractModel
     {
         
         /// <summary>
-        /// Information of secondary server 1
+        /// Node ID.
         /// </summary>
-        [JsonProperty("First")]
-        public SlaveInstanceInfo First{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
         /// <summary>
-        /// Second secondary server information.
+        /// Node type: primary node and secondary node.
         /// </summary>
-        [JsonProperty("Second")]
-        public SlaveInstanceInfo Second{ get; set; }
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
+        /// <summary>
+        /// Region.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "First.", this.First);
-            this.SetParamObj(map, prefix + "Second.", this.Second);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1185</VersionPrefix>
+    <VersionPrefix>3.0.1250</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,7 @@
     <Compile Include="V20170320\Models\AdjustCdbProxyRequest.cs" />
     <Compile Include="V20170320\Models\AdjustCdbProxyResponse.cs" />
     <Compile Include="V20170320\Models\AggregationCondition.cs" />
+    <Compile Include="V20170320\Models\AnalysisNodeInfo.cs" />
     <Compile Include="V20170320\Models\AnalyzeAuditLogsRequest.cs" />
     <Compile Include="V20170320\Models\AnalyzeAuditLogsResponse.cs" />
     <Compile Include="V20170320\Models\AssociateSecurityGroupsRequest.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="V20170320\Models\CloseCdbProxyAddressResponse.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
+    <Compile Include="V20170320\Models\ClusterInfo.cs" />
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />

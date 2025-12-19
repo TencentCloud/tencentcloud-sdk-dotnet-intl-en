@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)
+        /// Pay-as-you-go status. Valid values: 1 - normal; 2 - in arrears.
         /// </summary>
         [JsonProperty("HourFeeStatus")]
         public long? HourFeeStatus{ get; set; }
@@ -157,10 +157,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
+        /// Billing type of the RO instance. Valid values: 0 - yearly/monthly subscription; 1 - pay-as-you-go; 2-postpaid by month.
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
+
+        /// <summary>
+        /// RO replication delay status.
+        /// </summary>
+        [JsonProperty("ReplicationStatus")]
+        public string ReplicationStatus{ get; set; }
 
 
         /// <summary>
@@ -191,6 +197,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
+            this.SetParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
         }
     }
 }

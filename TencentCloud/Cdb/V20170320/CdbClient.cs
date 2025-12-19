@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.intl.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1185";
+       private const string sdkVersion = "SDK_NET_3.0.1250";
 
         /// <summary>
         /// Client constructor.
@@ -1184,7 +1184,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
+        /// This API is used to query the list of TencentDB for MySQL instances. It supports filtering instances by conditions such as project ID, instance ID, access address, and instance status. It also supports querying the list of information about primary instances, disaster recovery instances, and read-only instances.
+        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.comom/document/product/236/17491?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1194,7 +1195,8 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// This API (DescribeDBInstances) is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, access address, and instance status.
+        /// This API is used to query the list of TencentDB for MySQL instances. It supports filtering instances by conditions such as project ID, instance ID, access address, and instance status. It also supports querying the list of information about primary instances, disaster recovery instances, and read-only instances.
+        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.comom/document/product/236/17491?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>

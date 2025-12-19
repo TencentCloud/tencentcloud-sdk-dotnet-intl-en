@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// Billing method. Value range: 0 (monthly subscribed), 1 (hourly).
+        /// Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
         /// </summary>
         [JsonProperty("PayTypes")]
         public ulong?[] PayTypes{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// Instance task status. Valid values: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - enabling secondary instance access <br>4 - enabling public network access <br>5 - batch operation in progress <br>6 - rolling back <br>7 - disabling public network access <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built database <br>13 - dropping tables <br>14 - Disaster recovery instance creating sync task <br>15 - waiting for switch <br>16 - switching <br>17 - upgrade and switch completed <br>19 - parameter settings to be executed
+        /// Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong?[] TaskStatus{ get; set; }
@@ -115,19 +115,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long?[] CdbErrors{ get; set; }
 
         /// <summary>
-        /// Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
+        /// Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
+        /// Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// Whether security group ID is used as a filter
+        /// Whether to use the security group ID as the filter condition.
+        /// Note: 0 indicates no; 1 indicates yes.
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
@@ -211,7 +212,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// Tag key value
+        /// Tag key value.
+        /// Note that tags cannot be queried for instances being created.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -229,10 +231,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// Database engine type
+        /// Database engine type. Valid values: InnoDB; RocksDB.
         /// </summary>
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
+
+        /// <summary>
+        /// Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+        /// </summary>
+        [JsonProperty("QueryClusterInfo")]
+        public bool? QueryClusterInfo{ get; set; }
 
 
         /// <summary>
@@ -275,6 +283,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
             this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
             this.SetParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+            this.SetParamSimple(map, prefix + "QueryClusterInfo", this.QueryClusterInfo);
         }
     }
 }
