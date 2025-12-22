@@ -25,67 +25,67 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Types of testing
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// State
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input information
         /// </summary>
         [JsonProperty("InputInfo")]
         public AbWatermarkInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task notification configuration
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Create time
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Update time
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input file information
         /// </summary>
         [JsonProperty("InputFileInfo")]
         public InputFileInfo InputFileInfo{ get; set; }

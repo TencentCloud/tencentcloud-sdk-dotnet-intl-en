@@ -36,6 +36,18 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Pipeline1")]
         public ChannelPipelineAlerts[] Pipeline1{ get; set; }
 
+        /// <summary>
+        /// Pipeline 0 total active alarm count
+        /// </summary>
+        [JsonProperty("PipelineAActiveAlerts")]
+        public long? PipelineAActiveAlerts{ get; set; }
+
+        /// <summary>
+        /// Pipeline 1 total active alarm count
+        /// </summary>
+        [JsonProperty("PipelineBActiveAlerts")]
+        public long? PipelineBActiveAlerts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamArrayObj(map, prefix + "Pipeline0.", this.Pipeline0);
             this.SetParamArrayObj(map, prefix + "Pipeline1.", this.Pipeline1);
+            this.SetParamSimple(map, prefix + "PipelineAActiveAlerts", this.PipelineAActiveAlerts);
+            this.SetParamSimple(map, prefix + "PipelineBActiveAlerts", this.PipelineBActiveAlerts);
         }
     }
 }

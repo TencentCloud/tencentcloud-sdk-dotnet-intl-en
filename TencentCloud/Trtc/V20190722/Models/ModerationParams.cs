@@ -65,7 +65,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ModerationSupplierParam ModerationSupplierParam{ get; set; }
 
         /// <summary>
-        /// Whether to save the hit file. 0: not save by default; 1: save.
+        /// Whether to save file. 0: not save by default; 1: save; 2 save the hit file.
         /// </summary>
         [JsonProperty("SaveModerationFile")]
         public ulong? SaveModerationFile{ get; set; }

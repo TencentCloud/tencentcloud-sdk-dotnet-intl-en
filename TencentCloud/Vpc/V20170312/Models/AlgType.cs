@@ -25,13 +25,17 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Whether FTP ALG is enabled
+        /// Ftp protocol Alg functionality whether enabled, available values:.
+        /// <li>true: enable Ftp protocol Alg functionality.</li>.
+        /// <li>false: disable Ftp protocol Alg functionality.</li>.
         /// </summary>
         [JsonProperty("Ftp")]
         public bool? Ftp{ get; set; }
 
         /// <summary>
-        /// Whether SIP ALG is enabled
+        /// Whether the Sip protocol Alg function is enabled. available values:.
+        /// <li>true: enable Sip protocol Alg function.</li>.
+        /// <li>false: disable Sip protocol Alg function.</li>.
         /// </summary>
         [JsonProperty("Sip")]
         public bool? Sip{ get; set; }

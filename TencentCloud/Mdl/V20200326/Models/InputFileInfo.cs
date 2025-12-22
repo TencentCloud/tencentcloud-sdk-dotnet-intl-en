@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Segment duration, in milliseconds, ranging from 1000-10000, must be a multiple of 1000. The input video duration should be between SegmentDuration * 90 and SegmentDuration * 180
         /// </summary>
         [JsonProperty("SegmentDuration")]
         public long? SegmentDuration{ get; set; }

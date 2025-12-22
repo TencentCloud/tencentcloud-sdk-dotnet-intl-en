@@ -92,6 +92,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ScheduledType")]
         public string ScheduledType{ get; set; }
 
+        /// <summary>
+        /// Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+        /// 
+        /// Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+        /// The following cases assume that DisableUpdateDesiredCapacity is True:
+        /// - When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+        /// - When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+        /// - When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+        /// </summary>
+        [JsonProperty("DisableUpdateDesiredCapacity")]
+        public bool? DisableUpdateDesiredCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +121,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ScheduledType", this.ScheduledType);
+            this.SetParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
         }
     }
 }

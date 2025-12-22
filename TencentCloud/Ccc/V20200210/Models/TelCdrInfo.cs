@@ -151,9 +151,9 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// 
         /// Audio dial-in 503 VoIP user client error.
         /// 
-        /// Chinese description (https://www.tencentcloud.com/zh/document/product/1229/71847).
+        /// Chinese version please go domestic site (https://cloud.tencent.com/document/product/679/123938).
         /// 
-        /// English description (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+        /// English version please go international site (https://www.tencentcloud.com/document/product/1229/71847?lang=en).
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }

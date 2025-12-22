@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Input type, optional URL/COS, currently only supports URL
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL input information
         /// </summary>
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }

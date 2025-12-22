@@ -39,16 +39,16 @@ namespace TencentCloud.As.V20180419.Models
         public string ScheduledActionName{ get; set; }
 
         /// <summary>
-        /// The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
-        /// </summary>
-        [JsonProperty("MaxSize")]
-        public ulong? MaxSize{ get; set; }
-
-        /// <summary>
         /// The minimum number of instances set for the auto scaling group when the scheduled task is triggered.
         /// </summary>
         [JsonProperty("MinSize")]
         public ulong? MinSize{ get; set; }
+
+        /// <summary>
+        /// Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
         /// The desired number of instances set for the auto scaling group when the scheduled task is triggered.
@@ -57,10 +57,10 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? DesiredCapacity{ get; set; }
 
         /// <summary>
-        /// Initial triggered time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard.
+        /// The maximum number of instances set for the auto scaling group when the scheduled task is triggered.
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("MaxSize")]
+        public ulong? MaxSize{ get; set; }
 
         /// <summary>
         /// End time of the scheduled task. The value is in `Beijing time` (UTC+8) in the format of `YYYY-MM-DDThh:mm:ss+08:00` according to the `ISO8601` standard. <br><br>This parameter and `Recurrence` need to be specified at the same time. After the end time, the scheduled task will no longer take effect.
@@ -74,6 +74,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
 
+        /// <summary>
+        /// Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+        /// 
+        /// Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
+        /// The following cases assume that DisableUpdateDesiredCapacity is True:
+        /// - When scheduled task triggered, the original DesiredCapacity is 5. The scheduled task changes the minSize to 10, the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 5 is less than minSize 10, so the final new DesiredCapacity is 10.
+        /// - When scheduled task triggered, the original DesiredCapacity is 25. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect. However, the original DesiredCapacity 25 is greater than the maxSize 20, so the final new DesiredCapacity is 20.
+        /// - When scheduled task triggered, the original DesiredCapacity is 13. The scheduled task changes the minSize to 10 and the maxSize to 20, and the DesiredCapacity to 15. Since the DesiredCapacity update is disabled, 15 does not take effect, and the DesiredCapacity is still 13.
+        /// </summary>
+        [JsonProperty("DisableUpdateDesiredCapacity")]
+        public bool? DisableUpdateDesiredCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,12 +94,13 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamSimple(map, prefix + "ScheduledActionName", this.ScheduledActionName);
-            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
-            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Recurrence", this.Recurrence);
+            this.SetParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
         }
     }
 }

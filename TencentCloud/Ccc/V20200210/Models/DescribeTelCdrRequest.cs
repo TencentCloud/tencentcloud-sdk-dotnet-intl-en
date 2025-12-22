@@ -37,6 +37,24 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
+        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public long? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// Page size (required), up to 100.
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// <Page number (required), starting from 0.>.
+        /// </summary>
+        [JsonProperty("PageNumber")]
+        public long? PageNumber{ get; set; }
+
+        /// <summary>
         /// Instance id (deprecated).
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -54,24 +72,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
-
-        /// <summary>
-        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public long? SdkAppId{ get; set; }
-
-        /// <summary>
-        /// Page size (required), up to 100.
-        /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
-
-        /// <summary>
-        /// <Page number (required), starting from 0.>.
-        /// </summary>
-        [JsonProperty("PageNumber")]
-        public long? PageNumber{ get; set; }
 
         /// <summary>
         /// Filter by phone number.
@@ -93,12 +93,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
             this.SetParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArraySimple(map, prefix + "Phones.", this.Phones);
             this.SetParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
         }

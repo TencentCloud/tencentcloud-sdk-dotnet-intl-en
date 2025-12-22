@@ -61,13 +61,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// The ID of the bound ENI
+        /// Specifies the bound elastic network interface ID. null means no elastic network interface is bound.
         /// </summary>
         [JsonProperty("NetworkInterfaceId")]
         public string NetworkInterfaceId{ get; set; }
 
         /// <summary>
-        /// The private IP of the bound resources
+        /// Bound resource internal ip. null means no bound resource internal ip.
         /// </summary>
         [JsonProperty("PrivateAddressIp")]
         public string PrivateAddressIp{ get; set; }
@@ -109,13 +109,15 @@ namespace TencentCloud.Vpc.V20170312.Models
         public AlgType EipAlgType{ get; set; }
 
         /// <summary>
-        /// The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+        /// EIP ISP information. currently may return values including "CMCC" (mobile), "CTCC" (telecom), "CUCC" (china unicom), "BGP" (standard BGP).
         /// </summary>
         [JsonProperty("InternetServiceProvider")]
         public string InternetServiceProvider{ get; set; }
 
         /// <summary>
-        /// Whether the EIP is in a local BGP.
+        /// Specifies whether the EIP is a local bandwidth EIP. valid values:.
+        /// <li>true: EIP with local bandwidth.</li>.
+        /// <li>false: not a local bandwidth EIP.</li>.
         /// </summary>
         [JsonProperty("LocalBgp")]
         public bool? LocalBgp{ get; set; }
@@ -145,22 +147,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// List of tags associated with the EIP
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the Tag list associated with the elastic IP.
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// The expiration time.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Prepaid monthly subscription bandwidth IP expiration time.
+        /// Specifies the time format in YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("DeadlineDate")]
         public string DeadlineDate{ get; set; }
 
         /// <summary>
-        /// The type of instance bound with the EIP
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Instance type to which the EIP is bound. valid values:.
+        /// <Li>CVM: indicates cloud virtual machine.</li>.
+        /// <li>Specifies the NAT gateway.</li>.
+        /// <Li>HAVIP: high availability virtual ip.</li>.
+        /// <Li>ENI: specifies the elastic network interface.</li>.
+        /// <Li>CLB: specifies a private network clb.</li>.
+        /// <Li>DHCPIP: elastic private ip address</li>.
+        /// 
+        /// 
+        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -193,15 +203,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// Indicates the unique ID of the VPC to which the traditional EIPv6 belongs.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Specifies the unique ID of the vpc to which the traditional elastic IPv6 belongs.
         /// </summary>
         [JsonProperty("UnVpcId")]
         public string UnVpcId{ get; set; }
 
         /// <summary>
-        /// Indicates the unique ID of the CDC.
-        /// Note: This field may return 'null', indicating that no valid value was found.
+        /// Specifies the unique ID of the CDC.
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
