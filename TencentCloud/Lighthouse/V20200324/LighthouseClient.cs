@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.intl.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1253";
 
         /// <summary>
         /// Client constructor.
@@ -152,6 +152,29 @@ namespace TencentCloud.Lighthouse.V20200324
         public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
         {
             return InternalRequestAsync<AttachDisksResponse>(req, "AttachDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to cancel image sharing across accounts.
+        /// An image to be canceled sharing must be a custom image that is originally shared from another account to your account.
+        /// </summary>
+        /// <param name="req"><see cref="CancelShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="CancelShareBlueprintAcrossAccountsResponse"/></returns>
+        public Task<CancelShareBlueprintAcrossAccountsResponse> CancelShareBlueprintAcrossAccounts(CancelShareBlueprintAcrossAccountsRequest req)
+        {
+            return InternalRequestAsync<CancelShareBlueprintAcrossAccountsResponse>(req, "CancelShareBlueprintAcrossAccounts");
+        }
+
+        /// <summary>
+        /// This API is used to cancel image sharing across accounts.
+        /// An image to be canceled sharing must be a custom image that is originally shared from another account to your account.
+        /// </summary>
+        /// <param name="req"><see cref="CancelShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="CancelShareBlueprintAcrossAccountsResponse"/></returns>
+        public CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccountsSync(CancelShareBlueprintAcrossAccountsRequest req)
+        {
+            return InternalRequestAsync<CancelShareBlueprintAcrossAccountsResponse>(req, "CancelShareBlueprintAcrossAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1455,6 +1478,41 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// This API is used to share and cancel sharing of CVM custom images to the Lighthouse service.
+        /// Sharing CVM images to Lighthouse requires the following conditions to be met:
+        /// 1. Images that have been shared cannot be shared again.
+        /// 2. Images imported from external sources are not supported for sharing.
+        /// 3. Full-instance images are not supported for sharing.
+        /// 4. Images need to support CloudInit to be eligible for sharing.
+        /// 5. The Platform and OsName of the images must meet the sharing conditions before the images are eligible for sharing.
+        /// 6. Only images in the NORMAL status are supported for sharing.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
+        /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
+        public Task<ModifyImageSharePermissionResponse> ModifyImageSharePermission(ModifyImageSharePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSharePermissionResponse>(req, "ModifyImageSharePermission");
+        }
+
+        /// <summary>
+        /// This API is used to share and cancel sharing of CVM custom images to the Lighthouse service.
+        /// Sharing CVM images to Lighthouse requires the following conditions to be met:
+        /// 1. Images that have been shared cannot be shared again.
+        /// 2. Images imported from external sources are not supported for sharing.
+        /// 3. Full-instance images are not supported for sharing.
+        /// 4. Images need to support CloudInit to be eligible for sharing.
+        /// 5. The Platform and OsName of the images must meet the sharing conditions before the images are eligible for sharing.
+        /// 6. Only images in the NORMAL status are supported for sharing.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImageSharePermissionRequest"/></param>
+        /// <returns><see cref="ModifyImageSharePermissionResponse"/></returns>
+        public ModifyImageSharePermissionResponse ModifyImageSharePermissionSync(ModifyImageSharePermissionRequest req)
+        {
+            return InternalRequestAsync<ModifyImageSharePermissionResponse>(req, "ModifyImageSharePermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify an instance attribute. 
         /// * The instance name is used only for users’ convenience. 
         /// * Batch operations are supported. The maximum number of instances in each request is 100.
@@ -1806,6 +1864,39 @@ namespace TencentCloud.Lighthouse.V20200324
         public StopInstancesResponse StopInstancesSync(StopInstancesRequest req)
         {
             return InternalRequestAsync<StopInstancesResponse>(req, "StopInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to synchronize a custom image to other regions.
+        /// 
+        /// * Synchronization to multiple regions is supported. Up to 10 regions are supported.
+        /// * Synchronization to the source region is not supported.
+        /// * Only images in the NORMAL status are supported for synchronization.
+        /// * Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
+        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+        /// </summary>
+        /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
+        /// <returns><see cref="SyncBlueprintResponse"/></returns>
+        public Task<SyncBlueprintResponse> SyncBlueprint(SyncBlueprintRequest req)
+        {
+            return InternalRequestAsync<SyncBlueprintResponse>(req, "SyncBlueprint");
+        }
+
+        /// <summary>
+        /// This API is used to synchronize a custom image to other regions.
+        /// 
+        /// * Synchronization to multiple regions is supported. Up to 10 regions are supported.
+        /// * Synchronization to the source region is not supported.
+        /// * Only images in the NORMAL status are supported for synchronization.
+        /// * Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
+        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+        /// </summary>
+        /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
+        /// <returns><see cref="SyncBlueprintResponse"/></returns>
+        public SyncBlueprintResponse SyncBlueprintSync(SyncBlueprintRequest req)
+        {
+            return InternalRequestAsync<SyncBlueprintResponse>(req, "SyncBlueprint")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

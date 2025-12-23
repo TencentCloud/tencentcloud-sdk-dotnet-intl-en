@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProject](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
+        /// Instance'S project ID. obtain this parameter by calling the `ProjectId` field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/54679). default value 0 means default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
