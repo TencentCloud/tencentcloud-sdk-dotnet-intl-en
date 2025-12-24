@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.intl.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -719,6 +719,27 @@ namespace TencentCloud.Lighthouse.V20200324
         public DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotasSync(DescribeGeneralResourceQuotasRequest req)
         {
             return InternalRequestAsync<DescribeGeneralResourceQuotasResponse>(req, "DescribeGeneralResourceQuotas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesToShareRequest"/></param>
+        /// <returns><see cref="DescribeImagesToShareResponse"/></returns>
+        public Task<DescribeImagesToShareResponse> DescribeImagesToShare(DescribeImagesToShareRequest req)
+        {
+            return InternalRequestAsync<DescribeImagesToShareResponse>(req, "DescribeImagesToShare");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of Cloud Virtual Machine (CVM) custom images and share the images to Tencent Cloud Lighthouse (Lighthouse).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesToShareRequest"/></param>
+        /// <returns><see cref="DescribeImagesToShareResponse"/></returns>
+        public DescribeImagesToShareResponse DescribeImagesToShareSync(DescribeImagesToShareRequest req)
+        {
+            return InternalRequestAsync<DescribeImagesToShareResponse>(req, "DescribeImagesToShare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1804,6 +1825,52 @@ namespace TencentCloud.Lighthouse.V20200324
         public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
         {
             return InternalRequestAsync<ResetInstancesPasswordResponse>(req, "ResetInstancesPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to scale out a cloud disk. The operation currently only supports cloud disks of the data disk type that are in the ATTACHED or UNATTACHED status.
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDisksRequest"/></param>
+        /// <returns><see cref="ResizeDisksResponse"/></returns>
+        public Task<ResizeDisksResponse> ResizeDisks(ResizeDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDisksResponse>(req, "ResizeDisks");
+        }
+
+        /// <summary>
+        /// This API is used to scale out a cloud disk. The operation currently only supports cloud disks of the data disk type that are in the ATTACHED or UNATTACHED status.
+        /// </summary>
+        /// <param name="req"><see cref="ResizeDisksRequest"/></param>
+        /// <returns><see cref="ResizeDisksResponse"/></returns>
+        public ResizeDisksResponse ResizeDisksSync(ResizeDisksRequest req)
+        {
+            return InternalRequestAsync<ResizeDisksResponse>(req, "ResizeDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to share an image across accounts.
+        /// This API is used to share custom images only, and the status of the shared image must be NORMAL.
+        /// The account receiving the shared image must be a root account.
+        /// </summary>
+        /// <param name="req"><see cref="ShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="ShareBlueprintAcrossAccountsResponse"/></returns>
+        public Task<ShareBlueprintAcrossAccountsResponse> ShareBlueprintAcrossAccounts(ShareBlueprintAcrossAccountsRequest req)
+        {
+            return InternalRequestAsync<ShareBlueprintAcrossAccountsResponse>(req, "ShareBlueprintAcrossAccounts");
+        }
+
+        /// <summary>
+        /// This API is used to share an image across accounts.
+        /// This API is used to share custom images only, and the status of the shared image must be NORMAL.
+        /// The account receiving the shared image must be a root account.
+        /// </summary>
+        /// <param name="req"><see cref="ShareBlueprintAcrossAccountsRequest"/></param>
+        /// <returns><see cref="ShareBlueprintAcrossAccountsResponse"/></returns>
+        public ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccountsSync(ShareBlueprintAcrossAccountsRequest req)
+        {
+            return InternalRequestAsync<ShareBlueprintAcrossAccountsResponse>(req, "ShareBlueprintAcrossAccounts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

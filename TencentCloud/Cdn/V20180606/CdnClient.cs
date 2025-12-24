@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.intl.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1254";
 
         /// <summary>
         /// Client constructor.
@@ -180,7 +180,10 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query billing data details.
+        /// This API is used to query billing data details. 
+        /// Notes: 
+        /// Due to the impact of the billing and settlement methods, the data returned by the DescribeBillingData  has a certain delay. For hourly-billed customers, the expected delay is 3 to 5 hours. For monthly-billed customers, the expected delay is 4 to 28 hours. Before 4:00 AM  (UTC+8, excluding 4:00 AM), only data from two days prior can be queried; after 4:00 AM (including 4:00 AM), data from the previous day can be queried. 
+        /// If you have a strong requirement for data timeliness, it is recommended to use the DescribeCdnData.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
         /// <returns><see cref="DescribeBillingDataResponse"/></returns>
@@ -190,7 +193,10 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query billing data details.
+        /// This API is used to query billing data details. 
+        /// Notes: 
+        /// Due to the impact of the billing and settlement methods, the data returned by the DescribeBillingData  has a certain delay. For hourly-billed customers, the expected delay is 3 to 5 hours. For monthly-billed customers, the expected delay is 4 to 28 hours. Before 4:00 AM  (UTC+8, excluding 4:00 AM), only data from two days prior can be queried; after 4:00 AM (including 4:00 AM), data from the previous day can be queried. 
+        /// If you have a strong requirement for data timeliness, it is recommended to use the DescribeCdnData.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
         /// <returns><see cref="DescribeBillingDataResponse"/></returns>
