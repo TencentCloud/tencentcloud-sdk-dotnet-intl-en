@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1250</VersionPrefix>
+    <VersionPrefix>3.0.1257</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -85,6 +85,7 @@
     <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
+    <Compile Include="V20180525\Models\ComponentLogConfig.cs" />
     <Compile Include="V20180525\Models\CreateBackupStorageLocationRequest.cs" />
     <Compile Include="V20180525\Models\CreateBackupStorageLocationResponse.cs" />
     <Compile Include="V20180525\Models\CreateCLSLogConfigRequest.cs" />
@@ -209,6 +210,8 @@
     <Compile Include="V20180525\Models\DescribeClusterVirtualNodeResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeControlPlaneLogsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeControlPlaneLogsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeECMInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEdgeAvailableExtraArgsRequest.cs" />
@@ -269,6 +272,8 @@
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\DisableControlPlaneLogsRequest.cs" />
+    <Compile Include="V20180525\Models\DisableControlPlaneLogsResponse.cs" />
     <Compile Include="V20180525\Models\DisableEncryptionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\DisableEncryptionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\DrainClusterVirtualNodeRequest.cs" />
@@ -287,6 +292,8 @@
     <Compile Include="V20180525\Models\EdgeClusterPublicLB.cs" />
     <Compile Include="V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="V20180525\Models\EnableControlPlaneLogsRequest.cs" />
+    <Compile Include="V20180525\Models\EnableControlPlaneLogsResponse.cs" />
     <Compile Include="V20180525\Models\EnableEncryptionProtectionRequest.cs" />
     <Compile Include="V20180525\Models\EnableEncryptionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />

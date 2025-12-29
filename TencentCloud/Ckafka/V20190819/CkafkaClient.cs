@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.intl.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1242";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -407,6 +407,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
         {
             return InternalRequestAsync<DeleteGroupResponse>(req, "DeleteGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete topics subscribed by a consumption group. The consumption group status must be Empty.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupSubscribeTopicRequest"/></param>
+        /// <returns><see cref="DeleteGroupSubscribeTopicResponse"/></returns>
+        public Task<DeleteGroupSubscribeTopicResponse> DeleteGroupSubscribeTopic(DeleteGroupSubscribeTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupSubscribeTopicResponse>(req, "DeleteGroupSubscribeTopic");
+        }
+
+        /// <summary>
+        /// This API is used to delete topics subscribed by a consumption group. The consumption group status must be Empty.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupSubscribeTopicRequest"/></param>
+        /// <returns><see cref="DeleteGroupSubscribeTopicResponse"/></returns>
+        public DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopicSync(DeleteGroupSubscribeTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteGroupSubscribeTopicResponse>(req, "DeleteGroupSubscribeTopic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -848,6 +869,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeInstancesDetailResponse DescribeInstancesDetailSync(DescribeInstancesDetailRequest req)
         {
             return InternalRequestAsync<DescribeInstancesDetailResponse>(req, "DescribeInstancesDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance specification change types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyTypeRequest"/></param>
+        /// <returns><see cref="DescribeModifyTypeResponse"/></returns>
+        public Task<DescribeModifyTypeResponse> DescribeModifyType(DescribeModifyTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyTypeResponse>(req, "DescribeModifyType");
+        }
+
+        /// <summary>
+        /// This API is used to query instance specification change types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyTypeRequest"/></param>
+        /// <returns><see cref="DescribeModifyTypeResponse"/></returns>
+        public DescribeModifyTypeResponse DescribeModifyTypeSync(DescribeModifyTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeModifyTypeResponse>(req, "DescribeModifyType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

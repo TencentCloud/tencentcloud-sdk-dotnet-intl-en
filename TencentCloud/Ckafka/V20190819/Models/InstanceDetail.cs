@@ -25,193 +25,193 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id.</p>.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// CKafka cluster instance name.
+        /// <P>Specifies the name of the ckafka cluster instance.</p>.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance VIP information
+        /// <P>Specifies the vip information for accessing the instance.</p>.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Instance port information
+        /// <P>Specifies the port information to access the instance.</p>.
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
 
         /// <summary>
-        /// Virtual IP list
+        /// <p>Specifies the virtual IP list.</p>.
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+        /// <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance bandwidth in Mbps
+        /// <p>Specifies the instance bandwidth in Mbps.</p>.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Specifies the ckafka cluster instance disk size in gb.
+        /// <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// AZ ID
+        /// <p>Specifies the available zone ID.</p>.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// vpcId. If this parameter is empty, it means the basic network
+        /// <p>vpcId. if empty, indicates a basic network.</p>.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// <P>Subnet id.</p>.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+        /// <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+        /// <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }
 
         /// <summary>
-        /// Instance status information
+        /// <P>Specifies the instance status information.</p>.
         /// </summary>
         [JsonProperty("HealthyMessage")]
         public string HealthyMessage{ get; set; }
 
         /// <summary>
-        /// Instance creation time
+        /// <P>Specifies the instance creation time.</p>.
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// Instance expiration time
+        /// <P>Specifies the instance expiration time.</p>.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Whether it is an internal customer. 1: yes
+        /// <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
         /// </summary>
         [JsonProperty("IsInternal")]
         public long? IsInternal{ get; set; }
 
         /// <summary>
-        /// Number of topics
+        /// <p>Specifies the number of topics.</p>.
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// Tag
+        /// <P>Specifies the identifier tag.</p>.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// kafka version information.
+        /// <p>kafka version information.</p>.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Cross-Availability zone.
+        /// <P>Specifies the cross-availability zone.</p>.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ckafka sales type.
+        /// <P>Specifies the ckafka sales type.</p>.
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster instance type of ckafka.
+        /// <P>Specifies the ckafka cluster instance type.</p>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Specifies the ckafka cluster instance disk type.
+        /// <P>Specifies the disk type of the ckafka cluster instance.</p>.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Maximum number of topics for current specifications.
+        /// <p>Maximum number of topics for current specifications.</p>.
         /// </summary>
         [JsonProperty("MaxTopicNumber")]
         public long? MaxTopicNumber{ get; set; }
 
         /// <summary>
-        /// Maximum number of partitions for current specifications.
+        /// <p>Specifies the maximum number of partitions for current specifications.</p>.
         /// </summary>
         [JsonProperty("MaxPartitionNumber")]
         public long? MaxPartitionNumber{ get; set; }
 
         /// <summary>
-        /// Scheduled configuration upgrade time.
+        /// <P>Specifies the planned configuration upgrade time.</p>.
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public string RebalanceTime{ get; set; }
 
         /// <summary>
-        /// Specifies the number of partitions in the current instance.
+        /// <P>Current number of partitions of the instance.</p>.
         /// </summary>
         [JsonProperty("PartitionNumber")]
         public ulong? PartitionNumber{ get; set; }
 
         /// <summary>
-        /// Specifies the public network bandwidth type of the ckafka cluster instance.
+        /// <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+        /// <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Specifies the underlying cluster type of the ckafka cluster instance.
+        /// <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// Instance feature list.
+        /// <P>Specifies the instance feature list.</p>.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }

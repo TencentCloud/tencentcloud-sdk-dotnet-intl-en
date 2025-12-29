@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.intl.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1257";
 
         /// <summary>
         /// Client constructor.
@@ -1461,6 +1461,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to query plug-in log collection settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DescribeControlPlaneLogsResponse"/></returns>
+        public Task<DescribeControlPlaneLogsResponse> DescribeControlPlaneLogs(DescribeControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeControlPlaneLogsResponse>(req, "DescribeControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query plug-in log collection settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DescribeControlPlaneLogsResponse"/></returns>
+        public DescribeControlPlaneLogsResponse DescribeControlPlaneLogsSync(DescribeControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeControlPlaneLogsResponse>(req, "DescribeControlPlaneLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the ECM instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeECMInstancesRequest"/></param>
@@ -2091,6 +2112,27 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// This API is used to delete the log collection configuration of a plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DisableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DisableControlPlaneLogsResponse"/></returns>
+        public Task<DisableControlPlaneLogsResponse> DisableControlPlaneLogs(DisableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DisableControlPlaneLogsResponse>(req, "DisableControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// This API is used to delete the log collection configuration of a plugin.
+        /// </summary>
+        /// <param name="req"><see cref="DisableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="DisableControlPlaneLogsResponse"/></returns>
+        public DisableControlPlaneLogsResponse DisableControlPlaneLogsSync(DisableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<DisableControlPlaneLogsResponse>(req, "DisableControlPlaneLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable encryption protection.
         /// </summary>
         /// <param name="req"><see cref="DisableEncryptionProtectionRequest"/></param>
@@ -2150,6 +2192,27 @@ namespace TencentCloud.Tke.V20180525
         public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtectionSync(EnableClusterDeletionProtectionRequest req)
         {
             return InternalRequestAsync<EnableClusterDeletionProtectionResponse>(req, "EnableClusterDeletionProtection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create log collection settings for plugins.
+        /// </summary>
+        /// <param name="req"><see cref="EnableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="EnableControlPlaneLogsResponse"/></returns>
+        public Task<EnableControlPlaneLogsResponse> EnableControlPlaneLogs(EnableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<EnableControlPlaneLogsResponse>(req, "EnableControlPlaneLogs");
+        }
+
+        /// <summary>
+        /// This API is used to create log collection settings for plugins.
+        /// </summary>
+        /// <param name="req"><see cref="EnableControlPlaneLogsRequest"/></param>
+        /// <returns><see cref="EnableControlPlaneLogsResponse"/></returns>
+        public EnableControlPlaneLogsResponse EnableControlPlaneLogsSync(EnableControlPlaneLogsRequest req)
+        {
+            return InternalRequestAsync<EnableControlPlaneLogsResponse>(req, "EnableControlPlaneLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

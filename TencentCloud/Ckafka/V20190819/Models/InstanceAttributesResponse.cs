@@ -25,296 +25,277 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id.</p>.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the Name of the ckafka cluster instance.
+        /// <p>Specifies the Name of the ckafka cluster instance.</p>.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// VIP list information of access point
+        /// <p>Access point VIP list information.</p>.
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// Virtual IP
+        /// <p>Virtual IP.</p>.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Virtual port
+        /// <P>Virtual port.</p>.
         /// </summary>
         [JsonProperty("Vport")]
         public string Vport{ get; set; }
 
         /// <summary>
-        /// Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+        /// <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance bandwidth in Mbps
+        /// <p>Instance bandwidth (unit: Mbps).</p>.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Instance storage capacity in GB
+        /// <p>Specifies the instance storage size in GB.</p>.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// AZ
+        /// <P>Specifies the availability zone.</p>.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// VPC ID. If this parameter is empty, it means the basic network
+        /// <p>VPC ID. being empty indicates a basic network.</p>.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID. If this parameter is empty, it means the basic network
+        /// <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+        /// <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }
 
         /// <summary>
-        /// Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+        /// <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
         /// </summary>
         [JsonProperty("HealthyMessage")]
         public string HealthyMessage{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// <P>Creation time.</p>.
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Message retention period in minutes
+        /// <P>Message retention period, in minutes.</p>.
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
 
         /// <summary>
-        /// Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+        /// <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
         /// </summary>
         [JsonProperty("Config")]
         public InstanceConfigDO Config{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable partitions
+        /// <P>Number of remaining creatable partitions.</p>.
         /// </summary>
         [JsonProperty("RemainderPartitions")]
         public long? RemainderPartitions{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable topics
+        /// <P>Number of remaining creatable topics.</p>.
         /// </summary>
         [JsonProperty("RemainderTopics")]
         public long? RemainderTopics{ get; set; }
 
         /// <summary>
-        /// Number of partitions already created
+        /// <P>Specifies the current number of partitions created.</p>.
         /// </summary>
         [JsonProperty("CreatedPartitions")]
         public long? CreatedPartitions{ get; set; }
 
         /// <summary>
-        /// Number of topics already created
+        /// <P>Specifies the current number of topics created.</p>.
         /// </summary>
         [JsonProperty("CreatedTopics")]
         public long? CreatedTopics{ get; set; }
 
         /// <summary>
-        /// Tag array
+        /// <P>Tag array.</p>.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Expiration time
+        /// <P>Specifies the expiration time.</p>.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Availability Zone List
+        /// <P>Specifies the availability zone list.</p>.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Specifies the ckafka cluster instance version.
+        /// <P>Specifies the ckafka cluster instance version.</p>.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Maximum number of groups.
+        /// <P>Specifies the maximum number of groups.</p>.
         /// </summary>
         [JsonProperty("MaxGroupNum")]
         public long? MaxGroupNum{ get; set; }
 
         /// <summary>
-        /// Sale type. valid values: 0 (standard version), 1 (pro edition).
+        /// <P>Sale type. 0: standard version; 1: pro edition.</p>.
         /// </summary>
         [JsonProperty("Cvm")]
         public long? Cvm{ get; set; }
 
         /// <summary>
-        /// Instance type. valid values:. 
-        /// Specifies the pro edition.    
-        /// Standard version.
-        /// premium. specifies the advanced edition.
-        /// Specifies the serverless version.
+        /// <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+        /// <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// Dynamic message retention policy.
+        /// <P>Dynamic message retention policy.</p>.
         /// </summary>
         [JsonProperty("RetentionTimeConfig")]
         public DynamicRetentionTime RetentionTimeConfig{ get; set; }
 
         /// <summary>
-        /// Maximum number of connections.
+        /// <P>Maximum number of connections.</p>.
         /// </summary>
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth
+        /// <P>Public network bandwidth.</p>.
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Specifies the deprecated field with no actual meaning.
+        /// <P>Deprecated. no actual meaning.</p>.
         /// </summary>
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable partitions.
+        /// <P>Number of remaining creatable partitions.</p>.
         /// </summary>
         [JsonProperty("RemainingPartitions")]
         public long? RemainingPartitions{ get; set; }
 
         /// <summary>
-        /// Number of remaining creatable topics.
+        /// <P>Number of remaining creatable topics.</p>.
         /// </summary>
         [JsonProperty("RemainingTopics")]
         public long? RemainingTopics{ get; set; }
 
         /// <summary>
-        /// Scaling policy for dynamic disk.
+        /// <P>Dynamic disk expansion policy.</p>.
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// Specifies the system maintenance time.
+        /// <P>Specifies the system maintenance time.</p>.
         /// </summary>
         [JsonProperty("SystemMaintenanceTime")]
         public string SystemMaintenanceTime{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum size of messages at the instance level.
+        /// <P>Specifies the maximum size of instance level messages.</p>.
         /// </summary>
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }
 
         /// <summary>
-        /// Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+        /// <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Whether to enable the elastic bandwidth allowlist.   
-        /// Indicates the allowlist feature with elastic bandwidth enabled.
-        /// 0: elastic bandwidth allowlist feature is disabled.
+        /// <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
         /// </summary>
         [JsonProperty("ElasticBandwidthSwitch")]
         public long? ElasticBandwidthSwitch{ get; set; }
 
         /// <summary>
-        /// Indicates the elastic bandwidth activation status.
-        /// 1: indicates elastic bandwidth is disabled.
-        /// Enable elastic bandwidth.
-        /// Enable elastic bandwidth successfully.
-        /// 33: disabling elastic bandwidth.
-        /// Indicates that the elastic bandwidth is successfully disabled.
-        /// Enable elastic bandwidth failed.
-        /// Bandwidth failure.
+        /// <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
         /// </summary>
         [JsonProperty("ElasticBandwidthOpenStatus")]
         public long? ElasticBandwidthOpenStatus{ get; set; }
 
         /// <summary>
-        /// Cluster type.  
-        /// CLOUD_IDC idc cluster.
-        /// CLOUD_CVM_SHARE shared cluster.
-        /// CLOUD_CVM_YUNTI yunti cvm cluster.
-        /// CLOUD_CVM. specifies the cvm cluster.
-        /// CLOUD_CDC cdc cluster.
-        /// CLOUD_EKS_TSE eks cluster.
+        /// <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// Number of free partitions.
+        /// <P>Specifies the number of free partitions.</p>.
         /// </summary>
         [JsonProperty("FreePartitionNumber")]
         public long? FreePartitionNumber{ get; set; }
 
         /// <summary>
-        /// Specifies the elastic bandwidth upper limit.
+        /// <P>Specifies the elastic bandwidth upper limit.</p>.
         /// </summary>
         [JsonProperty("ElasticFloatBandwidth")]
         public long? ElasticFloatBandwidth{ get; set; }
 
         /// <summary>
-        /// ssl custom certificate id. only returned for instance clusters with custom certificates.
+        /// <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
         /// </summary>
         [JsonProperty("CustomCertId")]
         public string CustomCertId{ get; set; }
 
         /// <summary>
-        /// Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+        /// <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Instance deletion protection switch. 1: enabled; 0: disabled.
+        /// <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
         /// </summary>
         [JsonProperty("DeleteProtectionEnable")]
         public long? DeleteProtectionEnable{ get; set; }
