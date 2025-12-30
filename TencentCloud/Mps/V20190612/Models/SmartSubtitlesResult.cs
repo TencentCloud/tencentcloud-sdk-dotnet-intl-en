@@ -29,6 +29,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// - AsrFullTextRecognition: full speech recognition.
         /// - TransTextRecognition: speech translation.
         /// - PureSubtitleTrans: pure subtitle translation.
+        /// - OcrFullTextRecognition: text-based subtitle extraction.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -57,6 +58,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("PureSubtitleTransTask")]
         public PureSubtitleTransResult PureSubtitleTransTask{ get; set; }
 
+        /// <summary>
+        /// Text-based subtitle extraction result. This field is valid when the value of Type is
+        /// OcrFullTextRecognition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OcrFullTextTask")]
+        public SmartSubtitleTaskFullTextResult OcrFullTextTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
             this.SetParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
             this.SetParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
+            this.SetParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         }
     }
 }

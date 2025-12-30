@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -1579,7 +1579,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query the CDN statistics of VOD such as traffic and bandwidth.
-        ///    1. Only CDN usage data for the last 365 days can be queried.
+        ///    1. CDN usage data is retained on the system side for 13 months, while you can only query the CDN usage data for the most recent 365 days via the API.If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///    2. The query time range cannot be more than 90 days.
         ///    3. The time granularity of usage data can be specified, including 5-minute, 1-hour, and 1-day.
         ///    4. Traffic refers to the total traffic within the query time granularity, while bandwidth the peak bandwidth.
@@ -1593,7 +1593,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query the CDN statistics of VOD such as traffic and bandwidth.
-        ///    1. Only CDN usage data for the last 365 days can be queried.
+        ///    1. CDN usage data is retained on the system side for 13 months, while you can only query the CDN usage data for the most recent 365 days via the API.If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///    2. The query time range cannot be more than 90 days.
         ///    3. The time granularity of usage data can be specified, including 5-minute, 1-hour, and 1-day.
         ///    4. Traffic refers to the total traffic within the query time granularity, while bandwidth the peak bandwidth.
@@ -2037,7 +2037,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query the information of video processing usage within the specified time range.
-        ///    1. Statistics on video processing for the last 365 days can be queried.
+        ///    1. Video processing usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///    2. The query time range cannot be more than 90 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaProcessUsageDataRequest"/></param>
@@ -2049,7 +2049,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query the information of video processing usage within the specified time range.
-        ///    1. Statistics on video processing for the last 365 days can be queried.
+        ///    1. Video processing usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///    2. The query time range cannot be more than 90 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaProcessUsageDataRequest"/></param>
@@ -2284,7 +2284,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query VOD storage usage in bytes within the query period.
-        ///     1. You can only query storage usage for the last 365 days.
+        ///     1. Storage usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///     2. The query period is up to 90 days.
         ///     3. The query period at minute-level granularity is up to 7 days.
         /// </summary>
@@ -2297,7 +2297,7 @@ namespace TencentCloud.Vod.V20180717
 
         /// <summary>
         /// This API is used to query VOD storage usage in bytes within the query period.
-        ///     1. You can only query storage usage for the last 365 days.
+        ///     1. Storage usage data is retained on the system side for 13 months, and you may only query the usage data for the most recent 365 days via the API. If you need to retrieve historical usage data beyond 365 days, please contact us.
         ///     2. The query period is up to 90 days.
         ///     3. The query period at minute-level granularity is up to 7 days.
         /// </summary>

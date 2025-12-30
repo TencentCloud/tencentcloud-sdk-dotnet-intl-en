@@ -133,7 +133,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+        /// Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

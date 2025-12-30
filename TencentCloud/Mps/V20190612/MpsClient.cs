@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1248";
+       private const string sdkVersion = "SDK_NET_3.0.1258";
 
         /// <summary>
         /// Client constructor.
@@ -2422,6 +2422,27 @@ namespace TencentCloud.Mps.V20190612
         public ResetWorkflowResponse ResetWorkflowSync(ResetWorkflowRequest req)
         {
             return InternalRequestAsync<ResetWorkflowResponse>(req, "ResetWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to translate text.
+        /// </summary>
+        /// <param name="req"><see cref="TextTranslationRequest"/></param>
+        /// <returns><see cref="TextTranslationResponse"/></returns>
+        public Task<TextTranslationResponse> TextTranslation(TextTranslationRequest req)
+        {
+            return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation");
+        }
+
+        /// <summary>
+        /// This API is used to translate text.
+        /// </summary>
+        /// <param name="req"><see cref="TextTranslationRequest"/></param>
+        /// <returns><see cref="TextTranslationResponse"/></returns>
+        public TextTranslationResponse TextTranslationSync(TextTranslationRequest req)
+        {
+            return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
