@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Notification type. Currently only supports URLs
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Callback URL. Starting with http/https, supporting a maximum of 512 characters
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }

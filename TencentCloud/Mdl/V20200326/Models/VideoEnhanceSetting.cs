@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video enhancement intensity, 0-1.0, granularity 0.1
         /// </summary>
         [JsonProperty("Strength")]
         public float? Strength{ get; set; }

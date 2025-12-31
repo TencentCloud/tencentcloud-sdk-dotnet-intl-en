@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

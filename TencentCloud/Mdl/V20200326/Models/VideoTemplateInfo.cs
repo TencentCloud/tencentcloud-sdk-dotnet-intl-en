@@ -134,13 +134,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public VideoCodecDetail VideoCodecDetails{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video enhancement switch, 1: on 0: off.
         /// </summary>
         [JsonProperty("VideoEnhanceEnabled")]
         public ulong? VideoEnhanceEnabled{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video enhancement parameter array.
         /// </summary>
         [JsonProperty("VideoEnhanceSettings")]
         public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
@@ -150,6 +150,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         [JsonProperty("ColorSpaceSettings")]
         public ColorSpaceSetting ColorSpaceSettings{ get; set; }
+
+        /// <summary>
+        /// Traceability watermark.
+        /// </summary>
+        [JsonProperty("ForensicWatermarkIds")]
+        public string[] ForensicWatermarkIds{ get; set; }
 
 
         /// <summary>
@@ -178,6 +184,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
             this.SetParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
             this.SetParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
+            this.SetParamArraySimple(map, prefix + "ForensicWatermarkIds.", this.ForensicWatermarkIds);
         }
     }
 }

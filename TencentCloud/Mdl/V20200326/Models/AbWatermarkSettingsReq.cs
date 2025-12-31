@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Optional values: A/B.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
