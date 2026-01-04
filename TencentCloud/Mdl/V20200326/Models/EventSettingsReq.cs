@@ -102,6 +102,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("MotionGraphicsActivateSetting")]
         public MotionGraphicsActivateSetting MotionGraphicsActivateSetting{ get; set; }
 
+        /// <summary>
+        /// Ad Settings
+        /// </summary>
+        [JsonProperty("AdBreakSetting")]
+        public AdBreakSetting AdBreakSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
             this.SetParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
             this.SetParamObj(map, prefix + "MotionGraphicsActivateSetting.", this.MotionGraphicsActivateSetting);
+            this.SetParamObj(map, prefix + "AdBreakSetting.", this.AdBreakSetting);
         }
     }
 }

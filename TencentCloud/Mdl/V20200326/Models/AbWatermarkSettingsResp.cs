@@ -21,27 +21,20 @@ namespace TencentCloud.Mdl.V20200326.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PipelineOutputStatistics : AbstractModel
+    public class AbWatermarkSettingsResp : AbstractModel
     {
         
         /// <summary>
-        /// Timestamp.
-        /// In seconds, indicating data time.
+        /// AB watermark type.
         /// </summary>
-        [JsonProperty("Timestamp")]
-        public ulong? Timestamp{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// Output bandwidth in bps.
+        /// Watermark payload.
         /// </summary>
-        [JsonProperty("NetworkOut")]
-        public ulong? NetworkOut{ get; set; }
-
-        /// <summary>
-        /// Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
-        /// </summary>
-        [JsonProperty("NetworkValid")]
-        public long? NetworkValid{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
-            this.SetParamSimple(map, prefix + "NetworkOut", this.NetworkOut);
-            this.SetParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
         }
     }
 }

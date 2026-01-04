@@ -37,13 +37,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+        /// The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
         /// </summary>
         [JsonProperty("XPos")]
         public long? XPos{ get; set; }
 
         /// <summary>
-        /// The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+        /// The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
         /// </summary>
         [JsonProperty("YPos")]
         public long? YPos{ get; set; }

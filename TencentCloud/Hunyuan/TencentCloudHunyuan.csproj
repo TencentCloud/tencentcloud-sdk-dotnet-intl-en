@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1248</VersionPrefix>
+    <VersionPrefix>3.0.1260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,10 +49,19 @@
   <ItemGroup>
     <Compile Include="V20230901\HunyuanClient.cs" />
     <Compile Include="V20230901\Models\File3D.cs" />
+    <Compile Include="V20230901\Models\InputFile3D.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuan3DPartJobRequest.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuan3DPartJobResponse.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanTo3DProJobRequest.cs" />
     <Compile Include="V20230901\Models\QueryHunyuanTo3DProJobResponse.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuanTo3DRapidJobRequest.cs" />
+    <Compile Include="V20230901\Models\QueryHunyuanTo3DRapidJobResponse.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuan3DPartJobRequest.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuan3DPartJobResponse.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanTo3DProJobRequest.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanTo3DProJobResponse.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuanTo3DRapidJobRequest.cs" />
+    <Compile Include="V20230901\Models\SubmitHunyuanTo3DRapidJobResponse.cs" />
     <Compile Include="V20230901\Models\ViewImage.cs" />
   </ItemGroup>
 </Project>

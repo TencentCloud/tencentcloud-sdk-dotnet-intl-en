@@ -76,6 +76,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("FrameCaptureTemplateNames")]
         public string[] FrameCaptureTemplateNames{ get; set; }
 
+        /// <summary>
+        /// Name modification for sub m3u8.
+        /// </summary>
+        [JsonProperty("NameModifier")]
+        public string NameModifier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
             this.SetParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
             this.SetParamArraySimple(map, prefix + "FrameCaptureTemplateNames.", this.FrameCaptureTemplateNames);
+            this.SetParamSimple(map, prefix + "NameModifier", this.NameModifier);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? TypeID{ get; set; }
 
         /// <summary>
-        /// Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+        /// Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
         /// </summary>
         [JsonProperty("Num")]
         public ulong? Num{ get; set; }

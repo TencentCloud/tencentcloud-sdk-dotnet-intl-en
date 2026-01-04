@@ -21,27 +21,32 @@ namespace TencentCloud.Mdl.V20200326.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PipelineOutputStatistics : AbstractModel
+    public class AdBreakSetting : AbstractModel
     {
         
         /// <summary>
-        /// Timestamp.
-        /// In seconds, indicating data time.
+        /// Advertising type, currently supports L-SQUEEZE
         /// </summary>
-        [JsonProperty("Timestamp")]
-        public ulong? Timestamp{ get; set; }
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
 
         /// <summary>
-        /// Output bandwidth in bps.
+        /// Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
         /// </summary>
-        [JsonProperty("NetworkOut")]
-        public ulong? NetworkOut{ get; set; }
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+        /// L-type compression recovery configuration
         /// </summary>
-        [JsonProperty("NetworkValid")]
-        public long? NetworkValid{ get; set; }
+        [JsonProperty("LSqueezeSetting")]
+        public LSqueezeSetting LSqueezeSetting{ get; set; }
+
+        /// <summary>
+        /// AdSource type, supports UPLOAD_CREATIVES
+        /// </summary>
+        [JsonProperty("AdSource")]
+        public string AdSource{ get; set; }
 
 
         /// <summary>
@@ -49,9 +54,10 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
-            this.SetParamSimple(map, prefix + "NetworkOut", this.NetworkOut);
-            this.SetParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
+            this.SetParamObj(map, prefix + "LSqueezeSetting.", this.LSqueezeSetting);
+            this.SetParamSimple(map, prefix + "AdSource", this.AdSource);
         }
     }
 }

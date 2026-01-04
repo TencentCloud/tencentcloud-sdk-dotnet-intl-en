@@ -43,19 +43,19 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Location{ get; set; }
 
         /// <summary>
-        /// The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+        /// The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
         /// </summary>
         [JsonProperty("XPos")]
         public long? XPos{ get; set; }
 
         /// <summary>
-        /// The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+        /// The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
         /// </summary>
         [JsonProperty("YPos")]
         public long? YPos{ get; set; }
 
         /// <summary>
-        /// The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+        /// The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
         /// `0` means to scale the width proportionally to the height.
         /// You cannot set both `Width` and `Height` to `0`.
         /// </summary>
@@ -63,7 +63,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+        /// The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
         /// `0` means to scale the height proportionally to the width.
         /// You cannot set both `Width` and `Height` to `0`.
         /// </summary>

@@ -70,6 +70,12 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("AttachedChannels")]
         public string[] AttachedChannels{ get; set; }
 
+        /// <summary>
+        /// AB watermark configuration.
+        /// </summary>
+        [JsonProperty("AbWatermarkSettings")]
+        public AbWatermarkSettingsResp AbWatermarkSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -83,6 +89,7 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamObj(map, prefix + "TextSettings.", this.TextSettings);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "AttachedChannels.", this.AttachedChannels);
+            this.SetParamObj(map, prefix + "AbWatermarkSettings.", this.AbWatermarkSettings);
         }
     }
 }

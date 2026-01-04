@@ -52,6 +52,24 @@ namespace TencentCloud.Mdl.V20200326.Models
         [JsonProperty("Audio")]
         public AudioPipelineInputStatistics[] Audio{ get; set; }
 
+        /// <summary>
+        /// Session ID
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// Rtt time, in milliseconds
+        /// </summary>
+        [JsonProperty("RTT")]
+        public long? RTT{ get; set; }
+
+        /// <summary>
+        /// Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+        /// </summary>
+        [JsonProperty("NetworkValid")]
+        public long? NetworkValid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +80,9 @@ namespace TencentCloud.Mdl.V20200326.Models
             this.SetParamSimple(map, prefix + "NetworkIn", this.NetworkIn);
             this.SetParamArrayObj(map, prefix + "Video.", this.Video);
             this.SetParamArrayObj(map, prefix + "Audio.", this.Audio);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "RTT", this.RTT);
+            this.SetParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
         }
     }
 }

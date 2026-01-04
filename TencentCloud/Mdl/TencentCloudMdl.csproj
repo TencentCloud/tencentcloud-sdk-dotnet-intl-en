@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{87BF3C79-D8D0-3C22-AE2A-DEE7C02ABAD4}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1259</VersionPrefix>
+    <VersionPrefix>3.0.1260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20200326\Models\AbWatermarkDetectionInfo.cs" />
     <Compile Include="V20200326\Models\AbWatermarkInputInfo.cs" />
     <Compile Include="V20200326\Models\AbWatermarkSettingsReq.cs" />
+    <Compile Include="V20200326\Models\AbWatermarkSettingsResp.cs" />
+    <Compile Include="V20200326\Models\AdBreakSetting.cs" />
     <Compile Include="V20200326\Models\AdditionalRateSetting.cs" />
     <Compile Include="V20200326\Models\AmazonS3Settings.cs" />
     <Compile Include="V20200326\Models\AttachedInput.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="V20200326\Models\InputStreamInfo.cs" />
     <Compile Include="V20200326\Models\InputTrack.cs" />
     <Compile Include="V20200326\Models\InputTracks.cs" />
+    <Compile Include="V20200326\Models\LSqueezeSetting.cs" />
     <Compile Include="V20200326\Models\LogInfo.cs" />
     <Compile Include="V20200326\Models\LogMessageInfo.cs" />
     <Compile Include="V20200326\Models\ModifyStreamLiveChannelRequest.cs" />

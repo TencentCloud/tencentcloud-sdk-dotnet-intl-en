@@ -15,33 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Hunyuan.V20230901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PipelineOutputStatistics : AbstractModel
+    public class QueryHunyuanTo3DRapidJobRequest : AbstractModel
     {
         
         /// <summary>
-        /// Timestamp.
-        /// In seconds, indicating data time.
+        /// Task ID.	
         /// </summary>
-        [JsonProperty("Timestamp")]
-        public ulong? Timestamp{ get; set; }
-
-        /// <summary>
-        /// Output bandwidth in bps.
-        /// </summary>
-        [JsonProperty("NetworkOut")]
-        public ulong? NetworkOut{ get; set; }
-
-        /// <summary>
-        /// Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
-        /// </summary>
-        [JsonProperty("NetworkValid")]
-        public long? NetworkValid{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +36,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
-            this.SetParamSimple(map, prefix + "NetworkOut", this.NetworkOut);
-            this.SetParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
         }
     }
 }
