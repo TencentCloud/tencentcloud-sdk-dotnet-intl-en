@@ -102,6 +102,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// Callback URL after recording is completed
+        /// </summary>
+        [JsonProperty("CallbackURL")]
+        public string CallbackURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// 
+        /// The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 
+        /// The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

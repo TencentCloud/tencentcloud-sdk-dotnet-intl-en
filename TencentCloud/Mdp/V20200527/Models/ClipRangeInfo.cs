@@ -37,6 +37,18 @@ namespace TencentCloud.Mdp.V20200527.Models
         [System.Obsolete]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// Start offset, Valid when the Type is SpecifyTimeRange.
+        /// </summary>
+        [JsonProperty("StartOffset")]
+        public ulong? StartOffset{ get; set; }
+
+        /// <summary>
+        /// End offset, valid when Type is SpecifyTimeRange.
+        /// </summary>
+        [JsonProperty("EndOffset")]
+        public ulong? EndOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +57,8 @@ namespace TencentCloud.Mdp.V20200527.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "StartOffset", this.StartOffset);
+            this.SetParamSimple(map, prefix + "EndOffset", this.EndOffset);
         }
     }
 }

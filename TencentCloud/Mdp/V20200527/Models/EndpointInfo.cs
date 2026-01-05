@@ -103,6 +103,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("DRMInfo")]
         public DRMInfo DRMInfo{ get; set; }
 
+        /// <summary>
+        /// The switch of absolute path.
+        /// </summary>
+        [JsonProperty("AbsolutePathEnable")]
+        public bool? AbsolutePathEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
             this.SetParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
             this.SetParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
+            this.SetParamSimple(map, prefix + "AbsolutePathEnable", this.AbsolutePathEnable);
         }
     }
 }

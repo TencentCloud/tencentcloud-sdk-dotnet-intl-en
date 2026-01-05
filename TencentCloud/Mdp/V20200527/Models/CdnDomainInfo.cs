@@ -25,13 +25,13 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// 
+        /// Total list size.
         /// </summary>
         [JsonProperty("TotalSize")]
         public long? TotalSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of associated domain name information.
         /// </summary>
         [JsonProperty("Records")]
         public DomainRecordInfo[] Records{ get; set; }

@@ -100,37 +100,109 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// Advertising tag time.
         /// </summary>
         [JsonProperty("AdMarkerTime")]
+        [System.Obsolete]
         public float? AdMarkerTime{ get; set; }
 
         /// <summary>
         /// Personalization replacement time.
         /// </summary>
         [JsonProperty("ReplacedTime")]
+        [System.Obsolete]
         public float? ReplacedTime{ get; set; }
 
         /// <summary>
         /// Fill factor for personalized ads.
         /// </summary>
         [JsonProperty("MidFillRate")]
+        [System.Obsolete]
         public float? MidFillRate{ get; set; }
 
         /// <summary>
         /// Number of pre-roll ad requests.
         /// </summary>
         [JsonProperty("PreReqNum")]
+        [System.Obsolete]
         public ulong? PreReqNum{ get; set; }
 
         /// <summary>
         /// Number of pre-roll ad replacements.
         /// </summary>
         [JsonProperty("PreReplacedNum")]
+        [System.Obsolete]
         public ulong? PreReplacedNum{ get; set; }
 
         /// <summary>
         /// Ad replacement rate.
         /// </summary>
         [JsonProperty("PreReplaceRate")]
+        [System.Obsolete]
         public float? PreReplaceRate{ get; set; }
+
+        /// <summary>
+        /// Number of ad tags found in the list
+        /// </summary>
+        [JsonProperty("ADMarkerFound")]
+        public ulong? ADMarkerFound{ get; set; }
+
+        /// <summary>
+        /// Request advertising frequency from ADS
+        /// </summary>
+        [JsonProperty("MakeAdsRequest")]
+        public ulong? MakeAdsRequest{ get; set; }
+
+        /// <summary>
+        /// Received VAST returns from ADS
+        /// </summary>
+        [JsonProperty("VASTResponse")]
+        public ulong? VASTResponse{ get; set; }
+
+        /// <summary>
+        /// Successfully filled the ad count
+        /// </summary>
+        [JsonProperty("FilledAvail")]
+        public ulong? FilledAvail{ get; set; }
+
+        /// <summary>
+        /// The number of issues encountered during ad replacement execution
+        /// </summary>
+        [JsonProperty("WarningNoAd")]
+        public ulong? WarningNoAd{ get; set; }
+
+        /// <summary>
+        /// The number of timeouts returned by ADS
+        /// </summary>
+        [JsonProperty("ErrorAdsTimeout")]
+        public ulong? ErrorAdsTimeout{ get; set; }
+
+        /// <summary>
+        /// The number of empty VAST responses returned by ADS
+        /// </summary>
+        [JsonProperty("EmptyVASTResponse")]
+        public ulong? EmptyVASTResponse{ get; set; }
+
+        /// <summary>
+        /// The number of empty VMAP responses returned by ADS
+        /// </summary>
+        [JsonProperty("EmptyVMAPResponse")]
+        public ulong? EmptyVMAPResponse{ get; set; }
+
+        /// <summary>
+        /// Date
+        /// </summary>
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
+
+        /// <summary>
+        /// Start time
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// End time
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -156,6 +228,17 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "PreReqNum", this.PreReqNum);
             this.SetParamSimple(map, prefix + "PreReplacedNum", this.PreReplacedNum);
             this.SetParamSimple(map, prefix + "PreReplaceRate", this.PreReplaceRate);
+            this.SetParamSimple(map, prefix + "ADMarkerFound", this.ADMarkerFound);
+            this.SetParamSimple(map, prefix + "MakeAdsRequest", this.MakeAdsRequest);
+            this.SetParamSimple(map, prefix + "VASTResponse", this.VASTResponse);
+            this.SetParamSimple(map, prefix + "FilledAvail", this.FilledAvail);
+            this.SetParamSimple(map, prefix + "WarningNoAd", this.WarningNoAd);
+            this.SetParamSimple(map, prefix + "ErrorAdsTimeout", this.ErrorAdsTimeout);
+            this.SetParamSimple(map, prefix + "EmptyVASTResponse", this.EmptyVASTResponse);
+            this.SetParamSimple(map, prefix + "EmptyVMAPResponse", this.EmptyVMAPResponse);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

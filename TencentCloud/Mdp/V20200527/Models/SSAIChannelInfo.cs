@@ -60,6 +60,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// Used for clickthrough addresses
+        /// </summary>
+        [JsonProperty("SessionInitPrefix")]
+        public string SessionInitPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "PlaybackPrefix", this.PlaybackPrefix);
             this.SetParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "SessionInitPrefix", this.SessionInitPrefix);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// 
+        /// COS bucket name
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// File object path
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }
