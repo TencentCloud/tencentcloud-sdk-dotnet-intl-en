@@ -69,7 +69,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// <summary>
         /// Number of partitions for instance purchase, unit: unit (required when purchased; bandwidth information required for pro edition/advanced edition inquiry).
         /// Partition upper limit. maximum value of 40000. step length of 100.
-        /// Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+        /// Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

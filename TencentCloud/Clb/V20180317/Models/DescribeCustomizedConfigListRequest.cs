@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ConfigName{ get; set; }
 
         /// <summary>
-        /// Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+        /// Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("UconfigIds")]
         public string[] UconfigIds{ get; set; }
@@ -60,12 +60,12 @@ namespace TencentCloud.Clb.V20180317.Models
         /// Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
         /// Type: String.
         /// Required: No
-        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
         /// - vip
         /// Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
         /// Type: String.
         /// Required: No
-        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+        /// Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

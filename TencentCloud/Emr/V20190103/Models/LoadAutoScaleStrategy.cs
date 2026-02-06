@@ -141,7 +141,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
-        /// Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+        /// Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SoftDeployInfo")]

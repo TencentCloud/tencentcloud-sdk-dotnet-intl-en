@@ -55,7 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Name of RO AZ, such as ap-shanghai-1
+        /// Name of RO AZ, such as ap-shanghai-2
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+        /// Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }

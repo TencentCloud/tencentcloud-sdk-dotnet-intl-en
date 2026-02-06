@@ -25,14 +25,14 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
+        /// ID of the cloud load balancer instance. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
         /// Log set ID of cloud log service (CLS).
-        /// <li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.comom/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+        /// <li>Specifies the logset ID that can be obtained by calling the [DescribeLogsets](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1) API when adding or updating a log topic.</li>.
         /// <Li>When deleting a log topic, set this parameter to an empty string.</li>.
         /// </summary>
         [JsonProperty("LogSetId")]
@@ -40,7 +40,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Specifies the log topic ID of cloud log service (CLS).
-        /// <li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.comom/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
+        /// <li>Specifies the log topic ID can be obtained by calling the [DescribeTopics](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1) API when adding or updating a log topic.</li>.
         /// <Li>When deleting a log topic, set this parameter to an empty string.</li>.
         /// </summary>
         [JsonProperty("LogTopicId")]

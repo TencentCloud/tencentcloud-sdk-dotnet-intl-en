@@ -34,10 +34,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:
-        /// <li>standard: standard super-resolution.</li>
-        /// <li>super: advanced super-resolution.</li>
-        /// Default value: standard.
+        /// Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
@@ -54,25 +51,34 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Magnification factor of super-resolution, which can be a decimal.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Percent")]
         public float? Percent{ get; set; }
 
         /// <summary>
-        /// Width of the target image. The value cannot exceed 4096.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Height of the target image. The value cannot exceed 4096.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
+
+        /// <summary>
+        /// Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LongSide")]
+        public long? LongSide{ get; set; }
+
+        /// <summary>
+        /// Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ShortSide")]
+        public long? ShortSide{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "LongSide", this.LongSide);
+            this.SetParamSimple(map, prefix + "ShortSide", this.ShortSide);
         }
     }
 }

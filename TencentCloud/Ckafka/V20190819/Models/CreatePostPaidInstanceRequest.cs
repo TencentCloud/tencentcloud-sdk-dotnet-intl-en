@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// <p>VPC Id, can be obtained through the <a href="https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1">DescribeVpcs</a> api.</p>.
+        /// <p>VPC Id, can be obtained through the <a href="https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1">DescribeVpcs</a> api.</p>.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// <p>Subnet Id, which can be obtained through the <a href="https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> api.</p>.
+        /// <p>Subnet Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1">DescribeSubnets</a> api.</p>.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -79,19 +79,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// <p>The peak bandwidth of the instance private network. the default value is 40 MB/s. for standard edition, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configurations such as peak bandwidth and number of partitions should meet the billing specification of the pro edition. you can view the billing specification through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
+        /// <p>The peak bandwidth of the instance private network. the default value is 40 MB/s. for standard edition, input the peak bandwidth corresponding to the current instance specifications. note that if the instance created is a pro edition instance, parameter configurations such as peak bandwidth and number of partitions should meet the billing specification of the pro edition. you can view the billing specification through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1</p>.
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// <P>Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
+        /// <P>Instance disk size. default value is 500. step length is set to 100. should meet the billing specification of the current instance. can be accessed through the following link to view billing specifications: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1</p>.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// <P>Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
+        /// <P>Specifies the maximum number of partitions for the instance, which should meet the billing specification of the current instance. default value is 800 with a step length of 100. the billing specification can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1</p>.
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// Specifies the availability zone where the instance is located. when creating a multi-az instance, this parameter indicates the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the API <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.
+        /// Specifies the availability zone where the instance is located. when creating a multi-az instance, this parameter indicates the availability zone id of the subnet where the default access point is created. ZoneId and ZoneIds cannot be empty at the same time. you can obtain this information through the API <a href="https://www.tencentcloud.com/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? MultiZoneFlag{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the multi-availability zone id list when the instance is a multi-az instance. note the corresponding multi-availability zone for parameter ZoneId must be included in the parameter array. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.</p>.
+        /// <p>Specifies the multi-availability zone id list when the instance is a multi-az instance. note the corresponding multi-availability zone for parameter ZoneId must be included in the parameter array. ZoneId and ZoneIds cannot be empty at the same time. obtain through the API <a href="https://www.tencentcloud.com/document/product/597/55246?from_cn_redirect=1">DescribeCkafkaZone</a>.</p>.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ElasticBandwidthSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+        /// <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.com/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
         /// </summary>
         [JsonProperty("CustomSSLCertId")]
         public string CustomSSLCertId{ get; set; }

@@ -69,7 +69,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+        /// ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
         /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
         /// </summary>
         [JsonProperty("ZoneId")]
@@ -98,7 +98,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+        /// Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
         /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
         /// </summary>
         [JsonProperty("ZoneName")]

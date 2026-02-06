@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{07FCB225-F7A7-392A-A759-E2C6236ECC1C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1177</VersionPrefix>
+    <VersionPrefix>3.0.1262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,8 @@
     <Compile Include="V20180709\Models\CreateAllocationUnitResponse.cs" />
     <Compile Include="V20180709\Models\CreateGatherRuleRequest.cs" />
     <Compile Include="V20180709\Models\CreateGatherRuleResponse.cs" />
+    <Compile Include="V20180709\Models\CreateInstanceRequest.cs" />
+    <Compile Include="V20180709\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20180709\Models\Deal.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationRuleRequest.cs" />
     <Compile Include="V20180709\Models\DeleteAllocationRuleResponse.cs" />
@@ -187,7 +189,11 @@
     <Compile Include="V20180709\Models\PayModeSummaryOverviewItem.cs" />
     <Compile Include="V20180709\Models\ProductInfo.cs" />
     <Compile Include="V20180709\Models\ProjectSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\RefundInstanceRequest.cs" />
+    <Compile Include="V20180709\Models\RefundInstanceResponse.cs" />
     <Compile Include="V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="V20180709\Models\RenewInstanceRequest.cs" />
+    <Compile Include="V20180709\Models\RenewInstanceResponse.cs" />
     <Compile Include="V20180709\Models\SummaryDetail.cs" />
     <Compile Include="V20180709\Models\SummaryTotal.cs" />
     <Compile Include="V20180709\Models\TagDataInfo.cs" />

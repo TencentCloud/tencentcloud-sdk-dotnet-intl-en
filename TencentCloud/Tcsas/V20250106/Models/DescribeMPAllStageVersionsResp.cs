@@ -25,128 +25,110 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program ID.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program version ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program version primary key id.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
         /// Mini program name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program avatar.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
         /// Mini program type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
         /// Mini program introduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
         /// Mini program description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Developer
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the developer.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// The time when the developer created it
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Developer creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Mini program version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program version.
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Version features
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes version features.
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Phase. Values: [Develop,Platform,Online]
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Development Platform Online.
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
-        /// 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Approval request number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval ticket ID
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Whether it is a preview
-        /// 0: Not a preview; 1: Preview
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether it is a trial version.
+        /// Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
         /// </summary>
         [JsonProperty("ShowCase")]
         public long? ShowCase{ get; set; }
 
         /// <summary>
-        /// Version number to roll back to
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version number to roll back to.
         /// </summary>
         [JsonProperty("RollbackVersion")]
         public long? RollbackVersion{ get; set; }
 
         /// <summary>
-        /// Release status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates the release status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
         /// </summary>
         [JsonProperty("VersionCurrentStatus")]
         public long? VersionCurrentStatus{ get; set; }

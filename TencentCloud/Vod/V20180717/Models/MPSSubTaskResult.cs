@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. Returns 0 for success, other values for failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// MPS media processing task output.
         /// </summary>
         [JsonProperty("Output")]
         public MPSTaskOutput Output{ get; set; }

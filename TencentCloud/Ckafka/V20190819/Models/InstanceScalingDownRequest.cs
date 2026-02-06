@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+        /// ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Specifies the disk capacity in GB. value range: maximum value 500000, step length 100.
-        /// The specifications and limitations can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+        /// The specifications and limitations can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
         /// 
         /// </summary>
         [JsonProperty("DiskSize")]
@@ -47,14 +47,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
 
         /// <summary>
         /// Peak bandwidth in MB/s.
-        /// Specifies the url (https://www.tencentcloud.comom/document/product/597/11745?from_cn_redirect=1) to view specification limits and corresponding step length.
+        /// Specifies the url (https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1) to view specification limits and corresponding step length.
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
         /// Partition upper limit maximum value of 40000, step length 100.
-        /// Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+        /// Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

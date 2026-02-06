@@ -96,6 +96,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
+        /// Audio/Video enhancement configuration.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
         /// Container filter. Valid values:
         /// <li>Video: video container that can contain both video stream and audio stream;</li>
         /// <li>PureAudio: audio container that can contain only audio stream.</li>
@@ -137,6 +144,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamSimple(map, prefix + "ContainerType", this.ContainerType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

@@ -44,7 +44,6 @@ namespace TencentCloud.Tcsas.V20250106.Models
 
         /// <summary>
         /// API description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
@@ -75,49 +74,42 @@ namespace TencentCloud.Tcsas.V20250106.Models
 
         /// <summary>
         /// Application ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Application icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the application icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// API type. 1: System; 2: Custom
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API type. 1: system; 2: custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// API status. 0: Public; 1: Restricted
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API status. 0: public; 1: restricted.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

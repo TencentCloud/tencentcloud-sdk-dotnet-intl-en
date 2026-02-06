@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+        /// Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

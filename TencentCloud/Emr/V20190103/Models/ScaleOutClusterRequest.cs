@@ -57,26 +57,26 @@ namespace TencentCloud.Emr.V20190103.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// [Bootstrap Actions](https://www.tencentcloud.comom/document/product/589/35656?from_cn_redirect=1) script settings.
+        /// [Bootstrap Actions](https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1) script settings.
         /// </summary>
         [JsonProperty("ScriptBootstrapActionConfig")]
         public ScriptBootstrapActionConfig[] ScriptBootstrapActionConfig{ get; set; }
 
         /// <summary>
-        /// Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+        /// Scale-out deployment service. New nodes inherit services deployed in the current node type by default, including default optional services. This parameter only supports optional service filling, for example: HDFS, YARN, and Impala have been deployed to existing task nodes. When API is used to scale out the task nodes without deploying Impala, only HDFS and YARN are filled for deployment services. For more details, see [Mapping Table of Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public long?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+        /// Deployment process. By default, all scale-out service processes are deployed. Deployment processes can be modified. For example, HDFS, YARN, or Impala has been deployed for the current Task node. The default deployment services include DataNode,NodeManager,ImpalaServer. If users need to modify deployment process information, the deployment process can be DataNode, NodeManager, ImpalaServerCoordinator or DataNode, NodeManager, ImpalaServerExecutor. For more details, see [Mapping Table of Process Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public long?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
         /// Spread placement group ID list. Only one can be specified currently.
-        /// This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.comom/document/product/213/17810?from_cn_redirect=1) API.
+        /// This parameter can be obtained by calling the DisasterRecoverGroupId field in the return value of the [DescribeDisasterRecoverGroups](https://www.tencentcloud.com/document/product/213/17810?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
@@ -132,7 +132,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public NodeResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.comom/document/product/213/15707?from_cn_redirect=1).
+        /// Availability zone of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

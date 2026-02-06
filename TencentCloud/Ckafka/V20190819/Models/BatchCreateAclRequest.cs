@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ResourceType{ get; set; }
 
         /// <summary>
-        /// Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.comom/document/product/597/40847?from_cn_redirect=1).
+        /// Resource list array, obtainable through the DescribeTopic API (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }
 
         /// <summary>
-        /// Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.comom/document/product/597/89217?from_cn_redirect=1).
+        /// Specifies the set ACL rule list, which can be obtained through the DescribeAclRule API (https://www.tencentcloud.com/document/product/597/89217?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("RuleList")]
         public AclRuleInfo[] RuleList{ get; set; }

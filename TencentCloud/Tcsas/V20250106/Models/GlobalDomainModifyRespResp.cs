@@ -25,8 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// 0: Success; 1: Allowed domains; 2: Blocked domains
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: success; 1: allowed domains exist; 2: blocked domains exist.
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

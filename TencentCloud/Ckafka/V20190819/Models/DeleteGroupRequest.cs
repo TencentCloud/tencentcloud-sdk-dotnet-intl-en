@@ -25,13 +25,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+        /// The ckafka cluster instance Id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.comom/document/product/597/40841?from_cn_redirect=1).
+        /// Consumer group name, which can be obtained through the DescribeConsumerGroup API (https://www.tencentcloud.com/document/product/597/40841?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }

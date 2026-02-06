@@ -26,35 +26,30 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Role ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RoleId")]
         public long? RoleId{ get; set; }
 
         /// <summary>
-        /// Role name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Role name.
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Role type 1-Preset role 2-Custom role
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Role type 1-preset role 2-custom role.
         /// </summary>
         [JsonProperty("RoleType")]
         public long? RoleType{ get; set; }

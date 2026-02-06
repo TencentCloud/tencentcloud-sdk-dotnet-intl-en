@@ -25,19 +25,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+        /// List of CVM image IDs, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ImageIds")]
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+        /// Offset. The default value is 0. For more information on `Offset`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.comom/document/product/1207/47578?from_cn_redirect=1).
+        /// Number of returned results. The default value is 20, and the maximum value is 100. For more information on `Limit`, see the relevant section in API [Introduction](https://www.tencentcloud.com/document/product/1207/47578?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

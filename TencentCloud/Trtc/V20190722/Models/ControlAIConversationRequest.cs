@@ -25,23 +25,28 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Unique ID of the task
+        /// Task unique identifier.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Control commands, currently supported commands are as follows:
-        /// - ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+        /// Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// The server sends a text broadcast command. This is required when Command is ServerPushText.
+        /// Server-Sent broadcast text Command. required when Command is ServerPushText.
         /// </summary>
         [JsonProperty("ServerPushText")]
         public ServerPushText ServerPushText{ get; set; }
+
+        /// <summary>
+        /// The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+        /// </summary>
+        [JsonProperty("InvokeLLM")]
+        public InvokeLLM InvokeLLM{ get; set; }
 
 
         /// <summary>
@@ -52,6 +57,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+            this.SetParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
         }
     }
 }

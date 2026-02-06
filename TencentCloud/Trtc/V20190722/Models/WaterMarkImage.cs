@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+        /// The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
         /// </summary>
         [JsonProperty("WaterMarkUrl")]
         public string WaterMarkUrl{ get; set; }

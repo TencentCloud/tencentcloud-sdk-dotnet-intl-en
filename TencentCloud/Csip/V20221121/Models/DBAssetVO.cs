@@ -26,159 +26,138 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// Asset ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Asset name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset name.
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset type.
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpcid
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC tags
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// vpc Tag.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Domain name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Domain
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Asset creation time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset creation time.
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
 
         /// <summary>
         /// Last scan time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Configuration risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Configuration risk.
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         public ulong? ConfigurationRisk{ get; set; }
 
         /// <summary>
-        /// Network attacks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Network attack.
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
-        /// 
+        /// Network access.
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }
 
         /// <summary>
-        /// Scan tasks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Scan Task
         /// </summary>
         [JsonProperty("ScanTask")]
         public ulong? ScanTask{ get; set; }
 
         /// <summary>
-        /// User `appid`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// User name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Nickname Alias
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// Port
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Tags
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Private IP address
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Whether it's a critical asset
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Core or Not
         /// </summary>
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }
 
         /// <summary>
-        /// Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// New Asset or Not. 1: New
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }

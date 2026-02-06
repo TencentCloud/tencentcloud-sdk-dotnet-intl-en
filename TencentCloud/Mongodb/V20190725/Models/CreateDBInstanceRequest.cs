@@ -44,7 +44,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
+        /// Refers to version information. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain detailed information about the supported versions.
         /// - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
         /// - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
         /// - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
@@ -108,7 +108,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// <summary>
         /// VPC ID.
         /// - Only VPC configuration is supported, and a VPC in the same region as the instance should be selected. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available VPC ID.
-        /// - After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+        /// - After successful instance creation, VPCs can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.com/document/product/239/30910?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -116,7 +116,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// <summary>
         /// Subnet ID of the VPC.
         /// - A subnet should be specified within the selected VPC. Log in to the [VPC console](https://console.cloud.tencent.com/vpc) to obtain the available subnet ID.
-        /// - After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.comom/document/product/239/30910?from_cn_redirect=1).
+        /// - After successful instance creation, VPCs and subnets can be changed. For detailed operations, see [Changing the Network](https://www.tencentcloud.com/document/product/239/30910?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -244,7 +244,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// <summary>
         /// Parameter template ID.
         /// - A parameter template is a collection of predefined parameter values that can be used to quickly configure new MongoDB instances. Proper use of parameter templates can significantly enhance the deployment efficiency and operational performance of the database.
-        /// - The [DescribeDBInstanceParamTpl](https://www.tencentcloud.comom/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
+        /// - The [DescribeDBInstanceParamTpl](https://www.tencentcloud.com/document/product/240/109155?from_cn_redirect=1) API can be called to obtain the parameter template ID. Select the parameter template ID corresponding to the instance version and architecture.
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public string ParamTemplateId{ get; set; }

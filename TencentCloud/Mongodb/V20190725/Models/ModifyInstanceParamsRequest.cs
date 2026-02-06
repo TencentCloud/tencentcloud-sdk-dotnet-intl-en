@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.comom/document/product/240/65903?from_cn_redirect=1).
+        /// Specifies the parameter name and value to be modified. For details about the currently supported parameter names and the corresponding valid values, see [DescribeInstanceParams](https://www.tencentcloud.com/document/product/240/65903?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceParams")]
         public ModifyMongoDBParamType[] InstanceParams{ get; set; }

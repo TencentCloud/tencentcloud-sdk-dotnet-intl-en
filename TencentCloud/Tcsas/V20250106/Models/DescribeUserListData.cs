@@ -26,49 +26,42 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// User ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// User account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
-        /// Account type. 1: Super admin; 2: Platform admin; 3: Member
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
         /// User name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Status. 1: Normal; 2: Disabled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status. 1: normal; 2: disabled.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }

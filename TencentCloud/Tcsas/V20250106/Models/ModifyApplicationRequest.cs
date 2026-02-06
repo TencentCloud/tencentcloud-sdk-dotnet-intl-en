@@ -58,19 +58,28 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// Android app package name
         /// </summary>
         [JsonProperty("AndroidAppKey")]
+        [System.Obsolete]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
         /// iOS App bundleId
         /// </summary>
         [JsonProperty("IosAppKey")]
+        [System.Obsolete]
         public string IosAppKey{ get; set; }
 
         /// <summary>
         /// Remarks
         /// </summary>
         [JsonProperty("Remark")]
+        [System.Obsolete]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Scheme
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
 
 
         /// <summary>
@@ -86,6 +95,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
             this.SetParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
         }
     }
 }

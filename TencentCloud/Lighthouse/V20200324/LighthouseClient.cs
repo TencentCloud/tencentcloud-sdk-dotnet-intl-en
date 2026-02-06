@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.intl.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1254";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -1941,7 +1941,7 @@ namespace TencentCloud.Lighthouse.V20200324
         /// * Synchronization to the source region is not supported.
         /// * Only images in the NORMAL status are supported for synchronization.
         /// * Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
-        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.com/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
         /// </summary>
         /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
         /// <returns><see cref="SyncBlueprintResponse"/></returns>
@@ -1957,7 +1957,7 @@ namespace TencentCloud.Lighthouse.V20200324
         /// * Synchronization to the source region is not supported.
         /// * Only images in the NORMAL status are supported for synchronization.
         /// * Synchronization between Chinese mainland regions and regions outside the Chinese mainland is not supported.
-        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.comom/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
+        ///  * You can use the [DescribeBlueprints](https://www.tencentcloud.com/document/api/1207/47689?from_cn_redirect=1) API to query the image status. When the status is NORMAL, it indicates that the source region synchronization ends.
         /// </summary>
         /// <param name="req"><see cref="SyncBlueprintRequest"/></param>
         /// <returns><see cref="SyncBlueprintResponse"/></returns>

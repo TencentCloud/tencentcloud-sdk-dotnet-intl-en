@@ -28,7 +28,7 @@ namespace TencentCloud.Ses.V20201002
 
        private const string endpoint = "ses.intl.tencentcloudapi.com";
        private const string version = "2020-10-02";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Ses.V20201002
         public CreateAddressUnsubscribeConfigResponse CreateAddressUnsubscribeConfigSync(CreateAddressUnsubscribeConfigRequest req)
         {
             return InternalRequestAsync<CreateAddressUnsubscribeConfigResponse>(req, "CreateAddressUnsubscribeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add a custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomBlacklistRequest"/></param>
+        /// <returns><see cref="CreateCustomBlacklistResponse"/></returns>
+        public Task<CreateCustomBlacklistResponse> CreateCustomBlacklist(CreateCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<CreateCustomBlacklistResponse>(req, "CreateCustomBlacklist");
+        }
+
+        /// <summary>
+        /// Add a custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomBlacklistRequest"/></param>
+        /// <returns><see cref="CreateCustomBlacklistResponse"/></returns>
+        public CreateCustomBlacklistResponse CreateCustomBlacklistSync(CreateCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<CreateCustomBlacklistResponse>(req, "CreateCustomBlacklist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -203,6 +224,27 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// Add recipient addresses with Template parameters. Use this API to import Template parameters while adding recipient addresses, ensuring each recipient address uses Template variables with different values when sending emails. Users first call the CreateReceiver API to create a recipient list, then call this API to import recipient addresses and Template parameters for email sending, and finally use the BatchSendEmail API to complete batch email sending. Notably, after using this API, the Template parameter in the BatchSendEmail API does not need to be passed again. Users can also import recipient addresses, Template variables, and parameter values via the import file option in the console under Email Sending - Recipient List menu. This API limits the number of recipient addresses in a single request to 20,000 entries. It can also append recipient addresses to an already uploaded recipient list, but the total number of recipient addresses in the list must not exceed a certain limit, currently set at 50,000 entries. This API does not support removing duplicate recipient addresses. Users need to ensure uploaded and appended addresses are non-repeating and do not duplicate previously uploaded addresses.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailWithDataRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailWithDataResponse"/></returns>
+        public Task<CreateReceiverDetailWithDataResponse> CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req)
+        {
+            return InternalRequestAsync<CreateReceiverDetailWithDataResponse>(req, "CreateReceiverDetailWithData");
+        }
+
+        /// <summary>
+        /// Add recipient addresses with Template parameters. Use this API to import Template parameters while adding recipient addresses, ensuring each recipient address uses Template variables with different values when sending emails. Users first call the CreateReceiver API to create a recipient list, then call this API to import recipient addresses and Template parameters for email sending, and finally use the BatchSendEmail API to complete batch email sending. Notably, after using this API, the Template parameter in the BatchSendEmail API does not need to be passed again. Users can also import recipient addresses, Template variables, and parameter values via the import file option in the console under Email Sending - Recipient List menu. This API limits the number of recipient addresses in a single request to 20,000 entries. It can also append recipient addresses to an already uploaded recipient list, but the total number of recipient addresses in the list must not exceed a certain limit, currently set at 50,000 entries. This API does not support removing duplicate recipient addresses. Users need to ensure uploaded and appended addresses are non-repeating and do not duplicate previously uploaded addresses.
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailWithDataRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailWithDataResponse"/></returns>
+        public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithDataSync(CreateReceiverDetailWithDataRequest req)
+        {
+            return InternalRequestAsync<CreateReceiverDetailWithDataResponse>(req, "CreateReceiverDetailWithData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Remove address-level unsubscribe configuration.
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressUnsubscribeConfigRequest"/></param>
@@ -241,6 +283,27 @@ namespace TencentCloud.Ses.V20201002
         public DeleteBlackListResponse DeleteBlackListSync(DeleteBlackListRequest req)
         {
             return InternalRequestAsync<DeleteBlackListResponse>(req, "DeleteBlackList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a custom blocklist email address.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomBlackListRequest"/></param>
+        /// <returns><see cref="DeleteCustomBlackListResponse"/></returns>
+        public Task<DeleteCustomBlackListResponse> DeleteCustomBlackList(DeleteCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomBlackListResponse>(req, "DeleteCustomBlackList");
+        }
+
+        /// <summary>
+        /// Delete a custom blocklist email address.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomBlackListRequest"/></param>
+        /// <returns><see cref="DeleteCustomBlackListResponse"/></returns>
+        public DeleteCustomBlackListResponse DeleteCustomBlackListSync(DeleteCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomBlackListResponse>(req, "DeleteCustomBlackList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -371,8 +434,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// This API is used to get email sending status. Only data within 30 days can be queried.
-        /// Default API request rate limit: 1 request/sec.
+        /// Search the email sending status. Only support querying data within 30 days.
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -382,8 +444,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// This API is used to get email sending status. Only data within 30 days can be queried.
-        /// Default API request rate limit: 1 request/sec.
+        /// Search the email sending status. Only support querying data within 30 days.
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -457,6 +518,27 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// Retrieve the custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomBlacklistRequest"/></param>
+        /// <returns><see cref="ListCustomBlacklistResponse"/></returns>
+        public Task<ListCustomBlacklistResponse> ListCustomBlacklist(ListCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<ListCustomBlacklistResponse>(req, "ListCustomBlacklist");
+        }
+
+        /// <summary>
+        /// Retrieve the custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="ListCustomBlacklistRequest"/></param>
+        /// <returns><see cref="ListCustomBlacklistResponse"/></returns>
+        public ListCustomBlacklistResponse ListCustomBlacklistSync(ListCustomBlacklistRequest req)
+        {
+            return InternalRequestAsync<ListCustomBlacklistResponse>(req, "ListCustomBlacklist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of sender addresses.
         /// </summary>
         /// <param name="req"><see cref="ListEmailAddressRequest"/></param>
@@ -516,6 +598,27 @@ namespace TencentCloud.Ses.V20201002
         public ListEmailTemplatesResponse ListEmailTemplatesSync(ListEmailTemplatesRequest req)
         {
             return InternalRequestAsync<ListEmailTemplatesResponse>(req, "ListEmailTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query ALL recipient email addresses in the recipient list based on the recipient list id with paging query. Filter queries can be based on the recipient email address.
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverDetailsRequest"/></param>
+        /// <returns><see cref="ListReceiverDetailsResponse"/></returns>
+        public Task<ListReceiverDetailsResponse> ListReceiverDetails(ListReceiverDetailsRequest req)
+        {
+            return InternalRequestAsync<ListReceiverDetailsResponse>(req, "ListReceiverDetails");
+        }
+
+        /// <summary>
+        /// Query ALL recipient email addresses in the recipient list based on the recipient list id with paging query. Filter queries can be based on the recipient email address.
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiverDetailsRequest"/></param>
+        /// <returns><see cref="ListReceiverDetailsResponse"/></returns>
+        public ListReceiverDetailsResponse ListReceiverDetailsSync(ListReceiverDetailsRequest req)
+        {
+            return InternalRequestAsync<ListReceiverDetailsResponse>(req, "ListReceiverDetails")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +703,27 @@ namespace TencentCloud.Ses.V20201002
         public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfigSync(UpdateAddressUnsubscribeConfigRequest req)
         {
             return InternalRequestAsync<UpdateAddressUnsubscribeConfigResponse>(req, "UpdateAddressUnsubscribeConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Refresh custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomBlackListRequest"/></param>
+        /// <returns><see cref="UpdateCustomBlackListResponse"/></returns>
+        public Task<UpdateCustomBlackListResponse> UpdateCustomBlackList(UpdateCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomBlackListResponse>(req, "UpdateCustomBlackList");
+        }
+
+        /// <summary>
+        /// Refresh custom blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomBlackListRequest"/></param>
+        /// <returns><see cref="UpdateCustomBlackListResponse"/></returns>
+        public UpdateCustomBlackListResponse UpdateCustomBlackListSync(UpdateCustomBlackListRequest req)
+        {
+            return InternalRequestAsync<UpdateCustomBlackListResponse>(req, "UpdateCustomBlackList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

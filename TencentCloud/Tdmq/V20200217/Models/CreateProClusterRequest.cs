@@ -34,14 +34,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// Cluster specification code.
-        /// Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+        /// Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// Specifies the storage specification.
-        /// Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+        /// Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("StorageSize")]
         public long? StorageSize{ get; set; }

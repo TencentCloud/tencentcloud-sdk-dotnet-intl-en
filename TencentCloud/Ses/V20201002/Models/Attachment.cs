@@ -31,10 +31,16 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Base64-encoded attachment content. You can send attachments of up to 4 MB in the total size. Note: The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+        /// The Base64-encoded attachment content supports a maximum of 4M. note: tencent cloud API supports up to 8M request packets. the attachment content is expected to expand by 1.5 times after Base64 encoding. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
+
+        /// <summary>
+        /// Attachment URL. do not use the open function.
+        /// </summary>
+        [JsonProperty("FileURL")]
+        public string FileURL{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "FileURL", this.FileURL);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
         /// </summary>
         [JsonProperty("OutputFiles")]
         public MPSOutputFile[] OutputFiles{ get; set; }

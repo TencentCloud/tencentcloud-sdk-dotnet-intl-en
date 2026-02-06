@@ -26,115 +26,105 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Application ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Product ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product ID.
         /// </summary>
         [JsonProperty("AppIdentityId")]
         public long? AppIdentityId{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the application icon.
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Android package name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AndroidAppKey")]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
         /// iOS bundleId
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IosAppKey")]
         public string IosAppKey{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Updater
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the updater.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Application description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the application description.
         /// </summary>
         [JsonProperty("Intro")]
         public string Intro{ get; set; }
 
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Number of sensitive APIs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of sensitive apis.
         /// </summary>
         [JsonProperty("SensitiveApiCount")]
         public long? SensitiveApiCount{ get; set; }
 
         /// <summary>
         /// Application type. 1: Test; 2: Formal
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationType")]
         public long? ApplicationType{ get; set; }
+
+        /// <summary>
+        /// Specifies the application Scheme.
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
 
 
         /// <summary>
@@ -158,6 +148,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TeamName", this.TeamName);
             this.SetParamSimple(map, prefix + "SensitiveApiCount", this.SensitiveApiCount);
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
         }
     }
 }

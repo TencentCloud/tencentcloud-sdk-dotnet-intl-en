@@ -26,21 +26,18 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// API name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
         /// API description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
 
         /// <summary>
-        /// API type. 1: System; 2: Custom
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API type. 1: system; 2: custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }

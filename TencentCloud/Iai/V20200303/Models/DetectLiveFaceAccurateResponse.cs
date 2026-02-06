@@ -28,7 +28,7 @@ namespace TencentCloud.Iai.V20200303.Models
         /// Liveness scoring.
         /// -Value range: [0,100].
         /// -Determines whether it is a rephotograph based on the liveness score and threshold range.
-        /// -Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is 40.
+        /// -Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }

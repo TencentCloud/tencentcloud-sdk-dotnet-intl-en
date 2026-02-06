@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Layout mode:
-        /// 1: Floating
-        /// 2: Screen sharing
-        /// 3: Grid (default)
-        /// 4: Custom
+        /// Layout mode.
+        /// 1: floating layout.
+        /// 2: screen sharing layout.
+        /// 3: nine-grid layout.
+        /// 4: custom layout.
         /// 
-        /// Floating: By default, the video of the first anchor (you can also specify an anchor) who enters the room is scaled to fill the screen. When other anchors enter the room, their videos appear smaller and are superimposed over the large video from left to right starting from the bottom of the canvas according to their room entry sequence. If the total number of videos is 17 or less, there will be four windows in each row (4 x 4); if it is greater than 17, there will be five windows in each row (5 x 5). Up to 25 videos can be displayed. A user who publishes only audio will still be displayed in one window.
+        /// Floating layout: by default, the video footage of the first host who enters the room (or a specified host) fills the entire screen. other hosts' video images are arranged horizontally from the bottom-left corner in the room entry sequence, displayed as small pictures floating above the large screen. when the number of screens is less than or equal to 17, each line has 4 (4 x 4 arrangement). when the number of screens exceeds 17, the small pictures are rearranged with 5 per line (5 x 5 arrangement). a maximum of 25 screens are supported. if the user only sends audio, it still occupies a screen position.
         /// 
-        /// Screen sharing: The video of a specified anchor occupies a larger part of the canvas on the left side (if you do not specify an anchor, the left window will display the canvas background). The videos of other anchors are smaller and are positioned on the right side. If the total number of videos is 17 or less, the small videos are positioned from top to bottom in up to two columns on the right side, with eight videos per column at most. If there are more than 17 videos, the additional videos are positioned at the bottom of the canvas from left to right. Up to 25 videos can be displayed. A user who publishes only audio will still be displayed in one window.
+        /// Screen sharing layout: specifies a large screen position on the left side for one host (if not specified, the large screen position uses the background color). other hosts are arranged vertically on the right side from top to bottom. when the number of screens is less than 17, each column on the right supports up to 8 hosts, occupying a maximum of two columns. when the number of screens exceeds 17, hosts beyond the 17th are arranged horizontally starting from the bottom-left corner. a maximum of 25 screens is supported. if a host only sends audio, it still occupies a screen position.
         /// 
-        /// Grid: The videos of anchors are scaled and positioned automatically according to the total number of anchors in a room. Each video has the same size. Up to 25 videos can be displayed.
+        /// Nine-Grid layout: automatically adjust the size of each frame based on the number of hosts. each host's frame size is the same, supporting up to 25 frames.
         /// 
-        /// Custom: Specify the layout of videos by using the `MixLayoutList` parameter.
+        /// Custom layout: customize the layout of each host's video as needed in MixLayoutList.
         /// </summary>
         [JsonProperty("MixLayoutMode")]
         public ulong? MixLayoutMode{ get; set; }
@@ -70,25 +70,25 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MediaId{ get; set; }
 
         /// <summary>
-        /// The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+        /// The image url supports only jpg, png, and jpeg. the image resolution is limited to no more than 2K, and the image size limit is no more than 5MB. note that the url must carry the format extension, and only specific strings are supported in the url, including a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', and '='.
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }
 
         /// <summary>
-        /// `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
+        /// Set to 1 to enable the placeholder image function, and 0 to disable it. default is 0. when enabled, the corresponding placeholder image can be displayed in the preset position if the user has no upload audio and video.
         /// </summary>
         [JsonProperty("PlaceHolderMode")]
         public ulong? PlaceHolderMode{ get; set; }
 
         /// <summary>
-        /// The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
+        /// Handling solution when the background image aspect ratio is not the same, consistent with the RenderMode defined in MixLayoutList.
         /// </summary>
         [JsonProperty("BackgroundImageRenderMode")]
         public ulong? BackgroundImageRenderMode{ get; set; }
 
         /// <summary>
-        /// The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+        /// Sub-Picture placeholder image url supports only jpg, png, jpeg. resolution limitation is no more than 2K. image size limit is no more than 5MB. note that the url must carry format extension and supports only specific string literals within the range of a-z a-z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
         /// </summary>
         [JsonProperty("DefaultSubBackgroundImage")]
         public string DefaultSubBackgroundImage{ get; set; }
@@ -100,7 +100,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public WaterMark[] WaterMarkList{ get; set; }
 
         /// <summary>
-        /// The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+        /// When the aspect ratio of the background image does not match in the template layout, the handling solution is applied. the custom layout is disabled and aligns with the RenderMode defined in MixLayoutList.
         /// </summary>
         [JsonProperty("RenderMode")]
         public ulong? RenderMode{ get; set; }
@@ -110,6 +110,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         [JsonProperty("MaxResolutionUserAlign")]
         public ulong? MaxResolutionUserAlign{ get; set; }
+
+        /// <summary>
+        /// Controls whether audio users inside the room occupy the stream mixing layout. this takes effect only in mixed stream recording and template layout. true: represents that audio users do not occupy placeholders. false: represents that audio users occupy placeholders (false by default).
+        /// </summary>
+        [JsonProperty("PureAudioDisableLayout")]
+        public bool? PureAudioDisableLayout{ get; set; }
 
 
         /// <summary>
@@ -129,6 +135,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
             this.SetParamSimple(map, prefix + "RenderMode", this.RenderMode);
             this.SetParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
+            this.SetParamSimple(map, prefix + "PureAudioDisableLayout", this.PureAudioDisableLayout);
         }
     }
 }

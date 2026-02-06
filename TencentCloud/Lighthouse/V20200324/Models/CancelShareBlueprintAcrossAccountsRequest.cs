@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Image ID, which can be obtained through the BlueprintId returned by the [DescribeBlueprints](https://www.tencentcloud.comom/document/product/1207/47689?from_cn_redirect=1) API.
+        /// Image ID, which can be obtained through the BlueprintId returned by the [DescribeBlueprints](https://www.tencentcloud.com/document/product/1207/47689?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }
 
         /// <summary>
-        /// List of [account IDs](https://www.tencentcloud.comom/document/product/213/4944?from_cn_redirect=1#.E8.8E.B7.E5.8F.96.E4.B8.BB.E8.B4.A6.E5.8F.B7.E7.9A.84.E8.B4.A6.E5.8F.B7-id) that receive the shared images. The account ID is different from the QQ number. To query a user account ID, view the account ID column in the account information. The maximum number of accounts is 10.
+        /// List of [account IDs](https://www.tencentcloud.com/document/product/213/4944?from_cn_redirect=1#.E8.8E.B7.E5.8F.96.E4.B8.BB.E8.B4.A6.E5.8F.B7.E7.9A.84.E8.B4.A6.E5.8F.B7-id) that receive the shared images. The account ID is different from the QQ number. To query a user account ID, view the account ID column in the account information. The maximum number of accounts is 10.
         /// </summary>
         [JsonProperty("AccountIds")]
         public string[] AccountIds{ get; set; }

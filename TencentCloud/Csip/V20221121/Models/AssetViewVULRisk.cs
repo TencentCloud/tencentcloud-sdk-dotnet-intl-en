@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Unique ID of the asset
+        /// Risk ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -103,15 +103,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `uin`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -129,31 +127,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Vulnerability description
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
-        /// Components affected by the vulnerability 
+        /// Vulnerability impact component.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Reference information about the vulnerability
+        /// Technology reference.
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
-        /// Version
+        /// Vulnerability impact version.
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// Vulnerability URL
+        /// Risks.
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }
@@ -171,7 +169,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CVE{ get; set; }
 
         /// <summary>
-        /// Fix suggestion
+        /// Fixing solution
         /// </summary>
         [JsonProperty("Fix")]
         public string Fix{ get; set; }
@@ -183,7 +181,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string POCId{ get; set; }
 
         /// <summary>
-        /// Source of the task
+        /// Scan Source
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
@@ -213,14 +211,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceUUID{ get; set; }
 
         /// <summary>
-        /// Pay load
+        /// Payload
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
         /// <summary>
-        /// Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
         /// </summary>
         [JsonProperty("EMGCVulType")]
         public long? EMGCVulType{ get; set; }

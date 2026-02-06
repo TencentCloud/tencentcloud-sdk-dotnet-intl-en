@@ -28,12 +28,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Whether to enable banding removal. Valid values:
         /// <li>`ON`</li>
         /// <li>`OFF`</li>
+        /// Default value: `OFF`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+        /// The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
         /// Default value: `0.0`.
         /// </summary>
         [JsonProperty("Intensity")]

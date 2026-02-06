@@ -24,12 +24,33 @@ namespace TencentCloud.Ses.V20201002.Models
     public class ListEmailIdentitiesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// tag.
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagList[] TagList{ get; set; }
+
+        /// <summary>
+        /// Pagination limit.
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// Paging offset.
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of accelerated domain names.
+        /// The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
         /// </summary>
         [JsonProperty("RecordNames")]
         public string[] RecordNames{ get; set; }

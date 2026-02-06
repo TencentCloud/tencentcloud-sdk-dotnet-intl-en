@@ -40,6 +40,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// Cache configuration.
         /// </summary>
         [JsonProperty("CacheInfo")]
+        [System.Obsolete]
         public CacheInfo CacheInfo{ get; set; }
 
 

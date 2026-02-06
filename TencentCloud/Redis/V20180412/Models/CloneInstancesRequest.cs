@@ -57,7 +57,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.comom/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+        /// Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }

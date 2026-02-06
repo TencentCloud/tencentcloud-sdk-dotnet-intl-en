@@ -26,7 +26,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         
         /// <summary>
         /// Specifies the ID or IDs of one or multiple instances to be renewed.
-        /// - It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API.
+        /// - It can be obtained through the response parameter **InstanceId** of the [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API.
         /// - The maximum number of instances for each renewal request is 100.
         /// </summary>
         [JsonProperty("InstanceIds")]

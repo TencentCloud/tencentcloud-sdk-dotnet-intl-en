@@ -45,7 +45,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+        /// Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public IpRule[] IpRules{ get; set; }
 
         /// <summary>
-        /// Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+        /// Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
         /// 
         /// -Default value: DefaultRetention parameter.
         /// -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -121,7 +121,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+        /// Specifies the maximum number of topics that can be created. obtained from the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
         /// 
         /// -Default value and minimum value: specifies the TopicNumLimit parameter.
         /// -Maximum value of TopicNumUpperLimit parameter.
@@ -130,7 +130,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MaxTopicNum{ get; set; }
 
         /// <summary>
-        /// Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1).
+        /// Deployment AZ list. obtain from the [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) data structure returned by the api [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

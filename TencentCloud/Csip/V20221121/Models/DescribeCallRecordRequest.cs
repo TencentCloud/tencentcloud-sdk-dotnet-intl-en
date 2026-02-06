@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Csip.V20221121.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeCallRecordRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// Group Account Member ID
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// Access key ID.
+        /// </summary>
+        [JsonProperty("AccessKeyID")]
+        public ulong? AccessKeyID{ get; set; }
+
+        /// <summary>
+        /// ID of the source IP for the call.
+        /// </summary>
+        [JsonProperty("SourceIPID")]
+        public ulong? SourceIPID{ get; set; }
+
+        /// <summary>
+        /// Access account uin.
+        /// </summary>
+        [JsonProperty("AccUin")]
+        public string AccUin{ get; set; }
+
+        /// <summary>
+        /// Filter.
+        /// </summary>
+        [JsonProperty("Filter")]
+        public Filter Filter{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
+            this.SetParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
+            this.SetParamSimple(map, prefix + "AccUin", this.AccUin);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+        }
+    }
+}
+

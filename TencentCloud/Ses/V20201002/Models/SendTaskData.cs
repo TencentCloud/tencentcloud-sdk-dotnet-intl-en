@@ -91,8 +91,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Template and template data
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Template and template data.
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
@@ -112,8 +111,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public TimedEmailParam TimedParam{ get; set; }
 
         /// <summary>
-        /// Task exception information
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Task exception information.
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }

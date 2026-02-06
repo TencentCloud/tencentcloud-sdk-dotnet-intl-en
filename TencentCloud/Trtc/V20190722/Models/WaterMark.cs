@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The watermark type. 0 (default): image; 1: text (not supported yet).
+        /// The watermark type. 0 (default): image; 1: text; 2: timestamp.
         /// </summary>
         [JsonProperty("WaterMarkType")]
         public ulong? WaterMarkType{ get; set; }

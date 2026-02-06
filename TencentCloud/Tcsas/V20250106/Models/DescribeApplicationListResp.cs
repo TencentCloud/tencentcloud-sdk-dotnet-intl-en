@@ -26,14 +26,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Total number of entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// List information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataList")]
         public DescribeApplicationListData[] DataList{ get; set; }

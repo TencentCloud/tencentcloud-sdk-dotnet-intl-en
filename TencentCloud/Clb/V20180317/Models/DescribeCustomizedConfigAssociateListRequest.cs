@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+        /// Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("UconfigId")]
         public string UconfigId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+        /// Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

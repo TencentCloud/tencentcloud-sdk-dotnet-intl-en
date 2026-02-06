@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Tag key. It supports alphanumeric characters and underscores (_).
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag Key, can be letters, digits, and underscores.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag value. It supports alphanumeric characters and underscores (_).
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag Value, can be letters, digits, and underscores.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

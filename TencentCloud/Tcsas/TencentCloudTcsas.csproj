@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4FE02EAD-36EB-3BF7-AED6-3FB3FCFD4DB8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1230</VersionPrefix>
+    <VersionPrefix>3.0.1262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,12 +48,23 @@
 
   <ItemGroup>
     <Compile Include="V20250106\TcsasClient.cs" />
+    <Compile Include="V20250106\Models\APPOverview.cs" />
+    <Compile Include="V20250106\Models\APPOverviewData.cs" />
+    <Compile Include="V20250106\Models\AccessAnalysisDetail.cs" />
+    <Compile Include="V20250106\Models\AccessAnalysisOverview.cs" />
+    <Compile Include="V20250106\Models\AdTrendChart.cs" />
     <Compile Include="V20250106\Models\AddTeamMemberRequest.cs" />
     <Compile Include="V20250106\Models\AddTeamMemberResponse.cs" />
+    <Compile Include="V20250106\Models\AdvertDataOverview.cs" />
+    <Compile Include="V20250106\Models\AnalysisAdvertOverview.cs" />
+    <Compile Include="V20250106\Models\AnalysisData.cs" />
+    <Compile Include="V20250106\Models\ApplicationConfigInfo.cs" />
     <Compile Include="V20250106\Models\ApprovalItem.cs" />
     <Compile Include="V20250106\Models\BooleanInfo.cs" />
     <Compile Include="V20250106\Models\ConfigureMNPPreviewRequest.cs" />
     <Compile Include="V20250106\Models\ConfigureMNPPreviewResponse.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationConfigRequest.cs" />
+    <Compile Include="V20250106\Models\CreateApplicationConfigResponse.cs" />
     <Compile Include="V20250106\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20250106\Models\CreateApplicationResponse.cs" />
     <Compile Include="V20250106\Models\CreateApplicationSensitiveAPIReq.cs" />
@@ -96,8 +107,19 @@
     <Compile Include="V20250106\Models\DeleteTeamResponse.cs" />
     <Compile Include="V20250106\Models\DeleteUserRequest.cs" />
     <Compile Include="V20250106\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeAPPDataDetailLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeAPPDataDetailLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeAPPDataOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeAPPDataOverviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeAdvertisingLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeAdvertisingLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeAdvertisingOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeAdvertisingOverviewResponse.cs" />
     <Compile Include="V20250106\Models\DescribeApplicationConfigFileRequest.cs" />
     <Compile Include="V20250106\Models\DescribeApplicationConfigFileResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationConfigInfo.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationConfigInfosRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeApplicationConfigInfosResponse.cs" />
     <Compile Include="V20250106\Models\DescribeApplicationListData.cs" />
     <Compile Include="V20250106\Models\DescribeApplicationListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeApplicationListResp.cs" />
@@ -114,6 +136,46 @@
     <Compile Include="V20250106\Models\DescribeGlobalDomainACLResponse.cs" />
     <Compile Include="V20250106\Models\DescribeGlobalDomainsListData.cs" />
     <Compile Include="V20250106\Models\DescribeGlobalDomainsResp.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalOverviewDataSummaryRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalOverviewDataSummaryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalOverviewReportDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeGlobalOverviewReportDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAccessAnalysisOverviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGActiveUserRealTimeStatisticsRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGActiveUserRealTimeStatisticsResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAdvertisingOverviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAUDataDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAUDataDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAULineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAULineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAUMonthlyComparisonMetricCardRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGMAUMonthlyComparisonMetricCardResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentOverviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentReportDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentReportDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentRetentionAnalysisRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGPaymentRetentionAnalysisResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGRetentionDataRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGRetentionDataResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAccessAnalysisOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAccessAnalysisOverviewResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPActiveUserRealTimeStatisticsRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPActiveUserRealTimeStatisticsResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAdvertisingDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAdvertisingDetailResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListData.cs" />
@@ -128,16 +190,30 @@
     <Compile Include="V20250106\Models\DescribeMNPListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPListResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAUDataDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAUDataDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAULineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAULineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAUMetricCardRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPMAUMetricCardResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPManagerDetailData.cs" />
     <Compile Include="V20250106\Models\DescribeMNPOfflinePackageURLRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPOfflinePackageURLResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPageAnalysisDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPageAnalysisDetailResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPReleasedVersionHistoryRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPReleasedVersionHistoryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReportDataLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReportDataLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReportDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPReportDetailResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPRetentionDataRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPRetentionDataResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalData.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListData.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionApprovalListRequest.cs" />
@@ -153,6 +229,12 @@
     <Compile Include="V20250106\Models\DescribeMNPVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMPAllStageVersionsResp.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataLineChartRequest.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataLineChartResponse.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataOverviewRequest.cs" />
+    <Compile Include="V20250106\Models\DescribePaymentDataOverviewResponse.cs" />
     <Compile Include="V20250106\Models\DescribeRevertOnlineVersionPageResp.cs" />
     <Compile Include="V20250106\Models\DescribeRoleListData.cs" />
     <Compile Include="V20250106\Models\DescribeRoleListRequest.cs" />
@@ -185,7 +267,19 @@
     <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20250106\Models\GlobalDomainDeleteResp.cs" />
     <Compile Include="V20250106\Models\GlobalDomainModifyRespResp.cs" />
+    <Compile Include="V20250106\Models\MAUChartData.cs" />
+    <Compile Include="V20250106\Models\MAUDetail.cs" />
+    <Compile Include="V20250106\Models\MAUDetailData.cs" />
+    <Compile Include="V20250106\Models\MAUIndicatorCard.cs" />
+    <Compile Include="V20250106\Models\MAULineChartData.cs" />
+    <Compile Include="V20250106\Models\MNGMAULineChartData.cs" />
+    <Compile Include="V20250106\Models\MNGPaymentOverview.cs" />
+    <Compile Include="V20250106\Models\MNPAdOverview.cs" />
+    <Compile Include="V20250106\Models\MNPAdvertisingOverview.cs" />
+    <Compile Include="V20250106\Models\MNPPaymentOverview.cs" />
     <Compile Include="V20250106\Models\MNPTypeDefine.cs" />
+    <Compile Include="V20250106\Models\ModifyApplicationConfigRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyApplicationConfigResponse.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationRequest.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationResponse.cs" />
     <Compile Include="V20250106\Models\ModifyGlobalDomainRequest.cs" />
@@ -200,6 +294,10 @@
     <Compile Include="V20250106\Models\ModifyTeamResponse.cs" />
     <Compile Include="V20250106\Models\ModifyUserRequest.cs" />
     <Compile Include="V20250106\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20250106\Models\Overview.cs" />
+    <Compile Include="V20250106\Models\OverviewDetail.cs" />
+    <Compile Include="V20250106\Models\PaymentActiveRetention.cs" />
+    <Compile Include="V20250106\Models\PaymentDetail.cs" />
     <Compile Include="V20250106\Models\PresetResp.cs" />
     <Compile Include="V20250106\Models\ProcessMNPApprovalRequest.cs" />
     <Compile Include="V20250106\Models\ProcessMNPApprovalResponse.cs" />
@@ -210,11 +308,14 @@
     <Compile Include="V20250106\Models\ReleaseMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\RemoveMNPRequest.cs" />
     <Compile Include="V20250106\Models\RemoveMNPResponse.cs" />
+    <Compile Include="V20250106\Models\ReportDataResult.cs" />
     <Compile Include="V20250106\Models\ResourceIdInfo.cs" />
     <Compile Include="V20250106\Models\ResourceIdStringInfo.cs" />
+    <Compile Include="V20250106\Models\RetentionData.cs" />
     <Compile Include="V20250106\Models\RollbackMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\RollbackMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\StringData.cs" />
     <Compile Include="V20250106\Models\UploadFileTempSecret.cs" />
+    <Compile Include="V20250106\Models\VisitData.cs" />
   </ItemGroup>
 </Project>

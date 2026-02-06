@@ -25,8 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Response result
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Result.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

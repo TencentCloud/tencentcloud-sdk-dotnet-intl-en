@@ -26,49 +26,42 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Domain ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainId")]
         public long? DomainId{ get; set; }
 
         /// <summary>
         /// Domain name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainUrl")]
         public string DomainUrl{ get; set; }
 
         /// <summary>
-        /// Type. 1: Allowed; 2: Blocked
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type. 1: allowlist; 2: blocklist.
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Updater
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the updater.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

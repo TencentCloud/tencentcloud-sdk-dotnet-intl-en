@@ -42,7 +42,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+        /// AZ corresponding to the node. For the currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
         /// - Single AZ: all nodes are in the same AZ.
         /// - Multiple AZs: The current standard specification involves three AZs. The primary and secondary nodes are not in the same AZ. Note: AZs corresponding to the nodes to be deleted should be specified. After deletion, the number of nodes in any 2 AZs should be larger than that in the third AZ.
         /// </summary>

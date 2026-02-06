@@ -25,25 +25,30 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+        /// Task status:
+        /// WAIT: waiting
+        /// RUN: running
+        /// FAIL: failed
+        /// DONE: successful
+        /// Example value: RUN
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code.	
+        /// Error code
         /// </summary>
         [JsonProperty("ErrorCode")]
         public string ErrorCode{ get; set; }
 
         /// <summary>
-        /// Error message.	
+        /// Error message
         /// </summary>
         [JsonProperty("ErrorMessage")]
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// Generates the file URL with a valid period of 1 day.	
+        /// Generates the file URL with a valid period of 1 day
         /// </summary>
         [JsonProperty("ResultFile3Ds")]
         public File3D[] ResultFile3Ds{ get; set; }

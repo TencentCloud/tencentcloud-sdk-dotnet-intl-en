@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// Specifies the task ID. it can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the api [DescribeSmoothMigrationTaskList](https://www.tencentcloud.comom/document/api/1493/119997?from_cn_redirect=1) or from the console.
+        /// Specifies the task ID. it can be obtained from [SmoothMigrationTaskItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#SmoothMigrationTaskItem) returned by the api [DescribeSmoothMigrationTaskList](https://www.tencentcloud.com/document/api/1493/119997?from_cn_redirect=1) or from the console.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

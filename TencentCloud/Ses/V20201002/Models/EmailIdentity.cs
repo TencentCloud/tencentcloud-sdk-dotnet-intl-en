@@ -54,6 +54,18 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("DailyQuota")]
         public ulong? DailyQuota{ get; set; }
 
+        /// <summary>
+        /// Independent ip for domain configuration.
+        /// </summary>
+        [JsonProperty("SendIp")]
+        public string[] SendIp{ get; set; }
+
+        /// <summary>
+        /// tag.
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagList[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
             this.SetParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
             this.SetParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
+            this.SetParamArraySimple(map, prefix + "SendIp.", this.SendIp);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

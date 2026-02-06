@@ -26,42 +26,36 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// API ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// API name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API name.
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
         /// API request method
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// API status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API status.
         /// </summary>
         [JsonProperty("APIStatus")]
         public long? APIStatus{ get; set; }
 
         /// <summary>
-        /// API application status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API application status.
         /// </summary>
         [JsonProperty("APIApplyStatus")]
         public long? APIApplyStatus{ get; set; }
 
         /// <summary>
-        /// Reason for rejection
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for rejection.
         /// </summary>
         [JsonProperty("RejectReason")]
         public string RejectReason{ get; set; }
@@ -74,35 +68,30 @@ namespace TencentCloud.Tcsas.V20250106.Models
 
         /// <summary>
         /// Application ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the application icon.
         /// </summary>
         [JsonProperty("ApplicationIcon")]
         public string ApplicationIcon{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// API type. 1: System; 2: Custom
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API type. 1: system; 2: custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// API feature description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API feature description.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }

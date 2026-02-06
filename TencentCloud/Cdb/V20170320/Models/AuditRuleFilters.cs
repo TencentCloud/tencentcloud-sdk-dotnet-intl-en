@@ -25,8 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Audit rule 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// A single audit rule.
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }

@@ -25,134 +25,115 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Approval request ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval ticket ID
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
         /// Application ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
         /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program version.
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
         /// Mini program version ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
         /// Applicant
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplyUser")]
         public string ApplyUser{ get; set; }
 
         /// <summary>
         /// Application time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
         /// Mini program name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
         /// Mini program icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the application icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Mini Program QR code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program review qr code.
         /// </summary>
         [JsonProperty("MNPQrCodeUrl")]
         public string MNPQrCodeUrl{ get; set; }
 
         /// <summary>
         /// Mini program type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Approver
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the reviewer.
         /// </summary>
         [JsonProperty("ApprovalUser")]
         public string ApprovalUser{ get; set; }
 
         /// <summary>
-        /// Approval time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval time.
         /// </summary>
         [JsonProperty("ApprovalTime")]
         public string ApprovalTime{ get; set; }
 
         /// <summary>
         /// Approval notes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }

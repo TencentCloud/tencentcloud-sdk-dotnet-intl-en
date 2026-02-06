@@ -72,6 +72,31 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// Enhancement type. Valid values:
+        /// <li>VideoEnhance: video enhancement only.</li>
+        /// <li>AudioEnhance: audio enhancement only.</li>
+        /// <li>AudioVideoEnhance: video and audio enhancement included.</li>
+        /// <li> AnyEnhance: `VideoEnhance`, `AudioEnhance ` and `AudioVideoEnhance` included.</li>
+        /// <li> None: Not any enhancement type</li>
+        /// </summary>
+        [JsonProperty("EnhanceType")]
+        public string EnhanceType{ get; set; }
+
+        /// <summary>
+        /// Enhancement scenario configuration. Valid values:
+        /// <li>common: common enhancement parameters, which are basic optimization parameters suitable for various video types, enhancing overall image quality.</li>
+        /// <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li>
+        /// <li>short_play: enhance facial and subtitle details, emphasizing characters' facial expressions and subtitle clarity to improve the viewing experience.</li>
+        /// <li>short_video: optimize complex and diverse image quality issues, tailoring quality enhancements for the complex scenarios such as short videos to address various visual issues.</li>
+        /// <li>game: fix motion blur and enhance details, with a focus on enhancing the clarity of game details and restoring blurry areas during motions to make the image content during gaming clearer and richer.</li>
+        /// <li>HD_movie_series: provide a smooth playback effect for UHD videos. Standard 4K HDR videos with an FPS of 60 are generated to meet the needs of broadcasting/OTT for UHD videos. Formats for broadcasting scenarios are supported.</li>
+        /// <li>LQ_material: low-definition material/old video restoration. It enhances overall resolution, and solves issues of old videos, such as low resolution, blur, distortion, scratches, and color temperature due to their age.</li>
+        /// <li>lecture: live shows, e-commerce, conferences, and lectures. It improves the face display effect and performs specific optimizations, including face region enhancement, noise reduction, and artifacts removal, for scenarios involving human explanation, such as live shows, e-commerce, conferences, and lectures.</li>
+        /// </summary>
+        [JsonProperty("EnhanceScenarioType")]
+        public string EnhanceScenarioType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +110,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TEHDType", this.TEHDType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "EnhanceType", this.EnhanceType);
+            this.SetParamSimple(map, prefix + "EnhanceScenarioType", this.EnhanceScenarioType);
         }
     }
 }

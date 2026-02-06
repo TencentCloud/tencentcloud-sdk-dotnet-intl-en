@@ -25,7 +25,7 @@ namespace TencentCloud.Trocket.V20230308.Models
     {
         
         /// <summary>
-        /// TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+        /// TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Trocket.V20230308.Models
         public float? SendReceiveRatio{ get; set; }
 
         /// <summary>
-        /// Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+        /// Product specification. It can be obtained from the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
-        /// Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+        /// Message retention time (unit: hr). value range refers to the ProductSKU response parameters structure in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
         /// 
         /// -Default value: DefaultRetention parameter.
         /// -Minimum value: specifies the RetentionLowerLimit parameter.
@@ -77,7 +77,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public bool? AclEnabled{ get; set; }
 
         /// <summary>
-        /// The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
+        /// The maximum number of topics that can be created. value ranges from...to... refer to the ProductSKU output parameter in the DescribeProductSKUs api (https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1) (https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU).
         /// 
         /// -Minimum value and default value: TopicNumLimit parameter.
         /// -Maximum value of TopicNumUpperLimit parameter.
@@ -86,7 +86,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? MaxTopicNum{ get; set; }
 
         /// <summary>
-        /// Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.comom/document/api/1493/107676?from_cn_redirect=1).
+        /// Number of topics not included in the free quota. For the free quota, see the TopicNumLimit parameter in the output parameters of [ProductSKU](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ProductSKU) of the API [DescribeProductSKUs](https://www.tencentcloud.com/document/api/1493/107676?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ExtraTopicNum")]
         public string ExtraTopicNum{ get; set; }

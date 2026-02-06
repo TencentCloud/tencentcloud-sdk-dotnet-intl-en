@@ -216,6 +216,26 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ComplexAdaptiveDynamicStreamingCompleteEvent")]
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProcessMediaByMPSCompleteEvent")]
+        public ProcessMediaByMPS ProcessMediaByMPSCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AigcImageCompleteEvent")]
+        public AigcImageTask AigcImageCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("AigcVideoCompleteEvent")]
+        public AigcVideoTask AigcVideoCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +271,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
             this.SetParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
             this.SetParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
+            this.SetParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
+            this.SetParamObj(map, prefix + "AigcImageCompleteEvent.", this.AigcImageCompleteEvent);
+            this.SetParamObj(map, prefix + "AigcVideoCompleteEvent.", this.AigcVideoCompleteEvent);
         }
     }
 }

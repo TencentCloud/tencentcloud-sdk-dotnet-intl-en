@@ -38,7 +38,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Network type of the load balancing instance.
-        /// OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+        /// OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string AddressIPVersion{ get; set; }
 
         /// <summary>
-        /// Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+        /// Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public ulong? NumericalVpcId{ get; set; }

@@ -25,6 +25,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
+        /// Tencent HY 3D Global model version
+        /// Defaults to 3.0, with optional choices: 3.0, 3.1
+        /// When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
+        /// Example value:3.0
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
         /// Generates 3D content, describes 3D content.
         /// Supports up to 1024 utf-8 characters.
         /// Text-To-3D. Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
@@ -62,9 +71,13 @@ namespace TencentCloud.Hunyuan.V20230901.Models
 
         /// <summary>
         /// Multi-Perspective model image. reference value for viewing angle:.
-        /// left view.
-        /// right view.
-        /// back view.
+        /// left: Left view;
+        /// right: Right view;
+        /// back: Rear view;
+        /// top: Top view (only supported in Model 3.1);
+        /// bottom: Bottom view (only supported in Model 3.1);
+        /// left_front: Left front 45 degree view (only supported in Model 3.1);
+        /// right_front: Right front 45 degree view (only supported in Model 3.1);
         /// 
         /// Each perspective is limited to one image.
         /// Image size limit. the value must not exceed 8 mb after encoding.
@@ -75,34 +88,34 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public ViewImage[] MultiViewImages{ get; set; }
 
         /// <summary>
-        /// Specifies whether PBR material generation is enabled. default false.
+        /// Specifies whether PBR material generation is enabled. default false
         /// </summary>
         [JsonProperty("EnablePBR")]
         public bool? EnablePBR{ get; set; }
 
         /// <summary>
         /// Specifies the face count for 3D model generation. default value is 500000.
-        /// Specifies the supported face count generation range. value range: 40000-1500000.
+        /// Specifies the supported face count generation range. value range: 40000-1500000
         /// </summary>
         [JsonProperty("FaceCount")]
         public long? FaceCount{ get; set; }
 
         /// <summary>
-        /// Generation task type. default: Normal. valid values:.
-        /// Normal: generates a geometric model with textures.
+        /// Generation task type. default: Normal. valid values:
+        /// Normal: generates a geometric model with textures
         /// LowPoly: specifies the model generated after intelligent polygon reduction.
-        /// Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-        /// Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+        /// Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+        /// Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// This parameter only takes effect when LowPoly mode is selected from GenerateType.
+        /// This parameter only takes effect when LowPoly mode is selected from GenerateType
         /// 
-        /// Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-        /// triangle. specifies the triangular face.
-        /// quadrilateral: mix quadrangle and triangle faces to generate.
+        /// Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+        /// triangle. specifies the triangular face
+        /// quadrilateral: mix quadrangle and triangle faces to generate
         /// </summary>
         [JsonProperty("PolygonType")]
         public string PolygonType{ get; set; }
@@ -113,6 +126,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Model", this.Model);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);

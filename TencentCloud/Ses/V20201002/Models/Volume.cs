@@ -26,7 +26,6 @@ namespace TencentCloud.Ses.V20201002.Models
         
         /// <summary>
         /// Date
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SendDate")]
         public string SendDate{ get; set; }
@@ -68,8 +67,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? BounceCount{ get; set; }
 
         /// <summary>
-        /// Number of users who canceled subscriptions.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of users for unsubscription.
         /// </summary>
         [JsonProperty("UnsubscribeCount")]
         public ulong? UnsubscribeCount{ get; set; }

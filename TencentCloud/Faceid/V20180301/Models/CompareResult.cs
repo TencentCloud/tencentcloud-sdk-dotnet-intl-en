@@ -138,6 +138,25 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
+        /// <summary>
+        /// Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+        /// 01 - User kept eyes closed throughout the process.
+        /// 02 - User failed to complete the specified action.
+        /// 03 - Suspected photo replay attack.
+        /// 04 - Suspected synthetic image.
+        /// 05 - Suspected synthetic video.
+        /// 06 - Suspected synthetic action.
+        /// 07 - Suspected fraud template.
+        /// 08 - Suspected watermark existence.
+        /// 09 - Light verification failed.
+        /// 10 - Face verification failed.
+        /// 11 - Poor face quality.
+        /// 12 - Unqualified collection quality.
+        /// 13 - Suspected adversarial sample attack.
+        /// </summary>
+        [JsonProperty("LivenessInfoTag")]
+        public string[] LivenessInfoTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +178,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IsNeedCharge", this.IsNeedCharge);
             this.SetParamObj(map, prefix + "CardInfoInputJson.", this.CardInfoInputJson);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
         }
     }
 }

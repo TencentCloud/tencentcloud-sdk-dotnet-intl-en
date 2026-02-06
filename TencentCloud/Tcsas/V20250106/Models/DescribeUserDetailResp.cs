@@ -25,30 +25,26 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User iD.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// User account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
         /// User account
-        /// 1 - Super admin 2 - Platform admin 3 - Member
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
         /// User name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? ModifyClassicDomain{ get; set; }
 
         /// <summary>
-        /// The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.comom/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+        /// The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
         /// </summary>
         [JsonProperty("AssociateEndpoint")]
         public string AssociateEndpoint{ get; set; }

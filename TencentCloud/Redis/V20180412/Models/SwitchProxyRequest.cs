@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ProxyID{ get; set; }
 
         /// <summary>
-        /// Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.comom/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
+        /// Instance proxy ID list. Call the API [DescribeInstanceNodeInfo](https://www.tencentcloud.com/document/product/239/48603?from_cn_redirect=1) to obtain IDs from **NodeId** in the **Proxy** response parameter.
         /// </summary>
         [JsonProperty("ProxyIDList")]
         public string[] ProxyIDList{ get; set; }

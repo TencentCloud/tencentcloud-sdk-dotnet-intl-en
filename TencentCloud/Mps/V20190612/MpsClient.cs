@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1258";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -136,6 +136,48 @@ namespace TencentCloud.Mps.V20190612
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create AIGC image generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
+        public Task<CreateAigcImageTaskResponse> CreateAigcImageTask(CreateAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask");
+        }
+
+        /// <summary>
+        /// This API is used to create AIGC image generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
+        public CreateAigcImageTaskResponse CreateAigcImageTaskSync(CreateAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create AI video generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
+        public Task<CreateAigcVideoTaskResponse> CreateAigcVideoTask(CreateAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoTaskResponse>(req, "CreateAigcVideoTask");
+        }
+
+        /// <summary>
+        /// This API is used to create AI video generation tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
+        public CreateAigcVideoTaskResponse CreateAigcVideoTaskSync(CreateAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoTaskResponse>(req, "CreateAigcVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1076,6 +1118,48 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAdaptiveDynamicStreamingTemplatesResponse>(req, "DescribeAdaptiveDynamicStreamingTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcImageTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcImageTaskResponse"/></returns>
+        public Task<DescribeAigcImageTaskResponse> DescribeAigcImageTask(DescribeAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcImageTaskResponse>(req, "DescribeAigcImageTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcImageTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcImageTaskResponse"/></returns>
+        public DescribeAigcImageTaskResponse DescribeAigcImageTaskSync(DescribeAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcImageTaskResponse>(req, "DescribeAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcVideoTaskResponse"/></returns>
+        public Task<DescribeAigcVideoTaskResponse> DescribeAigcVideoTask(DescribeAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcVideoTaskResponse>(req, "DescribeAigcVideoTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="DescribeAigcVideoTaskResponse"/></returns>
+        public DescribeAigcVideoTaskResponse DescribeAigcVideoTaskSync(DescribeAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcVideoTaskResponse>(req, "DescribeAigcVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2401,6 +2485,27 @@ namespace TencentCloud.Mps.V20190612
         public ProcessMediaResponse ProcessMediaSync(ProcessMediaRequest req)
         {
             return InternalRequestAsync<ProcessMediaResponse>(req, "ProcessMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to return the speech recognition results synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
+        /// <returns><see cref="RecognizeAudioResponse"/></returns>
+        public Task<RecognizeAudioResponse> RecognizeAudio(RecognizeAudioRequest req)
+        {
+            return InternalRequestAsync<RecognizeAudioResponse>(req, "RecognizeAudio");
+        }
+
+        /// <summary>
+        /// This API is used to return the speech recognition results synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
+        /// <returns><see cref="RecognizeAudioResponse"/></returns>
+        public RecognizeAudioResponse RecognizeAudioSync(RecognizeAudioRequest req)
+        {
+            return InternalRequestAsync<RecognizeAudioResponse>(req, "RecognizeAudio")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

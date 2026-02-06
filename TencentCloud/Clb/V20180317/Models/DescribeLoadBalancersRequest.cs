@@ -110,7 +110,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+        /// Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -122,14 +122,14 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? WithRs{ get; set; }
 
         /// <summary>
-        /// Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+        /// Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
         /// Searches for cloud load balancer of basic network type. allows input '0'.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+        /// Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }

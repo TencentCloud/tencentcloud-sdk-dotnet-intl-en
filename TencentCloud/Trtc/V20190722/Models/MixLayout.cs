@@ -87,7 +87,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ImageLayer{ get; set; }
 
         /// <summary>
-        /// The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+        /// The image url supports only jpg, png, and jpeg formats. the resolution limitation is no more than 2K, and the image size limit is no more than 5MB. note that the url must carry the format extension. the url supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', and '='.
         /// </summary>
         [JsonProperty("SubBackgroundImage")]
         public string SubBackgroundImage{ get; set; }

@@ -49,34 +49,44 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Application type. 1: Test; 2: Formal
-        /// </summary>
-        [JsonProperty("ApplicationType")]
-        public long? ApplicationType{ get; set; }
-
-        /// <summary>
         /// Introduction
         /// </summary>
         [JsonProperty("Intro")]
         public string Intro{ get; set; }
 
         /// <summary>
+        /// Application type. 1: Test; 2: Formal
+        /// </summary>
+        [JsonProperty("ApplicationType")]
+        [System.Obsolete]
+        public long? ApplicationType{ get; set; }
+
+        /// <summary>
         /// Android app package name
         /// </summary>
         [JsonProperty("AndroidAppKey")]
+        [System.Obsolete]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
         /// iOS App bundleId
         /// </summary>
         [JsonProperty("IosAppKey")]
+        [System.Obsolete]
         public string IosAppKey{ get; set; }
 
         /// <summary>
         /// Remarks
         /// </summary>
         [JsonProperty("Remark")]
+        [System.Obsolete]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// Scheme
+        /// </summary>
+        [JsonProperty("Scheme")]
+        public string Scheme{ get; set; }
 
 
         /// <summary>
@@ -88,11 +98,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "Logo", this.Logo);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
-            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "Intro", this.Intro);
+            this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
             this.SetParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Scheme", this.Scheme);
         }
     }
 }

@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
+        /// Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// Upgradable Redis version. Call the [DescribeInstances](https://www.tencentcloud.comom/document/product/239/20018?from_cn_redirect=1) API to obtain the upgradable Redis version for the instance.
+        /// Upgradable Redis version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the upgradable Redis version for the instance.
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }

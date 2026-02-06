@@ -26,56 +26,48 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// User ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
         /// User account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
         /// User name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
         /// Team name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Team role name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the team role name.
         /// </summary>
         [JsonProperty("TeamRoleName")]
         public string TeamRoleName{ get; set; }
 
         /// <summary>
-        /// Team role ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the team role ID.
         /// </summary>
         [JsonProperty("TeamRoleId")]
         public long? TeamRoleId{ get; set; }
 
         /// <summary>
-        /// Editable or not
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is editable
         /// </summary>
         [JsonProperty("CanEdit")]
         public bool? CanEdit{ get; set; }

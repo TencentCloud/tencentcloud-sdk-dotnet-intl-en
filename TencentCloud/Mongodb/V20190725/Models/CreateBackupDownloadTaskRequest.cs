@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
+        /// Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

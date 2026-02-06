@@ -53,6 +53,7 @@ namespace TencentCloud.Mdp.V20200527.Models
         /// Note: this field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("CacheInfo")]
+        [System.Obsolete]
         public CacheInfo CacheInfo{ get; set; }
 
 

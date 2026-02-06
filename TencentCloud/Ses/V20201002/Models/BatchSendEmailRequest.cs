@@ -25,75 +25,76 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-        /// sender &lt;email address&gt;. For example:
-        /// Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+        /// Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+        /// Sender &lt;email address&gt; via fill in, such as:.
+        /// Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient group ID
+        /// Recipient list ID.
         /// </summary>
         [JsonProperty("ReceiverId")]
         public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// Email subject
+        /// Email subject.
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+        /// Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+        /// The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// Template when emails are sent using a template
+        /// When using a template to send, fill in the related parameters of the template.
+        /// <Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
 
         /// <summary>
-        /// Disused
+        /// Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+        /// Send attachment when required. fill in related parameters (not supported).
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// Parameter required for a recurring sending task
+        /// Required parameter for sending tasks periodically.
         /// </summary>
         [JsonProperty("CycleParam")]
         public CycleEmailParam CycleParam{ get; set; }
 
         /// <summary>
-        /// Parameter required for a scheduled sending task
+        /// Required parameter for scheduled task assignment.
         /// </summary>
         [JsonProperty("TimedParam")]
         public TimedEmailParam TimedParam{ get; set; }
 
         /// <summary>
-        /// Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+        /// Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
         /// <summary>
-        /// Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+        /// Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
         /// </summary>
         [JsonProperty("ADLocation")]
         public ulong? ADLocation{ get; set; }

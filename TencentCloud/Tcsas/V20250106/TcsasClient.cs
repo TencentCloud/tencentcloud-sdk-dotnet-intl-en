@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1230";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Tcsas.V20250106
         public CreateApplicationResponse CreateApplicationSync(CreateApplicationRequest req)
         {
             return InternalRequestAsync<CreateApplicationResponse>(req, "CreateApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create the configuration for a specified superapp.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationConfigRequest"/></param>
+        /// <returns><see cref="CreateApplicationConfigResponse"/></returns>
+        public Task<CreateApplicationConfigResponse> CreateApplicationConfig(CreateApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationConfigResponse>(req, "CreateApplicationConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create the configuration for a specified superapp.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationConfigRequest"/></param>
+        /// <returns><see cref="CreateApplicationConfigResponse"/></returns>
+        public CreateApplicationConfigResponse CreateApplicationConfigSync(CreateApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<CreateApplicationConfigResponse>(req, "CreateApplicationConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,6 +495,90 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to retrieve the line chart data for selected superapp metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
+        /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
+        public Task<DescribeAPPDataDetailLineChartResponse> DescribeAPPDataDetailLineChart(DescribeAPPDataDetailLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeAPPDataDetailLineChartResponse>(req, "DescribeAPPDataDetailLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data for selected superapp metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
+        /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
+        public DescribeAPPDataDetailLineChartResponse DescribeAPPDataDetailLineChartSync(DescribeAPPDataDetailLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeAPPDataDetailLineChartResponse>(req, "DescribeAPPDataDetailLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of the superapp data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPPDataOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAPPDataOverviewResponse"/></returns>
+        public Task<DescribeAPPDataOverviewResponse> DescribeAPPDataOverview(DescribeAPPDataOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAPPDataOverviewResponse>(req, "DescribeAPPDataOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of the superapp data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPPDataOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAPPDataOverviewResponse"/></returns>
+        public DescribeAPPDataOverviewResponse DescribeAPPDataOverviewSync(DescribeAPPDataOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAPPDataOverviewResponse>(req, "DescribeAPPDataOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
+        /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
+        public Task<DescribeAdvertisingLineChartResponse> DescribeAdvertisingLineChart(DescribeAdvertisingLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvertisingLineChartResponse>(req, "DescribeAdvertisingLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
+        /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
+        public DescribeAdvertisingLineChartResponse DescribeAdvertisingLineChartSync(DescribeAdvertisingLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvertisingLineChartResponse>(req, "DescribeAdvertisingLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvertisingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAdvertisingOverviewResponse"/></returns>
+        public Task<DescribeAdvertisingOverviewResponse> DescribeAdvertisingOverview(DescribeAdvertisingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvertisingOverviewResponse>(req, "DescribeAdvertisingOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAdvertisingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAdvertisingOverviewResponse"/></returns>
+        public DescribeAdvertisingOverviewResponse DescribeAdvertisingOverviewSync(DescribeAdvertisingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAdvertisingOverviewResponse>(req, "DescribeAdvertisingOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the application details.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
@@ -512,6 +617,27 @@ namespace TencentCloud.Tcsas.V20250106
         public DescribeApplicationConfigFileResponse DescribeApplicationConfigFileSync(DescribeApplicationConfigFileRequest req)
         {
             return InternalRequestAsync<DescribeApplicationConfigFileResponse>(req, "DescribeApplicationConfigFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the configuration details for an superapp.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeApplicationConfigInfosResponse"/></returns>
+        public Task<DescribeApplicationConfigInfosResponse> DescribeApplicationConfigInfos(DescribeApplicationConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationConfigInfosResponse>(req, "DescribeApplicationConfigInfos");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the configuration details for an superapp.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationConfigInfosRequest"/></param>
+        /// <returns><see cref="DescribeApplicationConfigInfosResponse"/></returns>
+        public DescribeApplicationConfigInfosResponse DescribeApplicationConfigInfosSync(DescribeApplicationConfigInfosRequest req)
+        {
+            return InternalRequestAsync<DescribeApplicationConfigInfosResponse>(req, "DescribeApplicationConfigInfos")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -579,6 +705,363 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to retrieve a global overview summary of usage statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalOverviewDataSummaryRequest"/></param>
+        /// <returns><see cref="DescribeGlobalOverviewDataSummaryResponse"/></returns>
+        public Task<DescribeGlobalOverviewDataSummaryResponse> DescribeGlobalOverviewDataSummary(DescribeGlobalOverviewDataSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalOverviewDataSummaryResponse>(req, "DescribeGlobalOverviewDataSummary");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve a global overview summary of usage statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalOverviewDataSummaryRequest"/></param>
+        /// <returns><see cref="DescribeGlobalOverviewDataSummaryResponse"/></returns>
+        public DescribeGlobalOverviewDataSummaryResponse DescribeGlobalOverviewDataSummarySync(DescribeGlobalOverviewDataSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalOverviewDataSummaryResponse>(req, "DescribeGlobalOverviewDataSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed report data for global overview within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalOverviewReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeGlobalOverviewReportDetailResponse"/></returns>
+        public Task<DescribeGlobalOverviewReportDetailResponse> DescribeGlobalOverviewReportDetail(DescribeGlobalOverviewReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalOverviewReportDetailResponse>(req, "DescribeGlobalOverviewReportDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed report data for global overview within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalOverviewReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeGlobalOverviewReportDetailResponse"/></returns>
+        public DescribeGlobalOverviewReportDetailResponse DescribeGlobalOverviewReportDetailSync(DescribeGlobalOverviewReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeGlobalOverviewReportDetailResponse>(req, "DescribeGlobalOverviewReportDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisDetailResponse"/></returns>
+        public Task<DescribeMNGAccessAnalysisDetailResponse> DescribeMNGAccessAnalysisDetail(DescribeMNGAccessAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisDetailResponse>(req, "DescribeMNGAccessAnalysisDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisDetailResponse"/></returns>
+        public DescribeMNGAccessAnalysisDetailResponse DescribeMNGAccessAnalysisDetailSync(DescribeMNGAccessAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisDetailResponse>(req, "DescribeMNGAccessAnalysisDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve line chart analysis data for mini game visits.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
+        public Task<DescribeMNGAccessAnalysisLineChartResponse> DescribeMNGAccessAnalysisLineChart(DescribeMNGAccessAnalysisLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisLineChartResponse>(req, "DescribeMNGAccessAnalysisLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve line chart analysis data for mini game visits.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
+        public DescribeMNGAccessAnalysisLineChartResponse DescribeMNGAccessAnalysisLineChartSync(DescribeMNGAccessAnalysisLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisLineChartResponse>(req, "DescribeMNGAccessAnalysisLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisOverviewResponse"/></returns>
+        public Task<DescribeMNGAccessAnalysisOverviewResponse> DescribeMNGAccessAnalysisOverview(DescribeMNGAccessAnalysisOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisOverviewResponse>(req, "DescribeMNGAccessAnalysisOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAccessAnalysisOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGAccessAnalysisOverviewResponse"/></returns>
+        public DescribeMNGAccessAnalysisOverviewResponse DescribeMNGAccessAnalysisOverviewSync(DescribeMNGAccessAnalysisOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAccessAnalysisOverviewResponse>(req, "DescribeMNGAccessAnalysisOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the real-time active user statistics for a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGActiveUserRealTimeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMNGActiveUserRealTimeStatisticsResponse"/></returns>
+        public Task<DescribeMNGActiveUserRealTimeStatisticsResponse> DescribeMNGActiveUserRealTimeStatistics(DescribeMNGActiveUserRealTimeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGActiveUserRealTimeStatisticsResponse>(req, "DescribeMNGActiveUserRealTimeStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the real-time active user statistics for a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGActiveUserRealTimeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMNGActiveUserRealTimeStatisticsResponse"/></returns>
+        public DescribeMNGActiveUserRealTimeStatisticsResponse DescribeMNGActiveUserRealTimeStatisticsSync(DescribeMNGActiveUserRealTimeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGActiveUserRealTimeStatisticsResponse>(req, "DescribeMNGActiveUserRealTimeStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingDetailResponse"/></returns>
+        public Task<DescribeMNGAdvertisingDetailResponse> DescribeMNGAdvertisingDetail(DescribeMNGAdvertisingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingDetailResponse>(req, "DescribeMNGAdvertisingDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingDetailResponse"/></returns>
+        public DescribeMNGAdvertisingDetailResponse DescribeMNGAdvertisingDetailSync(DescribeMNGAdvertisingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingDetailResponse>(req, "DescribeMNGAdvertisingDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini game advertising data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
+        public Task<DescribeMNGAdvertisingLineChartResponse> DescribeMNGAdvertisingLineChart(DescribeMNGAdvertisingLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingLineChartResponse>(req, "DescribeMNGAdvertisingLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini game advertising data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
+        public DescribeMNGAdvertisingLineChartResponse DescribeMNGAdvertisingLineChartSync(DescribeMNGAdvertisingLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingLineChartResponse>(req, "DescribeMNGAdvertisingLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingOverviewResponse"/></returns>
+        public Task<DescribeMNGAdvertisingOverviewResponse> DescribeMNGAdvertisingOverview(DescribeMNGAdvertisingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingOverviewResponse>(req, "DescribeMNGAdvertisingOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAdvertisingOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGAdvertisingOverviewResponse"/></returns>
+        public DescribeMNGAdvertisingOverviewResponse DescribeMNGAdvertisingOverviewSync(DescribeMNGAdvertisingOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAdvertisingOverviewResponse>(req, "DescribeMNGAdvertisingOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed mini game monthly active user data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAUDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAUDataDetailResponse"/></returns>
+        public Task<DescribeMNGMAUDataDetailResponse> DescribeMNGMAUDataDetail(DescribeMNGMAUDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAUDataDetailResponse>(req, "DescribeMNGMAUDataDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed mini game monthly active user data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAUDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAUDataDetailResponse"/></returns>
+        public DescribeMNGMAUDataDetailResponse DescribeMNGMAUDataDetailSync(DescribeMNGMAUDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAUDataDetailResponse>(req, "DescribeMNGMAUDataDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini game monthly active user data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
+        public Task<DescribeMNGMAULineChartResponse> DescribeMNGMAULineChart(DescribeMNGMAULineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAULineChartResponse>(req, "DescribeMNGMAULineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini game monthly active user data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
+        public DescribeMNGMAULineChartResponse DescribeMNGMAULineChartSync(DescribeMNGMAULineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAULineChartResponse>(req, "DescribeMNGMAULineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve MAU comparison data for a mini game between two months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAUMonthlyComparisonMetricCardRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAUMonthlyComparisonMetricCardResponse"/></returns>
+        public Task<DescribeMNGMAUMonthlyComparisonMetricCardResponse> DescribeMNGMAUMonthlyComparisonMetricCard(DescribeMNGMAUMonthlyComparisonMetricCardRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAUMonthlyComparisonMetricCardResponse>(req, "DescribeMNGMAUMonthlyComparisonMetricCard");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve MAU comparison data for a mini game between two months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGMAUMonthlyComparisonMetricCardRequest"/></param>
+        /// <returns><see cref="DescribeMNGMAUMonthlyComparisonMetricCardResponse"/></returns>
+        public DescribeMNGMAUMonthlyComparisonMetricCardResponse DescribeMNGMAUMonthlyComparisonMetricCardSync(DescribeMNGMAUMonthlyComparisonMetricCardRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGMAUMonthlyComparisonMetricCardResponse>(req, "DescribeMNGMAUMonthlyComparisonMetricCard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data for mini game payment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
+        public Task<DescribeMNGPaymentLineChartResponse> DescribeMNGPaymentLineChart(DescribeMNGPaymentLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentLineChartResponse>(req, "DescribeMNGPaymentLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data for mini game payment.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
+        public DescribeMNGPaymentLineChartResponse DescribeMNGPaymentLineChartSync(DescribeMNGPaymentLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentLineChartResponse>(req, "DescribeMNGPaymentLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini game payment data within a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentOverviewResponse"/></returns>
+        public Task<DescribeMNGPaymentOverviewResponse> DescribeMNGPaymentOverview(DescribeMNGPaymentOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentOverviewResponse>(req, "DescribeMNGPaymentOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini game payment data within a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentOverviewResponse"/></returns>
+        public DescribeMNGPaymentOverviewResponse DescribeMNGPaymentOverviewSync(DescribeMNGPaymentOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentOverviewResponse>(req, "DescribeMNGPaymentOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve a detailed payment report data for a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentReportDetailResponse"/></returns>
+        public Task<DescribeMNGPaymentReportDetailResponse> DescribeMNGPaymentReportDetail(DescribeMNGPaymentReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentReportDetailResponse>(req, "DescribeMNGPaymentReportDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve a detailed payment report data for a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentReportDetailResponse"/></returns>
+        public DescribeMNGPaymentReportDetailResponse DescribeMNGPaymentReportDetailSync(DescribeMNGPaymentReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentReportDetailResponse>(req, "DescribeMNGPaymentReportDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the mini game payment retention data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentRetentionAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentRetentionAnalysisResponse"/></returns>
+        public Task<DescribeMNGPaymentRetentionAnalysisResponse> DescribeMNGPaymentRetentionAnalysis(DescribeMNGPaymentRetentionAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentRetentionAnalysisResponse>(req, "DescribeMNGPaymentRetentionAnalysis");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the mini game payment retention data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGPaymentRetentionAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeMNGPaymentRetentionAnalysisResponse"/></returns>
+        public DescribeMNGPaymentRetentionAnalysisResponse DescribeMNGPaymentRetentionAnalysisSync(DescribeMNGPaymentRetentionAnalysisRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGPaymentRetentionAnalysisResponse>(req, "DescribeMNGPaymentRetentionAnalysis")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user retention data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGRetentionDataRequest"/></param>
+        /// <returns><see cref="DescribeMNGRetentionDataResponse"/></returns>
+        public Task<DescribeMNGRetentionDataResponse> DescribeMNGRetentionData(DescribeMNGRetentionDataRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGRetentionDataResponse>(req, "DescribeMNGRetentionData");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user retention data for a mini game within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGRetentionDataRequest"/></param>
+        /// <returns><see cref="DescribeMNGRetentionDataResponse"/></returns>
+        public DescribeMNGRetentionDataResponse DescribeMNGRetentionDataSync(DescribeMNGRetentionDataRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGRetentionDataResponse>(req, "DescribeMNGRetentionData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini program details.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPRequest"/></param>
@@ -596,6 +1079,69 @@ namespace TencentCloud.Tcsas.V20250106
         public DescribeMNPResponse DescribeMNPSync(DescribeMNPRequest req)
         {
             return InternalRequestAsync<DescribeMNPResponse>(req, "DescribeMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAccessAnalysisOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNPAccessAnalysisOverviewResponse"/></returns>
+        public Task<DescribeMNPAccessAnalysisOverviewResponse> DescribeMNPAccessAnalysisOverview(DescribeMNPAccessAnalysisOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAccessAnalysisOverviewResponse>(req, "DescribeMNPAccessAnalysisOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAccessAnalysisOverviewRequest"/></param>
+        /// <returns><see cref="DescribeMNPAccessAnalysisOverviewResponse"/></returns>
+        public DescribeMNPAccessAnalysisOverviewResponse DescribeMNPAccessAnalysisOverviewSync(DescribeMNPAccessAnalysisOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAccessAnalysisOverviewResponse>(req, "DescribeMNPAccessAnalysisOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the real-time active user statistics for a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPActiveUserRealTimeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMNPActiveUserRealTimeStatisticsResponse"/></returns>
+        public Task<DescribeMNPActiveUserRealTimeStatisticsResponse> DescribeMNPActiveUserRealTimeStatistics(DescribeMNPActiveUserRealTimeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPActiveUserRealTimeStatisticsResponse>(req, "DescribeMNPActiveUserRealTimeStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the real-time active user statistics for a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPActiveUserRealTimeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeMNPActiveUserRealTimeStatisticsResponse"/></returns>
+        public DescribeMNPActiveUserRealTimeStatisticsResponse DescribeMNPActiveUserRealTimeStatisticsSync(DescribeMNPActiveUserRealTimeStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPActiveUserRealTimeStatisticsResponse>(req, "DescribeMNPActiveUserRealTimeStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAdvertisingDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPAdvertisingDetailResponse"/></returns>
+        public Task<DescribeMNPAdvertisingDetailResponse> DescribeMNPAdvertisingDetail(DescribeMNPAdvertisingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAdvertisingDetailResponse>(req, "DescribeMNPAdvertisingDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAdvertisingDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPAdvertisingDetailResponse"/></returns>
+        public DescribeMNPAdvertisingDetailResponse DescribeMNPAdvertisingDetailSync(DescribeMNPAdvertisingDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAdvertisingDetailResponse>(req, "DescribeMNPAdvertisingDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +1251,69 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to retrieve the detailed mini program monthly active user data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAUDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAUDataDetailResponse"/></returns>
+        public Task<DescribeMNPMAUDataDetailResponse> DescribeMNPMAUDataDetail(DescribeMNPMAUDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAUDataDetailResponse>(req, "DescribeMNPMAUDataDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed mini program monthly active user data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAUDataDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAUDataDetailResponse"/></returns>
+        public DescribeMNPMAUDataDetailResponse DescribeMNPMAUDataDetailSync(DescribeMNPMAUDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAUDataDetailResponse>(req, "DescribeMNPMAUDataDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini program monthly active user data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
+        public Task<DescribeMNPMAULineChartResponse> DescribeMNPMAULineChart(DescribeMNPMAULineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAULineChartResponse>(req, "DescribeMNPMAULineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve mini program monthly active user data in a line chart format.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
+        public DescribeMNPMAULineChartResponse DescribeMNPMAULineChartSync(DescribeMNPMAULineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAULineChartResponse>(req, "DescribeMNPMAULineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve MAU comparison data for a mini program between two months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAUMetricCardRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAUMetricCardResponse"/></returns>
+        public Task<DescribeMNPMAUMetricCardResponse> DescribeMNPMAUMetricCard(DescribeMNPMAUMetricCardRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAUMetricCardResponse>(req, "DescribeMNPMAUMetricCard");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve MAU comparison data for a mini program between two months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPMAUMetricCardRequest"/></param>
+        /// <returns><see cref="DescribeMNPMAUMetricCardResponse"/></returns>
+        public DescribeMNPMAUMetricCardResponse DescribeMNPMAUMetricCardSync(DescribeMNPMAUMetricCardRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPMAUMetricCardResponse>(req, "DescribeMNPMAUMetricCard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DescribeMNPOfflinePackageURL
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPOfflinePackageURLRequest"/></param>
@@ -722,6 +1331,27 @@ namespace TencentCloud.Tcsas.V20250106
         public DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURLSync(DescribeMNPOfflinePackageURLRequest req)
         {
             return InternalRequestAsync<DescribeMNPOfflinePackageURLResponse>(req, "DescribeMNPOfflinePackageURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPageAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPPageAnalysisDetailResponse"/></returns>
+        public Task<DescribeMNPPageAnalysisDetailResponse> DescribeMNPPageAnalysisDetail(DescribeMNPPageAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPageAnalysisDetailResponse>(req, "DescribeMNPPageAnalysisDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPageAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPPageAnalysisDetailResponse"/></returns>
+        public DescribeMNPPageAnalysisDetailResponse DescribeMNPPageAnalysisDetailSync(DescribeMNPPageAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPageAnalysisDetailResponse>(req, "DescribeMNPPageAnalysisDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -764,6 +1394,69 @@ namespace TencentCloud.Tcsas.V20250106
         public DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistorySync(DescribeMNPReleasedVersionHistoryRequest req)
         {
             return InternalRequestAsync<DescribeMNPReleasedVersionHistoryResponse>(req, "DescribeMNPReleasedVersionHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
+        public Task<DescribeMNPReportDataLineChartResponse> DescribeMNPReportDataLineChart(DescribeMNPReportDataLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReportDataLineChartResponse>(req, "DescribeMNPReportDataLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
+        /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
+        public DescribeMNPReportDataLineChartResponse DescribeMNPReportDataLineChartSync(DescribeMNPReportDataLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReportDataLineChartResponse>(req, "DescribeMNPReportDataLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed mini program visit analysis data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPReportDetailResponse"/></returns>
+        public Task<DescribeMNPReportDetailResponse> DescribeMNPReportDetail(DescribeMNPReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReportDetailResponse>(req, "DescribeMNPReportDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed mini program visit analysis data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPReportDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPReportDetailResponse"/></returns>
+        public DescribeMNPReportDetailResponse DescribeMNPReportDetailSync(DescribeMNPReportDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPReportDetailResponse>(req, "DescribeMNPReportDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user retention data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPRetentionDataRequest"/></param>
+        /// <returns><see cref="DescribeMNPRetentionDataResponse"/></returns>
+        public Task<DescribeMNPRetentionDataResponse> DescribeMNPRetentionData(DescribeMNPRetentionDataRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPRetentionDataResponse>(req, "DescribeMNPRetentionData");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve user retention data for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPRetentionDataRequest"/></param>
+        /// <returns><see cref="DescribeMNPRetentionDataResponse"/></returns>
+        public DescribeMNPRetentionDataResponse DescribeMNPRetentionDataSync(DescribeMNPRetentionDataRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPRetentionDataResponse>(req, "DescribeMNPRetentionData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -848,6 +1541,69 @@ namespace TencentCloud.Tcsas.V20250106
         public DescribeMNPVersionResponse DescribeMNPVersionSync(DescribeMNPVersionRequest req)
         {
             return InternalRequestAsync<DescribeMNPVersionResponse>(req, "DescribeMNPVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataDetailRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataDetailResponse"/></returns>
+        public Task<DescribePaymentDataDetailResponse> DescribePaymentDataDetail(DescribePaymentDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataDetailResponse>(req, "DescribePaymentDataDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataDetailRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataDetailResponse"/></returns>
+        public DescribePaymentDataDetailResponse DescribePaymentDataDetailSync(DescribePaymentDataDetailRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataDetailResponse>(req, "DescribePaymentDataDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
+        public Task<DescribePaymentDataLineChartResponse> DescribePaymentDataLineChart(DescribePaymentDataLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataLineChartResponse>(req, "DescribePaymentDataLineChart");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
+        public DescribePaymentDataLineChartResponse DescribePaymentDataLineChartSync(DescribePaymentDataLineChartRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataLineChartResponse>(req, "DescribePaymentDataLineChart")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini program payment data within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataOverviewRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataOverviewResponse"/></returns>
+        public Task<DescribePaymentDataOverviewResponse> DescribePaymentDataOverview(DescribePaymentDataOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataOverviewResponse>(req, "DescribePaymentDataOverview");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve an overview of mini program payment data within a specified date range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePaymentDataOverviewRequest"/></param>
+        /// <returns><see cref="DescribePaymentDataOverviewResponse"/></returns>
+        public DescribePaymentDataOverviewResponse DescribePaymentDataOverviewSync(DescribePaymentDataOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribePaymentDataOverviewResponse>(req, "DescribePaymentDataOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1058,6 +1814,27 @@ namespace TencentCloud.Tcsas.V20250106
         public ModifyApplicationResponse ModifyApplicationSync(ModifyApplicationRequest req)
         {
             return InternalRequestAsync<ModifyApplicationResponse>(req, "ModifyApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to edit the configuration of a superapp.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApplicationConfigResponse"/></returns>
+        public Task<ModifyApplicationConfigResponse> ModifyApplicationConfig(ModifyApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationConfigResponse>(req, "ModifyApplicationConfig");
+        }
+
+        /// <summary>
+        /// This API is used to edit the configuration of a superapp.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationConfigRequest"/></param>
+        /// <returns><see cref="ModifyApplicationConfigResponse"/></returns>
+        public ModifyApplicationConfigResponse ModifyApplicationConfigSync(ModifyApplicationConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyApplicationConfigResponse>(req, "ModifyApplicationConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

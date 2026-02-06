@@ -163,6 +163,24 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Address")]
         public Address Address{ get; set; }
 
+        /// <summary>
+        /// Localized name.
+        /// </summary>
+        [JsonProperty("FullNameLocal")]
+        public string FullNameLocal{ get; set; }
+
+        /// <summary>
+        /// Localization.
+        /// </summary>
+        [JsonProperty("FirstNameLocal")]
+        public string FirstNameLocal{ get; set; }
+
+        /// <summary>
+        /// Localized surname.
+        /// </summary>
+        [JsonProperty("LastNameLocal")]
+        public string LastNameLocal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +206,9 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
             this.SetParamObj(map, prefix + "Address.", this.Address);
+            this.SetParamSimple(map, prefix + "FullNameLocal", this.FullNameLocal);
+            this.SetParamSimple(map, prefix + "FirstNameLocal", this.FirstNameLocal);
+            this.SetParamSimple(map, prefix + "LastNameLocal", this.LastNameLocal);
         }
     }
 }

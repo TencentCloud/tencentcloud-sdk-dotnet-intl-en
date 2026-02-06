@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ReplicationMode{ get; set; }
 
         /// <summary>
-        /// AZ name of the secondary database, such as ap-shanghai-1
+        /// AZ name of the secondary database, such as ap-shanghai-2
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

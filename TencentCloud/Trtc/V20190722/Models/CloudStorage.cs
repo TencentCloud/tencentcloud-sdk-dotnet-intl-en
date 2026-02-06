@@ -32,7 +32,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Vendor{ get; set; }
 
         /// <summary>
-        /// The region of cloud storage.
+        /// [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+        /// Example value: cn-shanghai-1.
+        /// 
+        /// [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -44,19 +47,21 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// The access_key of the cloud storage account.
+        /// access_key account information of the cloud storage.
+        /// To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretId value corresponding to the key fields in the link.
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// The secret_key of the cloud storage account.
+        /// secret_key account information of the cloud storage.
+        /// To store files to tencent cloud object storage (COS), visit https://console.cloud.tencent.com/cam/capi to view or create the SecretKey value corresponding to the key fields in the link.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+        /// The specified position of the cloud storage bucket consists of an array of strings. valid values: az, az, 0-9, '_', and '-'. for example, the recording file xxx.m3u8 becomes prefix1/prefix2/TaskId/xxx.m3u8 under the function of ["prefix1", "prefix2"].
         /// </summary>
         [JsonProperty("FileNamePrefix")]
         public string[] FileNamePrefix{ get; set; }

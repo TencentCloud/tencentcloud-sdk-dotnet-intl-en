@@ -37,13 +37,14 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Specifies whether to shut down a CVM automatically before a rollback
+        /// Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+        /// Specifies whether AutoStartInstance can be set to true when this parameter is true.
         /// </summary>
         [JsonProperty("AutoStopInstance")]
         public bool? AutoStopInstance{ get; set; }
 
         /// <summary>
-        /// Specifies whether to start up a CVM automatically after a rollback
+        /// Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
         /// </summary>
         [JsonProperty("AutoStartInstance")]
         public bool? AutoStartInstance{ get; set; }

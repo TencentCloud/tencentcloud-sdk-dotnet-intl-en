@@ -26,56 +26,48 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
         /// Mini program name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
         /// Mini program description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Mini program version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program version.
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Mini program introduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the mini program version.
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Mini program QR code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program qr code.
         /// </summary>
         [JsonProperty("QRCodeUrl")]
         public string QRCodeUrl{ get; set; }
 
         /// <summary>
-        /// Path to the preview
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the path to the preview version.
         /// </summary>
         [JsonProperty("PreviewEntrancePath")]
         public string PreviewEntrancePath{ get; set; }
 
         /// <summary>
-        /// QR code content
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the qr code content.
         /// </summary>
         [JsonProperty("QRCodeContent")]
         public string QRCodeContent{ get; set; }

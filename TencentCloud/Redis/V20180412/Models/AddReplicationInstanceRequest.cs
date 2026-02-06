@@ -32,7 +32,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// Instance ID.
-        /// - There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.comom/document/product/239/71934?from_cn_redirect=1).
+        /// - There are region and AZ limitations for adding a replication group instance. For detailed information, see [Use Limits](https://www.tencentcloud.com/document/product/239/71934?from_cn_redirect=1).
         /// - Currently, only Redis 4.0 and 5.0 cluster architecture instances support being added to the replication groups.
         /// - Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list), and copy the ID of the instance that needs to be added to the replication group in the instance list.
         /// </summary>

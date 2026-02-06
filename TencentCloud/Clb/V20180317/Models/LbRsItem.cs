@@ -26,14 +26,14 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// VPC ID in string format. Only string format is supported.
-        /// Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+        /// Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// Specifies the private IP address for backend querying, which can be CVM or eni.
-        /// Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+        /// Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }

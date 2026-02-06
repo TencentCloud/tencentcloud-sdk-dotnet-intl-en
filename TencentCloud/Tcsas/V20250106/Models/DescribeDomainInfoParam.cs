@@ -25,15 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Multiple domain separators ';'
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Multiple domain separators ';'.
         /// </summary>
         [JsonProperty("DomainUrl")]
         public string DomainUrl{ get; set; }
 
         /// <summary>
-        /// Domain type 1-requests domain 2-WebView load domain
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain type 1-requests domain 2-business domain.
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }

@@ -26,35 +26,30 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version number
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Version ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version ID.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Version note
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version remarks.
         /// </summary>
         [JsonProperty("MNPVersionNote")]
         public string MNPVersionNote{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

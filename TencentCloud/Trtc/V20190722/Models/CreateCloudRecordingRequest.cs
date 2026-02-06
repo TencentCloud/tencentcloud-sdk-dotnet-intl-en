@@ -31,7 +31,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
+        /// [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+        /// Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
@@ -87,7 +88,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? ResourceExpiredHour{ get; set; }
 
         /// <summary>
-        /// The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users’ [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
+        /// The permission ticket for a TRTC room. This parameter is required if advanced permission control is enabled in the console, in which case the TRTC backend will verify users' [PrivateMapKey](https://intl.cloud.tencent.com/document/product/647/32240?from_cn_redirect=1), which include an encrypted room ID and permission bit list. A user providing only `UserSig` and not `PrivateMapKey` will be unable to enter the room.
         /// </summary>
         [JsonProperty("PrivateMapKey")]
         public string PrivateMapKey{ get; set; }

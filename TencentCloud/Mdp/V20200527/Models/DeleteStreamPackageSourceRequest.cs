@@ -25,7 +25,7 @@ namespace TencentCloud.Mdp.V20200527.Models
     {
         
         /// <summary>
-        /// SourceLocation Id.
+        /// Source Id.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

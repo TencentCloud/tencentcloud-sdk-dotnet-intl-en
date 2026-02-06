@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
+        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to query the ID, such as lb-12345678.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.comom/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
+        /// Added SnatIp information. specify IP for request or designated subnet for automatic application. can be accessed through [DescribeSubnets](https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1) to query and retrieve. the default upper limit for one CLB instance is 10.
         /// </summary>
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }

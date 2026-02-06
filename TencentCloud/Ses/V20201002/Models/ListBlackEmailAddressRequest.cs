@@ -55,7 +55,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string EmailAddress{ get; set; }
 
         /// <summary>
-        /// You can specify a task ID to query.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("TaskID")]
         public string TaskID{ get; set; }

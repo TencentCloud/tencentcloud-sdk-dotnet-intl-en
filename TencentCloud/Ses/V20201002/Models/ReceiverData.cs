@@ -43,15 +43,13 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Recipient group description
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Recipient list description.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// List status (1 to be uploaded 2 uploading 3 upload complete).
         /// </summary>
         [JsonProperty("ReceiversStatus")]
         public ulong? ReceiversStatus{ get; set; }
@@ -61,6 +59,12 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Invalid number of recipients.
+        /// </summary>
+        [JsonProperty("InvalidCount")]
+        public ulong? InvalidCount{ get; set; }
 
 
         /// <summary>
@@ -74,6 +78,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "ReceiversStatus", this.ReceiversStatus);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
         }
     }
 }

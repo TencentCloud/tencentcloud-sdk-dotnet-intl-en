@@ -25,58 +25,79 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The recording mode.
-        /// 1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-        /// 2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+        /// Recording mode:.
+        /// 1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+        /// 2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
         /// </summary>
         [JsonProperty("RecordMode")]
         public ulong? RecordMode{ get; set; }
 
         /// <summary>
-        /// The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+        /// Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// The media type of the streams to record.
-        /// 0: Audio and video streams (default)
-        /// 1: Audio streams only
-        /// 2: Video streams only
+        /// Media stream type for recording.
+        /// 0: recording audio and video streams (default).
+        /// 1: record audio streams only.
+        /// 2: record video stream only.
         /// </summary>
         [JsonProperty("StreamType")]
         public ulong? StreamType{ get; set; }
 
         /// <summary>
-        /// The allowlist/blocklist for stream subscription.
+        /// Specifies the allowlist or blocklist for the subscription stream.
         /// </summary>
         [JsonProperty("SubscribeStreamUserIds")]
         public SubscribeStreamUserIds SubscribeStreamUserIds{ get; set; }
 
         /// <summary>
-        /// The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+        /// Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+        /// 
+        /// This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
         /// </summary>
         [JsonProperty("OutputFormat")]
         public ulong? OutputFormat{ get; set; }
 
         /// <summary>
-        /// Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+        /// In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
         /// </summary>
         [JsonProperty("AvMerge")]
         public ulong? AvMerge{ get; set; }
 
         /// <summary>
-        /// The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-        /// This parameter is invalid if the output format is HLS.
+        /// If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+        /// Hls format recording. this parameter is not effective.
         /// </summary>
         [JsonProperty("MaxMediaFileDuration")]
         public ulong? MaxMediaFileDuration{ get; set; }
 
         /// <summary>
-        /// The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+        /// Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
         /// </summary>
         [JsonProperty("MediaId")]
         public ulong? MediaId{ get; set; }
+
+        /// <summary>
+        /// Specifies the type of frame to fill when the upstream video stream stops:
+        /// - 0: Fill with the last frame (freeze the last video frame)
+        /// - 1: Fill with black frames
+        /// </summary>
+        [JsonProperty("FillType")]
+        public ulong? FillType{ get; set; }
+
+        /// <summary>
+        /// Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+        /// 
+        /// - 1: Subscribe. 
+        /// - 0: Do not subscribe (default).
+        /// > Note: 
+        /// When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+        /// </summary>
+        [JsonProperty("SubscribeAbility")]
+        public ulong? SubscribeAbility{ get; set; }
 
 
         /// <summary>
@@ -92,6 +113,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "AvMerge", this.AvMerge);
             this.SetParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
             this.SetParamSimple(map, prefix + "MediaId", this.MediaId);
+            this.SetParamSimple(map, prefix + "FillType", this.FillType);
+            this.SetParamSimple(map, prefix + "SubscribeAbility", this.SubscribeAbility);
         }
     }
 }

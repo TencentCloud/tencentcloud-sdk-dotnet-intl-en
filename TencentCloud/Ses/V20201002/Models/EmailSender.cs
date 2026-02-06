@@ -31,18 +31,23 @@ namespace TencentCloud.Ses.V20201002.Models
         public string EmailAddress{ get; set; }
 
         /// <summary>
-        /// Sender name.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Sender alias.
         /// </summary>
         [JsonProperty("EmailSenderName")]
         public string EmailSenderName{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CreatedTimestamp")]
         public ulong? CreatedTimestamp{ get; set; }
+
+        /// <summary>
+        /// smtp password type. 0=not set. 1=already set up.
+        /// </summary>
+        [JsonProperty("SmtpPwdType")]
+        public ulong? SmtpPwdType{ get; set; }
 
 
         /// <summary>
@@ -53,6 +58,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
             this.SetParamSimple(map, prefix + "EmailSenderName", this.EmailSenderName);
             this.SetParamSimple(map, prefix + "CreatedTimestamp", this.CreatedTimestamp);
+            this.SetParamSimple(map, prefix + "SmtpPwdType", this.SmtpPwdType);
         }
     }
 }

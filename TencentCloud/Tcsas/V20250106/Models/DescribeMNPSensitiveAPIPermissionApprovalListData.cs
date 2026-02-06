@@ -85,57 +85,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Approver
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the review user.
         /// </summary>
         [JsonProperty("ApprovalUser")]
         public string ApprovalUser{ get; set; }
 
         /// <summary>
-        /// Approval time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval time.
         /// </summary>
         [JsonProperty("ApprovalTime")]
         public string ApprovalTime{ get; set; }
 
         /// <summary>
         /// Approval notes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }
 
         /// <summary>
         /// Application ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the application icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// API type. 1: System; 2: Custom
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API type. 1: system; 2: custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// API feature description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API feature description.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }

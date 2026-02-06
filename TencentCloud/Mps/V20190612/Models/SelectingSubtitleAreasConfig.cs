@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
         /// </summary>
         [JsonProperty("AutoAreas")]
         public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Width of the sample video or image, in pixels.
         /// </summary>
         [JsonProperty("SampleWidth")]
         public ulong? SampleWidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// Height of the sample video or image, in pixels.
         /// </summary>
         [JsonProperty("SampleHeight")]
         public ulong? SampleHeight{ get; set; }

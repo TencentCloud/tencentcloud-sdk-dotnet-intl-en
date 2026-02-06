@@ -28,6 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Whether to enable HDR. Valid values:
         /// <li>`ON`</li>
         /// <li>`OFF`</li>
+        /// Default value: `OFF`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -39,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 
         /// Note:
         /// <li>This parameter is valid only if `Switch` is `ON`.</li>
-        /// <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx265`.</li>
+        /// <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

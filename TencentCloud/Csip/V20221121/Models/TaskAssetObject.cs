@@ -25,22 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Asset name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset name.
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 	Asset category
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset type.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Asset sub-category
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset category.
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
@@ -52,15 +49,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Asset{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// The ID specific for an asset synched from another cloud platform
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Unique ID of Multi-Cloud Assets
         /// </summary>
         [JsonProperty("Arn")]
         public string Arn{ get; set; }

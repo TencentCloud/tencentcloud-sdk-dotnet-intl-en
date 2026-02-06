@@ -28,16 +28,15 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Whether to enable noise removal. Valid values:
         /// <li>`ON`</li>
         /// <li>`OFF`</li>
+        /// Default value: `OFF`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-        /// <li>`weak`</li>
         /// <li>`normal`</li>
-        /// <li>`strong`</li>
-        /// Default value: `weak`.
+        /// Default value: `normal`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

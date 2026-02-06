@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1253";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -1798,7 +1798,7 @@ namespace TencentCloud.Cvm.V20170312
         /// This API is used to renew annual and monthly subscription instances.
         /// 
         /// This API is used to operate on monthly subscription instances only.
-        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.comom/document/product/555/20253?from_cn_redirect=1).
+        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.com/document/product/555/20253?from_cn_redirect=1).
         /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="RenewInstancesRequest"/></param>
@@ -1812,7 +1812,7 @@ namespace TencentCloud.Cvm.V20170312
         /// This API is used to renew annual and monthly subscription instances.
         /// 
         /// This API is used to operate on monthly subscription instances only.
-        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.comom/document/product/555/20253?from_cn_redirect=1).
+        /// This API is used to ensure your account balance is sufficient for renewal. You can check the balance via the DescribeAccountBalance API (https://www.tencentcloud.com/document/product/555/20253?from_cn_redirect=1).
         /// * You can query the result of the instance operation by calling the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5). If the latest operation status (LatestOperationState) of the instance is **SUCCESS**, the operation is successful.
         /// </summary>
         /// <param name="req"><see cref="RenewInstancesRequest"/></param>

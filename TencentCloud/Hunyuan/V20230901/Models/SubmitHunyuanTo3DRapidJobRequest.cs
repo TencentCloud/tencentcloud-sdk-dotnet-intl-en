@@ -25,19 +25,27 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+        /// Text-To-3D, description of 3D content, forward Prompt content
+        /// Supports up to 200 utf-8 characters
+        /// Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+        /// Input image Base64 data
+        /// Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+        /// jpg, png, jpeg, webp
+        /// Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+        /// Input image Url size: 
+        /// Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+        /// Format: jpg, png, jpeg, webp
+        /// Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
@@ -49,7 +57,10 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? EnablePBR{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+        /// Specifies whether to enable the single geometry generation option
+        /// When enabled, it generates a 3D model without textures (white model)
+        /// When enabled, the generative model does not support OBJ format
+        /// Default model file format is GLB
         /// </summary>
         [JsonProperty("EnableGeometry")]
         public bool? EnableGeometry{ get; set; }

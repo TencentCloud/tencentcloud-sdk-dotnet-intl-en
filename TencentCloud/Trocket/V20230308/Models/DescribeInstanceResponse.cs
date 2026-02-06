@@ -231,7 +231,7 @@ namespace TencentCloud.Trocket.V20230308.Models
         public long? TopicNumUpperLimit{ get; set; }
 
         /// <summary>
-        /// AZ list. See [ZoneInfo](https://www.tencentcloud.comom/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.comom/document/product/1596/77929?from_cn_redirect=1) in Data Type.
+        /// AZ list. See [ZoneInfo](https://www.tencentcloud.com/document/api/1596/77932?from_cn_redirect=1#ZoneInfo) returned by the API [DescribeZones](https://www.tencentcloud.com/document/product/1596/77929?from_cn_redirect=1) in Data Type.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

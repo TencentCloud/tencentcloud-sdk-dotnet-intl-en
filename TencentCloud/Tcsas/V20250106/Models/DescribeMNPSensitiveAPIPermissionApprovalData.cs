@@ -26,49 +26,42 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// API ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// API request method
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API method.
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// Reason for the request
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for application
         /// </summary>
         [JsonProperty("ApplyReason")]
         public string ApplyReason{ get; set; }
 
         /// <summary>
-        /// Reason for rejection
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for rejection.
         /// </summary>
         [JsonProperty("RejectReason")]
         public string RejectReason{ get; set; }
 
         /// <summary>
-        /// Approval status. 20: Rejected; 30: Approved
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Approval status. valid values: 20 (rejected), 30 (approved).
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// API feature description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API feature description.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
 
         /// <summary>
-        /// API type. 1: System; 2: Custom
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// API type. 1: system; 2: custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }

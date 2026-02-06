@@ -26,8 +26,8 @@ namespace TencentCloud.Trocket.V20230308.Models
         
         /// <summary>
         /// Resources corresponding to permissions.
-        /// Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-        /// Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or the console.
+        /// Specifies the topic name, which can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the api [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+        /// Specifies the consumer group name, which can be obtained from the api response of DescribeConsumerGroupList (https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }

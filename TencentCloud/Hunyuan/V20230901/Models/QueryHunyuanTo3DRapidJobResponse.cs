@@ -25,7 +25,11 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	
+        /// Task status:
+        /// WAIT: waiting
+        /// RUN: running
+        /// FAIL: failed
+        /// DONE: successful	
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -43,7 +47,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// Specifies the generated 3D file array.	
+        /// Specifies the generated 3D file array
         /// </summary>
         [JsonProperty("ResultFile3Ds")]
         public File3D[] ResultFile3Ds{ get; set; }

@@ -37,20 +37,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Queries the MPS task type. The transcoding task is queried by default.
-        /// <li>Transcode: transcoding.</li>
-        /// <li>Enhance: enhancement.</li>
-        /// <li>AIAnalysis: intelligent analysis.</li>
-        /// <li>AIRecognition: intelligent recognition.</li>
-        /// <li>AIReview: content moderation.</li>
-        /// <li>Snapshot: screenshot.</li>
-        /// <li>AnimatedGraphics: conversion to GIF.</li>
-        /// <li>AiQualityControl: media quality inspection.</li>
-        /// <li>Evaluation: video assessment.</li>
-        /// <li>ImageProcess: image processing.</li>
-        /// <li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-        /// <li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-        /// <li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+        /// Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+        /// <li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }
@@ -69,7 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>na-siliconvalley: Silicon Valley.</li>
         /// <li>na-ashburn: Virginia.</li>
         /// <li>na-toronto: Toronto.</li>
-        /// <li>sa-saopaulo: São Paulo.</li>
+        /// <li>sa-saopaulo: Sao Paulo.</li>
         /// <li>eu-frankfurt: Frankfurt.</li>
         /// <li>eu-moscow: Russia.</li>
         /// <li>aws: AWS.</li>

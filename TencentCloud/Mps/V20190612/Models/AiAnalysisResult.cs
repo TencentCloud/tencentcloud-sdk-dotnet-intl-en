@@ -25,17 +25,8 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. Valid values:
-        /// <li>Classification: smart classification.</li>
-        /// <li>Cover: smart cover.</li>
-        /// <li>Tag: smart tag.</li>
-        /// <li>FrameTag: smart frame tag.</li>
-        /// <li>Highlight: smart highlights.</li>
-        /// <li>DeLogo: smart erasing.</li>
-        /// <li>Description: LLM summary.</li>
-        /// <li>Dubbing: smart dubbing.</li>
-        /// <li>VideoRemake: video deduplication.</li>
-        /// <li>VideoComprehension: video (audio) recognition.</li>
+        /// Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+        /// <li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -127,6 +118,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VideoComprehensionTask")]
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
+        /// <summary>
+        /// Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CutoutTask")]
+        public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
+
+        /// <summary>
+        /// Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ReelTask")]
+        public AiAnalysisTaskReelResult ReelTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +150,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
             this.SetParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
             this.SetParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
+            this.SetParamObj(map, prefix + "CutoutTask.", this.CutoutTask);
+            this.SetParamObj(map, prefix + "ReelTask.", this.ReelTask);
         }
     }
 }

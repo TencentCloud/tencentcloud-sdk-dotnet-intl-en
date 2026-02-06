@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.intl.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1260";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,102 @@ namespace TencentCloud.Hunyuan.V20230901
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Tencent Hunyuan is a large language model (LLM) developed by Tencent R&D. It possesses powerful Chinese creation capacity, logical reasoning in complex context, and reliable task execution power. This API supports streaming or non-streaming calls. When using streaming calls, it follows the SSE protocol.
+        /// 
+        /// 1. This API does not currently support returning Image Content.
+        /// 2. By default, this API has account restrictions with a number of concurrencies of 5. 
+        /// 3. Please use the SDK to call this API. examples are provided in the Git repository examples/hunyuan/v20230901/ directory for each development language. The SDK link is provided in the "**Developer Resources - SDK**" part under the document.
+        /// 4. We recommend you use API Explorer for quick online debugging interface and download example code in languages, [click to open](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions).
+        /// </summary>
+        /// <param name="req"><see cref="ChatTranslationsRequest"/></param>
+        /// <returns><see cref="ChatTranslationsResponse"/></returns>
+        public Task<ChatTranslationsResponse> ChatTranslations(ChatTranslationsRequest req)
+        {
+            return InternalRequestAsync<ChatTranslationsResponse>(req, "ChatTranslations");
+        }
+
+        /// <summary>
+        /// Tencent Hunyuan is a large language model (LLM) developed by Tencent R&D. It possesses powerful Chinese creation capacity, logical reasoning in complex context, and reliable task execution power. This API supports streaming or non-streaming calls. When using streaming calls, it follows the SSE protocol.
+        /// 
+        /// 1. This API does not currently support returning Image Content.
+        /// 2. By default, this API has account restrictions with a number of concurrencies of 5. 
+        /// 3. Please use the SDK to call this API. examples are provided in the Git repository examples/hunyuan/v20230901/ directory for each development language. The SDK link is provided in the "**Developer Resources - SDK**" part under the document.
+        /// 4. We recommend you use API Explorer for quick online debugging interface and download example code in languages, [click to open](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions).
+        /// </summary>
+        /// <param name="req"><see cref="ChatTranslationsRequest"/></param>
+        /// <returns><see cref="ChatTranslationsResponse"/></returns>
+        public ChatTranslationsResponse ChatTranslationsSync(ChatTranslationsRequest req)
+        {
+            return InternalRequestAsync<ChatTranslationsResponse>(req, "ChatTranslations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After inputting a 3D model file, the 3D model file format can be switched.
+        /// </summary>
+        /// <param name="req"><see cref="Convert3DFormatRequest"/></param>
+        /// <returns><see cref="Convert3DFormatResponse"/></returns>
+        public Task<Convert3DFormatResponse> Convert3DFormat(Convert3DFormatRequest req)
+        {
+            return InternalRequestAsync<Convert3DFormatResponse>(req, "Convert3DFormat");
+        }
+
+        /// <summary>
+        /// After inputting a 3D model file, the 3D model file format can be switched.
+        /// </summary>
+        /// <param name="req"><see cref="Convert3DFormatRequest"/></param>
+        /// <returns><see cref="Convert3DFormatResponse"/></returns>
+        public Convert3DFormatResponse Convert3DFormatSync(Convert3DFormatRequest req)
+        {
+            return InternalRequestAsync<Convert3DFormatResponse>(req, "Convert3DFormat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+        /// 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+        /// </summary>
+        /// <param name="req"><see cref="Describe3DSmartTopologyJobRequest"/></param>
+        /// <returns><see cref="Describe3DSmartTopologyJobResponse"/></returns>
+        public Task<Describe3DSmartTopologyJobResponse> Describe3DSmartTopologyJob(Describe3DSmartTopologyJobRequest req)
+        {
+            return InternalRequestAsync<Describe3DSmartTopologyJobResponse>(req, "Describe3DSmartTopologyJob");
+        }
+
+        /// <summary>
+        /// The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+        /// 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+        /// </summary>
+        /// <param name="req"><see cref="Describe3DSmartTopologyJobRequest"/></param>
+        /// <returns><see cref="Describe3DSmartTopologyJobResponse"/></returns>
+        public Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJobSync(Describe3DSmartTopologyJobRequest req)
+        {
+            return InternalRequestAsync<Describe3DSmartTopologyJobResponse>(req, "Describe3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query component splitting tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanTo3DUVJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanTo3DUVJobResponse"/></returns>
+        public Task<DescribeHunyuanTo3DUVJobResponse> DescribeHunyuanTo3DUVJob(DescribeHunyuanTo3DUVJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanTo3DUVJobResponse>(req, "DescribeHunyuanTo3DUVJob");
+        }
+
+        /// <summary>
+        /// Query component splitting tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHunyuanTo3DUVJobRequest"/></param>
+        /// <returns><see cref="DescribeHunyuanTo3DUVJobResponse"/></returns>
+        public DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJobSync(DescribeHunyuanTo3DUVJobRequest req)
+        {
+            return InternalRequestAsync<DescribeHunyuanTo3DUVJobResponse>(req, "DescribeHunyuanTo3DUVJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -121,6 +217,50 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
+        /// Query 3D texture edit tasks.
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanTo3DTextureEditJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanTo3DTextureEditJobResponse"/></returns>
+        public Task<QueryHunyuanTo3DTextureEditJobResponse> QueryHunyuanTo3DTextureEditJob(QueryHunyuanTo3DTextureEditJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanTo3DTextureEditJobResponse>(req, "QueryHunyuanTo3DTextureEditJob");
+        }
+
+        /// <summary>
+        /// Query 3D texture edit tasks.
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuanTo3DTextureEditJobRequest"/></param>
+        /// <returns><see cref="QueryHunyuanTo3DTextureEditJobResponse"/></returns>
+        public QueryHunyuanTo3DTextureEditJobResponse QueryHunyuanTo3DTextureEditJobSync(QueryHunyuanTo3DTextureEditJobRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuanTo3DTextureEditJobResponse>(req, "QueryHunyuanTo3DTextureEditJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The SmartTopoly API uses the Polygen 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+        /// 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+        /// </summary>
+        /// <param name="req"><see cref="Submit3DSmartTopologyJobRequest"/></param>
+        /// <returns><see cref="Submit3DSmartTopologyJobResponse"/></returns>
+        public Task<Submit3DSmartTopologyJobResponse> Submit3DSmartTopologyJob(Submit3DSmartTopologyJobRequest req)
+        {
+            return InternalRequestAsync<Submit3DSmartTopologyJobResponse>(req, "Submit3DSmartTopologyJob");
+        }
+
+        /// <summary>
+        /// The SmartTopoly API uses the Polygen 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+        /// 1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+        /// </summary>
+        /// <param name="req"><see cref="Submit3DSmartTopologyJobRequest"/></param>
+        /// <returns><see cref="Submit3DSmartTopologyJobResponse"/></returns>
+        public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJobSync(Submit3DSmartTopologyJobRequest req)
+        {
+            return InternalRequestAsync<Submit3DSmartTopologyJobResponse>(req, "Submit3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to automatically perform component identification and generation based on the model structure after inputting a 3D model file.
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuan3DPartJobRequest"/></param>
@@ -184,6 +324,48 @@ namespace TencentCloud.Hunyuan.V20230901
         public SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJobSync(SubmitHunyuanTo3DRapidJobRequest req)
         {
             return InternalRequestAsync<SubmitHunyuanTo3DRapidJobResponse>(req, "SubmitHunyuanTo3DRapidJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DTextureEditJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DTextureEditJobResponse"/></returns>
+        public Task<SubmitHunyuanTo3DTextureEditJobResponse> SubmitHunyuanTo3DTextureEditJob(SubmitHunyuanTo3DTextureEditJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DTextureEditJobResponse>(req, "SubmitHunyuanTo3DTextureEditJob");
+        }
+
+        /// <summary>
+        /// After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DTextureEditJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DTextureEditJobResponse"/></returns>
+        public SubmitHunyuanTo3DTextureEditJobResponse SubmitHunyuanTo3DTextureEditJobSync(SubmitHunyuanTo3DTextureEditJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DTextureEditJobResponse>(req, "SubmitHunyuanTo3DTextureEditJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After inputting the model, UV unfolding can be performed based on the model texture to output the corresponding UV texture
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DUVJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DUVJobResponse"/></returns>
+        public Task<SubmitHunyuanTo3DUVJobResponse> SubmitHunyuanTo3DUVJob(SubmitHunyuanTo3DUVJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DUVJobResponse>(req, "SubmitHunyuanTo3DUVJob");
+        }
+
+        /// <summary>
+        /// After inputting the model, UV unfolding can be performed based on the model texture to output the corresponding UV texture
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuanTo3DUVJobRequest"/></param>
+        /// <returns><see cref="SubmitHunyuanTo3DUVJobResponse"/></returns>
+        public SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJobSync(SubmitHunyuanTo3DUVJobRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuanTo3DUVJobResponse>(req, "SubmitHunyuanTo3DUVJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,16 +31,17 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application platform. 2: Android; 3: iOS
-        /// </summary>
-        [JsonProperty("AppType")]
-        public long? AppType{ get; set; }
-
-        /// <summary>
         /// Platform ID
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
+
+        /// <summary>
+        /// Application platform. 2: Android; 3: iOS
+        /// </summary>
+        [JsonProperty("AppType")]
+        [System.Obsolete]
+        public long? AppType{ get; set; }
 
 
         /// <summary>
@@ -49,8 +50,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
         }
     }
 }

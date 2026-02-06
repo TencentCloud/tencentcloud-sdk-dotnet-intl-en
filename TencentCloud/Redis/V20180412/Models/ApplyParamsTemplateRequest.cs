@@ -32,7 +32,7 @@ namespace TencentCloud.Redis.V20180412.Models
 
         /// <summary>
         /// ID of the applied parameter template.
-        /// - The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.comom/document/product/239/58748?from_cn_redirect=1).
+        /// - The parameter template ID can be obtained through the response parameter **TemplateId** of the API [DescribeParamTemplateInfo](https://www.tencentcloud.com/document/product/239/58748?from_cn_redirect=1).
         /// - The operation can only be successfully performed when the parameter template version matches the architecture version of the target instance. A version mismatch will trigger an execution error.
         /// </summary>
         [JsonProperty("TemplateId")]

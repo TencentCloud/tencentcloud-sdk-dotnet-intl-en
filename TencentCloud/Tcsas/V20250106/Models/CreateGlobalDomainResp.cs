@@ -26,28 +26,24 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Result
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// List of duplicate domain names
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates the duplicate domain name.
         /// </summary>
         [JsonProperty("RepeatUrls")]
         public string[] RepeatUrls{ get; set; }
 
         /// <summary>
-        /// List of allowed domain names
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Lists allowed domain names.
         /// </summary>
         [JsonProperty("ExistsWhiteUrls")]
         public string[] ExistsWhiteUrls{ get; set; }
 
         /// <summary>
-        /// List of blocked domain names
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates the domain name already exists in the blocklist.
         /// </summary>
         [JsonProperty("ExistsBlackUrls")]
         public string[] ExistsBlackUrls{ get; set; }

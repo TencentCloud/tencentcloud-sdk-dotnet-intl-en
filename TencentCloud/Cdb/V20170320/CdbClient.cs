@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.intl.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to disable the audit service for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService");
+        }
+
+        /// <summary>
+        /// This API is used to disable the audit service for an instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable database proxy.
         /// </summary>
         /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
@@ -264,6 +285,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to create an audit log file for a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile");
+        }
+
+        /// <summary>
+        /// This API is used to create an audit log file for a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditPolicyRequest"/></param>
@@ -281,6 +323,27 @@ namespace TencentCloud.Cdb.V20170320
         public CreateAuditPolicyResponse CreateAuditPolicySync(CreateAuditPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuditPolicyResponse>(req, "CreateAuditPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public Task<CreateAuditRuleTemplateResponse> CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateAuditRuleTemplateResponse>(req, "CreateAuditRuleTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create an audit rule template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditRuleTemplateRequest"/></param>
+        /// <returns><see cref="CreateAuditRuleTemplateResponse"/></returns>
+        public CreateAuditRuleTemplateResponse CreateAuditRuleTemplateSync(CreateAuditRuleTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateAuditRuleTemplateResponse>(req, "CreateAuditRuleTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -533,6 +596,27 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to enable password rotation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRotationPasswordRequest"/></param>
+        /// <returns><see cref="CreateRotationPasswordResponse"/></returns>
+        public Task<CreateRotationPasswordResponse> CreateRotationPassword(CreateRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<CreateRotationPasswordResponse>(req, "CreateRotationPassword");
+        }
+
+        /// <summary>
+        /// This API is used to enable password rotation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRotationPasswordRequest"/></param>
+        /// <returns><see cref="CreateRotationPasswordResponse"/></returns>
+        public CreateRotationPasswordResponse CreateRotationPasswordSync(CreateRotationPasswordRequest req)
+        {
+            return InternalRequestAsync<CreateRotationPasswordResponse>(req, "CreateRotationPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (DeleteAccounts) is used to delete TencentDB accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
@@ -550,6 +634,69 @@ namespace TencentCloud.Cdb.V20170320
         public DeleteAccountsResponse DeleteAccountsSync(DeleteAccountsRequest req)
         {
             return InternalRequestAsync<DeleteAccountsResponse>(req, "DeleteAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an audit log file of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile");
+        }
+
+        /// <summary>
+        /// This API is used to delete an audit log file of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an audit policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAuditPolicyResponse"/></returns>
+        public Task<DeleteAuditPolicyResponse> DeleteAuditPolicy(DeleteAuditPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditPolicyResponse>(req, "DeleteAuditPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to delete an audit policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditPolicyRequest"/></param>
+        /// <returns><see cref="DeleteAuditPolicyResponse"/></returns>
+        public DeleteAuditPolicyResponse DeleteAuditPolicySync(DeleteAuditPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditPolicyResponse>(req, "DeleteAuditPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public Task<DeleteAuditRuleTemplatesResponse> DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditRuleTemplatesResponse>(req, "DeleteAuditRuleTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to delete audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DeleteAuditRuleTemplatesResponse"/></returns>
+        public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplatesSync(DeleteAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditRuleTemplatesResponse>(req, "DeleteAuditRuleTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -680,6 +827,69 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public Task<DescribeAuditConfigResponse> DescribeAuditConfig(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public DescribeAuditConfigResponse DescribeAuditConfigSync(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of audit instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of audit instances.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the audit log files of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles");
+        }
+
+        /// <summary>
+        /// This API is used to query the audit log files of a TencentDB instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a database audit log.
         /// </summary>
         /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
@@ -718,6 +928,48 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeAuditPoliciesResponse DescribeAuditPoliciesSync(DescribeAuditPoliciesRequest req)
         {
             return InternalRequestAsync<DescribeAuditPoliciesResponse>(req, "DescribeAuditPolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the change history of rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplateModifyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplateModifyHistoryResponse"/></returns>
+        public Task<DescribeAuditRuleTemplateModifyHistoryResponse> DescribeAuditRuleTemplateModifyHistory(DescribeAuditRuleTemplateModifyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRuleTemplateModifyHistoryResponse>(req, "DescribeAuditRuleTemplateModifyHistory");
+        }
+
+        /// <summary>
+        /// This API is used to query the change history of rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplateModifyHistoryRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplateModifyHistoryResponse"/></returns>
+        public DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistorySync(DescribeAuditRuleTemplateModifyHistoryRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRuleTemplateModifyHistoryResponse>(req, "DescribeAuditRuleTemplateModifyHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the information of audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public Task<DescribeAuditRuleTemplatesResponse> DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRuleTemplatesResponse>(req, "DescribeAuditRuleTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to query the information of audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeAuditRuleTemplatesResponse"/></returns>
+        public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplatesSync(DescribeAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditRuleTemplatesResponse>(req, "DescribeAuditRuleTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1185,7 +1437,7 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// This API is used to query the list of TencentDB for MySQL instances. It supports filtering instances by conditions such as project ID, instance ID, access address, and instance status. It also supports querying the list of information about primary instances, disaster recovery instances, and read-only instances.
-        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.comom/document/product/236/17491?from_cn_redirect=1) API.
+        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.com/document/product/236/17491?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1196,7 +1448,7 @@ namespace TencentCloud.Cdb.V20170320
 
         /// <summary>
         /// This API is used to query the list of TencentDB for MySQL instances. It supports filtering instances by conditions such as project ID, instance ID, access address, and instance status. It also supports querying the list of information about primary instances, disaster recovery instances, and read-only instances.
-        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.comom/document/product/236/17491?from_cn_redirect=1) API.
+        /// This API is used to return the availability zone (AZ) status during purchase, which does not change along with the proactive HA switch. If you want to know the AZ status in real time, query through the [DescribeDBInstanceConfig](https://www.tencentcloud.com/document/product/236/17491?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
@@ -1952,6 +2204,69 @@ namespace TencentCloud.Cdb.V20170320
         public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyAccountPrivilegesResponse>(req, "ModifyAccountPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditConfigRequest"/></param>
+        /// <returns><see cref="ModifyAuditConfigResponse"/></returns>
+        public Task<ModifyAuditConfigResponse> ModifyAuditConfig(ModifyAuditConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditConfigResponse>(req, "ModifyAuditConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditConfigRequest"/></param>
+        /// <returns><see cref="ModifyAuditConfigResponse"/></returns>
+        public ModifyAuditConfigResponse ModifyAuditConfigSync(ModifyAuditConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditConfigResponse>(req, "ModifyAuditConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public Task<ModifyAuditRuleTemplatesResponse> ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditRuleTemplatesResponse>(req, "ModifyAuditRuleTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to modify audit rule templates.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ModifyAuditRuleTemplatesResponse"/></returns>
+        public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplatesSync(ModifyAuditRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditRuleTemplatesResponse>(req, "ModifyAuditRuleTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the service configurations for a TencentDB instance, including the audit log retention period and the audit rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService");
+        }
+
+        /// <summary>
+        /// This API is used to modify the service configurations for a TencentDB instance, including the audit log retention period and the audit rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

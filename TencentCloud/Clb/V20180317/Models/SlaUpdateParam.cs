@@ -26,7 +26,7 @@ namespace TencentCloud.Clb.V20180317.Models
         
         /// <summary>
         /// CLB instance ID.
-        /// Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+        /// Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }

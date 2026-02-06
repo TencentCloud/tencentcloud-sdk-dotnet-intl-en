@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to adjust the TencentDB for MongoDB instance configuration. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>

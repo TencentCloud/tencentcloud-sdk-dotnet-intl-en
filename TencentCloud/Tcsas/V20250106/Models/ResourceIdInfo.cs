@@ -25,11 +25,10 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Resource ID
-        /// 0: No preview
-        /// 1. A preview is currently available and uploaded by the current user.
-        /// 2. A preview is currently available and uploaded by another user.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the resource ID returned by the business.
+        /// 0: no trial version available.
+        /// A trial version is currently available and uploaded by the current user.
+        /// 2: a trial version is currently available and uploaded by another user.
         /// </summary>
         [JsonProperty("ResourceId")]
         public long? ResourceId{ get; set; }

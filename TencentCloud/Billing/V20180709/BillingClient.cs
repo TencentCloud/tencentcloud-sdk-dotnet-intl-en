@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1177";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,29 @@ namespace TencentCloud.Billing.V20180709
         public CreateGatherRuleResponse CreateGatherRuleSync(CreateGatherRuleRequest req)
         {
             return InternalRequestAsync<CreateGatherRuleResponse>(req, "CreateGatherRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
+        /// Currently, the integrated and supported product for purchase includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public Task<CreateInstanceResponse> CreateInstance(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance");
+        }
+
+        /// <summary>
+        /// Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
+        /// Currently, the integrated and supported product for purchase includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRequest"/></param>
+        /// <returns><see cref="CreateInstanceResponse"/></returns>
+        public CreateInstanceResponse CreateInstanceSync(CreateInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceResponse>(req, "CreateInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -940,6 +963,52 @@ namespace TencentCloud.Billing.V20180709
         public PayDealsResponse PayDealsSync(PayDealsRequest req)
         {
             return InternalRequestAsync<PayDealsResponse>(req, "PayDeals")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// To unsubscribe from an unneeded instance, only the actual payment amount will be refunded, any used vouchers will not be returned. The refunded amount will be credited to your Tencent Cloud account balance by default.The account calling this API must be granted the finace:RefundInstance permission; otherwise, the refund process will fail.
+        /// Currently, the integrated and supported product for this operation includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="RefundInstanceRequest"/></param>
+        /// <returns><see cref="RefundInstanceResponse"/></returns>
+        public Task<RefundInstanceResponse> RefundInstance(RefundInstanceRequest req)
+        {
+            return InternalRequestAsync<RefundInstanceResponse>(req, "RefundInstance");
+        }
+
+        /// <summary>
+        /// To unsubscribe from an unneeded instance, only the actual payment amount will be refunded, any used vouchers will not be returned. The refunded amount will be credited to your Tencent Cloud account balance by default.The account calling this API must be granted the finace:RefundInstance permission; otherwise, the refund process will fail.
+        /// Currently, the integrated and supported product for this operation includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="RefundInstanceRequest"/></param>
+        /// <returns><see cref="RefundInstanceResponse"/></returns>
+        public RefundInstanceResponse RefundInstanceSync(RefundInstanceRequest req)
+        {
+            return InternalRequestAsync<RefundInstanceResponse>(req, "RefundInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Renewing an instance: when calling this API to renew a server, ensure that your Tencent Cloud account has sufficient balance; otherwise, the renewal will fail. The account calling this API must be granted the finace:tradepermission; otherwise, the renewal will fail.
+        /// Currently, the integrated and supported product for renewal includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public Task<RenewInstanceResponse> RenewInstance(RenewInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance");
+        }
+
+        /// <summary>
+        /// Renewing an instance: when calling this API to renew a server, ensure that your Tencent Cloud account has sufficient balance; otherwise, the renewal will fail. The account calling this API must be granted the finace:tradepermission; otherwise, the renewal will fail.
+        /// Currently, the integrated and supported product for renewal includes: Cloud Firewall.
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstanceRequest"/></param>
+        /// <returns><see cref="RenewInstanceResponse"/></returns>
+        public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// The StreamLive input ID.
+        /// The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

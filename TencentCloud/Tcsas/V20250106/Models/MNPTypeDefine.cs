@@ -25,43 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program category name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program category name.
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// Mini program category value
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mini program category value.
         /// </summary>
         [JsonProperty("TypeValue")]
         public string[] TypeValue{ get; set; }
 
         /// <summary>
-        /// Category ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Category ID.
         /// </summary>
         [JsonProperty("TypeId")]
         public long? TypeId{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Whether it is a system category
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates whether it is a system category.
         /// </summary>
         [JsonProperty("IsSystem")]
         public bool? IsSystem{ get; set; }

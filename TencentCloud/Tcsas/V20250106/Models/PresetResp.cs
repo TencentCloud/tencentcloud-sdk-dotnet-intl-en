@@ -25,8 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// RSA encryption public key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// RSA encryption public key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

@@ -97,6 +97,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("CurrentIssueDate")]
         public string CurrentIssueDate{ get; set; }
 
+        /// <summary>
+        /// Hong kong identity card version.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HKIDVersion")]
+        public string HKIDVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +120,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Symbol", this.Symbol);
             this.SetParamSimple(map, prefix + "IssuedDate", this.IssuedDate);
             this.SetParamSimple(map, prefix + "CurrentIssueDate", this.CurrentIssueDate);
+            this.SetParamSimple(map, prefix + "HKIDVersion", this.HKIDVersion);
         }
     }
 }

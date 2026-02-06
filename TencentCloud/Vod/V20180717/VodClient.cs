@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1258";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -267,6 +267,48 @@ namespace TencentCloud.Vod.V20180717
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate AIGC images. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
+        public Task<CreateAigcImageTaskResponse> CreateAigcImageTask(CreateAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask");
+        }
+
+        /// <summary>
+        /// This API is used to generate AIGC images. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcImageTaskResponse"/></returns>
+        public CreateAigcImageTaskResponse CreateAigcImageTaskSync(CreateAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate AIGC videos. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
+        public Task<CreateAigcVideoTaskResponse> CreateAigcVideoTask(CreateAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoTaskResponse>(req, "CreateAigcVideoTask");
+        }
+
+        /// <summary>
+        /// This API is used to generate AIGC videos. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateAigcVideoTaskResponse"/></returns>
+        public CreateAigcVideoTaskResponse CreateAigcVideoTaskSync(CreateAigcVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAigcVideoTaskResponse>(req, "CreateAigcVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -679,6 +721,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplateSync(CreateSampleSnapshotTemplateRequest req)
         {
             return InternalRequestAsync<CreateSampleSnapshotTemplateResponse>(req, "CreateSampleSnapshotTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate scenario-based AIGC images. <b>This interface is in beta. If you need to use it, please contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcImageTaskResponse"/></returns>
+        public Task<CreateSceneAigcImageTaskResponse> CreateSceneAigcImageTask(CreateSceneAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcImageTaskResponse>(req, "CreateSceneAigcImageTask");
+        }
+
+        /// <summary>
+        /// This API is used to generate scenario-based AIGC images. <b>This interface is in beta. If you need to use it, please contact us. API calls will incur actual fees.</b>
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneAigcImageTaskRequest"/></param>
+        /// <returns><see cref="CreateSceneAigcImageTaskResponse"/></returns>
+        public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTaskSync(CreateSceneAigcImageTaskRequest req)
+        {
+            return InternalRequestAsync<CreateSceneAigcImageTaskResponse>(req, "CreateSceneAigcImageTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2730,6 +2793,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to import AI analysis results into the knowledge base.
+        /// </summary>
+        /// <param name="req"><see cref="ImportMediaKnowledgeRequest"/></param>
+        /// <returns><see cref="ImportMediaKnowledgeResponse"/></returns>
+        public Task<ImportMediaKnowledgeResponse> ImportMediaKnowledge(ImportMediaKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ImportMediaKnowledgeResponse>(req, "ImportMediaKnowledge");
+        }
+
+        /// <summary>
+        /// This API is used to import AI analysis results into the knowledge base.
+        /// </summary>
+        /// <param name="req"><see cref="ImportMediaKnowledgeRequest"/></param>
+        /// <returns><see cref="ImportMediaKnowledgeResponse"/></returns>
+        public ImportMediaKnowledgeResponse ImportMediaKnowledgeSync(ImportMediaKnowledgeRequest req)
+        {
+            return InternalRequestAsync<ImportMediaKnowledgeResponse>(req, "ImportMediaKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Initiate media quality inspection task.
         /// </summary>
         /// <param name="req"><see cref="InspectMediaQualityRequest"/></param>
@@ -4028,6 +4112,27 @@ namespace TencentCloud.Vod.V20180717
         public SearchMediaResponse SearchMediaSync(SearchMediaRequest req)
         {
             return InternalRequestAsync<SearchMediaResponse>(req, "SearchMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to conduct semantic search on media using natural language.
+        /// </summary>
+        /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
+        /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>
+        public Task<SearchMediaBySemanticsResponse> SearchMediaBySemantics(SearchMediaBySemanticsRequest req)
+        {
+            return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics");
+        }
+
+        /// <summary>
+        /// This API is used to conduct semantic search on media using natural language.
+        /// </summary>
+        /// <param name="req"><see cref="SearchMediaBySemanticsRequest"/></param>
+        /// <returns><see cref="SearchMediaBySemanticsResponse"/></returns>
+        public SearchMediaBySemanticsResponse SearchMediaBySemanticsSync(SearchMediaBySemanticsRequest req)
+        {
+            return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

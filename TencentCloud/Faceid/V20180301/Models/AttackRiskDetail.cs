@@ -27,7 +27,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// Suspected attack trace types
         /// SuspectedSpoofingAttack: Suspected spoofing attack
-        ///  SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+        /// SuspectedSynthesisImage: Suspected synthesis image
+        /// SuspectedSynthesisVideo: Suspected synthesis video
+        /// SuspectedeAnomalyAttack: Suspected anomaly attack
+        /// SuspectedAdversarialAttack: Suspected adversarial attack 
+        /// SuspectedBlackIndustry: Suspected batch generation attack
         /// SuspectedWatermark: Suspected watermark
         /// </summary>
         [JsonProperty("Type")]

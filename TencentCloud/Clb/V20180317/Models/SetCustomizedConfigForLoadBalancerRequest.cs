@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-        /// Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+        /// Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConfigContent")]
         public string ConfigContent{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Clb.V20180317.Models
 
         /// <summary>
         /// CLB instance ID. this field is required for bind/unbind operations.
-        /// Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+        /// Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }

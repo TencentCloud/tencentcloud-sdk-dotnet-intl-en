@@ -63,7 +63,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] Texts{ get; set; }
 
         /// <summary>
-        /// Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.comom/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
+        /// Specifies the node name for querying slow logs. The [DescribeDBInstanceNodeProperty](https://www.tencentcloud.com/document/product/240/82022?from_cn_redirect=1) API can be called to query the node name.
         /// </summary>
         [JsonProperty("NodeNames")]
         public string[] NodeNames{ get; set; }

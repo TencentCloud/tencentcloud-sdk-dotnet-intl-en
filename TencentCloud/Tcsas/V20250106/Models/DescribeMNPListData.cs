@@ -55,71 +55,61 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Whether the mini program is released. 1: Released; 2: Removed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Mini program introduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Updater
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the updater.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Application name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Effective status of the bound application. 1: Not effective; 2: Effective
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
         /// </summary>
         [JsonProperty("EffectStatus")]
         public long? EffectStatus{ get; set; }
 
         /// <summary>
-        /// ID of the application bound with the mini program
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the ID of the application bound with the mini program.
         /// </summary>
         [JsonProperty("EffectMNPVersionId")]
         public long? EffectMNPVersionId{ get; set; }
 
         /// <summary>
-        /// Effective version number of the application that bound with the mini program
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the effective version number of the application bound to the mini program.
         /// </summary>
         [JsonProperty("EffectMNPVersion")]
         public string EffectMNPVersion{ get; set; }

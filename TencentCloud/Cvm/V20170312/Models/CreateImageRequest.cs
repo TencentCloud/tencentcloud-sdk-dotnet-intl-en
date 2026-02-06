@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Image name
+        /// Image name.
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Image description
+        /// Image description.
         /// </summary>
         [JsonProperty("ImageDescription")]
         public string ImageDescription{ get; set; }

@@ -89,6 +89,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
+        /// Audio/Video enhancement parameter.
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfigForUpdate EnhanceConfig{ get; set; }
+
+        /// <summary>
         /// The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
         /// <li>ts: TS segment</li>
         /// <li>fmp4: fMP4 segment</li>
@@ -112,6 +118,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
         }
     }

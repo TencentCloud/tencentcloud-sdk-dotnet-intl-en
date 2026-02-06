@@ -36,6 +36,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("EmailAddress")]
         public string EmailAddress{ get; set; }
 
+        /// <summary>
+        /// Reason for being blacklisted.
+        /// </summary>
+        [JsonProperty("IspDesc")]
+        public string IspDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ses.V20201002.Models
         {
             this.SetParamSimple(map, prefix + "BounceTime", this.BounceTime);
             this.SetParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
+            this.SetParamSimple(map, prefix + "IspDesc", this.IspDesc);
         }
     }
 }

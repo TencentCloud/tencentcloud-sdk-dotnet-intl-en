@@ -39,13 +39,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? OldIpExpiredTime{ get; set; }
 
         /// <summary>
-        /// VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
+        /// VPC ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the VPC ID.
         /// </summary>
         [JsonProperty("NewUniqVpcId")]
         public string NewUniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.comom/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
+        /// VPC subnet ID after the switch. If the instance is using a basic network, this field is not required. The [DescribeDBInstances](https://www.tencentcloud.com/document/product/240/38568?from_cn_redirect=1) API can be called to obtain the subnet ID of the VPC.
         /// </summary>
         [JsonProperty("NewUniqSubnetId")]
         public string NewUniqSubnetId{ get; set; }

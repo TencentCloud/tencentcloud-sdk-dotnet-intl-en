@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        ///  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+        ///  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
         /// </summary>
         [JsonProperty("KmsRegion")]
         public string KmsRegion{ get; set; }

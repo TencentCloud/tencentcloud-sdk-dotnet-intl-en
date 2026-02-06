@@ -85,7 +85,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 3 - Medium Risk
         /// 4 - High Risk
         /// Empty - Risk level not obtained.
-        /// Only returned for the ENHANCED version, with the default value being empty.
+        /// Only returned for the Enhance and Plus version, with the default value being empty.
         /// </summary>
         [JsonProperty("DeviceInfoLevel")]
         public string DeviceInfoLevel{ get; set; }

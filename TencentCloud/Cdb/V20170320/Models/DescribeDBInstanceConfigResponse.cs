@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// Instance AZ information in the format of "ap-shanghai-1".
+        /// Instance AZ information in the format of "ap-shanghai-2".
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

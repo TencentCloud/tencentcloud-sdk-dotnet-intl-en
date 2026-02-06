@@ -37,9 +37,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] Values{ get; set; }
 
         /// <summary>
-        ///  
-        /// `1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-        /// `7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+        /// Central platform definition:.
+        /// 1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+        /// Exact match fills 7. fuzzy matching fills 9. 
         /// </summary>
         [JsonProperty("OperatorType")]
         public long? OperatorType{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// String type response data
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// string type response data.
         /// </summary>
         [JsonProperty("Data")]
         public string Data{ get; set; }

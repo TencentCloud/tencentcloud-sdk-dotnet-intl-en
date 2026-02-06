@@ -29,6 +29,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>ON</li>
         /// <li>`OFF`</li>
         /// If super resolution is enabled, the output resolution will double.
+        /// Default value: `OFF`.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

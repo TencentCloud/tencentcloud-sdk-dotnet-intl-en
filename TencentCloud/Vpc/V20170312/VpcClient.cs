@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1252";
+       private const string sdkVersion = "SDK_NET_3.0.1262";
 
         /// <summary>
         /// Client constructor.
@@ -654,6 +654,27 @@ namespace TencentCloud.Vpc.V20170312
         public CheckNetDetectStateResponse CheckNetDetectStateSync(CheckNetDetectStateRequest req)
         {
             return InternalRequestAsync<CheckNetDetectStateResponse>(req, "CheckNetDetectState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check the collector and receiver for traffic mirroring (public IP address type).
+        /// </summary>
+        /// <param name="req"><see cref="CheckTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CheckTrafficMirrorResponse"/></returns>
+        public Task<CheckTrafficMirrorResponse> CheckTrafficMirror(CheckTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CheckTrafficMirrorResponse>(req, "CheckTrafficMirror");
+        }
+
+        /// <summary>
+        /// This API is used to check the collector and receiver for traffic mirroring (public IP address type).
+        /// </summary>
+        /// <param name="req"><see cref="CheckTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CheckTrafficMirrorResponse"/></returns>
+        public CheckTrafficMirrorResponse CheckTrafficMirrorSync(CheckTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CheckTrafficMirrorResponse>(req, "CheckTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1537,6 +1558,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorResponse"/></returns>
+        public Task<CreateTrafficMirrorResponse> CreateTrafficMirror(CreateTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorResponse>(req, "CreateTrafficMirror");
+        }
+
+        /// <summary>
+        /// This API is used to create a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrafficMirrorRequest"/></param>
+        /// <returns><see cref="CreateTrafficMirrorResponse"/></returns>
+        public CreateTrafficMirrorResponse CreateTrafficMirrorSync(CreateTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<CreateTrafficMirrorResponse>(req, "CreateTrafficMirror")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a VPC instance.
         /// * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), that of the largest IP address ranges 10.0.0.0/12 and 172.16.0.0/12 is 12 (1,048,576 IP addresses), and that of the largest IP address range 192.168.0.0/16 is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
         /// * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
@@ -2373,6 +2415,27 @@ namespace TencentCloud.Vpc.V20170312
         public DeleteTemplateMemberResponse DeleteTemplateMemberSync(DeleteTemplateMemberRequest req)
         {
             return InternalRequestAsync<DeleteTemplateMemberResponse>(req, "DeleteTemplateMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorResponse"/></returns>
+        public Task<DeleteTrafficMirrorResponse> DeleteTrafficMirror(DeleteTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorResponse>(req, "DeleteTrafficMirror");
+        }
+
+        /// <summary>
+        /// This API is used to delete a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTrafficMirrorRequest"/></param>
+        /// <returns><see cref="DeleteTrafficMirrorResponse"/></returns>
+        public DeleteTrafficMirrorResponse DeleteTrafficMirrorSync(DeleteTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<DeleteTrafficMirrorResponse>(req, "DeleteTrafficMirror")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3768,6 +3831,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
         {
             return InternalRequestAsync<DescribeTaskResultResponse>(req, "DescribeTaskResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the information of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorsRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorsResponse"/></returns>
+        public Task<DescribeTrafficMirrorsResponse> DescribeTrafficMirrors(DescribeTrafficMirrorsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorsResponse>(req, "DescribeTrafficMirrors");
+        }
+
+        /// <summary>
+        /// This API is used to query the information of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficMirrorsRequest"/></param>
+        /// <returns><see cref="DescribeTrafficMirrorsResponse"/></returns>
+        public DescribeTrafficMirrorsResponse DescribeTrafficMirrorsSync(DescribeTrafficMirrorsRequest req)
+        {
+            return InternalRequestAsync<DescribeTrafficMirrorsResponse>(req, "DescribeTrafficMirrors")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5777,6 +5861,29 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to modify the attributes of a traffic mirroring instance.
+        /// Note: Only the name and description can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorAttributeResponse"/></returns>
+        public Task<ModifyTrafficMirrorAttributeResponse> ModifyTrafficMirrorAttribute(ModifyTrafficMirrorAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorAttributeResponse>(req, "ModifyTrafficMirrorAttribute");
+        }
+
+        /// <summary>
+        /// This API is used to modify the attributes of a traffic mirroring instance.
+        /// Note: Only the name and description can be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTrafficMirrorAttributeRequest"/></param>
+        /// <returns><see cref="ModifyTrafficMirrorAttributeResponse"/></returns>
+        public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttributeSync(ModifyTrafficMirrorAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyTrafficMirrorAttributeResponse>(req, "ModifyTrafficMirrorAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (ModifyVpcAttribute) is used to modify VPC attributes.
         /// </summary>
         /// <param name="req"><see cref="ModifyVpcAttributeRequest"/></param>
@@ -6238,6 +6345,27 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API (ReplaceRoutes) modifies the specified routing policy (Route) based on the routing policy ID (RouteId), supporting batch modifications.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesWithRoutePolicyRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesWithRoutePolicyResponse"/></returns>
+        public Task<ReplaceRoutesWithRoutePolicyResponse> ReplaceRoutesWithRoutePolicy(ReplaceRoutesWithRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutesWithRoutePolicyResponse>(req, "ReplaceRoutesWithRoutePolicy");
+        }
+
+        /// <summary>
+        /// This API (ReplaceRoutes) modifies the specified routing policy (Route) based on the routing policy ID (RouteId), supporting batch modifications.
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceRoutesWithRoutePolicyRequest"/></param>
+        /// <returns><see cref="ReplaceRoutesWithRoutePolicyResponse"/></returns>
+        public ReplaceRoutesWithRoutePolicyResponse ReplaceRoutesWithRoutePolicySync(ReplaceRoutesWithRoutePolicyRequest req)
+        {
+            return InternalRequestAsync<ReplaceRoutesWithRoutePolicyResponse>(req, "ReplaceRoutesWithRoutePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to batch modify security group policies.
         /// Policies to modify must be in the same direction. `PolicyIndex` must be specified.
         /// </summary>
@@ -6391,6 +6519,71 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to update a traffic mirroring instance filter rule.
+        /// Note: A traffic mirroring instance cannot simultaneously support filtering based on NAT gateway and five tuple rules.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorFilterRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorFilterResponse"/></returns>
+        public Task<ResetTrafficMirrorFilterResponse> ResetTrafficMirrorFilter(ResetTrafficMirrorFilterRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorFilterResponse>(req, "ResetTrafficMirrorFilter");
+        }
+
+        /// <summary>
+        /// This API is used to update a traffic mirroring instance filter rule.
+        /// Note: A traffic mirroring instance cannot simultaneously support filtering based on NAT gateway and five tuple rules.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorFilterRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorFilterResponse"/></returns>
+        public ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilterSync(ResetTrafficMirrorFilterRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorFilterResponse>(req, "ResetTrafficMirrorFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset the collection object of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorSrcsRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorSrcsResponse"/></returns>
+        public Task<ResetTrafficMirrorSrcsResponse> ResetTrafficMirrorSrcs(ResetTrafficMirrorSrcsRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorSrcsResponse>(req, "ResetTrafficMirrorSrcs");
+        }
+
+        /// <summary>
+        /// This API is used to reset the collection object of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorSrcsRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorSrcsResponse"/></returns>
+        public ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcsSync(ResetTrafficMirrorSrcsRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorSrcsResponse>(req, "ResetTrafficMirrorSrcs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the receiving destination information of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorTargetRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorTargetResponse"/></returns>
+        public Task<ResetTrafficMirrorTargetResponse> ResetTrafficMirrorTarget(ResetTrafficMirrorTargetRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorTargetResponse>(req, "ResetTrafficMirrorTarget");
+        }
+
+        /// <summary>
+        /// This API is used to update the receiving destination information of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="ResetTrafficMirrorTargetRequest"/></param>
+        /// <returns><see cref="ResetTrafficMirrorTargetResponse"/></returns>
+        public ResetTrafficMirrorTargetResponse ResetTrafficMirrorTargetSync(ResetTrafficMirrorTargetRequest req)
+        {
+            return InternalRequestAsync<ResetTrafficMirrorTargetResponse>(req, "ResetTrafficMirrorTarget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// The API is used to reset a VPN tunnel.
         /// </summary>
         /// <param name="req"><see cref="ResetVpnConnectionRequest"/></param>
@@ -6519,6 +6712,48 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to start a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="StartTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StartTrafficMirrorResponse"/></returns>
+        public Task<StartTrafficMirrorResponse> StartTrafficMirror(StartTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StartTrafficMirrorResponse>(req, "StartTrafficMirror");
+        }
+
+        /// <summary>
+        /// This API is used to start a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="StartTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StartTrafficMirrorResponse"/></returns>
+        public StartTrafficMirrorResponse StartTrafficMirrorSync(StartTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StartTrafficMirrorResponse>(req, "StartTrafficMirror")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to stop a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="StopTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StopTrafficMirrorResponse"/></returns>
+        public Task<StopTrafficMirrorResponse> StopTrafficMirror(StopTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StopTrafficMirrorResponse>(req, "StopTrafficMirror");
+        }
+
+        /// <summary>
+        /// This API is used to stop a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="StopTrafficMirrorRequest"/></param>
+        /// <returns><see cref="StopTrafficMirrorResponse"/></returns>
+        public StopTrafficMirrorResponse StopTrafficMirrorSync(StopTrafficMirrorRequest req)
+        {
+            return InternalRequestAsync<StopTrafficMirrorResponse>(req, "StopTrafficMirror")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to convert a common public IP into an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
         /// * Tencent Cloud limits the number of times that a user can unbind EIPs and reassign public IPs in each region per day. For more information, see product introduction of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). The preceding quota can be obtained through the API [DescribeAddressQuota](https://intl.cloud.tencent.com/document/product/215/16701).
         /// </summary>
@@ -6634,6 +6869,48 @@ namespace TencentCloud.Vpc.V20170312
         public UnassignPrivateIpAddressesResponse UnassignPrivateIpAddressesSync(UnassignPrivateIpAddressesRequest req)
         {
             return InternalRequestAsync<UnassignPrivateIpAddressesResponse>(req, "UnassignPrivateIpAddresses")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the filter rule or collection object of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorAllFilterRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorAllFilterResponse"/></returns>
+        public Task<UpdateTrafficMirrorAllFilterResponse> UpdateTrafficMirrorAllFilter(UpdateTrafficMirrorAllFilterRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorAllFilterResponse>(req, "UpdateTrafficMirrorAllFilter");
+        }
+
+        /// <summary>
+        /// This API is used to update the filter rule or collection object of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorAllFilterRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorAllFilterResponse"/></returns>
+        public UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilterSync(UpdateTrafficMirrorAllFilterRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorAllFilterResponse>(req, "UpdateTrafficMirrorAllFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the collection direction of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorDirectionRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorDirectionResponse"/></returns>
+        public Task<UpdateTrafficMirrorDirectionResponse> UpdateTrafficMirrorDirection(UpdateTrafficMirrorDirectionRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorDirectionResponse>(req, "UpdateTrafficMirrorDirection");
+        }
+
+        /// <summary>
+        /// This API is used to update the collection direction of a traffic mirroring instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTrafficMirrorDirectionRequest"/></param>
+        /// <returns><see cref="UpdateTrafficMirrorDirectionResponse"/></returns>
+        public UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirectionSync(UpdateTrafficMirrorDirectionRequest req)
+        {
+            return InternalRequestAsync<UpdateTrafficMirrorDirectionResponse>(req, "UpdateTrafficMirrorDirection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

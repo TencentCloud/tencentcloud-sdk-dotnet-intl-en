@@ -100,12 +100,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
-        /// Smart subtitle file format:
-        /// - vtt: WebVTT format.
-        /// - srt: SRT format.
-        /// - original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-        /// - If this field is unspecified or left blank, no subtitle file will be generated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Smart subtitle file format.
+        /// - vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
@@ -177,12 +173,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AliasName{ get; set; }
 
         /// <summary>
-        /// Subtitle processing type.
-        /// - 0: ASR recognition subtitle.
-        /// - 1: pure subtitle translation.
+        /// Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
         /// </summary>
         [JsonProperty("ProcessType")]
         public ulong? ProcessType{ get; set; }
+
+        /// <summary>
+        /// Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SelectingSubtitleAreasConfig")]
+        public SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig{ get; set; }
 
 
         /// <summary>
@@ -205,6 +205,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
+            this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         }
     }
 }

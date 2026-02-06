@@ -26,84 +26,72 @@ namespace TencentCloud.Tcsas.V20250106.Models
         
         /// <summary>
         /// Mini program type 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
         /// Mini program ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
         /// Mini program name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
         /// Mini program icon
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
         /// Mini program introduction
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
         /// Mini program description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Creation time, timestamp
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation time, timestamp.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Creator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Connection status. 1: Not connected; 2: Connected
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Access status. 1: not connected; 2: connected.
         /// </summary>
         [JsonProperty("AccessStatus")]
         public long? AccessStatus{ get; set; }
 
         /// <summary>
-        /// The name of the associated team
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the associated team
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
         /// Team ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Mini program release status. 1: Released; 2: Removed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

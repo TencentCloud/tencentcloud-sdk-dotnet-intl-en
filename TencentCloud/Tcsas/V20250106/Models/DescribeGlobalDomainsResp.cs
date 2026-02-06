@@ -25,15 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Total number of results
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Domain name information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the domain information.
         /// </summary>
         [JsonProperty("DataList")]
         public DescribeGlobalDomainsListData[] DataList{ get; set; }
