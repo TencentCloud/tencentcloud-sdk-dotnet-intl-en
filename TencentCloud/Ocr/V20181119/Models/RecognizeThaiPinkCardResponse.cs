@@ -115,10 +115,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RefNumber{ get; set; }
 
         /// <summary>
-        /// Field confidence:
-        ///  { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+        /// This field is deprecated and will always return "1". Usage is not recommended.
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
