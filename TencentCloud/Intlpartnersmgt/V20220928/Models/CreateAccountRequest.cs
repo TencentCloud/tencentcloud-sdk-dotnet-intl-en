@@ -100,6 +100,14 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("Extended")]
         public string Extended{ get; set; }
 
+        /// <summary>
+        /// For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+        /// 1. Length: 2~200 characters
+        /// 2. Customer name cannot be pure numbers
+        /// </summary>
+        [JsonProperty("CustomerName")]
+        public string CustomerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +125,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "TradeOne", this.TradeOne);
             this.SetParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
             this.SetParamSimple(map, prefix + "Extended", this.Extended);
+            this.SetParamSimple(map, prefix + "CustomerName", this.CustomerName);
         }
     }
 }

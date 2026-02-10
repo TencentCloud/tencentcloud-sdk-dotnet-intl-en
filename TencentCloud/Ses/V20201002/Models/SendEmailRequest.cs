@@ -31,16 +31,17 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-        /// </summary>
-        [JsonProperty("Destination")]
-        public string[] Destination{ get; set; }
-
-        /// <summary>
         /// Email subject.
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
+
+        /// <summary>
+        /// Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+        /// Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+        /// </summary>
+        [JsonProperty("Destination")]
+        public string[] Destination{ get; set; }
 
         /// <summary>
         /// The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
@@ -117,8 +118,8 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-            this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamArraySimple(map, prefix + "Destination.", this.Destination);
             this.SetParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
             this.SetParamArraySimple(map, prefix + "Cc.", this.Cc);
             this.SetParamArraySimple(map, prefix + "Bcc.", this.Bcc);
