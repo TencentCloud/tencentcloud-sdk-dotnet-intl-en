@@ -48,7 +48,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string ErrorMessage{ get; set; }
 
         /// <summary>
-        /// Generate the file URL with a valid period of 1 day
+        /// The URL address for generating texture files is valid for 1 day.
         /// </summary>
         [JsonProperty("ResultFile3Ds")]
         public File3D[] ResultFile3Ds{ get; set; }

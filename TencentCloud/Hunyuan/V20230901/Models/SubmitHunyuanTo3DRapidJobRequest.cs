@@ -51,6 +51,15 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
+        /// Returns the 3D file format. valid values:
+        /// OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+        /// Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+        /// Example value: STL
+        /// </summary>
+        [JsonProperty("ResultFormat")]
+        public string ResultFormat{ get; set; }
+
+        /// <summary>
         /// Specifies whether PBR material generation is enabled, false by default.	
         /// </summary>
         [JsonProperty("EnablePBR")]
@@ -74,6 +83,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
             this.SetParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
             this.SetParamSimple(map, prefix + "EnableGeometry", this.EnableGeometry);
         }

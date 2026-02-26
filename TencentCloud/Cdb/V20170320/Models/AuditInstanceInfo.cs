@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public TagInfoUnit[] TagList{ get; set; }
 
         /// <summary>
-        /// Database engine type.
+        /// Database kernel type.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Database engine version.
+        /// Database kernel version.
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }

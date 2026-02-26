@@ -25,7 +25,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
     {
         
         /// <summary>
-        /// 3D file format. valid values: GIF, OBJ.
+        /// 3D model or texture. valid values: GIF or OBJ or Image.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.intl.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1263";
+       private const string sdkVersion = "SDK_NET_3.0.1265";
 
         /// <summary>
         /// Client constructor.
@@ -217,7 +217,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// Query 3D texture edit tasks.
+        /// Query 3D texture edit tasks, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DTextureEditJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DTextureEditJobResponse"/></returns>
@@ -227,7 +227,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// Query 3D texture edit tasks.
+        /// Query 3D texture edit tasks, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
         /// </summary>
         /// <param name="req"><see cref="QueryHunyuanTo3DTextureEditJobRequest"/></param>
         /// <returns><see cref="QueryHunyuanTo3DTextureEditJobResponse"/></returns>
@@ -328,7 +328,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+        /// After inputting the 3D model, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DTextureEditJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DTextureEditJobResponse"/></returns>
@@ -338,7 +338,7 @@ namespace TencentCloud.Hunyuan.V20230901
         }
 
         /// <summary>
-        /// After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+        /// After inputting the 3D model, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
         /// </summary>
         /// <param name="req"><see cref="SubmitHunyuanTo3DTextureEditJobRequest"/></param>
         /// <returns><see cref="SubmitHunyuanTo3DTextureEditJobResponse"/></returns>
