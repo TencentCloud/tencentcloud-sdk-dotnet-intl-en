@@ -143,14 +143,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ActionList{ get; set; }
 
         /// <summary>
-        /// Control liveness retry number.The value range is 1-99.
+        /// Maximum liveness verification attempts. Valid range: [1,99].
         /// The default value is 99.
         /// </summary>
         [JsonProperty("LivenessRetryLimit")]
         public long? LivenessRetryLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the liveness detection timeout period in seconds. value range: (0,600].
+        /// Specifies the liveness detection timeout period in seconds. Value range: (0,600].
         /// The default value is 45.
         /// </summary>
         [JsonProperty("LivenessTimeout")]

@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1267";
 
         /// <summary>
         /// Client constructor.
@@ -943,6 +943,31 @@ namespace TencentCloud.Cbs.V20170312
         public ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermissionSync(ModifySnapshotsSharePermissionRequest req)
         {
             return InternalRequestAsync<ModifySnapshotsSharePermissionResponse>(req, "ModifySnapshotsSharePermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to renew cloud disks.
+        /// 
+        /// This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be at the expiry date after the instance is renewed.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDiskRequest"/></param>
+        /// <returns><see cref="RenewDiskResponse"/></returns>
+        public Task<RenewDiskResponse> RenewDisk(RenewDiskRequest req)
+        {
+            return InternalRequestAsync<RenewDiskResponse>(req, "RenewDisk");
+        }
+
+        /// <summary>
+        /// This API is used to renew cloud disks.
+        /// 
+        /// This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be at the expiry date after the instance is renewed.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDiskRequest"/></param>
+        /// <returns><see cref="RenewDiskResponse"/></returns>
+        public RenewDiskResponse RenewDiskSync(RenewDiskRequest req)
+        {
+            return InternalRequestAsync<RenewDiskResponse>(req, "RenewDisk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

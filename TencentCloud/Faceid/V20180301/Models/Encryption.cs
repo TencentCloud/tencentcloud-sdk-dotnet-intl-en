@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string[] EncryptList{ get; set; }
 
         /// <summary>
-        /// Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+        /// Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }

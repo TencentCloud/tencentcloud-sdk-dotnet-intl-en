@@ -25,11 +25,11 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Original price of a monthly-subscribed cloud disk, in USD.
+        /// Discount unit price of a pay-as-you-go cloud disk, in USD.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public float? OriginalPrice{ get; set; }
+        [JsonProperty("UnitPriceDiscount")]
+        public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// Discounted price of a monthly-subscribed cloud disk, in USD.
@@ -46,18 +46,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-        /// Note: This field may return null, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("ChargeUnit")]
-        public string ChargeUnit{ get; set; }
-
-        /// <summary>
-        /// Discount unit price of a pay-as-you-go cloud disk, in USD.
+        /// Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UnitPriceDiscount")]
-        public float? UnitPriceDiscount{ get; set; }
+        [JsonProperty("UnitPriceHigh")]
+        public string UnitPriceHigh{ get; set; }
 
         /// <summary>
         /// Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
@@ -67,18 +60,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string OriginalPriceHigh{ get; set; }
 
         /// <summary>
+        /// Original price of a monthly-subscribed cloud disk, in USD.
+        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
         /// Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscountPriceHigh")]
         public string DiscountPriceHigh{ get; set; }
-
-        /// <summary>
-        /// Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("UnitPriceHigh")]
-        public string UnitPriceHigh{ get; set; }
 
         /// <summary>
         /// Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
@@ -87,21 +80,28 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("UnitPriceDiscountHigh")]
         public string UnitPriceDiscountHigh{ get; set; }
 
+        /// <summary>
+        /// Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ChargeUnit")]
+        public string ChargeUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
-            this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
-            this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
-            this.SetParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
-            this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
             this.SetParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+            this.SetParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
             this.SetParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
+            this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
         }
     }
 }
