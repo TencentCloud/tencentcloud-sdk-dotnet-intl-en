@@ -25,103 +25,115 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Command ID.
+        /// <p>Command ID.</p>.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// Command name.
+        /// <P>Command name.</p>.
         /// </summary>
         [JsonProperty("CommandName")]
         public string CommandName{ get; set; }
 
         /// <summary>
-        /// Command description.
+        /// <P>Command description.</p>.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Base64-encoded command.
+        /// <p>The Base64-encoded command content.</p>.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Command type.
+        /// <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// Command execution path.
+        /// <P>Command execution path.</p>.
         /// </summary>
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
         /// <summary>
-        /// Command timeout period.
+        /// <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// Command creation time.
+        /// <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Command update time.
+        /// <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable the custom parameter feature.
+        /// <P>Whether to enable the custom parameter feature.</p>.
         /// </summary>
         [JsonProperty("EnableParameter")]
         public bool? EnableParameter{ get; set; }
 
         /// <summary>
-        /// Default custom parameter value.
+        /// <P>Default value of custom parameter.</p>.
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+        /// <P>Default value of custom parameters.</p>.
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
+
+        /// <summary>
+        /// <P>Command association scenarios</p>.
+        /// </summary>
+        [JsonProperty("Scenes")]
+        public string[] Scenes{ get; set; }
+
+        /// <summary>
+        /// <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
         /// </summary>
         [JsonProperty("FormattedDescription")]
         public string FormattedDescription{ get; set; }
 
         /// <summary>
-        /// Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+        /// <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
         /// </summary>
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
         /// <summary>
-        /// The list of tags bound to the command.
+        /// <P>Tag list associated with the command.</p>.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// The user who executes the command on the instance.
+        /// <P>Username to run command on the instance.</p>.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// The COS bucket URL for uploading logs.
+        /// <P>The cos bucket address for log upload.</p>.
         /// </summary>
         [JsonProperty("OutputCOSBucketUrl")]
         public string OutputCOSBucketUrl{ get; set; }
 
         /// <summary>
-        /// The COS bucket directory where the logs are saved.
+        /// <P>Directory of logs in the cos bucket.</p>.
         /// </summary>
         [JsonProperty("OutputCOSKeyPrefix")]
         public string OutputCOSKeyPrefix{ get; set; }
@@ -143,6 +155,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
+            this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
             this.SetParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
             this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

@@ -28,7 +28,7 @@ namespace TencentCloud.Tat.V20201028
 
        private const string endpoint = "tat.intl.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -54,10 +54,10 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
-        /// This API is used to cancel the command executed on one or more CVM instances.
+        /// Cancel the executed command on one or multiple instances.
         /// 
-        /// * If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
-        /// * If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+        /// * If the command is not delivered to the agent and the task status is in PENDING, DELIVERING, or DELIVER_DELAYED, the state of a task is CANCELLED after cancellation.
+        /// * If the command is sent to the agent and the task status is RUNNING, the task status is TERMINATED after cancellation.
         /// </summary>
         /// <param name="req"><see cref="CancelInvocationRequest"/></param>
         /// <returns><see cref="CancelInvocationResponse"/></returns>
@@ -67,10 +67,10 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
-        /// This API is used to cancel the command executed on one or more CVM instances.
+        /// Cancel the executed command on one or multiple instances.
         /// 
-        /// * If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
-        /// * If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+        /// * If the command is not delivered to the agent and the task status is in PENDING, DELIVERING, or DELIVER_DELAYED, the state of a task is CANCELLED after cancellation.
+        /// * If the command is sent to the agent and the task status is RUNNING, the task status is TERMINATED after cancellation.
         /// </summary>
         /// <param name="req"><see cref="CancelInvocationRequest"/></param>
         /// <returns><see cref="CancelInvocationResponse"/></returns>
@@ -123,6 +123,27 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// This API is used to create a registration code.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRegisterCodeRequest"/></param>
+        /// <returns><see cref="CreateRegisterCodeResponse"/></returns>
+        public Task<CreateRegisterCodeResponse> CreateRegisterCode(CreateRegisterCodeRequest req)
+        {
+            return InternalRequestAsync<CreateRegisterCodeResponse>(req, "CreateRegisterCode");
+        }
+
+        /// <summary>
+        /// This API is used to create a registration code.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRegisterCodeRequest"/></param>
+        /// <returns><see cref="CreateRegisterCodeResponse"/></returns>
+        public CreateRegisterCodeResponse CreateRegisterCodeSync(CreateRegisterCodeRequest req)
+        {
+            return InternalRequestAsync<CreateRegisterCodeResponse>(req, "CreateRegisterCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a command.
         /// Commands bound to an invoker cannot be deleted.
         /// </summary>
@@ -146,6 +167,27 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// This API is used to execute batch deletion commands.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCommandsRequest"/></param>
+        /// <returns><see cref="DeleteCommandsResponse"/></returns>
+        public Task<DeleteCommandsResponse> DeleteCommands(DeleteCommandsRequest req)
+        {
+            return InternalRequestAsync<DeleteCommandsResponse>(req, "DeleteCommands");
+        }
+
+        /// <summary>
+        /// This API is used to execute batch deletion commands.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCommandsRequest"/></param>
+        /// <returns><see cref="DeleteCommandsResponse"/></returns>
+        public DeleteCommandsResponse DeleteCommandsSync(DeleteCommandsRequest req)
+        {
+            return InternalRequestAsync<DeleteCommandsResponse>(req, "DeleteCommands")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete an invoker.
         /// </summary>
         /// <param name="req"><see cref="DeleteInvokerRequest"/></param>
@@ -163,6 +205,48 @@ namespace TencentCloud.Tat.V20201028
         public DeleteInvokerResponse DeleteInvokerSync(DeleteInvokerRequest req)
         {
             return InternalRequestAsync<DeleteInvokerResponse>(req, "DeleteInvoker")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete registration codes in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterCodesRequest"/></param>
+        /// <returns><see cref="DeleteRegisterCodesResponse"/></returns>
+        public Task<DeleteRegisterCodesResponse> DeleteRegisterCodes(DeleteRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DeleteRegisterCodesResponse>(req, "DeleteRegisterCodes");
+        }
+
+        /// <summary>
+        /// This API is used to delete registration codes in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterCodesRequest"/></param>
+        /// <returns><see cref="DeleteRegisterCodesResponse"/></returns>
+        public DeleteRegisterCodesResponse DeleteRegisterCodesSync(DeleteRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DeleteRegisterCodesResponse>(req, "DeleteRegisterCodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete managed instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRegisterInstanceResponse"/></returns>
+        public Task<DeleteRegisterInstanceResponse> DeleteRegisterInstance(DeleteRegisterInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteRegisterInstanceResponse>(req, "DeleteRegisterInstance");
+        }
+
+        /// <summary>
+        /// This API is used to delete managed instances.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRegisterInstanceRequest"/></param>
+        /// <returns><see cref="DeleteRegisterInstanceResponse"/></returns>
+        public DeleteRegisterInstanceResponse DeleteRegisterInstanceSync(DeleteRegisterInstanceRequest req)
+        {
+            return InternalRequestAsync<DeleteRegisterInstanceResponse>(req, "DeleteRegisterInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -293,6 +377,27 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// This API is used to obtain quota information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotasRequest"/></param>
+        /// <returns><see cref="DescribeQuotasResponse"/></returns>
+        public Task<DescribeQuotasResponse> DescribeQuotas(DescribeQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeQuotasResponse>(req, "DescribeQuotas");
+        }
+
+        /// <summary>
+        /// This API is used to obtain quota information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotasRequest"/></param>
+        /// <returns><see cref="DescribeQuotasResponse"/></returns>
+        public DescribeQuotasResponse DescribeQuotasSync(DescribeQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeQuotasResponse>(req, "DescribeQuotas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of regions that supports TAT.
         /// If the `RegionState` is `AVAILABLE`, it means that TAT is available in the region. If no value is returned, TAT is not available in the region.
         /// </summary>
@@ -316,6 +421,69 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// This API is used to query registration code info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterCodesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterCodesResponse"/></returns>
+        public Task<DescribeRegisterCodesResponse> DescribeRegisterCodes(DescribeRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeRegisterCodesResponse>(req, "DescribeRegisterCodes");
+        }
+
+        /// <summary>
+        /// This API is used to query registration code info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterCodesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterCodesResponse"/></returns>
+        public DescribeRegisterCodesResponse DescribeRegisterCodesSync(DescribeRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DescribeRegisterCodesResponse>(req, "DescribeRegisterCodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query managed instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterInstancesResponse"/></returns>
+        public Task<DescribeRegisterInstancesResponse> DescribeRegisterInstances(DescribeRegisterInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRegisterInstancesResponse>(req, "DescribeRegisterInstances");
+        }
+
+        /// <summary>
+        /// This API is used to query managed instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegisterInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRegisterInstancesResponse"/></returns>
+        public DescribeRegisterInstancesResponse DescribeRegisterInstancesSync(DescribeRegisterInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRegisterInstancesResponse>(req, "DescribeRegisterInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query scenario details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public Task<DescribeScenesResponse> DescribeScenes(DescribeScenesRequest req)
+        {
+            return InternalRequestAsync<DescribeScenesResponse>(req, "DescribeScenes");
+        }
+
+        /// <summary>
+        /// This API is used to query scenario details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public DescribeScenesResponse DescribeScenesSync(DescribeScenesRequest req)
+        {
+            return InternalRequestAsync<DescribeScenesResponse>(req, "DescribeScenes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable an invoker.
         /// </summary>
         /// <param name="req"><see cref="DisableInvokerRequest"/></param>
@@ -333,6 +501,27 @@ namespace TencentCloud.Tat.V20201028
         public DisableInvokerResponse DisableInvokerSync(DisableInvokerRequest req)
         {
             return InternalRequestAsync<DisableInvokerResponse>(req, "DisableInvoker")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bulk disable registration codes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRegisterCodesRequest"/></param>
+        /// <returns><see cref="DisableRegisterCodesResponse"/></returns>
+        public Task<DisableRegisterCodesResponse> DisableRegisterCodes(DisableRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DisableRegisterCodesResponse>(req, "DisableRegisterCodes");
+        }
+
+        /// <summary>
+        /// This API is used to bulk disable registration codes.
+        /// </summary>
+        /// <param name="req"><see cref="DisableRegisterCodesRequest"/></param>
+        /// <returns><see cref="DisableRegisterCodesResponse"/></returns>
+        public DisableRegisterCodesResponse DisableRegisterCodesSync(DisableRegisterCodesRequest req)
+        {
+            return InternalRequestAsync<DisableRegisterCodesResponse>(req, "DisableRegisterCodes")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -429,6 +618,27 @@ namespace TencentCloud.Tat.V20201028
         public ModifyInvokerResponse ModifyInvokerSync(ModifyInvokerRequest req)
         {
             return InternalRequestAsync<ModifyInvokerResponse>(req, "ModifyInvoker")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify managed instance information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRegisterInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRegisterInstanceResponse"/></returns>
+        public Task<ModifyRegisterInstanceResponse> ModifyRegisterInstance(ModifyRegisterInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRegisterInstanceResponse>(req, "ModifyRegisterInstance");
+        }
+
+        /// <summary>
+        /// This API is used to modify managed instance information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRegisterInstanceRequest"/></param>
+        /// <returns><see cref="ModifyRegisterInstanceResponse"/></returns>
+        public ModifyRegisterInstanceResponse ModifyRegisterInstanceSync(ModifyRegisterInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyRegisterInstanceResponse>(req, "ModifyRegisterInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

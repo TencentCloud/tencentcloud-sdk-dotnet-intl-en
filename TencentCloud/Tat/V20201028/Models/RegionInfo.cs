@@ -37,7 +37,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// Region status. `AVAILABLE` indicates the region is available.
+        /// Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
         /// </summary>
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }

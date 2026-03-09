@@ -37,13 +37,15 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// Time when the execution is started.
+        /// Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecStartTime")]
         public string ExecStartTime{ get; set; }
 
         /// <summary>
-        /// Time when the execution is ended.
+        /// Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecEndTime")]
         public string ExecEndTime{ get; set; }

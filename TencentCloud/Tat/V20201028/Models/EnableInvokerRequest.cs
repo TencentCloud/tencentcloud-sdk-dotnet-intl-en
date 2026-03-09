@@ -25,7 +25,9 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// ID of the invoker to be enabled.
+        /// Executor ID to be enabled.
+        /// 
+        /// Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvokerId")]
         public string InvokerId{ get; set; }

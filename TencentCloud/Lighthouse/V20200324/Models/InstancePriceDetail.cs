@@ -26,21 +26,18 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         
         /// <summary>
         /// Instance ID.
-        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Price query information.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Price inquiry information.
         /// </summary>
         [JsonProperty("InstancePrice")]
         public InstancePrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
         /// </summary>
         [JsonProperty("DiscountDetail")]
         public DiscountDetail[] DiscountDetail{ get; set; }

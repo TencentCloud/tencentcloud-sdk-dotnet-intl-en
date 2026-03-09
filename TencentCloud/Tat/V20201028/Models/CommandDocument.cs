@@ -31,13 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Command type.
+        /// Command type. value is one of SHELL, POWERSHELL, BAT.
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// Timeout period.
+        /// Timeout period. unit: seconds.
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

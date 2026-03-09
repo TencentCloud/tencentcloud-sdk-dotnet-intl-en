@@ -37,10 +37,9 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
-        /// -The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-        /// Hand-filled value example:.
-        ///    /datastudio/resource/projectId/parentFolderPath/name 
+        /// -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+        /// -Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+        ///      /datastudio/resource/projectId/parentFolderPath/name 
         /// </summary>
         [JsonProperty("ResourceFile")]
         public string ResourceFile{ get; set; }

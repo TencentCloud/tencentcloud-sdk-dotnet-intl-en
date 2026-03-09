@@ -168,6 +168,17 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("CreateUserUin")]
         public string CreateUserUin{ get; set; }
 
+        /// <summary>
+        /// Task folder path.
+        /// 
+        /// Note:.
+        /// -Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+        /// -If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("TaskFolderPath")]
+        public string TaskFolderPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +203,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "TaskDescription", this.TaskDescription);
             this.SetParamSimple(map, prefix + "UpdateUserUin", this.UpdateUserUin);
             this.SetParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+            this.SetParamSimple(map, prefix + "TaskFolderPath", this.TaskFolderPath);
         }
     }
 }

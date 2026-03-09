@@ -37,7 +37,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Invoker type.
+        /// Executor type. currently only support SCHEDULE.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -73,20 +73,19 @@ namespace TencentCloud.Tat.V20201028.Models
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// Execution schedule of the invoker. This field is returned for recurring invokers.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Executor periodic schedule. recurring invoker will return this field.
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Modification time.
+        /// Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+        /// Whether deletion succeeded.
         /// </summary>
         [JsonProperty("Data")]
         public DeleteWorkflowResult Data{ get; set; }

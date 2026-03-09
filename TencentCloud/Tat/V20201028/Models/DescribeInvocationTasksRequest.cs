@@ -31,7 +31,14 @@ namespace TencentCloud.Tat.V20201028.Models
         public string[] InvocationTaskIds{ get; set; }
 
         /// <summary>
-        /// Filter conditions.<br> <li> `invocation-id` - String - Required: No - (Filter condition) Filter by the execution activity ID.<br> <li> `invocation-task-id` - String - Required: No - (Filter condition) Filter by the execution task ID.<br> <li> `instance-id` - String - Required: No - (Filter condition) Filter by the instance ID. <br> <li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID. <br>Up to 10 `Filters` are allowed for each request. Each filter can have up to five `Filter.Values`. `InvocationTaskIds` and `Filters` cannot be specified at the same time.
+        /// Filter conditions.<br>.
+        /// 
+        /// -invocation-task-id - String - required: no - (filter condition) filter by executing task id.
+        /// - invocation-id - String - required: no - (filter condition) filter by the execution activity id. you can obtain it through the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api.
+        /// -instance-id - String - required: no - (filtering conditions) filter by instance id. you can get the instance id through the query instance interface of corresponding cloud services. currently supported instance types: CVM, Lighthouse, and managed instances of TAT.
+        /// -command-id - String - required: no - (filter criteria) filter by command id. obtain through the api [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1).
+        /// 
+        /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvocationTaskIds` and `Filters` parameters cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -49,7 +56,12 @@ namespace TencentCloud.Tat.V20201028.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Whether to hide the output. Valid values:<br><li>`True` (default): Hide the output <br><li>`False`: Show the output <br>
+        /// Whether to hide the command output result. valid values:.
+        /// 
+        /// -true: hide output.
+        /// - false: do not hide.
+        ///  
+        /// The default value is true.
         /// </summary>
         [JsonProperty("HideOutput")]
         public bool? HideOutput{ get; set; }

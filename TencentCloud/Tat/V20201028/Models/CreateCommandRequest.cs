@@ -43,7 +43,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+        /// Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
@@ -69,14 +69,26 @@ namespace TencentCloud.Tat.V20201028.Models
         public bool? EnableParameter{ get; set; }
 
         /// <summary>
-        /// The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-        /// `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-        /// If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-        /// Up to 20 custom parameters are supported.
-        /// The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+        /// Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+        /// The key is the custom parameter name, and the value is the default. both kv are string-type.
+        /// If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+        /// Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+        /// Allow settings only when the EnableParameter parameter is true.
+        /// Custom parameters can be up to 20.
+        /// The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
+
+        /// <summary>
+        /// Custom parameter array.
+        /// If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+        /// Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+        /// Allow settings only when the EnableParameter parameter is true.
+        /// Custom parameters can be up to 20.
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
 
         /// <summary>
         /// Tags bound to the command. At most 10 tags are allowed.
@@ -120,6 +132,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);

@@ -92,6 +92,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("Children")]
         public CodeFolderNode[] Children{ get; set; }
 
+        /// <summary>
+        /// Parent folder path.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ParentFolderPath")]
+        public string ParentFolderPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
             this.SetParamSimple(map, prefix + "NodePermission", this.NodePermission);
             this.SetParamArrayObj(map, prefix + "Children.", this.Children);
+            this.SetParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
         }
     }
 }

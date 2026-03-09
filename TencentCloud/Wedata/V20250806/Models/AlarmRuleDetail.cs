@@ -68,6 +68,40 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ReconciliationExtInfo")]
         public ReconciliationStrategyInfo[] ReconciliationExtInfo{ get; set; }
 
+        /// <summary>
+        /// Configure allowlist for monitored object.
+        /// </summary>
+        [JsonProperty("MonitorWhiteTasks")]
+        public MonitorWhiteTask[] MonitorWhiteTasks{ get; set; }
+
+        /// <summary>
+        /// 3.0 Workflow completion time (period) Alarm policy.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WorkflowCompletionTimeCycleExtInfo")]
+        public TimeOutStrategyInfo[] WorkflowCompletionTimeCycleExtInfo{ get; set; }
+
+        /// <summary>
+        /// Workflow execution triggers the Alarm condition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WorkflowExecutionTrigger")]
+        public long? WorkflowExecutionTrigger{ get; set; }
+
+        /// <summary>
+        /// Workflow execution failure Alarm condition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WorkflowExecutionFailureTrigger")]
+        public long? WorkflowExecutionFailureTrigger{ get; set; }
+
+        /// <summary>
+        /// Workflow execution successful Alarm condition.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WorkflowExecutionSuccessTrigger")]
+        public long? WorkflowExecutionSuccessTrigger{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +114,11 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamArrayObj(map, prefix + "DataBackfillOrRerunTimeOutExtInfo.", this.DataBackfillOrRerunTimeOutExtInfo);
             this.SetParamArrayObj(map, prefix + "ProjectInstanceStatisticsAlarmInfoList.", this.ProjectInstanceStatisticsAlarmInfoList);
             this.SetParamArrayObj(map, prefix + "ReconciliationExtInfo.", this.ReconciliationExtInfo);
+            this.SetParamArrayObj(map, prefix + "MonitorWhiteTasks.", this.MonitorWhiteTasks);
+            this.SetParamArrayObj(map, prefix + "WorkflowCompletionTimeCycleExtInfo.", this.WorkflowCompletionTimeCycleExtInfo);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionTrigger", this.WorkflowExecutionTrigger);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionFailureTrigger", this.WorkflowExecutionFailureTrigger);
+            this.SetParamSimple(map, prefix + "WorkflowExecutionSuccessTrigger", this.WorkflowExecutionSuccessTrigger);
         }
     }
 }

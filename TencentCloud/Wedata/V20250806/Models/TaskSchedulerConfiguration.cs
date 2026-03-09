@@ -76,12 +76,6 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling.
-        /// </summary>
-        [JsonProperty("ScheduleRunType")]
-        public long? ScheduleRunType{ get; set; }
-
-        /// <summary>
         /// Whether calendar scheduling is enabled. Valid values: 1 (enabled), 0 (disabled).
         /// </summary>
         [JsonProperty("CalendarOpen")]
@@ -112,46 +106,17 @@ namespace TencentCloud.Wedata.V20250806.Models
         public DependencyTaskBrief[] UpstreamDependencyConfigList{ get; set; }
 
         /// <summary>
-        /// SpecSpecifies the downstream dependency array.
+        /// Downstream dependency array.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("DownStreamDependencyConfigList")]
-        public DependencyTaskBrief[] DownStreamDependencyConfigList{ get; set; }
+        [JsonProperty("DownstreamDependencyConfigList")]
+        public DependencyTaskBrief[] DownstreamDependencyConfigList{ get; set; }
 
         /// <summary>
         /// Array of Events
         /// </summary>
         [JsonProperty("EventListenerList")]
         public EventListener[] EventListenerList{ get; set; }
-
-        /// <summary>
-        /// Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-        /// </summary>
-        [JsonProperty("RunPriority")]
-        public ulong? RunPriority{ get; set; }
-
-        /// <summary>
-        /// Retry policy. retry wait time in minutes. default: 5.
-        /// </summary>
-        [JsonProperty("RetryWait")]
-        public long? RetryWait{ get; set; }
-
-        /// <summary>
-        /// Specifies the maximum attempts of the retry policy. default: 4.
-        /// </summary>
-        [JsonProperty("MaxRetryAttempts")]
-        public long? MaxRetryAttempts{ get; set; }
-
-        /// <summary>
-        /// Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-        /// </summary>
-        [JsonProperty("ExecutionTTL")]
-        public long? ExecutionTTL{ get; set; }
-
-        /// <summary>
-        /// Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-        /// </summary>
-        [JsonProperty("WaitExecutionTotalTTL")]
-        public string WaitExecutionTotalTTL{ get; set; }
 
         /// <summary>
         /// Rerun & Refill Configuration: Default: ALL;
@@ -191,6 +156,99 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("InitStrategy")]
         public string InitStrategy{ get; set; }
 
+        /// <summary>
+        /// Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ScheduleRunType")]
+        [System.Obsolete]
+        public long? ScheduleRunType{ get; set; }
+
+        /// <summary>
+        /// (Deprecated, recommend using DownstreamDependencyConfigList) downstream dependency array.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("DownStreamDependencyConfigList")]
+        [System.Obsolete]
+        public DependencyTaskBrief[] DownStreamDependencyConfigList{ get; set; }
+
+        /// <summary>
+        /// Task scheduling priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+        /// </summary>
+        [JsonProperty("RunPriority")]
+        [System.Obsolete]
+        public ulong? RunPriority{ get; set; }
+
+        /// <summary>
+        /// Retry policy. retry wait time in minutes. default: 5.
+        /// </summary>
+        [JsonProperty("RetryWait")]
+        [System.Obsolete]
+        public long? RetryWait{ get; set; }
+
+        /// <summary>
+        /// Specifies the maximum attempts of the retry policy. default: 4.
+        /// </summary>
+        [JsonProperty("MaxRetryAttempts")]
+        [System.Obsolete]
+        public long? MaxRetryAttempts{ get; set; }
+
+        /// <summary>
+        /// Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+        /// </summary>
+        [JsonProperty("ExecutionTTL")]
+        [System.Obsolete]
+        public long? ExecutionTTL{ get; set; }
+
+        /// <summary>
+        /// Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+        /// </summary>
+        [JsonProperty("WaitExecutionTotalTTL")]
+        [System.Obsolete]
+        public string WaitExecutionTotalTTL{ get; set; }
+
+        /// <summary>
+        /// Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ScheduleType")]
+        public long? ScheduleType{ get; set; }
+
+        /// <summary>
+        /// Task scheduling priority execution priority 4 high 5 medium 6 low, default: 6.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RunPriorityType")]
+        public long? RunPriorityType{ get; set; }
+
+        /// <summary>
+        /// Retry policy retry wait time, in minutes: default: 5.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RetryWaitMinute")]
+        public long? RetryWaitMinute{ get; set; }
+
+        /// <summary>
+        /// Retry policy maximum attempts. default: 4.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MaxRetryNumber")]
+        public long? MaxRetryNumber{ get; set; }
+
+        /// <summary>
+        /// Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExecutionTTLMinute")]
+        public long? ExecutionTTLMinute{ get; set; }
+
+        /// <summary>
+        /// Timeout handling strategy wait for the total duration timeout (measurement unit: minutes) defaults to -1.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("WaitExecutionTotalTTLMinute")]
+        public long? WaitExecutionTotalTTLMinute{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,24 +262,31 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
             this.SetParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
-            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
             this.SetParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
             this.SetParamSimple(map, prefix + "CalendarId", this.CalendarId);
             this.SetParamSimple(map, prefix + "CalendarName", this.CalendarName);
             this.SetParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
             this.SetParamArrayObj(map, prefix + "UpstreamDependencyConfigList.", this.UpstreamDependencyConfigList);
-            this.SetParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+            this.SetParamArrayObj(map, prefix + "DownstreamDependencyConfigList.", this.DownstreamDependencyConfigList);
             this.SetParamArrayObj(map, prefix + "EventListenerList.", this.EventListenerList);
-            this.SetParamSimple(map, prefix + "RunPriority", this.RunPriority);
-            this.SetParamSimple(map, prefix + "RetryWait", this.RetryWait);
-            this.SetParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
-            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
-            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
             this.SetParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
             this.SetParamArrayObj(map, prefix + "ParamTaskOutList.", this.ParamTaskOutList);
             this.SetParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
             this.SetParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
             this.SetParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+            this.SetParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+            this.SetParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+            this.SetParamSimple(map, prefix + "RunPriority", this.RunPriority);
+            this.SetParamSimple(map, prefix + "RetryWait", this.RetryWait);
+            this.SetParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
+            this.SetParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
+            this.SetParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+            this.SetParamSimple(map, prefix + "RunPriorityType", this.RunPriorityType);
+            this.SetParamSimple(map, prefix + "RetryWaitMinute", this.RetryWaitMinute);
+            this.SetParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
+            this.SetParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
+            this.SetParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
         }
     }
 }

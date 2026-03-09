@@ -31,11 +31,13 @@ namespace TencentCloud.Tat.V20201028.Models
         public string[] InvocationIds{ get; set; }
 
         /// <summary>
-        /// Filter conditions.<br> <li> `invocation-id` - String - Required: No - (Filter condition) Filter by the execution activity ID.<br> 
-        /// <li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID. 
-        /// <li> `command-created-by` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `TAT` (public commands) or `USER` (custom commands).
-        /// <li> `instance-kind` - String - Required: No - (Filter condition) Filter by the instance type. Valid values: `CVM` or `LIGHTHOUSE`. 
-        /// <br>Up to 10 `Filters` are allowed for each request. Each filter can have up to five `Filter.Values`. `InvocationIds` and `Filters` cannot be specified at the same time.
+        /// Filter conditions.<br>.
+        /// 
+        /// <li> invocation-id - String - required: no - (filter condition) filter by execution activity id.</li>.
+        /// <li>command-id - String - required: no - (filter condition) filter by command id.</li>. 
+        /// <li> command-created-by - String - required: no - (filter criteria) filter by executed command type. valid values: TAT or USER. TAT represents public command, USER represents USER created command.</li>.
+        /// <li> instance-kind - String - required: no - (filtering conditions) filter by running instance type. valid values: CVM or LIGHTHOUSE. CVM represents cloud virtual machine, LIGHTHOUSE represents tencent cloud LIGHTHOUSE.</li>.
+        /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvocationIds` and `Filters` parameters cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

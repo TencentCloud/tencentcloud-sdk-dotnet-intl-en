@@ -43,20 +43,21 @@ namespace TencentCloud.Tat.V20201028.Models
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// Execution task status. Valid values:
-        /// <li> PENDING: Pending 
-        /// <li> DELIVERING: Delivering
-        /// <li> DELIVER_DELAYED: Delivery delayed 
-        /// <li> DELIVER_FAILED: Delivery failed
-        /// <li> START_FAILED: Failed to start the command
-        /// <li> RUNNING: Running
-        /// <li> SUCCESS: Success
-        /// <li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-        /// <li> TIMEOUT: Command timed out
-        /// <li> TASK_TIMEOUT: Task timed out
-        /// <li> CANCELLING: Canceling
-        /// <li> CANCELLED: Canceled (canceled before execution)
-        /// <li> TERMINATED: Terminated (canceled during execution)
+        /// Execution task status. valid values:.
+        /// 
+        /// -PENDING: waiting for distribution.
+        /// -DELIVERING: distributing.
+        /// -DELIVER_DELAYED: delivery delay.
+        /// -DELIVER_FAILED: delivery fail.
+        /// -START_FAILED: command start failed.
+        /// - RUNNING: command RUNNING.
+        /// -SUCCESS: command success.
+        /// -FAILED: command execution failed, exit code not 0.
+        /// -TIMEOUT: command timeout.
+        /// -TASK_TIMEOUT: client no response.
+        /// -Canceling.
+        /// - CANCELLED: canceled (command canceled before startup).
+        /// -TERMINATED: suspended (canceled during command execution).
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
@@ -74,25 +75,27 @@ namespace TencentCloud.Tat.V20201028.Models
         public TaskResult TaskResult{ get; set; }
 
         /// <summary>
-        /// Start time of the execution task.
+        /// Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the execution task.
+        /// Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Update time.
+        /// Update time. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
@@ -111,9 +114,18 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// Invocation source.
+        /// 
+        /// -USER: originate from user invocation.
+        /// -INVOKER: originate from scheduled execution.
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }
+
+        /// <summary>
+        /// Name of the executed command.
+        /// </summary>
+        [JsonProperty("CommandName")]
+        public string CommandName{ get; set; }
 
 
         /// <summary>
@@ -134,6 +146,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
             this.SetParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+            this.SetParamSimple(map, prefix + "CommandName", this.CommandName);
         }
     }
 }

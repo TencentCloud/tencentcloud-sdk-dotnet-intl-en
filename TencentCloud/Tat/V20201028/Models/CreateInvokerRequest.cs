@@ -25,46 +25,66 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Invoker name.
+        /// Executor name. length not exceeding 120 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Invoker type. It can only be `SCHEDULE` (recurring invokers).
+        /// Executor type.
+        /// 
+        /// Selectable values (currently only support one):.
+        /// 
+        /// -`SCHEDULE`: period type executor.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Remote command ID.
+        /// 
+        /// Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+        /// Trigger associated instance ID. list cap 100.
+        /// 
+        /// You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+        /// 
+        /// The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// The user who executes the command.
+        /// Command execution user. length not exceeding 256 characters.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Custom parameters of the command.
+        /// Command custom parameter. field type is JSON encode string.
+        /// 
+        /// This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
         /// <summary>
-        /// Settings required for a recurring invoker.
+        /// Recurring invoker settings.
+        /// 
+        /// When the executor type is `SCHEDULE`, specify this parameter.
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }
+
+        /// <summary>
+        /// Tag associated with the command. list length not exceeding 10.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -79,6 +99,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

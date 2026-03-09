@@ -25,19 +25,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Cloud disk type. Valid values: "CLOUD_PREMIUM".
+        /// CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Cloud disk size.
+        /// CBS disk capacity, unit: GB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+        /// Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }

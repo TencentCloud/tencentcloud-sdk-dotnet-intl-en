@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1267";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -51,29 +51,6 @@ namespace TencentCloud.Faceid.V20180301
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// The types of national cards supported by the API and whether instructions on the back of the card are required are as follows:  
-        /// <table> <thead> <tr> <td>Nationality</td> <td style="width:200px">CardType</td> <td style="width:200px">Back side required</td> </tr> </thead> <tbody> <tr> <td>Indonesia</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Indonesia</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Hongkong</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Thailand</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Thailand</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Japan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Japan</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Taiwan</td> <td>ID Card</td> <td>Yes</td> </tr>  <tr> <td>Bangladesh</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Nigeria</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Nigeria</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Pakistan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Pakistan</td> <td>Driving License</td> <td>Yes</td> </tr> </tbody> </table>
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCardVerificationRequest"/></param>
-        /// <returns><see cref="ApplyCardVerificationResponse"/></returns>
-        public Task<ApplyCardVerificationResponse> ApplyCardVerification(ApplyCardVerificationRequest req)
-        {
-            return InternalRequestAsync<ApplyCardVerificationResponse>(req, "ApplyCardVerification");
-        }
-
-        /// <summary>
-        /// The types of national cards supported by the API and whether instructions on the back of the card are required are as follows:  
-        /// <table> <thead> <tr> <td>Nationality</td> <td style="width:200px">CardType</td> <td style="width:200px">Back side required</td> </tr> </thead> <tbody> <tr> <td>Indonesia</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Indonesia</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Hongkong</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Thailand</td> <td>ID card</td> <td>No</td> </tr> <tr> <td>Thailand</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Malaysia</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Singapore</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Philippine</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Japan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Japan</td> <td>Driving License</td> <td>No</td> </tr> <tr> <td>Taiwan</td> <td>ID Card</td> <td>Yes</td> </tr>  <tr> <td>Bangladesh</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Nigeria</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Nigeria</td> <td>Driving License</td> <td>Yes</td> </tr> <tr> <td>Pakistan</td> <td>ID card</td> <td>Yes</td> </tr> <tr> <td>Pakistan</td> <td>Driving License</td> <td>Yes</td> </tr> </tbody> </table>
-        /// </summary>
-        /// <param name="req"><see cref="ApplyCardVerificationRequest"/></param>
-        /// <returns><see cref="ApplyCardVerificationResponse"/></returns>
-        public ApplyCardVerificationResponse ApplyCardVerificationSync(ApplyCardVerificationRequest req)
-        {
-            return InternalRequestAsync<ApplyCardVerificationResponse>(req, "ApplyCardVerification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -136,27 +113,6 @@ namespace TencentCloud.Faceid.V20180301
         public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntlSync(ApplyWebVerificationBizTokenIntlRequest req)
         {
             return InternalRequestAsync<ApplyWebVerificationBizTokenIntlResponse>(req, "ApplyWebVerificationBizTokenIntl")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
-        /// </summary>
-        /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
-        /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
-        public Task<ApplyWebVerificationTokenResponse> ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req)
-        {
-            return InternalRequestAsync<ApplyWebVerificationTokenResponse>(req, "ApplyWebVerificationToken");
-        }
-
-        /// <summary>
-        /// This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
-        /// </summary>
-        /// <param name="req"><see cref="ApplyWebVerificationTokenRequest"/></param>
-        /// <returns><see cref="ApplyWebVerificationTokenResponse"/></returns>
-        public ApplyWebVerificationTokenResponse ApplyWebVerificationTokenSync(ApplyWebVerificationTokenRequest req)
-        {
-            return InternalRequestAsync<ApplyWebVerificationTokenResponse>(req, "ApplyWebVerificationToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -272,27 +228,6 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// The interface supports obtaining the certificate authentication result based on the token.
-        /// </summary>
-        /// <param name="req"><see cref="GetCardVerificationResultRequest"/></param>
-        /// <returns><see cref="GetCardVerificationResultResponse"/></returns>
-        public Task<GetCardVerificationResultResponse> GetCardVerificationResult(GetCardVerificationResultRequest req)
-        {
-            return InternalRequestAsync<GetCardVerificationResultResponse>(req, "GetCardVerificationResult");
-        }
-
-        /// <summary>
-        /// The interface supports obtaining the certificate authentication result based on the token.
-        /// </summary>
-        /// <param name="req"><see cref="GetCardVerificationResultRequest"/></param>
-        /// <returns><see cref="GetCardVerificationResultResponse"/></returns>
-        public GetCardVerificationResultResponse GetCardVerificationResultSync(GetCardVerificationResultRequest req)
-        {
-            return InternalRequestAsync<GetCardVerificationResultResponse>(req, "GetCardVerificationResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for 72 hours (72*3600s) after generation and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultIntlRequest"/></param>
@@ -377,27 +312,6 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
-        /// </summary>
-        /// <param name="req"><see cref="GetWebVerificationResultRequest"/></param>
-        /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
-        public Task<GetWebVerificationResultResponse> GetWebVerificationResult(GetWebVerificationResultRequest req)
-        {
-            return InternalRequestAsync<GetWebVerificationResultResponse>(req, "GetWebVerificationResult");
-        }
-
-        /// <summary>
-        /// This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
-        /// </summary>
-        /// <param name="req"><see cref="GetWebVerificationResultRequest"/></param>
-        /// <returns><see cref="GetWebVerificationResultResponse"/></returns>
-        public GetWebVerificationResultResponse GetWebVerificationResultSync(GetWebVerificationResultRequest req)
-        {
-            return InternalRequestAsync<GetWebVerificationResultResponse>(req, "GetWebVerificationResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
@@ -438,27 +352,6 @@ namespace TencentCloud.Faceid.V20180301
         public LivenessCompareResponse LivenessCompareSync(LivenessCompareRequest req)
         {
             return InternalRequestAsync<LivenessCompareResponse>(req, "LivenessCompare")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
-        /// </summary>
-        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
-        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
-        public Task<VideoLivenessCompareResponse> VideoLivenessCompare(VideoLivenessCompareRequest req)
-        {
-            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare");
-        }
-
-        /// <summary>
-        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
-        /// </summary>
-        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
-        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
-        public VideoLivenessCompareResponse VideoLivenessCompareSync(VideoLivenessCompareRequest req)
-        {
-            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

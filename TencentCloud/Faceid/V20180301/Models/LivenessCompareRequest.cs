@@ -62,7 +62,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// Optional configuration (a JSON string)
         /// {
-        /// "BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+        /// "BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
         /// }
         /// </summary>
         [JsonProperty("Optional")]

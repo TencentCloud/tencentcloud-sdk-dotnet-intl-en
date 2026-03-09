@@ -43,17 +43,14 @@ namespace TencentCloud.Tat.V20201028.Models
         public string LastHeartbeatTime{ get; set; }
 
         /// <summary>
-        /// Agent status. Valid values:
-        /// <li> `Online`
-        /// <li> `Offline`
+        /// Agent status. valid values:.
+        /// Online: Online, Offline: Offline.
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// Agent runtime environment. Valid values:
-        /// <li> `Linux`: Linux instance
-        /// <li> `Windows`: Windows instance
+        /// Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
         /// </summary>
         [JsonProperty("Environment")]
         public string Environment{ get; set; }

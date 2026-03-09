@@ -99,23 +99,22 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BundleSalesState{ get; set; }
 
         /// <summary>
-        /// Bundle type. 
-        /// Valid values: 
-        /// <li>STARTER_BUNDLE: Starter bundle</li>
-        /// <li>GENERAL_BUNDLE: General bundle</li>
-        /// <li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-        /// <li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-        /// <li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-        /// <li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-        /// <li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-        /// <li>BEFAST_BUNDLE: BeFast bundle </li>
+        /// Package type.
+        /// Value range:.
+        /// <Li>GENERAL_BUNDLE: general.</li>.
+        /// <Li>STORAGE_BUNDLE: storage type</li>.
+        /// <Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+        /// <Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+        /// <Li>BEFAST_BUNDLE: beefast bundle</li>.
+        /// <Li>STARTER_BUNDLE: entry-level.</li>.
+        /// <Li>CAREFREE_BUNDLE: carefree</li>.
+        /// <Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
         /// </summary>
         [JsonProperty("BundleType")]
         public string BundleType{ get; set; }
 
         /// <summary>
-        /// Bundle type description 
-        /// Note: This parameter may return null, indicating that no valid values can be obtained.
+        /// Package type description.
         /// </summary>
         [JsonProperty("BundleTypeDescription")]
         public string BundleTypeDescription{ get; set; }
@@ -129,6 +128,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         [JsonProperty("BundleDisplayLabel")]
         public string BundleDisplayLabel{ get; set; }
+
+        /// <summary>
+        /// Whether the traffic volume is unlimited.
+        /// </summary>
+        [JsonProperty("TrafficUnlimited")]
+        public bool? TrafficUnlimited{ get; set; }
 
 
         /// <summary>
@@ -151,6 +156,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BundleType", this.BundleType);
             this.SetParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
             this.SetParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
+            this.SetParamSimple(map, prefix + "TrafficUnlimited", this.TrafficUnlimited);
         }
     }
 }

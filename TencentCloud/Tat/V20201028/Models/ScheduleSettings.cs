@@ -25,9 +25,10 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Execution policy:
-        /// <br><li>`ONCE`: Execute once
-        /// <br><li>`RECURRENCE`: Execute repeatedly
+        /// Execution policy.
+        /// 
+        /// -ONCE: one-time execution.
+        /// -RECURRENCE: execute periodically.
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }
@@ -39,7 +40,9 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Recurrence{ get; set; }
 
         /// <summary>
-        /// The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+        /// Next execution time of the executor. this field requires specifying when Policy is ONCE.
+        /// 
+        /// The time format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("InvokeTime")]
         public string InvokeTime{ get; set; }

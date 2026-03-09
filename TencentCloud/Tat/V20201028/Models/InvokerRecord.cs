@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string InvokerId{ get; set; }
 
         /// <summary>
-        /// Execution time.
+        /// Execution time. format: YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("InvokeTime")]
         public string InvokeTime{ get; set; }
@@ -50,6 +50,16 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// Trigger result.
+        /// 
+        /// -PENDING: waiting for distribution.
+        /// - RUNNING: command RUNNING.
+        /// -Canceling.
+        /// -SUCCESS: command success.
+        /// -TIMEOUT: command timeout.
+        /// - FAILED: command FAILED.
+        /// -CANCELLED: all commands canceled.
+        /// -PARTIAL_FAILED: the command partially failed.
+        /// -PARTIAL_CANCELLED: the command is partially canceled.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

@@ -25,33 +25,31 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Values: 
-        /// <li>"DiskSpace": Cloud disk space</li>
-        /// <li>"DiskBackupQuota": Cloud disk backups</li>
+        /// <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
         /// </summary>
         [JsonProperty("PriceName")]
         public string PriceName{ get; set; }
 
         /// <summary>
-        /// Official unit price of the billable item
+        /// <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginUnitPrice")]
         public float? OriginUnitPrice{ get; set; }
 
         /// <summary>
-        /// Official total price of the billable item
+        /// <P>Total price of billing item dimension.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount of the billable item
+        /// <P>Dimensional discount for billing items.</p>.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted total price of the billable item
+        /// <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

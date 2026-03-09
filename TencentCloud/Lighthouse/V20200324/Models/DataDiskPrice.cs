@@ -25,38 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Cloud disk ID.
+        /// <p>Cloud disk ID.</p>.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Cloud disk unit price.
+        /// <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalDiskPrice")]
         public float? OriginalDiskPrice{ get; set; }
 
         /// <summary>
-        /// Total price of cloud disk
+        /// <P>Total CBS price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount.
+        /// <p>Discount.</p>.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted total price.
+        /// <P>Discounted total price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// ID of the instance to which the data disk is mounted.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Instance ID for data disk mounting.</p>.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

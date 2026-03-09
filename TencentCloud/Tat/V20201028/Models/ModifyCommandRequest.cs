@@ -25,76 +25,73 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Command ID.
+        /// <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+        /// <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
         /// </summary>
         [JsonProperty("CommandName")]
         public string CommandName{ get; set; }
 
         /// <summary>
-        /// Command description. The maximum length is 120 characters.
+        /// <P>Command description. no more than 120 characters.</p>.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Base64-encoded command. The maximum length is 64 KB.
+        /// <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Command type. `SHELL` and `POWERSHELL` are supported.
+        /// <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// Command execution path.
+        /// <P>Command execution path.</p>.
         /// </summary>
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
         /// <summary>
-        /// Command timeout period. Value range: [1, 86400].
+        /// <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-        /// All parameters are overwritten. All default values are required for modification.
-        /// Modification is only allowed when `EnableParameter` is `true`.
-        /// `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-        /// Up to 20 custom parameters are supported.
-        /// The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+        /// <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// The username used to execute the command on the CVM or Lighthouse instance.
-        /// The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+        /// <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
+
+        /// <summary>
+        /// <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+        /// <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
         /// </summary>
         [JsonProperty("OutputCOSBucketUrl")]
         public string OutputCOSBucketUrl{ get; set; }
 
         /// <summary>
-        /// The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-        /// 1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-        /// 2. Use a slash (/) to create a subdirectory.
-        /// 3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+        /// <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
         /// </summary>
         [JsonProperty("OutputCOSKeyPrefix")]
         public string OutputCOSKeyPrefix{ get; set; }
@@ -113,6 +110,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
             this.SetParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);

@@ -25,49 +25,65 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// ID of the invoker to be modified.
+        /// Executor ID to be modified.
+        /// 
+        /// Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvokerId")]
         public string InvokerId{ get; set; }
 
         /// <summary>
-        /// Name of the invoker to be modified.
+        /// Executor name to be modified. length not exceeding 120 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Invoker type. It can only be `SCHEDULE` (recurring invokers).
+        /// Executor type to be modified.
+        /// 
+        /// Selectable values (currently only support one):.
+        /// 
+        /// -`SCHEDULE`: period type executor.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// ID of the command to be modified.
+        /// Command ID to be modified.
+        /// 
+        /// Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// The username to be modified.
+        /// Username to be modified. length not exceeding 256 characters.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Custom parameters to be modified.
+        /// Custom parameters to be modified. field type is JSON encode string.
+        /// 
+        /// This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
         /// <summary>
-        /// List of instance IDs to be modified. Up to 100 IDs are allowed.
+        /// List of instance ids to be modified. list length limit 100.
+        /// 
+        /// You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+        /// 
+        /// The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Scheduled invoker settings to be modified.
+        /// Recurring invoker settings to be modified.
+        /// 
+        /// Change the executor type to `SCHEDULE` and specify this parameter.
         /// </summary>
         [JsonProperty("ScheduleSettings")]
         public ScheduleSettings ScheduleSettings{ get; set; }

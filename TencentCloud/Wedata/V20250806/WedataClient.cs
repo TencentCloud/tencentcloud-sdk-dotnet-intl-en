@@ -28,7 +28,7 @@ namespace TencentCloud.Wedata.V20250806
 
        private const string endpoint = "wedata.intl.tencentcloudapi.com";
        private const string version = "2025-08-06";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1268";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,90 @@ namespace TencentCloud.Wedata.V20250806
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Associate a project cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AddCalcEnginesToProjectRequest"/></param>
+        /// <returns><see cref="AddCalcEnginesToProjectResponse"/></returns>
+        public Task<AddCalcEnginesToProjectResponse> AddCalcEnginesToProject(AddCalcEnginesToProjectRequest req)
+        {
+            return InternalRequestAsync<AddCalcEnginesToProjectResponse>(req, "AddCalcEnginesToProject");
+        }
+
+        /// <summary>
+        /// Associate a project cluster.
+        /// </summary>
+        /// <param name="req"><see cref="AddCalcEnginesToProjectRequest"/></param>
+        /// <returns><see cref="AddCalcEnginesToProjectResponse"/></returns>
+        public AddCalcEnginesToProjectResponse AddCalcEnginesToProjectSync(AddCalcEnginesToProjectRequest req)
+        {
+            return InternalRequestAsync<AddCalcEnginesToProjectResponse>(req, "AddCalcEnginesToProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bind the designated execution resource group to the project.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateResourceGroupToProjectRequest"/></param>
+        /// <returns><see cref="AssociateResourceGroupToProjectResponse"/></returns>
+        public Task<AssociateResourceGroupToProjectResponse> AssociateResourceGroupToProject(AssociateResourceGroupToProjectRequest req)
+        {
+            return InternalRequestAsync<AssociateResourceGroupToProjectResponse>(req, "AssociateResourceGroupToProject");
+        }
+
+        /// <summary>
+        /// This API is used to bind the designated execution resource group to the project.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateResourceGroupToProjectRequest"/></param>
+        /// <returns><see cref="AssociateResourceGroupToProjectResponse"/></returns>
+        public AssociateResourceGroupToProjectResponse AssociateResourceGroupToProjectSync(AssociateResourceGroupToProjectRequest req)
+        {
+            return InternalRequestAsync<AssociateResourceGroupToProjectResponse>(req, "AssociateResourceGroupToProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Authorize a data source.
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeDataSourceRequest"/></param>
+        /// <returns><see cref="AuthorizeDataSourceResponse"/></returns>
+        public Task<AuthorizeDataSourceResponse> AuthorizeDataSource(AuthorizeDataSourceRequest req)
+        {
+            return InternalRequestAsync<AuthorizeDataSourceResponse>(req, "AuthorizeDataSource");
+        }
+
+        /// <summary>
+        /// Authorize a data source.
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeDataSourceRequest"/></param>
+        /// <returns><see cref="AuthorizeDataSourceResponse"/></returns>
+        public AuthorizeDataSourceResponse AuthorizeDataSourceSync(AuthorizeDataSourceRequest req)
+        {
+            return InternalRequestAsync<AuthorizeDataSourceResponse>(req, "AuthorizeDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Authorization in Catalog mode.
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizePrivilegesRequest"/></param>
+        /// <returns><see cref="AuthorizePrivilegesResponse"/></returns>
+        public Task<AuthorizePrivilegesResponse> AuthorizePrivileges(AuthorizePrivilegesRequest req)
+        {
+            return InternalRequestAsync<AuthorizePrivilegesResponse>(req, "AuthorizePrivileges");
+        }
+
+        /// <summary>
+        /// Authorization in Catalog mode.
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizePrivilegesRequest"/></param>
+        /// <returns><see cref="AuthorizePrivilegesResponse"/></returns>
+        public AuthorizePrivilegesResponse AuthorizePrivilegesSync(AuthorizePrivilegesRequest req)
+        {
+            return InternalRequestAsync<AuthorizePrivilegesResponse>(req, "AuthorizePrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -96,6 +180,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Configure CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodePermissionsRequest"/></param>
+        /// <returns><see cref="CreateCodePermissionsResponse"/></returns>
+        public Task<CreateCodePermissionsResponse> CreateCodePermissions(CreateCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateCodePermissionsResponse>(req, "CreateCodePermissions");
+        }
+
+        /// <summary>
+        /// Configure CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCodePermissionsRequest"/></param>
+        /// <returns><see cref="CreateCodePermissionsResponse"/></returns>
+        public CreateCodePermissionsResponse CreateCodePermissionsSync(CreateCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateCodePermissionsResponse>(req, "CreateCodePermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a data backfill plan.
         /// </summary>
         /// <param name="req"><see cref="CreateDataBackfillPlanRequest"/></param>
@@ -117,6 +222,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to create a data source in the designated project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public Task<CreateDataSourceResponse> CreateDataSource(CreateDataSourceRequest req)
+        {
+            return InternalRequestAsync<CreateDataSourceResponse>(req, "CreateDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to create a data source in the designated project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public CreateDataSourceResponse CreateDataSourceSync(CreateDataSourceRequest req)
+        {
+            return InternalRequestAsync<CreateDataSourceResponse>(req, "CreateDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to set alarm rules.
         /// </summary>
         /// <param name="req"><see cref="CreateOpsAlarmRuleRequest"/></param>
@@ -134,6 +260,48 @@ namespace TencentCloud.Wedata.V20250806
         public CreateOpsAlarmRuleResponse CreateOpsAlarmRuleSync(CreateOpsAlarmRuleRequest req)
         {
             return InternalRequestAsync<CreateOpsAlarmRuleResponse>(req, "CreateOpsAlarmRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a project with cluster information upon creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject");
+        }
+
+        /// <summary>
+        /// Create a project with cluster information upon creation.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add project user role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectMemberRequest"/></param>
+        /// <returns><see cref="CreateProjectMemberResponse"/></returns>
+        public Task<CreateProjectMemberResponse> CreateProjectMember(CreateProjectMemberRequest req)
+        {
+            return InternalRequestAsync<CreateProjectMemberResponse>(req, "CreateProjectMember");
+        }
+
+        /// <summary>
+        /// Add project user role.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectMemberRequest"/></param>
+        /// <returns><see cref="CreateProjectMemberResponse"/></returns>
+        public CreateProjectMemberResponse CreateProjectMemberSync(CreateProjectMemberRequest req)
+        {
+            return InternalRequestAsync<CreateProjectMemberResponse>(req, "CreateProjectMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -176,6 +344,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateResourceFolderResponse CreateResourceFolderSync(CreateResourceFolderRequest req)
         {
             return InternalRequestAsync<CreateResourceFolderResponse>(req, "CreateResourceFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to purchase resources.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGroupRequest"/></param>
+        /// <returns><see cref="CreateResourceGroupResponse"/></returns>
+        public Task<CreateResourceGroupResponse> CreateResourceGroup(CreateResourceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGroupResponse>(req, "CreateResourceGroup");
+        }
+
+        /// <summary>
+        /// This API is used to purchase resources.
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGroupRequest"/></param>
+        /// <returns><see cref="CreateResourceGroupResponse"/></returns>
+        public CreateResourceGroupResponse CreateResourceGroupSync(CreateResourceGroupRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGroupResponse>(req, "CreateResourceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +432,69 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Create a folder.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public Task<CreateTaskFolderResponse> CreateTaskFolder(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder");
+        }
+
+        /// <summary>
+        /// Create a folder.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTaskFolderRequest"/></param>
+        /// <returns><see cref="CreateTaskFolderResponse"/></returns>
+        public CreateTaskFolderResponse CreateTaskFolderSync(CreateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<CreateTaskFolderResponse>(req, "CreateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerTaskRequest"/></param>
+        /// <returns><see cref="CreateTriggerTaskResponse"/></returns>
+        public Task<CreateTriggerTaskResponse> CreateTriggerTask(CreateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerTaskResponse>(req, "CreateTriggerTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerTaskRequest"/></param>
+        /// <returns><see cref="CreateTriggerTaskResponse"/></returns>
+        public CreateTriggerTaskResponse CreateTriggerTaskSync(CreateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerTaskResponse>(req, "CreateTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// create workflow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowResponse"/></returns>
+        public Task<CreateTriggerWorkflowResponse> CreateTriggerWorkflow(CreateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowResponse>(req, "CreateTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// create workflow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="CreateTriggerWorkflowResponse"/></returns>
+        public CreateTriggerWorkflowResponse CreateTriggerWorkflowSync(CreateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<CreateTriggerWorkflowResponse>(req, "CreateTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create workflow.
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
@@ -281,6 +533,27 @@ namespace TencentCloud.Wedata.V20250806
         public CreateWorkflowFolderResponse CreateWorkflowFolderSync(CreateWorkflowFolderRequest req)
         {
             return InternalRequestAsync<CreateWorkflowFolderResponse>(req, "CreateWorkflowFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to configure data development permissions.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="CreateWorkflowPermissionsResponse"/></returns>
+        public Task<CreateWorkflowPermissionsResponse> CreateWorkflowPermissions(CreateWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowPermissionsResponse>(req, "CreateWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// This API is used to configure data development permissions.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="CreateWorkflowPermissionsResponse"/></returns>
+        public CreateWorkflowPermissionsResponse CreateWorkflowPermissionsSync(CreateWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<CreateWorkflowPermissionsResponse>(req, "CreateWorkflowPermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,6 +600,90 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Delete CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodePermissionsRequest"/></param>
+        /// <returns><see cref="DeleteCodePermissionsResponse"/></returns>
+        public Task<DeleteCodePermissionsResponse> DeleteCodePermissions(DeleteCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCodePermissionsResponse>(req, "DeleteCodePermissions");
+        }
+
+        /// <summary>
+        /// Delete CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCodePermissionsRequest"/></param>
+        /// <returns><see cref="DeleteCodePermissionsResponse"/></returns>
+        public DeleteCodePermissionsResponse DeleteCodePermissionsSync(DeleteCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteCodePermissionsResponse>(req, "DeleteCodePermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a replenishment plan.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataBackfillPlanAsyncRequest"/></param>
+        /// <returns><see cref="DeleteDataBackfillPlanAsyncResponse"/></returns>
+        public Task<DeleteDataBackfillPlanAsyncResponse> DeleteDataBackfillPlanAsync(DeleteDataBackfillPlanAsyncRequest req)
+        {
+            return InternalRequestAsync<DeleteDataBackfillPlanAsyncResponse>(req, "DeleteDataBackfillPlanAsync");
+        }
+
+        /// <summary>
+        /// Delete a replenishment plan.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataBackfillPlanAsyncRequest"/></param>
+        /// <returns><see cref="DeleteDataBackfillPlanAsyncResponse"/></returns>
+        public DeleteDataBackfillPlanAsyncResponse DeleteDataBackfillPlanAsyncSync(DeleteDataBackfillPlanAsyncRequest req)
+        {
+            return InternalRequestAsync<DeleteDataBackfillPlanAsyncResponse>(req, "DeleteDataBackfillPlanAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a data source.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourceRequest"/></param>
+        /// <returns><see cref="DeleteDataSourceResponse"/></returns>
+        public Task<DeleteDataSourceResponse> DeleteDataSource(DeleteDataSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteDataSourceResponse>(req, "DeleteDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to delete a data source.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourceRequest"/></param>
+        /// <returns><see cref="DeleteDataSourceResponse"/></returns>
+        public DeleteDataSourceResponse DeleteDataSourceSync(DeleteDataSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteDataSourceResponse>(req, "DeleteDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// RegisterLineage
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLineageRequest"/></param>
+        /// <returns><see cref="DeleteLineageResponse"/></returns>
+        public Task<DeleteLineageResponse> DeleteLineage(DeleteLineageRequest req)
+        {
+            return InternalRequestAsync<DeleteLineageResponse>(req, "DeleteLineage");
+        }
+
+        /// <summary>
+        /// RegisterLineage
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLineageRequest"/></param>
+        /// <returns><see cref="DeleteLineageResponse"/></returns>
+        public DeleteLineageResponse DeleteLineageSync(DeleteLineageRequest req)
+        {
+            return InternalRequestAsync<DeleteLineageResponse>(req, "DeleteLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Deletes alarm rules
         /// </summary>
         /// <param name="req"><see cref="DeleteOpsAlarmRuleRequest"/></param>
@@ -344,6 +701,48 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteOpsAlarmRuleResponse DeleteOpsAlarmRuleSync(DeleteOpsAlarmRuleRequest req)
         {
             return InternalRequestAsync<DeleteOpsAlarmRuleResponse>(req, "DeleteOpsAlarmRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a project.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public Task<DeleteProjectResponse> DeleteProject(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject");
+        }
+
+        /// <summary>
+        /// This API is used to delete a project.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete project users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectMemberRequest"/></param>
+        /// <returns><see cref="DeleteProjectMemberResponse"/></returns>
+        public Task<DeleteProjectMemberResponse> DeleteProjectMember(DeleteProjectMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectMemberResponse>(req, "DeleteProjectMember");
+        }
+
+        /// <summary>
+        /// This API is used to delete project users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectMemberRequest"/></param>
+        /// <returns><see cref="DeleteProjectMemberResponse"/></returns>
+        public DeleteProjectMemberResponse DeleteProjectMemberSync(DeleteProjectMemberRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectMemberResponse>(req, "DeleteProjectMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +785,27 @@ namespace TencentCloud.Wedata.V20250806
         public DeleteResourceFolderResponse DeleteResourceFolderSync(DeleteResourceFolderRequest req)
         {
             return InternalRequestAsync<DeleteResourceFolderResponse>(req, "DeleteResourceFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to destroy resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGroupRequest"/></param>
+        /// <returns><see cref="DeleteResourceGroupResponse"/></returns>
+        public Task<DeleteResourceGroupResponse> DeleteResourceGroup(DeleteResourceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGroupResponse>(req, "DeleteResourceGroup");
+        }
+
+        /// <summary>
+        /// This API is used to destroy resources.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGroupRequest"/></param>
+        /// <returns><see cref="DeleteResourceGroupResponse"/></returns>
+        public DeleteResourceGroupResponse DeleteResourceGroupSync(DeleteResourceGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGroupResponse>(req, "DeleteResourceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,6 +873,69 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Delete a data development task folder.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
+        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
+        public Task<DeleteTaskFolderResponse> DeleteTaskFolder(DeleteTaskFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder");
+        }
+
+        /// <summary>
+        /// Delete a data development task folder.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTaskFolderRequest"/></param>
+        /// <returns><see cref="DeleteTaskFolderResponse"/></returns>
+        public DeleteTaskFolderResponse DeleteTaskFolderSync(DeleteTaskFolderRequest req)
+        {
+            return InternalRequestAsync<DeleteTaskFolderResponse>(req, "DeleteTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a workflow scheduling task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerTaskRequest"/></param>
+        /// <returns><see cref="DeleteTriggerTaskResponse"/></returns>
+        public Task<DeleteTriggerTaskResponse> DeleteTriggerTask(DeleteTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerTaskResponse>(req, "DeleteTriggerTask");
+        }
+
+        /// <summary>
+        /// Delete a workflow scheduling task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerTaskRequest"/></param>
+        /// <returns><see cref="DeleteTriggerTaskResponse"/></returns>
+        public DeleteTriggerTaskResponse DeleteTriggerTaskSync(DeleteTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerTaskResponse>(req, "DeleteTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deletes a workflow
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="DeleteTriggerWorkflowResponse"/></returns>
+        public Task<DeleteTriggerWorkflowResponse> DeleteTriggerWorkflow(DeleteTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerWorkflowResponse>(req, "DeleteTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// Deletes a workflow
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="DeleteTriggerWorkflowResponse"/></returns>
+        public DeleteTriggerWorkflowResponse DeleteTriggerWorkflowSync(DeleteTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<DeleteTriggerWorkflowResponse>(req, "DeleteTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Deletes a workflow
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
@@ -495,6 +978,111 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to delete workflow folder permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteWorkflowPermissionsResponse"/></returns>
+        public Task<DeleteWorkflowPermissionsResponse> DeleteWorkflowPermissions(DeleteWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkflowPermissionsResponse>(req, "DeleteWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// This API is used to delete workflow folder permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="DeleteWorkflowPermissionsResponse"/></returns>
+        public DeleteWorkflowPermissionsResponse DeleteWorkflowPermissionsSync(DeleteWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<DeleteWorkflowPermissionsResponse>(req, "DeleteWorkflowPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View Data Source Permission.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceAuthorityRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceAuthorityResponse"/></returns>
+        public Task<DescribeDataSourceAuthorityResponse> DescribeDataSourceAuthority(DescribeDataSourceAuthorityRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceAuthorityResponse>(req, "DescribeDataSourceAuthority");
+        }
+
+        /// <summary>
+        /// View Data Source Permission.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceAuthorityRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceAuthorityResponse"/></returns>
+        public DescribeDataSourceAuthorityResponse DescribeDataSourceAuthoritySync(DescribeDataSourceAuthorityRequest req)
+        {
+            return InternalRequestAsync<DescribeDataSourceAuthorityResponse>(req, "DescribeDataSourceAuthority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Disable a project.
+        /// </summary>
+        /// <param name="req"><see cref="DisableProjectRequest"/></param>
+        /// <returns><see cref="DisableProjectResponse"/></returns>
+        public Task<DisableProjectResponse> DisableProject(DisableProjectRequest req)
+        {
+            return InternalRequestAsync<DisableProjectResponse>(req, "DisableProject");
+        }
+
+        /// <summary>
+        /// Disable a project.
+        /// </summary>
+        /// <param name="req"><see cref="DisableProjectRequest"/></param>
+        /// <returns><see cref="DisableProjectResponse"/></returns>
+        public DisableProjectResponse DisableProjectSync(DisableProjectRequest req)
+        {
+            return InternalRequestAsync<DisableProjectResponse>(req, "DisableProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind the designated execution resource group from the project.
+        /// </summary>
+        /// <param name="req"><see cref="DissociateResourceGroupFromProjectRequest"/></param>
+        /// <returns><see cref="DissociateResourceGroupFromProjectResponse"/></returns>
+        public Task<DissociateResourceGroupFromProjectResponse> DissociateResourceGroupFromProject(DissociateResourceGroupFromProjectRequest req)
+        {
+            return InternalRequestAsync<DissociateResourceGroupFromProjectResponse>(req, "DissociateResourceGroupFromProject");
+        }
+
+        /// <summary>
+        /// This API is used to unbind the designated execution resource group from the project.
+        /// </summary>
+        /// <param name="req"><see cref="DissociateResourceGroupFromProjectRequest"/></param>
+        /// <returns><see cref="DissociateResourceGroupFromProjectResponse"/></returns>
+        public DissociateResourceGroupFromProjectResponse DissociateResourceGroupFromProjectSync(DissociateResourceGroupFromProjectRequest req)
+        {
+            return InternalRequestAsync<DissociateResourceGroupFromProjectResponse>(req, "DissociateResourceGroupFromProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable a project.
+        /// </summary>
+        /// <param name="req"><see cref="EnableProjectRequest"/></param>
+        /// <returns><see cref="EnableProjectResponse"/></returns>
+        public Task<EnableProjectResponse> EnableProject(EnableProjectRequest req)
+        {
+            return InternalRequestAsync<EnableProjectResponse>(req, "EnableProject");
+        }
+
+        /// <summary>
+        /// Enable a project.
+        /// </summary>
+        /// <param name="req"><see cref="EnableProjectRequest"/></param>
+        /// <returns><see cref="EnableProjectResponse"/></returns>
+        public EnableProjectResponse EnableProjectSync(EnableProjectRequest req)
+        {
+            return InternalRequestAsync<EnableProjectResponse>(req, "EnableProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query alert information details.
         /// </summary>
         /// <param name="req"><see cref="GetAlarmMessageRequest"/></param>
@@ -533,6 +1121,132 @@ namespace TencentCloud.Wedata.V20250806
         public GetCodeFileResponse GetCodeFileSync(GetCodeFileRequest req)
         {
             return InternalRequestAsync<GetCodeFileResponse>(req, "GetCodeFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve sql folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetCodeFolderRequest"/></param>
+        /// <returns><see cref="GetCodeFolderResponse"/></returns>
+        public Task<GetCodeFolderResponse> GetCodeFolder(GetCodeFolderRequest req)
+        {
+            return InternalRequestAsync<GetCodeFolderResponse>(req, "GetCodeFolder");
+        }
+
+        /// <summary>
+        /// Retrieve sql folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetCodeFolderRequest"/></param>
+        /// <returns><see cref="GetCodeFolderResponse"/></returns>
+        public GetCodeFolderResponse GetCodeFolderSync(GetCodeFolderRequest req)
+        {
+            return InternalRequestAsync<GetCodeFolderResponse>(req, "GetCodeFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve supplementary plan details.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataBackfillPlanRequest"/></param>
+        /// <returns><see cref="GetDataBackfillPlanResponse"/></returns>
+        public Task<GetDataBackfillPlanResponse> GetDataBackfillPlan(GetDataBackfillPlanRequest req)
+        {
+            return InternalRequestAsync<GetDataBackfillPlanResponse>(req, "GetDataBackfillPlan");
+        }
+
+        /// <summary>
+        /// Retrieve supplementary plan details.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataBackfillPlanRequest"/></param>
+        /// <returns><see cref="GetDataBackfillPlanResponse"/></returns>
+        public GetDataBackfillPlanResponse GetDataBackfillPlanSync(GetDataBackfillPlanRequest req)
+        {
+            return InternalRequestAsync<GetDataBackfillPlanResponse>(req, "GetDataBackfillPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view detailed information of the specified data source.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataSourceRequest"/></param>
+        /// <returns><see cref="GetDataSourceResponse"/></returns>
+        public Task<GetDataSourceResponse> GetDataSource(GetDataSourceRequest req)
+        {
+            return InternalRequestAsync<GetDataSourceResponse>(req, "GetDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to view detailed information of the specified data source.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataSourceRequest"/></param>
+        /// <returns><see cref="GetDataSourceResponse"/></returns>
+        public GetDataSourceResponse GetDataSourceSync(GetDataSourceRequest req)
+        {
+            return InternalRequestAsync<GetDataSourceResponse>(req, "GetDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the associated task details of a data source.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataSourceRelatedTasksRequest"/></param>
+        /// <returns><see cref="GetDataSourceRelatedTasksResponse"/></returns>
+        public Task<GetDataSourceRelatedTasksResponse> GetDataSourceRelatedTasks(GetDataSourceRelatedTasksRequest req)
+        {
+            return InternalRequestAsync<GetDataSourceRelatedTasksResponse>(req, "GetDataSourceRelatedTasks");
+        }
+
+        /// <summary>
+        /// Query the associated task details of a data source.
+        /// </summary>
+        /// <param name="req"><see cref="GetDataSourceRelatedTasksRequest"/></param>
+        /// <returns><see cref="GetDataSourceRelatedTasksResponse"/></returns>
+        public GetDataSourceRelatedTasksResponse GetDataSourceRelatedTasksSync(GetDataSourceRelatedTasksRequest req)
+        {
+            return InternalRequestAsync<GetDataSourceRelatedTasksResponse>(req, "GetDataSourceRelatedTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the current user's maximum permission scope for the CodeStudio entity.
+        /// </summary>
+        /// <param name="req"><see cref="GetMyCodeMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyCodeMaxPermissionResponse"/></returns>
+        public Task<GetMyCodeMaxPermissionResponse> GetMyCodeMaxPermission(GetMyCodeMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyCodeMaxPermissionResponse>(req, "GetMyCodeMaxPermission");
+        }
+
+        /// <summary>
+        /// View the current user's maximum permission scope for the CodeStudio entity.
+        /// </summary>
+        /// <param name="req"><see cref="GetMyCodeMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyCodeMaxPermissionResponse"/></returns>
+        public GetMyCodeMaxPermissionResponse GetMyCodeMaxPermissionSync(GetMyCodeMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyCodeMaxPermissionResponse>(req, "GetMyCodeMaxPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Check the current user's maximum permission scope for the workflow folder recursively.
+        /// </summary>
+        /// <param name="req"><see cref="GetMyWorkflowMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyWorkflowMaxPermissionResponse"/></returns>
+        public Task<GetMyWorkflowMaxPermissionResponse> GetMyWorkflowMaxPermission(GetMyWorkflowMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyWorkflowMaxPermissionResponse>(req, "GetMyWorkflowMaxPermission");
+        }
+
+        /// <summary>
+        /// Check the current user's maximum permission scope for the workflow folder recursively.
+        /// </summary>
+        /// <param name="req"><see cref="GetMyWorkflowMaxPermissionRequest"/></param>
+        /// <returns><see cref="GetMyWorkflowMaxPermissionResponse"/></returns>
+        public GetMyWorkflowMaxPermissionResponse GetMyWorkflowMaxPermissionSync(GetMyWorkflowMaxPermissionRequest req)
+        {
+            return InternalRequestAsync<GetMyWorkflowMaxPermissionResponse>(req, "GetMyWorkflowMaxPermission")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +1335,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Query workflow task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetOpsTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetOpsTriggerWorkflowResponse"/></returns>
+        public Task<GetOpsTriggerWorkflowResponse> GetOpsTriggerWorkflow(GetOpsTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetOpsTriggerWorkflowResponse>(req, "GetOpsTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// Query workflow task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetOpsTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetOpsTriggerWorkflowResponse"/></returns>
+        public GetOpsTriggerWorkflowResponse GetOpsTriggerWorkflowSync(GetOpsTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetOpsTriggerWorkflowResponse>(req, "GetOpsTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain workflow scheduling details based on the workflow id.
         /// </summary>
         /// <param name="req"><see cref="GetOpsWorkflowRequest"/></param>
@@ -638,6 +1373,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetOpsWorkflowResponse GetOpsWorkflowSync(GetOpsWorkflowRequest req)
         {
             return InternalRequestAsync<GetOpsWorkflowResponse>(req, "GetOpsWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get project information.
+        /// </summary>
+        /// <param name="req"><see cref="GetProjectRequest"/></param>
+        /// <returns><see cref="GetProjectResponse"/></returns>
+        public Task<GetProjectResponse> GetProject(GetProjectRequest req)
+        {
+            return InternalRequestAsync<GetProjectResponse>(req, "GetProject");
+        }
+
+        /// <summary>
+        /// This API is used to get project information.
+        /// </summary>
+        /// <param name="req"><see cref="GetProjectRequest"/></param>
+        /// <returns><see cref="GetProjectResponse"/></returns>
+        public GetProjectResponse GetProjectSync(GetProjectRequest req)
+        {
+            return InternalRequestAsync<GetProjectResponse>(req, "GetProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +1419,69 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Query a resource file folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceFolderRequest"/></param>
+        /// <returns><see cref="GetResourceFolderResponse"/></returns>
+        public Task<GetResourceFolderResponse> GetResourceFolder(GetResourceFolderRequest req)
+        {
+            return InternalRequestAsync<GetResourceFolderResponse>(req, "GetResourceFolder");
+        }
+
+        /// <summary>
+        /// Query a resource file folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceFolderRequest"/></param>
+        /// <returns><see cref="GetResourceFolderResponse"/></returns>
+        public GetResourceFolderResponse GetResourceFolderSync(GetResourceFolderRequest req)
+        {
+            return InternalRequestAsync<GetResourceFolderResponse>(req, "GetResourceFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view specified execution resource group monitoring metrics.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceGroupMetricsRequest"/></param>
+        /// <returns><see cref="GetResourceGroupMetricsResponse"/></returns>
+        public Task<GetResourceGroupMetricsResponse> GetResourceGroupMetrics(GetResourceGroupMetricsRequest req)
+        {
+            return InternalRequestAsync<GetResourceGroupMetricsResponse>(req, "GetResourceGroupMetrics");
+        }
+
+        /// <summary>
+        /// This API is used to view specified execution resource group monitoring metrics.
+        /// </summary>
+        /// <param name="req"><see cref="GetResourceGroupMetricsRequest"/></param>
+        /// <returns><see cref="GetResourceGroupMetricsResponse"/></returns>
+        public GetResourceGroupMetricsResponse GetResourceGroupMetricsSync(GetResourceGroupMetricsRequest req)
+        {
+            return InternalRequestAsync<GetResourceGroupMetricsResponse>(req, "GetResourceGroupMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve sql folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLFolderRequest"/></param>
+        /// <returns><see cref="GetSQLFolderResponse"/></returns>
+        public Task<GetSQLFolderResponse> GetSQLFolder(GetSQLFolderRequest req)
+        {
+            return InternalRequestAsync<GetSQLFolderResponse>(req, "GetSQLFolder");
+        }
+
+        /// <summary>
+        /// Retrieve sql folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetSQLFolderRequest"/></param>
+        /// <returns><see cref="GetSQLFolderResponse"/></returns>
+        public GetSQLFolderResponse GetSQLFolderSync(GetSQLFolderRequest req)
+        {
+            return InternalRequestAsync<GetSQLFolderResponse>(req, "GetSQLFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query script details.
         /// </summary>
         /// <param name="req"><see cref="GetSQLScriptRequest"/></param>
@@ -680,6 +1499,48 @@ namespace TencentCloud.Wedata.V20250806
         public GetSQLScriptResponse GetSQLScriptSync(GetSQLScriptRequest req)
         {
             return InternalRequestAsync<GetSQLScriptResponse>(req, "GetSQLScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query table details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTableRequest"/></param>
+        /// <returns><see cref="GetTableResponse"/></returns>
+        public Task<GetTableResponse> GetTable(GetTableRequest req)
+        {
+            return InternalRequestAsync<GetTableResponse>(req, "GetTable");
+        }
+
+        /// <summary>
+        /// Query table details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTableRequest"/></param>
+        /// <returns><see cref="GetTableResponse"/></returns>
+        public GetTableResponse GetTableSync(GetTableRequest req)
+        {
+            return InternalRequestAsync<GetTableResponse>(req, "GetTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of all fields in a table.
+        /// </summary>
+        /// <param name="req"><see cref="GetTableColumnsRequest"/></param>
+        /// <returns><see cref="GetTableColumnsResponse"/></returns>
+        public Task<GetTableColumnsResponse> GetTableColumns(GetTableColumnsRequest req)
+        {
+            return InternalRequestAsync<GetTableColumnsResponse>(req, "GetTableColumns");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of all fields in a table.
+        /// </summary>
+        /// <param name="req"><see cref="GetTableColumnsRequest"/></param>
+        /// <returns><see cref="GetTableColumnsResponse"/></returns>
+        public GetTableColumnsResponse GetTableColumnsSync(GetTableColumnsRequest req)
+        {
+            return InternalRequestAsync<GetTableColumnsResponse>(req, "GetTableColumns")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -722,6 +1583,27 @@ namespace TencentCloud.Wedata.V20250806
         public GetTaskCodeResponse GetTaskCodeSync(GetTaskCodeRequest req)
         {
             return InternalRequestAsync<GetTaskCodeResponse>(req, "GetTaskCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query Task Folder Details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskFolderRequest"/></param>
+        /// <returns><see cref="GetTaskFolderResponse"/></returns>
+        public Task<GetTaskFolderResponse> GetTaskFolder(GetTaskFolderRequest req)
+        {
+            return InternalRequestAsync<GetTaskFolderResponse>(req, "GetTaskFolder");
+        }
+
+        /// <summary>
+        /// Query Task Folder Details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskFolderRequest"/></param>
+        /// <returns><see cref="GetTaskFolderResponse"/></returns>
+        public GetTaskFolderResponse GetTaskFolderSync(GetTaskFolderRequest req)
+        {
+            return InternalRequestAsync<GetTaskFolderResponse>(req, "GetTaskFolder")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,6 +1671,132 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to retrieve task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskResponse"/></returns>
+        public Task<GetTriggerTaskResponse> GetTriggerTask(GetTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskResponse>(req, "GetTriggerTask");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskResponse"/></returns>
+        public GetTriggerTaskResponse GetTriggerTaskSync(GetTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskResponse>(req, "GetTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve workflow scheduling task code.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskCodeRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskCodeResponse"/></returns>
+        public Task<GetTriggerTaskCodeResponse> GetTriggerTaskCode(GetTriggerTaskCodeRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskCodeResponse>(req, "GetTriggerTaskCode");
+        }
+
+        /// <summary>
+        /// Retrieve workflow scheduling task code.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskCodeRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskCodeResponse"/></returns>
+        public GetTriggerTaskCodeResponse GetTriggerTaskCodeSync(GetTriggerTaskCodeRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskCodeResponse>(req, "GetTriggerTaskCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query task execution details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRunRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskRunResponse"/></returns>
+        public Task<GetTriggerTaskRunResponse> GetTriggerTaskRun(GetTriggerTaskRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskRunResponse>(req, "GetTriggerTaskRun");
+        }
+
+        /// <summary>
+        /// Query task execution details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskRunRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskRunResponse"/></returns>
+        public GetTriggerTaskRunResponse GetTriggerTaskRunSync(GetTriggerTaskRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskRunResponse>(req, "GetTriggerTaskRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get task version list.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskVersionRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskVersionResponse"/></returns>
+        public Task<GetTriggerTaskVersionResponse> GetTriggerTaskVersion(GetTriggerTaskVersionRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskVersionResponse>(req, "GetTriggerTaskVersion");
+        }
+
+        /// <summary>
+        /// Get task version list.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerTaskVersionRequest"/></param>
+        /// <returns><see cref="GetTriggerTaskVersionResponse"/></returns>
+        public GetTriggerTaskVersionResponse GetTriggerTaskVersionSync(GetTriggerTaskVersionRequest req)
+        {
+            return InternalRequestAsync<GetTriggerTaskVersionResponse>(req, "GetTriggerTaskVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve workflow information.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowResponse"/></returns>
+        public Task<GetTriggerWorkflowResponse> GetTriggerWorkflow(GetTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowResponse>(req, "GetTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// Retrieve workflow information.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowResponse"/></returns>
+        public GetTriggerWorkflowResponse GetTriggerWorkflowSync(GetTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowResponse>(req, "GetTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query workflow task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowRunResponse"/></returns>
+        public Task<GetTriggerWorkflowRunResponse> GetTriggerWorkflowRun(GetTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowRunResponse>(req, "GetTriggerWorkflowRun");
+        }
+
+        /// <summary>
+        /// Query workflow task details.
+        /// </summary>
+        /// <param name="req"><see cref="GetTriggerWorkflowRunRequest"/></param>
+        /// <returns><see cref="GetTriggerWorkflowRunResponse"/></returns>
+        public GetTriggerWorkflowRunResponse GetTriggerWorkflowRunSync(GetTriggerWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<GetTriggerWorkflowRunResponse>(req, "GetTriggerWorkflowRun")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retrieve workflow information.
         /// </summary>
         /// <param name="req"><see cref="GetWorkflowRequest"/></param>
@@ -806,6 +1814,48 @@ namespace TencentCloud.Wedata.V20250806
         public GetWorkflowResponse GetWorkflowSync(GetWorkflowRequest req)
         {
             return InternalRequestAsync<GetWorkflowResponse>(req, "GetWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkflowFolderRequest"/></param>
+        /// <returns><see cref="GetWorkflowFolderResponse"/></returns>
+        public Task<GetWorkflowFolderResponse> GetWorkflowFolder(GetWorkflowFolderRequest req)
+        {
+            return InternalRequestAsync<GetWorkflowFolderResponse>(req, "GetWorkflowFolder");
+        }
+
+        /// <summary>
+        /// Query folder details.
+        /// </summary>
+        /// <param name="req"><see cref="GetWorkflowFolderRequest"/></param>
+        /// <returns><see cref="GetWorkflowFolderResponse"/></returns>
+        public GetWorkflowFolderResponse GetWorkflowFolderSync(GetWorkflowFolderRequest req)
+        {
+            return InternalRequestAsync<GetWorkflowFolderResponse>(req, "GetWorkflowFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify project user roles.
+        /// </summary>
+        /// <param name="req"><see cref="GrantMemberProjectRoleRequest"/></param>
+        /// <returns><see cref="GrantMemberProjectRoleResponse"/></returns>
+        public Task<GrantMemberProjectRoleResponse> GrantMemberProjectRole(GrantMemberProjectRoleRequest req)
+        {
+            return InternalRequestAsync<GrantMemberProjectRoleResponse>(req, "GrantMemberProjectRole");
+        }
+
+        /// <summary>
+        /// Modify project user roles.
+        /// </summary>
+        /// <param name="req"><see cref="GrantMemberProjectRoleRequest"/></param>
+        /// <returns><see cref="GrantMemberProjectRoleResponse"/></returns>
+        public GrantMemberProjectRoleResponse GrantMemberProjectRoleSync(GrantMemberProjectRoleRequest req)
+        {
+            return InternalRequestAsync<GrantMemberProjectRoleResponse>(req, "GrantMemberProjectRole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -831,6 +1881,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Terminate running.
+        /// </summary>
+        /// <param name="req"><see cref="KillTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="KillTriggerWorkflowRunsResponse"/></returns>
+        public Task<KillTriggerWorkflowRunsResponse> KillTriggerWorkflowRuns(KillTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<KillTriggerWorkflowRunsResponse>(req, "KillTriggerWorkflowRuns");
+        }
+
+        /// <summary>
+        /// Terminate running.
+        /// </summary>
+        /// <param name="req"><see cref="KillTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="KillTriggerWorkflowRunsResponse"/></returns>
+        public KillTriggerWorkflowRunsResponse KillTriggerWorkflowRunsSync(KillTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<KillTriggerWorkflowRunsResponse>(req, "KillTriggerWorkflowRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to search the alarm information list.
         /// </summary>
         /// <param name="req"><see cref="ListAlarmMessagesRequest"/></param>
@@ -848,6 +1919,27 @@ namespace TencentCloud.Wedata.V20250806
         public ListAlarmMessagesResponse ListAlarmMessagesSync(ListAlarmMessagesRequest req)
         {
             return InternalRequestAsync<ListAlarmMessagesResponse>(req, "ListAlarmMessages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve asset catalog info.
+        /// </summary>
+        /// <param name="req"><see cref="ListCatalogRequest"/></param>
+        /// <returns><see cref="ListCatalogResponse"/></returns>
+        public Task<ListCatalogResponse> ListCatalog(ListCatalogRequest req)
+        {
+            return InternalRequestAsync<ListCatalogResponse>(req, "ListCatalog");
+        }
+
+        /// <summary>
+        /// Retrieve asset catalog info.
+        /// </summary>
+        /// <param name="req"><see cref="ListCatalogRequest"/></param>
+        /// <returns><see cref="ListCatalogResponse"/></returns>
+        public ListCatalogResponse ListCatalogSync(ListCatalogRequest req)
+        {
+            return InternalRequestAsync<ListCatalogResponse>(req, "ListCatalog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +1965,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// View CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="ListCodePermissionsRequest"/></param>
+        /// <returns><see cref="ListCodePermissionsResponse"/></returns>
+        public Task<ListCodePermissionsResponse> ListCodePermissions(ListCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<ListCodePermissionsResponse>(req, "ListCodePermissions");
+        }
+
+        /// <summary>
+        /// View CodeStudio entity permission.
+        /// </summary>
+        /// <param name="req"><see cref="ListCodePermissionsRequest"/></param>
+        /// <returns><see cref="ListCodePermissionsResponse"/></returns>
+        public ListCodePermissionsResponse ListCodePermissionsSync(ListCodePermissionsRequest req)
+        {
+            return InternalRequestAsync<ListCodePermissionsResponse>(req, "ListCodePermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain table field lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListColumnLineageRequest"/></param>
+        /// <returns><see cref="ListColumnLineageResponse"/></returns>
+        public Task<ListColumnLineageResponse> ListColumnLineage(ListColumnLineageRequest req)
+        {
+            return InternalRequestAsync<ListColumnLineageResponse>(req, "ListColumnLineage");
+        }
+
+        /// <summary>
+        /// This API is used to obtain table field lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListColumnLineageRequest"/></param>
+        /// <returns><see cref="ListColumnLineageResponse"/></returns>
+        public ListColumnLineageResponse ListColumnLineageSync(ListColumnLineageRequest req)
+        {
+            return InternalRequestAsync<ListColumnLineageResponse>(req, "ListColumnLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retrieve all instances of a single backfill.
         /// </summary>
         /// <param name="req"><see cref="ListDataBackfillInstancesRequest"/></param>
@@ -890,6 +2024,48 @@ namespace TencentCloud.Wedata.V20250806
         public ListDataBackfillInstancesResponse ListDataBackfillInstancesSync(ListDataBackfillInstancesRequest req)
         {
             return InternalRequestAsync<ListDataBackfillInstancesResponse>(req, "ListDataBackfillInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the data source list in the designated project.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataSourcesRequest"/></param>
+        /// <returns><see cref="ListDataSourcesResponse"/></returns>
+        public Task<ListDataSourcesResponse> ListDataSources(ListDataSourcesRequest req)
+        {
+            return InternalRequestAsync<ListDataSourcesResponse>(req, "ListDataSources");
+        }
+
+        /// <summary>
+        /// This API is used to query the data source list in the designated project.
+        /// </summary>
+        /// <param name="req"><see cref="ListDataSourcesRequest"/></param>
+        /// <returns><see cref="ListDataSourcesResponse"/></returns>
+        public ListDataSourcesResponse ListDataSourcesSync(ListDataSourcesRequest req)
+        {
+            return InternalRequestAsync<ListDataSourcesResponse>(req, "ListDataSources")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset database info.
+        /// </summary>
+        /// <param name="req"><see cref="ListDatabaseRequest"/></param>
+        /// <returns><see cref="ListDatabaseResponse"/></returns>
+        public Task<ListDatabaseResponse> ListDatabase(ListDatabaseRequest req)
+        {
+            return InternalRequestAsync<ListDatabaseResponse>(req, "ListDatabase");
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset database info.
+        /// </summary>
+        /// <param name="req"><see cref="ListDatabaseRequest"/></param>
+        /// <returns><see cref="ListDatabaseResponse"/></returns>
+        public ListDatabaseResponse ListDatabaseSync(ListDatabaseRequest req)
+        {
+            return InternalRequestAsync<ListDatabaseResponse>(req, "ListDatabase")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -957,6 +2133,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to retrieve direct downstream task details.
+        /// </summary>
+        /// <param name="req"><see cref="ListDownstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListDownstreamTriggerTasksResponse"/></returns>
+        public Task<ListDownstreamTriggerTasksResponse> ListDownstreamTriggerTasks(ListDownstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListDownstreamTriggerTasksResponse>(req, "ListDownstreamTriggerTasks");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve direct downstream task details.
+        /// </summary>
+        /// <param name="req"><see cref="ListDownstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListDownstreamTriggerTasksResponse"/></returns>
+        public ListDownstreamTriggerTasksResponse ListDownstreamTriggerTasksSync(ListDownstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListDownstreamTriggerTasksResponse>(req, "ListDownstreamTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListLineageRequest"/></param>
+        /// <returns><see cref="ListLineageResponse"/></returns>
+        public Task<ListLineageResponse> ListLineage(ListLineageRequest req)
+        {
+            return InternalRequestAsync<ListLineageResponse>(req, "ListLineage");
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListLineageRequest"/></param>
+        /// <returns><see cref="ListLineageResponse"/></returns>
+        public ListLineageResponse ListLineageSync(ListLineageRequest req)
+        {
+            return InternalRequestAsync<ListLineageResponse>(req, "ListLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the alarm rule list.
         /// </summary>
         /// <param name="req"><see cref="ListOpsAlarmRulesRequest"/></param>
@@ -999,6 +2217,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to query the list of workflows.
+        /// </summary>
+        /// <param name="req"><see cref="ListOpsTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListOpsTriggerWorkflowsResponse"/></returns>
+        public Task<ListOpsTriggerWorkflowsResponse> ListOpsTriggerWorkflows(ListOpsTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListOpsTriggerWorkflowsResponse>(req, "ListOpsTriggerWorkflows");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of workflows.
+        /// </summary>
+        /// <param name="req"><see cref="ListOpsTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListOpsTriggerWorkflowsResponse"/></returns>
+        public ListOpsTriggerWorkflowsResponse ListOpsTriggerWorkflowsSync(ListOpsTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListOpsTriggerWorkflowsResponse>(req, "ListOpsTriggerWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Get Workflows under a Project by Project ID.
         /// </summary>
         /// <param name="req"><see cref="ListOpsWorkflowsRequest"/></param>
@@ -1016,6 +2255,132 @@ namespace TencentCloud.Wedata.V20250806
         public ListOpsWorkflowsResponse ListOpsWorkflowsSync(ListOpsWorkflowsRequest req)
         {
             return InternalRequestAsync<ListOpsWorkflowsResponse>(req, "ListOpsWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve authorizable permission details.
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionsRequest"/></param>
+        /// <returns><see cref="ListPermissionsResponse"/></returns>
+        public Task<ListPermissionsResponse> ListPermissions(ListPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListPermissionsResponse>(req, "ListPermissions");
+        }
+
+        /// <summary>
+        /// Retrieve authorizable permission details.
+        /// </summary>
+        /// <param name="req"><see cref="ListPermissionsRequest"/></param>
+        /// <returns><see cref="ListPermissionsResponse"/></returns>
+        public ListPermissionsResponse ListPermissionsSync(ListPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListPermissionsResponse>(req, "ListPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListProcessLineageRequest"/></param>
+        /// <returns><see cref="ListProcessLineageResponse"/></returns>
+        public Task<ListProcessLineageResponse> ListProcessLineage(ListProcessLineageRequest req)
+        {
+            return InternalRequestAsync<ListProcessLineageResponse>(req, "ListProcessLineage");
+        }
+
+        /// <summary>
+        /// This API is used to obtain asset lineage information.
+        /// </summary>
+        /// <param name="req"><see cref="ListProcessLineageRequest"/></param>
+        /// <returns><see cref="ListProcessLineageResponse"/></returns>
+        public ListProcessLineageResponse ListProcessLineageSync(ListProcessLineageRequest req)
+        {
+            return InternalRequestAsync<ListProcessLineageResponse>(req, "ListProcessLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the user under the project with pagination return.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectMembersRequest"/></param>
+        /// <returns><see cref="ListProjectMembersResponse"/></returns>
+        public Task<ListProjectMembersResponse> ListProjectMembers(ListProjectMembersRequest req)
+        {
+            return InternalRequestAsync<ListProjectMembersResponse>(req, "ListProjectMembers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the user under the project with pagination return.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectMembersRequest"/></param>
+        /// <returns><see cref="ListProjectMembersResponse"/></returns>
+        public ListProjectMembersResponse ListProjectMembersSync(ListProjectMembersRequest req)
+        {
+            return InternalRequestAsync<ListProjectMembersResponse>(req, "ListProjectMembers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get role list info.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectRolesRequest"/></param>
+        /// <returns><see cref="ListProjectRolesResponse"/></returns>
+        public Task<ListProjectRolesResponse> ListProjectRoles(ListProjectRolesRequest req)
+        {
+            return InternalRequestAsync<ListProjectRolesResponse>(req, "ListProjectRoles");
+        }
+
+        /// <summary>
+        /// Get role list info.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectRolesRequest"/></param>
+        /// <returns><see cref="ListProjectRolesResponse"/></returns>
+        public ListProjectRolesResponse ListProjectRolesSync(ListProjectRolesRequest req)
+        {
+            return InternalRequestAsync<ListProjectRolesResponse>(req, "ListProjectRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The project list in the tenant's global scope is irrelevant to the user's viewing range.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectsRequest"/></param>
+        /// <returns><see cref="ListProjectsResponse"/></returns>
+        public Task<ListProjectsResponse> ListProjects(ListProjectsRequest req)
+        {
+            return InternalRequestAsync<ListProjectsResponse>(req, "ListProjects");
+        }
+
+        /// <summary>
+        /// The project list in the tenant's global scope is irrelevant to the user's viewing range.
+        /// </summary>
+        /// <param name="req"><see cref="ListProjectsRequest"/></param>
+        /// <returns><see cref="ListProjectsResponse"/></returns>
+        public ListProjectsResponse ListProjectsSync(ListProjectsRequest req)
+        {
+            return InternalRequestAsync<ListProjectsResponse>(req, "ListProjects")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// [Filter criteria] {template Name, query usage with Keyword fuzzy matching} {template type, 1. system template 2. custom template} {quality detection dimensions (QualityDims), 1. accuracy 2. uniqueness 3. integrity 4. consistency 5. timeliness 6. validity} [Sorting field] {citation sorting type, sort ASC or DESC based on the number of references}.
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ListQualityRuleTemplatesResponse"/></returns>
+        public Task<ListQualityRuleTemplatesResponse> ListQualityRuleTemplates(ListQualityRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleTemplatesResponse>(req, "ListQualityRuleTemplates");
+        }
+
+        /// <summary>
+        /// [Filter criteria] {template Name, query usage with Keyword fuzzy matching} {template type, 1. system template 2. custom template} {quality detection dimensions (QualityDims), 1. accuracy 2. uniqueness 3. integrity 4. consistency 5. timeliness 6. validity} [Sorting field] {citation sorting type, sort ASC or DESC based on the number of references}.
+        /// </summary>
+        /// <param name="req"><see cref="ListQualityRuleTemplatesRequest"/></param>
+        /// <returns><see cref="ListQualityRuleTemplatesResponse"/></returns>
+        public ListQualityRuleTemplatesResponse ListQualityRuleTemplatesSync(ListQualityRuleTemplatesRequest req)
+        {
+            return InternalRequestAsync<ListQualityRuleTemplatesResponse>(req, "ListQualityRuleTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +2427,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to query the execution resource group list.
+        /// </summary>
+        /// <param name="req"><see cref="ListResourceGroupsRequest"/></param>
+        /// <returns><see cref="ListResourceGroupsResponse"/></returns>
+        public Task<ListResourceGroupsResponse> ListResourceGroups(ListResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<ListResourceGroupsResponse>(req, "ListResourceGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query the execution resource group list.
+        /// </summary>
+        /// <param name="req"><see cref="ListResourceGroupsRequest"/></param>
+        /// <returns><see cref="ListResourceGroupsResponse"/></returns>
+        public ListResourceGroupsResponse ListResourceGroupsSync(ListResourceGroupsRequest req)
+        {
+            return InternalRequestAsync<ListResourceGroupsResponse>(req, "ListResourceGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retrieve the content list of an sql folder
         /// </summary>
         /// <param name="req"><see cref="ListSQLFolderContentsRequest"/></param>
@@ -1100,6 +2486,69 @@ namespace TencentCloud.Wedata.V20250806
         public ListSQLScriptRunsResponse ListSQLScriptRunsSync(ListSQLScriptRunsRequest req)
         {
             return InternalRequestAsync<ListSQLScriptRunsResponse>(req, "ListSQLScriptRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the asset database Schema information.
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemaRequest"/></param>
+        /// <returns><see cref="ListSchemaResponse"/></returns>
+        public Task<ListSchemaResponse> ListSchema(ListSchemaRequest req)
+        {
+            return InternalRequestAsync<ListSchemaResponse>(req, "ListSchema");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the asset database Schema information.
+        /// </summary>
+        /// <param name="req"><see cref="ListSchemaRequest"/></param>
+        /// <returns><see cref="ListSchemaResponse"/></returns>
+        public ListSchemaResponse ListSchemaSync(ListSchemaRequest req)
+        {
+            return InternalRequestAsync<ListSchemaResponse>(req, "ListSchema")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain table information of assets.
+        /// </summary>
+        /// <param name="req"><see cref="ListTableRequest"/></param>
+        /// <returns><see cref="ListTableResponse"/></returns>
+        public Task<ListTableResponse> ListTable(ListTableRequest req)
+        {
+            return InternalRequestAsync<ListTableResponse>(req, "ListTable");
+        }
+
+        /// <summary>
+        /// This API is used to obtain table information of assets.
+        /// </summary>
+        /// <param name="req"><see cref="ListTableRequest"/></param>
+        /// <returns><see cref="ListTableResponse"/></returns>
+        public ListTableResponse ListTableSync(ListTableRequest req)
+        {
+            return InternalRequestAsync<ListTableResponse>(req, "ListTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query Task Folder List.
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskFoldersRequest"/></param>
+        /// <returns><see cref="ListTaskFoldersResponse"/></returns>
+        public Task<ListTaskFoldersResponse> ListTaskFolders(ListTaskFoldersRequest req)
+        {
+            return InternalRequestAsync<ListTaskFoldersResponse>(req, "ListTaskFolders");
+        }
+
+        /// <summary>
+        /// Query Task Folder List.
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskFoldersRequest"/></param>
+        /// <returns><see cref="ListTaskFoldersResponse"/></returns>
+        public ListTaskFoldersResponse ListTaskFoldersSync(ListTaskFoldersRequest req)
+        {
+            return InternalRequestAsync<ListTaskFoldersResponse>(req, "ListTaskFolders")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1188,6 +2637,111 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Get the role list of all root accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ListTenantRolesRequest"/></param>
+        /// <returns><see cref="ListTenantRolesResponse"/></returns>
+        public Task<ListTenantRolesResponse> ListTenantRoles(ListTenantRolesRequest req)
+        {
+            return InternalRequestAsync<ListTenantRolesResponse>(req, "ListTenantRoles");
+        }
+
+        /// <summary>
+        /// Get the role list of all root accounts.
+        /// </summary>
+        /// <param name="req"><see cref="ListTenantRolesRequest"/></param>
+        /// <returns><see cref="ListTenantRolesResponse"/></returns>
+        public ListTenantRolesResponse ListTenantRolesSync(ListTenantRolesRequest req)
+        {
+            return InternalRequestAsync<ListTenantRolesResponse>(req, "ListTenantRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Task save version list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskVersionsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskVersionsResponse"/></returns>
+        public Task<ListTriggerTaskVersionsResponse> ListTriggerTaskVersions(ListTriggerTaskVersionsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskVersionsResponse>(req, "ListTriggerTaskVersions");
+        }
+
+        /// <summary>
+        /// Task save version list.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTaskVersionsRequest"/></param>
+        /// <returns><see cref="ListTriggerTaskVersionsResponse"/></returns>
+        public ListTriggerTaskVersionsResponse ListTriggerTaskVersionsSync(ListTriggerTaskVersionsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTaskVersionsResponse>(req, "ListTriggerTaskVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query job pagination information.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListTriggerTasksResponse"/></returns>
+        public Task<ListTriggerTasksResponse> ListTriggerTasks(ListTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTasksResponse>(req, "ListTriggerTasks");
+        }
+
+        /// <summary>
+        /// Query job pagination information.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListTriggerTasksResponse"/></returns>
+        public ListTriggerTasksResponse ListTriggerTasksSync(ListTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListTriggerTasksResponse>(req, "ListTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query workflow operation.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowRunsResponse"/></returns>
+        public Task<ListTriggerWorkflowRunsResponse> ListTriggerWorkflowRuns(ListTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowRunsResponse>(req, "ListTriggerWorkflowRuns");
+        }
+
+        /// <summary>
+        /// Query workflow operation.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowRunsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowRunsResponse"/></returns>
+        public ListTriggerWorkflowRunsResponse ListTriggerWorkflowRunsSync(ListTriggerWorkflowRunsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowRunsResponse>(req, "ListTriggerWorkflowRuns")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of workflows.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowsResponse"/></returns>
+        public Task<ListTriggerWorkflowsResponse> ListTriggerWorkflows(ListTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowsResponse>(req, "ListTriggerWorkflows");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of workflows.
+        /// </summary>
+        /// <param name="req"><see cref="ListTriggerWorkflowsRequest"/></param>
+        /// <returns><see cref="ListTriggerWorkflowsResponse"/></returns>
+        public ListTriggerWorkflowsResponse ListTriggerWorkflowsSync(ListTriggerWorkflowsRequest req)
+        {
+            return InternalRequestAsync<ListTriggerWorkflowsResponse>(req, "ListTriggerWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retrieve task direct upstream.
         /// </summary>
         /// <param name="req"><see cref="ListUpstreamOpsTasksRequest"/></param>
@@ -1251,6 +2805,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// This API is used to retrieve direct upstream tasks.
+        /// </summary>
+        /// <param name="req"><see cref="ListUpstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListUpstreamTriggerTasksResponse"/></returns>
+        public Task<ListUpstreamTriggerTasksResponse> ListUpstreamTriggerTasks(ListUpstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListUpstreamTriggerTasksResponse>(req, "ListUpstreamTriggerTasks");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve direct upstream tasks.
+        /// </summary>
+        /// <param name="req"><see cref="ListUpstreamTriggerTasksRequest"/></param>
+        /// <returns><see cref="ListUpstreamTriggerTasksResponse"/></returns>
+        public ListUpstreamTriggerTasksResponse ListUpstreamTriggerTasksSync(ListUpstreamTriggerTasksRequest req)
+        {
+            return InternalRequestAsync<ListUpstreamTriggerTasksResponse>(req, "ListUpstreamTriggerTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the folder list.
         /// </summary>
         /// <param name="req"><see cref="ListWorkflowFoldersRequest"/></param>
@@ -1268,6 +2843,27 @@ namespace TencentCloud.Wedata.V20250806
         public ListWorkflowFoldersResponse ListWorkflowFoldersSync(ListWorkflowFoldersRequest req)
         {
             return InternalRequestAsync<ListWorkflowFoldersResponse>(req, "ListWorkflowFolders")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query workflow authorization permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="ListWorkflowPermissionsResponse"/></returns>
+        public Task<ListWorkflowPermissionsResponse> ListWorkflowPermissions(ListWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowPermissionsResponse>(req, "ListWorkflowPermissions");
+        }
+
+        /// <summary>
+        /// Query workflow authorization permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ListWorkflowPermissionsRequest"/></param>
+        /// <returns><see cref="ListWorkflowPermissionsResponse"/></returns>
+        public ListWorkflowPermissionsResponse ListWorkflowPermissionsSync(ListWorkflowPermissionsRequest req)
+        {
+            return InternalRequestAsync<ListWorkflowPermissionsResponse>(req, "ListWorkflowPermissions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1314,6 +2910,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// RegisterLineage
+        /// </summary>
+        /// <param name="req"><see cref="RegisterLineageRequest"/></param>
+        /// <returns><see cref="RegisterLineageResponse"/></returns>
+        public Task<RegisterLineageResponse> RegisterLineage(RegisterLineageRequest req)
+        {
+            return InternalRequestAsync<RegisterLineageResponse>(req, "RegisterLineage");
+        }
+
+        /// <summary>
+        /// RegisterLineage
+        /// </summary>
+        /// <param name="req"><see cref="RegisterLineageRequest"/></param>
+        /// <returns><see cref="RegisterLineageResponse"/></returns>
+        public RegisterLineageResponse RegisterLineageSync(RegisterLineageRequest req)
+        {
+            return InternalRequestAsync<RegisterLineageResponse>(req, "RegisterLineage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete project user roles.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMemberProjectRoleRequest"/></param>
+        /// <returns><see cref="RemoveMemberProjectRoleResponse"/></returns>
+        public Task<RemoveMemberProjectRoleResponse> RemoveMemberProjectRole(RemoveMemberProjectRoleRequest req)
+        {
+            return InternalRequestAsync<RemoveMemberProjectRoleResponse>(req, "RemoveMemberProjectRole");
+        }
+
+        /// <summary>
+        /// Delete project user roles.
+        /// </summary>
+        /// <param name="req"><see cref="RemoveMemberProjectRoleRequest"/></param>
+        /// <returns><see cref="RemoveMemberProjectRoleResponse"/></returns>
+        public RemoveMemberProjectRoleResponse RemoveMemberProjectRoleSync(RemoveMemberProjectRoleRequest req)
+        {
+            return InternalRequestAsync<RemoveMemberProjectRoleResponse>(req, "RemoveMemberProjectRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to batch rerun instances asynchronously.
         /// </summary>
         /// <param name="req"><see cref="RerunTaskInstancesAsyncRequest"/></param>
@@ -1331,6 +2969,69 @@ namespace TencentCloud.Wedata.V20250806
         public RerunTaskInstancesAsyncResponse RerunTaskInstancesAsyncSync(RerunTaskInstancesAsyncRequest req)
         {
             return InternalRequestAsync<RerunTaskInstancesAsyncResponse>(req, "RerunTaskInstancesAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Rerun an operation.
+        /// </summary>
+        /// <param name="req"><see cref="RerunTriggerWorkflowRunAsyncRequest"/></param>
+        /// <returns><see cref="RerunTriggerWorkflowRunAsyncResponse"/></returns>
+        public Task<RerunTriggerWorkflowRunAsyncResponse> RerunTriggerWorkflowRunAsync(RerunTriggerWorkflowRunAsyncRequest req)
+        {
+            return InternalRequestAsync<RerunTriggerWorkflowRunAsyncResponse>(req, "RerunTriggerWorkflowRunAsync");
+        }
+
+        /// <summary>
+        /// Rerun an operation.
+        /// </summary>
+        /// <param name="req"><see cref="RerunTriggerWorkflowRunAsyncRequest"/></param>
+        /// <returns><see cref="RerunTriggerWorkflowRunAsyncResponse"/></returns>
+        public RerunTriggerWorkflowRunAsyncResponse RerunTriggerWorkflowRunAsyncSync(RerunTriggerWorkflowRunAsyncRequest req)
+        {
+            return InternalRequestAsync<RerunTriggerWorkflowRunAsyncResponse>(req, "RerunTriggerWorkflowRunAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Revoke data source permission.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDataSourceAuthorizationRequest"/></param>
+        /// <returns><see cref="RevokeDataSourceAuthorizationResponse"/></returns>
+        public Task<RevokeDataSourceAuthorizationResponse> RevokeDataSourceAuthorization(RevokeDataSourceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<RevokeDataSourceAuthorizationResponse>(req, "RevokeDataSourceAuthorization");
+        }
+
+        /// <summary>
+        /// Revoke data source permission.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeDataSourceAuthorizationRequest"/></param>
+        /// <returns><see cref="RevokeDataSourceAuthorizationResponse"/></returns>
+        public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorizationSync(RevokeDataSourceAuthorizationRequest req)
+        {
+            return InternalRequestAsync<RevokeDataSourceAuthorizationResponse>(req, "RevokeDataSourceAuthorization")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Authorization Revoked in Catalog mode.
+        /// </summary>
+        /// <param name="req"><see cref="RevokePrivilegesRequest"/></param>
+        /// <returns><see cref="RevokePrivilegesResponse"/></returns>
+        public Task<RevokePrivilegesResponse> RevokePrivileges(RevokePrivilegesRequest req)
+        {
+            return InternalRequestAsync<RevokePrivilegesResponse>(req, "RevokePrivileges");
+        }
+
+        /// <summary>
+        /// Authorization Revoked in Catalog mode.
+        /// </summary>
+        /// <param name="req"><see cref="RevokePrivilegesRequest"/></param>
+        /// <returns><see cref="RevokePrivilegesResponse"/></returns>
+        public RevokePrivilegesResponse RevokePrivilegesSync(RevokePrivilegesRequest req)
+        {
+            return InternalRequestAsync<RevokePrivilegesResponse>(req, "RevokePrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1373,6 +3074,27 @@ namespace TencentCloud.Wedata.V20250806
         public SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsyncSync(SetSuccessTaskInstancesAsyncRequest req)
         {
             return InternalRequestAsync<SetSuccessTaskInstancesAsyncResponse>(req, "SetSuccessTaskInstancesAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Start tasks asynchronously in batch.
+        /// </summary>
+        /// <param name="req"><see cref="StartOpsTasksRequest"/></param>
+        /// <returns><see cref="StartOpsTasksResponse"/></returns>
+        public Task<StartOpsTasksResponse> StartOpsTasks(StartOpsTasksRequest req)
+        {
+            return InternalRequestAsync<StartOpsTasksResponse>(req, "StartOpsTasks");
+        }
+
+        /// <summary>
+        /// Start tasks asynchronously in batch.
+        /// </summary>
+        /// <param name="req"><see cref="StartOpsTasksRequest"/></param>
+        /// <returns><see cref="StartOpsTasksResponse"/></returns>
+        public StartOpsTasksResponse StartOpsTasksSync(StartOpsTasksRequest req)
+        {
+            return InternalRequestAsync<StartOpsTasksResponse>(req, "StartOpsTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1440,6 +3162,27 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Submit a workflow scheduling task.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTriggerTaskRequest"/></param>
+        /// <returns><see cref="SubmitTriggerTaskResponse"/></returns>
+        public Task<SubmitTriggerTaskResponse> SubmitTriggerTask(SubmitTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitTriggerTaskResponse>(req, "SubmitTriggerTask");
+        }
+
+        /// <summary>
+        /// Submit a workflow scheduling task.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitTriggerTaskRequest"/></param>
+        /// <returns><see cref="SubmitTriggerTaskResponse"/></returns>
+        public SubmitTriggerTaskResponse SubmitTriggerTaskSync(SubmitTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitTriggerTaskResponse>(req, "SubmitTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update a code file.
         /// </summary>
         /// <param name="req"><see cref="UpdateCodeFileRequest"/></param>
@@ -1478,6 +3221,27 @@ namespace TencentCloud.Wedata.V20250806
         public UpdateCodeFolderResponse UpdateCodeFolderSync(UpdateCodeFolderRequest req)
         {
             return InternalRequestAsync<UpdateCodeFolderResponse>(req, "UpdateCodeFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a data source.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataSourceRequest"/></param>
+        /// <returns><see cref="UpdateDataSourceResponse"/></returns>
+        public Task<UpdateDataSourceResponse> UpdateDataSource(UpdateDataSourceRequest req)
+        {
+            return InternalRequestAsync<UpdateDataSourceResponse>(req, "UpdateDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to update a data source.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDataSourceRequest"/></param>
+        /// <returns><see cref="UpdateDataSourceResponse"/></returns>
+        public UpdateDataSourceResponse UpdateDataSourceSync(UpdateDataSourceRequest req)
+        {
+            return InternalRequestAsync<UpdateDataSourceResponse>(req, "UpdateDataSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1524,6 +3288,48 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Query task execution details.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOpsTriggerTasksOwnerRequest"/></param>
+        /// <returns><see cref="UpdateOpsTriggerTasksOwnerResponse"/></returns>
+        public Task<UpdateOpsTriggerTasksOwnerResponse> UpdateOpsTriggerTasksOwner(UpdateOpsTriggerTasksOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateOpsTriggerTasksOwnerResponse>(req, "UpdateOpsTriggerTasksOwner");
+        }
+
+        /// <summary>
+        /// Query task execution details.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOpsTriggerTasksOwnerRequest"/></param>
+        /// <returns><see cref="UpdateOpsTriggerTasksOwnerResponse"/></returns>
+        public UpdateOpsTriggerTasksOwnerResponse UpdateOpsTriggerTasksOwnerSync(UpdateOpsTriggerTasksOwnerRequest req)
+        {
+            return InternalRequestAsync<UpdateOpsTriggerTasksOwnerResponse>(req, "UpdateOpsTriggerTasksOwner")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify project basic information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public Task<UpdateProjectResponse> UpdateProject(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject");
+        }
+
+        /// <summary>
+        /// This API is used to modify project basic information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update a resource file.
         /// </summary>
         /// <param name="req"><see cref="UpdateResourceFileRequest"/></param>
@@ -1545,7 +3351,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// This API is used to update a resource folder.
+        /// Update resource folder.
         /// </summary>
         /// <param name="req"><see cref="UpdateResourceFolderRequest"/></param>
         /// <returns><see cref="UpdateResourceFolderResponse"/></returns>
@@ -1555,13 +3361,34 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// This API is used to update a resource folder.
+        /// Update resource folder.
         /// </summary>
         /// <param name="req"><see cref="UpdateResourceFolderRequest"/></param>
         /// <returns><see cref="UpdateResourceFolderResponse"/></returns>
         public UpdateResourceFolderResponse UpdateResourceFolderSync(UpdateResourceFolderRequest req)
         {
             return InternalRequestAsync<UpdateResourceFolderResponse>(req, "UpdateResourceFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify configurations or renew resources.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateResourceGroupRequest"/></param>
+        /// <returns><see cref="UpdateResourceGroupResponse"/></returns>
+        public Task<UpdateResourceGroupResponse> UpdateResourceGroup(UpdateResourceGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateResourceGroupResponse>(req, "UpdateResourceGroup");
+        }
+
+        /// <summary>
+        /// This API is used to modify configurations or renew resources.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateResourceGroupRequest"/></param>
+        /// <returns><see cref="UpdateResourceGroupResponse"/></returns>
+        public UpdateResourceGroupResponse UpdateResourceGroupSync(UpdateResourceGroupRequest req)
+        {
+            return InternalRequestAsync<UpdateResourceGroupResponse>(req, "UpdateResourceGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1629,6 +3456,132 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
+        /// Update a task folder.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskFolderRequest"/></param>
+        /// <returns><see cref="UpdateTaskFolderResponse"/></returns>
+        public Task<UpdateTaskFolderResponse> UpdateTaskFolder(UpdateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskFolderResponse>(req, "UpdateTaskFolder");
+        }
+
+        /// <summary>
+        /// Update a task folder.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskFolderRequest"/></param>
+        /// <returns><see cref="UpdateTaskFolderResponse"/></returns>
+        public UpdateTaskFolderResponse UpdateTaskFolderSync(UpdateTaskFolderRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskFolderResponse>(req, "UpdateTaskFolder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTaskPartiallyResponse"/></returns>
+        public Task<UpdateTaskPartiallyResponse> UpdateTaskPartially(UpdateTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskPartiallyResponse>(req, "UpdateTaskPartially");
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTaskPartiallyResponse"/></returns>
+        public UpdateTaskPartiallyResponse UpdateTaskPartiallySync(UpdateTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTaskPartiallyResponse>(req, "UpdateTaskPartially")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskResponse"/></returns>
+        public Task<UpdateTriggerTaskResponse> UpdateTriggerTask(UpdateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskResponse>(req, "UpdateTriggerTask");
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskResponse"/></returns>
+        public UpdateTriggerTaskResponse UpdateTriggerTaskSync(UpdateTriggerTaskRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskResponse>(req, "UpdateTriggerTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskPartiallyResponse"/></returns>
+        public Task<UpdateTriggerTaskPartiallyResponse> UpdateTriggerTaskPartially(UpdateTriggerTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskPartiallyResponse>(req, "UpdateTriggerTaskPartially");
+        }
+
+        /// <summary>
+        /// This API is used to update a task.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerTaskPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerTaskPartiallyResponse"/></returns>
+        public UpdateTriggerTaskPartiallyResponse UpdateTriggerTaskPartiallySync(UpdateTriggerTaskPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerTaskPartiallyResponse>(req, "UpdateTriggerTaskPartially")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update workflow, including basic information and workflow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowResponse"/></returns>
+        public Task<UpdateTriggerWorkflowResponse> UpdateTriggerWorkflow(UpdateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowResponse>(req, "UpdateTriggerWorkflow");
+        }
+
+        /// <summary>
+        /// This API is used to update workflow, including basic information and workflow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowResponse"/></returns>
+        public UpdateTriggerWorkflowResponse UpdateTriggerWorkflowSync(UpdateTriggerWorkflowRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowResponse>(req, "UpdateTriggerWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Update workflow (including basic info and workflow parameters).
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowPartiallyResponse"/></returns>
+        public Task<UpdateTriggerWorkflowPartiallyResponse> UpdateTriggerWorkflowPartially(UpdateTriggerWorkflowPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowPartiallyResponse>(req, "UpdateTriggerWorkflowPartially");
+        }
+
+        /// <summary>
+        /// Update workflow (including basic info and workflow parameters).
+        /// </summary>
+        /// <param name="req"><see cref="UpdateTriggerWorkflowPartiallyRequest"/></param>
+        /// <returns><see cref="UpdateTriggerWorkflowPartiallyResponse"/></returns>
+        public UpdateTriggerWorkflowPartiallyResponse UpdateTriggerWorkflowPartiallySync(UpdateTriggerWorkflowPartiallyRequest req)
+        {
+            return InternalRequestAsync<UpdateTriggerWorkflowPartiallyResponse>(req, "UpdateTriggerWorkflowPartially")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update a workflow including basic information and workflow parameters.
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowRequest"/></param>
@@ -1650,7 +3603,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// This API is used to update a workflow folder
+        /// Refresh workflow folder.
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowFolderRequest"/></param>
         /// <returns><see cref="UpdateWorkflowFolderResponse"/></returns>
@@ -1660,7 +3613,7 @@ namespace TencentCloud.Wedata.V20250806
         }
 
         /// <summary>
-        /// This API is used to update a workflow folder
+        /// Refresh workflow folder.
         /// </summary>
         /// <param name="req"><see cref="UpdateWorkflowFolderRequest"/></param>
         /// <returns><see cref="UpdateWorkflowFolderResponse"/></returns>

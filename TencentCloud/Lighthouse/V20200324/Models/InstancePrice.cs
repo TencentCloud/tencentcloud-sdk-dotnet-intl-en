@@ -25,35 +25,40 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Original package unit price.
+        /// <P>Unit price of the package.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalBundlePrice")]
         public float? OriginalBundlePrice{ get; set; }
 
         /// <summary>
-        /// Original price.
+        /// <P>Original price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discount.
+        /// <p>Discount.</p>.
         /// </summary>
         [JsonProperty("Discount")]
-        public long? Discount{ get; set; }
+        public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// <P>Discounted price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Currency unit. Valid values: `CNY` and `USD`.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Price currency unit. valid values: USD.</p>.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
+
+        /// <summary>
+        /// <P>Billing item detail.</p>.
+        /// </summary>
+        [JsonProperty("DetailPrices")]
+        public DetailPrice[] DetailPrices{ get; set; }
 
 
         /// <summary>
@@ -66,6 +71,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
         }
     }
 }

@@ -25,15 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Total original price
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <P>Original total price.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Total discounted price
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <P>Total price after discount.</p><p>unit: usd</p>.
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }

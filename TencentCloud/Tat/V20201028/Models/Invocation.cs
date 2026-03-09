@@ -37,13 +37,23 @@ namespace TencentCloud.Tat.V20201028.Models
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// Execution task status. Valid values:
-        /// <li> PENDING: Pending 
-        /// <li> RUNNING: Running
-        /// <li> SUCCESS: Success
-        /// <li> FAILED: Failed
-        /// <li> TIMEOUT: Command timed out
-        /// <li> PARTIAL_FAILED: Partial failure
+        /// Name of the executed command.
+        /// </summary>
+        [JsonProperty("CommandName")]
+        public string CommandName{ get; set; }
+
+        /// <summary>
+        /// Execution task status. valid values:.
+        /// 
+        /// -PENDING: waiting for distribution.
+        /// - RUNNING: command RUNNING.
+        /// -Canceling.
+        /// -SUCCESS: command success.
+        /// -TIMEOUT: command timeout.
+        /// - FAILED: command FAILED.
+        /// -CANCELLED: all commands canceled.
+        /// -PARTIAL_FAILED: the command partially failed.
+        /// -PARTIAL_CANCELLED: the command is partially canceled.
         /// </summary>
         [JsonProperty("InvocationStatus")]
         public string InvocationStatus{ get; set; }
@@ -61,25 +71,26 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Start time of the execution activity.
+        /// Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the execution activity.
+        /// Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Time when the execution activity is created.
+        /// Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Time when the execution activity is updated.
+        /// Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
@@ -110,6 +121,9 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// Invocation source.
+        /// 
+        /// -USER: originate from user invocation.
+        /// -INVOKER: originate from scheduled execution.
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }
@@ -158,6 +172,7 @@ namespace TencentCloud.Tat.V20201028.Models
         {
             this.SetParamSimple(map, prefix + "InvocationId", this.InvocationId);
             this.SetParamSimple(map, prefix + "CommandId", this.CommandId);
+            this.SetParamSimple(map, prefix + "CommandName", this.CommandName);
             this.SetParamSimple(map, prefix + "InvocationStatus", this.InvocationStatus);
             this.SetParamArrayObj(map, prefix + "InvocationTaskBasicInfoSet.", this.InvocationTaskBasicInfoSet);
             this.SetParamSimple(map, prefix + "Description", this.Description);

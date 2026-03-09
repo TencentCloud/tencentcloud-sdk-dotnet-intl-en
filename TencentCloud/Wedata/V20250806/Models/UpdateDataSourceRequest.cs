@@ -1,0 +1,205 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Wedata.V20250806.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class UpdateDataSourceRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// Data source ID.
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// Project ID.
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// Configuration message of data sources is stored in JSON KV. based on each data source type, the KV storage information varies.
+        /// 
+        /// > deployType: 
+        /// CONNSTR_PUBLICDB (public network instance). 
+        /// CONNSTR_CVMDB (self-built instance).
+        /// Cloud INSTANCE.
+        /// 
+        /// ```
+        /// mysql: self-built instance.
+        /// {
+        ///     "deployType": "CONNSTR_CVMDB",
+        ///     "url": "jdbc:mysql://1.1.1.1:1111/example#test#123456",
+        ///     "username": "root",
+        ///     "password": "example#test#123456",
+        ///     "region": "ap-shanghai",
+        ///     "vpcId": "vpc-kprq42yo",
+        ///     "type": "MYSQL"
+        /// }
+        /// mysql: cloud instance.
+        /// {
+        ///     "instanceid": "cdb-12uxdo5e",
+        ///     "db": "db",
+        ///     "region": "ap-shanghai",
+        ///     "username": "msyql",
+        ///     "password": "example#test#123456",
+        ///     "deployType": "INSTANCE",
+        ///     "type": "TENCENT_MYSQL"
+        /// }
+        /// sql_server: 
+        /// {
+        ///     "deployType": "CONNSTR_PUBLICDB",
+        ///     "url": "jdbc:sqlserver://1.1.1.1:223;example#test#123456",
+        ///     "username": "user_1",
+        ///     "password": "example#test#123456",
+        ///     "type": "SQLSERVER"
+        /// }
+        /// redis:
+        ///     redisType:
+        /// -NO_ACCOUNT (account-free).
+        /// -SELF_ACCOUNT (custom account).
+        /// {
+        ///     "deployType": "CONNSTR_PUBLICDB",
+        ///     "username":""
+        ///     "password": "example#test#123456",
+        ///     "ip": "1.1.1.1",
+        ///     "port": "6379",
+        ///     "redisType": "NO_ACCOUT",
+        ///     "type": "REDIS"
+        /// }
+        /// oracle: 
+        /// {
+        ///     "deployType": "CONNSTR_CVMDB",
+        ///     "url": "jdbc:oracle:thin:@1.1.1.1:1521:example#test#123456",
+        ///     "username": "oracle",
+        ///     "password": "example#test#123456",
+        ///     "region": "ap-shanghai",
+        ///     "vpcId": "vpc-kprq42yo",
+        ///     "type": "ORACLE"
+        /// }
+        /// mongodb:
+        /// advanceParams (custom parameters, appended to the url).
+        /// {
+        ///     "advanceParams": [
+        ///         {
+        ///             "key": "authSource",
+        ///             "value": "auth"
+        ///         }
+        ///     ],
+        ///     "db": "admin",
+        ///     "deployType": "CONNSTR_PUBLICDB",
+        ///     "username": "user",
+        ///     "password": "example#test#123456",
+        ///     "type": "MONGODB",
+        ///     "host": "1.1.1.1:9200"
+        /// }
+        /// postgresql:
+        /// {
+        ///     "deployType": "CONNSTR_PUBLICDB",
+        ///     "url": "jdbc:postgresql://1.1.1.1:1921/example#test#123456",
+        ///     "username": "user",
+        ///     "password": "example#test#123456",
+        ///     "type": "POSTGRE"
+        /// }
+        /// kafka:
+        ///     authType:
+        ///         - sasl
+        ///         - jaas
+        ///         - sasl_plaintext
+        ///         - sasl_ssl
+        ///         - GSSAPI
+        ///     ssl:
+        ///         -PLAIN
+        ///         -GSSAPI
+        /// {
+        ///     "deployType": "CONNSTR_PUBLICDB",
+        ///     "host": "1.1.1.1:9092",
+        ///     "ssl": "GSSAPI",
+        ///     "authType": "sasl",
+        ///     "type": "KAFKA",
+        ///     "principal": "aaaa",
+        ///     "serviceName": "kafka"
+        /// }
+        /// 
+        /// cos:
+        /// {
+        ///     "region": "ap-shanghai",
+        ///     "deployType": "INSTANCE",
+        ///     "secretId": "aaaaa",
+        ///     "secretKey": "example#test#123456",
+        ///     "bucket": "aaa",
+        ///     "type": "COS"
+        /// }
+        /// 
+        /// ```
+        /// </summary>
+        [JsonProperty("ProdConProperties")]
+        public string ProdConProperties{ get; set; }
+
+        /// <summary>
+        /// This field is required if the project is in standard mode.
+        /// </summary>
+        [JsonProperty("DevConProperties")]
+        public string DevConProperties{ get; set; }
+
+        /// <summary>
+        /// Upload data source file in live production environment.
+        /// </summary>
+        [JsonProperty("ProdFileUpload")]
+        public DataSourceFileUpload ProdFileUpload{ get; set; }
+
+        /// <summary>
+        /// Upload data source file in development environment.
+        /// </summary>
+        [JsonProperty("DevFileUpload")]
+        public DataSourceFileUpload DevFileUpload{ get; set; }
+
+        /// <summary>
+        /// Data source display name for visual inspection.
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// Data source description information
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProdConProperties", this.ProdConProperties);
+            this.SetParamSimple(map, prefix + "DevConProperties", this.DevConProperties);
+            this.SetParamObj(map, prefix + "ProdFileUpload.", this.ProdFileUpload);
+            this.SetParamObj(map, prefix + "DevFileUpload.", this.DevFileUpload);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+        }
+    }
+}
+

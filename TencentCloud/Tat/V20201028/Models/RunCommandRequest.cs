@@ -31,9 +31,12 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// IDs of instances about to execute commands. Up to 100 IDs are allowed. Supported instance types:
-        /// <li> `CVM`
-        /// <li> `LIGHTHOUSE`
+        /// Instance ID list for the command to be executed, with a cap of 200.
+        /// 
+        /// Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+        /// - CVM
+        /// - Lighthouse
+        /// -TAT register instance.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -51,7 +54,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+        /// Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
@@ -69,38 +72,53 @@ namespace TencentCloud.Tat.V20201028.Models
         public ulong? Timeout{ get; set; }
 
         /// <summary>
-        /// Whether to save the command. Valid values:
-        /// <li> `True`: Save
-        /// <li> `False`: Do not save
-        /// The default value is `False`.
+        /// Whether to save the command. value range:.
+        /// <li>true: save</li>.
+        /// <li>false: not saved.</li>.
+        /// The default value is false.
         /// </summary>
         [JsonProperty("SaveCommand")]
         public bool? SaveCommand{ get; set; }
 
         /// <summary>
         /// Whether to enable the custom parameter feature.
-        /// This cannot be modified once created.
-        /// Default value: `false`.
+        /// Once created, this value does not offer modification.
+        /// Valid values:.
+        /// <li>true: enable</li>.
+        /// <li>false: disabled.</li>.
+        /// The default value is false.
         /// </summary>
         [JsonProperty("EnableParameter")]
         public bool? EnableParameter{ get; set; }
 
         /// <summary>
-        /// The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-        /// `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-        /// If Parameters is not provided, the default values specified here are used.
-        /// Up to 20 custom parameters are supported.
-        /// The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+        /// Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+        /// The key is the custom parameter name, and the value is the default. both kv are string-type.
+        /// This parameter can be set only when the EnableParameter of the command is true.
+        /// Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+        /// If Parameters is not provided, the default value here will be used to replace.
+        /// Custom parameters can be up to 20.
+        /// The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
         /// </summary>
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
         /// <summary>
-        /// Custom parameters of `Command`. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-        /// `key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-        /// If no parameter value is provided, the `DefaultParameters` is used.
-        /// Up to 20 custom parameters are supported.
-        /// The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+        /// Custom parameter array. if Parameters is not provided, the default value here will be used to replace. up to 20 custom Parameters are allowed.
+        /// If Parameters is not provided, the default value here will be used to replace.
+        /// This parameter can be set only when the EnableParameter of the command is true.
+        /// Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+        /// </summary>
+        [JsonProperty("DefaultParameterConfs")]
+        public DefaultParameterConf[] DefaultParameterConfs{ get; set; }
+
+        /// <summary>
+        /// Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+        /// The key is the custom parameter name, and the value is the default. both kv are string-type.
+        /// This parameter can be set only when the EnableParameter of the command is true.
+        /// If the parameter value is not provided, DefaultParameters or DefaultParameterConfs will be used.
+        /// Custom parameters can be up to 20.
+        /// The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
@@ -149,6 +167,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "SaveCommand", this.SaveCommand);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Username", this.Username);

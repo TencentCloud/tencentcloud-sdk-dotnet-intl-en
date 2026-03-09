@@ -25,13 +25,23 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// List of instance IDs for the query.
+        /// List of instance ids to be queried.
+        /// 
+        /// You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+        /// 
+        /// The maximum per request is 100.
+        /// 
+        /// Parameters must not be specified simultaneously `InstanceIds` and `Filters`.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Filter conditions.<br> <li>`agent-status` - String - Required: No - (Filter condition) Filter by agent status. Valid values: `Online`, `Offline`.<br> <li> `environment` - String - Required: No - (Filter condition) Filter by the agent environment. Valid value: `Linux`.<br> <li> `instance-id` - String - Required: No - (Filter condition) Filter by the instance ID. <br>Up to 10 `Filters` allowed in one request. For each filter, five `Filter.Values` can be specified. `InstanceIds` and `Filters` cannot be specified at the same time.
+        /// -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
+        /// -environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+        /// -instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+        /// 
+        /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

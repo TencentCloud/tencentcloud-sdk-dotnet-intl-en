@@ -25,7 +25,9 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// List of invoker IDs. Up to 100 IDs are allowed.
+        /// Executor ID list. the list has a cap of 100.
+        /// 
+        /// Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvokerIds")]
         public string[] InvokerIds{ get; set; }

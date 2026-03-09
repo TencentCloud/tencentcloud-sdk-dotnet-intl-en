@@ -93,6 +93,13 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
+        /// <summary>
+        /// Parent folder path.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ParentFolderPath")]
+        public string ParentFolderPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "AccessScope", this.AccessScope);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
         }
     }
 }

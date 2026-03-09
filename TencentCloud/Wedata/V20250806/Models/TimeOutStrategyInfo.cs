@@ -66,6 +66,29 @@ namespace TencentCloud.Wedata.V20250806.Models
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
+        /// <summary>
+        /// Seconds (for Spark Streaming policy).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Second")]
+        public long? Second{ get; set; }
+
+        /// <summary>
+        /// Count (for Spark Streaming retry count limit policy, ruleType=10).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Times")]
+        public long? Times{ get; set; }
+
+        /// <summary>
+        /// Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+        /// Unit: minute. value range: 5-1440.
+        /// After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AlarmTriggerFrequency")]
+        public long? AlarmTriggerFrequency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +100,9 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "Hour", this.Hour);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+            this.SetParamSimple(map, prefix + "Second", this.Second);
+            this.SetParamSimple(map, prefix + "Times", this.Times);
+            this.SetParamSimple(map, prefix + "AlarmTriggerFrequency", this.AlarmTriggerFrequency);
         }
     }
 }

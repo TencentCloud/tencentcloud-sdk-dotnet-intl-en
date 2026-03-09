@@ -61,42 +61,42 @@ namespace TencentCloud.Wedata.V20250806.Models
         public string YarnQueue{ get; set; }
 
         /// <summary>
-        /// Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+        /// Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceServiceId")]
         public string SourceServiceId{ get; set; }
 
         /// <summary>
-        /// Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+        /// Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceServiceType")]
         public string SourceServiceType{ get; set; }
 
         /// <summary>
-        /// Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+        /// Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourceServiceName")]
         public string SourceServiceName{ get; set; }
 
         /// <summary>
-        /// TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+        /// Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetServiceId")]
         public string TargetServiceId{ get; set; }
 
         /// <summary>
-        /// Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+        /// Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetServiceType")]
         public string TargetServiceType{ get; set; }
 
         /// <summary>
-        /// Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+        /// Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetServiceName")]
