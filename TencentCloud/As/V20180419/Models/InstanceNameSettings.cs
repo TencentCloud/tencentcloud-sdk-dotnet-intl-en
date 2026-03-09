@@ -41,13 +41,24 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceNameStyle{ get; set; }
 
         /// <summary>
-        /// CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-        /// 
-        /// Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+        /// CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceNameSuffix")]
         public string InstanceNameSuffix{ get; set; }
+
+        /// <summary>
+        /// Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+        /// - dot (.)
+        /// -  hyphen (-)
+        /// - empty string.
+        /// Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+        /// -The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+        /// -Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+        /// -Delimiter is an empty string, finally concatenated as testGpu4090007server.
+        /// </summary>
+        [JsonProperty("InstanceNameDelimiter")]
+        public string InstanceNameDelimiter{ get; set; }
 
 
         /// <summary>
@@ -58,6 +69,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
             this.SetParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
+            this.SetParamSimple(map, prefix + "InstanceNameDelimiter", this.InstanceNameDelimiter);
         }
     }
 }

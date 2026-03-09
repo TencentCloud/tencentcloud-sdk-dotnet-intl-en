@@ -129,17 +129,19 @@ namespace TencentCloud.As.V20180419.Models
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// CVM hostname settings.
-        /// This field is not supported for Windows instances.
-        /// This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+        /// Specifies the related settings for the cloud virtual machine HostName (HostName).
+        /// windows instances do not support setting hostname.
+        /// When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+        /// Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
         /// </summary>
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
 
         /// <summary>
-        /// Settings of CVM instance names. 
-        /// If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
-        /// This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+        /// Specifies the related settings of the cloud virtual machine (cvm) instance name. 
+        /// If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+        /// Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+        /// Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }
@@ -157,7 +159,7 @@ namespace TencentCloud.As.V20180419.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+        /// High-Performance computing cluster ID. See [Tencent Cloud HPC Documentation](https://www.tencentcloud.com/zh/document/product/1236) for more details.
         /// Note: this field is empty by default.
         /// </summary>
         [JsonProperty("HpcClusterId")]
