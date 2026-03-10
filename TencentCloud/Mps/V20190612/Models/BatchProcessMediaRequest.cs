@@ -31,8 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo[] InputInfo{ get; set; }
 
         /// <summary>
-        /// Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-        /// Note: When InputInfo.Type is URL, this parameter is required.
+        /// Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+        /// Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+        /// Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

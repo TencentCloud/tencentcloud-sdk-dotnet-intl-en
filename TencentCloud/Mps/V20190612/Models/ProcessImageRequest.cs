@@ -76,6 +76,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ImageTask")]
         public ImageTaskInput ImageTask{ get; set; }
 
+        /// <summary>
+        /// Extended parameters for image processing.
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "ImageTask.", this.ImageTask);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

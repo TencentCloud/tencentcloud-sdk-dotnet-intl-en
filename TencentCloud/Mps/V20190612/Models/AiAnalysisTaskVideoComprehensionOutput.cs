@@ -30,6 +30,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VideoComprehensionAnalysisResult")]
         public string VideoComprehensionAnalysisResult{ get; set; }
 
+        /// <summary>
+        /// Video (audio) extended information.
+        /// </summary>
+        [JsonProperty("VideoComprehensionExtInfo")]
+        public string VideoComprehensionExtInfo{ get; set; }
+
+        /// <summary>
+        /// Video shot understanding result.
+        /// </summary>
+        [JsonProperty("VideoComprehensionResultList")]
+        public VideoComprehensionResultItem[] VideoComprehensionResultList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VideoComprehensionAnalysisResult", this.VideoComprehensionAnalysisResult);
+            this.SetParamSimple(map, prefix + "VideoComprehensionExtInfo", this.VideoComprehensionExtInfo);
+            this.SetParamArrayObj(map, prefix + "VideoComprehensionResultList.", this.VideoComprehensionResultList);
         }
     }
 }

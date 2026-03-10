@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// ID of the successfully created task.
-        /// The task progress and generation results can be obtained by calling the query API.
+        /// <p>Returned task ID after the task is created successfully.<br>The task progress and generation results can be obtained by calling the query API.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

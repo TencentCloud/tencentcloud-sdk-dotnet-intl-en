@@ -21,26 +21,14 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TaskStatDataItem : AbstractModel
+    public class LiveStreamAiSmartSubtitleResultInfo : AbstractModel
     {
         
         /// <summary>
-        /// The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+        /// Live stream smart subtitling task result list.
         /// </summary>
-        [JsonProperty("Time")]
-        public string Time{ get; set; }
-
-        /// <summary>
-        /// Number of tasks.
-        /// </summary>
-        [JsonProperty("Count")]
-        public long? Count{ get; set; }
-
-        /// <summary>
-        /// Task usage.
-        /// </summary>
-        [JsonProperty("Usage")]
-        public long? Usage{ get; set; }
+        [JsonProperty("SmartSubtitleResult")]
+        public LiveSmartSubtitleResult[] SmartSubtitleResult{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Time", this.Time);
-            this.SetParamSimple(map, prefix + "Count", this.Count);
-            this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamArrayObj(map, prefix + "SmartSubtitleResult.", this.SmartSubtitleResult);
         }
     }
 }

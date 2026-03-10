@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video editing task ID, which can be used to query the status of an editing task.
+        /// <p>Video editing task ID. This can be used to query the task status.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

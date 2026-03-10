@@ -119,13 +119,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CutoutTask")]
         public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReelTask")]
         public AiAnalysisTaskReelResult ReelTask{ get; set; }

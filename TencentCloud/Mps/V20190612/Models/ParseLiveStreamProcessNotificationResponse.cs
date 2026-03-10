@@ -25,12 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Live stream processing result type. Valid values:
-        /// <li>AiReviewResult: content review result.</li>
-        /// <li>AiRecognitionResult: content recognition result.</li>
-        /// <li>LiveRecordResult: live streaming recording result.</li>
-        /// <li>AiQualityControlResult: media live quality control result.</li>
-        /// <li>AiAnalysisResult: content analysis result.</li>
+        /// Live stream processing result type, including:.
+        /// <Li>AiReviewResult: content moderation result;</li>.
+        /// <Li>AiRecognitionResult: content recognition result;</li>.
+        /// <Li>LiveRecordResult: live streaming result;</li>.
+        /// <Li>AiQualityControlResult: media quality inspection result.</li>.
+        /// <Li>AiAnalysisResult: content analysis result.</li>.
+        /// <Li>AiSmartSubtitleResult: smart subtitle result.</li>.
         /// <li>ProcessEof: end of live stream processing.</li>
         /// </summary>
         [JsonProperty("NotificationType")]
@@ -82,6 +83,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamRecordResultInfo LiveRecordResultInfo{ get; set; }
 
         /// <summary>
+        /// Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+        /// </summary>
+        [JsonProperty("AiSmartSubtitleResultInfo")]
+        public LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo{ get; set; }
+
+        /// <summary>
         /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
         /// </summary>
         [JsonProperty("SessionId")]
@@ -125,6 +132,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
             this.SetParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
             this.SetParamObj(map, prefix + "LiveRecordResultInfo.", this.LiveRecordResultInfo);
+            this.SetParamObj(map, prefix + "AiSmartSubtitleResultInfo.", this.AiSmartSubtitleResultInfo);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);

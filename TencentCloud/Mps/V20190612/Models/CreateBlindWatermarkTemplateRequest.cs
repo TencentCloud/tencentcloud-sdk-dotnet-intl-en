@@ -48,6 +48,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// Digital watermark strength.
+        /// default: default, balance between high-definition quality and resilience.
+        /// stronger: clear image quality, strong resilience.
+        /// strongest: normal video quality, highest resilience.
+        /// </summary>
+        [JsonProperty("Strength")]
+        public string Strength{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Strength", this.Strength);
         }
     }
 }

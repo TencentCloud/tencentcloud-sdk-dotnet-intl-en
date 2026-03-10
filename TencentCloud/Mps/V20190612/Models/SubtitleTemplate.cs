@@ -50,34 +50,49 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo SubtitleFileInput{ get; set; }
 
         /// <summary>
-        /// Font type. valid values:.
-        /// <li>hei.ttf: simhei.</li>.
-        /// <li>song.ttf: simsun.</li>.
-        /// <Li>Kai.Ttf (recommend) or simkai.ttf: kaiti.</li>.
-        /// <li>msyh.ttf: microsoft yahei</li>.
-        /// <li>msyhbd.ttf: microsoft yahei in bold.</li>.
-        /// <li>hkjgt.ttf: dynafont king gothic</li>.
-        /// <li>dhttx.ttf: dianheitexiti.</li>.
-        /// <li>xqgdzt.ttf: xiqueguzidianti</li>.
-        /// <li>qpcyt.ttf: smart splice super round body.</li>.
-        /// <li>arial.ttf: english only.</li>.
-        /// <li>dinalternate.ttf:DIN Alternate Bold</li>
-        /// <li>helveticalt.ttf:Helvetica</li>
-        /// <li>helveticains.ttf:Helvetica Inserat</li>
-        /// <li>trajanpro.ttf:TrajanPro-Bold</li>
-        /// <li>korean.ttf: specifies the korean language.</li>.
-        /// <li>japanese.ttf: specifies the japanese language.</li>.
-        /// <li>thai.ttf: specifies the thai language.</li>.
-        /// Default: hei.ttf (heiti). note: kaiti is recommended for use with kai.ttf.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+        /// </summary>
+        [JsonProperty("FontFileInput")]
+        public MediaInputInfo FontFileInput{ get; set; }
+
+        /// <summary>
+        /// Font type. Valid values:
+        /// <li>hei.ttf: SimHei.</li>
+        /// <li>song.ttf: SimSun.</li>
+        /// <li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+        /// <li>msyh.ttf: Microsoft YaHei.</li>
+        /// <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
+        /// <li>hkjgt.ttf: DynaFont King Gothic.</li>
+        /// <li>dhttx.ttf: DianHei Extra Light.</li>
+        /// <li>xqgdzt.ttf: XiQue GuZiDian.</li>
+        /// <li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+        /// <li>arial.ttf: English only.</li>
+        /// <li>dinalternate.ttf: DIN Alternate Bold.</li>
+        /// <li>helveticalt.ttf: Helvetica.</li>
+        /// <li>helveticains.ttf: Helvetica Inserat.</li>
+        /// <li>trajanpro.ttf: TrajanPro-Bold.</li>
+        /// <li>korean.ttf: Korean.</li>
+        /// <li>japanese.ttf: Japanese.</li>
+        /// <li>thai.ttf: Thai.</li>
+        /// Default value: hei.ttf.
+        /// <br>Note:
+        /// <li>kai.ttf is recommended for SimKai.</li>
+        /// <li>FontFileInput takes precedence when specified.</li>
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
-        /// Font size. Format: Npx, where N is a numerical value. If it is not specified, the font size of the subtitle file applies.
-        /// It is 5% of the source video height by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+        /// 
+        /// - Pixel: Npx. Value range of N: (0,4096].
+        /// - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
+        /// 
+        /// The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
@@ -130,18 +145,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public string BoardY{ get; set; }
 
         /// <summary>
-        /// Board width. Unit: pixels. Value range: [0,4096].
-        /// It is 90% of the source video width by default.
+        /// Background width. The value should be a positive integer.
+        /// - Value range for pixels: [0,4096].
+        /// - Value range for percentages: [0, 100].
+        /// If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
         /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BoardWidth")]
         public long? BoardWidth{ get; set; }
 
         /// <summary>
-        /// Board height. Unit: pixels. Value range: [0,4096].
-        /// It is 15% of the source video height by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Background height. The value should be a positive integer.
+        /// - Value range for pixels: [0,4096].
+        /// - Value range for percentages: [0, 100].
+        /// If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BoardHeight")]
         public long? BoardHeight{ get; set; }
@@ -165,60 +185,90 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? BoardAlpha{ get; set; }
 
         /// <summary>
-        /// Stroke width.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Stroke width. The value should be a floating-point number.
+        /// - Value range for pixels: [0, 1000].
+        /// - Value range for percentages: [0, 100].
+        /// If this is not specified, the default width is 0.3% of the source video height.
         /// </summary>
         [JsonProperty("OutlineWidth")]
         public float? OutlineWidth{ get; set; }
 
         /// <summary>
-        /// Stroke color. The value should be a 6-digit hexadecimal RGB value.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
         /// </summary>
         [JsonProperty("OutlineColor")]
         public string OutlineColor{ get; set; }
 
         /// <summary>
-        /// Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.
         /// </summary>
         [JsonProperty("OutlineAlpha")]
         public float? OutlineAlpha{ get; set; }
 
         /// <summary>
-        /// Shadow width. The value should be a floating-point number in the range of [0, 1000].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Shadow width. The value should be a floating-point number.
+        /// - Value range for pixels: [0, 1000].
+        /// - Value range for percentages: [0, 100].
+        /// If this is not specified, no shadow is applied by default.
         /// </summary>
         [JsonProperty("ShadowWidth")]
         public float? ShadowWidth{ get; set; }
 
         /// <summary>
-        /// Shadow color. The value should be a 6-digit hexadecimal RGB value.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
         /// </summary>
         [JsonProperty("ShadowColor")]
         public string ShadowColor{ get; set; }
 
         /// <summary>
-        /// Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
         /// </summary>
         [JsonProperty("ShadowAlpha")]
         public float? ShadowAlpha{ get; set; }
 
         /// <summary>
-        /// Line spacing. The value should be a positive integer in the range of [0, 1000].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Line spacing. The value should be a positive integer.
+        /// - Value range for pixels: [0, 1000].
+        /// - Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
         /// </summary>
         [JsonProperty("LineSpacing")]
         public long? LineSpacing{ get; set; }
 
         /// <summary>
-        /// Alignment mode. Valid values: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.
         /// </summary>
         [JsonProperty("Alignment")]
         public string Alignment{ get; set; }
+
+        /// <summary>
+        /// Default value is 0. If this is set to 1, the value of BoardWidth is a percentage based on the video width.
+        /// </summary>
+        [JsonProperty("BoardWidthUnit")]
+        public long? BoardWidthUnit{ get; set; }
+
+        /// <summary>
+        /// Default value is 0. If this is set to 1, the value of BoardHeight is a percentage based on the video height.
+        /// </summary>
+        [JsonProperty("BoardHeightUnit")]
+        public long? BoardHeightUnit{ get; set; }
+
+        /// <summary>
+        /// Default value is 0. If this is set to 1, the value of OutlineWidth is a percentage based on the video height.
+        /// </summary>
+        [JsonProperty("OutlineWidthUnit")]
+        public long? OutlineWidthUnit{ get; set; }
+
+        /// <summary>
+        /// Default value is 0. If this is set to 1, the value of ShadowWidth is a percentage based on the video height.
+        /// </summary>
+        [JsonProperty("ShadowWidthUnit")]
+        public long? ShadowWidthUnit{ get; set; }
+
+        /// <summary>
+        /// Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+        /// </summary>
+        [JsonProperty("LineSpacingUnit")]
+        public long? LineSpacingUnit{ get; set; }
 
 
         /// <summary>
@@ -229,6 +279,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
             this.SetParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
+            this.SetParamObj(map, prefix + "FontFileInput.", this.FontFileInput);
             this.SetParamSimple(map, prefix + "FontType", this.FontType);
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -247,6 +298,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
             this.SetParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
             this.SetParamSimple(map, prefix + "Alignment", this.Alignment);
+            this.SetParamSimple(map, prefix + "BoardWidthUnit", this.BoardWidthUnit);
+            this.SetParamSimple(map, prefix + "BoardHeightUnit", this.BoardHeightUnit);
+            this.SetParamSimple(map, prefix + "OutlineWidthUnit", this.OutlineWidthUnit);
+            this.SetParamSimple(map, prefix + "ShadowWidthUnit", this.ShadowWidthUnit);
+            this.SetParamSimple(map, prefix + "LineSpacingUnit", this.LineSpacingUnit);
         }
     }
 }

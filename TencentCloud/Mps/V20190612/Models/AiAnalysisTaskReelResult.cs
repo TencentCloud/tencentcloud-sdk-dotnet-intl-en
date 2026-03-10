@@ -43,13 +43,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the intelligent video editing task.
+        /// AI narration and video re-creation task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskReelInput Input{ get; set; }
 
         /// <summary>
-        /// Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+        /// AI narration and video re-creation task output.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskReelOutput Output{ get; set; }

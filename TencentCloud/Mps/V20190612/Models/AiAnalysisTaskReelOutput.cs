@@ -25,10 +25,20 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Path of the edited video.
+        /// Path of the output video.
         /// </summary>
         [JsonProperty("VideoPath")]
         public string VideoPath{ get; set; }
+
+        /// <summary>
+        /// Path list of the output videos.
+        /// 
+        /// **Note**:.
+        /// 1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+        /// 2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+        /// </summary>
+        [JsonProperty("VideoPaths")]
+        public string[] VideoPaths{ get; set; }
 
         /// <summary>
         /// Script file path.
@@ -37,7 +47,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ScriptPath{ get; set; }
 
         /// <summary>
-        /// Storage location of the edited video.
+        /// Storage location of the output video.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -49,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VideoPath", this.VideoPath);
+            this.SetParamArraySimple(map, prefix + "VideoPaths.", this.VideoPaths);
             this.SetParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
