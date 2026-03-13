@@ -43,7 +43,10 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string RWPermission{ get; set; }
 
         /// <summary>
-        /// User permission. all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions.
+        /// All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+        /// no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+        /// root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+        /// no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
         /// </summary>
         [JsonProperty("UserPermission")]
         public string UserPermission{ get; set; }

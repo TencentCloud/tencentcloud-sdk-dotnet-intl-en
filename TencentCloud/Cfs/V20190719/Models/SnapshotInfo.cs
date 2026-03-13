@@ -25,89 +25,96 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Snapshot creation time
+        /// <P>Snapshot creation time</p>.
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// Snapshot name
+        /// <P>Snapshot name</p>.
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// Snapshot ID
+        /// <p>Snapshot ID.</p>.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// Snapshot status
+        /// <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Region name
+        /// <P>Region name</p>.
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// File system ID
+        /// <p>File system ID</p>.
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// Snapshot size
+        /// <p>Snapshot size</p><p>unit: MiB</p>.
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// Retention period in days
+        /// <P>Retention duration days</p>.
         /// </summary>
         [JsonProperty("AliveDay")]
         public ulong? AliveDay{ get; set; }
 
         /// <summary>
-        /// Snapshot progress
+        /// <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
 
         /// <summary>
-        /// Account ID
+        /// <p>Account ID.</p>.
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// Snapshot deletion time
+        /// <P>Snapshot deletion time</p>.
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// File system name
+        /// <P>File system name</p>.
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Snapshot tag
+        /// <P>Snapshot tag.</p>.
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Snapshot type
+        /// <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
+
+        /// <summary>
+        /// <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SnapshotTime")]
+        public string SnapshotTime{ get; set; }
 
 
         /// <summary>
@@ -129,6 +136,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
+            this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SaleStatus{ get; set; }
 
         /// <summary>
-        /// Protocol type. Valid values: NFS, CIFS
+        /// Protocol type. optional values: NFS, CIFS, and TURBO.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

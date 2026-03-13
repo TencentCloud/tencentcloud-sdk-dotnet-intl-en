@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? FsLimit{ get; set; }
 
         /// <summary>
-        /// File system ID. Currently, only Standard file systems are supported.
+        /// File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }

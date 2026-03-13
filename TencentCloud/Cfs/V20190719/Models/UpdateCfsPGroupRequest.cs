@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Permission group ID
+        /// Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Permission group description, which can contain 1-255 characters
+        /// Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
         /// </summary>
         [JsonProperty("DescInfo")]
         public string DescInfo{ get; set; }

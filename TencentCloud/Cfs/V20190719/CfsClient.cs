@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.intl.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1271";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Cfs.V20190719
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Configure the directory list associated with the lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPathLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ApplyPathLifecyclePolicyResponse"/></returns>
+        public Task<ApplyPathLifecyclePolicyResponse> ApplyPathLifecyclePolicy(ApplyPathLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ApplyPathLifecyclePolicyResponse>(req, "ApplyPathLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// Configure the directory list associated with the lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyPathLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ApplyPathLifecyclePolicyResponse"/></returns>
+        public ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicySync(ApplyPathLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ApplyPathLifecyclePolicyResponse>(req, "ApplyPathLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -180,8 +201,91 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to create a data flow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataFlowRequest"/></param>
+        /// <returns><see cref="CreateDataFlowResponse"/></returns>
+        public Task<CreateDataFlowResponse> CreateDataFlow(CreateDataFlowRequest req)
+        {
+            return InternalRequestAsync<CreateDataFlowResponse>(req, "CreateDataFlow");
+        }
+
+        /// <summary>
+        /// This API is used to create a data flow.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataFlowRequest"/></param>
+        /// <returns><see cref="CreateDataFlowResponse"/></returns>
+        public CreateDataFlowResponse CreateDataFlowSync(CreateDataFlowRequest req)
+        {
+            return InternalRequestAsync<CreateDataFlowResponse>(req, "CreateDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Support proactive settlement/preheat API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecycleDataTaskResponse"/></returns>
+        public Task<CreateLifecycleDataTaskResponse> CreateLifecycleDataTask(CreateLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecycleDataTaskResponse>(req, "CreateLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// Support proactive settlement/preheat API.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecycleDataTaskResponse"/></returns>
+        public CreateLifecycleDataTaskResponse CreateLifecycleDataTaskSync(CreateLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecycleDataTaskResponse>(req, "CreateLifecycleDataTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a file storage lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyResponse"/></returns>
+        public Task<CreateLifecyclePolicyResponse> CreateLifecyclePolicy(CreateLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyResponse>(req, "CreateLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create a file storage lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyResponse"/></returns>
+        public CreateLifecyclePolicyResponse CreateLifecyclePolicySync(CreateLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyResponse>(req, "CreateLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Download the file list in a lifecycle task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyDownloadTaskResponse"/></returns>
+        public Task<CreateLifecyclePolicyDownloadTaskResponse> CreateLifecyclePolicyDownloadTask(CreateLifecyclePolicyDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyDownloadTaskResponse>(req, "CreateLifecyclePolicyDownloadTask");
+        }
+
+        /// <summary>
+        /// Download the file list in a lifecycle task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLifecyclePolicyDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLifecyclePolicyDownloadTaskResponse"/></returns>
+        public CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTaskSync(CreateLifecyclePolicyDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLifecyclePolicyDownloadTaskResponse>(req, "CreateLifecyclePolicyDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
         /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
@@ -192,7 +296,6 @@ namespace TencentCloud.Cfs.V20190719
 
         /// <summary>
         /// This API is used to create a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateMigrationTaskRequest"/></param>
         /// <returns><see cref="CreateMigrationTaskResponse"/></returns>
@@ -245,7 +348,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to delete a permission group.
+        /// This API is used to delete a permission group. Only permission groups not bound to a file system can be deleted by this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteCfsPGroupRequest"/></param>
         /// <returns><see cref="DeleteCfsPGroupResponse"/></returns>
@@ -255,7 +358,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to delete a permission group.
+        /// This API is used to delete a permission group. Only permission groups not bound to a file system can be deleted by this API.
         /// </summary>
         /// <param name="req"><see cref="DeleteCfsPGroupRequest"/></param>
         /// <returns><see cref="DeleteCfsPGroupResponse"/></returns>
@@ -308,8 +411,49 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to delete a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// Delete a data flow.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteDataFlowResponse"/></returns>
+        public Task<DeleteDataFlowResponse> DeleteDataFlow(DeleteDataFlowRequest req)
+        {
+            return InternalRequestAsync<DeleteDataFlowResponse>(req, "DeleteDataFlow");
+        }
+
+        /// <summary>
+        /// Delete a data flow.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataFlowRequest"/></param>
+        /// <returns><see cref="DeleteDataFlowResponse"/></returns>
+        public DeleteDataFlowResponse DeleteDataFlowSync(DeleteDataFlowRequest req)
+        {
+            return InternalRequestAsync<DeleteDataFlowResponse>(req, "DeleteDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a lifecycle management policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="DeleteLifecyclePolicyResponse"/></returns>
+        public Task<DeleteLifecyclePolicyResponse> DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteLifecyclePolicyResponse>(req, "DeleteLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// Delete a lifecycle management policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="DeleteLifecyclePolicyResponse"/></returns>
+        public DeleteLifecyclePolicyResponse DeleteLifecyclePolicySync(DeleteLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteLifecyclePolicyResponse>(req, "DeleteLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete migration tasks. Deletion is not supported for tasks in the status of Waiting, creating, running, canceling, or terminating.
         /// </summary>
         /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
         /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
@@ -319,35 +463,13 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to delete a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// This API is used to delete migration tasks. Deletion is not supported for tasks in the status of Waiting, creating, running, canceling, or terminating.
         /// </summary>
         /// <param name="req"><see cref="DeleteMigrationTaskRequest"/></param>
         /// <returns><see cref="DeleteMigrationTaskResponse"/></returns>
         public DeleteMigrationTaskResponse DeleteMigrationTaskSync(DeleteMigrationTaskRequest req)
         {
             return InternalRequestAsync<DeleteMigrationTaskResponse>(req, "DeleteMigrationTask")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete a mount target.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
-        /// <returns><see cref="DeleteMountTargetResponse"/></returns>
-        public Task<DeleteMountTargetResponse> DeleteMountTarget(DeleteMountTargetRequest req)
-        {
-            return InternalRequestAsync<DeleteMountTargetResponse>(req, "DeleteMountTarget");
-        }
-
-        /// <summary>
-        /// This API is used to delete a mount target.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteMountTargetRequest"/></param>
-        /// <returns><see cref="DeleteMountTargetResponse"/></returns>
-        public DeleteMountTargetResponse DeleteMountTargetSync(DeleteMountTargetRequest req)
-        {
-            return InternalRequestAsync<DeleteMountTargetResponse>(req, "DeleteMountTarget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -394,8 +516,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to get the list of data source buckets.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// To obtain the list of data source buckets.
         /// </summary>
         /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
         /// <returns><see cref="DescribeBucketListResponse"/></returns>
@@ -405,8 +526,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to get the list of data source buckets.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// To obtain the list of data source buckets.
         /// </summary>
         /// <param name="req"><see cref="DescribeBucketListRequest"/></param>
         /// <returns><see cref="DescribeBucketListResponse"/></returns>
@@ -564,6 +684,69 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to query data flow information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFlowRequest"/></param>
+        /// <returns><see cref="DescribeDataFlowResponse"/></returns>
+        public Task<DescribeDataFlowResponse> DescribeDataFlow(DescribeDataFlowRequest req)
+        {
+            return InternalRequestAsync<DescribeDataFlowResponse>(req, "DescribeDataFlow");
+        }
+
+        /// <summary>
+        /// This API is used to query data flow information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFlowRequest"/></param>
+        /// <returns><see cref="DescribeDataFlowResponse"/></returns>
+        public DescribeDataFlowResponse DescribeDataFlowSync(DescribeDataFlowRequest req)
+        {
+            return InternalRequestAsync<DescribeDataFlowResponse>(req, "DescribeDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the lifecycle task. It only supports querying task data within 3 months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>
+        public Task<DescribeLifecycleDataTaskResponse> DescribeLifecycleDataTask(DescribeLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecycleDataTaskResponse>(req, "DescribeLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the lifecycle task. It only supports querying task data within 3 months.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="DescribeLifecycleDataTaskResponse"/></returns>
+        public DescribeLifecycleDataTaskResponse DescribeLifecycleDataTaskSync(DescribeLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecycleDataTaskResponse>(req, "DescribeLifecycleDataTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query lifecycle management policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecyclePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeLifecyclePoliciesResponse"/></returns>
+        public Task<DescribeLifecyclePoliciesResponse> DescribeLifecyclePolicies(DescribeLifecyclePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecyclePoliciesResponse>(req, "DescribeLifecyclePolicies");
+        }
+
+        /// <summary>
+        /// Query lifecycle management policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLifecyclePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeLifecyclePoliciesResponse"/></returns>
+        public DescribeLifecyclePoliciesResponse DescribeLifecyclePoliciesSync(DescribeLifecyclePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeLifecyclePoliciesResponse>(req, "DescribeLifecyclePolicies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of migration tasks.
         /// To use this API, submit a ticket for us to add you to the allowlist.
         /// </summary>
@@ -629,7 +812,49 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to modify the scaling policy of a file system.
+        /// File system directory operation API. Currently, only the Turbo series file system supports calling this API to perform directory operations. The Universal Series file system (including the enhanced version) does not support calling.
+        /// </summary>
+        /// <param name="req"><see cref="DoDirectoryOperationRequest"/></param>
+        /// <returns><see cref="DoDirectoryOperationResponse"/></returns>
+        public Task<DoDirectoryOperationResponse> DoDirectoryOperation(DoDirectoryOperationRequest req)
+        {
+            return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation");
+        }
+
+        /// <summary>
+        /// File system directory operation API. Currently, only the Turbo series file system supports calling this API to perform directory operations. The Universal Series file system (including the enhanced version) does not support calling.
+        /// </summary>
+        /// <param name="req"><see cref="DoDirectoryOperationRequest"/></param>
+        /// <returns><see cref="DoDirectoryOperationResponse"/></returns>
+        public DoDirectoryOperationResponse DoDirectoryOperationSync(DoDirectoryOperationRequest req)
+        {
+            return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify data flow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataFlowRequest"/></param>
+        /// <returns><see cref="ModifyDataFlowResponse"/></returns>
+        public Task<ModifyDataFlowResponse> ModifyDataFlow(ModifyDataFlowRequest req)
+        {
+            return InternalRequestAsync<ModifyDataFlowResponse>(req, "ModifyDataFlow");
+        }
+
+        /// <summary>
+        /// Modify data flow parameters.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataFlowRequest"/></param>
+        /// <returns><see cref="ModifyDataFlowResponse"/></returns>
+        public ModifyDataFlowResponse ModifyDataFlowSync(ModifyDataFlowRequest req)
+        {
+            return InternalRequestAsync<ModifyDataFlowResponse>(req, "ModifyDataFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to set the file system scaling policy. It supports only the turbo file system.
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -639,7 +864,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to modify the scaling policy of a file system.
+        /// This API is used to set the file system scaling policy. It supports only the turbo file system.
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemAutoScaleUpRuleRequest"/></param>
         /// <returns><see cref="ModifyFileSystemAutoScaleUpRuleResponse"/></returns>
@@ -650,7 +875,28 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to scale up a Turbo file system.
+        /// Update a file storage lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ModifyLifecyclePolicyResponse"/></returns>
+        public Task<ModifyLifecyclePolicyResponse> ModifyLifecyclePolicy(ModifyLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyLifecyclePolicyResponse>(req, "ModifyLifecyclePolicy");
+        }
+
+        /// <summary>
+        /// Update a file storage lifecycle policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecyclePolicyRequest"/></param>
+        /// <returns><see cref="ModifyLifecyclePolicyResponse"/></returns>
+        public ModifyLifecyclePolicyResponse ModifyLifecyclePolicySync(ModifyLifecyclePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyLifecyclePolicyResponse>(req, "ModifyLifecyclePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to expand the turbo file system. It only supports expansion and does not support scale-down. The scaling increment for the turbo standard type is 10240 GIB, and for the turbo performance type, it is 5120 GIB.
         /// </summary>
         /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
         /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
@@ -660,7 +906,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to scale up a Turbo file system.
+        /// This API is used to expand the turbo file system. It only supports expansion and does not support scale-down. The scaling increment for the turbo standard type is 10240 GIB, and for the turbo performance type, it is 5120 GIB.
         /// </summary>
         /// <param name="req"><see cref="ScaleUpFileSystemRequest"/></param>
         /// <returns><see cref="ScaleUpFileSystemResponse"/></returns>
@@ -692,8 +938,28 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to stop a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// This API is used to terminate a lifecycle task.
+        /// </summary>
+        /// <param name="req"><see cref="StopLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="StopLifecycleDataTaskResponse"/></returns>
+        public Task<StopLifecycleDataTaskResponse> StopLifecycleDataTask(StopLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<StopLifecycleDataTaskResponse>(req, "StopLifecycleDataTask");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a lifecycle task.
+        /// </summary>
+        /// <param name="req"><see cref="StopLifecycleDataTaskRequest"/></param>
+        /// <returns><see cref="StopLifecycleDataTaskResponse"/></returns>
+        public StopLifecycleDataTaskResponse StopLifecycleDataTaskSync(StopLifecycleDataTaskRequest req)
+        {
+            return InternalRequestAsync<StopLifecycleDataTaskResponse>(req, "StopLifecycleDataTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate a migration task, including tasks in the Waiting or Running status.
         /// </summary>
         /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
         /// <returns><see cref="StopMigrationTaskResponse"/></returns>
@@ -703,8 +969,7 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
-        /// This API is used to stop a migration task.
-        /// To use this API, submit a ticket for us to add you to the allowlist.
+        /// This API is used to terminate a migration task, including tasks in the Waiting or Running status.
         /// </summary>
         /// <param name="req"><see cref="StopMigrationTaskRequest"/></param>
         /// <returns><see cref="StopMigrationTaskResponse"/></returns>

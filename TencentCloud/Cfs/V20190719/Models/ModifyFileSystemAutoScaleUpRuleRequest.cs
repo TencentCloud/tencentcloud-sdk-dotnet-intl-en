@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID
+        /// File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? ScaleUpThreshold{ get; set; }
 
         /// <summary>
-        /// Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+        /// Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
         /// </summary>
         [JsonProperty("TargetThreshold")]
         public ulong? TargetThreshold{ get; set; }
 
         /// <summary>
-        /// Rule status. Valid values: `0` (disabled) and `1` (enabled).
+        /// Rule status 0: turn off, 1: turn on; keep the original status if not specified.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

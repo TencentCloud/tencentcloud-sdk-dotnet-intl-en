@@ -43,19 +43,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Offset paging number. default 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Limit page size. default value 10.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// User-defined name
         /// </summary>
         [JsonProperty("CreationToken")]
         public string CreationToken{ get; set; }

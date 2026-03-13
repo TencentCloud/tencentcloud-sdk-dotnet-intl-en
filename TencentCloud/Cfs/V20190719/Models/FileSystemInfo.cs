@@ -55,13 +55,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// Used file system capacity
+        /// Used capacity of the file system, in Byte.
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// Maximum storage limit of a file system
+        /// File system space limit, in GiB.
         /// </summary>
         [JsonProperty("SizeLimit")]
         public ulong? SizeLimit{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// File system protocol type
+        /// File system protocol type. Valid values: NFS, CIFS, and TURBO.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// File system storage class
+        /// Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Whether a file system is encrypted
+        /// Is the file system encrypted. true: encrypted. false: non-encrypted.
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }
@@ -133,25 +133,26 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+        /// Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
         /// </summary>
         [JsonProperty("BandwidthLimit")]
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Snapshot policy associated with the file system.
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 
+        /// File system processes snapshot status, snapping: in snapshot, normal: in normal status.
         /// </summary>
         [JsonProperty("SnapStatus")]
         public string SnapStatus{ get; set; }
 
         /// <summary>
-        /// Total capacity of the file system
+        /// Upper limit of file system capacity.
+        /// Unit: GiB.
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
@@ -163,23 +164,44 @@ namespace TencentCloud.Cfs.V20190719.Models
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// The lifecycle management status of a file system.
+        /// Status of file system lifecycle management.
+        /// NotAvailable: unavailable.
+        /// Available.
         /// </summary>
         [JsonProperty("TieringState")]
         public string TieringState{ get; set; }
 
         /// <summary>
-        /// The details about tiered storage.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Layered storage detail.
         /// </summary>
         [JsonProperty("TieringDetail")]
         public TieringDetailInfo TieringDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// File system auto scale-out policy.
         /// </summary>
         [JsonProperty("AutoScaleUpRule")]
         public AutoScaleUpRule AutoScaleUpRule{ get; set; }
+
+        /// <summary>
+        /// File System Version
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// Additional performance info.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExstraPerformanceInfo")]
+        public ExstraPerformanceInfo[] ExstraPerformanceInfo{ get; set; }
+
+        /// <summary>
+        /// basic: standard version metadata type.
+        /// enhanced: additional metadata type.
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
 
 
         /// <summary>
@@ -212,6 +234,9 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "TieringState", this.TieringState);
             this.SetParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
             this.SetParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
         }
     }
 }

@@ -25,11 +25,16 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// STANDARD_IA storage usage
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
         /// </summary>
         [JsonProperty("TieringSizeInBytes")]
         public long? TieringSizeInBytes{ get; set; }
+
+        /// <summary>
+        /// <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+        /// </summary>
+        [JsonProperty("SecondaryTieringSizeInBytes")]
+        public long? SecondaryTieringSizeInBytes{ get; set; }
 
 
         /// <summary>
@@ -38,6 +43,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
+            this.SetParamSimple(map, prefix + "SecondaryTieringSizeInBytes", this.SecondaryTieringSizeInBytes);
         }
     }
 }

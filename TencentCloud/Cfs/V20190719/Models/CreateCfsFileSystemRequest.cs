@@ -37,13 +37,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string NetInterface{ get; set; }
 
         /// <summary>
-        /// Permission group ID
+        /// Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
 
         /// <summary>
-        /// File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+        /// File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -55,13 +55,15 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// VPC ID. This field is required if network type is VPC.
+        /// Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+        /// [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID. This field is required if network type is VPC.
+        /// Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+        /// [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -91,7 +93,8 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// CCN instance ID (required if the network type is CCN)
+        /// Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+        /// [DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
@@ -103,10 +106,46 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string CidrBlock{ get; set; }
 
         /// <summary>
-        /// File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+        /// File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
+
+        /// <summary>
+        /// File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+        /// [DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+        /// </summary>
+        [JsonProperty("SnapshotId")]
+        public string SnapshotId{ get; set; }
+
+        /// <summary>
+        /// Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+        /// [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// Whether default expansion is enabled. only turbo file storage supports this feature.
+        /// </summary>
+        [JsonProperty("EnableAutoScaleUp")]
+        public bool? EnableAutoScaleUp{ get; set; }
+
+        /// <summary>
+        /// v1.5: create a standard edition general file system.
+        /// v3.1: create an enhanced general file system.
+        /// Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+        /// </summary>
+        [JsonProperty("CfsVersion")]
+        public string CfsVersion{ get; set; }
+
+        /// <summary>
+        /// turbo file system metadata attribute.
+        /// basic: creates metadata of the standard type.
+        /// Enhanced: creates enhanced metadata.
+        /// </summary>
+        [JsonProperty("MetaType")]
+        public string MetaType{ get; set; }
 
 
         /// <summary>
@@ -128,6 +167,11 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
+            this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+            this.SetParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
+            this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public AvailableProtoStatus[] Protocols{ get; set; }
 
         /// <summary>
-        /// Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+        /// Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

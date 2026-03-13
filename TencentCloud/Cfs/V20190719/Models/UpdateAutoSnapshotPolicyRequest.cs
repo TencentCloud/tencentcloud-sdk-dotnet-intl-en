@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Snapshot policy ID
+        /// Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// Snapshot policy name
+        /// Snapshot policy name, no more than 64 characters.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// The day of the week on which to regularly back up the snapshot
+        /// Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Hour{ get; set; }
 
         /// <summary>
-        /// Snapshot retention period
+        /// Snapshot retention days.
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// Whether to activate the scheduled snapshot feature
+        /// Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
         /// </summary>
         [JsonProperty("IsActivated")]
         public ulong? IsActivated{ get; set; }
 
         /// <summary>
-        /// The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+        /// Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }
 
         /// <summary>
-        /// The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+        /// Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
         /// </summary>
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }

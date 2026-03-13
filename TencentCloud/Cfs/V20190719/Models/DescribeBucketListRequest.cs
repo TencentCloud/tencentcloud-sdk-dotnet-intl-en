@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string SrcService{ get; set; }
 
         /// <summary>
-        /// SecretId of the data source account
+        /// SecretId of the data source account.
         /// </summary>
         [JsonProperty("SrcSecretId")]
         public string SrcSecretId{ get; set; }

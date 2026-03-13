@@ -49,36 +49,31 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? MigrationMode{ get; set; }
 
         /// <summary>
-        /// Data source bucket name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data source bucket name.
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// Data source bucket region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source bucket region.
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// Data source bucket address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data source bucket address.
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
 
         /// <summary>
-        /// List address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Checklist address.
         /// </summary>
         [JsonProperty("ListAddress")]
         public string ListAddress{ get; set; }
 
         /// <summary>
-        /// File system instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File system instance name.
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
@@ -108,87 +103,82 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// End time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Completion/Termination time.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+        /// Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Number of files
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of files.
         /// </summary>
         [JsonProperty("FileTotalCount")]
         public ulong? FileTotalCount{ get; set; }
 
         /// <summary>
-        /// Number of migrated files
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of migrated files.
         /// </summary>
         [JsonProperty("FileMigratedCount")]
         public ulong? FileMigratedCount{ get; set; }
 
         /// <summary>
-        /// Number of files that failed to be migrated
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of failed files in migration.
         /// </summary>
         [JsonProperty("FileFailedCount")]
         public ulong? FileFailedCount{ get; set; }
 
         /// <summary>
-        /// File size, in bytes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File capacity, in Byte.
         /// </summary>
         [JsonProperty("FileTotalSize")]
         public long? FileTotalSize{ get; set; }
 
         /// <summary>
-        /// Size of migrated files, in bytes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Migrated file capacity in Byte.
         /// </summary>
         [JsonProperty("FileMigratedSize")]
         public long? FileMigratedSize{ get; set; }
 
         /// <summary>
-        /// Size of files that failed to be migrated, in bytes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Capacity of failed migration files, in Byte.
         /// </summary>
         [JsonProperty("FileFailedSize")]
         public long? FileFailedSize{ get; set; }
 
         /// <summary>
-        /// List of all files
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total inventory.
         /// </summary>
         [JsonProperty("FileTotalList")]
         public string FileTotalList{ get; set; }
 
         /// <summary>
-        /// List of migrated files
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File list completed.
         /// </summary>
         [JsonProperty("FileCompletedList")]
         public string FileCompletedList{ get; set; }
 
         /// <summary>
-        /// List of files that failed to be migrated
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Failed file list.
         /// </summary>
         [JsonProperty("FileFailedList")]
         public string FileFailedList{ get; set; }
 
         /// <summary>
-        /// Source bucket path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source bucket path.
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
+
+        /// <summary>
+        /// Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+        /// </summary>
+        [JsonProperty("Direction")]
+        public ulong? Direction{ get; set; }
 
 
         /// <summary>
@@ -221,6 +211,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "FileCompletedList", this.FileCompletedList);
             this.SetParamSimple(map, prefix + "FileFailedList", this.FileFailedList);
             this.SetParamSimple(map, prefix + "BucketPath", this.BucketPath);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

@@ -49,13 +49,15 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FSID{ get; set; }
 
         /// <summary>
-        /// Mount target status
+        /// Mount point status, including creating: under creation; available: running.
+        /// Deleting: deleting.
+        /// Creation failed.
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// Network type
+        /// Network type, including VPC, CCN.
         /// </summary>
         [JsonProperty("NetworkInterface")]
         public string NetworkInterface{ get; set; }

@@ -37,21 +37,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <br><li> taskId
-        /// 
-        /// Filter by **migration task ID**
-        /// Type: String
-        /// 
-        /// Required: No
-        /// 
-        /// <br><li> taskName
-        /// 
-        /// Fuzzy filter by **migration task name**
-        /// Type: String
-        /// 
-        /// Required: No
-        /// 
-        /// Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+        /// <br><li> taskId Filters by [migration task id]. type: String required: no<br></li><br><li> taskName does fuzzy search filtering by [migration task name]. type: String required: no the maximum number of Filters per request is 10, and the maximum number of Filter.Values is 100.</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// Snapshot policy name
+        /// Snapshot policy name.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Hour{ get; set; }
 
         /// <summary>
-        /// Whether to activate the scheduled snapshot feature
+        /// Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
         /// </summary>
         [JsonProperty("IsActivated")]
         public ulong? IsActivated{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string NextActiveTime{ get; set; }
 
         /// <summary>
-        /// Snapshot policy status
+        /// Snapshot policy status. available represents normal status. only status here.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Account ID
+        /// Account ID.
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
@@ -116,6 +116,18 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }
 
+        /// <summary>
+        /// Snapshot retention time for cross-region replication, in days.
+        /// </summary>
+        [JsonProperty("CrossRegionsAliveDays")]
+        public ulong? CrossRegionsAliveDays{ get; set; }
+
+        /// <summary>
+        /// Snapshot policy tag.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +149,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
             this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
             this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+            this.SetParamSimple(map, prefix + "CrossRegionsAliveDays", this.CrossRegionsAliveDays);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

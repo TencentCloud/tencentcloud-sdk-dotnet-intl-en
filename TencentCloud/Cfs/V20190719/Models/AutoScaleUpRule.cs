@@ -25,19 +25,19 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 
+        /// Enable auto scale-out policy, disable.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
         /// </summary>
         [JsonProperty("ScaleThreshold")]
         public ulong? ScaleThreshold{ get; set; }
 
         /// <summary>
-        /// 
+        /// Used capacity to total clusters ratio after expansion. value range: [10-90].
         /// </summary>
         [JsonProperty("TargetThreshold")]
         public ulong? TargetThreshold{ get; set; }

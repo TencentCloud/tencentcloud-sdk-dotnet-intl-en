@@ -25,40 +25,46 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// The time point when to repeat the snapshot operation
+        /// Snapshot repeat time point. value range: 0-23 hr.
         /// </summary>
         [JsonProperty("Hour")]
         public string Hour{ get; set; }
 
         /// <summary>
-        /// Policy name
+        /// Policy name, limited to 64 characters, only supports input of chinese, letters, numbers, _, or -.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// The day of the week on which to repeat the snapshot operation
+        /// Snapshot repeat date, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
         /// </summary>
         [JsonProperty("DayOfWeek")]
         public string DayOfWeek{ get; set; }
 
         /// <summary>
-        /// Snapshot retention period
+        /// Specifies the snapshot retention duration in days. the default value is 0 (permanent).
         /// </summary>
         [JsonProperty("AliveDays")]
         public ulong? AliveDays{ get; set; }
 
         /// <summary>
-        /// The specific day (day 1 to day 31) of the month on which to automatically create a snapshot.
+        /// Snapshot monthly recurrence, select a day from the 1st to the 31st of each month, and a snapshot will be automatically created on that day. for example, 1 represents the 1st. choose one of the three: DayOfWeek, IntervalDays.
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }
 
         /// <summary>
-        /// The snapshot interval, in days.
+        /// Interval days. choose one of the three with DayOfWeek and DayOfMonth.
         /// </summary>
         [JsonProperty("IntervalDays")]
         public ulong? IntervalDays{ get; set; }
+
+        /// <summary>
+        /// Snapshot policy tag.
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfo[] ResourceTags{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AliveDays", this.AliveDays);
             this.SetParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
             this.SetParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

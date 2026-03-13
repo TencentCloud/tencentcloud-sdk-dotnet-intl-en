@@ -26,6 +26,10 @@ namespace TencentCloud.Cfs.V20190719.Models
         
         /// <summary>
         /// Operation type
+        /// CreateCfsSnapshot: create a snapshot.
+        /// DeleteCfsSnapshot: delete snapshot.
+        /// CreateCfsFileSystem: create a file system.
+        /// UpdateCfsSnapshotAttribute: update snapshot.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -37,19 +41,23 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string ActionTime{ get; set; }
 
         /// <summary>
-        /// Operation name
+        /// Operation name.
+        /// CreateCfsSnapshot
+        /// DeleteCfsSnapshot
+        /// CreateCfsFileSystem
+        /// UpdateCfsSnapshotAttribute
         /// </summary>
         [JsonProperty("ActionName")]
         public string ActionName{ get; set; }
 
         /// <summary>
-        /// Operator
+        /// Operator uin.
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// Result
+        /// 1- task in progress; 2- task success; 3- task failure.
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }

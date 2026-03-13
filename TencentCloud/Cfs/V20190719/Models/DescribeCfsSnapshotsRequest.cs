@@ -25,43 +25,50 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID
+        /// File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// Snapshot ID
+        /// Snapshot ID.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// The starting position of paging
+        /// Paging start position, defaults to 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Page length
+        /// Page length. default value 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filters
+        /// Filter criteria
+        /// SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+        /// <br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+        /// <br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+        /// <br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+        /// <br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+        /// <br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+        /// <br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Order field
+        /// Sort by creation time to obtain value.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sorting order (ascending or descending)
+        /// Sorting order; ascending or descending order.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

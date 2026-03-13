@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID
+        /// File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }

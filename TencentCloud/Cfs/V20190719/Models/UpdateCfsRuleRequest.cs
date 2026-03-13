@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Permission group ID
+        /// Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PGroupId")]
         public string PGroupId{ get; set; }
 
         /// <summary>
-        /// Rule ID
+        /// Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -49,13 +49,17 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string RWPermission{ get; set; }
 
         /// <summary>
-        /// User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+        /// User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+        /// All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+        /// no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+        /// root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+        /// no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
         /// </summary>
         [JsonProperty("UserPermission")]
         public string UserPermission{ get; set; }
 
         /// <summary>
-        /// Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+        /// Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

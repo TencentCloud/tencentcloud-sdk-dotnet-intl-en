@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
+        /// Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
         /// </summary>
         [JsonProperty("MigrationType")]
         public ulong? MigrationType{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? MigrationMode{ get; set; }
 
         /// <summary>
-        /// SecretId of the data source account
+        /// SecretId of the data source account.
         /// </summary>
         [JsonProperty("SrcSecretId")]
         public string SrcSecretId{ get; set; }
 
         /// <summary>
-        /// SecretKey of the data source account
+        /// SecretKey of the data source account.
         /// </summary>
         [JsonProperty("SrcSecretKey")]
         public string SrcSecretKey{ get; set; }
 
         /// <summary>
-        /// File system instance ID
+        /// File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? CoverType{ get; set; }
 
         /// <summary>
-        /// Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
+        /// Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
         /// </summary>
         [JsonProperty("SrcService")]
         public string SrcService{ get; set; }
 
         /// <summary>
-        /// Data source bucket name. Specify at least one of the bucket name or address.
+        /// Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// Data source bucket address. Specify at least one of the bucket name or address.
+        /// Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
@@ -109,10 +109,16 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Source bucket path, which defaults to `/`
+        /// Source bucket path, defaults to /.
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
+
+        /// <summary>
+        /// Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+        /// </summary>
+        [JsonProperty("Direction")]
+        public ulong? Direction{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "ListAddress", this.ListAddress);
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
             this.SetParamSimple(map, prefix + "BucketPath", this.BucketPath);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }
