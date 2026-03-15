@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Instance list that needs to be modified.
+        /// <P>Instance list that needs to be modified</p>.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+        /// <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

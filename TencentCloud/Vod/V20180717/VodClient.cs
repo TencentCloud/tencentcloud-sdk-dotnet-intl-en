@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1268";
+       private const string sdkVersion = "SDK_NET_3.0.1273";
 
         /// <summary>
         /// Client constructor.
@@ -267,6 +267,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a Token for invoking AIGC API. After creation, there is a delay in data sync. It becomes queryable or deletable after about 30 seconds.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
+        public Task<CreateAigcApiTokenResponse> CreateAigcApiToken(CreateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAigcApiTokenResponse>(req, "CreateAigcApiToken");
+        }
+
+        /// <summary>
+        /// This API is used to create a Token for invoking AIGC API. After creation, there is a delay in data sync. It becomes queryable or deletable after about 30 seconds.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcApiTokenRequest"/></param>
+        /// <returns><see cref="CreateAigcApiTokenResponse"/></returns>
+        public CreateAigcApiTokenResponse CreateAigcApiTokenSync(CreateAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<CreateAigcApiTokenResponse>(req, "CreateAigcApiToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -989,6 +1010,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Delete an AIGC API Token.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
+        /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>
+        public Task<DeleteAigcApiTokenResponse> DeleteAigcApiToken(DeleteAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcApiTokenResponse>(req, "DeleteAigcApiToken");
+        }
+
+        /// <summary>
+        /// Delete an AIGC API Token.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcApiTokenRequest"/></param>
+        /// <returns><see cref="DeleteAigcApiTokenResponse"/></returns>
+        public DeleteAigcApiTokenResponse DeleteAigcApiTokenSync(DeleteAigcApiTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcApiTokenResponse>(req, "DeleteAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom animated image generating template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
@@ -1547,6 +1589,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplatesSync(DescribeAdaptiveDynamicStreamingTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAdaptiveDynamicStreamingTemplatesResponse>(req, "DescribeAdaptiveDynamicStreamingTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the AIGC API Token list. There is a delay in data sync after creation or deletion. The latest data is queryable after about 30 seconds.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcApiTokensRequest"/></param>
+        /// <returns><see cref="DescribeAigcApiTokensResponse"/></returns>
+        public Task<DescribeAigcApiTokensResponse> DescribeAigcApiTokens(DescribeAigcApiTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcApiTokensResponse>(req, "DescribeAigcApiTokens");
+        }
+
+        /// <summary>
+        /// Query the AIGC API Token list. There is a delay in data sync after creation or deletion. The latest data is queryable after about 30 seconds.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcApiTokensRequest"/></param>
+        /// <returns><see cref="DescribeAigcApiTokensResponse"/></returns>
+        public DescribeAigcApiTokensResponse DescribeAigcApiTokensSync(DescribeAigcApiTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcApiTokensResponse>(req, "DescribeAigcApiTokens")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

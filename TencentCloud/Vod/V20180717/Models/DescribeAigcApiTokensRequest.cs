@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDatabaseTableRequest : AbstractModel
+    public class DescribeAigcApiTokensRequest : AbstractModel
     {
         
         /// <summary>
-        /// Instance ID, for example: tdsql3-ow7t8lmc.
+        /// <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. customers who activate vod services after december 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>.
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// Database name, obtained via the DescribeDatabases api.
-        /// </summary>
-        [JsonProperty("DbName")]
-        public string DbName{ get; set; }
-
-        /// <summary>
-        /// Table name, obtained through the DescribeDatabaseObjects api.
-        /// </summary>
-        [JsonProperty("Table")]
-        public string Table{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DbName", this.DbName);
-            this.SetParamSimple(map, prefix + "Table", this.Table);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

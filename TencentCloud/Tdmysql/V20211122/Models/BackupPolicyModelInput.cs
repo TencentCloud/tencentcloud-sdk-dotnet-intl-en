@@ -25,61 +25,61 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <P>Backup end time.</p>.
+        /// <P>Backup end time.</p>
         /// </summary>
         [JsonProperty("BackupEndTime")]
         public string BackupEndTime{ get; set; }
 
         /// <summary>
-        /// <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+        /// <P>Backup method: physical physical backup, snapshot snapshot backup</p>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// <P>Backup start time</p>.
+        /// <P>Backup start time</p>
         /// </summary>
         [JsonProperty("BackupStartTime")]
         public string BackupStartTime{ get; set; }
 
         /// <summary>
-        /// <P>Whether full backup is enabled</p>.
+        /// <P>Whether full backup is enabled</p>
         /// </summary>
         [JsonProperty("EnableFull")]
         public long? EnableFull{ get; set; }
 
         /// <summary>
-        /// <P>Whether to enable log backup</p>.
+        /// <P>Whether to enable log backup</p>
         /// </summary>
         [JsonProperty("EnableLog")]
         public long? EnableLog{ get; set; }
 
         /// <summary>
-        /// <P>Full backup retention time can currently only be set to 7 days.</p>.
+        /// <P>Full backup retention time can currently only be set to 7 days.</p>
         /// </summary>
         [JsonProperty("FullRetentionPeriod")]
         public long? FullRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// <p>Instance ID.</p>.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <P>Log retention days. currently, can only set retention to 7 days.</p>.
+        /// <P>Log retention days. currently, can only set retention to 7 days.</p>
         /// </summary>
         [JsonProperty("LogRetentionPeriod")]
         public long? LogRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// <P>Days of the week to perform backup.</p>.
+        /// <P>Days of the week to perform backup.</p>
         /// </summary>
         [JsonProperty("PeriodTime")]
         public string PeriodTime{ get; set; }
 
         /// <summary>
-        /// <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+        /// <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

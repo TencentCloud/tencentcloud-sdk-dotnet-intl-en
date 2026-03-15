@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1272";
+       private const string sdkVersion = "SDK_NET_3.0.1273";
 
         /// <summary>
         /// Client constructor.
@@ -113,31 +113,6 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteDBSBackupSetsResponse DeleteDBSBackupSetsSync(DeleteDBSBackupSetsRequest req)
         {
             return InternalRequestAsync<DeleteDBSBackupSetsResponse>(req, "DeleteDBSBackupSets")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// No place to call.
-        /// 
-        /// This API is used to query whether billing is enabled.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingEnableRequest"/></param>
-        /// <returns><see cref="DescribeBillingEnableResponse"/></returns>
-        public Task<DescribeBillingEnableResponse> DescribeBillingEnable(DescribeBillingEnableRequest req)
-        {
-            return InternalRequestAsync<DescribeBillingEnableResponse>(req, "DescribeBillingEnable");
-        }
-
-        /// <summary>
-        /// No place to call.
-        /// 
-        /// This API is used to query whether billing is enabled.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBillingEnableRequest"/></param>
-        /// <returns><see cref="DescribeBillingEnableResponse"/></returns>
-        public DescribeBillingEnableResponse DescribeBillingEnableSync(DescribeBillingEnableRequest req)
-        {
-            return InternalRequestAsync<DescribeBillingEnableResponse>(req, "DescribeBillingEnable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -247,31 +222,6 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Redundant API, no API calls.
-        /// 
-        /// This API is used to query table information of a cloud database instance.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
-        public Task<DescribeDatabaseTableResponse> DescribeDatabaseTable(DescribeDatabaseTableRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseTableResponse>(req, "DescribeDatabaseTable");
-        }
-
-        /// <summary>
-        /// Redundant API, no API calls.
-        /// 
-        /// This API is used to query table information of a cloud database instance.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
-        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
-        public DescribeDatabaseTableResponse DescribeDatabaseTableSync(DescribeDatabaseTableRequest req)
-        {
-            return InternalRequestAsync<DescribeDatabaseTableResponse>(req, "DescribeDatabaseTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to query the process status of an asynchronous task.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>
@@ -352,31 +302,6 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
         {
             return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to entirely overwrite the API feature of ModifyInstanceCdc.
-        /// 
-        /// Modify the binlog status.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyBinlogStatusRequest"/></param>
-        /// <returns><see cref="ModifyBinlogStatusResponse"/></returns>
-        public Task<ModifyBinlogStatusResponse> ModifyBinlogStatus(ModifyBinlogStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyBinlogStatusResponse>(req, "ModifyBinlogStatus");
-        }
-
-        /// <summary>
-        /// This API is used to entirely overwrite the API feature of ModifyInstanceCdc.
-        /// 
-        /// Modify the binlog status.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyBinlogStatusRequest"/></param>
-        /// <returns><see cref="ModifyBinlogStatusResponse"/></returns>
-        public ModifyBinlogStatusResponse ModifyBinlogStatusSync(ModifyBinlogStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyBinlogStatusResponse>(req, "ModifyBinlogStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
