@@ -42,6 +42,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string OperateUin{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamArraySimple(map, prefix + "TagKey.", this.TagKey);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
         }
     }
 }

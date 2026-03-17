@@ -102,12 +102,12 @@ namespace TencentCloud.Billing.V20180709.Models
         /// <summary>
         /// Hourly settlement
         /// Daily settlement
-        /// Monthly settlement
+        /// Yearly/monthly subscription
         /// Spot
         /// New monthly subscription
-        /// Monthly subscription renewal
-        /// Monthly subscription specification adjustment
-        /// Monthly subscription refund
+        /// Yearly/monthly subscription renewal
+        /// Yearly/monthly subscription specification adjustment
+        /// Yearly/monthly subscription refund
         /// Adjustment - deduction
         /// Adjustment - refund
         /// Hourly RI fee

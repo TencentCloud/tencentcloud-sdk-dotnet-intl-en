@@ -69,7 +69,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+        /// Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
@@ -82,10 +82,10 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-        /// Monthly subscription purchase
-        /// Monthly subscription renewal
-        /// Monthly subscription upgrade/downgrade
-        /// Monthly subscription refund 
+        /// Yearly/monthly subscription purchase
+        /// Yearly/monthly subscription renewal
+        /// Yearly/monthly subscription upgrade/downgrade
+        /// Yearly/monthly subscription refund 
         /// Pay-as-you-go deduction 
         /// Offline project deduction 
         /// Offline product deduction 
@@ -101,13 +101,13 @@ namespace TencentCloud.Billing.V20180709.Models
         /// Offer compensation 
         /// Pay-as-you-go resource migration in 
         /// Pay-as-you-go resource migration out 
-        /// Monthly subscription resource migration in 
-        /// Monthly subscription resource migration out 
+        /// Yearly/monthly subscription resource migration in 
+        /// Yearly/monthly subscription resource migration out 
         /// Prepaid 
         /// Hourly 
         /// RI refund 
         /// Pay-as-you-go reversal 
-        /// Monthly subscription to pay-as-you-go 
+        /// Yearly/monthly subscription to pay-as-you-go 
         /// Minimum spend deduction 
         /// Hourly savings plan fee
         /// </summary>

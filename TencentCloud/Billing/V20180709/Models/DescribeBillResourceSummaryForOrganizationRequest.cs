@@ -46,6 +46,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// Cycle type, which can be `byUsedTime` (by billing cycle) or `byPayTime` (by deduction time). This value must be the same as the billing period type in Billing Center for that particular month. You can check your billing cycle at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
         /// </summary>
         [JsonProperty("PeriodType")]
+        [System.Obsolete]
         public string PeriodType{ get; set; }
 
         /// <summary>
@@ -57,10 +58,10 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-        /// Monthly subscription purchase
-        /// Monthly subscription renewal
-        /// Monthly subscription upgrade/downgrade
-        /// Monthly subscription refund 
+        /// Yearly/monthly subscription purchase
+        /// Yearly/monthly subscription renewal
+        /// Yearly/monthly subscription upgrade/downgrade
+        /// Yearly/monthly subscription refund 
         /// Pay-as-you-go deduction 
         /// Offline project deduction 
         /// Offline product deduction 
@@ -76,13 +77,13 @@ namespace TencentCloud.Billing.V20180709.Models
         /// Offer compensation 
         /// Pay-as-you-go resource migration in 
         /// Pay-as-you-go resource migration out 
-        /// Monthly subscription resource migration in 
-        /// Monthly subscription resource migration out 
+        /// Yearly/monthly subscription resource migration in 
+        /// Yearly/monthly subscription resource migration out 
         /// Prepaid 
         /// Hourly 
         /// RI refund 
         /// Pay-as-you-go reversal 
-        /// Monthly subscription to pay-as-you-go 
+        /// Yearly/monthly subscription to pay-as-you-go 
         /// Minimum spend deduction 
         /// Hourly savings plan fee
         /// </summary>

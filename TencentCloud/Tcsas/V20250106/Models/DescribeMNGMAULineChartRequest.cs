@@ -43,16 +43,16 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Mini program team ID
-        /// </summary>
-        [JsonProperty("MNPTeamId")]
-        public long? MNPTeamId{ get; set; }
-
-        /// <summary>
         /// Mini program appid, required. When provided, the query is performed based on the mini program.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
+
+        /// <summary>
+        /// Mini program team ID
+        /// </summary>
+        [JsonProperty("MNPTeamId")]
+        public long? MNPTeamId{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "DataType", this.DataType);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "MNPTeamId", this.MNPTeamId);
             this.SetParamSimple(map, prefix + "MNPId", this.MNPId);
+            this.SetParamSimple(map, prefix + "MNPTeamId", this.MNPTeamId);
         }
     }
 }
