@@ -21,26 +21,20 @@ namespace TencentCloud.Kms.V20190118.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnableKeyRotationRequest : AbstractModel
+    public class MemberAccount : AbstractModel
     {
         
         /// <summary>
-        /// Unique CMK ID
+        /// Member account appid.
         /// </summary>
-        [JsonProperty("KeyId")]
-        public string KeyId{ get; set; }
+        [JsonProperty("MemberAppId")]
+        public ulong? MemberAppId{ get; set; }
 
         /// <summary>
-        /// The interval between each key rotation in days. Value range: 7 - 365 (default).
+        /// Member account UIN
         /// </summary>
-        [JsonProperty("RotateDays")]
-        public ulong? RotateDays{ get; set; }
-
-        /// <summary>
-        /// Trusted service member account information. valid at that time when the current account is admin or delegated admin.
-        /// </summary>
-        [JsonProperty("MemberAccount")]
-        public MemberAccount MemberAccount{ get; set; }
+        [JsonProperty("MemberUin")]
+        public ulong? MemberUin{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Kms.V20190118.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
-            this.SetParamSimple(map, prefix + "RotateDays", this.RotateDays);
-            this.SetParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
+            this.SetParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+            this.SetParamSimple(map, prefix + "MemberUin", this.MemberUin);
         }
     }
 }

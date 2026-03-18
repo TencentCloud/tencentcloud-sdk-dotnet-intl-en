@@ -36,6 +36,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+        /// </summary>
+        [JsonProperty("MemberAccount")]
+        public MemberAccount MemberAccount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Kms.V20190118.Models
         {
             this.SetParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
         }
     }
 }

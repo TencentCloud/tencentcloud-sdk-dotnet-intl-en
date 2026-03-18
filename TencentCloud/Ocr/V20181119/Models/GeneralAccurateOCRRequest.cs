@@ -25,9 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Base64-encoded value of image.
-        /// The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-        /// Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+        /// The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
@@ -41,13 +39,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// Whether to return the character information. Default value: `false`
-        /// </summary>
-        [JsonProperty("IsWords")]
-        public bool? IsWords{ get; set; }
-
-        /// <summary>
-        /// Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+        /// Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
         /// </summary>
         [JsonProperty("EnableDetectSplit")]
         public bool? EnableDetectSplit{ get; set; }
@@ -64,6 +56,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+        /// </summary>
+        [JsonProperty("EnableDetectText")]
+        public bool? EnableDetectText{ get; set; }
+
+        /// <summary>
+        /// Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+        /// </summary>
+        [JsonProperty("ConfigID")]
+        public string ConfigID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,10 +76,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-            this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
             this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
+            this.SetParamSimple(map, prefix + "ConfigID", this.ConfigID);
         }
     }
 }
