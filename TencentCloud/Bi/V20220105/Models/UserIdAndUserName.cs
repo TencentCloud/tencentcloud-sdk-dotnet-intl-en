@@ -58,14 +58,21 @@ namespace TencentCloud.Bi.V20220105.Models
         public string LastLogin{ get; set; }
 
         /// <summary>
-        /// Enabled/Disabled status.
+        /// User status.
+        /// Valid values:.
+        /// 
+        /// -Enable.
+        /// -0: disabled.
+        /// 
+        /// The default value is 1.
+        /// Example value: 1.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Whether to change the password during the first-time login.
+        /// Whether to change password on first login.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstModify")]
@@ -114,14 +121,14 @@ namespace TencentCloud.Bi.V20220105.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// Global role.
+        /// System global role.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GlobalUserName")]
         public string GlobalUserName{ get; set; }
 
         /// <summary>
-        /// Global role code.
+        /// System global role code.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GlobalUserCode")]

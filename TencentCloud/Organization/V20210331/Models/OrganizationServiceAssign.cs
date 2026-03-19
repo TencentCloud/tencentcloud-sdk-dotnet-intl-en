@@ -26,92 +26,79 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Organization service ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
         /// Organization service product name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Whether to support delegation. Valid values: 1 (yes), 2 (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
         /// </summary>
         [JsonProperty("IsAssign")]
         public ulong? IsAssign{ get; set; }
 
         /// <summary>
         /// Organization service description.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Number of the current delegated admins.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of delegated administrators.
         /// </summary>
         [JsonProperty("MemberNum")]
         public string MemberNum{ get; set; }
 
         /// <summary>
         /// Help documentation.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Document")]
         public string Document{ get; set; }
 
         /// <summary>
-        /// Console path of the organization service product.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path to the console for organization service products.
         /// </summary>
         [JsonProperty("ConsoleUrl")]
         public string ConsoleUrl{ get; set; }
 
         /// <summary>
-        /// Whether to access the usage status. Valid values: 1 (yes), 
-        ///  2 (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to access the usage status. valid values: 1 (yes). 
+        /// 2: no.
         /// </summary>
         [JsonProperty("IsUsageStatus")]
         public ulong? IsUsageStatus{ get; set; }
 
         /// <summary>
-        /// Limit for the number of delegated admins.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Limit on the number of delegated administrators.
         /// </summary>
         [JsonProperty("CanAssignCount")]
         public ulong? CanAssignCount{ get; set; }
 
         /// <summary>
-        /// Organization service product identifier.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Organization service product ID.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
         /// </summary>
         [JsonProperty("ServiceGrant")]
         public ulong? ServiceGrant{ get; set; }
 
         /// <summary>
-        /// Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
         /// </summary>
         [JsonProperty("GrantStatus")]
         public string GrantStatus{ get; set; }
 
         /// <summary>
-        /// Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
         /// </summary>
         [JsonProperty("IsSetManagementScope")]
         public ulong? IsSetManagementScope{ get; set; }

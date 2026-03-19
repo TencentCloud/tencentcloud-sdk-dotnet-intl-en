@@ -49,8 +49,8 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-        /// Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+        /// List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+        /// Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }
@@ -67,6 +67,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
+        /// <summary>
+        /// Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+        /// </summary>
+        [JsonProperty("IsModifyNickName")]
+        public ulong? IsModifyNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
             this.SetParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
+            this.SetParamSimple(map, prefix + "IsModifyNickName", this.IsModifyNickName);
         }
     }
 }

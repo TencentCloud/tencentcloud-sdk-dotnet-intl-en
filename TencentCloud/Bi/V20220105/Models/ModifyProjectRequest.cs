@@ -68,6 +68,9 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// Default dashboard.
+        /// Value range:.
+        /// 1: project dashboard. 
+        /// 2: my dashboard.
         /// </summary>
         [JsonProperty("DefaultPanelType")]
         public long? DefaultPanelType{ get; set; }

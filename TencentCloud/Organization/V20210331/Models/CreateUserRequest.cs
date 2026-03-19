@@ -78,6 +78,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+        /// </summary>
+        [JsonProperty("NeedResetPassword")]
+        public bool? NeedResetPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "UserStatus", this.UserStatus);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
         }
     }
 }

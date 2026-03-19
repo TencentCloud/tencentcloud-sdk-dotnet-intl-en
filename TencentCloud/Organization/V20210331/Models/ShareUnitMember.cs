@@ -32,8 +32,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// Creation time.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

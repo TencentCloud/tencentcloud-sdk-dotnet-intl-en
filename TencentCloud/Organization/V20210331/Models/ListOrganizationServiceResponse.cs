@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Total quantity.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Organization service list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Group service list.
         /// </summary>
         [JsonProperty("Items")]
         public OrganizationServiceAssign[] Items{ get; set; }

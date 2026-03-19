@@ -26,7 +26,6 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Bound ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BindId")]
         public ulong? BindId{ get; set; }

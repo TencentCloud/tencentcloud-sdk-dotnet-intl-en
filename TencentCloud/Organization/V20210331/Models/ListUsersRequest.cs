@@ -73,7 +73,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string SortField{ get; set; }
 
         /// <summary>
-        /// Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+        /// Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }

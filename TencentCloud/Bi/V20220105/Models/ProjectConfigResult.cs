@@ -33,6 +33,15 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// Configuration mode.
+        /// Valid values:.
+        /// 
+        /// -usable.
+        /// -visible.
+        /// -disabled: unavailable.
+        /// -hidden: hide.
+        /// 
+        /// Default value: disabled.
+        /// Example value: disabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncludeType")]

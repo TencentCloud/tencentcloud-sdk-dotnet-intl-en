@@ -108,7 +108,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+        /// Billing mode. supported values: 0 and 1. default value: 0.
+        /// Value is 0, indicating pay-as-you-go billing.
+        /// Value is 1, which means yearly/monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -155,25 +157,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Storage upper limit of normal instance in GB
-        /// If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+        /// If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Purchase duration of monthly subscription plan
+        /// Purchase duration of yearly/monthly subscription plan
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+        /// Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+        /// Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
         /// 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
@@ -243,9 +245,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+        /// The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
         /// If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-        /// Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+        /// Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -263,7 +265,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+        /// Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
@@ -275,7 +277,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+        /// Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
@@ -291,6 +293,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
+
+        /// <summary>
+        /// Global database unique identifier.
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// Database proxy configuration.
+        /// </summary>
+        [JsonProperty("ProxyConfig")]
+        public ProxyConfig ProxyConfig{ get; set; }
+
+        /// <summary>
+        /// Automatically archive.
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
+        /// <summary>
+        /// Archiving processing time after pausing.
+        /// </summary>
+        [JsonProperty("AutoArchiveDelayHours")]
+        public long? AutoArchiveDelayHours{ get; set; }
+
+        /// <summary>
+        /// Kernel minor version number.
+        /// </summary>
+        [JsonProperty("CynosVersion")]
+        public string CynosVersion{ get; set; }
 
 
         /// <summary>
@@ -339,6 +371,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
             this.SetParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+            this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         }
     }
 }

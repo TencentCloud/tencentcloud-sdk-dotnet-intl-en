@@ -43,13 +43,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+        /// Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+        /// Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+        /// Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+        /// Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Ladder{ get; set; }
 
         /// <summary>
-        /// 
+        /// Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

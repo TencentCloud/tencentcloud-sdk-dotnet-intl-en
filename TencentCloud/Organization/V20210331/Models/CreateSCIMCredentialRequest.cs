@@ -30,6 +30,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
+        /// <summary>
+        /// Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+        /// </summary>
+        [JsonProperty("ExpireDuration")]
+        public ulong? ExpireDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ExpireDuration", this.ExpireDuration);
         }
     }
 }

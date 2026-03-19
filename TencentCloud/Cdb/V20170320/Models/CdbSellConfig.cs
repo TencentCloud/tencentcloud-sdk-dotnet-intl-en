@@ -73,8 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

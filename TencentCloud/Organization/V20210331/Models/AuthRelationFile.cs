@@ -26,15 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// File name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// File path.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

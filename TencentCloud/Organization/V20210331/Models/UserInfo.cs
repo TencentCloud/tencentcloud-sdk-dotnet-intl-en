@@ -96,6 +96,18 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("IsSelected")]
         public bool? IsSelected{ get; set; }
 
+        /// <summary>
+        /// User password.
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
+
+        /// <summary>
+        /// Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+        /// </summary>
+        [JsonProperty("NeedResetPassword")]
+        public bool? NeedResetPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IsSelected", this.IsSelected);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
         }
     }
 }

@@ -26,112 +26,96 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Organization ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
 
         /// <summary>
         /// Creator UIN.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostUin")]
         public long? HostUin{ get; set; }
 
         /// <summary>
-        /// Creator name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creator'S nickname.
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// Organization type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Enterprise organization type.
         /// </summary>
         [JsonProperty("OrgType")]
         public long? OrgType{ get; set; }
 
         /// <summary>
-        /// Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the organization admin. valid values: true, false.
         /// </summary>
         [JsonProperty("IsManager")]
         public bool? IsManager{ get; set; }
 
         /// <summary>
-        /// Policy type. Valid values: `Financial` (finance management).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Policy type. Financial: financial management.
         /// </summary>
         [JsonProperty("OrgPolicyType")]
         public string OrgPolicyType{ get; set; }
 
         /// <summary>
         /// Policy name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrgPolicyName")]
         public string OrgPolicyName{ get; set; }
 
         /// <summary>
-        /// List of member financial permissions.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member financial permission list.
         /// </summary>
         [JsonProperty("OrgPermission")]
         public OrgPermission[] OrgPermission{ get; set; }
 
         /// <summary>
-        /// Organization root node ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Root node ID of the organization.
         /// </summary>
         [JsonProperty("RootNodeId")]
         public long? RootNodeId{ get; set; }
 
         /// <summary>
         /// Organization creation time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Member joining time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member join time.
         /// </summary>
         [JsonProperty("JoinTime")]
         public string JoinTime{ get; set; }
 
         /// <summary>
-        /// Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to allow a member to exit. Valid values: Allow, Denied.
         /// </summary>
         [JsonProperty("IsAllowQuit")]
         public string IsAllowQuit{ get; set; }
 
         /// <summary>
-        /// Payer UIN.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy payer UIN.
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
         /// Payer name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayName")]
         public string PayName{ get; set; }
 
         /// <summary>
-        /// Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
         /// </summary>
         [JsonProperty("IsAssignManager")]
         public bool? IsAssignManager{ get; set; }
 
         /// <summary>
-        /// Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
         /// </summary>
         [JsonProperty("IsAuthManager")]
         public bool? IsAuthManager{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.intl.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1250";
+       private const string sdkVersion = "SDK_NET_3.0.1277";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// Add a shared unit department.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitNodeRequest"/></param>
+        /// <returns><see cref="AddShareUnitNodeResponse"/></returns>
+        public Task<AddShareUnitNodeResponse> AddShareUnitNode(AddShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitNodeResponse>(req, "AddShareUnitNode");
+        }
+
+        /// <summary>
+        /// Add a shared unit department.
+        /// </summary>
+        /// <param name="req"><see cref="AddShareUnitNodeRequest"/></param>
+        /// <returns><see cref="AddShareUnitNodeResponse"/></returns>
+        public AddShareUnitNodeResponse AddShareUnitNodeSync(AddShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<AddShareUnitNodeResponse>(req, "AddShareUnitNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to add resources to a shared unit.
         /// </summary>
         /// <param name="req"><see cref="AddShareUnitResourcesRequest"/></param>
@@ -243,6 +264,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// Bind a policy.
+        /// </summary>
+        /// <param name="req"><see cref="AttachPolicyRequest"/></param>
+        /// <returns><see cref="AttachPolicyResponse"/></returns>
+        public Task<AttachPolicyResponse> AttachPolicy(AttachPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachPolicyResponse>(req, "AttachPolicy");
+        }
+
+        /// <summary>
+        /// Bind a policy.
+        /// </summary>
+        /// <param name="req"><see cref="AttachPolicyRequest"/></param>
+        /// <returns><see cref="AttachPolicyResponse"/></returns>
+        public AttachPolicyResponse AttachPolicySync(AttachPolicyRequest req)
+        {
+            return InternalRequestAsync<AttachPolicyResponse>(req, "AttachPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to bind an organization member to a sub-account of the organization admin.
         /// </summary>
         /// <param name="req"><see cref="BindOrganizationMemberAuthAccountRequest"/></param>
@@ -264,6 +306,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to bind member access authorization policies to the sub-accounts of the organization administrator.
+        /// </summary>
+        /// <param name="req"><see cref="BindOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="BindOrganizationPolicySubAccountResponse"/></returns>
+        public Task<BindOrganizationPolicySubAccountResponse> BindOrganizationPolicySubAccount(BindOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<BindOrganizationPolicySubAccountResponse>(req, "BindOrganizationPolicySubAccount");
+        }
+
+        /// <summary>
+        /// This API is used to bind member access authorization policies to the sub-accounts of the organization administrator.
+        /// </summary>
+        /// <param name="req"><see cref="BindOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="BindOrganizationPolicySubAccountResponse"/></returns>
+        public BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccountSync(BindOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<BindOrganizationPolicySubAccountResponse>(req, "BindOrganizationPolicySubAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to unbind an organization member from a sub-account of the organization admin.
         /// </summary>
         /// <param name="req"><see cref="CancelOrganizationMemberAuthAccountRequest"/></param>
@@ -281,6 +344,27 @@ namespace TencentCloud.Organization.V20210331
         public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccountSync(CancelOrganizationMemberAuthAccountRequest req)
         {
             return InternalRequestAsync<CancelOrganizationMemberAuthAccountResponse>(req, "CancelOrganizationMemberAuthAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind member access authorization policies from the sub-accounts of the organization administrator.
+        /// </summary>
+        /// <param name="req"><see cref="CancelOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="CancelOrganizationPolicySubAccountResponse"/></returns>
+        public Task<CancelOrganizationPolicySubAccountResponse> CancelOrganizationPolicySubAccount(CancelOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<CancelOrganizationPolicySubAccountResponse>(req, "CancelOrganizationPolicySubAccount");
+        }
+
+        /// <summary>
+        /// This API is used to unbind member access authorization policies from the sub-accounts of the organization administrator.
+        /// </summary>
+        /// <param name="req"><see cref="CancelOrganizationPolicySubAccountRequest"/></param>
+        /// <returns><see cref="CancelOrganizationPolicySubAccountResponse"/></returns>
+        public CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccountSync(CancelOrganizationPolicySubAccountRequest req)
+        {
+            return InternalRequestAsync<CancelOrganizationPolicySubAccountResponse>(req, "CancelOrganizationPolicySubAccount")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -470,6 +554,27 @@ namespace TencentCloud.Organization.V20210331
         public CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicySync(CreateOrganizationMembersPolicyRequest req)
         {
             return InternalRequestAsync<CreateOrganizationMembersPolicyResponse>(req, "CreateOrganizationMembersPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a special type of policy that can be attached to the enterprise organization Root node, enterprise department nodes, or enterprise member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRequest"/></param>
+        /// <returns><see cref="CreatePolicyResponse"/></returns>
+        public Task<CreatePolicyResponse> CreatePolicy(CreatePolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyResponse>(req, "CreatePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create a special type of policy that can be attached to the enterprise organization Root node, enterprise department nodes, or enterprise member accounts.
+        /// </summary>
+        /// <param name="req"><see cref="CreatePolicyRequest"/></param>
+        /// <returns><see cref="CreatePolicyResponse"/></returns>
+        public CreatePolicyResponse CreatePolicySync(CreatePolicyRequest req)
+        {
+            return InternalRequestAsync<CreatePolicyResponse>(req, "CreatePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -747,6 +852,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// Deleting a Policy
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRequest"/></param>
+        /// <returns><see cref="DeletePolicyResponse"/></returns>
+        public Task<DeletePolicyResponse> DeletePolicy(DeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyResponse>(req, "DeletePolicy");
+        }
+
+        /// <summary>
+        /// Deleting a Policy
+        /// </summary>
+        /// <param name="req"><see cref="DeletePolicyRequest"/></param>
+        /// <returns><see cref="DeletePolicyResponse"/></returns>
+        public DeletePolicyResponse DeletePolicySync(DeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeletePolicyResponse>(req, "DeletePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to remove authorizations on member accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteRoleAssignmentRequest"/></param>
@@ -852,6 +978,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// Delete a shared unit department.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitNodeRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitNodeResponse"/></returns>
+        public Task<DeleteShareUnitNodeResponse> DeleteShareUnitNode(DeleteShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitNodeResponse>(req, "DeleteShareUnitNode");
+        }
+
+        /// <summary>
+        /// Delete a shared unit department.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShareUnitNodeRequest"/></param>
+        /// <returns><see cref="DeleteShareUnitNodeResponse"/></returns>
+        public DeleteShareUnitNodeResponse DeleteShareUnitNodeSync(DeleteShareUnitNodeRequest req)
+        {
+            return InternalRequestAsync<DeleteShareUnitNodeResponse>(req, "DeleteShareUnitNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete shared unit resources.
         /// </summary>
         /// <param name="req"><see cref="DeleteShareUnitResourcesRequest"/></param>
@@ -911,6 +1058,27 @@ namespace TencentCloud.Organization.V20210331
         public DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioningSync(DeleteUserSyncProvisioningRequest req)
         {
             return InternalRequestAsync<DeleteUserSyncProvisioningResponse>(req, "DeleteUserSyncProvisioning")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the valid policy associated with the target.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEffectivePolicyRequest"/></param>
+        /// <returns><see cref="DescribeEffectivePolicyResponse"/></returns>
+        public Task<DescribeEffectivePolicyResponse> DescribeEffectivePolicy(DescribeEffectivePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeEffectivePolicyResponse>(req, "DescribeEffectivePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the valid policy associated with the target.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEffectivePolicyRequest"/></param>
+        /// <returns><see cref="DescribeEffectivePolicyResponse"/></returns>
+        public DescribeEffectivePolicyResponse DescribeEffectivePolicySync(DescribeEffectivePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeEffectivePolicyResponse>(req, "DescribeEffectivePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1062,6 +1230,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to query the list of organization member access policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersAuthPolicyRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersAuthPolicyResponse"/></returns>
+        public Task<DescribeOrganizationMembersAuthPolicyResponse> DescribeOrganizationMembersAuthPolicy(DescribeOrganizationMembersAuthPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMembersAuthPolicyResponse>(req, "DescribeOrganizationMembersAuthPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of organization member access policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersAuthPolicyRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersAuthPolicyResponse"/></returns>
+        public DescribeOrganizationMembersAuthPolicyResponse DescribeOrganizationMembersAuthPolicySync(DescribeOrganizationMembersAuthPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeOrganizationMembersAuthPolicyResponse>(req, "DescribeOrganizationMembersAuthPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of organization nodes.
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationNodesRequest"/></param>
@@ -1079,6 +1268,69 @@ namespace TencentCloud.Organization.V20210331
         public DescribeOrganizationNodesResponse DescribeOrganizationNodesSync(DescribeOrganizationNodesRequest req)
         {
             return InternalRequestAsync<DescribeOrganizationNodesResponse>(req, "DescribeOrganizationNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query policy details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRequest"/></param>
+        /// <returns><see cref="DescribePolicyResponse"/></returns>
+        public Task<DescribePolicyResponse> DescribePolicy(DescribePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyResponse>(req, "DescribePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query policy details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyRequest"/></param>
+        /// <returns><see cref="DescribePolicyResponse"/></returns>
+        public DescribePolicyResponse DescribePolicySync(DescribePolicyRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyResponse>(req, "DescribePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query enterprise organization policy configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribePolicyConfigResponse"/></returns>
+        public Task<DescribePolicyConfigResponse> DescribePolicyConfig(DescribePolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyConfigResponse>(req, "DescribePolicyConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query enterprise organization policy configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribePolicyConfigResponse"/></returns>
+        public DescribePolicyConfigResponse DescribePolicyConfigSync(DescribePolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyConfigResponse>(req, "DescribePolicyConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of resources shared with me.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceToShareMemberRequest"/></param>
+        /// <returns><see cref="DescribeResourceToShareMemberResponse"/></returns>
+        public Task<DescribeResourceToShareMemberResponse> DescribeResourceToShareMember(DescribeResourceToShareMemberRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceToShareMemberResponse>(req, "DescribeResourceToShareMember");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of resources shared with me.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceToShareMemberRequest"/></param>
+        /// <returns><see cref="DescribeResourceToShareMemberResponse"/></returns>
+        public DescribeResourceToShareMemberResponse DescribeResourceToShareMemberSync(DescribeResourceToShareMemberRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceToShareMemberResponse>(req, "DescribeResourceToShareMember")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1125,6 +1377,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to obtain a list of shared unit departments.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitNodesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitNodesResponse"/></returns>
+        public Task<DescribeShareUnitNodesResponse> DescribeShareUnitNodes(DescribeShareUnitNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitNodesResponse>(req, "DescribeShareUnitNodes");
+        }
+
+        /// <summary>
+        /// This API is used to obtain a list of shared unit departments.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShareUnitNodesRequest"/></param>
+        /// <returns><see cref="DescribeShareUnitNodesResponse"/></returns>
+        public DescribeShareUnitNodesResponse DescribeShareUnitNodesSync(DescribeShareUnitNodesRequest req)
+        {
+            return InternalRequestAsync<DescribeShareUnitNodesResponse>(req, "DescribeShareUnitNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the resource list of a shared unit.
         /// </summary>
         /// <param name="req"><see cref="DescribeShareUnitResourcesRequest"/></param>
@@ -1167,6 +1440,48 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// Unbind a policy.
+        /// </summary>
+        /// <param name="req"><see cref="DetachPolicyRequest"/></param>
+        /// <returns><see cref="DetachPolicyResponse"/></returns>
+        public Task<DetachPolicyResponse> DetachPolicy(DetachPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachPolicyResponse>(req, "DetachPolicy");
+        }
+
+        /// <summary>
+        /// Unbind a policy.
+        /// </summary>
+        /// <param name="req"><see cref="DetachPolicyRequest"/></param>
+        /// <returns><see cref="DetachPolicyResponse"/></returns>
+        public DetachPolicyResponse DetachPolicySync(DetachPolicyRequest req)
+        {
+            return InternalRequestAsync<DetachPolicyResponse>(req, "DetachPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to disable a policy type.
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyTypeRequest"/></param>
+        /// <returns><see cref="DisablePolicyTypeResponse"/></returns>
+        public Task<DisablePolicyTypeResponse> DisablePolicyType(DisablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyTypeResponse>(req, "DisablePolicyType");
+        }
+
+        /// <summary>
+        /// This API is used to disable a policy type.
+        /// </summary>
+        /// <param name="req"><see cref="DisablePolicyTypeRequest"/></param>
+        /// <returns><see cref="DisablePolicyTypeResponse"/></returns>
+        public DisablePolicyTypeResponse DisablePolicyTypeSync(DisablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<DisablePolicyTypeResponse>(req, "DisablePolicyType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to undeploy permission configurations on member accounts.
         /// </summary>
         /// <param name="req"><see cref="DismantleRoleConfigurationRequest"/></param>
@@ -1184,6 +1499,27 @@ namespace TencentCloud.Organization.V20210331
         public DismantleRoleConfigurationResponse DismantleRoleConfigurationSync(DismantleRoleConfigurationRequest req)
         {
             return InternalRequestAsync<DismantleRoleConfigurationResponse>(req, "DismantleRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable a policy type.
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyTypeRequest"/></param>
+        /// <returns><see cref="EnablePolicyTypeResponse"/></returns>
+        public Task<EnablePolicyTypeResponse> EnablePolicyType(EnablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType");
+        }
+
+        /// <summary>
+        /// This API is used to enable a policy type.
+        /// </summary>
+        /// <param name="req"><see cref="EnablePolicyTypeRequest"/></param>
+        /// <returns><see cref="EnablePolicyTypeResponse"/></returns>
+        public EnablePolicyTypeResponse EnablePolicyTypeSync(EnablePolicyTypeRequest req)
+        {
+            return InternalRequestAsync<EnablePolicyTypeResponse>(req, "EnablePolicyType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1503,6 +1839,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to obtain the list of non-compliant resources detected by member tags.
+        /// </summary>
+        /// <param name="req"><see cref="ListNonCompliantResourceRequest"/></param>
+        /// <returns><see cref="ListNonCompliantResourceResponse"/></returns>
+        public Task<ListNonCompliantResourceResponse> ListNonCompliantResource(ListNonCompliantResourceRequest req)
+        {
+            return InternalRequestAsync<ListNonCompliantResourceResponse>(req, "ListNonCompliantResource");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of non-compliant resources detected by member tags.
+        /// </summary>
+        /// <param name="req"><see cref="ListNonCompliantResourceRequest"/></param>
+        /// <returns><see cref="ListNonCompliantResourceResponse"/></returns>
+        public ListNonCompliantResourceResponse ListNonCompliantResourceSync(ListNonCompliantResourceRequest req)
+        {
+            return InternalRequestAsync<ListNonCompliantResourceResponse>(req, "ListNonCompliantResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of delegated admins of the organization service.
         /// </summary>
         /// <param name="req"><see cref="ListOrgServiceAssignMemberRequest"/></param>
@@ -1587,6 +1944,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to query the list of policies associated with a target.
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesForTargetRequest"/></param>
+        /// <returns><see cref="ListPoliciesForTargetResponse"/></returns>
+        public Task<ListPoliciesForTargetResponse> ListPoliciesForTarget(ListPoliciesForTargetRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesForTargetResponse>(req, "ListPoliciesForTarget");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of policies associated with a target.
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesForTargetRequest"/></param>
+        /// <returns><see cref="ListPoliciesForTargetResponse"/></returns>
+        public ListPoliciesForTargetResponse ListPoliciesForTargetSync(ListPoliciesForTargetRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesForTargetResponse>(req, "ListPoliciesForTarget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the authorization list.
         /// </summary>
         /// <param name="req"><see cref="ListRoleAssignmentsRequest"/></param>
@@ -1667,6 +2045,27 @@ namespace TencentCloud.Organization.V20210331
         public ListSCIMCredentialsResponse ListSCIMCredentialsSync(ListSCIMCredentialsRequest req)
         {
             return InternalRequestAsync<ListSCIMCredentialsResponse>(req, "ListSCIMCredentials")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of targets associated with a specified policy.
+        /// </summary>
+        /// <param name="req"><see cref="ListTargetsForPolicyRequest"/></param>
+        /// <returns><see cref="ListTargetsForPolicyResponse"/></returns>
+        public Task<ListTargetsForPolicyResponse> ListTargetsForPolicy(ListTargetsForPolicyRequest req)
+        {
+            return InternalRequestAsync<ListTargetsForPolicyResponse>(req, "ListTargetsForPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of targets associated with a specified policy.
+        /// </summary>
+        /// <param name="req"><see cref="ListTargetsForPolicyRequest"/></param>
+        /// <returns><see cref="ListTargetsForPolicyResponse"/></returns>
+        public ListTargetsForPolicyResponse ListTargetsForPolicySync(ListTargetsForPolicyRequest req)
+        {
+            return InternalRequestAsync<ListTargetsForPolicyResponse>(req, "ListTargetsForPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2049,6 +2448,27 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// This API is used to modify an organization's member access policies.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMembersPolicyResponse"/></returns>
+        public Task<UpdateOrganizationMembersPolicyResponse> UpdateOrganizationMembersPolicy(UpdateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMembersPolicyResponse>(req, "UpdateOrganizationMembersPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify an organization's member access policies.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateOrganizationMembersPolicyRequest"/></param>
+        /// <returns><see cref="UpdateOrganizationMembersPolicyResponse"/></returns>
+        public UpdateOrganizationMembersPolicyResponse UpdateOrganizationMembersPolicySync(UpdateOrganizationMembersPolicyRequest req)
+        {
+            return InternalRequestAsync<UpdateOrganizationMembersPolicyResponse>(req, "UpdateOrganizationMembersPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update an organization node.
         /// </summary>
         /// <param name="req"><see cref="UpdateOrganizationNodeRequest"/></param>
@@ -2066,6 +2486,27 @@ namespace TencentCloud.Organization.V20210331
         public UpdateOrganizationNodeResponse UpdateOrganizationNodeSync(UpdateOrganizationNodeRequest req)
         {
             return InternalRequestAsync<UpdateOrganizationNodeResponse>(req, "UpdateOrganizationNode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Edit policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public Task<UpdatePolicyResponse> UpdatePolicy(UpdatePolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePolicyResponse>(req, "UpdatePolicy");
+        }
+
+        /// <summary>
+        /// Edit policy.
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePolicyRequest"/></param>
+        /// <returns><see cref="UpdatePolicyResponse"/></returns>
+        public UpdatePolicyResponse UpdatePolicySync(UpdatePolicyRequest req)
+        {
+            return InternalRequestAsync<UpdatePolicyResponse>(req, "UpdatePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

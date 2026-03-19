@@ -25,50 +25,43 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Organization node ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Organization node ID.
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
         /// Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parent node ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parent Node ID
         /// </summary>
         [JsonProperty("ParentNodeId")]
         public long? ParentNodeId{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update date
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Member tag list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

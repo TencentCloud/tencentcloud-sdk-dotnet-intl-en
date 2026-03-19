@@ -26,70 +26,60 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Identity ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
-        /// Role name of an identity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Role name of an identity.
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
-        /// Role alias of an identity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Role alias of an identity.
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
         /// Identity description.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// Time of initial configuration success.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Time of last configuration success.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time of the last successful configuration.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Identity type. Valid values: 1 (preset identity), 2 (custom identity).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity type. Valid values: 1: preset identity; 2: custom identity.
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
 
         /// <summary>
-        /// Configuration status. Valid values: 1 (configuration completed), 2 (reconfiguration required).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration status. Valid values: 1: configuration completed; 2: reconfiguration required.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Member Uin.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member UIN.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
         /// Member name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }

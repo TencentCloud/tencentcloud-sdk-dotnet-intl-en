@@ -25,71 +25,70 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Shared unit ID.
+        /// <p>Shared unit ID.</p>.
         /// </summary>
         [JsonProperty("UnitId")]
         public string UnitId{ get; set; }
 
         /// <summary>
-        /// Shared unit name.
+        /// <P>Shared unit name.</p>.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Shared unit administrator UIN.
+        /// <p>Shared unit administrator Uin.</p>.
         /// </summary>
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }
 
         /// <summary>
-        /// Shared unit administrator OwnerUin.
+        /// <p>Shared unit administrator OwnerUin.</p>.
         /// </summary>
         [JsonProperty("OwnerUin")]
         public long? OwnerUin{ get; set; }
 
         /// <summary>
-        /// Shared unit region.
+        /// <P>Shared unit region.</p>.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Description.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <P>Description.</P>.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <P>Creation time.</p>.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The number of resources in a shared unit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <P>The number of resources in a shared unit.</p>.
         /// </summary>
         [JsonProperty("ShareResourceNum")]
         public long? ShareResourceNum{ get; set; }
 
         /// <summary>
-        /// The number of members in a shared unit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <P>The number of members in a shared unit.</p>.
         /// </summary>
         [JsonProperty("ShareMemberNum")]
         public long? ShareMemberNum{ get; set; }
 
         /// <summary>
-        /// Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
         /// </summary>
         [JsonProperty("ShareScope")]
         public ulong? ShareScope{ get; set; }
+
+        /// <summary>
+        /// <P>The number of departments in a shared unit.</p>.
+        /// </summary>
+        [JsonProperty("ShareNodeNum")]
+        public long? ShareNodeNum{ get; set; }
 
 
         /// <summary>
@@ -107,6 +106,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
             this.SetParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
             this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
+            this.SetParamSimple(map, prefix + "ShareNodeNum", this.ShareNodeNum);
         }
     }
 }

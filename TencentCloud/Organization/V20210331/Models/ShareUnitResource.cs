@@ -38,8 +38,6 @@ namespace TencentCloud.Organization.V20210331.Models
 
         /// <summary>
         /// Creation time.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -51,22 +49,19 @@ namespace TencentCloud.Organization.V20210331.Models
         public string ProductResourceId{ get; set; }
 
         /// <summary>
-        /// The number of members in a shared unit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of members in a sharing unit.
         /// </summary>
         [JsonProperty("SharedMemberNum")]
         public ulong? SharedMemberNum{ get; set; }
 
         /// <summary>
-        /// The number of shared unit members in use.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of members using shared resources.
         /// </summary>
         [JsonProperty("SharedMemberUseNum")]
         public ulong? SharedMemberUseNum{ get; set; }
 
         /// <summary>
-        /// Shared administrator OwnerUin.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sharing unit administrator.
         /// </summary>
         [JsonProperty("ShareManagerUin")]
         public long? ShareManagerUin{ get; set; }

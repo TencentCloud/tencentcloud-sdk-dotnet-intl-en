@@ -25,64 +25,55 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Organization sub-account UIN.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Organization sub-account Uin.
         /// </summary>
         [JsonProperty("OrgSubAccountUin")]
         public long? OrgSubAccountUin{ get; set; }
 
         /// <summary>
         /// Policy ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
         /// Policy name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
         /// Identity ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// Identity role name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityRoleName")]
         public string IdentityRoleName{ get; set; }
 
         /// <summary>
-        /// Identity role alias.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Role alias of an identity.
         /// </summary>
         [JsonProperty("IdentityRoleAliasName")]
         public string IdentityRoleAliasName{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Update time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Sub-account name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sub-Account.
         /// </summary>
         [JsonProperty("OrgSubAccountName")]
         public string OrgSubAccountName{ get; set; }

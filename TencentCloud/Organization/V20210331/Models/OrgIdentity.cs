@@ -26,42 +26,36 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Identity ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// Identity name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityAliasName")]
         public string IdentityAliasName{ get; set; }
 
         /// <summary>
         /// Description.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// Identity policy.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityPolicy")]
         public IdentityPolicy[] IdentityPolicy{ get; set; }
 
         /// <summary>
-        /// Identity type. Valid values: `1` (preset); `2` (custom).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity type. 1: preset; 2: custom.
         /// </summary>
         [JsonProperty("IdentityType")]
         public ulong? IdentityType{ get; set; }
 
         /// <summary>
         /// Update time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

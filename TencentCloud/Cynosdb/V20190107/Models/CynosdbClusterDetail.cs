@@ -55,7 +55,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Status. supported values are as follows:.
+        /// -Creating: creating.
+        /// - running: running.
+        /// -isolating.
+        /// -Isolated: isolated.
+        /// -activating: restore from recycle bin.
+        /// -offlining: offline.
+        /// -offlined: offline.
+        /// - deleting: deleting.
+        /// - deleted: deleted.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -101,7 +110,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+        /// Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -185,7 +194,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// VIP and vport of the read-only instance in a cluster
+        /// VIP and vport of the read-only instance in a cluster.
         /// </summary>
         [JsonProperty("RoAddr")]
         public Addr[] RoAddr{ get; set; }
@@ -334,6 +343,45 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
+        /// <summary>
+        /// Global database network unique id.
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// The role of clusters in the global data network.
+        /// primary cluster.
+        /// Slave cluster - standby.
+        /// If empty, the field is invalid.
+        /// </summary>
+        [JsonProperty("GdnRole")]
+        public string GdnRole{ get; set; }
+
+        /// <summary>
+        /// Secondary storage usage, unit: G.
+        /// </summary>
+        [JsonProperty("UsedArchiveStorage")]
+        public long? UsedArchiveStorage{ get; set; }
+
+        /// <summary>
+        /// Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+        /// </summary>
+        [JsonProperty("ArchiveStatus")]
+        public string ArchiveStatus{ get; set; }
+
+        /// <summary>
+        /// Archive progress, percentage.
+        /// </summary>
+        [JsonProperty("ArchiveProgress")]
+        public long? ArchiveProgress{ get; set; }
+
+        /// <summary>
+        /// Whether transparent encryption is enabled.
+        /// </summary>
+        [JsonProperty("IsOpenTDE")]
+        public bool? IsOpenTDE{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -391,6 +439,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "GdnRole", this.GdnRole);
+            this.SetParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
+            this.SetParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+            this.SetParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+            this.SetParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
         }
     }
 }

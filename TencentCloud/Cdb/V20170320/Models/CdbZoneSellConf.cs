@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? IsBm{ get; set; }
 
         /// <summary>
-        /// Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+        /// Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
         /// </summary>
         [JsonProperty("PayType")]
         public string[] PayType{ get; set; }
@@ -156,6 +156,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineType")]
         public string[] EngineType{ get; set; }
 
+        /// <summary>
+        /// Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+        /// </summary>
+        [JsonProperty("CloudNativeClusterStatus")]
+        public long? CloudNativeClusterStatus{ get; set; }
+
+        /// <summary>
+        /// Cloud disk edition or single-node basic edition supported disk type.
+        /// </summary>
+        [JsonProperty("DiskTypeConf")]
+        public DiskTypeConfigItem[] DiskTypeConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "IsSupportIpv6", this.IsSupportIpv6);
             this.SetParamArraySimple(map, prefix + "EngineType.", this.EngineType);
+            this.SetParamSimple(map, prefix + "CloudNativeClusterStatus", this.CloudNativeClusterStatus);
+            this.SetParamArrayObj(map, prefix + "DiskTypeConf.", this.DiskTypeConf);
         }
     }
 }

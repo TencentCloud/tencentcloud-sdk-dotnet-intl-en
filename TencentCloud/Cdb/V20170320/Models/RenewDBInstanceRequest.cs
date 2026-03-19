@@ -37,10 +37,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+        /// To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
         /// </summary>
         [JsonProperty("ModifyPayType")]
         public string ModifyPayType{ get; set; }
+
+        /// <summary>
+        /// Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "ModifyPayType", this.ModifyPayType);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         }
     }
 }

@@ -60,6 +60,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("CustomPolicyDocument")]
         public string CustomPolicyDocument{ get; set; }
 
+        /// <summary>
+        /// List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+        /// </summary>
+        [JsonProperty("CustomPolicyDocuments")]
+        public string[] CustomPolicyDocuments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamArraySimple(map, prefix + "RolePolicyNames.", this.RolePolicyNames);
             this.SetParamArrayObj(map, prefix + "RolePolicies.", this.RolePolicies);
             this.SetParamSimple(map, prefix + "CustomPolicyDocument", this.CustomPolicyDocument);
+            this.SetParamArraySimple(map, prefix + "CustomPolicyDocuments.", this.CustomPolicyDocuments);
         }
     }
 }

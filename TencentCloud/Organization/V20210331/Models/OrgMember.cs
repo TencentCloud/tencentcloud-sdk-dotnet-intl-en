@@ -25,130 +25,118 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// Member UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member UIN.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// Member name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Member type. Valid values: `Invite` (invited); `Create` (created).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member type. Invite: invited, Create: created.
         /// </summary>
         [JsonProperty("MemberType")]
         public string MemberType{ get; set; }
 
         /// <summary>
-        /// Relationship policy type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Relationship policy type.
         /// </summary>
         [JsonProperty("OrgPolicyType")]
         public string OrgPolicyType{ get; set; }
 
         /// <summary>
-        /// Relationship policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Relational policy name.
         /// </summary>
         [JsonProperty("OrgPolicyName")]
         public string OrgPolicyName{ get; set; }
 
         /// <summary>
-        /// Relationship policy permission
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Relationship policy permission.
         /// </summary>
         [JsonProperty("OrgPermission")]
         public OrgPermission[] OrgPermission{ get; set; }
 
         /// <summary>
-        /// Node ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node ID.
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
-        /// Node name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node name.
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update date
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to allow a member to exit. Valid values: Allow, Denied.
         /// </summary>
         [JsonProperty("IsAllowQuit")]
         public string IsAllowQuit{ get; set; }
 
         /// <summary>
-        /// Payer UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy payer UIN.
         /// </summary>
         [JsonProperty("PayUin")]
         public string PayUin{ get; set; }
 
         /// <summary>
-        /// Payer name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy payer name.
         /// </summary>
         [JsonProperty("PayName")]
         public string PayName{ get; set; }
 
         /// <summary>
-        /// Management identity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Admin identity.
         /// </summary>
         [JsonProperty("OrgIdentity")]
         public MemberIdentity[] OrgIdentity{ get; set; }
 
         /// <summary>
-        /// Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
         /// </summary>
         [JsonProperty("BindStatus")]
         public string BindStatus{ get; set; }
 
         /// <summary>
-        /// Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member's permission status. Valid values: Confirmed, UnConfirmed.
         /// </summary>
         [JsonProperty("PermissionStatus")]
         public string PermissionStatus{ get; set; }
 
         /// <summary>
         /// Member tag list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Tencent cloud nickname.
+        /// </summary>
+        [JsonProperty("NickName")]
+        public string NickName{ get; set; }
 
 
         /// <summary>
@@ -174,6 +162,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NickName", this.NickName);
         }
     }
 }

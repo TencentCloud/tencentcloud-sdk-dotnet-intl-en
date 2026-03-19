@@ -25,15 +25,13 @@ namespace TencentCloud.Organization.V20210331.Models
     {
         
         /// <summary>
-        /// List of authorizable identities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of authorized identities.
         /// </summary>
         [JsonProperty("Items")]
         public OrgMemberAuthIdentity[] Items{ get; set; }
 
         /// <summary>
         /// Total number.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

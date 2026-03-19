@@ -32,7 +32,7 @@ namespace TencentCloud.Bi.V20220105.Models
         public ErrorInfo ErrorInfo{ get; set; }
 
         /// <summary>
-        /// Success No.
+        /// None.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]

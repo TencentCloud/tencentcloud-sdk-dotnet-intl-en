@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.intl.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1196";
+       private const string sdkVersion = "SDK_NET_3.0.1277";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Bi.V20220105
         public ApplyEmbedIntervalResponse ApplyEmbedIntervalSync(ApplyEmbedIntervalRequest req)
         {
             return InternalRequestAsync<ApplyEmbedIntervalResponse>(req, "ApplyEmbedInterval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Clean strong authentication tokens. Only enterprise admins can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="ClearEmbedTokenRequest"/></param>
+        /// <returns><see cref="ClearEmbedTokenResponse"/></returns>
+        public Task<ClearEmbedTokenResponse> ClearEmbedToken(ClearEmbedTokenRequest req)
+        {
+            return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken");
+        }
+
+        /// <summary>
+        /// Clean strong authentication tokens. Only enterprise admins can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="ClearEmbedTokenRequest"/></param>
+        /// <returns><see cref="ClearEmbedTokenResponse"/></returns>
+        public ClearEmbedTokenResponse ClearEmbedTokenSync(ClearEmbedTokenRequest req)
+        {
+            return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

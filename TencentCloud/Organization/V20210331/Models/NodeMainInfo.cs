@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Department ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }
 
         /// <summary>
         /// Department name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }

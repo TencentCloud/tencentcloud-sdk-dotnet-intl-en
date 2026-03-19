@@ -44,6 +44,12 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// Drive.
+        /// Value range:.
+        /// MYSQL: MYSQL database.
+        /// PRESTO: presto database.
+        /// POSTGRE: PostgreSQL database.
+        /// DLC: dlc database.
+        /// MSSQL: microsoft SQL Server database.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
@@ -156,6 +162,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
+        /// <summary>
+        /// Database schema.
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
+        /// <summary>
+        /// Database version.
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +202,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
             this.SetParamSimple(map, prefix + "UseVPC", this.UseVPC);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
         }
     }
 }

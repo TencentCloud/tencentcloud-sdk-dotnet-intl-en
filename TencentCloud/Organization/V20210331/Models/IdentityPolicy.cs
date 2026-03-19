@@ -37,15 +37,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
         /// </summary>
         [JsonProperty("PolicyType")]
         public ulong? PolicyType{ get; set; }
 
         /// <summary>
-        /// Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
         /// </summary>
         [JsonProperty("PolicyDocument")]
         public string PolicyDocument{ get; set; }

@@ -79,8 +79,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Cause of the failure.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for failure
         /// </summary>
         [JsonProperty("FailureReason")]
         public string FailureReason{ get; set; }

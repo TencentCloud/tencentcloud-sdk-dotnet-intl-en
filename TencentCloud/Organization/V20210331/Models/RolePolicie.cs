@@ -26,7 +26,6 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Policy ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RolePolicyId")]
         public long? RolePolicyId{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Identity ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityId")]
         public long? IdentityId{ get; set; }
 
         /// <summary>
         /// Identity name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdentityAliasName")]
         public string IdentityAliasName{ get; set; }

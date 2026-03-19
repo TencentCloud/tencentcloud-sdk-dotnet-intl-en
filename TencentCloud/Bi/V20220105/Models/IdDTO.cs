@@ -54,6 +54,10 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// Transaction status.
+        /// Value range:.
+        /// Processing.
+        /// 2: processing is successful.
+        /// 3: processing failure.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranStatus")]

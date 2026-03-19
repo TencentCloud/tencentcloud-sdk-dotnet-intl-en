@@ -26,14 +26,12 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Member UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// Member name j.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Member name.
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }

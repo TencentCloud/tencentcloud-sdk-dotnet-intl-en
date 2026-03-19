@@ -32,6 +32,12 @@ namespace TencentCloud.Bi.V20220105.Models
 
         /// <summary>
         /// Drive.
+        /// Value range:.
+        /// MYSQL: MYSQL database.
+        /// PRESTO: presto database.
+        /// POSTGRE: PostgreSQL database.
+        /// DLC: dlc database.
+        /// MSSQL: microsoft SQL Server database.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
@@ -150,6 +156,18 @@ namespace TencentCloud.Bi.V20220105.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// Database schema.
+        /// </summary>
+        [JsonProperty("Schema")]
+        public string Schema{ get; set; }
+
+        /// <summary>
+        /// Database version.
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +195,8 @@ namespace TencentCloud.Bi.V20220105.Models
             this.SetParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
             this.SetParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Schema", this.Schema);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
         }
     }
 }

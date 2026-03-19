@@ -110,12 +110,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Instance machine type.
+        /// 1. common: general.
+        /// 2. exclusive, dedicated.
         /// </summary>
         [JsonProperty("InstanceDeviceType")]
         public string InstanceDeviceType{ get; set; }
 
         /// <summary>
         /// Instance storage type.
+        /// Description: this parameter returns a value only when querying resources belonging to LibraDB.
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
@@ -128,6 +131,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Node list
+        /// Description: this parameter returns a value only when querying LibraDB resources.
         /// </summary>
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }

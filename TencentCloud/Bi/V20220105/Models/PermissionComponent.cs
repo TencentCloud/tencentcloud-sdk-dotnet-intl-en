@@ -32,7 +32,16 @@ namespace TencentCloud.Bi.V20220105.Models
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// Visible/Available.
+        /// Availability.
+        /// Valid values:.
+        /// 
+        /// -usable.
+        /// -visible.
+        /// -disabled: unavailable.
+        /// -hidden: hide.
+        /// 
+        /// Default value: disabled.
+        /// Example value: disabled.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncludeType")]

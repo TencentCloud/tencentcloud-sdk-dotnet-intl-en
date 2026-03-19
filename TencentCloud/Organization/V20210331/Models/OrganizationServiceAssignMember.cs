@@ -26,63 +26,54 @@ namespace TencentCloud.Organization.V20210331.Models
         
         /// <summary>
         /// Organization service ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceId")]
         public ulong? ServiceId{ get; set; }
 
         /// <summary>
         /// Organization service product name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
         /// Uin of the delegated admin.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MemberUin")]
         public long? MemberUin{ get; set; }
 
         /// <summary>
-        /// Name of the delegated admin.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Delegated administrator name.
         /// </summary>
         [JsonProperty("MemberName")]
         public string MemberName{ get; set; }
 
         /// <summary>
-        /// Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
         /// </summary>
         [JsonProperty("UsageStatus")]
         public ulong? UsageStatus{ get; set; }
 
         /// <summary>
         /// Delegation time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
         /// </summary>
         [JsonProperty("ManagementScope")]
         public ulong? ManagementScope{ get; set; }
 
         /// <summary>
-        /// Uin list of managed members. This parameter is valid when ManagementScope is 2.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
         /// </summary>
         [JsonProperty("ManagementScopeMembers")]
         public MemberMainInfo[] ManagementScopeMembers{ get; set; }
 
         /// <summary>
-        /// ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
         /// </summary>
         [JsonProperty("ManagementScopeNodes")]
         public NodeMainInfo[] ManagementScopeNodes{ get; set; }

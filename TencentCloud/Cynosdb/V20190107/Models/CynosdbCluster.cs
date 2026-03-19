@@ -112,7 +112,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+        /// Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -158,6 +158,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
+
+        /// <summary>
+        /// cynos version tag.
+        /// </summary>
+        [JsonProperty("CynosVersionTag")]
+        public string CynosVersionTag{ get; set; }
 
         /// <summary>
         /// Specifies the storage capacity.
@@ -216,7 +222,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+        /// Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -293,6 +299,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
+        /// <summary>
+        /// Global database unique Id.
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+        /// </summary>
+        [JsonProperty("GdnRole")]
+        public string GdnRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -320,6 +338,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
@@ -342,6 +361,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OrderSource", this.OrderSource);
             this.SetParamObj(map, prefix + "Ability.", this.Ability);
             this.SetParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "GdnRole", this.GdnRole);
         }
     }
 }

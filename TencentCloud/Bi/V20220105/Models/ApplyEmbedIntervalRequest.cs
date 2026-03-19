@@ -25,7 +25,7 @@ namespace TencentCloud.Bi.V20220105.Models
     {
         
         /// <summary>
-        /// Shares the project ID. Required.
+        /// Shares the project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }

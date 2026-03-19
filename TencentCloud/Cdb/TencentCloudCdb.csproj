@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1265</VersionPrefix>
+    <VersionPrefix>3.0.1277</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,6 +98,7 @@
     <Compile Include="V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="V20170320\Models\CloseWanServiceResponse.cs" />
     <Compile Include="V20170320\Models\ClusterInfo.cs" />
+    <Compile Include="V20170320\Models\ClusterTopology.cs" />
     <Compile Include="V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170320\Models\CommonTimeWindow.cs" />
     <Compile Include="V20170320\Models\CreateAccountsRequest.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="V20170320\Models\DeviceNetInfo.cs" />
     <Compile Include="V20170320\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170320\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20170320\Models\DiskTypeConfigItem.cs" />
     <Compile Include="V20170320\Models\DrInfo.cs" />
     <Compile Include="V20170320\Models\ErrlogItem.cs" />
     <Compile Include="V20170320\Models\ImportRecord.cs" />
@@ -373,6 +375,8 @@
     <Compile Include="V20170320\Models\ProxyInst.cs" />
     <Compile Include="V20170320\Models\ProxyNode.cs" />
     <Compile Include="V20170320\Models\ProxyNodeCustom.cs" />
+    <Compile Include="V20170320\Models\ReadWriteNode.cs" />
+    <Compile Include="V20170320\Models\ReadonlyNode.cs" />
     <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
     <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesResponse.cs" />
     <Compile Include="V20170320\Models\ReleaseResult.cs" />
