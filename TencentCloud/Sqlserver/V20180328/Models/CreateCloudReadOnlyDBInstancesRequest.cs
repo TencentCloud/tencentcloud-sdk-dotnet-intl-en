@@ -103,7 +103,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? ReadOnlyGroupMinInGroup{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+        /// Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

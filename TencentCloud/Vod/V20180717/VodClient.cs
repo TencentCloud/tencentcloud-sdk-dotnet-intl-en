@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1278";
 
         /// <summary>
         /// Client constructor.
@@ -1610,6 +1610,33 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcApiTokensResponse DescribeAigcApiTokensSync(DescribeAigcApiTokensRequest req)
         {
             return InternalRequestAsync<DescribeAigcApiTokensResponse>(req, "DescribeAigcApiTokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to return statistical information of AIGC within a specified time range.
+        /// 1. AIGC stats from the last 365 days can be queried.
+        ///    2. The query time span should not exceed 90 days.
+        /// 3. If the query time span exceeds 1 day, return data with day-level granularity. Otherwise, return data with 5-minute granularity.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeAigcUsageDataResponse"/></returns>
+        public Task<DescribeAigcUsageDataResponse> DescribeAigcUsageData(DescribeAigcUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData");
+        }
+
+        /// <summary>
+        /// This API is used to return statistical information of AIGC within a specified time range.
+        /// 1. AIGC stats from the last 365 days can be queried.
+        ///    2. The query time span should not exceed 90 days.
+        /// 3. If the query time span exceeds 1 day, return data with day-level granularity. Otherwise, return data with 5-minute granularity.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeAigcUsageDataResponse"/></returns>
+        public DescribeAigcUsageDataResponse DescribeAigcUsageDataSync(DescribeAigcUsageDataRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

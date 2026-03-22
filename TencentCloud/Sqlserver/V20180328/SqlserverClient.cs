@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1210";
+       private const string sdkVersion = "SDK_NET_3.0.1278";
 
         /// <summary>
         /// Client constructor.
@@ -1944,7 +1944,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade prices of a monthly subscribed instance.
+        /// This API is used to query the upgrade prices of a yearly/monthly subscribed instance.
         /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
@@ -1955,7 +1955,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// This API is used to query the upgrade prices of a monthly subscribed instance.
+        /// This API is used to query the upgrade prices of a yearly/monthly subscribed instance.
         /// .
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
