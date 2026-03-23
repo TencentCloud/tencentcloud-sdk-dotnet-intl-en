@@ -28,7 +28,7 @@ namespace TencentCloud.Mariadb.V20170312
 
        private const string endpoint = "mariadb.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1279";
 
         /// <summary>
         /// Client constructor.
@@ -182,7 +182,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+        /// This API is used to create a yearly/monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -192,7 +192,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+        /// This API is used to create a yearly/monthly subscribed TencentDB for MariaDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -690,7 +690,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate an isolated monthly subscribed instance.
+        /// This API is used to terminate an isolated yearly/monthly subscribed instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -700,7 +700,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to terminate an isolated monthly subscribed instance.
+        /// This API is used to terminate an isolated yearly/monthly subscribed instance.
         /// </summary>
         /// <param name="req"><see cref="DestroyDBInstanceRequest"/></param>
         /// <returns><see cref="DestroyDBInstanceResponse"/></returns>
@@ -776,7 +776,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// This API is used to isolate a yearly/monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>
@@ -786,7 +786,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// This API is used to isolate a monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
+        /// This API is used to isolate a yearly/monthly subscribed TencentDB for MariaDB instance, which will no longer be accessible via IP and port.  The isolated instance can be started up in the recycle bin.  If it is isolated due to overdue payments, top up your account as soon as possible.
         /// </summary>
         /// <param name="req"><see cref="IsolateDBInstanceRequest"/></param>
         /// <returns><see cref="IsolateDBInstanceResponse"/></returns>

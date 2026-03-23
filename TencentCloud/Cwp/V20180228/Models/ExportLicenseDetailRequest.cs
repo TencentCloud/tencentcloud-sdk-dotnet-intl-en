@@ -26,7 +26,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Take the intersection when filtering with multiple conditions: LicenseStatus, DeadlineStatus, ResourceId, and Keywords
-        /// <li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+        /// <li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
         /// <li>ResourceId resource ID</li>
         /// </summary>
         [JsonProperty("Filters")]

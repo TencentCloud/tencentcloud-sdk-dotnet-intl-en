@@ -147,6 +147,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DcnInstanceId")]
         public string DcnInstanceId{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +185,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

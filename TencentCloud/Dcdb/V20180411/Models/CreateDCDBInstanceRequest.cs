@@ -160,6 +160,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DcnSyncMode")]
+        public long? DcnSyncMode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +200,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

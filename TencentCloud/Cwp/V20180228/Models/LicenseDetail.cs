@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? LicenseId{ get; set; }
 
         /// <summary>
-        /// Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - monthly subscription; 2: Ultimate Edition - monthly subscription.
+        /// Authorization type. 0: Pro Edition - pay-as-you-go; 1: Pro Edition - yearly/monthly subscription; 2: Ultimate Edition - yearly/monthly subscription.
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }

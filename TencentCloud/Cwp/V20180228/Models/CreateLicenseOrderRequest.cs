@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+        /// Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Whether to auto-renew. The default is not to auto-renew.
-        /// This parameter is only valid for monthly subscription.
+        /// This parameter is only valid for yearly/monthly subscription.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public bool? AutoRenewFlag{ get; set; }

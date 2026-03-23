@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string DealName{ get; set; }
 
         /// <summary>
-        /// Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+        /// Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }

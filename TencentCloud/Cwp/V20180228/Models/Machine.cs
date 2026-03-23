@@ -47,6 +47,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineStatus{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AgentStatus")]
+        public string AgentStatus{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
+
+        /// <summary>
         /// Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
         /// </summary>
         [JsonProperty("Uuid")]
@@ -87,7 +99,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// Host status
         /// <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-        /// <li>PREPAY: prepaid, indicating monthly subscription mode</li>
+        /// <li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
@@ -227,6 +239,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AgentVersion")]
+        public string AgentVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -236,6 +254,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
             this.SetParamSimple(map, prefix + "MachineOs", this.MachineOs);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+            this.SetParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
@@ -264,6 +284,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         }
     }
 }

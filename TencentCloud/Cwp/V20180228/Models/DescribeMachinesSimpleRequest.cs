@@ -30,7 +30,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// BM: BM
         /// ECM: Edge Computing Machine
         /// LH: Lighthouse
-        /// Other: Hybrid Cloud Zone
+        /// Other: Hybrid Cloud Zone
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// Filtering criteria
         /// <li>Keywords - String - required: no - keywords for querying </li>
-        /// <li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+        /// <li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
         /// <li>TagId - String - required: no - tag ID </li>
         /// </summary>
         [JsonProperty("Filters")]

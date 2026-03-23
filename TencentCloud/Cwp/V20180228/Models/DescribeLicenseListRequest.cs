@@ -28,11 +28,11 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// Take the intersection when filtering with multiple conditions.
         /// <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
         /// <li> BuyTime: time of purchase</li>
-        /// <li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+        /// <li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
         /// <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
         /// <li>ResourceId resource ID</li>
         /// <li>Keywords IP filtering</li>
-        /// <li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+        /// <li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
         /// <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
         /// <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
         /// </summary>
@@ -57,6 +57,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +79,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

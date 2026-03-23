@@ -64,7 +64,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? Count{ get; set; }
 
         /// <summary>
-        /// Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+        /// Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
@@ -76,6 +76,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         [JsonProperty("AmountUnit")]
         public string AmountUnit{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
 
 
         /// <summary>
@@ -91,6 +97,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }

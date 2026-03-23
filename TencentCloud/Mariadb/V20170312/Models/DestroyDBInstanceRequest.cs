@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+        /// Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

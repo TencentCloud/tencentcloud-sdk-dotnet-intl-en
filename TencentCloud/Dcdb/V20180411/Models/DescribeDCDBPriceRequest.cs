@@ -70,7 +70,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? ShardCount{ get; set; }
 
         /// <summary>
-        /// Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+        /// Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
         /// </summary>
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
@@ -82,6 +82,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         [JsonProperty("AmountUnit")]
         public string AmountUnit{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
 
 
         /// <summary>
@@ -98,6 +104,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ShardCount", this.ShardCount);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
             this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
         }
     }
 }
