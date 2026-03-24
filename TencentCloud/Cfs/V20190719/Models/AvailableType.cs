@@ -25,22 +25,28 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Protocol and sale details
+        /// <p>Protocol and sale details</p>
         /// </summary>
         [JsonProperty("Protocols")]
         public AvailableProtoStatus[] Protocols{ get; set; }
 
         /// <summary>
-        /// Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+        /// <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Indicates whether prepaid is supported. `true`: yes; `false`: no
+        /// <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
         /// </summary>
         [JsonProperty("Prepayment")]
         public bool? Prepayment{ get; set; }
+
+        /// <summary>
+        /// <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamArrayObj(map, prefix + "Protocols.", this.Protocols);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Prepayment", this.Prepayment);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

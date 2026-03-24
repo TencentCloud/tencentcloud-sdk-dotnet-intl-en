@@ -62,7 +62,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? ModelType{ get; set; }
 
         /// <summary>
-        /// Standard voices <li>10510000-zhixiaoyao (Chinese)</li><li>1001-zhiyu (Chinese)</li><li>1002-zhiling (Chinese)</li><li>1003-zhimei (Chinese)</li><li>1004-zhiyun (Chinese)</li><li>1005-zhili (Chinese)</li><li>1007-zhina (Chinese)</li><li>1008-zhiqi (Chinese)</li><li>1009-zhiyun (Chinese)</li><li>1010-zhihua (Chinese)</li><li>1017-zhirong (Chinese)</li><li>1018-zhijing (Chinese)</li><li>1050-WeJack (English)</li><li>1051-WeRose (English)</li>Premium voices<br>Premium voices have higher fidelity and more natural-sounding quality than standard voices. For price details, see [Purchase Guide](https://www.tencentcloud.com/document/product/1154/47874).<br><li>100510000-zhixiaoyao (Chinese)</li><li>101001-zhiyu (Chinese)</li><li>101002-zhiling (Chinese)</li><li>101003-zhimei (Chinese)</li><li>101004-zhiyun (Chinese)</li><li>101005-zhili (Chinese)</li><li>101006-zhiyan (Chinese)</li><li>101007-zhina (Chinese)</li><li>101008-zhiqi (Chinese)</li><li>101009-zhiyun (Chinese)</li><li>101010-zhihua (Chinese)</li><li>101011-zhiyan (Chinese)</li><li>101012-zhidan (Chinese)</li><li>101013-zhihui (Chinese)</li><li>101014-zhining (Chinese)</li><li>101015-zhimeng (Chinese)</li><li>101016-zhitian (Chinese)</li><li>101017-zhirong (Chinese)</li><li>101018-zhijing (Chinese)</li><li>101019-zhitong (Cantonese)</li><li>101020-zhigang (Chinese)</li><li>101021-zhirui (Chinese)</li><li>101022-zhihong (Chinese)</li><li>101023-zhixuan (Chinese)</li><li>101024-zhihao (Chinese)</li><li>101025-zhiwei (Chinese)</li><li>101026-zhixi (Chinese)</li><li>101027-zhimei (Chinese)</li><li>101028-zhijie (Chinese)</li><li>101029-zhikai (Chinese)</li><li>101030-zhike (Chinese)</li><li>101031-zhikui (Chinese)</li><li>101032-zhifang (Chinese)</li><li>101033-zhibei (Chinese)</li><li>101034-zhilian (Chinese)</li><li>101035-zhiyi (Chinese)</li><li>101040-zhichuan (Sichuan dialect)</li><li>101050-WeJack (English)</li><li>101051-WeRose (English)</li><li>101052-zhiwei (Chinese)</li>
+        /// Standard voices <li>10510000-zhixiaoyao (Chinese)</li><li>1001-zhiyu (Chinese)</li><li>1002-zhiling (Chinese)</li><li>1003-zhimei (Chinese)</li><li>1004-zhiyun (Chinese)</li><li>1005-zhili (Chinese)</li></li><li>1008-zhiqi (Chinese)</li><li>1009-zhiyun (Chinese)</li><li>1010-zhihua (Chinese)</li><li>1017-zhirong (Chinese)</li><li>1018-zhijing (Chinese)</li><li>1050-WeJack (English)</li><li>1051-WeRose (English)</li>Premium voices<br>Premium voices have higher fidelity and more natural-sounding quality than standard voices. For price details, see [Purchase Guide](https://www.tencentcloud.com/document/product/1154/47874).<br><li>100510000-zhixiaoyao (Chinese)</li><li>101001-zhiyu (Chinese)</li><li>101002-zhiling (Chinese)</li><li>101003-zhimei (Chinese)</li><li>101004-zhiyun (Chinese)</li><li>101005-zhili (Chinese)</li><li>101006-zhiyan (Chinese)</li></li><li>101008-zhiqi (Chinese)</li><li>101009-zhiyun (Chinese)</li><li>101010-zhihua (Chinese)</li><li>101011-zhiyan (Chinese)</li><li>101012-zhidan (Chinese)</li><li>101013-zhihui (Chinese)</li><li>101014-zhining (Chinese)</li><li>101015-zhimeng (Chinese)</li><li>101016-zhitian (Chinese)</li><li>101017-zhirong (Chinese)</li><li>101018-zhijing (Chinese)</li><li>101019-zhitong (Cantonese)</li><li>101020-zhigang (Chinese)</li><li>101021-zhirui (Chinese)</li><li>101022-zhihong (Chinese)</li><li>101023-zhixuan (Chinese)</li><li>101024-zhihao (Chinese)</li><li>101025-zhiwei (Chinese)</li><li>101026-zhixi (Chinese)</li><li>101027-zhimei (Chinese)</li><li>101028-zhijie (Chinese)</li><li>101029-zhikai (Chinese)</li><li>101030-zhike (Chinese)</li><li>101031-zhikui (Chinese)</li><li>101032-zhifang (Chinese)</li><li>101033-zhibei (Chinese)</li><li>101034-zhilian (Chinese)</li><li>101035-zhiyi (Chinese)</li><li>101040-zhichuan (Sichuan dialect)</li><li>101050-WeJack (English)</li><li>101051-WeRose (English)</li><li>101052-zhiwei (Chinese)</li>
         /// <li>101053-zhifang (Chinese)</li>
         /// <li>101054-zhiyou (Chinese)</li>
         /// <li>101055-zhiyou (Chinese)</li>
@@ -70,6 +70,12 @@ namespace TencentCloud.Tts.V20190823.Models
         /// </summary>
         [JsonProperty("VoiceType")]
         public long? VoiceType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FastVoiceType")]
+        public string FastVoiceType{ get; set; }
 
         /// <summary>
         /// Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
@@ -113,12 +119,6 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("EmotionIntensity")]
         public long? EmotionIntensity{ get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("FastVoiceType")]
-        public string FastVoiceType{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +132,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ModelType", this.ModelType);
             this.SetParamSimple(map, prefix + "VoiceType", this.VoiceType);
+            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
             this.SetParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
@@ -139,7 +140,6 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
             this.SetParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
             this.SetParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
-            this.SetParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
         }
     }
 }
