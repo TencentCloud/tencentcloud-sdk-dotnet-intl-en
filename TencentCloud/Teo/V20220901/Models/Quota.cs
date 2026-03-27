@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Single batch submission quota limit.
         /// </summary>
         [JsonProperty("Batch")]
         public long? Batch{ get; set; }

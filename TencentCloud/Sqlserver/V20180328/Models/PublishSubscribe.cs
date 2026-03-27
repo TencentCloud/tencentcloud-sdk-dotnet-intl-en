@@ -25,55 +25,55 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Pub/Sub ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pub/Sub Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Published Instance ID
         /// </summary>
         [JsonProperty("PublishInstanceId")]
         public string PublishInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Published Instance Name
         /// </summary>
         [JsonProperty("PublishInstanceName")]
         public string PublishInstanceName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Published Instance IP
         /// </summary>
         [JsonProperty("PublishInstanceIp")]
         public string PublishInstanceIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscription Instance ID
         /// </summary>
         [JsonProperty("SubscribeInstanceId")]
         public string SubscribeInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscription Instance Name
         /// </summary>
         [JsonProperty("SubscribeInstanceName")]
         public string SubscribeInstanceName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscription Instance IP
         /// </summary>
         [JsonProperty("SubscribeInstanceIp")]
         public string SubscribeInstanceIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Publication-Subscription Relationship Collection of Database
         /// </summary>
         [JsonProperty("DatabaseTupleSet")]
         public DatabaseTupleStatus[] DatabaseTupleSet{ get; set; }

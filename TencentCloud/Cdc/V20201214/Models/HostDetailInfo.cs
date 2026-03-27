@@ -25,31 +25,31 @@ namespace TencentCloud.Cdc.V20201214.Models
     {
         
         /// <summary>
-        /// 
+        /// Type Family
         /// </summary>
         [JsonProperty("HostTypeFamily")]
         public string HostTypeFamily{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total CPU
         /// </summary>
         [JsonProperty("CpuTotal")]
         public float? CpuTotal{ get; set; }
 
         /// <summary>
-        /// 
+        /// Available CPU
         /// </summary>
         [JsonProperty("CpuAvailable")]
         public float? CpuAvailable{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total Memory
         /// </summary>
         [JsonProperty("MemTotal")]
         public float? MemTotal{ get; set; }
 
         /// <summary>
-        /// 
+        /// Available Memory
         /// </summary>
         [JsonProperty("MemAvailable")]
         public float? MemAvailable{ get; set; }

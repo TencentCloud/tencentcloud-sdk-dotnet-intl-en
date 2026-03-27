@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// The TcUrl address of the RTMP origin server.
         /// </summary>
         [JsonProperty("TcUrl")]
         public string TcUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// The StreamKey of the RTMP origin server.
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }

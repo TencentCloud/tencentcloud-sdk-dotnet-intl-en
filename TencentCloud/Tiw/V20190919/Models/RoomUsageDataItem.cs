@@ -52,7 +52,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public float? Value{ get; set; }
 
         /// <summary>
-        /// 
+        /// Interactive whiteboard room ID
         /// </summary>
         [JsonProperty("RoomID")]
         public ulong? RoomID{ get; set; }

@@ -114,6 +114,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("AIAgentId")]
         public long? AIAgentId{ get; set; }
 
+        /// <summary>
+        /// Retry interval for task failure. value range: 600-86400 seconds.
+        /// </summary>
+        [JsonProperty("RetryInterval")]
+        public long? RetryInterval{ get; set; }
+
+        /// <summary>
+        /// Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+            this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

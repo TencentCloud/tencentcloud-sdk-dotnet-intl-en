@@ -37,7 +37,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// line IP
         /// </summary>
         [JsonProperty("Eip")]
         public string Eip{ get; set; }

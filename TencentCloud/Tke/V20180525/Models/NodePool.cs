@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public NodeCountSummary NodeCountSummary{ get; set; }
 
         /// <summary>
-        /// 
+        /// Status information
         /// </summary>
         [JsonProperty("AutoscalingGroupStatus")]
         public string AutoscalingGroupStatus{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Detailed Steps Return Information
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Current Step Status, 0 Success, -2 Not Started
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Step Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

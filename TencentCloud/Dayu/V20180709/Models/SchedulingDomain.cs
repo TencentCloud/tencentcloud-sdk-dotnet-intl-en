@@ -73,7 +73,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// ttl
         /// </summary>
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }

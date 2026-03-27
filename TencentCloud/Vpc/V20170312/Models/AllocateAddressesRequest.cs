@@ -85,7 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AnycastZone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify IP address to apply for an EIP; each account has a quota of three times per month.
         /// </summary>
         [JsonProperty("VipCluster")]
         public string[] VipCluster{ get; set; }
@@ -118,13 +118,17 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string AddressName{ get; set; }
 
         /// <summary>
-        /// 
+        /// CDC unique ID
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
+        /// Whether to use a dedicated resource pool. Default value: True
+        /// - True: indicates the use of a dedicated resource pool
+        /// - False: indicates the use of a shared resource pool
         /// 
+        /// Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
         /// </summary>
         [JsonProperty("IsDedicatedAddressPool")]
         public bool? IsDedicatedAddressPool{ get; set; }

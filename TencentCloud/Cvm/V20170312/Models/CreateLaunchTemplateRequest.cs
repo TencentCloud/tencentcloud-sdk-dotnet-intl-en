@@ -193,7 +193,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
         /// </summary>
         [JsonProperty("EnableJumboFrame")]
         public bool? EnableJumboFrame{ get; set; }

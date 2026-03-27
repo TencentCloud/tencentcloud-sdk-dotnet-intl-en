@@ -73,7 +73,7 @@ namespace TencentCloud.Ims.V20201229.Models
         public Device Device{ get; set; }
 
         /// <summary>
-        /// 
+        /// This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,7 +25,10 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Origin protocol configuration, with values:
+        /// <li>http: Use HTTP protocol for origin pull;</li>
+        /// <li>https: Use HTTPS protocol for origin pull;</li>
+        /// <li>follow: Protocol following.</li>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

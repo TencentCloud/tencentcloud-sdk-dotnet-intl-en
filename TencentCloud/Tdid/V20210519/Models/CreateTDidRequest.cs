@@ -37,7 +37,7 @@ namespace TencentCloud.Tdid.V20210519.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        ///  
+        /// Deployment mechanism: 1 for enabled, 0 for disabled
         /// </summary>
         [JsonProperty("Relegation")]
         public ulong? Relegation{ get; set; }

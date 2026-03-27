@@ -25,19 +25,19 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Start timestamp, unix timestamp (query dimension supports only daily. for example, to query may 1st, pass starttime:"2023-05-01 00:00:00","endtime":"2023-05-01 23:59:59" timestamp. to query may 1st and may 2nd, pass starttime:"2023-05-01 00:00:00","endtime":"2023-05-02 23:59:59" timestamp).
+        /// <p>Start timestamp, Unix timestamp (query dimension only supports day, for example, to query may 1, you should pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp; to query may 1 and may 2, you should pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp)</p>.
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// End timestamp, unix timestamp, the query time range is up to 90 days (query dimension supports only daily. for example, to query may 1st, pass starttime:"2023-05-01 00:00:00","endtime":"2023-05-01 23:59:59" timestamp. to query may 1st and may 2nd, pass starttime:"2023-05-01 00:00:00","endtime":"2023-05-02 23:59:59" timestamp).
+        /// <p>End timestamp, Unix timestamp. the maximum query time range is 90 days (query dimension only supports day, for example, to query may 1, you should pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-01 23:59:59" timestamp; to query may 1 and may 2, you should pass startTime:"2023-05-01 00:00:00","endTime":"2023-05-02 23:59:59" timestamp).</p>.
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
-        /// Application id list, when having multiple ids, the returned value is the sum of all the ids.
+        /// <p>Application ID list. for multiple ids, the return value is the sum of multiple ids.</p>.
         /// </summary>
         [JsonProperty("SdkAppIdList")]
         public long?[] SdkAppIdList{ get; set; }

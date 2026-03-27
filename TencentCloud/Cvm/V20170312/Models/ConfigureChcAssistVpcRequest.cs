@@ -55,7 +55,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] DeploySecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
         /// </summary>
         [JsonProperty("ChcDeployExtraConfig")]
         public ChcDeployExtraConfig ChcDeployExtraConfig{ get; set; }

@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] LogLevels{ get; set; }
 
         /// <summary>
-        /// 
+        /// Keywords, supports fuzzy search
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }

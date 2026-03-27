@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1275";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.
@@ -820,6 +820,31 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// Notes:
+        /// 1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
+        /// 2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRenewInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRenewInstancesResponse"/></returns>
+        public Task<DescribeRenewInstancesResponse> DescribeRenewInstances(DescribeRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRenewInstancesResponse>(req, "DescribeRenewInstances");
+        }
+
+        /// <summary>
+        /// Notes:
+        /// 1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
+        /// 2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRenewInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRenewInstancesResponse"/></returns>
+        public DescribeRenewInstancesResponse DescribeRenewInstancesSync(DescribeRenewInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeRenewInstancesResponse>(req, "DescribeRenewInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get cost allocation tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeTagListRequest"/></param>
@@ -1009,6 +1034,33 @@ namespace TencentCloud.Billing.V20180709
         public RenewInstanceResponse RenewInstanceSync(RenewInstanceRequest req)
         {
             return InternalRequestAsync<RenewInstanceResponse>(req, "RenewInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Notes:
+        /// 1. This API supports setting auto-renewal mode and period for annual and monthly subscription instances.
+        /// 2. Obtain the product code and region code through an instance query API.
+        /// 3. When using this API, a sub-user must possess the QcloudFinanceRenewManageFullAccess permission policy.
+        /// </summary>
+        /// <param name="req"><see cref="SetRenewalRequest"/></param>
+        /// <returns><see cref="SetRenewalResponse"/></returns>
+        public Task<SetRenewalResponse> SetRenewal(SetRenewalRequest req)
+        {
+            return InternalRequestAsync<SetRenewalResponse>(req, "SetRenewal");
+        }
+
+        /// <summary>
+        /// Notes:
+        /// 1. This API supports setting auto-renewal mode and period for annual and monthly subscription instances.
+        /// 2. Obtain the product code and region code through an instance query API.
+        /// 3. When using this API, a sub-user must possess the QcloudFinanceRenewManageFullAccess permission policy.
+        /// </summary>
+        /// <param name="req"><see cref="SetRenewalRequest"/></param>
+        /// <returns><see cref="SetRenewalResponse"/></returns>
+        public SetRenewalResponse SetRenewalSync(SetRenewalRequest req)
+        {
+            return InternalRequestAsync<SetRenewalResponse>(req, "SetRenewal")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

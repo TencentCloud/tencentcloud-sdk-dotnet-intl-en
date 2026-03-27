@@ -25,37 +25,37 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 
+        /// Reserved Field
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 
+        /// Status code; 0 indicates successful processing, other values indicate processing failure
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description for the status code
         /// </summary>
         [JsonProperty("CodeDescription")]
         public string CodeDescription{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reserved Field
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reserved Field
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audit Details
         /// </summary>
         [JsonProperty("DetailSet")]
         public FuseFaceReviewDetail[] DetailSet{ get; set; }

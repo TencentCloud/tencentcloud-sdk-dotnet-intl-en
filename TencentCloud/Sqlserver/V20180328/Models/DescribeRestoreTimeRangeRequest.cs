@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
         /// </summary>
         [JsonProperty("TargetInstanceId")]
         public string TargetInstanceId{ get; set; }

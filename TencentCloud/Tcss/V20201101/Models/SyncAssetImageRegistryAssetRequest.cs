@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to synchronize all image repositories
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 
+        /// Partial image repositories requiring synchronization
         /// </summary>
         [JsonProperty("RegistryIds")]
         public ulong?[] RegistryIds{ get; set; }

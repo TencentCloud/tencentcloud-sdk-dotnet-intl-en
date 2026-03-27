@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.comom/document/api/236/101811?from_cn_redirect=1) API. A maximum of 5 rule templates can be deleted per request.
+        /// Audit rule template ID, which can be obtained through the [DescribeAuditRuleTemplates](https://www.tencentcloud.com/document/api/236/101811?from_cn_redirect=1) API. A maximum of 5 rule templates can be deleted per request.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }

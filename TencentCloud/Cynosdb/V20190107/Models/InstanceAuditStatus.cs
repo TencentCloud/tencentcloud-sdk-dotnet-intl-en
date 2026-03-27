@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audit status. ON- Audit is enabled; OFF- Audit is disabled.
         /// </summary>
         [JsonProperty("AuditStatus")]
         public string AuditStatus{ get; set; }

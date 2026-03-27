@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string LegalPerson{ get; set; }
 
         /// <summary>
-        /// 
+        /// (Exact match) Legal person ID number.
         /// </summary>
         [JsonProperty("LegalPersonId")]
         public string LegalPersonId{ get; set; }

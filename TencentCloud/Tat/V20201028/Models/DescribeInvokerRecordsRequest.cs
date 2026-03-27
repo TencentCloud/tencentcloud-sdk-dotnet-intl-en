@@ -27,7 +27,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Executor ID list. the list has a cap of 100.
         /// 
-        /// Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+        /// Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvokerIds")]
         public string[] InvokerIds{ get; set; }

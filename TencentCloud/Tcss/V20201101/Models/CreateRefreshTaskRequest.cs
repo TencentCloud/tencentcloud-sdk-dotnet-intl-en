@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 
+        /// Specify the cluster list. If empty, it indicates synchronization of all clusters.
         /// </summary>
         [JsonProperty("ClusterIDs")]
         public string[] ClusterIDs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to synchronize only the list
         /// </summary>
         [JsonProperty("IsSyncListOnly")]
         public bool? IsSyncListOnly{ get; set; }

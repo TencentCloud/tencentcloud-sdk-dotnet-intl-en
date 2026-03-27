@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// COS_URL
         /// </summary>
         [JsonProperty("FileURL")]
         public string FileURL{ get; set; }

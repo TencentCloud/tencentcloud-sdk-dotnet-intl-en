@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VipSwitchableTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Exchange Instance List
         /// </summary>
         [JsonProperty("ExchangeInstanceInfoList")]
         public ExchangeInstanceInfo[] ExchangeInstanceInfoList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Swap RO Group List
         /// </summary>
         [JsonProperty("ExchangeRoGroupInfoList")]
         public ExchangeRoGroupInfo[] ExchangeRoGroupInfoList{ get; set; }

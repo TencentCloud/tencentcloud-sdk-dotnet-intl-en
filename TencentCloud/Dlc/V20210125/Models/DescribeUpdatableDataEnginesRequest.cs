@@ -31,13 +31,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string DataEngineConfigCommand{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to use managed storage as result storage
         /// </summary>
         [JsonProperty("UseLakeFs")]
         public bool? UseLakeFs{ get; set; }
 
         /// <summary>
-        /// 
+        /// User-defined Result Storage Path
         /// </summary>
         [JsonProperty("CustomResultPath")]
         public string CustomResultPath{ get; set; }

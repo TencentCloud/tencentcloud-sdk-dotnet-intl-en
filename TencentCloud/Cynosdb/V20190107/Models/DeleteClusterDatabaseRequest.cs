@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Name
         /// </summary>
         [JsonProperty("DbNames")]
         public string[] DbNames{ get; set; }

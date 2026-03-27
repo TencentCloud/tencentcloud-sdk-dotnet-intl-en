@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.comom/document/product/1207/47575?from_cn_redirect=1).
+        /// List of bundle ids. the maximum is 100 per request for batch packages. you can get the BundleId in the return value from the API [DescribeBundles](https://www.tencentcloud.com/document/product/1207/47575?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("BundleIds")]
         public string[] BundleIds{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// AZ list. default to all availability zones.
-        /// <li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.comom/document/product/1207/57513?from_cn_redirect=1)</li>.
+        /// <li>AZs can be queried through the API [DescribeZones](https://www.tencentcloud.com/document/product/1207/57513?from_cn_redirect=1)</li>.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }

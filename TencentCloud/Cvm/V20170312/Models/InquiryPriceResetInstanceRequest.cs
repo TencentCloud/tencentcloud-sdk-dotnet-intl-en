@@ -55,7 +55,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// 
+        /// User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup.
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }

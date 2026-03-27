@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
         /// </summary>
         [JsonProperty("CheckType")]
         public ulong? CheckType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
         /// </summary>
         [JsonProperty("HandleType")]
         public ulong? HandleType{ get; set; }

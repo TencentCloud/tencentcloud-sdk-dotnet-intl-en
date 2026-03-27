@@ -105,19 +105,19 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output RTSP pull stream configuration.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeOutputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output HLS pull stream configuration.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum pull stream concurrency, maximum 4, default 4.
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }

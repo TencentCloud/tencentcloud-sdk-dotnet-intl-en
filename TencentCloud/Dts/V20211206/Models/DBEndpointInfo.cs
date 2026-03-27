@@ -81,7 +81,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string DatabaseNetEnv{ get; set; }
 
         /// <summary>
-        /// 
+        /// TDSQL connection method: proxy - access each set node via TDSQL proxy hosts. Note that this connection method is only available in self-developed cloud environments. Only proxy host information needs to be provided in Info. set - directly connect to set nodes. If selecting direct set connection, both proxy host information and all set node information must be correctly filled in Info. Mandatory when source is TDSQL MySQL type.
         /// </summary>
         [JsonProperty("ConnectType")]
         public string ConnectType{ get; set; }

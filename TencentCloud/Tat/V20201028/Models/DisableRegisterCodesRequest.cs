@@ -27,7 +27,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Registration code ID.
         /// 
-        /// Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+        /// Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
         /// </summary>
         [JsonProperty("RegisterCodeIds")]
         public string[] RegisterCodeIds{ get; set; }

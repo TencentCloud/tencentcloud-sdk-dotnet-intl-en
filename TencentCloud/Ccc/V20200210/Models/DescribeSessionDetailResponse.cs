@@ -25,142 +25,154 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Calling number.
+        /// <P>Calling number</p>.
         /// </summary>
         [JsonProperty("Caller")]
         public string Caller{ get; set; }
 
         /// <summary>
-        /// Called number.
+        /// <P>Called number</p>.
         /// </summary>
         [JsonProperty("Callee")]
         public string Callee{ get; set; }
 
         /// <summary>
-        /// Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+        /// <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
         /// </summary>
         [JsonProperty("CallType")]
         public long? CallType{ get; set; }
 
         /// <summary>
-        /// Start timestamp. Unix second-level timestamp.
+        /// <p>Start timestamp, Unix second-level timestamp</p>.
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// Ring timestamp. UNIX second-level timestamp.
+        /// <p>Ring timestamp, UNIX second-level timestamp</p>.
         /// </summary>
         [JsonProperty("RingTimestamp")]
         public long? RingTimestamp{ get; set; }
 
         /// <summary>
-        /// Answer timestamp. UNIX second-level timestamp.
+        /// <p>Answer timestamp, UNIX second-level timestamp</p>.
         /// </summary>
         [JsonProperty("AcceptTimestamp")]
         public long? AcceptTimestamp{ get; set; }
 
         /// <summary>
-        /// End timestamp, UNIX second-level timestamp.
+        /// <p>End timestamp, UNIX second-level timestamp</p>.
         /// </summary>
         [JsonProperty("EndedTimestamp")]
         public long? EndedTimestamp{ get; set; }
 
         /// <summary>
-        /// Queue entry time. Unix second-level timestamp.
+        /// <p>Queue entry time, Unix second-level timestamp</p>.
         /// </summary>
         [JsonProperty("QueuedTimestamp")]
         public long? QueuedTimestamp{ get; set; }
 
         /// <summary>
-        /// Agent account.
+        /// <P>Agent account</p>.
         /// </summary>
         [JsonProperty("StaffUserId")]
         public string StaffUserId{ get; set; }
 
         /// <summary>
-        /// Refers to the EndStatus field in the DescribeTelCdr api.
+        /// <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
 
         /// <summary>
-        /// Queue skill group ID.
+        /// <p>Queue skill group ID</p>.
         /// </summary>
         [JsonProperty("QueuedSkillGroupId")]
         public long? QueuedSkillGroupId{ get; set; }
 
         /// <summary>
-        /// Queue skill group name.
+        /// <P>Queue skill group name</p>.
         /// </summary>
         [JsonProperty("QueuedSkillGroupName")]
         public string QueuedSkillGroupName{ get; set; }
 
         /// <summary>
-        /// Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+        /// <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
         /// </summary>
         [JsonProperty("RecordURL")]
         public string RecordURL{ get; set; }
 
         /// <summary>
-        /// Specifies the COS link for recording transfer to a third party.
+        /// <p>Recording transfer to external COS link</p>.
         /// </summary>
         [JsonProperty("CustomRecordURL")]
         public string CustomRecordURL{ get; set; }
 
         /// <summary>
-        /// Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+        /// <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
         /// </summary>
         [JsonProperty("AsrURL")]
         public string AsrURL{ get; set; }
 
         /// <summary>
-        /// Voicemail recording url.
+        /// <P>Voicemail recording link</p>.
         /// </summary>
         [JsonProperty("VoicemailRecordURL")]
         public string[] VoicemailRecordURL{ get; set; }
 
         /// <summary>
-        /// Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+        /// <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
         /// </summary>
         [JsonProperty("VoicemailAsrURL")]
         public string[] VoicemailAsrURL{ get; set; }
 
         /// <summary>
-        /// IVR key information.
+        /// <P>IVR key information</p>.
         /// </summary>
         [JsonProperty("IVRKeyPressed")]
         public IVRKeyPressedElement[] IVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// Satisfaction rate keystroke information.
+        /// <P>Key information of satisfaction rate</p>.
         /// </summary>
         [JsonProperty("PostIVRKeyPressed")]
         public IVRKeyPressedElement[] PostIVRKeyPressed{ get; set; }
 
         /// <summary>
-        /// Hang-Up side. valid values: seat, user, system.
+        /// <P>Hang-Up side seat agent user system</p>.
         /// </summary>
         [JsonProperty("HungUpSide")]
         public string HungUpSide{ get; set; }
 
         /// <summary>
-        /// Customer custom data (User-to-User Interface).
+        /// <p>Customer custom data (User-to-User Interface)</p>.
         /// </summary>
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
         /// <summary>
-        /// List of events during a call.
+        /// <P>Event list for calls in progress</p>.
         /// </summary>
         [JsonProperty("Events")]
         public SessionEvent[] Events{ get; set; }
 
         /// <summary>
-        /// List of service participants.
+        /// <P>Service participant list</p>.
         /// </summary>
         [JsonProperty("ServeParticipants")]
         public ServeParticipant[] ServeParticipants{ get; set; }
+
+        /// <summary>
+        /// <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+        /// </summary>
+        [JsonProperty("SysHangupReason")]
+        public long? SysHangupReason{ get; set; }
+
+        /// <summary>
+        /// <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+        /// </summary>
+        [JsonProperty("SysHangupReasonString")]
+        public string SysHangupReasonString{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -197,6 +209,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "UUI", this.UUI);
             this.SetParamArrayObj(map, prefix + "Events.", this.Events);
             this.SetParamArrayObj(map, prefix + "ServeParticipants.", this.ServeParticipants);
+            this.SetParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
+            this.SetParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

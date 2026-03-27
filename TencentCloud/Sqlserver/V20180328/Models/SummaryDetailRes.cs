@@ -25,85 +25,95 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Region Identifier
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Status. Valid values:
+        /// 1: Creating
+        /// 2: Running
+        /// 3: Restricted Running (primary/secondary switching)
+        /// 4: Isolated
+        /// 5: Recycling
+        /// 6: Recycled
+        /// 7: Task Executing (performing instance backup, rollback, etc.)
+        /// 8: Offline
+        /// 9: Instance Scaling
+        /// 10: Instance Migrating
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup Space
         /// </summary>
         [JsonProperty("ActualUsedSpace")]
         public ulong? ActualUsedSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data Backup Space
         /// </summary>
         [JsonProperty("DataBackupSpace")]
         public ulong? DataBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data Backup Total File Count
         /// </summary>
         [JsonProperty("DataBackupCount")]
         public ulong? DataBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log Backup Space
         /// </summary>
         [JsonProperty("LogBackupSpace")]
         public ulong? LogBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log Backup Total File Count
         /// </summary>
         [JsonProperty("LogBackupCount")]
         public ulong? LogBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Automatic Backup Space
         /// </summary>
         [JsonProperty("AutoBackupSpace")]
         public ulong? AutoBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Automatic Backup Total File Count
         /// </summary>
         [JsonProperty("AutoBackupCount")]
         public ulong? AutoBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Manual Backup Space
         /// </summary>
         [JsonProperty("ManualBackupSpace")]
         public ulong? ManualBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Manual Backup Total File Count
         /// </summary>
         [JsonProperty("ManualBackupCount")]
         public ulong? ManualBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Region Code
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

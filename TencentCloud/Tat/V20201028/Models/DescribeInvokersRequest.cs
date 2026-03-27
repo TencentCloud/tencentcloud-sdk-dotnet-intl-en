@@ -38,7 +38,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// Filter criteria:.
         /// 
         /// - invoker-id - String - required: no - (filter condition) filter by executor id.
-        /// -command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+        /// -command-id - String - required: no - (filter condition) filters commands by id. you can obtain the id through the [DescribeCommands (query command details)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
         /// - invoker-type - String - required: no - (filter condition) filter by the executor type. currently only support SCHEDULE.
         /// 
         /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InvokerIds` and `Filters` parameters cannot be specified at the same time.

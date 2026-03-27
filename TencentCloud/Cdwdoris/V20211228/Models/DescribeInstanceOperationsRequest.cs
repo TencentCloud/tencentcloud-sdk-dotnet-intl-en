@@ -25,31 +25,31 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 
+        /// Cluster ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pagination parameter, offset, starting from 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pagination parameter, page size, default 10
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start Time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// End Time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

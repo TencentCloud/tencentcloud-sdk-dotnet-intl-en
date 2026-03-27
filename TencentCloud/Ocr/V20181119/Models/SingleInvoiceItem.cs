@@ -179,13 +179,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TrainTicket TrainTicket{ get; set; }
 
         /// <summary>
-        /// 
+        /// Medical Outpatient Fee Invoice (Electronic).
         /// </summary>
         [JsonProperty("MedicalOutpatientInvoice")]
         public MedicalInvoice MedicalOutpatientInvoice{ get; set; }
 
         /// <summary>
-        /// 
+        /// Inpatient Medical Fee Invoice (Electronic).
         /// </summary>
         [JsonProperty("MedicalHospitalizedInvoice")]
         public MedicalInvoice MedicalHospitalizedInvoice{ get; set; }

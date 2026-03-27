@@ -25,55 +25,55 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 
+        /// Invoice name.
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 
+        /// Invoice code.
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 
+        /// Invoice number.
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total amount (in figures).
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total Amount (in words).
         /// </summary>
         [JsonProperty("TotalCn")]
         public string TotalCn{ get; set; }
 
         /// <summary>
-        /// 
+        /// Invoice date.
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 
+        /// Verification code
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Place of Issue.
         /// </summary>
         [JsonProperty("Place")]
         public string Place{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reviewer.
         /// </summary>
         [JsonProperty("Reviewer")]
         public string Reviewer{ get; set; }

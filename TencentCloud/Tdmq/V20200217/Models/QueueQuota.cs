@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Maximum number of creatable queues
         /// </summary>
         [JsonProperty("MaxQueue")]
         public long? MaxQueue{ get; set; }

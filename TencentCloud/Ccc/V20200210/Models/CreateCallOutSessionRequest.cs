@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Customer service user ID, generally the customer service email. ensure that the mobile number has been bound. https://intl.cloud.tencent.com/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
+        /// Agent email, underwrite the mobile number has been bound. https://www.tencentcloud.comom/document/product/679/76067?from_cn_redirect=1#.E6.AD.A5.E9.AA.A42.EF.BC.9A.E5.AE.8C.E5.96.84.E8.B4.A6.E5.8F.B7.E4.BF.A1.E6.81.AF.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

@@ -74,7 +74,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public OriginRecordPrivateParameter[] PrivateParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
         /// </summary>
         [JsonProperty("Proto")]
         public string Proto{ get; set; }

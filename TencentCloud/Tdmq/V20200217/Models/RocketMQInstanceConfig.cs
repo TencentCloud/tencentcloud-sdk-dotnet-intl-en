@@ -91,7 +91,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public RocketMQTopicDistribution[] TopicDistribution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum number of queues per topic
         /// </summary>
         [JsonProperty("MaxQueuesPerTopic")]
         public ulong? MaxQueuesPerTopic{ get; set; }

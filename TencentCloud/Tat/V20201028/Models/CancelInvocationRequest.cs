@@ -27,7 +27,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Execution activity ID.
         /// 
-        /// Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+        /// Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvocationId")]
         public string InvocationId{ get; set; }

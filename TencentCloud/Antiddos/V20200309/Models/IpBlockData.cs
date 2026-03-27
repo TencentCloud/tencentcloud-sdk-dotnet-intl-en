@@ -25,37 +25,37 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 
+        /// Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource IP
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Blocking Time
         /// </summary>
         [JsonProperty("BlockTime")]
         public string BlockTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unblock Time (Estimated Unblock Time)
         /// </summary>
         [JsonProperty("UnBlockTime")]
         public string UnBlockTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
         /// </summary>
         [JsonProperty("ProtectFlag")]
         public ulong? ProtectFlag{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Public Cloud Timbre ID
         /// </summary>
         [JsonProperty("VoiceType")]
         public ulong? VoiceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timbre Key
         /// </summary>
         [JsonProperty("TimbreKey")]
         public string TimbreKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timbre Name
         /// </summary>
         [JsonProperty("VoiceName")]
         public string VoiceName{ get; set; }

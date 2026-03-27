@@ -118,19 +118,19 @@ namespace TencentCloud.Lcic.V20220817.Models
         public ulong? EnableDirectControl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
         /// </summary>
         [JsonProperty("InteractionMode")]
         public long? InteractionMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
         /// </summary>
         [JsonProperty("VideoOrientation")]
         public long? VideoOrientation{ get; set; }
 
         /// <summary>
-        /// 
+        /// Enable post-class evaluation. 0: Disable (default) 1: Enable
         /// </summary>
         [JsonProperty("IsGradingRequiredPostClass")]
         public long? IsGradingRequiredPostClass{ get; set; }
@@ -142,43 +142,43 @@ namespace TencentCloud.Lcic.V20220817.Models
         public long? RoomType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
         /// </summary>
         [JsonProperty("EndDelayTime")]
         public long? EndDelayTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Live Streaming Type: 0: Regular (default) 1: Simulated Live
         /// </summary>
         [JsonProperty("LiveType")]
         public ulong? LiveType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Simulated Live Playback Link
         /// </summary>
         [JsonProperty("RecordLiveUrl")]
         public string RecordLiveUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
         /// </summary>
         [JsonProperty("EnableAutoStart")]
         public ulong? EnableAutoStart{ get; set; }
 
         /// <summary>
-        /// 
+        /// Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
         /// </summary>
         [JsonProperty("RecordBackground")]
         public string RecordBackground{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
         /// </summary>
         [JsonProperty("RecordScene")]
         public string RecordScene{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recording custom language. This parameter is valid only when recordlayout=9.
         /// </summary>
         [JsonProperty("RecordLang")]
         public string RecordLang{ get; set; }

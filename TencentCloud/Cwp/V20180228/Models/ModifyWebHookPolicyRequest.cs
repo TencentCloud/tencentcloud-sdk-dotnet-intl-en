@@ -79,7 +79,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Quuids{ get; set; }
 
         /// <summary>
-        /// 
+        /// Machines to be excluded
         /// </summary>
         [JsonProperty("ExcludedQuuids")]
         public string[] ExcludedQuuids{ get; set; }

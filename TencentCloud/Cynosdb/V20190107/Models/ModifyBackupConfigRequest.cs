@@ -61,13 +61,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Logical Backup Configuration
         /// </summary>
         [JsonProperty("LogicBackupConfig")]
         public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to delete the automatic logical backup
         /// </summary>
         [JsonProperty("DeleteAutoLogicBackup")]
         public bool? DeleteAutoLogicBackup{ get; set; }

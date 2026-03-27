@@ -217,7 +217,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent{ get; set; }
 
         /// <summary>
-        /// 
+        /// MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
         /// </summary>
         [JsonProperty("ProcessMediaByMPSCompleteEvent")]
         public ProcessMediaByMPS ProcessMediaByMPSCompleteEvent{ get; set; }

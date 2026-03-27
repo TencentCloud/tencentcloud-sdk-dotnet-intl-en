@@ -37,16 +37,16 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string Uid{ get; set; }
 
         /// <summary>
-        /// Valid period, in seconds, no more than 1 hr.
-        /// </summary>
-        [JsonProperty("ExpiredTime")]
-        public long? ExpiredTime{ get; set; }
-
-        /// <summary>
         /// Signature data of the user. required field. standard JSON format.
         /// </summary>
         [JsonProperty("ClientData")]
         public string ClientData{ get; set; }
+
+        /// <summary>
+        /// Valid period, in seconds, no more than 1 hr.
+        /// </summary>
+        [JsonProperty("ExpiredTime")]
+        public long? ExpiredTime{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
-            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "ClientData", this.ClientData);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 
+        /// Condition attribute, currently supports only VpcID
         /// </summary>
         [JsonProperty("Attributes")]
         public string Attributes{ get; set; }
 
         /// <summary>
-        /// 
+        /// Condition rule, 1: equal to, 2: not equal to
         /// </summary>
         [JsonProperty("Rule")]
         public ulong? Rule{ get; set; }
 
         /// <summary>
-        /// 
+        /// Value of the corresponding condition attribute
         /// </summary>
         [JsonProperty("ConditionValue")]
         public string ConditionValue{ get; set; }

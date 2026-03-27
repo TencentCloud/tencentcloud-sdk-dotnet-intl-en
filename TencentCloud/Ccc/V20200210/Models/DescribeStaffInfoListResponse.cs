@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Total number of agent users.
+        /// <P>Total number of agent users</p>.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Agent user information list.
+        /// <P>Agent user information list</p>.
         /// </summary>
         [JsonProperty("StaffList")]
         public StaffInfo[] StaffList{ get; set; }

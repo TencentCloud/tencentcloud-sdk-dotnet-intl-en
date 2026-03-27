@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+        /// Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, or pay-as-you-go deduction.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }

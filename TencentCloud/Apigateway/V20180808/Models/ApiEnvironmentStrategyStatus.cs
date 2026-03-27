@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 
+        /// The quantity of rate limiting policies bound to APIs.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// API Binding Rate Limiting Policy List.
         /// </summary>
         [JsonProperty("ApiEnvironmentStrategySet")]
         public ApiEnvironmentStrategy[] ApiEnvironmentStrategySet{ get; set; }

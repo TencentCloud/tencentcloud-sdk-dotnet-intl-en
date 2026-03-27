@@ -65,6 +65,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Variables")]
         public Variable[] Variables{ get; set; }
 
+        /// <summary>
+        /// Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

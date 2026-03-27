@@ -259,19 +259,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Receiptor{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether fully electronic and paper tickets exist (0: No, 1: Yes).
         /// </summary>
         [JsonProperty("ElectronicFullMark")]
         public long? ElectronicFullMark{ get; set; }
 
         /// <summary>
-        /// 
+        /// Fully Electronic Number
         /// </summary>
         [JsonProperty("ElectronicFullNumber")]
         public string ElectronicFullNumber{ get; set; }
 
         /// <summary>
-        /// 
+        /// Co-branded Invoice.
         /// </summary>
         [JsonProperty("FormName")]
         public string FormName{ get; set; }

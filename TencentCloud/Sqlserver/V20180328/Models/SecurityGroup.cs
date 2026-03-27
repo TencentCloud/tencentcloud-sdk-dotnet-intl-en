@@ -25,43 +25,43 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creation Time, Time format: yyyy-mm-dd hh:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Inbound Rules
         /// </summary>
         [JsonProperty("InboundSet")]
         public SecurityGroupPolicy[] InboundSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Outbound Rules
         /// </summary>
         [JsonProperty("OutboundSet")]
         public SecurityGroupPolicy[] OutboundSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security Group ID
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security Group Name
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Security Group Remarks
         /// </summary>
         [JsonProperty("SecurityGroupRemark")]
         public string SecurityGroupRemark{ get; set; }

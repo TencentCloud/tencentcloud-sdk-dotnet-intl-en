@@ -25,19 +25,23 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// IP access restriction status. Optional values:
+        /// <li>Enabled: enable;</li>
+        /// <li>Disabled: disable.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP access restriction type:
+        /// <li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
+        /// <li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
         /// </summary>
         [JsonProperty("IPList")]
         public string[] IPList{ get; set; }

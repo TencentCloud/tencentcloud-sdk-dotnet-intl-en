@@ -25,13 +25,13 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 
+        /// Positive score, ranging from 0 to 100
         /// </summary>
         [JsonProperty("Positive")]
         public long? Positive{ get; set; }
 
         /// <summary>
-        /// 
+        /// Negative score, ranging from 0 to 100
         /// </summary>
         [JsonProperty("Negative")]
         public long? Negative{ get; set; }

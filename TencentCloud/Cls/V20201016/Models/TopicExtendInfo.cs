@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 
+        /// Log topic authentication-free configuration information
         /// </summary>
         [JsonProperty("AnonymousAccess")]
         public AnonymousInfo AnonymousAccess{ get; set; }

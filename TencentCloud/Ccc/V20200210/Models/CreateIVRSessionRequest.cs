@@ -60,6 +60,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("UUI")]
         public string UUI{ get; set; }
 
+        /// <summary>
+        /// Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+        /// </summary>
+        [JsonProperty("MaxRingTimeoutSecond")]
+        public long? MaxRingTimeoutSecond{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArraySimple(map, prefix + "Callers.", this.Callers);
             this.SetParamArrayObj(map, prefix + "Variables.", this.Variables);
             this.SetParamSimple(map, prefix + "UUI", this.UUI);
+            this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         }
     }
 }

@@ -130,7 +130,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Country{ get; set; }
 
         /// <summary>
-        /// 
+        /// Remarks
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

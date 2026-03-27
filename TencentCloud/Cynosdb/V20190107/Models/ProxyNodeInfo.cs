@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Proxy Node Name
         /// </summary>
         [JsonProperty("OssProxyNodeName")]
         public string OssProxyNodeName{ get; set; }

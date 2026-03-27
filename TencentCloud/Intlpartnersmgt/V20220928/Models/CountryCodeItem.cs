@@ -37,13 +37,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// ISO2 standard country/region code
         /// </summary>
         [JsonProperty("IOS2")]
         public string IOS2{ get; set; }
 
         /// <summary>
-        /// 
+        /// ISO3 standard country/region code
         /// </summary>
         [JsonProperty("IOS3")]
         public string IOS3{ get; set; }

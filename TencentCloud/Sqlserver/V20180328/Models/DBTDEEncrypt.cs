@@ -25,7 +25,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Database Name
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }

@@ -95,7 +95,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
 
         /// <summary>
         /// Specifies the face count for 3D model generation. default value is 500000.
-        /// Specifies the supported face count generation range. value range: 40000-1500000
+        /// Specifies the supported face count generation range. value range: 3000-1500000
         /// </summary>
         [JsonProperty("FaceCount")]
         public long? FaceCount{ get; set; }

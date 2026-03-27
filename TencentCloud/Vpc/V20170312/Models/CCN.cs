@@ -107,7 +107,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? RouteTableFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// `true`: instance is blocked, traffic is blocked, `false`: unblocked.
         /// </summary>
         [JsonProperty("IsSecurityLock")]
         public bool? IsSecurityLock{ get; set; }

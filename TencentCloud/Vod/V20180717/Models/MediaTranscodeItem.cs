@@ -110,7 +110,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Copyright information.
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }

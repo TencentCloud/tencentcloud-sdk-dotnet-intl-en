@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// RTSP pull stream address Url.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

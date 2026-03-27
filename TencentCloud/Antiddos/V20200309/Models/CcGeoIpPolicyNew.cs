@@ -43,7 +43,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 
+        /// domain name
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Segment{ get; set; }
 
         /// <summary>
-        /// 
+        /// whether to query node IPV6 information.
         /// </summary>
         [JsonProperty("ShowIpv6")]
         public bool? ShowIpv6{ get; set; }

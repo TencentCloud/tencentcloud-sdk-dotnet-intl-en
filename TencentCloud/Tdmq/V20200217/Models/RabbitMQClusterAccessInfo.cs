@@ -25,49 +25,49 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Cluster Public Network Access Address
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Console Access Address
         /// </summary>
         [JsonProperty("WebConsoleEndpoint")]
         public string WebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Console Login Username
         /// </summary>
         [JsonProperty("WebConsoleUsername")]
         public string WebConsoleUsername{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Console Login Password
         /// </summary>
         [JsonProperty("WebConsolePassword")]
         public string WebConsolePassword{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated
         /// </summary>
         [JsonProperty("PublicAccessEndpointStatus")]
         public bool? PublicAccessEndpointStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated
         /// </summary>
         [JsonProperty("PublicControlConsoleSwitchStatus")]
         public bool? PublicControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated
         /// </summary>
         [JsonProperty("VpcControlConsoleSwitchStatus")]
         public bool? VpcControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vpc management console access address, example value: http://1.1.1.1:15672
         /// </summary>
         [JsonProperty("VpcWebConsoleEndpoint")]
         public string VpcWebConsoleEndpoint{ get; set; }

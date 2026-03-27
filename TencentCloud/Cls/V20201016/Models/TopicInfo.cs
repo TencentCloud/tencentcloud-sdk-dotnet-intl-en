@@ -142,7 +142,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsWebTracking{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log topic extended information
         /// </summary>
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }

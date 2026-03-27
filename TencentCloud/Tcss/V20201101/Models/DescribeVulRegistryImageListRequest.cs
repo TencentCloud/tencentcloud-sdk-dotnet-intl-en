@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Offset, defaults to 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Resource total price under prepaid mode, excluding discounts. unit: cent.
+        /// Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
         /// </summary>
         [JsonProperty("TotalPrice")]
         public long? TotalPrice{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted total price under prepaid mode, unit: fen. for example, the user enjoys a Discount = TotalPrice × Discount.
+        /// Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
         /// </summary>
         [JsonProperty("TotalPriceDiscount")]
         public long? TotalPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Unit resource price in postpaid mode, excluding discounts. unit: cent.
+        /// Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
         /// </summary>
         [JsonProperty("UnitPrice")]
         public long? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Unit resource price in postpaid mode after Discount, unit: fen. for example, the user enjoys a Discount = unitprice × Discount.
+        /// Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public long? UnitPriceDiscount{ get; set; }
@@ -59,6 +59,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
+
+        /// <summary>
+        /// Excludes discounted rates under high precision.
+        /// </summary>
+        [JsonProperty("UnitPriceHighPrecision")]
+        public string UnitPriceHighPrecision{ get; set; }
+
+        /// <summary>
+        /// Discounted price under high precision.
+        /// </summary>
+        [JsonProperty("UnitPriceDiscountHighPrecision")]
+        public string UnitPriceDiscountHighPrecision{ get; set; }
+
+        /// <summary>
+        /// Currency unit.
+        /// </summary>
+        [JsonProperty("AmountUnit")]
+        public string AmountUnit{ get; set; }
 
 
         /// <summary>
@@ -72,6 +90,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
             this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
             this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+            this.SetParamSimple(map, prefix + "UnitPriceHighPrecision", this.UnitPriceHighPrecision);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscountHighPrecision", this.UnitPriceDiscountHighPrecision);
+            this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         }
     }
 }

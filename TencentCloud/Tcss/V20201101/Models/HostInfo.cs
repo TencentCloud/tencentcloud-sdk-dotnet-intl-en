@@ -135,13 +135,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Name
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Access Status
         /// </summary>
         [JsonProperty("ClusterAccessedStatus")]
         public string ClusterAccessedStatus{ get; set; }

@@ -76,7 +76,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detection Cycle, Unit: Minutes, 60 or 1440
         /// </summary>
         [JsonProperty("Cycle")]
         public ulong? Cycle{ get; set; }

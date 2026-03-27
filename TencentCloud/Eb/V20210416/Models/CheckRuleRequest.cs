@@ -25,13 +25,13 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 
+        /// Event Information
         /// </summary>
         [JsonProperty("Event")]
         public string Event{ get; set; }
 
         /// <summary>
-        /// 
+        /// EventPattern Information
         /// </summary>
         [JsonProperty("EventPattern")]
         public string EventPattern{ get; set; }

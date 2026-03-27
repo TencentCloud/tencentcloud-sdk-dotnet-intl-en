@@ -79,7 +79,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deployment Mode
         /// </summary>
         [JsonProperty("DeploymentMode")]
         public string DeploymentMode{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Publish Database Name
         /// </summary>
         [JsonProperty("PublishDatabase")]
         public string PublishDatabase{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscription Database Name
         /// </summary>
         [JsonProperty("SubscribeDatabase")]
         public string SubscribeDatabase{ get; set; }

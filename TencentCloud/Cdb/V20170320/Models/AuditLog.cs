@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQL Type.
         /// </summary>
         [JsonProperty("SqlType")]
         public string SqlType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Name.
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQL Statement.
         /// </summary>
         [JsonProperty("Sql")]
         public string Sql{ get; set; }

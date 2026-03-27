@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] DeploySecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// dhcp option parameters required for deployment
         /// </summary>
         [JsonProperty("ChcDeployExtraConfig")]
         public ChcDeployExtraConfig ChcDeployExtraConfig{ get; set; }

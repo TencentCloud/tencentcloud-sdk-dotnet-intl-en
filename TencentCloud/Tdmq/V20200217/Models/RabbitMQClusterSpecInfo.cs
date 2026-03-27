@@ -25,37 +25,37 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Cluster Specification Name
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of Nodes
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Peak tps
         /// </summary>
         [JsonProperty("MaxTps")]
         public ulong? MaxTps{ get; set; }
 
         /// <summary>
-        /// 
+        /// Peak bandwidth Unit: mbps
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public ulong? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage capacity Unit: GB
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// 
+        /// public network bandwidth tps. Unit: Mbps
         /// </summary>
         [JsonProperty("PublicNetworkTps")]
         public ulong? PublicNetworkTps{ get; set; }

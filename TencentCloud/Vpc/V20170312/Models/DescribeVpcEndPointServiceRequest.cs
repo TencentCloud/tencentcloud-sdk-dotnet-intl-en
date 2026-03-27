@@ -53,7 +53,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] EndPointServiceIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// <li>Does not support passing the parameter Filters simultaneously.</li> <li>Lists the endpoint service information authorized to the current account. Can be filtered using the EndPointServiceIds parameter to determine which endpoint services are authorized to the account.</li>
         /// </summary>
         [JsonProperty("IsListAuthorizedEndPointService")]
         public bool? IsListAuthorizedEndPointService{ get; set; }

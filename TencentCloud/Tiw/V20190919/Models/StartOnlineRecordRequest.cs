@@ -97,13 +97,23 @@ namespace TencentCloud.Tiw.V20190919.Models
         public RecordControl RecordControl{ get; set; }
 
         /// <summary>
+        /// Recording mode
         /// 
+        /// 
+        /// 
+        /// REALTIME_MODE - Real-time recording mode (default)
+        /// 
+        /// VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
         /// </summary>
         [JsonProperty("RecordMode")]
         public string RecordMode{ get; set; }
 
         /// <summary>
+        /// Chat group ID. This field is only applicable to `video generation mode`.
         /// 
+        /// 
+        /// 
+        /// In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
         /// </summary>
         [JsonProperty("ChatGroupId")]
         public string ChatGroupId{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Tat.V20201028.Models
         
         /// <summary>
         /// The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-        /// This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+        /// This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
         /// If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
         /// 
         /// key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -39,7 +39,7 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// Perform the replace preview command.
-        /// Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+        /// Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// CommandId and Content, you must provide one and can only provide one.
         /// </summary>
         [JsonProperty("CommandId")]

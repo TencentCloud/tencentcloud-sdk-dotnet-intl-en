@@ -32,7 +32,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Product Details
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }

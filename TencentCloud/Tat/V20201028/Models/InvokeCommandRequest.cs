@@ -25,7 +25,7 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+        /// Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
         /// The key is the custom parameter name, and the value is the default. both kv are string-type.
-        /// This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+        /// This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
         /// If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
         /// Custom parameters can be up to 20.
         /// The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].

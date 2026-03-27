@@ -109,13 +109,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         public ulong?[] TaskStatusList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Architecture ID
         /// </summary>
         [JsonProperty("ArchId")]
         public string ArchId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Architecture Name
         /// </summary>
         [JsonProperty("ArchName")]
         public string ArchName{ get; set; }

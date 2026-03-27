@@ -199,7 +199,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string RollbackTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// DCN synchronization mode: 0: asynchronous, 1: strong synchronization
         /// </summary>
         [JsonProperty("DcnSyncMode")]
         public long? DcnSyncMode{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether the parameter is modifiable. 1: Yes 0: No
         /// </summary>
         [JsonProperty("IsModifiable")]
         public long? IsModifiable{ get; set; }

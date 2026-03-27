@@ -43,13 +43,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string PublicDataStreamWhiteList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public Network Management Console Allowlist Status
         /// </summary>
         [JsonProperty("PublicControlConsoleWhiteListStatus")]
         public string PublicControlConsoleWhiteListStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public Network Data Flow Allowlist Status
         /// </summary>
         [JsonProperty("PublicDataStreamWhiteListStatus")]
         public string PublicDataStreamWhiteListStatus{ get; set; }

@@ -27,7 +27,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Managed instance ID.
         /// 
-        /// Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+        /// Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

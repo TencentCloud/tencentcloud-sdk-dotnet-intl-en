@@ -241,7 +241,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string BanStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP List
         /// </summary>
         [JsonProperty("IPList")]
         public IPDetail[] IPList{ get; set; }

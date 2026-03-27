@@ -31,19 +31,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string[] IpList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pass id for domain-bound resources
         /// </summary>
         [JsonProperty("IdList")]
         public string[] IdList{ get; set; }
 
         /// <summary>
-        /// 
+        /// region name
         /// </summary>
         [JsonProperty("FilterRegion")]
         public ulong? FilterRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// CNAME WAF resource
         /// </summary>
         [JsonProperty("CnameWafIdList")]
         public string[] CnameWafIdList{ get; set; }

@@ -195,19 +195,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? PodMem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Name
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 
+        /// pod uid
         /// </summary>
         [JsonProperty("PodUid")]
         public string PodUid{ get; set; }

@@ -25,43 +25,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Log topic operation: optional create, reuse.
+        /// create: create a new log topic using TopicName.
+        /// reuse: use an existing log topic by specifying TopicId.
+        /// Combining the use of an existing log topic and creating a new log set is not allowed.
         /// </summary>
         [JsonProperty("TopicOperation")]
         public string TopicOperation{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log set operation: optional create, reuse.
+        /// create: create a new log set using GroupName.
+        /// reuse: use an existing log set by specifying GroupId.
+        /// Combining the use of an existing log topic and creating a new log set is not allowed.
         /// </summary>
         [JsonProperty("GroupOperation")]
         public string GroupOperation{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log Delivery Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// log topic id
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 
+        /// log topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 
+        /// log set id
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// log set name
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

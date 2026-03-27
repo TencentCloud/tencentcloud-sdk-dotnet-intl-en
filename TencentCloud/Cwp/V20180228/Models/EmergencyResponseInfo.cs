@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HostNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Service status: 0 not started, · in progress, 2 completed
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -25,44 +25,44 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Number of minutes consumed by outbound package.
+        /// <P>Minutes consumed by outbound package</p>.
         /// </summary>
         [JsonProperty("TelCallOutCount")]
         public long? TelCallOutCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by inbound package.
+        /// <P>Minutes consumed by inbound package</p>.
         /// </summary>
         [JsonProperty("TelCallInCount")]
         public long? TelCallInCount{ get; set; }
 
         /// <summary>
-        /// Number of agent usage statistics.
+        /// <P>Number of agent usage statistics</p>.
         /// </summary>
         [JsonProperty("SeatUsedCount")]
         public long? SeatUsedCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by audio package.
+        /// <P>Minutes consumed by audio package</p>.
         /// </summary>
         [JsonProperty("VoipCallInCount")]
         [System.Obsolete]
         public long? VoipCallInCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by audio package.
+        /// <P>Minutes consumed by audio package</p>.
         /// </summary>
         [JsonProperty("VOIPCallInCount")]
         public long? VOIPCallInCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by offline speech-to-text package.
+        /// <P>Minutes consumed by offline speech-to-text package</p>.
         /// </summary>
         [JsonProperty("AsrOfflineCount")]
         public long? AsrOfflineCount{ get; set; }
 
         /// <summary>
-        /// Number of minutes consumed by real-time speech-to-text package.
+        /// <P>Minutes consumed by real-time speech-to-text package</p>.
         /// </summary>
         [JsonProperty("AsrRealtimeCount")]
         public long? AsrRealtimeCount{ get; set; }

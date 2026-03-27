@@ -79,7 +79,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Uuids{ get; set; }
 
         /// <summary>
-        /// 
+        /// 0 version comparison, 2 version comparison + poc
         /// </summary>
         [JsonProperty("ScanMethod")]
         public ulong? ScanMethod{ get; set; }

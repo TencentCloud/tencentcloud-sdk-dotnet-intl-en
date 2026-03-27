@@ -74,31 +74,31 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? Latest{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether running containers exist
         /// </summary>
         [JsonProperty("ContainerRunning")]
         public bool? ContainerRunning{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scan End Time
         /// </summary>
         [JsonProperty("ScanEndTime")]
         public string ScanEndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scan Scope: 0 All Images, 1 Custom Images, 2 Recommended Scan Images
         /// </summary>
         [JsonProperty("ScanScope")]
         public ulong? ScanScope{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository Type tcr,ccr,harbor
         /// </summary>
         [JsonProperty("RegistryType")]
         public string[] RegistryType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string[] Namespace{ get; set; }

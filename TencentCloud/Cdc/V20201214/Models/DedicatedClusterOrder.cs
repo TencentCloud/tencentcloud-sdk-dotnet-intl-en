@@ -154,43 +154,43 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Acceptance Status
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expected Delivery Time
         /// </summary>
         [JsonProperty("DeliverExpectTime")]
         public string DeliverExpectTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Actual Delivery Completion Time
         /// </summary>
         [JsonProperty("DeliverFinishTime")]
         public string DeliverFinishTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expected Acceptance Time
         /// </summary>
         [JsonProperty("CheckExpectTime")]
         public string CheckExpectTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Actual Acceptance Completion Time
         /// </summary>
         [JsonProperty("CheckFinishTime")]
         public string CheckFinishTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Order SLA
         /// </summary>
         [JsonProperty("OrderSLA")]
         public string OrderSLA{ get; set; }
 
         /// <summary>
-        /// 
+        /// Order Payment Plan
         /// </summary>
         [JsonProperty("OrderPayPlan")]
         public string OrderPayPlan{ get; set; }

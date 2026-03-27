@@ -31,7 +31,7 @@ namespace TencentCloud.Msp.V20180319.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// Migration destination Ip
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

@@ -27,7 +27,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Pending deletion executor ID.
         /// 
-        /// Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+        /// Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
         /// </summary>
         [JsonProperty("InvokerId")]
         public string InvokerId{ get; set; }

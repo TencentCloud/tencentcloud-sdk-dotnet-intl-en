@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Status of the Prometheus switch
         /// </summary>
         [JsonProperty("PrometheusEndpointStatus")]
         public string PrometheusEndpointStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// prometheus Information
         /// </summary>
         [JsonProperty("VpcPrometheusEndpoint")]
         public string[] VpcPrometheusEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// Node Information
         /// </summary>
         [JsonProperty("NodePrometheusAddress")]
         public string[] NodePrometheusAddress{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpc information
         /// </summary>
         [JsonProperty("VpcEndpointInfo")]
         public VpcEndpointInfo VpcEndpointInfo{ get; set; }

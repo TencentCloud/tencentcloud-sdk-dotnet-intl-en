@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string AccessKeySecret{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

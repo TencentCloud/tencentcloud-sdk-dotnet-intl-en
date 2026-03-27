@@ -31,7 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Tag{ get; set; }
 
         /// <summary>
+        /// Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
         /// 
+        /// For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }

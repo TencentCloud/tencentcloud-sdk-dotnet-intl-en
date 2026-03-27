@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] LogLevels{ get; set; }
 
         /// <summary>
-        /// 
+        /// Keywords
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }

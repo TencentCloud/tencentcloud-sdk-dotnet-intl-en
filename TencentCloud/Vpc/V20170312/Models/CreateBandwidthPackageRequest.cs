@@ -75,7 +75,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }

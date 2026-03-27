@@ -193,7 +193,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? CWPBlProcess{ get; set; }
 
         /// <summary>
-        /// 
+        /// Exception status codes
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }

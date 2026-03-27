@@ -25,109 +25,109 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 
+        /// Primary key ID, which has no business meaning and serves solely as a unique identifier
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 
+        /// sub-account Appid
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
-        /// 
+        /// sub-account UIn
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sub-account name
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 
+        /// master account Appid
         /// </summary>
         [JsonProperty("OwnerAppID")]
         public string OwnerAppID{ get; set; }
 
         /// <summary>
-        /// 
+        /// master account Uin
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// master account name
         /// </summary>
         [JsonProperty("OwnerNickName")]
         public string OwnerNickName{ get; set; }
 
         /// <summary>
-        /// 
+        /// master account's memberId information
         /// </summary>
         [JsonProperty("OwnerMemberID")]
         public string OwnerMemberID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Account type: 0 for Tencent Cloud account, 1 for AWS account
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Accessible services count
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Accessible API count
         /// </summary>
         [JsonProperty("InterfaceCount")]
         public long? InterfaceCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Accessible resources count
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access/Behavior Logs Count
         /// </summary>
         [JsonProperty("LogCount")]
         public long? LogCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Permissions configuration risk
         /// </summary>
         [JsonProperty("ConfigRiskCount")]
         public long? ConfigRiskCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Dangerous behavior alarm
         /// </summary>
         [JsonProperty("ActionRiskCount")]
         public long? ActionRiskCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// whether to enable CloudAudit logs
         /// </summary>
         [JsonProperty("IsAccessCloudAudit")]
         public bool? IsAccessCloudAudit{ get; set; }
 
         /// <summary>
-        /// 
+        /// whether risk configuration security assessment
         /// </summary>
         [JsonProperty("IsAccessCheck")]
         public bool? IsAccessCheck{ get; set; }
 
         /// <summary>
-        /// 
+        /// whether to configure user behavior management policies
         /// </summary>
         [JsonProperty("IsAccessUeba")]
         public bool? IsAccessUeba{ get; set; }

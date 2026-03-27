@@ -49,7 +49,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// device type:common, exclusive
+        /// Instance device type. Supported values are as follows:
+        /// - common: indicates the general type
+        /// - exclusive: indicates the exclusive type.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

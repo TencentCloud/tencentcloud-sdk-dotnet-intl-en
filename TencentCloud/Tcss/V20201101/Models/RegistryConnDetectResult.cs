@@ -25,37 +25,37 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 
+        /// Host quuid or backend for Connectivity Detection
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Host uuid or backend for Connectivity Detection
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detection Result Status
         /// </summary>
         [JsonProperty("ConnDetectStatus")]
         public string ConnDetectStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detection Result Information
         /// </summary>
         [JsonProperty("ConnDetectMessage")]
         public string ConnDetectMessage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Failure Resolution
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Failure Cause
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }

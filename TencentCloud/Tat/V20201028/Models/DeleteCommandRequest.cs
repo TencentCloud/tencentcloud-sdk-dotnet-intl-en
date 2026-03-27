@@ -25,7 +25,7 @@ namespace TencentCloud.Tat.V20201028.Models
     {
         
         /// <summary>
-        /// Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+        /// Command ID to be deleted. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }

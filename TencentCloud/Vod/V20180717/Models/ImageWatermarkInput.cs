@@ -58,7 +58,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string RepeatType{ get; set; }
 
         /// <summary>
+        /// Image transparency, value range: [0, 100]
         /// 
+        /// <li>0: Completely opaque</li>
+        /// 
+        /// <li>100: Completely transparent</li>
+        /// 
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Transparency")]
         public long? Transparency{ get; set; }

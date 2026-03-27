@@ -25,19 +25,25 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// SSL Encryption Status
+        /// enable - Enabled
+        /// disable - Disabled
+        /// enable_doing - Enabling
+        /// disable_doing - Disabling
+        /// renew_doing - Updating
+        /// wait_doing - Waiting to be executed during maintenance window
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }
 
         /// <summary>
-        /// 
+        /// SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("SSLValidityPeriod")]
         public string SSLValidityPeriod{ get; set; }
 
         /// <summary>
-        /// 
+        /// SSL Certificates Validity: 0 - Invalid, 1 - Valid
         /// </summary>
         [JsonProperty("SSLValidity")]
         public ulong? SSLValidity{ get; set; }

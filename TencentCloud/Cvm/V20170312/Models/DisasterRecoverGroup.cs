@@ -72,7 +72,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// placement group affinity
         /// </summary>
         [JsonProperty("Affinity")]
         public long? Affinity{ get; set; }

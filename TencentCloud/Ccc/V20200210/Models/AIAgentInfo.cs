@@ -36,6 +36,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("AIAgentName")]
         public string AIAgentName{ get; set; }
 
+        /// <summary>
+        /// List of intelligent agent variable names.
+        /// </summary>
+        [JsonProperty("VariableNames")]
+        public string[] VariableNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
             this.SetParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
+            this.SetParamArraySimple(map, prefix + "VariableNames.", this.VariableNames);
         }
     }
 }

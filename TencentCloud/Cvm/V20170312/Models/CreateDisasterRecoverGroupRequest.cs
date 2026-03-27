@@ -43,7 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
         /// </summary>
         [JsonProperty("Affinity")]
         public long? Affinity{ get; set; }

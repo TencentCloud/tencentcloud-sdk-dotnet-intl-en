@@ -74,7 +74,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpc information
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

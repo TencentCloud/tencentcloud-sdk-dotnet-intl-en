@@ -25,31 +25,31 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 
+        /// Sentiment Tag
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag score, ranging from 0 to 100
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sentiment analysis details
         /// </summary>
         [JsonProperty("Detail")]
         public SentimentDetail Detail{ get; set; }
 
         /// <summary>
-        /// 
+        /// Response code; "OK" for success, "InternalError" for failure
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 
+        /// Exception information
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

@@ -213,7 +213,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string KMSRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
         /// </summary>
         [JsonProperty("KMSClusterId")]
         public string KMSClusterId{ get; set; }

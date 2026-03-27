@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Quuids{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repair method: 0 component update or patch installation, 1 disable service
         /// </summary>
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }

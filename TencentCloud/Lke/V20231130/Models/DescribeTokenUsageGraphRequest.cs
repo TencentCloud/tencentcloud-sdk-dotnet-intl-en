@@ -61,13 +61,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] AppBizIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filter Sub-scenarios
         /// </summary>
         [JsonProperty("SubScenes")]
         public string[] SubScenes{ get; set; }

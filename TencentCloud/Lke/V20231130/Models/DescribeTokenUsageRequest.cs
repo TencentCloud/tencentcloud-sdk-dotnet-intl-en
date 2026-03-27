@@ -79,13 +79,13 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] SubScenes{ get; set; }
 
         /// <summary>
-        /// 
+        /// Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }

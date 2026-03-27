@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Maximum number of vhosts allowed to be created
         /// </summary>
         [JsonProperty("MaxVirtualHost")]
         public long? MaxVirtualHost{ get; set; }

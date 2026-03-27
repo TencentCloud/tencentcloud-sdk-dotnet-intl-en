@@ -68,7 +68,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Snapshot type. Optional values: full, full backup; increment, incremental backup
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup file name, fuzzy search
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }

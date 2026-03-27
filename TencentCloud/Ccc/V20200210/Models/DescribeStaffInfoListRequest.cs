@@ -25,37 +25,37 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+        /// <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Page size, upper limit 9,999.
+        /// <P>Pagination size. upper limit: 9999.</p>.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Page number starting from 0.
+        /// <P>Page number, starting from 0.</p>.
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Agent account used when querying a single agent.
+        /// <P>Agent account, used when query single agent.</p>.
         /// </summary>
         [JsonProperty("StaffMail")]
         public string StaffMail{ get; set; }
 
         /// <summary>
-        /// Use when querying for agents with a modification time greater or equal to modifiedtime.
+        /// <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
         /// </summary>
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
         /// <summary>
-        /// Skill group id.
+        /// <p>Skill group ID</p>.
         /// </summary>
         [JsonProperty("SkillGroupId")]
         public long? SkillGroupId{ get; set; }

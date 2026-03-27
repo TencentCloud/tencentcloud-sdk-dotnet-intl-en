@@ -25,25 +25,25 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Publish Database Name
         /// </summary>
         [JsonProperty("PublishDatabase")]
         public string PublishDatabase{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscription Database Name
         /// </summary>
         [JsonProperty("SubscribeDatabase")]
         public string SubscribeDatabase{ get; set; }
 
         /// <summary>
-        /// 
+        /// Latest Synchronization Time
         /// </summary>
         [JsonProperty("LastSyncTime")]
         public string LastSyncTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Publish/Subscribe Status Between Databases: running, success, fail, unknow
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

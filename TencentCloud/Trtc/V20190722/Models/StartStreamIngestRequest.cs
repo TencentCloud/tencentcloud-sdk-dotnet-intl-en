@@ -89,7 +89,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string[] SourceUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify that the video plays from a specific second timestamp.
         /// </summary>
         [JsonProperty("SeekSecond")]
         public long? SeekSecond{ get; set; }

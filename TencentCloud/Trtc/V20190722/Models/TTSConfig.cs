@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 
+        /// Voice ID
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

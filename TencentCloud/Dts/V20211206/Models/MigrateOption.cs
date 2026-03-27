@@ -75,7 +75,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
         /// <summary>
-        /// 
+        /// PostgreSQL migration types: logical (logical migration), physical (physical migration)
         /// </summary>
         [JsonProperty("MigrateWay")]
         public string MigrateWay{ get; set; }

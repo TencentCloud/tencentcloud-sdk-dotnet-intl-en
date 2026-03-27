@@ -53,7 +53,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] FixTag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }

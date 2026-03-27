@@ -91,13 +91,13 @@ namespace TencentCloud.Tmt.V20180321.Models
         public string UntranslatedText{ get; set; }
 
         /// <summary>
-        /// 
+        /// Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
         /// </summary>
         [JsonProperty("TermRepoIDList")]
         public string[] TermRepoIDList{ get; set; }
 
         /// <summary>
-        /// 
+        /// The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
         /// </summary>
         [JsonProperty("SentRepoIDList")]
         public string[] SentRepoIDList{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Subscription Relationship to be Modified
         /// </summary>
         [JsonProperty("DatabaseTuple")]
         public DatabaseTuple DatabaseTuple{ get; set; }
 
         /// <summary>
-        /// 
+        /// Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
         /// </summary>
         [JsonProperty("NewDatabaseTuple")]
         public DatabaseTuple NewDatabaseTuple{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
         /// </summary>
         [JsonProperty("DeleteDataBasesTuple")]
         public bool? DeleteDataBasesTuple{ get; set; }

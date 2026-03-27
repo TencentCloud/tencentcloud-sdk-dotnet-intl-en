@@ -161,7 +161,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Dedicated Cluster ID</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }

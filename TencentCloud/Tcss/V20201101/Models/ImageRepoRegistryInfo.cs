@@ -25,103 +25,103 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 
+        /// Repository id
         /// </summary>
         [JsonProperty("RegistryId")]
         public ulong? RegistryId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository Type, list: harbor, tcr
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository url
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// Network Type, list: public
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region, list: default
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository Version
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository connection error message (to be deprecated, use ConnDetectException instead)
         /// </summary>
         [JsonProperty("ConnectMsg")]
         public string ConnectMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connectivity Detection Method
         /// </summary>
         [JsonProperty("ConnDetectType")]
         public string ConnDetectType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connectivity Detection Host Count
         /// </summary>
         [JsonProperty("ConnDetectHostCount")]
         public ulong? ConnDetectHostCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connectivity Detection Details
         /// </summary>
         [JsonProperty("ConnDetectDetail")]
         public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// instance_id in tcr
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Latest Successful Synchronization Time
         /// </summary>
         [JsonProperty("LatestSyncTime")]
         public string LatestSyncTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Synchronization Status
         /// </summary>
         [JsonProperty("SyncStatus")]
         public string SyncStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Synchronization Failure Reason
         /// </summary>
         [JsonProperty("SyncFailReason")]
         public string SyncFailReason{ get; set; }
 
         /// <summary>
-        /// 
+        /// Synchronization Failure Solution
         /// </summary>
         [JsonProperty("SyncSolution")]
         public string SyncSolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Synchronization Failure Message
         /// </summary>
         [JsonProperty("SyncMessage")]
         public string SyncMessage{ get; set; }

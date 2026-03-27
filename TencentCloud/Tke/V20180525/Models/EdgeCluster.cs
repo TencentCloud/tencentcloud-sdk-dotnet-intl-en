@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ServiceCIDR{ get; set; }
 
         /// <summary>
-        /// 
+        /// k8s version number
         /// </summary>
         [JsonProperty("K8SVersion")]
         public string K8SVersion{ get; set; }

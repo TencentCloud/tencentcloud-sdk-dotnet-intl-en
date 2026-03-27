@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Name, up to 64 characters in length.
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// Daily settlement
         /// Yearly/monthly subscription
         /// Spot
-        /// New monthly subscription
+        /// New yearly/monthly subscription
         /// Yearly/monthly subscription renewal
         /// Yearly/monthly subscription specification adjustment
         /// Yearly/monthly subscription refund

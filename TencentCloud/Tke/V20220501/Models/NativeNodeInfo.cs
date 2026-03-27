@@ -166,7 +166,10 @@ namespace TencentCloud.Tke.V20220501.Models
         public string OsImage{ get; set; }
 
         /// <summary>
+        /// **Instance ID corresponding to the native node**
         /// 
+        /// - ins-q47ofw6 indicates that this instance is a CVM instance
+        /// - eks-f8mvyaep indicates that this instance is a CXM instance
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

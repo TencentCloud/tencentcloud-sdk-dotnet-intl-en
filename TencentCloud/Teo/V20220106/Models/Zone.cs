@@ -117,7 +117,13 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ModifiedOn{ get; set; }
 
         /// <summary>
+        /// Site access region, with values:
         /// 
+        /// <li> global: Global;</li>
+        /// 
+        /// <li> mainland: Chinese mainland;</li>
+        /// 
+        /// <li> overseas: Overseas regions.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

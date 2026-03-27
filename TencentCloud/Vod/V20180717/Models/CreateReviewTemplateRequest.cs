@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audit template name, length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audit template description, length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

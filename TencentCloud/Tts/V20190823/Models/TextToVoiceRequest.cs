@@ -72,7 +72,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
         /// </summary>
         [JsonProperty("FastVoiceType")]
         public string FastVoiceType{ get; set; }
@@ -108,13 +108,14 @@ namespace TencentCloud.Tts.V20190823.Models
         public ulong? SegmentRate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
+        /// Sample value: neutral
         /// </summary>
         [JsonProperty("EmotionCategory")]
         public string EmotionCategory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
         /// </summary>
         [JsonProperty("EmotionIntensity")]
         public long? EmotionIntensity{ get; set; }

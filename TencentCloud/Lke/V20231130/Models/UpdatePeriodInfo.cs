@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Document update frequency type: 0: No update, -H: Hourly granularity. Currently only supports 24 (1 day), 72 (3 days), 168 (7 days). Only valid for source=2 Tencent document type.
         /// </summary>
         [JsonProperty("UpdatePeriodH")]
         public ulong? UpdatePeriodH{ get; set; }

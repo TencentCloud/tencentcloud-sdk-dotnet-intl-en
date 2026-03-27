@@ -25,13 +25,13 @@ namespace TencentCloud.Cdwdoris.V20211228.Models
     {
         
         /// <summary>
-        /// 
+        /// catalog Name
         /// </summary>
         [JsonProperty("CatalogName")]
         public string CatalogName{ get; set; }
 
         /// <summary>
-        /// 
+        /// catalog permission
         /// </summary>
         [JsonProperty("Permissions")]
         public string[] Permissions{ get; set; }

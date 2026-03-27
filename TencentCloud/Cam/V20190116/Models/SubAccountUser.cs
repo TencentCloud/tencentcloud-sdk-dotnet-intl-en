@@ -62,13 +62,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? UserType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recent Login IP
         /// </summary>
         [JsonProperty("LastLoginIp")]
         public string LastLoginIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recent login time; if the returned value is empty, it means the console has never been logged in to.
         /// </summary>
         [JsonProperty("LastLoginTime")]
         public string LastLoginTime{ get; set; }

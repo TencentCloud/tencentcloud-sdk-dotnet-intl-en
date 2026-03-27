@@ -49,19 +49,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recognition start UTC time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recognition end UTC time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Steady state marker.
         /// </summary>
         [JsonProperty("SteadyState")]
         public bool? SteadyState{ get; set; }

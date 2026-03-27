@@ -95,13 +95,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
         /// </summary>
         [JsonProperty("FilterBeginCommit")]
         public bool? FilterBeginCommit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
         /// </summary>
         [JsonProperty("FilterCheckpoint")]
         public bool? FilterCheckpoint{ get; set; }

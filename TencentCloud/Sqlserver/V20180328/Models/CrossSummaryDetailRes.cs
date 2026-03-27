@@ -25,85 +25,85 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance Status
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Backup Status: enable - Enabled, disable - Disabled
         /// </summary>
         [JsonProperty("CrossBackupEnabled")]
         public string CrossBackupEnabled{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Backup Target Region
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// 
+        /// Latest Backup Start Time
         /// </summary>
         [JsonProperty("LastBackupStartTime")]
         public string LastBackupStartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Backup Retention Days
         /// </summary>
         [JsonProperty("CrossBackupSaveDays")]
         public long? CrossBackupSaveDays{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Data Backup Total Space
         /// </summary>
         [JsonProperty("DataBackupSpace")]
         public ulong? DataBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Data Backup Total File Count
         /// </summary>
         [JsonProperty("DataBackupCount")]
         public ulong? DataBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Log Backup Total Space
         /// </summary>
         [JsonProperty("LogBackupSpace")]
         public ulong? LogBackupSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Log Backup Total File Count
         /// </summary>
         [JsonProperty("LogBackupCount")]
         public ulong? LogBackupCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Backup Total Space
         /// </summary>
         [JsonProperty("ActualUsedSpace")]
         public ulong? ActualUsedSpace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cross-Region Backup Total Count
         /// </summary>
         [JsonProperty("ActualUsedCount")]
         public ulong? ActualUsedCount{ get; set; }

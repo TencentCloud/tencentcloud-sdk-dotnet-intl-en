@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// Maximum number of creatable exchanges
         /// </summary>
         [JsonProperty("MaxExchange")]
         public long? MaxExchange{ get; set; }

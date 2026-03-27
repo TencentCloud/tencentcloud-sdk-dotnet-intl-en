@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
         /// </summary>
         [JsonProperty("GenerationMode")]
         public string GenerationMode{ get; set; }

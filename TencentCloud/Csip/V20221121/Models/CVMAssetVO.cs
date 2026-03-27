@@ -81,7 +81,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpc id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

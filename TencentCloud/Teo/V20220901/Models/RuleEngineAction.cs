@@ -179,7 +179,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
         /// </summary>
         [JsonProperty("OriginPullProtocolParameters")]
         public OriginPullProtocolParameters OriginPullProtocolParameters{ get; set; }

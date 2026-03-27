@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
         /// </summary>
         [JsonProperty("ReadOnlyInstanceId")]
         public string ReadOnlyInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Instance Weight, in the range of 0-100
         /// </summary>
         [JsonProperty("ReadOnlyWeight")]
         public long? ReadOnlyWeight{ get; set; }

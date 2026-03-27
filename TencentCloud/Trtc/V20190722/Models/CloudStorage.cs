@@ -32,7 +32,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Vendor{ get; set; }
 
         /// <summary>
-        /// [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+        /// [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
         /// Example value: cn-shanghai-1.
         /// 
         /// [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.

@@ -119,7 +119,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string TimeConsuming{ get; set; }
 
         /// <summary>
-        /// 
+        /// id, for frontend
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

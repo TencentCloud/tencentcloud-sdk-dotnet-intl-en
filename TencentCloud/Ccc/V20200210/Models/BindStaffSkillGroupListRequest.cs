@@ -37,17 +37,17 @@ namespace TencentCloud.Ccc.V20200210.Models
         public string StaffEmail{ get; set; }
 
         /// <summary>
+        /// Bound skill group list (required).
+        /// </summary>
+        [JsonProperty("StaffSkillGroupList")]
+        public StaffSkillGroupList[] StaffSkillGroupList{ get; set; }
+
+        /// <summary>
         /// Bound skill group list.
         /// </summary>
         [JsonProperty("SkillGroupList")]
         [System.Obsolete]
         public long?[] SkillGroupList{ get; set; }
-
-        /// <summary>
-        /// Bound skill group list (required).
-        /// </summary>
-        [JsonProperty("StaffSkillGroupList")]
-        public StaffSkillGroupList[] StaffSkillGroupList{ get; set; }
 
 
         /// <summary>
@@ -57,8 +57,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "StaffEmail", this.StaffEmail);
-            this.SetParamArraySimple(map, prefix + "SkillGroupList.", this.SkillGroupList);
             this.SetParamArrayObj(map, prefix + "StaffSkillGroupList.", this.StaffSkillGroupList);
+            this.SetParamArraySimple(map, prefix + "SkillGroupList.", this.SkillGroupList);
         }
     }
 }

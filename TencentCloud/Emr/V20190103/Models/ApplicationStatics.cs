@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? SumMemorySeconds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total VCore Seconds
         /// </summary>
         [JsonProperty("SumVCoreSeconds")]
         public long? SumVCoreSeconds{ get; set; }

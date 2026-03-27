@@ -81,7 +81,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? PublicIpType{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpc
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

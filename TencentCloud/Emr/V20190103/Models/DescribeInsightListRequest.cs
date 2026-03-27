@@ -61,7 +61,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether it includes specific parameter suggestions and other information
         /// </summary>
         [JsonProperty("MustHasContext")]
         public bool? MustHasContext{ get; set; }

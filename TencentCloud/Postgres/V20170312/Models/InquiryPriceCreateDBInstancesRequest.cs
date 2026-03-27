@@ -75,7 +75,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }

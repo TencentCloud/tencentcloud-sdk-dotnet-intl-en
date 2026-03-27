@@ -25,25 +25,25 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 
+        /// MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
         /// </summary>
         [JsonProperty("MiniOsType")]
         public string MiniOsType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Server architecture and boot mode. Value: x86_legacy, arm_uefi.
         /// </summary>
         [JsonProperty("BootType")]
         public string BootType{ get; set; }
 
         /// <summary>
-        /// 
+        /// The boot file used by PXE. Default: pxelinux.0.
         /// </summary>
         [JsonProperty("BootFile")]
         public string BootFile{ get; set; }
 
         /// <summary>
-        /// 
+        /// tftp server ip address.
         /// </summary>
         [JsonProperty("NextServerAddress")]
         public string NextServerAddress{ get; set; }

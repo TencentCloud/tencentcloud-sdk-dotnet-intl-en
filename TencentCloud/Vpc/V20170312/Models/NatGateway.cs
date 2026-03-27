@@ -155,7 +155,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? NatProductVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
         /// </summary>
         [JsonProperty("SmartScheduleMode")]
         public bool? SmartScheduleMode{ get; set; }

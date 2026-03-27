@@ -25,31 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Enable voice interaction feature
         /// </summary>
         [JsonProperty("EnableVoiceInteract")]
         public bool? EnableVoiceInteract{ get; set; }
 
         /// <summary>
-        /// 
+        /// Enable voice call
         /// </summary>
         [JsonProperty("EnableVoiceCall")]
         public bool? EnableVoiceCall{ get; set; }
 
         /// <summary>
-        /// 
+        /// Enable digital human
         /// </summary>
         [JsonProperty("EnableDigitalHuman")]
         public bool? EnableDigitalHuman{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timbre Configuration
         /// </summary>
         [JsonProperty("Voice")]
         public VoiceConfig Voice{ get; set; }
 
         /// <summary>
-        /// 
+        /// Digital Human Configuration
         /// </summary>
         [JsonProperty("DigitalHuman")]
         public DigitalHumanConfig DigitalHuman{ get; set; }

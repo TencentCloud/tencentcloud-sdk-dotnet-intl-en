@@ -98,7 +98,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify the time zone for query time, default UTC+08:00
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }

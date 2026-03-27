@@ -211,19 +211,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public string CcnOwnerUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// The ID of the sub-instance when the database is cynos and it is a sub-database instance within a cynos cluster
         /// </summary>
         [JsonProperty("ChildInstanceId")]
         public string ChildInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// When the database is cynos and it is a sub-database instance within a cynos cluster, this parameter represents the type of the sub-instance, for example: pass 'ro' for read-only instances, 'rw' for read-write instances.
         /// </summary>
         [JsonProperty("ChildInstanceType")]
         public string ChildInstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Shard id of tdsql. Mandatory when node type is set.
         /// </summary>
         [JsonProperty("SetId")]
         public string SetId{ get; set; }

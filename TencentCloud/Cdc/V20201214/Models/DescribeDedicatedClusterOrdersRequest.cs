@@ -61,7 +61,7 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Order Type List
         /// </summary>
         [JsonProperty("OrderTypes")]
         public string[] OrderTypes{ get; set; }

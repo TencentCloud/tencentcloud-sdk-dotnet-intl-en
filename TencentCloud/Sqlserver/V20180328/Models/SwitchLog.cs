@@ -25,31 +25,31 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Switchover Event ID
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
         /// </summary>
         [JsonProperty("SwitchType")]
         public ulong? SwitchType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Switchover Start Time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Switchover End Time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Machine failure causes automatic switchover.
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

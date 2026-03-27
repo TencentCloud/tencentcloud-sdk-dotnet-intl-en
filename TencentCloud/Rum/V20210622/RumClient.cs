@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1281";
 
         /// <summary>
         /// Client constructor.

@@ -88,7 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string HdrType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video Codecs.
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }

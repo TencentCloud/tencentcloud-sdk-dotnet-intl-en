@@ -25,25 +25,25 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Reference price for yearly/monthly subscription, unit-cent
         /// </summary>
         [JsonProperty("PrepaidPrice")]
         public ulong? PrepaidPrice{ get; set; }
 
         /// <summary>
-        /// 
+        /// Price unit for yearly/monthly subscription, M-month
         /// </summary>
         [JsonProperty("PrepaidPriceUnit")]
         public string PrepaidPriceUnit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pay-as-you-go price, unit-cent
         /// </summary>
         [JsonProperty("PostpaidPrice")]
         public ulong? PostpaidPrice{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pay-as-you-go price unit, H-hour
         /// </summary>
         [JsonProperty("PostpaidPriceUnit")]
         public string PostpaidPriceUnit{ get; set; }

@@ -97,7 +97,11 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SkillGroupId{ get; set; }
 
         /// <summary>
-        /// Ending status.
+        /// End status.
+        /// 
+        /// For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+        /// 
+        /// For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
         /// </summary>
         [JsonProperty("EndStatusString")]
         public string EndStatusString{ get; set; }

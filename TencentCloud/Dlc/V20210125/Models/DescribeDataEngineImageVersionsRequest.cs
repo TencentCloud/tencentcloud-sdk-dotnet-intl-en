@@ -31,13 +31,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sort order: false (descending, default), true (ascending)
         /// </summary>
         [JsonProperty("Asc")]
         public bool? Asc{ get; set; }

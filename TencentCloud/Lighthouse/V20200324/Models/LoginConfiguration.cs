@@ -43,7 +43,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
         /// </summary>
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }

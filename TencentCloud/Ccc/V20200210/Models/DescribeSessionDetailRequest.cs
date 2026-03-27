@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+        /// <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// Specifies the session id of the call.
+        /// <P>Call session id</p>.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+        /// <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
         /// </summary>
         [JsonProperty("StartTimestamp")]
         public long? StartTimestamp{ get; set; }
 
         /// <summary>
-        /// End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+        /// <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
         /// </summary>
         [JsonProperty("EndTimestamp")]
         public long? EndTimestamp{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 
+        /// Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
         /// </summary>
         [JsonProperty("HitGroup")]
         public string HitGroup{ get; set; }
 
         /// <summary>
-        /// 
+        /// Matched Similarity
         /// </summary>
         [JsonProperty("SimilarityScore")]
         public float? SimilarityScore{ get; set; }
 
         /// <summary>
-        /// 
+        /// Matched Template id
         /// </summary>
         [JsonProperty("HitTemplate")]
         public string HitTemplate{ get; set; }

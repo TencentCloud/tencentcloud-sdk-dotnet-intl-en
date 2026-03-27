@@ -156,7 +156,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public CpuTopology CpuTopology{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance launch template.
         /// </summary>
         [JsonProperty("LaunchTemplate")]
         public LaunchTemplate LaunchTemplate{ get; set; }

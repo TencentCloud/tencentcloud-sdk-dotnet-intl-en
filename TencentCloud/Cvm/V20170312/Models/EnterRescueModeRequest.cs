@@ -50,7 +50,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? ForceStop{ get; set; }
 
         /// <summary>
-        /// 
+        /// The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
         /// </summary>
         [JsonProperty("StopType")]
         public string StopType{ get; set; }

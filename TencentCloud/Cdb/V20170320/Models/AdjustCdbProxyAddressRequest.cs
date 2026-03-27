@@ -97,13 +97,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable adaptive load balancing. Disabled by default.
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }

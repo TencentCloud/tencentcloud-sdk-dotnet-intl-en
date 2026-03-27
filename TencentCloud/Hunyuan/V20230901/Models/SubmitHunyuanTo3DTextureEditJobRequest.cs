@@ -27,7 +27,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// File URL of the 3D model file that requires texture edit
         /// Supported formats: FBX
-        /// 3D model limit: less than 100000 faces
+        /// 3D model limit: less than 200MB
         /// </summary>
         [JsonProperty("File3D")]
         public InputFile3D File3D{ get; set; }

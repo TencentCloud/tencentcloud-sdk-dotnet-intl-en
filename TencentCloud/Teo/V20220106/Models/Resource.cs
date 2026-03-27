@@ -83,7 +83,11 @@ namespace TencentCloud.Teo.V20220106.Models
         public string PlanId{ get; set; }
 
         /// <summary>
+        /// Region, with values:
         /// 
+        /// <li>mainland: Chinese mainland;</li>
+        /// 
+        /// <li>overseas: Overseas.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

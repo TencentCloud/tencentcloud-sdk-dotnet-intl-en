@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
         /// </summary>
         [JsonProperty("NeedRouterInfo")]
         public bool? NeedRouterInfo{ get; set; }

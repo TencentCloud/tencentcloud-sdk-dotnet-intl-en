@@ -151,13 +151,17 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Env{ get; set; }
 
         /// <summary>
-        /// 
+        /// group by parameter value enumeration: 1:1m
+        ///    2:5m  3:30m 
+        ///    4:1h
+        ///  5:1d
         /// </summary>
         [JsonProperty("GroupByType")]
         public long? GroupByType{ get; set; }
 
         /// <summary>
-        /// 
+        /// 1: Query Intelligent Research
+        /// 0: Use old logic, already offline, do not use
         /// </summary>
         [JsonProperty("IsNewData")]
         public long? IsNewData{ get; set; }

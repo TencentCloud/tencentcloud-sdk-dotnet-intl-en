@@ -25,31 +25,31 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Policy, ACCEPT or DROP
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 
+        /// Destination IP or IP range, for example 172.16.0.0/12
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// port or port range
         /// </summary>
         [JsonProperty("PortRange")]
         public string PortRange{ get; set; }
 
         /// <summary>
-        /// 
+        /// Network protocol supports UDP, TCP, etc.
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
         /// </summary>
         [JsonProperty("Dir")]
         public string Dir{ get; set; }

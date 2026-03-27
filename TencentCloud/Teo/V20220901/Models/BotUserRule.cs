@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

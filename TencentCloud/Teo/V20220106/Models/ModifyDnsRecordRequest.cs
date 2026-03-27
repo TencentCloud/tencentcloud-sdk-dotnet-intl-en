@@ -55,7 +55,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 
+        /// Time to Live Value
         /// </summary>
         [JsonProperty("Ttl")]
         public long? Ttl{ get; set; }

@@ -87,19 +87,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// This field is deprecated.
         /// </summary>
         [JsonProperty("Precision")]
         public string Precision{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
         /// </summary>
         [JsonProperty("OutputMediaType")]
         public string OutputMediaType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reserved field, used for special purposes. Example value: ""
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

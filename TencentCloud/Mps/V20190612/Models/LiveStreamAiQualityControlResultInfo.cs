@@ -33,7 +33,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public QualityControlResult[] QualityControlResults{ get; set; }
 
         /// <summary>
-        /// 
+        /// Format diagnostic results list.
         /// </summary>
         [JsonProperty("DiagnoseResults")]
         [System.Obsolete]

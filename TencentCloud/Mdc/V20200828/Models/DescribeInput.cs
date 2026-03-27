@@ -95,25 +95,25 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input RTMP_PULL configuration.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input RTSP_PULL configuration.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input HLS_PULL configuration.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Delayed broadcast smooth stream delivery configuration.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }

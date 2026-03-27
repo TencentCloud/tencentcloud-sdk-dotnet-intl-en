@@ -349,7 +349,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Style{ get; set; }
 
         /// <summary>
-        /// 
+        /// Multi-Node Instance Secondary AZ Information
         /// </summary>
         [JsonProperty("MultiSlaveZones")]
         public SlaveZones[] MultiSlaveZones{ get; set; }

@@ -47,7 +47,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Number of returned results, defaults to 20 with a maximum value of 100. for further introduction about `Limit`, see relevant sections in the API [overview](https://www.tencentcloud.comom/document/API/213/15688?from_cn_redirect=1).
+        /// Number of returned results, defaults to 20 with a maximum value of 100. for further introduction about `Limit`, see relevant sections in the API [overview](https://www.tencentcloud.com/document/API/213/15688?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] ItemLabelIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Machines to be excluded
         /// </summary>
         [JsonProperty("ExcludedQuuids")]
         public string[] ExcludedQuuids{ get; set; }

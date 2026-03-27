@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Database Name
         /// </summary>
         [JsonProperty("DataBaseName")]
         public string DataBaseName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Permission Modification Information
         /// </summary>
         [JsonProperty("AccountPrivileges")]
         public AccountPrivilege[] AccountPrivileges{ get; set; }

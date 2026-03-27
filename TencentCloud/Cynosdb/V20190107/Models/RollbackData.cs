@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance CPU
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Memory
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster storage limit
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original Cluster id
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original Cluster Name
         /// </summary>
         [JsonProperty("OriginalClusterName")]
         public string OriginalClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback Method
         /// </summary>
         [JsonProperty("RollbackStrategy")]
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Snapshot Time
         /// </summary>
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? SnapShotId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback Database
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback Data Table
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }

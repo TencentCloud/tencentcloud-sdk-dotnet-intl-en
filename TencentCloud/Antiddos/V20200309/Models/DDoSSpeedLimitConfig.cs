@@ -46,7 +46,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public PortSegment[] DstPortScopes{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

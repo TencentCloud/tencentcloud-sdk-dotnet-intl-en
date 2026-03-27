@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 
+        /// Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
         /// </summary>
         [JsonProperty("Operations")]
         public string[] Operations{ get; set; }
 
         /// <summary>
-        /// 
+        /// Condition list
         /// </summary>
         [JsonProperty("Conditions")]
         public ConditionInfo[] Conditions{ get; set; }

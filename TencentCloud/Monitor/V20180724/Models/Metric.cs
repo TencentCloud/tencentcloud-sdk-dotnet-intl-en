@@ -109,7 +109,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] Periods{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether delay metrics
         /// </summary>
         [JsonProperty("IsLatenessMetric")]
         public long? IsLatenessMetric{ get; set; }

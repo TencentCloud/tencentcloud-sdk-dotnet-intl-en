@@ -233,13 +233,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 
+        /// WorkloadType
         /// </summary>
         [JsonProperty("WorkloadType")]
         public string WorkloadType{ get; set; }

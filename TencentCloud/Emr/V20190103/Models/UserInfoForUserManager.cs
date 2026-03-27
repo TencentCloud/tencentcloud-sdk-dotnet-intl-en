@@ -37,13 +37,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// 
+        /// Password
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// 
+        /// Remarks
         /// </summary>
         [JsonProperty("ReMark")]
         public string ReMark{ get; set; }

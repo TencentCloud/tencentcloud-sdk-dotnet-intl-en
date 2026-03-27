@@ -25,37 +25,39 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
         /// </summary>
         [JsonProperty("CheckName")]
         public string CheckName{ get; set; }
 
         /// <summary>
+        /// Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
         /// 
+        /// CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 
+        /// Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
         /// </summary>
         [JsonProperty("Passed")]
         public long? Passed{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
         /// </summary>
         [JsonProperty("IsAffect")]
         public long? IsAffect{ get; set; }
 
         /// <summary>
-        /// 
+        /// Required description when impact exists or the check is not passed
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Describe the corresponding code
         /// </summary>
         [JsonProperty("MsgCode")]
         public long? MsgCode{ get; set; }

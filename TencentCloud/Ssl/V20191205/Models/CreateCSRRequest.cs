@@ -97,7 +97,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag List
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }

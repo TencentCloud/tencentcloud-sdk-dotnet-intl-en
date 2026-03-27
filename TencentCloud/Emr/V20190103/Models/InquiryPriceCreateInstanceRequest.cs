@@ -124,7 +124,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ExternalService[] ExternalService{ get; set; }
 
         /// <summary>
-        /// 
+        /// The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
         /// </summary>
         [JsonProperty("VersionID")]
         public ulong? VersionID{ get; set; }

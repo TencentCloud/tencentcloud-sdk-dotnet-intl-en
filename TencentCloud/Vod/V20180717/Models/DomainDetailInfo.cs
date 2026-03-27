@@ -82,7 +82,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP access limit configuration information.
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }

@@ -237,7 +237,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public ExternalService[] ExternalService{ get; set; }
 
         /// <summary>
-        /// 
+        /// If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
         /// </summary>
         [JsonProperty("VersionID")]
         public long? VersionID{ get; set; }

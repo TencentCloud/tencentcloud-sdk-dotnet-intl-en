@@ -323,13 +323,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Workload
         /// </summary>
         [JsonProperty("WorkloadType")]
         public string WorkloadType{ get; set; }

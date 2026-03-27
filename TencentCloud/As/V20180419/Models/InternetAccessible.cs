@@ -53,7 +53,7 @@ namespace TencentCloud.As.V20180419.Models
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address type](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
+        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address type](https://www.tencentcloud.com/document/product/1199/41646?from_cn_redirect=1). default value: BGP.
         /// 
         /// <Li>BGP: general bgp line.</li>.
         /// For a user who has enabled the static single-line IP allowlist, valid values include:.
@@ -71,7 +71,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 
         /// <Li>WanIP: specifies the public ip address.</li>.
         /// <Li>HighQualityEIP: highqualityip. only Singapore and hong kong (china) support highqualityip.</li>.
-        /// <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.comom/document/product/1199/41646?from_cn_redirect=1).</li>. 
+        /// <Li>AntiDDoSEIP: anti-ddos eip. only partially supported regions can use anti-ddos eip. details visible in [elastic ip product overview](https://www.tencentcloud.com/document/product/1199/41646?from_cn_redirect=1).</li>. 
         /// If needed to assign an elastic IPv4 address to a resource, specify the elastic IPv4 address type. if only use WanIP, do not set this field.
         /// 
         /// High quality IP the anti-ddos feature is only in beta test in some regions. if needed, submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category).

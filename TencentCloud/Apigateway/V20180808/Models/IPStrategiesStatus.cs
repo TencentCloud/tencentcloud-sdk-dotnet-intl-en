@@ -25,13 +25,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 
+        /// Number of policies.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Policy List.
         /// </summary>
         [JsonProperty("StrategySet")]
         public IPStrategy[] StrategySet{ get; set; }

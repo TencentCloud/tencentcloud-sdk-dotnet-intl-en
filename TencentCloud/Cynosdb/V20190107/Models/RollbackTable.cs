@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Database Name
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Table
         /// </summary>
         [JsonProperty("Tables")]
         public RollbackTableInfo[] Tables{ get; set; }

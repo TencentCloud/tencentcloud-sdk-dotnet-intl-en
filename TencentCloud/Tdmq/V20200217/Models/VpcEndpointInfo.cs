@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// vpc id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// subnet id
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// vpc Access Point Information
         /// </summary>
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }

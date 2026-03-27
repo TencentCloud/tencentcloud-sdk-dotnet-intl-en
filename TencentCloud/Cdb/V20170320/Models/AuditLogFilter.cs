@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] User{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database Name.
         /// </summary>
         [JsonProperty("DBName")]
         public string[] DBName{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] PolicyName{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQL statement. Supports fuzzy matching.
         /// </summary>
         [JsonProperty("Sql")]
         public string Sql{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
         /// </summary>
         [JsonProperty("SqlType")]
         public string SqlType{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdid.V20210519.Models
         public ulong? LabelId{ get; set; }
 
         /// <summary>
-        /// 
+        /// tdid
         /// </summary>
         [JsonProperty("Did")]
         public string Did{ get; set; }

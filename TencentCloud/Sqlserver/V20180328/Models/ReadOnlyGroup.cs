@@ -25,85 +25,85 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 
+        /// Read-Only Group ID
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group Name
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Region ID of the Read-Only Group, same as the Primary Instance
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group's AZ ID, same as the Primary Instance
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
         /// </summary>
         [JsonProperty("IsOfflineDelay")]
         public long? IsOfflineDelay{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timeout threshold used after enabling the timeout culling feature
         /// </summary>
         [JsonProperty("ReadOnlyMaxDelayTime")]
         public long? ReadOnlyMaxDelayTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
         /// </summary>
         [JsonProperty("MinReadOnlyInGroup")]
         public long? MinReadOnlyInGroup{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group vip
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group vport
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group VPC Subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Group Status: 1-Running, 5-Creating
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Primary instance ID, in the form of mssql-sgeshe3th
         /// </summary>
         [JsonProperty("MasterInstanceId")]
         public string MasterInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Read-Only Instance Replica Set
         /// </summary>
         [JsonProperty("ReadOnlyInstanceSet")]
         public ReadOnlyInstance[] ReadOnlyInstanceSet{ get; set; }

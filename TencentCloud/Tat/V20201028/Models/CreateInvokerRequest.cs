@@ -43,7 +43,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Remote command ID.
         /// 
-        /// Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+        /// Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
         /// </summary>
         [JsonProperty("CommandId")]
         public string CommandId{ get; set; }
@@ -53,7 +53,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// 
         /// You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
         /// 
-        /// The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+        /// The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.com/document/api/1340/52682?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Command custom parameter. field type is JSON encode string.
         /// 
-        /// This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+        /// This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }

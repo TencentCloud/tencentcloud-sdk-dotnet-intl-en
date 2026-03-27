@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
