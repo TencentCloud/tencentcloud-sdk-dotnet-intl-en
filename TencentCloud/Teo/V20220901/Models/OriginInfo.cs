@@ -25,27 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin server type, with values:
-        /// <li>IP_DOMAIN: IPv4, IPv6, or domain name type origin server;</li>
-        /// <li>COS: Tencent Cloud COS origin server;</li>
-        /// <li>AWS_S3: AWS S3 origin server;</li>
-        /// <li>ORIGIN_GROUP: origin server group type origin server;</li>
-        ///  <li>VOD: Video on Demand;</li>
-        /// <li>SPACE: origin server uninstallation. Currently only available to the allowlist;</li>
+        /// Origin server type. Valid values:
+        /// <li>IP_DOMAIN: IPV4, IPV6, or DOMAIN type origin server.</li>.
+        /// <Li>COS: tencent cloud cos origin server;</li>.
+        /// <Li>AWS_S3: aws s3 cos origin server;</li>.
+        /// <Li>ORIGIN_GROUP: origin server group type origin server;</li>.
+        /// <Li>VOD: video on demand;</li>.
+        /// <Li>SPACE: origin server uninstallation. currently only available to the allowlist;</li>.
         /// <li>LB: load balancing. Currently only available to the allowlist. </li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Origin server address, which varies according to the value of OriginType:
-        /// <li>When OriginType = IP_DOMAIN, fill in an IPv4 address, an IPv6 address, or a domain name;</li>
-        /// <li>When OriginType = COS, fill in the access domain name of the COS bucket;</li>
-        /// <li>When OriginType = AWS_S3, fill in the access domain name of the S3 bucket;</li>
-        /// <li>When OriginType = ORIGIN_GROUP, fill in the origin server group ID;</li>
-        /// <li>When OriginType = VOD, fill in the VOD application ID;</li>
-        /// <li>When OriginType = LB, fill in the Cloud Load Balancer instance ID. This feature is currently only available to the allowlist;</li>
-        /// <li>When OriginType = SPACE, fill in the origin server uninstallation space ID. This feature is currently only available to the allowlist.</li>
+        /// Origin server address, which varies according to the value of OriginType:.
+        /// <li>When OriginType = IP_DOMAIN, this parameter should be an IPv4 address, an IPv6 address, or a DOMAIN name;</li>.
+        /// <li>When OriginType = COS, this parameter is the access domain of the COS bucket;</li>.
+        /// <li>When OriginType = AWS_S3, this parameter is the access domain of the S3 bucket;</li>.
+        /// <li>When OriginType = ORIGIN_GROUP, this parameter should be the ORIGIN server GROUP ID. if referencing an ORIGIN server GROUP from other sites, the format is {ORIGIN server GROUP ID}@{ZoneID}, such as og-testorigin@zone-38moq1z10wwwy;</li>.
+        /// <li>When OriginType = VOD, this parameter is the VOD application ID;</li>.
+        /// <li>When OriginType = LB, this parameter is the cloud load balancer instance ID. this feature is currently only available to the allowlist. if referencing a load balancer from other sites, the format is {cloud load balancer ID}@{ZoneID}, such as LB-2rxpamcyqfzg@zone-38moq1z10wwwy;</li>.
+        /// <li>When OriginType = SPACE, this parameter specifies the origin server uninstallation SPACE ID. this feature is currently only available to the allowlist.</li>.
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
@@ -57,10 +57,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string BackupOrigin{ get; set; }
 
         /// <summary>
-        /// Whether access to the private Cloud Object Storage origin server is allowed. This parameter is valid only when OriginType is COS or AWS_S3. Valid values:
-        /// <li>on: Enable private authentication;</li>
-        /// <li>off: Disable private authentication.</li>
-        /// If it is not specified, the default value is off.
+        /// Whether access to the private object storage origin server is allowed. this parameter is valid only when the origin server type OriginType is COS or AWS_S3. valid values:.
+        /// <Li>On: enable private authentication;</li>.
+        /// <Li>Off: disable private authentication.</li>if left empty, the default value is off.
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
@@ -72,10 +71,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public PrivateParameter[] PrivateParameters{ get; set; }
 
         /// <summary>
-        /// Custom origin server HOST header. this parameter is valid only when OriginType=IP_DOMAIN.If the OriginType is another type of origin, this parameter does not need to be passed in, otherwise an error will be reported.
-        /// If OriginType is COS or AWS_S3, the HOST header for origin-pull will remain consistent with the origin server domain name.
-        /// If OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
-        /// If OriginType is VOD or SPACE, no configuration is required for this header, and the domain name takes effect based on the corresponding origin.
+        /// Custom origin server HOST header. this parameter is valid only when OriginType = IP_DOMAIN. when OriginType is other types, this parameter is not required, otherwise error will occur.
+        /// When OriginType is COS or AWS_S3, the origin-pull HOST header will remain consistent with the origin server domain name.
+        /// When OriginType is ORIGIN_GROUP, the HOST header follows the ORIGIN site GROUP configuration. if not configured, it defaults to the acceleration domain name.
+        /// When OriginType is VOD or SPACE, no configuration required for this header, the corresponding domain name takes effect.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }
@@ -104,8 +103,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string VodeoBucketId{ get; set; }
 
         /// <summary>
-        /// VOD origin-pull scope. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server. the default value is all;</li> <li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. specify the bucket by the parameter VodBucketId.</li>.
-        /// </li>
+        /// VOD origin range. this parameter is valid only when OriginType = VOD. valid values: <li>all: all files in the VOD application corresponding to the current origin server.</li><li>bucket: files in a specified bucket under the VOD application corresponding to the current origin server. use parameter VodBucketId to specify the bucket.</li>default value is all if left empty.
         /// </summary>
         [JsonProperty("VodOriginScope")]
         public string VodOriginScope{ get; set; }

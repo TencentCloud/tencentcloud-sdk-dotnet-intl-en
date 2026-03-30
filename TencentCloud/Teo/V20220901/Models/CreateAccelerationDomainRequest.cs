@@ -43,36 +43,48 @@ namespace TencentCloud.Teo.V20220901.Models
         public OriginInfo OriginInfo{ get; set; }
 
         /// <summary>
-        /// Origin-pull protocol configuration. Values:
-        /// <li>`FOLLOW`: Follow the protocol of origin</li>
-        /// <li>`HTTP`: Send requests to the origin over HTTP</li>
-        /// <li>`HTTPS`: Send requests to the origin over HTTPS</li>
-        /// <li>Default: `FOLLOW`</li>
+        /// Origin-Pull protocol. valid values:.
+        /// <Li>FOLLOW: follow protocol;</li>.
+        /// <Li>HTTP: http protocol for origin-pull;</li>.
+        /// <li>HTTPS: the origin server uses the HTTPS protocol.</li>defaults to FOLLOW if left blank.
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. Port 80 is used if it's not specified. 
+        /// HTTP origin port. default value 80. value range: 1–65535.
+        /// This parameter is valid only when OriginProtocol is FOLLOW or HTTP.
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. Port 443 is used if it's not specified. 
+        /// HTTPS origin port. default value 443. value range: 1–65535.
+        /// This parameter is valid only when OriginProtocol is FOLLOW or HTTPS.
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// IPv6 status. Values:
-        /// <li>`follow`: Follow the IPv6 configuration of the site</li>
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// <li>Default: `follow`</li>
+        /// IPv6 status. valid values:.
+        /// <li>follow: adhere to the site IPv6 configuration;</li>.
+        /// <li>on: enabled status;</li>.
+        /// <li>off: disabled.</li>if left empty, the default value is follow.
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }
+
+        /// <summary>
+        /// Specify the shared CNAME address for domain binding. use the default CNAME when not specified.
+        /// Bind shared CNAME requires the scheduling policy of all domains to be consistent. the following configuration affects the scheduling policy. when inconsistent, bind shared CNAME will be processed as follows:.
+        /// -IPv6 access: not allowed to create domain name. change IPv6Status to keep it configured the same as other domain names bound to the shared CNAME.
+        /// -Anti-DDoS: if the selected shared CNAME has DDoS protection enabled, domain activation will enable DDoS protection by default.
+        /// -Network optimization in the chinese mainland (international acceleration): not allowed to create a domain name. keep the network optimization in the chinese mainland (international acceleration) configuration of the current domain name consistent with the other domain names bound to the shared CNAME and try again after.
+        /// 
+        /// Note: shared CNAME is currently in beta test. if you need to use it, contact us to enable it.
+        /// </summary>
+        [JsonProperty("SharedCNAME")]
+        public string SharedCNAME{ get; set; }
 
 
         /// <summary>
@@ -87,6 +99,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "HttpOriginPort", this.HttpOriginPort);
             this.SetParamSimple(map, prefix + "HttpsOriginPort", this.HttpsOriginPort);
             this.SetParamSimple(map, prefix + "IPv6Status", this.IPv6Status);
+            this.SetParamSimple(map, prefix + "SharedCNAME", this.SharedCNAME);
         }
     }
 }
