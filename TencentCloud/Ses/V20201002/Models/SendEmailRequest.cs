@@ -25,88 +25,85 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+        /// <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Email subject.
+        /// <p>Email Subject</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-        /// Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+        /// <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string[] Destination{ get; set; }
 
         /// <summary>
-        /// The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+        /// <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// Cc recipient email address, supports up to 20 carbon copies.
+        /// <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
         /// </summary>
         [JsonProperty("Cc")]
         public string[] Cc{ get; set; }
 
         /// <summary>
-        /// Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+        /// <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
         /// </summary>
         [JsonProperty("Bcc")]
         public string[] Bcc{ get; set; }
 
         /// <summary>
-        /// Use template for sending and fill in related parameters.
-        /// <dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+        /// <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
 
         /// <summary>
-        /// This parameter has been deprecated.
-        /// <dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+        /// <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+        /// <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+        /// Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
         /// <summary>
-        /// Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+        /// <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
         /// </summary>
         [JsonProperty("TriggerType")]
         public ulong? TriggerType{ get; set; }
 
         /// <summary>
-        /// Message-Id field in the smtp header.
+        /// <p>Message-Id field in the smtp header</p>
         /// </summary>
         [JsonProperty("SmtpMessageId")]
         public string SmtpMessageId{ get; set; }
 
         /// <summary>
-        /// Other fields that can be set in the smtp header.
+        /// <p>Other fields that can be set in the smtp header</p>
         /// </summary>
         [JsonProperty("SmtpHeaders")]
         public string SmtpHeaders{ get; set; }
 
         /// <summary>
-        /// from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+        /// <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
         /// </summary>
         [JsonProperty("HeaderFrom")]
         public string HeaderFrom{ get; set; }

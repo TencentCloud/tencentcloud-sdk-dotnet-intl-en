@@ -31,19 +31,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance memory size in GB
+        /// Instance memory size in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GB
+        /// Instance disk size in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+        /// Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Array of voucher IDs (currently, only one voucher can be used per order)
+        /// Array of voucher IDs (currently, only one voucher can be used per order).
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+        /// Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+        /// Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
         /// </summary>
         [JsonProperty("Span")]
         public long? Span{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? MultiZones{ get; set; }
 
         /// <summary>
-        /// Tags associated with the instances to be created
+        /// Tags associated with the instances to be created.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
@@ -161,6 +161,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+        /// </summary>
+        [JsonProperty("MultiNodes")]
+        public bool? MultiNodes{ get; set; }
+
+        /// <summary>
+        /// The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+        /// </summary>
+        [JsonProperty("DrZones")]
+        public string[] DrZones{ get; set; }
+
+        /// <summary>
+        /// Disk encryption identifier, 0-unencrypted, 1-encrypted.
+        /// </summary>
+        [JsonProperty("DiskEncryptFlag")]
+        public long? DiskEncryptFlag{ get; set; }
 
 
         /// <summary>
@@ -191,6 +209,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "Collation", this.Collation);
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+            this.SetParamArraySimple(map, prefix + "DrZones.", this.DrZones);
+            this.SetParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
         }
     }
 }

@@ -25,76 +25,73 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-        /// Sender &lt;email address&gt; via fill in, such as:.
-        /// Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+        /// <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
         /// </summary>
         [JsonProperty("FromEmailAddress")]
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// Recipient list ID.
+        /// <p>Recipient list ID</p>
         /// </summary>
         [JsonProperty("ReceiverId")]
         public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// Email subject.
+        /// <p>Email Subject</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
         /// <summary>
-        /// Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+        /// <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+        /// <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// When using a template to send, fill in the related parameters of the template.
-        /// <Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+        /// <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
 
         /// <summary>
-        /// Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+        /// <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// Send attachment when required. fill in related parameters (not supported).
+        /// <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// Required parameter for sending tasks periodically.
+        /// <p>Required parameter for sending tasks periodically</p>
         /// </summary>
         [JsonProperty("CycleParam")]
         public CycleEmailParam CycleParam{ get; set; }
 
         /// <summary>
-        /// Required parameter for scheduled task assignment.
+        /// <p>Required parameter of scheduled task assignment</p>
         /// </summary>
         [JsonProperty("TimedParam")]
         public TimedEmailParam TimedParam{ get; set; }
 
         /// <summary>
-        /// Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+        /// Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
         /// <summary>
-        /// Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+        /// <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
         /// </summary>
         [JsonProperty("ADLocation")]
         public ulong? ADLocation{ get; set; }

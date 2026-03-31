@@ -25,25 +25,25 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC instance ID
+        /// VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet instance ID
+        /// Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Endpoint name
+        /// Endpoint name. limited to 60 characters.
         /// </summary>
         [JsonProperty("EndPointName")]
         public string EndPointName{ get; set; }
 
         /// <summary>
-        /// Endpoint service ID
+        /// Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }
@@ -55,10 +55,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointVip{ get; set; }
 
         /// <summary>
-        /// Security group ID
+        /// Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
+
+        /// <summary>
+        /// List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+        /// </summary>
+        [JsonProperty("IpAddressType")]
+        public string IpAddressType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
             this.SetParamSimple(map, prefix + "EndPointVip", this.EndPointVip);
             this.SetParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
         }
     }
 }

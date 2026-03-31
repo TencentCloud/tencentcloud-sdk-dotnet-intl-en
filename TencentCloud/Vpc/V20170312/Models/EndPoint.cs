@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string State{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time. format: YYYY-MM-DD HH:MM:SS.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -97,11 +97,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] GroupSet{ get; set; }
 
         /// <summary>
-        /// Endpoint service name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Endpoint service name.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
+
+        /// <summary>
+        /// CDC cluster unique ID.
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
+        /// Tag key-value pair.		
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
 
 
         /// <summary>
@@ -122,6 +133,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArraySimple(map, prefix + "GroupSet.", this.GroupSet);
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }
