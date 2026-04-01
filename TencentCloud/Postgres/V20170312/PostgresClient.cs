@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1286";
 
         /// <summary>
         /// Client constructor.
@@ -1448,7 +1448,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to switch the instance billing mode from pay-as-you-go to monthly subscription.
+        /// This API is used to switch the instance billing mode from pay-as-you-go to yearly/monthly subscription.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceChargeTypeRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceChargeTypeResponse"/></returns>
@@ -1458,7 +1458,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to switch the instance billing mode from pay-as-you-go to monthly subscription.
+        /// This API is used to switch the instance billing mode from pay-as-you-go to yearly/monthly subscription.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceChargeTypeRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceChargeTypeResponse"/></returns>

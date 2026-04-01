@@ -21,9 +21,15 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SearchMediaBySemanticsRequest : AbstractModel
+    public class ModifyLLMComprehendTemplateRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>Unique identifier of the Large Model Understanding Template</p>
+        /// </summary>
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
+
         /// <summary>
         /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
         /// </summary>
@@ -31,40 +37,40 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Search content</p>
+        /// <p>Large model parsing template name. The length cannot exceed 64 characters.</p>
         /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
+        /// <p>Large model parses template description information. The length cannot exceed 256 characters.</p>
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+        /// <p>Parse model. Optional values:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
         /// </summary>
-        [JsonProperty("Categories")]
-        public string[] Categories{ get; set; }
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
 
         /// <summary>
-        /// <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
+        /// <p>Segment summary parsing configuration</p>
         /// </summary>
-        [JsonProperty("Tags")]
-        public string[] Tags{ get; set; }
+        [JsonProperty("Summary")]
+        public LLMComprehendSummaryForUpdate Summary{ get; set; }
 
         /// <summary>
-        /// <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+        /// <p>Text transcription parsing configuration</p>
         /// </summary>
-        [JsonProperty("Persons")]
-        public string[] Persons{ get; set; }
+        [JsonProperty("Asr")]
+        public LLMComprehendAsrForUpdate Asr{ get; set; }
 
         /// <summary>
-        /// <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+        /// <p>Face identification configuration</p>
         /// </summary>
-        [JsonProperty("TaskTypes")]
-        public string[] TaskTypes{ get; set; }
+        [JsonProperty("FaceRecognition")]
+        public LLMComprehendFaceRecognitionForUpdate FaceRecognition{ get; set; }
 
 
         /// <summary>
@@ -72,13 +78,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "Text", this.Text);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "Categories.", this.Categories);
-            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
-            this.SetParamArraySimple(map, prefix + "Persons.", this.Persons);
-            this.SetParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamObj(map, prefix + "Summary.", this.Summary);
+            this.SetParamObj(map, prefix + "Asr.", this.Asr);
+            this.SetParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
         }
     }
 }

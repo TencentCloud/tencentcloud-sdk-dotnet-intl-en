@@ -25,22 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Order ID.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Order number.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// Bill ID.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Order transaction number.
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the instance ID of the cloned instance. only support postpaid return this value.
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }

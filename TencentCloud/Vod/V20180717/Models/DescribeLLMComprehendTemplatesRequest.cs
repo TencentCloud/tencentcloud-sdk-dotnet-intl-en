@@ -21,35 +21,32 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImportMediaKnowledgeRequest : AbstractModel
+    public class DescribeLLMComprehendTemplatesRequest : AbstractModel
     {
         
         /// <summary>
-        /// <b>Specifies the VOD application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+        /// Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
         /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("Definitions")]
+        public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Unique identifier of the Large Model Comprehend Template
+        /// Pagination offset. Default value: 0.
         /// </summary>
-        [JsonProperty("Definition")]
-        public long? Definition{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Specifies the task type for importing the knowledge base. valid values:.
-        /// - AiAnalysis.DescriptionTask
-        /// - SmartSubtitle.AsrFullTextTask
+        /// Number of returned entries. Default value: 10. Maximum value: 100.
         /// </summary>
-        [JsonProperty("ImportTasks")]
-        [System.Obsolete]
-        public string[] ImportTasks{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -58,9 +55,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
-            this.SetParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
+            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

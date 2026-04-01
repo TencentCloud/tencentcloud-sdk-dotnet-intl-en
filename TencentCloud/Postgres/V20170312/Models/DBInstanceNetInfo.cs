@@ -55,22 +55,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// VPC ID. specifies the ID of the virtual private cloud.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }

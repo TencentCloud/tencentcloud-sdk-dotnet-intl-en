@@ -32,7 +32,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// ID of the primary instance to which the read-only instance belongs
+        /// Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
@@ -44,51 +44,51 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Instance storage capacity in GB
+        /// Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+        /// Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Validity period in months, valid values:
-        /// <li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-        /// <li>Pay-as-you-go: `1`.
+        /// Purchase duration, in months.
+        /// <Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+        /// <li>Pay-as-you-go: Only supports `1`.</li>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+        /// VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+        /// VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values: 
-        /// <li>`PREPAID`: Monthly subscription
-        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-        /// Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+        /// Instance billing type, which currently supports:.
+        /// <Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+        /// <Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+        /// Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers automatically. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Specifies whether to automatically use a voucher.
+        /// <Li>0: no.</li>.
+        /// <Li>`1`: yes.</li>.
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public ulong? AutoVoucher{ get; set; }
@@ -100,16 +100,16 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Valid values:
-        /// <li>`0`: Manual renewal.
-        /// <li>`1`: Automatic renewal.
-        /// Default value: `0`.
+        /// Specifies the auto-renewal flag.
+        /// <Li>`0`: manual renewal.</li>.
+        /// <Li>`1`: auto-renewal</li>.
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID. default value is 0, means it belongs to the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -139,32 +139,38 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Whether IPv6 is supported.
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Specifies whether to support Ipv6.
+        /// <Li>0: no.</li>.
+        /// <Li>`1`: yes.</li>.
+        /// Default value: 0
         /// </summary>
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }
 
         /// <summary>
-        /// Instance name (which will be supported in the future)
+        /// Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+        /// Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
         /// </summary>
         [JsonProperty("DBVersion")]
         [System.Obsolete]
         public string DBVersion{ get; set; }
 
         /// <summary>
-        /// <p>Dedicated Cluster ID</p>
+        /// CDC ID.
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -193,6 +199,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

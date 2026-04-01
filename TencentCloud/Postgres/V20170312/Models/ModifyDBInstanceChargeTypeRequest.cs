@@ -25,42 +25,42 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of `postgres-6fego161`
+        /// Specifies the instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values:
-        /// <li>`PREPAID`: Monthly subscription.
-        /// <li>`POSTPAID_BY_HOUR`: Pay-as-you-go.
-        /// Default value: `PREPAID`.
+        /// Instance billing type, which currently supports:.
+        /// <Li>PREPAID: prepaid, i.e., yearly/monthly subscription</li>.
+        /// <Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+        /// Default value: PREPAID
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Validity period in months
-        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-        /// <li>Pay-as-you-go: `1`.
+        /// Purchase duration, in months.
+        /// <Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+        /// <li>Pay-as-you-go: Only supports `1`.</li>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Valid values:
-        /// <li>`0`: Manual renewal.
-        /// <li>`1`: Automatic renewal.
-        /// Default value: `0`.
+        /// Specifies the auto-renewal flag.
+        /// <Li>`0`: manual renewal.</li>.
+        /// <Li>`1`: auto-renewal</li>.
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers automatically. Valid values:
-        /// <li>`0`: No.
-        /// <li>`1`: Yes.
-        /// Default value: `0`.
+        /// Specifies whether to automatically use a voucher.
+        /// <Li>0: no.</li>.
+        /// <Li>`1`: yes.</li>.
+        /// Default value: 0
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }

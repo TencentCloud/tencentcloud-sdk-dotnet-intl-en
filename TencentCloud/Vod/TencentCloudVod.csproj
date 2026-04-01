@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1286</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -286,6 +286,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleRequest.cs" />
     <Compile Include="V20180717\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20180717\Models\CreateProcedureTemplateRequest.cs" />
@@ -345,6 +347,8 @@
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMediaRequest.cs" />
     <Compile Include="V20180717\Models\DeleteMediaResponse.cs" />
     <Compile Include="V20180717\Models\DeletePersonSampleRequest.cs" />
@@ -423,6 +427,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -567,6 +573,13 @@
     <Compile Include="V20180717\Models\JitterConfigureInfo.cs" />
     <Compile Include="V20180717\Models\JitterConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\JustInTimeTranscodeTemplate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendAsr.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendAsrForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendFaceRecognition.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendFaceRecognitionForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendSummary.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendSummaryForUpdate.cs" />
+    <Compile Include="V20180717\Models\LLMComprehendTemplateItem.cs" />
     <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
@@ -661,6 +674,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoRequest.cs" />
     <Compile Include="V20180717\Models\ModifyMediaInfoResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMediaStorageClassRequest.cs" />

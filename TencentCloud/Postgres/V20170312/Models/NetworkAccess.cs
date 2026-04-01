@@ -25,57 +25,49 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Network resource ID, instance ID, or RO group ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Network resource id, instance id, or RO group id.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Resource type. Valid values: `1` (instance), `2` (RO group)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Resource type. valid values: 1 (instance), 2 (RO group).
         /// </summary>
         [JsonProperty("ResourceType")]
         public ulong? ResourceType{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// VPC ID. specifies the ID of the virtual private cloud.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// IPv4 address
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// IPv4 Address
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// IPv6 address
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// IPv6 Address
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// Access port
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the access port.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
         /// </summary>
         [JsonProperty("VpcStatus")]
         public long? VpcStatus{ get; set; }

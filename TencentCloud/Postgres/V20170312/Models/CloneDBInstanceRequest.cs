@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the original instance to be cloned.
+        /// The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Instance storage capacity in GB.
+        /// Instance disk capacity size. set step size to 10. unit: GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -52,10 +52,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Renewal Flag:
+        /// Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+        /// Valid values:.
         /// 
-        /// - `0`: manual renewal
-        /// `1`: auto-renewal
+        /// - `0`: specifies manual renewal.
+        /// -`1`: specifies auto-renewal.
         /// 
         /// Default value: 0
         /// </summary>
@@ -75,7 +76,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+        /// Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -83,7 +84,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// <summary>
         /// Instance billing type, which currently supports:
         /// 
-        /// - PREPAID: Prepaid, i.e., monthly subscription
+        /// - PREPAID: Prepaid, i.e., yearly/monthly subscription
         /// - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
         /// 
         /// Default value: PREPAID
@@ -92,13 +93,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+        /// Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID. default value is 0, which means it belongs to the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -110,8 +111,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public Tag[] TagList{ get; set; }
 
         /// <summary>
-        /// Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-        /// The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+        /// Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+        /// AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
@@ -140,13 +141,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ActivityId{ get; set; }
 
         /// <summary>
-        /// Basic backup set ID.
+        /// Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
         /// </summary>
         [JsonProperty("BackupSetId")]
         public string BackupSetId{ get; set; }
 
         /// <summary>
-        /// Restoration point in time.
+        /// Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
         /// </summary>
         [JsonProperty("RecoveryTargetTime")]
         public string RecoveryTargetTime{ get; set; }
@@ -160,6 +161,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
 
 
         /// <summary>
@@ -186,6 +193,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
             this.SetParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

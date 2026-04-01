@@ -25,23 +25,23 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID list. Currently, you can't remove multiple instances from isolation in batches. Only one instance ID can be passed in here.
+        /// Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// Validity period in months
-        /// <li>Monthly subscription: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-        /// <li>Pay-as-you-go: `1`.
+        /// Purchase duration, in months.
+        /// <Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+        /// <Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers. Valid values:
-        /// <li>`true`: Yes.
-        /// u200c<li>`false`: No.
+        /// Whether to use vouchers.
+        /// <li>true: use.</li>.
+        /// <li>false: non-use.</li>.
         /// Default value: `false`.
         /// </summary>
         [JsonProperty("AutoVoucher")]

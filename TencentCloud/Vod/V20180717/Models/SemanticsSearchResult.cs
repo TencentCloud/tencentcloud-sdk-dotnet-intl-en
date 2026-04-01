@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Specifies the end time of the video clip, in seconds.
+        /// Segment end time of the video, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
