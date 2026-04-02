@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1285";
+       private const string sdkVersion = "SDK_NET_3.0.1287";
 
         /// <summary>
         /// Client constructor.
@@ -6217,7 +6217,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
+        /// This API (RenewVpnGateway) is used to renew prepaid (yearly/monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
         /// </summary>
         /// <param name="req"><see cref="RenewVpnGatewayRequest"/></param>
         /// <returns><see cref="RenewVpnGatewayResponse"/></returns>
@@ -6227,7 +6227,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
+        /// This API (RenewVpnGateway) is used to renew prepaid (yearly/monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
         /// </summary>
         /// <param name="req"><see cref="RenewVpnGatewayRequest"/></param>
         /// <returns><see cref="RenewVpnGatewayResponse"/></returns>

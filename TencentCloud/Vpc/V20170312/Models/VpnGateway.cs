@@ -97,7 +97,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public bool? IsAddressBlocked{ get; set; }
 
         /// <summary>
-        /// Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+        /// Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
         /// </summary>
         [JsonProperty("NewPurchasePlan")]
         public string NewPurchasePlan{ get; set; }
@@ -144,6 +144,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("MaxConnection")]
         public ulong? MaxConnection{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BgpAsn")]
+        public ulong? BgpAsn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+            this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
         }
     }
 }

@@ -37,10 +37,22 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string VpnGatewayName{ get; set; }
 
         /// <summary>
-        /// VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+        /// VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BgpAsn")]
+        public ulong? BgpAsn{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong? MaxConnection{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
             this.SetParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+            this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         }
     }
 }

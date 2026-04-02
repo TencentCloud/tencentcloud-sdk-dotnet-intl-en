@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1287";
 
         /// <summary>
         /// Client constructor.
@@ -406,6 +406,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataBridgeUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataBridgeUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataBridgeUrlV2Response"/></returns>
+        public Task<DescribeDataBridgeUrlV2Response> DescribeDataBridgeUrlV2(DescribeDataBridgeUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataBridgeUrlV2Response>(req, "DescribeDataBridgeUrlV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataBridgeUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataBridgeUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataBridgeUrlV2Response"/></returns>
+        public DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2Sync(DescribeDataBridgeUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataBridgeUrlV2Response>(req, "DescribeDataBridgeUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the DescribeDataCustomUrl information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataCustomUrlRequest"/></param>
@@ -427,6 +448,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataCustomUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataCustomUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataCustomUrlV2Response"/></returns>
+        public Task<DescribeDataCustomUrlV2Response> DescribeDataCustomUrlV2(DescribeDataCustomUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataCustomUrlV2Response>(req, "DescribeDataCustomUrlV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataCustomUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataCustomUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataCustomUrlV2Response"/></returns>
+        public DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2Sync(DescribeDataCustomUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataCustomUrlV2Response>(req, "DescribeDataCustomUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the DescribeDataEventUrl information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataEventUrlRequest"/></param>
@@ -444,6 +486,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataEventUrlResponse DescribeDataEventUrlSync(DescribeDataEventUrlRequest req)
         {
             return InternalRequestAsync<DescribeDataEventUrlResponse>(req, "DescribeDataEventUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataEventUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataEventUrlV2Response"/></returns>
+        public Task<DescribeDataEventUrlV2Response> DescribeDataEventUrlV2(DescribeDataEventUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataEventUrlV2Response>(req, "DescribeDataEventUrlV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataEventUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataEventUrlV2Response"/></returns>
+        public DescribeDataEventUrlV2Response DescribeDataEventUrlV2Sync(DescribeDataEventUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataEventUrlV2Response>(req, "DescribeDataEventUrlV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -511,6 +574,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataFetchUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlV2Response"/></returns>
+        public Task<DescribeDataFetchUrlV2Response> DescribeDataFetchUrlV2(DescribeDataFetchUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataFetchUrlV2Response>(req, "DescribeDataFetchUrlV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataFetchUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlV2Response"/></returns>
+        public DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2Sync(DescribeDataFetchUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataFetchUrlV2Response>(req, "DescribeDataFetchUrlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the loginfo information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataLogUrlInfoRequest"/></param>
@@ -553,6 +637,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain LogUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataLogUrlStatisticsV2Response> DescribeDataLogUrlStatisticsV2(DescribeDataLogUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataLogUrlStatisticsV2Response>(req, "DescribeDataLogUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain LogUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsV2Response"/></returns>
+        public DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2Sync(DescribeDataLogUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataLogUrlStatisticsV2Response>(req, "DescribeDataLogUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the PerformancePage information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataPerformancePageRequest"/></param>
@@ -570,6 +675,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataPerformancePageResponse DescribeDataPerformancePageSync(DescribeDataPerformancePageRequest req)
         {
             return InternalRequestAsync<DescribeDataPerformancePageResponse>(req, "DescribeDataPerformancePage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain PerformancePage information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageV2Request"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageV2Response"/></returns>
+        public Task<DescribeDataPerformancePageV2Response> DescribeDataPerformancePageV2(DescribeDataPerformancePageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPerformancePageV2Response>(req, "DescribeDataPerformancePageV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain PerformancePage information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageV2Request"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageV2Response"/></returns>
+        public DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2Sync(DescribeDataPerformancePageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPerformancePageV2Response>(req, "DescribeDataPerformancePageV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -637,6 +763,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataPvUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataPvUrlStatisticsV2Response> DescribeDataPvUrlStatisticsV2(DescribeDataPvUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPvUrlStatisticsV2Response>(req, "DescribeDataPvUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataPvUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsV2Response"/></returns>
+        public DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2Sync(DescribeDataPvUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataPvUrlStatisticsV2Response>(req, "DescribeDataPvUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the number of reported data entries for a project.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataReportCountRequest"/></param>
@@ -654,6 +801,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataReportCountResponse DescribeDataReportCountSync(DescribeDataReportCountRequest req)
         {
             return InternalRequestAsync<DescribeDataReportCountResponse>(req, "DescribeDataReportCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the project reporting volume.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataReportCountV2Request"/></param>
+        /// <returns><see cref="DescribeDataReportCountV2Response"/></returns>
+        public Task<DescribeDataReportCountV2Response> DescribeDataReportCountV2(DescribeDataReportCountV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataReportCountV2Response>(req, "DescribeDataReportCountV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the project reporting volume.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataReportCountV2Request"/></param>
+        /// <returns><see cref="DescribeDataReportCountV2Response"/></returns>
+        public DescribeDataReportCountV2Response DescribeDataReportCountV2Sync(DescribeDataReportCountV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataReportCountV2Response>(req, "DescribeDataReportCountV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -679,6 +847,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataSetUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSetUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataSetUrlStatisticsV2Response"/></returns>
+        public Task<DescribeDataSetUrlStatisticsV2Response> DescribeDataSetUrlStatisticsV2(DescribeDataSetUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataSetUrlStatisticsV2Response>(req, "DescribeDataSetUrlStatisticsV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataSetUrlStatistics information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSetUrlStatisticsV2Request"/></param>
+        /// <returns><see cref="DescribeDataSetUrlStatisticsV2Response"/></returns>
+        public DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2Sync(DescribeDataSetUrlStatisticsV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataSetUrlStatisticsV2Response>(req, "DescribeDataSetUrlStatisticsV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the DescribeDataStaticProject information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataStaticProjectRequest"/></param>
@@ -696,6 +885,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataStaticProjectResponse DescribeDataStaticProjectSync(DescribeDataStaticProjectRequest req)
         {
             return InternalRequestAsync<DescribeDataStaticProjectResponse>(req, "DescribeDataStaticProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataStaticProject information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticProjectV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticProjectV2Response"/></returns>
+        public Task<DescribeDataStaticProjectV2Response> DescribeDataStaticProjectV2(DescribeDataStaticProjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticProjectV2Response>(req, "DescribeDataStaticProjectV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataStaticProject information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticProjectV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticProjectV2Response"/></returns>
+        public DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2Sync(DescribeDataStaticProjectV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticProjectV2Response>(req, "DescribeDataStaticProjectV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -721,6 +931,27 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// This API is used to obtain DescribeDataStaticResource information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticResourceV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticResourceV2Response"/></returns>
+        public Task<DescribeDataStaticResourceV2Response> DescribeDataStaticResourceV2(DescribeDataStaticResourceV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticResourceV2Response>(req, "DescribeDataStaticResourceV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataStaticResource information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticResourceV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticResourceV2Response"/></returns>
+        public DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2Sync(DescribeDataStaticResourceV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticResourceV2Response>(req, "DescribeDataStaticResourceV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the DescribeDataStaticUrl information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataStaticUrlRequest"/></param>
@@ -738,6 +969,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataStaticUrlResponse DescribeDataStaticUrlSync(DescribeDataStaticUrlRequest req)
         {
             return InternalRequestAsync<DescribeDataStaticUrlResponse>(req, "DescribeDataStaticUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataStaticUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticUrlV2Response"/></returns>
+        public Task<DescribeDataStaticUrlV2Response> DescribeDataStaticUrlV2(DescribeDataStaticUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticUrlV2Response>(req, "DescribeDataStaticUrlV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataStaticUrl information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataStaticUrlV2Request"/></param>
+        /// <returns><see cref="DescribeDataStaticUrlV2Response"/></returns>
+        public DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2Sync(DescribeDataStaticUrlV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataStaticUrlV2Response>(req, "DescribeDataStaticUrlV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -761,6 +1013,29 @@ namespace TencentCloud.Rum.V20210622
         public DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPageSync(DescribeDataWebVitalsPageRequest req)
         {
             return InternalRequestAsync<DescribeDataWebVitalsPageResponse>(req, "DescribeDataWebVitalsPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataWebVitalsPage information, which is the core user activity information.
+        /// Web Vitals for page loading performance are key performance metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataWebVitalsPageV2Request"/></param>
+        /// <returns><see cref="DescribeDataWebVitalsPageV2Response"/></returns>
+        public Task<DescribeDataWebVitalsPageV2Response> DescribeDataWebVitalsPageV2(DescribeDataWebVitalsPageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataWebVitalsPageV2Response>(req, "DescribeDataWebVitalsPageV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain DescribeDataWebVitalsPage information, which is the core user activity information.
+        /// Web Vitals for page loading performance are key performance metrics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataWebVitalsPageV2Request"/></param>
+        /// <returns><see cref="DescribeDataWebVitalsPageV2Response"/></returns>
+        public DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2Sync(DescribeDataWebVitalsPageV2Request req)
+        {
+            return InternalRequestAsync<DescribeDataWebVitalsPageV2Response>(req, "DescribeDataWebVitalsPageV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1126,6 +1401,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeScoresResponse DescribeScoresSync(DescribeScoresRequest req)
         {
             return InternalRequestAsync<DescribeScoresResponse>(req, "DescribeScores")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the home page score list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresV2Request"/></param>
+        /// <returns><see cref="DescribeScoresV2Response"/></returns>
+        public Task<DescribeScoresV2Response> DescribeScoresV2(DescribeScoresV2Request req)
+        {
+            return InternalRequestAsync<DescribeScoresV2Response>(req, "DescribeScoresV2");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the home page score list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScoresV2Request"/></param>
+        /// <returns><see cref="DescribeScoresV2Response"/></returns>
+        public DescribeScoresV2Response DescribeScoresV2Sync(DescribeScoresV2Request req)
+        {
+            return InternalRequestAsync<DescribeScoresV2Response>(req, "DescribeScoresV2")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
