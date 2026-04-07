@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1289";
 
         /// <summary>
         /// Client constructor.
@@ -359,6 +359,27 @@ namespace TencentCloud.Cvm.V20170312
         public DeleteImagesResponse DeleteImagesSync(DeleteImagesRequest req)
         {
             return InternalRequestAsync<DeleteImagesResponse>(req, "DeleteImages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch remove CVM instances from specified placement groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteInstancesDisasterRecoverGroupsResponse"/></returns>
+        public Task<DeleteInstancesDisasterRecoverGroupsResponse> DeleteInstancesDisasterRecoverGroups(DeleteInstancesDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesDisasterRecoverGroupsResponse>(req, "DeleteInstancesDisasterRecoverGroups");
+        }
+
+        /// <summary>
+        /// This API is used to batch remove CVM instances from specified placement groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstancesDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteInstancesDisasterRecoverGroupsResponse"/></returns>
+        public DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroupsSync(DeleteInstancesDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteInstancesDisasterRecoverGroupsResponse>(req, "DeleteInstancesDisasterRecoverGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

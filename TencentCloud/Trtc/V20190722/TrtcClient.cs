@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1289";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,29 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// API description:
+        /// Enable the cloud transcription feature.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="CreateCloudTranscriptionResponse"/></returns>
+        public Task<CreateCloudTranscriptionResponse> CreateCloudTranscription(CreateCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudTranscriptionResponse>(req, "CreateCloudTranscription");
+        }
+
+        /// <summary>
+        /// API description:
+        /// Enable the cloud transcription feature.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="CreateCloudTranscriptionResponse"/></returns>
+        public CreateCloudTranscriptionResponse CreateCloudTranscriptionSync(CreateCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudTranscriptionResponse>(req, "CreateCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to stop submission for moderation after the cloud moderation task is successfully started.
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
@@ -239,6 +262,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudSliceTaskResponse DeleteCloudSliceTaskSync(DeleteCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<DeleteCloudSliceTaskResponse>(req, "DeleteCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate the transcription task after successful activation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DeleteCloudTranscriptionResponse"/></returns>
+        public Task<DeleteCloudTranscriptionResponse> DeleteCloudTranscription(DeleteCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription");
+        }
+
+        /// <summary>
+        /// This API is used to terminate the transcription task after successful activation.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DeleteCloudTranscriptionResponse"/></returns>
+        public DeleteCloudTranscriptionResponse DeleteCloudTranscriptionSync(DeleteCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -373,6 +417,27 @@ namespace TencentCloud.Trtc.V20190722
         public DescribeCloudSliceTaskResponse DescribeCloudSliceTaskSync(DescribeCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<DescribeCloudSliceTaskResponse>(req, "DescribeCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the transcription status after starting a transcription task. It is effective only when the transcription task is in process. Querying after termination will return an error.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeCloudTranscriptionResponse"/></returns>
+        public Task<DescribeCloudTranscriptionResponse> DescribeCloudTranscription(DescribeCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription");
+        }
+
+        /// <summary>
+        /// This API is used to query the transcription status after starting a transcription task. It is effective only when the transcription task is in process. Querying after termination will return an error.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudTranscriptionRequest"/></param>
+        /// <returns><see cref="DescribeCloudTranscriptionResponse"/></returns>
+        public DescribeCloudTranscriptionResponse DescribeCloudTranscriptionSync(DescribeCloudTranscriptionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudTranscriptionResponse>(req, "DescribeCloudTranscription")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

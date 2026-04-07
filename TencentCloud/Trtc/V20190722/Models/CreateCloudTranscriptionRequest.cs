@@ -1,0 +1,78 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Trtc.V20190722.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateCloudTranscriptionRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+        /// </summary>
+        [JsonProperty("SdkAppId")]
+        public ulong? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+        /// </summary>
+        [JsonProperty("RoomId")]
+        public string RoomId{ get; set; }
+
+        /// <summary>
+        /// Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+        /// </summary>
+        [JsonProperty("RoomIdType")]
+        public ulong? RoomIdType{ get; set; }
+
+        /// <summary>
+        /// Parameters for transcribe service to join TRTC room.
+        /// </summary>
+        [JsonProperty("TranscriptionParam")]
+        public TranscriptionParam TranscriptionParam{ get; set; }
+
+        /// <summary>
+        /// Parameters used by the ASR transcribe service.
+        /// </summary>
+        [JsonProperty("AsrParam")]
+        public AsrParam AsrParam{ get; set; }
+
+        /// <summary>
+        /// Translation parameters used for transcription.
+        /// </summary>
+        [JsonProperty("TranslationParam")]
+        public TranslationParam TranslationParam{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
+            this.SetParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
+            this.SetParamObj(map, prefix + "TranscriptionParam.", this.TranscriptionParam);
+            this.SetParamObj(map, prefix + "AsrParam.", this.AsrParam);
+            this.SetParamObj(map, prefix + "TranslationParam.", this.TranslationParam);
+        }
+    }
+}
+
