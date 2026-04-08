@@ -25,26 +25,32 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of segments for full speech recognition.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>List of segments for full speech recognition.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// <p>Subtitle file path</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// <p>Subtitle file URL.</p>
         /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// <p>Subtitle recognition result info.</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfo")]
+        public SubtitleResult SubtitleInfo{ get; set; }
+
+        /// <summary>
+        /// <p>Storage location of the subtitle file.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+            this.SetParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         }
     }

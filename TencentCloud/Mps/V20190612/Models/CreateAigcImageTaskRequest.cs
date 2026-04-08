@@ -25,58 +25,61 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Model name.
-        /// Supported models:Hunyuan,
-        /// GEM,
-        /// Qwen.
+        /// <p>Model name.<br>Supported models:<br>Hunyuan.<br>GEM.<br>Qwen.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+        /// <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p><ol><li>GEM: [2.5 and 3.0].</li></ol>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+        /// <p>Description of the generated image. (Note: Supports up to 1000 characters.) This parameter is required when no reference image is passed in.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+        /// <p>Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+        /// <p>The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.</p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public bool? EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+        /// <p>Used for inputting image information as a resource for reference. Default support for inputting an image.</p><p>Models supporting multi-image input:</p><ol><li>GEM, supporting up to 3 images as resource input.</li></ol><p>Note:</p><ol><li>Recommended image less than 7M. Limits vary by model.</li><li>Format support: jpeg, png, webp.</li></ol>
         /// </summary>
         [JsonProperty("ImageInfos")]
         public AigcImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
-        /// Additional parameters required for the model.
+        /// <p>Additional parameters required for the model.</p>
         /// </summary>
         [JsonProperty("ExtraParameters")]
         public AigcImageExtraParam ExtraParameters{ get; set; }
 
         /// <summary>
-        /// COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+        /// <p>Used to input some special scene parameters required by the model, serialized into a string in Json format. Example: {"size":"2048x2048"}</p>
+        /// </summary>
+        [JsonProperty("AdditionalParameters")]
+        public string AdditionalParameters{ get; set; }
+
+        /// <summary>
+        /// <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
         /// </summary>
         [JsonProperty("StoreCosParam")]
         public AigcStoreCosParam StoreCosParam{ get; set; }
 
         /// <summary>
-        /// API operator name.
+        /// <p>API operator name.</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
@@ -94,6 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
             this.SetParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
+            this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
             this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }

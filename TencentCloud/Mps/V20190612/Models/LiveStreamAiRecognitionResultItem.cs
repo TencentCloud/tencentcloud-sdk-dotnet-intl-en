@@ -87,7 +87,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamObjectRecognitionResult[] ObjectRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Tagging results are valid when Type is TagRecognition.
+        /// 
         /// </summary>
         [JsonProperty("TagRecognitionResultSet")]
         public LiveStreamTagRecognitionResult[] TagRecognitionResultSet{ get; set; }

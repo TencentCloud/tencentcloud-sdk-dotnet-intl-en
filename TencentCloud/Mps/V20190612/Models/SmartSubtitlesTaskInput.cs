@@ -53,7 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Output path of the generated subtitle file, which can be a relative or absolute path.
-        /// To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+        /// To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.comom/document/product/862/37039.?from_cn_redirect=1
         /// 
         /// Relative path example:
         ///  - File name_{variable name}.{format}.

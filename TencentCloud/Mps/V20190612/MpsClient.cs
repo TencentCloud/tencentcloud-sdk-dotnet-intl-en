@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1290";
 
         /// <summary>
         /// Client constructor.
@@ -508,6 +508,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to create a custom subtitle suppression template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="CreateSubtitleEmbedTemplateResponse"/></returns>
+        public Task<CreateSubtitleEmbedTemplateResponse> CreateSubtitleEmbedTemplate(CreateSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSubtitleEmbedTemplateResponse>(req, "CreateSubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a custom subtitle suppression template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="CreateSubtitleEmbedTemplateResponse"/></returns>
+        public CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplateSync(CreateSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateSubtitleEmbedTemplateResponse>(req, "CreateSubtitleEmbedTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
         /// </summary>
         /// <param name="req"><see cref="CreateTranscodeTemplateRequest"/></param>
@@ -971,6 +992,27 @@ namespace TencentCloud.Mps.V20190612
         public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplateSync(DeleteSnapshotByTimeOffsetTemplateRequest req)
         {
             return InternalRequestAsync<DeleteSnapshotByTimeOffsetTemplateResponse>(req, "DeleteSnapshotByTimeOffsetTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a user-customized Subtitle Suppression Template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSubtitleEmbedTemplateResponse"/></returns>
+        public Task<DeleteSubtitleEmbedTemplateResponse> DeleteSubtitleEmbedTemplate(DeleteSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSubtitleEmbedTemplateResponse>(req, "DeleteSubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// Delete a user-customized Subtitle Suppression Template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="DeleteSubtitleEmbedTemplateResponse"/></returns>
+        public DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplateSync(DeleteSubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteSubtitleEmbedTemplateResponse>(req, "DeleteSubtitleEmbedTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1559,6 +1601,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroupSync(DescribeStreamLinkSecurityGroupRequest req)
         {
             return InternalRequestAsync<DescribeStreamLinkSecurityGroupResponse>(req, "DescribeStreamLinkSecurityGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the subtitle suppression template details list based on template unique identifier. The returned results include all eligible user-customized subtitle suppression templates and system preset subtitle suppression templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubtitleEmbedTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSubtitleEmbedTemplatesResponse"/></returns>
+        public Task<DescribeSubtitleEmbedTemplatesResponse> DescribeSubtitleEmbedTemplates(DescribeSubtitleEmbedTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSubtitleEmbedTemplatesResponse>(req, "DescribeSubtitleEmbedTemplates");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the subtitle suppression template details list based on template unique identifier. The returned results include all eligible user-customized subtitle suppression templates and system preset subtitle suppression templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubtitleEmbedTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeSubtitleEmbedTemplatesResponse"/></returns>
+        public DescribeSubtitleEmbedTemplatesResponse DescribeSubtitleEmbedTemplatesSync(DescribeSubtitleEmbedTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeSubtitleEmbedTemplatesResponse>(req, "DescribeSubtitleEmbedTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2267,6 +2330,27 @@ namespace TencentCloud.Mps.V20190612
         public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplateSync(ModifySnapshotByTimeOffsetTemplateRequest req)
         {
             return InternalRequestAsync<ModifySnapshotByTimeOffsetTemplateResponse>(req, "ModifySnapshotByTimeOffsetTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-customized subtitle suppression template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="ModifySubtitleEmbedTemplateResponse"/></returns>
+        public Task<ModifySubtitleEmbedTemplateResponse> ModifySubtitleEmbedTemplate(ModifySubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySubtitleEmbedTemplateResponse>(req, "ModifySubtitleEmbedTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-customized subtitle suppression template.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubtitleEmbedTemplateRequest"/></param>
+        /// <returns><see cref="ModifySubtitleEmbedTemplateResponse"/></returns>
+        public ModifySubtitleEmbedTemplateResponse ModifySubtitleEmbedTemplateSync(ModifySubtitleEmbedTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifySubtitleEmbedTemplateResponse>(req, "ModifySubtitleEmbedTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

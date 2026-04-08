@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique identifier of the smart subtitle template.
+        /// <p>Unique identifier of the smart subtitle template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -57,23 +57,38 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Font type. Valid values:
-        /// <li>hei.ttf: SimHei.</li>
+        /// <li>hei.ttf: SimHei</li>
         /// <li>song.ttf: SimSun.</li>
-        /// <li>kai.ttf (recommend) or simkai.ttf: SimKai.</li>
+        /// <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
         /// <li>msyh.ttf: Microsoft YaHei.</li>
         /// <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
         /// <li>hkjgt.ttf: DynaFont King Gothic.</li>
         /// <li>dhttx.ttf: DianHei Extra Light.</li>
         /// <li>xqgdzt.ttf: XiQue GuZiDian.</li>
-        /// <li>qpcyt.ttf: QiaoPin ChaoYuan.</li>
+        /// <li>qpcyt.ttf: Smart Splice Super Round Body</li>
         /// <li>arial.ttf: English only.</li>
-        /// <li>dinalternate.ttf: DIN Alternate Bold.</li>
-        /// <li>helveticalt.ttf: Helvetica.</li>
-        /// <li>helveticains.ttf: Helvetica Inserat.</li>
-        /// <li>trajanpro.ttf: TrajanPro-Bold.</li>
+        /// <li>dinalternate.ttf:DIN Alternate Bold</li>
+        /// <li>helveticalt.ttf:Helvetica</li>
+        /// <li>helveticains.ttf:Helvetica Inserat</li>
+        /// <li>trajanpro.ttf:TrajanPro-Bold</li>
         /// <li>korean.ttf: Korean.</li>
         /// <li>japanese.ttf: Japanese.</li>
         /// <li>thai.ttf: Thai.</li>
+        /// <li>roboto.ttf:Roboto</li>
+        /// <li>notosans.ttf:NotoSans</li>
+        /// <li>notosansthai.ttf: Thai NotoSansThai</li>
+        /// <li>sarabun.ttf: Thai Sarabun</li>
+        /// <li>kanit.ttf: Thai Kanit</li>
+        /// <li>charmonman.ttf: Thai Charmonman.</li>
+        /// <li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
+        /// <li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
+        /// <li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
+        /// <li>notosanskr.ttf: Korean NotoSansKR.</li>
+        /// <li>gothica1.ttf: Korean GothicA1.</li>
+        /// <li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
+        /// <li>notosansjp.ttf: Japanese NotoSansJP.</li>
+        /// <li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
+        /// <li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
         /// Default value: hei.ttf.
         /// <br>Note:
         /// <li>kai.ttf is recommended for SimKai.</li>

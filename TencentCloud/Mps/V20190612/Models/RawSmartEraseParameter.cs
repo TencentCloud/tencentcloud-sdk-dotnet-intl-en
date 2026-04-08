@@ -25,37 +25,49 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the removal type.
-        /// -subtitle removal.
-        /// -Remove watermark.
-        /// -privacy protection.
+        /// <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// Subtitle erasure configuration.
-        /// When EraseType is subtitle, this field is required.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// Specifies the watermark removal configuration.
-        /// When EraseType is watermark, this field is required.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// Privacy protection configuration.
-        /// When EraseType is privacy, this field is required.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
+
+        /// <summary>
+        /// <p>id of the subtitle removal suppression template.</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedId")]
+        public long? SubtitleEmbedId{ get; set; }
+
+        /// <summary>
+        /// <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+        /// </summary>
+        [JsonProperty("UseOriginalPos")]
+        public long? UseOriginalPos{ get; set; }
+
+        /// <summary>
+        /// <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+        /// </summary>
+        [JsonProperty("UseOriginalSize")]
+        public long? UseOriginalSize{ get; set; }
 
 
         /// <summary>
@@ -67,6 +79,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EraseSubtitleConfig.", this.EraseSubtitleConfig);
             this.SetParamObj(map, prefix + "EraseWatermarkConfig.", this.EraseWatermarkConfig);
             this.SetParamObj(map, prefix + "ErasePrivacyConfig.", this.ErasePrivacyConfig);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+            this.SetParamSimple(map, prefix + "UseOriginalPos", this.UseOriginalPos);
+            this.SetParamSimple(map, prefix + "UseOriginalSize", this.UseOriginalSize);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

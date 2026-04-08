@@ -31,6 +31,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("WrittenEnable")]
         public string WrittenEnable{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AdvancePolicy")]
+        public WrittenAdvancePolicy AdvancePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+            this.SetParamObj(map, prefix + "AdvancePolicy.", this.AdvancePolicy);
         }
     }
 }

@@ -25,32 +25,32 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of segments for translation.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>List of segments for translation.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskTransTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Subtitle file path.
+        /// <p>Subtitle file URL.</p>
         /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
         /// <summary>
-        /// Subtitle file storage location.
+        /// <p>Smart subtitling result storage information.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Subtitle file URL.
+        /// <p>Subtitle file path</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Returned translation result during multilingual translation.	
+        /// <p>Returned translation result during multilingual translation.</p>
         /// </summary>
         [JsonProperty("SubtitleResults")]
         public SubtitleTransResultItem[] SubtitleResults{ get; set; }

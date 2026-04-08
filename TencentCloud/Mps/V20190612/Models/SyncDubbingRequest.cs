@@ -90,11 +90,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioData{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AudioUrl")]
+        public string AudioUrl{ get; set; }
+
+        /// <summary>
         /// Cloning audio language. The default language is Chinese.
         /// Supported languages are the same as those for TextLang.
         /// </summary>
         [JsonProperty("AudioLang")]
         public string AudioLang{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Output")]
+        public SyncDubbingOutputOption Output{ get; set; }
 
         /// <summary>
         /// Extended parameters in the format of a JSON string.
@@ -112,7 +124,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TextLang", this.TextLang);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
+            this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "AudioLang", this.AudioLang);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

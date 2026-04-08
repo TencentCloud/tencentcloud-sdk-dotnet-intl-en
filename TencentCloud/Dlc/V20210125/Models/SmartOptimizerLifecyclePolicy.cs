@@ -43,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DropTable")]
+        [System.Obsolete]
         public bool? DropTable{ get; set; }
 
         /// <summary>

@@ -25,46 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique identifier of the smart erasing template.
+        /// <p>Unique identifier of the intelligent erasure template</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Length limit for the smart erasing template name: 64 characters.
+        /// <p>Length limit for the smart erasing template name: 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Length limit for the description information of the smart erasing template: 256 characters.
+        /// <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Erasing type.
-        /// -subtitle: subtitle removal.
-        /// -watermark: watermark removal.
-        /// -privacy: privacy protection.
+        /// <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.
+        /// <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.
+        /// <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.
+        /// <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }

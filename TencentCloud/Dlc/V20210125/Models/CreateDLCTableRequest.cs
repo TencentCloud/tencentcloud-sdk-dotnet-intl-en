@@ -72,6 +72,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ResourceGroupname")]
         public string ResourceGroupname{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Catalog")]
+        public string Catalog{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "ExternalDataConfiguration.", this.ExternalDataConfiguration);
             this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
             this.SetParamSimple(map, prefix + "ResourceGroupname", this.ResourceGroupname);
+            this.SetParamSimple(map, prefix + "Catalog", this.Catalog);
         }
     }
 }

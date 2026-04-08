@@ -90,6 +90,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TableFormat")]
         public string TableFormat{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamSimple(map, prefix + "TableFormat", this.TableFormat);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

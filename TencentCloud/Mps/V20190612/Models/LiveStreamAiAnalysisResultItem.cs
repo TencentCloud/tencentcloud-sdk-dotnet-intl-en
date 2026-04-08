@@ -34,8 +34,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Segmentation results are valid when Type is
-        /// SegmentRecognition.
+        /// 
         /// </summary>
         [JsonProperty("SegmentResultSet")]
         public SegmentRecognitionItem[] SegmentResultSet{ get; set; }

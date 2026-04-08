@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the video path for translation.
+        /// <p>Dubbed video path.</p>
         /// </summary>
         [JsonProperty("VideoPath")]
         public string VideoPath{ get; set; }
 
         /// <summary>
-        /// Specifies the file path of the tag.
+        /// <p>Tag file path</p>
         /// </summary>
         [JsonProperty("SpeakerPath")]
         public string SpeakerPath{ get; set; }
 
         /// <summary>
-        /// Voice type ID.
+        /// <p>Voice type id</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// Specifies the storage location of the transcoded video.
+        /// <p>Storage location of the dubbed video.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

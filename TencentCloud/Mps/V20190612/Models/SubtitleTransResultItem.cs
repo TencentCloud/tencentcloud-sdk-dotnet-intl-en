@@ -25,30 +25,34 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Translation marker.
-        /// - Success
-        /// - Error
+        /// <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Source language (such as "en").
+        /// <p>Source language (such as "en")</p>
         /// </summary>
         [JsonProperty("TransSrc")]
         public string TransSrc{ get; set; }
 
         /// <summary>
-        /// Target language (such as "zh").
+        /// <p>Target language (such as "zh")</p>
         /// </summary>
         [JsonProperty("TransDst")]
         public string TransDst{ get; set; }
 
         /// <summary>
-        /// Subtitle file URL.
+        /// <p>Subtitle file URL</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
+
+        /// <summary>
+        /// <p>Subtitle translation suppression video path.</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedPath")]
+        public string SubtitleEmbedPath{ get; set; }
 
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TransSrc", this.TransSrc);
             this.SetParamSimple(map, prefix + "TransDst", this.TransDst);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
         }
     }
 }

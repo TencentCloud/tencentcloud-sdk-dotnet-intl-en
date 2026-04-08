@@ -33,13 +33,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Video source language.
+        /// 
         /// </summary>
         [JsonProperty("SourceLanguage")]
         public string SourceLanguage{ get; set; }
 
         /// <summary>
-        /// Translated target language.
+        /// 
         /// </summary>
         [JsonProperty("DestinationLanguage")]
         public string DestinationLanguage{ get; set; }

@@ -87,19 +87,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The PTS timestamp for the exception start.
+        /// 
         /// </summary>
         [JsonProperty("Timestamp")]
         public float? Timestamp{ get; set; }
 
         /// <summary>
-        /// Diagnosed abnormal description.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Abnormality detection time in Beijing time, using ISO date format.
+        /// 
         /// </summary>
         [JsonProperty("DateTime")]
         public string DateTime{ get; set; }

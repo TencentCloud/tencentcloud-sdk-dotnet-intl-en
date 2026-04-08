@@ -25,22 +25,28 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Language of the subtitle file.
+        /// <p>Language of the subtitle file</p>
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// Whether the processing is successful.
+        /// <p>Whether the processing is successful.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Subtitle file URL.
+        /// <p>Subtitle file path</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
+
+        /// <summary>
+        /// <p>Subtitle suppression video path.</p>
+        /// </summary>
+        [JsonProperty("SubtitleEmbedPath")]
+        public string SubtitleEmbedPath{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
         }
     }
 }
