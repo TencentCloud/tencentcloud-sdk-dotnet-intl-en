@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C64F3428-9CE7-3A08-8DE2-D7FBE42B7F75}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1291</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,8 @@
     <Compile Include="V20230901\Models\Convert3DFormatResponse.cs" />
     <Compile Include="V20230901\Models\Describe3DSmartTopologyJobRequest.cs" />
     <Compile Include="V20230901\Models\Describe3DSmartTopologyJobResponse.cs" />
+    <Compile Include="V20230901\Models\DescribeConvert3DFormatJobRequest.cs" />
+    <Compile Include="V20230901\Models\DescribeConvert3DFormatJobResponse.cs" />
     <Compile Include="V20230901\Models\DescribeHunyuanTo3DUVJobRequest.cs" />
     <Compile Include="V20230901\Models\DescribeHunyuanTo3DUVJobResponse.cs" />
     <Compile Include="V20230901\Models\ErrorMsg.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="V20230901\Models\Reference.cs" />
     <Compile Include="V20230901\Models\Submit3DSmartTopologyJobRequest.cs" />
     <Compile Include="V20230901\Models\Submit3DSmartTopologyJobResponse.cs" />
+    <Compile Include="V20230901\Models\SubmitConvert3DFormatJobRequest.cs" />
+    <Compile Include="V20230901\Models\SubmitConvert3DFormatJobResponse.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuan3DPartJobRequest.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuan3DPartJobResponse.cs" />
     <Compile Include="V20230901\Models\SubmitHunyuanTo3DProJobRequest.cs" />

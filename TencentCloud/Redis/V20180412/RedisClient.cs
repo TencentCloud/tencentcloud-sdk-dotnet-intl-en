@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.intl.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1291";
 
         /// <summary>
         /// Client constructor.
@@ -1814,6 +1814,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstanceBackupModeResponse ModifyInstanceBackupModeSync(ModifyInstanceBackupModeRequest req)
         {
             return InternalRequestAsync<ModifyInstanceBackupModeResponse>(req, "ModifyInstanceBackupMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to change the billing type of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceChargeTypeResponse"/></returns>
+        public Task<ModifyInstanceChargeTypeResponse> ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceChargeTypeResponse>(req, "ModifyInstanceChargeType");
+        }
+
+        /// <summary>
+        /// This API is used to change the billing type of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceChargeTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceChargeTypeResponse"/></returns>
+        public ModifyInstanceChargeTypeResponse ModifyInstanceChargeTypeSync(ModifyInstanceChargeTypeRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceChargeTypeResponse>(req, "ModifyInstanceChargeType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

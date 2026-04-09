@@ -28,7 +28,7 @@ namespace TencentCloud.Organization.V20210331
 
        private const string endpoint = "organization.intl.tencentcloudapi.com";
        private const string version = "2021-03-31";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1291";
 
         /// <summary>
         /// Client constructor.
@@ -1940,6 +1940,27 @@ namespace TencentCloud.Organization.V20210331
         public ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfigurationSync(ListPermissionPoliciesInRoleConfigurationRequest req)
         {
             return InternalRequestAsync<ListPermissionPoliciesInRoleConfigurationResponse>(req, "ListPermissionPoliciesInRoleConfiguration")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query and view the policy list data.
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesRequest"/></param>
+        /// <returns><see cref="ListPoliciesResponse"/></returns>
+        public Task<ListPoliciesResponse> ListPolicies(ListPoliciesRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesResponse>(req, "ListPolicies");
+        }
+
+        /// <summary>
+        /// This API is used to query and view the policy list data.
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesRequest"/></param>
+        /// <returns><see cref="ListPoliciesResponse"/></returns>
+        public ListPoliciesResponse ListPoliciesSync(ListPoliciesRequest req)
+        {
+            return InternalRequestAsync<ListPoliciesResponse>(req, "ListPolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

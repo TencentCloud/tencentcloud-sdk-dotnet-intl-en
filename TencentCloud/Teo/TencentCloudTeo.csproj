@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1283</VersionPrefix>
+    <VersionPrefix>3.0.1291</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -342,6 +342,7 @@
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />
     <Compile Include="V20220901\TeoClient.cs" />
+    <Compile Include="V20220901\Models\AICrawlerDetection.cs" />
     <Compile Include="V20220901\Models\APIResource.cs" />
     <Compile Include="V20220901\Models\APIService.cs" />
     <Compile Include="V20220901\Models\AccelerateMainland.cs" />
@@ -373,6 +374,7 @@
     <Compile Include="V20220901\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20220901\Models\AuthenticationParameters.cs" />
     <Compile Include="V20220901\Models\BandwidthAbuseDefense.cs" />
+    <Compile Include="V20220901\Models\BasicBotSettings.cs" />
     <Compile Include="V20220901\Models\BillingData.cs" />
     <Compile Include="V20220901\Models\BillingDataFilter.cs" />
     <Compile Include="V20220901\Models\BindDomainInfo.cs" />
@@ -386,10 +388,21 @@
     <Compile Include="V20220901\Models\BlockIPActionParameters.cs" />
     <Compile Include="V20220901\Models\BotConfig.cs" />
     <Compile Include="V20220901\Models\BotExtendAction.cs" />
+    <Compile Include="V20220901\Models\BotIntelligence.cs" />
     <Compile Include="V20220901\Models\BotManagedRule.cs" />
     <Compile Include="V20220901\Models\BotManagement.cs" />
+    <Compile Include="V20220901\Models\BotManagementActionOverrides.cs" />
+    <Compile Include="V20220901\Models\BotManagementCustomRule.cs" />
+    <Compile Include="V20220901\Models\BotManagementCustomRules.cs" />
+    <Compile Include="V20220901\Models\BotManagementLite.cs" />
     <Compile Include="V20220901\Models\BotPortraitRule.cs" />
+    <Compile Include="V20220901\Models\BotRatings.cs" />
+    <Compile Include="V20220901\Models\BotSessionValidation.cs" />
     <Compile Include="V20220901\Models\BotUserRule.cs" />
+    <Compile Include="V20220901\Models\BrowserImpersonationDetection.cs" />
+    <Compile Include="V20220901\Models\BrowserImpersonationDetectionAction.cs" />
+    <Compile Include="V20220901\Models\BrowserImpersonationDetectionRule.cs" />
+    <Compile Include="V20220901\Models\CAPTCHAPageChallenge.cs" />
     <Compile Include="V20220901\Models\CC.cs" />
     <Compile Include="V20220901\Models\CLSTopic.cs" />
     <Compile Include="V20220901\Models\Cache.cs" />
@@ -416,6 +429,7 @@
     <Compile Include="V20220901\Models\ClientAttestationRule.cs" />
     <Compile Include="V20220901\Models\ClientAttestationRules.cs" />
     <Compile Include="V20220901\Models\ClientAttester.cs" />
+    <Compile Include="V20220901\Models\ClientBehaviorDetection.cs" />
     <Compile Include="V20220901\Models\ClientFiltering.cs" />
     <Compile Include="V20220901\Models\ClientIPCountryParameters.cs" />
     <Compile Include="V20220901\Models\ClientIPHeaderParameters.cs" />
@@ -748,6 +762,7 @@
     <Compile Include="V20220901\Models\FollowOrigin.cs" />
     <Compile Include="V20220901\Models\ForceRedirect.cs" />
     <Compile Include="V20220901\Models\ForceRedirectHTTPSParameters.cs" />
+    <Compile Include="V20220901\Models\FrequentScanningProtection.cs" />
     <Compile Include="V20220901\Models\Function.cs" />
     <Compile Include="V20220901\Models\FunctionEnvironmentVariable.cs" />
     <Compile Include="V20220901\Models\FunctionRule.cs" />
@@ -772,6 +787,8 @@
     <Compile Include="V20220901\Models\IPExpireInfo.cs" />
     <Compile Include="V20220901\Models\IPGroup.cs" />
     <Compile Include="V20220901\Models\IPRegionInfo.cs" />
+    <Compile Include="V20220901\Models\IPReputation.cs" />
+    <Compile Include="V20220901\Models\IPReputationGroup.cs" />
     <Compile Include="V20220901\Models\IPWhitelist.cs" />
     <Compile Include="V20220901\Models\IPv6Parameters.cs" />
     <Compile Include="V20220901\Models\Identification.cs" />
@@ -790,6 +807,7 @@
     <Compile Include="V20220901\Models\JITVideoProcess.cs" />
     <Compile Include="V20220901\Models\JSInjectionRule.cs" />
     <Compile Include="V20220901\Models\JustInTimeTranscodeTemplate.cs" />
+    <Compile Include="V20220901\Models\KnownBotCategories.cs" />
     <Compile Include="V20220901\Models\L4OfflineLog.cs" />
     <Compile Include="V20220901\Models\L4Proxy.cs" />
     <Compile Include="V20220901\Models\L4ProxyRemoteAuth.cs" />
@@ -805,6 +823,7 @@
     <Compile Include="V20220901\Models\ManagedRules.cs" />
     <Compile Include="V20220901\Models\MaxAge.cs" />
     <Compile Include="V20220901\Models\MaxAgeParameters.cs" />
+    <Compile Include="V20220901\Models\MaxNewSessionTriggerConfig.cs" />
     <Compile Include="V20220901\Models\MinimalRequestBodyTransferRate.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainRequest.cs" />
     <Compile Include="V20220901\Models\ModifyAccelerationDomainResponse.cs" />
@@ -977,6 +996,7 @@
     <Compile Include="V20220901\Models\RulesProperties.cs" />
     <Compile Include="V20220901\Models\RulesSettingAction.cs" />
     <Compile Include="V20220901\Models\S3.cs" />
+    <Compile Include="V20220901\Models\SearchEngineBots.cs" />
     <Compile Include="V20220901\Models\SecEntry.cs" />
     <Compile Include="V20220901\Models\SecEntryValue.cs" />
     <Compile Include="V20220901\Models\SecurityAction.cs" />
@@ -985,7 +1005,9 @@
     <Compile Include="V20220901\Models\SecurityPolicyTemplateInfo.cs" />
     <Compile Include="V20220901\Models\SecurityTemplateBinding.cs" />
     <Compile Include="V20220901\Models\SecurityType.cs" />
+    <Compile Include="V20220901\Models\SecurityWeightedAction.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
+    <Compile Include="V20220901\Models\SessionRateControl.cs" />
     <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
     <Compile Include="V20220901\Models\SkipCondition.cs" />
     <Compile Include="V20220901\Models\SlowAttackDefense.cs" />
@@ -993,6 +1015,7 @@
     <Compile Include="V20220901\Models\SlowRateConfig.cs" />
     <Compile Include="V20220901\Models\SmartRouting.cs" />
     <Compile Include="V20220901\Models\SmartRoutingParameters.cs" />
+    <Compile Include="V20220901\Models\SourceIDC.cs" />
     <Compile Include="V20220901\Models\StandardDebug.cs" />
     <Compile Include="V20220901\Models\StandardDebugParameters.cs" />
     <Compile Include="V20220901\Models\StatusCodeCacheParam.cs" />

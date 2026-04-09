@@ -25,15 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Safe execution actions. valid values:.
-        /// <Li>Deny: block request to access site resource;</li>.
-        /// <Li>`Monitor`: observe; only record logs</li>.
-        /// <li>`Redirect`: Redirect to URL</li>.
-        /// <Li>Disabled: disabled; specify rule is not enabled.</li>.
-        /// <Li>Allow: allow access but delay processing the request.</li>.
-        /// <Li>Challenge: challenge, respond to challenge content;</li>.
-        /// <Li>BlockIP: to be deprecated, ip block;</li>.
-        /// <Li>`ReturnCustomPage`: to be deprecated, use specified page block;</li>.
+        /// Specifies the specific actions for safe execution. valid values:.
+        /// <Li>Deny. specifies to block requests from accessing site resources.</li>.
+        /// <Li>Monitor: observation, only record logs.</li>.
+        /// <li>Redirect: Redirect to URL.</li>.
+        /// <Li>Disabled: specifies that the rule is not enabled.</li>.
+        /// <Li>Allow: specifies whether to allow access with delayed processing of requests.</li>.
+        /// <Li>Challenge: specifies the challenge content to respond to.</li>.
+        /// <Li>Trans: pass and allow requests to directly access site resources.</li>.
+        /// <Li>BlockIP: to be deprecated. ip block.</li>.
+        /// <Li>ReturnCustomPage: to be deprecated. use specified page for interception.</li>.
         /// <li>JSChallenge: to be deprecated, JavaScript challenge;</li>.
         /// <Li>ManagedChallenge: to be deprecated. managed challenge.</li>.
         /// </summary>

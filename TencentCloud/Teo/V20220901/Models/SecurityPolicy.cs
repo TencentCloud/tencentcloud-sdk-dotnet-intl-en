@@ -62,6 +62,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("BotManagement")]
         public BotManagement BotManagement{ get; set; }
 
+        /// <summary>
+        /// Basic Bot management configuration.
+        /// </summary>
+        [JsonProperty("BotManagementLite")]
+        public BotManagementLite BotManagementLite{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
             this.SetParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
             this.SetParamObj(map, prefix + "BotManagement.", this.BotManagement);
+            this.SetParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
         }
     }
 }

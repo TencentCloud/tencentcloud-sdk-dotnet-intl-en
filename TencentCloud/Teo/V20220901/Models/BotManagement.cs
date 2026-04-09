@@ -25,10 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Definition list of client authentication rules. feature in beta test. submit a ticket or contact smart customer service if needed.
+        /// Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public string Enabled{ get; set; }
+
+        /// <summary>
+        /// Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+        /// </summary>
+        [JsonProperty("CustomRules")]
+        public BotManagementCustomRules CustomRules{ get; set; }
+
+        /// <summary>
+        /// Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+        /// </summary>
+        [JsonProperty("BasicBotSettings")]
+        public BasicBotSettings BasicBotSettings{ get; set; }
+
+        /// <summary>
+        /// Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
         /// </summary>
         [JsonProperty("ClientAttestationRules")]
         public ClientAttestationRules ClientAttestationRules{ get; set; }
+
+        /// <summary>
+        /// Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+        /// </summary>
+        [JsonProperty("BrowserImpersonationDetection")]
+        public BrowserImpersonationDetection BrowserImpersonationDetection{ get; set; }
 
 
         /// <summary>
@@ -36,7 +60,11 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamObj(map, prefix + "CustomRules.", this.CustomRules);
+            this.SetParamObj(map, prefix + "BasicBotSettings.", this.BasicBotSettings);
             this.SetParamObj(map, prefix + "ClientAttestationRules.", this.ClientAttestationRules);
+            this.SetParamObj(map, prefix + "BrowserImpersonationDetection.", this.BrowserImpersonationDetection);
         }
     }
 }

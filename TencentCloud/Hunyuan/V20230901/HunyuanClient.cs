@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.intl.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1291";
 
         /// <summary>
         /// Client constructor.
@@ -125,6 +125,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJobSync(Describe3DSmartTopologyJobRequest req)
         {
             return InternalRequestAsync<Describe3DSmartTopologyJobResponse>(req, "Describe3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConvert3DFormatJobRequest"/></param>
+        /// <returns><see cref="DescribeConvert3DFormatJobResponse"/></returns>
+        public Task<DescribeConvert3DFormatJobResponse> DescribeConvert3DFormatJob(DescribeConvert3DFormatJobRequest req)
+        {
+            return InternalRequestAsync<DescribeConvert3DFormatJobResponse>(req, "DescribeConvert3DFormatJob");
+        }
+
+        /// <summary>
+        /// According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConvert3DFormatJobRequest"/></param>
+        /// <returns><see cref="DescribeConvert3DFormatJobResponse"/></returns>
+        public DescribeConvert3DFormatJobResponse DescribeConvert3DFormatJobSync(DescribeConvert3DFormatJobRequest req)
+        {
+            return InternalRequestAsync<DescribeConvert3DFormatJobResponse>(req, "DescribeConvert3DFormatJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -257,6 +278,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJobSync(Submit3DSmartTopologyJobRequest req)
         {
             return InternalRequestAsync<Submit3DSmartTopologyJobResponse>(req, "Submit3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After inputting the 3D model file, the system will automatically convert it to the required format. The maximum supported file size is 200MB.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitConvert3DFormatJobRequest"/></param>
+        /// <returns><see cref="SubmitConvert3DFormatJobResponse"/></returns>
+        public Task<SubmitConvert3DFormatJobResponse> SubmitConvert3DFormatJob(SubmitConvert3DFormatJobRequest req)
+        {
+            return InternalRequestAsync<SubmitConvert3DFormatJobResponse>(req, "SubmitConvert3DFormatJob");
+        }
+
+        /// <summary>
+        /// After inputting the 3D model file, the system will automatically convert it to the required format. The maximum supported file size is 200MB.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitConvert3DFormatJobRequest"/></param>
+        /// <returns><see cref="SubmitConvert3DFormatJobResponse"/></returns>
+        public SubmitConvert3DFormatJobResponse SubmitConvert3DFormatJobSync(SubmitConvert3DFormatJobRequest req)
+        {
+            return InternalRequestAsync<SubmitConvert3DFormatJobResponse>(req, "SubmitConvert3DFormatJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

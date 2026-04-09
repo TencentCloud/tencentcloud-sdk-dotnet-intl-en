@@ -79,18 +79,28 @@ namespace TencentCloud.Billing.V20180709.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The products that are applicable.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Product information applies to
         /// </summary>
         [JsonProperty("ApplicableProducts")]
         public ApplicableProducts ApplicableProducts{ get; set; }
 
         /// <summary>
-        /// The products that are not applicable.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Product information not applicable
         /// </summary>
         [JsonProperty("ExcludedProducts")]
         public ExcludedProducts[] ExcludedProducts{ get; set; }
+
+        /// <summary>
+        /// Instructions/Batch Remarks
+        /// </summary>
+        [JsonProperty("PolicyRemark")]
+        public string PolicyRemark{ get; set; }
+
+        /// <summary>
+        /// Coupon issuance time
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -109,6 +119,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "ApplicableProducts.", this.ApplicableProducts);
             this.SetParamArrayObj(map, prefix + "ExcludedProducts.", this.ExcludedProducts);
+            this.SetParamSimple(map, prefix + "PolicyRemark", this.PolicyRemark);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }
