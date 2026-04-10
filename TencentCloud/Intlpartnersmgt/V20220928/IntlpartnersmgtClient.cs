@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1292";
 
         /// <summary>
         /// Client constructor.
@@ -540,6 +540,29 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerVoucherListResponse DescribeCustomerVoucherListSync(DescribeCustomerVoucherListRequest req)
         {
             return InternalRequestAsync<DescribeCustomerVoucherListResponse>(req, "DescribeCustomerVoucherList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Description: The current API is used to query the usage details of reseller's customer vouchers by Reseller, Second-level Reseller or Distributor.
+        /// Reseller, Second-level Reseller or Distributor can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerVoucherUsageDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCustomerVoucherUsageDetailsResponse"/></returns>
+        public Task<DescribeCustomerVoucherUsageDetailsResponse> DescribeCustomerVoucherUsageDetails(DescribeCustomerVoucherUsageDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerVoucherUsageDetailsResponse>(req, "DescribeCustomerVoucherUsageDetails");
+        }
+
+        /// <summary>
+        /// Description: The current API is used to query the usage details of reseller's customer vouchers by Reseller, Second-level Reseller or Distributor.
+        /// Reseller, Second-level Reseller or Distributor can call this API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerVoucherUsageDetailsRequest"/></param>
+        /// <returns><see cref="DescribeCustomerVoucherUsageDetailsResponse"/></returns>
+        public DescribeCustomerVoucherUsageDetailsResponse DescribeCustomerVoucherUsageDetailsSync(DescribeCustomerVoucherUsageDetailsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerVoucherUsageDetailsResponse>(req, "DescribeCustomerVoucherUsageDetails")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
