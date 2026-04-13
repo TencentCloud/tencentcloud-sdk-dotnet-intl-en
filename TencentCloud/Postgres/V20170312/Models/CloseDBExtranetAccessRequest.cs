@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-6r233v55
+        /// Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+        /// Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
         /// </summary>
         [JsonProperty("IsIpv6")]
         public long? IsIpv6{ get; set; }

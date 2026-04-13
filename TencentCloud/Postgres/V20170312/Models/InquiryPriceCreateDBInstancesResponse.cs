@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Published price in US Cent
+        /// <p>List price, in cents.</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public ulong? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Discounted total amount in US Cent
+        /// <p>Actual payment amount after discount, in cents.</p>
         /// </summary>
         [JsonProperty("Price")]
         public ulong? Price{ get; set; }

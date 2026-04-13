@@ -92,6 +92,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("L7UsedList")]
         public string[] L7UsedList{ get; set; }
 
+        /// <summary>
+        /// Specifies the list of instances referenced by cloud load balancer.
+        /// </summary>
+        [JsonProperty("References")]
+        public OriginGroupReference[] References{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +114,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "L4UsedList.", this.L4UsedList);
             this.SetParamArraySimple(map, prefix + "L7UsedList.", this.L7UsedList);
+            this.SetParamArrayObj(map, prefix + "References.", this.References);
         }
     }
 }

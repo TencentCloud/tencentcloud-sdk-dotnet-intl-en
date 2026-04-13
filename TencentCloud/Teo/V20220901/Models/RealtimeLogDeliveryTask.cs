@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string DeliveryStatus{ get; set; }
 
         /// <summary>
-        /// Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+        /// Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

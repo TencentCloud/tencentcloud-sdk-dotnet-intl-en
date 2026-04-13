@@ -46,34 +46,35 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// Whether to enable IPv6 access. If this parameter is not input, the default value `off` is used. This configuration can be enabled only in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:
-        /// <li>on: Enable;</li>
+        /// Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+        /// <li>`on`: Enable;</li>
         /// <li>off: Disable.</li>
-        /// 
         /// </summary>
         [JsonProperty("Ipv6")]
         public string Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether to enable static IP. If this parameter is not input, the default value `off` is used. This configuration can be enabled only in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:
-        /// <li>on: Enable;</li>
+        /// Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+        /// <li>`on`: Enable;</li>
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("StaticIp")]
         public string StaticIp{ get; set; }
 
         /// <summary>
-        /// Whether to enable network optimization for the Chinese mainland. If this parameter is not input, the default value `off` is used. This configuration can be enabled only in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:
-        /// <li>on: Enable;</li>
+        /// Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+        /// <li>`on`: Enable;</li>
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public string AccelerateMainland{ get; set; }
 
         /// <summary>
-        /// Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://intl.cloud.tencent.com/document/product/1552/95994?from_cn_redirect=1).
+        /// Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+        /// This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
         /// </summary>
         [JsonProperty("DDosProtectionConfig")]
+        [System.Obsolete]
         public DDosProtectionConfig DDosProtectionConfig{ get; set; }
 
 

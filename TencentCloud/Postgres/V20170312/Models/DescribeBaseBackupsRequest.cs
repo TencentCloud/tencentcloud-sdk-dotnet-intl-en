@@ -37,7 +37,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string MaxFinishTime{ get; set; }
 
         /// <summary>
-        /// Filter instances by using one or more filters. Valid values:  `db-instance-idFilter` (filter by instance ID in string),  `db-instance-name` (filter by instance name in string),  `db-instance-ip` (filter by instance VPC IP address in string),  `base-backup-id` (filter by backup set ID in string), 
+        /// Query using one or more filter criteria. filter criteria currently supported include:.
+        /// db-instance-id: filter by instance id (string type).
+        /// db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+        /// db-instance-ip: specifies the instance VPC ip for filtering (string type).
+        /// base-backup-id: filter by backup set id (in string format).
+        /// db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/product/409/16778#dbinstance).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -55,13 +60,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+        /// Specifies the sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+        /// Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

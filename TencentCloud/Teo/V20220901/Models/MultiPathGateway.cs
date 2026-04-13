@@ -78,6 +78,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Lines")]
         public MultiPathGatewayLine[] Lines{ get; set; }
 
+        /// <summary>
+        /// Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+        /// </summary>
+        [JsonProperty("NeedConfirm")]
+        public string NeedConfirm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +98,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "GatewayIP", this.GatewayIP);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamArrayObj(map, prefix + "Lines.", this.Lines);
+            this.SetParamSimple(map, prefix + "NeedConfirm", this.NeedConfirm);
         }
     }
 }

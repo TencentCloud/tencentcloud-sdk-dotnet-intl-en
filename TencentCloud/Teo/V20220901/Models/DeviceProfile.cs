@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+        /// Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }

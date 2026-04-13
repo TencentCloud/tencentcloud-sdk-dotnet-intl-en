@@ -37,61 +37,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// List of name servers used by the site
+        /// Identical site identifier. specifies a composite of numbers, english letters, ".", "-", and "_" with a character limit of 200.
         /// </summary>
-        [JsonProperty("OriginalNameServers")]
-        public string[] OriginalNameServers{ get; set; }
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
 
         /// <summary>
-        /// The list of name servers assigned by Tencent Cloud.
+        /// Site acceleration region. valid values:.
+        /// <Li>Global: global availability zone.</li>.
+        /// <Li>Mainland: chinese mainland availability zone.</li>.
+        /// <li>overseas: global availability zone (excluding the chinese mainland).</li>.
         /// </summary>
-        [JsonProperty("NameServers")]
-        public string[] NameServers{ get; set; }
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
         /// <summary>
-        /// The site status. Values:
-        /// u200c<li>`active`: The name server is switched to EdgeOne.</li>
-        /// u200c<li>`pending`: The name server is not switched.</li>
-        /// u200c<li>`moved`: The name server is changed to other service providers.</li>
-        /// u200c<li>`deactivated`: The site is blocked.</li>
-        /// <li>`initializing`: The site is not bound with any plan. </li>
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// Site access method. Valid values:
-        /// <li>full: NS access;</li>
-        /// <li>partial: CNAME access;</li>
-        /// <li>noDomainAccess: access with no domain name.</li>
+        /// Site access type. valid values:.
+        /// <li>full: NS access type;</li>.
+        /// <li>partial: CNAME access type;</li>.
+        /// <li>noDomainAccess: domainless access type.</li>.
+        /// <li>dnsPodAccess: DNSPod managed type. this type requires your domain name to be hosted on tencent cloud DNSPod.</li>.
+        /// <li> pages: pages data type;</li>.
+        /// <li>ai: edge reasoning access type.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Whether the site is disabled.
-        /// </summary>
-        [JsonProperty("Paused")]
-        public bool? Paused{ get; set; }
-
-        /// <summary>
-        /// Whether CNAME acceleration is enabled. Values:
-        /// <li>`enabled`: Enabled</li>
-        /// <li>`disabled`: Disabled</li>
-        /// </summary>
-        [JsonProperty("CnameSpeedUp")]
-        public string CnameSpeedUp{ get; set; }
-
-        /// <summary>
-        /// CNAME record access status. Values:
-        /// <li>`finished`: The site is verified.</li>
-        /// <li>`pending`: The site is being verified.</li>
-        /// </summary>
-        [JsonProperty("CnameStatus")]
-        public string CnameStatus{ get; set; }
-
-        /// <summary>
-        /// The list of resource tags.
+        /// Specifies the Tag associated with the site.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -101,6 +74,24 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("Resources")]
         public Resource[] Resources{ get; set; }
+
+        /// <summary>
+        /// NS site detail. returned only when Type = full.
+        /// </summary>
+        [JsonProperty("NSDetail")]
+        public NSDetail NSDetail{ get; set; }
+
+        /// <summary>
+        /// CNAME site detail. returned only when Type = partial.
+        /// </summary>
+        [JsonProperty("CNAMEDetail")]
+        public CNAMEDetail CNAMEDetail{ get; set; }
+
+        /// <summary>
+        /// DNSPod managed Type site detail. returned only when Type = dnsPodAccess.
+        /// </summary>
+        [JsonProperty("DNSPodDetail")]
+        public DNSPodDetail DNSPodDetail{ get; set; }
 
         /// <summary>
         /// The creation time of the site.
@@ -115,27 +106,23 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// The site access region. Values:
-        /// <li>`global`: Global.</li>
-        /// <li>`mainland`: Chinese mainland.</li>
-        /// <li>`overseas`: Outside the Chinese mainland.</li>
+        /// The site status. Values:
+        /// u200c<li>`active`: The name server is switched to EdgeOne.</li>
+        /// u200c<li>`pending`: The name server is not switched.</li>
+        /// u200c<li>`moved`: The name server is changed to other service providers.</li>
+        /// u200c<li>`deactivated`: The site is blocked.</li>
+        /// <li>`initializing`: The site is not bound with any plan. </li>
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// The custom name server information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CNAME record access status. Values:
+        /// <li>`finished`: The site is verified.</li>
+        /// <li>`pending`: The site is being verified.</li>
         /// </summary>
-        [JsonProperty("VanityNameServers")]
-        public VanityNameServers VanityNameServers{ get; set; }
-
-        /// <summary>
-        /// The custom name server IP information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("VanityNameServersIps")]
-        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
+        [JsonProperty("CnameStatus")]
+        public string CnameStatus{ get; set; }
 
         /// <summary>
         /// Status of the proxy. Values:
@@ -147,31 +134,71 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ActiveStatus{ get; set; }
 
         /// <summary>
-        /// Site alias. a composite of digits, numbers, english letters, -, and _, limited to 20 characters.
-        /// </summary>
-        [JsonProperty("AliasZoneName")]
-        public string AliasZoneName{ get; set; }
-
-        /// <summary>
-        /// Whether it’s a fake site. Valid values: 
-        /// <li>`0`: Non-fake site;</li>
-        /// <li>`1`: Fake site.</li>
-        /// </summary>
-        [JsonProperty("IsFake")]
-        public long? IsFake{ get; set; }
-
-        /// <summary>
         /// Lock status. Values: <li>`enable`: Normal. Modification is allowed.</li><li>`disable`: Locked. Modification is not allowed.</li><li>`plan_migrate`: Adjusting the plan. Modification is not allowed.</li> 
         /// </summary>
         [JsonProperty("LockStatus")]
         public string LockStatus{ get; set; }
 
         /// <summary>
-        /// Ownership verification information
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Whether the site is disabled.
+        /// </summary>
+        [JsonProperty("Paused")]
+        public bool? Paused{ get; set; }
+
+        /// <summary>
+        /// Specifies whether it is a fake site (this field is a historic reserved field and is no longer maintained, refer to the website type for the corresponding field). valid values:.
+        /// <Li>0: non-fake site.</li>.
+        /// <Li>1: fake site.</li>.
+        /// </summary>
+        [JsonProperty("IsFake")]
+        public long? IsFake{ get; set; }
+
+        /// <summary>
+        /// Whether to enable CNAME acceleration (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field). valid values:.
+        /// <Li>Enabled: specifies whether the feature is enabled.</li>.
+        /// <li>disabled: specifies that the feature is turned off.</li>.
+        /// </summary>
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
+
+        /// <summary>
+        /// Ownership verification information. (this field is a historic reserved field and is no longer maintained. refer to the website type for the corresponding field.).
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
+
+        /// <summary>
+        /// Lists the currently used NS of the site. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field based on the website type.).
+        /// </summary>
+        [JsonProperty("OriginalNameServers")]
+        public string[] OriginalNameServers{ get; set; }
+
+        /// <summary>
+        /// Lists of NS assigned by tencent cloud. (this field is a historic reserved field and no longer maintained. refer to the website type for the corresponding field.).
+        /// </summary>
+        [JsonProperty("NameServers")]
+        public string[] NameServers{ get; set; }
+
+        /// <summary>
+        /// Specifies user-customized NS information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("VanityNameServers")]
+        public VanityNameServers VanityNameServers{ get; set; }
+
+        /// <summary>
+        /// User-Customized NS IP information. (this field is a historic reserved field and is no longer maintained. refer to the corresponding field according to the website type.).
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// </summary>
+        [JsonProperty("VanityNameServersIps")]
+        public VanityNameServersIps[] VanityNameServersIps{ get; set; }
+
+        /// <summary>
+        /// Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("WorkModeInfos")]
+        public ConfigGroupWorkModeInfo[] WorkModeInfos{ get; set; }
 
 
         /// <summary>
@@ -181,25 +208,29 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
-            this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
-            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Paused", this.Paused);
-            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
-            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamObj(map, prefix + "NSDetail.", this.NSDetail);
+            this.SetParamObj(map, prefix + "CNAMEDetail.", this.CNAMEDetail);
+            this.SetParamObj(map, prefix + "DNSPodDetail.", this.DNSPodDetail);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
+            this.SetParamSimple(map, prefix + "Paused", this.Paused);
+            this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
+            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
+            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+            this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
+            this.SetParamArraySimple(map, prefix + "NameServers.", this.NameServers);
             this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
             this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
-            this.SetParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
-            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
-            this.SetParamSimple(map, prefix + "IsFake", this.IsFake);
-            this.SetParamSimple(map, prefix + "LockStatus", this.LockStatus);
-            this.SetParamObj(map, prefix + "OwnershipVerification.", this.OwnershipVerification);
+            this.SetParamArrayObj(map, prefix + "WorkModeInfos.", this.WorkModeInfos);
         }
     }
 }

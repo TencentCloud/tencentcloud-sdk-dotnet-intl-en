@@ -25,22 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Parameter name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// The number of modification events
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Number of modified events.
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
-        /// Modification event details
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Last modification time.
         /// </summary>
         [JsonProperty("EventDetail")]
         public EventInfo[] EventDetail{ get; set; }

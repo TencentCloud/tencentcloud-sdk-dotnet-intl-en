@@ -46,8 +46,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Weight of an origin. Range: 0-100. If it is not specified, a random weight is assigned. If `0` is passed in, there is no traffic scheduled to this origin.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

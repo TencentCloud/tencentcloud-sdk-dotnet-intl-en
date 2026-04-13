@@ -25,57 +25,49 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Parameter name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Original parameter value
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Original parameter value.
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }
 
         /// <summary>
-        /// New parameter value in this modification event
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// This modification specifies the expected parameter value.
         /// </summary>
         [JsonProperty("NewValue")]
         public string NewValue{ get; set; }
 
         /// <summary>
-        /// Start time of parameter modification
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the start time for backend parameter modification.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Start time when the modified parameter takes effect
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the start of effective time for the backend parameter.
         /// </summary>
         [JsonProperty("EffectiveTime")]
         public string EffectiveTime{ get; set; }
 
         /// <summary>
-        /// Modification status
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Modification status. valid values: in progress, success, paused.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Operator (generally, the value is the UIN of a sub-user)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Operator (normal: user sub UIN).
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// Event log
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Time log.
         /// </summary>
         [JsonProperty("EventLog")]
         public string EventLog{ get; set; }

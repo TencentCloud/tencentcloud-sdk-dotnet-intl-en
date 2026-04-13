@@ -25,11 +25,11 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Services referencing the origin group. Values:
-        /// <li>`AccelerationDomain`: Acceleration domain name</li>
-        /// <li>`RuleEngine`: Rules engine</li>
-        /// <li>`Loadbalance`: Load balancer</li>
-        /// <li>`ApplicationProxy`: L4 proxy</li>
+        /// Reference service type. valid values:.
+        /// <Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
+        /// <Li>Rule-Engine: specifies the rule engine.</li>.
+        /// <Li>Load-Balancer: specifies the cloud load balancer.</li>.
+        /// <li>application-proxy: layer 4 proxy.</li>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -41,10 +41,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Name of the instance referencing the origin group
+        /// Specifies the instance name of the reference type.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// Referer ID.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// Refers to the site name.
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
+        /// <summary>
+        /// Refers to the site alias.
+        /// </summary>
+        [JsonProperty("AliasZoneName")]
+        public string AliasZoneName{ get; set; }
 
 
         /// <summary>
@@ -55,6 +73,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         }
     }
 }

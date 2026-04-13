@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.intl.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1169";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -2001,6 +2001,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoListSync(DescribeProvinceIspPlayInfoListRequest req)
         {
             return InternalRequestAsync<DescribeProvinceIspPlayInfoListResponse>(req, "DescribeProvinceIspPlayInfoList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Live Streaming Push Bandwidth and Traffic Data Query. The push billing will first compare the global push usage with the global playback usage. If the billing conditions are met, billing will be issued based on the usage in each region. For details, refer to the Billing Documentation.(https://cloud.tencent.com/document/product/267/34175)
+        /// </summary>
+        /// <param name="req"><see cref="DescribePushBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribePushBandwidthAndFluxListResponse"/></returns>
+        public Task<DescribePushBandwidthAndFluxListResponse> DescribePushBandwidthAndFluxList(DescribePushBandwidthAndFluxListRequest req)
+        {
+            return InternalRequestAsync<DescribePushBandwidthAndFluxListResponse>(req, "DescribePushBandwidthAndFluxList");
+        }
+
+        /// <summary>
+        /// Live Streaming Push Bandwidth and Traffic Data Query. The push billing will first compare the global push usage with the global playback usage. If the billing conditions are met, billing will be issued based on the usage in each region. For details, refer to the Billing Documentation.(https://cloud.tencent.com/document/product/267/34175)
+        /// </summary>
+        /// <param name="req"><see cref="DescribePushBandwidthAndFluxListRequest"/></param>
+        /// <returns><see cref="DescribePushBandwidthAndFluxListResponse"/></returns>
+        public DescribePushBandwidthAndFluxListResponse DescribePushBandwidthAndFluxListSync(DescribePushBandwidthAndFluxListRequest req)
+        {
+            return InternalRequestAsync<DescribePushBandwidthAndFluxListResponse>(req, "DescribePushBandwidthAndFluxList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

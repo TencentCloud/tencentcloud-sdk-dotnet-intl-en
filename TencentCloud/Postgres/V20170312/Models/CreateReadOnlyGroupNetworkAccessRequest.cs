@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// RO group ID in the format of pgro-4t9c6g7k.
+        /// ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public bool? IsAssignVip{ get; set; }
 
         /// <summary>
-        /// Target VIP.
+        /// Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

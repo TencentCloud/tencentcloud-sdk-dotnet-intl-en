@@ -25,8 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance key list
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the key information list of the instance.
         /// </summary>
         [JsonProperty("EncryptionKeys")]
         public EncryptionKey[] EncryptionKeys{ get; set; }

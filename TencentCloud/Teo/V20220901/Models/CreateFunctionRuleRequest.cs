@@ -37,10 +37,32 @@ namespace TencentCloud.Teo.V20220901.Models
         public FunctionRuleCondition[] FunctionRuleConditions{ get; set; }
 
         /// <summary>
-        /// Function ID, specifying a function executed when a trigger rule condition is met.
+        /// Function selection configuration type.
+        /// <Li>Direct: specifies the execution function directly.</li>.
+        /// <Li>Weight: selects the function based on weight ratio.</li>.
+        /// <li> region: specifies the country/region selection function based on client IP.</li>.
+        /// Specifies the default value as direct when left blank.
+        /// </summary>
+        [JsonProperty("TriggerType")]
+        public string TriggerType{ get; set; }
+
+        /// <summary>
+        /// Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
+
+        /// <summary>
+        /// Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+        /// </summary>
+        [JsonProperty("RegionMappingSelections")]
+        public FunctionRegionSelection[] RegionMappingSelections{ get; set; }
+
+        /// <summary>
+        /// Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+        /// </summary>
+        [JsonProperty("WeightedSelections")]
+        public FunctionWeightedSelection[] WeightedSelections{ get; set; }
 
         /// <summary>
         /// Rule description, which can contain up to 60 characters.
@@ -56,7 +78,10 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "FunctionRuleConditions.", this.FunctionRuleConditions);
+            this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
+            this.SetParamArrayObj(map, prefix + "RegionMappingSelections.", this.RegionMappingSelections);
+            this.SetParamArrayObj(map, prefix + "WeightedSelections.", this.WeightedSelections);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }

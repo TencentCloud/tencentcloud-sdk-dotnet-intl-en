@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-6bwgamo3.
+        /// Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public bool? IsAssignVip{ get; set; }
 
         /// <summary>
-        /// Target VIP.
+        /// Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }

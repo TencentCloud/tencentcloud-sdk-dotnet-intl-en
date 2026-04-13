@@ -25,46 +25,46 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Encrypted KeyId of KMS instance
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the KeyId for KMS instance encryption.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Encryption key alias of KMS instance 
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Alias name of the KMS instance encryption Key.
         /// </summary>
         [JsonProperty("KeyAlias")]
         public string KeyAlias{ get; set; }
 
         /// <summary>
-        /// Instance DEK ciphertext
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the ciphertext of the instance encryption key DEK.
         /// </summary>
         [JsonProperty("DEKCipherTextBlob")]
         public string DEKCipherTextBlob{ get; set; }
 
         /// <summary>
-        /// Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
         /// </summary>
         [JsonProperty("IsEnabled")]
         public long? IsEnabled{ get; set; }
 
         /// <summary>
-        /// Region where KMS key resides
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the region of the KMS key.
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
-        /// DEK key creation time
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Creation time of the DEK key.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+        /// </summary>
+        [JsonProperty("KMSClusterId")]
+        public string KMSClusterId{ get; set; }
 
 
         /// <summary>
@@ -78,6 +78,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
             this.SetParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1291";
+       private const string sdkVersion = "SDK_NET_3.0.1294";
 
         /// <summary>
         /// Client constructor.
@@ -60,7 +60,7 @@ namespace TencentCloud.Teo.V20220901
         /// Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
         /// Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
         /// 
-        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
+        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1). 
         /// description:.
         /// - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
         /// - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
@@ -80,7 +80,7 @@ namespace TencentCloud.Teo.V20220901
         /// Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
         /// Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
         /// 
-        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
+        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1). 
         /// description:.
         /// - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
         /// - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
@@ -95,7 +95,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a specific policy template. 
+        /// This API is used to bind/unbind a domain name to/from a specific policy template.
         /// </summary>
         /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
         /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
@@ -105,7 +105,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a specific policy template. 
+        /// This API is used to bind/unbind a domain name to/from a specific policy template.
         /// </summary>
         /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
         /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
@@ -182,7 +182,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
-        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.comom/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="CheckFreeCertificateVerificationRequest"/></param>
         /// <returns><see cref="CheckFreeCertificateVerificationResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
-        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.comom/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="CheckFreeCertificateVerificationRequest"/></param>
         /// <returns><see cref="CheckFreeCertificateVerificationResponse"/></returns>
@@ -441,6 +441,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to create a KV namespace in the specified site.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
+        public Task<CreateEdgeKVNamespaceResponse> CreateEdgeKVNamespace(CreateEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeKVNamespaceResponse>(req, "CreateEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// This API is used to create a KV namespace in the specified site.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
+        public CreateEdgeKVNamespaceResponse CreateEdgeKVNamespaceSync(CreateEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeKVNamespaceResponse>(req, "CreateEdgeKVNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create and deploy an edge function to EdgeOne edge nodes.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRequest"/></param>
@@ -462,7 +483,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a trigger rule for an edge function.
+        /// This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -472,7 +493,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a trigger rule for an edge function.
+        /// This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -485,7 +506,7 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
         /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
-        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
+        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
@@ -497,7 +518,7 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
         /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
-        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
+        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
@@ -766,15 +787,14 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a real-time log delivery task.
-        /// The following restrictions apply:
+        /// This API is used to create a real-time log delivery task. The following limits apply.
+        /// -When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), L4 proxy logs, or edge function logs, an entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:.
+        /// -A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address;.
+        /// -A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible Cloud Object Storage;.
+        /// -When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the same combination of data delivery type (LogType) and data delivery Area.
+        /// -When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only the data delivery type (LogType) as site acceleration log (domain). Under the combination of the same site (ZoneId) and data delivery area (Area), you can only add one real-time log delivery task for EdgeOne log analysis.
         /// 
-        /// - When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
-        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
-        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
-        /// - When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
-        /// 
-        /// Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
+        /// This API is used to query the real-time log delivery task list based on the entity to check whether the entity has been added to another real-time log delivery task. It is advisable to use the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.comom/document/product/1552/104110?from_cn_redirect=1) API first.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -784,15 +804,14 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a real-time log delivery task.
-        /// The following restrictions apply:
+        /// This API is used to create a real-time log delivery task. The following limits apply.
+        /// -When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), L4 proxy logs, or edge function logs, an entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:.
+        /// -A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address;.
+        /// -A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible Cloud Object Storage;.
+        /// -When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the same combination of data delivery type (LogType) and data delivery Area.
+        /// -When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only the data delivery type (LogType) as site acceleration log (domain). Under the combination of the same site (ZoneId) and data delivery area (Area), you can only add one real-time log delivery task for EdgeOne log analysis.
         /// 
-        /// - When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
-        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
-        ///     - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
-        /// - When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
-        /// 
-        /// Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
+        /// This API is used to query the real-time log delivery task list based on the entity to check whether the entity has been added to another real-time log delivery task. It is advisable to use the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.comom/document/product/1552/104110?from_cn_redirect=1) API first.
         /// </summary>
         /// <param name="req"><see cref="CreateRealtimeLogDeliveryTaskRequest"/></param>
         /// <returns><see cref="CreateRealtimeLogDeliveryTaskResponse"/></returns>
@@ -1141,6 +1160,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteDnsRecordsResponse DeleteDnsRecordsSync(DeleteDnsRecordsRequest req)
         {
             return InternalRequestAsync<DeleteDnsRecordsResponse>(req, "DeleteDnsRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete specified KV namespace. Once deleted, all keys in namespace will be cleared and cannot be recovered. If the namespace is being referred by edge function, you need to unbind relationship before it can only be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
+        public Task<DeleteEdgeKVNamespaceResponse> DeleteEdgeKVNamespace(DeleteEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<DeleteEdgeKVNamespaceResponse>(req, "DeleteEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// This API is used to delete specified KV namespace. Once deleted, all keys in namespace will be cleared and cannot be recovered. If the namespace is being referred by edge function, you need to unbind relationship before it can only be deleted.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
+        public DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespaceSync(DeleteEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<DeleteEdgeKVNamespaceResponse>(req, "DeleteEdgeKVNamespace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1945,6 +1985,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the KV namespace list of a specified site, supporting pagination, sorting and conditional filtering. It returns the basic info, capacity utilization and reference relationship of namespaces. If data not found, return an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
+        public Task<DescribeEdgeKVNamespacesResponse> DescribeEdgeKVNamespaces(DescribeEdgeKVNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeKVNamespacesResponse>(req, "DescribeEdgeKVNamespaces");
+        }
+
+        /// <summary>
+        /// This API is used to query the KV namespace list of a specified site, supporting pagination, sorting and conditional filtering. It returns the basic info, capacity utilization and reference relationship of namespaces. If data not found, return an empty array.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
+        public DescribeEdgeKVNamespacesResponse DescribeEdgeKVNamespacesSync(DescribeEdgeKVNamespacesRequest req)
+        {
+            return InternalRequestAsync<DescribeEdgeKVNamespacesResponse>(req, "DescribeEdgeKVNamespaces")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
@@ -1962,6 +2023,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeEnvironmentsResponse DescribeEnvironmentsSync(DescribeEnvironmentsRequest req)
         {
             return InternalRequestAsync<DescribeEnvironmentsResponse>(req, "DescribeEnvironments")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as bound component types, variable names, and configuration parameters. Currently supported bound component types include KV namespace (kv_namespace).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
+        public Task<DescribeFunctionComponentBindingsResponse> DescribeFunctionComponentBindings(DescribeFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionComponentBindingsResponse>(req, "DescribeFunctionComponentBindings");
+        }
+
+        /// <summary>
+        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as bound component types, variable names, and configuration parameters. Currently supported bound component types include KV namespace (kv_namespace).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
+        public DescribeFunctionComponentBindingsResponse DescribeFunctionComponentBindingsSync(DescribeFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<DescribeFunctionComponentBindingsResponse>(req, "DescribeFunctionComponentBindings")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2474,6 +2556,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the origin speed limit. This feature is in closed beta testing.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
+        public Task<DescribePrefetchOriginLimitResponse> DescribePrefetchOriginLimit(DescribePrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<DescribePrefetchOriginLimitResponse>(req, "DescribePrefetchOriginLimit");
+        }
+
+        /// <summary>
+        /// This API is used to query the origin speed limit. This feature is in closed beta testing.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
+        public DescribePrefetchOriginLimitResponse DescribePrefetchOriginLimitSync(DescribePrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<DescribePrefetchOriginLimitResponse>(req, "DescribePrefetchOriginLimit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
@@ -2776,7 +2879,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of L4 traffic data recorded over time.
+        /// Query the shared CNAME list, support fuzzy search, paginate, and sort.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
+        /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
+        public Task<DescribeSharedCNAMEResponse> DescribeSharedCNAME(DescribeSharedCNAMERequest req)
+        {
+            return InternalRequestAsync<DescribeSharedCNAMEResponse>(req, "DescribeSharedCNAME");
+        }
+
+        /// <summary>
+        /// Query the shared CNAME list, support fuzzy search, paginate, and sort.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
+        /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
+        public DescribeSharedCNAMEResponse DescribeSharedCNAMESync(DescribeSharedCNAMERequest req)
+        {
+            return InternalRequestAsync<DescribeSharedCNAMEResponse>(req, "DescribeSharedCNAME")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// <p>This API is used to query the time series Data list of Layer 4.</p>.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
         /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
@@ -2786,7 +2910,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of L4 traffic data recorded over time.
+        /// <p>This API is used to query the time series Data list of Layer 4.</p>.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
         /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
@@ -2845,7 +2969,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data for layer-7 domain services' origin-pull data.
+        /// This API is used to query time series data of origin-pull for L7 domains. 
+        /// Group aggregation can be performed by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed guide and limits, see [How to Use API to Implement Grouping Aggregation in a Single Call](https://www.tencentcloud.com/document/product/1145/77047?lang=en&pg=).
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
@@ -2855,7 +2980,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data for layer-7 domain services' origin-pull data.
+        /// This API is used to query time series data of origin-pull for L7 domains. 
+        /// Group aggregation can be performed by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed guide and limits, see [How to Use API to Implement Grouping Aggregation in a Single Call](https://www.tencentcloud.com/document/product/1145/77047?lang=en&pg=).
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
@@ -3117,11 +3243,95 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
+        /// This API is used to delete one or more key-value pair data in the specified namespace, with batch deletion supported. Data cannot be recovered after deletion.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
+        /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
+        public Task<EdgeKVDeleteResponse> EdgeKVDelete(EdgeKVDeleteRequest req)
+        {
+            return InternalRequestAsync<EdgeKVDeleteResponse>(req, "EdgeKVDelete");
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more key-value pair data in the specified namespace, with batch deletion supported. Data cannot be recovered after deletion.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
+        /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
+        public EdgeKVDeleteResponse EdgeKVDeleteSync(EdgeKVDeleteRequest req)
+        {
+            return InternalRequestAsync<EdgeKVDeleteResponse>(req, "EdgeKVDelete")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch read key values from a specified namespace, supporting a single query of up to 20 keys.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
+        /// <returns><see cref="EdgeKVGetResponse"/></returns>
+        public Task<EdgeKVGetResponse> EdgeKVGet(EdgeKVGetRequest req)
+        {
+            return InternalRequestAsync<EdgeKVGetResponse>(req, "EdgeKVGet");
+        }
+
+        /// <summary>
+        /// This API is used to batch read key values from a specified namespace, supporting a single query of up to 20 keys.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
+        /// <returns><see cref="EdgeKVGetResponse"/></returns>
+        public EdgeKVGetResponse EdgeKVGetSync(EdgeKVGetRequest req)
+        {
+            return InternalRequestAsync<EdgeKVGetResponse>(req, "EdgeKVGet")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to list all keys in the specified namespace with prefix filtering support. It implements cursor traversal through Cursor and returns the next cursor to proceed with querying. Suitable for traversal of all keys in the namespace.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVListRequest"/></param>
+        /// <returns><see cref="EdgeKVListResponse"/></returns>
+        public Task<EdgeKVListResponse> EdgeKVList(EdgeKVListRequest req)
+        {
+            return InternalRequestAsync<EdgeKVListResponse>(req, "EdgeKVList");
+        }
+
+        /// <summary>
+        /// This API is used to list all keys in the specified namespace with prefix filtering support. It implements cursor traversal through Cursor and returns the next cursor to proceed with querying. Suitable for traversal of all keys in the namespace.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVListRequest"/></param>
+        /// <returns><see cref="EdgeKVListResponse"/></returns>
+        public EdgeKVListResponse EdgeKVListSync(EdgeKVListRequest req)
+        {
+            return InternalRequestAsync<EdgeKVListResponse>(req, "EdgeKVList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to write key-value pair data to a specified namespace and supports setting expiration time. If the key already exists, it overwrites the original value. If Not Exist, it creates a new key-value pair.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
+        /// <returns><see cref="EdgeKVPutResponse"/></returns>
+        public Task<EdgeKVPutResponse> EdgeKVPut(EdgeKVPutRequest req)
+        {
+            return InternalRequestAsync<EdgeKVPutResponse>(req, "EdgeKVPut");
+        }
+
+        /// <summary>
+        /// This API is used to write key-value pair data to a specified namespace and supports setting expiration time. If the key already exists, it overwrites the original value. If Not Exist, it creates a new key-value pair.
+        /// </summary>
+        /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
+        /// <returns><see cref="EdgeKVPutResponse"/></returns>
+        public EdgeKVPutResponse EdgeKVPutSync(EdgeKVPutRequest req)
+        {
+            return InternalRequestAsync<EdgeKVPutResponse>(req, "EdgeKVPut")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin-pull IP ranges for L7 acceleration domains/L4 proxy instances. The maximum quantity of L7 acceleration domains supported in a single submission is 200, and the maximum quantity of L4 proxy instances is 100. It supports composite submission of L7 acceleration domains/L4 proxy instances, with a maximum total number of instances of 200. To enable exceeding 200 resources, you can first enable the maximum allowed number via specified resources, and enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API. When enabling simultaneously, allowlisted accounts support selecting other origin-pull IP range versions, such as simplified edition, to achieve origin-pull effect with fewer IP ranges.
         /// 
-        /// Create and bind policy Query instance Reset instance access password.
-        /// -Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
-        /// -The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
+        /// Note:
+        /// -Calling this API is deemed as agreement to the special agreement for origin protection enablement (https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
+        /// -The origin IP range may change irregularly. EdgeOne will trigger notifications via Message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the origin IP range change notification, please ensure you have selected the edge security acceleration platform EO product services relevant message notification and configured the correct message recipients in the Tencent Cloud Message Center Console (https://console.cloud.tencent.com/message). For the setting method, refer to Message Subscription Management (https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -3131,11 +3341,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
+        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin-pull IP ranges for L7 acceleration domains/L4 proxy instances. The maximum quantity of L7 acceleration domains supported in a single submission is 200, and the maximum quantity of L4 proxy instances is 100. It supports composite submission of L7 acceleration domains/L4 proxy instances, with a maximum total number of instances of 200. To enable exceeding 200 resources, you can first enable the maximum allowed number via specified resources, and enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API. When enabling simultaneously, allowlisted accounts support selecting other origin-pull IP range versions, such as simplified edition, to achieve origin-pull effect with fewer IP ranges.
         /// 
-        /// Create and bind policy Query instance Reset instance access password.
-        /// -Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
-        /// -The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
+        /// Note:
+        /// -Calling this API is deemed as agreement to the special agreement for origin protection enablement (https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
+        /// -The origin IP range may change irregularly. EdgeOne will trigger notifications via Message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the origin IP range change notification, please ensure you have selected the edge security acceleration platform EO product services relevant message notification and configured the correct message recipients in the Tencent Cloud Message Center Console (https://console.cloud.tencent.com/message). For the setting method, refer to Message Subscription Management (https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -3146,7 +3356,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to export site configuration based on desired configuration items. The exported configuration is used for import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>
@@ -3156,7 +3366,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to export site configuration based on desired configuration items. The exported configuration is used for import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>
@@ -3536,6 +3746,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify the attribute information of a specified KV namespace. Currently supported is namespace description modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
+        public Task<ModifyEdgeKVNamespaceResponse> ModifyEdgeKVNamespace(ModifyEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<ModifyEdgeKVNamespaceResponse>(req, "ModifyEdgeKVNamespace");
+        }
+
+        /// <summary>
+        /// This API is used to modify the attribute information of a specified KV namespace. Currently supported is namespace description modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
+        public ModifyEdgeKVNamespaceResponse ModifyEdgeKVNamespaceSync(ModifyEdgeKVNamespaceRequest req)
+        {
+            return InternalRequestAsync<ModifyEdgeKVNamespaceResponse>(req, "ModifyEdgeKVNamespace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRequest"/></param>
@@ -3557,7 +3788,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+        /// This API is used to modify the binding relationship between edge functions and components, supporting four operation modes: bind, bind-override, unbind, and rebind. By specifying the operation type and component list, you can manage the component binding of functions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
+        public Task<ModifyFunctionComponentBindingsResponse> ModifyFunctionComponentBindings(ModifyFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionComponentBindingsResponse>(req, "ModifyFunctionComponentBindings");
+        }
+
+        /// <summary>
+        /// This API is used to modify the binding relationship between edge functions and components, supporting four operation modes: bind, bind-override, unbind, and rebind. By specifying the operation type and component list, you can manage the component binding of functions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
+        /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
+        public ModifyFunctionComponentBindingsResponse ModifyFunctionComponentBindingsSync(ModifyFunctionComponentBindingsRequest req)
+        {
+            return InternalRequestAsync<ModifyFunctionComponentBindingsResponse>(req, "ModifyFunctionComponentBindings")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
@@ -3567,7 +3819,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
@@ -3874,7 +4126,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
+        /// This API is used to enable or disable specific origin IP ranges for L7 acceleration domains or L4 proxy instances. The maximum quantity for single submission is 200 L7 acceleration domains or 100 L4 proxy instances, with mixed submissions supported up to a total of 200 instances. If changes are needed for submissions exceeding 200 instances, please submit in batches via this interface. Meanwhile, allowlisted customers can switch to other available origin protection IP range versions such as the simplified edition, which can reduce origin IP ranges.
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
         /// <returns><see cref="ModifyOriginACLResponse"/></returns>
@@ -3884,7 +4136,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
+        /// This API is used to enable or disable specific origin IP ranges for L7 acceleration domains or L4 proxy instances. The maximum quantity for single submission is 200 L7 acceleration domains or 100 L4 proxy instances, with mixed submissions supported up to a total of 200 instances. If changes are needed for submissions exceeding 200 instances, please submit in batches via this interface. Meanwhile, allowlisted customers can switch to other available origin protection IP range versions such as the simplified edition, which can reduce origin IP ranges.
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
         /// <returns><see cref="ModifyOriginACLResponse"/></returns>
@@ -3933,6 +4185,29 @@ namespace TencentCloud.Teo.V20220901
         public ModifyPlanResponse ModifyPlanSync(ModifyPlanRequest req)
         {
             return InternalRequestAsync<ModifyPlanResponse>(req, "ModifyPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to configure the origin speed limit. This feature is in beta test.
+        /// This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
+        public Task<ModifyPrefetchOriginLimitResponse> ModifyPrefetchOriginLimit(ModifyPrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyPrefetchOriginLimitResponse>(req, "ModifyPrefetchOriginLimit");
+        }
+
+        /// <summary>
+        /// This API is used to configure the origin speed limit. This feature is in beta test.
+        /// This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
+        /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
+        public ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimitSync(ModifyPrefetchOriginLimitRequest req)
+        {
+            return InternalRequestAsync<ModifyPrefetchOriginLimitResponse>(req, "ModifyPrefetchOriginLimit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4107,6 +4382,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify a shared CNAME. Currently only support modifying the description of a shared CNAME and setting the associated IP SSL domain name of a shared CNAME with IP SSL type. The shared CNAME itself cannot be modified after creation. This feature is in beta test.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
+        /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
+        public Task<ModifySharedCNAMEResponse> ModifySharedCNAME(ModifySharedCNAMERequest req)
+        {
+            return InternalRequestAsync<ModifySharedCNAMEResponse>(req, "ModifySharedCNAME");
+        }
+
+        /// <summary>
+        /// This API is used to modify a shared CNAME. Currently only support modifying the description of a shared CNAME and setting the associated IP SSL domain name of a shared CNAME with IP SSL type. The shared CNAME itself cannot be modified after creation. This feature is in beta test.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
+        /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
+        public ModifySharedCNAMEResponse ModifySharedCNAMESync(ModifySharedCNAMERequest req)
+        {
+            return InternalRequestAsync<ModifySharedCNAMEResponse>(req, "ModifySharedCNAME")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the security policy configuration template.
         /// </summary>
         /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
@@ -4187,6 +4483,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneStatusResponse ModifyZoneStatusSync(ModifyZoneStatusRequest req)
         {
             return InternalRequestAsync<ModifyZoneStatusResponse>(req, "ModifyZoneStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the working mode of configuration modules under a site. Configuration modules can enable version management mode or immediate effect mode by configuration group dimension. For details, refer to version management (https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyZoneWorkModeRequest"/></param>
+        /// <returns><see cref="ModifyZoneWorkModeResponse"/></returns>
+        public Task<ModifyZoneWorkModeResponse> ModifyZoneWorkMode(ModifyZoneWorkModeRequest req)
+        {
+            return InternalRequestAsync<ModifyZoneWorkModeResponse>(req, "ModifyZoneWorkMode");
+        }
+
+        /// <summary>
+        /// This API is used to modify the working mode of configuration modules under a site. Configuration modules can enable version management mode or immediate effect mode by configuration group dimension. For details, refer to version management (https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyZoneWorkModeRequest"/></param>
+        /// <returns><see cref="ModifyZoneWorkModeResponse"/></returns>
+        public ModifyZoneWorkModeResponse ModifyZoneWorkModeSync(ModifyZoneWorkModeRequest req)
+        {
+            return InternalRequestAsync<ModifyZoneWorkModeResponse>(req, "ModifyZoneWorkMode")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

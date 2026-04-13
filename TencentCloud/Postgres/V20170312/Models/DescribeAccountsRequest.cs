@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-6fego161
+        /// Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page. Default value: 10. Value range: 1–100.
+        /// Pagination return. maximum return per page. default 20. value range 1-100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -43,13 +43,15 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+        /// Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+        /// Default value: createTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+        /// Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+        /// Default value: desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

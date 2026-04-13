@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Validity period of a URL, which is 12 hours by default.
+        /// Validity time of the connection. value range: [0,36]. default value: 12 hours.
         /// </summary>
         [JsonProperty("URLExpireTime")]
         public ulong? URLExpireTime{ get; set; }

@@ -25,60 +25,64 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+        /// <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+        /// <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Storage capacity size in GB.
+        /// <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
 
         /// <summary>
-        /// Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+        /// <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+        /// <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+        /// <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
 
         /// <summary>
-        /// Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+        /// <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Instance type. Default value: `primary`. Valid values:
-        /// `primary` (dual-server high-availability, one-primary-one-standby)
-        /// `readonly` (read-only instance)
+        /// <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+        /// <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
+
+        /// <summary>
+        /// <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
 
 
         /// <summary>
@@ -95,6 +99,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

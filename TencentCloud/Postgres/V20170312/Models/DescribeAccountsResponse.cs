@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Detailed account list information.
+        /// Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api.
         /// </summary>
         [JsonProperty("Details")]
         public AccountInfo[] Details{ get; set; }

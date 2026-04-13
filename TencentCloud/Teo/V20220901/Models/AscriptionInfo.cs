@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Host record.
+        /// 
         /// </summary>
         [JsonProperty("Subdomain")]
         public string Subdomain{ get; set; }

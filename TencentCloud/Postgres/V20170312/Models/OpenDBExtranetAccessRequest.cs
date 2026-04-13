@@ -25,13 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-hez4fh0v
+        /// Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to enable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+        /// Specifies whether to enable public network Ipv6. valid values: 1 (yes), 0 (no).
+        /// Default value: 0
         /// </summary>
         [JsonProperty("IsIpv6")]
         public long? IsIpv6{ get; set; }

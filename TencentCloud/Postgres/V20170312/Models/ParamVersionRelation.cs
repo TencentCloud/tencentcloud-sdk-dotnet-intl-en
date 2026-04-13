@@ -25,43 +25,37 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Parameter name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The kernel version that corresponds to the parameter information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter information belonging to kernel version.
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
-        /// Default parameter value under the kernel version and specification of the instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Default value of the parameter for this version and specification.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Unit of the parameter value. If the parameter has no unit, this field will return null.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter value unit. returns null if the parameter has no units.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// The maximum value of the `integer` or `real` parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Numerical type (integer, real) parameter specifies the upper bound.
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
 
         /// <summary>
-        /// The minimum value of the `integer` or `real` parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the numerical type (integer, real) parameter and its lower bound.
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }

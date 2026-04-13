@@ -37,28 +37,49 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Account remarks
+        /// Specifies the account remark.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+        /// Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Account creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Account last modified time
+        /// Last update time of the account.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// Specifies the last modified time of the account.
+        /// 
+        /// This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+        /// Indicates that this field is updated only when the password is modified via the cloud API or the console.
+        /// </summary>
+        [JsonProperty("PasswordUpdateTime")]
+        public string PasswordUpdateTime{ get; set; }
+
+        /// <summary>
+        /// Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
+        /// <summary>
+        /// Specifies whether CAM verification is enabled for the user account.
+        /// </summary>
+        [JsonProperty("OpenCam")]
+        public bool? OpenCam{ get; set; }
 
 
         /// <summary>
@@ -72,6 +93,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "OpenCam", this.OpenCam);
         }
     }
 }

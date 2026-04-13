@@ -30,6 +30,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpstreamMutualTLS")]
         public MutualTLS UpstreamMutualTLS{ get; set; }
 
+        /// <summary>
+        /// In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+        /// </summary>
+        [JsonProperty("UpstreamCertificateVerify")]
+        public OriginCertificateVerify UpstreamCertificateVerify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "UpstreamMutualTLS.", this.UpstreamMutualTLS);
+            this.SetParamObj(map, prefix + "UpstreamCertificateVerify.", this.UpstreamCertificateVerify);
         }
     }
 }

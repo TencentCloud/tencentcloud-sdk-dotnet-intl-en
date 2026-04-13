@@ -33,12 +33,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of resources to be preheated. Each element format is similar to the following:
-        /// http://www.example.com/example.txt. The parameter value is currently required.
-        /// Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+        /// List of resources to be preheated. required. each element format is as follows:.
+        /// http://www.example.com/example.txt.
+        /// Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }
+
+        /// <summary>
+        /// Preheat mode. valid values:.
+        /// <Li>Default: default mode, which preheats to the middle layer.</li>.
+        /// <Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+        /// Notes:.
+        /// Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+        /// 2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+        /// Description:.
+        /// This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
         /// <summary>
         /// Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
@@ -48,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? EncodeUrl{ get; set; }
 
         /// <summary>
-        /// HTTP header information
+        /// Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
         /// </summary>
         [JsonProperty("Headers")]
         public Header[] Headers{ get; set; }
@@ -56,15 +69,14 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Media fragment preheating control. valid values:.
         /// <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-        /// <Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-        /// 
+        /// <Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
         /// Notes:.
-        /// 1. the supported description file is M3U8, and the corresponding shard is TS.
-        /// Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-        /// Recursive resolution depth is no more than 3.
-        /// Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-        /// 
-        /// This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+        /// Supported description file is M3U8; corresponding shard is TS.
+        /// Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+        /// Specifies the recursive resolution depth is no more than 3.
+        /// Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+        /// Description:.
+        /// This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
         /// </summary>
         [JsonProperty("PrefetchMediaSegments")]
         public string PrefetchMediaSegments{ get; set; }
@@ -77,6 +89,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
             this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);

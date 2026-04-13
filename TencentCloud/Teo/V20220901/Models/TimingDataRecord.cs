@@ -31,10 +31,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TypeKey{ get; set; }
 
         /// <summary>
-        /// Detailed time series data
+        /// Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
         /// </summary>
         [JsonProperty("TypeValue")]
         public TimingTypeValue[] TypeValue{ get; set; }
+
+        /// <summary>
+        /// Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+        /// </summary>
+        [JsonProperty("FloatTypeValue")]
+        public FloatTimingTypeValue[] FloatTypeValue{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "TypeKey", this.TypeKey);
             this.SetParamArrayObj(map, prefix + "TypeValue.", this.TypeValue);
+            this.SetParamArrayObj(map, prefix + "FloatTypeValue.", this.FloatTypeValue);
         }
     }
 }

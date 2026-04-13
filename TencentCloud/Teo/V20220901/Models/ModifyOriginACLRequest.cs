@@ -36,6 +36,19 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginACLEntities")]
         public OriginACLEntity[] OriginACLEntities{ get; set; }
 
+        /// <summary>
+        /// The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+        /// Valid values are as follows:
+        /// <li>gaz: Standard global availability zone control domain;</li>
+        /// <li>mlc: Standard Chinese mainland availability zone control domain;</li>
+        /// <li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+        /// <li>plat-gaz: Simplify global availability zone control domain;</li>
+        /// <li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+        /// <li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+        /// </summary>
+        [JsonProperty("OriginACLFamily")]
+        public string OriginACLFamily{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +57,7 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "OriginACLEntities.", this.OriginACLEntities);
+            this.SetParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
         }
     }
 }

@@ -43,19 +43,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Backup method, including physical and logical.
+        /// Specifies the backup method: physical - physical backup, logical - logical backup.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Backup mode, including automatic and manual.
+        /// Backup mode: automatic - automatic backup, manual - manual backup.
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
         /// <summary>
-        /// Backup task status
+        /// Backup task status. valid values: init, running, finished, failed, canceled.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }

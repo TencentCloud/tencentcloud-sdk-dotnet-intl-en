@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
+        /// (Required) Origins in the origin group.
+        /// </summary>
+        [JsonProperty("Records")]
+        public OriginRecord[] Records{ get; set; }
+
+        /// <summary>
         /// Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
         /// </summary>
         [JsonProperty("Name")]
@@ -45,12 +51,6 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// (Required) Origins in the origin group.
-        /// </summary>
-        [JsonProperty("Records")]
-        public OriginRecord[] Records{ get; set; }
-
-        /// <summary>
         /// Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
         /// </summary>
         [JsonProperty("HostHeader")]
@@ -63,9 +63,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArrayObj(map, prefix + "Records.", this.Records);
             this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }

@@ -33,12 +33,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Type of cache purging. Values:
-        /// <li>`purge_url`: Purge by the URL</li>
-        /// <li>`purge_prefix`: Purge by the directory</li>
-        /// <li>`purge_host`: Purge by the hostname</li>
-        /// <li>`purge_all`: Purge all caches</li>
-        /// <li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+        /// Node cache clearing type, valid values:
+        /// <li>purge_url: URL refresh;</li>
+        /// <li>purge_prefix: Directory refresh.</li>
+        /// <li>purge_host: Hostname refresh;</li>
+        /// <li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+        /// <li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

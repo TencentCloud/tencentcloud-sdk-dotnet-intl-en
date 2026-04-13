@@ -90,10 +90,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string AccelerateMainland{ get; set; }
 
         /// <summary>
-        /// Security protection configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Security protection settings.
+        /// This field is deprecated.
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("DDosProtectionConfig")]
+        [System.Obsolete]
         public DDosProtectionConfig DDosProtectionConfig{ get; set; }
 
         /// <summary>

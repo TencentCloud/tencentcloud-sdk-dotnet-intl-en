@@ -26,52 +26,45 @@ namespace TencentCloud.Postgres.V20170312.Models
         
         /// <summary>
         /// Parameter ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Parameter name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-        /// For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-        /// For a `bool` parameter, the valid values include `true` and `false`; 
-        /// For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter value type: integer, real, bool, enum, mutil_enum.
+        /// When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+        /// When the parameter type is boolean, the valid values are true or false. 
+        /// When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
         /// </summary>
         [JsonProperty("ParamValueType")]
         public string ParamValueType{ get; set; }
 
         /// <summary>
-        /// Unit of the parameter value. If the parameter has no unit, this field will return null.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter value unit. returns null if the parameter has no units.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// Default value of the parameter, which is returned as a string
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Default parameter value. returns in string form.
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Current value of the parameter, which is returned as a string
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the current value in string form.
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// The maximum value of the `integer` or `real` parameter
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the numerical type (integer, real) parameter and its lower bound.
         /// </summary>
         [JsonProperty("Max")]
         public float? Max{ get; set; }
@@ -84,71 +77,61 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// The minimum value of the `integer` or `real` parameter
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Numerical type (integer, real) parameter specifies the upper bound.
         /// </summary>
         [JsonProperty("Min")]
         public float? Min{ get; set; }
 
         /// <summary>
-        /// Parameter description in Chinese
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Chinese description.
         /// </summary>
         [JsonProperty("ParamDescriptionCH")]
         public string ParamDescriptionCH{ get; set; }
 
         /// <summary>
-        /// Parameter description in English
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the english description of the parameter.
         /// </summary>
         [JsonProperty("ParamDescriptionEN")]
         public string ParamDescriptionEN{ get; set; }
 
         /// <summary>
-        /// Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
         /// </summary>
         [JsonProperty("NeedReboot")]
         public bool? NeedReboot{ get; set; }
 
         /// <summary>
-        /// Parameter category in Chinese
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter chinese category.
         /// </summary>
         [JsonProperty("ClassificationCN")]
         public string ClassificationCN{ get; set; }
 
         /// <summary>
-        /// Parameter category in English
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Parameter english category.
         /// </summary>
         [JsonProperty("ClassificationEN")]
         public string ClassificationEN{ get; set; }
 
         /// <summary>
-        /// Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies whether it is related to the specification (true for related, false for unrelated).
         /// </summary>
         [JsonProperty("SpecRelated")]
         public bool? SpecRelated{ get; set; }
 
         /// <summary>
-        /// Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
         /// </summary>
         [JsonProperty("Advanced")]
         public bool? Advanced{ get; set; }
 
         /// <summary>
-        /// The last modified time of the parameter
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the last modified time.
         /// </summary>
         [JsonProperty("LastModifyTime")]
         public string LastModifyTime{ get; set; }
 
         /// <summary>
-        /// Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
         /// </summary>
         [JsonProperty("StandbyRelated")]
         public long? StandbyRelated{ get; set; }

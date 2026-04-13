@@ -45,9 +45,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Authentication method. valid values:.
-        /// <Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-        /// <Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+        /// Authentication method. Valid values:
+        /// <li>TC-RCE: Authentication with RCE risk identification;</li>
+        /// <li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+        /// <li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
         /// </summary>
         [JsonProperty("AttesterSource")]
         public string AttesterSource{ get; set; }
@@ -75,6 +76,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("TCCaptchaOption")]
         public TCCaptchaOption TCCaptchaOption{ get; set; }
 
+        /// <summary>
+        /// Configuration message of TC-EO-CAPTCHA authentication.
+        /// <li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+        /// </summary>
+        [JsonProperty("TCEOCaptchaOption")]
+        public TCEOCaptchaOption TCEOCaptchaOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +96,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "AttesterDuration", this.AttesterDuration);
             this.SetParamObj(map, prefix + "TCRCEOption.", this.TCRCEOption);
             this.SetParamObj(map, prefix + "TCCaptchaOption.", this.TCCaptchaOption);
+            this.SetParamObj(map, prefix + "TCEOCaptchaOption.", this.TCEOCaptchaOption);
         }
     }
 }

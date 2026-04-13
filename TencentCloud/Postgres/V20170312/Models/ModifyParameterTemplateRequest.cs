@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+        /// Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

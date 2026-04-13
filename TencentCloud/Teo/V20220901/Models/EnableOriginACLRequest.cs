@@ -31,9 +31,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// L7 acceleration domain name activation in origin protection mode.
-        /// <li>`all`: enable layer-7 acceleration domain names for the site.</li>.
-        /// <Li>Specific: enable for the site's designated layer-7 acceleration domain name.</li>when no parameter is defined, the default is specific.
+        /// When first enabling origin protection for a site, configure the layer-7 acceleration domain name in specific IP range mode.
+        /// <li>ALL: Target all layer-7 acceleration domain names under the current site. When the number of domains exceeds 200, please go through first in specific mode to enable 200 domain names, and enable the remaining resource via the ModifyOriginACL API.</li>
+        /// <li>Specific: Enables layer-7 acceleration for the site's designated domain name.</li>Note: When no parameter is defined, the default is specific. For subsequent addition of layer-7 acceleration domain names or layer-4 proxy instances, configure them via the ModifyOriginACL API.
         /// </summary>
         [JsonProperty("L7EnableMode")]
         public string L7EnableMode{ get; set; }
@@ -45,9 +45,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] L7Hosts{ get; set; }
 
         /// <summary>
-        /// Specifies the origin protection mode of the l4 proxy instance.
-        /// <Li>ALL: enable for all l4 proxy instances under the site.</li>.
-        /// <Li>Specific: enable for the designated layer 4 proxy instance of the site.</li>when no parameter is defined, the default is specific.
+        /// When first enabling origin protection for a site, configure the Layer 4 Proxy Instance Configuration in specific IP range mode.
+        /// <li>ALL: Enable all L4 proxy instances under the current site. When the instance count exceeds 100, please go through specific mode to enable 100 domain names first. Enable the remaining resources via the ModifyOriginACL API.</li>
+        /// <li>specific: Enable for the designated L4 proxy instance under the site.</li>Note: When no parameter is defined, the default is specific. Configure subsequent addition of L7 acceleration domains/L4 proxy instances via the ModifyOriginACL API.
         /// </summary>
         [JsonProperty("L4EnableMode")]
         public string L4EnableMode{ get; set; }
@@ -57,6 +57,19 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("L4ProxyIds")]
         public string[] L4ProxyIds{ get; set; }
+
+        /// <summary>
+        /// The origin protection back-to-origin ACL control domain. If left empty, the standard global control domain is used by default. Available control domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+        /// Valid values are as follows:
+        /// <li>gaz: Standard global availability zone control domain;</li>
+        /// <li>mlc: Standard Chinese mainland availability zone control domain;</li>
+        /// <li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+        /// <li>plat-gaz: Simplify global availability zone control domain;</li>
+        /// <li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+        /// <li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+        /// </summary>
+        [JsonProperty("OriginACLFamily")]
+        public string OriginACLFamily{ get; set; }
 
 
         /// <summary>
@@ -69,6 +82,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "L7Hosts.", this.L7Hosts);
             this.SetParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
             this.SetParamArraySimple(map, prefix + "L4ProxyIds.", this.L4ProxyIds);
+            this.SetParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
         }
     }
 }

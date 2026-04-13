@@ -25,11 +25,12 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-        /// <li>partial: CNAME access;</li>
-        /// <li>full: NS access;</li>
-        /// <li>noDomainAccess: access with no domain name.</li>
-        /// <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+        /// Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+        /// <li>partial: CNAME access;</li>.
+        /// <li>full: NS access;</li>.
+        /// <li>noDomainAccess: access with no domain name.</li>.
+        /// <li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+        /// <li>ai: edge reasoning integration.</li>.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
