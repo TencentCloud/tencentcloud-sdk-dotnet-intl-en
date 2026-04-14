@@ -82,7 +82,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 2:Action mode;
         /// 3:Lighting mode;
         /// 4:Action+Lighting mode;
-        /// 5:Action+Lighting(High security) mode.
+        /// 5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+        /// 
         /// Example: 4
         /// </summary>
         [JsonProperty("SecurityLevel")]
@@ -177,6 +178,15 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("AllowExpiredDocument")]
         public bool? AllowExpiredDocument{ get; set; }
 
+        /// <summary>
+        /// Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+        /// BASIC: Basic version.
+        /// PLUS: PLUS version.
+        /// The default value is BASIC.
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +209,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
             this.SetParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
             this.SetParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
         }
     }
 }

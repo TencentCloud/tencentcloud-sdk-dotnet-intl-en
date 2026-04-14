@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1295";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,69 @@ namespace TencentCloud.Faceid.V20180301
         public ApplyWebVerificationBizTokenIntlResponse ApplyWebVerificationBizTokenIntlSync(ApplyWebVerificationBizTokenIntlRequest req)
         {
             return InternalRequestAsync<ApplyWebVerificationBizTokenIntlResponse>(req, "ApplyWebVerificationBizTokenIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and bank card number.
+        /// </summary>
+        /// <param name="req"><see cref="BankCard2EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard2EVerificationResponse"/></returns>
+        public Task<BankCard2EVerificationResponse> BankCard2EVerification(BankCard2EVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCard2EVerificationResponse>(req, "BankCard2EVerification");
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and bank card number.
+        /// </summary>
+        /// <param name="req"><see cref="BankCard2EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard2EVerificationResponse"/></returns>
+        public BankCard2EVerificationResponse BankCard2EVerificationSync(BankCard2EVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCard2EVerificationResponse>(req, "BankCard2EVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to verify the authenticity and consistency of the bank card number, name, ID number, and mobile number for account opening.
+        /// </summary>
+        /// <param name="req"><see cref="BankCard4EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard4EVerificationResponse"/></returns>
+        public Task<BankCard4EVerificationResponse> BankCard4EVerification(BankCard4EVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCard4EVerificationResponse>(req, "BankCard4EVerification");
+        }
+
+        /// <summary>
+        /// This API is used to verify the authenticity and consistency of the bank card number, name, ID number, and mobile number for account opening.
+        /// </summary>
+        /// <param name="req"><see cref="BankCard4EVerificationRequest"/></param>
+        /// <returns><see cref="BankCard4EVerificationResponse"/></returns>
+        public BankCard4EVerificationResponse BankCard4EVerificationSync(BankCard4EVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCard4EVerificationResponse>(req, "BankCard4EVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to verify the authenticity and consistency of the bank card number, name, and ID number of information.
+        /// </summary>
+        /// <param name="req"><see cref="BankCardVerificationRequest"/></param>
+        /// <returns><see cref="BankCardVerificationResponse"/></returns>
+        public Task<BankCardVerificationResponse> BankCardVerification(BankCardVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCardVerificationResponse>(req, "BankCardVerification");
+        }
+
+        /// <summary>
+        /// This API is used to verify the authenticity and consistency of the bank card number, name, and ID number of information.
+        /// </summary>
+        /// <param name="req"><see cref="BankCardVerificationRequest"/></param>
+        /// <returns><see cref="BankCardVerificationResponse"/></returns>
+        public BankCardVerificationResponse BankCardVerificationSync(BankCardVerificationRequest req)
+        {
+            return InternalRequestAsync<BankCardVerificationResponse>(req, "BankCardVerification")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -352,6 +415,27 @@ namespace TencentCloud.Faceid.V20180301
         public LivenessCompareResponse LivenessCompareSync(LivenessCompareRequest req)
         {
             return InternalRequestAsync<LivenessCompareResponse>(req, "LivenessCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// </summary>
+        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
+        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
+        public Task<VideoLivenessCompareResponse> VideoLivenessCompare(VideoLivenessCompareRequest req)
+        {
+            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare");
+        }
+
+        /// <summary>
+        /// This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+        /// </summary>
+        /// <param name="req"><see cref="VideoLivenessCompareRequest"/></param>
+        /// <returns><see cref="VideoLivenessCompareResponse"/></returns>
+        public VideoLivenessCompareResponse VideoLivenessCompareSync(VideoLivenessCompareRequest req)
+        {
+            return InternalRequestAsync<VideoLivenessCompareResponse>(req, "VideoLivenessCompare")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

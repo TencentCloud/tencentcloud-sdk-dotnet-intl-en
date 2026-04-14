@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+        /// Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
         /// After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
         /// Example: https://www.tencentcloud.com/products/faceid.
         /// </summary>
