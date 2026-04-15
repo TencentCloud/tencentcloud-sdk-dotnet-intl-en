@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1295";
+       private const string sdkVersion = "SDK_NET_3.0.1296";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Faceid.V20180301
         public BankCardVerificationResponse BankCardVerificationSync(BankCardVerificationRequest req)
         {
             return InternalRequestAsync<BankCardVerificationResponse>(req, "BankCardVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Bank card basic information query
+        /// </summary>
+        /// <param name="req"><see cref="CheckBankCardInformationRequest"/></param>
+        /// <returns><see cref="CheckBankCardInformationResponse"/></returns>
+        public Task<CheckBankCardInformationResponse> CheckBankCardInformation(CheckBankCardInformationRequest req)
+        {
+            return InternalRequestAsync<CheckBankCardInformationResponse>(req, "CheckBankCardInformation");
+        }
+
+        /// <summary>
+        /// Bank card basic information query
+        /// </summary>
+        /// <param name="req"><see cref="CheckBankCardInformationRequest"/></param>
+        /// <returns><see cref="CheckBankCardInformationResponse"/></returns>
+        public CheckBankCardInformationResponse CheckBankCardInformationSync(CheckBankCardInformationRequest req)
+        {
+            return InternalRequestAsync<CheckBankCardInformationResponse>(req, "CheckBankCardInformation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
