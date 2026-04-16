@@ -25,7 +25,7 @@ namespace TencentCloud.Cdz.V20221123.Models
     {
         
         /// <summary>
-        /// Unique id of the cloud dedicated zone.
+        /// Unique id of the cloud dedicated zone
         /// </summary>
         [JsonProperty("CdzId")]
         public string CdzId{ get; set; }

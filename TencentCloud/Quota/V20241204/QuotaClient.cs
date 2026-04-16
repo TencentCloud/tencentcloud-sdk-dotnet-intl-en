@@ -28,7 +28,7 @@ namespace TencentCloud.Quota.V20241204
 
        private const string endpoint = "quota.intl.tencentcloudapi.com";
        private const string version = "2024-12-04";
-       private const string sdkVersion = "SDK_NET_3.0.1224";
+       private const string sdkVersion = "SDK_NET_3.0.1297";
 
         /// <summary>
         /// Client constructor.

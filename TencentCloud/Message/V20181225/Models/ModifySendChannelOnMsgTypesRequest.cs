@@ -25,7 +25,7 @@ namespace TencentCloud.Message.V20181225.Models
     {
         
         /// <summary>
-        /// Message sending channel.
+        /// Message sending channel
         /// </summary>
         [JsonProperty("SendTypes")]
         public SendType[] SendTypes{ get; set; }

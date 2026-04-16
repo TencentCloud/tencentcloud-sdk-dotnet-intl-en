@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20201103
 
        private const string endpoint = "rce.intl.tencentcloudapi.com";
        private const string version = "2020-11-03";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1297";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// This API is used to query risk assessment results.
+        /// This API is used to query risk assessment results
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskAssessmentRequest"/></param>
         /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// This API is used to query risk assessment results.
+        /// This API is used to query risk assessment results
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskAssessmentRequest"/></param>
         /// <returns><see cref="DescribeRiskAssessmentResponse"/></returns>

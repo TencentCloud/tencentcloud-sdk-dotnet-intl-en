@@ -31,7 +31,7 @@ namespace TencentCloud.Region.V20220627.Models
         public RegionProduct[] Products{ get; set; }
 
         /// <summary>
-        /// Total number of products.
+        /// Total number of products
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

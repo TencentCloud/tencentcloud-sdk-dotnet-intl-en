@@ -28,7 +28,7 @@ namespace TencentCloud.Message.V20181225
 
        private const string endpoint = "message.intl.tencentcloudapi.com";
        private const string version = "2018-12-25";
-       private const string sdkVersion = "SDK_NET_3.0.1221";
+       private const string sdkVersion = "SDK_NET_3.0.1297";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Message.V20181225
         }
 
         /// <summary>
-        /// This API is used to batch modify delivery methods.
+        /// This API is used to batch modify delivery methods
         /// </summary>
         /// <param name="req"><see cref="ModifySendChannelOnMsgTypesRequest"/></param>
         /// <returns><see cref="ModifySendChannelOnMsgTypesResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Message.V20181225
         }
 
         /// <summary>
-        /// This API is used to batch modify delivery methods.
+        /// This API is used to batch modify delivery methods
         /// </summary>
         /// <param name="req"><see cref="ModifySendChannelOnMsgTypesRequest"/></param>
         /// <returns><see cref="ModifySendChannelOnMsgTypesResponse"/></returns>

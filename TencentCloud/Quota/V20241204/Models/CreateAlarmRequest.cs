@@ -25,7 +25,7 @@ namespace TencentCloud.Quota.V20241204.Models
     {
         
         /// <summary>
-        /// Alarm rule name. specifies the name of the Alarm rule.
+        /// Alarm rule name. specifies the name of the Alarm rule
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
