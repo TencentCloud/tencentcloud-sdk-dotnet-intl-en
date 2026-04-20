@@ -66,6 +66,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("AdBreaks")]
         public AdBreakInfo[] AdBreaks{ get; set; }
 
+        /// <summary>
+        /// VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+        /// </summary>
+        [JsonProperty("VodAcquisitionMethod")]
+        public string VodAcquisitionMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
             this.SetParamObj(map, prefix + "PlaybackConf.", this.PlaybackConf);
             this.SetParamArrayObj(map, prefix + "AdBreaks.", this.AdBreaks);
+            this.SetParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
         }
     }
 }

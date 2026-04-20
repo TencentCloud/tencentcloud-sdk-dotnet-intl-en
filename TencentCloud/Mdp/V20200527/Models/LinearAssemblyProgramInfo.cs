@@ -90,6 +90,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("SourceLocationName")]
         public string SourceLocationName{ get; set; }
 
+        /// <summary>
+        /// VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+        /// </summary>
+        [JsonProperty("VodAcquisitionMethod")]
+        public string VodAcquisitionMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "SourceLocationName", this.SourceLocationName);
+            this.SetParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
         }
     }
 }
