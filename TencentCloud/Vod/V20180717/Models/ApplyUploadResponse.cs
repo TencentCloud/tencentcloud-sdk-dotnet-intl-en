@@ -25,39 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+        /// Bucket for uploading the API URL bucket_name.
         /// </summary>
         [JsonProperty("StorageBucket")]
         public string StorageBucket{ get; set; }
 
         /// <summary>
-        /// Storage region, which is used as the `Region` in the `Host` of the upload API.
+        /// Storage campus for uploading the Host Region of the port.
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+        /// VOD session for confirmation of API parameters VodSessionKey.
         /// </summary>
         [JsonProperty("VodSessionKey")]
         public string VodSessionKey{ get; set; }
 
         /// <summary>
-        /// Media storage path, which is used as the `Key` of the stored media of the upload API.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Media storage path for the object key (Key) used by the upload API to store media.
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }
 
         /// <summary>
-        /// Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cover storage path for uploading the object Key of the cover via API.
         /// </summary>
         [JsonProperty("CoverStoragePath")]
         public string CoverStoragePath{ get; set; }
 
         /// <summary>
-        /// Temporary credential, which is used for authentication of the upload API.
+        /// Temporary credentials for uploading API permission verification.
         /// </summary>
         [JsonProperty("TempCertificate")]
         public TempCertificate TempCertificate{ get; set; }

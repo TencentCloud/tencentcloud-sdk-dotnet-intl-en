@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.intl.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1300";
 
         /// <summary>
         /// Client constructor.
@@ -1900,6 +1900,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetailSync(DescribeRollbackTaskDetailRequest req)
         {
             return InternalRequestAsync<DescribeRollbackTaskDetailResponse>(req, "DescribeRollbackTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the SSL enabling status. If the SSL is enabled, the certificate download link will be returned synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public Task<DescribeSSLStatusResponse> DescribeSSLStatus(DescribeSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the SSL enabling status. If the SSL is enabled, the certificate download link will be returned synchronously.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeSSLStatusResponse"/></returns>
+        public DescribeSSLStatusResponse DescribeSSLStatusSync(DescribeSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeSSLStatusResponse>(req, "DescribeSSLStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

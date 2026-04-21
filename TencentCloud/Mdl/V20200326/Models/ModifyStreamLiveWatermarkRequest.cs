@@ -49,7 +49,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public CreateTextSettings TextSettings{ get; set; }
 
         /// <summary>
-        /// AB watermark configuration.
+        /// 
         /// </summary>
         [JsonProperty("AbWatermarkSettings")]
         public AbWatermarkSettingsReq AbWatermarkSettings{ get; set; }
