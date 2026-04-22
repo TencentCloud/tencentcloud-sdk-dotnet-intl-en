@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1294</VersionPrefix>
+    <VersionPrefix>3.0.1301</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -231,6 +231,8 @@
     <Compile Include="V20170312\Models\ModifyBaseBackupExpireTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceChargeTypeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceChargeTypeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceDeletionProtectionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceDeletionProtectionResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceDeploymentResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceHAConfigRequest.cs" />

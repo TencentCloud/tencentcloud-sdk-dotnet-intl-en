@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1301";
 
         /// <summary>
         /// Client constructor.
@@ -1740,6 +1740,27 @@ namespace TencentCloud.Postgres.V20170312
         public ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeTypeSync(ModifyDBInstanceChargeTypeRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceChargeTypeResponse>(req, "ModifyDBInstanceChargeType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This interface (DeletionProtection) is used to enable or disable instance destruction protection.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceDeletionProtectionResponse"/></returns>
+        public Task<ModifyDBInstanceDeletionProtectionResponse> ModifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceDeletionProtectionResponse>(req, "ModifyDBInstanceDeletionProtection");
+        }
+
+        /// <summary>
+        /// This interface (DeletionProtection) is used to enable or disable instance destruction protection.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceDeletionProtectionRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceDeletionProtectionResponse"/></returns>
+        public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtectionSync(ModifyDBInstanceDeletionProtectionRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceDeletionProtectionResponse>(req, "ModifyDBInstanceDeletionProtection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

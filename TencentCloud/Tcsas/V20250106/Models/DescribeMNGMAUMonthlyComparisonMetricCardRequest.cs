@@ -55,7 +55,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Mini program appid, required. When provided, the query is performed based on the mini program.
+        /// Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }

@@ -137,6 +137,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("AllowExpiredDocument")]
         public bool? AllowExpiredDocument{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SkipResultPage")]
+        public bool? SkipResultPage{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CardOcrDisplayFields")]
+        public string[] CardOcrDisplayFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +167,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
             this.SetParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
+            this.SetParamSimple(map, prefix + "SkipResultPage", this.SkipResultPage);
+            this.SetParamArraySimple(map, prefix + "CardOcrDisplayFields.", this.CardOcrDisplayFields);
         }
     }
 }
