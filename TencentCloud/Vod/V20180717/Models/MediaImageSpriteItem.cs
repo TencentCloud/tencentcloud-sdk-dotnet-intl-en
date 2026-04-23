@@ -25,36 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Subimage height of image sprite.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Height of the sprite sheet.</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Subimage width of image sprite.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Width of the sprite sheet.</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Total number of subimages in each image sprite.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>The number of small images in each sprite sheet.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Address of each image sprite.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>The domain names or IP addresses of each sprite sheet.</p>
         /// </summary>
         [JsonProperty("ImageUrlSet")]
         public string[] ImageUrlSet{ get; set; }

@@ -110,10 +110,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// Copyright information.
+        /// 
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
+
+        /// <summary>
+        /// Digital watermark template id.
+        /// </summary>
+        [JsonProperty("BlindWatermarkDefinition")]
+        public long? BlindWatermarkDefinition{ get; set; }
 
 
         /// <summary>
@@ -134,6 +140,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+            this.SetParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
         }
     }
 }

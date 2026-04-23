@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Quota.V20241204.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaAudioStreamItem : AbstractModel
+    public class Sort : AbstractModel
     {
         
         /// <summary>
-        /// <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+        /// Ascending Descending Order
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public long? Bitrate{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Sampling rate of the audio stream, unit: hz.</p>
+        /// Field
         /// </summary>
-        [JsonProperty("SamplingRate")]
-        public long? SamplingRate{ get; set; }
-
-        /// <summary>
-        /// <p>Audio stream encoding format, such as aac.</p>
-        /// </summary>
-        [JsonProperty("Codec")]
-        public string Codec{ get; set; }
+        [JsonProperty("Field")]
+        public string Field{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
-            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
-            this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Field", this.Field);
         }
     }
 }

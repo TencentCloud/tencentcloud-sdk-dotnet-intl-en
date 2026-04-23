@@ -25,19 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Live recording stream ID.
+        /// <p>Live streaming Recording domain name</p>
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>Live streaming Recording Path</p>
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// <p>Live recording stream ID.</p>
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
         /// </summary>
         [JsonProperty("RecordStartTime")]
         public string RecordStartTime{ get; set; }
 
         /// <summary>
-        /// Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("RecordEndTime")]
         public string RecordEndTime{ get; set; }
@@ -48,6 +60,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
             this.SetParamSimple(map, prefix + "RecordStartTime", this.RecordStartTime);
             this.SetParamSimple(map, prefix + "RecordEndTime", this.RecordEndTime);

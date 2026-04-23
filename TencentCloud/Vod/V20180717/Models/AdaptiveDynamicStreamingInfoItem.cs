@@ -25,60 +25,76 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming specification.
+        /// <p>Convert to adaptive bitrate streaming specification.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// The packaging format. Valid values:
-        /// <li>`HLS`</li>
-        /// <li>`DASH`</li>
+        /// <p>Packaging format. Value ranges from:</p><li>HLS;</li><li>DASH.</li>
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }
 
         /// <summary>
-        /// Encryption type.
+        /// <p>Encryption type.</p>
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// Playback address.
+        /// <p>Playback address.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// File size (bytes)
-        /// <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
-        /// <li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
-        /// <li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+        /// <p>Media file size, unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li><li>When the media file is DASH, the size is the sum of mpd and fragment file sizes.</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated through pre-processing before 2022-01-10T16:00:00Z.</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Digital watermark type. Optional values:
-        /// <li>Trace means traceability watermark processing; </li>
-        /// <li>CopyRight means copyright watermark processing; </li>
-        /// <li>None means no digital watermark processing. </li>
+        /// <p>Watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no watermark processing.</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// The information of the streams.
+        /// <p>Substream info list.</p>
         /// </summary>
         [JsonProperty("SubStreamSet")]
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
 
         /// <summary>
-        /// Copyright Information.
+        /// <p>Copyright information.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
+
+        /// <summary>
+        /// <p>Digital watermark template id.</p>
+        /// </summary>
+        [JsonProperty("BlindWatermarkDefinition")]
+        public long? BlindWatermarkDefinition{ get; set; }
+
+        /// <summary>
+        /// <p>Subtitle information list.</p>
+        /// </summary>
+        [JsonProperty("SubtitleSet")]
+        public MediaSubtitleItem[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// <p>Unique identifier for default subtitle.</p>
+        /// </summary>
+        [JsonProperty("DefaultSubtitleId")]
+        public string DefaultSubtitleId{ get; set; }
+
+        /// <summary>
+        /// <p>DRM encryption method.</p>
+        /// </summary>
+        [JsonProperty("DrmEncryptType")]
+        public string DrmEncryptType{ get; set; }
 
 
         /// <summary>
@@ -94,6 +110,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
             this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+            this.SetParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
+            this.SetParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
+            this.SetParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
+            this.SetParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
         }
     }
 }

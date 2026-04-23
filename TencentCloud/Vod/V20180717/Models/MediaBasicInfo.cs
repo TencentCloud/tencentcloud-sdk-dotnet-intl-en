@@ -115,6 +115,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageRegion{ get; set; }
 
         /// <summary>
+        /// Media storage path.
+        /// </summary>
+        [JsonProperty("StoragePath")]
+        public string StoragePath{ get; set; }
+
+        /// <summary>
         /// Tag information of media file.
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -171,6 +177,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
             this.SetParamObj(map, prefix + "SourceInfo.", this.SourceInfo);
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+            this.SetParamSimple(map, prefix + "StoragePath", this.StoragePath);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "Category", this.Category);

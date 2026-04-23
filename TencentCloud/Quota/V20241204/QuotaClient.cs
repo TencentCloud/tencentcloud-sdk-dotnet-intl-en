@@ -28,7 +28,7 @@ namespace TencentCloud.Quota.V20241204
 
        private const string endpoint = "quota.intl.tencentcloudapi.com";
        private const string version = "2024-12-04";
-       private const string sdkVersion = "SDK_NET_3.0.1297";
+       private const string sdkVersion = "SDK_NET_3.0.1302";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Quota.V20241204
         }
 
         /// <summary>
+        /// user quota list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggregateUserQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAggregateUserQuotasResponse"/></returns>
+        public Task<DescribeAggregateUserQuotasResponse> DescribeAggregateUserQuotas(DescribeAggregateUserQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAggregateUserQuotasResponse>(req, "DescribeAggregateUserQuotas");
+        }
+
+        /// <summary>
+        /// user quota list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAggregateUserQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAggregateUserQuotasResponse"/></returns>
+        public DescribeAggregateUserQuotasResponse DescribeAggregateUserQuotasSync(DescribeAggregateUserQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAggregateUserQuotasResponse>(req, "DescribeAggregateUserQuotas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the alarm rule list.
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
@@ -113,6 +134,27 @@ namespace TencentCloud.Quota.V20241204
         public DescribeAlarmsResponse DescribeAlarmsSync(DescribeAlarmsRequest req)
         {
             return InternalRequestAsync<DescribeAlarmsResponse>(req, "DescribeAlarms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query a user quota
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public Task<DescribeUserQuotaResponse> DescribeUserQuota(DescribeUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeUserQuotaResponse>(req, "DescribeUserQuota");
+        }
+
+        /// <summary>
+        /// Query a user quota
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
+        /// <returns><see cref="DescribeUserQuotaResponse"/></returns>
+        public DescribeUserQuotaResponse DescribeUserQuotaSync(DescribeUserQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeUserQuotaResponse>(req, "DescribeUserQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

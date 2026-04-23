@@ -37,20 +37,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Subtitle language. Common values:
-        /// <li>`zh`: Chinese</li>
-        /// <li>`en`: English</li>
-        /// <li>`ja`: Japanese</li>
-        /// <li>`ko`: Korean</li>
-        /// <li>`vi`: Vietnamese</li>
-        /// <li>`ms`: Malay</li>
-        /// <li>`th`: Thai</li>
-        /// <li>`pt`: Portuguese</li>
-        /// <li>`tr`: Turkish</li>
-        /// <li>`ar`: Arabic</li>
-        /// <li>`es`: Spanish</li>
-        /// <li>`hi`: Hindi</li>
-        /// <li>`fr`: French</li>For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+        /// Subtitle language. Common values are as follows:
+        /// <li>zh: Chinese;</li>
+        /// <li>en: English;</li>
+        /// <li>ja: Japanese;</li>
+        /// <li>ko: Korean;</li>
+        /// <li>vi: Vietnamese.</li>
+        /// <li>ms: Malay;</li>
+        /// <li>th: Thai;</li>
+        /// <li>pt: Portuguese;</li>
+        /// <li>tr: Turkish;</li>
+        /// <li>ar: Arabic;</li>
+        /// <li>es: Spanish;</li>
+        /// <li>hi: Hindi;</li>
+        /// <li>fr: French.</li>
+        /// For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
@@ -69,9 +70,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Subtitle source, values:
-        /// <li>UserUploaded: user uploaded;</li>
-        /// <li>AIRecognition: AI recognition, generated through asr full text recognition or voice translation.</li>
+        /// Subtitle source. Value ranges from...to...
+        /// <li>UserUploaded: User upload.</li>
+        /// <li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

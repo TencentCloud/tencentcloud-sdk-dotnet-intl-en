@@ -25,244 +25,196 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/33987">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// File ID set. Any element in the set can be matched.
-        /// <li>Array length limit: 10.</li>
-        /// <li>ID length limit: 40 characters.</li>
+        /// <p>File id collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 character.</li>
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// The file names to use for fuzzy search, which are sorted by relevance in descending order.
-        /// <li>Name length limit: 100 characters.</li>
-        /// <li>Array length limit: 10</li>
+        /// <p>File name collection. Fuzzy match media files by file name. The higher the matching degree, the higher the priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// The file name prefixes to search.
-        /// <li>Prefix length limit: 100 characters.</li>
-        /// <li>Array length limit: 10.</li>
+        /// <p>File name prefix. Prefix match media files.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("NamePrefixes")]
         public string[] NamePrefixes{ get; set; }
 
         /// <summary>
-        /// File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
-        /// <li>Length limit for a single description: 100 characters</li>
-        /// <li>Array length limit: 10</li>
+        /// <p>File description set, fuzzy match media files. The higher the matching degree, higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("Descriptions")]
         public string[] Descriptions{ get; set; }
 
         /// <summary>
-        /// Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-        /// <li>Array length limit: 10.</li>
+        /// <p>Category id collection, match the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("ClassIds")]
         public long?[] ClassIds{ get; set; }
 
         /// <summary>
-        /// The tags to search. A file is considered a match if it has any of the tags specified.
-        /// <li>Tag length limit: 32 characters.</li>
-        /// <li>Array length limit: 16.</li>
+        /// <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 character.</li><li>Array length limit: 16.</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// File type. Any element in the set can be matched.
-        /// <li>Video: video file</li>
-        /// <li>Audio: audio file</li>
-        /// <li>Image: image file</li>
+        /// <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
         /// </summary>
         [JsonProperty("Categories")]
         public string[] Categories{ get; set; }
 
         /// <summary>
-        /// Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-        /// <li>Array length limit: 10.</li>
+        /// <p>Media file source collection. Source value reference <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("SourceTypes")]
         public string[] SourceTypes{ get; set; }
 
         /// <summary>
-        /// The live stream code array. A media file will be returned if it matches any element in the array.
-        /// <li>Array length limit: 10</li>
+        /// <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("StreamIds")]
         public string[] StreamIds{ get; set; }
 
         /// <summary>
-        /// Matches files created within the time period.
-        /// <li>Includes specified start and end points in time.</li>
+        /// <p>Match files with creation time within this time period.</p><li>Include the specified start and end points in time.</li>
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
-        /// <li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+        /// <p>Match files with expiration time within this period. Unable to retrieve expired files.</p><li>Include the specified start and end points in time.</li>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public TimeRange ExpireTime{ get; set; }
 
         /// <summary>
-        /// Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-        /// <li>Length limit for a single region: 20 characters</li>
-        /// <li>Array length limit: 20</li>
+        /// <p>Media file storage region, such as ap-chongqing. Please refer to <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
         /// </summary>
         [JsonProperty("StorageRegions")]
         public string[] StorageRegions{ get; set; }
 
         /// <summary>
-        /// An array of storage classes. Valid values:
-        /// <li>STANDARD</li>
-        /// <li>STANDARD_IA</li>
-        /// <li>ARCHIVE</li>
-        /// <li>DEEP_ARCHIVE</li>
+        /// <p>Storage type array. Optional values:</p><li> STANDARD: Standard storage.</li><li> STANDARD_IA: Infrequent storage.</li><li> ARCHIVE: Archive storage.</li><li> DEEP_ARCHIVE: Deep archive storage.</li>
         /// </summary>
         [JsonProperty("StorageClasses")]
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
-        /// The file formats.
-        /// <li>Array length limit: 10</li>
+        /// <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("MediaTypes")]
         public string[] MediaTypes{ get; set; }
 
         /// <summary>
-        /// The file statuses.
-        /// <li>`Normal`</li>
-        /// <li>`SystemForbidden` (blocked by VOD)</li>
-        /// <li>`Forbidden` (blocked by you)</li>
+        /// <p>Media file status, match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// The types of moderation result.
-        /// <li>`pass`</li>
-        /// <li>`review` (the content may be non-compliant and needs to be reviewed)</li>
-        /// <li>`block` (the content is non-compliant and should be blocked)</li>
-        /// <li>`notModerated` (the file hasn't been moderated yet)</li>
+        /// <p>Media file review result, match any element in the collection.</p><li> pass: Pass review;</li><li> review: Suspected violation, suggest re-examination;</li><li> block: Confirmed violation, suggest banning;</li><li> notModerated: Not moderated.</li>
         /// </summary>
         [JsonProperty("ReviewResults")]
         public string[] ReviewResults{ get; set; }
 
         /// <summary>
-        /// The TRTC application IDs. Any file that matches one of the application IDs will be returned.
-        /// <li>Array length limit: 10</li>
+        /// <p>TRTC application ID collection. Matches any element in the collection.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("TrtcSdkAppIds")]
         public ulong?[] TrtcSdkAppIds{ get; set; }
 
         /// <summary>
-        /// The TRTC room IDs. Any file that matches one of the room IDs will be returned.
-        /// <li>Element length limit: 64 characters.</li>
-        /// <li>Array length limit: 10.</li>
+        /// <p>TRTC room ID collection. Matches any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("TrtcRoomIds")]
         public string[] TrtcRoomIds{ get; set; }
 
         /// <summary>
-        /// Specifies information entry that needs to be returned for all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-        /// <li>basicInfo (basic video information).</li>
-        /// <li>metaData (video metadata).</li>
-        /// <li>transcodeInfo (result information of video transcoding).</li>
-        /// <li>animatedGraphicsInfo (result information of animated image generating task).</li>
-        /// <li>imageSpriteInfo (image sprite information).</li>
-        /// <li>snapshotByTimeOffsetInfo (point-in-time screenshot information).</li>
-        /// <li>sampleSnapshotInfo (sampled screenshot information).</li>
-        /// <li>keyFrameDescInfo (timestamp information).</li>
-        /// <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-        /// <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+        /// <p>Information to be returned for all specified media files, multiple information can be specified simultaneously, N starts incrementing from 0. If this field is not filled in, default return all information. Options include:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li>
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// Sorting order.
-        /// <li>Valid value of `Sort.Field`: CreateTime.</li>
-        /// <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
+        /// <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid. Search results sorted by relevance.</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// <div id="p_offset">Start offset of a paged return. Default value: 0. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+        /// <div id="p_offset">Starting offset amount for pagination return, default value: 0. Returns entries from Offset to Offset+Limit-1.<li>Value ranges from...to... Offset + Limit is no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <div id="p_limit">Number of entries returned by a paged query. Default value: 10. Entries from No. "Offset" to No. "Offset + Limit - 1" will be returned.
-        /// <li>Value range: "Offset + Limit" cannot be more than 5,000. (For more information, please see <a href="#maxResultsDesc">Limit on the Number of Results Returned by API</a>)</li></div>
+        /// <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value ranges from...to... Offset + Limit is no more than 5000. (Refer to: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-        /// Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+        /// <p>(Not recommended: Use Names, NamePrefixes, or Descriptions as alternatives)<br>Search text, fuzzy match media file name or description information. The higher the matching degree and more matches, the higher priority in sorting. Length limit: 64 characters.</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `SourceTypes` should be used instead)
-        /// Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+        /// <p>(Not recommended: Use SourceTypes as an alternative)<br>Media file source. Source value reference <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// (Not recommended. Consider using `StreamIds` instead.)
-        /// The live stream code.
+        /// <p>(Not recommended: Use StreamIds as an alternative)<br>Push stream live code.</p>
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `CreateTime` should be used instead)
-        /// Start time in the creation time range.
-        /// <li>After or at the start time.</li>
-        /// <li>If `CreateTime.After` also exists, it will be used first.</li>
-        /// <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+        /// <p>(Not recommended: Use CreateTime instead)<br>Start time of creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// (This is not recommended. `CreateTime` should be used instead)
-        /// End time in the creation time range.
-        /// <li>Before the end time.</li>
-        /// <li>If `CreateTime.Before` also exists, it will be used first.</li>
-        /// <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+        /// <p>(Not recommended: Use CreateTime instead)<br>End time of creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// This parameter is invalid now.
+        /// <p>This field is invalid.</p>
         /// </summary>
         [JsonProperty("Vids")]
         public string[] Vids{ get; set; }
 
         /// <summary>
-        /// This parameter is invalid now.
+        /// <p>This field is invalid.</p>
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
+
+        /// <summary>
+        /// <p>Live streaming push Domain. Valid when the media source is Live streaming Recording.</p>
+        /// </summary>
+        [JsonProperty("StreamDomains")]
+        public string[] StreamDomains{ get; set; }
+
+        /// <summary>
+        /// <p>Live streaming push Path. Valid at that time when the source is live recording.</p>
+        /// </summary>
+        [JsonProperty("StreamPaths")]
+        public string[] StreamPaths{ get; set; }
 
 
         /// <summary>
@@ -300,6 +252,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
+            this.SetParamArraySimple(map, prefix + "StreamDomains.", this.StreamDomains);
+            this.SetParamArraySimple(map, prefix + "StreamPaths.", this.StreamPaths);
         }
     }
 }

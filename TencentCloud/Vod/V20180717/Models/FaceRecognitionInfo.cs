@@ -21,26 +21,14 @@ namespace TencentCloud.Vod.V20180717.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaAudioStreamItem : AbstractModel
+    public class FaceRecognitionInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+        /// <p>Face recognition task list</p>
         /// </summary>
-        [JsonProperty("Bitrate")]
-        public long? Bitrate{ get; set; }
-
-        /// <summary>
-        /// <p>Sampling rate of the audio stream, unit: hz.</p>
-        /// </summary>
-        [JsonProperty("SamplingRate")]
-        public long? SamplingRate{ get; set; }
-
-        /// <summary>
-        /// <p>Audio stream encoding format, such as aac.</p>
-        /// </summary>
-        [JsonProperty("Codec")]
-        public string Codec{ get; set; }
+        [JsonProperty("FaceRecognitionTasks")]
+        public FaceRecognitionTask[] FaceRecognitionTasks{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
-            this.SetParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
-            this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamArrayObj(map, prefix + "FaceRecognitionTasks.", this.FaceRecognitionTasks);
         }
     }
 }
