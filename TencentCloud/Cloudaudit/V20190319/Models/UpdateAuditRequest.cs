@@ -79,7 +79,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public long? IsEnableKmsEncry{ get; set; }
 
         /// <summary>
-        /// User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+        /// User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+        /// Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
         /// </summary>
         [JsonProperty("LogFilePrefix")]
         public string LogFilePrefix{ get; set; }

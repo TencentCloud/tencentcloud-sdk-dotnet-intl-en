@@ -25,15 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Total amount of data.
-        /// Example value: 10.
+        /// <p>Total data</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Detailed data.
-        /// Example value: [].
+        /// <p>Detailed data</p>
         /// </summary>
         [JsonProperty("Data")]
         public AdjustInfoDetail[] Data{ get; set; }

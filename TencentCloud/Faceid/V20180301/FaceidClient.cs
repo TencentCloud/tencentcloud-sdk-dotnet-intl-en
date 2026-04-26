@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1301";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,48 @@ namespace TencentCloud.Faceid.V20180301
         public CheckBankCardInformationResponse CheckBankCardInformationSync(CheckBankCardInformationRequest req)
         {
             return InternalRequestAsync<CheckBankCardInformationResponse>(req, "CheckBankCardInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to import the ID card portrait side photo, recognize the information on the ID card photo, and compare the name, identity card number, and ID card portrait photo with the ID photo in the authoritative database to verify if they belong to the same person, thereby verifying the authenticity of the identity card information.
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdCardInformationRequest"/></param>
+        /// <returns><see cref="CheckIdCardInformationResponse"/></returns>
+        public Task<CheckIdCardInformationResponse> CheckIdCardInformation(CheckIdCardInformationRequest req)
+        {
+            return InternalRequestAsync<CheckIdCardInformationResponse>(req, "CheckIdCardInformation");
+        }
+
+        /// <summary>
+        /// This API is used to import the ID card portrait side photo, recognize the information on the ID card photo, and compare the name, identity card number, and ID card portrait photo with the ID photo in the authoritative database to verify if they belong to the same person, thereby verifying the authenticity of the identity card information.
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdCardInformationRequest"/></param>
+        /// <returns><see cref="CheckIdCardInformationResponse"/></returns>
+        public CheckIdCardInformationResponse CheckIdCardInformationSync(CheckIdCardInformationRequest req)
+        {
+            return InternalRequestAsync<CheckIdCardInformationResponse>(req, "CheckIdCardInformation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name, identity card number, and valid period.
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdNameDateRequest"/></param>
+        /// <returns><see cref="CheckIdNameDateResponse"/></returns>
+        public Task<CheckIdNameDateResponse> CheckIdNameDate(CheckIdNameDateRequest req)
+        {
+            return InternalRequestAsync<CheckIdNameDateResponse>(req, "CheckIdNameDate");
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name, identity card number, and valid period.
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdNameDateRequest"/></param>
+        /// <returns><see cref="CheckIdNameDateResponse"/></returns>
+        public CheckIdNameDateResponse CheckIdNameDateSync(CheckIdNameDateRequest req)
+        {
+            return InternalRequestAsync<CheckIdNameDateResponse>(req, "CheckIdNameDate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -417,6 +459,90 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and identity card number. You can provide the required verification information by manually inputting the name and identity card number or importing the ID card portrait side image.
+        /// </summary>
+        /// <param name="req"><see cref="IdCardOCRVerificationRequest"/></param>
+        /// <returns><see cref="IdCardOCRVerificationResponse"/></returns>
+        public Task<IdCardOCRVerificationResponse> IdCardOCRVerification(IdCardOCRVerificationRequest req)
+        {
+            return InternalRequestAsync<IdCardOCRVerificationResponse>(req, "IdCardOCRVerification");
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and identity card number. You can provide the required verification information by manually inputting the name and identity card number or importing the ID card portrait side image.
+        /// </summary>
+        /// <param name="req"><see cref="IdCardOCRVerificationRequest"/></param>
+        /// <returns><see cref="IdCardOCRVerificationResponse"/></returns>
+        public IdCardOCRVerificationResponse IdCardOCRVerificationSync(IdCardOCRVerificationRequest req)
+        {
+            return InternalRequestAsync<IdCardOCRVerificationResponse>(req, "IdCardOCRVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and identity card number.
+        /// </summary>
+        /// <param name="req"><see cref="IdCardVerificationRequest"/></param>
+        /// <returns><see cref="IdCardVerificationResponse"/></returns>
+        public Task<IdCardVerificationResponse> IdCardVerification(IdCardVerificationRequest req)
+        {
+            return InternalRequestAsync<IdCardVerificationResponse>(req, "IdCardVerification");
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the name and identity card number.
+        /// </summary>
+        /// <param name="req"><see cref="IdCardVerificationRequest"/></param>
+        /// <returns><see cref="IdCardVerificationResponse"/></returns>
+        public IdCardVerificationResponse IdCardVerificationSync(IdCardVerificationRequest req)
+        {
+            return InternalRequestAsync<IdCardVerificationResponse>(req, "IdCardVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information (this interface has stopped integration, new customers please use the <a href="https://www.tencentcloud.com/document/product/1007/102203?from_cn_redirect=1">photo face verification (V2.0)</a> API).
+        /// </summary>
+        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
+        /// <returns><see cref="ImageRecognitionResponse"/></returns>
+        public Task<ImageRecognitionResponse> ImageRecognition(ImageRecognitionRequest req)
+        {
+            return InternalRequestAsync<ImageRecognitionResponse>(req, "ImageRecognition");
+        }
+
+        /// <summary>
+        /// This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information (this interface has stopped integration, new customers please use the <a href="https://www.tencentcloud.com/document/product/1007/102203?from_cn_redirect=1">photo face verification (V2.0)</a> API).
+        /// </summary>
+        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
+        /// <returns><see cref="ImageRecognitionResponse"/></returns>
+        public ImageRecognitionResponse ImageRecognitionSync(ImageRecognitionRequest req)
+        {
+            return InternalRequestAsync<ImageRecognitionResponse>(req, "ImageRecognition")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information.
+        /// </summary>
+        /// <param name="req"><see cref="ImageRecognitionV2Request"/></param>
+        /// <returns><see cref="ImageRecognitionV2Response"/></returns>
+        public Task<ImageRecognitionV2Response> ImageRecognitionV2(ImageRecognitionV2Request req)
+        {
+            return InternalRequestAsync<ImageRecognitionV2Response>(req, "ImageRecognitionV2");
+        }
+
+        /// <summary>
+        /// This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information.
+        /// </summary>
+        /// <param name="req"><see cref="ImageRecognitionV2Request"/></param>
+        /// <returns><see cref="ImageRecognitionV2Response"/></returns>
+        public ImageRecognitionV2Response ImageRecognitionV2Sync(ImageRecognitionV2Request req)
+        {
+            return InternalRequestAsync<ImageRecognitionV2Response>(req, "ImageRecognitionV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
         /// This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
         /// </summary>
@@ -436,6 +562,69 @@ namespace TencentCloud.Faceid.V20180301
         public LivenessCompareResponse LivenessCompareSync(LivenessCompareRequest req)
         {
             return InternalRequestAsync<LivenessCompareResponse>(req, "LivenessCompare")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the duration of a mobile number. Enter mobile number to query.
+        /// </summary>
+        /// <param name="req"><see cref="MobileNetworkTimeVerificationRequest"/></param>
+        /// <returns><see cref="MobileNetworkTimeVerificationResponse"/></returns>
+        public Task<MobileNetworkTimeVerificationResponse> MobileNetworkTimeVerification(MobileNetworkTimeVerificationRequest req)
+        {
+            return InternalRequestAsync<MobileNetworkTimeVerificationResponse>(req, "MobileNetworkTimeVerification");
+        }
+
+        /// <summary>
+        /// This API is used to query the duration of a mobile number. Enter mobile number to query.
+        /// </summary>
+        /// <param name="req"><see cref="MobileNetworkTimeVerificationRequest"/></param>
+        /// <returns><see cref="MobileNetworkTimeVerificationResponse"/></returns>
+        public MobileNetworkTimeVerificationResponse MobileNetworkTimeVerificationSync(MobileNetworkTimeVerificationRequest req)
+        {
+            return InternalRequestAsync<MobileNetworkTimeVerificationResponse>(req, "MobileNetworkTimeVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to verify phone number status. You can enter mobile number to query.
+        /// </summary>
+        /// <param name="req"><see cref="MobileStatusRequest"/></param>
+        /// <returns><see cref="MobileStatusResponse"/></returns>
+        public Task<MobileStatusResponse> MobileStatus(MobileStatusRequest req)
+        {
+            return InternalRequestAsync<MobileStatusResponse>(req, "MobileStatus");
+        }
+
+        /// <summary>
+        /// This API is used to verify phone number status. You can enter mobile number to query.
+        /// </summary>
+        /// <param name="req"><see cref="MobileStatusRequest"/></param>
+        /// <returns><see cref="MobileStatusResponse"/></returns>
+        public MobileStatusResponse MobileStatusSync(MobileStatusRequest req)
+        {
+            return InternalRequestAsync<MobileStatusResponse>(req, "MobileStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationRequest"/></param>
+        /// <returns><see cref="PhoneVerificationResponse"/></returns>
+        public Task<PhoneVerificationResponse> PhoneVerification(PhoneVerificationRequest req)
+        {
+            return InternalRequestAsync<PhoneVerificationResponse>(req, "PhoneVerification");
+        }
+
+        /// <summary>
+        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationRequest"/></param>
+        /// <returns><see cref="PhoneVerificationResponse"/></returns>
+        public PhoneVerificationResponse PhoneVerificationSync(PhoneVerificationRequest req)
+        {
+            return InternalRequestAsync<PhoneVerificationResponse>(req, "PhoneVerification")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

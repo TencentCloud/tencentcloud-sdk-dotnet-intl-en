@@ -79,7 +79,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Type nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Type name
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
+        /// <summary>
+        /// Tag information.	
+        /// </summary>
+        [JsonProperty("Tags")]
+        public BillTagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
             this.SetParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

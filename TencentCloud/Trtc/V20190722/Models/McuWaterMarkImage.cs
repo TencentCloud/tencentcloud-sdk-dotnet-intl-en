@@ -25,7 +25,10 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+        /// Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+        /// Note:.
+        /// Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+        /// 2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
         /// </summary>
         [JsonProperty("WaterMarkUrl")]
         public string WaterMarkUrl{ get; set; }
@@ -60,6 +63,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("ZOrder")]
         public ulong? ZOrder{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DynamicPosType")]
+        public ulong? DynamicPosType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +81,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "LocationX", this.LocationX);
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
+            this.SetParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
         }
     }
 }

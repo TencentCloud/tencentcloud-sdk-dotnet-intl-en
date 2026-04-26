@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Fee type
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+        /// Indicates whether to display
         /// </summary>
         [JsonProperty("Display")]
         public long? Display{ get; set; }

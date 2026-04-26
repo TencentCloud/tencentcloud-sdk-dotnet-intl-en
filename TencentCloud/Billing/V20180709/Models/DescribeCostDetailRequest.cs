@@ -37,13 +37,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+        /// Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+        /// Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+        /// The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Used to query information of a specified product (currently not available)
+        /// Query information of a specified product
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

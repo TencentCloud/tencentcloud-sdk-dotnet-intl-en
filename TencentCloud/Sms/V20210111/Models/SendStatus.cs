@@ -31,7 +31,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string SerialNo{ get; set; }
 
         /// <summary>
-        /// Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+        /// Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+        /// Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("IsoCode")]
         public string IsoCode{ get; set; }

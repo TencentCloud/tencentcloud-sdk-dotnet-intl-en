@@ -25,8 +25,7 @@ namespace TencentCloud.Advisor.V20200721.Models
     {
         
         /// <summary>
-        /// Assessment item list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assessment item list.
         /// </summary>
         [JsonProperty("Strategies")]
         public Strategies[] Strategies{ get; set; }

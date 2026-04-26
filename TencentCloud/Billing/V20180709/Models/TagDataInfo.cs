@@ -37,8 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Set the allocation tag time. Ordinary tags do not return.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

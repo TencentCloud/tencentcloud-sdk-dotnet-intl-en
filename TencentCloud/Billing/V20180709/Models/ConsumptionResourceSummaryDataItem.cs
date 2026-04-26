@@ -103,165 +103,181 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ConsumptionTypeName{ get; set; }
 
         /// <summary>
-        /// Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
+        /// Original price
         /// </summary>
         [JsonProperty("RealCost")]
         public string RealCost{ get; set; }
 
         /// <summary>
-        /// Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
+        /// Fee start time
         /// </summary>
         [JsonProperty("FeeBeginTime")]
         public string FeeBeginTime{ get; set; }
 
         /// <summary>
-        /// End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+        /// End time of fees
         /// </summary>
         [JsonProperty("FeeEndTime")]
         public string FeeEndTime{ get; set; }
 
         /// <summary>
         /// Days
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DayDiff")]
         public string DayDiff{ get; set; }
 
         /// <summary>
-        /// Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
+        /// Daily consumption
         /// </summary>
         [JsonProperty("DailyTotalCost")]
         public string DailyTotalCost{ get; set; }
 
         /// <summary>
-        /// Order numberNote: This field may return null, indicating that no valid values can be obtained.
+        /// Order ID
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
 
         /// <summary>
-        /// VoucherNote: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
         /// Bonus
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty amount
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
+        /// Tax
+        /// </summary>
+        [JsonProperty("Tax")]
+        public string Tax{ get; set; }
+
+        /// <summary>
+        /// tax rate
+        /// </summary>
+        [JsonProperty("TaxRate")]
+        public string TaxRate{ get; set; }
+
+        /// <summary>
+        /// Cash payment (pre-tax)
+        /// </summary>
+        [JsonProperty("AmountBeforeTax")]
+        public string AmountBeforeTax{ get; set; }
+
+        /// <summary>
+        /// Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
+        /// User UIN: Account ID of the actual resource user
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
+        /// Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Subproduct code
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// Region typeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Region type
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// Region type nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Region type name.
         /// </summary>
         [JsonProperty("RegionTypeName")]
         public string RegionTypeName{ get; set; }
 
         /// <summary>
-        /// Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Field 1
         /// </summary>
         [JsonProperty("Extend1")]
         public string Extend1{ get; set; }
 
         /// <summary>
-        /// Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Field 2
         /// </summary>
         [JsonProperty("Extend2")]
         public string Extend2{ get; set; }
 
         /// <summary>
-        /// Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Field 3
         /// </summary>
         [JsonProperty("Extend3")]
         public string Extend3{ get; set; }
 
         /// <summary>
-        /// Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Field 4
         /// </summary>
         [JsonProperty("Extend4")]
         public string Extend4{ get; set; }
 
         /// <summary>
-        /// Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
+        /// Extension Field 5
         /// </summary>
         [JsonProperty("Extend5")]
         public string Extend5{ get; set; }
 
         /// <summary>
-        /// Instance typeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Instance type
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Instance Type Name
         /// </summary>
         [JsonProperty("InstanceTypeName")]
         public string InstanceTypeName{ get; set; }
 
         /// <summary>
-        /// Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
+        /// Deduction time: Deduction time
         /// </summary>
         [JsonProperty("PayTime")]
         public string PayTime{ get; set; }
 
         /// <summary>
-        /// Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
+        /// Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+        /// Describing Configurations
         /// </summary>
         [JsonProperty("ComponentConfig")]
         public string ComponentConfig{ get; set; }
 
         /// <summary>
-        /// Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag information.
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
@@ -294,6 +310,9 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "Tax", this.Tax);
+            this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
+            this.SetParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
             this.SetParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
             this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);

@@ -37,8 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? TotalUsedAmount{ get; set; }
 
         /// <summary>
-        /// The usage details.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Voucher usage record details
         /// </summary>
         [JsonProperty("UsageRecords")]
         public UsageRecords[] UsageRecords{ get; set; }

@@ -67,7 +67,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public Storage Storage{ get; set; }
 
         /// <summary>
-        /// Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+        /// Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
         /// </summary>
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }

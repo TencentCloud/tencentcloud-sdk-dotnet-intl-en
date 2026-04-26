@@ -28,7 +28,7 @@ namespace TencentCloud.Sts.V20180813
 
        private const string endpoint = "sts.intl.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,20 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to request for the temporary security credentials of a role.
+        /// This API is used to request temporary access credentials for assuming a role.
+        /// 
+        /// This API is used to describe the composition of role policies.
+        /// 
+        /// This API is used to specify the role trust policy, which defines who can assume the role.
+        /// 
+        /// This API is used to specify the role permission policy, which defines what actions can be performed after assuming the role.
+        /// 
+        /// 
+        /// This API is used to describe the conditions under which a role can be assumed.
+        /// 
+        /// This API is used to bind a policy that allows a user to call AssumeRole.
+        /// 
+        /// This API is used to add a user as a principal in the role trust policy.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleRequest"/></param>
         /// <returns><see cref="AssumeRoleResponse"/></returns>
@@ -64,7 +77,20 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to request for the temporary security credentials of a role.
+        /// This API is used to request temporary access credentials for assuming a role.
+        /// 
+        /// This API is used to describe the composition of role policies.
+        /// 
+        /// This API is used to specify the role trust policy, which defines who can assume the role.
+        /// 
+        /// This API is used to specify the role permission policy, which defines what actions can be performed after assuming the role.
+        /// 
+        /// 
+        /// This API is used to describe the conditions under which a role can be assumed.
+        /// 
+        /// This API is used to bind a policy that allows a user to call AssumeRole.
+        /// 
+        /// This API is used to add a user as a principal in the role trust policy.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleRequest"/></param>
         /// <returns><see cref="AssumeRoleResponse"/></returns>
@@ -75,7 +101,9 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to request for the temporary credentials for a role that has been authenticated via a SAML assertion.
+        /// This API is used to request temporary access credentials for a role based on a SAML assertion.
+        /// 
+        /// Note: When called with signature method v3, header `X-TC-Token` could be ignored, and `Authorization` should be SKIP.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithSAMLRequest"/></param>
         /// <returns><see cref="AssumeRoleWithSAMLResponse"/></returns>
@@ -85,7 +113,9 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to request for the temporary credentials for a role that has been authenticated via a SAML assertion.
+        /// This API is used to request temporary access credentials for a role based on a SAML assertion.
+        /// 
+        /// Note: When called with signature method v3, header `X-TC-Token` could be ignored, and `Authorization` should be SKIP.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithSAMLRequest"/></param>
         /// <returns><see cref="AssumeRoleWithSAMLResponse"/></returns>
@@ -97,6 +127,8 @@ namespace TencentCloud.Sts.V20180813
 
         /// <summary>
         /// This API is used to apply for an OIDC role credential.
+        /// 
+        /// Note: When called with signature method v3, header `X-TC-Token` could be ignored, and `Authorization` should be SKIP.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithWebIdentityRequest"/></param>
         /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
@@ -107,6 +139,8 @@ namespace TencentCloud.Sts.V20180813
 
         /// <summary>
         /// This API is used to apply for an OIDC role credential.
+        /// 
+        /// Note: When called with signature method v3, header `X-TC-Token` could be ignored, and `Authorization` should be SKIP.
         /// </summary>
         /// <param name="req"><see cref="AssumeRoleWithWebIdentityRequest"/></param>
         /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
@@ -118,7 +152,8 @@ namespace TencentCloud.Sts.V20180813
 
         /// <summary>
         /// This API is used to get the identity information of the current caller.
-        /// The persistent keys of the root account and sub-account as well as the temporary credentials generated by `AssumeRole` and `GetFederationToken` can be used to get the identity information.
+        /// 
+        /// This API is used to get the identity information using the persistent keys of the root account and sub-account as well as the temporary credentials generated by AssumeRole and GetFederationToken.
         /// </summary>
         /// <param name="req"><see cref="GetCallerIdentityRequest"/></param>
         /// <returns><see cref="GetCallerIdentityResponse"/></returns>
@@ -129,7 +164,8 @@ namespace TencentCloud.Sts.V20180813
 
         /// <summary>
         /// This API is used to get the identity information of the current caller.
-        /// The persistent keys of the root account and sub-account as well as the temporary credentials generated by `AssumeRole` and `GetFederationToken` can be used to get the identity information.
+        /// 
+        /// This API is used to get the identity information using the persistent keys of the root account and sub-account as well as the temporary credentials generated by AssumeRole and GetFederationToken.
         /// </summary>
         /// <param name="req"><see cref="GetCallerIdentityRequest"/></param>
         /// <returns><see cref="GetCallerIdentityResponse"/></returns>
@@ -140,7 +176,15 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to get temporary credentials for a federated user.
+        /// This API is used to provide instructions.
+        /// 
+        /// This API is used to return a set of temporary access credentials. A typical application scenario is for proxy applications to centrally request temporary access credentials and distribute them to other distributed terminal applications within the enterprise network, such as terminal applications uploading files to COS. This API only supports calls with permanent keys.
+        /// 
+        /// This API is used to implement best practices.
+        /// 
+        /// 1. This API is used to recommend reusing temporary access credentials within their validity period to avoid rate limiting due to increased business request rates.
+        /// 2. This API is used to recommend granting temporary access credentials with the principle of least privilege.
+        /// 3. This API is used to recommend not using the root account for permanent keys calling the API.
         /// </summary>
         /// <param name="req"><see cref="GetFederationTokenRequest"/></param>
         /// <returns><see cref="GetFederationTokenResponse"/></returns>
@@ -150,7 +194,15 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
-        /// This API is used to get temporary credentials for a federated user.
+        /// This API is used to provide instructions.
+        /// 
+        /// This API is used to return a set of temporary access credentials. A typical application scenario is for proxy applications to centrally request temporary access credentials and distribute them to other distributed terminal applications within the enterprise network, such as terminal applications uploading files to COS. This API only supports calls with permanent keys.
+        /// 
+        /// This API is used to implement best practices.
+        /// 
+        /// 1. This API is used to recommend reusing temporary access credentials within their validity period to avoid rate limiting due to increased business request rates.
+        /// 2. This API is used to recommend granting temporary access credentials with the principle of least privilege.
+        /// 3. This API is used to recommend not using the root account for permanent keys calling the API.
         /// </summary>
         /// <param name="req"><see cref="GetFederationTokenRequest"/></param>
         /// <returns><see cref="GetFederationTokenResponse"/></returns>

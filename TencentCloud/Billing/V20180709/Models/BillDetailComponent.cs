@@ -68,13 +68,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string UsedAmountUnit{ get; set; }
 
         /// <summary>
-        /// Raw usage/duration: The raw usage/duration of a component before deduction. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original usage/duration: The original usage of the component before deduction by resource packages.
         /// </summary>
         [JsonProperty("RealTotalMeasure")]
         public string RealTotalMeasure{ get; set; }
 
         /// <summary>
-        /// Deducted usage/duration (including packages): The usage/duration deducted with a package. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Deduction of usage/duration (including resource packages): The amount of usage/duration deducted by resource packages
         /// </summary>
         [JsonProperty("DeductedMeasure")]
         public string DeductedMeasure{ get; set; }
@@ -134,49 +134,49 @@ namespace TencentCloud.Billing.V20180709.Models
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// Component type code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component type code
         /// </summary>
         [JsonProperty("ItemCode")]
         public string ItemCode{ get; set; }
 
         /// <summary>
-        /// Component name code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component name code
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
-        /// Component contracted price: The contracted unit price of a component, which is "List price x Discount". Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component unit price: Discounted unit price of the component. Component unit price = list price * discount.
         /// </summary>
         [JsonProperty("ContractPrice")]
         public string ContractPrice{ get; set; }
 
         /// <summary>
-        /// Instance type: The instance type of a product or service purchased, which can be resource package, RI, SP, or spot instance. Other instance types are not displayed by default. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. Normal instance display is not displayed by default.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// RI deduction (duration): The usage duration deducted by RI. Note: This field may return null, indicating that no valid values can be obtained.
+        /// RI deduction duration: The duration of use deducted by reserved instances for this product or service.
         /// </summary>
         [JsonProperty("RiTimeSpan")]
         public string RiTimeSpan{ get; set; }
 
         /// <summary>
-        /// RI deduction (cost): The amount deducted from the original cost by RI. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserved Instance Deduction Component Original Price: The original price of a component deducted by reserved instances for this product or service
         /// </summary>
         [JsonProperty("OriginalCostWithRI")]
         public string OriginalCostWithRI{ get; set; }
 
         /// <summary>
-        /// Savings plan deduction rate: The discount multiplier that applies to the component based on the remaining commitment of the savings plan. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Savings plan deduction rate: The discount rate for this component within the available balance limit of the savings plan
         /// </summary>
         [JsonProperty("SPDeductionRate")]
         public string SPDeductionRate{ get; set; }
@@ -189,38 +189,37 @@ namespace TencentCloud.Billing.V20180709.Models
         public string SPDeduction{ get; set; }
 
         /// <summary>
-        /// SP deduction (cost): SP deduction (cost) = Cost deduction by SP / SP deduction rate. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original Price of Savings Plan Deduction Component: Savings Plan Deduction from Original Price = Deduction Amount of Savings Plan Package / Savings Plan Deduction Rate
         /// </summary>
         [JsonProperty("OriginalCostWithSP")]
         public string OriginalCostWithSP{ get; set; }
 
         /// <summary>
-        /// Blended discount multiplier: The final discount multiplier that is applied after combining multiple discount types, which is "Total amount after discount / Original cost". Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mixed discount rate: The final discount rate after integrating various discount deductions. Mixed Discount Rate = Discounted total price/Component original price.
         /// </summary>
         [JsonProperty("BlendedDiscount")]
         public string BlendedDiscount{ get; set; }
 
         /// <summary>
-        /// Configuration description: The specification configuration of an instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration description: Information on specification of resource configuration
         /// </summary>
         [JsonProperty("ComponentConfig")]
         public BillDetailComponentConfig[] ComponentConfig{ get; set; }
 
         /// <summary>
-        /// The tax rate.
+        /// tax rate
         /// </summary>
         [JsonProperty("TaxRate")]
         public string TaxRate{ get; set; }
 
         /// <summary>
-        /// The tax amount.
+        /// Tax.
         /// </summary>
         [JsonProperty("TaxAmount")]
         public string TaxAmount{ get; set; }
 
         /// <summary>
-        /// The currency used for the settlement of a component.
+        /// Currency.
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

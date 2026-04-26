@@ -26,13 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Project ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Default projectNote: This field may return null, indicating that no valid values can be obtained.
+        /// default project
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }

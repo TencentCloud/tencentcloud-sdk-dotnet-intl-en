@@ -25,17 +25,64 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// The name of the product.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Product name
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Product Details
+        /// product details
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
+
+        /// <summary>
+        /// Product code	
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// Sub-product code	
+        /// </summary>
+        [JsonProperty("SubProductCode")]
+        public string SubProductCode{ get; set; }
+
+        /// <summary>
+        /// Billing item code.	
+        /// </summary>
+        [JsonProperty("BillingItemCode")]
+        public string BillingItemCode{ get; set; }
+
+        /// <summary>
+        /// Billing sub-item code.	
+        /// </summary>
+        [JsonProperty("SubBillingItemCode")]
+        public string SubBillingItemCode{ get; set; }
+
+        /// <summary>
+        /// Product English Name	
+        /// </summary>
+        [JsonProperty("ProductEnName")]
+        public string ProductEnName{ get; set; }
+
+        /// <summary>
+        /// English name of the sub-product.	
+        /// </summary>
+        [JsonProperty("SubProductEnName")]
+        public string SubProductEnName{ get; set; }
+
+        /// <summary>
+        /// billing cycle	
+        /// </summary>
+        [JsonProperty("CalcUnit")]
+        public string CalcUnit{ get; set; }
+
+        /// <summary>
+        /// payMode is prepay and payScene is common in the current situation
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
 
         /// <summary>
@@ -45,6 +92,14 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+            this.SetParamSimple(map, prefix + "BillingItemCode", this.BillingItemCode);
+            this.SetParamSimple(map, prefix + "SubBillingItemCode", this.SubBillingItemCode);
+            this.SetParamSimple(map, prefix + "ProductEnName", this.ProductEnName);
+            this.SetParamSimple(map, prefix + "SubProductEnName", this.SubProductEnName);
+            this.SetParamSimple(map, prefix + "CalcUnit", this.CalcUnit);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
         }
     }
 }

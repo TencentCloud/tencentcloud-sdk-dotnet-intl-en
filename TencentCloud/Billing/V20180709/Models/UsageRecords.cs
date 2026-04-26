@@ -37,11 +37,34 @@ namespace TencentCloud.Billing.V20180709.Models
         public string UsedTime{ get; set; }
 
         /// <summary>
-        /// The details of the product purchased.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Usage record details
         /// </summary>
         [JsonProperty("UsageDetails")]
         public UsageDetails[] UsageDetails{ get; set; }
+
+        /// <summary>
+        /// Payment mode
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public string PayMode{ get; set; }
+
+        /// <summary>
+        /// Queried coupon id
+        /// </summary>
+        [JsonProperty("VoucherId")]
+        public string VoucherId{ get; set; }
+
+        /// <summary>
+        /// Transaction scene: (adjust: adjust accounts, common: normal transaction scene)
+        /// </summary>
+        [JsonProperty("PayScene")]
+        public string PayScene{ get; set; }
+
+        /// <summary>
+        /// Unique ID, corresponding to transaction: prepaid dealName, bill adjustment/postpaid outTradeNo
+        /// </summary>
+        [JsonProperty("SeqId")]
+        public string SeqId{ get; set; }
 
 
         /// <summary>
@@ -52,6 +75,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
             this.SetParamSimple(map, prefix + "UsedTime", this.UsedTime);
             this.SetParamArrayObj(map, prefix + "UsageDetails.", this.UsageDetails);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "VoucherId", this.VoucherId);
+            this.SetParamSimple(map, prefix + "PayScene", this.PayScene);
+            this.SetParamSimple(map, prefix + "SeqId", this.SeqId);
         }
     }
 }

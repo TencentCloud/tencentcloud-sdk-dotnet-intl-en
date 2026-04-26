@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Total{ get; set; }
 
         /// <summary>
-        /// Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+        /// Date Detail Amount
         /// </summary>
         [JsonProperty("TimeDetail")]
         public AnalyseTimeDetail[] TimeDetail{ get; set; }

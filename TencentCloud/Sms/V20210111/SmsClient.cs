@@ -28,7 +28,7 @@ namespace TencentCloud.Sms.V20210111
 
        private const string endpoint = "sms.intl.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "SDK_NET_3.0.1293";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -449,9 +449,28 @@ namespace TencentCloud.Sms.V20210111
         }
 
         /// <summary>
+        /// This API is used to send Global SMS messages in batches. Compared with the SendSms API, it supports sending SMS messages with different content to multiple phone numbers in a single request and allows specifying different SenderIds.
+        /// </summary>
+        /// <param name="req"><see cref="SendMultiGlobalSmsRequest"/></param>
+        /// <returns><see cref="SendMultiGlobalSmsResponse"/></returns>
+        public Task<SendMultiGlobalSmsResponse> SendMultiGlobalSms(SendMultiGlobalSmsRequest req)
+        {
+            return InternalRequestAsync<SendMultiGlobalSmsResponse>(req, "SendMultiGlobalSms");
+        }
+
+        /// <summary>
+        /// This API is used to send Global SMS messages in batches. Compared with the SendSms API, it supports sending SMS messages with different content to multiple phone numbers in a single request and allows specifying different SenderIds.
+        /// </summary>
+        /// <param name="req"><see cref="SendMultiGlobalSmsRequest"/></param>
+        /// <returns><see cref="SendMultiGlobalSmsResponse"/></returns>
+        public SendMultiGlobalSmsResponse SendMultiGlobalSmsSync(SendMultiGlobalSmsRequest req)
+        {
+            return InternalRequestAsync<SendMultiGlobalSmsResponse>(req, "SendMultiGlobalSms")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to send SMS verification codes, notification, or marketing messages to users.
-        /// >- Note: Because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the [SDK](https://intl.cloud.tencent.com/document/product/382/43193?from_cn_redirect=1).
-        /// >- Note: You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
         /// </summary>
         /// <param name="req"><see cref="SendSmsRequest"/></param>
         /// <returns><see cref="SendSmsResponse"/></returns>
@@ -462,8 +481,6 @@ namespace TencentCloud.Sms.V20210111
 
         /// <summary>
         /// This API is used to send SMS verification codes, notification, or marketing messages to users.
-        /// >- Note: Because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the [SDK](https://intl.cloud.tencent.com/document/product/382/43193?from_cn_redirect=1).
-        /// >- Note: You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
         /// </summary>
         /// <param name="req"><see cref="SendSmsRequest"/></param>
         /// <returns><see cref="SendSmsResponse"/></returns>

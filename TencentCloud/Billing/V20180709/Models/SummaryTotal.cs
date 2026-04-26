@@ -25,14 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+        /// discounted total price
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }

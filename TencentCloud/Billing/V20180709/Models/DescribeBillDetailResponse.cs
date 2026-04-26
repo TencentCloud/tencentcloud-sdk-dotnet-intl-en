@@ -25,20 +25,19 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Details list
+        /// Detail list
         /// </summary>
         [JsonProperty("DetailSet")]
         public BillDetail[] DetailSet{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total record count, cached once every 24 hours, may be less than the actual total record count
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Context information of this request can be used in the request parameter of the next request to accelerate query speed.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

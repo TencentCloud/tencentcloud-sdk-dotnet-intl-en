@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Total number of records.
+        /// Total number of records
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }

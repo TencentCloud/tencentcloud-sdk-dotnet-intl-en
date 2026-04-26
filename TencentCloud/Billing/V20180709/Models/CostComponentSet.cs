@@ -96,6 +96,18 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
+        /// <summary>
+        /// Tax
+        /// </summary>
+        [JsonProperty("Tax")]
+        public string Tax{ get; set; }
+
+        /// <summary>
+        /// tax rate
+        /// </summary>
+        [JsonProperty("TaxRate")]
+        public string TaxRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "Tax", this.Tax);
+            this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
         }
     }
 }

@@ -25,16 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Third-Party Cloud Storage Account Information
-        /// (Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-        /// Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+        /// Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud VOD Account Information
-        /// Example:{"McuTencentVod":{"ExpireTime":86400}}
+        /// Account information of tencent cloud vod.
         /// </summary>
         [JsonProperty("McuCloudVod")]
         public McuCloudVod McuCloudVod{ get; set; }

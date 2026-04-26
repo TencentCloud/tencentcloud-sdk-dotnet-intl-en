@@ -25,52 +25,40 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example value: 909619400.
+        /// Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// Bill month. Format: yyyy-MM.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// Example value: 2024-10.
+        /// Bill month, formatted as yyyy-MM.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Adjustment type.
-        /// Adjustment: manualAdjustment.
-        /// Supplementary settlement: supplementarySettlement.
-        /// Re-settlement: reSettlement.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// Example value: manualAdjustment.
+        /// Adjustment type
+        /// Bill adjustment: manualAdjustment
+        /// Supplementary settlement: supplementarySettlement
+        /// Re-settlement
         /// </summary>
         [JsonProperty("AdjustType")]
         public string AdjustType{ get; set; }
 
         /// <summary>
-        /// Adjustment order number.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// Example value: 2220726096135.
+        /// Adjustment Number
         /// </summary>
         [JsonProperty("AdjustNum")]
         public string AdjustNum{ get; set; }
 
         /// <summary>
-        /// Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// Example value: 2022-12-02 12:39:04.
+        /// Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("AdjustCompletionTime")]
         public string AdjustCompletionTime{ get; set; }
 
         /// <summary>
-        /// Adjustment amount.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// Example value: 333.00000000.
+        /// Adjustment Amount
         /// </summary>
         [JsonProperty("AdjustAmount")]
         public float? AdjustAmount{ get; set; }

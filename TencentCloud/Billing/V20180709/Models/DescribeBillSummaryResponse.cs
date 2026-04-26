@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+        /// <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
         /// </summary>
         [JsonProperty("Ready")]
         public ulong? Ready{ get; set; }
 
         /// <summary>
-        /// Detailed summary of costs by multiple dimensions
+        /// <p>Multidimensional bill summary of consumption detail</p>
         /// </summary>
         [JsonProperty("SummaryDetail")]
         public SummaryDetail[] SummaryDetail{ get; set; }

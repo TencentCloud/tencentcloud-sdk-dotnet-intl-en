@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1291";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -266,6 +266,111 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to query the filter conditions of a resource directory.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocateConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocateConditionsResponse"/></returns>
+        public Task<DescribeAllocateConditionsResponse> DescribeAllocateConditions(DescribeAllocateConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocateConditionsResponse>(req, "DescribeAllocateConditions");
+        }
+
+        /// <summary>
+        /// This API is used to query the filter conditions of a resource directory.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocateConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocateConditionsResponse"/></returns>
+        public DescribeAllocateConditionsResponse DescribeAllocateConditionsSync(DescribeAllocateConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocateConditionsResponse>(req, "DescribeAllocateConditions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the filter conditions of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillConditionsResponse"/></returns>
+        public Task<DescribeAllocationBillConditionsResponse> DescribeAllocationBillConditions(DescribeAllocationBillConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillConditionsResponse>(req, "DescribeAllocationBillConditions");
+        }
+
+        /// <summary>
+        /// This API is used to query the filter conditions of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillConditionsRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillConditionsResponse"/></returns>
+        public DescribeAllocationBillConditionsResponse DescribeAllocationBillConditionsSync(DescribeAllocationBillConditionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillConditionsResponse>(req, "DescribeAllocationBillConditions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillDetailResponse"/></returns>
+        public Task<DescribeAllocationBillDetailResponse> DescribeAllocationBillDetail(DescribeAllocationBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillDetailResponse>(req, "DescribeAllocationBillDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeAllocationBillDetailResponse"/></returns>
+        public DescribeAllocationBillDetailResponse DescribeAllocationBillDetailSync(DescribeAllocationBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationBillDetailResponse>(req, "DescribeAllocationBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the monthly overview of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationMonthOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationMonthOverviewResponse"/></returns>
+        public Task<DescribeAllocationMonthOverviewResponse> DescribeAllocationMonthOverview(DescribeAllocationMonthOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationMonthOverviewResponse>(req, "DescribeAllocationMonthOverview");
+        }
+
+        /// <summary>
+        /// This API is used to query the monthly overview of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationMonthOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationMonthOverviewResponse"/></returns>
+        public DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverviewSync(DescribeAllocationMonthOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationMonthOverviewResponse>(req, "DescribeAllocationMonthOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the daily overview of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationOverviewResponse"/></returns>
+        public Task<DescribeAllocationOverviewResponse> DescribeAllocationOverview(DescribeAllocationOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationOverviewResponse>(req, "DescribeAllocationOverview");
+        }
+
+        /// <summary>
+        /// This API is used to query the daily overview of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationOverviewRequest"/></param>
+        /// <returns><see cref="DescribeAllocationOverviewResponse"/></returns>
+        public DescribeAllocationOverviewResponse DescribeAllocationOverviewSync(DescribeAllocationOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationOverviewResponse>(req, "DescribeAllocationOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query sharing rule details.
         /// </summary>
         /// <param name="req"><see cref="DescribeAllocationRuleDetailRequest"/></param>
@@ -308,6 +413,69 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// This API is used to query the details of a cost allocation bill by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByBusinessRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByBusinessResponse"/></returns>
+        public Task<DescribeAllocationSummaryByBusinessResponse> DescribeAllocationSummaryByBusiness(DescribeAllocationSummaryByBusinessRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByBusinessResponse>(req, "DescribeAllocationSummaryByBusiness");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by product.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByBusinessRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByBusinessResponse"/></returns>
+        public DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusinessSync(DescribeAllocationSummaryByBusinessRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByBusinessResponse>(req, "DescribeAllocationSummaryByBusiness")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by item.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByItemRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByItemResponse"/></returns>
+        public Task<DescribeAllocationSummaryByItemResponse> DescribeAllocationSummaryByItem(DescribeAllocationSummaryByItemRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByItemResponse>(req, "DescribeAllocationSummaryByItem");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by item.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByItemRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByItemResponse"/></returns>
+        public DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItemSync(DescribeAllocationSummaryByItemRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByItemResponse>(req, "DescribeAllocationSummaryByItem")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByResourceResponse"/></returns>
+        public Task<DescribeAllocationSummaryByResourceResponse> DescribeAllocationSummaryByResource(DescribeAllocationSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByResourceResponse>(req, "DescribeAllocationSummaryByResource");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationSummaryByResourceRequest"/></param>
+        /// <returns><see cref="DescribeAllocationSummaryByResourceResponse"/></returns>
+        public DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResourceSync(DescribeAllocationSummaryByResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationSummaryByResourceResponse>(req, "DescribeAllocationSummaryByResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the cost tree.
         /// </summary>
         /// <param name="req"><see cref="DescribeAllocationTreeRequest"/></param>
@@ -325,6 +493,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeAllocationTreeResponse DescribeAllocationTreeSync(DescribeAllocationTreeRequest req)
         {
             return InternalRequestAsync<DescribeAllocationTreeResponse>(req, "DescribeAllocationTree")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the cost trend of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTrendByMonthRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTrendByMonthResponse"/></returns>
+        public Task<DescribeAllocationTrendByMonthResponse> DescribeAllocationTrendByMonth(DescribeAllocationTrendByMonthRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth");
+        }
+
+        /// <summary>
+        /// This API is used to query the cost trend of a cost allocation bill.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllocationTrendByMonthRequest"/></param>
+        /// <returns><see cref="DescribeAllocationTrendByMonthResponse"/></returns>
+        public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonthSync(DescribeAllocationTrendByMonthRequest req)
+        {
+            return InternalRequestAsync<DescribeAllocationTrendByMonthResponse>(req, "DescribeAllocationTrendByMonth")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -350,7 +539,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+        /// This API is used to query whether there is a bill adjustment for the current UIN through API. Customers can obtain bill adjustment status faster and proactively.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
         /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
@@ -360,7 +549,7 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
-        /// This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+        /// This API is used to query whether there is a bill adjustment for the current UIN through API. Customers can obtain bill adjustment status faster and proactively.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillAdjustInfoRequest"/></param>
         /// <returns><see cref="DescribeBillAdjustInfoResponse"/></returns>
@@ -631,7 +820,31 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// Query the four-layer matching relationship between the quoted product name and billing products
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCPQBillingMappingRequest"/></param>
+        /// <returns><see cref="DescribeCPQBillingMappingResponse"/></returns>
+        public Task<DescribeCPQBillingMappingResponse> DescribeCPQBillingMapping(DescribeCPQBillingMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeCPQBillingMappingResponse>(req, "DescribeCPQBillingMapping");
+        }
+
+        /// <summary>
+        /// Query the four-layer matching relationship between the quoted product name and billing products
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCPQBillingMappingRequest"/></param>
+        /// <returns><see cref="DescribeCPQBillingMappingResponse"/></returns>
+        public DescribeCPQBillingMappingResponse DescribeCPQBillingMappingSync(DescribeCPQBillingMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeCPQBillingMappingResponse>(req, "DescribeCPQBillingMapping")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query consumption details.
+        /// 
+        /// Notes:
+        /// For customers with large-scale consumption detail (for example, monthly consumption detail exceeding 1M), there will be a timeout risk when retrieving detailed data via API call. It is recommended to enable the billing data storage function and analyze bill files obtained in a bucket. [Store bills to COS](https://www.tencentcloud.com/document/product/555/61275?from_cn_redirect=1)
         /// </summary>
         /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
         /// <returns><see cref="DescribeCostDetailResponse"/></returns>
@@ -642,6 +855,9 @@ namespace TencentCloud.Billing.V20180709
 
         /// <summary>
         /// This API is used to query consumption details.
+        /// 
+        /// Notes:
+        /// For customers with large-scale consumption detail (for example, monthly consumption detail exceeding 1M), there will be a timeout risk when retrieving detailed data via API call. It is recommended to enable the billing data storage function and analyze bill files obtained in a bucket. [Store bills to COS](https://www.tencentcloud.com/document/product/555/61275?from_cn_redirect=1)
         /// </summary>
         /// <param name="req"><see cref="DescribeCostDetailRequest"/></param>
         /// <returns><see cref="DescribeCostDetailResponse"/></returns>
@@ -795,6 +1011,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDateSync(DescribeDosageCosDetailByDateRequest req)
         {
             return InternalRequestAsync<DescribeDosageCosDetailByDateResponse>(req, "DescribeDosageCosDetailByDate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherResourceRequest"/></param>
+        /// <returns><see cref="DescribeGatherResourceResponse"/></returns>
+        public Task<DescribeGatherResourceResponse> DescribeGatherResource(DescribeGatherResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherResourceResponse>(req, "DescribeGatherResource");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a cost allocation bill by resource.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatherResourceRequest"/></param>
+        /// <returns><see cref="DescribeGatherResourceResponse"/></returns>
+        public DescribeGatherResourceResponse DescribeGatherResourceSync(DescribeGatherResourceRequest req)
+        {
+            return InternalRequestAsync<DescribeGatherResourceResponse>(req, "DescribeGatherResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

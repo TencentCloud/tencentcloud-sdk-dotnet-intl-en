@@ -25,7 +25,7 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// SMS delivery status.
+        /// SMS send status.
         /// </summary>
         [JsonProperty("SendStatusSet")]
         public SendStatus[] SendStatusSet{ get; set; }

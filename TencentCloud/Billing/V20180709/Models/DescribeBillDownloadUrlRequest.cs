@@ -25,26 +25,26 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Bill type. Valid values:
-        /// `billOverview` (L0: PDF bills)
-        /// `billSummary` (L1: Bill summary)	
-        /// `billResource` (L2: Bill by instance)	
-        /// `billDetail` (L3: Bill details)	
-        /// `billPack` (Bill packs)
+        /// Billing mode. Enumeration values
+        /// billOverview=L0-PDF Bill
+        /// Bill Summary=L1-Summary Bill	
+        /// billResource=L2-Resource bill	
+        /// billDetail=L3-Detailed Bill	
+        /// billPack
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Bill month.
-        /// The earliest month that can be queried is January 2021.
-        /// L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+        /// Billing month
+        /// Earliest start month supported is 2021-01
+        /// L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+        /// Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
         /// </summary>
         [JsonProperty("ChildUin")]
         public string[] ChildUin{ get; set; }

@@ -194,6 +194,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ResourceId")]
         public string[] ResourceId{ get; set; }
 
+        /// <summary>
+        /// Availability zone Id corresponding to the order
+        /// </summary>
+        [JsonProperty("ZoneCode")]
+        public string ZoneCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
             this.SetParamArraySimple(map, prefix + "ResourceId.", this.ResourceId);
+            this.SetParamSimple(map, prefix + "ZoneCode", this.ZoneCode);
         }
     }
 }

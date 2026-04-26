@@ -72,6 +72,24 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DynamicPosType")]
+        public ulong? DynamicPosType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ZOrder")]
+        public ulong? ZOrder{ get; set; }
+
+        /// <summary>
+        /// Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+        /// </summary>
+        [JsonProperty("Font")]
+        public string Font{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "FontSize", this.FontSize);
             this.SetParamSimple(map, prefix + "FontColor", this.FontColor);
             this.SetParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
+            this.SetParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
+            this.SetParamSimple(map, prefix + "ZOrder", this.ZOrder);
+            this.SetParamSimple(map, prefix + "Font", this.Font);
         }
     }
 }

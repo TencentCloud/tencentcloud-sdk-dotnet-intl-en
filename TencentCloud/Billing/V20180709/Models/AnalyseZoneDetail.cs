@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// AZ ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Available zone Name
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

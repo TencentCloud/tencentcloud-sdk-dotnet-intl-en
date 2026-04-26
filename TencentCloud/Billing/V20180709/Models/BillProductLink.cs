@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAuditResponse : AbstractModel
+    public class BillProductLink : AbstractModel
     {
         
         /// <summary>
-        /// Whether creation succeeded.
+        /// Subproduct code
         /// </summary>
-        [JsonProperty("IsSuccess")]
-        public long? IsSuccess{ get; set; }
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// Subproduct name
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ProductCodeName")]
+        public string ProductCodeName{ get; set; }
+
+        /// <summary>
+        /// Component name
+        /// </summary>
+        [JsonProperty("Children")]
+        public BillItem[] Children{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsSuccess", this.IsSuccess);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "ProductCodeName", this.ProductCodeName);
+            this.SetParamArrayObj(map, prefix + "Children.", this.Children);
         }
     }
 }

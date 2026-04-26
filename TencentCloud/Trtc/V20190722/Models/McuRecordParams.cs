@@ -25,80 +25,61 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Relay Recording Mode
-        /// 0/blank: Not currently supported, behavior undefined.
-        /// 1: Disable recording.
-        /// 2: Start recording (uses console's auto-recording template parameters. Reference: [Link to Documentation]).
-        /// 3: Start recording (uses API-specified parameters).
-        /// Example: 2
+        /// Retweet recording mode. 
+        /// 0/Leave blank: not currently supported; behavior is undefined.
+        /// 1: disable recording.
+        /// 2: enable recording (via console automatic recording template parameters, see: [redirection document](https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1#.E5.BD.95.E5.88.B6.E6.8E.A7.E5.88.B6.E6.96.B9.E6.A1.88));.
+        /// 3: enable recording (use API to specify parameter).
         /// </summary>
         [JsonProperty("UniRecord")]
         public ulong? UniRecord{ get; set; }
 
         /// <summary>
-        /// Recording Task Key
-        /// Identifies a recording task. This parameter allows merging multiple relay tasks into one recording file. If unspecified, only records the current relay task.
-        /// [Format: Up to 128 bytes; only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).]
-        /// Example: test_record_key_a
+        /// Recording task key, identifies a recording task. you can record multiple relay tasks into a file by specifying this parameter. if this parameter is not specified, only the current relay task is recorded.
+        /// Limit length to 128 bytes, only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("RecordKey")]
         public string RecordKey{ get; set; }
 
         /// <summary>
-        /// [Valid only when UniRecord=3]
-        /// Recording Resume Wait Time
-        /// Corresponds to template parameter "Resume Wait Duration." Unit: seconds.
-        /// Range: 5-86400 (24 hours). Default: 30. Recording stops if idle longer than this value.
-        /// Example: 30
+        /// [Valid only when UniRecord=3.].
+        /// Resume recording waiting time, corresponding to the "wait time for resumption" in the recording template, unit: seconds. the value must be greater than or equal to 5 and less than or equal to 86400 (24 hours), with a default value of 30. when resumption is enabled, the recording task ends automatically if idle for a duration exceeding RecordWaitTime.
         /// </summary>
         [JsonProperty("RecordWaitTime")]
         public ulong? RecordWaitTime{ get; set; }
 
         /// <summary>
-        /// [Valid only when UniRecord=3]
-        /// Recording Output Formats
-        /// Corresponds to template parameter "File Format." Supported values: hls, mp4, aac. Default: mp4.
-        /// Note: mp4 and aac formats are mutually exclusive.
-        /// Example (MP4 only): ["mp4"]
-        /// Example (MP4 + HLS): ["mp4","hls"]
+        /// [Valid only when UniRecord=3.].
+        /// The list of output file formats for recording corresponds to the "file format" in the recording template. it supports three formats: "hls", "mp4", and "aac". the default value is "mp4". among them, "mp4" and "aac" formats cannot be specified simultaneously.
+        /// Record only the mp4 format, example value: ["mp4"]. record both mp4 and HLS formats simultaneously, example value: ["mp4","HLS"].
         /// </summary>
         [JsonProperty("RecordFormat")]
         public string[] RecordFormat{ get; set; }
 
         /// <summary>
-        /// [Valid only when UniRecord=3]
-        /// Single File Duration
-        /// Corresponds to template parameter "Max File Duration." Unit: minutes.
-        /// Range: 1-1440 (24 hours). Default: 1440. Applies only to mp4/aac. Actual duration is capped at 2GB file size.
-        /// Example: 1440
+        /// [Valid only when UniRecord=3.].
+        /// Single file recording duration, corresponding to the "max recording time per file" in the recording template, unit: minutes. the value must be greater than or equal to 1 and less than or equal to 1440 (24 hours), with a default value of 1440. it only takes effect for "mp4" or "aac" format. the actual single file recording duration is also limited by the file size not exceeding 2G. if it exceeds 2G, the file will be forcibly split.
         /// </summary>
         [JsonProperty("MaxMediaFileDuration")]
         public ulong? MaxMediaFileDuration{ get; set; }
 
         /// <summary>
-        /// [Valid only when UniRecord=3]
-        /// Recording Media Type
-        /// Corresponds to template parameter "Recording Format."
-        /// 0: Audio+Video, 1: Audio only, 2: Video only. Output is the intersection of this setting and relay content.
-        /// Example: 0
+        /// [Valid only when UniRecord=3.].
+        /// The audio and video type of the recording corresponds to the "recording format" in the recording template. valid values: 0 (audio and video), 1 (pure audio), 2 (video only). the final recording file content is the intersection of the specified type and the relayed content.
         /// </summary>
         [JsonProperty("StreamType")]
         public ulong? StreamType{ get; set; }
 
         /// <summary>
-        /// Recording Filename Prefix
-        /// Filename prefix (<=64 bytes). Applies only to VOD storage.
-        /// *Format: Letters (a-z, A-Z), numbers (0-9), underscores (_), hyphens (-).*
-        /// Example: mcu_record_prefix
+        /// Recording file name prefix, no more than 64 characters. this parameter is valid only when store is vod.
+        /// Limit length to 64 bytes, only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("UserDefineRecordPrefix")]
         public string UserDefineRecordPrefix{ get; set; }
 
         /// <summary>
-        /// [Valid only when UniRecord=3]
-        /// Recording Storage Parameters
-        /// Corresponds to console parameter "Storage Location." Supports Tencent VOD or COS (exclusively).
-        /// Example: {"McuCloudVod":{"McuTencentVod":{"ExpireTime":86400}}}
+        /// [Valid only when UniRecord=3.].
+        /// Recording files storage parameters, corresponding console "storage location" and related parameters. currently supports VOD and COS storage methods. only one can be filled.
         /// </summary>
         [JsonProperty("McuStorageParams")]
         public McuStorageParams McuStorageParams{ get; set; }

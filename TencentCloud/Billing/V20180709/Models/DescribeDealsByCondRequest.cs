@@ -91,6 +91,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// Order status
+        /// </summary>
+        [JsonProperty("StatusSet")]
+        public long?[] StatusSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "OrderId", this.OrderId);
             this.SetParamSimple(map, prefix + "BigDealId", this.BigDealId);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
         }
     }
 }

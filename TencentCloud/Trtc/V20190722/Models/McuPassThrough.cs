@@ -31,7 +31,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string PayloadContent{ get; set; }
 
         /// <summary>
-        /// The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+        /// PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+        /// Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
         /// </summary>
         [JsonProperty("PayloadType")]
         public ulong? PayloadType{ get; set; }

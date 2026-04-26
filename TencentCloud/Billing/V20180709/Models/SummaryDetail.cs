@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bill dimension code
         /// </summary>
         [JsonProperty("GroupKey")]
         public string GroupKey{ get; set; }
 
         /// <summary>
-        /// Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing dimension value
         /// </summary>
         [JsonProperty("GroupValue")]
         public string GroupValue{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product summary information
         /// </summary>
         [JsonProperty("Business")]
         public BusinessSummaryInfo[] Business{ get; set; }

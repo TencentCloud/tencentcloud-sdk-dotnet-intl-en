@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditRequest : AbstractModel
+    public class BillProject : AbstractModel
     {
         
         /// <summary>
-        /// Tracking set name
+        /// Project ID
         /// </summary>
-        [JsonProperty("AuditName")]
-        public string AuditName{ get; set; }
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
+        /// </summary>
+        [JsonProperty("ProjectName")]
+        public string ProjectName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
         }
     }
 }

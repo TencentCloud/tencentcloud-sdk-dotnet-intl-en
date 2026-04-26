@@ -26,51 +26,48 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Tag value
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// Cost percentage rounded to two decimal places
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Percentage of the fee, with 2 decimal places.
         /// </summary>
         [JsonProperty("RealTotalCostRatio")]
         public string RealTotalCostRatio{ get; set; }
 
         /// <summary>
-        /// Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+        /// discounted total price
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cash account expenditure: The amount paid through the cash account
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Gift account expenditure: The amount paid using free credits
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
-        /// The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }

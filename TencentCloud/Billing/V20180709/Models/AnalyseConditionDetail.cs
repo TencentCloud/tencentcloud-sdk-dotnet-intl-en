@@ -25,49 +25,49 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// ProductNote: This field may return null, indicating that no valid values can be obtained.
+        /// product
         /// </summary>
         [JsonProperty("Business")]
         public AnalyseBusinessDetail[] Business{ get; set; }
 
         /// <summary>
-        /// ItemNote: This field may return null, indicating that no valid values can be obtained.
+        /// Project
         /// </summary>
         [JsonProperty("Project")]
         public AnalyseProjectDetail[] Project{ get; set; }
 
         /// <summary>
-        /// RegionNote: This field may return null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public AnalyseRegionDetail[] Region{ get; set; }
 
         /// <summary>
-        /// Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing mode.
         /// </summary>
         [JsonProperty("PayMode")]
         public AnalysePayModeDetail[] PayMode{ get; set; }
 
         /// <summary>
-        /// Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type
         /// </summary>
         [JsonProperty("ActionType")]
         public AnalyseActionTypeDetail[] ActionType{ get; set; }
 
         /// <summary>
-        /// Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+        /// Availability zone
         /// </summary>
         [JsonProperty("Zone")]
         public AnalyseZoneDetail[] Zone{ get; set; }
 
         /// <summary>
-        /// Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+        /// Resource owner Uin
         /// </summary>
         [JsonProperty("OwnerUin")]
         public AnalyseOwnerUinDetail[] OwnerUin{ get; set; }
 
         /// <summary>
-        /// Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Fee type
         /// </summary>
         [JsonProperty("Amount")]
         public AnalyseAmountDetail[] Amount{ get; set; }

@@ -32,7 +32,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Vendor{ get; set; }
 
         /// <summary>
-        /// [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+        /// [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
         /// Example value: cn-shanghai-1.
         /// 
         /// [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -66,6 +66,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("FileNamePrefix")]
         public string[] FileNamePrefix{ get; set; }
 
+        /// <summary>
+        /// If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+        /// </summary>
+        [JsonProperty("EndpointUrl")]
+        public string EndpointUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +84,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
             this.SetParamArraySimple(map, prefix + "FileNamePrefix.", this.FileNamePrefix);
+            this.SetParamSimple(map, prefix + "EndpointUrl", this.EndpointUrl);
         }
     }
 }

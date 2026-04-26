@@ -25,28 +25,28 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Format: yyyy-MM.
-        /// Billing month. Either Month or the combination of TimeFrom and TimeTo needs to be passed. If the TimeFrom and TimeTo are passed, the Month field is invalid.
-        /// Example: 2024-10.
+        /// <p>Format: yyyy-MM<br>Bill month. Either month or timeFrom&amp;timeTo must be specified. If timeFrom&amp;timeTo is specified, the month field is invalid.</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Format: yyyy-MM-dd.
-        /// Start date. Either Month or the combination of TimeFrom and TimeTo needs to be passed. If TimeFrom and TimeTo are passed, the Month field is invalid. TimeFrom and TimeTo should represent the same month and be passed in together. Cross-month queries are not supported. The result will include the full month's data.
-        /// Example: 2024-10-01.
+        /// <p>Format: yyyy-MM-dd<br>Start time. Either month or timeFrom&amp;timeTo must be specified. If timeFrom&amp;timeTo is specified, the month field is invalid. timeFrom and timeTo must be specified together and must be in the same month. Cross-month queries are not supported and the query results are data for the entire month.</p>
         /// </summary>
         [JsonProperty("TimeFrom")]
         public string TimeFrom{ get; set; }
 
         /// <summary>
-        /// Format: yyyy-MM-dd.
-        /// End date. Either Month or the combination of TimeFrom and TimeTo needs to be passed. If TimeFrom and TimeTo are passed, the Month field is invalid. TimeFrom and TimeTo should represent the same month and be passed in together. Cross-month queries are not supported. The result will include the full month's data.
-        /// Example: 2024-10-02.
+        /// <p>Format: yyyy-MM-dd<br>End time. Either month or timeFrom&amp;timeTo must be specified. If this field is specified, the month field is invalid. timeFrom and timeTo must be passed together and be in the same month. Cross-month queries are not supported. The query result is data of the entire month.</p>
         /// </summary>
         [JsonProperty("TimeTo")]
         public string TimeTo{ get; set; }
+
+        /// <summary>
+        /// <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
+        /// </summary>
+        [JsonProperty("PayerUin")]
+        public string PayerUin{ get; set; }
 
 
         /// <summary>
@@ -57,6 +57,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Month", this.Month);
             this.SetParamSimple(map, prefix + "TimeFrom", this.TimeFrom);
             this.SetParamSimple(map, prefix + "TimeTo", this.TimeTo);
+            this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
         }
     }
 }

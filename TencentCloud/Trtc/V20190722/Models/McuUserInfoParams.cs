@@ -30,6 +30,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("UserInfo")]
         public MixUserInfo UserInfo{ get; set; }
 
+        /// <summary>
+        /// Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+        /// Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+        /// </summary>
+        [JsonProperty("SoundLevel")]
+        public ulong? SoundLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
+            this.SetParamSimple(map, prefix + "SoundLevel", this.SoundLevel);
         }
     }
 }

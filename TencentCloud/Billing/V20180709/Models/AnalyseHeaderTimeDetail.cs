@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// DateNote: This field may return null, indicating that no valid values can be obtained.
+        /// Date
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

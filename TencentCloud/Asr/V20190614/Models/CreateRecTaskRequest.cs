@@ -74,7 +74,7 @@ namespace TencentCloud.Asr.V20190614.Models
         /// <summary>
         /// Audio source.
         /// 0: Audio URL.
-        /// 1: Local audio file (body of the POST request).
+        /// 1: Local audio file (body of the POST request)
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
@@ -89,7 +89,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// Data length (before Base64 encoding).
+        /// Data length (before Base64 encoding)
         /// </summary>
         [JsonProperty("DataLen")]
         public ulong? DataLen{ get; set; }
@@ -263,6 +263,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("KeyWordLibIdList")]
         public string[] KeyWordLibIdList{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ReplaceTextId")]
+        public string ReplaceTextId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +298,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "HotwordList", this.HotwordList);
             this.SetParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
+            this.SetParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tag.V20180813
 
        private const string endpoint = "tag.intl.tencentcloudapi.com";
        private const string version = "2018-08-13";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// Creates a project
+        /// Creates a project.
         /// </summary>
         /// <param name="req"><see cref="AddProjectRequest"/></param>
         /// <returns><see cref="AddProjectResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
-        /// Creates a project
+        /// Creates a project.
         /// </summary>
         /// <param name="req"><see cref="AddProjectRequest"/></param>
         /// <returns><see cref="AddProjectResponse"/></returns>

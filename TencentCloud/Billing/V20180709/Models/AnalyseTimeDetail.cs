@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// DateNote: This field may return null, indicating that no valid values can be obtained.
+        /// Date
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// AmountNote: This field may return null, indicating that no valid values can be obtained.
+        /// Amount
         /// </summary>
         [JsonProperty("Money")]
         public string Money{ get; set; }

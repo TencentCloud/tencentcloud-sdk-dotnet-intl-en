@@ -37,13 +37,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public ConsumptionSummaryTotal Total{ get; set; }
 
         /// <summary>
-        /// Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained.
+        /// Consumption details summarized by product
         /// </summary>
         [JsonProperty("Data")]
         public ConsumptionBusinessSummaryDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Record count. If NeedRecordNum is 0, null is returned.
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }

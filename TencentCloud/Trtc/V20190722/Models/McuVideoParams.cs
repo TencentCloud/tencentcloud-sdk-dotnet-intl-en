@@ -25,44 +25,47 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The video encoding parameters.
+        /// Video encoding parameter for the output stream.
         /// </summary>
         [JsonProperty("VideoEncode")]
         public VideoEncode VideoEncode{ get; set; }
 
         /// <summary>
-        /// The layout parameters.
+        /// Stream mixing layout parameter.
         /// </summary>
         [JsonProperty("LayoutParams")]
         public McuLayoutParams LayoutParams{ get; set; }
 
         /// <summary>
-        /// The canvas color. Below are the values for some common colors:
-        /// Red: 0xcc0033
-        /// Yellow: 0xcc9900
-        /// Green: 0xcccc33
-        /// Blue: 0x99CCFF
-        /// Black: 0x000000
-        /// White: 0xFFFFFF
-        /// Grey: 0x999999
+        /// The entire canvas background color. commonly used colors:.
+        /// Red: 0xcc0033.
+        /// Yellow: 0xcc9900.
+        /// Green: 0xcccc33.
+        /// Blue: 0x99CCFF.
+        /// Black: 0x000000.
+        /// White: 0xFFFFFF.
+        /// Gray: 0x999999.
         /// </summary>
         [JsonProperty("BackGroundColor")]
         public string BackGroundColor{ get; set; }
 
         /// <summary>
-        /// The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+        /// The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+        /// Note:.
+        /// 1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+        /// 2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
         /// </summary>
         [JsonProperty("BackgroundImageUrl")]
         public string BackgroundImageUrl{ get; set; }
 
         /// <summary>
-        /// The watermark information for the mixed stream.
+        /// Watermark parameters for the stream mixing layout.
         /// </summary>
         [JsonProperty("WaterMarkList")]
         public McuWaterMarkParams[] WaterMarkList{ get; set; }
 
         /// <summary>
-        /// Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+        /// The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
         /// </summary>
         [JsonProperty("BackgroundRenderMode")]
         public ulong? BackgroundRenderMode{ get; set; }

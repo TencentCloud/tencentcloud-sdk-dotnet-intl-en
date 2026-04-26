@@ -25,8 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Tencent VOD Parameters
-        /// Example :{"ExpireTime":86400}
+        /// Parameters of tencent cloud video on demand (vod).	
         /// </summary>
         [JsonProperty("McuTencentVod")]
         public McuTencentVod McuTencentVod{ get; set; }

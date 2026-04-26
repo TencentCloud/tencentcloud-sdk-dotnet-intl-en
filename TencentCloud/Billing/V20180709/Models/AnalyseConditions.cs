@@ -25,79 +25,84 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Product name code
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string BusinessCodes{ get; set; }
 
         /// <summary>
-        /// Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Subproduct name code
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string ProductCodes{ get; set; }
 
         /// <summary>
-        /// Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Component type code
         /// </summary>
         [JsonProperty("ComponentCode")]
         public string ComponentCode{ get; set; }
 
         /// <summary>
-        /// Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Availability zone ID: The availability zone ID where the resource is located.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string ZoneIds{ get; set; }
 
         /// <summary>
-        /// Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Region ID: Resource region ID
         /// </summary>
         [JsonProperty("RegionIds")]
         public string RegionIds{ get; set; }
 
         /// <summary>
-        /// Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Project ID: Project ID of the resource
         /// </summary>
         [JsonProperty("ProjectIds")]
         public string ProjectIds{ get; set; }
 
         /// <summary>
-        /// Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
         /// </summary>
         [JsonProperty("PayModes")]
         public string PayModes{ get; set; }
 
         /// <summary>
-        /// Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type. Query transaction type (please use transaction type code as input parameter).
         /// </summary>
         [JsonProperty("ActionTypes")]
         public string ActionTypes{ get; set; }
 
         /// <summary>
-        /// Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+        /// Cost allocation tag key
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }
 
         /// <summary>
-        /// Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+        /// Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+        /// cashPayAmount: Cash 
+        /// incentivePayAmount: Bonus 
+        /// voucherPayAmount: Coupon 
+        /// tax: tax. 
+        /// costBeforeTax: pre-tax price
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }
 
         /// <summary>
-        /// User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+        /// User UIN for querying cost analysis data
         /// </summary>
         [JsonProperty("PayerUins")]
         public string PayerUins{ get; set; }
 
         /// <summary>
-        /// User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+        /// User UIN for using resources
         /// </summary>
         [JsonProperty("OwnerUins")]
         public string OwnerUins{ get; set; }
 
         /// <summary>
-        /// Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+        /// Consumption type. Query consumption type (please use consumption type code input parameter).
         /// </summary>
         [JsonProperty("ConsumptionTypes")]
         public string ConsumptionTypes{ get; set; }

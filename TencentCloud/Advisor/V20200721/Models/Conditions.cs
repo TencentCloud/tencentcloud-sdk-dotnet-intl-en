@@ -25,22 +25,19 @@ namespace TencentCloud.Advisor.V20200721.Models
     {
         
         /// <summary>
-        /// Warning condition ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Warning condition ID.
         /// </summary>
         [JsonProperty("ConditionId")]
         public ulong? ConditionId{ get; set; }
 
         /// <summary>
         /// Warning level. 2: medium risk; 3: high risk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// Warning level description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the warning level.
         /// </summary>
         [JsonProperty("LevelDesc")]
         public string LevelDesc{ get; set; }

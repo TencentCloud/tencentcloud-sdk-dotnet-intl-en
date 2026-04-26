@@ -79,7 +79,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// Order ID: The order number for a monthly subscription purchase
+        /// Order ID: The sub-order number corresponding to the monthly subscription mode. In the postpaid billing model, the bill amount does not exist as an order concept, and this parameter can be ignored.
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }
@@ -133,31 +133,31 @@ namespace TencentCloud.Billing.V20180709.Models
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag information.
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Product code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product code
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// Subproduct code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subproduct code
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// Transaction type code. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type code
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Region ID. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region ID
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
@@ -169,83 +169,79 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
         /// </summary>
         [JsonProperty("PriceInfo")]
         public string[] PriceInfo{ get; set; }
 
         /// <summary>
-        /// Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
         /// </summary>
         [JsonProperty("AssociatedOrder")]
         public BillDetailAssociatedOrder AssociatedOrder{ get; set; }
 
         /// <summary>
-        /// Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
-        /// Billing rules: Official website links for detailed billing rules of each product.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing Rules: The detailed billing rules for each product shown in the portal explanation link
         /// </summary>
         [JsonProperty("FormulaUrl")]
         public string FormulaUrl{ get; set; }
 
         /// <summary>
-        /// Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing day
         /// </summary>
         [JsonProperty("BillDay")]
         public string BillDay{ get; set; }
 
         /// <summary>
-        /// Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing month
         /// </summary>
         [JsonProperty("BillMonth")]
         public string BillMonth{ get; set; }
 
         /// <summary>
-        /// Billing record IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing record ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Domestic and international codesNote: This field may return null, indicating that no valid values can be obtained.
+        /// Domestic and international codes
         /// </summary>
         [JsonProperty("RegionType")]
         public string RegionType{ get; set; }
 
         /// <summary>
-        /// Domestic and International: The region type to which the resource belongs (domestic, international)Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domestic and international: Resource region type (domestic, international)
         /// </summary>
         [JsonProperty("RegionTypeName")]
         public string RegionTypeName{ get; set; }
 
         /// <summary>
-        /// Note attributes (instance configuration): Other note information, such as the reserved instance, the reserved instance type, the transaction type, and the region information on both ends of the CCN product.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remark attribute (instance configuration): Additional remark information, such as reserved instance type and transaction type for reserved instances, regional information of both ends for CCN products.
         /// </summary>
         [JsonProperty("ReserveDetail")]
         public string ReserveDetail{ get; set; }
 
         /// <summary>
-        /// the discount object for the current consumption item, such as official website discount, user discount, and event discount.
+        /// discount object
         /// </summary>
         [JsonProperty("DiscountObject")]
         public string DiscountObject{ get; set; }
 
         /// <summary>
-        /// the discount type for the current consumption item, such as discount and contract price.
+        /// Offer type
         /// </summary>
         [JsonProperty("DiscountType")]
         public string DiscountType{ get; set; }
 
         /// <summary>
-        /// supplementary description of the discount type, such as 0.2.
+        /// discount content
         /// </summary>
         [JsonProperty("DiscountContent")]
         public string DiscountContent{ get; set; }

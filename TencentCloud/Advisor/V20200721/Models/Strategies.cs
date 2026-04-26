@@ -26,63 +26,54 @@ namespace TencentCloud.Advisor.V20200721.Models
         
         /// <summary>
         /// Assessment item ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
-        /// Assessment item name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assessment item name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Assessment item description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assessment item description.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Product ID corresponding to the assessment item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product ID corresponding to the assessment item.
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// Product name corresponding to the assessment item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assessment item corresponding product name.
         /// </summary>
         [JsonProperty("ProductDesc")]
         public string ProductDesc{ get; set; }
 
         /// <summary>
-        /// Optimization suggestions for the assessment item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies optimization suggestions for the assessment item.
         /// </summary>
         [JsonProperty("Repair")]
         public string Repair{ get; set; }
 
         /// <summary>
-        /// Category ID of the assessment item 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Assessment item category ID.
         /// </summary>
         [JsonProperty("GroupId")]
         public ulong? GroupId{ get; set; }
 
         /// <summary>
-        /// Category name of the assessment item 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the category name of the assessment item.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Risk list of the assessment item 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the evaluation item risk list.
         /// </summary>
         [JsonProperty("Conditions")]
         public Conditions[] Conditions{ get; set; }

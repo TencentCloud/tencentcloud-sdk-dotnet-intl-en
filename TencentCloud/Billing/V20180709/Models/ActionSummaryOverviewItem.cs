@@ -67,7 +67,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

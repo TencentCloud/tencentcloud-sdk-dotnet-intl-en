@@ -25,8 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// User UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User uin
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }

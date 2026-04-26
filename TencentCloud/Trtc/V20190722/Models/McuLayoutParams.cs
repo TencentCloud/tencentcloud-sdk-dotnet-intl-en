@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+        /// Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
         /// </summary>
         [JsonProperty("MixLayoutMode")]
         public ulong? MixLayoutMode{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? PureAudioHoldPlaceMode{ get; set; }
 
         /// <summary>
-        /// The details of a custom layout.
+        /// Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
         /// </summary>
         [JsonProperty("MixLayoutList")]
         public McuLayout[] MixLayoutList{ get; set; }

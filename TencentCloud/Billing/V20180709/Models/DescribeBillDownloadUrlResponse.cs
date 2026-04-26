@@ -25,13 +25,14 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+        /// Whether the bill file is ready. 0: file generating, 1: file generated
         /// </summary>
         [JsonProperty("Ready")]
         public long? Ready{ get; set; }
 
         /// <summary>
-        /// Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Billing file download link, valid for 1 day
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

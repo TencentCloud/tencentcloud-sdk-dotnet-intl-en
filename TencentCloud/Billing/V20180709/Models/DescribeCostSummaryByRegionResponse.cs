@@ -43,7 +43,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ConsumptionRegionSummaryDataItem[] Data{ get; set; }
 
         /// <summary>
-        /// Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Record count. If NeedRecordNum is 0, null is returned.
         /// </summary>
         [JsonProperty("RecordNum")]
         public ulong? RecordNum{ get; set; }

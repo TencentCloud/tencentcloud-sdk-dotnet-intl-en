@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type code
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction type Name
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// The type of the `RoomId` parameter. 0: integer; 1: string.
+        /// Room id type. 0 indicates integer room number. 1 indicates string room number.
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }

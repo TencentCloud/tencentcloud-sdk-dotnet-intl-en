@@ -25,13 +25,13 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing mode code
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing mode Name
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }

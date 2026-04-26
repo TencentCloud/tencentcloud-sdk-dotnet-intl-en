@@ -28,7 +28,7 @@ namespace TencentCloud.Cloudaudit.V20190319
 
        private const string endpoint = "cloudaudit.intl.tencentcloudapi.com";
        private const string version = "2019-03-19";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1303";
 
         /// <summary>
         /// Client constructor.
@@ -54,35 +54,6 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-        /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public Task<CreateAuditResponse> CreateAudit(CreateAuditRequest req)
-        {
-            return InternalRequestAsync<CreateAuditResponse>(req, "CreateAudit");
-        }
-
-        /// <summary>
-        /// Parameter requirements:
-        /// 1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
-        /// 2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-        /// 3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-        /// 4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-        /// </summary>
-        /// <param name="req"><see cref="CreateAuditRequest"/></param>
-        /// <returns><see cref="CreateAuditResponse"/></returns>
-        public CreateAuditResponse CreateAuditSync(CreateAuditRequest req)
-        {
-            return InternalRequestAsync<CreateAuditResponse>(req, "CreateAudit")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to create a tracking set.
         /// </summary>
         /// <param name="req"><see cref="CreateAuditTrackRequest"/></param>
@@ -100,27 +71,6 @@ namespace TencentCloud.Cloudaudit.V20190319
         public CreateAuditTrackResponse CreateAuditTrackSync(CreateAuditTrackRequest req)
         {
             return InternalRequestAsync<CreateAuditTrackResponse>(req, "CreateAuditTrack")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public Task<DeleteAuditResponse> DeleteAudit(DeleteAuditRequest req)
-        {
-            return InternalRequestAsync<DeleteAuditResponse>(req, "DeleteAudit");
-        }
-
-        /// <summary>
-        /// This API is used to delete a tracking set.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAuditRequest"/></param>
-        /// <returns><see cref="DeleteAuditResponse"/></returns>
-        public DeleteAuditResponse DeleteAuditSync(DeleteAuditRequest req)
-        {
-            return InternalRequestAsync<DeleteAuditResponse>(req, "DeleteAudit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

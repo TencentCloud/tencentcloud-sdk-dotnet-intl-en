@@ -26,7 +26,6 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Region ID
-        /// Note: This field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }

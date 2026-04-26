@@ -25,28 +25,27 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Recording screen width, defaults to 1280, value range [0, 1920]
+        /// Recording image width defaults to 1280, with a value range of [0, 1920].
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Recording screen height, defaults to 720, value range [0, 1080]
+        /// Recording image height, defaults to 720, in the range of [0, 1080].
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
-        ///  
+        /// Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-        /// This parameter does not take effect for Hls format recordings.
-        /// Sample value: 1440
+        /// If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+        /// Hls format recording. this parameter is not effective.
+        /// Example value: 1440.
         /// </summary>
         [JsonProperty("MaxMediaFileDuration")]
         public long? MaxMediaFileDuration{ get; set; }

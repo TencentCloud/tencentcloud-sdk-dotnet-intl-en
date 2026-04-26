@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cloudaudit.V20190319.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAuditResponse : AbstractModel
+    public class DescribeAllocateConditionsRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether deletion succeeded
+        /// Bill month, in the format of 2024-02, which is the current month by default if not provided
         /// </summary>
-        [JsonProperty("IsSuccess")]
-        public long? IsSuccess{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Month")]
+        public string Month{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsSuccess", this.IsSuccess);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Month", this.Month);
         }
     }
 }

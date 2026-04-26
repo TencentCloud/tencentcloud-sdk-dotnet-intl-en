@@ -31,11 +31,11 @@ namespace TencentCloud.Sts.V20180813.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Policy description
         /// Note:
-        /// 1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-        /// 2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
-        /// 3. The policy cannot contain the `principal` element.
+        /// 
+        /// The policy syntax refers to [CAM's Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
+        /// The policy cannot contain the principal element.
+        /// This parameter needs to be URL-encoded. The server will URL-decode this field and grant temporary access credentials based on the processed policy. Please pass the parameter according to the specification.
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }

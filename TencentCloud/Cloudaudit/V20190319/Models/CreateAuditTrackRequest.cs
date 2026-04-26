@@ -31,6 +31,18 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// Tracking set status (0: Not enabled; 1: Enabled).
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// Storage type of shipped data. Valid values: `cos`, `cls`.
+        /// </summary>
+        [JsonProperty("Storage")]
+        public Storage Storage{ get; set; }
+
+        /// <summary>
         /// Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
         /// </summary>
         [JsonProperty("ActionType")]
@@ -43,28 +55,22 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Tracking set status (0: Not enabled; 1: Enabled)
-        /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
-
-        /// <summary>
         /// The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
         /// </summary>
         [JsonProperty("EventNames")]
         public string[] EventNames{ get; set; }
 
         /// <summary>
-        /// Storage type of shipped data. Valid values: `cos`, `cls`.
-        /// </summary>
-        [JsonProperty("Storage")]
-        public Storage Storage{ get; set; }
-
-        /// <summary>
-        /// Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+        /// Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
         /// </summary>
         [JsonProperty("TrackForAllMembers")]
         public ulong? TrackForAllMembers{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ExportId")]
+        public string ExportId{ get; set; }
 
 
         /// <summary>
@@ -73,12 +79,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "Storage.", this.Storage);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "EventNames.", this.EventNames);
-            this.SetParamObj(map, prefix + "Storage.", this.Storage);
             this.SetParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+            this.SetParamSimple(map, prefix + "ExportId", this.ExportId);
         }
     }
 }

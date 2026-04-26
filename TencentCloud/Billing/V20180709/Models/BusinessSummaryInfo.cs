@@ -37,8 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
@@ -68,7 +67,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

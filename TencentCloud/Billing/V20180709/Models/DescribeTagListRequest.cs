@@ -25,31 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// The number of entries returned at a time. The maximum value is `1000`.
+        /// Quantity, with the maximum value of 1,000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+        /// Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Cost allocation tag key, used for fuzzy search.
+        /// Cost allocation tag key, used as fuzzy search
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+        /// Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+        /// Sorting method, enumeration value: asc for ascending order, desc for descending order.
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }

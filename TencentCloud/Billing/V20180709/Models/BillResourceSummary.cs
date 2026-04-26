@@ -163,7 +163,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty account expenditure: The amount paid through the royalty account
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ExtendField5{ get; set; }
 
         /// <summary>
-        /// Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag information.
         /// </summary>
         [JsonProperty("Tags")]
         public BillTagInfo[] Tags{ get; set; }
@@ -254,7 +254,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string OriginalCostWithSP{ get; set; }
 
         /// <summary>
-        /// Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+        /// Billing month
         /// </summary>
         [JsonProperty("BillMonth")]
         public string BillMonth{ get; set; }

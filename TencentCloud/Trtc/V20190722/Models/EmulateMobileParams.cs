@@ -25,17 +25,17 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Mobile device types,
-        /// 0: Phone
-        /// 1: Tablet
+        /// Mobile device type.
+        /// Mobile phone.
+        /// Tablet.
         /// </summary>
         [JsonProperty("MobileDeviceType")]
         public ulong? MobileDeviceType{ get; set; }
 
         /// <summary>
-        /// Screen orientation,
-        /// 0: Portrait,
-        /// 1: Landscape
+        /// Screen orientation.
+        /// Portrait mode.
+        /// Landscape mode.
         /// </summary>
         [JsonProperty("ScreenOrientation")]
         public ulong? ScreenOrientation{ get; set; }

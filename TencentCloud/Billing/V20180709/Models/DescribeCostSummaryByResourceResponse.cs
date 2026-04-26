@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Ready{ get; set; }
 
         /// <summary>
-        /// Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Consumption details
         /// </summary>
         [JsonProperty("Total")]
         public ConsumptionSummaryTotal Total{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? RecordNum{ get; set; }
 
         /// <summary>
-        /// Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Resource consumption details
         /// </summary>
         [JsonProperty("Data")]
         public ConsumptionResourceSummaryDataItem[] Data{ get; set; }

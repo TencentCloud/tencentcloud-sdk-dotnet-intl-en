@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Trend value. The value of this field is null when Type is none.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

@@ -25,32 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Number of data entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of data records
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Header informationNote: This field may return null, indicating that no valid values can be obtained.
+        /// Header information.
         /// </summary>
         [JsonProperty("Header")]
         public AnalyseHeaderDetail Header{ get; set; }
 
         /// <summary>
-        /// Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Data details
         /// </summary>
         [JsonProperty("Detail")]
         public AnalyseDetail[] Detail{ get; set; }
 
         /// <summary>
-        /// Data amountNote: This field may return null, indicating that no valid values can be obtained.
+        /// data total
         /// </summary>
         [JsonProperty("TotalDetail")]
         public AnalyseDetail TotalDetail{ get; set; }
 
         /// <summary>
-        /// Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+        /// filtering box
         /// </summary>
         [JsonProperty("ConditionValue")]
         public AnalyseConditionDetail ConditionValue{ get; set; }

@@ -58,7 +58,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// Fee type: cost-total cost, totalCost-original price cost
+        /// Fee type: cost-discounted total cost, totalCost-original price cost
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }

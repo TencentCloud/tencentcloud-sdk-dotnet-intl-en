@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// List of sharing rules.
+        /// List of sharing rules
         /// </summary>
         [JsonProperty("RuleList")]
         public AllocationRulesSummary RuleList{ get; set; }

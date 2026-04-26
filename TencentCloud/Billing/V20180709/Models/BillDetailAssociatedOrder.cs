@@ -25,43 +25,37 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Purchase order.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Newly purchased order
         /// </summary>
         [JsonProperty("PrepayPurchase")]
         public string PrepayPurchase{ get; set; }
 
         /// <summary>
-        /// Renewal order.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Renewal order
         /// </summary>
         [JsonProperty("PrepayRenew")]
         public string PrepayRenew{ get; set; }
 
         /// <summary>
-        /// Upgrade order.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration upgrade order
         /// </summary>
         [JsonProperty("PrepayModifyUp")]
         public string PrepayModifyUp{ get; set; }
 
         /// <summary>
-        /// Write-off order.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Write-off order
         /// </summary>
         [JsonProperty("ReverseOrder")]
         public string ReverseOrder{ get; set; }
 
         /// <summary>
-        /// The order after discount.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order after discount adjustment
         /// </summary>
         [JsonProperty("NewOrder")]
         public string NewOrder{ get; set; }
 
         /// <summary>
-        /// The original order before discount.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Order before discount adjustment
         /// </summary>
         [JsonProperty("Original")]
         public string Original{ get; set; }

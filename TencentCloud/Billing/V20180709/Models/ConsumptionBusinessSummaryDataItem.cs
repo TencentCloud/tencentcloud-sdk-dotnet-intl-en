@@ -50,33 +50,42 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Cash
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
         /// Bonus
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
 
         /// <summary>
-        /// VoucherNote: This field may return null, indicating that no valid values can be obtained.
+        /// Voucher
         /// </summary>
         [JsonProperty("VoucherPayAmount")]
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+        /// Royalty amount
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }
 
         /// <summary>
+        /// Cash payment (pre-tax)
+        /// </summary>
+        [JsonProperty("AmountBeforeTax")]
+        public string AmountBeforeTax{ get; set; }
+
+        /// <summary>
+        /// Tax
+        /// </summary>
+        [JsonProperty("Tax")]
+        public string Tax{ get; set; }
+
+        /// <summary>
         /// Region name (only shown in regional summary)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
@@ -95,6 +104,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
             this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+            this.SetParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
+            this.SetParamSimple(map, prefix + "Tax", this.Tax);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }

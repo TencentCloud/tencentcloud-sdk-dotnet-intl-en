@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+        /// Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

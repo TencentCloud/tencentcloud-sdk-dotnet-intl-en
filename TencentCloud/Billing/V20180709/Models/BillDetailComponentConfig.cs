@@ -26,14 +26,12 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Configuration description name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Configuration description value
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+        /// [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
         /// Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
         /// </summary>
         [JsonProperty("RoomId")]

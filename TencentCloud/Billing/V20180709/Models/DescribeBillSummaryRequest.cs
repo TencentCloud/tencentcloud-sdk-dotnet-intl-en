@@ -25,31 +25,31 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// Bill month in the format of "yyyy-mm"
+        /// <p>Bill month, formatted as 2023-04</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+        /// <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// Tag key, which is used when `GroupType` is `tag`.
+        /// <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string[] TagKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
         /// </summary>
         [JsonProperty("OperateUin")]
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
         /// </summary>
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
