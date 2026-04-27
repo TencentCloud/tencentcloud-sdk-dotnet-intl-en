@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Edgezone.V20260401.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamLivePlanRequest : AbstractModel
+    public class DescribeZoneDataRequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the channel for which you want to configure an event.
+        /// Availability zone id
         /// </summary>
-        [JsonProperty("ChannelId")]
-        public string ChannelId{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// Event configuration.
+        /// Metric name (inbw: inbound bandwidth, outbw: outbound bandwidth)
         /// </summary>
-        [JsonProperty("Plan")]
-        public PlanReq Plan{ get; set; }
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
+        /// <summary>
+        /// Start time (UTC time)
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// End time (UTC time), query up to 2 days.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamObj(map, prefix + "Plan.", this.Plan);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

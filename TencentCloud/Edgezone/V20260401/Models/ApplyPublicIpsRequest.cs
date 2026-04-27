@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Edgezone.V20260401.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamLivePlanRequest : AbstractModel
+    public class ApplyPublicIpsRequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the channel for which you want to configure an event.
+        /// Public network instance ID (route publishing mode must be STATIC)
         /// </summary>
-        [JsonProperty("ChannelId")]
-        public string ChannelId{ get; set; }
+        [JsonProperty("NetworkInstanceId")]
+        public string NetworkInstanceId{ get; set; }
 
         /// <summary>
-        /// Event configuration.
+        /// Apply for an Ip quantity, minimum is 1
         /// </summary>
-        [JsonProperty("Plan")]
-        public PlanReq Plan{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
+        /// Applied Ip type, enumeration value: ipv4, ipv6
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamObj(map, prefix + "Plan.", this.Plan);
+            this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

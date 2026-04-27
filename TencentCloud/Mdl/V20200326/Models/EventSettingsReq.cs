@@ -31,7 +31,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+        /// ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
         /// </summary>
         [JsonProperty("InputAttachment")]
         public string InputAttachment{ get; set; }

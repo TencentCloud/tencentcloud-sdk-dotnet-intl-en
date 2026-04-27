@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Tcsas.V20250106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamLivePlanRequest : AbstractModel
+    public class CreateMNPSecretKeyRequest : AbstractModel
     {
         
         /// <summary>
-        /// ID of the channel for which you want to configure an event.
+        /// <p>Platform ID</p>
         /// </summary>
-        [JsonProperty("ChannelId")]
-        public string ChannelId{ get; set; }
+        [JsonProperty("PlatformId")]
+        public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Event configuration.
+        /// <p>Mini program or mini game appid</p>
         /// </summary>
-        [JsonProperty("Plan")]
-        public PlanReq Plan{ get; set; }
+        [JsonProperty("MNPId")]
+        public string MNPId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamObj(map, prefix + "Plan.", this.Plan);
+            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "MNPId", this.MNPId);
         }
     }
 }

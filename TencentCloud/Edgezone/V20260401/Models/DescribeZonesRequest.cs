@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Mdl.V20200326.Models
+namespace TencentCloud.Edgezone.V20260401.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateStreamLivePlanRequest : AbstractModel
+    public class DescribeZonesRequest : AbstractModel
     {
         
-        /// <summary>
-        /// ID of the channel for which you want to configure an event.
-        /// </summary>
-        [JsonProperty("ChannelId")]
-        public string ChannelId{ get; set; }
-
-        /// <summary>
-        /// Event configuration.
-        /// </summary>
-        [JsonProperty("Plan")]
-        public PlanReq Plan{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamObj(map, prefix + "Plan.", this.Plan);
         }
     }
 }

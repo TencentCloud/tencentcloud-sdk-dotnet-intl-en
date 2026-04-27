@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1301";
+       private const string sdkVersion = "SDK_NET_3.0.1304";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Tcsas.V20250106
         public CreateMNPDomainACLResponse CreateMNPDomainACLSync(CreateMNPDomainACLRequest req)
         {
             return InternalRequestAsync<CreateMNPDomainACLResponse>(req, "CreateMNPDomainACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a secret key for a mini program or mini game.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMNPSecretKeyResponse"/></returns>
+        public Task<CreateMNPSecretKeyResponse> CreateMNPSecretKey(CreateMNPSecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSecretKeyResponse>(req, "CreateMNPSecretKey");
+        }
+
+        /// <summary>
+        /// This API is used to create a secret key for a mini program or mini game.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSecretKeyRequest"/></param>
+        /// <returns><see cref="CreateMNPSecretKeyResponse"/></returns>
+        public CreateMNPSecretKeyResponse CreateMNPSecretKeySync(CreateMNPSecretKeyRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSecretKeyResponse>(req, "CreateMNPSecretKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
