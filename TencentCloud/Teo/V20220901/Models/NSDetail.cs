@@ -41,7 +41,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+        /// Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }

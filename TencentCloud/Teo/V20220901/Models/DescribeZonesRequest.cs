@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The page offset. Default value: 0
+        /// The page offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

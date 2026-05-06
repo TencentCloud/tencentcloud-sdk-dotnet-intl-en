@@ -78,9 +78,9 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Predefined fields for delivery. valid values:.
-        /// <Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.comom/document/product/1552/105791?from_cn_redirect=1)</li>.
-        /// <Li><A href="https://www.tencentcloud.comom/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-        /// <Li>Specifies the edge function logs (https://www.tencentcloud.comom/document/product/1552/115585?from_cn_redirect=1).</li>.
+        /// <Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
+        /// <Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
+        /// <Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }

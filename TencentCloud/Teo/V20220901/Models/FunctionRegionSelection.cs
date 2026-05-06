@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.comom/document/product/1552/112542?from_cn_redirect=1).
+        /// List of countries/regions. example value: CN: china, CN.GD: guangdong, china. for values, see: [country/region and corresponding code enumeration](https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }

@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+        /// Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }

@@ -31,28 +31,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+        /// The end time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Query metrics. valid values:.
-        /// <ul><li>**l4Flow_flux**: specifies the total access traffic. measurement unit: Byte. metric value type: Integer.</li>.
-        /// <li>**l4Flow_inFlux**: specifies access inbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-        /// <li>**l4Flow_outFlux**: access outbound traffic. measurement unit: Byte. metric value type: Integer.</li>.
-        /// <li>**l4Flow_inBandwidth**: specifies the inbound bandwidth peak of the visit. measurement unit: bps. metric value type: Integer.</li>.
-        /// <li>**l4Flow_outBandwidth**: specifies the outbound bandwidth peak. measurement unit: bps. metric value type: Integer.</li>.
-        /// <li>**l4Flow_connections**: specifies the number of concurrent connections, measurement unit: unit, metric value type: Integer.</li>.
-        /// <li>**l4Flow_newConnectionsRate**: the rate of new connections, measurement unit: per second, metric value type: Float, rounded to two decimal places.</li></ul>**note**:<ul><li>metrics of <code>Integer</code> type will return corresponding time series Data from <code>Data.N.TypeValue</code>;</li>.
-        /// <li>Metrics with <code>Float</code> value type will return corresponding time series Data from <code>Data.N.FloatTypeValue</code>.</li></ul>.
+        /// Metric list. Valid values:
+        /// <ul><li>**l4Flow_flux**: Total client traffic. Unit: Byte. Value type: Integer.</li>
+        /// <li>**l4Flow_inFlux**: Inbound client traffic. Unit: Byte. Value type: Integer.</li>
+        /// <li>**l4Flow_outFlux**: Outbound client traffic. Unit: Byte. Value type: Integer.</li>
+        /// <li>**l4Flow_inBandwidth**: Peak inbound client bandwidth. Unit: bps. Value type: Integer.</li>
+        /// <li>**l4Flow_outBandwidth**: Peak outbound client bandwidth. Unit: bps. Value type: Integer.</li>
+        /// <li>**l4Flow_connections**: Concurrent client connections. Unit: count. Value type: Integer.</li>
+        /// <li>**l4Flow_newConnectionsRate**: New connection rate. Unit: connections/second. Value type: Float. Rounded to two decimal places.</li></ul>**Note**:<ul><li>Metrics with an <code>Integer</code> value type return time-series data via <code>Data.N.TypeValue</code>;</li>
+        /// <li>Metrics with a <code>Float</code> value type return time-series data via <code>Data.N.FloatTypeValue</code>.</li></ul>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// Site ID. this parameter will change from selectable to required after may 30, 2024. for details, see the announcement: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-        /// Import up to 100 site ids. to query all site data under the tencent cloud root account, use `*` as a replacement. querying account-level data requires permission for all site resources of this api.
+        /// Site ID. This parameter will change from selectable to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne: Tencent Cloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+        /// Import up to 100 zone-ids. To query all site data under the Tencent Cloud root account, use `*` as a replacement. Querying account-level data requires permission for all site resources of this API.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -64,19 +64,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// Time granularity of the query. valid values:.
-        /// <ul><li>**min**: 1 minute;</li>.
-        /// <Li>**5min**: 5 minutes;</li>.
-        /// <Li>**Hour**: 1 hour;</li>.
-        /// <Li>**Day**: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
+        /// Time granularity of the query. Valid values:
+        /// <ul><li>**min**: 1 minute;</li><Li>**5min**: 5 minutes;</li><Li>**hour**: 1 hour;</li><Li>**day**: 1 day.</li></ul>If this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. Specifically, data will be queried with a granularity of <code>min</code>, <code>5min</code>, <code>hour</code>, and <code>day</code> respectively when the period is no more than 1 hour, no more than 2 days, no more than 7 days, and over 7 days.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Filter criteria. the detailed Key values of filter criteria are as follows:.
-        /// <ul><li>**ruleId**: filter by forwarding rule ID.</li>.
-        /// <li>**proxyId**: filters by l4 proxy instance ID.</li></ul>.
+        /// Filter criteria. The detailed key values of filter criteria are as follows:.
+        /// <ul><li>**ruleId**: filter by forwarding rule ID.</li>
+        /// <li>**proxyId**: filter by L4 proxy instance ID.</li></ul>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Organization.V20181225.Models
     {
         
         /// <summary>
-        /// Organizational unit ID list
+        /// Organizational unit ID list.
         /// </summary>
         [JsonProperty("NodeIds")]
         public ulong?[] NodeIds{ get; set; }

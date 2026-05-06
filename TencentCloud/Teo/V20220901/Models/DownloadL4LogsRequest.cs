@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+        /// The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

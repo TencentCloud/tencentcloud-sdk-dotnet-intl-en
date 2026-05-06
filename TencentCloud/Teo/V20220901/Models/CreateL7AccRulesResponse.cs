@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Rule id list.
+        /// Rule id list
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }

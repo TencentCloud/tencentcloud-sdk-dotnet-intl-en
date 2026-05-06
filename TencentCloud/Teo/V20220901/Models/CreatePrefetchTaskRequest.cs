@@ -35,7 +35,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// List of resources to be preheated. required. each element format is as follows:.
         /// http://www.example.com/example.txt.
-        /// Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+        /// Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }

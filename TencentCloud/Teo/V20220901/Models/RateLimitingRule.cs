@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1).
+        /// The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string CountingPeriod{ get; set; }
 
         /// <summary>
-        /// The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>.
+        /// The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>.
         /// </summary>
         [JsonProperty("ActionDuration")]
         public string ActionDuration{ get; set; }

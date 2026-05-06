@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+        /// Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("WorkModeInfos")]
         public ConfigGroupWorkModeInfo[] WorkModeInfos{ get; set; }

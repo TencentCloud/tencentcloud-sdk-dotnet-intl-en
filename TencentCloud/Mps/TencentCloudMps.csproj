@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1290</VersionPrefix>
+    <VersionPrefix>3.0.1308</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -270,6 +270,8 @@
     <Compile Include="V20190612\Models\CreatePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\CreateProcessImageTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateProcessImageTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20190612\Models\CreateProjectResponse.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\CreateQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\CreateSampleSnapshotTemplateRequest.cs" />
@@ -314,6 +316,8 @@
     <Compile Include="V20190612\Models\DeletePersonSampleResponse.cs" />
     <Compile Include="V20190612\Models\DeleteProcessImageTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteProcessImageTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20190612\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateRequest.cs" />
     <Compile Include="V20190612\Models\DeleteQualityControlTemplateResponse.cs" />
     <Compile Include="V20190612\Models\DeleteSampleSnapshotTemplateRequest.cs" />
@@ -358,6 +362,8 @@
     <Compile Include="V20190612\Models\DescribeBlindWatermarkTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeContentReviewTemplatesResponse.cs" />
+    <Compile Include="V20190612\Models\DescribeDesignTaskRequest.cs" />
+    <Compile Include="V20190612\Models\DescribeDesignTaskResponse.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20190612\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20190612\Models\DescribeImageTaskDetailRequest.cs" />
@@ -667,6 +673,7 @@
     <Compile Include="V20190612\Models\SmartSubtitlesTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTaskInput.cs" />
     <Compile Include="V20190612\Models\SnapshotByTimeOffsetTemplate.cs" />
+    <Compile Include="V20190612\Models\Speakers.cs" />
     <Compile Include="V20190612\Models\SpecificationDataItem.cs" />
     <Compile Include="V20190612\Models\SpekeDrm.cs" />
     <Compile Include="V20190612\Models\SubtitleBoardConfig.cs" />
@@ -694,6 +701,7 @@
     <Compile Include="V20190612\Models\TaskSimpleInfo.cs" />
     <Compile Include="V20190612\Models\TaskStatData.cs" />
     <Compile Include="V20190612\Models\TaskStatDataItem.cs" />
+    <Compile Include="V20190612\Models\TermBase.cs" />
     <Compile Include="V20190612\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20190612\Models\TerrorismConfigureInfoForUpdate.cs" />
     <Compile Include="V20190612\Models\TerrorismImgReviewTemplateInfo.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+        /// Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1290";
+       private const string sdkVersion = "SDK_NET_3.0.1308";
 
         /// <summary>
         /// Client constructor.
@@ -346,6 +346,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateProcessImageTemplateResponse CreateProcessImageTemplateSync(CreateProcessImageTemplateRequest req)
         {
             return InternalRequestAsync<CreateProcessImageTemplateResponse>(req, "CreateProcessImageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject");
+        }
+
+        /// <summary>
+        /// This API is used to create an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="CreateProjectRequest"/></param>
+        /// <returns><see cref="CreateProjectResponse"/></returns>
+        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
+        {
+            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -870,6 +891,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to delete an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public Task<DeleteProjectResponse> DeleteProject(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject");
+        }
+
+        /// <summary>
+        /// This API is used to delete an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProjectRequest"/></param>
+        /// <returns><see cref="DeleteProjectResponse"/></returns>
+        public DeleteProjectResponse DeleteProjectSync(DeleteProjectRequest req)
+        {
+            return InternalRequestAsync<DeleteProjectResponse>(req, "DeleteProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a media quality inspection template.
         /// </summary>
         /// <param name="req"><see cref="DeleteQualityControlTemplateRequest"/></param>
@@ -1328,6 +1370,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplatesSync(DescribeContentReviewTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeContentReviewTemplatesResponse>(req, "DescribeContentReviewTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an asynchronous voice design task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
+        /// <returns><see cref="DescribeDesignTaskResponse"/></returns>
+        public Task<DescribeDesignTaskResponse> DescribeDesignTask(DescribeDesignTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignTaskResponse>(req, "DescribeDesignTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an asynchronous voice design task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDesignTaskRequest"/></param>
+        /// <returns><see cref="DescribeDesignTaskResponse"/></returns>
+        public DescribeDesignTaskResponse DescribeDesignTaskSync(DescribeDesignTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeDesignTaskResponse>(req, "DescribeDesignTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
