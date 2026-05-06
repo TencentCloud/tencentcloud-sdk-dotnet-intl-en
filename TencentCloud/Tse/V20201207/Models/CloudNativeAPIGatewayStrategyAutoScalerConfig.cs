@@ -1,0 +1,104 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tse.V20201207.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CloudNativeAPIGatewayStrategyAutoScalerConfig : AbstractModel
+    {
+        
+        /// <summary>
+        /// Maximum number of replicas
+        /// </summary>
+        [JsonProperty("MaxReplicas")]
+        public long? MaxReplicas{ get; set; }
+
+        /// <summary>
+        /// Metric list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Metrics")]
+        public CloudNativeAPIGatewayStrategyAutoScalerConfigMetric[] Metrics{ get; set; }
+
+        /// <summary>
+        /// Whether metric scaling is enabled
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Enabled")]
+        [System.Obsolete]
+        public bool? Enabled{ get; set; }
+
+        /// <summary>
+        /// Creation time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        [System.Obsolete]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Modification time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        [System.Obsolete]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// Policy ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("StrategyId")]
+        [System.Obsolete]
+        public string StrategyId{ get; set; }
+
+        /// <summary>
+        /// Metric configuration ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AutoScalerId")]
+        [System.Obsolete]
+        public string AutoScalerId{ get; set; }
+
+        /// <summary>
+        /// Metric scaling behavior configuration
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Behavior")]
+        public AutoScalerBehavior Behavior{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
+            this.SetParamArrayObj(map, prefix + "Metrics.", this.Metrics);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
+            this.SetParamSimple(map, prefix + "AutoScalerId", this.AutoScalerId);
+            this.SetParamObj(map, prefix + "Behavior.", this.Behavior);
+        }
+    }
+}
+

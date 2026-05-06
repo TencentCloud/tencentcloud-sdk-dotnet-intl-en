@@ -1,0 +1,302 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1307</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Tse</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201207\TseClient.cs" />
+    <Compile Include="V20201207\Models\AccurateQpsThreshold.cs" />
+    <Compile Include="V20201207\Models\Argument.cs" />
+    <Compile Include="V20201207\Models\ArgumentValue.cs" />
+    <Compile Include="V20201207\Models\AutoScalerBehavior.cs" />
+    <Compile Include="V20201207\Models\AutoScalerPolicy.cs" />
+    <Compile Include="V20201207\Models\AutoScalerRules.cs" />
+    <Compile Include="V20201207\Models\BindAutoScalerResourceStrategyToGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\BindAutoScalerResourceStrategyToGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\CanaryPriorityRule.cs" />
+    <Compile Include="V20201207\Models\CertificateInfo.cs" />
+    <Compile Include="V20201207\Models\CloseWafProtectionRequest.cs" />
+    <Compile Include="V20201207\Models\CloseWafProtectionResponse.cs" />
+    <Compile Include="V20201207\Models\CloudAPIGatewayCanaryRuleList.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayBalancedService.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRule.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayCanaryRuleCondition.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayConfig.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayNode.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayNodeConfig.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayRateLimitDetail.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategy.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategyAutoScalerConfig.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategyAutoScalerConfigMetric.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategyBindingGroupInfo.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategyCronScalerConfig.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayStrategyCronScalerConfigParam.cs" />
+    <Compile Include="V20201207\Models\CloudNativeAPIGatewayVpcConfig.cs" />
+    <Compile Include="V20201207\Models\CreateAutoScalerResourceStrategyRequest.cs" />
+    <Compile Include="V20201207\Models\CreateAutoScalerResourceStrategyResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayPublicNetworkRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayPublicNetworkResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayResult.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServerGroupResult.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\CreateCloudNativeAPIGatewayServiceResponse.cs" />
+    <Compile Include="V20201207\Models\CreateGatewayServiceResult.cs" />
+    <Compile Include="V20201207\Models\CreateGovernanceLaneGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\CreateGovernanceLaneGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\CreateNativeGatewayServiceSourceResponse.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\CreateOrModifyCloudNativeAPIGatewayCORSResponse.cs" />
+    <Compile Include="V20201207\Models\CreatePublicNetworkResult.cs" />
+    <Compile Include="V20201207\Models\CreateWafDomainsRequest.cs" />
+    <Compile Include="V20201207\Models\CreateWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteAutoScalerResourceStrategyResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCORSResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayPublicNetworkResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayResult.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteCloudNativeAPIGatewayServiceResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteGovernanceLaneGroup.cs" />
+    <Compile Include="V20201207\Models\DeleteGovernanceLaneGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteGovernanceLaneGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServerGroupResult.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteNativeGatewayServiceSourceResponse.cs" />
+    <Compile Include="V20201207\Models\DeleteWafDomainsRequest.cs" />
+    <Compile Include="V20201207\Models\DeleteWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategiesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategiesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategyBindingGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeAutoScalerResourceStrategyBindingGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCORSRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCORSResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCanaryRulesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificateDetailsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificatesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayCertificatesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayConfigResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayInfoByIpResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayNodesResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayPortsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayPortsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayResult.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayRoutesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesLightRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesLightResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayServicesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayUpstreamRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewayUpstreamResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaysRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeCloudNativeAPIGatewaysResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeGatewayInstancePortResult.cs" />
+    <Compile Include="V20201207\Models\DescribeGovernanceLaneGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeGovernanceLaneGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeInstanceInfoByIpResult.cs" />
+    <Compile Include="V20201207\Models\DescribeKongCORSResult.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServerGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServerGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServiceSourcesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeNativeGatewayServiceSourcesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeOneCloudNativeAPIGatewayServiceResponse.cs" />
+    <Compile Include="V20201207\Models\DescribePublicAddressConfigRequest.cs" />
+    <Compile Include="V20201207\Models\DescribePublicAddressConfigResponse.cs" />
+    <Compile Include="V20201207\Models\DescribePublicAddressConfigResult.cs" />
+    <Compile Include="V20201207\Models\DescribePublicNetworkRequest.cs" />
+    <Compile Include="V20201207\Models\DescribePublicNetworkResponse.cs" />
+    <Compile Include="V20201207\Models\DescribePublicNetworkResult.cs" />
+    <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeUpstreamHealthCheckConfigResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafDomainsResult.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeWafProtectionResult.cs" />
+    <Compile Include="V20201207\Models\ExternalRedis.cs" />
+    <Compile Include="V20201207\Models\Filter.cs" />
+    <Compile Include="V20201207\Models\GatewayInstanceSchemeAndPorts.cs" />
+    <Compile Include="V20201207\Models\GatewayServices.cs" />
+    <Compile Include="V20201207\Models\GovernanceLaneGroup.cs" />
+    <Compile Include="V20201207\Models\GovernanceLaneRule.cs" />
+    <Compile Include="V20201207\Models\GovernanceServiceDestination.cs" />
+    <Compile Include="V20201207\Models\InstancePort.cs" />
+    <Compile Include="V20201207\Models\InstanceTagInfo.cs" />
+    <Compile Include="V20201207\Models\InternetConfig.cs" />
+    <Compile Include="V20201207\Models\KVMapping.cs" />
+    <Compile Include="V20201207\Models\KeyValue.cs" />
+    <Compile Include="V20201207\Models\KongActiveHealthCheck.cs" />
+    <Compile Include="V20201207\Models\KongCertificate.cs" />
+    <Compile Include="V20201207\Models\KongCertificatesList.cs" />
+    <Compile Include="V20201207\Models\KongCertificatesPreview.cs" />
+    <Compile Include="V20201207\Models\KongPassiveHealthCheck.cs" />
+    <Compile Include="V20201207\Models\KongRoutePreview.cs" />
+    <Compile Include="V20201207\Models\KongServiceDetail.cs" />
+    <Compile Include="V20201207\Models\KongServiceLightPreview.cs" />
+    <Compile Include="V20201207\Models\KongServicePreview.cs" />
+    <Compile Include="V20201207\Models\KongServiceRouteList.cs" />
+    <Compile Include="V20201207\Models\KongServices.cs" />
+    <Compile Include="V20201207\Models\KongTarget.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamInfo.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamList.cs" />
+    <Compile Include="V20201207\Models\KongUpstreamPreview.cs" />
+    <Compile Include="V20201207\Models\Label.cs" />
+    <Compile Include="V20201207\Models\LaneTrafficEntry.cs" />
+    <Compile Include="V20201207\Models\LimitRule.cs" />
+    <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayResult.cs" />
+    <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyBindingGroupInfoResult.cs" />
+    <Compile Include="V20201207\Models\ListCloudNativeAPIGatewayStrategyResult.cs" />
+    <Compile Include="V20201207\Models\ListFilter.cs" />
+    <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyAutoScalerResourceStrategyResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCanaryRuleResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCertificateRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayCertificateResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayRouteResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyCloudNativeAPIGatewayServiceResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyConsoleNetworkRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyConsoleNetworkResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyGovernanceLaneGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyGovernanceLaneGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServerGroupResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServiceSourceRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyNativeGatewayServiceSourceResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyNetworkAccessStrategyRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyNetworkAccessStrategyResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyNetworkBasicInfoRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyNetworkBasicInfoResponse.cs" />
+    <Compile Include="V20201207\Models\ModifyUpstreamNodeStatusRequest.cs" />
+    <Compile Include="V20201207\Models\ModifyUpstreamNodeStatusResponse.cs" />
+    <Compile Include="V20201207\Models\NativeGatewayServerGroup.cs" />
+    <Compile Include="V20201207\Models\NativeGatewayServerGroups.cs" />
+    <Compile Include="V20201207\Models\NativeGatewayServiceSourceItem.cs" />
+    <Compile Include="V20201207\Models\NetworkAccessControl.cs" />
+    <Compile Include="V20201207\Models\OpenWafProtectionRequest.cs" />
+    <Compile Include="V20201207\Models\OpenWafProtectionResponse.cs" />
+    <Compile Include="V20201207\Models\PublicAddressConfig.cs" />
+    <Compile Include="V20201207\Models\QpsThreshold.cs" />
+    <Compile Include="V20201207\Models\RateLimitResponse.cs" />
+    <Compile Include="V20201207\Models\RouteWafStatus.cs" />
+    <Compile Include="V20201207\Models\RoutingDestinationRuleLabel.cs" />
+    <Compile Include="V20201207\Models\RuleFilter.cs" />
+    <Compile Include="V20201207\Models\ServiceGatewaySelector.cs" />
+    <Compile Include="V20201207\Models\ServiceSelector.cs" />
+    <Compile Include="V20201207\Models\ServiceWafStatus.cs" />
+    <Compile Include="V20201207\Models\SourceInfo.cs" />
+    <Compile Include="V20201207\Models\SourceInstanceAuth.cs" />
+    <Compile Include="V20201207\Models\SourceInstanceVpcInfo.cs" />
+    <Compile Include="V20201207\Models\TSEGatewaySelector.cs" />
+    <Compile Include="V20201207\Models\TrafficGray.cs" />
+    <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsRequest.cs" />
+    <Compile Include="V20201207\Models\UnbindAutoScalerResourceStrategyFromGroupsResponse.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayCertificateInfoResponse.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewayResult.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewaySpecRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateCloudNativeAPIGatewaySpecResponse.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamHealthCheckConfigRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamHealthCheckConfigResponse.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamTargetsRequest.cs" />
+    <Compile Include="V20201207\Models\UpdateUpstreamTargetsResponse.cs" />
+    <Compile Include="V20201207\Models\UpstreamHealthCheckConfig.cs" />
+  </ItemGroup>
+</Project>
