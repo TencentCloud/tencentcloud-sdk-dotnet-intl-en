@@ -27,7 +27,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// File URL of the 3D model requiring UV unfold
         /// Supported formats: FBX, OBJ, GLB
-        /// 3D model limit: less than 30000 faces
+        /// 3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
         /// </summary>
         [JsonProperty("File")]
         public InputFile3D File{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// List of newly-added APIs
+        /// List of newly-added APIs.
         /// </summary>
         [JsonProperty("APIList")]
         public CreateApplicationSensitiveAPIReq[] APIList{ get; set; }

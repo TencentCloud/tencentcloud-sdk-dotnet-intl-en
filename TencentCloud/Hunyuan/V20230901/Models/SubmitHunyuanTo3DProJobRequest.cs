@@ -103,8 +103,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         /// <summary>
         /// Generation task type. default: Normal. valid values:
         /// Normal: generates a geometric model with textures
-        /// LowPoly: specifies the model generated after intelligent polygon reduction.
-        /// Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+        /// LowPoly: specifies the model generated after intelligent polygon reduction
+        /// Geometry: specifies whether to generate a Geometry model without textures (white model). When this parameter is enabled, only GLB will be output andthe EnablePBR parameter does not take effect
         /// Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
         /// </summary>
         [JsonProperty("GenerateType")]

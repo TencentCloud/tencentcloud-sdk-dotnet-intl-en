@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1304";
+       private const string sdkVersion = "SDK_NET_3.0.1309";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a team member.
+        /// This API is used to add a team member
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a team member.
+        /// This API is used to add a team member
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
