@@ -15,13 +15,13 @@
  * under the License.
  */
 
-namespace TencentCloud.Dc.V20180410.Models
+namespace TencentCloud.Ssl.V20191205.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ReleaseInternetAddressResponse : AbstractModel
+    public class CertificateInfoSubmitResponse : AbstractModel
     {
         
         /// <summary>

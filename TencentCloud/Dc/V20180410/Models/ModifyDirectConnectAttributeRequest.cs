@@ -91,13 +91,19 @@ namespace TencentCloud.Dc.V20180410.Models
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
+        /// Fault reporting contact email
+        /// </summary>
+        [JsonProperty("FaultReportContactEmail")]
+        public string FaultReportContactEmail{ get; set; }
+
+        /// <summary>
         /// Whether the connection applicant has signed the service agreement.
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
         /// <summary>
-        /// Connection’s bandwidth
+        /// Connection's bandwidth
         /// </summary>
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
@@ -119,6 +125,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }

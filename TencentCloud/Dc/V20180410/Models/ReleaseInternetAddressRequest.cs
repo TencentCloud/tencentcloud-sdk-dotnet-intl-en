@@ -25,7 +25,7 @@ namespace TencentCloud.Dc.V20180410.Models
     {
         
         /// <summary>
-        /// ID of the internet tunnel’s public IP address
+        /// ID of the internet tunnel's public IP address
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

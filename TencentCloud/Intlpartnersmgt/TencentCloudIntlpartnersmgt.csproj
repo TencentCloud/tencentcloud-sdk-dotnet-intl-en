@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9E1BD561-ED16-31A5-98EE-F902EDDA0693}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1292</VersionPrefix>
+    <VersionPrefix>3.0.1310</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -92,6 +92,8 @@
     <Compile Include="V20220928\Models\DescribeCustomerOwnVoucherItem.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerOwnVoucherListRequest.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerOwnVoucherListResponse.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerOwnVoucherUsageDetailsRequest.cs" />
+    <Compile Include="V20220928\Models\DescribeCustomerOwnVoucherUsageDetailsResponse.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerUinData.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerUinRequest.cs" />
     <Compile Include="V20220928\Models\DescribeCustomerUinResponse.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1310";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,48 @@ namespace TencentCloud.Ssl.V20191205
         public CancelCertificateOrderResponse CancelCertificateOrderSync(CancelCertificateOrderRequest req)
         {
             return InternalRequestAsync<CancelCertificateOrderResponse>(req, "CancelCertificateOrder")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Submit certificate information for payment
+        /// </summary>
+        /// <param name="req"><see cref="CertificateInfoSubmitRequest"/></param>
+        /// <returns><see cref="CertificateInfoSubmitResponse"/></returns>
+        public Task<CertificateInfoSubmitResponse> CertificateInfoSubmit(CertificateInfoSubmitRequest req)
+        {
+            return InternalRequestAsync<CertificateInfoSubmitResponse>(req, "CertificateInfoSubmit");
+        }
+
+        /// <summary>
+        /// Submit certificate information for payment
+        /// </summary>
+        /// <param name="req"><see cref="CertificateInfoSubmitRequest"/></param>
+        /// <returns><see cref="CertificateInfoSubmitResponse"/></returns>
+        public CertificateInfoSubmitResponse CertificateInfoSubmitSync(CertificateInfoSubmitRequest req)
+        {
+            return InternalRequestAsync<CertificateInfoSubmitResponse>(req, "CertificateInfoSubmit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Submit a certificate order
+        /// </summary>
+        /// <param name="req"><see cref="CertificateOrderSubmitRequest"/></param>
+        /// <returns><see cref="CertificateOrderSubmitResponse"/></returns>
+        public Task<CertificateOrderSubmitResponse> CertificateOrderSubmit(CertificateOrderSubmitRequest req)
+        {
+            return InternalRequestAsync<CertificateOrderSubmitResponse>(req, "CertificateOrderSubmit");
+        }
+
+        /// <summary>
+        /// Submit a certificate order
+        /// </summary>
+        /// <param name="req"><see cref="CertificateOrderSubmitRequest"/></param>
+        /// <returns><see cref="CertificateOrderSubmitResponse"/></returns>
+        public CertificateOrderSubmitResponse CertificateOrderSubmitSync(CertificateOrderSubmitRequest req)
+        {
+            return InternalRequestAsync<CertificateOrderSubmitResponse>(req, "CertificateOrderSubmit")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

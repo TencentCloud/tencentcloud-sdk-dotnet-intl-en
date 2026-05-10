@@ -28,7 +28,7 @@ namespace TencentCloud.Hunyuan.V20230901
 
        private const string endpoint = "hunyuan.intl.tencentcloudapi.com";
        private const string version = "2023-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1310";
 
         /// <summary>
         /// Client constructor.
@@ -125,6 +125,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJobSync(Describe3DSmartTopologyJobRequest req)
         {
             return InternalRequestAsync<Describe3DSmartTopologyJobResponse>(req, "Describe3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 3D Model Auto Rigging API, powered by the Hunyuan Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="DescribeAutoRiggingJobResponse"/></returns>
+        public Task<DescribeAutoRiggingJobResponse> DescribeAutoRiggingJob(DescribeAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoRiggingJobResponse>(req, "DescribeAutoRiggingJob");
+        }
+
+        /// <summary>
+        /// 3D Model Auto Rigging API, powered by the Hunyuan Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="DescribeAutoRiggingJobResponse"/></returns>
+        public DescribeAutoRiggingJobResponse DescribeAutoRiggingJobSync(DescribeAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoRiggingJobResponse>(req, "DescribeAutoRiggingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -278,6 +299,27 @@ namespace TencentCloud.Hunyuan.V20230901
         public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJobSync(Submit3DSmartTopologyJobRequest req)
         {
             return InternalRequestAsync<Submit3DSmartTopologyJobResponse>(req, "Submit3DSmartTopologyJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 3D Model Auto Rigging API, powered by the HY Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="SubmitAutoRiggingJobResponse"/></returns>
+        public Task<SubmitAutoRiggingJobResponse> SubmitAutoRiggingJob(SubmitAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAutoRiggingJobResponse>(req, "SubmitAutoRiggingJob");
+        }
+
+        /// <summary>
+        /// 3D Model Auto Rigging API, powered by the HY Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitAutoRiggingJobRequest"/></param>
+        /// <returns><see cref="SubmitAutoRiggingJobResponse"/></returns>
+        public SubmitAutoRiggingJobResponse SubmitAutoRiggingJobSync(SubmitAutoRiggingJobRequest req)
+        {
+            return InternalRequestAsync<SubmitAutoRiggingJobResponse>(req, "SubmitAutoRiggingJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

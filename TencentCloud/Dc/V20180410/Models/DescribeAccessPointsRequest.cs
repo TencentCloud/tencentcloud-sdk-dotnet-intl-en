@@ -44,6 +44,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

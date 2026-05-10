@@ -76,6 +76,46 @@ namespace TencentCloud.Gwlb.V20240906.Models
         [JsonProperty("AllDeadToAlive")]
         public bool? AllDeadToAlive{ get; set; }
 
+        /// <summary>
+        /// Tags
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// Traffic Distribution Mode
+        /// <ul>
+        /// <li>STATELESS: Stateless</li>
+        /// <li>STATEFUL: Stateful</li>
+        /// </ul>
+        /// </summary>
+        [JsonProperty("ForwardingMode")]
+        public string ForwardingMode{ get; set; }
+
+        /// <summary>
+        /// <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+        /// </summary>
+        [JsonProperty("RescheduleUnbindRs")]
+        public bool? RescheduleUnbindRs{ get; set; }
+
+        /// <summary>
+        /// <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+        /// </summary>
+        [JsonProperty("RescheduleUnbindRsStartTime")]
+        public long? RescheduleUnbindRsStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthy")]
+        public bool? RescheduleUnhealthy{ get; set; }
+
+        /// <summary>
+        /// <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthyStartTime")]
+        public long? RescheduleUnhealthyStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +130,12 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
             this.SetParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ForwardingMode", this.ForwardingMode);
+            this.SetParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
+            this.SetParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthyStartTime", this.RescheduleUnhealthyStartTime);
         }
     }
 }

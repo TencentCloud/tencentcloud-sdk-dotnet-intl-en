@@ -48,6 +48,30 @@ namespace TencentCloud.Gwlb.V20240906.Models
         [JsonProperty("AllDeadToAlive")]
         public bool? AllDeadToAlive{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RescheduleUnbindRs")]
+        public bool? RescheduleUnbindRs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RescheduleUnbindRsStartTime")]
+        public long? RescheduleUnbindRsStartTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthy")]
+        public bool? RescheduleUnhealthy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RescheduleUnhealthyStartTime")]
+        public long? RescheduleUnhealthyStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Gwlb.V20240906.Models
             this.SetParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
             this.SetParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
             this.SetParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+            this.SetParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
+            this.SetParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+            this.SetParamSimple(map, prefix + "RescheduleUnhealthyStartTime", this.RescheduleUnhealthyStartTime);
         }
     }
 }

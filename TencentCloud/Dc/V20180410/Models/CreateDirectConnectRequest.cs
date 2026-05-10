@@ -122,10 +122,28 @@ namespace TencentCloud.Dc.V20180410.Models
         public string FaultReportContactNumber{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FaultReportContactEmail")]
+        public string FaultReportContactEmail{ get; set; }
+
+        /// <summary>
         /// Whether the connection applicant has signed the service agreement. Default value: true.
         /// </summary>
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
+
+        /// <summary>
+        /// Tag key-value pair
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Is MACsec required
+        /// </summary>
+        [JsonProperty("IsMacSec")]
+        public bool? IsMacSec{ get; set; }
 
 
         /// <summary>
@@ -149,7 +167,10 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+            this.SetParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
         }
     }
 }

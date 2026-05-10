@@ -28,7 +28,7 @@ namespace TencentCloud.Dc.V20180410
 
        private const string endpoint = "dc.intl.tencentcloudapi.com";
        private const string version = "2018-04-10";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1310";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// This API is used to apply for an internet tunnel’s CIDR block.
+        /// This API is used to apply for an internet tunnel's CIDR block.
         /// </summary>
         /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
         /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Dc.V20180410
         }
 
         /// <summary>
-        /// This API is used to apply for an internet tunnel’s CIDR block.
+        /// This API is used to apply for an internet tunnel's CIDR block.
         /// </summary>
         /// <param name="req"><see cref="ApplyInternetAddressRequest"/></param>
         /// <returns><see cref="ApplyInternetAddressResponse"/></returns>
