@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskCoverInput Input{ get; set; }
 
         /// <summary>
-        /// Output of intelligent cover generating task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent Cover Task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskCoverOutput Output{ get; set; }

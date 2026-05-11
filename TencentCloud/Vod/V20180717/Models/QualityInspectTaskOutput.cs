@@ -25,25 +25,29 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+        /// Whether there is no audio track in the media file. Value ranges from...to...
+        /// <li>0: No, have audio tracks;</li>
+        /// <li>1: Yes, no audio track.</li>
         /// </summary>
         [JsonProperty("NoAudio")]
         public long? NoAudio{ get; set; }
 
         /// <summary>
-        /// Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+        /// Whether there is no video track in the media file. Value ranges from...to...
+        /// <li>0: No, meaning there is a video track;</li>
+        /// <li>1: Yes, no video track.</li>
         /// </summary>
         [JsonProperty("NoVideo")]
         public long? NoVideo{ get; set; }
 
         /// <summary>
-        /// Quality score, value range: [0, 100].
+        /// Video picture quality score, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public ulong? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// Abnormal items list detected of media quality inspection task
+        /// List of abnormalities detected in audio and video quality.
         /// </summary>
         [JsonProperty("QualityInspectResultSet")]
         public QualityInspectResultItem[] QualityInspectResultSet{ get; set; }

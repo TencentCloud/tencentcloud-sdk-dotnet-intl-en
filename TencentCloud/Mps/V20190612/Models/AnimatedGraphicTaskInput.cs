@@ -25,42 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Animated image generating template ID.
+        /// <p>Video-to-GIF conversion template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Start time of an animated image in a video in seconds.
+        /// <p>Start time of the GIF in the video, in seconds.</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time of an animated image in a video in seconds.
+        /// <p>End time of the GIF in the video, in seconds.</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Target bucket of a generated animated image file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+        /// <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Output path of a file after animated image generating, which can be a relative or absolute path.
-        /// If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).
-        /// Relative path example:
-        /// <li>Filename_{Variable name}.{format}.</li>
-        /// <li>Filename.{format}.</li>
-        /// Absolute path example:
-        /// <li>/Custom path/Filename_{Variable name}.{format}.</li>
-        /// If left empty, a relative path is used by default: `{inputName}_animatedGraphic_{definition}.{format}`.
+        /// <p>Output path of the file after GIF conversion, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_animatedGraphic_{definition}.{format}</code>.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
 
         /// <summary>
@@ -73,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

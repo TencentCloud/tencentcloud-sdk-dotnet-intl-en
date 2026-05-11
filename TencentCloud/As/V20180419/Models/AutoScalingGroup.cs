@@ -184,7 +184,7 @@ namespace TencentCloud.As.V20180419.Models
         public ServiceSettings ServiceSettings{ get; set; }
 
         /// <summary>
-        /// The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+        /// The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports ip and enable IPv6 CIDR in the subnet. for usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/zh/document/product/215/78469).
         /// </summary>
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
@@ -236,10 +236,27 @@ namespace TencentCloud.As.V20180419.Models
         public bool? CapacityRebalance{ get; set; }
 
         /// <summary>
-        /// Instance name sequencing settings.
+        /// Instance name index settings.
         /// </summary>
         [JsonProperty("InstanceNameIndexSettings")]
         public InstanceNameIndexSettings InstanceNameIndexSettings{ get; set; }
+
+        /// <summary>
+        /// Instance host name index settings.
+        /// </summary>
+        [JsonProperty("HostNameIndexSettings")]
+        public HostNameIndexSettings HostNameIndexSettings{ get; set; }
+
+        /// <summary>
+        /// This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+        /// 
+        /// - Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+        /// - Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+        /// - Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+        /// Default: FALSE(indicating that concurrent scaling is disabled).
+        /// </summary>
+        [JsonProperty("ConcurrentScaleOutForDesiredCapacity")]
+        public bool? ConcurrentScaleOutForDesiredCapacity{ get; set; }
 
 
         /// <summary>
@@ -279,6 +296,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
             this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
             this.SetParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
+            this.SetParamObj(map, prefix + "HostNameIndexSettings.", this.HostNameIndexSettings);
+            this.SetParamSimple(map, prefix + "ConcurrentScaleOutForDesiredCapacity", this.ConcurrentScaleOutForDesiredCapacity);
         }
     }
 }

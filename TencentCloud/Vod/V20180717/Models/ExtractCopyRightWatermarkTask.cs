@@ -60,15 +60,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Extract copyright watermark task input information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Input of the copyright watermark extraction task.
         /// </summary>
         [JsonProperty("Input")]
         public ExtractCopyRightWatermarkTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Extract copyright watermark task output information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Output message of the Copyright Watermark Extraction Task.
         /// </summary>
         [JsonProperty("Output")]
         public ExtractCopyRightWatermarkTaskOutput Output{ get; set; }

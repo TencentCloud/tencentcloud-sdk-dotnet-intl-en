@@ -33,15 +33,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Query result of video transcoding task in bitrate reduction, valid when task type is Transcode.
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public ReduceMediaBitrateTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }

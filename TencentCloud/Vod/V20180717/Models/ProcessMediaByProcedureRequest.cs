@@ -25,19 +25,27 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media file ID.
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
-        /// <summary>
         /// [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// Media file ID.
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
+        /// Storage path of the media.
+        /// Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+        /// FileId or MediaStoragePath must be provided.
+        /// </summary>
+        [JsonProperty("MediaStoragePath")]
+        public string MediaStoragePath{ get; set; }
+
+        /// <summary>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -78,8 +86,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);

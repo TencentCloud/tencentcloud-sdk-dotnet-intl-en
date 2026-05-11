@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskHeadTailResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of video opening and ending credits recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video opening and closing credits recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskHeadTailResultOutput Output{ get; set; }

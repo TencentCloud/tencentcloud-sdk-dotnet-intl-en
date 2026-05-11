@@ -36,36 +36,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }

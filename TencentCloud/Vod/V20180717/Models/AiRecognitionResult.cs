@@ -26,84 +26,76 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>FaceRecognition: face recognition,</li>
-        /// <li>AsrWordsRecognition: speech keyword recognition,</li>
-        /// <li>OcrWordsRecognition: text keyword recognition,</li>
-        /// <li>AsrFullTextRecognition: full speech recognition,</li>
-        /// <li>AsrTranslateRecognition: voice translation recognition,</li>
-        /// <li>OcrFullTextRecognition: full text recognition,</li>
-        /// <li>HeadTailRecognition: video opening and ending credits recognition,</li>
-        /// <li>ObjectRecognition: object recognition.</li>
+        /// <li>FaceRecognition: face recognition.</li>
+        /// <li>AsrWordsRecognition: speech keyword recognition.</li>
+        /// <li>OcrWordsRecognition: text keyword recognition.</li>
+        /// <li>AsrFullTextRecognition: full speech recognition.</li>
+        /// <li>AsrTranslateRecognition: Speech translation recognition,</li>
+        /// <li>OcrFullTextRecognition: full text recognition.</li>
+        /// <li>HeadTailRecognition: Video start and end recognition,</li>
+        /// <li>ObjectRecognition: Object recognition.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Video opening and ending credits recognition result, which is valid when `Type` is
-        ///  `HeadTailRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video opening and closing credits recognition result when Type is
+        /// HeadTailRecognition.
         /// </summary>
         [JsonProperty("HeadTailTask")]
         public AiRecognitionTaskHeadTailResult HeadTailTask{ get; set; }
 
         /// <summary>
-        /// Video splitting recognition result, which is valid when `Type` is
-        ///  `SegmentRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video splitting recognition result, which is valid when Type is
+        /// Valid at SegmentRecognition.
         /// </summary>
         [JsonProperty("SegmentTask")]
         public AiRecognitionTaskSegmentResult SegmentTask{ get; set; }
 
         /// <summary>
-        /// Face recognition result, which is valid when `Type` is 
-        ///  `FaceRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Face recognition result, which is valid when Type is 
+        /// FaceRecognition.
         /// </summary>
         [JsonProperty("FaceTask")]
         public AiRecognitionTaskFaceResult FaceTask{ get; set; }
 
         /// <summary>
-        /// Speech keyword recognition result, which is valid when `Type` is
-        ///  `AsrWordsRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Speech keyword recognition result when Type is
+        /// Valid at AsrWordsRecognition.
         /// </summary>
         [JsonProperty("AsrWordsTask")]
         public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
-        /// Full speech recognition result, which is valid when `Type` is
-        ///  `AsrFullTextRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Full speech recognition result. When Type is
+        /// Set to AsrFullTextRecognition, this parameter takes effect.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
-        /// Voice translation result, valid when Type is AsrTranslateRecognition.
+        /// Voice translation result. Valid when Type is AsrTranslateRecognition.
         /// </summary>
         [JsonProperty("AsrTranslateTask")]
         public AiRecognitionTaskAsrTranslateResult AsrTranslateTask{ get; set; }
 
         /// <summary>
-        /// Text keyword recognition result, which is valid when `Type` is
-        ///  `OcrWordsRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Text keyword recognition result when Type is
+        /// Valid at OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsTask")]
         public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
-        /// Full text recognition result, which is valid when `Type` is
-        ///  `OcrFullTextRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Full text recognition result. When Type is
+        /// OcrFullTextRecognition.
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
-        /// Object recognition result, which is valid when `Type` is
-        ///  `ObjectRecognition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Object recognition result, which is valid when Type is
+        /// Valid at ObjectRecognition.
         /// </summary>
         [JsonProperty("ObjectTask")]
         public AiRecognitionTaskObjectResult ObjectTask{ get; set; }

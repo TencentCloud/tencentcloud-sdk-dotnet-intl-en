@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskFaceResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of face recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Face recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskFaceResultOutput Output{ get; set; }

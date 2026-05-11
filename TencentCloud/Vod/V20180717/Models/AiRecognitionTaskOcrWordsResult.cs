@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskOcrWordsResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of text keyword recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Text keyword recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskOcrWordsResultOutput Output{ get; set; }

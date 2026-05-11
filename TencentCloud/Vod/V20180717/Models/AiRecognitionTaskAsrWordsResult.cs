@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrWordsResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of speech keyword recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Speech keyword recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrWordsResultOutput Output{ get; set; }

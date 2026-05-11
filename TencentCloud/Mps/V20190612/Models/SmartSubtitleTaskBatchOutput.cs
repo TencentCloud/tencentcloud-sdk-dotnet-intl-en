@@ -25,39 +25,39 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task progress.
+        /// <p>Task progress.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
+        /// <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+        /// <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// <p>Error message.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Translation task output information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Translation task output information.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TransTextTask")]
         public SmartSubtitleTaskTransTextResultOutput TransTextTask{ get; set; }
 
         /// <summary>
-        /// Output information on the full speech recognition task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Full speech recognition task output information.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask{ get; set; }

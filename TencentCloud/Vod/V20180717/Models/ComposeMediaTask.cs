@@ -62,15 +62,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of media file composing task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Input of the media file creation task.
         /// </summary>
         [JsonProperty("Input")]
         public ComposeMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of media file composing task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output of the media file creation task.
         /// </summary>
         [JsonProperty("Output")]
         public ComposeMediaTaskOutput Output{ get; set; }

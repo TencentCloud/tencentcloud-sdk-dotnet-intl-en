@@ -25,11 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable super resolution. Valid values:
-        /// <li>ON</li>
-        /// <li>`OFF`</li>
-        /// If super resolution is enabled, the output resolution will double.
-        /// Default value: `OFF`.
+        /// Super resolution control switch. Optional values:
+        /// <li>ON: Enable super resolution;</li>
+        /// <li>OFF: Disable screen super resolution.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

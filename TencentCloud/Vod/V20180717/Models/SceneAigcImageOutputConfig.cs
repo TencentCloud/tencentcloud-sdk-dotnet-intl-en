@@ -25,38 +25,58 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod, and the Temporary access URL can be obtained from the event notification.</li>
-        /// Default value: Temporary.
+        /// <p>Storage mode. Valid values: <li>Permanent: Permanent storage. Generated image files will be stored in VOD and the FileId can be obtained in event notification;</li> <li>Temporary: Temporary storage. Generated image files will not be stored in VOD, and a temporary access URL can be obtained in event notification;</li><br>Default value: Temporary</p>
         /// </summary>
         [JsonProperty("StorageMode")]
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// Output filename, longest 64 characters. default filename is specified by the system.
+        /// <p>Output filename, up to 64 characters. Default filename is specified by the system.</p>
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-        /// <Li>Default value: 0, indicate other categories.</li>
+        /// <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Specify the aspect ratio of the generated image. input format is W:H.
-        /// 
-        /// Only valid for product_image scenarios. available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.
+        /// <p>Specify the aspect ratio of the generated image. The input format is W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9.</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, adaptively adjust based on the original image input.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated based on both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, prioritize using ImageWidth and ImageHeight.</li></ol></li></ul>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
+
+        /// <summary>
+        /// <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+        /// </summary>
+        [JsonProperty("EncodeConfig")]
+        public ImageSceneAigcEncodeConfig EncodeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Output image width. <strong>Valid only for AI image expansion scenarios.</strong></p>
+        /// </summary>
+        [JsonProperty("ImageWidth")]
+        public ulong? ImageWidth{ get; set; }
+
+        /// <summary>
+        /// <p>Output image height, <strong>valid only for AI image expansion scenarios</strong>.</p>
+        /// </summary>
+        [JsonProperty("ImageHeight")]
+        public ulong? ImageHeight{ get; set; }
+
+        /// <summary>
+        /// <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+        /// </summary>
+        [JsonProperty("Resolution")]
+        public string Resolution{ get; set; }
 
 
         /// <summary>
@@ -69,6 +89,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+            this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
+            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
+            this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+            this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
         }
     }
 }

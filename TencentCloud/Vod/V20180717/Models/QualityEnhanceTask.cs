@@ -66,22 +66,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input for media quality enhance task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Input of the audio and video quality regeneration task.
         /// </summary>
         [JsonProperty("Input")]
         public QualityEnhanceTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of the media quality enhance task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Output of the audio and video quality regeneration task.
         /// </summary>
         [JsonProperty("Output")]
         public QualityEnhanceTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Media quality enhance outputs meta-information of the video.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Metadata of the output video after audio and video quality revival.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

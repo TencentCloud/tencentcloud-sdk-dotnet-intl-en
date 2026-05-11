@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Confidence level of the voice translation segment. Value: 0~100.
+        /// Confidence of a speech translation segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Start time offset of the voice translation segment in seconds.
+        /// Start time offset of a recognized segment in speech translation, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the voice translation segment in seconds.
+        /// End time offset of a recognized segment in speech translation, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// The translation.
+        /// Translated text.
         /// </summary>
         [JsonProperty("Translation")]
         public string Translation{ get; set; }

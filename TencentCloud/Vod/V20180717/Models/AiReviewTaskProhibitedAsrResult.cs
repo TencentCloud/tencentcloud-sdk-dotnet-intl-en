@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewProhibitedAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for ASR-based recognition of banned content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Audio/video moderation Asr text prohibited task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedAsrTaskOutput Output{ get; set; }

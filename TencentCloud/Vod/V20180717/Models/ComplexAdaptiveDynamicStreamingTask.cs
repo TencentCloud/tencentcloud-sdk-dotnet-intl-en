@@ -32,14 +32,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Task status. Valid values:
-        /// <li>PROCESSING: processing;</li>
-        /// <li>FINISH: completed.</li>
+        /// <li>PROCESSING: Processing;</li>
+        /// <li>FINISH: completed</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+        /// Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingTaskResultSet")]
         public ComplexAdaptiveDynamicStreamingTaskResult[] ComplexAdaptiveDynamicStreamingTaskResultSet{ get; set; }

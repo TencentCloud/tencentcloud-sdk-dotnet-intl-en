@@ -25,19 +25,38 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
+        /// Task type. Specific subtask type in the MPS WorkflowTask structure. Value:
+        /// <li>MediaProcess.Transcode: audio and video transcoding task.</li>
+        /// <li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+        /// <li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+        /// <li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
+        /// <li>AiAnalysis.TagTask: intelligent tag task.</li>
+        /// <li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
+        /// <li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
+        /// <li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
+        /// <li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
+        /// <li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
+        /// <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+        /// <li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
+        /// <li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
+        /// <li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
+        /// <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+        /// <li>SmartSubtitle.TransTextTask: Translation result.</li>
+        /// <li>SmartSubtitle.PureSubtitleTransTask: Returns the translation result of the pure subtitle file.</li>
+        /// <li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+        /// <li>SmartErase: intelligent erasure task.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
+        /// Task status, including PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. Returns 0 for success, other values for failure.
+        /// Error code. 0 indicates success, others indicate failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
@@ -49,13 +68,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
+        /// MPS video processing task input. This field corresponds to the Input result returned by the MPS task in JSON format.
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// MPS media processing task output.
+        /// MPS video processing task output.
         /// </summary>
         [JsonProperty("Output")]
         public MPSTaskOutput Output{ get; set; }

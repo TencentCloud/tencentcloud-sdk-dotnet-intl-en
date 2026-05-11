@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrFullTextResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of full speech recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output information on the speech full-text recognition task.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrFullTextResultOutput Output{ get; set; }

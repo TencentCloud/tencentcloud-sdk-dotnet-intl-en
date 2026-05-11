@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskFrameTagInput Input{ get; set; }
 
         /// <summary>
-        /// Output of intelligent frame-specific tagging task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent frame-specific tagging task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskFrameTagOutput Output{ get; set; }

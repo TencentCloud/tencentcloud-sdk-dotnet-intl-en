@@ -66,22 +66,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// The input parameters of the audio/video remastering task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Input of the audio and video quality regeneration task.
         /// </summary>
         [JsonProperty("Input")]
         public RebuildMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output parameters of the audio/video remastering task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Output of the audio and video quality regeneration task.
         /// </summary>
         [JsonProperty("Output")]
         public RebuildMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// The metadata of the output file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Metadata of the output video after audio and video quality revival.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

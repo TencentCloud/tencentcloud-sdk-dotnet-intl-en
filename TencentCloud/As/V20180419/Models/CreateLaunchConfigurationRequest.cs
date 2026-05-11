@@ -44,7 +44,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+        /// Instance model. Different instance models specify different resource specifications. The specific value can be obtained by calling the [DescribeZoneInstanceConfigInfos](https://www.tencentcloud.com/document/product/213/33254) API to get the latest specification table or referring to the descriptions in [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
         /// `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.
         /// </summary>
         [JsonProperty("InstanceType")]
@@ -109,7 +109,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Instance model list. different instance models specify different resource specifications. supports up to 10 instance models.
-        /// The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
+        /// The `InstanceType` and `InstanceTypes` parameters are mutually exclusive. one and only one must be filled in. specific values can be obtained by calling the api [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) to obtain the latest specification table or refer to [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -144,14 +144,19 @@ namespace TencentCloud.As.V20180419.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// CVM hostname settings.
+        /// Specifies the related settings for the cloud virtual machine HostName (HostName).
+        /// windows instances do not support setting hostname. 
+        /// When adding new attributes, the cloud virtual machine hostname must be transmitted. other fields not transmitted will be set as default.
+        /// Validates whether the host name (with suffix added if it exists) exceeds the maximum of 46 characters.
         /// </summary>
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
 
         /// <summary>
-        /// Settings of CVM instance names
-        /// If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+        /// Specifies the related settings of the cloud server instance name (InstanceName).
+        /// If the user sets this field in the launch configuration, the instance name of the instance created by the scaling group will be set according to this field and passed to CVM. if the user does not set this field in the launch configuration, the instance name of the instance created by the scaling group will be set as "as-{{ scaling group AutoScalingGroupName }}" and passed to CVM.
+        /// Specifies the instance name of the cloud virtual machine when adding this attribute. other fields not transmitted will be set as default.
+        /// Verifies whether the instance name (add the suffix if it exists) exceeds the maximum of 108 characters.
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }
@@ -171,7 +176,7 @@ namespace TencentCloud.As.V20180419.Models
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// High-Performance computing cluster ID. you can obtain this parameter by calling the [DescribeHpcClusters](https://intl.cloud.tencent.com/document/product/213/83220?from_cn_redirect=1) api.
+        /// High-Performance computing cluster ID. This parameter is not currently supported for the international site.
         /// Note: this field is empty by default.
         /// </summary>
         [JsonProperty("HpcClusterId")]

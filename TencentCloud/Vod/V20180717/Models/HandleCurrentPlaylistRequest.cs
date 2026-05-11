@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,6 +49,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ItemId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SegmentIndex")]
+        public long? SegmentIndex{ get; set; }
+
+        /// <summary>
         /// Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
         /// </summary>
         [JsonProperty("RoundPlaylist")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "ItemId", this.ItemId);
+            this.SetParamSimple(map, prefix + "SegmentIndex", this.SegmentIndex);
             this.SetParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
         }
     }

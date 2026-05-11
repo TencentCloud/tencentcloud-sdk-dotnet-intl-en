@@ -113,10 +113,23 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EnhanceSwitch{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OffPeak")]
+        public string OffPeak{ get; set; }
+
+        /// <summary>
         /// Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
         /// </summary>
         [JsonProperty("FrameInterpolate")]
         public string FrameInterpolate{ get; set; }
+
+        /// <summary>
+        /// Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+        /// Currently supported models include Vidu. Other models are not currently supported.
+        /// </summary>
+        [JsonProperty("LogoAdd")]
+        public string LogoAdd{ get; set; }
 
 
         /// <summary>
@@ -136,7 +149,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
             this.SetParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
             this.SetParamSimple(map, prefix + "EnhanceSwitch", this.EnhanceSwitch);
+            this.SetParamSimple(map, prefix + "OffPeak", this.OffPeak);
             this.SetParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
+            this.SetParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         }
     }
 }

@@ -69,15 +69,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of video editing task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video editing task input.
         /// </summary>
         [JsonProperty("Input")]
         public EditMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of video editing task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Output of the video editing task.
         /// </summary>
         [JsonProperty("Output")]
         public EditMediaTaskOutput Output{ get; set; }

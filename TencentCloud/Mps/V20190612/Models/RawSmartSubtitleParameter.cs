@@ -89,6 +89,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SubtitleEmbedId")]
         public long? SubtitleEmbedId{ get; set; }
 
+        /// <summary>
+        /// <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+        /// </summary>
+        [JsonProperty("SpeakerMode")]
+        public long? SpeakerMode{ get; set; }
+
+        /// <summary>
+        /// <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+        /// </summary>
+        [JsonProperty("SpeakerLabel")]
+        public long? SpeakerLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +117,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ProcessType", this.ProcessType);
             this.SetParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
             this.SetParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+            this.SetParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+            this.SetParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
         }
     }
 }

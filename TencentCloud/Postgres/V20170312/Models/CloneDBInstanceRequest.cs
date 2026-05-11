@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+        /// The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+        /// Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -112,7 +112,7 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
-        /// AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+        /// AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }

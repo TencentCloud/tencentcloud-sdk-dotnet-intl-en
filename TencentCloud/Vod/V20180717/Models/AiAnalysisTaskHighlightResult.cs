@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskHighlightInput Input{ get; set; }
 
         /// <summary>
-        /// Output of an intelligent highlight generating task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intelligent Highlight Task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHighlightOutput Output{ get; set; }

@@ -49,15 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input information of video splitting task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video splitting task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskSegmentResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of video splitting task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video splitting task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskSegmentResultOutput Output{ get; set; }

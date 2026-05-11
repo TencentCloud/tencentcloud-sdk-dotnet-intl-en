@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaType{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -83,6 +83,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
+        /// The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled.
+        /// </summary>
+        [JsonProperty("TasksPriority")]
+        public long? TasksPriority{ get; set; }
+
+        /// <summary>
         /// The source context which is used to pass through the user request information. After `Procedure` is specified, the task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
@@ -106,6 +112,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
+        /// <summary>
+        /// Storage path of the media.
+        /// Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+        /// FileId or MediaStoragePath must be provided.
+        /// </summary>
+        [JsonProperty("MediaStoragePath")]
+        public string MediaStoragePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,10 +135,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         }
     }
 }

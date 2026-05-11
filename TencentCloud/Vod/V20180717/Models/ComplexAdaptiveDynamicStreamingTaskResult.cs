@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task status of a single adaptive bitrate stream. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// Task status. Valid values:
+        /// <li>PROCESSING: Processing;</li>
+        /// <li>SUCCESS: Completed;</li>
+        /// <li>FAIL: Failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+        /// Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -43,19 +46,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+        /// Transcoding progress, with a value range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of a single adaptive bitrate stream.
+        /// Input of adaptive bitrate streaming.
         /// </summary>
         [JsonProperty("Input")]
         public ComplexAdaptiveDynamicStreamingTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of a single adaptive bitrate stream.
+        /// Output of adaptive bitrate streaming.
         /// </summary>
         [JsonProperty("Output")]
         public ComplexAdaptiveDynamicStreamingTaskOutput Output{ get; set; }

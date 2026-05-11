@@ -47,6 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
+        [System.Obsolete]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>

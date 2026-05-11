@@ -25,39 +25,39 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Error code. 0 is returned if the request is successful.
+        /// <p>Error code. 0 is returned if the request is successful.</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// Error message. success is returned if the request is successful.
+        /// <p>Error message. success is returned if the request is successful.</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// Synthetic audio in Base64 encoding and WAV format.
+        /// <p>Synthetic audio in Base64 encoding and WAV format.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Synthetic audio URL. It is valid for 24 hours.</p>
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// Cloned voice type ID.
+        /// <p>Cloned voice ID.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

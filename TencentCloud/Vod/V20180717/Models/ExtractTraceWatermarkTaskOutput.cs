@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+        /// Player's ID, represented in hexadecimal, 6 digits in total.
         /// </summary>
         [JsonProperty("Uv")]
         public string Uv{ get; set; }

@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTerrorismTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for intelligent recognition of terrorism content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation involves unsafe information in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismTaskOutput Output{ get; set; }

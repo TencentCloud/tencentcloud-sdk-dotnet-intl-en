@@ -25,42 +25,42 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// ID of an image sprite generating template.
+        /// <p>Sprite screenshot template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Target bucket of a generated image sprite. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+        /// <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Output path of a captured sprite image file, which can be a relative or absolute path.
-        /// If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-        /// <li>Filename_{Variable name}.{format}.</li>
-        /// <li>Filename.{format}.</li>
-        /// Absolute path example:
-        /// <li>/Custom path/Filename_{Variable name}.{format}.</li>
-        /// If left empty, a relative path is used by default: `{inputName}_imageSprite_{definition}_{number}.{format}`.
+        /// <p>Output path of the sprite screenshot image file after the sprite screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}_{number}.{format}</code>.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// Output path to the WebVTT file after an image sprite is generated, which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_imageSprite_{definition}.{format}`.
+        /// <p>Output path of the Web VTT file after the sprite screenshot is taken, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_imageSprite_{definition}.{format}</code>.</p>
         /// </summary>
         [JsonProperty("WebVttObjectName")]
         public string WebVttObjectName{ get; set; }
 
         /// <summary>
-        /// Rule of the `{number}` variable in the image sprite output path.
+        /// <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
 
         /// <summary>
@@ -73,6 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "WebVttObjectName", this.WebVttObjectName);
             this.SetParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

@@ -71,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
+        [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>

@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Model name. 
+        /// Model name.
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Model version. 
+        /// Model version.
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// File information of the input image for the AIGC image generation task.
+        /// Input file of the AIGC image generation task.
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// The prompt content for image generation.
+        /// Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Prevent the model from generating image generation prompts.
+        /// To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+        /// Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+        /// Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
         /// </summary>
         [JsonProperty("GenerationMode")]
         public string GenerationMode{ get; set; }
 
         /// <summary>
-        /// Output media file configuration for the task.
+        /// Output the result file of the AIGC image generation.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcImageOutputConfig OutputConfig{ get; set; }

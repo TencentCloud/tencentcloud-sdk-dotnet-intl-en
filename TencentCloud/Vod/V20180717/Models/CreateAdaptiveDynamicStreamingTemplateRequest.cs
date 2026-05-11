@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -69,6 +69,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("DrmKeyProvider")]
         public string DrmKeyProvider{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("DrmEncryptType")]
+        public string DrmEncryptType{ get; set; }
 
         /// <summary>
         /// Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
@@ -115,6 +121,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
+            this.SetParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);

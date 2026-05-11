@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
         /// </summary>
         [JsonProperty("InputInfo")]
@@ -78,18 +84,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
-        /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
             this.SetParamObj(map, prefix + "OutputInfo.", this.OutputInfo);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
@@ -99,7 +100,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

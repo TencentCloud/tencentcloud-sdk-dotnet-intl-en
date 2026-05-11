@@ -51,7 +51,7 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public bool? Stream{ get; set; }
 
         /// <summary>
-        /// Text to be translated.
+        /// Text to be translated
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

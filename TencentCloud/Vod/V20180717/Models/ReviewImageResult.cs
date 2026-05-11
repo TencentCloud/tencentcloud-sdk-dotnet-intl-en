@@ -25,10 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The suggestion. Valid values:
-        /// <li>pass</li>
-        /// <li>review</li>
-        /// <li>block</li>
+        /// Image review result suggestion. Value ranges from...to...
+        /// <li>pass: it is recommended to pass;</li>
+        /// <li>review: suggest re-examination;</li>
+        /// <li>block: Suggest banning.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
@@ -40,28 +40,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-        /// <li>`Image` (people or icons in images)</li>
-        /// <li>`OCR` (text in images)</li>
+        /// Valid when Suggestion is review or block, indicating the most likely prohibited forms. Value ranges from...to...
+        /// <li>Image: The figure or icon on the screen;</li>
+        /// <li>OCR: Text on the screen.</li>
         /// </summary>
         [JsonProperty("Form")]
         public string Form{ get; set; }
 
         /// <summary>
-        /// A list of the suspicious segments detected.
-        /// <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
+        /// Video clips suspected of containing violation information.
+        /// <font color=red>Note</font>: The list only displays the first 10 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public ReviewImageSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
+        /// URL of video clip list file involved in suspicion of violation information. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+        /// URL expiry time of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

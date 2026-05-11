@@ -25,10 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The ID of the intelligent highlight generation template.
+        /// <p>ID of the intelligent video highlight template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("ExtendedParameter")]
+        public string ExtendedParameter{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
         }
     }
 }

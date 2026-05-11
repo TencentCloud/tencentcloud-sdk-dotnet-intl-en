@@ -25,25 +25,25 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Order number list. Each instance corresponds to an order number.
+        /// <p>Order number list. Each instance corresponds to an order number.</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Bill ID of frozen fees
+        /// <p>Frozen bill ID.</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+        /// <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+        /// <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
         /// </summary>
         [JsonProperty("BillingParameters")]
         public string BillingParameters{ get; set; }

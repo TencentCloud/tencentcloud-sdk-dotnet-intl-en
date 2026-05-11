@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewProhibitedOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for OCR-based recognition of banned content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation Ocr text prohibited information recognition task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedOcrTaskOutput Output{ get; set; }

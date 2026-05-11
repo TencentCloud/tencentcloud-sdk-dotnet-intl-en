@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task ID.
+        /// Task ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

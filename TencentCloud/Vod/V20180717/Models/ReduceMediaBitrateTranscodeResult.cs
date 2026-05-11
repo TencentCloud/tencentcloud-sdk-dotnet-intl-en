@@ -49,8 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TranscodeTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of a transcoding task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transcoding task output.
         /// </summary>
         [JsonProperty("Output")]
         public MediaTranscodeItem Output{ get; set; }

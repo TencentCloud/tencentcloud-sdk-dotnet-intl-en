@@ -25,37 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// When this field is set to true, it indicates that the video has no audio track.
+        /// <p>A value of true indicates that the video has no audio track.</p>
         /// </summary>
         [JsonProperty("NoAudio")]
         public bool? NoAudio{ get; set; }
 
         /// <summary>
-        /// When this field is set to true, it indicates that the video has no video track.
+        /// <p>A value of true indicates that the video has no video track.</p>
         /// </summary>
         [JsonProperty("NoVideo")]
         public bool? NoVideo{ get; set; }
 
         /// <summary>
-        /// No-reference quality score of the video (100 points in total).
+        /// <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public long? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// No-reference quality score of the video (MOS).
+        /// <p>No-reference quality score of the video (MOS).</p>
         /// </summary>
         [JsonProperty("QualityEvaluationMeanOpinionScore")]
         public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
-        /// Exception items identified in content quality inspection.
+        /// <p>Video aesthetic score. Value range: [0, 100].</p>
+        /// </summary>
+        [JsonProperty("AestheticEvaluationScore")]
+        public long? AestheticEvaluationScore{ get; set; }
+
+        /// <summary>
+        /// <p>Exception items detected in content quality inspection.</p>
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// Exception items identified in format diagnosis.
+        /// <p>Exception items detected in format diagnosis.</p>
         /// </summary>
         [JsonProperty("ContainerDiagnoseResultSet")]
         public ContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
@@ -70,6 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
             this.SetParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+            this.SetParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
             this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
         }

@@ -50,6 +50,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
+        /// Digital watermark.
+        /// </summary>
+        [JsonProperty("BlindWatermark")]
+        public BlindWatermarkInput BlindWatermark{ get; set; }
+
+        /// <summary>
         /// List of blurs. Up to 10 ones can be supported.
         /// </summary>
         [JsonProperty("MosaicSet")]
@@ -89,6 +95,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
             this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
+            this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
             this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

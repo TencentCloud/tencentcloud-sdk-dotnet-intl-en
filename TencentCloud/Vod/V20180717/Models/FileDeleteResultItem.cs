@@ -31,8 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The type of the file deleted.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Part of the file deleted this time.
         /// </summary>
         [JsonProperty("DeleteParts")]
         public MediaDeleteItem[] DeleteParts{ get; set; }

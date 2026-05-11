@@ -31,8 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SplitMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of a video splitting task.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Video splitting task output information.
         /// </summary>
         [JsonProperty("Output")]
         public TaskOutputMediaInfo Output{ get; set; }

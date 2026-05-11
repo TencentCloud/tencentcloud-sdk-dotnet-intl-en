@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskTagInput Input{ get; set; }
 
         /// <summary>
-        /// Output of intelligent tagging task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent tag task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskTagOutput Output{ get; set; }

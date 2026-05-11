@@ -25,26 +25,46 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+        /// <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID.</b>
+        /// <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// This parameter is used for passing through to media processing service (MPS) so that video processing tasks can be triggered from VOD.
-        /// For detailed information on video processing parameters, please refer to [MPS Initiate Media Processing](https://www.tencentcloud.com/document/product/1041/33640). 
-        /// Instructions: 
-        /// 1. Currently, only the AiAnalysisTask parameter in the MPS "ProcessMedia" API needs to be configured. Other parameters are not required. If other parameters are included, the system will automatically ignore them. 
-        /// 2. Currently, this is the only method used to initiate Smart Erase tasks. If parameters related to other task types are configured, the system will automatically ignore them.
+        /// <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
         /// </summary>
         [JsonProperty("MPSProcessMediaParams")]
         public string MPSProcessMediaParams{ get; set; }
+
+        /// <summary>
+        /// <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+        /// </summary>
+        [JsonProperty("AiAnalysisTask")]
+        public MPSAiAnalysisTaskInput AiAnalysisTask{ get; set; }
+
+        /// <summary>
+        /// <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+        /// </summary>
+        [JsonProperty("SmartSubtitlesTask")]
+        public MPSSmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
+
+        /// <summary>
+        /// <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+        /// </summary>
+        [JsonProperty("SmartEraseTask")]
+        public MPSSmartEraseTaskInput SmartEraseTask{ get; set; }
+
+        /// <summary>
+        /// <p>Reserved field. Used for special purpose.</p>
+        /// </summary>
+        [JsonProperty("ExtInfo")]
+        public string ExtInfo{ get; set; }
 
 
         /// <summary>
@@ -55,6 +75,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "MPSProcessMediaParams", this.MPSProcessMediaParams);
+            this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
+            this.SetParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+            this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }
 }

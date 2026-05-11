@@ -34,13 +34,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The HDR type. Valid values:
-        /// <li>`hdr10`</li>
-        /// <li>`hlg`</li>
+        /// High dynamic range type. Valid values:
+        /// <li>hdr10: means the hdr10 standard;</li>
+        /// <li>hlg: refers to the hlg standard.</li>
         /// 
         /// Note:
-        /// <li>This parameter is valid only if `Switch` is `ON`.</li>
-        /// <li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+        /// <li>Valid only when the high dynamic range type control switch is ON.</li>
+        /// <li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

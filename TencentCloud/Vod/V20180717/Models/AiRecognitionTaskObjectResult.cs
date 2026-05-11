@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskObjectResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of object recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Object recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskObjectResultOutput Output{ get; set; }

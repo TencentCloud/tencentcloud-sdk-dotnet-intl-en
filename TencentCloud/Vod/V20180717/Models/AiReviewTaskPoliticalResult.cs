@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPoliticalTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for intelligent recognition of politically sensitive content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation involves inappropriate information in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalTaskOutput Output{ get; set; }

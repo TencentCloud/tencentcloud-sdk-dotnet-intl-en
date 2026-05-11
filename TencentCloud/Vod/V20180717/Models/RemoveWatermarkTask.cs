@@ -60,8 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of a watermark removal task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Input of the intelligent watermark removal task.
         /// </summary>
         [JsonProperty("Input")]
         public RemoveWaterMarkTaskInput Input{ get; set; }

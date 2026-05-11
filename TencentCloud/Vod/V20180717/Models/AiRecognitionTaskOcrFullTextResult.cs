@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskOcrFullTextResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of full text recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Full text recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskOcrFullTextResultOutput Output{ get; set; }

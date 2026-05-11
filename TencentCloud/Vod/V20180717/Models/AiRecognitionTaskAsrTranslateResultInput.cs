@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Voice translation template ID.
+        /// Speech translation template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

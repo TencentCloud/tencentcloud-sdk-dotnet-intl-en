@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPornOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for OCR-based recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation Ocr text involves offensive content in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornOcrTaskOutput Output{ get; set; }

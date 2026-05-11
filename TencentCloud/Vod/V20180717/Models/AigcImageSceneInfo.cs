@@ -25,9 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// AI image generation scenario type. valid values:
+        /// Scenario type of AI image generation. Available values:
         /// -change_clothes: AI clothing change.
-        /// -product_image: AI-generated product image.
+        /// -Product image: AI-generated product image.
+        /// -outpainting: AI image expansion.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -57,8 +57,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// The metadata of the source video.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Metadata of the original video.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

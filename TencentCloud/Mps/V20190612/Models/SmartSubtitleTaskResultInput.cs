@@ -25,18 +25,23 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Smart subtitle template ID.
+        /// <p>Smart subtitle template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-        /// This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawSmartSubtitleParameter RawParameter{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("UserExtPara")]
+        public string UserExtPara{ get; set; }
 
 
         /// <summary>
@@ -46,6 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamObj(map, prefix + "RawParameter.", this.RawParameter);
+            this.SetParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
         }
     }
 }

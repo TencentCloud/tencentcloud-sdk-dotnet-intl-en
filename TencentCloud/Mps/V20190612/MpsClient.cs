@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1308";
+       private const string sdkVersion = "SDK_NET_3.0.1311";
 
         /// <summary>
         /// Client constructor.
@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612
 
         /// <summary>
         /// This API is used to initiate batch processing tasks for URL video links, with features including:
-        /// Smart subtitle (full speech, speech hotword, and speech translation)
+        /// Smart subtitle (full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
         /// <returns><see cref="BatchProcessMediaResponse"/></returns>
@@ -66,7 +66,7 @@ namespace TencentCloud.Mps.V20190612
 
         /// <summary>
         /// This API is used to initiate batch processing tasks for URL video links, with features including:
-        /// Smart subtitle (full speech, speech hotword, and speech translation)
+        /// Smart subtitle (full speech, speech hotword, and speech translation).
         /// </summary>
         /// <param name="req"><see cref="BatchProcessMediaRequest"/></param>
         /// <returns><see cref="BatchProcessMediaResponse"/></returns>
@@ -1735,6 +1735,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query the result of an asynchronous text to speech task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToSpeechAsyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeTextToSpeechAsyncTaskResponse"/></returns>
+        public Task<DescribeTextToSpeechAsyncTaskResponse> DescribeTextToSpeechAsyncTask(DescribeTextToSpeechAsyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToSpeechAsyncTaskResponse>(req, "DescribeTextToSpeechAsyncTask");
+        }
+
+        /// <summary>
+        /// This API is used to query the result of an asynchronous text to speech task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTextToSpeechAsyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeTextToSpeechAsyncTaskResponse"/></returns>
+        public DescribeTextToSpeechAsyncTaskResponse DescribeTextToSpeechAsyncTaskSync(DescribeTextToSpeechAsyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeTextToSpeechAsyncTaskResponse>(req, "DescribeTextToSpeechAsyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeTemplatesRequest"/></param>
@@ -1777,6 +1798,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeUsageDataResponse DescribeUsageDataSync(DescribeUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeUsageDataResponse>(req, "DescribeUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public Task<DescribeVoicesResponse> DescribeVoices(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices");
+        }
+
+        /// <summary>
+        /// This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public DescribeVoicesResponse DescribeVoicesSync(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1840,6 +1882,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeWorkflowsResponse DescribeWorkflowsSync(DescribeWorkflowsRequest req)
         {
             return InternalRequestAsync<DescribeWorkflowsResponse>(req, "DescribeWorkflows")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to design a voice. It generates a voice ID based on a prompt.
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public Task<DesignVoiceAsyncResponse> DesignVoiceAsync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync");
+        }
+
+        /// <summary>
+        /// This API is used to design a voice. It generates a voice ID based on a prompt.
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2636,6 +2699,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to query an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="QueryProjectRequest"/></param>
+        /// <returns><see cref="QueryProjectResponse"/></returns>
+        public Task<QueryProjectResponse> QueryProject(QueryProjectRequest req)
+        {
+            return InternalRequestAsync<QueryProjectResponse>(req, "QueryProject");
+        }
+
+        /// <summary>
+        /// This API is used to query an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="QueryProjectRequest"/></param>
+        /// <returns><see cref="QueryProjectResponse"/></returns>
+        public QueryProjectResponse QueryProjectSync(QueryProjectRequest req)
+        {
+            return InternalRequestAsync<QueryProjectResponse>(req, "QueryProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to return the speech recognition results synchronously.
         /// </summary>
         /// <param name="req"><see cref="RecognizeAudioRequest"/></param>
@@ -2699,7 +2783,28 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to translate text.
+        /// This API is used to convert text to speech asynchronously and supports long text to speech.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public Task<TextToSpeechAsyncResponse> TextToSpeechAsync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync");
+        }
+
+        /// <summary>
+        /// This API is used to convert text to speech asynchronously and supports long text to speech.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public TextToSpeechAsyncResponse TextToSpeechAsyncSync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>
@@ -2709,13 +2814,34 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to translate text.
+        /// 
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>
         public TextTranslationResponse TextTranslationSync(TextTranslationRequest req)
         {
             return InternalRequestAsync<TextTranslationResponse>(req, "TextTranslation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public Task<UpdateProjectResponse> UpdateProject(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject");
+        }
+
+        /// <summary>
+        /// This API is used to update an episode project.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProjectRequest"/></param>
+        /// <returns><see cref="UpdateProjectResponse"/></returns>
+        public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
+        {
+            return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

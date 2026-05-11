@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -62,9 +62,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AiRecognitionTaskSet")]
+        public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
+
+        /// <summary>
         /// Type parameter of AI-based content recognition task.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
+        [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
@@ -85,6 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         }

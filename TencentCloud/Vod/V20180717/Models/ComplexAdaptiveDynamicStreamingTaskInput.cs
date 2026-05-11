@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming parameters.
+        /// Adaptive Bitrate Parameters.
         /// </summary>
         [JsonProperty("StreamPara")]
         public ComplexAdaptiveDynamicStreamingTaskStreamPara StreamPara{ get; set; }

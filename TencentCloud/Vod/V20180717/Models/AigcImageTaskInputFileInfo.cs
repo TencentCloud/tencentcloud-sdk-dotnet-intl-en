@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+        /// Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

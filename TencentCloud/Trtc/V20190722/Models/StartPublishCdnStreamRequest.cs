@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+        /// [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public McuFeedBackRoomParams[] FeedBackRoomParams{ get; set; }
 
         /// <summary>
-        /// Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+        /// Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("RecordParams")]
         public McuRecordParams RecordParams{ get; set; }

@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPornTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for intelligent recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation involves offensive content in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornTaskOutput Output{ get; set; }

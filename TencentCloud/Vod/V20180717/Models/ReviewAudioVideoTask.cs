@@ -51,15 +51,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of a moderation task.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Audio/video moderation task input.
         /// </summary>
         [JsonProperty("Input")]
         public ReviewAudioVideoTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of a moderation task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio/video moderation task output.
         /// </summary>
         [JsonProperty("Output")]
         public ReviewAudioVideoTaskOutput Output{ get; set; }

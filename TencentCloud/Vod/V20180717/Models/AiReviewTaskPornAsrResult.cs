@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPornAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for ASR-based recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation involves offensive content in Asr text task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornAsrTaskOutput Output{ get; set; }

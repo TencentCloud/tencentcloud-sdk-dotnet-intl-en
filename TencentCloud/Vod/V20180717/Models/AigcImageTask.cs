@@ -25,55 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task ID.
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+        /// <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+        /// <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+        /// <p>Extended error codes. An empty string indicates success, other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+        /// </summary>
+        [JsonProperty("ErrCodeExt")]
+        public string ErrCodeExt{ get; set; }
+
+        /// <summary>
+        /// <p>Error message.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+        /// <p>Task progress, with a value range of [0-100].</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of AIGC image task.
+        /// <p>Input of the AIGC image generation task.</p>
         /// </summary>
         [JsonProperty("Input")]
         public AigcImageTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of AIGC image task.
+        /// <p>Output information of the AIGC image generation task.</p>
         /// </summary>
         [JsonProperty("Output")]
         public AigcImageTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+        /// <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+        /// <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
@@ -87,6 +93,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamObj(map, prefix + "Input.", this.Input);

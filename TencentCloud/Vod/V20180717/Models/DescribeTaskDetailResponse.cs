@@ -25,235 +25,266 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task type. Valid values:
-        /// <li>`Procedure`: Video processing</li>
-        /// <li>`EditMedia`: Video editing</li>
-        /// <li>`SplitMedia`: Video splitting</li>
-        /// <li>`ComposeMedia`: Media file production</li>
-        /// <li>`WechatPublish`: Weixin publishing</li>
-        /// <li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-        /// <li>`PullUpload`: Pulling media files for upload</li>
-        /// <li>`FastClipMedia`: Quick clipping</li>
-        /// <li>`RemoveWatermarkTask`: Watermark removal</li>
-        /// <li>`DescribeFileAttributesTask`: Getting file attributes</li>
-        /// <li> `ReviewAudioVideo`: Moderation</li>
-        /// <li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-        /// <li>`QualityEnhance`: Enhance audio/video</li>
-        /// <li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+        /// <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values:
-        /// <li>WAITING: waiting;</li>
-        /// <li>PROCESSING: processing;</li>
-        /// <li>FINISH: completed.</li>
+        /// <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcedureTask")]
         public ProcedureTask ProcedureTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EditMediaTask")]
         public EditMediaTask EditMediaTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatPublishTask")]
         public WechatPublishTask WechatPublishTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ComposeMediaTask")]
         public ComposeMediaTask ComposeMediaTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SplitMediaTask")]
         public SplitMediaTask SplitMediaTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishTask")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PullUploadTask")]
         public PullUploadTask PullUploadTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTask2017 TranscodeTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConcatTask")]
         public ConcatTask2017 ConcatTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClipTask")]
         public ClipTask2017 ClipTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateImageSpriteTask")]
         public CreateImageSpriteTask2017 CreateImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemoveWatermarkTask")]
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RebuildMediaTask")]
         public RebuildMediaTask RebuildMediaTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkTask")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtractCopyRightWatermarkTask")]
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>This field is invalid.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReduceMediaBitrateTask")]
         public ReduceMediaBitrateTask ReduceMediaBitrateTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DescribeFileAttributesTask")]
         public DescribeFileAttributesTask DescribeFileAttributesTask{ get; set; }
 
         /// <summary>
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityInspectTask")]
         public QualityInspectTask QualityInspectTask{ get; set; }
 
         /// <summary>
-        /// Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityEnhanceTask")]
         public QualityEnhanceTask QualityEnhanceTask{ get; set; }
 
         /// <summary>
-        /// Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingTask")]
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
-        /// Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+        /// <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
         /// </summary>
         [JsonProperty("ProcessMediaByMPSTask")]
         public ProcessMediaByMPS ProcessMediaByMPSTask{ get; set; }
 
         /// <summary>
-        /// AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+        /// <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
         /// </summary>
         [JsonProperty("AigcImageTask")]
         public AigcImageTask AigcImageTask{ get; set; }
 
         /// <summary>
-        /// AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+        /// <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
         /// </summary>
         [JsonProperty("AigcVideoTask")]
         public AigcVideoTask AigcVideoTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledge")]
         public ImportMediaKnowledgeTask ImportMediaKnowledge{ get; set; }
 
         /// <summary>
-        /// Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+        /// <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
         /// </summary>
         [JsonProperty("SceneAigcImageTask")]
         public SceneAigcImageTask SceneAigcImageTask{ get; set; }
+
+        /// <summary>
+        /// <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+        /// </summary>
+        [JsonProperty("SceneAigcVideoTask")]
+        public SceneAigcVideoTask SceneAigcVideoTask{ get; set; }
+
+        /// <summary>
+        /// <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+        /// </summary>
+        [JsonProperty("ProcessImageAsyncTask")]
+        public ProcessImageAsync ProcessImageAsyncTask{ get; set; }
+
+        /// <summary>
+        /// <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+        /// </summary>
+        [JsonProperty("ExtractBlindWatermarkTask")]
+        public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }
+
+        /// <summary>
+        /// <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+        /// </summary>
+        [JsonProperty("CreateAigcAdvancedCustomElementTask")]
+        public CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask{ get; set; }
+
+        /// <summary>
+        /// <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+        /// </summary>
+        [JsonProperty("CreateAigcCustomVoiceTask")]
+        public CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask{ get; set; }
+
+        /// <summary>
+        /// <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+        /// </summary>
+        [JsonProperty("CreateAigcSubjectTask")]
+        public CreateAigcSubjectTask CreateAigcSubjectTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AigcVideoRedrawTask")]
+        public AigcVideoRedrawTask AigcVideoRedrawTask{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AigcAudioTask")]
+        public AigcAudioTask AigcAudioTask{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -299,6 +330,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AigcVideoTask.", this.AigcVideoTask);
             this.SetParamObj(map, prefix + "ImportMediaKnowledge.", this.ImportMediaKnowledge);
             this.SetParamObj(map, prefix + "SceneAigcImageTask.", this.SceneAigcImageTask);
+            this.SetParamObj(map, prefix + "SceneAigcVideoTask.", this.SceneAigcVideoTask);
+            this.SetParamObj(map, prefix + "ProcessImageAsyncTask.", this.ProcessImageAsyncTask);
+            this.SetParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
+            this.SetParamObj(map, prefix + "CreateAigcAdvancedCustomElementTask.", this.CreateAigcAdvancedCustomElementTask);
+            this.SetParamObj(map, prefix + "CreateAigcCustomVoiceTask.", this.CreateAigcCustomVoiceTask);
+            this.SetParamObj(map, prefix + "CreateAigcSubjectTask.", this.CreateAigcSubjectTask);
+            this.SetParamObj(map, prefix + "AigcVideoRedrawTask.", this.AigcVideoRedrawTask);
+            this.SetParamObj(map, prefix + "AigcAudioTask.", this.AigcAudioTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

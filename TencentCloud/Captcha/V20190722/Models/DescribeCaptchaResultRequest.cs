@@ -31,13 +31,13 @@ namespace TencentCloud.Captcha.V20190722.Models
         public ulong? CaptchaType{ get; set; }
 
         /// <summary>
-        /// The user verification ticket returned by the frontend callback function
+        /// The user verification ticket returned by the frontend callback function.
         /// </summary>
         [JsonProperty("Ticket")]
         public string Ticket{ get; set; }
 
         /// <summary>
-        /// The user public IP obtained from the customer backend server
+        /// The user public IP obtained from the customer backend server.
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

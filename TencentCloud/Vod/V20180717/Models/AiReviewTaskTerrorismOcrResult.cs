@@ -55,8 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTerrorismOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for OCR-based recognition of terrorism content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation Ocr text involves unsafe information in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismOcrTaskOutput Output{ get; set; }

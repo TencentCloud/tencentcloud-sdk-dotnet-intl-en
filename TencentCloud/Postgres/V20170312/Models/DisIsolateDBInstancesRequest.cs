@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+        /// Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }

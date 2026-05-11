@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The ID of the remaster template.
+        /// Audio and video quality rebirth template number.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

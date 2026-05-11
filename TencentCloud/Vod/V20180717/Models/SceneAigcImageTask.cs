@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task ID.
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+        /// Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+        /// Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+        /// Task progress, with a value range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of AIGC image task.
+        /// Input of the AIGC image generation task.
         /// </summary>
         [JsonProperty("Input")]
         public SceneAigcImageTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of AIGC image task.
+        /// Output information of the AIGC image generation task.
         /// </summary>
         [JsonProperty("Output")]
         public SceneAigcImageTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+        /// Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

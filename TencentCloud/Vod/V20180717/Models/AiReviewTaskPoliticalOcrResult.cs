@@ -56,8 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPoliticalOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output for OCR-based recognition of politically sensitive content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Video moderation Ocr text involves inappropriate information in task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalOcrTaskOutput Output{ get; set; }
