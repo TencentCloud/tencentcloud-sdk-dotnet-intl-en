@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1313";
 
         /// <summary>
         /// Client constructor.
@@ -182,7 +182,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// Used to create one-time Intelligent Agent outbound calls. You can create a voice Intelligent Agent in the management console - Intelligent Agent Management and perform dialogue process configuration (https://www.tencentcloud.com/document/product/679/119796?from_cn_redirect=1). This API is used to initiate a single outbound call task with a configured Intelligent Agent. To create batch Intelligent Agent outbound call tasks, refer to the documentation for creating automatic outbound call tasks (https://www.tencentcloud.com/document/product/679/69194?from_cn_redirect=1).
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/1229/59535?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAIAgentCallRequest"/></param>
         /// <returns><see cref="CreateAIAgentCallResponse"/></returns>
@@ -194,7 +194,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// Used to create one-time Intelligent Agent outbound calls. You can create a voice Intelligent Agent in the management console - Intelligent Agent Management and perform dialogue process configuration (https://www.tencentcloud.com/document/product/679/119796?from_cn_redirect=1). This API is used to initiate a single outbound call task with a configured Intelligent Agent. To create batch Intelligent Agent outbound call tasks, refer to the documentation for creating automatic outbound call tasks (https://www.tencentcloud.com/document/product/679/69194?from_cn_redirect=1).
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/1229/59535?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAIAgentCallRequest"/></param>
         /// <returns><see cref="CreateAIAgentCallResponse"/></returns>
@@ -207,7 +207,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to **call the AI model directly** to trigger a **single** outbound call. It supports configuring the model, prompt content, voice, and all call elements through API parameters.
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone numbers. For details, refer to the Intelligent Agent Call Purchase Guide (https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone numbers. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/1229/59535?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAICallRequest"/></param>
         /// <returns><see cref="CreateAICallResponse"/></returns>
@@ -219,7 +219,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to **call the AI model directly** to trigger a **single** outbound call. It supports configuring the model, prompt content, voice, and all call elements through API parameters.
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone numbers. For details, refer to the Intelligent Agent Call Purchase Guide (https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone numbers. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/1229/59535?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAICallRequest"/></param>
         /// <returns><see cref="CreateAICallResponse"/></returns>

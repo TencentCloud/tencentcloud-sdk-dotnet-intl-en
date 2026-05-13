@@ -40,7 +40,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// Discount.
         /// </summary>
         [JsonProperty("Discount")]
-        public long? Discount{ get; set; }
+        public float? Discount{ get; set; }
 
         /// <summary>
         /// Discounted image total price in USD.

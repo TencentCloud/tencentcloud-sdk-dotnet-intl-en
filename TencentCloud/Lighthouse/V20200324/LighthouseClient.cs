@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.intl.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1313";
 
         /// <summary>
         /// Client constructor.
@@ -740,27 +740,6 @@ namespace TencentCloud.Lighthouse.V20200324
         public DescribeImagesToShareResponse DescribeImagesToShareSync(DescribeImagesToShareRequest req)
         {
             return InternalRequestAsync<DescribeImagesToShareResponse>(req, "DescribeImagesToShare")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query the attributes of the default login key of an instance.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
-        public Task<DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttribute(DescribeInstanceLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceLoginKeyPairAttributeResponse>(req, "DescribeInstanceLoginKeyPairAttribute");
-        }
-
-        /// <summary>
-        /// This API is used to query the attributes of the default login key of an instance.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
-        public DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttributeSync(DescribeInstanceLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<DescribeInstanceLoginKeyPairAttributeResponse>(req, "DescribeInstanceLoginKeyPairAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1582,29 +1561,6 @@ namespace TencentCloud.Lighthouse.V20200324
         public ModifyInstancesBundleResponse ModifyInstancesBundleSync(ModifyInstancesBundleRequest req)
         {
             return InternalRequestAsync<ModifyInstancesBundleResponse>(req, "ModifyInstancesBundle")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to set the attributes of the default login key pair of an instance.
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
-        public Task<ModifyInstancesLoginKeyPairAttributeResponse> ModifyInstancesLoginKeyPairAttribute(ModifyInstancesLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<ModifyInstancesLoginKeyPairAttributeResponse>(req, "ModifyInstancesLoginKeyPairAttribute");
-        }
-
-        /// <summary>
-        /// This API is used to set the attributes of the default login key pair of an instance.
-        /// 
-        /// </summary>
-        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
-        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
-        public ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttributeSync(ModifyInstancesLoginKeyPairAttributeRequest req)
-        {
-            return InternalRequestAsync<ModifyInstancesLoginKeyPairAttributeResponse>(req, "ModifyInstancesLoginKeyPairAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

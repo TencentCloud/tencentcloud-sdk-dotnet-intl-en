@@ -25,41 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Availability zone.
+        /// <P>Availability zone.</p>.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Cloud disk type. valid values are as follows:.
-        /// 
-        /// <Li>CLOUD_BASIC: basic cloud disk.</li>.
-        /// <Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-        /// <Li>CLOUD_SSD: ssd cloud disk</li>.
+        /// <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Cloud disk sale status.
+        /// <P>Cloud block storage (cbs) saleable state.</p>.
         /// </summary>
         [JsonProperty("DiskSalesState")]
         public string DiskSalesState{ get; set; }
 
         /// <summary>
-        /// Maximum cloud disk size.
+        /// <p>Maximum CBS size.</p><p>unit: GB</p>.
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
-        /// Minimum cloud disk size.
+        /// <p>Minimum CBS disk size.</p><p>unit: GB</p>.
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public long? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// Cloud disk increment.
+        /// <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
         /// </summary>
         [JsonProperty("DiskStepSize")]
         public long? DiskStepSize{ get; set; }
