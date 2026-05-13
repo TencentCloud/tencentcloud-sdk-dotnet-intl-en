@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Search keyword
+        /// <p>Search keywords</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// <p>Offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of results to be returned
+        /// <p>Maximum return quantity</p><p>Default value: 20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Only supported for GroupState filter criteria. valid values: Empty, Stable. note: this parameter can only be accessed in versions 2.8/3.2.
+        /// <p>Only supports filtering by GroupState. Supported filter statuses are Empty/Stable. Note: This parameter is only supported for versions 2.8/3.2.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

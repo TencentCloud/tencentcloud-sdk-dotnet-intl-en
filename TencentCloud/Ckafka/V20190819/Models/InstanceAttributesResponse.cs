@@ -247,7 +247,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public ulong? MaxMessageByte{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+        /// <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -299,6 +299,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("DeleteProtectionEnable")]
         public long? DeleteProtectionEnable{ get; set; }
+
+        /// <summary>
+        /// <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
+        /// <summary>
+        /// <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+        /// </summary>
+        [JsonProperty("TransactionalIdExpirationMs")]
+        public long? TransactionalIdExpirationMs{ get; set; }
 
 
         /// <summary>
@@ -352,6 +364,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+            this.SetParamSimple(map, prefix + "TransactionalIdExpirationMs", this.TransactionalIdExpirationMs);
         }
     }
 }

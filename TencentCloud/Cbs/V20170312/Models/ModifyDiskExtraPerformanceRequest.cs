@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-        /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
-
-        /// <summary>
-        /// The extra throughput to purchase, in MB/s
+        /// Specifies the hard disk performance of the additional CBS purchase in MiB/s.
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
+
+        /// <summary>
+        /// The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

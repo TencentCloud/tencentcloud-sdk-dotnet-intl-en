@@ -25,19 +25,19 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Scheduled snapshot policy ID.
+        /// Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+        /// Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+        /// Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }

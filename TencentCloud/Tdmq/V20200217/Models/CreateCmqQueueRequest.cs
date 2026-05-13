@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+        /// Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }

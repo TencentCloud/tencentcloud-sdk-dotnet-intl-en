@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Namespace name.
+        /// namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+        /// Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
         /// </summary>
         [JsonProperty("ResetTimestamp")]
         public ulong? ResetTimestamp{ get; set; }

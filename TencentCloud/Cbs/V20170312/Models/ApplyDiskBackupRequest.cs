@@ -25,16 +25,28 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+        /// Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("DiskBackupId")]
         public string DiskBackupId{ get; set; }
 
         /// <summary>
-        /// ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+        /// Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+        /// </summary>
+        [JsonProperty("AutoStopInstance")]
+        public bool? AutoStopInstance{ get; set; }
+
+        /// <summary>
+        /// Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+        /// </summary>
+        [JsonProperty("AutoStartInstance")]
+        public bool? AutoStartInstance{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+            this.SetParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
         }
     }
 }

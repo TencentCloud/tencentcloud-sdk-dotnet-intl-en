@@ -25,62 +25,62 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Availability zone
+        /// <p>Availability zone</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Whether it is an internal application.
+        /// <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("IsInternalApp")]
         public long? IsInternalApp{ get; set; }
 
         /// <summary>
-        /// Application identifier
+        /// <p>AppID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+        /// <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
         /// </summary>
         [JsonProperty("Flag")]
         public bool? Flag{ get; set; }
 
         /// <summary>
-        /// Availability zone name.
+        /// <p>Availability zone name</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+        /// <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
         /// </summary>
         [JsonProperty("ZoneStatus")]
         public long? ZoneStatus{ get; set; }
 
         /// <summary>
-        /// Extra flag
+        /// <p>Additional flag</p>
         /// </summary>
         [JsonProperty("Exflag")]
         [System.Obsolete]
         public string Exflag{ get; set; }
 
         /// <summary>
-        /// Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+        /// <p>true indicates sold out, false indicates not sold out.</p>
         /// </summary>
         [JsonProperty("SoldOut")]
         public string SoldOut{ get; set; }
 
         /// <summary>
-        /// Specifies the sell-out information of the standard version.
+        /// <p>Standard version sell-out information</p>
         /// </summary>
         [JsonProperty("SalesInfo")]
         public SaleInfo[] SalesInfo{ get; set; }
 
         /// <summary>
-        /// Additional flag.
+        /// <p>Additional flag</p>
         /// </summary>
         [JsonProperty("ExtraFlag")]
         public string ExtraFlag{ get; set; }

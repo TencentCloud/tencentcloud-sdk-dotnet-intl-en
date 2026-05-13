@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -54,11 +54,11 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to roll back a backup point to the original cloud disk.
+        /// This API is used to roll back a backup to the original cloud disk.
         /// 
-        /// * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
-        /// * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
-        /// * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+        /// This API only supports rolling back to the original cloud disk. For data disk backup points, if you need to copy backup point data to other CBS, use first [CreateSnapshot](https://www.tencentcloud.com/document/product/362/15648?from_cn_redirect=1) to convert the backup point to a snapshot, and use [CreateDisks](https://www.tencentcloud.com/document/product/362/16312?from_cn_redirect=1) to create a new elastic cloud disk, then copy snapshot data to the newly purchased cloud disk.
+        /// The backup point used for rollback must be in NORMAL status. The backup point status can be checked through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API, see BackupState field explanation in the output parameter.
+        /// If it is an elastic cloud disk, the CBS must be in an unmounted state. The CBS mount status can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See Attached field explanation. If it is a non-elastic cloud hard disk purchased together with the instance, the instance must be in a powered off state. The instance status can be queried through the [DescribeInstancesStatus](https://www.tencentcloud.com/document/product/213/15738?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
         /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
@@ -68,11 +68,11 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to roll back a backup point to the original cloud disk.
+        /// This API is used to roll back a backup to the original cloud disk.
         /// 
-        /// * Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
-        /// * Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
-        /// * For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+        /// This API only supports rolling back to the original cloud disk. For data disk backup points, if you need to copy backup point data to other CBS, use first [CreateSnapshot](https://www.tencentcloud.com/document/product/362/15648?from_cn_redirect=1) to convert the backup point to a snapshot, and use [CreateDisks](https://www.tencentcloud.com/document/product/362/16312?from_cn_redirect=1) to create a new elastic cloud disk, then copy snapshot data to the newly purchased cloud disk.
+        /// The backup point used for rollback must be in NORMAL status. The backup point status can be checked through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API, see BackupState field explanation in the output parameter.
+        /// If it is an elastic cloud disk, the CBS must be in an unmounted state. The CBS mount status can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See Attached field explanation. If it is a non-elastic cloud hard disk purchased together with the instance, the instance must be in a powered off state. The instance status can be queried through the [DescribeInstancesStatus](https://www.tencentcloud.com/document/product/213/15738?from_cn_redirect=1) API.
         /// </summary>
         /// <param name="req"><see cref="ApplyDiskBackupRequest"/></param>
         /// <returns><see cref="ApplyDiskBackupResponse"/></returns>
@@ -108,6 +108,33 @@ namespace TencentCloud.Cbs.V20170312
         public ApplySnapshotResponse ApplySnapshotSync(ApplySnapshotRequest req)
         {
             return InternalRequestAsync<ApplySnapshotResponse>(req, "ApplySnapshot")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to rollback a snapshot group and restore the instance to the state at the moment the snapshot group was created.
+        /// This API is used to roll back all or part of the disks in the snapshot group.
+        /// This API is used to roll back disks. If the disks to be rolled back contain mounted disks, they must be mounted to the same instance, and the instance must be shut down before rollback.
+        /// Rollback is an asynchronous operation. A successful API return does not indicate a successful rollback. You can call DescribeSnapshotGroups to check the snapshot group status.
+        /// </summary>
+        /// <param name="req"><see cref="ApplySnapshotGroupRequest"/></param>
+        /// <returns><see cref="ApplySnapshotGroupResponse"/></returns>
+        public Task<ApplySnapshotGroupResponse> ApplySnapshotGroup(ApplySnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<ApplySnapshotGroupResponse>(req, "ApplySnapshotGroup");
+        }
+
+        /// <summary>
+        /// This API is used to rollback a snapshot group and restore the instance to the state at the moment the snapshot group was created.
+        /// This API is used to roll back all or part of the disks in the snapshot group.
+        /// This API is used to roll back disks. If the disks to be rolled back contain mounted disks, they must be mounted to the same instance, and the instance must be shut down before rollback.
+        /// Rollback is an asynchronous operation. A successful API return does not indicate a successful rollback. You can call DescribeSnapshotGroups to check the snapshot group status.
+        /// </summary>
+        /// <param name="req"><see cref="ApplySnapshotGroupRequest"/></param>
+        /// <returns><see cref="ApplySnapshotGroupResponse"/></returns>
+        public ApplySnapshotGroupResponse ApplySnapshotGroupSync(ApplySnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<ApplySnapshotGroupResponse>(req, "ApplySnapshotGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -166,10 +193,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to replicate a snapshot to another region.
+        /// This API is used to replicate snapshots across regions.
         /// 
-        /// * This is an async API. A new snapshot ID is issued when the cross-region replication task is generated. It does not mean that the snapshot has been replicated successfully. You can all the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API in the destination region to check for this snapshot. If the snapshot status is `NORMAL`, the snapshot is replicated successfully.
-        /// * The snapshot cross-region replication service will be commercialized in the Q3 of 2022. We will notify users about the commercialization in advance. Please check your messages in the Message Center.
+        /// This API is asynchronous. When the cross-region replication request is issued successfully, it returns a new snapshot ID. At this point, the snapshot is not immediately replicated to the target region. You can use the [DescribeSnapshots](https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1) API for the query in the target region to check the snapshot status and determine whether the replication is complete. If the snapshot status is "NORMAL", it indicates snapshot replication is complete.
+        /// This API is used to perform snapshot cross-region replication, which will generate cross-region traffic. Commercial billing for this feature is expected in Q3 2025. Please check subsequent Message Center notices to avoid unexpected charges.
         /// </summary>
         /// <param name="req"><see cref="CopySnapshotCrossRegionsRequest"/></param>
         /// <returns><see cref="CopySnapshotCrossRegionsResponse"/></returns>
@@ -179,10 +206,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to replicate a snapshot to another region.
+        /// This API is used to replicate snapshots across regions.
         /// 
-        /// * This is an async API. A new snapshot ID is issued when the cross-region replication task is generated. It does not mean that the snapshot has been replicated successfully. You can all the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API in the destination region to check for this snapshot. If the snapshot status is `NORMAL`, the snapshot is replicated successfully.
-        /// * The snapshot cross-region replication service will be commercialized in the Q3 of 2022. We will notify users about the commercialization in advance. Please check your messages in the Message Center.
+        /// This API is asynchronous. When the cross-region replication request is issued successfully, it returns a new snapshot ID. At this point, the snapshot is not immediately replicated to the target region. You can use the [DescribeSnapshots](https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1) API for the query in the target region to check the snapshot status and determine whether the replication is complete. If the snapshot status is "NORMAL", it indicates snapshot replication is complete.
+        /// This API is used to perform snapshot cross-region replication, which will generate cross-region traffic. Commercial billing for this feature is expected in Q3 2025. Please check subsequent Message Center notices to avoid unexpected charges.
         /// </summary>
         /// <param name="req"><see cref="CopySnapshotCrossRegionsRequest"/></param>
         /// <returns><see cref="CopySnapshotCrossRegionsResponse"/></returns>
@@ -297,6 +324,31 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to create a snapshot group.
+        /// This API is used to create snapshot groups. The CBS list must be mounted on the same instance.
+        /// This API is used to create snapshot groups for all or some of the disks mounted to instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotGroupRequest"/></param>
+        /// <returns><see cref="CreateSnapshotGroupResponse"/></returns>
+        public Task<CreateSnapshotGroupResponse> CreateSnapshotGroup(CreateSnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<CreateSnapshotGroupResponse>(req, "CreateSnapshotGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create a snapshot group.
+        /// This API is used to create snapshot groups. The CBS list must be mounted on the same instance.
+        /// This API is used to create snapshot groups for all or some of the disks mounted to instance.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotGroupRequest"/></param>
+        /// <returns><see cref="CreateSnapshotGroupResponse"/></returns>
+        public CreateSnapshotGroupResponse CreateSnapshotGroupSync(CreateSnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<CreateSnapshotGroupResponse>(req, "CreateSnapshotGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (DeleteAutoSnapshotPolicies) is used to delete scheduled snapshot policies.
         /// 
         /// * Batch operations are supported. If one of the scheduled snapshot policies in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
@@ -339,6 +391,31 @@ namespace TencentCloud.Cbs.V20170312
         public DeleteDiskBackupsResponse DeleteDiskBackupsSync(DeleteDiskBackupsRequest req)
         {
             return InternalRequestAsync<DeleteDiskBackupsResponse>(req, "DeleteDiskBackups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete snapshot groups. One snapshot group can be deleted per call.
+        /// This API is used to delete all snapshots in the snapshot group by default.
+        /// This API is used to delete a snapshot group. If a snapshot in the snapshot group has an associated image, deletion will fail and no snapshot will be deleted. Parameters can be input to enable simultaneous deletion of images bound to the snapshot by setting DeleteBindImages equal to true.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotGroupRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotGroupResponse"/></returns>
+        public Task<DeleteSnapshotGroupResponse> DeleteSnapshotGroup(DeleteSnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteSnapshotGroupResponse>(req, "DeleteSnapshotGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete snapshot groups. One snapshot group can be deleted per call.
+        /// This API is used to delete all snapshots in the snapshot group by default.
+        /// This API is used to delete a snapshot group. If a snapshot in the snapshot group has an associated image, deletion will fail and no snapshot will be deleted. Parameters can be input to enable simultaneous deletion of images bound to the snapshot by setting DeleteBindImages equal to true.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotGroupRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotGroupResponse"/></returns>
+        public DeleteSnapshotGroupResponse DeleteSnapshotGroupSync(DeleteSnapshotGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteSnapshotGroupResponse>(req, "DeleteSnapshotGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -466,35 +543,6 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-        /// 
-        /// This API is used to query the operation logs of a cloud disk. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiskOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeDiskOperationLogsResponse"/></returns>
-        public Task<DescribeDiskOperationLogsResponse> DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDiskOperationLogsResponse>(req, "DescribeDiskOperationLogs");
-        }
-
-        /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-        /// 
-        /// This API is used to query the operation logs of a cloud disk. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDiskOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeDiskOperationLogsResponse"/></returns>
-        public DescribeDiskOperationLogsResponse DescribeDiskOperationLogsSync(DescribeDiskOperationLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDiskOperationLogsResponse>(req, "DescribeDiskOperationLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API (DescribeDisks) is used to query the list of cloud disks.
         /// 
         /// * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.
@@ -547,31 +595,48 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-        /// 
-        /// This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+        /// This API is used to query the snapshot group list.
+        /// This API is used to query the snapshot group list based on snapshot group ID, snapshot group status or snapshot ID associated with the snapshot group. The relationship among different criteria is AND. For detailed filtering information, see `Filter`.
+        /// If the parameter is empty, a certain number of the cloud disk list for the current user is returned (specified by `Limit`, defaults to 20).
         /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
-        public Task<DescribeSnapshotOperationLogsResponse> DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req)
+        /// <param name="req"><see cref="DescribeSnapshotGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotGroupsResponse"/></returns>
+        public Task<DescribeSnapshotGroupsResponse> DescribeSnapshotGroups(DescribeSnapshotGroupsRequest req)
         {
-            return InternalRequestAsync<DescribeSnapshotOperationLogsResponse>(req, "DescribeSnapshotOperationLogs");
+            return InternalRequestAsync<DescribeSnapshotGroupsResponse>(req, "DescribeSnapshotGroups");
         }
 
         /// <summary>
-        /// 接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
-        /// 
-        /// This API has been disused. Use the CloudAudit API instead, For more information, visit https://tapd.woa.com/pro/prong/stories/view/1010114221880719007.
-        /// 
-        /// This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
+        /// This API is used to query the snapshot group list.
+        /// This API is used to query the snapshot group list based on snapshot group ID, snapshot group status or snapshot ID associated with the snapshot group. The relationship among different criteria is AND. For detailed filtering information, see `Filter`.
+        /// If the parameter is empty, a certain number of the cloud disk list for the current user is returned (specified by `Limit`, defaults to 20).
         /// </summary>
-        /// <param name="req"><see cref="DescribeSnapshotOperationLogsRequest"/></param>
-        /// <returns><see cref="DescribeSnapshotOperationLogsResponse"/></returns>
-        public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogsSync(DescribeSnapshotOperationLogsRequest req)
+        /// <param name="req"><see cref="DescribeSnapshotGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotGroupsResponse"/></returns>
+        public DescribeSnapshotGroupsResponse DescribeSnapshotGroupsSync(DescribeSnapshotGroupsRequest req)
         {
-            return InternalRequestAsync<DescribeSnapshotOperationLogsResponse>(req, "DescribeSnapshotOperationLogs")
+            return InternalRequestAsync<DescribeSnapshotGroupsResponse>(req, "DescribeSnapshotGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the usage overview of user snapshots, including total snapshot capacity, cost capacity, etc.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOverviewResponse"/></returns>
+        public Task<DescribeSnapshotOverviewResponse> DescribeSnapshotOverview(DescribeSnapshotOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotOverviewResponse>(req, "DescribeSnapshotOverview");
+        }
+
+        /// <summary>
+        /// This API is used to query the usage overview of user snapshots, including total snapshot capacity, cost capacity, etc.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotOverviewRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotOverviewResponse"/></returns>
+        public DescribeSnapshotOverviewResponse DescribeSnapshotOverviewSync(DescribeSnapshotOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSnapshotOverviewResponse>(req, "DescribeSnapshotOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -651,7 +716,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to get snapshot overview information.
+        /// This API is used to standardize API naming. This API will be decommissioned and replaced by the new API named DescribeSnapshotOverview.
+        /// 
+        /// This API is used to obtain snapshot overview information.
         /// </summary>
         /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>
         /// <returns><see cref="GetSnapOverviewResponse"/></returns>
@@ -661,7 +728,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API is used to get snapshot overview information.
+        /// This API is used to standardize API naming. This API will be decommissioned and replaced by the new API named DescribeSnapshotOverview.
+        /// 
+        /// This API is used to obtain snapshot overview information.
         /// </summary>
         /// <param name="req"><see cref="GetSnapOverviewRequest"/></param>
         /// <returns><see cref="GetSnapOverviewResponse"/></returns>
@@ -768,6 +837,33 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the renewal price of CBS.
+        /// 
+        /// This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be performed at the expiry date after the instance is renewed.
+        /// This API is used to support specifying different renewal durations for multiple cloud disks. The total price for renewing multiple cloud disks is returned.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDisksResponse"/></returns>
+        public Task<InquiryPriceRenewDisksResponse> InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewDisksResponse>(req, "InquiryPriceRenewDisks");
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of CBS.
+        /// 
+        /// This API is used to support renewal along with mounted instances. The parameter specifies CurInstanceDeadline in [DiskChargePrepaid](https://www.tencentcloud.com/document/product/362/15669?from_cn_redirect=1#DiskChargePrepaid), and renewal will be performed at the expiry date after the instance is renewed.
+        /// This API is used to support specifying different renewal durations for multiple cloud disks. The total price for renewing multiple cloud disks is returned.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDisksResponse"/></returns>
+        public InquiryPriceRenewDisksResponse InquiryPriceRenewDisksSync(InquiryPriceRenewDisksRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewDisksResponse>(req, "InquiryPriceRenewDisks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the price for expanding cloud disks.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceResizeDiskRequest"/></param>
@@ -816,9 +912,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
-        /// * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+        /// This API is used to modify only the Project ID of elastic cloud disks. The Project ID of a cloud disk created with a host is linked to the host. Whether a cloud disk is elastic can be checked through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See the Portable field explanation in the output parameters.
+        /// The "cloud disk name" is only for ease of management for users. Tencent Cloud does not use this name as a basis for submitting tickets or performing cloud disk management operations.
+        /// This API is used to support batch operations. If multiple cloud disk IDs are passed in, modify cloud disks to the same attribute. If there is a cloud disk that does not allow operation, the operation will not be executed and return a specific error code.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiskAttributesRequest"/></param>
         /// <returns><see cref="ModifyDiskAttributesResponse"/></returns>
@@ -828,9 +924,9 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
-        /// * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+        /// This API is used to modify only the Project ID of elastic cloud disks. The Project ID of a cloud disk created with a host is linked to the host. Whether a cloud disk is elastic can be checked through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. See the Portable field explanation in the output parameters.
+        /// The "cloud disk name" is only for ease of management for users. Tencent Cloud does not use this name as a basis for submitting tickets or performing cloud disk management operations.
+        /// This API is used to support batch operations. If multiple cloud disk IDs are passed in, modify cloud disks to the same attribute. If there is a cloud disk that does not allow operation, the operation will not be executed and return a specific error code.
         /// </summary>
         /// <param name="req"><see cref="ModifyDiskAttributesRequest"/></param>
         /// <returns><see cref="ModifyDiskAttributesResponse"/></returns>
@@ -887,10 +983,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
+        /// This API is used to modify the attributes of a specified snapshot.
         /// 
-        /// * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
-        /// * "Snapshot name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or snapshot management.
+        /// This API supports modifying snapshot name and expiration time, as well as changing a non-permanent snapshot to a permanent one.
+        /// The "snapshot name" is only for making user management convenient. Tencent Cloud does not use this name as a basis for submitting tickets or managing snapshot operations.
         /// </summary>
         /// <param name="req"><see cref="ModifySnapshotAttributeRequest"/></param>
         /// <returns><see cref="ModifySnapshotAttributeResponse"/></returns>
@@ -900,10 +996,10 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
-        /// This API (ModifySnapshotAttribute) is used to modify the attributes of a specified snapshot.
+        /// This API is used to modify the attributes of a specified snapshot.
         /// 
-        /// * Currently, you can only modify snapshot name and change non-permanent snapshots into permanent snapshots.
-        /// * "Snapshot name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or snapshot management.
+        /// This API supports modifying snapshot name and expiration time, as well as changing a non-permanent snapshot to a permanent one.
+        /// The "snapshot name" is only for making user management convenient. Tencent Cloud does not use this name as a basis for submitting tickets or managing snapshot operations.
         /// </summary>
         /// <param name="req"><see cref="ModifySnapshotAttributeRequest"/></param>
         /// <returns><see cref="ModifySnapshotAttributeResponse"/></returns>

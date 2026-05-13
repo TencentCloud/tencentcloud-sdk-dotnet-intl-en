@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.intl.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Mqtt.V20240516
         public CreateAuthorizationPolicyResponse CreateAuthorizationPolicySync(CreateAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<CreateAuthorizationPolicyResponse>(req, "CreateAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a device signature for per-device secret
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceIdentityRequest"/></param>
+        /// <returns><see cref="CreateDeviceIdentityResponse"/></returns>
+        public Task<CreateDeviceIdentityResponse> CreateDeviceIdentity(CreateDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceIdentityResponse>(req, "CreateDeviceIdentity");
+        }
+
+        /// <summary>
+        /// Create a device signature for per-device secret
+        /// </summary>
+        /// <param name="req"><see cref="CreateDeviceIdentityRequest"/></param>
+        /// <returns><see cref="CreateDeviceIdentityResponse"/></returns>
+        public CreateDeviceIdentityResponse CreateDeviceIdentitySync(CreateDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<CreateDeviceIdentityResponse>(req, "CreateDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -197,6 +218,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DeleteClientSubscriptionResponse DeleteClientSubscriptionSync(DeleteClientSubscriptionRequest req)
         {
             return InternalRequestAsync<DeleteClientSubscriptionResponse>(req, "DeleteClientSubscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a device signature
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DeleteDeviceIdentityResponse"/></returns>
+        public Task<DeleteDeviceIdentityResponse> DeleteDeviceIdentity(DeleteDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceIdentityResponse>(req, "DeleteDeviceIdentity");
+        }
+
+        /// <summary>
+        /// Delete a device signature
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DeleteDeviceIdentityResponse"/></returns>
+        public DeleteDeviceIdentityResponse DeleteDeviceIdentitySync(DeleteDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DeleteDeviceIdentityResponse>(req, "DeleteDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,6 +369,69 @@ namespace TencentCloud.Mqtt.V20240516
         }
 
         /// <summary>
+        /// Query device certificates with paging
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificatesResponse"/></returns>
+        public Task<DescribeDeviceCertificatesResponse> DescribeDeviceCertificates(DescribeDeviceCertificatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates");
+        }
+
+        /// <summary>
+        /// Query device certificates with paging
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificatesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificatesResponse"/></returns>
+        public DescribeDeviceCertificatesResponse DescribeDeviceCertificatesSync(DescribeDeviceCertificatesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificatesResponse>(req, "DescribeDeviceCertificates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the list of device identifiers in a cluster
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentitiesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentitiesResponse"/></returns>
+        public Task<DescribeDeviceIdentitiesResponse> DescribeDeviceIdentities(DescribeDeviceIdentitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentitiesResponse>(req, "DescribeDeviceIdentities");
+        }
+
+        /// <summary>
+        /// Query the list of device identifiers in a cluster
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentitiesRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentitiesResponse"/></returns>
+        public DescribeDeviceIdentitiesResponse DescribeDeviceIdentitiesSync(DescribeDeviceIdentitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentitiesResponse>(req, "DescribeDeviceIdentities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query device identification
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityResponse"/></returns>
+        public Task<DescribeDeviceIdentityResponse> DescribeDeviceIdentity(DescribeDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityResponse>(req, "DescribeDeviceIdentity");
+        }
+
+        /// <summary>
+        /// Query device identification
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceIdentityRequest"/></param>
+        /// <returns><see cref="DescribeDeviceIdentityResponse"/></returns>
+        public DescribeDeviceIdentityResponse DescribeDeviceIdentitySync(DescribeDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceIdentityResponse>(req, "DescribeDeviceIdentity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRequest"/></param>
@@ -344,6 +449,37 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeInstanceResponse DescribeInstanceSync(DescribeInstanceRequest req)
         {
             return InternalRequestAsync<DescribeInstanceResponse>(req, "DescribeInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get instance list. Description of the Filters parameter use is as follows:
+        /// 1. InstanceName, fuzzy search by name
+        /// 2. InstanceId, query by instance ID
+        /// 3. InstanceStatus, instance status query, supports multiple selections
+        /// 
+        /// When using the TagFilters parameter for search, the filters parameter is invalid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public Task<DescribeInstanceListResponse> DescribeInstanceList(DescribeInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceListResponse>(req, "DescribeInstanceList");
+        }
+
+        /// <summary>
+        /// Get instance list. Description of the Filters parameter use is as follows:
+        /// 1. InstanceName, fuzzy search by name
+        /// 2. InstanceId, query by instance ID
+        /// 3. InstanceStatus, instance status query, supports multiple selections
+        /// 
+        /// When using the TagFilters parameter for search, the filters parameter is invalid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeInstanceListResponse"/></returns>
+        public DescribeInstanceListResponse DescribeInstanceListSync(DescribeInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceListResponse>(req, "DescribeInstanceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +543,90 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRulesSync(DescribeMessageEnrichmentRulesRequest req)
         {
             return InternalRequestAsync<DescribeMessageEnrichmentRulesResponse>(req, "DescribeMessageEnrichmentRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain product sales specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductSKUListRequest"/></param>
+        /// <returns><see cref="DescribeProductSKUListResponse"/></returns>
+        public Task<DescribeProductSKUListResponse> DescribeProductSKUList(DescribeProductSKUListRequest req)
+        {
+            return InternalRequestAsync<DescribeProductSKUListResponse>(req, "DescribeProductSKUList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain product sales specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductSKUListRequest"/></param>
+        /// <returns><see cref="DescribeProductSKUListResponse"/></returns>
+        public DescribeProductSKUListResponse DescribeProductSKUListSync(DescribeProductSKUListRequest req)
+        {
+            return InternalRequestAsync<DescribeProductSKUListResponse>(req, "DescribeProductSKUList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query shared subscription group detailed information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionClientRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionClientResponse"/></returns>
+        public Task<DescribeSharedSubscriptionClientResponse> DescribeSharedSubscriptionClient(DescribeSharedSubscriptionClientRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionClientResponse>(req, "DescribeSharedSubscriptionClient");
+        }
+
+        /// <summary>
+        /// Query shared subscription group detailed information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionClientRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionClientResponse"/></returns>
+        public DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClientSync(DescribeSharedSubscriptionClientRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionClientResponse>(req, "DescribeSharedSubscriptionClient")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the subscription group list shared within the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsResponse"/></returns>
+        public Task<DescribeSharedSubscriptionGroupsResponse> DescribeSharedSubscriptionGroups(DescribeSharedSubscriptionGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsResponse>(req, "DescribeSharedSubscriptionGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query the subscription group list shared within the cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionGroupsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionGroupsResponse"/></returns>
+        public DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroupsSync(DescribeSharedSubscriptionGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionGroupsResponse>(req, "DescribeSharedSubscriptionGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the subscription list of a shared subscription group
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionsResponse"/></returns>
+        public Task<DescribeSharedSubscriptionsResponse> DescribeSharedSubscriptions(DescribeSharedSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionsResponse>(req, "DescribeSharedSubscriptions");
+        }
+
+        /// <summary>
+        /// Query the subscription list of a shared subscription group
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSharedSubscriptionsRequest"/></param>
+        /// <returns><see cref="DescribeSharedSubscriptionsResponse"/></returns>
+        public DescribeSharedSubscriptionsResponse DescribeSharedSubscriptionsSync(DescribeSharedSubscriptionsRequest req)
+        {
+            return InternalRequestAsync<DescribeSharedSubscriptionsResponse>(req, "DescribeSharedSubscriptions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -495,6 +715,27 @@ namespace TencentCloud.Mqtt.V20240516
         public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicySync(ModifyAuthorizationPolicyRequest req)
         {
             return InternalRequestAsync<ModifyAuthorizationPolicyResponse>(req, "ModifyAuthorizationPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the device signature
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceIdentityRequest"/></param>
+        /// <returns><see cref="ModifyDeviceIdentityResponse"/></returns>
+        public Task<ModifyDeviceIdentityResponse> ModifyDeviceIdentity(ModifyDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceIdentityResponse>(req, "ModifyDeviceIdentity");
+        }
+
+        /// <summary>
+        /// Modify the device signature
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceIdentityRequest"/></param>
+        /// <returns><see cref="ModifyDeviceIdentityResponse"/></returns>
+        public ModifyDeviceIdentityResponse ModifyDeviceIdentitySync(ModifyDeviceIdentityRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceIdentityResponse>(req, "ModifyDeviceIdentity")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

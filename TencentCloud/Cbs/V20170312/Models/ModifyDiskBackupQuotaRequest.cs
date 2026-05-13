@@ -25,13 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Cloud disk ID.
+        /// Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Cloud disk backup point quota after the adjustment
+        /// Adjusted cloud disk backup point quota. value range: 1-1024.
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public ulong? DiskBackupQuota{ get; set; }

@@ -25,109 +25,109 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance Id. you can obtain it by calling the DescribeInstances api.
+        /// <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Can only contain letters, digits, underscores, "-", or ".".
+        /// <p>Can only contain letters, digits, underscore, "-", ".". </p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Number of partitions, which should be greater than 0
+        /// <p>Number of partitions, more than 0</p>
         /// </summary>
         [JsonProperty("PartitionNum")]
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
+        /// <p>Replica count cannot be over the number of brokers, with a maximum of 3</p>
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+        /// <p>ip allowlist switch, 1: on; 0: off, default off</p>
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+        /// <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
+        /// <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+        /// <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// Minimum number of synchronous replicas, defaults to 1.
+        /// <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+        /// <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+        /// <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+        /// <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+        /// <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+        /// <p>Preset ACL rule, 1: on 0: off, default is off</p>
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// Name of the preset ACL rule.
+        /// <p>Preset ACL rule name</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+        /// <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// Tag list.
+        /// <p>Tag list</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Time type for message saving. valid values: CreateTime/LogAppendTime.
+        /// <p>Time type for message saving: CreateTime/LogAppendTime</p>
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]
         public string LogMsgTimestampType{ get; set; }

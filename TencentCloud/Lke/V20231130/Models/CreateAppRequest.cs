@@ -36,6 +36,18 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("BaseConfig")]
         public BaseConfig BaseConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+        /// </summary>
+        [JsonProperty("AgentType")]
+        public string AgentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
         }
     }
 }

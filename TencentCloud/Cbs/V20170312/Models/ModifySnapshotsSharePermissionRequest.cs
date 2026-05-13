@@ -25,7 +25,13 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+        /// The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("SnapshotIds")]
+        public string[] SnapshotIds{ get; set; }
+
+        /// <summary>
+        /// Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
         /// </summary>
         [JsonProperty("AccountIds")]
         public string[] AccountIds{ get; set; }
@@ -36,21 +42,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("Permission")]
         public string Permission{ get; set; }
 
-        /// <summary>
-        /// The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("SnapshotIds")]
-        public string[] SnapshotIds{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamArraySimple(map, prefix + "AccountIds.", this.AccountIds);
             this.SetParamSimple(map, prefix + "Permission", this.Permission);
-            this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         }
     }
 }

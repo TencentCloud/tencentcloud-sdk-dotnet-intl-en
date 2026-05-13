@@ -25,71 +25,89 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+        /// <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Maximum retention time of instance logs, in minutes, with a value range of 1min to 90 days.
+        /// <p>Maximum retention time of instance log, in minutes, with a maximum of 90 days and a minimum of 1 min</p>
         /// </summary>
         [JsonProperty("MsgRetentionTime")]
         public long? MsgRetentionTime{ get; set; }
 
         /// <summary>
-        /// Specifies the Name of the ckafka cluster instance.
+        /// <p>ckafka cluster instance Name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance configuration
+        /// <p>Instance configuration</p>
         /// </summary>
         [JsonProperty("Config")]
         public ModifyInstanceAttributesConfig Config{ get; set; }
 
         /// <summary>
-        /// Dynamic message retention policy configuration
+        /// <p>Dynamic message retention policy configuration</p>
         /// </summary>
         [JsonProperty("DynamicRetentionConfig")]
         public DynamicRetentionTime DynamicRetentionConfig{ get; set; }
 
         /// <summary>
-        /// Specifies the execution time of a scheduled task for edition upgrade or configuration upgrade in Unix timestamp, accurate to the second.
+        /// <p>Used to modify the scheduled task execution time for edition upgrade or upgrade version, Unix timestamp, accurate to the second</p>
         /// </summary>
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }
 
         /// <summary>
-        /// Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+        /// <p>Public network bandwidth: minimum 3Mbps, maximum 999Mbps. Only the Pro Edition supports filling in.</p>
         /// </summary>
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
         /// <summary>
-        /// Dynamic disk expansion policy configuration.
+        /// <p>Configure dynamic disk expansion policy</p>
         /// </summary>
         [JsonProperty("DynamicDiskConfig")]
         [System.Obsolete]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
         /// <summary>
-        /// Single message size at the instance level (unit: byte). value range: 1024 (excluding) to 12582912 (excluding).
+        /// <p>Single message size at the instance level (unit: byte) Maximum 12582912 (excluding) Minimum 1024 (excluding)</p>
         /// </summary>
         [JsonProperty("MaxMessageByte")]
         public ulong? MaxMessageByte{ get; set; }
 
         /// <summary>
-        /// Whether to allow unsynchronized replicas to be elected as leader. valid values: 1 (enable), 0 (disable).
+        /// <p>Whether to allow unsynchronized replicas to be elected as leader: 1 Enable 0 Disable</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Instance deletion protection switch. 1: enabled; 0: disabled.
+        /// <p>Instance deletion protection switch: 1: enabled 0: disabled</p>
         /// </summary>
         [JsonProperty("DeleteProtectionEnable")]
         public long? DeleteProtectionEnable{ get; set; }
+
+        /// <summary>
+        /// <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
+        /// <summary>
+        /// <p>Ban Status for high-risk admin interface; true to ban high-risk adminApi; no support for turning on after closing, only supported in Pro Edition; default false, no action taken for high-risk admin interface</p>
+        /// </summary>
+        [JsonProperty("AdminSecurity")]
+        public bool? AdminSecurity{ get; set; }
+
+        /// <summary>
+        /// <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Value ranges from 3600000 to 604800000.<br>Unit: ms
+        /// </summary>
+        [JsonProperty("TransactionalIdExpirationMs")]
+        public long? TransactionalIdExpirationMs{ get; set; }
 
 
         /// <summary>
@@ -108,6 +126,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+            this.SetParamSimple(map, prefix + "AdminSecurity", this.AdminSecurity);
+            this.SetParamSimple(map, prefix + "TransactionalIdExpirationMs", this.TransactionalIdExpirationMs);
         }
     }
 }

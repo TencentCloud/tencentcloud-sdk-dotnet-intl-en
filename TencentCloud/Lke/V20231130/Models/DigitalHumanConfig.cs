@@ -25,22 +25,28 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// Digital Human Asset key
+        /// 
         /// </summary>
         [JsonProperty("AssetKey")]
         public string AssetKey{ get; set; }
 
         /// <summary>
-        /// Digital Human Name
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Image
+        /// 
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "AssetKey", this.AssetKey);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         }
     }
 }

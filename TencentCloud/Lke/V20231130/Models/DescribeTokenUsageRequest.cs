@@ -58,12 +58,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Start timestamp, in seconds (default value: 0).
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// End timestamp, in seconds (default value: 0, must be greater than the start timestamp).
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
@@ -79,16 +81,28 @@ namespace TencentCloud.Lke.V20231130.Models
         public string[] SubScenes{ get; set; }
 
         /// <summary>
-        /// Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+        /// Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
         /// </summary>
         [JsonProperty("AppType")]
         public string AppType{ get; set; }
 
         /// <summary>
-        /// Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+        /// Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// Start time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// End time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
 
 
         /// <summary>
@@ -107,6 +121,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
             this.SetParamSimple(map, prefix + "AppType", this.AppType);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }

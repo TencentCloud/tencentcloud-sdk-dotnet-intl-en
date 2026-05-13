@@ -25,62 +25,62 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// (Filter) filter by instance ID
+        /// <p>(Filtering Conditions) Filter by instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+        /// <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+        /// <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, `0` will be used by default.
+        /// <p>Offset, which is 0 by default.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+        /// <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Tag key match.
+        /// <p>Match the tag key.</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+        /// <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// This parameter has been deprecated and replaced with `InstanceIdList`.
+        /// <p>Deprecated. Use InstanceIdList.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         [System.Obsolete]
         public string InstanceIds{ get; set; }
 
         /// <summary>
-        /// Filter by instance ID.
+        /// <p>Filter by instance ID</p>
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// Filter instances by a set of tags
+        /// <p>Filter instances based on tag list (take the intersection)</p>
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }

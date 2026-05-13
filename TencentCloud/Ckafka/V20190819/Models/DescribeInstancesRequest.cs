@@ -25,44 +25,44 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// (Query condition) filter by the ckafka cluster instance Id.
+        /// <p>(Query Conditions) Filter by cluster instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+        /// <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+        /// <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default
+        /// <p>Offset, which is 0 by default</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+        /// <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Tag key value (this field has been deprecated).
+        /// <p>Abandoned. Match the tag key.</p>
         /// </summary>
         [JsonProperty("TagKey")]
         [System.Obsolete]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// (Query condition) VPC Id.
+        /// <p>(Query condition) VPC Id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

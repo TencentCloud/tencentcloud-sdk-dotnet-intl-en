@@ -49,6 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
         /// </summary>
         [JsonProperty("VisitorLabels")]
+        [System.Obsolete]
         public GetWsTokenReq_Label[] VisitorLabels{ get; set; }
 
 

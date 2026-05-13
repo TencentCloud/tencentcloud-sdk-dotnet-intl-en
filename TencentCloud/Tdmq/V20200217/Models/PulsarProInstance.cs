@@ -79,7 +79,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+        /// Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }

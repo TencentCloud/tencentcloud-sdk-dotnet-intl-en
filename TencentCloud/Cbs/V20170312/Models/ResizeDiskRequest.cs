@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
-
-        /// <summary>
         /// Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
+
+        /// <summary>
+        /// Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }

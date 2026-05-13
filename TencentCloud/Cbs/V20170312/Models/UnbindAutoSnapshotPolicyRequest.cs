@@ -25,16 +25,22 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// List of cloud disk IDs scheduled snapshot policy to be unbound from.
+        /// ID of scheduled snapshot policy to be unbound.
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyId")]
+        public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// ID of scheduled snapshot policy to be unbound.
+        /// Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
         /// </summary>
-        [JsonProperty("AutoSnapshotPolicyId")]
-        public string AutoSnapshotPolicyId{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

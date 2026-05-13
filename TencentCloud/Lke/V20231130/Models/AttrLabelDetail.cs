@@ -34,6 +34,7 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Label identification.
         /// </summary>
         [JsonProperty("AttrKey")]
+        [System.Obsolete]
         public string AttrKey{ get; set; }
 
         /// <summary>

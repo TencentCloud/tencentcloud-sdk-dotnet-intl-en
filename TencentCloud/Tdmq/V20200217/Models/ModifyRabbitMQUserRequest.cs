@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
+        /// Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

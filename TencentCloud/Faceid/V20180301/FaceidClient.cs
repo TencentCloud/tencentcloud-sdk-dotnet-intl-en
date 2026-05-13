@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1303";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -608,7 +608,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1061/79689">carrier</a> document.
         /// </summary>
         /// <param name="req"><see cref="PhoneVerificationRequest"/></param>
         /// <returns><see cref="PhoneVerificationResponse"/></returns>
@@ -618,7 +618,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+        /// This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1061/79689">carrier</a> document.
         /// </summary>
         /// <param name="req"><see cref="PhoneVerificationRequest"/></param>
         /// <returns><see cref="PhoneVerificationResponse"/></returns>

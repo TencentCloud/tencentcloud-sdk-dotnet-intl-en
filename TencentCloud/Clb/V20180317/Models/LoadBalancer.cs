@@ -204,7 +204,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+        /// Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
         /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChargeType")]
@@ -424,6 +424,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("AssociateEndpoint")]
         public string AssociateEndpoint{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AvailableZoneAffinityInfo")]
+        public AvailableZoneAffinityInfo AvailableZoneAffinityInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -488,6 +494,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
             this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
             this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
+            this.SetParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
+        /// <summary>
+        /// IP access restriction rules.
+        /// </summary>
+        [JsonProperty("IPFilterPolicy")]
+        public IPFilterPolicy IPFilterPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
             this.SetParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
             this.SetParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+            this.SetParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
         }
     }
 }

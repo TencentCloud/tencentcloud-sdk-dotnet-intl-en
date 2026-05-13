@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID list of the cloud disks to be reinitialized. Up to 20 disks can be reinitialized at a time.
+        /// List of cloud disk ids to be reinitialized. can be accessed through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. the initialization is limited to not exceeding 20 disks.
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

@@ -25,28 +25,34 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+        /// <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Order ID list
+        /// <p>Order number list</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+        /// <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Order and purchase mapping list corresponding to the instance.
+        /// <p>Order and purchase mapping list corresponding to the instance</p>
         /// </summary>
         [JsonProperty("DealNameInstanceIdMapping")]
         public DealInstanceDTO[] DealNameInstanceIdMapping{ get; set; }
+
+        /// <summary>
+        /// <p>Event ID returned by CAM authentication</p>
+        /// </summary>
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
         }
     }
 }

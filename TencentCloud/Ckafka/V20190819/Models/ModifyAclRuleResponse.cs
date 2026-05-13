@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Unique key of a rule
+        /// <p>Unique representation Key of the rule</p>
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

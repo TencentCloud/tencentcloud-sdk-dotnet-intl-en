@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Cloud disk ID, which can be queried through the `DescribeDisks` API.
+        /// Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }

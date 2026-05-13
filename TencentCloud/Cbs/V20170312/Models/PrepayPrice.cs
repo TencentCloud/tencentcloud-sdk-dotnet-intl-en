@@ -31,8 +31,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         public float? DiscountPrice{ get; set; }
 
         /// <summary>
-        /// Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
@@ -84,8 +84,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Detailed billing items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Details list of billable items.
         /// </summary>
         [JsonProperty("DetailPrices")]
         public DetailPrice[] DetailPrices{ get; set; }

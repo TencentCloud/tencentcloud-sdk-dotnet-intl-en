@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+        /// Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
         /// </summary>
         [JsonProperty("SubscriptionName")]
         public string SubscriptionName{ get; set; }

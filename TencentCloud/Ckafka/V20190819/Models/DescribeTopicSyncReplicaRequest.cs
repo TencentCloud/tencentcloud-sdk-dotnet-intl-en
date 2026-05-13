@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name
+        /// <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default.
+        /// <p>Offset, which is 0 by default</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. default value: 20. must be greater than 0.
+        /// <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filters unsynced replicas only
+        /// <p>Only filter unsynced replicas</p>
         /// </summary>
         [JsonProperty("OutOfSyncReplicaOnly")]
         public bool? OutOfSyncReplicaOnly{ get; set; }

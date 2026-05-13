@@ -25,16 +25,10 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+        /// INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
         /// </summary>
         [JsonProperty("InquiryType")]
         public string InquiryType{ get; set; }
-
-        /// <summary>
-        /// Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-        /// </summary>
-        [JsonProperty("Zones")]
-        public string[] Zones{ get; set; }
 
         /// <summary>
         /// Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
@@ -43,22 +37,34 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskChargeType{ get; set; }
 
         /// <summary>
-        /// Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+        /// Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+        /// </summary>
+        [JsonProperty("InstanceFamilies")]
+        public string[] InstanceFamilies{ get; set; }
+
+        /// <summary>
+        /// Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
         /// </summary>
         [JsonProperty("DiskTypes")]
         public string[] DiskTypes{ get; set; }
 
         /// <summary>
-        /// The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+        /// Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Instance memory size in GB.
+        /// </summary>
+        [JsonProperty("Memory")]
+        public ulong? Memory{ get; set; }
+
+        /// <summary>
+        /// SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
-
-        /// <summary>
-        /// Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-        /// </summary>
-        [JsonProperty("InstanceFamilies")]
-        public string[] InstanceFamilies{ get; set; }
 
         /// <summary>
         /// Instance CPU cores.
@@ -67,10 +73,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// Instance memory size.
+        /// Dedicated cluster ID.
         /// </summary>
-        [JsonProperty("Memory")]
-        public ulong? Memory{ get; set; }
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
 
 
         /// <summary>
@@ -79,13 +85,14 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InquiryType", this.InquiryType);
-            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-            this.SetParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
-            this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
             this.SetParamArraySimple(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
-            this.SetParamSimple(map, prefix + "CPU", this.CPU);
+            this.SetParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
+            this.SetParamSimple(map, prefix + "CPU", this.CPU);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         }
     }
 }

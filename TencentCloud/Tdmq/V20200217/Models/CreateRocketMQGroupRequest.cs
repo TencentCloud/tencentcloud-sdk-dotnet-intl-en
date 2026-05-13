@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Namespace. Currently, only one namespace is supported
+        /// Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }

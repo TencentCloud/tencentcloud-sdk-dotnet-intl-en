@@ -126,6 +126,31 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("MaxRingTimeoutSecond")]
         public long? MaxRingTimeoutSecond{ get; set; }
 
+        /// <summary>
+        /// <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+        /// <p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+        /// </summary>
+        [JsonProperty("RetryHangupTypes")]
+        public string[] RetryHangupTypes{ get; set; }
+
+        /// <summary>
+        /// Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+        /// </summary>
+        [JsonProperty("RetryTags")]
+        public RetryTagItem[] RetryTags{ get; set; }
+
+        /// <summary>
+        /// <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+        /// </summary>
+        [JsonProperty("AvailableWorkTimeConfig")]
+        public AvailableTimeConfig[] AvailableWorkTimeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Trigger Strategy</p>
+        /// </summary>
+        [JsonProperty("TriggerStrategy")]
+        public TriggerStrategyItem[] TriggerStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +174,10 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+            this.SetParamArraySimple(map, prefix + "RetryHangupTypes.", this.RetryHangupTypes);
+            this.SetParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
+            this.SetParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
+            this.SetParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
         }
     }
 }

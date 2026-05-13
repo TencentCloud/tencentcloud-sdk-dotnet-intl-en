@@ -25,40 +25,46 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// CKafka cluster instance version.
+        /// <p>ckafka cluster instance version</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// Broker version information.
+        /// <p>broker version info</p>
         /// </summary>
         [JsonProperty("CurBrokerVersion")]
         public string CurBrokerVersion{ get; set; }
 
         /// <summary>
-        /// Latest version information.
+        /// <p>latest version info</p>
         /// </summary>
         [JsonProperty("LatestBrokerVersion")]
         public LatestBrokerVersion[] LatestBrokerVersion{ get; set; }
 
         /// <summary>
-        /// Whether to allow kernel upgrades across major versions.
+        /// <p>Permission for cross-major version kernel upgrade</p>
         /// </summary>
         [JsonProperty("AllowUpgradeHighVersion")]
         public bool? AllowUpgradeHighVersion{ get; set; }
 
         /// <summary>
-        /// Major version allowed for upgrades.
+        /// <p>Permission for major version upgrade</p>
         /// </summary>
         [JsonProperty("HighVersionSet")]
         public string[] HighVersionSet{ get; set; }
 
         /// <summary>
-        /// Whether to allow automatic deletion of consumer groups during minor version configuration.
+        /// <p>Permission to configure auto deletion of consumer group for minor version number</p>
         /// </summary>
         [JsonProperty("AllowAutoDeleteTimestamp")]
         public bool? AllowAutoDeleteTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>Allow the modification of transaction ID expiration time configuration</p>
+        /// </summary>
+        [JsonProperty("AllowModifyTxnIdExpiration")]
+        public bool? AllowModifyTxnIdExpiration{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AllowUpgradeHighVersion", this.AllowUpgradeHighVersion);
             this.SetParamArraySimple(map, prefix + "HighVersionSet.", this.HighVersionSet);
             this.SetParamSimple(map, prefix + "AllowAutoDeleteTimestamp", this.AllowAutoDeleteTimestamp);
+            this.SetParamSimple(map, prefix + "AllowModifyTxnIdExpiration", this.AllowModifyTxnIdExpiration);
         }
     }
 }

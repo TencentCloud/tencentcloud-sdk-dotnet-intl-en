@@ -25,13 +25,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Exclusive Edition cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+        /// Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+        /// 
+        /// -ClientIntraffic: Inbound traffic
+        /// -ClientOuttraffic: Outbound traffic
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

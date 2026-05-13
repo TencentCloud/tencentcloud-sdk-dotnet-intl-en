@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Filter by `topicName`. Fuzzy search is supported
+        /// <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default
+        /// <p>Offset, which is 0 by default</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+        /// <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Name of the preset ACL rule.
+        /// <p>Acl preset policy name</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }

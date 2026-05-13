@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.intl.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -201,7 +201,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+        /// This API is used to create prepaid yearly/monthly subscribed instances. It only supports creating Pro Edition instances.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
         /// <returns><see cref="CreateInstancePreResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+        /// This API is used to create prepaid yearly/monthly subscribed instances. It only supports creating Pro Edition instances.
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
         /// <returns><see cref="CreateInstancePreResponse"/></returns>
@@ -894,7 +894,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to enumerate regions, and can be called only in Guangzhou.
+        /// Enumerate regional information
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to enumerate regions, and can be called only in Guangzhou.
+        /// Enumerate regional information
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionRequest"/></param>
         /// <returns><see cref="DescribeRegionResponse"/></returns>

@@ -49,7 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxNamespaces{ get; set; }
 
         /// <summary>
-        /// Maximum number of topic partitions
+        /// Maximum number of topics that can be created
         /// </summary>
         [JsonProperty("MaxTopics")]
         public ulong? MaxTopics{ get; set; }
@@ -70,10 +70,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxPartitions{ get; set; }
 
         /// <summary>
-        /// Maximum delayed message count for the product. 0 indicates no limit.	
+        /// Maximum delayed message count. 0 means no limit.	
         /// </summary>
         [JsonProperty("MaxDelayedMessages")]
         public long? MaxDelayedMessages{ get; set; }
+
+        /// <summary>
+        /// Maximum number of topic partitions that can be created
+        /// </summary>
+        [JsonProperty("MaxTopicsPartitioned")]
+        public long? MaxTopicsPartitioned{ get; set; }
+
+        /// <summary>
+        /// Maximum number of connections per broker
+        /// </summary>
+        [JsonProperty("BrokerMaxConnections")]
+        public long? BrokerMaxConnections{ get; set; }
+
+        /// <summary>
+        /// Maximum number of connections per IP
+        /// </summary>
+        [JsonProperty("BrokerMaxConnectionsPerIp")]
+        public long? BrokerMaxConnectionsPerIp{ get; set; }
+
+        /// <summary>
+        /// Elastic storage cluster maximum storage specification; fixed storage is 0.
+        /// </summary>
+        [JsonProperty("MaximumElasticStorage")]
+        public long? MaximumElasticStorage{ get; set; }
 
 
         /// <summary>
@@ -89,6 +113,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
             this.SetParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
             this.SetParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
+            this.SetParamSimple(map, prefix + "MaxTopicsPartitioned", this.MaxTopicsPartitioned);
+            this.SetParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
+            this.SetParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
+            this.SetParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// vpc id
+        /// 
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// subnet id
+        /// 
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// vpc Access Point Information
+        /// 
         /// </summary>
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("VpcTlsEndpoint")]
         public string VpcTlsEndpoint{ get; set; }
 
+        /// <summary>
+        /// Error message for VPC access point operations.
+        /// </summary>
+        [JsonProperty("VpcErrorMessage")]
+        public string VpcErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
             this.SetParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
             this.SetParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
+            this.SetParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
         }
     }
 }

@@ -25,7 +25,9 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+        /// It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+        /// 
+        /// In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
         /// </summary>
         [JsonProperty("DiskIdSet")]
         public string[] DiskIdSet{ get; set; }
@@ -37,14 +39,17 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsActivated{ get; set; }
 
         /// <summary>
-        /// Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+        /// Status of regular snapshot policy. valid values:.
+        /// <ul>
+        /// <Li>NORMAL: specifies the scaling group is in normal state.</li>.
+        /// <Li>ISOLATED: specifies the instance is isolated.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyState")]
         public string AutoSnapshotPolicyState{ get; set; }
 
         /// <summary>
-        /// Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
         /// </summary>
         [JsonProperty("IsCopyToRemote")]
         public ulong? IsCopyToRemote{ get; set; }
@@ -99,22 +104,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CopyToAccountUin{ get; set; }
 
         /// <summary>
-        /// List of IDs of the instances associated with the scheduled snapshot policy.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Lists instance ids that are bound to the current periodic snapshot policy.
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the number of months snapshot can be retained.
         /// </summary>
         [JsonProperty("RetentionMonths")]
         public ulong? RetentionMonths{ get; set; }
 
         /// <summary>
-        /// The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the maximum retention number of snapshots created by scheduled snapshot.
         /// </summary>
         [JsonProperty("RetentionAmount")]
         public ulong? RetentionAmount{ get; set; }
@@ -135,7 +137,6 @@ namespace TencentCloud.Cbs.V20170312.Models
 
         /// <summary>
         /// Tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

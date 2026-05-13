@@ -25,12 +25,6 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// <p>The primary availability zone of the instance, for example: ap-guangzhou-3. If needed to support multiple AZs, add primary and secondary AZ information in the DBNodeSet.N field.<br>AZ information can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> api and checking the Zone field in the returned value.</p>
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
         /// <p>Purchasable specification code. Obtain this parameter by calling the `SpecCode` field in the return value of <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a>.</p>
         /// </summary>
         [JsonProperty("SpecCode")]
@@ -73,6 +67,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string AdminPassword{ get; set; }
 
         /// <summary>
+        /// <p>The primary availability zone of the instance, for example: ap-guangzhou-3. If needed to support multiple AZs, add primary and secondary AZ information in the DBNodeSet.N field.<br>AZ information can be obtained by calling the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> api and checking the Zone field in the returned value.</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
         /// <p>PostgreSQL major version number (this parameter is currently required). Version information can be obtained from <a href="https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1">DescribeDBVersions</a>. Currently supports major versions 10, 11, 12, 13, 14, and 15. For details, see <a href="https://www.tencentcloud.com/document/product/409/67018?from_cn_redirect=1">kernel version overview</a>.<br>When this parameter is entered, an instance running the latest kernel version of the latest minor version will be created based on this major version number.</p>
         /// </summary>
         [JsonProperty("DBMajorVersion")]
@@ -97,7 +97,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// <p>VPC ID, such as vpc-xxxxxxxx (this parameter is currently required). A valid VPC ID can be obtained by logging in to the console to query or by calling the API <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> and acquiring the unVpcId field in the API return.</p>
+        /// <p>VPC ID, such as vpc-xxxxxxxx (this parameter is currently required). A valid VPC ID can be obtained by logging in to the console to query or by calling the API DescribeVpcEx and acquiring the unVpcId field in the API return.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -228,7 +228,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
@@ -236,6 +235,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Charset", this.Charset);
             this.SetParamSimple(map, prefix + "AdminName", this.AdminName);
             this.SetParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);

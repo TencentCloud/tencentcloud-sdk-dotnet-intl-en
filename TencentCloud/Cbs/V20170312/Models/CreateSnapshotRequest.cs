@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string Deadline{ get; set; }
 
         /// <summary>
-        /// ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+        /// Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
         /// </summary>
         [JsonProperty("DiskBackupId")]
         public string DiskBackupId{ get; set; }
@@ -53,6 +53,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+        /// </summary>
+        [JsonProperty("DiskUsage")]
+        public string DiskUsage{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         }
     }
 }

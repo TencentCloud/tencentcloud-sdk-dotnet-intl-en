@@ -31,9 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] DiskBackupIds{ get; set; }
 
         /// <summary>
-        /// Filter. `DiskBackupIds` and `Filters` cannot be specified at the same time. Valid values: <br><li>disk-backup-id - Array of String - Required: No - (Filter) Filter by backup point ID in the format of `dbp-11112222`.
-        /// <br><li>disk-id - Array of String - Required: No - (Filter) Filter by ID of the cloud disk for which backup points are created.
-        /// <br><li>disk-usage - Array of String - Required: No - (Filter) Filter by type of the cloud disk for which backup points are created. (SYSTEM_DISK: System disk | DATA_DISK: Data disk)
+        /// Filter criteria. parameters must not be specified simultaneously for DiskBackupIds and Filters. filter conditions:<br><li>disk-backup-id - Array of String - required: no - (filter condition) Filters by backup point id. backup point id format: dbp-11112222.</li><br><li>disk-id - Array of String - required: no - (filter condition) Filters by cloud disk id where the backup point was created. cloud disk id format: disk-srftydert.</li><br><li>disk-usage - Array of String - required: no - (filter condition) Filters by cloud disk type (SYSTEM_disk: represents SYSTEM disk | DATA_disk: represents DATA disk).</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -51,13 +49,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting order of cloud disk backup points. Valid values:<br><li>ASC: Ascending<br><li>DESC: Descending
+        /// Specifies the sorting order of the CBS backup point list. default: ASC. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// The field by which cloud disk backup points are sorted. Valid values:<br><li>CREATE_TIME: Sort by creation time<br>Backup points are sorted by creation time by default.
+        /// Field on which the list of cloud disk backup points is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk backup point</li><br>sort by creation TIME by default.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Kafka consumer group
+        /// <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
+        /// <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
         /// </summary>
         [JsonProperty("Topics")]
         public string[] Topics{ get; set; }
 
         /// <summary>
-        /// Fuzzy match by `topicName`
+        /// <p>Fuzzy matching topicName</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Offset position of this query. Default value: 0
+        /// <p>Offset position of this query, defaults to 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+        /// <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

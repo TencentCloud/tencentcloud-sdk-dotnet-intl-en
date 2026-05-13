@@ -25,115 +25,115 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name
+        /// <p>Topic name</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+        /// <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// IP allowlist switch. 1: enabled, 0: disabled.
+        /// <p>IP allowlist switch, 1: on; 0: off.</p>
         /// </summary>
         [JsonProperty("EnableWhiteList")]
         public long? EnableWhiteList{ get; set; }
 
         /// <summary>
-        /// Default value: 1.
+        /// <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
         /// </summary>
         [JsonProperty("MinInsyncReplicas")]
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// 0: false, 1: true. Default value: 0.
+        /// <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// Message retention period in ms. The current minimum value is 60,000 ms.
+        /// <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+        /// <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
         /// </summary>
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
-        /// Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+        /// <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
         /// <summary>
-        /// Message deletion policy. Valid values: delete, compact
+        /// <p>Message deletion strategy: choose delete or compact</p>
         /// </summary>
         [JsonProperty("CleanUpPolicy")]
         public string CleanUpPolicy{ get; set; }
 
         /// <summary>
-        /// IP allowlist, which is required if the value of `enableWhileList` is 1.
+        /// <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
         /// </summary>
         [JsonProperty("IpWhiteList")]
         public string[] IpWhiteList{ get; set; }
 
         /// <summary>
-        /// Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+        /// <p>Preset ACL rule, 1: on 0: off, default is off</p>
         /// </summary>
         [JsonProperty("EnableAclRule")]
         public long? EnableAclRule{ get; set; }
 
         /// <summary>
-        /// ACL rule name.
+        /// <p>ACL rule name</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+        /// <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }
 
         /// <summary>
-        /// Tag list.
+        /// <p>Tag list</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Production traffic throttling in MB/s. set to -1 to disable throttling.
+        /// <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
         /// </summary>
         [JsonProperty("QuotaProducerByteRate")]
         public long? QuotaProducerByteRate{ get; set; }
 
         /// <summary>
-        /// Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+        /// <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
         /// </summary>
         [JsonProperty("QuotaConsumerByteRate")]
         public long? QuotaConsumerByteRate{ get; set; }
 
         /// <summary>
-        /// Number of topic replicas. valid values: 1, 3.
+        /// <p>topic replica count Minimum value: 1, Maximum value: 3</p>
         /// </summary>
         [JsonProperty("ReplicaNum")]
         public long? ReplicaNum{ get; set; }
 
         /// <summary>
-        /// Specifies the time type for message saving: CreateTime/LogAppendTime.
+        /// <p>Time type for message saving: CreateTime/LogAppendTime</p>
         /// </summary>
         [JsonProperty("LogMsgTimestampType")]
         public string LogMsgTimestampType{ get; set; }

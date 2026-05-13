@@ -43,7 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+        /// Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
         /// </summary>
         [JsonProperty("AttachMode")]
         public string AttachMode{ get; set; }

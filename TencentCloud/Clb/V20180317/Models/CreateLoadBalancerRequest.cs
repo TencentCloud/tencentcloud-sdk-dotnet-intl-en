@@ -88,7 +88,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Network billing mode by the maximum outbound bandwidth. It applies only to private network LCU-supported instances and all public network instances. The feature of purchasing monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// Network billing mode by the maximum outbound bandwidth. It applies only to private network LCU-supported instances and all public network instances. The feature of purchasing yearly/monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -192,13 +192,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Egress{ get; set; }
 
         /// <summary>
-        /// Prepayment-related attributes of a CLB instance. The feature of purchasing monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// Prepayment-related attributes of a CLB instance. The feature of purchasing yearly/monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
         /// </summary>
         [JsonProperty("LBChargePrepaid")]
         public LBChargePrepaid LBChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Billing type of a CLB instance. Valid values: POSTPAID_BY_HOUR and PREPAID. Default value: POSTPAID_BY_HOUR. The feature of purchasing monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+        /// Billing type of a CLB instance. Valid values: POSTPAID_BY_HOUR and PREPAID. Default value: POSTPAID_BY_HOUR. The feature of purchasing yearly/monthly subscription instances via an API is under grayscale release. If you want to experience this feature, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
         /// </summary>
         [JsonProperty("LBChargeType")]
         public string LBChargeType{ get; set; }

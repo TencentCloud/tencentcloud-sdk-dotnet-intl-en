@@ -28,7 +28,7 @@ namespace TencentCloud.Ccc.V20200210
 
        private const string endpoint = "ccc.intl.tencentcloudapi.com";
        private const string version = "2020-02-10";
-       private const string sdkVersion = "SDK_NET_3.0.1311";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -274,7 +274,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to create bulk automatic outbound calls. The system will automatically initiate outbound calls to the designated called number list based on task configuration. This API can call the configured Intelligent Agent to perform batch outbound call tasks. You can create a voice Intelligent Agent in the management console-Intelligent Agent Management and configure the dialogue process (https://www.tencentcloud.com/document/product/679/119796?from_cn_redirect=1). To create a single Intelligent Agent outbound call task, refer to the documentation (https://www.tencentcloud.com/document/product/679/115681?from_cn_redirect=1).
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoCalloutTaskRequest"/></param>
         /// <returns><see cref="CreateAutoCalloutTaskResponse"/></returns>
@@ -286,7 +286,7 @@ namespace TencentCloud.Ccc.V20200210
         /// <summary>
         /// This API is used to create bulk automatic outbound calls. The system will automatically initiate outbound calls to the designated called number list based on task configuration. This API can call the configured Intelligent Agent to perform batch outbound call tasks. You can create a voice Intelligent Agent in the management console-Intelligent Agent Management and configure the dialogue process (https://www.tencentcloud.com/document/product/679/119796?from_cn_redirect=1). To create a single Intelligent Agent outbound call task, refer to the documentation (https://www.tencentcloud.com/document/product/679/115681?from_cn_redirect=1).
         /// 
-        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.com/document/product/679/125953?from_cn_redirect=1).
+        /// The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number.
         /// </summary>
         /// <param name="req"><see cref="CreateAutoCalloutTaskRequest"/></param>
         /// <returns><see cref="CreateAutoCalloutTaskResponse"/></returns>

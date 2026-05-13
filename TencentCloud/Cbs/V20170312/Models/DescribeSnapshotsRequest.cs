@@ -31,18 +31,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] SnapshotIds{ get; set; }
 
         /// <summary>
-        /// Filters. It cannot be specified together with `SnapshotIds`.<br><li>snapshot-id - Array of String - Optional - Filters by snapshot ID, such as `snap-11112222`.<br><li>snapshot-name - Array of String - Optional - Filters by snapshot name. <br><li>snapshot-state - Array of String - Optional - Filters by snapshot state (NORMAL: normal | CREATING: creating | ROLLBACKING: rolling back). <br><li>disk-usage - Array of String - Optional - Filters by the type of the cloud disk from which a snapshot is created (SYSTEM_DISK: system disk | DATA_DISK: data disk).<br><li>project-id - Array of String - Optional - Filters by the ID of the project to which a cloud disk belongs. <br><li>disk-id - Array of String - Optional - Filters by the ID of the cloud disk from which a snapshot is created.<br><li>zone - Array of String - Optional - Filters by [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).<br><li>encrypt - Array of String - Optional - Filters by whether a snapshot is created from an encrypted cloud disk. (TRUE: a snapshot of an encrypted cloud disk | FALSE: not a snapshot of an encrypted cloud disk.)
-        /// <li>snapshot-type- Array of String - Optional - Filters by the snapshot type specified in `snapshot-type`.
-        /// (SHARED_SNAPSHOT: a shared snapshot | PRIVATE_SNAPSHOT: a private snapshot.)
+        /// Filter criteria. parameters `SnapshotIds` and `Filters` cannot be specified at the same time.<br><ul><li>snapshot-id<ul><li>filter by cloud disk snapshot id</li><li>type: String</li><li>required: no</li></ul></li><li>snapshot-name<ul><li>filter by cloud disk snapshot name</li><li>type: String</li><li>required: no</li></ul></li><li>snapshot-state<ul><li>filter by cloud disk snapshot status</li><li>type: String</li><li>required: no</li><li>value ranges FROM:<ul><li><code>NORMAL</code>: NORMAL</li><li><code>CREATING</code>: CREATING</li><li><code>ROLLBACKING</code>: rolling back</li><li><code>COPYING_FROM_REMOTE</code>: cross geo-replication in progress</li><li><code>CHECKING_COPIED</code>: COPYING check in progress</li><li><code>TORECYCLE</code>: pending recycling</li></ul></li></ul></li><li>disk-usage<ul><li>filter by cloud disk usage purpose</li><li>type: String</li><li>required: no</li><li>value ranges FROM:<ul><li><code>SYSTEM_disk</code>: represent SYSTEM disk</li><li><code>DATA_disk</code>: represent DATA disk</li></ul></li></ul></li><li>project-id<ul><li>filter by cloud disk project id</li><li>type: String</li><li>required: no</li></ul></li><li>disk-id<ul><li>filter by cloud disk id. up to 10 values can be specified</li><li>type: String</li><li>required: no</li></ul></li><li>encrypt<ul><li>filter by whether encrypted or not</li><li>type: String</li><li>required: no</li></ul></li><li>snapshot-type<ul><li>query by snapshot ownership type</li><li>type: String</li><li>required: no</li><li>value ranges FROM:<ul><li><code>SHARED_snapshot</code>: refer to SHARED snapshot</li><li><code>PRIVATE_snapshot</code>: refer to own PRIVATE snapshot</li></ul></li></ul></li></ul>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
-
-        /// <summary>
-        /// Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// Number of results to be returned. Default is 20. Maximum is 100. For more information on `Limit`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
@@ -51,16 +43,30 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
-        /// </summary>
-        [JsonProperty("Order")]
-        public string Order{ get; set; }
-
-        /// <summary>
-        /// The field by which the snapshot list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of the snapshots <br>By default, the snapshot list is sorted by the creation time of snapshots.
+        /// Field based on which the snapshot list is sorted. valid values:.
+        /// <ul>
+        /// <Li>CREATE_TIME: specifies to sort by snapshot creation time.</li>.
+        /// <Li>Sort by creation time by default.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
+
+        /// <summary>
+        /// Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Outputs the sorting order of the cloud disk list. valid values:.
+        /// <ul>
+        /// <Li>ASC: specifies ascending order.</li>.
+        /// <Li>DESC: specifies sorting in descending order.</li>.
+        /// </ul>
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
 
 
         /// <summary>
@@ -70,10 +76,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

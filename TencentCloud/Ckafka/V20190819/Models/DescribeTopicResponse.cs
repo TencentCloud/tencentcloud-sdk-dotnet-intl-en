@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Returned result.
+        /// <p>Returned result</p>
         /// </summary>
         [JsonProperty("Result")]
         public TopicResult Result{ get; set; }

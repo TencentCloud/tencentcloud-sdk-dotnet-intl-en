@@ -25,22 +25,28 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-        /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
-
-        /// <summary>
-        /// Cloud disk size after scale out (in GB). This cannot be smaller than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+        /// Specifies the size after expanding the cloud disk in GiB, which should not be less than the current disk size. for the cloud disk size range, please refer to the product type of CBS (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// ID of project the cloud disk belongs to. If selected, it can only be used for authentication.
+        /// Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskIds parameter.
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
+        /// <summary>
+        /// cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). if input, it is only for authentication.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// Cloud disk ID list. queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. mutually exclusive with the DiskId parameter.
+        /// </summary>
+        [JsonProperty("DiskIds")]
+        public string[] DiskIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         }
     }
 }

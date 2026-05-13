@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Returned result set of route information
+        /// <p>Returned routing information result set</p>
         /// </summary>
         [JsonProperty("Result")]
         public RouteResponse Result{ get; set; }

@@ -25,40 +25,52 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// Workflow ID
+        /// 
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// Workflow Name
+        /// 
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// Workflow Run ID
+        /// 
         /// </summary>
         [JsonProperty("WorkflowRunId")]
         public string WorkflowRunId{ get; set; }
 
         /// <summary>
-        /// Tab
+        /// 
         /// </summary>
         [JsonProperty("OptionCards")]
         public string[] OptionCards{ get; set; }
 
         /// <summary>
-        /// Multi-bubble output results
+        /// 
         /// </summary>
         [JsonProperty("Outputs")]
         public string[] Outputs{ get; set; }
 
         /// <summary>
-        /// Workflow Publish Time, unix timestamp
+        /// 
         /// </summary>
         [JsonProperty("WorkflowReleaseTime")]
         public string WorkflowReleaseTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Contents")]
+        public Content[] Contents{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OptionMode")]
+        public long? OptionMode{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
             this.SetParamArraySimple(map, prefix + "Outputs.", this.Outputs);
             this.SetParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
+            this.SetParamArrayObj(map, prefix + "Contents.", this.Contents);
+            this.SetParamSimple(map, prefix + "OptionMode", this.OptionMode);
         }
     }
 }

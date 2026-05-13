@@ -43,7 +43,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? PermRead{ get; set; }
 
         /// <summary>
-        /// Authorized resource type (Topic: topic; Group: consumer group).
+        /// Authorized resource type. Enumeration values are as follows:
+        /// -Topic: Topic dimension
+        /// -Group: Consumer group dimension
+        /// -Cluster: cluster-level (default value)
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// (Filter condition) filter by instance ID.
+        /// <p>(Filtering Conditions) Filter by instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// (Filter condition) filter by instance name. fuzzy query is supported.
+        /// <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+        /// <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Offset. default value: 0.
+        /// <p>Offset, which is 0 by default</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. default: 10. maximum value: 100.
+        /// <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Matches the Tag key.
+        /// <p>Match the tag key.</p>
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }

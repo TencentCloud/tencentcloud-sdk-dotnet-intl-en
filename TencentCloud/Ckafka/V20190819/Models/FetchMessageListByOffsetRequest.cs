@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Topic name
+        /// <p>Topic name</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Partition ID
+        /// <p>Partition id</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Offset information
+        /// <p>Location info</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+        /// <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
         /// </summary>
         [JsonProperty("SinglePartitionRecordNumber")]
         public long? SinglePartitionRecordNumber{ get; set; }

@@ -25,82 +25,78 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Instance connection method
-        /// 0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-        /// 1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-        /// 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-        /// 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+        /// <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// Route ID
+        /// <p>Route Id</p>
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+        /// <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
 
         /// <summary>
-        /// Virtual IP list
+        /// <p>Virtual IP list</p>
         /// </summary>
         [JsonProperty("VipList")]
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// Domain name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Domain name</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Domain name port
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Domain name port</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DomainPort")]
         public long? DomainPort{ get; set; }
 
         /// <summary>
-        /// Timestamp.
+        /// <p>Timestamp</p>
         /// </summary>
         [JsonProperty("DeleteTimestamp")]
         public string DeleteTimestamp{ get; set; }
 
         /// <summary>
-        /// Specifies the subnet Id.
+        /// <p>Subnet Id</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Subnet")]
         public string Subnet{ get; set; }
 
         /// <summary>
-        /// Virtual IP list (1:1 broker node).
+        /// <p>Virtual IP list (1:1 broker node)</p>
         /// </summary>
         [JsonProperty("BrokerVipList")]
         public VipEntity[] BrokerVipList{ get; set; }
 
         /// <summary>
-        /// VPC Id. specifies the Id of the vpc.
+        /// <p>VPC Id</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// <p>Remarks</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+        /// <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]

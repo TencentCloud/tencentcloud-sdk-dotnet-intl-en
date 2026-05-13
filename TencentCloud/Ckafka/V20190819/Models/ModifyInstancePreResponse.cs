@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Response structure of modifying the configurations of a prepaid instance.
+        /// <p>Return structure for updating prepaid instance configuration</p>
         /// </summary>
         [JsonProperty("Result")]
         public CreateInstancePreResp Result{ get; set; }

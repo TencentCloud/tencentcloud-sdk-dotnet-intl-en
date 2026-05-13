@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

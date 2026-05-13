@@ -73,6 +73,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SessionExpireTime")]
         public ulong? SessionExpireTime{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SnatEnable")]
+        public bool? SnatEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+            this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         }
     }
 }

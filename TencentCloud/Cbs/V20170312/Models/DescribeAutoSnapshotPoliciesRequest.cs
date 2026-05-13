@@ -31,7 +31,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] AutoSnapshotPolicyIds{ get; set; }
 
         /// <summary>
-        /// Filter conditions. Specification of both the `AutoSnapshotPolicyIds` and `Filters` parameters is not supported.<br><li>auto-snapshot-policy-id - Array of String - Required or not: No - (Filter condition) Filters according to the scheduled snapshot policy ID. The format of the scheduled snapshot policy ID is as follows: `asp-11112222`. <br><li>auto-snapshot-policy-state - Array of String - Required or not: No - (Filter condition) Filters according to the status of the scheduled snapshot policy. The format of the scheduled snapshot policy ID is as follows: `asp-11112222`. (NORMAL: normal | ISOLATED: isolated)<br><li>auto-snapshot-policy-name - Array of String - Required or not: No - (Filter condition) Filters according to the name of the scheduled snapshot policy.
+        /// Filter criteria. AutoSnapshotPolicyIds and Filters cannot be specified at the same time.
+        /// <li>auto-snapshot-policy-id - Array of String - required: no - (filter condition) filter by regular snapshot policy id. regular snapshot policy id such as: `asp-3stvwfxx`.</li>.
+        /// <li>AutoSnapshotPolicyState - Array of String - required: no - (filter condition) filters by the status of the regular snapshot policy. regular snapshot policy ID format: `asp-3stvwfxx`. (NORMAL: NORMAL | ISOLATED: ISOLATED).</li>.
+        /// <li>AutoSnapshotPolicyName - Array of String - required: no - (filter condition) filters by the name of the regular snapshot policy.</li>.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -49,7 +52,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Outputs the ordering of the scheduled snapshot lists. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
+        /// Specifies the output order of the regular snapshot list. valid values: <br><li>ASC: ascending order<br></li><li>DESC: descending order.</li>.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ErrorLinkText{ get; set; }
 
         /// <summary>
-        /// 
+        /// Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure.
         /// </summary>
         [JsonProperty("DuplicateFileCheckType")]
         public ulong? DuplicateFileCheckType{ get; set; }

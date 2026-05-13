@@ -25,49 +25,49 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+        /// <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// (Filter) filter by `topicName`. Fuzzy search is supported
+        /// <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Offset. If this parameter is left empty, 0 will be used by default
+        /// <p>Offset, which is 0 by default</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. default: 20. value must be above 0.
+        /// <p>Number of returned results. Default value: 20. Value must be above 0.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Name of the preset ACL rule.
+        /// <p>Acl preset policy name</p>
         /// </summary>
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
         /// <summary>
-        /// Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+        /// <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 0 - sequential, 1 - reverse order. default value: 0.
+        /// <p>0-sequential, 1-reverse, default value is 0.</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// Currently supports ReplicaNum (number of replicas) filter criteria.
+        /// <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

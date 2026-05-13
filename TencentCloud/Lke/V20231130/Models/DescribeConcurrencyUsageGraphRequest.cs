@@ -72,6 +72,24 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
 
+        /// <summary>
+        /// Space ID
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// Start timestamp, unit: seconds
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// End timestamp, unit: seconds
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
             this.SetParamSimple(map, prefix + "SubBizType", this.SubBizType);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }

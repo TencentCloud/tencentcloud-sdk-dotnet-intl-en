@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Specifies the structure of the returned renewal type.
+        /// <p>Returned scaling type structure</p>
         /// </summary>
         [JsonProperty("Result")]
         public DescModifyType Result{ get; set; }

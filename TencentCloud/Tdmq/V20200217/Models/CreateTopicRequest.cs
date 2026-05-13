@@ -99,6 +99,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AckTimeOut")]
         public long? AckTimeOut{ get; set; }
 
+        /// <summary>
+        /// Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+        /// </summary>
+        [JsonProperty("PulsarTopicMessageType")]
+        public long? PulsarTopicMessageType{ get; set; }
+
+        /// <summary>
+        /// Theme tag
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+        /// </summary>
+        [JsonProperty("DelayMessagePolicy")]
+        public string DelayMessagePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +134,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
             this.SetParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
             this.SetParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+            this.SetParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
         }
     }
 }

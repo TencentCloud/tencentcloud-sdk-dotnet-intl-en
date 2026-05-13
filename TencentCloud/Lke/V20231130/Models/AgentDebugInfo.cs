@@ -25,16 +25,22 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// Input Information for Tools and Large Models, json
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// Output Information for Tools and Large Models, json
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Lke.V20231130.Models
         {
             this.SetParamSimple(map, prefix + "Input", this.Input);
             this.SetParamSimple(map, prefix + "Output", this.Output);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
         }
     }
 }

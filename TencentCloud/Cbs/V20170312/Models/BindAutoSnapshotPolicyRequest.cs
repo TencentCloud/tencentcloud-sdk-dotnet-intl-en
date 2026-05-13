@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// ID of scheduled snapshot policy to be bound.
+        /// Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }

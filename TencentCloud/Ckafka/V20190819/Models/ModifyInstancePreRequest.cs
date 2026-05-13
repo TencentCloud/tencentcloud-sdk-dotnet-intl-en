@@ -25,28 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+        /// <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-        /// Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
+        /// <p>Disk size in GB. Maximum value is 500000 with a step length of 100. View specification limits through the following url: https://www.tencentcloud.com/document/product/597/122562?from_cn_redirect=1</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Peak bandwidth in MB/s.
-        /// Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
+        /// <p>Peak bandwidth in MB/s can be accessed through the following link to view specifications limit and corresponding step length: https://www.tencentcloud.com/document/product/597/11745?from_cn_redirect=1</p>
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// Partition upper bound. maximum value of 40000. step length of 100.
-        /// Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
+        /// <p>Partition upper limit maximum value: 40000, step length: 100. View specification limits through the following URL: https://www.tencentcloud.com/document/product/597/122563?from_cn_redirect=1</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }

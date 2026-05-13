@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+        /// <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

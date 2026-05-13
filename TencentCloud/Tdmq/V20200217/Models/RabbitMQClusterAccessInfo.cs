@@ -25,49 +25,49 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Cluster Public Network Access Address
+        /// 
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// Cluster Console Access Address
+        /// 
         /// </summary>
         [JsonProperty("WebConsoleEndpoint")]
         public string WebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// Cluster Console Login Username
+        /// 
         /// </summary>
         [JsonProperty("WebConsoleUsername")]
         public string WebConsoleUsername{ get; set; }
 
         /// <summary>
-        /// Cluster Console Login Password
+        /// 
         /// </summary>
         [JsonProperty("WebConsolePassword")]
         public string WebConsolePassword{ get; set; }
 
         /// <summary>
-        /// Deprecated
+        /// 
         /// </summary>
         [JsonProperty("PublicAccessEndpointStatus")]
         public bool? PublicAccessEndpointStatus{ get; set; }
 
         /// <summary>
-        /// Deprecated
+        /// 
         /// </summary>
         [JsonProperty("PublicControlConsoleSwitchStatus")]
         public bool? PublicControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Deprecated
+        /// 
         /// </summary>
         [JsonProperty("VpcControlConsoleSwitchStatus")]
         public bool? VpcControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Vpc management console access address, example value: http://1.1.1.1:15672
+        /// 
         /// </summary>
         [JsonProperty("VpcWebConsoleEndpoint")]
         public string VpcWebConsoleEndpoint{ get; set; }
@@ -121,6 +121,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("PublicIpReused")]
         public bool? PublicIpReused{ get; set; }
 
+        /// <summary>
+        /// Error message for public network console access point operations.
+        /// </summary>
+        [JsonProperty("PublicWebConsoleErrorMessage")]
+        public string PublicWebConsoleErrorMessage{ get; set; }
+
+        /// <summary>
+        /// Error message for private network console access point operations.
+        /// </summary>
+        [JsonProperty("VpcWebConsoleErrorMessage")]
+        public string VpcWebConsoleErrorMessage{ get; set; }
+
+        /// <summary>
+        /// Error message for public network access point operation failure.
+        /// </summary>
+        [JsonProperty("PublicDataStreamErrorMessage")]
+        public string PublicDataStreamErrorMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +161,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
             this.SetParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
             this.SetParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
+            this.SetParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
+            this.SetParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
+            this.SetParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
         }
     }
 }

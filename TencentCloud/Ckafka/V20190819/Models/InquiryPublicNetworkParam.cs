@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+        /// Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
         /// </summary>
         [JsonProperty("PublicNetworkChargeType")]
         public string PublicNetworkChargeType{ get; set; }

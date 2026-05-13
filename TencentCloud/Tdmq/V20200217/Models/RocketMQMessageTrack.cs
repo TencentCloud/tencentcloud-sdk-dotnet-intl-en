@@ -55,6 +55,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ExceptionDesc")]
         public string ExceptionDesc{ get; set; }
 
+        /// <summary>
+        /// Consumption status source. The enumeration values are as follows:
+        /// 
+        /// -DIFF_OFFSET: Calculate by server offset
+        /// -TRACE_REPORT: Judge by the reported path.
+        /// </summary>
+        [JsonProperty("ConsumeStatusSource")]
+        public string ConsumeStatusSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +74,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ConsumeStatus", this.ConsumeStatus);
             this.SetParamSimple(map, prefix + "TrackType", this.TrackType);
             this.SetParamSimple(map, prefix + "ExceptionDesc", this.ExceptionDesc);
+            this.SetParamSimple(map, prefix + "ConsumeStatusSource", this.ConsumeStatusSource);
         }
     }
 }

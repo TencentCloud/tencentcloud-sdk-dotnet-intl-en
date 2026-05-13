@@ -37,13 +37,15 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// Cloud disk size in GB.
+        /// Specifies the disk capacity in GiB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+        /// Cloud disk type. value ranges from...to...<br>.
+        /// <Li>SYSTEM_DISK: specifies the system disk.</li>.
+        /// <Li>DATA_DISK: specifies the data disk.</li>.
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
@@ -55,13 +57,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskBackupName{ get; set; }
 
         /// <summary>
-        /// Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+        /// <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+        /// <ul>
+        /// <Li>NORMAL: specifies the scaling group is in normal state.</li>.
+        /// <Li>CREATING: creating.</li>.
+        /// <Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("DiskBackupState")]
         public string DiskBackupState{ get; set; }
 
         /// <summary>
-        /// Cloud disk creation progress in percentage.
+        /// Specifies the creation percentage of the cloud disk backup point.
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }
@@ -73,7 +80,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+        /// Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }

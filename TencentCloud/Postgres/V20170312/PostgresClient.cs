@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1311";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -814,7 +814,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+        /// This api is used to query instance backup list. This interface belongs to early stage and stopped feature iteration. We recommend using api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343) as an alternative.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>
@@ -824,7 +824,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the backup list of an instance. This API is disused and replaced by the [DescribeBaseBackups](https://intl.cloud.tencent.com/document/api/409/89022?from_cn_redirect=1) API.
+        /// This api is used to query instance backup list. This interface belongs to early stage and stopped feature iteration. We recommend using api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343) as an alternative.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBBackupsRequest"/></param>
         /// <returns><see cref="DescribeDBBackupsResponse"/></returns>

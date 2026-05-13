@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// Application ID.
+        /// Application ID
         /// </summary>
         [JsonProperty("BotBizId")]
         public string BotBizId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Returns the region enumeration result list.
+        /// <p>Return the region enumeration result list</p>
         /// </summary>
         [JsonProperty("Result")]
         public Region[] Result{ get; set; }

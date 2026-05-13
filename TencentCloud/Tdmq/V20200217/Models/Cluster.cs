@@ -118,11 +118,23 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string PublicEndPoint{ get; set; }
 
         /// <summary>
+        /// Old public network access point
+        /// </summary>
+        [JsonProperty("OldPublicEndPoint")]
+        public string OldPublicEndPoint{ get; set; }
+
+        /// <summary>
         /// VPC access point
         /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcEndPoint")]
         public string VpcEndPoint{ get; set; }
+
+        /// <summary>
+        /// Old VPC access point
+        /// </summary>
+        [JsonProperty("OldVpcEndPoint")]
+        public string OldVpcEndPoint{ get; set; }
 
         /// <summary>
         /// Number of namespaces
@@ -195,9 +207,21 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
+        /// Old support network Pulsar access point
+        /// </summary>
+        [JsonProperty("OldInternalPulsarEndPoint")]
+        public string OldInternalPulsarEndPoint{ get; set; }
+
+        /// <summary>
+        /// Old support network HTTP access point
+        /// </summary>
+        [JsonProperty("OldInternalHttpEndPoint")]
+        public string OldInternalHttpEndPoint{ get; set; }
+
+        /// <summary>
         /// Billing mode:
         /// `0`: Pay-as-you-go
-        /// `1`: Monthly subscription
+        /// `1`: Yearly/Monthly subscription
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayMode")]
@@ -244,7 +268,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxStorageCapacity", this.MaxStorageCapacity);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
+            this.SetParamSimple(map, prefix + "OldPublicEndPoint", this.OldPublicEndPoint);
             this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+            this.SetParamSimple(map, prefix + "OldVpcEndPoint", this.OldVpcEndPoint);
             this.SetParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
             this.SetParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
             this.SetParamSimple(map, prefix + "MaxPublishRateInMessages", this.MaxPublishRateInMessages);
@@ -255,6 +281,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
             this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "OldInternalPulsarEndPoint", this.OldInternalPulsarEndPoint);
+            this.SetParamSimple(map, prefix + "OldInternalHttpEndPoint", this.OldInternalHttpEndPoint);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);

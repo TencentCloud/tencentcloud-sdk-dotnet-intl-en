@@ -91,7 +91,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public RocketMQTopicDistribution[] TopicDistribution{ get; set; }
 
         /// <summary>
-        /// Maximum number of queues per topic
+        /// 
         /// </summary>
         [JsonProperty("MaxQueuesPerTopic")]
         public ulong? MaxQueuesPerTopic{ get; set; }
@@ -137,6 +137,19 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SendReceiveRatio")]
         public float? SendReceiveRatio{ get; set; }
 
+        /// <summary>
+        /// Send and receive TPS peak cap
+        /// </summary>
+        [JsonProperty("TpsLimit")]
+        public long? TpsLimit{ get; set; }
+
+        /// <summary>
+        /// Generic cluster specification
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("GeneralSkuCode")]
+        public string GeneralSkuCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +174,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
             this.SetParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
             this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "TpsLimit", this.TpsLimit);
+            this.SetParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
         }
     }
 }

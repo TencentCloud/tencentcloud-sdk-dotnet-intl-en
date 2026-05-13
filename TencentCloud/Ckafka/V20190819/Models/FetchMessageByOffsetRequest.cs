@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+        /// <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the topic name, which can be obtained through the [DescribeTopic](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1) api.
+        /// <p>Topic name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1">DescribeTopic</a> API</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Partition ID
+        /// <p>Partition id</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Specifies the position information.
+        /// <p>Location info</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

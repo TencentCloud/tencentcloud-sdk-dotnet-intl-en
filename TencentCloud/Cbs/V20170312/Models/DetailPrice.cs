@@ -25,8 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Name of the billable item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of a billable item.
         /// </summary>
         [JsonProperty("PriceTitle")]
         public string PriceTitle{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
         /// </summary>
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }

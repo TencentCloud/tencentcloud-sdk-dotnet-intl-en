@@ -25,52 +25,58 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// CKafka cluster instance ID.
+        /// <p>ckafka cluster instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the bandwidth after upgrade. measurement unit: mb.
+        /// <p>Bandwidth after upgrade, unit mb</p>
         /// </summary>
         [JsonProperty("BandWidth")]
         public long? BandWidth{ get; set; }
 
         /// <summary>
-        /// Specifies the disk after upgrade, in gb.
+        /// <p>Disk capacity after upgrade, in GB</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Disk type, such as CLOUD_PREMIUM.
+        /// <p>Disk type, such as CLOUD_PREMIUM</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Number of partitions.
+        /// <p>Number of partitions</p>
         /// </summary>
         [JsonProperty("Partition")]
         public long? Partition{ get; set; }
 
         /// <summary>
-        /// Number of Topics
+        /// <p>topic count</p>
         /// </summary>
         [JsonProperty("Topic")]
         public long? Topic{ get; set; }
 
         /// <summary>
-        /// Instance type, such as sp_ckafka_profession.
+        /// <p>Instance type such as sp_ckafka_profession</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Configuration change portal.
+        /// <p>Resize portal</p>
         /// </summary>
         [JsonProperty("ModifyEntry")]
         public string ModifyEntry{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+        /// </summary>
+        [JsonProperty("ModifyZone")]
+        public bool? ModifyZone{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ModifyEntry", this.ModifyEntry);
+            this.SetParamSimple(map, prefix + "ModifyZone", this.ModifyZone);
         }
     }
 }

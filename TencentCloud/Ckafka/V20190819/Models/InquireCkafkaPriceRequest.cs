@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+        /// Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
         /// </summary>
         [JsonProperty("InstanceChargeParam")]
         public InstanceChargeParam InstanceChargeParam{ get; set; }

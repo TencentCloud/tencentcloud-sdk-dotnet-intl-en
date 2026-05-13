@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Route ID
+        /// <p>Route Id</p>
         /// </summary>
         [JsonProperty("RouteId")]
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// Specifies whether to display the primary route. when true, the routing list will additionally display the primary route information during instance creation (not affected by InternalFlag or UsedFor parameter filtering).	
+        /// <p>Whether to display the primary route. If true, the primary route information during instance creation will additionally be displayed on the basis of the original routing list (and will not be affected by parameter filtering such as InternalFlag or UsedFor).</p>
         /// </summary>
         [JsonProperty("MainRouteFlag")]
         public bool? MainRouteFlag{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster Name
+        /// 
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region Information
+        /// 
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// VPC and network information
+        /// 
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Virtual Host Quantity
+        /// 
         /// </summary>
         [JsonProperty("VirtualHostNumber")]
         public long? VirtualHostNumber{ get; set; }
 
         /// <summary>
-        /// Number of Queues
+        /// 
         /// </summary>
         [JsonProperty("QueueNumber")]
         public long? QueueNumber{ get; set; }
 
         /// <summary>
-        /// Number of messages produced per second Unit: messages/second
+        /// 
         /// </summary>
         [JsonProperty("MessagePublishRate")]
         public float? MessagePublishRate{ get; set; }
 
         /// <summary>
-        /// Number of backlogged messages Unit: messages
+        /// 
         /// </summary>
         [JsonProperty("MessageStackNumber")]
         public long? MessageStackNumber{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Channel Count
+        /// 
         /// </summary>
         [JsonProperty("ChannelNumber")]
         public long? ChannelNumber{ get; set; }
 
         /// <summary>
-        /// Connection Count
+        /// 
         /// </summary>
         [JsonProperty("ConnectionNumber")]
         public long? ConnectionNumber{ get; set; }
 
         /// <summary>
-        /// Consumer Count
+        /// 
         /// </summary>
         [JsonProperty("ConsumerNumber")]
         public long? ConsumerNumber{ get; set; }
 
         /// <summary>
-        /// Exchange Count
+        /// 
         /// </summary>
         [JsonProperty("ExchangeNumber")]
         public long? ExchangeNumber{ get; set; }
@@ -193,6 +193,30 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnableDeletionProtection")]
         public bool? EnableDeletionProtection{ get; set; }
 
+        /// <summary>
+        /// Whether there is a risk of vhost without mirror queue enabled
+        /// </summary>
+        [JsonProperty("MirroredQueueRisk")]
+        public bool? MirroredQueueRisk{ get; set; }
+
+        /// <summary>
+        /// whether to indicate risk
+        /// </summary>
+        [JsonProperty("EnableRiskWarning")]
+        public bool? EnableRiskWarning{ get; set; }
+
+        /// <summary>
+        /// Timeout period for consumption
+        /// </summary>
+        [JsonProperty("ConsumeTimeout")]
+        public ulong? ConsumeTimeout{ get; set; }
+
+        /// <summary>
+        /// Maximum number of channels
+        /// </summary>
+        [JsonProperty("ChannelMax")]
+        public ulong? ChannelMax{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -227,6 +251,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+            this.SetParamSimple(map, prefix + "MirroredQueueRisk", this.MirroredQueueRisk);
+            this.SetParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
+            this.SetParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
+            this.SetParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
         }
     }
 }

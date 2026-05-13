@@ -49,6 +49,12 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
+        /// <summary>
+        /// <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public FilterItem[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Record count.
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Role array.
+        /// This API is used to provide the role list.
         /// </summary>
         [JsonProperty("RoleSets")]
         public Role[] RoleSets{ get; set; }

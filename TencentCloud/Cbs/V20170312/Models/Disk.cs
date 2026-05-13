@@ -25,27 +25,25 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+        /// Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+        /// Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
         /// </summary>
         [JsonProperty("DiskState")]
         public string DiskState{ get; set; }
@@ -57,14 +55,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public long? SnapshotCount{ get; set; }
 
         /// <summary>
-        /// Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
         /// </summary>
         [JsonProperty("AutoRenewFlagError")]
         public bool? AutoRenewFlagError{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+        /// Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
         /// </summary>
         [JsonProperty("Rollbacking")]
         public bool? Rollbacking{ get; set; }
@@ -76,7 +73,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+        /// Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
@@ -94,8 +91,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? BackupDisk{ get; set; }
 
         /// <summary>
-        /// The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -107,29 +103,26 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
         /// </summary>
         [JsonProperty("AttachMode")]
         public string AttachMode{ get; set; }
 
         /// <summary>
-        /// ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyIds")]
         public string[] AutoSnapshotPolicyIds{ get; set; }
 
         /// <summary>
-        /// Extra performance for a cloud disk, in MB/sec.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the additional performance value of the CBS in MiB/s.
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
 
         /// <summary>
-        /// Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
         /// </summary>
         [JsonProperty("Migrating")]
         public bool? Migrating{ get; set; }
@@ -141,7 +134,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// The total capacity of the snapshots of the cloud disk. Unit: MB.
+        /// Total snapshot capacity of the cloud disk. unit: MiB.
         /// </summary>
         [JsonProperty("SnapshotSize")]
         public ulong? SnapshotSize{ get; set; }
@@ -153,8 +146,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsReturnable")]
         public bool? IsReturnable{ get; set; }
@@ -166,32 +159,31 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+        /// Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
         /// </summary>
         [JsonProperty("Attached")]
         public bool? Attached{ get; set; }
 
         /// <summary>
-        /// Cloud disk size (in GB).
+        /// Specifies the disk capacity in GiB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Migration progress of cloud disk type change, from 0 to 100.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
         /// </summary>
         [JsonProperty("MigratePercent")]
         public ulong? MigratePercent{ get; set; }
 
         /// <summary>
-        /// Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+        /// Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+        /// Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
@@ -203,14 +195,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? Portable{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
+        /// Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
         /// </summary>
         [JsonProperty("SnapshotAbility")]
         public bool? SnapshotAbility{ get; set; }
 
         /// <summary>
-        /// This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
         /// </summary>
         [JsonProperty("DeadlineError")]
         public bool? DeadlineError{ get; set; }
@@ -222,15 +213,14 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? RollbackPercent{ get; set; }
 
         /// <summary>
-        /// Number of days from current time until disk expiration (only applicable for prepaid disks).
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DifferDaysOfDeadline")]
         public long? DifferDaysOfDeadline{ get; set; }
 
         /// <summary>
-        /// In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
         /// </summary>
         [JsonProperty("ReturnFailCode")]
         public long? ReturnFailCode{ get; set; }
@@ -248,7 +238,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+        /// Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
         /// </summary>
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
@@ -266,7 +256,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskBackupCount{ get; set; }
 
         /// <summary>
-        /// Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+        /// The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -279,17 +269,28 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string LastAttachInsId{ get; set; }
 
         /// <summary>
-        /// Error message for the last operation of the cloud disk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Error prompt for the last operation on cbs.
         /// </summary>
         [JsonProperty("ErrorPrompt")]
         public string ErrorPrompt{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether performance burst is enabled for the cloud disk.
         /// </summary>
         [JsonProperty("BurstPerformance")]
         public bool? BurstPerformance{ get; set; }
+
+        /// <summary>
+        /// Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+        /// </summary>
+        [JsonProperty("EncryptType")]
+        public string EncryptType{ get; set; }
+
+        /// <summary>
+        /// Key ID of the encrypted disk.
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
 
 
         /// <summary>
@@ -339,6 +340,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
             this.SetParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
             this.SetParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+            this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

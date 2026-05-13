@@ -64,7 +64,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+        /// VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the DescribeVpcEx API.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

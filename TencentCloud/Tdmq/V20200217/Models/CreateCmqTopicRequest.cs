@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+        /// Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

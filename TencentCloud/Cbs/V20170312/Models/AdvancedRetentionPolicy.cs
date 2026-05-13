@@ -25,29 +25,25 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
         /// </summary>
         [JsonProperty("Days")]
         public ulong? Days{ get; set; }
 
         /// <summary>
-        /// Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
         /// </summary>
         [JsonProperty("Weeks")]
         public ulong? Weeks{ get; set; }
 
         /// <summary>
-        /// Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
         /// </summary>
         [JsonProperty("Months")]
         public ulong? Months{ get; set; }
 
         /// <summary>
-        /// Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
         /// </summary>
         [JsonProperty("Years")]
         public ulong? Years{ get; set; }

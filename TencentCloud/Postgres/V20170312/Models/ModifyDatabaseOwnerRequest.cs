@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+        /// Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }

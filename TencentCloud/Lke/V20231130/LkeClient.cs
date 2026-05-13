@@ -28,7 +28,7 @@ namespace TencentCloud.Lke.V20231130
 
        private const string endpoint = "lke.intl.tencentcloudapi.com";
        private const string version = "2023-11-30";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1312";
 
         /// <summary>
         /// Client constructor.
@@ -138,27 +138,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// This API is used to create enterprises.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCorpRequest"/></param>
-        /// <returns><see cref="CreateCorpResponse"/></returns>
-        public Task<CreateCorpResponse> CreateCorp(CreateCorpRequest req)
-        {
-            return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp");
-        }
-
-        /// <summary>
-        /// This API is used to create enterprises.
-        /// </summary>
-        /// <param name="req"><see cref="CreateCorpRequest"/></param>
-        /// <returns><see cref="CreateCorpResponse"/></returns>
-        public CreateCorpResponse CreateCorpSync(CreateCorpRequest req)
-        {
-            return InternalRequestAsync<CreateCorpResponse>(req, "CreateCorp")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to create doc categories.
         /// </summary>
         /// <param name="req"><see cref="CreateDocCateRequest"/></param>
@@ -218,31 +197,6 @@ namespace TencentCloud.Lke.V20231130
         public CreateQACateResponse CreateQACateSync(CreateQACateRequest req)
         {
             return InternalRequestAsync<CreateQACateResponse>(req, "CreateQACate")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
-        /// Document parsing supports converting images or PDF files into Markdown format files, and can parse content elements including tables, formulas, images, headings, paragraphs, headers, and footers, and intelligently convert the content into reading order.
-        /// During the trial period, the QPS limit for a single account is only 1. If you need to access officially, please contact our R&D team.
-        /// </summary>
-        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
-        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
-        public Task<CreateReconstructDocumentFlowResponse> CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req)
-        {
-            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow");
-        }
-
-        /// <summary>
-        /// This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
-        /// Document parsing supports converting images or PDF files into Markdown format files, and can parse content elements including tables, formulas, images, headings, paragraphs, headers, and footers, and intelligently convert the content into reading order.
-        /// During the trial period, the QPS limit for a single account is only 1. If you need to access officially, please contact our R&D team.
-        /// </summary>
-        /// <param name="req"><see cref="CreateReconstructDocumentFlowRequest"/></param>
-        /// <returns><see cref="CreateReconstructDocumentFlowResponse"/></returns>
-        public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlowSync(CreateReconstructDocumentFlowRequest req)
-        {
-            return InternalRequestAsync<CreateReconstructDocumentFlowResponse>(req, "CreateReconstructDocumentFlow")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -537,27 +491,6 @@ namespace TencentCloud.Lke.V20231130
         public DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraphSync(DescribeConcurrencyUsageGraphRequest req)
         {
             return InternalRequestAsync<DescribeConcurrencyUsageGraphResponse>(req, "DescribeConcurrencyUsageGraph")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query corporate details.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
-        /// <returns><see cref="DescribeCorpResponse"/></returns>
-        public Task<DescribeCorpResponse> DescribeCorp(DescribeCorpRequest req)
-        {
-            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp");
-        }
-
-        /// <summary>
-        /// This API is used to query corporate details.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCorpRequest"/></param>
-        /// <returns><see cref="DescribeCorpResponse"/></returns>
-        public DescribeCorpResponse DescribeCorpSync(DescribeCorpRequest req)
-        {
-            return InternalRequestAsync<DescribeCorpResponse>(req, "DescribeCorp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1066,27 +999,6 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
-        /// This is an asynchronous APIs, used to get document parsing task results.
-        /// </summary>
-        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
-        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
-        public Task<GetReconstructDocumentResultResponse> GetReconstructDocumentResult(GetReconstructDocumentResultRequest req)
-        {
-            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult");
-        }
-
-        /// <summary>
-        /// This is an asynchronous APIs, used to get document parsing task results.
-        /// </summary>
-        /// <param name="req"><see cref="GetReconstructDocumentResultRequest"/></param>
-        /// <returns><see cref="GetReconstructDocumentResultResponse"/></returns>
-        public GetReconstructDocumentResultResponse GetReconstructDocumentResultSync(GetReconstructDocumentResultRequest req)
-        {
-            return InternalRequestAsync<GetReconstructDocumentResultResponse>(req, "GetReconstructDocumentResult")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to get the task status.
         /// </summary>
         /// <param name="req"><see cref="GetTaskStatusRequest"/></param>
@@ -1192,6 +1104,27 @@ namespace TencentCloud.Lke.V20231130
         }
 
         /// <summary>
+        /// This API is used to determine whether to transfer to human service.
+        /// </summary>
+        /// <param name="req"><see cref="IsTransferIntentRequest"/></param>
+        /// <returns><see cref="IsTransferIntentResponse"/></returns>
+        public Task<IsTransferIntentResponse> IsTransferIntent(IsTransferIntentRequest req)
+        {
+            return InternalRequestAsync<IsTransferIntentResponse>(req, "IsTransferIntent");
+        }
+
+        /// <summary>
+        /// This API is used to determine whether to transfer to human service.
+        /// </summary>
+        /// <param name="req"><see cref="IsTransferIntentRequest"/></param>
+        /// <returns><see cref="IsTransferIntentResponse"/></returns>
+        public IsTransferIntentResponse IsTransferIntentSync(IsTransferIntentRequest req)
+        {
+            return InternalRequestAsync<IsTransferIntentResponse>(req, "IsTransferIntent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the application list under the corporate.
         /// </summary>
         /// <param name="req"><see cref="ListAppRequest"/></param>
@@ -1209,27 +1142,6 @@ namespace TencentCloud.Lke.V20231130
         public ListAppResponse ListAppSync(ListAppRequest req)
         {
             return InternalRequestAsync<ListAppResponse>(req, "ListApp")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to get list of application types.
-        /// </summary>
-        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
-        /// <returns><see cref="ListAppCategoryResponse"/></returns>
-        public Task<ListAppCategoryResponse> ListAppCategory(ListAppCategoryRequest req)
-        {
-            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory");
-        }
-
-        /// <summary>
-        /// This API is used to get list of application types.
-        /// </summary>
-        /// <param name="req"><see cref="ListAppCategoryRequest"/></param>
-        /// <returns><see cref="ListAppCategoryResponse"/></returns>
-        public ListAppCategoryResponse ListAppCategorySync(ListAppCategoryRequest req)
-        {
-            return InternalRequestAsync<ListAppCategoryResponse>(req, "ListAppCategory")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

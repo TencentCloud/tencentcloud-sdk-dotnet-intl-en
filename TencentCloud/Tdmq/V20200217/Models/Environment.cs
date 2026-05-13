@@ -87,6 +87,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AutoSubscriptionCreation")]
         public bool? AutoSubscriptionCreation{ get; set; }
 
+        /// <summary>
+        /// Offline subscription automatic expiration cleanup time
+        /// </summary>
+        [JsonProperty("SubscriptionExpirationTime")]
+        public ulong? SubscriptionExpirationTime{ get; set; }
+
+        /// <summary>
+        /// Offline subscription automatic expiration cleanup time switch
+        /// </summary>
+        [JsonProperty("SubscriptionExpirationTimeEnable")]
+        public bool? SubscriptionExpirationTimeEnable{ get; set; }
+
+        /// <summary>
+        /// Namespace tag
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +121,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
             this.SetParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
             this.SetParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
+            this.SetParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
+            this.SetParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

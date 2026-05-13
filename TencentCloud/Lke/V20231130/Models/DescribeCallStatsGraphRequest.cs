@@ -58,12 +58,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Start timestamp, in seconds.
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// End timestamp, in seconds.
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
@@ -77,6 +79,30 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("SubScenes")]
         public string[] SubScenes{ get; set; }
+
+        /// <summary>
+        /// Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
+
+        /// <summary>
+        /// Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// Start time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// End time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
 
 
         /// <summary>
@@ -93,6 +119,10 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }

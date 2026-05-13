@@ -58,12 +58,14 @@ namespace TencentCloud.Lke.V20231130.Models
         /// Start timestamp, in seconds.
         /// </summary>
         [JsonProperty("StartTime")]
+        [System.Obsolete]
         public string StartTime{ get; set; }
 
         /// <summary>
         /// End timestamp, in seconds.
         /// </summary>
         [JsonProperty("EndTime")]
+        [System.Obsolete]
         public string EndTime{ get; set; }
 
         /// <summary>
@@ -71,6 +73,24 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("AppBizIds")]
         public string[] AppBizIds{ get; set; }
+
+        /// <summary>
+        /// Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// Start time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// End time. Unix timestamp in seconds, empty by default.
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
 
 
         /// <summary>
@@ -86,6 +106,9 @@ namespace TencentCloud.Lke.V20231130.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }

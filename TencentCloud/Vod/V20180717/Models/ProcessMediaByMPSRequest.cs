@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD. For details on different types of video processing parameters, refer to <a href="https://www.tencentcloud.com/document/product/266/131209?from_cn_redirect=1">Using MPS Media AI Capability</a>. You can create custom templates via the <a href="https://www.tencentcloud.com/document/product/266/122580?from_cn_redirect=1">CreateMPSTemplate</a> API.</p>
+        /// <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
         /// </summary>
         [JsonProperty("MPSProcessMediaParams")]
         public string MPSProcessMediaParams{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+        /// <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
         /// </summary>
         [JsonProperty("Result")]
         public ConsumerRecord[] Result{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Topic namespace. Currently, you can create topics only in one single namespace.
+        /// Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }

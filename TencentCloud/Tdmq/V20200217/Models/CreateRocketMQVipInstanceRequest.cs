@@ -37,12 +37,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Number of nodes. Value range: 2–20.
-        /// </summary>
-        [JsonProperty("NodeCount")]
-        public long? NodeCount{ get; set; }
-
-        /// <summary>
         /// Single-node storage space, in GB. The minimum space is 200 GB.
         /// </summary>
         [JsonProperty("StorageSize")]
@@ -65,6 +59,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// Node count, required when creating a dedicated cluster
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
+        /// <summary>
+        /// Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("GeneralSkuCode")]
+        public string GeneralSkuCode{ get; set; }
 
         /// <summary>
         /// Whether it is used for cloud migration. The default value is false.
@@ -104,11 +110,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
-            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
             this.SetParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
             this.SetParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

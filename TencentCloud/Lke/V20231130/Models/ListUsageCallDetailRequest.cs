@@ -31,18 +31,6 @@ namespace TencentCloud.Lke.V20231130.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Start time.
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
-        /// End time.
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
         /// Page number.
         /// </summary>
         [JsonProperty("PageNumber")]
@@ -53,6 +41,18 @@ namespace TencentCloud.Lke.V20231130.Models
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// Start time.
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// End time.
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
         /// Uin list.
@@ -78,6 +78,36 @@ namespace TencentCloud.Lke.V20231130.Models
         [JsonProperty("SubScenes")]
         public string[] SubScenes{ get; set; }
 
+        /// <summary>
+        /// Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+        /// </summary>
+        [JsonProperty("AppType")]
+        public string AppType{ get; set; }
+
+        /// <summary>
+        /// Custom tag corresponding to bill details
+        /// </summary>
+        [JsonProperty("BillingTag")]
+        public string BillingTag{ get; set; }
+
+        /// <summary>
+        /// Space ID
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
+        /// Start timestamp, unit: seconds
+        /// </summary>
+        [JsonProperty("StatStartTime")]
+        public long? StatStartTime{ get; set; }
+
+        /// <summary>
+        /// Start timestamp, unit: seconds
+        /// </summary>
+        [JsonProperty("StatEndTime")]
+        public long? StatEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,14 +115,19 @@ namespace TencentCloud.Lke.V20231130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "UinAccount.", this.UinAccount);
             this.SetParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
             this.SetParamSimple(map, prefix + "CallType", this.CallType);
             this.SetParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+            this.SetParamSimple(map, prefix + "AppType", this.AppType);
+            this.SetParamSimple(map, prefix + "BillingTag", this.BillingTag);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
+            this.SetParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+            this.SetParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
         }
     }
 }

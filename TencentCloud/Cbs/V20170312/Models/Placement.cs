@@ -31,20 +31,20 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
         /// <summary>
-        /// ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+        /// Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Project name of the instance.
+        /// Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProjectName")]
@@ -58,8 +58,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CdcName{ get; set; }
 
         /// <summary>
-        /// ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-        /// Note: This field may return null, indicating that no valid value was found.
+        /// The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }

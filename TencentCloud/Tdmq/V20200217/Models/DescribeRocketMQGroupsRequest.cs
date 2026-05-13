@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Namespace.
+        /// Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
         /// </summary>
         [JsonProperty("NamespaceId")]
         public string NamespaceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The max number of returned results.
+        /// Maximum number of entries per request. Range: [0–100]. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

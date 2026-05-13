@@ -25,219 +25,221 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// Instance type
-        /// BASIC: basic edition.
-        /// PRO edition.
-        /// PLATINUM edition.
+        /// <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Number of topics
+        /// <p>Number of topics</p>
         /// </summary>
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
         /// <summary>
-        /// Maximum number of topics per instance
+        /// <p>Maximum number of topics per instance</p>
         /// </summary>
         [JsonProperty("TopicNumLimit")]
         public long? TopicNumLimit{ get; set; }
 
         /// <summary>
-        /// TPS throttle value
+        /// <p>TPS throttle value</p>
         /// </summary>
         [JsonProperty("TpsLimit")]
         public long? TpsLimit{ get; set; }
 
         /// <summary>
-        /// Creation time, in seconds
+        /// <p>createTime, in seconds</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public long? CreatedTime{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// <p>Remarks</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+        /// <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Specifies the instance specification.
+        /// <p>Instance specification</p>
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
-        /// Maximum number of subscriptions for a single client.
+        /// <p>Maximum number of subscriptions for a single client</p>
         /// </summary>
         [JsonProperty("MaxSubscriptionPerClient")]
         public long? MaxSubscriptionPerClient{ get; set; }
 
         /// <summary>
-        /// Number of authorization rules.
+        /// <p>Number of authorization rule entries</p>
         /// </summary>
         [JsonProperty("AuthorizationPolicyLimit")]
         public long? AuthorizationPolicyLimit{ get; set; }
 
         /// <summary>
-        /// Maximum number of clients.
+        /// <p>Number of clients cap</p>
         /// </summary>
         [JsonProperty("ClientNumLimit")]
         public long? ClientNumLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the registration method for the client certificate.
-        /// JITP: automatically register.
-        /// API: register manually through api.
+        /// <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
         /// </summary>
         [JsonProperty("DeviceCertificateProvisionType")]
         public string DeviceCertificateProvisionType{ get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically activate the device certificate during automatic registration.
+        /// <p>Whether to automatically activate when automatically registering a device certificate</p>
         /// </summary>
         [JsonProperty("AutomaticActivation")]
         public bool? AutomaticActivation{ get; set; }
 
         /// <summary>
-        /// Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+        /// <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+        /// <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Expiry time. millisecond-level timestamp.
+        /// <p>Expiry time, millisecond-level timestamp</p>
         /// </summary>
         [JsonProperty("ExpiryTime")]
         public long? ExpiryTime{ get; set; }
 
         /// <summary>
-        /// Scheduled destruction time. millisecond-level timestamp.
+        /// <p>Predestruction time, millisecond-level timestamp</p>
         /// </summary>
         [JsonProperty("DestroyTime")]
         public long? DestroyTime{ get; set; }
 
         /// <summary>
-        /// TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+        /// <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
         /// </summary>
         [JsonProperty("X509Mode")]
         public string X509Mode{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum Ca quota.
+        /// <p>Maximum Ca quota</p>
         /// </summary>
         [JsonProperty("MaxCaNum")]
         public long? MaxCaNum{ get; set; }
 
         /// <summary>
-        /// FPS cert registration code.
+        /// <p>FPS Cert Registration Code</p>
         /// </summary>
         [JsonProperty("RegistrationCode")]
         public string RegistrationCode{ get; set; }
 
         /// <summary>
-        /// Maximum number of subscriptions for a cluster.
+        /// <p>Maximum number of subscriptions for a cluster</p>
         /// </summary>
         [JsonProperty("MaxSubscription")]
         public long? MaxSubscription{ get; set; }
 
         /// <summary>
-        /// Authorization policy switch.
+        /// <p>Authorization policy switch</p>
         /// </summary>
         [JsonProperty("AuthorizationPolicy")]
         public bool? AuthorizationPolicy{ get; set; }
 
         /// <summary>
-        /// Maximum limit of shared subscription groups.
+        /// <p>Maximum limit of shared subscription groups</p>
         /// </summary>
         [JsonProperty("SharedSubscriptionGroupLimit")]
         public long? SharedSubscriptionGroupLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the topic filter number limit for each shared subscription group.
+        /// <p>Number limit of TopicFilter in one shared subscription group</p>
         /// </summary>
         [JsonProperty("MaxTopicFilterPerSharedSubscriptionGroup")]
+        [System.Obsolete]
         public long? MaxTopicFilterPerSharedSubscriptionGroup{ get; set; }
 
         /// <summary>
-        /// Specifies the limit on number of auto-subscription rules.
+        /// <p>Limit on number of auto subscription rules</p>
         /// </summary>
         [JsonProperty("AutoSubscriptionPolicyLimit")]
         public long? AutoSubscriptionPolicyLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the number limit of TopicFilter in a single auto-subscription rule.
+        /// <p>Number limit of TopicFilter in a single auto subscription rule</p>
         /// </summary>
         [JsonProperty("MaxTopicFilterPerAutoSubscriptionPolicy")]
         public long? MaxTopicFilterPerAutoSubscriptionPolicy{ get; set; }
 
         /// <summary>
-        /// Specifies whether to use the default server certificate.
+        /// <p>Whether to use the default server certificate</p>
         /// </summary>
         [JsonProperty("UseDefaultServerCert")]
         public bool? UseDefaultServerCert{ get; set; }
 
         /// <summary>
-        /// Maximum allowed number of server cas.
+        /// <p>Maximum number of server CAs</p>
         /// </summary>
         [JsonProperty("TrustedCaLimit")]
         public long? TrustedCaLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum allowed number of server certificates.
+        /// <p>Maximum number of server certificates</p>
         /// </summary>
         [JsonProperty("ServerCertLimit")]
         public long? ServerCertLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the max level of the topic prefix.
+        /// <p>Max level of topic prefix</p>
         /// </summary>
         [JsonProperty("TopicPrefixSlashLimit")]
         public long? TopicPrefixSlashLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the speed limit for sending messages by a single client in messages per second.
+        /// <p>Single client send message rate limiting, unit messages/second</p>
         /// </summary>
         [JsonProperty("MessageRate")]
         public long? MessageRate{ get; set; }
 
         /// <summary>
-        /// Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+        /// <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
         /// </summary>
         [JsonProperty("TransportLayerSecurity")]
         public string TransportLayerSecurity{ get; set; }
 
         /// <summary>
-        /// Specifies the message property enrichment rule quota.
+        /// <p>Message property enhancement rule quota</p>
         /// </summary>
         [JsonProperty("MessageEnrichmentRuleLimit")]
         public long? MessageEnrichmentRuleLimit{ get; set; }
+
+        /// <summary>
+        /// <p>Maximum allowed number of blocking rules</p>
+        /// </summary>
+        [JsonProperty("BlockRuleLimit")]
+        public long? BlockRuleLimit{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -286,6 +288,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
             this.SetParamSimple(map, prefix + "MessageRate", this.MessageRate);
             this.SetParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
             this.SetParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
+            this.SetParamSimple(map, prefix + "BlockRuleLimit", this.BlockRuleLimit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,19 +25,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ACL rule name.
+        /// <p>ACL rule name</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Specifies whether to apply to newly-added topics when importing predefined rule modifications.
+        /// <p>Input when modifying the preset rule, whether to apply to newly-added topics</p><p>Enumeration value:</p><ul><li>0: Not allowed to apply to newly-added topics</li><li>1: Allowed to apply to newly-added topics</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("IsApplied")]
         public long? IsApplied{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? Available{ get; set; }
 
         /// <summary>
-        /// Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+        /// Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
@@ -50,14 +50,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+        /// Cloud disk media type. valid values: <br>.
+        /// CLOUD_BASIC: specifies the BASIC CLOUD disk.
+        /// CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+        /// CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+        /// CLOUD_SSD: indicates SSD CLOUD disk.
+        /// CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+        /// CLOUD_TSSD: indicates ultra-fast ssd cbs.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Minimum increment of cloud disk size adjustment in GB.
-        /// Note: This field might return null, indicating that no valid values can be obtained.
+        /// Specifies the minimum step size for disk size change in GiB.
         /// </summary>
         [JsonProperty("StepSize")]
         public ulong? StepSize{ get; set; }
@@ -77,26 +82,25 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+        /// Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }
 
         /// <summary>
-        /// The minimum configurable cloud disk size (in GB).
+        /// Specifies the minimum configurable cloud disk size in GiB.
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public ulong? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// The maximum configurable cloud disk size (in GB).
+        /// Specifies the maximum configurable cloud disk size in GiB.
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public ulong? MaxDiskSize{ get; set; }
 
         /// <summary>
-        /// Price of a monthly subscribed or pay-as-you-go cloud disk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price of a prepaid or postpaid cloud disk.
         /// </summary>
         [JsonProperty("Price")]
         public Price Price{ get; set; }

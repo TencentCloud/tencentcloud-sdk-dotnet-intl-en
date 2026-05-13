@@ -58,6 +58,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SwitchFlag")]
+        public ulong? SwitchFlag{ get; set; }
+
+        /// <summary>
         /// Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
         /// </summary>
         [JsonProperty("SnatPro")]
@@ -92,6 +98,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamSimple(map, prefix + "SwitchFlag", this.SwitchFlag);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
             this.SetParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);

@@ -25,16 +25,10 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+        /// Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
-
-        /// <summary>
-        /// Name of new snapshot. Maximum length is 60 bytes.
-        /// </summary>
-        [JsonProperty("SnapshotName")]
-        public string SnapshotName{ get; set; }
 
         /// <summary>
         /// Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
@@ -43,7 +37,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+        /// Name of new snapshot. Maximum length is 60 bytes.
+        /// </summary>
+        [JsonProperty("SnapshotName")]
+        public string SnapshotName{ get; set; }
+
+        /// <summary>
+        /// Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }
@@ -55,8 +55,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
-            this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
         }
     }

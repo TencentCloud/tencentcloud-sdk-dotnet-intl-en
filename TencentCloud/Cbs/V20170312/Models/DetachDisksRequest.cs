@@ -31,7 +31,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+        /// For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

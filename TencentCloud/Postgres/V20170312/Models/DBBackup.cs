@@ -91,8 +91,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ExternalAddr{ get; set; }
 
         /// <summary>
-        /// Backup set ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Backup set ID.
         /// </summary>
         [JsonProperty("SetId")]
         public string SetId{ get; set; }

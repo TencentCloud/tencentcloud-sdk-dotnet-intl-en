@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// List of scheduled snapshot policy IDs to be deleted.
+        /// Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyIds")]
         public string[] AutoSnapshotPolicyIds{ get; set; }

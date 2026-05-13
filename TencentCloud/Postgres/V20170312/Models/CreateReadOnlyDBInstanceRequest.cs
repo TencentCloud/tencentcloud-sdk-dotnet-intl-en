@@ -61,7 +61,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+        /// <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the DescribeVpcEx API to obtain it from the unVpcId field in the return value.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

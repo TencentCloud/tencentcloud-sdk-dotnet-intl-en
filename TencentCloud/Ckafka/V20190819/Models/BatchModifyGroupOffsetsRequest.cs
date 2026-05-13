@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Consumer group name.
+        /// <p>Consumer group name</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Partition information.
+        /// <p>partition info</p>
         /// </summary>
         [JsonProperty("Partitions")]
         public Partitions[] Partitions{ get; set; }
 
         /// <summary>
-        /// Name of the specified topic. Default value: names of all topics.
+        /// <p>Specify topic, default to all topics</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string[] TopicName{ get; set; }

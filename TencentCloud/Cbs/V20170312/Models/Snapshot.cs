@@ -31,19 +31,35 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+        /// Specifies whether the snapshot is for cross-region replication. value range:.
+        /// <ul>
+        /// <li>true: indicates a snapshot for cross-region replication.</li>.
+        /// <li>false: snapshot of the local region.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("CopyFromRemote")]
         public bool? CopyFromRemote{ get; set; }
 
         /// <summary>
-        /// Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+        /// Snapshot status. valid values:.
+        /// <ul>
+        /// <Li>NORMAL: specifies the scaling group is normal.</li>.
+        /// <Li>CREATING: creating</li>.
+        /// <Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+        /// <Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+        /// <Li>CHECKING_COPIED: copying check in progress.</li>.
+        /// <Li>TORECYCLE: to be recycled.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("SnapshotState")]
         public string SnapshotState{ get; set; }
 
         /// <summary>
-        /// Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+        /// Whether it is a permanent snapshot. valid values:.
+        /// <ul>
+        /// <li>true: permanent snapshot.</li>.
+        /// <li>false: non-permanent snapshot.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("IsPermanent")]
         public bool? IsPermanent{ get; set; }
@@ -79,13 +95,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ShareReference{ get; set; }
 
         /// <summary>
-        /// Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+        /// Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
         /// </summary>
         [JsonProperty("SnapshotType")]
         public string SnapshotType{ get; set; }
 
         /// <summary>
-        /// Size of the cloud disk used to create this snapshot (in GB).
+        /// Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
@@ -97,13 +113,17 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// The destination region to which the snapshot is being replicated. Default value is [ ].
+        /// Destination region of the snapshot currently under cross region replication. if not, return `[]`.
         /// </summary>
         [JsonProperty("CopyingToRegions")]
         public string[] CopyingToRegions{ get; set; }
 
         /// <summary>
-        /// Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+        /// Indicates whether the snapshot is created for an encrypted disk. valid values:.
+        /// <ul>
+        /// <li>true: specifies the snapshot is created by encrypted disks.</li>.
+        /// <li>false: snapshot created for non-encrypted disk.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("Encrypt")]
         public bool? Encrypt{ get; set; }
@@ -121,7 +141,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? ImageCount{ get; set; }
 
         /// <summary>
-        /// The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+        /// Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+        /// <ul>
+        /// <Li>SYSTEM_DISK: system disk</li>.
+        /// <Li>DATA_DISK: specifies the data disk.</li>.
+        /// </ul>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public string DiskUsage{ get; set; }

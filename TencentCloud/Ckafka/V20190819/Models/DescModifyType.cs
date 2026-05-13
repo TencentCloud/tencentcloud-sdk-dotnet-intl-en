@@ -36,27 +36,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("MigrateFlag")]
         public bool? MigrateFlag{ get; set; }
 
-        /// <summary>
-        /// Estimated duration of migration in stable mode (seconds).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("MigrateCostTime")]
-        public long? MigrateCostTime{ get; set; }
-
-        /// <summary>
-        /// Upgrade mode (1: stable mode, 2: high-speed mode).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("UpgradeStrategy")]
-        public long? UpgradeStrategy{ get; set; }
-
-        /// <summary>
-        /// Indicates the estimated time for migration in high-speed mode, in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("MigrateCostTimeHighSpeed")]
-        public long? MigrateCostTimeHighSpeed{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,9 +44,6 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "ModifyType", this.ModifyType);
             this.SetParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
-            this.SetParamSimple(map, prefix + "MigrateCostTime", this.MigrateCostTime);
-            this.SetParamSimple(map, prefix + "UpgradeStrategy", this.UpgradeStrategy);
-            this.SetParamSimple(map, prefix + "MigrateCostTimeHighSpeed", this.MigrateCostTimeHighSpeed);
         }
     }
 }

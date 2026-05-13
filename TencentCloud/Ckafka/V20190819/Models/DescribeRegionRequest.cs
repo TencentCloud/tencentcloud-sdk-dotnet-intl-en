@@ -25,25 +25,25 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The offset value
+        /// <p>Offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned
+        /// <p>Return the maximum number of results</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Business field, which can be ignored.
+        /// <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
         /// <summary>
-        /// CDC business field, which can be ignored.
+        /// <p>cdc dedicated cluster business field, can be ignored</p>
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
