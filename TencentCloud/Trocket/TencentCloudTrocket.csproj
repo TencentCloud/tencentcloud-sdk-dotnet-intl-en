@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{621A4001-F8F8-394B-BCE2-5A65FE5DDEA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1262</VersionPrefix>
+    <VersionPrefix>3.0.1314</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20230308\Models\ChangeMigratingTopicToNextStageRequest.cs" />
     <Compile Include="V20230308\Models\ChangeMigratingTopicToNextStageResponse.cs" />
     <Compile Include="V20230308\Models\ClientSubscriptionInfo.cs" />
+    <Compile Include="V20230308\Models\ConsumeGroupItem.cs" />
     <Compile Include="V20230308\Models\ConsumerClient.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\CreateConsumerGroupResponse.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="V20230308\Models\DescribeConsumerClientListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerClientRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerClientResponse.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerGroupListRequest.cs" />
+    <Compile Include="V20230308\Models\DescribeConsumerGroupListResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerGroupResponse.cs" />
     <Compile Include="V20230308\Models\DescribeConsumerLagRequest.cs" />
@@ -145,6 +148,7 @@
     <Compile Include="V20230308\Models\ResendDeadLetterMessageResponse.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetRequest.cs" />
     <Compile Include="V20230308\Models\ResetConsumerGroupOffsetResponse.cs" />
+    <Compile Include="V20230308\Models\RetryPolicy.cs" />
     <Compile Include="V20230308\Models\RoleItem.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageRequest.cs" />
     <Compile Include="V20230308\Models\RollbackMigratingTopicStageResponse.cs" />

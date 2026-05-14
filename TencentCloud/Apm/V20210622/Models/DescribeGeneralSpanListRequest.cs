@@ -25,60 +25,49 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Business system id.
+        /// <p>Business system ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Span query start timestamp (unit: seconds).
+        /// <p>Span query start timestamp (unit: seconds)</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Span query end timestamp (unit: seconds).
+        /// <p>Span query end timestamp (unit: s)</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Universal filter parameters.
+        /// <p>Universal filter parameters supported filter key such as service.name</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Sort
-        /// .
-        /// The currently supported keys are:.
-        /// 
-        /// -StartTime (start time).
-        /// -EndTime (end time).
-        /// -Duration (response time).
-        /// 
-        /// The currently supported values are:.
-        /// 
-        /// - desc: sort in descending order.
-        /// -Asc - ascending order.
+        /// <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public OrderBy OrderBy{ get; set; }
 
         /// <summary>
-        /// The service name of the business itself. console users should fill in taw.
+        /// <p>Business service name. Console users please enter taw</p>
         /// </summary>
         [JsonProperty("BusinessName")]
         public string BusinessName{ get; set; }
 
         /// <summary>
-        /// Number of items per page, defaults to 10,000, valid values are 0 to 10,000.
+        /// <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination.
+        /// <p>Page</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

@@ -25,24 +25,30 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Associated product instance ID.
+        /// <p>Instance ID of the associated product</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }
 
         /// <summary>
-        /// Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+        /// <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Specifies the CKafka message topic.
+        /// <p>CKafka message topic</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
+
+        /// <summary>
+        /// <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+        /// </summary>
+        [JsonProperty("MetricTopic")]
+        public string MetricTopic{ get; set; }
 
 
         /// <summary>
@@ -53,6 +59,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "PeerId", this.PeerId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
         }
     }
 }

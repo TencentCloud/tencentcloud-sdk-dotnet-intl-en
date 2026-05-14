@@ -28,7 +28,7 @@ namespace TencentCloud.Apm.V20210622
 
        private const string endpoint = "apm.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1314";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,27 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// Query all vulnerability information of the user
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeApmAllVulCountResponse"/></returns>
+        public Task<DescribeApmAllVulCountResponse> DescribeApmAllVulCount(DescribeApmAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAllVulCountResponse>(req, "DescribeApmAllVulCount");
+        }
+
+        /// <summary>
+        /// Query all vulnerability information of the user
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeApmAllVulCountResponse"/></returns>
+        public DescribeApmAllVulCountResponse DescribeApmAllVulCountSync(DescribeApmAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmAllVulCountResponse>(req, "DescribeApmAllVulCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query application configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeApmApplicationConfigRequest"/></param>
@@ -264,6 +285,27 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// Query SQL injection details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSQLInjectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmSQLInjectionDetailResponse"/></returns>
+        public Task<DescribeApmSQLInjectionDetailResponse> DescribeApmSQLInjectionDetail(DescribeApmSQLInjectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSQLInjectionDetailResponse>(req, "DescribeApmSQLInjectionDetail");
+        }
+
+        /// <summary>
+        /// Query SQL injection details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmSQLInjectionDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmSQLInjectionDetailResponse"/></returns>
+        public DescribeApmSQLInjectionDetailResponse DescribeApmSQLInjectionDetailSync(DescribeApmSQLInjectionDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmSQLInjectionDetailResponse>(req, "DescribeApmSQLInjectionDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query sampling configuration
         /// </summary>
         /// <param name="req"><see cref="DescribeApmSampleConfigRequest"/></param>
@@ -306,6 +348,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// Query vulnerability metrics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityCountRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityCountResponse"/></returns>
+        public Task<DescribeApmVulnerabilityCountResponse> DescribeApmVulnerabilityCount(DescribeApmVulnerabilityCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityCountResponse>(req, "DescribeApmVulnerabilityCount");
+        }
+
+        /// <summary>
+        /// Query vulnerability metrics
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityCountRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityCountResponse"/></returns>
+        public DescribeApmVulnerabilityCountResponse DescribeApmVulnerabilityCountSync(DescribeApmVulnerabilityCountRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityCountResponse>(req, "DescribeApmVulnerabilityCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query vulnerability details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityDetailResponse"/></returns>
+        public Task<DescribeApmVulnerabilityDetailResponse> DescribeApmVulnerabilityDetail(DescribeApmVulnerabilityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityDetailResponse>(req, "DescribeApmVulnerabilityDetail");
+        }
+
+        /// <summary>
+        /// Query vulnerability details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmVulnerabilityDetailRequest"/></param>
+        /// <returns><see cref="DescribeApmVulnerabilityDetailResponse"/></returns>
+        public DescribeApmVulnerabilityDetailResponse DescribeApmVulnerabilityDetailSync(DescribeApmVulnerabilityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeApmVulnerabilityDetailResponse>(req, "DescribeApmVulnerabilityDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the application configuration information.
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralApmApplicationConfigRequest"/></param>
@@ -327,27 +411,28 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// This API is a general API used to obtain metric data. Users submit request parameters as needed and receive the corresponding metric data.
-        /// The API call frequency is limited to 20 requests per second and 1200 requests per minute. The number of data points per request is limited to 1440.
-        /// **Usage of the General Interface for Fetching Metric Data**
-        /// DescribeGeneralMetricData is a general interface for querying metric data, supporting flexible data retrieval. The query method of this interface is similar to using the following SQL statement:
-        /// SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}.
+        /// General interface to obtain metric data. Submit request parameters as needed and receive the corresponding metric data.
+        /// API call frequency limit: 20 requests/second, 1,200 requests/minute. Data point limit per single request: up to 1,440 data points.
+        /// 
+        /// General interface to obtain metric data usage: This API is used to query metric data flexibly. The query method of this API is similar to using the following SQL statement: SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}. Before initiating request, please confirm the following key parameters:
         /// 1. View (ViewName)
-        /// Determines the data domain you want to query.
-        /// Examples: service_metric (Service Monitoring View), db_metric (Database View), etc. For views supported by APM, please refer to [Metric Views](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=)
-        /// 2. Metrics (Metrics)
-        /// Used to specify one or more metric items to be included in the returned results.
-        /// Examples: request_count (Total Requests), duration_avg (Average Latency), error_rate (Error Rate). For metrics supported by APM, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 3. Filters (Filters)
-        /// Supports one or more filtering conditions in the form of Key-Value pairs.
-        /// Example: Querying only a specific service: service.name = "order-service". Common dimensions and specific dimensions supported by each ViewName can be used as keys in filtering conditions. For more details, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 4. Aggregation (GroupBy)
-        /// Supports one or more aggregation dimensions, equivalent to the GROUP BY clause in SQL.
-        /// Example: Grouping by the interface name operation to view the performance of each interface. Common dimensions and specific dimensions supported by each ViewName can be used as aggregation dimensions. For more details, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 5. Granularity (Period)
-        /// This parameter determines whether the data needs to be aggregated by time slices.
-        ///     - Period = 1 (Time Series Mode): The returned results are aggregated by time slices. The multiple values contained in the TimeSerial and DataSerial correspond one-to-one, representing the aggregation results for specific time slices. Time Series Mode is primarily used for displaying time trend charts.
-        ///     - Period = 0 (Summary Statistics Mode): In the returned results, the DataSerial contains only a single value, representing the summarized data for the entire time range.
+        /// Determine the domain of the queried data.
+        /// For example: service_metric (service monitoring view), db_metric (database view). For views supported by APM, see metrics view (https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1#069b06a9-2593-49db-b694-dea4200f3b19).
+        /// 
+        /// 2. Metrics
+        /// Used to specify one or more metric items in the returned result.
+        /// For example: request_count (request count), duration_avg (avg duration), error_rate (error rate). For supported metrics about APM, see [APM Protocol Standards](https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1). Each view (ViewName) supports an exclusive metric set.
+        /// 3. Filters
+        /// Support filter criteria in the form of one or multiple Key-Value pairs.
+        /// For example: Only query a certain specific service with service.name = "order-service". Common dimensional and each view (ViewName) support exclusive dimensions, which can be used as keys in filter conditions. For details, refer to the APM metrics protocol standard (https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1).
+        /// 
+        /// 4. GroupBy (aggregation)
+        /// Support one or more aggregate dimensions, equivalent to SQL GROUP BY.
+        /// For example: Group by API name operation to view the performance of each API. Common dimensional and each view (ViewName) support exclusive dimensional, which can be used as aggregation dimension. For details, see [APM protocol standards](https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1).
+        /// 5. Granularity (Period) 
+        /// This parameter determines whether time slice aggregation is required.
+        /// -Period = 1: Time series mode: In the returned result, aggregation is performed by time slice. The time series (TimeSerial) and data sequence (DataSerial) have a one-to-one correspondence, representing aggregation results for specific time slices. Time series mode is mainly used to show time trend charts.
+        /// -Period = 0: Summarize mode. In the returned result, the data sequence (DataSerial) only contains a unique value, representing the aggregated data for the entire time interval.
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
         /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
@@ -357,27 +442,28 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
-        /// This API is a general API used to obtain metric data. Users submit request parameters as needed and receive the corresponding metric data.
-        /// The API call frequency is limited to 20 requests per second and 1200 requests per minute. The number of data points per request is limited to 1440.
-        /// **Usage of the General Interface for Fetching Metric Data**
-        /// DescribeGeneralMetricData is a general interface for querying metric data, supporting flexible data retrieval. The query method of this interface is similar to using the following SQL statement:
-        /// SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}.
+        /// General interface to obtain metric data. Submit request parameters as needed and receive the corresponding metric data.
+        /// API call frequency limit: 20 requests/second, 1,200 requests/minute. Data point limit per single request: up to 1,440 data points.
+        /// 
+        /// General interface to obtain metric data usage: This API is used to query metric data flexibly. The query method of this API is similar to using the following SQL statement: SELECT {Metrics} FROM {ViewName} WHERE {Filters} GROUP BY {GroupBy}. Before initiating request, please confirm the following key parameters:
         /// 1. View (ViewName)
-        /// Determines the data domain you want to query.
-        /// Examples: service_metric (Service Monitoring View), db_metric (Database View), etc. For views supported by APM, please refer to [Metric Views](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=)
-        /// 2. Metrics (Metrics)
-        /// Used to specify one or more metric items to be included in the returned results.
-        /// Examples: request_count (Total Requests), duration_avg (Average Latency), error_rate (Error Rate). For metrics supported by APM, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 3. Filters (Filters)
-        /// Supports one or more filtering conditions in the form of Key-Value pairs.
-        /// Example: Querying only a specific service: service.name = "order-service". Common dimensions and specific dimensions supported by each ViewName can be used as keys in filtering conditions. For more details, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 4. Aggregation (GroupBy)
-        /// Supports one or more aggregation dimensions, equivalent to the GROUP BY clause in SQL.
-        /// Example: Grouping by the interface name operation to view the performance of each interface. Common dimensions and specific dimensions supported by each ViewName can be used as aggregation dimensions. For more details, please refer to the [APM Metric Protocol Standard](https://www.tencentcloud.com/document/product/248/68462?has_map=1&lang=en&pg=).
-        /// 5. Granularity (Period)
-        /// This parameter determines whether the data needs to be aggregated by time slices.
-        ///     - Period = 1 (Time Series Mode): The returned results are aggregated by time slices. The multiple values contained in the TimeSerial and DataSerial correspond one-to-one, representing the aggregation results for specific time slices. Time Series Mode is primarily used for displaying time trend charts.
-        ///     - Period = 0 (Summary Statistics Mode): In the returned results, the DataSerial contains only a single value, representing the summarized data for the entire time range.
+        /// Determine the domain of the queried data.
+        /// For example: service_metric (service monitoring view), db_metric (database view). For views supported by APM, see metrics view (https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1#069b06a9-2593-49db-b694-dea4200f3b19).
+        /// 
+        /// 2. Metrics
+        /// Used to specify one or more metric items in the returned result.
+        /// For example: request_count (request count), duration_avg (avg duration), error_rate (error rate). For supported metrics about APM, see [APM Protocol Standards](https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1). Each view (ViewName) supports an exclusive metric set.
+        /// 3. Filters
+        /// Support filter criteria in the form of one or multiple Key-Value pairs.
+        /// For example: Only query a certain specific service with service.name = "order-service". Common dimensional and each view (ViewName) support exclusive dimensions, which can be used as keys in filter conditions. For details, refer to the APM metrics protocol standard (https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1).
+        /// 
+        /// 4. GroupBy (aggregation)
+        /// Support one or more aggregate dimensions, equivalent to SQL GROUP BY.
+        /// For example: Group by API name operation to view the performance of each API. Common dimensional and each view (ViewName) support exclusive dimensional, which can be used as aggregation dimension. For details, see [APM protocol standards](https://www.tencentcloud.com/document/product/248/101681?from_cn_redirect=1).
+        /// 5. Granularity (Period) 
+        /// This parameter determines whether time slice aggregation is required.
+        /// -Period = 1: Time series mode: In the returned result, aggregation is performed by time slice. The time series (TimeSerial) and data sequence (DataSerial) have a one-to-one correspondence, representing aggregation results for specific time slices. Time series mode is mainly used to show time trend charts.
+        /// -Period = 0: Summarize mode. In the returned result, the data sequence (DataSerial) only contains a unique value, representing the aggregated data for the entire time interval.
         /// </summary>
         /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
         /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
@@ -451,6 +537,27 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// Query all vulnerability information of the user
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOPRAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeOPRAllVulCountResponse"/></returns>
+        public Task<DescribeOPRAllVulCountResponse> DescribeOPRAllVulCount(DescribeOPRAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeOPRAllVulCountResponse>(req, "DescribeOPRAllVulCount");
+        }
+
+        /// <summary>
+        /// Query all vulnerability information of the user
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOPRAllVulCountRequest"/></param>
+        /// <returns><see cref="DescribeOPRAllVulCountResponse"/></returns>
+        public DescribeOPRAllVulCountResponse DescribeOPRAllVulCountSync(DescribeOPRAllVulCountRequest req)
+        {
+            return InternalRequestAsync<DescribeOPRAllVulCountResponse>(req, "DescribeOPRAllVulCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to pull application overview data.
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceOverviewRequest"/></param>
@@ -489,6 +596,27 @@ namespace TencentCloud.Apm.V20210622
         public DescribeTagValuesResponse DescribeTagValuesSync(DescribeTagValuesRequest req)
         {
             return InternalRequestAsync<DescribeTagValuesResponse>(req, "DescribeTagValues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the service topology diagram according to the application name.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopologyNewRequest"/></param>
+        /// <returns><see cref="DescribeTopologyNewResponse"/></returns>
+        public Task<DescribeTopologyNewResponse> DescribeTopologyNew(DescribeTopologyNewRequest req)
+        {
+            return InternalRequestAsync<DescribeTopologyNewResponse>(req, "DescribeTopologyNew");
+        }
+
+        /// <summary>
+        /// This API is used to query the service topology diagram according to the application name.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopologyNewRequest"/></param>
+        /// <returns><see cref="DescribeTopologyNewResponse"/></returns>
+        public DescribeTopologyNewResponse DescribeTopologyNewSync(DescribeTopologyNewRequest req)
+        {
+            return InternalRequestAsync<DescribeTopologyNewResponse>(req, "DescribeTopologyNew")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -594,6 +722,27 @@ namespace TencentCloud.Apm.V20210622
         public ModifyApmSampleConfigResponse ModifyApmSampleConfigSync(ModifyApmSampleConfigRequest req)
         {
             return InternalRequestAsync<ModifyApmSampleConfigResponse>(req, "ModifyApmSampleConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to edit information about applications of APM.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmServiceRequest"/></param>
+        /// <returns><see cref="ModifyApmServiceResponse"/></returns>
+        public Task<ModifyApmServiceResponse> ModifyApmService(ModifyApmServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyApmServiceResponse>(req, "ModifyApmService");
+        }
+
+        /// <summary>
+        /// This API is used to edit information about applications of APM.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApmServiceRequest"/></param>
+        /// <returns><see cref="ModifyApmServiceResponse"/></returns>
+        public ModifyApmServiceResponse ModifyApmServiceSync(ModifyApmServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyApmServiceResponse>(req, "ModifyApmService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

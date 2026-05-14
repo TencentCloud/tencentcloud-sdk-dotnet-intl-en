@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.intl.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1314";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,29 @@ namespace TencentCloud.Aiart.V20221229
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to generate the images of the model changing clothes based on the model photo and the clothes image.
+        /// It supports 1 concurrency by default, which means that up to 1 submitted task can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeClothesRequest"/></param>
+        /// <returns><see cref="ChangeClothesResponse"/></returns>
+        public Task<ChangeClothesResponse> ChangeClothes(ChangeClothesRequest req)
+        {
+            return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes");
+        }
+
+        /// <summary>
+        /// This API is used to generate the images of the model changing clothes based on the model photo and the clothes image.
+        /// It supports 1 concurrency by default, which means that up to 1 submitted task can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeClothesRequest"/></param>
+        /// <returns><see cref="ChangeClothesResponse"/></returns>
+        public ChangeClothesResponse ChangeClothesSync(ChangeClothesRequest req)
+        {
+            return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

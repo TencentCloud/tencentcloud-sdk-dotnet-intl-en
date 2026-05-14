@@ -25,34 +25,40 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Associated product name. currently only supports Prometheus.
+        /// <p>Associated product name, currently only support Prometheus, CKafka</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+        /// <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Business system ID
+        /// <p>Business system ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Associated product instance ID.
+        /// <p>ID of the associated product instance</p>
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }
 
         /// <summary>
-        /// Specifies the CKafka message topic.
+        /// <p>CKafka message topic</p>
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
+
+        /// <summary>
+        /// <p>Ckafka message topic</p>
+        /// </summary>
+        [JsonProperty("MetricTopic")]
+        public string MetricTopic{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PeerId", this.PeerId);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
         }
     }
 }

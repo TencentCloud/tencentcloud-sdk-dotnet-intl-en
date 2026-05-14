@@ -25,130 +25,310 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Business system id.
+        /// <p>Business system ID</p>
         /// </summary>
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// Application name	.	
+        /// <p>Application name</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// API filtering.
+        /// <p>Interface Filtering</p>
         /// </summary>
         [JsonProperty("OperationNameFilter")]
         public string OperationNameFilter{ get; set; }
 
         /// <summary>
-        /// Error type filtering.
+        /// <p>Error type filtering</p>
         /// </summary>
         [JsonProperty("ExceptionFilter")]
         public string ExceptionFilter{ get; set; }
 
         /// <summary>
-        /// HTTP status code filtering.
+        /// <p>HTTP status code filtering</p>
         /// </summary>
         [JsonProperty("ErrorCodeFilter")]
         public string ErrorCodeFilter{ get; set; }
 
         /// <summary>
-        /// Application diagnosis switch (deprecated).
+        /// <p>Application diagnosis switch (abandoned)</p>
         /// </summary>
         [JsonProperty("EventEnable")]
         public bool? EventEnable{ get; set; }
 
         /// <summary>
-        /// URL convergence switch. 0: off; 1: on.
+        /// <p>URL convergence switch 0 Off 1 On</p>
         /// </summary>
         [JsonProperty("UrlConvergenceSwitch")]
         public long? UrlConvergenceSwitch{ get; set; }
 
         /// <summary>
-        /// URL convergence threshold.	
+        /// <p>URL convergence threshold</p>
         /// </summary>
         [JsonProperty("UrlConvergenceThreshold")]
         public long? UrlConvergenceThreshold{ get; set; }
 
         /// <summary>
-        /// URL convergence rule in the form of a regular expression.	
+        /// <p>URL regular convergence rules</p>
         /// </summary>
         [JsonProperty("UrlConvergence")]
         public string UrlConvergence{ get; set; }
 
         /// <summary>
-        /// URL exclusion rule in the form of a regular expression.
+        /// <p>URL exclusion rule regex</p>
         /// </summary>
         [JsonProperty("UrlExclude")]
         public string UrlExclude{ get; set; }
 
         /// <summary>
-        /// Log feature switch. 0: off; 1: on.
+        /// <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// Log source.	
+        /// <p>Log source</p>
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
-        /// Log set. 
+        /// <p>Logset</p>
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// Log topic.
+        /// <p>Log topic</p>
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// Method stack snapshot switch: true to enable, false to disable.
+        /// <p>Method stack snapshot switch. Enabled indicates true. false indicates disabled.</p>
         /// </summary>
         [JsonProperty("SnapshotEnable")]
         public bool? SnapshotEnable{ get; set; }
 
         /// <summary>
-        /// Slow call listening trigger threshold.
+        /// <p>Slow call monitoring trigger threshold</p>
         /// </summary>
         [JsonProperty("SnapshotTimeout")]
         public long? SnapshotTimeout{ get; set; }
 
         /// <summary>
-        /// Probe master switch.
+        /// <p>Master switch for probes</p>
         /// </summary>
         [JsonProperty("AgentEnable")]
         public bool? AgentEnable{ get; set; }
 
         /// <summary>
-        /// Component list switch (deprecated).
+        /// <p>Component list toggle (abandoned)</p>
         /// </summary>
         [JsonProperty("InstrumentList")]
         public Instrument[] InstrumentList{ get; set; }
 
         /// <summary>
-        /// Link compression switch (deprecated).
+        /// <p>Link compression switch (abandoned)</p>
         /// </summary>
         [JsonProperty("TraceSquash")]
         public bool? TraceSquash{ get; set; }
 
         /// <summary>
-        /// Specifies the memory threshold for probe fusing.
+        /// <p>Link filtering configuration</p>
+        /// </summary>
+        [JsonProperty("AgentIgnoreOperation")]
+        public string AgentIgnoreOperation{ get; set; }
+
+        /// <summary>
+        /// <p>Enable the application security switch</p>
+        /// </summary>
+        [JsonProperty("EnableSecurityConfig")]
+        public bool? EnableSecurityConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Whether SQL injection detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsSqlInjectionAnalysis")]
+        public long? IsSqlInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether component vulnerability detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsInstrumentationVulnerabilityScan")]
+        public long? IsInstrumentationVulnerabilityScan{ get; set; }
+
+        /// <summary>
+        /// <p>Whether remote command execution detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsRemoteCommandExecutionAnalysis")]
+        public long? IsRemoteCommandExecutionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether memory leakage detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsMemoryHijackingAnalysis")]
+        public long? IsMemoryHijackingAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable detection of any file deletion</p>
+        /// </summary>
+        [JsonProperty("IsDeleteAnyFileAnalysis")]
+        public long? IsDeleteAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable arbitrary file read detection</p>
+        /// </summary>
+        [JsonProperty("IsReadAnyFileAnalysis")]
+        public long? IsReadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable arbitrary file upload detection</p>
+        /// </summary>
+        [JsonProperty("IsUploadAnyFileAnalysis")]
+        public long? IsUploadAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable detection of arbitrary files</p>
+        /// </summary>
+        [JsonProperty("IsIncludeAnyFileAnalysis")]
+        public long? IsIncludeAnyFileAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether path traversal detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsDirectoryTraversalAnalysis")]
+        public long? IsDirectoryTraversalAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable template engine injection detection</p>
+        /// </summary>
+        [JsonProperty("IsTemplateEngineInjectionAnalysis")]
+        public long? IsTemplateEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether script engine injection detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsScriptEngineInjectionAnalysis")]
+        public long? IsScriptEngineInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether expression injection detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsExpressionInjectionAnalysis")]
+        public long? IsExpressionInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether JNDI injection detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsJndiInjectionAnalysis")]
+        public long? IsJndiInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether JNI injection detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsJniInjectionAnalysis")]
+        public long? IsJniInjectionAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether Webshell backdoor detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsWebshellBackdoorAnalysis")]
+        public long? IsWebshellBackdoorAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether deserialization detection is enabled</p>
+        /// </summary>
+        [JsonProperty("IsDeserializationAnalysis")]
+        public long? IsDeserializationAnalysis{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the console switch is enabled</p>
+        /// </summary>
+        [JsonProperty("EnableDashboardConfig")]
+        public bool? EnableDashboardConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to associate with Dashboard</p>
+        /// </summary>
+        [JsonProperty("IsRelatedDashboard")]
+        public long? IsRelatedDashboard{ get; set; }
+
+        /// <summary>
+        /// <p>Dashboard topic</p>
+        /// </summary>
+        [JsonProperty("DashboardTopicID")]
+        public string DashboardTopicID{ get; set; }
+
+        /// <summary>
+        /// <p>Fuse memory threshold of the probe</p>
         /// </summary>
         [JsonProperty("DisableMemoryUsed")]
         public long? DisableMemoryUsed{ get; set; }
 
         /// <summary>
-        /// Specifies the CPU threshold for probe fusing.
+        /// <p>Probe fuse CPU threshold</p>
         /// </summary>
         [JsonProperty("DisableCpuUsed")]
         public long? DisableCpuUsed{ get; set; }
+
+        /// <summary>
+        /// <p>Whether SQL parameter access is enabled</p>
+        /// </summary>
+        [JsonProperty("DbStatementParametersEnabled")]
+        public bool? DbStatementParametersEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>Slow SQL threshold</p>
+        /// </summary>
+        [JsonProperty("SlowSQLThresholds")]
+        public ApmTag[] SlowSQLThresholds{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the masking rule is enabled</p>
+        /// </summary>
+        [JsonProperty("EnableDesensitizationRule")]
+        public long? EnableDesensitizationRule{ get; set; }
+
+        /// <summary>
+        /// <p>Masking rule</p>
+        /// </summary>
+        [JsonProperty("DesensitizationRule")]
+        public string DesensitizationRule{ get; set; }
+
+        /// <summary>
+        /// <p>Automated performance analysis task configuration</p>
+        /// </summary>
+        [JsonProperty("AutoProfilingConfig")]
+        public AutoProfilingConfig AutoProfilingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Threshold configuration switch</p>
+        /// </summary>
+        [JsonProperty("EnableThresholdConfig")]
+        public bool? EnableThresholdConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Error rate threshold</p><p>Unit: %</p>
+        /// </summary>
+        [JsonProperty("ErrRateThreshold")]
+        public long? ErrRateThreshold{ get; set; }
+
+        /// <summary>
+        /// <p>Alert threshold of response time</p><p>Unit: ms</p>
+        /// </summary>
+        [JsonProperty("ResponseDurationWarningThreshold")]
+        public long? ResponseDurationWarningThreshold{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to use the default fuse threshold of the probe</p>
+        /// </summary>
+        [JsonProperty("UseDefaultFuseConfig")]
+        public bool? UseDefaultFuseConfig{ get; set; }
 
 
         /// <summary>
@@ -175,8 +355,38 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "AgentEnable", this.AgentEnable);
             this.SetParamArrayObj(map, prefix + "InstrumentList.", this.InstrumentList);
             this.SetParamSimple(map, prefix + "TraceSquash", this.TraceSquash);
+            this.SetParamSimple(map, prefix + "AgentIgnoreOperation", this.AgentIgnoreOperation);
+            this.SetParamSimple(map, prefix + "EnableSecurityConfig", this.EnableSecurityConfig);
+            this.SetParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+            this.SetParamSimple(map, prefix + "IsRemoteCommandExecutionAnalysis", this.IsRemoteCommandExecutionAnalysis);
+            this.SetParamSimple(map, prefix + "IsMemoryHijackingAnalysis", this.IsMemoryHijackingAnalysis);
+            this.SetParamSimple(map, prefix + "IsDeleteAnyFileAnalysis", this.IsDeleteAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsReadAnyFileAnalysis", this.IsReadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsUploadAnyFileAnalysis", this.IsUploadAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsIncludeAnyFileAnalysis", this.IsIncludeAnyFileAnalysis);
+            this.SetParamSimple(map, prefix + "IsDirectoryTraversalAnalysis", this.IsDirectoryTraversalAnalysis);
+            this.SetParamSimple(map, prefix + "IsTemplateEngineInjectionAnalysis", this.IsTemplateEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsScriptEngineInjectionAnalysis", this.IsScriptEngineInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsExpressionInjectionAnalysis", this.IsExpressionInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJndiInjectionAnalysis", this.IsJndiInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsJniInjectionAnalysis", this.IsJniInjectionAnalysis);
+            this.SetParamSimple(map, prefix + "IsWebshellBackdoorAnalysis", this.IsWebshellBackdoorAnalysis);
+            this.SetParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
+            this.SetParamSimple(map, prefix + "EnableDashboardConfig", this.EnableDashboardConfig);
+            this.SetParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
+            this.SetParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
             this.SetParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
             this.SetParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+            this.SetParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+            this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+            this.SetParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+            this.SetParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+            this.SetParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
+            this.SetParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+            this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+            this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
         }
     }
 }

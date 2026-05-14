@@ -55,13 +55,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? SecretType{ get; set; }
 
         /// <summary>
-        /// Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+        /// Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
         /// </summary>
         [JsonProperty("SecretBinary")]
         public string SecretBinary{ get; set; }
 
         /// <summary>
-        /// Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+        /// The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
         /// </summary>
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }

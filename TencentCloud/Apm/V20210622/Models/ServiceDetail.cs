@@ -25,66 +25,87 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// <p>Application ID</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceID")]
         public string ServiceID{ get; set; }
 
         /// <summary>
-        /// Business system ID
+        /// <p>Business system ID</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// User appid.
+        /// <p>User appid</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Host account UIN
+        /// <p>main account uin</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateUIN")]
         public string CreateUIN{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// <p>Application name</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// Application description
+        /// <p>Application description</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceDescription")]
         public string ServiceDescription{ get; set; }
 
         /// <summary>
-        /// Region.
+        /// <p>Region</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Tag.
+        /// <p>Tag</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public ApmTag[] Tags{ get; set; }
 
         /// <summary>
-        /// Business system name.
+        /// <p>Business system name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("EnableThresholdConfig")]
+        public bool? EnableThresholdConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ErrRateThreshold")]
+        public long? ErrRateThreshold{ get; set; }
+
+        /// <summary>
+        /// <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ResponseDurationWarningThreshold")]
+        public long? ResponseDurationWarningThreshold{ get; set; }
 
 
         /// <summary>
@@ -101,6 +122,9 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+            this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+            this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         }
     }
 }

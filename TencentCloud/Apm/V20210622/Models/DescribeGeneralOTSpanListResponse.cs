@@ -25,16 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Total number.
+        /// <p>Total number</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-        /// Decode the text in the Spans field with Base64 to get the compressed byte[].
-        /// Use gzip to decompress the compressed byte array and get the byte array before compression.
-        /// Uses UTF-8 character set to convert byte[] before compression to text.
+        /// <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
         /// </summary>
         [JsonProperty("Spans")]
         public string Spans{ get; set; }

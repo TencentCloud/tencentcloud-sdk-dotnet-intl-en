@@ -25,13 +25,13 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Total number.
+        /// <p>Total number</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Span pagination list.
+        /// <p>Span pagination list</p>
         /// </summary>
         [JsonProperty("Spans")]
         public Span[] Spans{ get; set; }

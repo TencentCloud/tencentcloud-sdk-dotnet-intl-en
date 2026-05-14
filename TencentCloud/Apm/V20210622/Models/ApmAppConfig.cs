@@ -25,339 +25,399 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID</p>
         /// </summary>
         [JsonProperty("InstanceKey")]
         public string InstanceKey{ get; set; }
 
         /// <summary>
-        /// Service name.
+        /// <p>Service name</p>
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// URL convergence switch.
+        /// <p>URL convergence switch</p>
         /// </summary>
         [JsonProperty("UrlConvergenceSwitch")]
         public long? UrlConvergenceSwitch{ get; set; }
 
         /// <summary>
-        /// URL convergence threshold
+        /// <p>URL convergence threshold</p>
         /// </summary>
         [JsonProperty("UrlConvergenceThreshold")]
         public long? UrlConvergenceThreshold{ get; set; }
 
         /// <summary>
-        /// URL convergence regular expression.
+        /// <p>URL regular convergence</p>
         /// </summary>
         [JsonProperty("UrlConvergence")]
         public string UrlConvergence{ get; set; }
 
         /// <summary>
-        /// Exception filtering regular expression.
+        /// <p>Exception filter regular</p>
         /// </summary>
         [JsonProperty("ExceptionFilter")]
         public string ExceptionFilter{ get; set; }
 
         /// <summary>
-        /// Error code filtering.
+        /// <p>Error code filtering</p>
         /// </summary>
         [JsonProperty("ErrorCodeFilter")]
         public string ErrorCodeFilter{ get; set; }
 
         /// <summary>
-        /// Service component type.
+        /// <p>Service component type</p>
         /// </summary>
         [JsonProperty("Components")]
         public string Components{ get; set; }
 
         /// <summary>
-        /// URL exclusion regular.
+        /// <p>URL exclusion regular</p>
         /// </summary>
         [JsonProperty("UrlExclude")]
         public string UrlExclude{ get; set; }
 
         /// <summary>
-        /// Specifies the log source.
+        /// <p>Log source</p>
         /// </summary>
         [JsonProperty("LogSource")]
         public string LogSource{ get; set; }
 
         /// <summary>
-        /// Log region.
+        /// <p>Log region</p>
         /// </summary>
         [JsonProperty("LogRegion")]
         public string LogRegion{ get; set; }
 
         /// <summary>
-        /// Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
+        /// <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
         /// </summary>
         [JsonProperty("IsRelatedLog")]
         public long? IsRelatedLog{ get; set; }
 
         /// <summary>
-        /// Log topic ID
+        /// <p>Log topic ID</p>
         /// </summary>
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
         /// <summary>
-        /// API names to filter
+        /// <p>Interface Names to Filter</p>
         /// </summary>
         [JsonProperty("IgnoreOperationName")]
         public string IgnoreOperationName{ get; set; }
 
         /// <summary>
-        /// CLS log set/ES cluster ID
+        /// <p>CLS logset | ES cluster ID</p>
         /// </summary>
         [JsonProperty("LogSet")]
         public string LogSet{ get; set; }
 
         /// <summary>
-        /// Number of traces reported by the probe per second.
+        /// <p>Number of traces reported by the probe per second</p>
         /// </summary>
         [JsonProperty("TraceRateLimit")]
         public long? TraceRateLimit{ get; set; }
 
         /// <summary>
-        /// Whether thread profiling is enabled.
+        /// <p>Whether thread profiling is enabled</p>
         /// </summary>
         [JsonProperty("EnableSnapshot")]
         public bool? EnableSnapshot{ get; set; }
 
         /// <summary>
-        /// Timeout threshold for thread profiling.
+        /// <p>Timeout threshold for thread profiling</p>
         /// </summary>
         [JsonProperty("SnapshotTimeout")]
         public long? SnapshotTimeout{ get; set; }
 
         /// <summary>
-        /// Whether agent is enabled.
+        /// <p>Whether to enable agent</p>
         /// </summary>
         [JsonProperty("AgentEnable")]
         public bool? AgentEnable{ get; set; }
 
         /// <summary>
-        /// Component List
+        /// <p>Component list</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstrumentList")]
         public Instrument[] InstrumentList{ get; set; }
 
         /// <summary>
-        /// Whether link compression is enabled.
+        /// <p>Whether to enable link compression</p>
         /// </summary>
         [JsonProperty("TraceSquash")]
         public bool? TraceSquash{ get; set; }
 
         /// <summary>
-        /// Whether application diagnosis is enabled.
+        /// <p>Whether the application diagnosis switch is enabled</p>
         /// </summary>
         [JsonProperty("EventEnable")]
         public bool? EventEnable{ get; set; }
 
         /// <summary>
-        /// Related configurations of the probe APIs.
+        /// <p>probe API related configuration</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AgentOperationConfigView")]
         public AgentOperationConfigView AgentOperationConfigView{ get; set; }
 
         /// <summary>
-        /// Whether to enable application log configuration.
+        /// <p>Whether the application log configuration is enabled</p>
         /// </summary>
         [JsonProperty("EnableLogConfig")]
         public bool? EnableLogConfig{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// <p>Application ID</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceID")]
         public string ServiceID{ get; set; }
 
         /// <summary>
-        /// Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+        /// <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnableDashboardConfig")]
         public bool? EnableDashboardConfig{ get; set; }
 
         /// <summary>
-        /// Whether to associate with Dashboard. 0: disabled; 1: enabled.
+        /// <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsRelatedDashboard")]
         public long? IsRelatedDashboard{ get; set; }
 
         /// <summary>
-        /// dashboard ID
+        /// <p>dashboard ID</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DashboardTopicID")]
         public string DashboardTopicID{ get; set; }
 
         /// <summary>
-        /// Whether to enable the application-level configuration.
+        /// <p>Whether the application-level configuration is enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnableSecurityConfig")]
         public bool? EnableSecurityConfig{ get; set; }
 
         /// <summary>
-        /// Whether to enable detection of component vulnerability.
+        /// <p>Whether the component vulnerability detection is enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsInstrumentationVulnerabilityScan")]
         public long? IsInstrumentationVulnerabilityScan{ get; set; }
 
         /// <summary>
-        /// Whether to enable SQL injection analysis.
+        /// <p>Whether SQL injection analysis is enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsSqlInjectionAnalysis")]
         public long? IsSqlInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable execution analysis of remote command.
+        /// <p>Whether remote command execution analysis is enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsRemoteCommandExecutionAnalysis")]
         public long? IsRemoteCommandExecutionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable detection analysis of Java webshell.
+        /// <p>Whether Java Webshell detection and analysis is enabled</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsMemoryHijackingAnalysis")]
         public long? IsMemoryHijackingAnalysis{ get; set; }
 
         /// <summary>
-        /// CLS index type. (0 = full-text index; 1 = key-value index).
+        /// <p>CLS index type (0=full-text index, 1=key-value index)</p>
         /// </summary>
         [JsonProperty("LogIndexType")]
         public long? LogIndexType{ get; set; }
 
         /// <summary>
-        /// Index key of traceId. It is valid when the CLS index type is key-value index.
+        /// <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
         /// </summary>
         [JsonProperty("LogTraceIdKey")]
         public string LogTraceIdKey{ get; set; }
 
         /// <summary>
-        /// Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+        /// <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDeleteAnyFileAnalysis")]
         public long? IsDeleteAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+        /// <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsReadAnyFileAnalysis")]
         public long? IsReadAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+        /// <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsUploadAnyFileAnalysis")]
         public long? IsUploadAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+        /// <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsIncludeAnyFileAnalysis")]
         public long? IsIncludeAnyFileAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+        /// <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDirectoryTraversalAnalysis")]
         public long? IsDirectoryTraversalAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+        /// <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsTemplateEngineInjectionAnalysis")]
         public long? IsTemplateEngineInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+        /// <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsScriptEngineInjectionAnalysis")]
         public long? IsScriptEngineInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+        /// <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsExpressionInjectionAnalysis")]
         public long? IsExpressionInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+        /// <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsJNDIInjectionAnalysis")]
         public long? IsJNDIInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+        /// <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsJNIInjectionAnalysis")]
         public long? IsJNIInjectionAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+        /// <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsWebshellBackdoorAnalysis")]
         public long? IsWebshellBackdoorAnalysis{ get; set; }
 
         /// <summary>
-        /// Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+        /// <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDeserializationAnalysis")]
         public long? IsDeserializationAnalysis{ get; set; }
 
         /// <summary>
-        /// API name automatic convergence switch (0 - disabled; 1 - enabled)
+        /// <p>API name auto convergence switch (0-off, 1-on)</p>
         /// </summary>
         [JsonProperty("UrlAutoConvergenceEnable")]
         public bool? UrlAutoConvergenceEnable{ get; set; }
 
         /// <summary>
-        /// Convergence threshold for URL long segments.
+        /// <p>URL long segment convergence threshold</p>
         /// </summary>
         [JsonProperty("UrlLongSegmentThreshold")]
         public long? UrlLongSegmentThreshold{ get; set; }
 
         /// <summary>
-        /// Convergence threshold for URL numerical segments.
+        /// <p>URL digit segment convergence threshold</p>
         /// </summary>
         [JsonProperty("UrlNumberSegmentThreshold")]
         public long? UrlNumberSegmentThreshold{ get; set; }
 
         /// <summary>
-        /// Specifies the memory threshold for probe fusing.
+        /// <p>Fuse memory threshold of the probe</p>
         /// </summary>
         [JsonProperty("DisableMemoryUsed")]
         public long? DisableMemoryUsed{ get; set; }
 
         /// <summary>
-        /// Specifies the CPU threshold for probe fusing.
+        /// <p>Probe fuse CPU threshold</p>
         /// </summary>
         [JsonProperty("DisableCpuUsed")]
         public long? DisableCpuUsed{ get; set; }
+
+        /// <summary>
+        /// <p>Whether SQL parameter access is enabled</p>
+        /// </summary>
+        [JsonProperty("DbStatementParametersEnabled")]
+        public bool? DbStatementParametersEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>Slow SQL threshold</p>
+        /// </summary>
+        [JsonProperty("SlowSQLThresholds")]
+        public ApmTag[] SlowSQLThresholds{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the masking rule is enabled</p>
+        /// </summary>
+        [JsonProperty("EnableDesensitizationRule")]
+        public long? EnableDesensitizationRule{ get; set; }
+
+        /// <summary>
+        /// <p>Masking rule</p>
+        /// </summary>
+        [JsonProperty("DesensitizationRule")]
+        public string DesensitizationRule{ get; set; }
+
+        /// <summary>
+        /// <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+        /// </summary>
+        [JsonProperty("LogSpanIdKey")]
+        public string LogSpanIdKey{ get; set; }
+
+        /// <summary>
+        /// <p>Automated performance analysis configuration</p>
+        /// </summary>
+        [JsonProperty("AutoProfilingConfig")]
+        public AutoProfilingConfig AutoProfilingConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+        /// </summary>
+        [JsonProperty("EnableThresholdConfig")]
+        public bool? EnableThresholdConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+        /// </summary>
+        [JsonProperty("ErrRateThreshold")]
+        public long? ErrRateThreshold{ get; set; }
+
+        /// <summary>
+        /// <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+        /// </summary>
+        [JsonProperty("ResponseDurationWarningThreshold")]
+        public long? ResponseDurationWarningThreshold{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to use the built-in fuse threshold of the probe by default</p>
+        /// </summary>
+        [JsonProperty("UseDefaultFuseConfig")]
+        public bool? UseDefaultFuseConfig{ get; set; }
 
 
         /// <summary>
@@ -417,6 +477,16 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
             this.SetParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
             this.SetParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+            this.SetParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+            this.SetParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+            this.SetParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+            this.SetParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+            this.SetParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+            this.SetParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
+            this.SetParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+            this.SetParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+            this.SetParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+            this.SetParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
         }
     }
 }

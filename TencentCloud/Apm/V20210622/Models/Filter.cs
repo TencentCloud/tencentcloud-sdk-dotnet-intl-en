@@ -25,19 +25,19 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// Filtering method (=, !=, in).
+        /// <p>Filter method (=, !=, in)</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Filter dimension name.
+        /// <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Filter value. uses commas to separate multiple values in in filtering method.
+        /// <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

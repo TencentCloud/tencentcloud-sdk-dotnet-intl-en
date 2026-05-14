@@ -28,7 +28,7 @@ namespace TencentCloud.Trocket.V20230308
 
        private const string endpoint = "trocket.intl.tencentcloudapi.com";
        private const string version = "2023-03-08";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1314";
 
         /// <summary>
         /// Client constructor.
@@ -302,6 +302,51 @@ namespace TencentCloud.Trocket.V20230308
         public DescribeConsumerGroupResponse DescribeConsumerGroupSync(DescribeConsumerGroupRequest req)
         {
             return InternalRequestAsync<DescribeConsumerGroupResponse>(req, "DescribeConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get the consumer group list. The Filter parameter usage instructions are as follows:
+        /// 
+        /// -ConsumerGroupName, the consumer group name, supports fuzzy query and can be obtained from the [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) in the API response of [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
+        /// -ConsumeMessageOrderly, shipping order, enumeration value as follows:
+        /// -ordered delivery
+        /// -Concurrent delivery: false.
+        /// -RetryPolicy, retry policy, enumeration values as follows:
+        /// -EXPONENTIAL: fixed interval
+        /// -CUSTOMIZED: Tier backoff
+        /// 
+        /// Example of Filters: 
+        /// [{ "Name": "ConsumeMessageOrderly", "Values": ["true"] }]
+        /// This API is applicable to 5.x clusters. For 4.x clusters, refer to the REST API documentation [DescribeRocketMQGroups](https://www.tencentcloud.com/document/api/1179/63420?from_cn_redirect=1) to get the consumer group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupListResponse"/></returns>
+        public Task<DescribeConsumerGroupListResponse> DescribeConsumerGroupList(DescribeConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupListResponse>(req, "DescribeConsumerGroupList");
+        }
+
+        /// <summary>
+        /// Get the consumer group list. The Filter parameter usage instructions are as follows:
+        /// 
+        /// -ConsumerGroupName, the consumer group name, supports fuzzy query and can be obtained from the [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) in the API response of [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or the console.
+        /// -ConsumeMessageOrderly, shipping order, enumeration value as follows:
+        /// -ordered delivery
+        /// -Concurrent delivery: false.
+        /// -RetryPolicy, retry policy, enumeration values as follows:
+        /// -EXPONENTIAL: fixed interval
+        /// -CUSTOMIZED: Tier backoff
+        /// 
+        /// Example of Filters: 
+        /// [{ "Name": "ConsumeMessageOrderly", "Values": ["true"] }]
+        /// This API is applicable to 5.x clusters. For 4.x clusters, refer to the REST API documentation [DescribeRocketMQGroups](https://www.tencentcloud.com/document/api/1179/63420?from_cn_redirect=1) to get the consumer group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupListResponse"/></returns>
+        public DescribeConsumerGroupListResponse DescribeConsumerGroupListSync(DescribeConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupListResponse>(req, "DescribeConsumerGroupList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

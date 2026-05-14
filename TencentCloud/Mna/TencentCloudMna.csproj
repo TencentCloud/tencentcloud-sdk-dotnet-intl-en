@@ -1,0 +1,176 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1314</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Mna</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210119\MnaClient.cs" />
+    <Compile Include="V20210119\Models\ActivateHardware.cs" />
+    <Compile Include="V20210119\Models\ActivateHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\ActivateHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\ActiveDeviceList.cs" />
+    <Compile Include="V20210119\Models\AddApplicationRequest.cs" />
+    <Compile Include="V20210119\Models\AddApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\AddDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\AddDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\AddGroupRequest.cs" />
+    <Compile Include="V20210119\Models\AddGroupResponse.cs" />
+    <Compile Include="V20210119\Models\AddHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\AddHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\AddL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\AddL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\CreateEncryptedKeyRequest.cs" />
+    <Compile Include="V20210119\Models\CreateEncryptedKeyResponse.cs" />
+    <Compile Include="V20210119\Models\DelApplicationList.cs" />
+    <Compile Include="V20210119\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteGroupRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20210119\Models\DeleteL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\DeleteL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\DestIpInfo.cs" />
+    <Compile Include="V20210119\Models\DeviceBaseInfo.cs" />
+    <Compile Include="V20210119\Models\DeviceDetails.cs" />
+    <Compile Include="V20210119\Models\DeviceNetInfo.cs" />
+    <Compile Include="V20210119\Models\DevicePayModeInfo.cs" />
+    <Compile Include="V20210119\Models\DownloadActiveDeviceCountRequest.cs" />
+    <Compile Include="V20210119\Models\DownloadActiveDeviceCountResponse.cs" />
+    <Compile Include="V20210119\Models\FlowDetails.cs" />
+    <Compile Include="V20210119\Models\FlowPackageInfo.cs" />
+    <Compile Include="V20210119\Models\GetActiveDeviceCountRequest.cs" />
+    <Compile Include="V20210119\Models\GetActiveDeviceCountResponse.cs" />
+    <Compile Include="V20210119\Models\GetApplicationRequest.cs" />
+    <Compile Include="V20210119\Models\GetApplicationResponse.cs" />
+    <Compile Include="V20210119\Models\GetDestIPByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetDestIPByNameResponse.cs" />
+    <Compile Include="V20210119\Models\GetDevicePayModeRequest.cs" />
+    <Compile Include="V20210119\Models\GetDevicePayModeResponse.cs" />
+    <Compile Include="V20210119\Models\GetDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\GetDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\GetDevicesRequest.cs" />
+    <Compile Include="V20210119\Models\GetDevicesResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowAlarmInfoRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowAlarmInfoResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowPackagesRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowPackagesResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByGroupRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByGroupResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByNameResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByRegionRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticByRegionResponse.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticRequest.cs" />
+    <Compile Include="V20210119\Models\GetFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetGroupDetailRequest.cs" />
+    <Compile Include="V20210119\Models\GetGroupDetailResponse.cs" />
+    <Compile Include="V20210119\Models\GetGroupListRequest.cs" />
+    <Compile Include="V20210119\Models\GetGroupListResponse.cs" />
+    <Compile Include="V20210119\Models\GetHardwareInfoRequest.cs" />
+    <Compile Include="V20210119\Models\GetHardwareInfoResponse.cs" />
+    <Compile Include="V20210119\Models\GetHardwareListRequest.cs" />
+    <Compile Include="V20210119\Models\GetHardwareListResponse.cs" />
+    <Compile Include="V20210119\Models\GetL3ConnListRequest.cs" />
+    <Compile Include="V20210119\Models\GetL3ConnListResponse.cs" />
+    <Compile Include="V20210119\Models\GetMonitorDataByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetMonitorDataByNameResponse.cs" />
+    <Compile Include="V20210119\Models\GetMultiFlowStatisticRequest.cs" />
+    <Compile Include="V20210119\Models\GetMultiFlowStatisticResponse.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorByNameResponse.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorRequest.cs" />
+    <Compile Include="V20210119\Models\GetNetMonitorResponse.cs" />
+    <Compile Include="V20210119\Models\GetPublicKeyRequest.cs" />
+    <Compile Include="V20210119\Models\GetPublicKeyResponse.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataByNameRequest.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataByNameResponse.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataRequest.cs" />
+    <Compile Include="V20210119\Models\GetStatisticDataResponse.cs" />
+    <Compile Include="V20210119\Models\GetVendorHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\GetVendorHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\GroupAddDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\GroupAddDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\GroupDeleteDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\GroupDeleteDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\GroupInfo.cs" />
+    <Compile Include="V20210119\Models\Hardware.cs" />
+    <Compile Include="V20210119\Models\HardwareInfo.cs" />
+    <Compile Include="V20210119\Models\L3ConnInfo.cs" />
+    <Compile Include="V20210119\Models\ModifyPackageRenewFlagRequest.cs" />
+    <Compile Include="V20210119\Models\ModifyPackageRenewFlagResponse.cs" />
+    <Compile Include="V20210119\Models\MonitorData.cs" />
+    <Compile Include="V20210119\Models\NetDetails.cs" />
+    <Compile Include="V20210119\Models\OrderFlowPackageRequest.cs" />
+    <Compile Include="V20210119\Models\OrderFlowPackageResponse.cs" />
+    <Compile Include="V20210119\Models\OrderInfo.cs" />
+    <Compile Include="V20210119\Models\OrderPerLicenseRequest.cs" />
+    <Compile Include="V20210119\Models\OrderPerLicenseResponse.cs" />
+    <Compile Include="V20210119\Models\ReportOrderRequest.cs" />
+    <Compile Include="V20210119\Models\ReportOrderResponse.cs" />
+    <Compile Include="V20210119\Models\SetNotifyUrlRequest.cs" />
+    <Compile Include="V20210119\Models\SetNotifyUrlResponse.cs" />
+    <Compile Include="V20210119\Models\SlotNetInfo.cs" />
+    <Compile Include="V20210119\Models\UpdateApplicationInfoRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateApplicationInfoResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateApplicationKeyRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateApplicationKeyResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateDeviceRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateDeviceResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateGroupRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateGroupResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateHardwareRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateHardwareResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3CidrRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3CidrResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3ConnRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateL3SwitchRequest.cs" />
+    <Compile Include="V20210119\Models\UpdateL3SwitchResponse.cs" />
+    <Compile Include="V20210119\Models\UpdateNetInfo.cs" />
+    <Compile Include="V20210119\Models\VendorHardware.cs" />
+  </ItemGroup>
+</Project>

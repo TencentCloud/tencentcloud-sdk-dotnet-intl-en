@@ -28,7 +28,7 @@ namespace TencentCloud.Mqtt.V20240516
 
        private const string endpoint = "mqtt.intl.tencentcloudapi.com";
        private const string version = "2024-05-16";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1314";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Mqtt.V20240516
         public DescribeClientListResponse DescribeClientListSync(DescribeClientListRequest req)
         {
             return InternalRequestAsync<DescribeClientListResponse>(req, "DescribeClientList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query device certificate details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateResponse"/></returns>
+        public Task<DescribeDeviceCertificateResponse> DescribeDeviceCertificate(DescribeDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateResponse>(req, "DescribeDeviceCertificate");
+        }
+
+        /// <summary>
+        /// This API is used to query device certificate details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceCertificateRequest"/></param>
+        /// <returns><see cref="DescribeDeviceCertificateResponse"/></returns>
+        public DescribeDeviceCertificateResponse DescribeDeviceCertificateSync(DescribeDeviceCertificateRequest req)
+        {
+            return InternalRequestAsync<DescribeDeviceCertificateResponse>(req, "DescribeDeviceCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

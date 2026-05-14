@@ -1,0 +1,140 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Trocket.V20230308.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ConsumeGroupItem : AbstractModel
+    {
+        
+        /// <summary>
+        /// Instance ID.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Consumer group name
+        /// </summary>
+        [JsonProperty("ConsumerGroup")]
+        public string ConsumerGroup{ get; set; }
+
+        /// <summary>
+        /// Enable consumption
+        /// </summary>
+        [JsonProperty("ConsumeEnable")]
+        public bool? ConsumeEnable{ get; set; }
+
+        /// <summary>
+        /// Ordered delivery: true
+        /// Concurrent delivery: false.
+        /// </summary>
+        [JsonProperty("ConsumeMessageOrderly")]
+        public bool? ConsumeMessageOrderly{ get; set; }
+
+        /// <summary>
+        /// Maximum number of retries
+        /// </summary>
+        [JsonProperty("MaxRetryTimes")]
+        public long? MaxRetryTimes{ get; set; }
+
+        /// <summary>
+        /// Remarks
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// ID of a 4.x cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterIdV4")]
+        public string ClusterIdV4{ get; set; }
+
+        /// <summary>
+        /// Namespace of a 4.x cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NamespaceV4")]
+        public string NamespaceV4{ get; set; }
+
+        /// <summary>
+        /// Consumer group name of a 4.x cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ConsumerGroupV4")]
+        public string ConsumerGroupV4{ get; set; }
+
+        /// <summary>
+        /// Complete namespace of a 4.x cluster.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FullNamespaceV4")]
+        public string FullNamespaceV4{ get; set; }
+
+        /// <summary>
+        /// Number of subscribed topics.
+        /// </summary>
+        [JsonProperty("SubscribeTopicNum")]
+        public long? SubscribeTopicNum{ get; set; }
+
+        /// <summary>
+        /// Creation time.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
+
+        /// <summary>
+        /// List of bound tags
+        /// </summary>
+        [JsonProperty("TagList")]
+        public Tag[] TagList{ get; set; }
+
+        /// <summary>
+        /// Retry policy
+        /// </summary>
+        [JsonProperty("RetryPolicy")]
+        public RetryPolicy RetryPolicy{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
+            this.SetParamSimple(map, prefix + "ConsumeEnable", this.ConsumeEnable);
+            this.SetParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+            this.SetParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "ClusterIdV4", this.ClusterIdV4);
+            this.SetParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+            this.SetParamSimple(map, prefix + "ConsumerGroupV4", this.ConsumerGroupV4);
+            this.SetParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
+            this.SetParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
+        }
+    }
+}
+

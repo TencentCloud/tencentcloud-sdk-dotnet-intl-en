@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// Sub-user username
+        /// Sub-user username.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
