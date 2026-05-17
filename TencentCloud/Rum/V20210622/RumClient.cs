@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1287";
+       private const string sdkVersion = "SDK_NET_3.0.1315";
 
         /// <summary>
         /// Client constructor.
@@ -1443,6 +1443,27 @@ namespace TencentCloud.Rum.V20210622
         public DescribeTawAreasResponse DescribeTawAreasSync(DescribeTawAreasRequest req)
         {
             return InternalRequestAsync<DescribeTawAreasResponse>(req, "DescribeTawAreas")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTawInstancesResponse"/></returns>
+        public Task<DescribeTawInstancesResponse> DescribeTawInstances(DescribeTawInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTawInstancesResponse>(req, "DescribeTawInstances");
+        }
+
+        /// <summary>
+        /// This API is used to query instance information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
+        /// <returns><see cref="DescribeTawInstancesResponse"/></returns>
+        public DescribeTawInstancesResponse DescribeTawInstancesSync(DescribeTawInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeTawInstancesResponse>(req, "DescribeTawInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

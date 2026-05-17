@@ -25,7 +25,7 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+        /// Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotId{ get; set; }
 
         /// <summary>
-        /// Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+        /// Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }

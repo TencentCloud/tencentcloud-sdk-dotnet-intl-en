@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1310";
+       private const string sdkVersion = "SDK_NET_3.0.1315";
 
         /// <summary>
         /// Client constructor.
@@ -453,6 +453,27 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// Query company list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompaniesRequest"/></param>
+        /// <returns><see cref="DescribeCompaniesResponse"/></returns>
+        public Task<DescribeCompaniesResponse> DescribeCompanies(DescribeCompaniesRequest req)
+        {
+            return InternalRequestAsync<DescribeCompaniesResponse>(req, "DescribeCompanies");
+        }
+
+        /// <summary>
+        /// Query company list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCompaniesRequest"/></param>
+        /// <returns><see cref="DescribeCompaniesResponse"/></returns>
+        public DescribeCompaniesResponse DescribeCompaniesSync(DescribeCompaniesRequest req)
+        {
+            return InternalRequestAsync<DescribeCompaniesResponse>(req, "DescribeCompanies")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of EdgeOne instances to which a certificate can be deployed.
         /// </summary>
         /// <param name="req"><see cref="DescribeHostTeoInstanceListRequest"/></param>
@@ -554,6 +575,27 @@ namespace TencentCloud.Ssl.V20191205
         public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetailSync(DescribeHostUploadUpdateRecordDetailRequest req)
         {
             return InternalRequestAsync<DescribeHostUploadUpdateRecordDetailResponse>(req, "DescribeHostUploadUpdateRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the list of people in charge
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagersRequest"/></param>
+        /// <returns><see cref="DescribeManagersResponse"/></returns>
+        public Task<DescribeManagersResponse> DescribeManagers(DescribeManagersRequest req)
+        {
+            return InternalRequestAsync<DescribeManagersResponse>(req, "DescribeManagers");
+        }
+
+        /// <summary>
+        /// Query the list of people in charge
+        /// </summary>
+        /// <param name="req"><see cref="DescribeManagersRequest"/></param>
+        /// <returns><see cref="DescribeManagersResponse"/></returns>
+        public DescribeManagersResponse DescribeManagersSync(DescribeManagersRequest req)
+        {
+            return InternalRequestAsync<DescribeManagersResponse>(req, "DescribeManagers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

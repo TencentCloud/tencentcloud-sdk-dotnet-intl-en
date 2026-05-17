@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1287</VersionPrefix>
+    <VersionPrefix>3.0.1315</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -178,6 +178,8 @@
     <Compile Include="V20210622\Models\DescribeScoresV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeTawAreasRequest.cs" />
     <Compile Include="V20210622\Models\DescribeTawAreasResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeTawInstancesRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeTawInstancesResponse.cs" />
     <Compile Include="V20210622\Models\DescribeUvListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeUvListResponse.cs" />
     <Compile Include="V20210622\Models\DescribeWhitelistsRequest.cs" />
@@ -197,6 +199,7 @@
     <Compile Include="V20210622\Models\ResumeProjectRequest.cs" />
     <Compile Include="V20210622\Models\ResumeProjectResponse.cs" />
     <Compile Include="V20210622\Models\RumAreaInfo.cs" />
+    <Compile Include="V20210622\Models\RumInstanceInfo.cs" />
     <Compile Include="V20210622\Models\RumProject.cs" />
     <Compile Include="V20210622\Models\RumPvInfo.cs" />
     <Compile Include="V20210622\Models\RumUvInfo.cs" />
