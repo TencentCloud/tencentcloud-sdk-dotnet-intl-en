@@ -25,13 +25,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Order ID
+        /// <p>Order ID.</p>
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// List of IDs of the created instances
+        /// <p>List of instance created IDs.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

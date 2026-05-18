@@ -58,6 +58,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("ReplicateSetNum")]
         public long? ReplicateSetNum{ get; set; }
 
+        /// <summary>
+        /// CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+        /// Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }

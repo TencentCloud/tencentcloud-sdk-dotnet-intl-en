@@ -28,7 +28,7 @@ namespace TencentCloud.Scf.V20180416
 
        private const string endpoint = "scf.intl.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -883,6 +883,27 @@ namespace TencentCloud.Scf.V20180416
         public UpdateFunctionCodeResponse UpdateFunctionCodeSync(UpdateFunctionCodeRequest req)
         {
             return InternalRequestAsync<UpdateFunctionCodeResponse>(req, "UpdateFunctionCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the function configuration based on the input parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
+        public Task<UpdateFunctionConfigurationResponse> UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionConfigurationResponse>(req, "UpdateFunctionConfiguration");
+        }
+
+        /// <summary>
+        /// This API is used to update the function configuration based on the input parameters.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
+        public UpdateFunctionConfigurationResponse UpdateFunctionConfigurationSync(UpdateFunctionConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionConfigurationResponse>(req, "UpdateFunctionConfiguration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

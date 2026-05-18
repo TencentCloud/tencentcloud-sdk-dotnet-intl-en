@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1262";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Mongodb.V20190725
         public AssignProjectResponse AssignProjectSync(AssignProjectRequest req)
         {
             return InternalRequestAsync<AssignProjectResponse>(req, "AssignProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to close the audit service.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService");
+        }
+
+        /// <summary>
+        /// This API is used to close the audit service.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -138,7 +159,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -148,7 +169,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+        /// This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701) API can be called to query and obtain the supported sales specifications.
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
         /// <returns><see cref="CreateDBInstanceResponse"/></returns>
@@ -260,6 +281,69 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
         {
             return InternalRequestAsync<DescribeAsyncRequestInfoResponse>(req, "DescribeAsyncRequestInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public Task<DescribeAuditConfigResponse> DescribeAuditConfig(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditConfigRequest"/></param>
+        /// <returns><see cref="DescribeAuditConfigResponse"/></returns>
+        public DescribeAuditConfigResponse DescribeAuditConfigSync(DescribeAuditConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditConfigResponse>(req, "DescribeAuditConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query audit log files of a cloud database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles");
+        }
+
+        /// <summary>
+        /// This API is used to query audit log files of a cloud database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query database audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public Task<DescribeAuditLogsResponse> DescribeAuditLogs(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query database audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public DescribeAuditLogsResponse DescribeAuditLogsSync(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -558,6 +642,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to query the current domain information of the MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSRVConnectionDomainRequest"/></param>
+        /// <returns><see cref="DescribeSRVConnectionDomainResponse"/></returns>
+        public Task<DescribeSRVConnectionDomainResponse> DescribeSRVConnectionDomain(DescribeSRVConnectionDomainRequest req)
+        {
+            return InternalRequestAsync<DescribeSRVConnectionDomainResponse>(req, "DescribeSRVConnectionDomain");
+        }
+
+        /// <summary>
+        /// This API is used to query the current domain information of the MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSRVConnectionDomainRequest"/></param>
+        /// <returns><see cref="DescribeSRVConnectionDomainResponse"/></returns>
+        public DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomainSync(DescribeSRVConnectionDomainRequest req)
+        {
+            return InternalRequestAsync<DescribeSRVConnectionDomainResponse>(req, "DescribeSRVConnectionDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query security groups bound to an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
@@ -642,6 +747,48 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to close the SRV Access Address of the MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="DisableSRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="DisableSRVConnectionUrlResponse"/></returns>
+        public Task<DisableSRVConnectionUrlResponse> DisableSRVConnectionUrl(DisableSRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<DisableSRVConnectionUrlResponse>(req, "DisableSRVConnectionUrl");
+        }
+
+        /// <summary>
+        /// This API is used to close the SRV Access Address of the MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="DisableSRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="DisableSRVConnectionUrlResponse"/></returns>
+        public DisableSRVConnectionUrlResponse DisableSRVConnectionUrlSync(DisableSRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<DisableSRVConnectionUrlResponse>(req, "DisableSRVConnectionUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable the SRV Access Address for MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="EnableSRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="EnableSRVConnectionUrlResponse"/></returns>
+        public Task<EnableSRVConnectionUrlResponse> EnableSRVConnectionUrl(EnableSRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<EnableSRVConnectionUrlResponse>(req, "EnableSRVConnectionUrl");
+        }
+
+        /// <summary>
+        /// This API is used to enable the SRV Access Address for MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="EnableSRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="EnableSRVConnectionUrlResponse"/></returns>
+        public EnableSRVConnectionUrlResponse EnableSRVConnectionUrlSync(EnableSRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<EnableSRVConnectionUrlResponse>(req, "EnableSRVConnectionUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
         /// </summary>
         /// <param name="req"><see cref="EnableTransparentDataEncryptionRequest"/></param>
@@ -659,6 +806,27 @@ namespace TencentCloud.Mongodb.V20190725
         public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryptionSync(EnableTransparentDataEncryptionRequest req)
         {
             return InternalRequestAsync<EnableTransparentDataEncryptionResponse>(req, "EnableTransparentDataEncryption")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network access address of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWanServiceRequest"/></param>
+        /// <returns><see cref="EnableWanServiceResponse"/></returns>
+        public Task<EnableWanServiceResponse> EnableWanService(EnableWanServiceRequest req)
+        {
+            return InternalRequestAsync<EnableWanServiceResponse>(req, "EnableWanService");
+        }
+
+        /// <summary>
+        /// This API is used to enable the public network access address of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="EnableWanServiceRequest"/></param>
+        /// <returns><see cref="EnableWanServiceResponse"/></returns>
+        public EnableWanServiceResponse EnableWanServiceSync(EnableWanServiceRequest req)
+        {
+            return InternalRequestAsync<EnableWanServiceResponse>(req, "EnableWanService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -873,6 +1041,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to adjust the availability zone distribution of MongoDB cloud database nodes. You can specify the primary AZ and total availability zone distribution info to complete node distribution adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAzRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAzResponse"/></returns>
+        public Task<ModifyInstanceAzResponse> ModifyInstanceAz(ModifyInstanceAzRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAzResponse>(req, "ModifyInstanceAz");
+        }
+
+        /// <summary>
+        /// This API is used to adjust the availability zone distribution of MongoDB cloud database nodes. You can specify the primary AZ and total availability zone distribution info to complete node distribution adjustment.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceAzRequest"/></param>
+        /// <returns><see cref="ModifyInstanceAzResponse"/></returns>
+        public ModifyInstanceAzResponse ModifyInstanceAzSync(ModifyInstanceAzRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceAzResponse>(req, "ModifyInstanceAz")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the parameter configuration of a TencentDB for MongoDB instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
@@ -890,6 +1079,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ModifyInstanceParamsResponse ModifyInstanceParamsSync(ModifyInstanceParamsRequest req)
         {
             return InternalRequestAsync<ModifyInstanceParamsResponse>(req, "ModifyInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the TTL duration of the SRV Access Address for a MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="ModifySRVConnectionUrlResponse"/></returns>
+        public Task<ModifySRVConnectionUrlResponse> ModifySRVConnectionUrl(ModifySRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<ModifySRVConnectionUrlResponse>(req, "ModifySRVConnectionUrl");
+        }
+
+        /// <summary>
+        /// This API is used to modify the TTL duration of the SRV Access Address for a MongoDB database.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySRVConnectionUrlRequest"/></param>
+        /// <returns><see cref="ModifySRVConnectionUrlResponse"/></returns>
+        public ModifySRVConnectionUrlResponse ModifySRVConnectionUrlSync(ModifySRVConnectionUrlRequest req)
+        {
+            return InternalRequestAsync<ModifySRVConnectionUrlResponse>(req, "ModifySRVConnectionUrl")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -974,6 +1184,27 @@ namespace TencentCloud.Mongodb.V20190725
         public ResetDBInstancePasswordResponse ResetDBInstancePasswordSync(ResetDBInstancePasswordRequest req)
         {
             return InternalRequestAsync<ResetDBInstancePasswordResponse>(req, "ResetDBInstancePassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to rollback the database instance to a specified time point.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceResponse"/></returns>
+        public Task<RestoreDBInstanceResponse> RestoreDBInstance(RestoreDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceResponse>(req, "RestoreDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to rollback the database instance to a specified time point.
+        /// </summary>
+        /// <param name="req"><see cref="RestoreDBInstanceRequest"/></param>
+        /// <returns><see cref="RestoreDBInstanceResponse"/></returns>
+        public RestoreDBInstanceResponse RestoreDBInstanceSync(RestoreDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestoreDBInstanceResponse>(req, "RestoreDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1083,7 +1314,8 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// This API is used to upgrade database version.
+        /// **Description**: Upgrade to version 3.6 and above is supported. Only upgrading from a lower version to a higher version step by step is allowed. Cross-version upgrade or version downgrade is not supported.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>
@@ -1093,7 +1325,8 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+        /// This API is used to upgrade database version.
+        /// **Description**: Upgrade to version 3.6 and above is supported. Only upgrading from a lower version to a higher version step by step is allowed. Cross-version upgrade or version downgrade is not supported.
         /// </summary>
         /// <param name="req"><see cref="UpgradeDbInstanceVersionRequest"/></param>
         /// <returns><see cref="UpgradeDbInstanceVersionResponse"/></returns>

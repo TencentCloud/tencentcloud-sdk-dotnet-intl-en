@@ -35,8 +35,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Saleable specification status flag. Valid values are as follows:
-        ///  - 0: selling stopped.
-        ///  - 1: available for sale.
+        /// - 0: selling stopped.
+        /// - 1: available for sale.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -91,24 +91,34 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
         /// - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
         /// - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+        /// - MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersionCode")]
         public string MongoVersionCode{ get; set; }
 
         /// <summary>
         /// Digital version corresponding to the instance version.
+        /// - MongoDB version 3.2: 2.
+        /// - MongoDB version 3.6: 4.
+        /// - MongoDB version 4.0: 5.
+        /// - MongoDB version 4.2: 9.
+        /// - MongoDB version 4.4: 10.
+        /// - MongoDB version 5.0: 11.
+        /// - MongoDB version 6.0: 12.
+        /// - MongoDB version 7.0: 13.
+        /// - MongoDB version 8.0: 14.
         /// </summary>
         [JsonProperty("MongoVersionValue")]
         public ulong? MongoVersionValue{ get; set; }
 
         /// <summary>
-        /// Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+        /// Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Storage engine.
+        /// Storage engine. Only WiredTiger is supported.
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }

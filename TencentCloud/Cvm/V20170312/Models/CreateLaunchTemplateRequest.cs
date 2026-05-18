@@ -51,7 +51,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// Instance model. Different instance models specify different resource specifications.
         /// 
-        /// <br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained BY calling the [DescribeInstanceTypeConfigs](https://intl.cloud.tencent.com/document/api/213/15749?from_cn_redirect=1) api to get the latest specification table or referring to the [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) description. if this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><li>for instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. the specific format is: CDH_XCXG. for example, for creating a CDH instance with 1 CPU core and 1 gb memory, this parameter should be CDH_1C1G.</li>.
+        /// <br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs api to get the latest specification table or referring to the [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) description. if this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><li>for instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. the specific format is: CDH_XCXG. for example, for creating a CDH instance with 1 CPU core and 1 gb memory, this parameter should be CDH_1C1G.</li>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -193,7 +193,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? DisableApiTermination{ get; set; }
 
         /// <summary>
-        /// Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+        /// Whether jumbo frames are enabled for the instance. Valid values:
+        /// - true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.
+        /// - false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.
+        /// 
+        /// 
+        ///  Supported instance types: [Instance Types](https://www.tencentcloud.com/zh/document/api/213/11518)
         /// </summary>
         [JsonProperty("EnableJumboFrame")]
         public bool? EnableJumboFrame{ get; set; }

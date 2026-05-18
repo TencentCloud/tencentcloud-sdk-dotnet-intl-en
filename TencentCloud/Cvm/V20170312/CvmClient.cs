@@ -28,7 +28,7 @@ namespace TencentCloud.Cvm.V20170312
 
        private const string endpoint = "cvm.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1289";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -1941,7 +1941,7 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// This API is used to change the model of an instance.
-        /// * You can only use this API to change the models of instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+        /// * You can only use this API to change the models of instances whose [system disk type](https://www.tencentcloud.com/zh/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
         /// * Currently, you cannot use this API to change the models of [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
         /// </summary>
         /// <param name="req"><see cref="ResetInstancesTypeRequest"/></param>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Cvm.V20170312
 
         /// <summary>
         /// This API is used to change the model of an instance.
-        /// * You can only use this API to change the models of instances whose [system disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
+        /// * You can only use this API to change the models of instances whose [system disk type](https://www.tencentcloud.com/zh/document/product/213/15753) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`.
         /// * Currently, you cannot use this API to change the models of [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
         /// </summary>
         /// <param name="req"><see cref="ResetInstancesTypeRequest"/></param>

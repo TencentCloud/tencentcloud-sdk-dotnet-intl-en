@@ -132,6 +132,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
         /// - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
         /// - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+        /// - MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }

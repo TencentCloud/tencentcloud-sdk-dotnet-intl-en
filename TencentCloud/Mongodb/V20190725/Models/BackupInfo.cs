@@ -25,89 +25,79 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup method.
-        /// - 0: automatic backup.
-        /// - 1: manual backup.
+        /// <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }
 
         /// <summary>
-        /// Backup file name.
+        /// <p>Backup file name.</p>
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// Backup task remarks.
+        /// <p>Backup task notes.</p>
         /// </summary>
         [JsonProperty("BackupDesc")]
         public string BackupDesc{ get; set; }
 
         /// <summary>
-        /// Backup file size, in KB.
+        /// <p>Backup file size, in KB.</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public ulong? BackupSize{ get; set; }
 
         /// <summary>
-        /// Backup start time.
+        /// <p>Backup start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup end time.
+        /// <p>Backup end time.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup status.
-        /// - 1: backing up.
-        /// - 2: backup successful.
+        /// <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Backup method.
-        /// - 0: logical backup.
-        /// - 1: physical backup.
-        /// - 3: snapshot backup.
-        /// **Note:**
-        /// - The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-        /// - Physical backup is not supported when storage encryption is enabled for the instance.
+        /// <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public ulong? BackupMethod{ get; set; }
 
         /// <summary>
-        /// Backup record ID.
+        /// <p>Backup record ID.</p>
         /// </summary>
         [JsonProperty("BackId")]
         public long? BackId{ get; set; }
 
         /// <summary>
-        /// Backup deletion time.
+        /// <p>Backup deletion time.</p>
         /// </summary>
         [JsonProperty("DeleteTime")]
         public string DeleteTime{ get; set; }
 
         /// <summary>
-        /// Cross-region backup region.
+        /// <p>Backup region in a different location.</p>
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// Rollback time supported by the backup.
+        /// <p>Rollback time supported by the backup.</p>
         /// </summary>
         [JsonProperty("RestoreTime")]
         public string RestoreTime{ get; set; }

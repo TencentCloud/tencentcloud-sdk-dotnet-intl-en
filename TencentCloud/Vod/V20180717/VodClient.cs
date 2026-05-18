@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1314";
+       private const string sdkVersion = "SDK_NET_3.0.1316";
 
         /// <summary>
         /// Client constructor.
@@ -351,6 +351,27 @@ namespace TencentCloud.Vod.V20180717
         public CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplateSync(CreateAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<CreateAnimatedGraphicsTemplateResponse>(req, "CreateAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public Task<CreateBlindWatermarkTemplateResponse> CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="CreateBlindWatermarkTemplateResponse"/></returns>
+        public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplateSync(CreateBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateBlindWatermarkTemplateResponse>(req, "CreateBlindWatermarkTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1073,6 +1094,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to delete a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public Task<DeleteBlindWatermarkTemplateResponse> DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a user-defined digital watermark template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="DeleteBlindWatermarkTemplateResponse"/></returns>
+        public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplateSync(DeleteBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteBlindWatermarkTemplateResponse>(req, "DeleteBlindWatermarkTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Delete CDN Domain
         /// </summary>
         /// <param name="req"><see cref="DeleteCDNDomainRequest"/></param>
@@ -1725,6 +1767,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplatesSync(DescribeAnimatedGraphicsTemplatesRequest req)
         {
             return InternalRequestAsync<DescribeAnimatedGraphicsTemplatesResponse>(req, "DescribeAnimatedGraphicsTemplates")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query user-customized digital watermark templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public Task<DescribeBlindWatermarkTemplatesResponse> DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates");
+        }
+
+        /// <summary>
+        /// Query user-customized digital watermark templates.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlindWatermarkTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeBlindWatermarkTemplatesResponse"/></returns>
+        public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplatesSync(DescribeBlindWatermarkTemplatesRequest req)
+        {
+            return InternalRequestAsync<DescribeBlindWatermarkTemplatesResponse>(req, "DescribeBlindWatermarkTemplates")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2843,6 +2906,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public Task<ExtractBlindWatermarkResponse> ExtractBlindWatermark(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark");
+        }
+
+        /// <summary>
+        /// This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+        /// </summary>
+        /// <param name="req"><see cref="ExtractBlindWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractBlindWatermarkResponse"/></returns>
+        public ExtractBlindWatermarkResponse ExtractBlindWatermarkSync(ExtractBlindWatermarkRequest req)
+        {
+            return InternalRequestAsync<ExtractBlindWatermarkResponse>(req, "ExtractBlindWatermark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Extract CopyRight Watermark.
         /// </summary>
         /// <param name="req"><see cref="ExtractCopyRightWatermarkRequest"/></param>
@@ -3168,6 +3252,27 @@ namespace TencentCloud.Vod.V20180717
         public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplateSync(ModifyAnimatedGraphicsTemplateRequest req)
         {
             return InternalRequestAsync<ModifyAnimatedGraphicsTemplateResponse>(req, "ModifyAnimatedGraphicsTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public Task<ModifyBlindWatermarkTemplateResponse> ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlindWatermarkTemplateRequest"/></param>
+        /// <returns><see cref="ModifyBlindWatermarkTemplateResponse"/></returns>
+        public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplateSync(ModifyBlindWatermarkTemplateRequest req)
+        {
+            return InternalRequestAsync<ModifyBlindWatermarkTemplateResponse>(req, "ModifyBlindWatermarkTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

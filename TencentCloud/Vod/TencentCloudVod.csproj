@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1314</VersionPrefix>
+    <VersionPrefix>3.0.1316</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -218,6 +218,7 @@
     <Compile Include="V20180717\Models\BlackWhiteEdgeConfigureInfo.cs" />
     <Compile Include="V20180717\Models\BlackWhiteEdgeConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\BlindWatermarkInput.cs" />
+    <Compile Include="V20180717\Models\BlindWatermarkTemplate.cs" />
     <Compile Include="V20180717\Models\BlurConfigureInfo.cs" />
     <Compile Include="V20180717\Models\BlurConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\CDNCertInfo.cs" />
@@ -290,6 +291,8 @@
     <Compile Include="V20180717\Models\CreateAigcVideoTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\CreateBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateCDNDomainRequest.cs" />
     <Compile Include="V20180717\Models\CreateCDNDomainResponse.cs" />
     <Compile Include="V20180717\Models\CreateClassRequest.cs" />
@@ -357,6 +360,8 @@
     <Compile Include="V20180717\Models\DeleteAigcApiTokenResponse.cs" />
     <Compile Include="V20180717\Models\DeleteAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteCDNDomainRequest.cs" />
     <Compile Include="V20180717\Models\DeleteCDNDomainResponse.cs" />
     <Compile Include="V20180717\Models\DeleteClassRequest.cs" />
@@ -417,6 +422,8 @@
     <Compile Include="V20180717\Models\DescribeAllClassResponse.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeAnimatedGraphicsTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeBlindWatermarkTemplatesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeBlindWatermarkTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCDNDomainsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCDNDomainsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCDNStatDetailsRequest.cs" />
@@ -532,6 +539,8 @@
     <Compile Include="V20180717\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionResponse.cs" />
     <Compile Include="V20180717\Models\ExtractBlindWatermarkInputInfo.cs" />
+    <Compile Include="V20180717\Models\ExtractBlindWatermarkRequest.cs" />
+    <Compile Include="V20180717\Models\ExtractBlindWatermarkResponse.cs" />
     <Compile Include="V20180717\Models\ExtractBlindWatermarkTask.cs" />
     <Compile Include="V20180717\Models\ExtractBlindWatermarkTaskConfig.cs" />
     <Compile Include="V20180717\Models\ExtractCopyRightWatermarkRequest.cs" />
@@ -712,6 +721,8 @@
     <Compile Include="V20180717\Models\ModifyAdaptiveDynamicStreamingTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyAnimatedGraphicsTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyAnimatedGraphicsTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyBlindWatermarkTemplateRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyCDNDomainConfigRequest.cs" />
     <Compile Include="V20180717\Models\ModifyCDNDomainConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyClassRequest.cs" />

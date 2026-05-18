@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// Order ID.
+        /// <p>Order ID.</p>
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }

@@ -31,13 +31,22 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+        /// The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+        /// - MONGO_40_WT: Version 4.0.
+        /// - MONGO_42_WT: Version 4.2.
+        /// - MONGO_44_WT: Version 4.4.
+        /// - MONGO_50_WT: Version 5.0.
+        /// - MONGO_60_WT: Version 6.0.
+        /// -MONGO_70_WT: Version 7.0.
+        /// - MONGO_80_WT: Version 8.0.
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+        /// Specify whether to perform the upgrade during the maintenance period.
+        /// -0: Upgrade now.
+        /// - 1: Upgrade during the maintenance window.
         /// </summary>
         [JsonProperty("InMaintenance")]
         public long? InMaintenance{ get; set; }

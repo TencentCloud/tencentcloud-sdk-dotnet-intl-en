@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1164</VersionPrefix>
+    <VersionPrefix>3.0.1316</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20180416\Models\AsyncEvent.cs" />
     <Compile Include="V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="V20180416\Models\AsyncTriggerConfig.cs" />
+    <Compile Include="V20180416\Models\CfsConfig.cs" />
+    <Compile Include="V20180416\Models\CfsInsInfo.cs" />
     <Compile Include="V20180416\Models\Code.cs" />
     <Compile Include="V20180416\Models\CopyFunctionRequest.cs" />
     <Compile Include="V20180416\Models\CopyFunctionResponse.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="V20180416\Models\CreateNamespaceResponse.cs" />
     <Compile Include="V20180416\Models\CreateTriggerRequest.cs" />
     <Compile Include="V20180416\Models\CreateTriggerResponse.cs" />
+    <Compile Include="V20180416\Models\DeadLetterConfig.cs" />
     <Compile Include="V20180416\Models\DeleteAliasRequest.cs" />
     <Compile Include="V20180416\Models\DeleteAliasResponse.cs" />
     <Compile Include="V20180416\Models\DeleteFunctionRequest.cs" />
@@ -75,6 +78,8 @@
     <Compile Include="V20180416\Models\DeleteReservedConcurrencyConfigResponse.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerRequest.cs" />
     <Compile Include="V20180416\Models\DeleteTriggerResponse.cs" />
+    <Compile Include="V20180416\Models\EipConfigIn.cs" />
+    <Compile Include="V20180416\Models\Environment.cs" />
     <Compile Include="V20180416\Models\Filter.cs" />
     <Compile Include="V20180416\Models\Function.cs" />
     <Compile Include="V20180416\Models\FunctionLog.cs" />
@@ -105,6 +110,7 @@
     <Compile Include="V20180416\Models\InvokeRequest.cs" />
     <Compile Include="V20180416\Models\InvokeResponse.cs" />
     <Compile Include="V20180416\Models\LayerVersionInfo.cs" />
+    <Compile Include="V20180416\Models\LayerVersionSimple.cs" />
     <Compile Include="V20180416\Models\LimitsInfo.cs" />
     <Compile Include="V20180416\Models\ListAliasesRequest.cs" />
     <Compile Include="V20180416\Models\ListAliasesResponse.cs" />
@@ -127,6 +133,8 @@
     <Compile Include="V20180416\Models\Namespace.cs" />
     <Compile Include="V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="V20180416\Models\NamespaceUsage.cs" />
+    <Compile Include="V20180416\Models\ProtocolParams.cs" />
+    <Compile Include="V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionRequest.cs" />
     <Compile Include="V20180416\Models\PublishLayerVersionResponse.cs" />
     <Compile Include="V20180416\Models\PublishVersionRequest.cs" />
@@ -155,6 +163,8 @@
     <Compile Include="V20180416\Models\UpdateAliasResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeRequest.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionCodeResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionConfigurationRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionEventInvokeConfigRequest.cs" />
     <Compile Include="V20180416\Models\UpdateFunctionEventInvokeConfigResponse.cs" />
     <Compile Include="V20180416\Models\UpdateNamespaceRequest.cs" />
@@ -162,8 +172,11 @@
     <Compile Include="V20180416\Models\UpdateTriggerStatusRequest.cs" />
     <Compile Include="V20180416\Models\UpdateTriggerStatusResponse.cs" />
     <Compile Include="V20180416\Models\UsageInfo.cs" />
+    <Compile Include="V20180416\Models\Variable.cs" />
     <Compile Include="V20180416\Models\VersionMatch.cs" />
     <Compile Include="V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="V20180416\Models\VersionWeight.cs" />
+    <Compile Include="V20180416\Models\VpcConfig.cs" />
+    <Compile Include="V20180416\Models\WSParams.cs" />
   </ItemGroup>
 </Project>
