@@ -30,6 +30,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// Maximum video bitrate. Valid when Type is specified as top speed Codec.
+        /// Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+        /// </summary>
+        [JsonProperty("MaxVideoBitrate")]
+        public ulong? MaxVideoBitrate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
         }
     }
 }

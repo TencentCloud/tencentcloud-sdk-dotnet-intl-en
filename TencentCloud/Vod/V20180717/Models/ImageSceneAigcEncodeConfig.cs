@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image format. Valid values: JPEG and PNG. Defaults to the original image format. Animation is not supported.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 
+        /// Relative image quality. Value ranges from 1 to 100. The numeric value is based on the original image quality and defaults to the original image quality.
         /// </summary>
         [JsonProperty("Quality")]
         public long? Quality{ get; set; }

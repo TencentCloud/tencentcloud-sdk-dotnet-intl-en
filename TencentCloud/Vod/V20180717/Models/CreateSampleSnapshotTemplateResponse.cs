@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of a sampled screencapturing template.
+        /// Unique identifier of the sampling screenshot template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

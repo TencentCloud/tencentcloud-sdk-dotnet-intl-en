@@ -34,7 +34,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Custom heuristic cache time configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public HeuristicCacheConfig CacheConfig{ get; set; }

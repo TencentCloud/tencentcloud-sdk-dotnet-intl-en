@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The unique identification of the media file of the fast edited video
+        /// Unique identifier of the media file after quick editing.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Fast-edited media playback address
+        /// Media playback address after quick editing.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

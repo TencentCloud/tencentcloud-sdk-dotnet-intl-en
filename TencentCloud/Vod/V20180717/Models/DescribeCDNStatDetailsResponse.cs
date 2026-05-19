@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time granularity of every piece of data in minutes.
+        /// Time granularity of each data entry. Measurement unit: minute.
         /// </summary>
         [JsonProperty("DataInterval")]
         public ulong? DataInterval{ get; set; }
 
         /// <summary>
-        /// CDN usage statistics.
+        /// CDN usage data.
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

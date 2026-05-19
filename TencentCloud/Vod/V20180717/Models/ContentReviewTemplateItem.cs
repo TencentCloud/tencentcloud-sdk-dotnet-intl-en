@@ -43,38 +43,33 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Parameters for recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Authentication involves control parameters for offensive information.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Parameters for recognition of terrorism content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Authentication involves control parameters for unsafe information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Parameters for recognition of politically sensitive content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Authentication involves control parameters for inappropriate information.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of prohibited information detection. Prohibited information includes:
-        /// <li>Abusive;</li>
-        /// <li>Drug-related.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Prohibited control parameters. Prohibited content includes:
+        /// <li>Abuse;</li>
+        /// <li>Drug-related illegal activities.</li>
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Custom recognition parameters
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Customize video moderation control parameters.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

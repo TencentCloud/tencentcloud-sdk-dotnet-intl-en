@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Player configuration name filter. Array length limit: 100.
+        /// Player configuration name filter condition, with a maximum array length of 100.
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
@@ -43,15 +43,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
+        /// Number of returned entries. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Player configuration type filter. Valid values:
-        /// <li>Preset: preset configuration;</li>
-        /// <li>Custom: custom configuration.</li>
+        /// Player configuration type filter condition. Available values:
+        /// <li>Preset: system predefined configuration;</li>
+        /// <li>Custom: User-customized configuration.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error message.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task progress, in the range of [0-100].</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Input info of the AIGC audio task.</p>
         /// </summary>
         [JsonProperty("Input")]
         public AigcAudioTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>AIGC audio task output information.</p>
         /// </summary>
         [JsonProperty("Output")]
         public AigcAudioTaskOutput Output{ get; set; }

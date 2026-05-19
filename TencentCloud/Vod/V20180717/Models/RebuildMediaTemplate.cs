@@ -51,29 +51,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// The video remaster parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio-visual quality revival video control info.
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// The audio remaster parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio-visual quality revival audio control info.
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }
 
         /// <summary>
-        /// The output video parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Output video control information.
         /// </summary>
         [JsonProperty("TargetVideoInfo")]
         public RebuildMediaTargetVideoStream TargetVideoInfo{ get; set; }
 
         /// <summary>
-        /// The output audio parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Output audio control information.
         /// </summary>
         [JsonProperty("TargetAudioInfo")]
         public RebuildMediaTargetAudioStream TargetAudioInfo{ get; set; }

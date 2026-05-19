@@ -25,75 +25,75 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Watermarking type. Valid values:
-        /// <li>image: image watermark;</li>
-        /// <li>text: text watermark;</li>
+        /// Watermark type. Valid values:
+        /// <li>image: image watermark.</li>
+        /// <li>Text: text watermark.</li>
         /// <li>svg: SVG watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Watermarking template name. Length limit: 64 characters.
+        /// Watermark template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// Origin position. Valid values:
-        /// <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-        /// <li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-        /// <li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-        /// <li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+        /// <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+        /// <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+        /// <li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+        /// <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
         /// Default value: TopLeft.
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-        /// <li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-        /// <li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
-        /// Default value: 0 px.
+        /// The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+        /// <li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-        /// <li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-        /// <li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
-        /// Default value: 0 px.
+        /// The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+        /// <li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// Image watermarking template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
+        /// Image watermark template. This field is required when Type is image. Invalid field when Type is text.
         /// </summary>
         [JsonProperty("ImageTemplate")]
         public ImageWatermarkInput ImageTemplate{ get; set; }
 
         /// <summary>
-        /// Text watermarking template. This field is required when `Type` is `text` and is invalid when `Type` is `image`.
+        /// Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
         /// </summary>
         [JsonProperty("TextTemplate")]
         public TextWatermarkTemplateInput TextTemplate{ get; set; }
 
         /// <summary>
-        /// SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
+        /// SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
         /// </summary>
         [JsonProperty("SvgTemplate")]
         public SvgWatermarkInput SvgTemplate{ get; set; }

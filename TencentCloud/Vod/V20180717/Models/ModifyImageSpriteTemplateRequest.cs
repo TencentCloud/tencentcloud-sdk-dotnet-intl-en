@@ -25,92 +25,89 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of an image sprite generating template.
+        /// Unique identifier of the sprite template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Name of an image sprite generating template. Length limit: 64 characters.
+        /// Sprite image template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Subimage width of an image sprite in px. Value range: [128, 4,096].
+        /// Width of small images in sprite image, in the range of [32, 4096], unit: px.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Subimage height of an image sprite in px. Value range: [128, 4,096].
+        /// Height of small images in sprite image, in the range of [32, 4096], unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Resolution adaption. Valid values:
-        /// <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-        /// <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+        /// Resolution adaptation, available values:
+        /// <li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
         /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Sampling type. Valid values:
+        /// Sampling type, Valid value:
         /// <li>Percent: by percent.</li>
-        /// <li>Time: by time interval.</li>
+        /// <li>Time: By time interval.</li>
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
 
         /// <summary>
         /// Sampling interval.
-        /// <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-        /// <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+        /// <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+        /// <li>When SampleType is Time, specify the sampling interval in seconds.</li>
         /// </summary>
         [JsonProperty("SampleInterval")]
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// Subimage row count of an image sprite.
+        /// Number of rows of small images in sprite image.
         /// </summary>
         [JsonProperty("RowCount")]
         public ulong? RowCount{ get; set; }
 
         /// <summary>
-        /// Subimage column count of an image sprite.
+        /// Number of columns of small images in sprite image.
         /// </summary>
         [JsonProperty("ColumnCount")]
         public ulong? ColumnCount{ get; set; }
 
         /// <summary>
-        /// Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-        /// <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-        /// <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-        /// Default value: black.
+        /// Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// The image format. Valid values:
-        /// <li> jpg</li>
-        /// <li> png</li>
-        /// <li> webp</li>
+        /// Image format. Value:
+        /// <li> jpg: jpg format;</li>
+        /// <li>png: png format.</li>
+        /// <li>WEBP: webp format.</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

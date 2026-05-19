@@ -25,14 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of watermarking template details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Watermark template details list.
         /// </summary>
         [JsonProperty("WatermarkTemplateSet")]
         public WatermarkTemplate[] WatermarkTemplateSet{ get; set; }

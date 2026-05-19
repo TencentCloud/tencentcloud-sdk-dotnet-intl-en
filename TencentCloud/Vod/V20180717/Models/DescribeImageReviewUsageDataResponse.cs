@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+        /// Image moderation stats show overview data of the number of moderations within a specified time range.
         /// </summary>
         [JsonProperty("ImageReviewUsageDataSet")]
         public ImageReviewUsageDataItem[] ImageReviewUsageDataSet{ get; set; }

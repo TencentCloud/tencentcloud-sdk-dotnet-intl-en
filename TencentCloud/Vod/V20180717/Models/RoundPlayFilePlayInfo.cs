@@ -44,14 +44,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Playback duration, in seconds.
-        /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
         /// Playback progress, in seconds.
-        /// Note: this field may return null, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }

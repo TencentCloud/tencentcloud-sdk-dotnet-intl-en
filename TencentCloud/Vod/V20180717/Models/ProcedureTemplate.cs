@@ -67,8 +67,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// Type parameter of AI-based content recognition task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Parameters for the AI content recognition task.
+        /// </summary>
+        [JsonProperty("AiRecognitionTaskSet")]
+        public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
+
+        /// <summary>
+        /// This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         [System.Obsolete]
@@ -112,6 +118,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
             this.SetParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
             this.SetParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+            this.SetParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);

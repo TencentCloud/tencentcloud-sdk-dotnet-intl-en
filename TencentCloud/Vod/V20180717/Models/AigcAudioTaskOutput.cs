@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Output audio content</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioTaskOutputFileInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output video information.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioTaskOutputFileInfo[] VideoInfos{ get; set; }

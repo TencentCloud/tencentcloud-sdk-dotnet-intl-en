@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Overview of video processing statistics, which displays the overview and details of queried tasks.
+        /// Video processing statistics overview, which displays an overview and detailed data of the queried task.
         /// </summary>
         [JsonProperty("MediaProcessDataSet")]
         public TaskStatData[] MediaProcessDataSet{ get; set; }

@@ -25,15 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subtitle ID, which must belongs to the main media.
+        /// Subtitle ID. The subtitle must belong to the input main media of the adaptive bitrate task.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Whether to set as the default subtitle for adaptive bitrate streaming.
-        /// <li>YES: Set as the default subtitle;</li>
-        /// <li>NO: Not set as the default subtitle (default value).</li>
+        /// Set as the default subtitle for adaptive bitrate. Value:
+        /// <li>YES: Set as default subtitle;</li>
+        /// <li>NO: Not set as default subtitle (default value).</li>
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }

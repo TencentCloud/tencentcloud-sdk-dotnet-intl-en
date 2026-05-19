@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+        /// Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media file composing task ID, which can be used to query the status of composing task (with task type being `MakeMedia`).
+        /// Task ID for media file production. The state of the production task (task type is MakeMedia) can be queried through this ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

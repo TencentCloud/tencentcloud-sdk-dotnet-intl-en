@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The total number of records that meet the conditions.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// The details of the moderation templates.
+        /// Review template detail list.
         /// </summary>
         [JsonProperty("ReviewTemplateSet")]
         public ReviewTemplate[] ReviewTemplateSet{ get; set; }

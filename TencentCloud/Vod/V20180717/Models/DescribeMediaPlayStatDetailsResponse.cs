@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The playback statistics.
+        /// Playback statistics.
         /// </summary>
         [JsonProperty("PlayStatInfoSet")]
         public PlayStatInfo[] PlayStatInfoSet{ get; set; }

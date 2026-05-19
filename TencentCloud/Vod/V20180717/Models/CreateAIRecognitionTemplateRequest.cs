@@ -25,79 +25,80 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Video content recognition template name. Length limit: 64 characters.
+        /// Audio and video content recognition template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of video content recognition template. Length limit: 256 characters.
+        /// Audio/video content recognition template description. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter of video opening and ending credits recognition.
+        /// Video opening and closing recognition control parameters.
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of video splitting recognition.
+        /// Video split recognition control parameters.
         /// </summary>
         [JsonProperty("SegmentConfigure")]
         public SegmentConfigureInfo SegmentConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of face recognition.
+        /// Face recognition control parameter.
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of full text recognition.
+        /// Text Full-text Recognition Control Parameters.
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of text keyword recognition.
+        /// Text keyword recognition control parameters.
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfo OcrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of full speech recognition.
+        /// Voice full-text recognition control parameters.
+        /// <font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger voice translation recognition (when DstLanguage is left empty or filled with an empty string, no translation is performed, and the billing item matches that of full speech recognition).</font>
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of speech keyword recognition.
+        /// Voice keyword recognition control parameters.
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of voice translation.
+        /// Voice translation recognition control parameters.
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of object recognition.
+        /// Object recognition control parameters.
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfo ObjectConfigure{ get; set; }
 
         /// <summary>
-        /// Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+        /// Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

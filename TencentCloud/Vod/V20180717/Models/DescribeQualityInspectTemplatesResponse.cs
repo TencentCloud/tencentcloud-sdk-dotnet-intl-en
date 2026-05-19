@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Comply with the filter conditions, the total number of records.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Media quality inspect template details list.
+        /// Audio and video quality detection template details list.
         /// </summary>
         [JsonProperty("QualityInspectTemplateSet")]
         public QualityInspectTemplateItem[] QualityInspectTemplateSet{ get; set; }

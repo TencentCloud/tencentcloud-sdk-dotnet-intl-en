@@ -25,51 +25,51 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Filter: Task status. Valid values: WAITING (waiting), PROCESSING (processing), FINISH (completed).
+        /// Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Filter: file ID.
+        /// Filter criteria: file ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Filter: task creation time.
+        /// Filter condition: Task creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// Filter: task end time.
+        /// Filter condition: Task end time.
         /// </summary>
         [JsonProperty("FinishTime")]
         public TimeRange FinishTime{ get; set; }
 
         /// <summary>
-        /// Sort field. Valid values:
-        /// <li>`CreateTime`: task creation time</li>
-        /// <li>`FinishTime`: task end time</li>
+        /// Sorting method. Selectable fields for Sort.Field:
+        /// <li> CreateTime Task creation time.</li>
+        /// <li>FinishTime Task end time.</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
+        /// Number of returned entries. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
+        /// Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

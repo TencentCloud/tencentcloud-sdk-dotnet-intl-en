@@ -25,37 +25,41 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of full speech recognition task. Valid values:
-        /// <li>ON: enables intelligent full speech recognition task;</li>
-        /// <li>OFF: disables intelligent full speech recognition task.</li>
+        /// Voice full-text recognition task switch. Available values:
+        /// <li>ON: enable intelligent voice full-text recognition task.</li>
+        /// <li>OFF: disable intelligent voice full-text recognition task</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The modification information of the subtitle format list.
+        /// Subtitle format list operation information.
         /// </summary>
         [JsonProperty("SubtitleFormatsOperation")]
         public SubtitleFormatsOperation SubtitleFormatsOperation{ get; set; }
 
         /// <summary>
-        /// The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-        /// <li>vtt</li>
-        /// <li>srt</li>
-        /// <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+        /// Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+        /// <li>vtt: Generate a WebVTT subtitle file.</li>
+        /// <li>srt: Generate SRT subtitle file.</li>
+        /// <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         [System.Obsolete]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>
-        /// Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+        /// Media source language. Valid values:
+        /// <li>zh: Mandarin;</li>
+        /// <li>en: English;</li>
+        /// <li>ja: Japanese;</li>
+        /// <li>zh-ca: Cantonese.</li>
         /// </summary>
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+        /// Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }

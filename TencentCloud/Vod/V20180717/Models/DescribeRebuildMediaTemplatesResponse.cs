@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The total number of records that meet the conditions.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Rebuild media template details list.
+        /// Video regeneration template detail list.
         /// </summary>
         [JsonProperty("RebuildMediaTemplateSet")]
         public RebuildMediaTemplate[] RebuildMediaTemplateSet{ get; set; }

@@ -25,58 +25,52 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Model name.
+        /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Model version. 
+        /// <p>Model version.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// File information of the input video for the AIGC video generation task. 
+        /// <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
         /// </summary>
-        [JsonProperty("FileInfos")]
-        public AigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
 
         /// <summary>
-        /// The media file ID used as the end frame to generate video. 
-        /// </summary>
-        [JsonProperty("LastFrameFileId")]
-        public string LastFrameFileId{ get; set; }
-
-        /// <summary>
-        /// Prompt content for video generation. 
+        /// <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Prevent the model from generating video prompts.
+        /// <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// Whether to optimize Prompt content automatically. when Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>.
+        /// <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public bool? EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("GenerationMode")]
-        public string GenerationMode{ get; set; }
-
-        /// <summary>
-        /// Specifies the output media file configuration for the video task.
+        /// <p>Output file of the AIGC image generation result.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcAudioOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Additional parameter</p>
+        /// </summary>
+        [JsonProperty("AdditionalParameters")]
+        public string AdditionalParameters{ get; set; }
 
 
         /// <summary>
@@ -86,13 +80,12 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
-            this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
-            this.SetParamSimple(map, prefix + "LastFrameFileId", this.LastFrameFileId);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
-            this.SetParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
         }
     }
 }

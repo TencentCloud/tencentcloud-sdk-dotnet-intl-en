@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The information of the storage regions.
+        /// Storage region information list.
         /// </summary>
         [JsonProperty("StorageRegionInfos")]
         public StorageRegionInfo[] StorageRegionInfos{ get; set; }

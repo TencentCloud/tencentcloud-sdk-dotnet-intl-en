@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media quality inspection task ID.
+        /// Audio and video quality inspection task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

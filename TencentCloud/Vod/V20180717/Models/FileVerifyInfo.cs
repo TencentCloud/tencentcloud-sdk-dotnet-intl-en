@@ -38,7 +38,6 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// File verification file name.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FileVerifyName")]
         public string FileVerifyName{ get; set; }

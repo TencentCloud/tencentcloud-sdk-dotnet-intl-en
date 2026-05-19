@@ -33,6 +33,18 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         [JsonProperty("File")]
         public InputFile3D File{ get; set; }
 
+        /// <summary>
+        /// <p>Model component segmentation data;<br>The format is a JSON string, e.g., {"MeshName_part_1":{"face_ids":[1,2,3..],"color":"#FF805C"}}.<br>Here, `face_ids` is an integer array representing the set of face IDs for the segment, and `color` specifies the color.</p>
+        /// </summary>
+        [JsonProperty("PartSegmentationInfo")]
+        public string PartSegmentationInfo{ get; set; }
+
+        /// <summary>
+        /// <p>Determines whether component generation is performed in a step-by-step manner.<br>When enabled, providing the original model allows for the generation of a model containing segmentation information, along with the corresponding segmentation data. Users can then edit this information before submitting the segmented model and data to proceed with the component generation process.<br>This parameter is disabled by default.</p>
+        /// </summary>
+        [JsonProperty("EnableStagedGeneration")]
+        public bool? EnableStagedGeneration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +52,8 @@ namespace TencentCloud.Hunyuan.V20230901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "File.", this.File);
+            this.SetParamSimple(map, prefix + "PartSegmentationInfo", this.PartSegmentationInfo);
+            this.SetParamSimple(map, prefix + "EnableStagedGeneration", this.EnableStagedGeneration);
         }
     }
 }

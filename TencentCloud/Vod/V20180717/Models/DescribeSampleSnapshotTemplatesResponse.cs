@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of sampled screencapturing template details.
+        /// Sampling screenshot template detail list.
         /// </summary>
         [JsonProperty("SampleSnapshotTemplateSet")]
         public SampleSnapshotTemplate[] SampleSnapshotTemplateSet{ get; set; }

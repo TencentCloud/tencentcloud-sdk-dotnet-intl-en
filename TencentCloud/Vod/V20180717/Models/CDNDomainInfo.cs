@@ -49,8 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// CDN domain name configuration information. 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// cdn domain configuration information.
         /// </summary>
         [JsonProperty("Config")]
         public CDNDomainConfig Config{ get; set; }

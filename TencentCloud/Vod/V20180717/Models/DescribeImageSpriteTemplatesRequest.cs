@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Unique ID filter of image sprite generating templates. Array length limit: 100.
+        /// Filter condition for the sprite template unique identifier. The array length cannot exceed 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public ulong?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Paged offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -49,9 +49,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Template type filter. Valid values:
-        /// <li>Preset: preset template;</li>
-        /// <li>Custom: custom template.</li>
+        /// Condition for filtering templates by type. Valid values:
+        /// <li>Preset: system preset template;</li>
+        /// <li>Custom: User-defined template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

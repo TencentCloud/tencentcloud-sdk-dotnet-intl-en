@@ -25,103 +25,105 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media quality inspection template ID.
+        /// Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Template Type, available options: <li>Preset: Preset Template;</li> <li>Custom: User Custom Template.</li>
+        /// Template type. Available values:
+        /// <li>Preset: system preset template;</li>
+        /// <li>Custom: User-defined template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Media quality inspection template name.
+        /// Template Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description. 
+        /// Template description.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Frame interval, unit in seconds.
+        /// Frame interception interval in seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video jitter and ghosting.
+        /// Control parameters for video frame jitter and ghosting detection.
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfo JitterConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video blur.
+        /// Control parameters for video frame blur detection.
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfo BlurConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting low brightness and overexposure of video.
+        /// Control parameters for low-light and overexposure detection in video frames.
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfo AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video crash.
+        /// Control parameters for screen glitch detection in video footage.
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfo CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video black edges, white edges, black screen, and white screen.
+        /// Control parameters for video picture black edge, white edge, black screen, and white screen detection.
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video noise.
+        /// Control parameters for video frame noise detection.
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfo NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video mosaic.
+        /// Control parameters for video frame mosaic detection.
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfo MosaicConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for QR code detection in video.
+        /// Control parameters for video frame QR code detection.
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfo QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video quality evaluation.
+        /// Control parameters for video frame quality evaluation.
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfo QualityEvaluationConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for audio (mutes, bass, blast sound).
+        /// Control parameters for audio (mute, bass, clipping) detection.
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfo VoiceConfigure{ get; set; }
 
         /// <summary>
-        /// Template Creation Time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template Modification time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

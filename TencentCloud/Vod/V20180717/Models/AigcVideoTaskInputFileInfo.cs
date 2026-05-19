@@ -25,67 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+        /// <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// File category. Valid values:
-        /// <li>Image: image.</li>
-        /// <li>Video: video.</li>
+        /// <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-        /// 1. recommended image size: less than 10 mb.
-        /// 2. image format value is jpeg, jpg, png.
+        /// <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Accessible file URL. this parameter is valid when Type value is URL.
-        /// Note:.
-        /// 1. recommended image size: less than 10 mb.
-        /// 2. image format value is jpeg, jpg, png.
+        /// <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Reference Type. The GV Model applies.
-        /// Note:
-        /// When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-        /// When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+        /// <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p>
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// Subject Id.
-        /// Applicable model: Vidu-q2.
-        /// When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+        /// <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// Suitable for the Vidu-q2 model.
-        /// When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+        /// <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// Whether to retain the original sound. Valid when Category is Video. Values as follows:
-        /// <li>Enabled: Reserved</li>
-        /// <li>Disabled: not retain</li>
+        /// <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li>
         /// </summary>
         [JsonProperty("KeepOriginalSound")]
         public string KeepOriginalSound{ get; set; }
+
+        /// <summary>
+        /// <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+        /// </summary>
+        [JsonProperty("Usage")]
+        public string Usage{ get; set; }
+
+        /// <summary>
+        /// <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p>
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
 
 
         /// <summary>
@@ -101,6 +98,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ObjectId", this.ObjectId);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamSimple(map, prefix + "KeepOriginalSound", this.KeepOriginalSound);
+            this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }
 }

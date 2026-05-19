@@ -25,108 +25,102 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of transcoding template.
+        /// <p>Unique identifier of the transcoding template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public string Definition{ get; set; }
 
         /// <summary>
-        /// Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+        /// <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Transcoding template name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Transcoding template name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Template description information.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Template type. Valid values:
-        /// <li>Preset: preset template;</li>
-        /// <li>Custom: custom template.</li>
+        /// <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Valid values:
-        /// <li>0: retain;</li>
-        /// <li>1: remove.</li>
+        /// <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio data. Valid values:
-        /// <li>0: retain;</li>
-        /// <li>1: remove.</li>
+        /// <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// TESHD transcoding parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>TSC transcoding parameter.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// Audio/Video enhancement configuration.
+        /// <p>Audio/Video enhancement configuration.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// Container filter. Valid values:
-        /// <li>Video: video container that can contain both video stream and audio stream;</li>
-        /// <li>PureAudio: audio container that can contain only audio stream.</li>
+        /// <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
 
         /// <summary>
-        /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The segment type. This parameter is valid only if `Container` is `hls`
+        /// <p>Segment type. Valid only when Container is hls.</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -149,6 +143,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

@@ -25,19 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable LLM enhancement. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
-        /// Default value: OFF.
+        /// Large model enhancement switch. Available values:
+        /// <li>ON: enabled</li>
+        /// <li>OFF: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The strength. Valid values:
-        /// <li>weak</li>
-        /// <li>normal</li>
-        /// <li>strong</li>
+        /// Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
+        /// <li>weak: weak;</li>
+        /// <li>NORMAL: The scaling group is normal.</li>
+        /// <li>strong: strong.</li>
         /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]

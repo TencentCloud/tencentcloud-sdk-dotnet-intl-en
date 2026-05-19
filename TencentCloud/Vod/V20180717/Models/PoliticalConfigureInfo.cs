@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for recognition of politically sensitive content in images
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Image recognition involves control parameters for inappropriate information.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for ASR-based recognition of politically sensitive content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// ASR-based recognition involves control parameters for inappropriate information.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for OCR-based recognition of politically sensitive content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Text recognition involves control parameters for inappropriate information.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

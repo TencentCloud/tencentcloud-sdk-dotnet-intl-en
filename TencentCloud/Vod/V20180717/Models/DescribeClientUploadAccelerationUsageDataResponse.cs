@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The usage of client upload acceleration.
+        /// Client upload acceleration statistics data.
         /// </summary>
         [JsonProperty("ClientUploadAccelerationUsageDataSet")]
         public StatDataItem[] ClientUploadAccelerationUsageDataSet{ get; set; }

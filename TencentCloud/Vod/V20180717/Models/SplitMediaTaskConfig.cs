@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+        /// [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }

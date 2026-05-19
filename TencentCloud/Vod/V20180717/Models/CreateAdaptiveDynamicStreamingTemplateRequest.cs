@@ -25,86 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The adaptive bitrate streaming format. Valid values:
-        /// <li>HLS</li>
-        /// <li>MPEG-DASH</li>
+        /// <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-        /// Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+        /// <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
         /// </summary>
         [JsonProperty("StreamInfos")]
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template name. Length limit: 64 characters.
+        /// <p>Template name. The length cannot exceed 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// DRM scheme type, value range:
-        /// <li>SimpleAES</li>
-        /// <li>Widevine</li>
-        /// <li>FairPlay</li>
-        /// The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+        /// <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// The provider of the DRM key. Valid values:
-        /// <li>SDMC</li>
-        /// <li>VOD</li>
-        /// The default is `VOD`.
+        /// <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
         /// </summary>
         [JsonProperty("DrmKeyProvider")]
         public string DrmKeyProvider{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
         /// </summary>
         [JsonProperty("DrmEncryptType")]
         public string DrmEncryptType{ get; set; }
 
         /// <summary>
-        /// Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-        /// <li>0: no,</li>
-        /// <li>1: yes.</li>
-        /// Default value: no.
+        /// <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
         /// </summary>
         [JsonProperty("DisableHigherVideoBitrate")]
         public ulong? DisableHigherVideoBitrate{ get; set; }
 
         /// <summary>
-        /// Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-        /// <li>0: no,</li>
-        /// <li>1: yes.</li>
-        /// Default value: no.
+        /// <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
         /// </summary>
         [JsonProperty("DisableHigherVideoResolution")]
         public ulong? DisableHigherVideoResolution{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// <p>Template description, with a length limit of 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-        /// <li>ts: TS segment</li>
-        /// <li>fmp4: fMP4 segment</li>
-        /// Default: ts
+        /// <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }

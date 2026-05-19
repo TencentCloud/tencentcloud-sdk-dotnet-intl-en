@@ -43,72 +43,64 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Template type, values:
+        /// Template type. Valid values:
         /// <li>Preset: system preset template;</li>
-        /// <li>Custom: user-defined template.</li>
+        /// <li>Custom: User-defined template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Control parameter of opening and closing credits recognition.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Head and tail recognition control parameter.
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of splitting recognition.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Segmentation recognition control parameter.
         /// </summary>
         [JsonProperty("SegmentConfigure")]
         public SegmentConfigureInfo SegmentConfigure{ get; set; }
 
         /// <summary>
         /// Face recognition control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
-        /// Full text recognition control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Text Full-text Recognition Control Parameters.
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
 
         /// <summary>
         /// Text keyword recognition control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfo OcrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Full speech recognition control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Voice full-text recognition control parameters.
+        /// <font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// Speech keyword recognition control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Voice keyword recognition control parameters.
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Voice translation control parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Voice translation recognition control parameters.
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of object recognition.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Object recognition control parameter.
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfo ObjectConfigure{ get; set; }

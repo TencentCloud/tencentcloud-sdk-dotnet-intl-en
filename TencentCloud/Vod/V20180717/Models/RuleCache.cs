@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// Cache configuration
+        /// Cache configuration.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public RuleCacheConfig CacheConfig{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+        /// Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

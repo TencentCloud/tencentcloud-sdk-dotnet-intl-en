@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Address of clipped video.
+        /// Trimmed video address
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
+        /// Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// Unique ID of a video clip for persistent storage.
+        /// Unique identifier of the media file for post-editing solidified video.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The ID of the task flow to execute on the video clipped for persistent storage.
+        /// Edited video task flow ID after solidification.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

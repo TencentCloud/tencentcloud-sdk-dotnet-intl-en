@@ -31,8 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-        /// Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+        /// Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }

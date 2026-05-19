@@ -45,8 +45,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// The audio bitrate, in Kbps. Value range: 0 and 26-256.
-        /// If the value is `0`, the original audio bitrate will be used.
+        /// Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+        /// When the value is 0, it means VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

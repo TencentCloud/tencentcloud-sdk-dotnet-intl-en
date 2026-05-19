@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The unique ID of the moderation template.
+        /// Unique tag of the moderation template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

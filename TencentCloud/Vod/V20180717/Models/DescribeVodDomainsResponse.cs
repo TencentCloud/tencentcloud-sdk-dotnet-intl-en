@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total number of domain names
+        /// Total number of domains.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Domain name information list
+        /// List of domain names.
         /// </summary>
         [JsonProperty("DomainSet")]
         public DomainDetailInfo[] DomainSet{ get; set; }

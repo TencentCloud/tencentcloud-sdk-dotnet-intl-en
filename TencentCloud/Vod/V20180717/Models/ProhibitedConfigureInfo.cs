@@ -25,15 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameter of prohibited information detection in speech.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Voice prohibition control parameter.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public ProhibitedAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameter of prohibited information detection in text.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Text prohibited control parameters.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public ProhibitedOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

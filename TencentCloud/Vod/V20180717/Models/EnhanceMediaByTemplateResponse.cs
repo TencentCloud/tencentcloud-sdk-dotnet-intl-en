@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
+        /// Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

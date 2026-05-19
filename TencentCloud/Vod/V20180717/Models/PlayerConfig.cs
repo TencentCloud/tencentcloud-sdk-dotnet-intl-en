@@ -25,95 +25,86 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Player configuration name.
+        /// <p>Player configuration name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Player configuration type. Valid values:
-        /// <li>Preset: preset configuration;</li>
-        /// <li>Custom: custom configuration.</li>
+        /// <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The type of audio/video played. Valid values:
-        /// <li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
-        /// <li>Transcode: Transcoded stream</li>
-        /// <li>Original: The original stream</li>
+        /// <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: adaptive bitrate stream output;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// Switch of DRM-protected adaptive bitstream playback:
-        /// <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-        /// <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
+        /// <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
 
         /// <summary>
-        /// ID of the unencrypted adaptive bitrate streaming template that allows output.
+        /// <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// Content of the DRM-protected adaptive bitrate streaming template that allows output.
+        /// <p>Allowed output of DRM adaptive bitstream template content.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
 
         /// <summary>
-        /// The ID of the transcoding template allowed.
+        /// <p>Allowed output transcoding template ID.</p>
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// ID of the image sprite generating template that allows output.
+        /// <p>Allowed output sprite template ID.</p>
         /// </summary>
         [JsonProperty("ImageSpriteDefinition")]
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// Display name of player for substreams with different resolutions.
+        /// <p>The player displays names for substreams of different resolution.</p>
         /// </summary>
         [JsonProperty("ResolutionNameSet")]
         public ResolutionNameInfo[] ResolutionNameSet{ get; set; }
 
         /// <summary>
-        /// Creation time of player configuration in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of player configuration in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+        /// <p>Domain name used during playback. A value of Default indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Scheme used for playback. Valid values:
-        /// <li>Default: the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used;</li>
-        /// <li>HTTP;</li>
-        /// <li>HTTPS.</li>
+        /// <p>Scheme used during playback. Value ranges from:</p><li>Default: Use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// Template description.
+        /// <p>Template description information.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

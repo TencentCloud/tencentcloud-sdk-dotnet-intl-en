@@ -25,127 +25,127 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The file ID.
+        /// Media File ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+        /// Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+        /// End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The video quality remastering parameters.
+        /// Image quality restoration control parameters.
         /// </summary>
         [JsonProperty("RepairInfo")]
         public RepairInfo RepairInfo{ get; set; }
 
         /// <summary>
-        /// The smart frame interpolation parameters.
+        /// Intelligent Frame Interpolation Control Parameters.
         /// </summary>
         [JsonProperty("VideoFrameInterpolationInfo")]
         public VideoFrameInterpolationInfo VideoFrameInterpolationInfo{ get; set; }
 
         /// <summary>
-        /// The super resolution parameters.
+        /// Image super-resolution control parameters.
         /// </summary>
         [JsonProperty("SuperResolutionInfo")]
         public SuperResolutionInfo SuperResolutionInfo{ get; set; }
 
         /// <summary>
-        /// The high dynamic range (HDR) parameters.
+        /// High dynamic range type control parameter.
         /// </summary>
         [JsonProperty("HDRInfo")]
         public HDRInfo HDRInfo{ get; set; }
 
         /// <summary>
-        /// The image noise removal parameters.
+        /// Video noise reduction control parameters.
         /// </summary>
         [JsonProperty("VideoDenoiseInfo")]
         public VideoDenoiseInfo VideoDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// The noise removal parameters.
+        /// Audio noise reduction control parameters.
         /// </summary>
         [JsonProperty("AudioDenoiseInfo")]
         public AudioDenoiseInfo AudioDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// The color enhancement parameters.
+        /// Color enhancement control parameters.
         /// </summary>
         [JsonProperty("ColorInfo")]
         public ColorEnhanceInfo ColorInfo{ get; set; }
 
         /// <summary>
-        /// The detail enhancement parameters.
+        /// Detail enhancement control parameters.
         /// </summary>
         [JsonProperty("SharpInfo")]
         public SharpEnhanceInfo SharpInfo{ get; set; }
 
         /// <summary>
-        /// The face enhancement parameters.
+        /// Face enhancement control parameters.
         /// </summary>
         [JsonProperty("FaceInfo")]
         public FaceEnhanceInfo FaceInfo{ get; set; }
 
         /// <summary>
-        /// The low-light enhancement parameters.
+        /// Low-light control parameters.
         /// </summary>
         [JsonProperty("LowLightInfo")]
         public LowLightEnhanceInfo LowLightInfo{ get; set; }
 
         /// <summary>
-        /// The banding removal parameters.
+        /// Scratch removal control parameter.
         /// </summary>
         [JsonProperty("ScratchRepairInfo")]
         public ScratchRepairInfo ScratchRepairInfo{ get; set; }
 
         /// <summary>
-        /// The artifact removal (smoothing) parameters.
+        /// Deburring control parameter.
         /// </summary>
         [JsonProperty("ArtifactRepairInfo")]
         public ArtifactRepairInfo ArtifactRepairInfo{ get; set; }
 
         /// <summary>
-        /// The output parameters of the file.
+        /// Audio-Visual Quality Rebirth Output Target Parameters.
         /// </summary>
         [JsonProperty("TargetInfo")]
         public RebuildMediaTargetInfo TargetInfo{ get; set; }
 
         /// <summary>
-        /// The session ID, which is used for de-duplication. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+        /// Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// The task priority, which can be a value from -10 to 10. The higher the value, the higher the priority. If this parameter is left empty, 0 will be used.
+        /// Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// A reserved parameter.
+        /// Reserved field, used when special purpose.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

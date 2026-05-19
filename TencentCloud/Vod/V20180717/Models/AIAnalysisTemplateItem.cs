@@ -43,29 +43,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent categorization task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent Classification Task Control Parameters.
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent tagging task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent tag task control parameter.
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent cover generating task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent Cover Task Control Parameters.
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent frame-specific tagging task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Intelligent frame tagging task control parameter.
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }

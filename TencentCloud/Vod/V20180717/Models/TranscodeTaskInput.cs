@@ -25,65 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video transcoding template ID.
+        /// <p>Video transcoding template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// List of up to 10 image or text watermarks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Digital watermark.
+        /// <p>Traceable watermark.</p>
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// Copyright watermark.
+        /// <p>Copyright watermark.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// Digital watermark.
+        /// <p>Digital watermark.</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// List of blurs. Up to 10 ones can be supported.
+        /// <p>Mosaic list. Up to 10 are supported.</p>
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+        /// <p>Opening and ending list. Up to 10 opening and ending sequences are supported.</p>
         /// </summary>
         [JsonProperty("HeadTailSet")]
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// Start time offset of a transcoded video, in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+        /// <p>Start time offset of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video starts from the start position of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video starts from the nth second position of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a transcoded video, in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+        /// <p>Offset of the termination time of the transcoded video, unit: second.</p><li>Leave it blank or enter 0 means the transcoded video lasts until the end of the original video.</li><li>When the value is greater than 0 (assume it is n), it means the transcoded video lasts until the nth second of the original video.</li><li>When the value is less than 0 (assume it is -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
+
+        /// <summary>
+        /// <p>List of subtitle suppression information. Up to 2 are supported.</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfoSet")]
+        public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
 
         /// <summary>
@@ -100,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
         }
     }
 }

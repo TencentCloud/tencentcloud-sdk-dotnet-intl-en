@@ -25,46 +25,48 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video parameter information.
+        /// <p>Video parameter information.</p>
         /// </summary>
         [JsonProperty("Video")]
         public VideoTemplateInfo Video{ get; set; }
 
         /// <summary>
-        /// Audio parameter information.
+        /// <p>Audio parameter info.</p>
         /// </summary>
         [JsonProperty("Audio")]
         public AudioTemplateInfo Audio{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio stream. Valid values:
-        /// <li>0: no,</li>
-        /// <li>1: yes.</li>
+        /// <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Whether to remove a video stream. Valid values:
-        /// <li>0: no</li>
-        /// <li>1: yes</li>
+        /// <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// TESHD transcoding parameters
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>TSC transcoding parameter.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// Audio/Video enhancement configuration.
+        /// <p>Audio/Video enhancement configuration.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameter.</p>
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -78,6 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

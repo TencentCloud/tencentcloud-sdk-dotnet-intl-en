@@ -25,71 +25,71 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Rebuild Media Template ID.
+        /// Video rebirth template number.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// Rebuild Media Template Name.
+        /// Video rebirth template name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Rebuild media template description.
+        /// Video rebirth template description.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Rebuild media video control information.
+        /// Video Rebirth Video Control Information.
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// Rebuild media audio control information.
+        /// Video Rebirth Audio Control Information.
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }
 
         /// <summary>
-        /// The output video parameters.
+        /// Output target video control information.
         /// </summary>
         [JsonProperty("TargetVideoInfo")]
         public RebuildMediaTargetVideoStream TargetVideoInfo{ get; set; }
 
         /// <summary>
-        /// The output audio parameters.
+        /// Output target audio control information.
         /// </summary>
         [JsonProperty("TargetAudioInfo")]
         public RebuildMediaTargetAudioStream TargetAudioInfo{ get; set; }
 
         /// <summary>
-        /// The output container format. Valid values: `mp4`, `flv`, `hls`.
+        /// Container format. Available values: mp4, flv, and hls.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Valid values:
-        /// <li>`0`: No</li>
-        /// <li>`1`: Yes</li>
+        /// Whether to remove video data. Available values:
+        /// <li>`0`: reserved</li>
+        /// <li>1: Remove</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio data. Valid values:
-        /// <li>`0`: No</li>
-        /// <li>`1`: Yes</li>
+        /// Remove audio data. Available values:
+        /// <li>`0`: reserved</li>
+        /// <li>1: Remove</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }

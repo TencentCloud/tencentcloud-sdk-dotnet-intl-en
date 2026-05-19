@@ -25,115 +25,115 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Query indicators, the values u200bu200bare:
-        /// <li>Traffic: traffic, unit is Byte. </li>
-        /// <li>Bandwidth: Bandwidth, unit is Bps. </li>
-        /// <li>Requests: Number of requests. </li>
-        /// <li>QUICRequests: Number of QUIC requests. </li>
-        /// <li>IpVisit: Number of IP visits. </li>
+        /// Query metric. Valid values:
+        /// <li>Traffic: Total Traffic in bytes.</li>
+        /// <li>Bandwidth: bandwidth, in Bps.</li>
+        /// <li>Requests: Request count.</li>
+        /// <li>QUICRequests: Number of QUIC requests.</li>
+        /// <li>IpVisit: Number of IP visits.</li>
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+        /// Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+        /// End time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
+        /// Domain name list. Up to 20 domain names can be queried for data. Default returns the overlaid usage data of all domains.
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }
 
         /// <summary>
-        /// Service region. Valid values:
-        /// <li>Chinese Mainland</li>
-        /// <li>Asia Pacific Region 1: Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand</li>
-        /// <li>Asia Pacific Region 2: Taiwan (China), Japan, Malaysia, Indonesia, and South Korea</li>
-        /// <li>Asia Pacific Region 3: Philippines, India, Australia, and other Asia Pacific countries and regions</li>
-        /// <li>Middle East</li>
-        /// <li>Europe</li>
-        /// <li>North America</li>
-        /// <li>South America</li>
-        /// <li>Africa</li>
-        /// Default value: Chinese Mainland
+        /// Service area. Valid values:
+        /// <li>Chinese Mainland: Chinese mainland.</li>
+        /// <li>Asia Pacific Region 1: Asia Pacific zone 1, including Hong Kong (China), Macao (China), Singapore, Vietnam, and Thailand.</li>
+        /// <li>Asia Pacific Region 2: Asia Pacific zone 2, including Taiwan, Japan, Malaysia, Indonesia, Korea.</li>
+        /// <li>Asia Pacific Region 3: Asia Pacific zone 3, including Philippines, India, Australia and other countries and regions in Asia Pacific.</li>
+        /// <li>Middle East: Middle East.</li>
+        /// <li>Europe: Europe.</li>
+        /// <li>North America: North America.</li>
+        /// <li>South America: South America.</li>
+        /// <li>Africa: Africa.</li>
+        /// Default is Chinese mainland.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// District where users are located. When `Area` is `Chinese Mainland`, valid values for `Districts` are as follows. Otherwise, `Districts` can be ignored.
-        /// <li>Beijing</li>
-        /// <li>Inner Mongolia</li>
-        /// <li>Shanxi</li>
-        /// <li>Hebei</li>
-        /// <li>Tianjin</li>
-        /// <li>Ningxia</li>
-        /// <li>Shaanxi</li>
-        /// <li>Gansu</li>
-        /// <li>Qinghai</li>
-        /// <li>Xinjiang</li>
-        /// <li>Heilongjiang</li>
-        /// <li>Jilin</li>
-        /// <li>Liaoning</li>
-        /// <li>Fujian</li>
-        /// <li>Jiangsu</li>
-        /// <li>Anhui</li>
-        /// <li>Shandong</li>
-        /// <li>Shanghai</li>
-        /// <li>Zhejiang</li>
-        /// <li>Henan</li>
-        /// <li>Hubei</li>
-        /// <li>Jiangxi</li>
-        /// <li>Hunan</li>
-        /// <li>Guizhou</li>
-        /// <li>Yunnan</li>
-        /// <li>Chongqing</li>
-        /// <li>Sichuan</li>
-        /// <li>Xizang</li>
-        /// <li>Guangdong</li>
-        /// <li>Guangxi</li>
-        /// <li>Hainan</li>
-        /// <li>Hong Kong, Macao and Taiwan</li>
-        /// <li>Outside Chinese Mainland</li>
-        /// <li>Other</li>
+        /// When the user's located region is Chinese Mainland, value is the following region information. When Area has other values, ignore the Districts parameter.
+        /// <li>Beijing: Beijing.</li>
+        /// <li>Inner Mongolia: Inner Mongolia.</li>
+        /// <li>Shanxi: Shanxi.</li>
+        /// <li>Hebei: Hebei.</li>
+        /// <li>Tianjin: Tianjin.</li>
+        /// <li>Ningxia: Ningxia.</li>
+        /// <li>Shaanxi: Shaanxi.</li>
+        /// <li>Gansu: Gansu.</li>
+        /// <li>Qinghai: Qinghai.</li>
+        /// <li>Xinjiang: Xinjiang.</li>
+        /// <li>Heilongjiang: Heilongjiang.</li>
+        /// <li>Jilin: Jilin.</li>
+        /// <li>Liaoning: Liaoning.</li>
+        /// <li>Fujian: Fujian.</li>
+        /// <li>Jiangsu: Jiangsu.</li>
+        /// <li>Anhui: Anhui.</li>
+        /// <li>Shandong: Shandong.</li>
+        /// <li>Shanghai: Shanghai.</li>
+        /// <li>Zhejiang: Zhejiang.</li>
+        /// <li>Henan: Henan.</li>
+        /// <li>Hubei: Hubei.</li>
+        /// <li>Jiangxi: Jiangxi.</li>
+        /// <li>Hunan: Hu’nan.</li>
+        /// <li>Guizhou: Guizhou.</li>
+        /// <li>Yunnan: Yunnan.</li>
+        /// <li>Chongqing: Chongqing.</li>
+        /// <li>Sichuan: Sichuan.</li>
+        /// <li>Xizang: Tibet.</li>
+        /// <li>Guangdong: Guangdong.</li>
+        /// <li>Guangxi: Guangxi.</li>
+        /// <li>Hainan: Hainan.</li>
+        /// <li>Hong Kong, Macao and Taiwan: Hong Kong (China), Macao (China) and Taiwan (China).</li>
+        /// <li>Outside Chinese Mainland: overseas.</li>
+        /// <li>Other: other.</li>
         /// </summary>
         [JsonProperty("Districts")]
         public string[] Districts{ get; set; }
 
         /// <summary>
-        /// ISP of users. When `Area` is `Chinese Mainland`, valid values for `Isps` are as follows. Otherwise, `Isps` can be ignored.
-        /// <li>China Telecom</li>
-        /// <li>China Unicom</li>
-        /// <li>CERNET</li>
-        /// <li>Great Wall Broadband Network</li>
-        /// <li>China Mobile</li>
-        /// <li>China Mobile Tietong</li>
-        /// <li>ISPs outside Chinese Mainland</li>
-        /// <li>Other ISPs</li>
+        /// User's Operator Information. When Area is Chinese Mainland, value is the following carrier information. When Area is other values, ignore the Isps parameter.
+        /// <li>China Telecom: CTCC. </li>
+        /// <li>China Unicom: CUCC. </li>
+        /// <li>CERNET: China Education Network.</li>
+        /// <li>Great Wall Broadband Network: Great Wall Broadband.</li>
+        /// <li>China Mobile: CMCC.</li>
+        /// <li>China Mobile Tietong: China Tietong.</li>
+        /// <li>ISPs outside Chinese Mainland: Overseas carriers.</li>
+        /// <li>Other ISPs: Other ISPs.</li>
         /// </summary>
         [JsonProperty("Isps")]
         public string[] Isps{ get; set; }
 
         /// <summary>
-        /// Time granularity of every piece of data in minutes. Valid values:
-        /// <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-        /// <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
-        /// If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
+        /// Time granularity of each data entry. Unit: minute. Valid values:
+        /// <li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+        /// <li>1440: Day granularity. Returns the data of day granularity within the specified query time. The duration between start time and end time is more than 24 hours. Supports only day granularity data.</li>
+        /// When the duration between StartTime and EndTime is more than 24 hours, DataInterval defaults to 1440.
         /// </summary>
         [JsonProperty("DataInterval")]
         public ulong? DataInterval{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Head Tail Template Number
+        /// Opening and ending template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

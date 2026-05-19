@@ -25,52 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Model name.
+        /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Model version.
+        /// <p>Model version.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// Input file of the AIGC image generation task.
+        /// <p>File information for AIGC image generation task input.</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+        /// <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+        /// <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+        /// <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+        /// <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
         /// </summary>
         [JsonProperty("GenerationMode")]
         public string GenerationMode{ get; set; }
 
         /// <summary>
-        /// Output the result file of the AIGC image generation.
+        /// <p>Output result file for AIGC image generation.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcImageOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Random seed of the model.</p>
+        /// </summary>
+        [JsonProperty("Seed")]
+        public long? Seed{ get; set; }
+
+        /// <summary>
+        /// <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+        /// </summary>
+        [JsonProperty("SceneType")]
+        public string SceneType{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+            this.SetParamSimple(map, prefix + "Seed", this.Seed);
+            this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Times of initiating intelligent content recognition tasks.
+        /// Trigger content intelligent identification count.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Duration of intelligent recognition content.
+        /// Content intelligent identification duration.
         /// </summary>
         [JsonProperty("TotalDuration")]
         public long? TotalDuration{ get; set; }
 
         /// <summary>
-        /// Data of intelligent recognition content duration. One piece of data is collected every day.
+        /// Content intelligent identification duration stats, one data point per day.
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

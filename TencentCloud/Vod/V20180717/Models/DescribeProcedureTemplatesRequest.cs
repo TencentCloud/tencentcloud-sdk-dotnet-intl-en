@@ -25,36 +25,40 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Name filter of task flow template. Array length limit: 100.
+        /// <p>Task flow template name filter conditions. The array can contain up to 100 conditions.</p>
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Filter of task flow template types. Valid values:
-        /// <li>Preset: preset task flow template;</li>
-        /// <li>Custom: custom task flow template.</li>
+        /// <p>Filtering condition for the task flow template type. Valid values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// <p>Paging offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>Specify the field to sort the returned results in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order can be desc (descending order) or asc (ascending order).</p><p>Input parameter limitation: Currently only the CreateTime field is supported for sorting.</p>
+        /// </summary>
+        [JsonProperty("SortBy")]
+        public SortBy[] SortBy{ get; set; }
 
 
         /// <summary>
@@ -67,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "SortBy.", this.SortBy);
         }
     }
 }

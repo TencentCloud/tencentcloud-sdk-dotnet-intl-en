@@ -25,15 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// Watermark type filter. Valid values:
-        /// <li>image: image watermark;</li>
-        /// <li>text: text watermark.</li>
+        /// <li>image: image watermark.</li>
+        /// <li>Text: text watermark.</li>
+        /// <li>svg: SVG watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -45,14 +46,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Unique ID filter of watermarking templates. Array length limit: 100.
+        /// Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
         /// Number of returned entries
-        /// <li>Default value: 10;</li>
+        /// <li>Default value: 10.</li>
         /// <li>Maximum value: 100.</li>
         /// </summary>
         [JsonProperty("Limit")]

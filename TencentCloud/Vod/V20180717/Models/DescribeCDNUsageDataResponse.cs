@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time granularity in minutes.
+        /// Time granularity, unit: minute.
         /// </summary>
         [JsonProperty("DataInterval")]
         public long? DataInterval{ get; set; }

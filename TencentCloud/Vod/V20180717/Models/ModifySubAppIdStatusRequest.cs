@@ -25,17 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Subapplication status. Valid values:
-        /// <li>On: enabled</li>
-        /// <li>Off: disabled</li>
-        /// <li>Destroyed: terminated</li>
-        /// You cannot enable a subapplication whose status is "Destroying". You can enable it after it was terminated.
+        /// Application status. Valid values:
+        /// <li>On: enabled.</li>
+        /// <li>Off: Disabled.</li>
+        /// <li>Destroyed: Terminate.</li>
+        /// If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

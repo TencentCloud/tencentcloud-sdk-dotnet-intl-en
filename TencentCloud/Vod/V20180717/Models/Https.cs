@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Http2{ get; set; }
 
         /// <summary>
-        /// Server certificate configuration information
+        /// Cert configuration message.
         /// </summary>
         [JsonProperty("CertInfo")]
         public CDNCertInfo CertInfo{ get; set; }

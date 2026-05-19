@@ -25,26 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-        /// <li>The maximum number of domain names is 20. </li>
+        /// Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+        /// <li>The maximum number of domains is 20.</li>
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// Maximum results to return for pulling paginated queries. Default value: 20
+        /// Maximum number of results returned for pagination pull. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Page number offset from the beginning of paginated queries. Default value: 0
+        /// Starting offset for pagination pull. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

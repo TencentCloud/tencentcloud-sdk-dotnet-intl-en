@@ -28,6 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
         /// </summary>
         [JsonProperty("TotalCount")]
+        [System.Obsolete]
         public long? TotalCount{ get; set; }
 
         /// <summary>

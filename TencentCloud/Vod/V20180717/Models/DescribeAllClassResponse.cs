@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Category information set
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Classification information collection
         /// </summary>
         [JsonProperty("ClassInfoSet")]
         public MediaClassInfo[] ClassInfoSet{ get; set; }

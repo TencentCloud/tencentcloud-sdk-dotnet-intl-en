@@ -25,19 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable volume equalization. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF` </li>
-        /// Default value: `OFF`.
+        /// Volume equalization control switch. Available values:
+        /// <li>ON: enable volume equalization;</li>
+        /// <li>OFF: Disable volume normalization.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The type. Valid values:
-        /// <li>`loudNorm`: Loudness normalization.</li>
-        /// <li>`gainControl`: Volume leveling.</li>
-        /// Default value: `loudNorm`.
+        /// Type, available values:
+        /// <li>loudNorm: Loudness normalization</li>
+        /// <li>gainControl: Reduce abrupt change</li>
+        /// Default value: loudNorm.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of watermarking template.
+        /// Unique identifier of the watermark template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Watermark image address. This field is valid only when `Type` is `image`.
+        /// URL of the image watermark. This field is valid only when Type is image.
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

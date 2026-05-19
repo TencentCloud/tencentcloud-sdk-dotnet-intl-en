@@ -25,16 +25,24 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// Remaster template ID, please contact Tencent Cloud for details
+        /// </summary>
+        [JsonProperty("Definition")]
+        public ulong? Definition{ get; set; }
+
+        /// <summary>
         /// Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Remaster template ID, please contact Tencent Cloud for details
+        /// Media storage path.
+        /// Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+        /// FileId and MediaStoragePath must provide one of.
         /// </summary>
-        [JsonProperty("Definition")]
-        public ulong? Definition{ get; set; }
+        [JsonProperty("MediaStoragePath")]
+        public string MediaStoragePath{ get; set; }
 
         /// <summary>
         /// <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
@@ -72,8 +80,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

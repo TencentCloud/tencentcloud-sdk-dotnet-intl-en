@@ -25,16 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name for acceleration setting
+        /// Domains requiring acceleration configuration.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Region. Valid values:
-        /// <li>`Chinese Mainland`</li>
-        /// <li>`Outside Chinese Mainland`</li>
-        /// <li>`Global`</li>
+        /// Region, optional value:
+        /// <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+        /// <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+        /// <li>Global: global.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

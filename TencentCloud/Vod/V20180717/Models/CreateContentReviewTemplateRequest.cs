@@ -25,65 +25,65 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+        /// Switch for whether the audio/video moderation result enters the audio/video moderation wall (manual review of the recognition result).
         /// <li>ON: yes</li>
-        /// <li>OFF: no</li>
+        /// <li>OFF: No.</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Name of an intelligent content recognition template. Length limit: 64 characters.
+        /// Content review template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of an intelligent content recognition template. Length limit: 256 characters.
+        /// Content review template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter for porn information.
+        /// Control parameters for offensive information.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for terrorism information.
+        /// Control parameters for unsafe information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for politically sensitive information.
+        /// Uncomfortable control parameters.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of prohibited information detection. Prohibited information includes:
-        /// <li>Abusive;</li>
-        /// <li>Drug-related.</li>
+        /// Prohibited control parameters. Prohibited content includes:
+        /// <li>Abuse;</li>
+        /// <li>Drug-related violation.</li>
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for custom intelligent content recognition.
+        /// User-defined content review control parameters.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }
 
         /// <summary>
-        /// Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
+        /// Frame interception interval in seconds. If left empty, the default frame interval is 1 second with a minimum value of 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

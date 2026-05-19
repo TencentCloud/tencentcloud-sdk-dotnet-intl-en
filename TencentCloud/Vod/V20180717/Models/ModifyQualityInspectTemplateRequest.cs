@@ -25,91 +25,91 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media quality inspection template ID.
+        /// Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Media quality inspection template name.Length limit: 64 characters.
+        /// Template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Frame interval, unit in seconds, minimum value is 1. When not filled, the default frame interval is 1 second.
+        /// Frame interception interval, unit: seconds, minimum value 1.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video jitter and ghosting.
+        /// Control parameters for video frame jitter and ghosting detection.
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfoForUpdate JitterConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video blur.
+        /// Control parameters for video frame blur detection.
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfoForUpdate BlurConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting low brightness and overexposure of video.
+        /// Control parameters for low-light and overexposure detection in video frames.
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video crash.
+        /// Control parameters for screen glitch detection in video footage.
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfoForUpdate CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video black edges, white edges, black screen, and white screen.
+        /// Control parameters for video picture black edge, white edge, black screen, and white screen detection.
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video noise.
+        /// Control parameters for video frame noise detection.
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfoForUpdate NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for detecting video mosaic.
+        /// Control parameters for video frame mosaic detection.
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfoForUpdate MosaicConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for QR code detection in video.
+        /// Control parameters for video frame QR code detection.
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfoForUpdate QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for audio (mutes, bass, blast sound).
+        /// Audio (mute, bass, clipping) detection control parameters.
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfoForUpdate VoiceConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video quality evaluation.
+        /// Control parameters for video frame quality evaluation.
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure{ get; set; }

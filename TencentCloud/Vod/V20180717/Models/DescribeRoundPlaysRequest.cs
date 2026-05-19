@@ -64,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
         /// </summary>
         [JsonProperty("Offset")]
+        [System.Obsolete]
         public long? Offset{ get; set; }
 
         /// <summary>

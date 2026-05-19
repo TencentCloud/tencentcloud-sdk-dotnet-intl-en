@@ -31,51 +31,51 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Parameter of video processing task.
+        /// Parameters for the video processing task.
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// The information of an intelligent moderation task\*.
-        /// <font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+        /// Parameters for the AI intelligent content moderation task.
+        /// <font color=red>\*: This parameter is used to trigger legacy review and is not recommended. Use the ReviewAudioVideoTask parameter to initiate review.</font>
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// Parameter of AI-based content analysis task.
+        /// Parameters for the AI intelligent content analysis task.
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Parameters for the AI content recognition task.
         /// </summary>
         [JsonProperty("AiRecognitionTaskSet")]
         public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
 
         /// <summary>
-        /// Type parameter of AI-based content recognition task.
+        /// This parameter is not recommended. Recommend using AiRecognitionTaskSet.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// The information of the moderation task.
+        /// Parameters for the audio and video moderation task.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }

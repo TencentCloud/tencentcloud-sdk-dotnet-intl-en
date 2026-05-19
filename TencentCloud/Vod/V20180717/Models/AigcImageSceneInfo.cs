@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Scenario type of AI image generation. Available values:
-        /// -change_clothes: AI clothing change.
-        /// -Product image: AI-generated product image.
-        /// -outpainting: AI image expansion.
+        /// <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Valid when Type is change_clothes. this item is required and indicates the AI clothes-changing image generation config.
+        /// <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
 
         /// <summary>
-        /// Valid when Type is product_image. indicates the AI-generated product image config.
+        /// <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
         /// </summary>
         [JsonProperty("ProductImageConfig")]
         public ProductImageConfig ProductImageConfig{ get; set; }

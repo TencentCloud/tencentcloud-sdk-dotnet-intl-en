@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for custom facial recognition
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// User-defined character video moderation control parameter.
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfo FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for custom ASR-based recognition
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// User custom voice video moderation control parameter.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for custom OCR-based recognition
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// User custom text video moderation control parameter.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfo OcrReviewInfo{ get; set; }

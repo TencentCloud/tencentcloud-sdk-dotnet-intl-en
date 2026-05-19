@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The total number of records matching the filter criteria.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Head Tail Template Details.
+        /// Header and trailer template detail list.
         /// </summary>
         [JsonProperty("HeadTailTemplateSet")]
         public HeadTailTemplate[] HeadTailTemplateSet{ get; set; }

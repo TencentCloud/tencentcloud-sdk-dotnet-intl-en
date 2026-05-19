@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The license request statistics (the number of license requests in the time period specified)
+        /// License query count stats show detailed data of the queried license.
         /// </summary>
         [JsonProperty("LicenseUsageDataSet")]
         public LicenseUsageDataItem[] LicenseUsageDataSet{ get; set; }

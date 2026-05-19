@@ -25,71 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name
+        /// <p>Domain name.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Acceleration region information
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// <p>Acceleration region information.</p>
         /// </summary>
         [JsonProperty("AccelerateAreaInfos")]
         public AccelerateAreaInfo[] AccelerateAreaInfos{ get; set; }
 
         /// <summary>
-        /// Deployment status. Valid values:
-        /// <li>Online</li>
-        /// <li>Deploying</li>
-        /// <li>Locked: you cannot change the deployment status of locked domain names</li>
+        /// <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
         /// </summary>
         [JsonProperty("DeployStatus")]
         public string DeployStatus{ get; set; }
 
         /// <summary>
-        /// HTTPS configuration information
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// <p>HTTPS configuration message.</p>
         /// </summary>
         [JsonProperty("HTTPSConfig")]
         public DomainHTTPSConfig HTTPSConfig{ get; set; }
 
         /// <summary>
-        /// [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// The time when the domain name was added in the VOD system
-        /// <li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+        /// <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The QUIC configuration for the domain.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Domain name QUIC configuration message.</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>IP access restriction configuration message.</p>
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }
 
         /// <summary>
-        /// Domain type. Valid values:
-        /// <li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+        /// <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

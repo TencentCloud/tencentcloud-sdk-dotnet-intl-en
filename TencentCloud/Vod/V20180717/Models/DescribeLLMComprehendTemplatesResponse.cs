@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total number of records that meet the filtering conditions.
+        /// <p>Total number of records that meet filter conditions.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of large model comprehend template details.
+        /// <p>Large model parses template details list.</p>
         /// </summary>
         [JsonProperty("LLMComprehendTemplateSet")]
         public LLMComprehendTemplateItem[] LLMComprehendTemplateSet{ get; set; }

@@ -25,69 +25,69 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Input the type of video. The possible values u200bu200bare File and Stream.
+        /// Type of input video. Optional values: File, Stream.
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Input video file information, required when InputType is File.
+        /// Input video file information. Required when InputType is File.
         /// </summary>
         [JsonProperty("FileInfos")]
         public EditMediaFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// nput stream information, required when InputType is Stream.
+        /// Input stream information. Required when InputType is Stream.
         /// </summary>
         [JsonProperty("StreamInfos")]
         public EditMediaStreamInfo[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// EditMedia template ID. The values u200bu200bare 10 and 20. If left blank, the 10 template is used. 
-        /// <li>10: When splicing, the input with the highest resolution is used as the benchmark;</li>
-        /// <li>20: When splicing, the input with the highest code rate is used as the benchmark. </li>
+        /// Edit template ID. Valid values: 10, 20. Leave empty to use template 10.
+        /// <li>10: During splicing, use the input with the highest resolution as the base;</li>
+        /// <li>20: During splicing, use the input with the highest bitrate as the base.</li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+        /// [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// The file configuration generated after editing.
+        /// File configuration generated after editing.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public EditMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+        /// Identify source context. This is used to pass through user request information. The EditMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+        /// Priority of the task. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+        /// Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Reserved fields, used for special purposes.
+        /// Reserved field, used when special purpose.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

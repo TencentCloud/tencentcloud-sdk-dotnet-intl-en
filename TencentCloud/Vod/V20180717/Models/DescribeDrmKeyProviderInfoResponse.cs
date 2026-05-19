@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The DRM key information provided by SDMC.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
         /// </summary>
         [JsonProperty("SDMCInfo")]
         public SDMCDrmKeyProviderInfo SDMCInfo{ get; set; }

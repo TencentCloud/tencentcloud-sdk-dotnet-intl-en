@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The total number of records that meet the conditions.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The information of the queried image processing templates.
+        /// List of image processing template details.
         /// </summary>
         [JsonProperty("ImageProcessingTemplateSet")]
         public ImageProcessingTemplate[] ImageProcessingTemplateSet{ get; set; }

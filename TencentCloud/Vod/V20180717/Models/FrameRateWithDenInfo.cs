@@ -25,22 +25,21 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Capability configuration switch. Valid values:
-        /// <li>ON: enabled.</li>
-        /// <li>OFF: disabled.</li>
-        /// Default value: OFF.
+        /// Frame interpolation frame rate control switch. Available values:
+        /// <li>ON: enabled</li>
+        /// <li>OFF: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
+        /// Frame rate numerator. Value range: non-negative number, which should be less than 100 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will override the Fps in the VideoTemplate.
         /// </summary>
         [JsonProperty("FpsNum")]
         public long? FpsNum{ get; set; }
 
         /// <summary>
-        /// Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
+        /// Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1.
         /// </summary>
         [JsonProperty("FpsDen")]
         public long? FpsDen{ get; set; }

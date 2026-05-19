@@ -59,8 +59,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-        /// When the value is 0, it means that the video bitrate remains the same as the original video.
+        /// Bitrate of video stream, value ranges from 0 to [128, 10000], measurement unit: kbps.
+        /// When the value is 0, it means VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

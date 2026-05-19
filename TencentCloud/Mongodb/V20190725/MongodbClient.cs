@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1317";
 
         /// <summary>
         /// Client constructor.
@@ -260,6 +260,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DeleteLogDownloadTaskResponse DeleteLogDownloadTaskSync(DeleteLogDownloadTaskRequest req)
         {
             return InternalRequestAsync<DeleteLogDownloadTaskResponse>(req, "DeleteLogDownloadTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain all accounts of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
+        /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
+        public Task<DescribeAccountUsersResponse> DescribeAccountUsers(DescribeAccountUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountUsersResponse>(req, "DescribeAccountUsers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain all accounts of the current instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
+        /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
+        public DescribeAccountUsersResponse DescribeAccountUsersSync(DescribeAccountUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeAccountUsersResponse>(req, "DescribeAccountUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The template ID.
+        /// Unique identifier of the image processing template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

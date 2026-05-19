@@ -35,8 +35,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-        /// When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+        /// Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+        /// When the value is 0 or left blank, VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }

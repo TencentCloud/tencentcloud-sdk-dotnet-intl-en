@@ -25,41 +25,46 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming template ID.
+        /// <p>Adaptive bitrate streaming template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// List of up to 10 image or text watermarks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Digital watermark.
+        /// <p>Traceable watermark.</p>
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// CopyRight Watermark.
+        /// <p>Copyright watermark.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// Digital watermark.
+        /// <p>Digital watermark.</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// List of subtitle IDs (maximum: 16)
+        /// <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public string[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+        /// </summary>
+        [JsonProperty("SubtitleInfoSet")]
+        public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
 
         /// <summary>
@@ -73,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
             this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
+            this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
         }
     }
 }

@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for recognition of pornographic content in images
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Image recognition involves control parameters for offensive information.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PornImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for ASR-based recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// ASR-based recognition involves control parameters for offensive information.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PornAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for OCR-based recognition of pornographic content
-        /// Note: This field may return `null`, indicating that no valid value can be found.
+        /// Text recognition involves control parameters for offensive information.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PornOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

@@ -25,33 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public long? SubAppId{ get; set; }
 
         /// <summary>
-        /// The audit template uniquely identifies the filtering conditions, and the array length limit is: 100.
+        /// Filter condition for the audit template unique identifier. The array length cannot exceed 100.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// The template type. Valid values:
-        /// <li>Preset</li>
-        /// <li>Custom</li>
+        /// Condition for filtering templates by type. Valid values:
+        /// <li>Preset: system preset template;</li>
+        /// <li>Custom: User-defined template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The pagination offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The number of records to return. Default value: 10. Maximum value: 100.
+        /// Number of returned entries. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

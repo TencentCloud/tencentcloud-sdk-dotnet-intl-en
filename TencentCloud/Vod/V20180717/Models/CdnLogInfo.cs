@@ -25,32 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
+        /// <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// Log name in the format of date and time-domain name,
-        /// such as 2018120101-test.vod2.mqcloud.com.
+        /// <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Log download link, which is valid for 24 hours.
+        /// <p>Log download link, valid for 24 hours.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+        /// <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+        /// <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

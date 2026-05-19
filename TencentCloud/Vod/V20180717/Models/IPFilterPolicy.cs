@@ -25,24 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// IP access restriction status. Optional values:
-        /// <li>Enabled: enable;</li>
-        /// <li>Disabled: disable.</li>
+        /// IP access restriction status. Available values:
+        /// <li>Enabled: enabled;</li>
+        /// <li>Disabled: Disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// IP access restriction type:
-        /// <li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-        /// <li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>
-        /// <li>When Status is set to Enabled, FilterType must be assigned.</li>
+        /// IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
+        /// <li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 <= N <= 32; IPV6: 1 <= N <= 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+        /// IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
         /// </summary>
         [JsonProperty("IPList")]
         public string[] IPList{ get; set; }

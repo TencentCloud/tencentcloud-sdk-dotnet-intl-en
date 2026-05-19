@@ -25,33 +25,39 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of the media file
+        /// Unique identifier of a media file.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Operation. Valid values:
-        /// <li>`Attach`: associates subtitles.</li>
-        /// <li>`Detach`: disassociates subtitles.</li>
+        /// Operation. Values as follows:
+        /// <li>Attach: Associate subtitles.</li>
+        /// <li>Detach: Remove associated subtitles.</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+        /// [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// Unique IDs of the subtitles
+        /// Unique identifier of the subtitle.
         /// </summary>
         [JsonProperty("SubtitleIds")]
         public string[] SubtitleIds{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// Unique identifier for default subtitle. Leave empty to not set default subtitle.
+        /// </summary>
+        [JsonProperty("DefaultSubtitleId")]
+        public string DefaultSubtitleId{ get; set; }
+
+        /// <summary>
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -66,6 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+            this.SetParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

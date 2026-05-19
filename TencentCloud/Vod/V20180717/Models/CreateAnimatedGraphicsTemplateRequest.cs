@@ -25,68 +25,68 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video frame rate in Hz. Value range: [1, 30].
+        /// Frame rate. Value ranges from 1 to 30. Unit: Hz.
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-        /// Default value: 0.
+        /// Maximum value of the animated gif width (or long edge) in px. Value range: 0 and [128, 4096].
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+        /// The default value is 0.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-        /// <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-        /// <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-        /// <li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-        /// <li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-        /// Default value: 0.
+        /// Maximum value of animated gif height (or short edge). Value ranges from 0 to [128, 4096]. Measurement unit: px.
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+        /// The default value is 0.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Resolution adaption. Valid values:
-        /// <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-        /// <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+        /// Resolution adaptation, available values:
+        /// <li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
         /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Animated image format. Valid values: gif; webp. Default value: gif.
+        /// Animated image file format, value is gif and webp. Default is gif.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Image quality. Value range: [1, 100]. Default value: 75.
+        /// Image quality. Valid range: 1 - 100. Default value: 75.
         /// </summary>
         [JsonProperty("Quality")]
         public float? Quality{ get; set; }
 
         /// <summary>
-        /// Name of an animated image generating template. Length limit: 64 characters.
+        /// Rotating image template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

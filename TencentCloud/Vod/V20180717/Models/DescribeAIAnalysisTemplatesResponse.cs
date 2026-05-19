@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// Total number of records that meet the filtering conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of video content analysis template details.
+        /// Audio and video content analysis template detail list.
         /// </summary>
         [JsonProperty("AIAnalysisTemplateSet")]
         public AIAnalysisTemplateItem[] AIAnalysisTemplateSet{ get; set; }

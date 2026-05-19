@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total number of log download links
-        /// Note: this field may return `null`, indicating that no valid value is obtained.
+        /// <p>Total number of log download links.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
         /// </summary>
         [JsonProperty("OverseaCdnLogs")]
         public CdnLogInfo[] OverseaCdnLogs{ get; set; }
 
         /// <summary>
-        /// Log download list for CDN nodes in Mainland China.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Log Download List of Domestic CDN Nodes.</p>
         /// </summary>
         [JsonProperty("DomesticCdnLogs")]
         public CdnLogInfo[] DomesticCdnLogs{ get; set; }

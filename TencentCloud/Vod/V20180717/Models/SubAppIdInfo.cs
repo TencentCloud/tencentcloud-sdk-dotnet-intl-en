@@ -64,6 +64,27 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// Mode of this application. Valid values:
+        /// -fileid: Only in fileid mode
+        /// -fileid+path: FileID & Path mode
+        /// Leave empty to select FileID mode by default
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// Storage regions enabled for the sub-app.
+        /// </summary>
+        [JsonProperty("StorageRegions")]
+        public string[] StorageRegions{ get; set; }
+
+        /// <summary>
+        /// tag bound to the sub-application.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public ResourceTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +97,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

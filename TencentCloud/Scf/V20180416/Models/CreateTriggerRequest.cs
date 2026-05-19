@@ -37,7 +37,9 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
+        /// Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
+        /// To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
+        /// To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+        /// Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

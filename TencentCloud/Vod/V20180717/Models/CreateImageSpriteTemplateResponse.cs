@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of an image sprite generating template.
+        /// Unique identifier of a sprite template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

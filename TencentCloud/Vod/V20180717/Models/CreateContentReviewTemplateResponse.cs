@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of an intelligent recognition template.
+        /// Unique identifier of an audio and video content review template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
