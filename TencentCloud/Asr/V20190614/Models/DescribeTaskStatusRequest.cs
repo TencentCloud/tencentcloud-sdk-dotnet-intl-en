@@ -26,7 +26,7 @@ namespace TencentCloud.Asr.V20190614.Models
         
         /// <summary>
         /// Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-        /// ** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+        /// **Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

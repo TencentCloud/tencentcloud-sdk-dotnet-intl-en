@@ -21,38 +21,44 @@ namespace TencentCloud.Ssl.V20191205.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GatewayCertificate : AbstractModel
+    public class TDMQInstanceDetail : AbstractModel
     {
         
         /// <summary>
-        /// Gateway certificate ID
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// gateway certificate name
+        /// Instance name.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Bind Domain Name
+        /// Instance status
         /// </summary>
-        [JsonProperty("BindDomains")]
-        public string[] BindDomains{ get; set; }
+        [JsonProperty("InstanceStatus")]
+        public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Certificate source
-        /// </summary>
-        [JsonProperty("CertSource")]
-        public string CertSource{ get; set; }
-
-        /// <summary>
-        /// Currently bound SSL certificate ID
+        /// Server certificate ID.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
+
+        /// <summary>
+        /// CA certificate ID
+        /// </summary>
+        [JsonProperty("CaCertId")]
+        public string CaCertId{ get; set; }
+
+        /// <summary>
+        /// Mismatched domain name list
+        /// </summary>
+        [JsonProperty("NoMatchDomains")]
+        public string[] NoMatchDomains{ get; set; }
 
 
         /// <summary>
@@ -60,11 +66,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
-            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
             this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "CaCertId", this.CaCertId);
+            this.SetParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
         }
     }
 }

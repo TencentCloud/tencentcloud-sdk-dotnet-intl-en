@@ -25,29 +25,25 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The unique ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique ID
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// The source.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source.
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// The name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The status.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

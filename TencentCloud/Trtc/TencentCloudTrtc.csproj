@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1311</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,7 @@
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
     <Compile Include="V20190722\Models\AgentConfig.cs" />
     <Compile Include="V20190722\Models\AgentParams.cs" />
+    <Compile Include="V20190722\Models\AmbientSound.cs" />
     <Compile Include="V20190722\Models\AsrParam.cs" />
     <Compile Include="V20190722\Models\AudioEncode.cs" />
     <Compile Include="V20190722\Models\AudioEncodeParams.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="V20190722\Models\TranslationConfig.cs" />
     <Compile Include="V20190722\Models\TranslationParam.cs" />
     <Compile Include="V20190722\Models\TrtcUsage.cs" />
+    <Compile Include="V20190722\Models\TurnDetection.cs" />
     <Compile Include="V20190722\Models\UpdateAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\UpdateAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\UpdatePublishCdnStreamRequest.cs" />
@@ -231,6 +233,7 @@
     <Compile Include="V20190722\Models\VideoEncode.cs" />
     <Compile Include="V20190722\Models\VideoEncodeParams.cs" />
     <Compile Include="V20190722\Models\VideoParams.cs" />
+    <Compile Include="V20190722\Models\VoicePrint.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
     <Compile Include="V20190722\Models\WaterMarkChar.cs" />
     <Compile Include="V20190722\Models\WaterMarkImage.cs" />

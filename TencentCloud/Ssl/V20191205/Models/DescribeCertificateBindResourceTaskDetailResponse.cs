@@ -25,100 +25,112 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The details of associated CLB resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>clb resource detail</p>
         /// </summary>
         [JsonProperty("CLB")]
         public ClbInstanceList[] CLB{ get; set; }
 
         /// <summary>
-        /// The details of associated CDN resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>cdn resource detail</p>
         /// </summary>
         [JsonProperty("CDN")]
         public CdnInstanceList[] CDN{ get; set; }
 
         /// <summary>
-        /// The details of associated WAF resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>waf resource detail</p>
         /// </summary>
         [JsonProperty("WAF")]
         public WafInstanceList[] WAF{ get; set; }
 
         /// <summary>
-        /// The details of associated Anti-DDS resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Associate ddos resource detail</p>
         /// </summary>
         [JsonProperty("DDOS")]
         public DdosInstanceList[] DDOS{ get; set; }
 
         /// <summary>
-        /// The details of associated LIVE resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Associate live resource detail</p>
         /// </summary>
         [JsonProperty("LIVE")]
         public LiveInstanceList[] LIVE{ get; set; }
 
         /// <summary>
-        /// The details of associated VOD resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>vod resource detail</p>
         /// </summary>
         [JsonProperty("VOD")]
         public VODInstanceList[] VOD{ get; set; }
 
         /// <summary>
-        /// The details of associated TKE resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>tke resource detail</p>
         /// </summary>
         [JsonProperty("TKE")]
         public TkeInstanceList[] TKE{ get; set; }
 
         /// <summary>
-        /// The details of associated APIGATEWAY resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>apigateway resource detail</p>
         /// </summary>
         [JsonProperty("APIGATEWAY")]
         public ApiGatewayInstanceList[] APIGATEWAY{ get; set; }
 
         /// <summary>
-        /// The details of associated TCB resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>tcb resource detail</p>
         /// </summary>
         [JsonProperty("TCB")]
         public TCBInstanceList[] TCB{ get; set; }
 
         /// <summary>
-        /// The details of associated TEO resources.	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Associate teo resource detail</p>
         /// </summary>
         [JsonProperty("TEO")]
         public TeoInstanceList[] TEO{ get; set; }
 
         /// <summary>
-        /// The status of the async task. Valid values: `0` for querying, `1` for successful, and `2` for abnormal. If the status is `1`, check the result of `BindResourceResult` ; if the status is `2`, check the `error` .
+        /// <p>Associate cloud resources async query result: 0 indicates querying, 1 indicates success. 2 indicates an exception. If the status is 1, view the BindResourceResult. If the status is 2, view the Error reason.</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// The cache time of the current result.
+        /// <p>Current result cache time</p>
         /// </summary>
         [JsonProperty("CacheTime")]
         public string CacheTime{ get; set; }
 
         /// <summary>
-        /// Associated TSE resource details
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Associate tse resource detail</p>
         /// </summary>
         [JsonProperty("TSE")]
         public TSEInstanceList[] TSE{ get; set; }
 
         /// <summary>
-        /// Information of associated cos resource.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Associated COS resource detail</p>
         /// </summary>
         [JsonProperty("COS")]
         public COSInstanceList[] COS{ get; set; }
+
+        /// <summary>
+        /// <p>Associated TDMQ - Rabbit resource detail</p>
+        /// </summary>
+        [JsonProperty("TDMQ")]
+        public TDMQInstanceList[] TDMQ{ get; set; }
+
+        /// <summary>
+        /// <p>Associated MQTT resource detail</p>
+        /// </summary>
+        [JsonProperty("MQTT")]
+        public MQTTInstanceList[] MQTT{ get; set; }
+
+        /// <summary>
+        /// <p>Associated GAAP resource detail</p>
+        /// </summary>
+        [JsonProperty("GAAP")]
+        public GAAPInstanceList[] GAAP{ get; set; }
+
+        /// <summary>
+        /// <p>Associated SCF resource detail</p>
+        /// </summary>
+        [JsonProperty("SCF")]
+        public SCFInstanceList[] SCF{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -146,6 +158,10 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CacheTime", this.CacheTime);
             this.SetParamArrayObj(map, prefix + "TSE.", this.TSE);
             this.SetParamArrayObj(map, prefix + "COS.", this.COS);
+            this.SetParamArrayObj(map, prefix + "TDMQ.", this.TDMQ);
+            this.SetParamArrayObj(map, prefix + "MQTT.", this.MQTT);
+            this.SetParamArrayObj(map, prefix + "GAAP.", this.GAAP);
+            this.SetParamArrayObj(map, prefix + "SCF.", this.SCF);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -21,38 +21,32 @@ namespace TencentCloud.Ssl.V20191205.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GatewayCertificate : AbstractModel
+    public class RevokeDomainValidateAuths : AbstractModel
     {
         
         /// <summary>
-        /// Gateway certificate ID
+        /// DV authentication value path.
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("DomainValidateAuthPath")]
+        public string DomainValidateAuthPath{ get; set; }
 
         /// <summary>
-        /// gateway certificate name
+        /// DV authentication KEY.
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("DomainValidateAuthKey")]
+        public string DomainValidateAuthKey{ get; set; }
 
         /// <summary>
-        /// Bind Domain Name
+        /// DV authentication value.
         /// </summary>
-        [JsonProperty("BindDomains")]
-        public string[] BindDomains{ get; set; }
+        [JsonProperty("DomainValidateAuthValue")]
+        public string DomainValidateAuthValue{ get; set; }
 
         /// <summary>
-        /// Certificate source
+        /// DV authentication domain name.
         /// </summary>
-        [JsonProperty("CertSource")]
-        public string CertSource{ get; set; }
-
-        /// <summary>
-        /// Currently bound SSL certificate ID
-        /// </summary>
-        [JsonProperty("CertId")]
-        public string CertId{ get; set; }
+        [JsonProperty("DomainValidateAuthDomain")]
+        public string DomainValidateAuthDomain{ get; set; }
 
 
         /// <summary>
@@ -60,11 +54,10 @@ namespace TencentCloud.Ssl.V20191205.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "BindDomains.", this.BindDomains);
-            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "DomainValidateAuthPath", this.DomainValidateAuthPath);
+            this.SetParamSimple(map, prefix + "DomainValidateAuthKey", this.DomainValidateAuthKey);
+            this.SetParamSimple(map, prefix + "DomainValidateAuthValue", this.DomainValidateAuthValue);
+            this.SetParamSimple(map, prefix + "DomainValidateAuthDomain", this.DomainValidateAuthDomain);
         }
     }
 }

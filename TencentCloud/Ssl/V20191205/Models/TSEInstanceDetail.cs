@@ -26,21 +26,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         
         /// <summary>
         /// Gateway ID
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// Gateway name
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// gateway name
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
         /// Gateway certificate list
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("CertificateList")]
         public GatewayCertificate[] CertificateList{ get; set; }

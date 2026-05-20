@@ -25,8 +25,8 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-        /// ** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+        /// Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+        /// Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

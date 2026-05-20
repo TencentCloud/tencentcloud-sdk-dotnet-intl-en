@@ -26,7 +26,7 @@ namespace TencentCloud.Asr.V20190614.Models
         
         /// <summary>
         /// Returned result of the recording recognition request, containing the task ID required for querying the result.
-        /// ** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+        /// **Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system.**
         /// </summary>
         [JsonProperty("Data")]
         public Task Data{ get; set; }

@@ -25,43 +25,31 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+        /// <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+        /// <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
         /// <summary>
-        /// Current offset, default is 0.
+        /// <p>Offset, defaults to 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-        /// - clb.
-        /// - cdn.
-        /// - ddos.
-        /// - live.
-        /// - vod.
-        /// - waf.
-        /// - apigateway.
-        /// - teo.
-        /// - tke.
-        /// - cos.
-        /// - tse.
-        /// - tcb.
+        /// <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
         /// </summary>
         [JsonProperty("ResourceTypes")]
         public string[] ResourceTypes{ get; set; }
 
         /// <summary>
-        /// Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+        /// <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
         /// </summary>
         [JsonProperty("Regions")]
         public string[] Regions{ get; set; }

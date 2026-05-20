@@ -25,46 +25,37 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The domain.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The status.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// The unified domain status.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unified domain status
         /// </summary>
         [JsonProperty("UnionStatus")]
         public long? UnionStatus{ get; set; }
 
         /// <summary>
-        /// Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
         /// </summary>
         [JsonProperty("IsPreempted")]
         public bool? IsPreempted{ get; set; }
 
         /// <summary>
-        /// Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
         /// </summary>
         [JsonProperty("ICPStatus")]
         public long? ICPStatus{ get; set; }
 
         /// <summary>
-        /// The ID of the associated certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bound Certificate ID
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }

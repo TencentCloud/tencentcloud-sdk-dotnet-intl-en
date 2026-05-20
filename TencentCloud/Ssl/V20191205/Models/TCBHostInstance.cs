@@ -25,29 +25,25 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The domain.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The status.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The resolution status.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parsing status
         /// </summary>
         [JsonProperty("DNSStatus")]
         public string DNSStatus{ get; set; }
 
         /// <summary>
-        /// The ID of the associated certificate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bound Certificate ID
         /// </summary>
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1317</VersionPrefix>
+    <VersionPrefix>3.0.1318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -319,6 +319,10 @@
     <Compile Include="V20180717\Models\CreateBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateCDNDomainRequest.cs" />
     <Compile Include="V20180717\Models\CreateCDNDomainResponse.cs" />
+    <Compile Include="V20180717\Models\CreateCLSLogsetRequest.cs" />
+    <Compile Include="V20180717\Models\CreateCLSLogsetResponse.cs" />
+    <Compile Include="V20180717\Models\CreateCLSTopicRequest.cs" />
+    <Compile Include="V20180717\Models\CreateCLSTopicResponse.cs" />
     <Compile Include="V20180717\Models\CreateClassRequest.cs" />
     <Compile Include="V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="V20180717\Models\CreateComplexAdaptiveDynamicStreamingTaskRequest.cs" />
@@ -480,6 +484,8 @@
     <Compile Include="V20180717\Models\DescribeCurrentPlaylistResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDefaultDistributionConfigRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDefaultDistributionConfigResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEnhanceMediaTemplatesRequest.cs" />

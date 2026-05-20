@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -540,6 +540,48 @@ namespace TencentCloud.Vod.V20180717
         public CreateCDNDomainResponse CreateCDNDomainSync(CreateCDNDomainRequest req)
         {
             return InternalRequestAsync<CreateCDNDomainResponse>(req, "CreateCDNDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a new logset with VOD.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogsetRequest"/></param>
+        /// <returns><see cref="CreateCLSLogsetResponse"/></returns>
+        public Task<CreateCLSLogsetResponse> CreateCLSLogset(CreateCLSLogsetRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogsetResponse>(req, "CreateCLSLogset");
+        }
+
+        /// <summary>
+        /// Create a new logset with VOD.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSLogsetRequest"/></param>
+        /// <returns><see cref="CreateCLSLogsetResponse"/></returns>
+        public CreateCLSLogsetResponse CreateCLSLogsetSync(CreateCLSLogsetRequest req)
+        {
+            return InternalRequestAsync<CreateCLSLogsetResponse>(req, "CreateCLSLogset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a new CLS log topic under VOD
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSTopicRequest"/></param>
+        /// <returns><see cref="CreateCLSTopicResponse"/></returns>
+        public Task<CreateCLSTopicResponse> CreateCLSTopic(CreateCLSTopicRequest req)
+        {
+            return InternalRequestAsync<CreateCLSTopicResponse>(req, "CreateCLSTopic");
+        }
+
+        /// <summary>
+        /// Create a new CLS log topic under VOD
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSTopicRequest"/></param>
+        /// <returns><see cref="CreateCLSTopicResponse"/></returns>
+        public CreateCLSTopicResponse CreateCLSTopicSync(CreateCLSTopicRequest req)
+        {
+            return InternalRequestAsync<CreateCLSTopicResponse>(req, "CreateCLSTopic")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2343,6 +2385,31 @@ namespace TencentCloud.Vod.V20180717
         public DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileListSync(DescribeDailyPlayStatFileListRequest req)
         {
             return InternalRequestAsync<DescribeDailyPlayStatFileListResponse>(req, "DescribeDailyPlayStatFileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the default distribution configuration.
+        /// * Domain name and distribution protocol, which are the domain name and protocol in the media file distribution URL. Media files are distributed according to the default distribution configuration.
+        /// Playback key, used to calculate player signature.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="DescribeDefaultDistributionConfigResponse"/></returns>
+        public Task<DescribeDefaultDistributionConfigResponse> DescribeDefaultDistributionConfig(DescribeDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDefaultDistributionConfigResponse>(req, "DescribeDefaultDistributionConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query the default distribution configuration.
+        /// * Domain name and distribution protocol, which are the domain name and protocol in the media file distribution URL. Media files are distributed according to the default distribution configuration.
+        /// Playback key, used to calculate player signature.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefaultDistributionConfigRequest"/></param>
+        /// <returns><see cref="DescribeDefaultDistributionConfigResponse"/></returns>
+        public DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfigSync(DescribeDefaultDistributionConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeDefaultDistributionConfigResponse>(req, "DescribeDefaultDistributionConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1315";
+       private const string sdkVersion = "SDK_NET_3.0.1318";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Ssl.V20191205
         public CertificateOrderSubmitResponse CertificateOrderSubmitSync(CertificateOrderSubmitRequest req)
         {
             return InternalRequestAsync<CertificateOrderSubmitResponse>(req, "CertificateOrderSubmit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Check the domain validation result of the cert
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateDomainVerificationRequest"/></param>
+        /// <returns><see cref="CheckCertificateDomainVerificationResponse"/></returns>
+        public Task<CheckCertificateDomainVerificationResponse> CheckCertificateDomainVerification(CheckCertificateDomainVerificationRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateDomainVerificationResponse>(req, "CheckCertificateDomainVerification");
+        }
+
+        /// <summary>
+        /// Check the domain validation result of the cert
+        /// </summary>
+        /// <param name="req"><see cref="CheckCertificateDomainVerificationRequest"/></param>
+        /// <returns><see cref="CheckCertificateDomainVerificationResponse"/></returns>
+        public CheckCertificateDomainVerificationResponse CheckCertificateDomainVerificationSync(CheckCertificateDomainVerificationRequest req)
+        {
+            return InternalRequestAsync<CheckCertificateDomainVerificationResponse>(req, "CheckCertificateDomainVerification")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,7 +369,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to query the task result of CreateCertificateBindResourceSyncTask, returning the asynchronous task result of the certificate associated with cloud resources, supporting the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos.
+        /// Query the task result of CreateCertificateBindResourceSyncTask, return the asynchronous task result of binding cloud resources with the certificate, support the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos, gaap, mqtt, scf, tdmq.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
@@ -358,7 +379,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to query the task result of CreateCertificateBindResourceSyncTask, returning the asynchronous task result of the certificate associated with cloud resources, supporting the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos.
+        /// Query the task result of CreateCertificateBindResourceSyncTask, return the asynchronous task result of binding cloud resources with the certificate, support the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos, gaap, mqtt, scf, tdmq.
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateBindResourceTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeCertificateBindResourceTaskDetailResponse"/></returns>
@@ -743,6 +764,27 @@ namespace TencentCloud.Ssl.V20191205
         public ReplaceCertificateResponse ReplaceCertificateSync(ReplaceCertificateRequest req)
         {
             return InternalRequestAsync<ReplaceCertificateResponse>(req, "ReplaceCertificate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to revoke certificate.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeCertificateRequest"/></param>
+        /// <returns><see cref="RevokeCertificateResponse"/></returns>
+        public Task<RevokeCertificateResponse> RevokeCertificate(RevokeCertificateRequest req)
+        {
+            return InternalRequestAsync<RevokeCertificateResponse>(req, "RevokeCertificate");
+        }
+
+        /// <summary>
+        /// This API is used to revoke certificate.
+        /// </summary>
+        /// <param name="req"><see cref="RevokeCertificateRequest"/></param>
+        /// <returns><see cref="RevokeCertificateResponse"/></returns>
+        public RevokeCertificateResponse RevokeCertificateSync(RevokeCertificateRequest req)
+        {
+            return InternalRequestAsync<RevokeCertificateResponse>(req, "RevokeCertificate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

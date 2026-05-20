@@ -25,15 +25,13 @@ namespace TencentCloud.Ssl.V20191205.Models
     {
         
         /// <summary>
-        /// The list of instances.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance list
         /// </summary>
         [JsonProperty("InstanceList")]
         public TCBHostInstance[] InstanceList{ get; set; }
 
         /// <summary>
-        /// The instance count.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
