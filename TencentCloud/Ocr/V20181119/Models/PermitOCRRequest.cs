@@ -25,26 +25,20 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// The Base64-encoded value of the image.
-        /// Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-        /// Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-        /// Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+        /// The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// The URL of the image.
-        /// Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-        /// Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-        /// We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+        /// The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
         /// The download speed and stability of non-Tencent Cloud URLs may be low.
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// Whether to return the profile photo, default is false.
+        /// Whether to return the avatar image. Default is false.
         /// </summary>
         [JsonProperty("CropPortrait")]
         public bool? CropPortrait{ get; set; }
