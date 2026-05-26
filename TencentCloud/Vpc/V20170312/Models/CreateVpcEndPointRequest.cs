@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+        /// VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+        /// Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointName{ get; set; }
 
         /// <summary>
-        /// Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+        /// Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("EndPointServiceId")]
         public string EndPointServiceId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointVip{ get; set; }
 
         /// <summary>
-        /// Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+        /// Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }

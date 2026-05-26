@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Purchasable specification list.
+        /// <p>Purchasable specification list.</p>
         /// </summary>
         [JsonProperty("SpecInfoList")]
         public SpecInfo[] SpecInfoList{ get; set; }

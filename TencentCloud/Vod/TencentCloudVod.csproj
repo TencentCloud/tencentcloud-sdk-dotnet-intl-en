@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1318</VersionPrefix>
+    <VersionPrefix>3.0.1319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -232,6 +232,8 @@
     <Compile Include="V20180717\Models\CDNDomainConfig.cs" />
     <Compile Include="V20180717\Models\CDNDomainConfigForUpdate.cs" />
     <Compile Include="V20180717\Models\CDNDomainInfo.cs" />
+    <Compile Include="V20180717\Models\CLSLogsetInfo.cs" />
+    <Compile Include="V20180717\Models\CLSTopicInfo.cs" />
     <Compile Include="V20180717\Models\Cache.cs" />
     <Compile Include="V20180717\Models\CacheConfigCache.cs" />
     <Compile Include="V20180717\Models\CacheConfigFollowOrigin.cs" />
@@ -400,6 +402,8 @@
     <Compile Include="V20180717\Models\DeleteBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteCDNDomainRequest.cs" />
     <Compile Include="V20180717\Models\DeleteCDNDomainResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteCLSTopicRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteCLSTopicResponse.cs" />
     <Compile Include="V20180717\Models\DeleteClassRequest.cs" />
     <Compile Include="V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
@@ -474,6 +478,10 @@
     <Compile Include="V20180717\Models\DescribeCDNStatDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCDNUsageDataResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSLogsetsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSLogsetsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSTopicsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSTopicsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeClientUploadAccelerationUsageDataRequest.cs" />

@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Pagination offset</p>
+        /// <p>Pagination offset.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Pagination count</p>
+        /// <p>Number of entries per page.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID</p>
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Superapp ID</p>
+        /// <p>Superapp ID.</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// <p>Keywords for search (API name)</p>
+        /// <p>Search keyword (API name).</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

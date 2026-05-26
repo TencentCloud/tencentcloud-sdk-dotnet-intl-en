@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// string: Overview
+        /// string: Overview.
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }
 
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Date in YYYYMMDD format
+        /// Date in YYYYMMDD format.
         /// </summary>
         [JsonProperty("DataTime")]
         public long? DataTime{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Boolean response object</p>
+        /// <p>Boolean response object.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// <p>Approval number</p>
+        /// <p>Approval number.</p>
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }

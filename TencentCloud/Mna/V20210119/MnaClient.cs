@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.intl.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1314";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
         {
             return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the access region list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessRegionsRequest"/></param>
+        /// <returns><see cref="DescribeAccessRegionsResponse"/></returns>
+        public Task<DescribeAccessRegionsResponse> DescribeAccessRegions(DescribeAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessRegionsResponse>(req, "DescribeAccessRegions");
+        }
+
+        /// <summary>
+        /// Query the access region list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessRegionsRequest"/></param>
+        /// <returns><see cref="DescribeAccessRegionsResponse"/></returns>
+        public DescribeAccessRegionsResponse DescribeAccessRegionsSync(DescribeAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessRegionsResponse>(req, "DescribeAccessRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -869,6 +890,27 @@ namespace TencentCloud.Mna.V20210119
         public GroupDeleteDeviceResponse GroupDeleteDeviceSync(GroupDeleteDeviceRequest req)
         {
             return InternalRequestAsync<GroupDeleteDeviceResponse>(req, "GroupDeleteDevice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify device connectivity regions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessRegionsRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessRegionsResponse"/></returns>
+        public Task<ModifyDeviceAccessRegionsResponse> ModifyDeviceAccessRegions(ModifyDeviceAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessRegionsResponse>(req, "ModifyDeviceAccessRegions");
+        }
+
+        /// <summary>
+        /// This API is used to modify device connectivity regions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceAccessRegionsRequest"/></param>
+        /// <returns><see cref="ModifyDeviceAccessRegionsResponse"/></returns>
+        public ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegionsSync(ModifyDeviceAccessRegionsRequest req)
+        {
+            return InternalRequestAsync<ModifyDeviceAccessRegionsResponse>(req, "ModifyDeviceAccessRegions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

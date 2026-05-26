@@ -28,7 +28,7 @@ namespace TencentCloud.Cbs.V20170312
 
        private const string endpoint = "cbs.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -539,6 +539,33 @@ namespace TencentCloud.Cbs.V20170312
         public DescribeDiskConfigQuotaResponse DescribeDiskConfigQuotaSync(DescribeDiskConfigQuotaRequest req)
         {
             return InternalRequestAsync<DescribeDiskConfigQuotaResponse>(req, "DescribeDiskConfigQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of dedicated cloud disk clusters under the current user account.
+        /// 
+        /// * You can query by the dedicated cloud disk cluster ID (`CdcId`) and availability zone (`zone`). Multiple filters are combined with AND. For details about filtering, please see `Filter`.
+        /// * If the parameter is empty, a number (as specified by `Limit`; the default is 20) of dedicated cloud disk clusters are returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskStoragePoolRequest"/></param>
+        /// <returns><see cref="DescribeDiskStoragePoolResponse"/></returns>
+        public Task<DescribeDiskStoragePoolResponse> DescribeDiskStoragePool(DescribeDiskStoragePoolRequest req)
+        {
+            return InternalRequestAsync<DescribeDiskStoragePoolResponse>(req, "DescribeDiskStoragePool");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of dedicated cloud disk clusters under the current user account.
+        /// 
+        /// * You can query by the dedicated cloud disk cluster ID (`CdcId`) and availability zone (`zone`). Multiple filters are combined with AND. For details about filtering, please see `Filter`.
+        /// * If the parameter is empty, a number (as specified by `Limit`; the default is 20) of dedicated cloud disk clusters are returned.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskStoragePoolRequest"/></param>
+        /// <returns><see cref="DescribeDiskStoragePoolResponse"/></returns>
+        public DescribeDiskStoragePoolResponse DescribeDiskStoragePoolSync(DescribeDiskStoragePoolRequest req)
+        {
+            return InternalRequestAsync<DescribeDiskStoragePoolResponse>(req, "DescribeDiskStoragePool")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

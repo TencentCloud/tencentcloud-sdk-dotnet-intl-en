@@ -31,16 +31,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
+        /// Host
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
+        /// <summary>
         /// Password, which can contain 8-64 characters.
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Host
+        /// Whether password rotation is enabled (0: turn off; 1: turn on)
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("PasswordRotation")]
+        public long? PasswordRotation{ get; set; }
 
         /// <summary>
         /// Description
@@ -61,8 +67,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
-            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
+            this.SetParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }

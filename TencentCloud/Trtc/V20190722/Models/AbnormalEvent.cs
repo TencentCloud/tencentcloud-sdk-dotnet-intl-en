@@ -25,14 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+        /// Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
         /// </summary>
         [JsonProperty("AbnormalEventId")]
         public ulong? AbnormalEventId{ get; set; }
 
         /// <summary>
-        /// The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remote user ID,"": indicates the exception event is not user-generated.
         /// </summary>
         [JsonProperty("PeerId")]
         public string PeerId{ get; set; }

@@ -25,55 +25,55 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Page offset
+        /// Pagination offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Superapp ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Online status. 0 All (default); 1 Available; 2 In canary release
+        /// Available status. Valid value: 0: All; 1 Available; 2: In canary release.
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// Engine type. 0 Mini program; 1 Mini game
+        /// Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
         /// </summary>
         [JsonProperty("EngineTypeList")]
         public long?[] EngineTypeList{ get; set; }
 
         /// <summary>
-        /// Secondary category name
+        /// Secondary category name.
         /// </summary>
         [JsonProperty("SubCategory")]
         public string SubCategory{ get; set; }
 
         /// <summary>
-        /// Primary category name
+        /// Primary category name.
         /// </summary>
         [JsonProperty("PrimaryCategory")]
         public string PrimaryCategory{ get; set; }
 
         /// <summary>
-        /// Keywords
+        /// Keyword.
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

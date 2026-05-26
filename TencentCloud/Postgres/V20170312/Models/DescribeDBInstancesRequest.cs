@@ -25,20 +25,21 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Query using one or more filter criteria. Filter criteria currently supported include:
-        /// db-instance-id: filter by instance ID (in string format)
-        /// db-instance-name: filter by instance name (in string format)
-        /// db-project-id: filter by project ID (in string format)
-        /// db-pay-mode: filter by instance billing mode (in string format)
-        /// db-tag-key: filter by tag key (in string format)
-        /// db-private-ip: filter by instance VPC IP (in string format)
+        /// Query using one or more filter criteria. filter criteria currently supported include:.
+        /// db-instance-id: Filter by instance ID, type string
+        /// db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+        /// db-project-id: Filter by project ID, type integer
+        /// db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+        /// db-tag-key: specifies the tag key to filter by (string type).
+        /// db-private-ip: Filter by instance Private Cloud IP, type string
         /// db-public-address: filter by instance public network address (in string format)
+        /// db-dedicated-cluster-id: Filter by private cluster Id, type string
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+        /// Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -50,13 +51,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+        /// Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+        /// Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

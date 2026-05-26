@@ -25,67 +25,67 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program or mini game appid
+        /// Mini program or mini game appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game icon
+        /// Mini program or mini game icon.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game name
+        /// Mini program or mini game name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game information
+        /// Mini program or mini game information.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modifier
+        /// Last modifier.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Online status. 0 Not available; 1 Available
+        /// Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// Engine type. 0 Mini program; 1 Mini game
+        /// Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
         /// </summary>
         [JsonProperty("EngineType")]
         public long? EngineType{ get; set; }
 
         /// <summary>
-        /// Category information
+        /// Category information.
         /// </summary>
         [JsonProperty("CategoryList")]
         public CategoryInfo[] CategoryList{ get; set; }

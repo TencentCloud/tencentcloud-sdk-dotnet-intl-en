@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game version ID</p>
+        /// <p>Mini game version ID.</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID</p>
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

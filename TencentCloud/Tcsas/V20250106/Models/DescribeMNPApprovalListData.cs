@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Approval ticket ID
+        /// Approval number.
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+        /// Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
@@ -55,73 +55,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Mini program version ID
+        /// Mini program version ID.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Applicant
+        /// Applicant.
         /// </summary>
         [JsonProperty("ApplyUser")]
         public string ApplyUser{ get; set; }
 
         /// <summary>
-        /// Application time
+        /// Application time.
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program icon
+        /// Mini program icon.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Specifies the application icon.
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Mini program review qr code.
+        /// Mini program approval QR code URL.
         /// </summary>
         [JsonProperty("MNPQrCodeUrl")]
         public string MNPQrCodeUrl{ get; set; }
 
         /// <summary>
-        /// Mini program type
+        /// Mini program category.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Specifies the reviewer.
+        /// Approver.
         /// </summary>
         [JsonProperty("ApprovalUser")]
         public string ApprovalUser{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApprovalTime{ get; set; }
 
         /// <summary>
-        /// Approval notes
+        /// Approval note.
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }

@@ -25,46 +25,52 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program type
+        /// <p>Mini program category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// <p>Mini program name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini app icon
+        /// <p>Mini program icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program introduction
+        /// <p>Mini program introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Mini program description
+        /// <p>Mini program description.</p>
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
+
+        /// <summary>
+        /// <p>The mini program name and description in multiple languages.</p>
+        /// </summary>
+        [JsonProperty("I18nList")]
+        public MNPI18NSyncDto[] I18nList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "MNPDesc", this.MNPDesc);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
+            this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
         }
     }
 }

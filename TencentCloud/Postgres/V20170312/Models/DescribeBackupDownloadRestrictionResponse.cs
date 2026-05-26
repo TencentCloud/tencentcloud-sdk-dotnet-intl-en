@@ -31,29 +31,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string RestrictionType{ get; set; }
 
         /// <summary>
-        /// Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
         /// </summary>
         [JsonProperty("VpcRestrictionEffect")]
         public string VpcRestrictionEffect{ get; set; }
 
         /// <summary>
-        /// Whether it is allowed to download the VPC ID list of the backup files. 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the vpc id list to allow or deny downloading backup files.
         /// </summary>
         [JsonProperty("VpcIdSet")]
         public string[] VpcIdSet{ get; set; }
 
         /// <summary>
-        /// Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-        /// Note: Note: This field may return null, indicating that no valid values can be obtained.
+        /// ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
         /// </summary>
         [JsonProperty("IpRestrictionEffect")]
         public string IpRestrictionEffect{ get; set; }
 
         /// <summary>
-        /// Whether it is allowed to download the IP list of the backup files. 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the ip list to allow or deny downloading the backup file.
         /// </summary>
         [JsonProperty("IpSet")]
         public string[] IpSet{ get; set; }

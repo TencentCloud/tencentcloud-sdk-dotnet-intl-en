@@ -386,37 +386,37 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public bool? IsPhysicalReplicationSupported{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether strong-sync DCN is supported</p>
         /// </summary>
         [JsonProperty("IsDcnStrongSyncSupported")]
         public long? IsDcnStrongSyncSupported{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether DCN switching is supported</p>
         /// </summary>
         [JsonProperty("IsDcnSwitchSupported")]
         public long? IsDcnSwitchSupported{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Proxy version</p>
         /// </summary>
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
         /// </summary>
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
         /// </summary>
         [JsonProperty("ProtectedProperty")]
         public long? ProtectedProperty{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

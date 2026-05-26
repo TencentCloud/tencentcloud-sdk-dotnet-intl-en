@@ -31,7 +31,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string BusinessId{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID</p>
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

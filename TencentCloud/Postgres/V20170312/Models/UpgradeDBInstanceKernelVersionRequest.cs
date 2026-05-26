@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,11 +37,11 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string TargetDBKernelVersion{ get; set; }
 
         /// <summary>
-        /// Switch time after the kernel version upgrade for the specified instance. Valid values:
-        /// <li>`0`: Switch now.
-        /// <li>`1`: Switch at the specified time.
-        /// <li>`2`: Switch in the maintenance time.
-        /// Default value: `0`. 
+        /// Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+        /// <Li>0: switch immediately.</li>.
+        /// <Li>1: switch at specified time</li>.
+        /// <Li>2: switch during maintenance time window.</li>.
+        /// Default value: 0  
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }
@@ -59,9 +59,9 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SwitchEndTime{ get; set; }
 
         /// <summary>
-        /// Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-        /// u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-        /// u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+        /// Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+        /// <li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+        /// <li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
         /// Default value: `false`.
         /// </summary>
         [JsonProperty("DryRun")]

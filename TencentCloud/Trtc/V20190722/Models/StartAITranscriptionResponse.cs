@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Used to uniquely identify a transcription task.
+        /// For unique identification of transcription task.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

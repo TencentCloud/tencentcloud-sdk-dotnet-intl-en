@@ -25,97 +25,97 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// App Id.
+        /// Superapp identity ID.
         /// </summary>
         [JsonProperty("AppIdentityId")]
         public long? AppIdentityId{ get; set; }
 
         /// <summary>
-        /// Name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Icon
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Android app package name
+        /// Android superapp package name. 
         /// </summary>
         [JsonProperty("AndroidAppKey")]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
-        /// iOS App bundleId
+        /// iOS superapp bundle ID. 
         /// </summary>
         [JsonProperty("IosAppKey")]
         public string IosAppKey{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the updater.
+        /// Last modifier.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time. 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Introduction
+        /// Superapp introduction.
         /// </summary>
         [JsonProperty("Intro")]
         public string Intro{ get; set; }
 
         /// <summary>
-        /// Team Id.
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Number of sensitive apis.
+        /// Number of sensitive APIs.
         /// </summary>
         [JsonProperty("SensitiveApiCount")]
         public long? SensitiveApiCount{ get; set; }
 
         /// <summary>
-        /// Application type. 1: Test; 2: Formal
+        /// Superapp type. Valid values: 1: Test; 2: Production.
         /// </summary>
         [JsonProperty("ApplicationType")]
         public long? ApplicationType{ get; set; }

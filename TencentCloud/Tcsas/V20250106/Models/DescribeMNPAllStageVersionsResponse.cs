@@ -25,8 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Response data
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Response data.
         /// </summary>
         [JsonProperty("Data")]
         public DescribeMPAllStageVersionsResp[] Data{ get; set; }

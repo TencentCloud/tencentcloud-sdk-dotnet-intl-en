@@ -25,28 +25,28 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Overview of visit analysis data
+        /// Access analysis overview data. 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BaseData")]
         public AccessAnalysisDetail BaseData{ get; set; }
 
         /// <summary>
-        /// This API does not respond.
+        /// Not returned by this API.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Overview")]
         public Overview Overview{ get; set; }
 
         /// <summary>
-        /// This API does not respond.
+        /// Not returned by this API.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PageData")]
         public AccessAnalysisDetail PageData{ get; set; }
 
         /// <summary>
-        /// This API does not respond.
+        /// Not returned by this API.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Payment")]

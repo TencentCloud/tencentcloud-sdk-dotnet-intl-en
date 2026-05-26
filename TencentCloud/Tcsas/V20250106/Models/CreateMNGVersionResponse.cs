@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Response data</p>
+        /// <p>Response data.</p>
         /// </summary>
         [JsonProperty("Data")]
         public CreateMNGVersionResp Data{ get; set; }

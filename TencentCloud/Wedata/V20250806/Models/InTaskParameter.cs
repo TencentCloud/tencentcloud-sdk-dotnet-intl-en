@@ -25,29 +25,39 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// Parameter name.
+        /// <p>Parameter name</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ParamKey")]
         public string ParamKey{ get; set; }
 
         /// <summary>
-        /// Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-        /// Example: project_wedata_1.sh_250820_104107.pp_out
+        /// <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ParamDesc")]
         public string ParamDesc{ get; set; }
 
         /// <summary>
-        /// Parent Task ID
+        /// <p>Parent task ID.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FromTaskId")]
         public string FromTaskId{ get; set; }
 
         /// <summary>
-        /// Parent task parameter key.
+        /// <p>Parent task parameter key</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FromParamKey")]
         public string FromParamKey{ get; set; }
+
+        /// <summary>
+        /// <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -59,6 +69,7 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "ParamDesc", this.ParamDesc);
             this.SetParamSimple(map, prefix + "FromTaskId", this.FromTaskId);
             this.SetParamSimple(map, prefix + "FromParamKey", this.FromParamKey);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

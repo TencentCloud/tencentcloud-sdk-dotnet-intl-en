@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1309";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a team member
+        /// This API is used to add a team member.
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a team member
+        /// This API is used to add a team member.
         /// </summary>
         /// <param name="req"><see cref="AddTeamMemberRequest"/></param>
         /// <returns><see cref="AddTeamMemberResponse"/></returns>
@@ -117,7 +117,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create an application.
+        /// This API is used to create a superapp.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>
@@ -127,7 +127,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create an application.
+        /// This API is used to create a superapp.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationRequest"/></param>
         /// <returns><see cref="CreateApplicationResponse"/></returns>
@@ -159,7 +159,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create a sensitive API of an application.
+        /// This API is used to create a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="CreateApplicationSensitiveAPIResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create a sensitive API of an application.
+        /// This API is used to create a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="CreateApplicationSensitiveAPIResponse"/></returns>
@@ -348,7 +348,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a domain name to the allowlist / blocklist of a mini program.
+        /// This API is used to create a domain allowlist/blocklist for a mini program.
         /// </summary>
         /// <param name="req"><see cref="CreateMNPDomainACLRequest"/></param>
         /// <returns><see cref="CreateMNPDomainACLResponse"/></returns>
@@ -358,7 +358,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to add a domain name to the allowlist / blocklist of a mini program.
+        /// This API is used to create a domain allowlist/blocklist for a mini program.
         /// </summary>
         /// <param name="req"><see cref="CreateMNPDomainACLRequest"/></param>
         /// <returns><see cref="CreateMNPDomainACLResponse"/></returns>
@@ -369,7 +369,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create a secret key for a mini program or mini game.
+        /// This API is used to create a package secret key for a mini program or mini game.
         /// </summary>
         /// <param name="req"><see cref="CreateMNPSecretKeyRequest"/></param>
         /// <returns><see cref="CreateMNPSecretKeyResponse"/></returns>
@@ -379,7 +379,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to create a secret key for a mini program or mini game.
+        /// This API is used to create a package secret key for a mini program or mini game.
         /// </summary>
         /// <param name="req"><see cref="CreateMNPSecretKeyRequest"/></param>
         /// <returns><see cref="CreateMNPSecretKeyResponse"/></returns>
@@ -495,7 +495,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to delete the applications.
+        /// This API is used to delete a superapp.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
         /// <returns><see cref="DeleteApplicationResponse"/></returns>
@@ -505,7 +505,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to delete the applications.
+        /// This API is used to delete a superapp.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
         /// <returns><see cref="DeleteApplicationResponse"/></returns>
@@ -516,7 +516,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to delete a sensitive API.
+        /// This API is used to delete a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="DeleteApplicationSensitiveAPIResponse"/></returns>
@@ -526,7 +526,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to delete a sensitive API.
+        /// This API is used to delete a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="DeleteApplicationSensitiveAPIResponse"/></returns>
@@ -663,7 +663,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for selected superapp metrics.
+        /// This API is used to query the line chart data for selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
         /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for selected superapp metrics.
+        /// This API is used to query the line chart data for selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
         /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
@@ -684,7 +684,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of the superapp data.
+        /// This API is used to query the data overview for the selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataOverviewRequest"/></param>
         /// <returns><see cref="DescribeAPPDataOverviewResponse"/></returns>
@@ -694,7 +694,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of the superapp data.
+        /// This API is used to query the data overview for the selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataOverviewRequest"/></param>
         /// <returns><see cref="DescribeAPPDataOverviewResponse"/></returns>
@@ -705,7 +705,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+        /// This API is used to query the advertising line chart data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
@@ -715,7 +715,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+        /// This API is used to query the advertising line chart data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
@@ -726,7 +726,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+        /// This API is used to query the mini program advertising overview.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingOverviewRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingOverviewResponse"/></returns>
@@ -736,7 +736,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+        /// This API is used to query the mini program advertising overview.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingOverviewRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingOverviewResponse"/></returns>
@@ -747,7 +747,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the application details.
+        /// This API is used to query the superapp details.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
         /// <returns><see cref="DescribeApplicationResponse"/></returns>
@@ -757,7 +757,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the application details.
+        /// This API is used to query the superapp details.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationRequest"/></param>
         /// <returns><see cref="DescribeApplicationResponse"/></returns>
@@ -768,7 +768,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the configuration files of an application.
+        /// This API is used to query the configuration files of a superapp.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationConfigFileRequest"/></param>
         /// <returns><see cref="DescribeApplicationConfigFileResponse"/></returns>
@@ -778,7 +778,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the configuration files of an application.
+        /// This API is used to query the configuration files of a superapp.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationConfigFileRequest"/></param>
         /// <returns><see cref="DescribeApplicationConfigFileResponse"/></returns>
@@ -789,7 +789,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the configuration details for an superapp.
+        /// This API is used to query the superapp configuration information.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationConfigInfosRequest"/></param>
         /// <returns><see cref="DescribeApplicationConfigInfosResponse"/></returns>
@@ -799,7 +799,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the configuration details for an superapp.
+        /// This API is used to query the superapp configuration information.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationConfigInfosRequest"/></param>
         /// <returns><see cref="DescribeApplicationConfigInfosResponse"/></returns>
@@ -810,7 +810,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the applications.
+        /// This API is used to query a list of superapps.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>
@@ -820,7 +820,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the applications.
+        /// This API is used to query a list of superapps.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationListRequest"/></param>
         /// <returns><see cref="DescribeApplicationListResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a list of the mini programs or mini games associated with a superapp.
+        /// This API is used to query the mini program or mini game list associated with a superapp.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationMNPListRequest"/></param>
         /// <returns><see cref="DescribeApplicationMNPListResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a list of the mini programs or mini games associated with a superapp.
+        /// This API is used to query the mini program or mini game list associated with a superapp.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationMNPListRequest"/></param>
         /// <returns><see cref="DescribeApplicationMNPListResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list sensitive APIs of an application.
+        /// This API is used to query a list of superapp sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationSensitiveAPIListRequest"/></param>
         /// <returns><see cref="DescribeApplicationSensitiveAPIListResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list sensitive APIs of an application.
+        /// This API is used to query a list of superapp sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationSensitiveAPIListRequest"/></param>
         /// <returns><see cref="DescribeApplicationSensitiveAPIListResponse"/></returns>
@@ -894,7 +894,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a global overview summary of usage statistics.
+        /// This API is used to query the data summary for the global overview.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalOverviewDataSummaryRequest"/></param>
         /// <returns><see cref="DescribeGlobalOverviewDataSummaryResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a global overview summary of usage statistics.
+        /// This API is used to query the data summary for the global overview.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalOverviewDataSummaryRequest"/></param>
         /// <returns><see cref="DescribeGlobalOverviewDataSummaryResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed report data for global overview within a specified date range.
+        /// This API is used to query the detailed report data for global overview within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalOverviewReportDetailRequest"/></param>
         /// <returns><see cref="DescribeGlobalOverviewReportDetailResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed report data for global overview within a specified date range.
+        /// This API is used to query the detailed report data for global overview within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalOverviewReportDetailRequest"/></param>
         /// <returns><see cref="DescribeGlobalOverviewReportDetailResponse"/></returns>
@@ -957,7 +957,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+        /// This API is used to query the detailed visit analysis data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisDetailResponse"/></returns>
@@ -967,7 +967,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+        /// This API is used to query the detailed visit analysis data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisDetailResponse"/></returns>
@@ -978,7 +978,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve line chart analysis data for mini game visits.
+        /// This API is used to query the mini game visit analysis line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
@@ -988,7 +988,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve line chart analysis data for mini game visits.
+        /// This API is used to query the mini game visit analysis line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
@@ -999,7 +999,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+        /// This API is used to query an overview of visit analysis data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisOverviewResponse"/></returns>
@@ -1009,7 +1009,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+        /// This API is used to query an overview of visit analysis data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisOverviewResponse"/></returns>
@@ -1020,7 +1020,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the real-time active user statistics for a mini game.
+        /// This API is used to query the mini game real-time active user statistics.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGActiveUserRealTimeStatisticsRequest"/></param>
         /// <returns><see cref="DescribeMNGActiveUserRealTimeStatisticsResponse"/></returns>
@@ -1030,7 +1030,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the real-time active user statistics for a mini game.
+        /// This API is used to query the mini game real-time active user statistics.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGActiveUserRealTimeStatisticsRequest"/></param>
         /// <returns><see cref="DescribeMNGActiveUserRealTimeStatisticsResponse"/></returns>
@@ -1041,7 +1041,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+        /// This API is used to query the detailed mini game advertising data over a specified period.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingDetailResponse"/></returns>
@@ -1051,7 +1051,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+        /// This API is used to query the detailed mini game advertising data over a specified period.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingDetailResponse"/></returns>
@@ -1062,7 +1062,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve mini game advertising data in a line chart format.
+        /// This API is used to query the mini game advertising data in a line chart format.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
@@ -1072,7 +1072,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve mini game advertising data in a line chart format.
+        /// This API is used to query the mini game advertising data in a line chart format.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
@@ -1083,7 +1083,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+        /// This API is used to query an overview of mini game ad metrics within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingOverviewResponse"/></returns>
@@ -1093,7 +1093,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+        /// This API is used to query an overview of mini game ad metrics within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingOverviewResponse"/></returns>
@@ -1125,7 +1125,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the list of mini game types.
+        /// This API is used to query the mini game categories.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGCategoryRequest"/></param>
         /// <returns><see cref="DescribeMNGCategoryResponse"/></returns>
@@ -1135,7 +1135,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the list of mini game types.
+        /// This API is used to query the mini game categories.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGCategoryRequest"/></param>
         /// <returns><see cref="DescribeMNGCategoryResponse"/></returns>
@@ -1188,7 +1188,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini game monthly active user data.
+        /// This API is used to query the detailed mini game monthly active user data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAUDataDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGMAUDataDetailResponse"/></returns>
@@ -1198,7 +1198,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini game monthly active user data.
+        /// This API is used to query the detailed mini game monthly active user data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAUDataDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGMAUDataDetailResponse"/></returns>
@@ -1209,7 +1209,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve mini game monthly active user data in a line chart format.
+        /// This API is used to query the mini game MAU line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
@@ -1219,7 +1219,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve mini game monthly active user data in a line chart format.
+        /// This API is used to query the mini game MAU line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
@@ -1230,7 +1230,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve MAU comparison data for a mini game between two months.
+        /// This API is used to query the MAU comparison data for a mini game between two months.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAUMonthlyComparisonMetricCardRequest"/></param>
         /// <returns><see cref="DescribeMNGMAUMonthlyComparisonMetricCardResponse"/></returns>
@@ -1240,7 +1240,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve MAU comparison data for a mini game between two months.
+        /// This API is used to query the MAU comparison data for a mini game between two months.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAUMonthlyComparisonMetricCardRequest"/></param>
         /// <returns><see cref="DescribeMNGMAUMonthlyComparisonMetricCardResponse"/></returns>
@@ -1272,7 +1272,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for mini game payment.
+        /// This API is used to query the mini game payment line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
@@ -1282,7 +1282,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for mini game payment.
+        /// This API is used to query the mini game payment line chart.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
@@ -1293,7 +1293,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini game payment data within a specified period.
+        /// This API is used to query an overview of mini game payment data within a specified period.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentOverviewResponse"/></returns>
@@ -1303,7 +1303,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini game payment data within a specified period.
+        /// This API is used to query an overview of mini game payment data within a specified period.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentOverviewResponse"/></returns>
@@ -1314,7 +1314,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a detailed payment report data for a mini game.
+        /// This API is used to query a detailed payment report data for a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentReportDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentReportDetailResponse"/></returns>
@@ -1324,7 +1324,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve a detailed payment report data for a mini game.
+        /// This API is used to query a detailed payment report data for a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentReportDetailRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentReportDetailResponse"/></returns>
@@ -1335,7 +1335,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the mini game payment retention data.
+        /// This API is used to query the mini game payment retention data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentRetentionAnalysisRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentRetentionAnalysisResponse"/></returns>
@@ -1345,7 +1345,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the mini game payment retention data.
+        /// This API is used to query the mini game payment retention data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentRetentionAnalysisRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentRetentionAnalysisResponse"/></returns>
@@ -1377,7 +1377,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the released mini game versions.
+        /// This API is used to query the release version history of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGReleasedVersionHistoryRequest"/></param>
         /// <returns><see cref="DescribeMNGReleasedVersionHistoryResponse"/></returns>
@@ -1387,7 +1387,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the released mini game versions.
+        /// This API is used to query the release version history of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGReleasedVersionHistoryRequest"/></param>
         /// <returns><see cref="DescribeMNGReleasedVersionHistoryResponse"/></returns>
@@ -1398,7 +1398,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve user retention data for a mini game within a specified date range.
+        /// This API is used to query the user retention data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGRetentionDataRequest"/></param>
         /// <returns><see cref="DescribeMNGRetentionDataResponse"/></returns>
@@ -1408,7 +1408,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve user retention data for a mini game within a specified date range.
+        /// This API is used to query the user retention data for a mini game within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGRetentionDataRequest"/></param>
         /// <returns><see cref="DescribeMNGRetentionDataResponse"/></returns>
@@ -1419,7 +1419,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the details of a sensitive API permission request for a mini game.
+        /// This API is used to query the details of permission requests to allow a mini game to call sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="DescribeMNGSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -1429,7 +1429,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the details of a sensitive API permission request for a mini game.
+        /// This API is used to query the details of permission requests to allow a mini game to call sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="DescribeMNGSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -1440,7 +1440,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the list of sensitive APIs that available to the mini game.
+        /// This API is used to query a list of sensitive APIs that are available to the mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGSensitiveAPIPermissionListRequest"/></param>
         /// <returns><see cref="DescribeMNGSensitiveAPIPermissionListResponse"/></returns>
@@ -1450,7 +1450,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the list of sensitive APIs that available to the mini game.
+        /// This API is used to query a list of sensitive APIs that are available to the mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGSensitiveAPIPermissionListRequest"/></param>
         /// <returns><see cref="DescribeMNGSensitiveAPIPermissionListResponse"/></returns>
@@ -1461,7 +1461,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the creation result of a mini game version.
+        /// This API is used to query the mini game version creation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGVersionRequest"/></param>
         /// <returns><see cref="DescribeMNGVersionResponse"/></returns>
@@ -1471,7 +1471,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the creation result of a mini game version.
+        /// This API is used to query the mini game version creation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGVersionRequest"/></param>
         /// <returns><see cref="DescribeMNGVersionResponse"/></returns>
@@ -1503,7 +1503,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+        /// This API is used to query the overview of mini program visit analysis data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAccessAnalysisOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNPAccessAnalysisOverviewResponse"/></returns>
@@ -1513,7 +1513,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+        /// This API is used to query the overview of mini program visit analysis data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAccessAnalysisOverviewRequest"/></param>
         /// <returns><see cref="DescribeMNPAccessAnalysisOverviewResponse"/></returns>
@@ -1524,7 +1524,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the real-time active user statistics for a mini program.
+        /// This API is used to query the mini program real-time active user statistics.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPActiveUserRealTimeStatisticsRequest"/></param>
         /// <returns><see cref="DescribeMNPActiveUserRealTimeStatisticsResponse"/></returns>
@@ -1534,7 +1534,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the real-time active user statistics for a mini program.
+        /// This API is used to query the mini program real-time active user statistics.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPActiveUserRealTimeStatisticsRequest"/></param>
         /// <returns><see cref="DescribeMNPActiveUserRealTimeStatisticsResponse"/></returns>
@@ -1545,7 +1545,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+        /// This API is used to query the detailed advertising data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAdvertisingDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPAdvertisingDetailResponse"/></returns>
@@ -1555,7 +1555,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+        /// This API is used to query the detailed advertising data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAdvertisingDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPAdvertisingDetailResponse"/></returns>
@@ -1566,7 +1566,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program version information.
+        /// This API is used to query versions of a mini program across all stages.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
@@ -1576,7 +1576,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program version information.
+        /// This API is used to query versions of a mini program across all stages.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
@@ -1587,7 +1587,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list the approval requests related with a mini program version.
+        /// This API is used to query a list of approval requests related with a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPApprovalListRequest"/></param>
         /// <returns><see cref="DescribeMNPApprovalListResponse"/></returns>
@@ -1597,7 +1597,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list the approval requests related with a mini program version.
+        /// This API is used to query a list of approval requests related with a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPApprovalListRequest"/></param>
         /// <returns><see cref="DescribeMNPApprovalListResponse"/></returns>
@@ -1608,7 +1608,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program types.
+        /// This API is used to query the mini program category list.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPCategoryRequest"/></param>
         /// <returns><see cref="DescribeMNPCategoryResponse"/></returns>
@@ -1618,7 +1618,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program types.
+        /// This API is used to query the mini program category list.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPCategoryRequest"/></param>
         /// <returns><see cref="DescribeMNPCategoryResponse"/></returns>
@@ -1629,7 +1629,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the domain allowlist / blocklist of a mini program.
+        /// This API is used to query the domain allowlist/blocklist of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPDomainACLRequest"/></param>
         /// <returns><see cref="DescribeMNPDomainACLResponse"/></returns>
@@ -1639,7 +1639,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the domain allowlist / blocklist of a mini program.
+        /// This API is used to query the domain allowlist/blocklist of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPDomainACLRequest"/></param>
         /// <returns><see cref="DescribeMNPDomainACLResponse"/></returns>
@@ -1650,7 +1650,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini programs.
+        /// This API is used to query the mini program list.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPListRequest"/></param>
         /// <returns><see cref="DescribeMNPListResponse"/></returns>
@@ -1660,7 +1660,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini programs.
+        /// This API is used to query the mini program list.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPListRequest"/></param>
         /// <returns><see cref="DescribeMNPListResponse"/></returns>
@@ -1671,7 +1671,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini program monthly active user data.
+        /// This API is used to query the detailed mini program monthly active user data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAUDataDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPMAUDataDetailResponse"/></returns>
@@ -1681,7 +1681,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini program monthly active user data.
+        /// This API is used to query the detailed mini program monthly active user data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAUDataDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPMAUDataDetailResponse"/></returns>
@@ -1692,7 +1692,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the mini program monthly active user data in a line chart format.
+        /// This API is used to query the mini program monthly active user data in a line chart format.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
@@ -1702,7 +1702,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the mini program monthly active user data in a line chart format.
+        /// This API is used to query the mini program monthly active user data in a line chart format.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
@@ -1713,7 +1713,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve MAU comparison data for a mini program between two months.
+        /// This API is used to query the MAU comparison data for a mini program between two months.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAUMetricCardRequest"/></param>
         /// <returns><see cref="DescribeMNPMAUMetricCardResponse"/></returns>
@@ -1723,7 +1723,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve MAU comparison data for a mini program between two months.
+        /// This API is used to query the MAU comparison data for a mini program between two months.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAUMetricCardRequest"/></param>
         /// <returns><see cref="DescribeMNPMAUMetricCardResponse"/></returns>
@@ -1755,7 +1755,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+        /// This API is used to query the detailed mini program page visit data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPPageAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPPageAnalysisDetailResponse"/></returns>
@@ -1765,7 +1765,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+        /// This API is used to query the detailed mini program page visit data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPPageAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPPageAnalysisDetailResponse"/></returns>
@@ -1797,7 +1797,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list all released versions of a mini program.
+        /// This API is used to query the release version history of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReleasedVersionHistoryRequest"/></param>
         /// <returns><see cref="DescribeMNPReleasedVersionHistoryResponse"/></returns>
@@ -1807,7 +1807,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to list all released versions of a mini program.
+        /// This API is used to query the release version history of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReleasedVersionHistoryRequest"/></param>
         /// <returns><see cref="DescribeMNPReleasedVersionHistoryResponse"/></returns>
@@ -1818,7 +1818,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+        /// This API is used to query the mini program visit analysis line chart within a given date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
@@ -1828,7 +1828,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+        /// This API is used to query the mini program visit analysis line chart within a given date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
@@ -1839,7 +1839,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini program visit analysis data.
+        /// This API is used to query the detailed mini program visit analysis data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDetailResponse"/></returns>
@@ -1849,7 +1849,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed mini program visit analysis data.
+        /// This API is used to query the detailed mini program visit analysis data.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDetailRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDetailResponse"/></returns>
@@ -1860,7 +1860,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve user retention data for a mini program within a specified date range.
+        /// This API is used to query the mini program user retention data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPRetentionDataRequest"/></param>
         /// <returns><see cref="DescribeMNPRetentionDataResponse"/></returns>
@@ -1870,7 +1870,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve user retention data for a mini program within a specified date range.
+        /// This API is used to query the mini program user retention data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPRetentionDataRequest"/></param>
         /// <returns><see cref="DescribeMNPRetentionDataResponse"/></returns>
@@ -1881,7 +1881,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query details of a specific permission request to call sensitive APIs.
+        /// This API is used to query the details of a sensitive API permission request for a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -1891,7 +1891,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query details of a specific permission request to call sensitive APIs.
+        /// This API is used to query the details of a sensitive API permission request for a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -1902,7 +1902,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query permission requests to allow a mini program calling sensitive APIs.
+        /// This API is used to query a list of permission requests to allow a mini program to call sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalListRequest"/></param>
         /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalListResponse"/></returns>
@@ -1912,7 +1912,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query permission requests to allow a mini program calling sensitive APIs.
+        /// This API is used to query a list of permission requests to allow a mini program to call sensitive APIs.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPSensitiveAPIPermissionApprovalListRequest"/></param>
         /// <returns><see cref="DescribeMNPSensitiveAPIPermissionApprovalListResponse"/></returns>
@@ -1965,7 +1965,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+        /// This API is used to query the mini program payment data details within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataDetailRequest"/></param>
         /// <returns><see cref="DescribePaymentDataDetailResponse"/></returns>
@@ -1975,7 +1975,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+        /// This API is used to query the mini program payment data details within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataDetailRequest"/></param>
         /// <returns><see cref="DescribePaymentDataDetailResponse"/></returns>
@@ -1986,7 +1986,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+        /// This API is used to query the mini program payment line chart within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
         /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
@@ -1996,7 +1996,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+        /// This API is used to query the mini program payment line chart within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
         /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
@@ -2007,7 +2007,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini program payment data within a specified date range.
+        /// This API is used to query an overview of mini program payment data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataOverviewRequest"/></param>
         /// <returns><see cref="DescribePaymentDataOverviewResponse"/></returns>
@@ -2017,7 +2017,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to retrieve an overview of mini program payment data within a specified date range.
+        /// This API is used to query an overview of mini program payment data within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataOverviewRequest"/></param>
         /// <returns><see cref="DescribePaymentDataOverviewResponse"/></returns>
@@ -2028,7 +2028,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the roles.
+        /// This API is used to query a list of roles.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
@@ -2038,7 +2038,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the roles.
+        /// This API is used to query a list of roles.
         /// </summary>
         /// <param name="req"><see cref="DescribeRoleListRequest"/></param>
         /// <returns><see cref="DescribeRoleListResponse"/></returns>
@@ -2070,7 +2070,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the teams.
+        /// This API is used to query a list of teams.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>
@@ -2080,7 +2080,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the teams.
+        /// This API is used to query a list of teams.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>
@@ -2091,7 +2091,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the team members.
+        /// This API is used to query a list of team members.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamMemberListRequest"/></param>
         /// <returns><see cref="DescribeTeamMemberListResponse"/></returns>
@@ -2101,7 +2101,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the team members.
+        /// This API is used to query a list of team members.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamMemberListRequest"/></param>
         /// <returns><see cref="DescribeTeamMemberListResponse"/></returns>
@@ -2154,7 +2154,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the users.
+        /// This API is used to query a list of users.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserListRequest"/></param>
         /// <returns><see cref="DescribeUserListResponse"/></returns>
@@ -2164,7 +2164,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the users.
+        /// This API is used to query a list of users.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserListRequest"/></param>
         /// <returns><see cref="DescribeUserListResponse"/></returns>
@@ -2175,7 +2175,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to set a sensitive API to restricted.
+        /// This API is used to disable a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="DisableApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="DisableApplicationSensitiveAPIResponse"/></returns>
@@ -2185,7 +2185,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to set a sensitive API to restricted.
+        /// This API is used to disable a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="DisableApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="DisableApplicationSensitiveAPIResponse"/></returns>
@@ -2196,7 +2196,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to set an application sensitive API to public.
+        /// This API is used to enable a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="EnableApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="EnableApplicationSensitiveAPIResponse"/></returns>
@@ -2206,7 +2206,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to set an application sensitive API to public.
+        /// This API is used to enable a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="EnableApplicationSensitiveAPIRequest"/></param>
         /// <returns><see cref="EnableApplicationSensitiveAPIResponse"/></returns>
@@ -2217,7 +2217,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to change the application information.
+        /// This API is used to change the superapp information.
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
         /// <returns><see cref="ModifyApplicationResponse"/></returns>
@@ -2227,7 +2227,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to change the application information.
+        /// This API is used to change the superapp information.
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
         /// <returns><see cref="ModifyApplicationResponse"/></returns>
@@ -2322,7 +2322,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to modify the mini program information.
+        /// This API is used to edit the mini program information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMNPRequest"/></param>
         /// <returns><see cref="ModifyMNPResponse"/></returns>
@@ -2332,7 +2332,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to modify the mini program information.
+        /// This API is used to edit the mini program information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMNPRequest"/></param>
         /// <returns><see cref="ModifyMNPResponse"/></returns>
@@ -2427,7 +2427,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to approve or reject the release of a mini program version.
+        /// This API is used to process mini program approval requests.
         /// </summary>
         /// <param name="req"><see cref="ProcessMNPApprovalRequest"/></param>
         /// <returns><see cref="ProcessMNPApprovalResponse"/></returns>
@@ -2437,7 +2437,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to approve or reject the release of a mini program version.
+        /// This API is used to process mini program approval requests.
         /// </summary>
         /// <param name="req"><see cref="ProcessMNPApprovalRequest"/></param>
         /// <returns><see cref="ProcessMNPApprovalResponse"/></returns>
@@ -2448,7 +2448,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to approve or reject the sensitive API permission requests.
+        /// This API is used to process a sensitive API permission request for a mini program.
         /// </summary>
         /// <param name="req"><see cref="ProcessMNPSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="ProcessMNPSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -2458,7 +2458,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to approve or reject the sensitive API permission requests.
+        /// This API is used to process a sensitive API permission request for a mini program.
         /// </summary>
         /// <param name="req"><see cref="ProcessMNPSensitiveAPIPermissionApprovalRequest"/></param>
         /// <returns><see cref="ProcessMNPSensitiveAPIPermissionApprovalResponse"/></returns>
@@ -2574,7 +2574,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to rollback a mini program online version.
+        /// This API is used to roll back the released version of a mini program to a specified version.
         /// </summary>
         /// <param name="req"><see cref="RollbackMNPVersionRequest"/></param>
         /// <returns><see cref="RollbackMNPVersionResponse"/></returns>
@@ -2584,7 +2584,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to rollback a mini program online version.
+        /// This API is used to roll back the released version of a mini program to a specified version.
         /// </summary>
         /// <param name="req"><see cref="RollbackMNPVersionRequest"/></param>
         /// <returns><see cref="RollbackMNPVersionResponse"/></returns>

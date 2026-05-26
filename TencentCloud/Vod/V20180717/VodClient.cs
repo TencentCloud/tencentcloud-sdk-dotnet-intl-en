@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -313,7 +313,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+        /// This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the [billing documentation](https://intl.cloud.tencent.com/document/product/266/14666#87e472ca-9c95-4658-ab7b-8f2130608419).
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioCloneRequest"/></param>
         /// <returns><see cref="CreateAigcAudioCloneResponse"/></returns>
@@ -323,7 +323,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+        /// This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the [billing documentation](https://intl.cloud.tencent.com/document/product/266/14666#87e472ca-9c95-4658-ab7b-8f2130608419).
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioCloneRequest"/></param>
         /// <returns><see cref="CreateAigcAudioCloneResponse"/></returns>
@@ -1429,6 +1429,27 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Delete the log topic enabled by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSTopicRequest"/></param>
+        /// <returns><see cref="DeleteCLSTopicResponse"/></returns>
+        public Task<DeleteCLSTopicResponse> DeleteCLSTopic(DeleteCLSTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSTopicResponse>(req, "DeleteCLSTopic");
+        }
+
+        /// <summary>
+        /// Delete the log topic enabled by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSTopicRequest"/></param>
+        /// <returns><see cref="DeleteCLSTopicResponse"/></returns>
+        public DeleteCLSTopicResponse DeleteCLSTopicSync(DeleteCLSTopicRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSTopicResponse>(req, "DeleteCLSTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// * A category can be deleted only if it has no subcategories and associated media files;
         /// * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
         /// </summary>
@@ -2250,6 +2271,48 @@ namespace TencentCloud.Vod.V20180717
         public DescribeCDNUsageDataResponse DescribeCDNUsageDataSync(DescribeCDNUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeCDNUsageDataResponse>(req, "DescribeCDNUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the CLS log set created by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogsetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSLogsetsResponse"/></returns>
+        public Task<DescribeCLSLogsetsResponse> DescribeCLSLogsets(DescribeCLSLogsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSLogsetsResponse>(req, "DescribeCLSLogsets");
+        }
+
+        /// <summary>
+        /// Query the CLS log set created by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSLogsetsRequest"/></param>
+        /// <returns><see cref="DescribeCLSLogsetsResponse"/></returns>
+        public DescribeCLSLogsetsResponse DescribeCLSLogsetsSync(DescribeCLSLogsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSLogsetsResponse>(req, "DescribeCLSLogsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the log topic list created by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCLSTopicsResponse"/></returns>
+        public Task<DescribeCLSTopicsResponse> DescribeCLSTopics(DescribeCLSTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSTopicsResponse>(req, "DescribeCLSTopics");
+        }
+
+        /// <summary>
+        /// Query the log topic list created by VOD.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCLSTopicsResponse"/></returns>
+        public DescribeCLSTopicsResponse DescribeCLSTopicsSync(DescribeCLSTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSTopicsResponse>(req, "DescribeCLSTopics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

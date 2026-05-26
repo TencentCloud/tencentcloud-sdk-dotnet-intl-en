@@ -60,14 +60,14 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         /// Execution time in seconds
         /// </summary>
         [JsonProperty("QueryTime")]
-        public long? QueryTime{ get; set; }
+        public float? QueryTime{ get; set; }
 
         /// <summary>
         /// Lock time in seconds
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LockTime")]
-        public long? LockTime{ get; set; }
+        public float? LockTime{ get; set; }
 
         /// <summary>
         /// Number of scanned rows

@@ -25,38 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Number of visits
+        /// Number of visits.
         /// </summary>
         [JsonProperty("VisitCount")]
         public long? VisitCount{ get; set; }
 
         /// <summary>
-        /// Average pages per device - visit_page_count / active_device_num
+        /// Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
         /// </summary>
         [JsonProperty("AvgDeviceVisitDeep")]
         public string AvgDeviceVisitDeep{ get; set; }
 
         /// <summary>
-        /// Pages per visit - visit_page_count / miniapp_open_num
+        /// Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
         /// </summary>
         [JsonProperty("AvgCountVisitDeep")]
         public string AvgCountVisitDeep{ get; set; }
 
         /// <summary>
-        /// Average visit duration - miniapp_total_duration / visit_page_count
+        /// Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
         /// </summary>
         [JsonProperty("AvgPageVisitDuration")]
         public string AvgPageVisitDuration{ get; set; }
 
         /// <summary>
-        /// Average visit duration per session
-        /// miniapp_total_duration/miniapp_open_num
+        /// Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
         /// </summary>
         [JsonProperty("AvgCountVisitDuration")]
         public string AvgCountVisitDuration{ get; set; }
 
         /// <summary>
-        /// Refresh time in YYYYMMDD format
+        /// Refresh time in YYYYMMDD format.
         /// </summary>
         [JsonProperty("DataTime")]
         public long? DataTime{ get; set; }

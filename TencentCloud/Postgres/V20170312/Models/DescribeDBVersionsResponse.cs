@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// List of database versions
+        /// <p>Database version information list.</p>
         /// </summary>
         [JsonProperty("VersionSet")]
         public Version[] VersionSet{ get; set; }

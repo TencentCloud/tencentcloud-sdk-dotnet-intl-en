@@ -25,37 +25,37 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Specification ID
+        /// <p>Specification ID.</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// <p>CPU cores.</p>
         /// </summary>
         [JsonProperty("CPU")]
         public ulong? CPU{ get; set; }
 
         /// <summary>
-        /// Memory size in MB
+        /// <p>Memory size, in MB.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Maximum storage capacity in GB supported by this specification
+        /// <p>Maximum storage capacity supported by this specification, in GB.</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// Minimum storage capacity in GB supported by this specification
+        /// <p>Minimum storage capacity supported by this specification, in GB.</p>
         /// </summary>
         [JsonProperty("MinStorage")]
         public ulong? MinStorage{ get; set; }
 
         /// <summary>
-        /// Estimated QPS for this specification
+        /// <p>Estimated QPS of the specification.</p>
         /// </summary>
         [JsonProperty("QPS")]
         public ulong? QPS{ get; set; }

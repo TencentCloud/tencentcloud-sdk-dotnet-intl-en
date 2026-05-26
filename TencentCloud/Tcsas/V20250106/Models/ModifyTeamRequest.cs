@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Team administrator
+        /// Team administrator.
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }

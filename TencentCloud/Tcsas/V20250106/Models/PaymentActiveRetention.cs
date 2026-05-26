@@ -25,73 +25,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Day 1 active retention of paying users
+        /// Day 1 active retention of paying users.
         /// </summary>
         [JsonProperty("OneDayRetentionUsers")]
         public long? OneDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 2 active retention of paying users
+        /// Day 2 active retention of paying users.
         /// </summary>
         [JsonProperty("TwoDayRetentionUsers")]
         public long? TwoDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 3 active retention of paying users
+        /// Day 3 active retention of paying users.
         /// </summary>
         [JsonProperty("ThreeDayRetentionUsers")]
         public long? ThreeDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 4 active retention of paying users
+        /// Day 4 active retention of paying users.
         /// </summary>
         [JsonProperty("FourDayRetentionUsers")]
         public long? FourDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 5 active retention of paying users
+        /// Day 5 active retention of paying users.
         /// </summary>
         [JsonProperty("FiveDayRetentionUsers")]
         public long? FiveDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 6 active retention of paying users
+        /// Day 6 active retention of paying users.
         /// </summary>
         [JsonProperty("SixDayRetentionUsers")]
         public long? SixDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 7 active retention of paying users
+        /// Day 7 active retention of paying users.
         /// </summary>
         [JsonProperty("SevenDayRetentionUsers")]
         public long? SevenDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 14 active retention of paying users
+        /// Day 14 active retention of paying users.
         /// </summary>
         [JsonProperty("FourteenDayRetentionUsers")]
         public long? FourteenDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 15 active retention of paying users
+        /// Day 15 active retention of paying users.
         /// </summary>
         [JsonProperty("FifteenDayRetentionUsers")]
         public long? FifteenDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Day 30 active retention of paying users
+        /// Day 30 active retention of paying users.
         /// </summary>
         [JsonProperty("ThirtyDayRetentionUsers")]
         public long? ThirtyDayRetentionUsers{ get; set; }
 
         /// <summary>
-        /// Number of paying users
+        /// Number of paying users.
         /// </summary>
         [JsonProperty("PaymentUserNum")]
         public long? PaymentUserNum{ get; set; }
 
         /// <summary>
-        /// Data time in YYYYMMDD format
+        /// Data time in YYYYMMDD format.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }

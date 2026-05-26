@@ -25,29 +25,45 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+        /// Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+        /// <li>LOCAL_BASIC: Local SATA disk</li>
+        /// <li>LOCAL_SSD: Local NVMe SSD</li>
+        /// <li>CLOUD_BASIC: Cloud SATA disk</li>
+        /// <li>CLOUD_SSD: Cloud SSD</li>
+        /// <li>CLOUD_PREMIUM: Premium SSD</li>
+        /// <li>CLOUD_BSSD: Balanced SSD</li>
+        /// <li>CLOUD_HSSD: Enhanced SSD</li>
+        /// <li>CLOUD_TSSD: Tremendous SSD</li>
+        /// Default value: Current disk types with inventory available.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-        /// It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+        /// System disk ID.
+        /// Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// System disk size; unit: GB; default value: 50 GB.
+        /// System disk size; unit: GiB; default value: 50 GiB.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// ID of the dedicated cluster to which the instance belongs.
+        /// Specifies the dedicated cluster ID belonging to.
+        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
+
+        /// <summary>
+        /// Disk name, which specifies a length not exceeding 128 characters.
+        /// </summary>
+        [JsonProperty("DiskName")]
+        public string DiskName{ get; set; }
 
 
         /// <summary>
@@ -59,6 +75,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
         }
     }
 }

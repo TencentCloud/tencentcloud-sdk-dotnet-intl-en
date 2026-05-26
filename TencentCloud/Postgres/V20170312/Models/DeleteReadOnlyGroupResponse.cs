@@ -25,8 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Task ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Process ID
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Domain ID
+        /// Domain ID.
         /// </summary>
         [JsonProperty("DomainId")]
         public long? DomainId{ get; set; }
 
         /// <summary>
-        /// Domain name
+        /// Domain name.
         /// </summary>
         [JsonProperty("DomainUrl")]
         public string DomainUrl{ get; set; }
 
         /// <summary>
-        /// Type. 1: allowlist; 2: blocklist.
+        /// Domain type. Valid value: 1: Allowed; 2: Blocked.
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the updater.
+        /// Last modifier.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

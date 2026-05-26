@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// This is Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

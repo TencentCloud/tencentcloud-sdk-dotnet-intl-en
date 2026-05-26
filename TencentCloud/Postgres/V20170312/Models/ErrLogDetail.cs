@@ -25,28 +25,77 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Username
+        /// <p>userName</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Database name
+        /// <p>Database name</p>
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// Error occurrence time
+        /// <p>Error occurrence time</p>
         /// </summary>
         [JsonProperty("ErrTime")]
         public string ErrTime{ get; set; }
 
         /// <summary>
-        /// Error message
+        /// <p>Error message</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
+
+        /// <summary>
+        /// <p>Process ID</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ProcessId")]
+        public long? ProcessId{ get; set; }
+
+        /// <summary>
+        /// <p>client address</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientAddr")]
+        public string ClientAddr{ get; set; }
+
+        /// <summary>
+        /// <p>Session ID</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// <p>Session start time</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SessionStartTime")]
+        public string SessionStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>Virtual transaction ID</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VirtualTransactionId")]
+        public string VirtualTransactionId{ get; set; }
+
+        /// <summary>
+        /// <p>SQLSTATE error code</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SqlStateCode")]
+        public string SqlStateCode{ get; set; }
+
+        /// <summary>
+        /// <p>client application name</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
 
 
         /// <summary>
@@ -58,6 +107,13 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Database", this.Database);
             this.SetParamSimple(map, prefix + "ErrTime", this.ErrTime);
             this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+            this.SetParamSimple(map, prefix + "ProcessId", this.ProcessId);
+            this.SetParamSimple(map, prefix + "ClientAddr", this.ClientAddr);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionStartTime", this.SessionStartTime);
+            this.SetParamSimple(map, prefix + "VirtualTransactionId", this.VirtualTransactionId);
+            this.SetParamSimple(map, prefix + "SqlStateCode", this.SqlStateCode);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         }
     }
 }

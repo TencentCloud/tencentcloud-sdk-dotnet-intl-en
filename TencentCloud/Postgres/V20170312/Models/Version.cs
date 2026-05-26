@@ -58,9 +58,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SupportedFeatureNames{ get; set; }
 
         /// <summary>
-        /// Database version status. Valid values:
-        /// `AVAILABLE`.
-        /// `DEPRECATED`.
+        /// Database version status, including:.
+        /// AVAILABLE: available.
+        /// UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+        /// DEPRECATED.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

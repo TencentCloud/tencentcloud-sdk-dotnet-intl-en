@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,48 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to disable CAM verification service for a database account.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAccountCAMRequest"/></param>
+        /// <returns><see cref="CloseAccountCAMResponse"/></returns>
+        public Task<CloseAccountCAMResponse> CloseAccountCAM(CloseAccountCAMRequest req)
+        {
+            return InternalRequestAsync<CloseAccountCAMResponse>(req, "CloseAccountCAM");
+        }
+
+        /// <summary>
+        /// This API is used to disable CAM verification service for a database account.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAccountCAMRequest"/></param>
+        /// <returns><see cref="CloseAccountCAMResponse"/></returns>
+        public CloseAccountCAMResponse CloseAccountCAMSync(CloseAccountCAMRequest req)
+        {
+            return InternalRequestAsync<CloseAccountCAMResponse>(req, "CloseAccountCAM")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to disable the audit feature for a database instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public Task<CloseAuditServiceResponse> CloseAuditService(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService");
+        }
+
+        /// <summary>
+        /// This API is used to disable the audit feature for a database instance.
+        /// </summary>
+        /// <param name="req"><see cref="CloseAuditServiceRequest"/></param>
+        /// <returns><see cref="CloseAuditServiceResponse"/></returns>
+        public CloseAuditServiceResponse CloseAuditServiceSync(CloseAuditServiceRequest req)
+        {
+            return InternalRequestAsync<CloseAuditServiceResponse>(req, "CloseAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to disable the public network address of an instance.
         /// </summary>
         /// <param name="req"><see cref="CloseDBExtranetAccessRequest"/></param>
@@ -117,27 +159,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to disable the public network address of a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
-        public Task<CloseServerlessDBExtranetAccessResponse> CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<CloseServerlessDBExtranetAccessResponse>(req, "CloseServerlessDBExtranetAccess");
-        }
-
-        /// <summary>
-        /// This API is used to disable the public network address of a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="CloseServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="CloseServerlessDBExtranetAccessResponse"/></returns>
-        public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccessSync(CloseServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<CloseServerlessDBExtranetAccessResponse>(req, "CloseServerlessDBExtranetAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to create a data account. The returned Oid is the unique identifier of the account, which matches the oid recorded in the database system table pg_roles.
         /// </summary>
         /// <param name="req"><see cref="CreateAccountRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Postgres.V20170312
         public CreateAccountResponse CreateAccountSync(CreateAccountRequest req)
         {
             return InternalRequestAsync<CreateAccountResponse>(req, "CreateAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creating an Audit Log File
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public Task<CreateAuditLogFileResponse> CreateAuditLogFile(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile");
+        }
+
+        /// <summary>
+        /// Creating an Audit Log File
+        /// </summary>
+        /// <param name="req"><see cref="CreateAuditLogFileRequest"/></param>
+        /// <returns><see cref="CreateAuditLogFileResponse"/></returns>
+        public CreateAuditLogFileResponse CreateAuditLogFileSync(CreateAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<CreateAuditLogFileResponse>(req, "CreateAuditLogFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -218,27 +260,6 @@ namespace TencentCloud.Postgres.V20170312
         public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccessSync(CreateDBInstanceNetworkAccessRequest req)
         {
             return InternalRequestAsync<CreateDBInstanceNetworkAccessResponse>(req, "CreateDBInstanceNetworkAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
-        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
-        public Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
-        {
-            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances");
-        }
-
-        /// <summary>
-        /// This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
-        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
-        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
-        {
-            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -373,27 +394,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
-        public Task<CreateServerlessDBInstanceResponse> CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateServerlessDBInstanceResponse>(req, "CreateServerlessDBInstance");
-        }
-
-        /// <summary>
-        /// This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="CreateServerlessDBInstanceResponse"/></returns>
-        public CreateServerlessDBInstanceResponse CreateServerlessDBInstanceSync(CreateServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateServerlessDBInstanceResponse>(req, "CreateServerlessDBInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to delete a database account. Oid and UserName must be input simultaneously to avoid accidental deletion. Note: This API is reentrant. If the account no longer exists, calling this API to delete it will not trigger an error.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>
@@ -411,6 +411,27 @@ namespace TencentCloud.Postgres.V20170312
         public DeleteAccountResponse DeleteAccountSync(DeleteAccountRequest req)
         {
             return InternalRequestAsync<DeleteAccountResponse>(req, "DeleteAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deletes an audit log file
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public Task<DeleteAuditLogFileResponse> DeleteAuditLogFile(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile");
+        }
+
+        /// <summary>
+        /// Deletes an audit log file
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAuditLogFileRequest"/></param>
+        /// <returns><see cref="DeleteAuditLogFileResponse"/></returns>
+        public DeleteAuditLogFileResponse DeleteAuditLogFileSync(DeleteAuditLogFileRequest req)
+        {
+            return InternalRequestAsync<DeleteAuditLogFileResponse>(req, "DeleteAuditLogFile")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -457,7 +478,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a network of an instance.
+        /// This API is used to delete a network from an instance while keeping at least one network.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
@@ -467,7 +488,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a network of an instance.
+        /// This API is used to delete a network from an instance while keeping at least one network.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
@@ -541,7 +562,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a network of an RO group.
+        /// This API is used to delete a network from an RO group (at least 1 network must remain).
         /// </summary>
         /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>
@@ -551,34 +572,13 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to delete a network of an RO group.
+        /// This API is used to delete a network from an RO group (at least 1 network must remain).
         /// </summary>
         /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
         /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>
         public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccessSync(DeleteReadOnlyGroupNetworkAccessRequest req)
         {
             return InternalRequestAsync<DeleteReadOnlyGroupNetworkAccessResponse>(req, "DeleteReadOnlyGroupNetworkAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
-        public Task<DeleteServerlessDBInstanceResponse> DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessDBInstanceResponse>(req, "DeleteServerlessDBInstance");
-        }
-
-        /// <summary>
-        /// This API is used to delete a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteServerlessDBInstanceRequest"/></param>
-        /// <returns><see cref="DeleteServerlessDBInstanceResponse"/></returns>
-        public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstanceSync(DeleteServerlessDBInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteServerlessDBInstanceResponse>(req, "DeleteServerlessDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -621,6 +621,69 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
         {
             return InternalRequestAsync<DescribeAccountsResponse>(req, "DescribeAccounts")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the audit instance list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public Task<DescribeAuditInstanceListResponse> DescribeAuditInstanceList(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList");
+        }
+
+        /// <summary>
+        /// Query the audit instance list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeAuditInstanceListResponse"/></returns>
+        public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries audit log files
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public Task<DescribeAuditLogFilesResponse> DescribeAuditLogFiles(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles");
+        }
+
+        /// <summary>
+        /// Queries audit log files
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogFilesRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogFilesResponse"/></returns>
+        public DescribeAuditLogFilesResponse DescribeAuditLogFilesSync(DescribeAuditLogFilesRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogFilesResponse>(req, "DescribeAuditLogFiles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query a Database Audit log.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public Task<DescribeAuditLogsResponse> DescribeAuditLogs(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query a Database Audit log.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogsResponse"/></returns>
+        public DescribeAuditLogsResponse DescribeAuditLogsSync(DescribeAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogsResponse>(req, "DescribeAuditLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -877,9 +940,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the HA configuration of an instance, which includes:
-        /// <li>Allow a standby node to promote to a primary node.
-        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// This API (DescribeDBInstanceHConfig) is used to query instance HA configuration information. The HA configuration information includes:
+        /// <li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+        /// <li>This API is used to configure conditions for using synchronous or asynchronous replication in semi-sync instances.</li>.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
@@ -889,9 +952,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the HA configuration of an instance, which includes:
-        /// <li>Allow a standby node to promote to a primary node.
-        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// This API (DescribeDBInstanceHConfig) is used to query instance HA configuration information. The HA configuration information includes:
+        /// <li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+        /// <li>This API is used to configure conditions for using synchronous or asynchronous replication in semi-sync instances.</li>.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstanceHAConfigRequest"/></param>
         /// <returns><see cref="DescribeDBInstanceHAConfigResponse"/></returns>
@@ -986,27 +1049,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
-        public Task<DescribeDBSlowlogsResponse> DescribeDBSlowlogs(DescribeDBSlowlogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDBSlowlogsResponse>(req, "DescribeDBSlowlogs");
-        }
-
-        /// <summary>
-        /// This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
-        /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
-        public DescribeDBSlowlogsResponse DescribeDBSlowlogsSync(DescribeDBSlowlogsRequest req)
-        {
-            return InternalRequestAsync<DescribeDBSlowlogsResponse>(req, "DescribeDBSlowlogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to query the list of supported database versions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBVersionsRequest"/></param>
@@ -1028,7 +1070,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
+        /// This api is used to get instance Xlog list. This interface belongs to early api and has stopped feature iteration. We recommend using api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1) as substitution.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1038,7 +1080,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
+        /// This api is used to get instance Xlog list. This interface belongs to early api and has stopped feature iteration. We recommend using api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1) as substitution.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBXlogsRequest"/></param>
         /// <returns><see cref="DescribeDBXlogsResponse"/></returns>
@@ -1280,7 +1322,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+        /// This api is used to query sales specification configuration. This interface belongs to the early stage and has stopped feature iteration. It is recommended to use the new api [DescribeClasses](https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1) as an alternative.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1290,7 +1332,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+        /// This api is used to query sales specification configuration. This interface belongs to the early stage and has stopped feature iteration. It is recommended to use the new api [DescribeClasses](https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1) as an alternative.
         /// </summary>
         /// <param name="req"><see cref="DescribeProductConfigRequest"/></param>
         /// <returns><see cref="DescribeProductConfigResponse"/></returns>
@@ -1339,27 +1381,6 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
         {
             return InternalRequestAsync<DescribeRegionsResponse>(req, "DescribeRegions")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query the details of one or more PostgreSQL for Serverless instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
-        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
-        public Task<DescribeServerlessDBInstancesResponse> DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeServerlessDBInstancesResponse>(req, "DescribeServerlessDBInstances");
-        }
-
-        /// <summary>
-        /// This API is used to query the details of one or more PostgreSQL for Serverless instances.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessDBInstancesRequest"/></param>
-        /// <returns><see cref="DescribeServerlessDBInstancesResponse"/></returns>
-        public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstancesSync(DescribeServerlessDBInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeServerlessDBInstancesResponse>(req, "DescribeServerlessDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1488,27 +1509,6 @@ namespace TencentCloud.Postgres.V20170312
         public DisIsolateDBInstancesResponse DisIsolateDBInstancesSync(DisIsolateDBInstancesRequest req)
         {
             return InternalRequestAsync<DisIsolateDBInstancesResponse>(req, "DisIsolateDBInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public Task<InitDBInstancesResponse> InitDBInstances(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances");
-        }
-
-        /// <summary>
-        /// This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="InitDBInstancesRequest"/></param>
-        /// <returns><see cref="InitDBInstancesResponse"/></returns>
-        public InitDBInstancesResponse InitDBInstancesSync(InitDBInstancesRequest req)
-        {
-            return InternalRequestAsync<InitDBInstancesResponse>(req, "InitDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1660,6 +1660,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// Modify the audit feature of the database instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public Task<ModifyAuditServiceResponse> ModifyAuditService(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService");
+        }
+
+        /// <summary>
+        /// Modify the audit feature of the database instance
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAuditServiceRequest"/></param>
+        /// <returns><see cref="ModifyAuditServiceResponse"/></returns>
+        public ModifyAuditServiceResponse ModifyAuditServiceSync(ModifyAuditServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyAuditServiceResponse>(req, "ModifyAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the backup download restrictions.
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
@@ -1786,9 +1807,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the HA configuration of an instance. which includes:
-        /// <li>Allow the standby node to promote to the primary node.
-        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// This API is used to modify instance HA configuration info. Among them, HA configuration info includes:.
+        /// <li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+        /// <li>This API is used to configure conditions for using synchronous replication or async replication in semi-sync instances.</li>.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
@@ -1798,9 +1819,9 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify the HA configuration of an instance. which includes:
-        /// <li>Allow the standby node to promote to the primary node.
-        /// <li>Allow a semi-sync instance to adopt sync or async replication.
+        /// This API is used to modify instance HA configuration info. Among them, HA configuration info includes:.
+        /// <li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+        /// <li>This API is used to configure conditions for using synchronous replication or async replication in semi-sync instances.</li>.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceHAConfigRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceHAConfigResponse"/></returns>
@@ -1916,7 +1937,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify instance specifications, including memory and disk size.
+        /// This API is used to modify instance specifications, including memory, Disk and Cpu.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -1926,7 +1947,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to modify instance specifications, including memory and disk size.
+        /// This API is used to modify instance specifications, including memory, Disk and Cpu.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
         /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
@@ -2084,6 +2105,48 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// This API is used to enable CAM verification service for a database account.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAccountCAMRequest"/></param>
+        /// <returns><see cref="OpenAccountCAMResponse"/></returns>
+        public Task<OpenAccountCAMResponse> OpenAccountCAM(OpenAccountCAMRequest req)
+        {
+            return InternalRequestAsync<OpenAccountCAMResponse>(req, "OpenAccountCAM");
+        }
+
+        /// <summary>
+        /// This API is used to enable CAM verification service for a database account.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAccountCAMRequest"/></param>
+        /// <returns><see cref="OpenAccountCAMResponse"/></returns>
+        public OpenAccountCAMResponse OpenAccountCAMSync(OpenAccountCAMRequest req)
+        {
+            return InternalRequestAsync<OpenAccountCAMResponse>(req, "OpenAccountCAM")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable the audit feature of the database instance
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService");
+        }
+
+        /// <summary>
+        /// Enable the audit feature of the database instance
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+            return InternalRequestAsync<OpenAuditServiceResponse>(req, "OpenAuditService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable the public network access of an instance.
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
@@ -2105,27 +2168,6 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable the public network address of a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
-        public Task<OpenServerlessDBExtranetAccessResponse> OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<OpenServerlessDBExtranetAccessResponse>(req, "OpenServerlessDBExtranetAccess");
-        }
-
-        /// <summary>
-        /// This API is used to enable the public network address of a PostgreSQL for Serverless instance.
-        /// </summary>
-        /// <param name="req"><see cref="OpenServerlessDBExtranetAccessRequest"/></param>
-        /// <returns><see cref="OpenServerlessDBExtranetAccessResponse"/></returns>
-        public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccessSync(OpenServerlessDBExtranetAccessRequest req)
-        {
-            return InternalRequestAsync<OpenServerlessDBExtranetAccessResponse>(req, "OpenServerlessDBExtranetAccess")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to rebalance the loads of read-only replicas in an RO group. Please note that connections to those read-only replicas will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases. This operation should be performed with caution.
         /// </summary>
         /// <param name="req"><see cref="RebalanceReadOnlyGroupRequest"/></param>
@@ -2143,6 +2185,27 @@ namespace TencentCloud.Postgres.V20170312
         public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroupSync(RebalanceReadOnlyGroupRequest req)
         {
             return InternalRequestAsync<RebalanceReadOnlyGroupResponse>(req, "RebalanceReadOnlyGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to manually reset the password for an account with CAM Verification enabled.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccountPasswordRequest"/></param>
+        /// <returns><see cref="RefreshAccountPasswordResponse"/></returns>
+        public Task<RefreshAccountPasswordResponse> RefreshAccountPassword(RefreshAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<RefreshAccountPasswordResponse>(req, "RefreshAccountPassword");
+        }
+
+        /// <summary>
+        /// This API is used to manually reset the password for an account with CAM Verification enabled.
+        /// </summary>
+        /// <param name="req"><see cref="RefreshAccountPasswordRequest"/></param>
+        /// <returns><see cref="RefreshAccountPasswordResponse"/></returns>
+        public RefreshAccountPasswordResponse RefreshAccountPasswordSync(RefreshAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<RefreshAccountPasswordResponse>(req, "RefreshAccountPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2273,10 +2336,10 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable the primary-standby switch of an instance.
-        /// <li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
-        /// <li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
-        /// <li>This operation can only be performed for the primary instance.
+        /// This API is used to switch over primary and replica nodes.
+        /// <li>This API is used to verify whether the business can correctly handle instance primary/backup switch scenarios by initiating switch proactively.</li>.
+        /// <li>This API is used to force a primary-secondary switch when the backup node latency fails to satisfy the switch condition by using forced switching.</li>.
+        /// <li>This API is used to perform this operation on the primary instance only.</li>.
         /// </summary>
         /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
         /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
@@ -2286,10 +2349,10 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// This API is used to enable the primary-standby switch of an instance.
-        /// <li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
-        /// <li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
-        /// <li>This operation can only be performed for the primary instance.
+        /// This API is used to switch over primary and replica nodes.
+        /// <li>This API is used to verify whether the business can correctly handle instance primary/backup switch scenarios by initiating switch proactively.</li>.
+        /// <li>This API is used to force a primary-secondary switch when the backup node latency fails to satisfy the switch condition by using forced switching.</li>.
+        /// <li>This API is used to perform this operation on the primary instance only.</li>.
         /// </summary>
         /// <param name="req"><see cref="SwitchDBInstancePrimaryRequest"/></param>
         /// <returns><see cref="SwitchDBInstancePrimaryResponse"/></returns>
@@ -2317,27 +2380,6 @@ namespace TencentCloud.Postgres.V20170312
         public UnlockAccountResponse UnlockAccountSync(UnlockAccountRequest req)
         {
             return InternalRequestAsync<UnlockAccountResponse>(req, "UnlockAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
-        public Task<UpgradeDBInstanceResponse> UpgradeDBInstance(UpgradeDBInstanceRequest req)
-        {
-            return InternalRequestAsync<UpgradeDBInstanceResponse>(req, "UpgradeDBInstance");
-        }
-
-        /// <summary>
-        /// This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
-        /// </summary>
-        /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
-        /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
-        public UpgradeDBInstanceResponse UpgradeDBInstanceSync(UpgradeDBInstanceRequest req)
-        {
-            return InternalRequestAsync<UpgradeDBInstanceResponse>(req, "UpgradeDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

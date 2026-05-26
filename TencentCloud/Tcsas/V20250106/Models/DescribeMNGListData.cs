@@ -25,91 +25,91 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Mini game icon</p>
+        /// <p>Mini game icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// <p>Mini game name</p>
+        /// <p>Mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// <p>Team name</p>
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// <p>Mini game category</p>
+        /// <p>Mini game category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+        /// <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Mini game introduction</p>
+        /// <p>Mini game introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// <p>Creator</p>
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// <p>Creation time</p>
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Updater</p>
+        /// <p>Last modifier.</p>
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// <p>Update time</p>
+        /// <p>Last modified time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Superapp name</p>
+        /// <p>Superapp name.</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// <p>Effective status of the bound superapp. 1: Not effective; 2: Effective</p>
+        /// <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
         /// </summary>
         [JsonProperty("EffectStatus")]
         public long? EffectStatus{ get; set; }
 
         /// <summary>
-        /// <p>Effective version ID of the superapp bound to the mini game</p>
+        /// <p>Effective mini game version ID bound to the superapp.</p>
         /// </summary>
         [JsonProperty("EffectMNPVersionId")]
         public long? EffectMNPVersionId{ get; set; }
 
         /// <summary>
-        /// <p>Effective version number of the superapp bound to the mini game</p>
+        /// <p>Effective mini game version number bound to the superapp. </p>
         /// </summary>
         [JsonProperty("EffectMNPVersion")]
         public string EffectMNPVersion{ get; set; }

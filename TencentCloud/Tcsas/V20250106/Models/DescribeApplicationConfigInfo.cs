@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Android configuration list
+        /// Android configuration list.
         /// </summary>
         [JsonProperty("AndroidConfig")]
         public ApplicationConfigInfo[] AndroidConfig{ get; set; }
 
         /// <summary>
-        /// iOS configuration list
+        /// iOS configuration list.
         /// </summary>
         [JsonProperty("IosConfig")]
         public ApplicationConfigInfo[] IosConfig{ get; set; }

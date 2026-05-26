@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Superapp configuration type: 1 Non-production, 2 Production
+        /// Superapp configuration type. Valid values: 1 Non-production; 2 Production.
         /// </summary>
         [JsonProperty("ApplicationType")]
         public long? ApplicationType{ get; set; }
 
         /// <summary>
-        /// Superapp package name
+        /// Superapp package name.
         /// </summary>
         [JsonProperty("AppKey")]
         public string AppKey{ get; set; }
 
         /// <summary>
-        /// Superapp URL
+        /// Superapp URL.
         /// </summary>
         [JsonProperty("AppURL")]
         public string AppURL{ get; set; }
 
         /// <summary>
-        /// Superapp configuration ID
+        /// Superapp configuration ID.
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

@@ -25,30 +25,25 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+        /// <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p>
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// Purchase duration, in months.
-        /// <Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-        /// <Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+        /// <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to use vouchers.
-        /// <li>true: use.</li>.
-        /// <li>false: non-use.</li>.
-        /// Default value: `false`.
+        /// <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Voucher ID list
+        /// <p>Voucher id list.</p>
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }

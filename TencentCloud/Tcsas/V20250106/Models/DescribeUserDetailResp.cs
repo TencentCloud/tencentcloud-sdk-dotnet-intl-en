@@ -25,26 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User iD.
+        /// User ID.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User account
+        /// User account.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
-        /// User account
-        /// 1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+        /// User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// User name
+        /// User name.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

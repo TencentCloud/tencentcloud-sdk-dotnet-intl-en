@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User signature for the transcription service to join a TRTC room. The signature verification corresponding to the current UserId serves as the login password. For specific details, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+        /// User signature for the transcription service to join a TRTC room. The signature verification corresponding to the current UserId serves as the login password. For specific details, see TRTC solution for calculating [UserSig](https://intl.cloud.tencent.com/zh/document/product/647/38104).
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }

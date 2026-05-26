@@ -25,28 +25,28 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// No data available
+        /// No description available.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BaseData")]
         public APPOverviewData BaseData{ get; set; }
 
         /// <summary>
-        /// Superapp overview summary data
+        /// Superapp overview summary data.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Overview")]
         public APPOverviewData Overview{ get; set; }
 
         /// <summary>
-        /// No data available
+        /// No description available.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PageData")]
         public APPOverviewData PageData{ get; set; }
 
         /// <summary>
-        /// No data available
+        /// No description available.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Payment")]

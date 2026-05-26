@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Domain name list
+        /// Domain list.
         /// </summary>
         [JsonProperty("DomainUrlList")]
         public string[] DomainUrlList{ get; set; }
 
         /// <summary>
-        /// Domain type. 1: Allowed; 2: Blocked
+        /// Domain type. Valid value: 1: Allowed; 2: Blocked.
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

@@ -25,24 +25,28 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// AZ ID, which can be obtained through the `DescribeZones` API.
+        /// <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Database engines. Valid values:
-        /// 1. `postgresql` (TencentDB for PostgreSQL)
-        /// 2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+        /// <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
 
         /// <summary>
-        /// Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+        /// <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
 
 
         /// <summary>
@@ -53,6 +57,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

@@ -25,109 +25,109 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version ID</p>
+        /// <p>Mini game version ID.</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// <p>Mini game name</p>
+        /// <p>Mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// <p>Mini game icon</p>
+        /// <p>Mini game icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// <p>Mini game category</p>
+        /// <p>Mini game category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// <p>Mini game introduction</p>
+        /// <p>Mini game introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// <p>Mini game description</p>
+        /// <p>Mini game description.</p>
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// <p>Developer</p>
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// <p>Developer creation time</p>
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version</p>
+        /// <p>Mini game version.</p>
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// <p>Version feature description</p>
+        /// <p>Version feature introduction.</p>
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// <p>Version:</p> Develop, preview, released</p>
+        /// <p>Stage: Develop, preview, available.</p>
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
-        /// <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+        /// <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// <p>Approval number</p>
+        /// <p>Approval number.</p>
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
+        /// <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
         /// </summary>
         [JsonProperty("ShowCase")]
         public long? ShowCase{ get; set; }
 
         /// <summary>
-        /// <p>Rollback version number</p>
+        /// <p>Rollback version number.</p>
         /// </summary>
         [JsonProperty("RollbackVersion")]
         public long? RollbackVersion{ get; set; }
 
         /// <summary>
-        /// <p>Available status</p>
+        /// <p>Available status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+        /// <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
         /// </summary>
         [JsonProperty("VersionCurrentStatus")]
         public long? VersionCurrentStatus{ get; set; }

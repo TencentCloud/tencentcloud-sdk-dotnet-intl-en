@@ -25,46 +25,52 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program type
+        /// Mini program category.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program introduction
+        /// Mini program introduction.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Mini program description
+        /// Mini program description.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Mini program icon
+        /// Mini program icon.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
+
+        /// <summary>
+        /// <p>The mini program name and description in multiple languages.</p>
+        /// </summary>
+        [JsonProperty("I18nList")]
+        public MNPI18NSyncDto[] I18nList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "MNPId", this.MNPId);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "MNPIcon", this.MNPIcon);
+            this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
         }
     }
 }

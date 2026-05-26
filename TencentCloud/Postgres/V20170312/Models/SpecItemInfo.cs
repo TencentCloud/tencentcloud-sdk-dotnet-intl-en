@@ -25,82 +25,79 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Specification ID
+        /// <p>Specification ID.</p>
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgerSQL version number
+        /// <p>PostgreSQL version number.</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Full version name corresponding to kernel number
+        /// <p>Full version name of the kernel number.</p>
         /// </summary>
         [JsonProperty("VersionName")]
         public string VersionName{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// <p>CPU cores.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size in MB
+        /// <p>Memory size, in MB.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Maximum storage capacity in GB supported by this specification
+        /// <p>Maximum storage capacity supported by this specification, in GB.</p>
         /// </summary>
         [JsonProperty("MaxStorage")]
         public ulong? MaxStorage{ get; set; }
 
         /// <summary>
-        /// Minimum storage capacity in GB supported by this specification
+        /// <p>Minimum storage capacity supported by this specification, in GB.</p>
         /// </summary>
         [JsonProperty("MinStorage")]
         public ulong? MinStorage{ get; set; }
 
         /// <summary>
-        /// Estimated QPS for this specification
+        /// <p>Estimated QPS of the specification.</p>
         /// </summary>
         [JsonProperty("Qps")]
         public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// (Disused)
+        /// <p>[Deprecated field].</p>
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
 
         /// <summary>
-        /// Machine type
+        /// <p>Machine type.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// PostgreSQL major version number
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>PostgreSQL major version number.</p>
         /// </summary>
         [JsonProperty("MajorVersion")]
         public string MajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL kernel version number
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>PostgreSQL kernel version number.</p>
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
         /// </summary>
         [JsonProperty("IsSupportTDE")]
         public long? IsSupportTDE{ get; set; }

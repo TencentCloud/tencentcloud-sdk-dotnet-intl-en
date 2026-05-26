@@ -61,7 +61,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ProjectIds{ get; set; }
 
         /// <summary>
-        /// Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+        /// Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
         /// </summary>
         [JsonProperty("PayModes")]
         public string PayModes{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ActionTypes{ get; set; }
 
         /// <summary>
-        /// Cost allocation tag key
+        /// Cost allocation tag key and value
         /// </summary>
         [JsonProperty("Tags")]
         public string Tags{ get; set; }

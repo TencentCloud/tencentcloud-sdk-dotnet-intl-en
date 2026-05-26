@@ -25,61 +25,61 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Number of new devices
+        /// Number of new devices.
         /// </summary>
         [JsonProperty("ActiveCount")]
         public long? ActiveCount{ get; set; }
 
         /// <summary>
-        /// Average visit duration per user
+        /// Average visit duration per user.
         /// </summary>
         [JsonProperty("AvgDevice")]
         public string AvgDevice{ get; set; }
 
         /// <summary>
-        /// Average visit duration per session
+        /// Average visit duration per session.
         /// </summary>
         [JsonProperty("AvgOnce")]
         public string AvgOnce{ get; set; }
 
         /// <summary>
-        /// Average opens per user
+        /// Average opens per user.
         /// </summary>
         [JsonProperty("AvgOpenCount")]
         public string AvgOpenCount{ get; set; }
 
         /// <summary>
-        /// Date
+        /// Date.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }
 
         /// <summary>
-        /// Data time
+        /// Data refresh time.
         /// </summary>
         [JsonProperty("FlushTime")]
         public string FlushTime{ get; set; }
 
         /// <summary>
-        /// Number of active devices
+        /// Number of active devices.
         /// </summary>
         [JsonProperty("NewCount")]
         public long? NewCount{ get; set; }
 
         /// <summary>
-        /// Number of opens
+        /// Number of opens.
         /// </summary>
         [JsonProperty("OpenCount")]
         public long? OpenCount{ get; set; }
 
         /// <summary>
-        /// Number of shares
+        /// Number of shares.
         /// </summary>
         [JsonProperty("TotalShareNum")]
         public long? TotalShareNum{ get; set; }
 
         /// <summary>
-        /// Cumulative users
+        /// Cumulative users.
         /// </summary>
         [JsonProperty("TotalUserNum")]
         public long? TotalUserNum{ get; set; }

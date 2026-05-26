@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+        /// <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
         /// </summary>
         [JsonProperty("AttackRiskLevel")]
         public string AttackRiskLevel{ get; set; }
 
         /// <summary>
-        /// A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+        /// <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
         /// </summary>
         [JsonProperty("AttackRiskDetailList")]
         public AttackRiskDetail[] AttackRiskDetailList{ get; set; }
 
         /// <summary>
-        /// Additional Information
+        /// <p>Return additional information (including detailed information of cache hit templates).</p>
         /// </summary>
         [JsonProperty("ExtraInfo")]
         public ExtraInfo ExtraInfo{ get; set; }

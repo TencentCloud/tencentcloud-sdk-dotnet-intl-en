@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// MAU details
+        /// MAU details.
         /// </summary>
         [JsonProperty("DataList")]
         public MAULineChartData[] DataList{ get; set; }

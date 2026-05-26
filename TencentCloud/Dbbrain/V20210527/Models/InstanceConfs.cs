@@ -43,6 +43,18 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("KeyDelimiters")]
         public string[] KeyDelimiters{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ShardNum")]
+        public string ShardNum{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AnalysisTopKey")]
+        public string AnalysisTopKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +64,8 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
             this.SetParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
             this.SetParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
+            this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
+            this.SetParamSimple(map, prefix + "AnalysisTopKey", this.AnalysisTopKey);
         }
     }
 }

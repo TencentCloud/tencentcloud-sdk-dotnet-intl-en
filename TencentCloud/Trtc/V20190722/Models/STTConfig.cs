@@ -27,7 +27,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// <summary>
         /// Convert speech to text supported languages, "zh" chinese is selected by default.
         /// 
-        /// You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. for detailed instructions, see: [AI intelligent recognition billing description](https://www.tencentcloud.com/document/product/647/111976?from_cn_redirect=1).
+        /// You can unlock different languages by purchasing the "AI intelligent recognition duration package" or claiming the trial version of the monthly subscription package. 
         /// 
         /// Supported languages for different speech to text package versions are as follows:.
         /// 

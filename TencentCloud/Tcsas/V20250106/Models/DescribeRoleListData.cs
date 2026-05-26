@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Role ID
+        /// Role ID.
         /// </summary>
         [JsonProperty("RoleId")]
         public long? RoleId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Role type 1-preset role 2-custom role.
+        /// Role type. Valid values: 1: Preset role; 2: Custom role. 
         /// </summary>
         [JsonProperty("RoleType")]
         public long? RoleType{ get; set; }

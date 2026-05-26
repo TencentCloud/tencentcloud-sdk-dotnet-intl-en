@@ -25,73 +25,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>API ID</p>
+        /// <p>API ID.</p>
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// <p>API name</p>
+        /// <p>API name.</p>
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
-        /// <p>API method</p>
+        /// <p>API method.</p>
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// <p>API status</p>
+        /// <p>API status.</p>
         /// </summary>
         [JsonProperty("APIStatus")]
         public long? APIStatus{ get; set; }
 
         /// <summary>
-        /// <p>API request status</p>
+        /// <p>API request status.</p>
         /// </summary>
         [JsonProperty("APIApplyStatus")]
         public long? APIApplyStatus{ get; set; }
 
         /// <summary>
-        /// <p>Reason for rejection</p>
+        /// <p>Reason for rejection.</p>
         /// </summary>
         [JsonProperty("RejectReason")]
         public string RejectReason{ get; set; }
 
         /// <summary>
-        /// <p>Approval number</p>
+        /// <p>Approval number.</p>
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// <p>Superapp ID</p>
+        /// <p>Superapp ID.</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// <p>Superapp icon</p>
+        /// <p>Superapp icon.</p>
         /// </summary>
         [JsonProperty("ApplicationIcon")]
         public string ApplicationIcon{ get; set; }
 
         /// <summary>
-        /// <p>Superapp name</p>
+        /// <p>Superapp name.</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// <p>API type. Valid values: 1: System; 2: Custom
+        /// <p>API type. Valid values: 1: System; 2: Custom.</p>
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// <p>API feature description</p>
+        /// <p>API feature description.</p>
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }

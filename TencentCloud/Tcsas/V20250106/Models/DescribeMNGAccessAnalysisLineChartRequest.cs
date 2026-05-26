@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program appid
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Fixed value: mnp_data_analysis
+        /// Fixed value: mnp_data_analysis.
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// IndexId (optional):
+        /// Index ID (optional):
         /// active_device_num: Number of active users
         /// new_device_num: Number of new users
         /// total_user_num: Total number of users
@@ -51,13 +51,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// miniapp_open_num: Number of mini game opens
         /// avg_device_open_num: Average opens per user
         /// avg_device_open_duration: Average visit duration per user
-        /// avg_count_open_duration: Average visit duration per session
+        /// avg_count_open_duration: Average visit duration per session.
         /// </summary>
         [JsonProperty("IndexId")]
         public string IndexId{ get; set; }
 
         /// <summary>
-        /// Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+        /// Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
         /// </summary>
         [JsonProperty("QueryData")]
         public string QueryData{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1317";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -201,6 +201,29 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to create a parameter template for TencentDB for MongoDB.
+        /// **Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceParamTplResponse"/></returns>
+        public Task<CreateDBInstanceParamTplResponse> CreateDBInstanceParamTpl(CreateDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstanceParamTplResponse>(req, "CreateDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// This API is used to create a parameter template for TencentDB for MongoDB.
+        /// **Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceParamTplResponse"/></returns>
+        public CreateDBInstanceParamTplResponse CreateDBInstanceParamTplSync(CreateDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstanceParamTplResponse>(req, "CreateDBInstanceParamTpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a log download task.
         /// </summary>
         /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
@@ -239,6 +262,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DeleteAccountUserResponse DeleteAccountUserSync(DeleteAccountUserRequest req)
         {
             return InternalRequestAsync<DeleteAccountUserResponse>(req, "DeleteAccountUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete full backups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDBBackupsResponse"/></returns>
+        public Task<DeleteDBBackupsResponse> DeleteDBBackups(DeleteDBBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBBackupsResponse>(req, "DeleteDBBackups");
+        }
+
+        /// <summary>
+        /// This API is used to delete full backups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBBackupsRequest"/></param>
+        /// <returns><see cref="DeleteDBBackupsResponse"/></returns>
+        public DeleteDBBackupsResponse DeleteDBBackupsSync(DeleteDBBackupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBBackupsResponse>(req, "DeleteDBBackups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -537,6 +581,52 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// This API is used to query ALL MongoDB database parameter templates under the current account.
+        /// **Description:** The DescribeDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplResponse"/></returns>
+        public Task<DescribeDBInstanceParamTplResponse> DescribeDBInstanceParamTpl(DescribeDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplResponse>(req, "DescribeDBInstanceParamTpl");
+        }
+
+        /// <summary>
+        /// This API is used to query ALL MongoDB database parameter templates under the current account.
+        /// **Description:** The DescribeDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplResponse"/></returns>
+        public DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTplSync(DescribeDBInstanceParamTplRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplResponse>(req, "DescribeDBInstanceParamTpl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query parameter template details of a cloud database instance for MongoDB.
+        /// **Description:** The DescribeDBInstanceParamTplDetail API is in public beta. During this period, this interface is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplDetailResponse"/></returns>
+        public Task<DescribeDBInstanceParamTplDetailResponse> DescribeDBInstanceParamTplDetail(DescribeDBInstanceParamTplDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplDetailResponse>(req, "DescribeDBInstanceParamTplDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query parameter template details of a cloud database instance for MongoDB.
+        /// **Description:** The DescribeDBInstanceParamTplDetail API is in public beta. During this period, this interface is only applicable to beta test participants.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParamTplDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParamTplDetailResponse"/></returns>
+        public DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetailSync(DescribeDBInstanceParamTplDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceParamTplDetailResponse>(req, "DescribeDBInstanceParamTplDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -663,6 +753,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// Retrieve the rotation status info
+        /// </summary>
+        /// <param name="req"><see cref="DescribePasswordRotationRequest"/></param>
+        /// <returns><see cref="DescribePasswordRotationResponse"/></returns>
+        public Task<DescribePasswordRotationResponse> DescribePasswordRotation(DescribePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<DescribePasswordRotationResponse>(req, "DescribePasswordRotation");
+        }
+
+        /// <summary>
+        /// Retrieve the rotation status info
+        /// </summary>
+        /// <param name="req"><see cref="DescribePasswordRotationRequest"/></param>
+        /// <returns><see cref="DescribePasswordRotationResponse"/></returns>
+        public DescribePasswordRotationResponse DescribePasswordRotationSync(DescribePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<DescribePasswordRotationResponse>(req, "DescribePasswordRotation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the current domain information of the MongoDB database.
         /// </summary>
         /// <param name="req"><see cref="DescribeSRVConnectionDomainRequest"/></param>
@@ -785,6 +896,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DisableSRVConnectionUrlResponse DisableSRVConnectionUrlSync(DisableSRVConnectionUrlRequest req)
         {
             return InternalRequestAsync<DisableSRVConnectionUrlResponse>(req, "DisableSRVConnectionUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable password rotation
+        /// </summary>
+        /// <param name="req"><see cref="EnablePasswordRotationRequest"/></param>
+        /// <returns><see cref="EnablePasswordRotationResponse"/></returns>
+        public Task<EnablePasswordRotationResponse> EnablePasswordRotation(EnablePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<EnablePasswordRotationResponse>(req, "EnablePasswordRotation");
+        }
+
+        /// <summary>
+        /// Enable password rotation
+        /// </summary>
+        /// <param name="req"><see cref="EnablePasswordRotationRequest"/></param>
+        /// <returns><see cref="EnablePasswordRotationResponse"/></returns>
+        public EnablePasswordRotationResponse EnablePasswordRotationSync(EnablePasswordRotationRequest req)
+        {
+            return InternalRequestAsync<EnablePasswordRotationResponse>(req, "EnablePasswordRotation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -995,6 +1127,27 @@ namespace TencentCloud.Mongodb.V20190725
         public KillOpsResponse KillOpsSync(KillOpsRequest req)
         {
             return InternalRequestAsync<KillOpsResponse>(req, "KillOps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify backup expiration time
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBackupExpireTimeResponse"/></returns>
+        public Task<ModifyBackupExpireTimeResponse> ModifyBackupExpireTime(ModifyBackupExpireTimeRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupExpireTimeResponse>(req, "ModifyBackupExpireTime");
+        }
+
+        /// <summary>
+        /// Modify backup expiration time
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupExpireTimeRequest"/></param>
+        /// <returns><see cref="ModifyBackupExpireTimeResponse"/></returns>
+        public ModifyBackupExpireTimeResponse ModifyBackupExpireTimeSync(ModifyBackupExpireTimeRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupExpireTimeResponse>(req, "ModifyBackupExpireTime")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

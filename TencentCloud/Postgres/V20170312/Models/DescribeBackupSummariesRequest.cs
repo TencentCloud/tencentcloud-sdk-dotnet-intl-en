@@ -37,22 +37,22 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter instances using one or more criteria. Valid filter names:
-        /// db-instance-id: Filter by instance ID (in string format).
-        /// db-instance-name: Filter by instance name (in string format).
-        /// db-instance-ip: Filter by instance VPC IP (in string format).
+        /// Query using one or more filter criteria. filter criteria currently supported include:.
+        /// db-instance-id: filter by instance id (string type).
+        /// db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+        /// db-instance-ip: specifies the instance VPC ip for filtering (string type).
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: `TotalBackupSize`, `LogBackupSize`, `ManualBaseBackupSize`, `AutoBaseBackupSize`.
+        /// Sorting field, supports TotalBackupSize - total size of backups, LogBackupSize - size of backup logs, ManualBaseBackupSize - size of manual backup data, AutoBaseBackupSize - size of automatic data backup. if this parameter is not input, no sorting is performed by default.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+        /// Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

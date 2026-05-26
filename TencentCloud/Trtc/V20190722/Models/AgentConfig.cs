@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating [UserSig](https://www.tencentcloud.com/document/product/647/45910?from_cn_redirect=1#UserSig).
+        /// Signature verification corresponding to the chatbot's UserId, namely, the UserId and UserSig serve as the login password for the chatbot to enter the room. for specific calculation methods, see TRTC solution for calculating.
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }

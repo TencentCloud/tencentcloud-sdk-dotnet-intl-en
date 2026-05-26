@@ -25,33 +25,33 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC's [SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid) is the same as the SdkAppId used by the room that starts the transcription task.
+        /// [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId used by the room with transcription task enabled.
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// TRTC's [RoomId](https://cloud.tencent.com/document/product/647/46351#roomid), which indicates the room number where the transcription task is started.
+        /// [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC refers to the room number that enables the transcription task.
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// Parameters of the transcription robot.
+        /// Transcription robot parameters.
         /// </summary>
         [JsonProperty("TranscriptionParams")]
         public TranscriptionParams TranscriptionParams{ get; set; }
 
         /// <summary>
-        /// The unique ID passed by the caller is used by the server to deduplicate. Note: If this parameter is passed, the server will use it first to deduplicate. If this parameter is not passed, the server's deduplication strategy is as follows: 
-        /// - If the TranscriptionMode field is 0, only one task can be opened in a room
-        /// - If the TranscriptionMode field is 1, only one task can be opened in a TargetUserId
+        /// Unique Id passed by the caller, used by the server for task deduplication. duplicate tasks will fail to initiate. the server uses SdkAppId+RoomId+RoomIdType+RobotUserId for deduplication by default. if SessionId is provided, it will also be used for deduplication.
+        /// Note:.
+        /// When TranscriptionMode is 0, ensure only one task is initiated in a room. if multiple tasks are initiated, robots will subscribe to each other. unless the task is stopped proactively, it will timeout exit after 10 hours. in such cases, it is advisable to fill in SessionId to ensure subsequent repeated tasks fail.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The type of TRTC room number. 0 represents a numeric room number, and 1 represents a string room number. If not filled in, the default is a numeric room number.
+        /// Type of the TRTC room number. 0 indicates digit room number, 1 indicates string room number. by default if left blank, it is digit room number.
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public RecognizeConfig RecognizeConfig{ get; set; }
 
         /// <summary>
-        /// Translation config.
+        /// Translate configuration details.
         /// </summary>
         [JsonProperty("TranslationConfig")]
         public TranslationConfig TranslationConfig{ get; set; }

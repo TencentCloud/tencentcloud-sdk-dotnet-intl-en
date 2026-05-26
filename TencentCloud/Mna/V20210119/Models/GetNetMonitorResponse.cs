@@ -25,17 +25,13 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// monitoring data
+        /// <p>Monitoring data.</p>
         /// </summary>
         [JsonProperty("MonitorData")]
         public MonitorData[] MonitorData{ get; set; }
 
         /// <summary>
-        /// Access region. Valid values: ['MC','AP','EU','AM'].
-        /// MC=Chinese mainland
-        /// AP=Asia Pacific
-        /// EU=Europe
-        /// AM=Americas
+        /// <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }

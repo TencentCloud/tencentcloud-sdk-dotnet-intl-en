@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+        /// Specifies the instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports operating multiple instances simultaneously.
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// ID of the new project
+        /// ID of the new project it belongs to. obtain through the [DescribeProjects](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game category name</p>
+        /// <p>Mini game category name.</p>
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// <p>Mini game category</p>
+        /// <p>Mini game category.</p>
         /// </summary>
         [JsonProperty("TypeValue")]
         public string[] TypeValue{ get; set; }
 
         /// <summary>
-        /// <p>Category ID</p>
+        /// <p>Category ID.</p>
         /// </summary>
         [JsonProperty("TypeId")]
         public long? TypeId{ get; set; }
 
         /// <summary>
-        /// <p>Creation time</p>
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Creator</p>
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// <p>Whether this is a system category</p>
+        /// <p>Whether it is a system category.</p>
         /// </summary>
         [JsonProperty("IsSystem")]
         public bool? IsSystem{ get; set; }

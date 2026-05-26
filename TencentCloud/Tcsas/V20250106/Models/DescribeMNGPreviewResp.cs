@@ -25,49 +25,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Mini game name</p>
+        /// <p>Mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// <p>Mini game description</p>
+        /// <p>Mini game description.</p>
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version</p>
+        /// <p>Mini game version.</p>
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version description</p>
+        /// <p>Mini game version description.</p>
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version QR code</p>
+        /// <p>Mini game version QR code URL.</p>
         /// </summary>
         [JsonProperty("QRCodeUrl")]
         public string QRCodeUrl{ get; set; }
 
         /// <summary>
-        /// <p>Preview path</p>
+        /// <p>Preview path.</p>
         /// </summary>
         [JsonProperty("PreviewEntrancePath")]
         public string PreviewEntrancePath{ get; set; }
 
         /// <summary>
-        /// <p>Information encoded in the QR code</p>
+        /// <p>Information encoded in the QR code.</p>
         /// </summary>
         [JsonProperty("QRCodeContent")]
         public string QRCodeContent{ get; set; }

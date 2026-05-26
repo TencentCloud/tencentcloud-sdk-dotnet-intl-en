@@ -25,60 +25,55 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// RO group identifier
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// RO group identifier.
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// RO group name
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the read-only group name.
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
 
         /// <summary>
-        /// Project ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Primary instance ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Primary instance id.
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
-        /// The minimum number of read-only replicas that must be retained in an RO group
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Specifies the minimum number of instances to retain.
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public long? MinDelayEliminateReserve{ get; set; }
 
         /// <summary>
-        /// Delayed log size threshold
+        /// Specifies the delay threshold for space size in MB.
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public long? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+        /// Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
         /// </summary>
         [JsonProperty("ReplayLatencyEliminate")]
         public long? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// Delay threshold
+        /// Delay time size threshold, in seconds.
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public float? MaxReplayLag{ get; set; }
 
         /// <summary>
-        /// Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+        /// Delay time switch. 0 - turn off. 1 - turn on.
         /// </summary>
         [JsonProperty("ReplayLagEliminate")]
         public long? ReplayLagEliminate{ get; set; }
@@ -91,7 +86,6 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// Subnet ID
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -109,7 +103,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Status. valid values: creating, ok, modifying, deleting, deleted.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

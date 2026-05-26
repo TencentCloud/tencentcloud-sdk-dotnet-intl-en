@@ -25,38 +25,38 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Fixed value: mnp_data_analysis
+        /// Fixed value: mnp_data_analysis.
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// IndexId (optional):
+        /// Index ID (optional):
         /// app_minigame_num: Number of created mini games
         /// app_online_miniapp_num: Number of available mini programs
         /// app_miniapp_num: Number of created mini programs
         /// app_related_corp_num: Mini program team data
         /// app_online_minigame_num: Number of available mini games
         /// app_active_device_num: Number of active devices
-        /// app_new_device_num: Number of new devices
+        /// app_new_device_num: Number of new devices.
         /// </summary>
         [JsonProperty("IndexIds")]
         public string[] IndexIds{ get; set; }
 
         /// <summary>
-        /// Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+        /// Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
         /// </summary>
         [JsonProperty("QueryData")]
         public string QueryData{ get; set; }
 
         /// <summary>
-        /// Superapp ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationIds")]
         public string[] ApplicationIds{ get; set; }

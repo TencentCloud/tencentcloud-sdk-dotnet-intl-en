@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>API name</p>
+        /// <p>API name.</p>
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
-        /// <p>API description</p>
+        /// <p>API description.</p>
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
 
         /// <summary>
-        /// <p>API type. Valid values: 1: System; 2: Custom</p>
+        /// <p>API type. Valid values: 1: System; 2: Custom.</p>
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+        /// <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
         /// </summary>
         [JsonProperty("UseScope")]
         public ulong? UseScope{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Multiple domain names are concatenated with the separator ;</p>
+        /// <p>Multiple domains concatenated with semicolons (;).</p>
         /// </summary>
         [JsonProperty("DomainUrl")]
         public string DomainUrl{ get; set; }
 
         /// <summary>
-        /// <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+        /// <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }

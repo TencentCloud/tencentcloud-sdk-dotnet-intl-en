@@ -25,31 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Type: 0 Non-production data, 1 Production data
+        /// Data type. Valid values: 0: Non-production data; 1: Production data.
         /// </summary>
         [JsonProperty("DataType")]
         public long? DataType{ get; set; }
 
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Superapp ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Mini program appid, required. When provided, the query is performed based on the mini program.
+        /// Mini program appid. If not empty, results are filtered by mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program team ID
+        /// Mini program team ID.
         /// </summary>
         [JsonProperty("MNPTeamId")]
         public long? MNPTeamId{ get; set; }

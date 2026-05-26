@@ -25,43 +25,43 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Start time in YYYYMMDD format
+        /// Start time in YYYYMMDD format.
         /// </summary>
         [JsonProperty("SourceMonth")]
         public long? SourceMonth{ get; set; }
 
         /// <summary>
-        /// Type: 0 Non-production data, 1 Production data 
+        /// Data type. Valid values: 0: Non-production data; 1: Production data.
         /// </summary>
         [JsonProperty("DataType")]
         public long? DataType{ get; set; }
 
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// End time in YYYYMMDD format
+        /// End time in YYYYMMDD format.
         /// </summary>
         [JsonProperty("TargetMonth")]
         public long? TargetMonth{ get; set; }
 
         /// <summary>
-        /// Superapp ID starting with App
+        /// Superapp ID prefixed with "app".
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
+        /// Mini program appid. If not empty, results are filtered by mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program team ID, required. When provided, the query is performed based on the mini program team.
+        /// Mini program team ID. If not empty, results are filtered by mini program team ID.
         /// </summary>
         [JsonProperty("MNPTeamId")]
         public long? MNPTeamId{ get; set; }

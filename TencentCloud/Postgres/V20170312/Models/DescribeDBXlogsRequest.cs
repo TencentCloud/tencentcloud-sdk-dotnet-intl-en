@@ -25,31 +25,31 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-4wdeb0zv.
+        /// Instance ID. for example, postgres-4wdeb0zv.
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+        /// Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query end time in the format of 2018-06-10 17:06:38
+        /// Query end time, in the format of 2018-06-10 17:06:38.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Page number for data return in paged query. Pagination starts from 0
+        /// Pagination return indicates which page of entries to return. counting begins from page 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per page in paged query. Value range: 1-100.
+        /// Pagination return indicates how many items per page. value range: 1-100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

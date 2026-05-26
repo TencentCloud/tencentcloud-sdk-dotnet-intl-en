@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? BaseBackupRetentionPeriod{ get; set; }
 
         /// <summary>
-        /// Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+        /// Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
         /// </summary>
         [JsonProperty("BackupPeriod")]
         public string[] BackupPeriod{ get; set; }
@@ -59,6 +59,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("LogBackupRetentionPeriod")]
         public ulong? LogBackupRetentionPeriod{ get; set; }
+
+        /// <summary>
+        /// Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// Specifies the name of the backup plan to modify.
+        /// </summary>
+        [JsonProperty("PlanName")]
+        public string PlanName{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
             this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
         }
     }
 }

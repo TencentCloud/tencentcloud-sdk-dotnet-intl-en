@@ -25,110 +25,109 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program ID.
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Specifies the mini program version primary key id.
+        /// Mini program version primary key ID.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Specifies the mini program avatar.
+        /// Mini program icon.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program type
+        /// Mini program category.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Mini program introduction
+        /// Mini program introduction.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Mini program description
+        /// Mini program description.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Specifies the developer.
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Developer creation time.
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Mini program version.
+        /// Mini program version number.
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Describes version features.
+        /// Version introduction.
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Development Platform Online.
+        /// Stage: Develop, preview, released.
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
-        /// 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+        /// Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Approval ticket ID
+        /// Approval number.
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Specifies whether it is a trial version.
-        /// Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+        /// Whether this is a preview. Valid values: 0: No; 1: Yes.
         /// </summary>
         [JsonProperty("ShowCase")]
         public long? ShowCase{ get; set; }
 
         /// <summary>
-        /// Version number to roll back to.
+        /// Rollback version number.
         /// </summary>
         [JsonProperty("RollbackVersion")]
         public long? RollbackVersion{ get; set; }
 
         /// <summary>
-        /// Indicates the release status.
+        /// Available status. Valid value: 0: All; 1 Available; 2: In canary release.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+        /// Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
         /// </summary>
         [JsonProperty("VersionCurrentStatus")]
         public long? VersionCurrentStatus{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance ID in the format of postgres-hez4fh0v
+        /// Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -46,10 +46,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
         /// </summary>
         [JsonProperty("InstanceChargeType")]
+        [System.Obsolete]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Instance CPU size, unit: Core
+        /// Specifies the instance Cpu size in unit Core.
+        /// If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Year-month date data
+        /// Date in YYYYMM format.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataTime")]
         public long? DataTime{ get; set; }
 
         /// <summary>
-        /// MAU data
+        /// MAU count. 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MAUCount")]

@@ -25,31 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Task ID</p>
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+        /// <p>Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// <p>Task status information</p>
+        /// <p>Task status information.</p>
         /// </summary>
         [JsonProperty("TaskMsg")]
         public string TaskMsg{ get; set; }
 
         /// <summary>
-        /// <p>Mini game version ID (returned upon successful compilation)</p>
+        /// <p>Mini game version ID (returned upon successful compilation).</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }

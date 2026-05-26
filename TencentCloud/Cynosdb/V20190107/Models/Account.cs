@@ -31,6 +31,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
+        /// Host
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
+        /// <summary>
         /// Database account description
         /// </summary>
         [JsonProperty("Description")]
@@ -49,16 +55,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Host
-        /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
-
-        /// <summary>
         /// The max connections
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
+
+        /// <summary>
+        /// Whether password rotation is enabled (0: turn off; 1: turn on)
+        /// </summary>
+        [JsonProperty("PasswordRotation")]
+        public long? PasswordRotation{ get; set; }
 
 
         /// <summary>
@@ -67,11 +73,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
         }
     }
 }

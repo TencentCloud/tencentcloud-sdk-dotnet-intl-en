@@ -25,34 +25,46 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+        /// The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+        /// Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }
 
         /// <summary>
-        /// If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+        /// After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
         /// </summary>
         [JsonProperty("MaxIdleTime")]
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+        /// 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
         /// </summary>
         [JsonProperty("TranscriptionMode")]
         public ulong? TranscriptionMode{ get; set; }
 
         /// <summary>
-        /// Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+        /// Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
         /// </summary>
         [JsonProperty("TargetUserId")]
         public string TargetUserId{ get; set; }
+
+        /// <summary>
+        /// Voiceprint configuration.
+        /// </summary>
+        [JsonProperty("VoicePrint")]
+        public VoicePrint VoicePrint{ get; set; }
+
+        /// <summary>
+        /// Semantic sentence segmentation detection.
+        /// </summary>
+        [JsonProperty("TurnDetection")]
+        public TurnDetection TurnDetection{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
             this.SetParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
             this.SetParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
+            this.SetParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
+            this.SetParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
         }
     }
 }

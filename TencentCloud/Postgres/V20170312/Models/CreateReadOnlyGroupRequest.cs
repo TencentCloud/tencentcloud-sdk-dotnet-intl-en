@@ -25,61 +25,61 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Primary instance ID
+        /// Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MasterDBInstanceId")]
         public string MasterDBInstanceId{ get; set; }
 
         /// <summary>
-        /// RO group name
+        /// Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID. default value is 0, means it belongs to the default project.
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+        /// Delay time size switch: 0 for off, 1 for on. this parameter is required.
         /// </summary>
         [JsonProperty("ReplayLagEliminate")]
         public ulong? ReplayLagEliminate{ get; set; }
 
         /// <summary>
-        /// Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+        /// Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
         /// </summary>
         [JsonProperty("ReplayLatencyEliminate")]
         public ulong? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// Delay threshold in ms
+        /// The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public ulong? MaxReplayLag{ get; set; }
 
         /// <summary>
-        /// Delayed log size threshold in MB
+        /// Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public ulong? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// The minimum number of read-only replicas that must be retained in an RO group
+        /// Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public ulong? MinDelayEliminateReserve{ get; set; }

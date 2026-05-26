@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Superapp ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Superapp type. 1: Test; 2: Formal
+        /// Superapp type. Valid values: 1: Test; 2: Production.
         /// </summary>
         [JsonProperty("ApplicationType")]
         public long? ApplicationType{ get; set; }
 
         /// <summary>
-        /// Superapp operating system. 2 Android 3 iOS
+        /// Superapp operating system type. Valid values: 2: Android; 3: iOS.
         /// </summary>
         [JsonProperty("ApplicationPlatformType")]
         public long? ApplicationPlatformType{ get; set; }
 
         /// <summary>
-        /// Package name: corresponds to packageName on Android and bundleId on iOS
+        /// Package name. Corresponds to the package name on Android and the bundle ID on iOS.
         /// </summary>
         [JsonProperty("AppKey")]
         public string AppKey{ get; set; }
 
         /// <summary>
-        /// Superapp URL
+        /// Superapp URL.
         /// </summary>
         [JsonProperty("AppURL")]
         public string AppURL{ get; set; }

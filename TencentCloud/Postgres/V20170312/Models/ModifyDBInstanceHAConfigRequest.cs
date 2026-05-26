@@ -25,31 +25,31 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Primary-standby sync mode. Valid values:
-        /// <li>`Semi-sync`
-        /// <li>`Async`
+        /// Primary-Standby sync mode.
+        /// <Li>Semi-Sync: semi-sync</li>.
+        /// <Li>Async: asynchronous</li>.
         /// </summary>
         [JsonProperty("SyncMode")]
         public string SyncMode{ get; set; }
 
         /// <summary>
-        /// Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-        /// <li>Unit: byte
-        /// <li>Value range: 1073741824-322122547200
+        /// Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+        /// <Li>Unit: byte.</li>.
+        /// <Li>Value range: [1073741824, 322122547200]</li>.
         /// </summary>
         [JsonProperty("MaxStandbyLatency")]
         public ulong? MaxStandbyLatency{ get; set; }
 
         /// <summary>
-        /// The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-        /// <li>Unit: s
-        /// <li>Value range: 5-10
+        /// Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+        /// <Li>Unit: s.</li>.
+        /// <Li>Value range: [5, 10]</li>.
         /// </summary>
         [JsonProperty("MaxStandbyLag")]
         public ulong? MaxStandbyLag{ get; set; }

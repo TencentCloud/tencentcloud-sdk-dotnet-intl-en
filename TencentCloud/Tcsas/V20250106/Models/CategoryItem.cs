@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Category ID
+        /// Category ID.
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Category name
+        /// Category name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

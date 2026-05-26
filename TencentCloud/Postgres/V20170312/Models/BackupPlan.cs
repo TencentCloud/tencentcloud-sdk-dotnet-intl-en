@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BackupPeriod{ get; set; }
 
         /// <summary>
-        /// Data backup retention duration
+        /// Specifies the data backup retention duration in days.
         /// </summary>
         [JsonProperty("BaseBackupRetentionPeriod")]
         public ulong? BaseBackupRetentionPeriod{ get; set; }
@@ -48,6 +48,48 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("MaxBackupStartTime")]
         public string MaxBackupStartTime{ get; set; }
 
+        /// <summary>
+        /// Backup plan ID.
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// Specifies the custom name of the backup plan.
+        /// </summary>
+        [JsonProperty("PlanName")]
+        public string PlanName{ get; set; }
+
+        /// <summary>
+        /// Specifies the log backup retention period in days.
+        /// </summary>
+        [JsonProperty("LogBackupRetentionPeriod")]
+        public ulong? LogBackupRetentionPeriod{ get; set; }
+
+        /// <summary>
+        /// Creation time.
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// Last modification time.
+        /// </summary>
+        [JsonProperty("UpdatedTime")]
+        public string UpdatedTime{ get; set; }
+
+        /// <summary>
+        /// Backup plan type. valid values: default (created by system), custom.
+        /// </summary>
+        [JsonProperty("PlanType")]
+        public string PlanType{ get; set; }
+
+        /// <summary>
+        /// Backup cycle type. valid values: week, month.
+        /// </summary>
+        [JsonProperty("BackupPeriodType")]
+        public string BackupPeriodType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +100,13 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
             this.SetParamSimple(map, prefix + "MinBackupStartTime", this.MinBackupStartTime);
             this.SetParamSimple(map, prefix + "MaxBackupStartTime", this.MaxBackupStartTime);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "PlanName", this.PlanName);
+            this.SetParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamSimple(map, prefix + "PlanType", this.PlanType);
+            this.SetParamSimple(map, prefix + "BackupPeriodType", this.BackupPeriodType);
         }
     }
 }

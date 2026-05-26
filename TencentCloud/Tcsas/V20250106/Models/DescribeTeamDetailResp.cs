@@ -25,73 +25,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Team role type 1-mini program team 2-application team
+        /// Team role type. Valid values: 1: Mini program team; 2: Superapp team.
         /// </summary>
         [JsonProperty("TeamRoleType")]
         public long? TeamRoleType{ get; set; }
 
         /// <summary>
-        /// Administrator account
+        /// Admin account.
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Number of team members
+        /// Number of team members.
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
 
         /// <summary>
-        /// Number of bound mini program teams
+        /// Number of bound mini program teams.
         /// </summary>
         [JsonProperty("BindMiniTeamCount")]
         public long? BindMiniTeamCount{ get; set; }
 
         /// <summary>
-        /// Name of the bound team
+        /// Name of the bound team.
         /// </summary>
         [JsonProperty("BindTeamName")]
         public string BindTeamName{ get; set; }
 
         /// <summary>
-        /// Team registration link
+        /// Team registration link.
         /// </summary>
         [JsonProperty("RegisterLink")]
         public string RegisterLink{ get; set; }
 
         /// <summary>
-        /// Application name. It Is required when querying details of a mini program team.
+        /// Superapp name. Only returned for mini program teams.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Team expiration time. 0 means never expire.
+        /// Team expiration time. 0 indicates no expiration. 
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Team status. valid values: 1: normal; 2: disabled; 3: expired.
+        /// Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

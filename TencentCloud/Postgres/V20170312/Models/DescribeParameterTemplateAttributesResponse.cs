@@ -25,15 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Parameter template ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the parameter template ID.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Number of parameters contained in the parameter template
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the number of parameters in the parameter template.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -47,28 +45,24 @@ namespace TencentCloud.Postgres.V20170312.Models
 
         /// <summary>
         /// Parameter template name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Database version applicable to a parameter template
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the database version the parameter template applies to.
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// Database engine applicable to a parameter template
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifies the database engine the parameter template applies to.
         /// </summary>
         [JsonProperty("DBEngine")]
         public string DBEngine{ get; set; }
 
         /// <summary>
         /// Parameter template description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TemplateDescription")]
         public string TemplateDescription{ get; set; }

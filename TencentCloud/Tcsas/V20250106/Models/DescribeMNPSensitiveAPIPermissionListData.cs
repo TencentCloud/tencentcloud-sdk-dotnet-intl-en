@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// API ID
+        /// API ID.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string APIName{ get; set; }
 
         /// <summary>
-        /// API request method
+        /// API method.
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
@@ -61,31 +61,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string RejectReason{ get; set; }
 
         /// <summary>
-        /// Approval ID
+        /// Approval number.
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Specifies the application icon.
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("ApplicationIcon")]
         public string ApplicationIcon{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// API type. 1: system; 2: custom.
+        /// API type. Valid values: 1: System; 2: Custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }

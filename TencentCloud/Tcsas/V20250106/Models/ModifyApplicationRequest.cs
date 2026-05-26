@@ -25,58 +25,58 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application introduction
+        /// Superapp introduction.
         /// </summary>
         [JsonProperty("Intro")]
         public string Intro{ get; set; }
 
         /// <summary>
-        /// Icon
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Android app package name
+        /// Android app package name.
         /// </summary>
         [JsonProperty("AndroidAppKey")]
         [System.Obsolete]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
-        /// iOS App bundleId
+        /// iOS app bundle ID.
         /// </summary>
         [JsonProperty("IosAppKey")]
         [System.Obsolete]
         public string IosAppKey{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         [System.Obsolete]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Scheme
+        /// Scheme.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }

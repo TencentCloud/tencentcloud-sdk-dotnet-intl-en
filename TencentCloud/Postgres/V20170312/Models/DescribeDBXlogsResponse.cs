@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Number of date entries returned this time.
+        /// Indicates how many data entries are returned.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Xlog list
+        /// Xlog list.
         /// </summary>
         [JsonProperty("XlogList")]
         public Xlog[] XlogList{ get; set; }

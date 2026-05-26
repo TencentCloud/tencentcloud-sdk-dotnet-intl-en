@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Secret ID</p>
+        /// <p>Key ID.</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// <p>Secret key</p>
+        /// <p>Secret key.</p>
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

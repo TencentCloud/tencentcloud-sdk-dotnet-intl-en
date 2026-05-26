@@ -43,8 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public SpecItemInfo[] SpecItemInfoList{ get; set; }
 
         /// <summary>
-        /// Regions where KMS is supported
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Specifies the region that supports KMS.
         /// </summary>
         [JsonProperty("SupportKMSRegions")]
         public string[] SupportKMSRegions{ get; set; }

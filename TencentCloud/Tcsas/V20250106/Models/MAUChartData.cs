@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Year and month: 2024-12
+        /// Date in YYYYMM format.
         /// </summary>
         [JsonProperty("DataTime")]
         public long? DataTime{ get; set; }
 
         /// <summary>
-        /// Value
+        /// MAU count.
         /// </summary>
         [JsonProperty("MAUCount")]
         public long? MAUCount{ get; set; }
 
         /// <summary>
-        /// Data update time, only available when MAUCount is greater than 0.
+        /// Data update time. Only has a value when MAUCount is greater than 0.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

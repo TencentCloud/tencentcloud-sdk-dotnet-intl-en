@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid. 
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program description
+        /// Mini program description.
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Describes the mini program version.
+        /// Mini program version introduction.
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Specifies the mini program qr code.
+        /// Mini program QR code URL.
         /// </summary>
         [JsonProperty("QRCodeUrl")]
         public string QRCodeUrl{ get; set; }
 
         /// <summary>
-        /// Specifies the path to the preview version.
+        /// Preview path.
         /// </summary>
         [JsonProperty("PreviewEntrancePath")]
         public string PreviewEntrancePath{ get; set; }
 
         /// <summary>
-        /// Specifies the qr code content.
+        /// Information encoded in the QR code.
         /// </summary>
         [JsonProperty("QRCodeContent")]
         public string QRCodeContent{ get; set; }

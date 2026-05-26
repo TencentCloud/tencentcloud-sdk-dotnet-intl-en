@@ -25,82 +25,88 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// Device unique ID
+        /// <p>Unique ID of the device</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// Device name.
+        /// <p>Device name</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// The time when the device is created, in ms.
+        /// <p>The time when the device is created, in ms</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last online time of the device, in ms.
+        /// <p>Last online time of the device, in ms</p>
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
-        /// Device remark
+        /// <p>Remark of the device</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+        /// <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
         /// </summary>
         [JsonProperty("AccessScope")]
         public long? AccessScope{ get; set; }
 
         /// <summary>
-        /// Authorization validity period of license 0: Monthly authorization 1: Permanent license
+        /// <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }
 
         /// <summary>
-        /// Payer 0: Manufacturer payment 1: Customer payment
+        /// <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
         /// </summary>
         [JsonProperty("Payer")]
         public long? Payer{ get; set; }
 
         /// <summary>
-        /// device group ID
+        /// <p>device group ID</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Device group name
+        /// <p>Device group name</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+        /// <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
         /// </summary>
         [JsonProperty("FlowTrunc")]
         public long? FlowTrunc{ get; set; }
 
         /// <summary>
-        /// Device sn
+        /// <p>Device sn</p>
         /// </summary>
         [JsonProperty("Sn")]
         public string Sn{ get; set; }
 
         /// <summary>
-        /// manufacturer
+        /// <p>Manufacturer</p>
         /// </summary>
         [JsonProperty("Vendor")]
         public string Vendor{ get; set; }
+
+        /// <summary>
+        /// <p>Access region list.</p>
+        /// </summary>
+        [JsonProperty("AllowedRegions")]
+        public string[] AllowedRegions{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
             this.SetParamSimple(map, prefix + "Sn", this.Sn);
             this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
+            this.SetParamArraySimple(map, prefix + "AllowedRegions.", this.AllowedRegions);
         }
     }
 }

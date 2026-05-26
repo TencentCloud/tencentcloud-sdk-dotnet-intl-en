@@ -25,13 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+        /// This API only supports prepaid instance queries.
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Renewal duration in months. Maximum value: 48
+        /// Renewal period, calculated on a monthly basis.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

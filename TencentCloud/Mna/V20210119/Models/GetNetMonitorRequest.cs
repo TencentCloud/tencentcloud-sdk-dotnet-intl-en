@@ -25,31 +25,31 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// Device ID
+        /// <p>device id</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// Start time.
+        /// <p>Start time.</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
-        /// End time.
+        /// <p>End time.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+        /// <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
         /// </summary>
         [JsonProperty("Metrics")]
         public string Metrics{ get; set; }
 
         /// <summary>
-        /// Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+        /// <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
         /// </summary>
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }

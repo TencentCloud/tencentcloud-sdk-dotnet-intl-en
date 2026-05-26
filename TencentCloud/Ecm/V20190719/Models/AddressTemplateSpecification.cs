@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// IP address ID, such as `eipm-2uw6ujo6`.
+        /// IP address ID, such as `eipm-2uw6ujo6`. 
         /// </summary>
         [JsonProperty("AddressId")]
         public string AddressId{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Page offset
+        /// Pagination offset. 
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Domain type. 1: Allowed; 2: Blocked
+        /// Domain type. Valid value: 1: Allowed; 2: Blocked.
         /// </summary>
         [JsonProperty("DomainTypes")]
         public long?[] DomainTypes{ get; set; }
 
         /// <summary>
-        /// Domain names to be queried
+        /// Search keyword (domain).
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

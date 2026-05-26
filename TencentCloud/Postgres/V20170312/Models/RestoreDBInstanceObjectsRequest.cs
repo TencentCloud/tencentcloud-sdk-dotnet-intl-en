@@ -25,19 +25,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+        /// List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
         /// </summary>
         [JsonProperty("RestoreObjects")]
         public string[] RestoreObjects{ get; set; }
 
         /// <summary>
-        /// Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+        /// Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
         /// </summary>
         [JsonProperty("BackupSetId")]
         public string BackupSetId{ get; set; }

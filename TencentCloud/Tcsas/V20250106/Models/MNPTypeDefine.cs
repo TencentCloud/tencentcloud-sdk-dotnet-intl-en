@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Specifies the mini program category name.
+        /// Mini program category name.
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// Mini program category value.
+        /// Mini program category values.
         /// </summary>
         [JsonProperty("TypeValue")]
         public string[] TypeValue{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? TypeId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Indicates whether it is a system category.
+        /// Whether it is a system category.
         /// </summary>
         [JsonProperty("IsSystem")]
         public bool? IsSystem{ get; set; }

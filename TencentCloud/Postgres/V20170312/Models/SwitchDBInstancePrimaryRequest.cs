@@ -25,24 +25,24 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to perform forced switch. As long as the standby node can be accessed, the switch will be performed regardless of the primary-standby sync delay. You can switch immediately only when `SwitchTag` is `0.
-        /// <li>Default: `false`.
+        /// Whether to force a switch. forced switching initiates a switch as long as the secondary node is accessible, regardless of the primary/secondary delay. only when SwitchTag is 0 can you use switch immediately.
+        /// <Li>Default: false</li>.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }
 
         /// <summary>
-        /// Switch time for the specified instance after configuration modification.
-        /// <li>`0`: Switch now. 
-        /// <li>`1`: Switch at the specified time.
-        /// <li>`2`: Switch in the maintenance time.
-        /// <li>Default value: `0`. 
+        /// Specifies the switch time after instance configuration change.
+        /// <Li>0: switch immediately</li>.
+        /// <Li>1: switch at specified time</li>.
+        /// <Li>2: switch during maintenance time window.</li>.
+        /// Default value: 0  
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }

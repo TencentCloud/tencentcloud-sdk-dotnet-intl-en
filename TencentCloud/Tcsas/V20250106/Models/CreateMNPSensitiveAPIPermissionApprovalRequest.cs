@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// API Id
+        /// API ID.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// Reason for application
+        /// Reason for request.
         /// </summary>
         [JsonProperty("ApplyReason")]
         public string ApplyReason{ get; set; }
 
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

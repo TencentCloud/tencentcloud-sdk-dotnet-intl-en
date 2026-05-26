@@ -25,65 +25,65 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Logo address
+        /// Superapp logo URL.
         /// </summary>
         [JsonProperty("Logo")]
         public string Logo{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Introduction
+        /// Superapp introduction.
         /// </summary>
         [JsonProperty("Intro")]
         public string Intro{ get; set; }
 
         /// <summary>
-        /// Application type. 1: Test; 2: Formal
+        /// Superapp type. Valid values: 1: Test; 2: Production.
         /// </summary>
         [JsonProperty("ApplicationType")]
         [System.Obsolete]
         public long? ApplicationType{ get; set; }
 
         /// <summary>
-        /// Android app package name
+        /// Android app package name.
         /// </summary>
         [JsonProperty("AndroidAppKey")]
         [System.Obsolete]
         public string AndroidAppKey{ get; set; }
 
         /// <summary>
-        /// iOS App bundleId
+        /// iOS app bundle ID.
         /// </summary>
         [JsonProperty("IosAppKey")]
         [System.Obsolete]
         public string IosAppKey{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         [System.Obsolete]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Scheme
+        /// Scheme.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }

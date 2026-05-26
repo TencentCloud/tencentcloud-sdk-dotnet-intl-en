@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Result.
+        /// Operation result.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

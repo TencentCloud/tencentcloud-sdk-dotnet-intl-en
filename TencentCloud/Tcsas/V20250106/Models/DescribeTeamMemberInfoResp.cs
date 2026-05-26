@@ -25,49 +25,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User ID
+        /// User ID.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User account
+        /// User account.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
-        /// User name
+        /// User name.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Specifies the team role name.
+        /// Team role name.
         /// </summary>
         [JsonProperty("TeamRoleName")]
         public string TeamRoleName{ get; set; }
 
         /// <summary>
-        /// Specifies the team role ID.
+        /// Team role ID.
         /// </summary>
         [JsonProperty("TeamRoleId")]
         public long? TeamRoleId{ get; set; }
 
         /// <summary>
-        /// Whether it is editable
+        /// Whether it can be edited.
         /// </summary>
         [JsonProperty("CanEdit")]
         public bool? CanEdit{ get; set; }

@@ -25,20 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// Approval result. 2: Rejected;
-        /// 3: Approved
+        /// Approval result. Valid value: 2: Rejected; 3: Approved.
         /// </summary>
         [JsonProperty("ApprovalResult")]
         public long? ApprovalResult{ get; set; }
 
         /// <summary>
-        /// Approval notes. It’s required when the request is rejected.
+        /// Approval notes. It is required when the request is rejected.
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }

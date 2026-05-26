@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Specifies the ID of the task to create a mini program version.
+        /// Mini program version compilation task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

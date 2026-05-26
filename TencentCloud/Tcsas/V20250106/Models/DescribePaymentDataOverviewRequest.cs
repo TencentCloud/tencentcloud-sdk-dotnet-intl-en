@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Start time
+        /// Start time.
         /// </summary>
         [JsonProperty("TimeBegin")]
         public long? TimeBegin{ get; set; }
 
         /// <summary>
-        /// Mini program appid
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPIds")]
         public string[] MNPIds{ get; set; }
 
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Type: 0 Non-production data, 1 Production data
+        /// Data type. Valid values: 0: Non-production data; 1: Production data.
         /// </summary>
         [JsonProperty("DataType")]
         public long? DataType{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("TimeEnd")]
         public long? TimeEnd{ get; set; }
 
         /// <summary>
-        /// Operating system: 0 All, 2 Android, 3 iOS
+        /// Operating system. Valid values: 0: All; 2: Android; 3: iOS.
         /// </summary>
         [JsonProperty("Platform")]
         public long? Platform{ get; set; }

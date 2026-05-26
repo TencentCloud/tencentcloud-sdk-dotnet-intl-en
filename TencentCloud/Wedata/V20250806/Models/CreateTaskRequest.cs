@@ -25,25 +25,26 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// Project ID.
+        /// <p>Project ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// The basic attributes of the task.
+        /// <p>The
+        /// basic attributes of the task.</p>
         /// </summary>
         [JsonProperty("TaskBaseAttribute")]
         public CreateTaskBaseAttribute TaskBaseAttribute{ get; set; }
 
         /// <summary>
-        /// Task configurations.
+        /// <p>Task configurations.</p>
         /// </summary>
         [JsonProperty("TaskConfiguration")]
         public CreateTaskConfiguration TaskConfiguration{ get; set; }
 
         /// <summary>
-        /// Task scheduling configuration.
+        /// <p>Task scheduling configuration</p>
         /// </summary>
         [JsonProperty("TaskSchedulerConfiguration")]
         public CreateTaskSchedulerConfiguration TaskSchedulerConfiguration{ get; set; }

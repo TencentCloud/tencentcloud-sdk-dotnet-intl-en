@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+        /// Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
         /// </summary>
         [JsonProperty("IndexId")]
         public string IndexId{ get; set; }
 
         /// <summary>
-        /// Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+        /// Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
         /// </summary>
         [JsonProperty("QueryData")]
         public string QueryData{ get; set; }

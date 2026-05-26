@@ -37,8 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? TotalCallNum{ get; set; }
 
         /// <summary>
-        /// The statistical analysis list of slow queries
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// List of slow SQL statistical analysis.
         /// </summary>
         [JsonProperty("AnalysisItems")]
         public AnalysisItems[] AnalysisItems{ get; set; }

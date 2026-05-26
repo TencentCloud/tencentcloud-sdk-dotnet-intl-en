@@ -104,9 +104,8 @@ namespace TencentCloud.Batch.V20170312.Models
 
         /// <summary>
         /// Target of the notification
-        /// Values: `CMQ`, `TDMQ_CMQ`
-        /// `CMQ`: Tencent Cloud CMQ (default)
-        /// `TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+        /// Values: `TDMQ_CMQ`
+        /// `TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public string NotificationTarget{ get; set; }

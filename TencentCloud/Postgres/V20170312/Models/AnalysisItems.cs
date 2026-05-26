@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? CallNum{ get; set; }
 
         /// <summary>
-        /// The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+        /// Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
         /// </summary>
         [JsonProperty("CallPercent")]
         public float? CallPercent{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public float? AvgCostTime{ get; set; }
 
         /// <summary>
-        /// The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+        /// Start execution time of the first slow SQL within the specified time range.
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+        /// Start execution time of the last slow SQL within the specified time range.
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }

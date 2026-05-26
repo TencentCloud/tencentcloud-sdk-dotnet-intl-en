@@ -25,91 +25,91 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program icon
+        /// Mini program icon.
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Name of the associated team
+        /// Team name. 
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Mini program type
+        /// Mini program category.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+        /// Mini program available status. Valid values: 1: Available; 2: Removed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Mini program introduction
+        /// Mini program introduction.
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the updater.
+        /// Last modifier.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+        /// Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
         /// </summary>
         [JsonProperty("EffectStatus")]
         public long? EffectStatus{ get; set; }
 
         /// <summary>
-        /// Specifies the ID of the application bound with the mini program.
+        /// Effective mini program version ID bound to the superapp. 
         /// </summary>
         [JsonProperty("EffectMNPVersionId")]
         public long? EffectMNPVersionId{ get; set; }
 
         /// <summary>
-        /// Specifies the effective version number of the application bound to the mini program.
+        /// Effective mini program version number bound to the superapp. 
         /// </summary>
         [JsonProperty("EffectMNPVersion")]
         public string EffectMNPVersion{ get; set; }

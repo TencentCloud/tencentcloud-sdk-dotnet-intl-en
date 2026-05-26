@@ -25,26 +25,26 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The application ID, such as `1400xxxxxx`.
+        /// User SdkAppId (for example: 1400xxxxxx).
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-        /// Note: Only data in the last 14 days can be queried.
+        /// Query start time, local unix timestamp, in seconds (for example: 1590065777).
+        /// Note: support querying data within the last 14 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+        /// Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+        /// Room number. query up to 20 abnormal experience events in the room.
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }

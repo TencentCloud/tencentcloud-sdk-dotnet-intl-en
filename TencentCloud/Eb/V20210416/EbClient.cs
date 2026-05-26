@@ -28,7 +28,7 @@ namespace TencentCloud.Eb.V20210416
 
        private const string endpoint = "eb.intl.tencentcloudapi.com";
        private const string version = "2021-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// This API is used to query logs. 
+        /// This API is used to query logs.
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// This API is used to query logs. 
+        /// This API is used to query logs.
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

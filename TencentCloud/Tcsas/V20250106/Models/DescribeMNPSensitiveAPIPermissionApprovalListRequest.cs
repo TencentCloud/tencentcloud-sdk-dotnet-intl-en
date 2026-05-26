@@ -25,31 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Page offset
+        /// Pagination offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Approval status. 1: Processing; 20: Rejected; 30: Approved
+        /// Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
         /// </summary>
         [JsonProperty("ApprovalStatusList")]
         public long?[] ApprovalStatusList{ get; set; }
 
         /// <summary>
-        /// Keywords for search (API name, API method or application name)
+        /// Search keyword (API name, API method or superapp name).
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List information
+        /// Superapp list data.
         /// </summary>
         [JsonProperty("DataList")]
         public DescribeApplicationListData[] DataList{ get; set; }

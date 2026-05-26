@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Page offset
+        /// Pagination offset. 
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Keywords for search (username or account)
+        /// Search keyword (username or account).
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// User account 1 - Super admin 2 - Platform admin 3 - Member
+        /// User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// Team ID. If left empty, all teams are returned.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }

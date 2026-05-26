@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// 0: success; 1: allowed domains exist; 2: blocked domains exist.
+        /// Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Date
+        /// Date.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program type
+        /// Mini program category.
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Estimated revenue
+        /// Estimated revenue.
         /// </summary>
         [JsonProperty("EstimatedEarnings")]
         public string EstimatedEarnings{ get; set; }
 
         /// <summary>
-        /// Requests
+        /// Number of requests.
         /// </summary>
         [JsonProperty("RequestsNumber")]
         public long? RequestsNumber{ get; set; }
 
         /// <summary>
-        /// Impressions
+        /// Number of impressions.
         /// </summary>
         [JsonProperty("Impressions")]
         public long? Impressions{ get; set; }
 
         /// <summary>
-        /// Effective Cost Per Mille
+        /// eCPM (effective cost per mille).
         /// </summary>
         [JsonProperty("ECPM")]
         public string ECPM{ get; set; }
 
         /// <summary>
-        /// Taps
+        /// Number of taps.
         /// </summary>
         [JsonProperty("ClicksNumber")]
         public long? ClicksNumber{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+        /// Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TargetDBKernelVersion")]
         public string TargetDBKernelVersion{ get; set; }

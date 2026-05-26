@@ -25,31 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game appid</p>
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>Version number</p>
+        /// <p>Version number.</p>
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// <p>Version ID</p>
+        /// <p>Version ID.</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// <p>Version remarks</p>
+        /// <p>Version note.</p>
         /// </summary>
         [JsonProperty("MNPVersionNote")]
         public string MNPVersionNote{ get; set; }
 
         /// <summary>
-        /// <p>Update time</p>
+        /// <p>Last modified time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -25,46 +25,52 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Mini game type</p>
+        /// <p>Mini game category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// <p>Mini game name</p>
+        /// <p>Mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// <p>Mini game icon</p>
+        /// <p>Mini game icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// <p>Mini game introduction</p>
+        /// <p>Mini game introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// <p>Mini game description</p>
+        /// <p>Mini game description.</p>
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID</p>
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Team ID</p>
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
+
+        /// <summary>
+        /// <p>The mini game name and description in multiple languages.</p>
+        /// </summary>
+        [JsonProperty("I18nList")]
+        public MNPI18NSyncDto[] I18nList{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "MNPDesc", this.MNPDesc);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
+            this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
         }
     }
 }

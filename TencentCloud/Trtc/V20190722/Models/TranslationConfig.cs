@@ -25,25 +25,25 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Target language, target language list (ISO 639-1).
+        /// Target language for translation, target language list (ISO 639-1).
         /// </summary>
         [JsonProperty("TargetLanguages")]
         public string[] TargetLanguages{ get; set; }
 
         /// <summary>
-        /// 1: Only text translation, 2: Voice simultaneous interpretation.
+        /// 1: text translation only 2: speech simultaneous interpretation.
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
 
         /// <summary>
-        /// Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+        /// Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
         /// </summary>
         [JsonProperty("TTSConfig")]
         public TTSConfig TTSConfig{ get; set; }
 
         /// <summary>
-        /// Translation terminology.
+        /// Translation terminology collection.
         /// </summary>
         [JsonProperty("Terminology")]
         public Terminology[] Terminology{ get; set; }

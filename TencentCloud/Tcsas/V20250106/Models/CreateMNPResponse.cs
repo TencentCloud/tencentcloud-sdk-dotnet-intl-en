@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Response mini program ID
+        /// <p>The returned mini game appid returned.</p>
         /// </summary>
         [JsonProperty("Data")]
         public ResourceIdStringInfo Data{ get; set; }

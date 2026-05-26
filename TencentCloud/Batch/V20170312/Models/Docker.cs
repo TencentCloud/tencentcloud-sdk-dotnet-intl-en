@@ -25,6 +25,12 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
+        /// For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+        /// </summary>
+        [JsonProperty("Image")]
+        public string Image{ get; set; }
+
+        /// <summary>
         /// Docker Hub username or Tencent Registry username
         /// </summary>
         [JsonProperty("User")]
@@ -35,12 +41,6 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
-
-        /// <summary>
-        /// For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-        /// </summary>
-        [JsonProperty("Image")]
-        public string Image{ get; set; }
 
         /// <summary>
         /// For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
@@ -73,9 +73,9 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Server", this.Server);
             this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
             this.SetParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);

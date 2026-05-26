@@ -25,94 +25,100 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// APIID
+        /// API ID.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// API name
+        /// API name.
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
-        /// API request method
+        /// API request method.
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// API description
+        /// API description.
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// Creator.
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Updater
+        /// Last modifier.
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Specifies the application icon.
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// API type. 1: system; 2: custom.
+        /// API type. Valid values: 1: System; 2: Custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }
 
         /// <summary>
-        /// API status. 0: public; 1: restricted.
+        /// API status. Valid values: 0: Public; 1: Restricted.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+        /// </summary>
+        [JsonProperty("UseScope")]
+        public long? UseScope{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "ApplicationLogo", this.ApplicationLogo);
             this.SetParamSimple(map, prefix + "APIType", this.APIType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UseScope", this.UseScope);
         }
     }
 }

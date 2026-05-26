@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User account
+        /// User account.
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
 
         /// <summary>
-        /// User name
+        /// User name.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// User account type. 2: Platform admin; 3: Member.
+        /// User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Call CreatePresetKey to get the keyID from RequestId
+        /// Call CreatePresetKey to get the keyID from RequestId.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

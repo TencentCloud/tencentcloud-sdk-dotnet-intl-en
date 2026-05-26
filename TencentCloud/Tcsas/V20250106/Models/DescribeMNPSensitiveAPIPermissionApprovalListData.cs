@@ -25,67 +25,67 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Approval ID
+        /// Approval number.
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Sensitive API ID
+        /// Sensitive API ID.
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// API name
+        /// API name.
         /// </summary>
         [JsonProperty("APIName")]
         public string APIName{ get; set; }
 
         /// <summary>
-        /// API request method
+        /// API method.
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program name
+        /// Mini program name.
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Applicant
+        /// Applicant.
         /// </summary>
         [JsonProperty("ApplyUser")]
         public string ApplyUser{ get; set; }
 
         /// <summary>
-        /// Application time
+        /// Application time.
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Application notes
+        /// Application note.
         /// </summary>
         [JsonProperty("ApplyNote")]
         public string ApplyNote{ get; set; }
 
         /// <summary>
-        /// Approval status. 1: Processing; 20: Rejected; 30: Approved
+        /// Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Specifies the review user.
+        /// Approver.
         /// </summary>
         [JsonProperty("ApprovalUser")]
         public string ApprovalUser{ get; set; }
@@ -97,31 +97,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string ApprovalTime{ get; set; }
 
         /// <summary>
-        /// Approval notes
+        /// Approval note.
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// Superapp ID.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application name
+        /// Superapp name.
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Specifies the application icon.
+        /// Superapp icon.
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// API type. 1: system; 2: custom.
+        /// API type. Valid values: 1: System; 2: Custom.
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }

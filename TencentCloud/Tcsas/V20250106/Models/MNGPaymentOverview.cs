@@ -25,61 +25,61 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Paid revenue / Number of paying users * 100%
+        /// ARPPU. Calculated as: paying revenue / paying users * 100%.
         /// </summary>
         [JsonProperty("ARPPu")]
         public string ARPPu{ get; set; }
 
         /// <summary>
-        /// Data time in YYYYMMDD format
+        /// Data time in YYYYMMDD format.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }
 
         /// <summary>
-        /// New paying user ratio = NewUserNum / OrderUserNum * 100%
+        /// New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
         /// </summary>
         [JsonProperty("NewPaidUseRatio")]
         public string NewPaidUseRatio{ get; set; }
 
         /// <summary>
-        /// Number of new paying users
+        /// Number of new paying users.
         /// </summary>
         [JsonProperty("NewPaidUserNum")]
         public long? NewPaidUserNum{ get; set; }
 
         /// <summary>
-        /// Total payment amount from new users
+        /// Total payment amount from new users.
         /// </summary>
         [JsonProperty("NewUserPaidAmount")]
         public string NewUserPaidAmount{ get; set; }
 
         /// <summary>
-        /// Total payment amount
+        /// Total payment amount.
         /// </summary>
         [JsonProperty("PaidAmount")]
         public string PaidAmount{ get; set; }
 
         /// <summary>
-        /// Number of paying users
+        /// Number of paying users.
         /// </summary>
         [JsonProperty("PaidUserNum")]
         public long? PaidUserNum{ get; set; }
 
         /// <summary>
-        /// Refund amount
+        /// Refund amount.
         /// </summary>
         [JsonProperty("RefundAmount")]
         public string RefundAmount{ get; set; }
 
         /// <summary>
-        /// Number of refund orders
+        /// Number of refund orders.
         /// </summary>
         [JsonProperty("RefundNum")]
         public long? RefundNum{ get; set; }
 
         /// <summary>
-        /// Update time (timestamp in seconds)
+        /// Last modified time (timestamp in seconds).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Array of domain name URLs
+        /// Array of domain URLs.
         /// </summary>
         [JsonProperty("DomainUrlList")]
         public string[] DomainUrlList{ get; set; }
 
         /// <summary>
-        /// Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+        /// Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
         /// </summary>
         [JsonProperty("DomainType")]
         public long? DomainType{ get; set; }

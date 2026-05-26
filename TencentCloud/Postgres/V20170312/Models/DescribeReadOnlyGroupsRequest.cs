@@ -25,13 +25,16 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+        /// Query using one or more filter criteria. filter criteria currently supported include:.
+        /// db-master-instance-id: specifies the primary instance to filter by (in string format).
+        /// read-only-group-id: Filter by read-only group ID, type string.
+        /// Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The number of results per page. Default value: 10.
+        /// Specifies the number of items per page. default value: 10. maximum value: 99.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -43,13 +46,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+        /// Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `desc`, `asc`.
+        /// Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+        /// Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
         /// </summary>
         [JsonProperty("RestrictionType")]
         public string RestrictionType{ get; set; }
@@ -37,7 +37,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string VpcRestrictionEffect{ get; set; }
 
         /// <summary>
-        /// Whether it is allowed to download the VPC ID list of the backup files.
+        /// Specifies the vpc id list to allow or deny downloading backup files.
+        /// **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
         /// </summary>
         [JsonProperty("VpcIdSet")]
         public string[] VpcIdSet{ get; set; }
@@ -49,7 +50,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string IpRestrictionEffect{ get; set; }
 
         /// <summary>
-        /// Whether it is allowed to download the IP list of the backup files.
+        /// Specifies the ip list to allow or deny downloading backup files.
+        /// **Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
         /// </summary>
         [JsonProperty("IpSet")]
         public string[] IpSet{ get; set; }

@@ -25,33 +25,31 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+        /// Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
         /// </summary>
         [JsonProperty("ComparisonRatio")]
         public string ComparisonRatio{ get; set; }
 
         /// <summary>
-        /// 1 Increase
-        /// 2 Decrease
-        /// Returns 0 when SourceMAUNum is 0
+        /// Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
         /// </summary>
         [JsonProperty("ComparisonResult")]
         public long? ComparisonResult{ get; set; }
 
         /// <summary>
-        /// Last month's MAU data
+        /// Previous month MAU. 
         /// </summary>
         [JsonProperty("SourceMAUNum")]
         public long? SourceMAUNum{ get; set; }
 
         /// <summary>
-        /// This month's MAU data
+        /// Current month MAU.
         /// </summary>
         [JsonProperty("TargetMAUNum")]
         public long? TargetMAUNum{ get; set; }
 
         /// <summary>
-        /// Data timestamp
+        /// Data timestamp.
         /// </summary>
         [JsonProperty("FlushTime")]
         public long? FlushTime{ get; set; }

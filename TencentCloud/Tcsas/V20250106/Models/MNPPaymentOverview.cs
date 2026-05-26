@@ -25,14 +25,14 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Number of mini programs involved in the order
+        /// Mini program count with orders.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrderMNPNum")]
         public long? OrderMNPNum{ get; set; }
 
         /// <summary>
-        /// Total orders
+        /// Total orders.
         /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -40,7 +40,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? OrderNum{ get; set; }
 
         /// <summary>
-        /// Total paid orders
+        /// Total paid orders.
         /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -48,7 +48,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? OrderPaidNum{ get; set; }
 
         /// <summary>
-        /// Total refunded orders
+        /// Number of refund orders.
         /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -56,63 +56,63 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? OrderRefundNum{ get; set; }
 
         /// <summary>
-        /// Total unpaid orders
+        /// Total unpaid orders.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrderUnpaidNum")]
         public long? OrderUnpaidNum{ get; set; }
 
         /// <summary>
-        /// Total order users
+        /// Total order users.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OrderUserNum")]
         public long? OrderUserNum{ get; set; }
 
         /// <summary>
-        /// Total paying users
+        /// Total paying users.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PaidUserNum")]
         public long? PaidUserNum{ get; set; }
 
         /// <summary>
-        /// Amount paid
+        /// Amount paid.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PaidAmount")]
         public string PaidAmount{ get; set; }
 
         /// <summary>
-        /// Total amount refunded
+        /// Total amount refunded.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RefundAmount")]
         public string RefundAmount{ get; set; }
 
         /// <summary>
-        /// Total order amount
+        /// Total order amount.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalAmount")]
         public string TotalAmount{ get; set; }
 
         /// <summary>
-        /// Unpaid amount
+        /// Unpaid amount.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UnpaidAmount")]
         public string UnpaidAmount{ get; set; }
 
         /// <summary>
-        /// Timestamp
+        /// Timestamp.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// Data date
+        /// Data time.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataTime")]

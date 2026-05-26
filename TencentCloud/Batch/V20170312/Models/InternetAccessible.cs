@@ -25,7 +25,10 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// Network connection billing plan. Valid value: <br><li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour.
+        /// Network connection billing plan. Valid value:
+        /// 
+        /// <li>TRAFFIC_POSTPAID_BY_HOUR: pay after use. You are billed for your traffic, by the hour. </li>
+        /// <li>BANDWIDTH_PACKAGE: Bandwidth package user. </li>
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
@@ -43,10 +46,53 @@ namespace TencentCloud.Batch.V20170312.Models
         public bool? PublicIpAssigned{ get; set; }
 
         /// <summary>
-        /// Bandwidth package ID. To obatin the IDs, you can call [`DescribeBandwidthPackages`](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) and look for the `BandwidthPackageId` fields in the response.
+        /// Bandwidth package ID. it can be obtained through the `BandwidthPackageId` in the return value from the DescribeBandwidthPackages api. this parameter is used as an input parameter only in the RunInstances api.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
+
+        /// <summary>
+        /// Line type. for details on various types of lines and supported regions, refer to [EIP IP address types](https://www.tencentcloud.com/document/product/213/5733). default value: BGP.
+        /// <Li>BGP: specifies the general bgp line.</li>.
+        /// For a user with static single-line IP allowlist enabled, valid values include:.
+        /// <Li>CMCC: china mobile.</li>.
+        /// <Li>CTCC: china telecom</li>.
+        /// <Li>CUCC: china unicom</li>.
+        /// Note: The static single-line IP is only supported in some regions.
+        /// 
+        /// </summary>
+        [JsonProperty("InternetServiceProvider")]
+        public string InternetServiceProvider{ get; set; }
+
+        /// <summary>
+        /// Specifies the public IP type.
+        /// 
+        /// <Li>WanIP: specifies the public ip address.</li>.
+        /// <Li>HighQualityEIP: specifies a high quality ip. high quality ip is only supported in Singapore and hong kong (china).</li>.
+        /// <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
+        /// If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
+        /// 
+        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+        /// </summary>
+        [JsonProperty("IPv4AddressType")]
+        public string IPv4AddressType{ get; set; }
+
+        /// <summary>
+        /// Indicates the type of elastic public IPv6.
+        /// <Li>EIPv6: elastic ip version 6.</li>.
+        /// <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
+        /// If needed, assign an elastic IPv6 address for resource allocation.
+        /// 
+        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+        /// </summary>
+        [JsonProperty("IPv6AddressType")]
+        public string IPv6AddressType{ get; set; }
+
+        /// <summary>
+        /// DDoS protection package unique ID. this field is required when applying for a ddos protection IP.
+        /// </summary>
+        [JsonProperty("AntiDDoSPackageId")]
+        public string AntiDDoSPackageId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +104,10 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAssigned", this.PublicIpAssigned);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+            this.SetParamSimple(map, prefix + "IPv4AddressType", this.IPv4AddressType);
+            this.SetParamSimple(map, prefix + "IPv6AddressType", this.IPv6AddressType);
+            this.SetParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         }
     }
 }

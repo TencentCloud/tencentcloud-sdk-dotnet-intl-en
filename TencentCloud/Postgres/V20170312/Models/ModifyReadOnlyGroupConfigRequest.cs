@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// RO group ID
+        /// Read-Only group ID.
         /// </summary>
         [JsonProperty("ReadOnlyGroupId")]
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// RO group name
+        /// Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
         /// </summary>
         [JsonProperty("ReadOnlyGroupName")]
         public string ReadOnlyGroupName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ReplayLatencyEliminate{ get; set; }
 
         /// <summary>
-        /// Delayed log size threshold in MB
+        /// Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
         /// </summary>
         [JsonProperty("MaxReplayLatency")]
         public ulong? MaxReplayLatency{ get; set; }
 
         /// <summary>
-        /// Delay threshold in ms
+        /// Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
         /// </summary>
         [JsonProperty("MaxReplayLag")]
         public ulong? MaxReplayLag{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Rebalance{ get; set; }
 
         /// <summary>
-        /// The minimum number of read-only replicas that must be retained in an RO group
+        /// Specifies the minimum number of instances to retain with delay removal. value range [0,100].
         /// </summary>
         [JsonProperty("MinDelayEliminateReserve")]
         public ulong? MinDelayEliminateReserve{ get; set; }

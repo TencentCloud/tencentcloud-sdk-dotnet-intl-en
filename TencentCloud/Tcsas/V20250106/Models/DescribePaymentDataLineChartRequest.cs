@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Tenant ID
+        /// Tenant ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Fixed value: payment_data_analysis
+        /// Fixed value: payment_data_analysis.
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// IndexId (optional):
+        /// Index ID (optional):
         /// order_user_num: Number of users placing orders
         /// order_num: Total orders
         /// total_amount: Total amount
@@ -46,13 +46,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// order_paid_num: Total paid orders
         /// paid_amount: Amount paid
         /// order_refund_num: Total refunded orders
-        /// refund_amount: Total amount refunded
+        /// refund_amount: Total amount refunded.
         /// </summary>
         [JsonProperty("IndexId")]
         public string IndexId{ get; set; }
 
         /// <summary>
-        /// Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+        /// Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
         /// </summary>
         [JsonProperty("QueryData")]
         public string QueryData{ get; set; }

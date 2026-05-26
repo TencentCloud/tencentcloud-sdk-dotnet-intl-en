@@ -24,12 +24,19 @@ namespace TencentCloud.Postgres.V20170312.Models
     public class DescribeDBVersionsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>Instance storage type. The supported versions are returned based on the disk type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

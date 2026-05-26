@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of postgres-6bwgamo3.
+        /// Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Instance disk size in GiB after modification.
+        /// Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SwitchEndTime{ get; set; }
 
         /// <summary>
-        /// Instance CPU size in Cores after modification.
+        /// Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }

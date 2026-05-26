@@ -25,73 +25,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Superapp active device count
+        /// Superapp active device count.
         /// </summary>
         [JsonProperty("AllActiveDeviceNum")]
         public long? AllActiveDeviceNum{ get; set; }
 
         /// <summary>
-        /// Superapp new device count
+        /// Superapp new device count.
         /// </summary>
         [JsonProperty("AllNewDeviceNum")]
         public long? AllNewDeviceNum{ get; set; }
 
         /// <summary>
-        /// Mini program team count
+        /// Mini program team count.
         /// </summary>
         [JsonProperty("CorpNum")]
         public long? CorpNum{ get; set; }
 
         /// <summary>
-        /// Mini game active device count
+        /// Mini game active device count.
         /// </summary>
         [JsonProperty("GameActiveDeviceNum")]
         public long? GameActiveDeviceNum{ get; set; }
 
         /// <summary>
-        /// Mini game new device count
+        /// Mini game new device count.
         /// </summary>
         [JsonProperty("GameNewDeviceNum")]
         public long? GameNewDeviceNum{ get; set; }
 
         /// <summary>
-        /// Created mini program count
+        /// Created mini program count.
         /// </summary>
         [JsonProperty("MiniAppNum")]
         public long? MiniAppNum{ get; set; }
 
         /// <summary>
-        /// Created mini game count
+        /// Created mini game count.
         /// </summary>
         [JsonProperty("MngNum")]
         public long? MngNum{ get; set; }
 
         /// <summary>
-        /// Mini program new device count
+        /// Mini program new device count.
         /// </summary>
         [JsonProperty("NewDeviceNum")]
         public long? NewDeviceNum{ get; set; }
 
         /// <summary>
-        /// Released mini program count
+        /// Released mini program count.
         /// </summary>
         [JsonProperty("OnlineMiniAppNum")]
         public long? OnlineMiniAppNum{ get; set; }
 
         /// <summary>
-        /// Released mini game count
+        /// Released mini game count.
         /// </summary>
         [JsonProperty("OnlineMngNum")]
         public long? OnlineMngNum{ get; set; }
 
         /// <summary>
-        /// Mini program active device count
+        /// Mini program active device count.
         /// </summary>
         [JsonProperty("VisitNum")]
         public long? VisitNum{ get; set; }
 
         /// <summary>
-        /// Data refresh timestamp
+        /// Data refresh timestamp.
         /// </summary>
         [JsonProperty("FlushTime")]
         public string FlushTime{ get; set; }

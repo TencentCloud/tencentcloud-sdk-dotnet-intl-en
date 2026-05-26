@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User ID
+        /// User ID.
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User role ID
+        /// User role ID.
         /// </summary>
         [JsonProperty("UserRoleId")]
         public long? UserRoleId{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Admin name
+        /// Admin name.
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }
 
         /// <summary>
-        /// Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+        /// Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
         /// </summary>
         [JsonProperty("TeamRoleTypeList")]
         public long?[] TeamRoleTypeList{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remark.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Platform ID, required for API call
+        /// Platform ID, required for API call.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Associated team ID
+        /// Associated team ID.
         /// </summary>
         [JsonProperty("RelatedTeamId")]
         public string RelatedTeamId{ get; set; }

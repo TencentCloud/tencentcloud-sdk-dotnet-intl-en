@@ -86,7 +86,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public LocalDiskType[] LocalDiskTypeList{ get; set; }
 
         /// <summary>
-        /// Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+        /// Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -147,7 +147,7 @@ namespace TencentCloud.Batch.V20170312.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+        /// 
         /// </summary>
         [JsonProperty("GpuCount")]
         public float? GpuCount{ get; set; }
@@ -157,6 +157,17 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         [JsonProperty("Frequency")]
         public string Frequency{ get; set; }
+
+        /// <summary>
+        /// Inventory status. Valid values:
+        /// <li>EnoughStock: Inventory is sufficient.</li> 
+        /// <li>NormalStock: Supply is guaranteed.</li>
+        /// <li>UnderStock: Inventory is about to sell out.</li> 
+        /// <li>WithoutStock: Inventory is already sold out.</li>
+        /// Note: This field may return null, indicating that no valid value is found.
+        /// </summary>
+        [JsonProperty("StatusCategory")]
+        public string StatusCategory{ get; set; }
 
 
         /// <summary>
@@ -186,6 +197,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "GpuCount", this.GpuCount);
             this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
         }
     }
 }

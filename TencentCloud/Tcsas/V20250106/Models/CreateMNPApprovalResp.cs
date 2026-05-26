@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Bool type response object
+        /// The Boolean response object.
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// Approval No.
+        /// Approval nunmber.
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }

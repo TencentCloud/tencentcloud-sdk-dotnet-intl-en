@@ -31,15 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Segmented analysis results of the time consumption of the slow logs found.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Describes the segmented analysis results of the duration of the queried slow logs.
         /// </summary>
         [JsonProperty("DurationAnalysis")]
         public DurationAnalysis[] DurationAnalysis{ get; set; }
 
         /// <summary>
         /// Collection of detailed information on slow logs found.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RawSlowQueryList")]
         public RawSlowQuery[] RawSlowQueryList{ get; set; }

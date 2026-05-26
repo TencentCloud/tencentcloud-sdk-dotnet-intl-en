@@ -25,35 +25,35 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Estimated revenue
+        /// Estimated revenue.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EstimatedEarnings")]
         public AnalysisData[] EstimatedEarnings{ get; set; }
 
         /// <summary>
-        /// Requests
+        /// Number of requests.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestsNumber")]
         public AnalysisData[] RequestsNumber{ get; set; }
 
         /// <summary>
-        /// Impressions
+        /// Number of impressions.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Impressions")]
         public AnalysisData[] Impressions{ get; set; }
 
         /// <summary>
-        /// Effective Cost Per Mille
+        /// eCPM (effective cost per mille).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ECPM")]
         public AnalysisData[] ECPM{ get; set; }
 
         /// <summary>
-        /// Taps
+        /// Number of taps.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClicksNumber")]

@@ -25,49 +25,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Bucket
+        /// Storage bucket.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Region
+        /// Region.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Destination of upload
+        /// Upload path.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Temporary secret ID
+        /// Temporary secret ID.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TempSecretId")]
         public string TempSecretId{ get; set; }
 
         /// <summary>
-        /// Temporary secret key
+        /// Temporary secret key.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TempSecretKey")]
         public string TempSecretKey{ get; set; }
 
         /// <summary>
-        /// Token 
+        /// Token credential. 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+        /// Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
         /// </summary>
         [JsonProperty("AccelerateEnable")]
         public long? AccelerateEnable{ get; set; }

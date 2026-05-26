@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program ID
+        /// Mini program appid.
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Version number
+        /// Version number.
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Version remarks.
+        /// Version note.
         /// </summary>
         [JsonProperty("MNPVersionNote")]
         public string MNPVersionNote{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Last modified time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

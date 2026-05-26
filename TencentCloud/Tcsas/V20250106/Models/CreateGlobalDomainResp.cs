@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Result
+        /// Operation result. 
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// Indicates the duplicate domain name.
+        /// Duplicate domains.
         /// </summary>
         [JsonProperty("RepeatUrls")]
         public string[] RepeatUrls{ get; set; }
 
         /// <summary>
-        /// Lists allowed domain names.
+        /// Domains that already exist in the allowlist.
         /// </summary>
         [JsonProperty("ExistsWhiteUrls")]
         public string[] ExistsWhiteUrls{ get; set; }
 
         /// <summary>
-        /// Indicates the domain name already exists in the blocklist.
+        /// Domains that already exist in the blocklist. 
         /// </summary>
         [JsonProperty("ExistsBlackUrls")]
         public string[] ExistsBlackUrls{ get; set; }

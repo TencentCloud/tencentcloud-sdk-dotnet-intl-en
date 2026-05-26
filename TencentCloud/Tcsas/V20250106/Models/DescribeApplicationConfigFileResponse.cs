@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Response data
+        /// Response data.
         /// </summary>
         [JsonProperty("Data")]
         public DownloadApplicationConfigResp Data{ get; set; }

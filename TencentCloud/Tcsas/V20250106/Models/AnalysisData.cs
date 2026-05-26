@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Time
+        /// Data time.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }
 
         /// <summary>
-        /// Value
+        /// Data value.
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }

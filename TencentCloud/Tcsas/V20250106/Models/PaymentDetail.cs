@@ -25,73 +25,73 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Date in YYYYMMDD format
+        /// Date in YYYYMMDD format.
         /// </summary>
         [JsonProperty("DataTime")]
         public string DataTime{ get; set; }
 
         /// <summary>
-        /// Number of mini programs involved in the order
+        /// Mini program count with orders.
         /// </summary>
         [JsonProperty("OrderMNPNum")]
         public long? OrderMNPNum{ get; set; }
 
         /// <summary>
-        /// Total orders
+        /// Total orders.
         /// </summary>
         [JsonProperty("OrderNum")]
         public long? OrderNum{ get; set; }
 
         /// <summary>
-        /// Paid orders
+        /// Paid orders.
         /// </summary>
         [JsonProperty("OrderPaidNum")]
         public long? OrderPaidNum{ get; set; }
 
         /// <summary>
-        /// Total refunded orders
+        /// Number of refund orders.
         /// </summary>
         [JsonProperty("OrderRefundNum")]
         public long? OrderRefundNum{ get; set; }
 
         /// <summary>
-        /// Unpaid orders
+        /// Total unpaid orders.
         /// </summary>
         [JsonProperty("OrderUnpaidNum")]
         public long? OrderUnpaidNum{ get; set; }
 
         /// <summary>
-        /// Number of users placing orders (openid)
+        /// Number of ordering users (by OpenID).
         /// </summary>
         [JsonProperty("OrderUserNum")]
         public long? OrderUserNum{ get; set; }
 
         /// <summary>
-        /// Amount paid
+        /// Amount paid.
         /// </summary>
         [JsonProperty("PaidAmount")]
         public string PaidAmount{ get; set; }
 
         /// <summary>
-        /// Amount refunded
+        /// Amount refunded.
         /// </summary>
         [JsonProperty("RefundAmount")]
         public string RefundAmount{ get; set; }
 
         /// <summary>
-        /// Total order amount
+        /// Total amount.
         /// </summary>
         [JsonProperty("TotalAmount")]
         public string TotalAmount{ get; set; }
 
         /// <summary>
-        /// Unpaid amount
+        /// Unpaid amount.
         /// </summary>
         [JsonProperty("UnpaidAmount")]
         public string UnpaidAmount{ get; set; }
 
         /// <summary>
-        /// Data update timestamp
+        /// Data update timestamp.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }

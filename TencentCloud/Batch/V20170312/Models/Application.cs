@@ -25,16 +25,16 @@ namespace TencentCloud.Batch.V20170312.Models
     {
         
         /// <summary>
-        /// Task execution command
-        /// </summary>
-        [JsonProperty("Command")]
-        public string Command{ get; set; }
-
-        /// <summary>
         /// Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
         /// </summary>
         [JsonProperty("DeliveryForm")]
         public string DeliveryForm{ get; set; }
+
+        /// <summary>
+        /// Task execution command
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
 
         /// <summary>
         /// Remote storage path of the application package
@@ -54,8 +54,8 @@ namespace TencentCloud.Batch.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "DeliveryForm", this.DeliveryForm);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "PackagePath", this.PackagePath);
             this.SetParamObj(map, prefix + "Docker.", this.Docker);
         }

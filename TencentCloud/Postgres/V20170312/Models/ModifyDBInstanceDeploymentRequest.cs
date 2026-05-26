@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
@@ -38,11 +38,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBNode[] DBNodeSet{ get; set; }
 
         /// <summary>
-        /// Switch time after instance configurations are modified.
-        /// <li>0: Switch immediately</li>
-        /// <li>1: Switch at specified time</li>
-        /// <li>2: Switch during maintenance time window</li>
-        /// Default value: 0
+        /// Specifies the switch time after instance configuration change.
+        /// <Li>0: switch immediately</li>.
+        /// <Li>1: switch at specified time</li>.
+        /// <Li>2: switch during maintenance time window.</li>.
         /// </summary>
         [JsonProperty("SwitchTag")]
         public long? SwitchTag{ get; set; }

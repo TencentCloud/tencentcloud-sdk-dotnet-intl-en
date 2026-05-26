@@ -28,7 +28,7 @@ namespace TencentCloud.Batch.V20170312
 
        private const string endpoint = "batch.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1319";
 
         /// <summary>
         /// Client constructor.
@@ -381,6 +381,27 @@ namespace TencentCloud.Batch.V20170312
         public DescribeJobResponse DescribeJobSync(DescribeJobRequest req)
         {
             return InternalRequestAsync<DescribeJobResponse>(req, "DescribeJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the resource usage monitoring information of Job task instances. This API only supports querying elastic node tasks and undeleted jobs. Computing environment tasks are not currently supported. This interface only supports querying the resource utilization of Job instances within a time range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeJobMonitorDataResponse"/></returns>
+        public Task<DescribeJobMonitorDataResponse> DescribeJobMonitorData(DescribeJobMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeJobMonitorDataResponse>(req, "DescribeJobMonitorData");
+        }
+
+        /// <summary>
+        /// Query the resource usage monitoring information of Job task instances. This API only supports querying elastic node tasks and undeleted jobs. Computing environment tasks are not currently supported. This interface only supports querying the resource utilization of Job instances within a time range.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeJobMonitorDataResponse"/></returns>
+        public DescribeJobMonitorDataResponse DescribeJobMonitorDataSync(DescribeJobMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeJobMonitorDataResponse>(req, "DescribeJobMonitorData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

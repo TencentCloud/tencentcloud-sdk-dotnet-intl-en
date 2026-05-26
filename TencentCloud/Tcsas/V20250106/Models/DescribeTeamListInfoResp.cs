@@ -25,67 +25,67 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team ID
+        /// Team ID.
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name
+        /// Team name.
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Administrator user ID
+        /// Admin user ID.
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }
 
         /// <summary>
-        /// Administrator account
+        /// Admin account.
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
-        /// Administrator username
+        /// Admin username.
         /// </summary>
         [JsonProperty("AdminUserName")]
         public string AdminUserName{ get; set; }
 
         /// <summary>
-        /// Number of team members
+        /// Number of team members.
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
 
         /// <summary>
-        /// Team registration link
+        /// Team registration link.
         /// </summary>
         [JsonProperty("RegisterLink")]
         public string RegisterLink{ get; set; }
 
         /// <summary>
-        /// Team permission type
+        /// Team role types. 
         /// </summary>
         [JsonProperty("TeamRoleTypeList")]
         public long?[] TeamRoleTypeList{ get; set; }
 
         /// <summary>
-        /// Associated team ID
+        /// Associated team ID.
         /// </summary>
         [JsonProperty("RelatedTeamId")]
         public long? RelatedTeamId{ get; set; }
 
         /// <summary>
-        /// Team expiration time. 0 means never expire.
+        /// Team expiration time. 0 indicates no expiration.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Team status. valid values: 1: normal; 2: disabled; 3: expired.
+        /// Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

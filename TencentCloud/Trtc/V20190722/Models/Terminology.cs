@@ -25,13 +25,13 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Source terminology
+        /// Source terminology.
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// Target terminology
+        /// Terminology translation result.
         /// </summary>
         [JsonProperty("Target")]
         public string Target{ get; set; }

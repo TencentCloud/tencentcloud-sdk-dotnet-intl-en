@@ -76,7 +76,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? PageNo{ get; set; }
 
         /// <summary>
-        /// Cost allocation tag value
+        /// Cost allocation tag key
         /// </summary>
         [JsonProperty("TagKeyStr")]
         public string TagKeyStr{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string EndPointId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+        /// The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }

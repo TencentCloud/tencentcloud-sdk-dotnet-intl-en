@@ -25,43 +25,43 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>API ID</p>
+        /// <p>API ID.</p>
         /// </summary>
         [JsonProperty("APIId")]
         public string APIId{ get; set; }
 
         /// <summary>
-        /// <p>API method</p>
+        /// <p>API method.</p>
         /// </summary>
         [JsonProperty("APIMethod")]
         public string APIMethod{ get; set; }
 
         /// <summary>
-        /// <p>Reason for request</p>
+        /// <p>Reason for request.</p>
         /// </summary>
         [JsonProperty("ApplyReason")]
         public string ApplyReason{ get; set; }
 
         /// <summary>
-        /// <p>Reason for rejection</p>
+        /// <p>Reason for rejection.</p>
         /// </summary>
         [JsonProperty("RejectReason")]
         public string RejectReason{ get; set; }
 
         /// <summary>
-        /// <p>Approval status. 20: Rejected; 30: Approved</p>
+        /// <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// <p>API feature description</p>
+        /// <p>API feature description.</p>
         /// </summary>
         [JsonProperty("APIDesc")]
         public string APIDesc{ get; set; }
 
         /// <summary>
-        /// <p>API type. Valid values: 1: System; 2: Custom</p>
+        /// <p>API type. Valid values: 1: System; 2: Custom.</p>
         /// </summary>
         [JsonProperty("APIType")]
         public long? APIType{ get; set; }

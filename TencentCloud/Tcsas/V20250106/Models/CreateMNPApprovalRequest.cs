@@ -25,19 +25,19 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program version ID
+        /// Mini program version ID.
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// submit: Submit an approval request; cancel: Cancel the approval request
+        /// submit: Submit an approval request; cancel: Cancel the approval request.
         /// </summary>
         [JsonProperty("ApplyAction")]
         public string ApplyAction{ get; set; }
 
         /// <summary>
-        /// Platform ID
+        /// Platform ID.
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }

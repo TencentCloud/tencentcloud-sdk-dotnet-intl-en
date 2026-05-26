@@ -25,10 +25,28 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Voice ID
+        /// Voice type ID.
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
+
+        /// <summary>
+        /// TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+        /// <summary>
+        /// Speaking rate. value range: 0.5-2.0. default: 1.0.
+        /// </summary>
+        [JsonProperty("Speed")]
+        public float? Speed{ get; set; }
+
+        /// <summary>
+        /// Value range: (0, 10]. default value: 1.0.
+        /// </summary>
+        [JsonProperty("Volume")]
+        public float? Volume{ get; set; }
 
 
         /// <summary>
@@ -37,6 +55,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamSimple(map, prefix + "Speed", this.Speed);
+            this.SetParamSimple(map, prefix + "Volume", this.Volume);
         }
     }
 }

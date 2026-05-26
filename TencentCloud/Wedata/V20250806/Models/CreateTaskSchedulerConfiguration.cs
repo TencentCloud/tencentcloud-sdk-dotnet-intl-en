@@ -25,203 +25,197 @@ namespace TencentCloud.Wedata.V20250806.Models
     {
         
         /// <summary>
-        /// Period type: defaults to DAY_CYCLE.
-        /// 
-        /// Supported types. 
-        /// 
-        /// ONEOFF_CYCLE: specifies a one-time cycle.
-        /// YEAR_CYCLE: specifies the year cycle.
-        /// MONTH_CYCLE: specifies the monthly cycle.
-        /// WEEK_CYCLE: specifies the week cycle.
-        /// DAY_CYCLE: specifies the day cycle.
-        /// HOUR_CYCLE: specifies the hour cycle.
-        /// MINUTE_CYCLE: specifies the minute cycle.
-        /// CRONTAB_CYCLE: specifies the crontab expression type.
+        /// <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
         /// </summary>
         [JsonProperty("CycleType")]
         public string CycleType{ get; set; }
 
         /// <summary>
-        /// Time zone, defaults to UTC+8.
+        /// <p>Time zone, defaults to UTC+8</p>
         /// </summary>
         [JsonProperty("ScheduleTimeZone")]
         public string ScheduleTimeZone{ get; set; }
 
         /// <summary>
-        /// Cron expression, defaults to 0 0 0 * * ? *.
+        /// <p>Cron expression, defaults to 0 0 0 * * ? *</p>
         /// </summary>
         [JsonProperty("CrontabExpression")]
         public string CrontabExpression{ get; set; }
 
         /// <summary>
-        /// Effective date, defaults to 00:00:00 of the current date.
+        /// <p>Effective date, defaults to 00:00:00 of the current date</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End date, defaults to 2099-12-31 23:59:59.
+        /// <p>End date, defaults to 2099-12-31 23:59:59</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Execution time: the left-closed interval. Default: 00:00.
+        /// <p>Execution time left-closed interval, default 00:00</p>
         /// </summary>
         [JsonProperty("ExecutionStartTime")]
         public string ExecutionStartTime{ get; set; }
 
         /// <summary>
-        /// Execution time: the right closed interval. Default: 23:59.
+        /// <p>Execution time right closed interval, default 23:59</p>
         /// </summary>
         [JsonProperty("ExecutionEndTime")]
         public string ExecutionEndTime{ get; set; }
 
         /// <summary>
-        /// Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+        /// <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
         /// </summary>
         [JsonProperty("CalendarOpen")]
         public string CalendarOpen{ get; set; }
 
         /// <summary>
-        /// Calendar scheduling:  the calendar ID.
+        /// <p>Calendar scheduling Calendar ID</p>
         /// </summary>
         [JsonProperty("CalendarId")]
         public string CalendarId{ get; set; }
 
         /// <summary>
-        /// Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+        /// <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
         /// </summary>
         [JsonProperty("SelfDepend")]
         public string SelfDepend{ get; set; }
 
         /// <summary>
-        /// Specifies the upstream dependency list.
+        /// <p>Upstream dependency array</p>
         /// </summary>
         [JsonProperty("UpstreamDependencyConfigList")]
         public DependencyTaskBrief[] UpstreamDependencyConfigList{ get; set; }
 
         /// <summary>
-        /// List of Events
+        /// <p>Event array</p>
         /// </summary>
         [JsonProperty("EventListenerList")]
         public EventListener[] EventListenerList{ get; set; }
 
         /// <summary>
-        /// Rerun & Refill Configuration: Default: ALL;
-        /// 
-        /// * ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-        /// 
-        /// * FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-        /// 
-        /// * NONE: Rerun or refill is not allowed regardless of success or failure.
+        /// <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
         /// </summary>
         [JsonProperty("AllowRedoType")]
         public string AllowRedoType{ get; set; }
 
         /// <summary>
-        /// Output parameter list.
+        /// <p>Output parameter array</p>
         /// </summary>
         [JsonProperty("ParamTaskOutList")]
         public OutTaskParameter[] ParamTaskOutList{ get; set; }
 
         /// <summary>
-        /// Input parameter list.
+        /// <p>Input parameter array</p>
         /// </summary>
         [JsonProperty("ParamTaskInList")]
         public InTaskParameter[] ParamTaskInList{ get; set; }
 
         /// <summary>
-        /// Output registration.
+        /// <p>Output registration</p>
         /// </summary>
         [JsonProperty("TaskOutputRegistryList")]
         public TaskDataRegistry[] TaskOutputRegistryList{ get; set; }
 
         /// <summary>
-        /// **Instance generation policy**.
-        /// T_PLUS_0: specifies t+0 generation. default policy.
-        /// T_PLUS_1: specifies t+1 generation.
+        /// <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
         /// </summary>
         [JsonProperty("InitStrategy")]
         public string InitStrategy{ get; set; }
 
         /// <summary>
-        /// Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+        /// <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
         /// </summary>
         [JsonProperty("ScheduleRunType")]
         [System.Obsolete]
         public string ScheduleRunType{ get; set; }
 
         /// <summary>
-        /// Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+        /// <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
         /// </summary>
         [JsonProperty("RunPriority")]
         [System.Obsolete]
         public string RunPriority{ get; set; }
 
         /// <summary>
-        /// Retry Policy: Retry Wait Time (in minutes): Default 5
+        /// <p>Retry policy Retry wait time, in minutes: Default: 5</p>
         /// </summary>
         [JsonProperty("RetryWait")]
         [System.Obsolete]
         public string RetryWait{ get; set; }
 
         /// <summary>
-        /// Retry Policy: maximum attempts. Default: 4.
+        /// <p>Retry policy Maximum attempts, Default: 4</p>
         /// </summary>
         [JsonProperty("MaxRetryAttempts")]
         [System.Obsolete]
         public string MaxRetryAttempts{ get; set; }
 
         /// <summary>
-        /// Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+        /// <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
         /// </summary>
         [JsonProperty("ExecutionTTL")]
         [System.Obsolete]
         public string ExecutionTTL{ get; set; }
 
         /// <summary>
-        /// Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+        /// <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
         /// </summary>
         [JsonProperty("WaitExecutionTotalTTL")]
         [System.Obsolete]
         public string WaitExecutionTotalTTL{ get; set; }
 
         /// <summary>
-        /// Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+        /// <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
         /// </summary>
         [JsonProperty("ScheduleType")]
         public long? ScheduleType{ get; set; }
 
         /// <summary>
-        /// Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+        /// <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
         /// </summary>
         [JsonProperty("RunPriorityType")]
         public long? RunPriorityType{ get; set; }
 
         /// <summary>
-        /// Retry policy retry wait time, in minutes: default: 5.
+        /// <p>Retry policy Retry wait time, in minutes: Default: 5</p>
         /// </summary>
         [JsonProperty("RetryWaitMinute")]
         public long? RetryWaitMinute{ get; set; }
 
         /// <summary>
-        /// Maximum attempts of the retry policy. default: 4.
+        /// <p>Retry policy Maximum attempts, Default: 4</p>
         /// </summary>
         [JsonProperty("MaxRetryNumber")]
         public long? MaxRetryNumber{ get; set; }
 
         /// <summary>
-        /// Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+        /// <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
         /// </summary>
         [JsonProperty("ExecutionTTLMinute")]
         public long? ExecutionTTLMinute{ get; set; }
 
         /// <summary>
-        /// Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+        /// <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
         /// </summary>
         [JsonProperty("WaitExecutionTotalTTLMinute")]
         public long? WaitExecutionTotalTTLMinute{ get; set; }
+
+        /// <summary>
+        /// <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+        /// </summary>
+        [JsonProperty("DependencyTriggerPolicy")]
+        public string DependencyTriggerPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+        /// </summary>
+        [JsonProperty("AllowDownstreamDependency")]
+        [System.Obsolete]
+        public long? AllowDownstreamDependency{ get; set; }
 
 
         /// <summary>
@@ -258,6 +252,8 @@ namespace TencentCloud.Wedata.V20250806.Models
             this.SetParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
             this.SetParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
             this.SetParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
+            this.SetParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+            this.SetParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
         }
     }
 }

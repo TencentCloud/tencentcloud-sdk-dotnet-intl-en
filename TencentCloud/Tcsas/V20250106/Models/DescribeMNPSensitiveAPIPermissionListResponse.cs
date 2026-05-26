@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Response parameters.
+        /// Response data.
         /// </summary>
         [JsonProperty("Data")]
         public DescribeMNPSensitiveAPIPermissionListResp Data{ get; set; }

@@ -49,8 +49,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string RegionState{ get; set; }
 
         /// <summary>
-        /// Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
         /// </summary>
         [JsonProperty("SupportInternational")]
         public ulong? SupportInternational{ get; set; }

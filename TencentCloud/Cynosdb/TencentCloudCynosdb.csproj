@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,10 +52,16 @@
     <Compile Include="V20190107\Models\Account.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\ActivateLibraDBClusterRequest.cs" />
+    <Compile Include="V20190107\Models\ActivateLibraDBClusterResponse.cs" />
+    <Compile Include="V20190107\Models\ActivateLibraDBInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\ActivateLibraDBInstanceResponse.cs" />
     <Compile Include="V20190107\Models\AddClusterSlaveZoneRequest.cs" />
     <Compile Include="V20190107\Models\AddClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
+    <Compile Include="V20190107\Models\AddLibraDBInstancesRequest.cs" />
+    <Compile Include="V20190107\Models\AddLibraDBInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
     <Compile Include="V20190107\Models\AuditInstanceFilters.cs" />
     <Compile Include="V20190107\Models\AuditInstanceInfo.cs" />
@@ -75,6 +81,9 @@
     <Compile Include="V20190107\Models\BizTaskModifyInstanceParam.cs" />
     <Compile Include="V20190107\Models\BizTaskModifyParamsData.cs" />
     <Compile Include="V20190107\Models\CLSInfo.cs" />
+    <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\CheckCreateLibraDBInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\CheckItem.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceRequest.cs" />
     <Compile Include="V20190107\Models\CloseAuditServiceResponse.cs" />
     <Compile Include="V20190107\Models\CloseClusterPasswordComplexityRequest.cs" />
@@ -108,6 +117,10 @@
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CreateIntegrateClusterRequest.cs" />
     <Compile Include="V20190107\Models\CreateIntegrateClusterResponse.cs" />
+    <Compile Include="V20190107\Models\CreateLibraDBClusterAccountsRequest.cs" />
+    <Compile Include="V20190107\Models\CreateLibraDBClusterAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\CreateLibraDBClustersRequest.cs" />
+    <Compile Include="V20190107\Models\CreateLibraDBClustersResponse.cs" />
     <Compile Include="V20190107\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20190107\Models\CreateProxyEndPointRequest.cs" />
@@ -136,6 +149,10 @@
     <Compile Include="V20190107\Models\DeleteCLSDeliveryResponse.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseRequest.cs" />
     <Compile Include="V20190107\Models\DeleteClusterDatabaseResponse.cs" />
+    <Compile Include="V20190107\Models\DeleteLibraDBClusterAccountsRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteLibraDBClusterAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\DeleteLibraDBClusterRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteLibraDBClusterResponse.cs" />
     <Compile Include="V20190107\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="V20190107\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20190107\Models\DeliverSummary.cs" />
@@ -213,6 +230,12 @@
     <Compile Include="V20190107\Models\DescribeIntegrateTaskResponse.cs" />
     <Compile Include="V20190107\Models\DescribeIsolatedInstancesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeIsolatedInstancesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountAllPrivilegesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountAllPrivilegesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountPrivilegesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountPrivilegesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeLibraDBClusterAccountsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodRequest.cs" />
     <Compile Include="V20190107\Models\DescribeMaintainPeriodResponse.cs" />
     <Compile Include="V20190107\Models\DescribeParamTemplateDetailRequest.cs" />
@@ -284,8 +307,12 @@
     <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\LibraDBInstanceInitInfo.cs" />
     <Compile Include="V20190107\Models\LogicBackupConfigInfo.cs" />
     <Compile Include="V20190107\Models\ManualBackupData.cs" />
+    <Compile Include="V20190107\Models\MigrateDBItem.cs" />
+    <Compile Include="V20190107\Models\MigrateObject.cs" />
+    <Compile Include="V20190107\Models\MigrateTableItem.cs" />
     <Compile Include="V20190107\Models\ModifiableInfo.cs" />
     <Compile Include="V20190107\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20190107\Models\ModifyAccountDescriptionResponse.cs" />
@@ -355,6 +382,7 @@
     <Compile Include="V20190107\Models\NetAddr.cs" />
     <Compile Include="V20190107\Models\NewAccount.cs" />
     <Compile Include="V20190107\Models\ObjectTask.cs" />
+    <Compile Include="V20190107\Models\Objects.cs" />
     <Compile Include="V20190107\Models\OfflineClusterRequest.cs" />
     <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />

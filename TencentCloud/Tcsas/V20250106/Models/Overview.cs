@@ -25,49 +25,49 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Superapps
+        /// Number of superapps.
         /// </summary>
         [JsonProperty("AppNum")]
         public long? AppNum{ get; set; }
 
         /// <summary>
-        /// Teams
+        /// Number of teams.
         /// </summary>
         [JsonProperty("CorpNum")]
         public long? CorpNum{ get; set; }
 
         /// <summary>
-        /// Refresh time
+        /// Refresh timestamp.
         /// </summary>
         [JsonProperty("FlushTime")]
         public string FlushTime{ get; set; }
 
         /// <summary>
-        /// Mini programs
+        /// Number of mini programs.
         /// </summary>
         [JsonProperty("MiniAppNum")]
         public long? MiniAppNum{ get; set; }
 
         /// <summary>
-        /// Mini games
+        /// Number of mini games.
         /// </summary>
         [JsonProperty("MiniGameNum")]
         public long? MiniGameNum{ get; set; }
 
         /// <summary>
-        /// Mini game visits
+        /// Number of mini game visits.
         /// </summary>
         [JsonProperty("MiniGameVisitNum")]
         public long? MiniGameVisitNum{ get; set; }
 
         /// <summary>
-        /// Mini program updates
+        /// Number of mini program updates.
         /// </summary>
         [JsonProperty("UpdateNum")]
         public long? UpdateNum{ get; set; }
 
         /// <summary>
-        /// Mini program visits
+        /// Number of mini program visits.
         /// </summary>
         [JsonProperty("VisitNum")]
         public long? VisitNum{ get; set; }

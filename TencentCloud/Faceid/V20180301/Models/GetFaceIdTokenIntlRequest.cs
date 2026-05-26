@@ -25,61 +25,47 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The detection mode. Valid values:
-        /// `liveness`: Liveness detection only.
-        /// `compare`: Selfie Verification(liveness detection and face comparison).
-        /// Default value: `liveness`.
+        /// <p>Indicates the detection mode. Parameter values as follows:<br>"liveness": liveness detection only;<br>"compare": liveness detection + face comparison;<br>Default value: "liveness".</p>
         /// </summary>
         [JsonProperty("CheckMode")]
         public string CheckMode{ get; set; }
 
         /// <summary>
-        /// The verification security level. Valid values:
-        /// `1`: Video-based liveness detection.
-        /// `2`: Motion-based liveness detection.
-        /// `3`: Reflection-based liveness detection.
-        /// `4`: Motion- and reflection-based liveness detection.
-        /// Default value: `4`.
+        /// <p>Indicates the security level of authentication. Security levels are divided into:<br>"1": silent liveness;<br>"2": action liveness detection;<br>"3": light liveness;<br>"4": action + light liveness;<br>Default value is "4".</p>
+        /// **Note:** Security level increases from `1` to `4`, with `4` providing the highest security.
         /// </summary>
         [JsonProperty("SecureLevel")]
         public string SecureLevel{ get; set; }
 
         /// <summary>
-        /// The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+        /// <p>The base64 code of the image for comparison, used for the "liveness comparison" mode. This parameter is required when CheckMode is "compare".</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// The pass-through parameter, which can be omitted if there are no special requirements.
+        /// <p>This parameter is a business passthrough parameter and can be omitted unless otherwise needed.</p>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// This interface is used to control th action sequences.
-        /// Action types are as follows:
-        /// "blink"
-        /// "mouth"
-        /// "nod"
-        /// "shake"
-        /// You can choose 1-2 actions out of the four.
-        /// Single action example: "blink"
-        /// Multiple action example: "blink,mouth"
-        /// The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2 or 4; otherwise, the interface reports an error.
+        /// <p>This API is used to control the sequence of actions. The action types are as follows:<br>"blink"<br>"mouth"<br>"nod"<br>"shake"<br>Choose 1-2 actions from the four.<br>Single action example: "blink"<br>Multi-action example: "blink,mouth".<br>Default value is blink.<br>Input this parameter only when SecureLevel is 2 or 4 for different action types to take effect; otherwise, the API returns an error.</p>
         /// </summary>
         [JsonProperty("ActionList")]
         public string ActionList{ get; set; }
 
         /// <summary>
-        /// BASIC: Basic version (Default).
-        /// ENHANCE: Enhance version, enable additional output of device risk level field.
-        /// PRO: Pro version, enable additional output of attack type fields.
-        /// PLUS: Plus version, enable additional output of device risk level and attack type fields.
-        /// Please contact us to access enhance version & plus version.	
+        /// <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
         /// </summary>
         [JsonProperty("SdkVersion")]
         public string SdkVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Liveness retry count</p><p>Value ranges from 1 to 5</p><p>Default value: 5</p>
+        /// </summary>
+        [JsonProperty("RetryLimit")]
+        public long? RetryLimit{ get; set; }
 
 
         /// <summary>
@@ -93,6 +79,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
+            this.SetParamSimple(map, prefix + "RetryLimit", this.RetryLimit);
         }
     }
 }

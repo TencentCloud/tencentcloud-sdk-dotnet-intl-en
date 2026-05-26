@@ -25,27 +25,27 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Base64-encoded result data
+        /// Result data in Base64 encoding.
         /// </summary>
         [JsonProperty("DataResult")]
         public string DataResult{ get; set; }
 
         /// <summary>
-        /// Executed SQL
+        /// Executed SQL.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecSql")]
         public string ExecSql{ get; set; }
 
         /// <summary>
-        /// Execution time
+        /// Execution time.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExecTime")]
         public long? ExecTime{ get; set; }
 
         /// <summary>
-        /// Query index ID
+        /// Query index ID.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IndexId")]

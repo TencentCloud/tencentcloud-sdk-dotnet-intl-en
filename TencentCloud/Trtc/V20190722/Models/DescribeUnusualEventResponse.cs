@@ -25,14 +25,14 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// The number of records returned.
-        /// Value range: 0-20.
+        /// Total number of returned data entries.
+        /// Value range: [0, 20].
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// The information of the abnormal user experiences.
+        /// Abnormal experience list.
         /// </summary>
         [JsonProperty("AbnormalExperienceList")]
         public AbnormalExperience[] AbnormalExperienceList{ get; set; }
