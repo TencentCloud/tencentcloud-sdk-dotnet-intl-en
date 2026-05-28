@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Backup policy.
+        /// <p>Backup policy</p>
         /// </summary>
         [JsonProperty("BackupPolicy")]
         public BackupPolicyModelInput BackupPolicy{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

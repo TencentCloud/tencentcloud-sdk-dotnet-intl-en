@@ -25,49 +25,50 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+        /// <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
         /// </summary>
         [JsonProperty("ProxyCount")]
+        [System.Obsolete]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// <p>cpu cores</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory.
+        /// <p>Memory</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Connection pool type: SessionConnectionPool (session-level connection pool).
+        /// <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+        /// <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// Connection pool threshold. measurement unit (seconds).
+        /// <p>Connection pool threshold: Measurement unit (seconds)</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// Description.
+        /// <p>description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+        /// <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

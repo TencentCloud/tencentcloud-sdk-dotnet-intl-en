@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Frozen transaction ID.
+        /// <p>Frozen transaction ID</p>
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
-        /// Order ID
+        /// <p>Order ID</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+        /// <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs)</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+        /// <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field and the query API DescribeResourcesByDealName to get the cluster ID)</p>
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Big order ID
+        /// <p>Large Order ID</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BigDealIds")]

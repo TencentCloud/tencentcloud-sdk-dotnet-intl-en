@@ -25,12 +25,14 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
+        /// COS path.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
 
         /// <summary>
+        /// Permission ["read", "write"]
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Permissions")]

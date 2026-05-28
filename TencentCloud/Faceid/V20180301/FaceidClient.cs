@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -417,6 +417,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// NFC verification service, obtain Token information for the NFC identify request.
+        /// </summary>
+        /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
+        /// <returns><see cref="GetNFCTokenResponse"/></returns>
+        public Task<GetNFCTokenResponse> GetNFCToken(GetNFCTokenRequest req)
+        {
+            return InternalRequestAsync<GetNFCTokenResponse>(req, "GetNFCToken");
+        }
+
+        /// <summary>
+        /// NFC verification service, obtain Token information for the NFC identify request.
+        /// </summary>
+        /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
+        /// <returns><see cref="GetNFCTokenResponse"/></returns>
+        public GetNFCTokenResponse GetNFCTokenSync(GetNFCTokenRequest req)
+        {
+            return InternalRequestAsync<GetNFCTokenResponse>(req, "GetNFCToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetSdkVerificationResultRequest"/></param>
@@ -455,6 +476,27 @@ namespace TencentCloud.Faceid.V20180301
         public GetWebVerificationResultIntlResponse GetWebVerificationResultIntlSync(GetWebVerificationResultIntlRequest req)
         {
             return InternalRequestAsync<GetWebVerificationResultIntlResponse>(req, "GetWebVerificationResultIntl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain document NFC data, input the Token returned by the NFC SDK (valid for 10 minutes), and return the corresponding document information retrieved via NFC. This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+        /// </summary>
+        /// <param name="req"><see cref="GetWxNFCResultRequest"/></param>
+        /// <returns><see cref="GetWxNFCResultResponse"/></returns>
+        public Task<GetWxNFCResultResponse> GetWxNFCResult(GetWxNFCResultRequest req)
+        {
+            return InternalRequestAsync<GetWxNFCResultResponse>(req, "GetWxNFCResult");
+        }
+
+        /// <summary>
+        /// Obtain document NFC data, input the Token returned by the NFC SDK (valid for 10 minutes), and return the corresponding document information retrieved via NFC. This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+        /// </summary>
+        /// <param name="req"><see cref="GetWxNFCResultRequest"/></param>
+        /// <returns><see cref="GetWxNFCResultResponse"/></returns>
+        public GetWxNFCResultResponse GetWxNFCResultSync(GetWxNFCResultRequest req)
+        {
+            return InternalRequestAsync<GetWxNFCResultResponse>(req, "GetWxNFCResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

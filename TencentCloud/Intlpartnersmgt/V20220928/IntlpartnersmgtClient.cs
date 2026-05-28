@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1310";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -473,6 +473,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerInfoResponse DescribeCustomerInfoSync(DescribeCustomerInfoRequest req)
         {
             return InternalRequestAsync<DescribeCustomerInfoResponse>(req, "DescribeCustomerInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cost analysis API advanced filtering
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnCostExplorerFilterRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnCostExplorerFilterResponse"/></returns>
+        public Task<DescribeCustomerOwnCostExplorerFilterResponse> DescribeCustomerOwnCostExplorerFilter(DescribeCustomerOwnCostExplorerFilterRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnCostExplorerFilterResponse>(req, "DescribeCustomerOwnCostExplorerFilter");
+        }
+
+        /// <summary>
+        /// Cost analysis API advanced filtering
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnCostExplorerFilterRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnCostExplorerFilterResponse"/></returns>
+        public DescribeCustomerOwnCostExplorerFilterResponse DescribeCustomerOwnCostExplorerFilterSync(DescribeCustomerOwnCostExplorerFilterRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnCostExplorerFilterResponse>(req, "DescribeCustomerOwnCostExplorerFilter")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

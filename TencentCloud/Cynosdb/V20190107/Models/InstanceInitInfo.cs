@@ -25,57 +25,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance CPU
+        /// <p>Instance cpu</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Instance memory
+        /// <p>Instance memory</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values:`rw`, `ro`.
+        /// <p>Instance type rw/ro</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Number of the instances. Value range: 1-15.
+        /// <p>Number of instances, range [1,15]</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Minimum number of serverless instances. Value range: 1-15.
+        /// <p>Minimum count of Serverless instance, range [1,15]</p>
         /// </summary>
         [JsonProperty("MinRoCount")]
         public long? MinRoCount{ get; set; }
 
         /// <summary>
-        /// Maximum number of serverless instances. Value range: 1-15.
+        /// <p>Maximum count of Serverless instances, range [1,15]</p>
         /// </summary>
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
         /// <summary>
-        /// Minimum specifications for serverless instance
+        /// <p>Minimum specification of Serverless instance</p>
         /// </summary>
         [JsonProperty("MinRoCpu")]
         public float? MinRoCpu{ get; set; }
 
         /// <summary>
-        /// Maximum specifications for serverless instance
+        /// <p>Maximum specification of Serverless instance</p>
         /// </summary>
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }
 
         /// <summary>
-        /// Instance machine type.
-        /// 1. common: general.
-        /// 2. exclusive: exclusive.
+        /// <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

@@ -25,16 +25,34 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Instance ID, for example: tdsql3-42f40429.
+        /// <p>Instance ID, such as tdsql3-42f40429.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database name, obtained via the DescribeDatabases api.
+        /// <p>Database name, obtained via the DescribeDatabases API.</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
+
+        /// <summary>
+        /// <p>Pagination index</p>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>Number of items per page</p>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>Table name matching expression</p>
+        /// </summary>
+        [JsonProperty("TableRegexp")]
+        public string TableRegexp{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TableRegexp", this.TableRegexp);
         }
     }
 }

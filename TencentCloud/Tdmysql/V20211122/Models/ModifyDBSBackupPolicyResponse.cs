@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Success status.
+        /// <p>Whether it is successful</p>
         /// </summary>
         [JsonProperty("IsSuccess")]
         public bool? IsSuccess{ get; set; }
 
         /// <summary>
-        /// Message.
+        /// <p>Message</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

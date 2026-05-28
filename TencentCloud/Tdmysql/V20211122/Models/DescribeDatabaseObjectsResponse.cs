@@ -25,40 +25,40 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Passthrough input parameter.
+        /// <p>Passthrough input parameter.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database name.
+        /// <p>Database name.</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// Table list.
+        /// <p>Table list.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tables")]
         public DatabaseTable[] Tables{ get; set; }
 
         /// <summary>
-        /// View list.
+        /// <p>View list.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Views")]
         public DatabaseView[] Views{ get; set; }
 
         /// <summary>
-        /// Stored procedure list.
+        /// <p>Stored procedure list.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Procs")]
         public DatabaseProcedure[] Procs{ get; set; }
 
         /// <summary>
-        /// Function list.
+        /// <p>Function list.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Funcs")]

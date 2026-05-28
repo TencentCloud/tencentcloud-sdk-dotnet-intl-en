@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1273";
+       private const string sdkVersion = "SDK_NET_3.0.1321";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,49 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Create an instance backup set.
+        /// This API is used to create clone instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public Task<CreateCloneInstanceResponse> CreateCloneInstance(CreateCloneInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloneInstanceResponse>(req, "CreateCloneInstance");
+        }
+
+        /// <summary>
+        /// This API is used to create clone instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloneInstanceRequest"/></param>
+        /// <returns><see cref="CreateCloneInstanceResponse"/></returns>
+        public CreateCloneInstanceResponse CreateCloneInstanceSync(CreateCloneInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateCloneInstanceResponse>(req, "CreateCloneInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch create instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public Task<CreateDBInstancesResponse> CreateDBInstances(CreateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to batch create instances.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateDBInstancesResponse"/></returns>
+        public CreateDBInstancesResponse CreateDBInstancesSync(CreateDBInstancesRequest req)
+        {
+            return InternalRequestAsync<CreateDBInstancesResponse>(req, "CreateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a manual backup of an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBSBackupRequest"/></param>
         /// <returns><see cref="CreateDBSBackupResponse"/></returns>
@@ -85,7 +127,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Create an instance backup set.
+        /// This API is used to create a manual backup of an instance.
         /// </summary>
         /// <param name="req"><see cref="CreateDBSBackupRequest"/></param>
         /// <returns><see cref="CreateDBSBackupResponse"/></returns>
@@ -96,7 +138,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Delete instance backup sets.
+        /// This API is used to delete manual backups of instances.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBSBackupSetsRequest"/></param>
         /// <returns><see cref="DeleteDBSBackupSetsResponse"/></returns>
@@ -106,13 +148,55 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Delete instance backup sets.
+        /// This API is used to delete manual backups of instances.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBSBackupSetsRequest"/></param>
         /// <returns><see cref="DeleteDBSBackupSetsResponse"/></returns>
         public DeleteDBSBackupSetsResponse DeleteDBSBackupSetsSync(DeleteDBSBackupSetsRequest req)
         {
             return InternalRequestAsync<DeleteDBSBackupSetsResponse>(req, "DeleteDBSBackupSets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public Task<DescribeDBInstanceDetailResponse> DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceDetailResponse>(req, "DescribeDBInstanceDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query instance details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceDetailResponse"/></returns>
+        public DescribeDBInstanceDetailResponse DescribeDBInstanceDetailSync(DescribeDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstanceDetailResponse>(req, "DescribeDBInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public Task<DescribeDBInstancesResponse> DescribeDBInstances(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to query instance list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
+        /// <returns><see cref="DescribeDBInstancesResponse"/></returns>
+        public DescribeDBInstancesResponse DescribeDBInstancesSync(DescribeDBInstancesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBInstancesResponse>(req, "DescribeDBInstances")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -138,7 +222,28 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Query recoverable time.
+        /// This API is used to query instance archived WAL log list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSArchiveLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSArchiveLogsResponse"/></returns>
+        public Task<DescribeDBSArchiveLogsResponse> DescribeDBSArchiveLogs(DescribeDBSArchiveLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSArchiveLogsResponse>(req, "DescribeDBSArchiveLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query instance archived WAL log list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSArchiveLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSArchiveLogsResponse"/></returns>
+        public DescribeDBSArchiveLogsResponse DescribeDBSArchiveLogsSync(DescribeDBSArchiveLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSArchiveLogsResponse>(req, "DescribeDBSArchiveLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the recoverable time.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSAvailableRecoveryTimeRequest"/></param>
         /// <returns><see cref="DescribeDBSAvailableRecoveryTimeResponse"/></returns>
@@ -148,7 +253,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Query recoverable time.
+        /// This API is used to obtain the recoverable time.
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSAvailableRecoveryTimeRequest"/></param>
         /// <returns><see cref="DescribeDBSAvailableRecoveryTimeResponse"/></returns>
@@ -159,7 +264,91 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Query clone list of instances.
+        /// Query an instance backup strategy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupPolicyResponse"/></returns>
+        public Task<DescribeDBSBackupPolicyResponse> DescribeDBSBackupPolicy(DescribeDBSBackupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupPolicyResponse>(req, "DescribeDBSBackupPolicy");
+        }
+
+        /// <summary>
+        /// Query an instance backup strategy
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupPolicyRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupPolicyResponse"/></returns>
+        public DescribeDBSBackupPolicyResponse DescribeDBSBackupPolicySync(DescribeDBSBackupPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupPolicyResponse>(req, "DescribeDBSBackupPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance backup set information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupSetsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupSetsResponse"/></returns>
+        public Task<DescribeDBSBackupSetsResponse> DescribeDBSBackupSets(DescribeDBSBackupSetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupSetsResponse>(req, "DescribeDBSBackupSets");
+        }
+
+        /// <summary>
+        /// This API is used to query instance backup set information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupSetsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupSetsResponse"/></returns>
+        public DescribeDBSBackupSetsResponse DescribeDBSBackupSetsSync(DescribeDBSBackupSetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupSetsResponse>(req, "DescribeDBSBackupSets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance backup space overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsResponse"/></returns>
+        public Task<DescribeDBSBackupStatisticsResponse> DescribeDBSBackupStatistics(DescribeDBSBackupStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsResponse>(req, "DescribeDBSBackupStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to query instance backup space overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsResponse"/></returns>
+        public DescribeDBSBackupStatisticsResponse DescribeDBSBackupStatisticsSync(DescribeDBSBackupStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsResponse>(req, "DescribeDBSBackupStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query backup set statistical detail.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsDetailResponse"/></returns>
+        public Task<DescribeDBSBackupStatisticsDetailResponse> DescribeDBSBackupStatisticsDetail(DescribeDBSBackupStatisticsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsDetailResponse>(req, "DescribeDBSBackupStatisticsDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query backup set statistical detail.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSBackupStatisticsDetailRequest"/></param>
+        /// <returns><see cref="DescribeDBSBackupStatisticsDetailResponse"/></returns>
+        public DescribeDBSBackupStatisticsDetailResponse DescribeDBSBackupStatisticsDetailSync(DescribeDBSBackupStatisticsDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDBSBackupStatisticsDetailResponse>(req, "DescribeDBSBackupStatisticsDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query clone list
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSCloneInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBSCloneInstancesResponse"/></returns>
@@ -169,7 +358,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Query clone list of instances.
+        /// Query clone list
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSCloneInstancesRequest"/></param>
         /// <returns><see cref="DescribeDBSCloneInstancesResponse"/></returns>
@@ -222,6 +411,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to query the database list of a cloud database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public Task<DescribeDatabasesResponse> DescribeDatabases(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases");
+        }
+
+        /// <summary>
+        /// This API is used to query the database list of a cloud database instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
+        /// <returns><see cref="DescribeDatabasesResponse"/></returns>
+        public DescribeDatabasesResponse DescribeDatabasesSync(DescribeDatabasesRequest req)
+        {
+            return InternalRequestAsync<DescribeDatabasesResponse>(req, "DescribeDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the process status of an asynchronous task.
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>
@@ -243,6 +453,90 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to query available regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleInfoResponse"/></returns>
+        public Task<DescribeSaleInfoResponse> DescribeSaleInfo(DescribeSaleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleInfoResponse>(req, "DescribeSaleInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query available regions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
+        /// <returns><see cref="DescribeSaleInfoResponse"/></returns>
+        public DescribeSaleInfoResponse DescribeSaleInfoSync(DescribeSaleInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSaleInfoResponse>(req, "DescribeSaleInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to list available component specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
+        /// <returns><see cref="DescribeSpecsResponse"/></returns>
+        public Task<DescribeSpecsResponse> DescribeSpecs(DescribeSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs");
+        }
+
+        /// <summary>
+        /// This API is used to list available component specifications.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
+        /// <returns><see cref="DescribeSpecsResponse"/></returns>
+        public DescribeSpecsResponse DescribeSpecsSync(DescribeSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query user permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeUserPrivilegesResponse"/></returns>
+        public Task<DescribeUserPrivilegesResponse> DescribeUserPrivileges(DescribeUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPrivilegesResponse>(req, "DescribeUserPrivileges");
+        }
+
+        /// <summary>
+        /// This API is used to query user permissions.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserPrivilegesRequest"/></param>
+        /// <returns><see cref="DescribeUserPrivilegesResponse"/></returns>
+        public DescribeUserPrivilegesResponse DescribeUserPrivilegesSync(DescribeUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<DescribeUserPrivilegesResponse>(req, "DescribeUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query user list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public Task<DescribeUsersResponse> DescribeUsers(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers");
+        }
+
+        /// <summary>
+        /// This API is used to query user list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public DescribeUsersResponse DescribeUsersSync(DescribeUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeUsersResponse>(req, "DescribeUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to destroy instances in batch.
         /// </summary>
         /// <param name="req"><see cref="DestroyInstancesRequest"/></param>
@@ -260,6 +554,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DestroyInstancesResponse DestroyInstancesSync(DestroyInstancesRequest req)
         {
             return InternalRequestAsync<DestroyInstancesResponse>(req, "DestroyInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to horizontally scale out instances.
+        /// </summary>
+        /// <param name="req"><see cref="ExpandInstanceRequest"/></param>
+        /// <returns><see cref="ExpandInstanceResponse"/></returns>
+        public Task<ExpandInstanceResponse> ExpandInstance(ExpandInstanceRequest req)
+        {
+            return InternalRequestAsync<ExpandInstanceResponse>(req, "ExpandInstance");
+        }
+
+        /// <summary>
+        /// This API is used to horizontally scale out instances.
+        /// </summary>
+        /// <param name="req"><see cref="ExpandInstanceRequest"/></param>
+        /// <returns><see cref="ExpandInstanceResponse"/></returns>
+        public ExpandInstanceResponse ExpandInstanceSync(ExpandInstanceRequest req)
+        {
+            return InternalRequestAsync<ExpandInstanceResponse>(req, "ExpandInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,7 +663,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Modify the instance backup strategy.
+        /// This API is used to modify the instance backup strategy.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupPolicyRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupPolicyResponse"/></returns>
@@ -358,7 +673,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Modify the instance backup strategy.
+        /// This API is used to modify the instance backup strategy.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupPolicyRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupPolicyResponse"/></returns>
@@ -369,7 +684,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Modify the backup set remark.
+        /// This API is used to modify backup notes of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupSetCommentRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupSetCommentResponse"/></returns>
@@ -379,7 +694,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// Modify the backup set remark.
+        /// This API is used to modify backup notes of an instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBSBackupSetCommentRequest"/></param>
         /// <returns><see cref="ModifyDBSBackupSetCommentResponse"/></returns>
@@ -407,6 +722,69 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
         {
             return InternalRequestAsync<ModifyInstanceNameResponse>(req, "ModifyInstanceName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify user permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesResponse"/></returns>
+        public Task<ModifyUserPrivilegesResponse> ModifyUserPrivileges(ModifyUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges");
+        }
+
+        /// <summary>
+        /// This API is used to modify user permissions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyUserPrivilegesResponse"/></returns>
+        public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to restart database instances.
+        /// </summary>
+        /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
+        /// <returns><see cref="RestartDBInstancesResponse"/></returns>
+        public Task<RestartDBInstancesResponse> RestartDBInstances(RestartDBInstancesRequest req)
+        {
+            return InternalRequestAsync<RestartDBInstancesResponse>(req, "RestartDBInstances");
+        }
+
+        /// <summary>
+        /// This API is used to restart database instances.
+        /// </summary>
+        /// <param name="req"><see cref="RestartDBInstancesRequest"/></param>
+        /// <returns><see cref="RestartDBInstancesResponse"/></returns>
+        public RestartDBInstancesResponse RestartDBInstancesSync(RestartDBInstancesRequest req)
+        {
+            return InternalRequestAsync<RestartDBInstancesResponse>(req, "RestartDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to scale up a TDSQL Boundless instance, which can be a primary instance or a disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceResponse"/></returns>
+        public Task<UpgradeInstanceResponse> UpgradeInstance(UpgradeInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance");
+        }
+
+        /// <summary>
+        /// This API is used to scale up a TDSQL Boundless instance, which can be a primary instance or a disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceResponse"/></returns>
+        public UpgradeInstanceResponse UpgradeInstanceSync(UpgradeInstanceRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
