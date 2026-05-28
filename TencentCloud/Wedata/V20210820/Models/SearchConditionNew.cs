@@ -25,7 +25,7 @@ namespace TencentCloud.Wedata.V20210820.Models
     {
         
         /// <summary>
-        /// Query Framework, required
+        /// Query Framework, required.
         /// </summary>
         [JsonProperty("Instance")]
         public SearchConditionInstanceNew Instance{ get; set; }

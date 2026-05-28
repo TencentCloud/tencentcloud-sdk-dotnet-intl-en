@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1322";
 
         /// <summary>
         /// Client constructor.
@@ -494,6 +494,27 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         public DescribeCustomerOwnCostExplorerFilterResponse DescribeCustomerOwnCostExplorerFilterSync(DescribeCustomerOwnCostExplorerFilterRequest req)
         {
             return InternalRequestAsync<DescribeCustomerOwnCostExplorerFilterResponse>(req, "DescribeCustomerOwnCostExplorerFilter")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cost analysis API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnCostExplorerSummaryResponse"/></returns>
+        public Task<DescribeCustomerOwnCostExplorerSummaryResponse> DescribeCustomerOwnCostExplorerSummary(DescribeCustomerOwnCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnCostExplorerSummaryResponse>(req, "DescribeCustomerOwnCostExplorerSummary");
+        }
+
+        /// <summary>
+        /// Cost analysis API
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomerOwnCostExplorerSummaryRequest"/></param>
+        /// <returns><see cref="DescribeCustomerOwnCostExplorerSummaryResponse"/></returns>
+        public DescribeCustomerOwnCostExplorerSummaryResponse DescribeCustomerOwnCostExplorerSummarySync(DescribeCustomerOwnCostExplorerSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomerOwnCostExplorerSummaryResponse>(req, "DescribeCustomerOwnCostExplorerSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

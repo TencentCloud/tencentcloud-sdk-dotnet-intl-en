@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetOfflineDIInstanceListRequest : AbstractModel
+    public class DimensionPeriodData : AbstractModel
     {
         
         /// <summary>
-        /// Which Page
+        /// <p>Function name by dimensional classification</p>
         /// </summary>
-        [JsonProperty("PageIndex")]
-        public ulong? PageIndex{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// Number of Items per Page.
+        /// <p>code corresponding to the function name after dimensional classification</p>
         /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Sum value of the current group</p>
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("SumCost")]
+        public string SumCost{ get; set; }
 
         /// <summary>
-        /// No
+        /// <p>Amount statistics by date grouping</p>
         /// </summary>
-        [JsonProperty("SearchCondition")]
-        public SearchConditionNew SearchCondition{ get; set; }
+        [JsonProperty("ItemDetail")]
+        public PeriodItemDetail[] ItemDetail{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "SumCost", this.SumCost);
+            this.SetParamArrayObj(map, prefix + "ItemDetail.", this.ItemDetail);
         }
     }
 }

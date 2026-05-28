@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Intlpartnersmgt.V20220928.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetOfflineDIInstanceListRequest : AbstractModel
+    public class PeriodItemDetail : AbstractModel
     {
         
         /// <summary>
-        /// Which Page
+        /// <p>Date</p>
         /// </summary>
-        [JsonProperty("PageIndex")]
-        public ulong? PageIndex{ get; set; }
+        [JsonProperty("Period")]
+        public string Period{ get; set; }
 
         /// <summary>
-        /// Number of Items per Page.
+        /// <p>Fee</p>
         /// </summary>
-        [JsonProperty("PageSize")]
-        public ulong? PageSize{ get; set; }
-
-        /// <summary>
-        /// Project ID
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// No
-        /// </summary>
-        [JsonProperty("SearchCondition")]
-        public SearchConditionNew SearchCondition{ get; set; }
+        [JsonProperty("Cost")]
+        public string Cost{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Cost", this.Cost);
         }
     }
 }
