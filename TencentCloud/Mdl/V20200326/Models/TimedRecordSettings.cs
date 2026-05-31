@@ -25,9 +25,8 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-        /// If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+        /// If enabled, the task will be cleared 7 days after completion.
         /// </summary>
         [JsonProperty("AutoClear")]
         public string AutoClear{ get; set; }

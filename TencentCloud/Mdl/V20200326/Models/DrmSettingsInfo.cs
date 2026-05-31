@@ -25,50 +25,45 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-        /// DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+        /// Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+        /// Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-        /// `CustomDRMKeys` means encryption keys customized by users.
-        /// `SDMCDRM` means the DRM key management system of SDMC.
+        /// Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+        /// CustomDRMKeys refers to the custom encryption key.
+        /// SDMCDRM refers to the DRM key management system using SMDC.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-        /// If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+        /// Scheme is CustomDRMKeys, required, filled in by the user.
+        /// Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }
 
         /// <summary>
-        /// The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Required when Scheme is CustomDRMKeys. The content is the key customized by users.
         /// </summary>
         [JsonProperty("Keys")]
         public DrmKey[] Keys{ get; set; }
 
         /// <summary>
-        /// SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// SDMC key configuration information, used when Scheme is SDMCDRM.
         /// </summary>
         [JsonProperty("SDMCSettings")]
         public SDMCSettingsInfo SDMCSettings{ get; set; }
 
         /// <summary>
-        /// Optional Types:
-        /// `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-        /// 
+        /// Optional type:
+        /// `FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
         /// HLS-TS supports `FAIRPLAY` and `AES128`.
-        /// 
-        /// HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-        /// 
-        /// DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+        /// HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+        /// DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }

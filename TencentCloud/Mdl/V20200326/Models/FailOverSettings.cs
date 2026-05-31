@@ -25,8 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// ID of the backup input
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Input Id of the backup stream.
         /// </summary>
         [JsonProperty("SecondaryInputId")]
         public string SecondaryInputId{ get; set; }

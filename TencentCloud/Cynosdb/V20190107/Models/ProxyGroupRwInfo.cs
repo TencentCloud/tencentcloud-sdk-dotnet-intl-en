@@ -84,6 +84,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
+        /// <summary>
+        /// Whether to treat the libra node as an ordinary RO node
+        /// </summary>
+        [JsonProperty("ApNodeAsRoNode")]
+        public bool? ApNodeAsRoNode{ get; set; }
+
+        /// <summary>
+        /// libra node fault, whether to forward to other nodes
+        /// </summary>
+        [JsonProperty("ApQueryToOtherNode")]
+        public bool? ApQueryToOtherNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "RwType", this.RwType);
             this.SetParamSimple(map, prefix + "TransSplit", this.TransSplit);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+            this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         }
     }
 }

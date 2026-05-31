@@ -68,7 +68,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Snapshot type. Optional values: full, full backup; increment, incremental backup
+        /// 
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup file name, fuzzy search
+        /// 
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
@@ -102,6 +102,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsCrossRegionsBackup")]
+        public string IsCrossRegionsBackup{ get; set; }
+
+        /// <summary>
+        /// Status you want to query
+        /// </summary>
+        [JsonProperty("BackupStatus")]
+        public string[] BackupStatus{ get; set; }
 
 
         /// <summary>
@@ -122,6 +140,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
             this.SetParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
             this.SetParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+            this.SetParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
+            this.SetParamArraySimple(map, prefix + "BackupStatus.", this.BackupStatus);
         }
     }
 }

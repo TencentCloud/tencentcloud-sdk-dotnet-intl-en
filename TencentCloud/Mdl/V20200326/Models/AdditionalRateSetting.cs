@@ -25,19 +25,19 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+        /// The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
         /// </summary>
         [JsonProperty("VideoMaxBitrate")]
         public ulong? VideoMaxBitrate{ get; set; }
 
         /// <summary>
-        /// Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+        /// Cache configuration supports configuration as 1-4x the Max Bitrate value.
         /// </summary>
         [JsonProperty("BufferSize")]
         public ulong? BufferSize{ get; set; }
 
         /// <summary>
-        /// VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+        /// Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
         /// </summary>
         [JsonProperty("QualityLevel")]
         public ulong? QualityLevel{ get; set; }

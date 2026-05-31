@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+        /// User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
         /// </summary>
         [JsonProperty("TrackName")]
         public string TrackName{ get; set; }
 
         /// <summary>
-        /// Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+        /// Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
         /// </summary>
         [JsonProperty("AudioCodec")]
         public string AudioCodec{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? AudioSampleRate{ get; set; }
 
         /// <summary>
-        /// Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+        /// Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
         /// </summary>
         [JsonProperty("AudioSelectorName")]
         public string AudioSelectorName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AudioNormalizationSettings AudioNormalization{ get; set; }
 
         /// <summary>
-        /// Audio encoding configuration.
+        /// Additional audio mode and sound channel configuration.
         /// </summary>
         [JsonProperty("AudioCodecDetails")]
         public AudioCodecDetail AudioCodecDetails{ get; set; }

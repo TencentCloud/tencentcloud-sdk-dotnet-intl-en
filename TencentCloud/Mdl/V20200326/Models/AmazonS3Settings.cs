@@ -25,19 +25,19 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Access key ID of the S3 sub-account.
+        /// Access key ID of the S3 sub-user.
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public string AccessKeyID{ get; set; }
 
         /// <summary>
-        /// Secret access key of the S3 sub-account.
+        /// Secret access key of the S3 sub-user.
         /// </summary>
         [JsonProperty("SecretAccessKey")]
         public string SecretAccessKey{ get; set; }
 
         /// <summary>
-        /// Region of S3.
+        /// S3 region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// File output path, which can be empty. If it is not empty, it starts with / and ends with /.
+        /// File output path, can be empty, starts and ends with / if not empty.
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+        /// User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// File suffix, only supports `jpg`.
+        /// File suffix only supports jpg.
         /// </summary>
         [JsonProperty("FileExt")]
         public string FileExt{ get; set; }
 
         /// <summary>
-        /// Support `unix` or `utc0`, default unix.
+        /// Support [unix|utc0]. Default is unix.
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }

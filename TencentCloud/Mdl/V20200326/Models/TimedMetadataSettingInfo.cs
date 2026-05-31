@@ -25,7 +25,8 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+        /// Whether to pass through ID3 info. Available values:
+        /// 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
         /// </summary>
         [JsonProperty("Behavior")]
         public ulong? Behavior{ get; set; }

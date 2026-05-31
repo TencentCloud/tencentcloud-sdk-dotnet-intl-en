@@ -25,288 +25,277 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster status. Valid values are as follows:
-        /// creating
-        /// running
-        /// isolating
-        /// isolated
-        /// activating (removing isolation)
-        /// offlining (deactivating)
-        /// offlined (deactivated)
-        /// deleting
-        /// deleted
+        /// <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// <p>Update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// AZ
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region
+        /// <p>Region</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Database version
+        /// <p>Database version</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Number of instances
+        /// <p>Number of instances</p>
         /// </summary>
         [JsonProperty("InstanceNum")]
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// User UIN
+        /// <p>User uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Engine type.
+        /// <p>Engine type</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// User appid.
+        /// <p>User appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Cluster status description
+        /// <p>Cluster status description</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Cluster Creation Time
+        /// <p>Cluster creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+        /// <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Expiration time.
+        /// <p>End time</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Cluster read/write vip.
+        /// <p>Cluster read/write vip</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Cluster read/write vport.
+        /// <p>Cluster read/write vport</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// Specifies the virtual private cloud ID.
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Specifies the subnet ID.
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Specifies the cynos kernel version.
+        /// <p>cynos kernel version</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// cynos version tag.
+        /// <p>cynos version tag</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// Specifies the storage capacity.
+        /// <p>Storage capacity</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Renewal Flag
+        /// <p>Renewal flag</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Task being processed.
+        /// <p>Currently processing task</p>
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// Task array of the cluster.
+        /// <p>Task array of the cluster</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Array of tags bound to the cluster.
+        /// <p>tag Array of cluster binding</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Db type (NORMAL, SERVERLESS).
+        /// <p>Db type (NORMAL, SERVERLESS)</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// Specifies the status of the SERVERLESS cluster when the Db type is SERVERLESS. valid values:.
-        /// resume
-        /// pause
+        /// <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Cluster prepaid storage size.
+        /// <p>Cluster Prepaid storage size</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Cluster storage ID for prepaid storage, specifies the storage ID used for prepaid storage modification.
+        /// <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+        /// <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// Minimum storage value corresponding to cluster computing specifications.
+        /// <p>Minimum storage of the cluster compute specification</p>
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// The maximum storage value corresponding to the cluster computing specification.
+        /// <p>Maximum storage value of the cluster compute specification</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster network information.
+        /// <p>Cluster network information</p>
         /// </summary>
         [JsonProperty("NetAddrs")]
         public NetAddr[] NetAddrs{ get; set; }
 
         /// <summary>
-        /// Physical availability zone.
+        /// <p>Physical AZ</p>
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Primary AZ.
+        /// <p>Primary AZ</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// Whether there is an availability zone.
+        /// <p>Whether there is a secondary AZ</p>
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// Secondary AZ.
+        /// <p>Secondary AZ</p>
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// Business type.
+        /// <p>Business type</p>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// Whether to freeze.
+        /// <p>Freeze or not</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// Order Source
+        /// <p>Order source</p>
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// Capacity.
+        /// <p>Capacity</p>
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// Specifies the information of the resource package bound to the instance (only the storage resource package is returned here, that is, packageType=DISK).	
+        /// <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// Global database unique Id.
+        /// <p>Global database unique ID</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+        /// <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
         /// </summary>
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }

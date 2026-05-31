@@ -25,79 +25,85 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Current value
+        /// <p>Current value</p>
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Default value
+        /// <p>Default value</p>
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// Enumerated values of the parameter It is null if the parameter is non-enumerated.
+        /// <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Valid values: `1` (global parameter),  `0`  (non-global parameter).
+        /// <p>1: Global parameter, 0: Non-global parameter</p>
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
-        /// Maximum value
+        /// <p>Maximum value</p>
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Minimum value
+        /// <p>Minimum value</p>
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
+        /// <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// <p>Parameter name</p>
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+        /// <p>Parameter type: integer, enum, float, string, func</p>
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
         /// <summary>
-        /// Parameter description
+        /// <p>Whether the parameter is modifiable</p>
+        /// </summary>
+        [JsonProperty("ModifiableInfo")]
+        public ModifiableInfo ModifiableInfo{ get; set; }
+
+        /// <summary>
+        /// <p>Parameter description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether the type is a formula.
+        /// <p>Whether the type is formula</p>
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Parameter configuration formula.
+        /// <p>Parameter configuration formula</p>
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
-        /// The default formula style of parameters that support formulas.
+        /// <p>Default formula style for parameters that support formulas</p>
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }
@@ -117,6 +123,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "NeedReboot", this.NeedReboot);
             this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
             this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "IsFunc", this.IsFunc);
             this.SetParamSimple(map, prefix + "Func", this.Func);

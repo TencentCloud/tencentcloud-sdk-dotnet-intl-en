@@ -43,19 +43,19 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Vcodec{ get; set; }
 
         /// <summary>
-        /// Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+        /// Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+        /// Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+        /// Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public long? NeedAudio{ get; set; }
 
         /// <summary>
-        /// Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+        /// Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
@@ -98,7 +98,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
-        /// Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+        /// Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
         /// </summary>
         [JsonProperty("RateControlMode")]
         public string RateControlMode{ get; set; }
@@ -152,31 +152,31 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? AudioSampleRate{ get; set; }
 
         /// <summary>
-        /// This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+        /// This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
         /// </summary>
         [JsonProperty("FrameRateType")]
         public string FrameRateType{ get; set; }
 
         /// <summary>
-        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+        /// Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
         /// </summary>
         [JsonProperty("FrameRateNumerator")]
         public ulong? FrameRateNumerator{ get; set; }
 
         /// <summary>
-        /// Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+        /// Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
         /// </summary>
         [JsonProperty("FrameRateDenominator")]
         public ulong? FrameRateDenominator{ get; set; }
 
         /// <summary>
-        /// The number of B frames can be selected from 1 to 3.
+        /// Number of B-frames 1-3.
         /// </summary>
         [JsonProperty("BFramesNum")]
         public ulong? BFramesNum{ get; set; }
 
         /// <summary>
-        /// The number of reference frames can be selected from 1 to 16.
+        /// Refer to the number of frames 1-16.
         /// </summary>
         [JsonProperty("RefFramesNum")]
         public ulong? RefFramesNum{ get; set; }
@@ -200,19 +200,19 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AudioCodecDetail AudioCodecDetails{ get; set; }
 
         /// <summary>
-        /// Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+        /// Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
         /// </summary>
         [JsonProperty("MultiAudioTrackEnabled")]
         public ulong? MultiAudioTrackEnabled{ get; set; }
 
         /// <summary>
-        /// Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+        /// Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
         /// </summary>
         [JsonProperty("AudioTracks")]
         public AudioTrackInfo[] AudioTracks{ get; set; }
 
         /// <summary>
-        /// Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+        /// Whether to enable video enhancement, 1: enable 0: disable.
         /// </summary>
         [JsonProperty("VideoEnhanceEnabled")]
         public ulong? VideoEnhanceEnabled{ get; set; }
@@ -224,25 +224,25 @@ namespace TencentCloud.Mdl.V20200326.Models
         public VideoEnhanceSetting[] VideoEnhanceSettings{ get; set; }
 
         /// <summary>
-        /// Key frame interval, 300-10000, optional.
+        /// Keyframe interval, 300-10000, optional.
         /// </summary>
         [JsonProperty("GopSize")]
         public long? GopSize{ get; set; }
 
         /// <summary>
-        /// Keyframe units, only support MILLISECONDS (milliseconds).
+        /// Key frame measurement unit currently only supports MILLISECONDS (ms).
         /// </summary>
         [JsonProperty("GopSizeUnits")]
         public string GopSizeUnits{ get; set; }
 
         /// <summary>
-        /// Color space setting.
+        /// Colorspace configuration.
         /// </summary>
         [JsonProperty("ColorSpaceSettings")]
         public ColorSpaceSetting ColorSpaceSettings{ get; set; }
 
         /// <summary>
-        /// Traceability watermark.
+        /// Traceable watermark.
         /// </summary>
         [JsonProperty("ForensicWatermarkIds")]
         public string[] ForensicWatermarkIds{ get; set; }

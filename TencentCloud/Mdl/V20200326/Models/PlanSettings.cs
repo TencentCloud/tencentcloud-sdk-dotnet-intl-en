@@ -25,8 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Timed recording settings
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Configuration message of the scheduled recording task.
         /// </summary>
         [JsonProperty("TimedRecordSettings")]
         public TimedRecordSettings TimedRecordSettings{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.
@@ -1183,6 +1183,27 @@ namespace TencentCloud.Ocr.V20181119
         public MainlandPermitOCRResponse MainlandPermitOCRSync(MainlandPermitOCRRequest req)
         {
             return InternalRequestAsync<MainlandPermitOCRResponse>(req, "MainlandPermitOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// The POD intelligent review deeply integrates multimodal large model image understanding technology, targeting the logistics last-mile delivery scenario to provide high-precision POD compliance audit service. The system auto-recognizes ticket imperfections and risks of non-compliance, helping businesses achieve standardized control in the delivery process and effectively avoid customer complaints and disputes caused by non-compliant credentials.
+        /// </summary>
+        /// <param name="req"><see cref="PODAuditAIRequest"/></param>
+        /// <returns><see cref="PODAuditAIResponse"/></returns>
+        public Task<PODAuditAIResponse> PODAuditAI(PODAuditAIRequest req)
+        {
+            return InternalRequestAsync<PODAuditAIResponse>(req, "PODAuditAI");
+        }
+
+        /// <summary>
+        /// The POD intelligent review deeply integrates multimodal large model image understanding technology, targeting the logistics last-mile delivery scenario to provide high-precision POD compliance audit service. The system auto-recognizes ticket imperfections and risks of non-compliance, helping businesses achieve standardized control in the delivery process and effectively avoid customer complaints and disputes caused by non-compliant credentials.
+        /// </summary>
+        /// <param name="req"><see cref="PODAuditAIRequest"/></param>
+        /// <returns><see cref="PODAuditAIResponse"/></returns>
+        public PODAuditAIResponse PODAuditAISync(PODAuditAIRequest req)
+        {
+            return InternalRequestAsync<PODAuditAIResponse>(req, "PODAuditAI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

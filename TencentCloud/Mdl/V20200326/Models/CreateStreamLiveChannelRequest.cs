@@ -25,55 +25,55 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+        /// Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Inputs to attach. You can attach 1 to 5 inputs.
+        /// Associated media input, limit on the number [1, 5].
         /// </summary>
         [JsonProperty("AttachedInputs")]
         public AttachedInput[] AttachedInputs{ get; set; }
 
         /// <summary>
-        /// Configuration information of the channel's output groups. Quantity: [1, 10]
+        /// Configuration message of the output group for the channel. Limit on the number [1, 10].
         /// </summary>
         [JsonProperty("OutputGroups")]
         public StreamLiveOutputGroupsInfo[] OutputGroups{ get; set; }
 
         /// <summary>
-        /// Audio transcoding templates. Quantity: [1, 20]
+        /// Audio transcoding template array, with the maximum number of [1, 20].
         /// </summary>
         [JsonProperty("AudioTemplates")]
         public AudioTemplateInfo[] AudioTemplates{ get; set; }
 
         /// <summary>
-        /// Video transcoding templates. Quantity: [1, 10]
+        /// Video transcoding template array, with the maximum number of [1, 10].
         /// </summary>
         [JsonProperty("VideoTemplates")]
         public VideoTemplateInfo[] VideoTemplates{ get; set; }
 
         /// <summary>
-        /// Audio/Video transcoding templates. Quantity: [1, 10]
+        /// Audio and video transcoding template array, with a limit on the number between 1 and 10.
         /// </summary>
         [JsonProperty("AVTemplates")]
         public AVTemplate[] AVTemplates{ get; set; }
 
         /// <summary>
-        /// Subtitle template configuration.
+        /// Subtitle template configuration is only valid for joint transcoding template.
         /// </summary>
         [JsonProperty("CaptionTemplates")]
         public SubtitleConf[] CaptionTemplates{ get; set; }
 
         /// <summary>
-        /// Event settings
+        /// Configuration message of the scheduled task.
         /// </summary>
         [JsonProperty("PlanSettings")]
         public PlanSettings PlanSettings{ get; set; }
 
         /// <summary>
-        /// The callback settings.
+        /// Callback configuration information.
         /// </summary>
         [JsonProperty("EventNotifySettings")]
         public EventNotifySetting EventNotifySettings{ get; set; }
@@ -91,25 +91,25 @@ namespace TencentCloud.Mdl.V20200326.Models
         public PipelineInputSettingsInfo PipelineInputSettings{ get; set; }
 
         /// <summary>
-        /// Recognition configuration for input content.
+        /// Input content identification configuration.
         /// </summary>
         [JsonProperty("InputAnalysisSettings")]
         public InputAnalysisInfo InputAnalysisSettings{ get; set; }
 
         /// <summary>
-        /// Console tag list.
+        /// Console tag list
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Frame capture templates.
+        /// chart template
         /// </summary>
         [JsonProperty("FrameCaptureTemplates")]
         public FrameCaptureTemplate[] FrameCaptureTemplates{ get; set; }
 
         /// <summary>
-        /// General settings.
+        /// Common configuration.
         /// </summary>
         [JsonProperty("GeneralSettings")]
         public GeneralSetting GeneralSettings{ get; set; }

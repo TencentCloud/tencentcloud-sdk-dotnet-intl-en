@@ -25,21 +25,19 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Whether to enable time shifting. Option [OPEN|CLOSE].
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Domain name bound for time shifting
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Enable time-shift bound domain name.
         /// </summary>
         [JsonProperty("PlayDomain")]
         public string PlayDomain{ get; set; }
 
         /// <summary>
-        /// Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+        /// The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
         /// </summary>
         [JsonProperty("StartoverWindow")]
         public long? StartoverWindow{ get; set; }

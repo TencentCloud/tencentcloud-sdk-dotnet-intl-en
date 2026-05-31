@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+        /// Resource package size. Compute resource unit: unit; storage resource: GB.
         /// </summary>
         [JsonProperty("PackageSpec")]
         public float? PackageSpec{ get; set; }

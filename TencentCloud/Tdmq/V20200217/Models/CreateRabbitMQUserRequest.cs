@@ -25,47 +25,52 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+        /// <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username, which is used for login.
+        /// <p>Username, used when logging in</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+        /// <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Description
+        /// <p>Description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-        /// Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
+        /// <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
+        /// <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
         /// </summary>
         [JsonProperty("MaxConnections")]
         public long? MaxConnections{ get; set; }
 
         /// <summary>
-        /// The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+        /// <p>Maximum number of channels for the user. Not specified means no limit.</p>
         /// </summary>
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }
+
+        /// <summary>
+        /// <p>Whether cam authentication is enabled</p>
+        /// </summary>
+        [JsonProperty("EnableCamAuth")]
+        public bool? EnableCamAuth{ get; set; }
 
 
         /// <summary>
@@ -80,6 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
             this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+            this.SetParamSimple(map, prefix + "EnableCamAuth", this.EnableCamAuth);
         }
     }
 }

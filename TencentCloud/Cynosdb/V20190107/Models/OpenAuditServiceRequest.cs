@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+        /// Audit rule (deprecated).
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         [System.Obsolete]
@@ -54,6 +54,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AuditAll")]
+        public bool? AuditAll{ get; set; }
 
 
         /// <summary>
@@ -66,6 +72,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
             this.SetParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
             this.SetParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+            this.SetParamSimple(map, prefix + "AuditAll", this.AuditAll);
         }
     }
 }

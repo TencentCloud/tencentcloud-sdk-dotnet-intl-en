@@ -25,116 +25,118 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Engine type
+        /// <p>Engine type</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance status
+        /// <p>Instance status</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Instance status description
+        /// <p>Instance status description</p>
         /// </summary>
         [JsonProperty("InstanceStatusDesc")]
         public string InstanceStatusDesc{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// <p>cpu cores</p>
         /// </summary>
         [JsonProperty("InstanceCpu")]
         public long? InstanceCpu{ get; set; }
 
         /// <summary>
-        /// Memory
+        /// <p>Memory</p>
         /// </summary>
         [JsonProperty("InstanceMemory")]
         public long? InstanceMemory{ get; set; }
 
         /// <summary>
-        /// Disk
+        /// <p>hard disk</p>
         /// </summary>
         [JsonProperty("InstanceStorage")]
         public long? InstanceStorage{ get; set; }
 
         /// <summary>
-        /// Instance role
+        /// <p>Instance role</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// Execution start time (seconds from 0 o'clock).	
+        /// <p>Execution start time (seconds from 00:00).</p>
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the continuous time. the unit is second.	
+        /// <p>Duration (unit: s)</p>
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+        /// <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }
 
         /// <summary>
-        /// serverless instance substatus.
+        /// <p>serverless instance substatus</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Instance task information.
+        /// <p>Instance task information</p>
         /// </summary>
         [JsonProperty("InstanceTasks")]
         public ObjectTask[] InstanceTasks{ get; set; }
 
         /// <summary>
-        /// Instance machine type.
-        /// 1. common: general.
-        /// 2. exclusive, dedicated.
+        /// <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
         /// </summary>
         [JsonProperty("InstanceDeviceType")]
         public string InstanceDeviceType{ get; set; }
 
         /// <summary>
-        /// Instance storage type.
-        /// Description: this parameter returns a value only when querying resources belonging to LibraDB.
+        /// <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
         /// </summary>
         [JsonProperty("InstanceStorageType")]
         public string InstanceStorageType{ get; set; }
 
         /// <summary>
-        /// Database type.
+        /// <p>Database type</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// Node list
-        /// Description: this parameter returns a value only when querying LibraDB resources.
+        /// <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
         /// </summary>
         [JsonProperty("NodeList")]
         public string[] NodeList{ get; set; }
+
+        /// <summary>
+        /// <p>AI optimizer status</p>
+        /// </summary>
+        [JsonProperty("AIOptimizerStatus")]
+        public AIOptimizerStatus AIOptimizerStatus{ get; set; }
 
 
         /// <summary>
@@ -160,6 +162,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+            this.SetParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
         }
     }
 }

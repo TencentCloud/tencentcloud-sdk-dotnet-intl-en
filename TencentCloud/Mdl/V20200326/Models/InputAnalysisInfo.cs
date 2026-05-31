@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Highlight configuration.
+        /// Highlights configuration.
         /// </summary>
         [JsonProperty("HighlightSetting")]
         public HighlightInfo HighlightSetting{ get; set; }

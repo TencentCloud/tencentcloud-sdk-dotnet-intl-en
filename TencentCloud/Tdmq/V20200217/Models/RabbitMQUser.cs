@@ -25,78 +25,91 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+        /// <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username, which is used for login.
+        /// <p>Username, used when logging in</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, which is used for login.
+        /// <p>Password, used when logging in</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// User description
+        /// <p>user description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+        /// <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// User creation time
+        /// <p>User creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last user modification time
+        /// <p>User last modification time</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// User type. Valid values: `System` (Created by system), `User` (Created by user).
+        /// <p>Type of user, System: system creation, User: user creation</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum number of available connections per user.
+        /// <p>Maximum available connections per user</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxConnections")]
         public long? MaxConnections{ get; set; }
 
         /// <summary>
-        /// Maximum number of available channels per user.
+        /// <p>Maximum available channels per user</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }
 
         /// <summary>
-        /// Creation timestamp.
+        /// <p>Creation time timestamp</p>
         /// </summary>
         [JsonProperty("CreateTs")]
         public ulong? CreateTs{ get; set; }
 
         /// <summary>
-        /// Modification timestamp.
+        /// <p>Modification time timestamp</p>
         /// </summary>
         [JsonProperty("ModifyTs")]
         public ulong? ModifyTs{ get; set; }
+
+        /// <summary>
+        /// <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("CamAuthEnabled")]
+        public bool? CamAuthEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>cam credential name</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CamCredentialName")]
+        public string CamCredentialName{ get; set; }
 
 
         /// <summary>
@@ -116,6 +129,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
             this.SetParamSimple(map, prefix + "CreateTs", this.CreateTs);
             this.SetParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+            this.SetParamSimple(map, prefix + "CamAuthEnabled", this.CamAuthEnabled);
+            this.SetParamSimple(map, prefix + "CamCredentialName", this.CamCredentialName);
         }
     }
 }

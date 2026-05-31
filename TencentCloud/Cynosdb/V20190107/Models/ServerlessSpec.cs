@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the minimum value of the cpu.
+        /// <p>cpu minimum value</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// Maximum value of cpu.
+        /// <p>Maximum value of cpu</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Maximum storage space.
+        /// <p>Maximum storage space</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Specifies whether it is the default specification.
+        /// <p>Is the default specification</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }
 
         /// <summary>
-        /// Whether there is inventory.
+        /// <p>Whether there is inventory</p>
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
         /// <summary>
-        /// Inventory quantity.
+        /// <p>Inventory quantity</p>
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }
 
         /// <summary>
-        /// Availability zone inventory information.
+        /// <p>Availability zone inventory information</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneStockInfos")]

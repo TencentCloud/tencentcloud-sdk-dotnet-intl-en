@@ -25,32 +25,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// ID of the exclusive instance
+        /// <p>Dedicated Instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance specification.
-        /// Valid values: `rocket-vip-basic-1` (Basic),
-        /// `rocket-vip-basic-2` (Standard),
-        /// `rocket-vip-basic-3` (Advanced I),
-        /// `rocket-vip-basic-4` (Advanced II).
+        /// <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// Node count
+        /// <p>Node count</p>
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// Storage space in GB
+        /// <p>Storage space in GB</p>
         /// </summary>
         [JsonProperty("StorageSize")]
         public ulong? StorageSize{ get; set; }
+
+        /// <summary>
+        /// <p>Deploy availability zone list</p>
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public string[] ZoneIds{ get; set; }
 
 
         /// <summary>
@@ -62,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

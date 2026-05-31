@@ -25,25 +25,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Freeze transaction. one frozen transaction is activated at a time.
+        /// <p>Freeze transaction. One frozen flow is activated at a time.</p>
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
-        /// Specifies the post-paid order number.
+        /// <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Delivery resource id list.
+        /// <p>Delivery resource id list.</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
+        [System.Obsolete]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Large order number.
+        /// <p>Large order number</p>
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

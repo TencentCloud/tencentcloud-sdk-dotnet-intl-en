@@ -25,87 +25,85 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Template name.
+        /// Template Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Name of caption selector. Required when CaptionSource selects `INPUT`.
+        /// Name of the subtitle selector. Required when CaptionSource is set to INPUT.
         /// </summary>
         [JsonProperty("CaptionSelectorName")]
         public string CaptionSelectorName{ get; set; }
 
         /// <summary>
-        /// Optional values: INPUT (source subtitle information), ANALYSIS (intelligent speech recognition to subtitles).
+        /// Available values: INPUT (source subtitle information), ANALYSIS (intelligent voice recognition to subtitle).
         /// </summary>
         [JsonProperty("CaptionSource")]
         public string CaptionSource{ get; set; }
 
         /// <summary>
-        /// Optional values: 1 Source, 2 Source+Target, 3 Target (original language only, original language + translation language, translation language). Required when CaptionSource selects `ANALYSIS `. When outputting as WebVTT, a single template can only output one language.
+        /// Available values: 1 Source, 2 Source+Target, 3 Target (source language only, source language + target language, target language). When the output is WebVTT, it can only output one language.
         /// </summary>
         [JsonProperty("ContentType")]
         public ulong? ContentType{ get; set; }
 
         /// <summary>
-        /// Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. Support `2` when CaptionSource selects `INPUT`. Support `1` and `3` when CaptionSource selects `ANALYSIS `.
+        /// Output mode: 1 Burn in, 2 Embedded, 3 WebVTT. When CaptionSource is INPUT, it supports only 2. When CaptionSource is ANALYSIS, it supports 1, 3.
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }
 
         /// <summary>
-        /// Original phonetic language.
-        /// Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+        /// Original speech languages: Chinese, English, Japanese, Korean.
         /// </summary>
         [JsonProperty("SourceLanguage")]
         public string SourceLanguage{ get; set; }
 
         /// <summary>
-        /// Target language.
-        /// Optional values: Chinese, English, Japanese, Korean. Required when CaptionSource selects `ANALYSIS `.
+        /// Target languages: Chinese, English, Japanese, Korean.
         /// </summary>
         [JsonProperty("TargetLanguage")]
         public string TargetLanguage{ get; set; }
 
         /// <summary>
-        /// Font style configuration. Required when CaptionSource selects `ANALYSIS `.
+        /// Font style configuration. Required for BurnIn.
         /// </summary>
         [JsonProperty("FontStyle")]
         public SubtitleFontConf FontStyle{ get; set; }
 
         /// <summary>
-        /// There are two modes: STEADY and DYNAMIC, corresponding to steady state and unstable state respectively; the default is STEADY. Required when CaptionSource selects `ANALYSIS `. When the output is WebVTT, only STEADY can be selected.
+        /// STEADY and DYNAMIC modes correspond to steady state and non-steady state respectively. Default is STEADY. Only select STEADY when the output is WebVTT.
         /// </summary>
         [JsonProperty("StateEffectMode")]
         public string StateEffectMode{ get; set; }
 
         /// <summary>
-        /// Steady-state delay time, unit seconds; optional values: 10, 20, default 10. Required when CaptionSource selects `ANALYSIS `.
+        /// Steady-state delay time in seconds. Value range: 10, 20. Default: 10.
         /// </summary>
         [JsonProperty("SteadyStateDelayedTime")]
         public ulong? SteadyStateDelayedTime{ get; set; }
 
         /// <summary>
-        /// Audio selector name, required for generating WebVTT subtitles using speech recognition, can be empty.
+        /// Audio selector name, required for speech recognition to generate WebVTT subtitles, can be empty
         /// </summary>
         [JsonProperty("AudioSelectorName")]
         public string AudioSelectorName{ get; set; }
 
         /// <summary>
-        /// Format configuration for speech recognition output on WebVTT.
+        /// Format configuration for WebVTT output in speech recognition.
         /// </summary>
         [JsonProperty("WebVTTFontStyle")]
         public WebVTTFontStyle WebVTTFontStyle{ get; set; }
 
         /// <summary>
-        /// Language code, length 2-20. ISO 639-2 three-digit code is recommend.
+        /// Language code, length 2-20.
         /// </summary>
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }
 
         /// <summary>
-        /// Language description, less than 100 characters in length.
+        /// Language description, length less than 100.
         /// </summary>
         [JsonProperty("LanguageDescription")]
         public string LanguageDescription{ get; set; }

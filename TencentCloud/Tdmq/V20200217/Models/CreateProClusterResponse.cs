@@ -25,25 +25,25 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Specifies the sub-order number.
+        /// <p>Sub-order number</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
 
         /// <summary>
-        /// Order ID
+        /// <p>Order ID</p>
         /// </summary>
         [JsonProperty("BigDealId")]
         public string BigDealId{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name.
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }

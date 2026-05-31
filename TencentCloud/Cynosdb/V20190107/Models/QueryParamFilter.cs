@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+        /// Search field. Currently supports: ProxyGroupId
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }

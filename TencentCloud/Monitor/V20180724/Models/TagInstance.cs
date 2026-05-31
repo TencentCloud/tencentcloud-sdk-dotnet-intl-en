@@ -57,7 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionId")]
-        public string RegionId{ get; set; }
+        public long? RegionId{ get; set; }
 
         /// <summary>
         /// Binding status. 2: bound; 1: binding

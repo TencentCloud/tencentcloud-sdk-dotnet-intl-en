@@ -25,19 +25,19 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Static graphic overlay configuration.
+        /// Static image overlay configuration.
         /// </summary>
         [JsonProperty("StaticImageSettings")]
         public StaticImageSettings StaticImageSettings{ get; set; }
 
         /// <summary>
-        /// Dynamic graphic overlay configuration.
+        /// Real-time graphic overlay configuration.
         /// </summary>
         [JsonProperty("MotionGraphicsSettings")]
         public MotionGraphicsSetting MotionGraphicsSettings{ get; set; }
 
         /// <summary>
-        /// Thumbnail Configuration.
+        /// Thumbnail configuration
         /// </summary>
         [JsonProperty("ThumbnailSettings")]
         public ThumbnailSettings ThumbnailSettings{ get; set; }

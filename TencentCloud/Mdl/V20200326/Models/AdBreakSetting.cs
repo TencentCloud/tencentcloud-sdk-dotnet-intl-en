@@ -31,10 +31,16 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Format{ get; set; }
 
         /// <summary>
-        /// Duration, in milliseconds, requires 1000<duration<=600000. The current accuracy is seconds, which is a multiple of 1000
+        /// Duration, in milliseconds, requires 1000&lt;duration&lt;=600000 The current accuracy is seconds, which is a multiple of 1000
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
+
+        /// <summary>
+        /// AdSource type, supports UPLOAD_CREATIVES
+        /// </summary>
+        [JsonProperty("AdSource")]
+        public string AdSource{ get; set; }
 
         /// <summary>
         /// L-type compression recovery configuration
@@ -43,10 +49,16 @@ namespace TencentCloud.Mdl.V20200326.Models
         public LSqueezeSetting LSqueezeSetting{ get; set; }
 
         /// <summary>
-        /// AdSource type, supports UPLOAD_CREATIVES
+        /// 
         /// </summary>
-        [JsonProperty("AdSource")]
-        public string AdSource{ get; set; }
+        [JsonProperty("PipSetting")]
+        public PipSetting PipSetting{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BorderFrameSetting")]
+        public BorderFrameSetting BorderFrameSetting{ get; set; }
 
 
         /// <summary>
@@ -56,8 +68,10 @@ namespace TencentCloud.Mdl.V20200326.Models
         {
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
-            this.SetParamObj(map, prefix + "LSqueezeSetting.", this.LSqueezeSetting);
             this.SetParamSimple(map, prefix + "AdSource", this.AdSource);
+            this.SetParamObj(map, prefix + "LSqueezeSetting.", this.LSqueezeSetting);
+            this.SetParamObj(map, prefix + "PipSetting.", this.PipSetting);
+            this.SetParamObj(map, prefix + "BorderFrameSetting.", this.BorderFrameSetting);
         }
     }
 }

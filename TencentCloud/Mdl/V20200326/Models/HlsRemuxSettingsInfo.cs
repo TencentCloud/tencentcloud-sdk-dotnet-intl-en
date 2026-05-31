@@ -25,86 +25,90 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+        /// Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
         /// </summary>
         [JsonProperty("SegmentDuration")]
         public ulong? SegmentDuration{ get; set; }
 
         /// <summary>
-        /// Number of segments. Value range: [3,30]. Default value: 5.
+        /// Number of shards. Input range [3, 30]. Default is 5.
         /// </summary>
         [JsonProperty("SegmentNumber")]
         public ulong? SegmentNumber{ get; set; }
 
         /// <summary>
-        /// Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+        /// Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
         /// </summary>
         [JsonProperty("PdtInsertion")]
         public string PdtInsertion{ get; set; }
 
         /// <summary>
-        /// PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+        /// Pdt duration in seconds. Input range (0, 3000]. Default 600.
         /// </summary>
         [JsonProperty("PdtDuration")]
         public ulong? PdtDuration{ get; set; }
 
         /// <summary>
-        /// Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+        /// Video packaging type, selectable SEPARATE|MERGE.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// The segment type. Valid values: `ts` (default), `fmp4`.
-        /// Currently, fMP4 segments do not support DRM or time shifting.
+        /// Segment type, supports [ts|fmp4], default ts.
+        /// fmp4 does not currently support DRM and time shifting.
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
 
         /// <summary>
-        /// The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+        /// When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
         /// </summary>
         [JsonProperty("H265PackageType")]
         public string H265PackageType{ get; set; }
 
         /// <summary>
-        /// Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+        /// Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
         /// </summary>
         [JsonProperty("LowLatency")]
         public ulong? LowLatency{ get; set; }
 
         /// <summary>
-        /// Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+        /// Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
         /// </summary>
         [JsonProperty("PartialSegmentDuration")]
         public ulong? PartialSegmentDuration{ get; set; }
 
         /// <summary>
-        /// Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+        /// Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
         /// </summary>
         [JsonProperty("PartialSegmentPlaySite")]
         public ulong? PartialSegmentPlaySite{ get; set; }
 
         /// <summary>
-        /// Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+        /// Hls master m3u8 file sorting rule by bitrate. Available values:
+        /// 1: Video bitrate ascending 2: Video bitrate descending
+        /// Default value: 1
         /// </summary>
         [JsonProperty("StreamOrder")]
         public ulong? StreamOrder{ get; set; }
 
         /// <summary>
-        /// Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+        /// Whether the Hls master m3u8 file contains resolution information. Available values:
+        /// 1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+        /// Default value: 1.
         /// </summary>
         [JsonProperty("VideoResolution")]
         public ulong? VideoResolution{ get; set; }
 
         /// <summary>
-        /// Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+        /// Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
         /// </summary>
         [JsonProperty("EndListTag")]
         public long? EndListTag{ get; set; }
 
         /// <summary>
-        /// Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+        /// Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
         /// </summary>
         [JsonProperty("AdMarkupType")]
         public string AdMarkupType{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AudioPidSelectionInfo AudioPidSelection{ get; set; }
 
         /// <summary>
-        /// Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+        /// Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
         /// </summary>
         [JsonProperty("AudioSelectorType")]
         public string AudioSelectorType{ get; set; }

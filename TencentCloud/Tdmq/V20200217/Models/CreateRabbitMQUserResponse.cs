@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Username, which is used for login.
+        /// <p>Username, used when logging in</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

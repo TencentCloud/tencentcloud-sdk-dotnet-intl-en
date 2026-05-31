@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+        /// Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
         /// </summary>
         [JsonProperty("ThumbnailEnabled")]
         public long? ThumbnailEnabled{ get; set; }

@@ -25,49 +25,51 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable input recognition 0: Disable 1 Enable Default value 0 Disable.
+        /// Whether to enable input recognition  0: disabled  1: enabled  Default value: 0.
         /// </summary>
         [JsonProperty("HighlightEnabled")]
         public ulong? HighlightEnabled{ get; set; }
 
         /// <summary>
-        /// The product where the results are saved, optional: COS. Currently, only Tencent Cloud COS is supported. In the future, it will be connected to AWS S3 and COS will be used by default.
+        /// Products to save results. Option: COS.
+        /// Currently supports Tencent Cloud COS only. AWS S3 integration will be supported later. Default is COS.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Valid when Type is COS, the region where COS is stored.
+        /// Valid when Type is COS. Region of COS storage.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Valid when Type is COS, the bucket name stored in COS.
+        /// Valid when Type is COS. Bucket name of COS storage.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Valid when Type is COS, the path where cos is stored.
+        /// Valid when Type is COS. Path of COS storage.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Valid when Type is COS, the file name stored in cos.
+        /// Valid when Type is COS. Name of the stored file in COS.
         /// </summary>
         [JsonProperty("Filename")]
         public string Filename{ get; set; }
 
         /// <summary>
-        /// Valid when Type is COS, the file name suffix stored in COS is automatically generated in the time format, optional values: unix, utc. Unix is the second-level timestamp and UTC is the year, month and day represented by the zero time zone.
+        /// Valid when Type is COS. The file extension of COS storage is automatically generated in time format. Available values: unix, utc.
+        /// unix is a second-level timestamp. utc 0 represents the year, month, day.
         /// </summary>
         [JsonProperty("TimestampFormat")]
         public string TimestampFormat{ get; set; }
 
         /// <summary>
-        /// Audio selector list is optional and can be empty. If not filled in, an audio will be used as the output of the recognition result by default.
+        /// Audio selector list, selectable, can be left blank. By default, an audio is used as the output of the recognition result.
         /// </summary>
         [JsonProperty("AudioSelectorNames")]
         public string[] AudioSelectorNames{ get; set; }

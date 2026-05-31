@@ -25,61 +25,61 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Text color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+        /// Text color, 6 hexadecimal characters in RGB (not required #).
         /// </summary>
         [JsonProperty("TextColor")]
         public string TextColor{ get; set; }
 
         /// <summary>
-        /// Background color, RGB hexadecimal representation, 6 hexadecimal characters (no # needed).
+        /// Background color, 6 hexadecimal characters in RGB (not required #)
         /// </summary>
         [JsonProperty("BackgroundColor")]
         public string BackgroundColor{ get; set; }
 
         /// <summary>
-        /// Background opacity parameter, a number from 0 to 100, with 0 being the default for full transparency.
+        /// Background opacity parameter. A number from 0 to 100. The default value is 0 (fully transparent).
         /// </summary>
         [JsonProperty("BackgroundAlpha")]
         public long? BackgroundAlpha{ get; set; }
 
         /// <summary>
-        /// Font size, in units of vh (1% of height), default value 0 means automatic.
+        /// Font size, in vh (1% of height), default value 0 means auto.
         /// </summary>
         [JsonProperty("FontSize")]
         public long? FontSize{ get; set; }
 
         /// <summary>
-        /// The position of the text box, default value AUTO, can be empty; represents the percentage of video height, supports integers from 0 to 100.
+        /// The position of the text box, default value AUTO, can be empty; it represents the percentage of video height and supports integers from 0 to 100.
         /// </summary>
         [JsonProperty("Line")]
         public string Line{ get; set; }
 
         /// <summary>
-        /// The alignment of the text box on the Line. Optional values: START, CENTER, END. Which can be empty.
+        /// The alignment mode of the text box on the Line. Available values: START, CENTER, END. Default: START. Can be blank.
         /// </summary>
         [JsonProperty("LineAlignment")]
         public string LineAlignment{ get; set; }
 
         /// <summary>
-        /// The text box is positioned in another direction as a percentage of the video's width. It defaults to AUTO and can be empty.
+        /// The position of the text box in another direction is a percentage of the video width or height, defaults to AUTO, and can be empty.
         /// </summary>
         [JsonProperty("Position")]
         public string Position{ get; set; }
 
         /// <summary>
-        /// The alignment of the text box on the Position. Optional values are LINE_LEFT, LINE_RIGHT, CENTER, and AUTO. The default value is AUTO, and it can be empty.
+        /// The alignment mode of the text box on Position. Available values: LINE_LEFT, LINE_RIGHT, CENTER, AUTO. Default value: AUTO. Can be empty.
         /// </summary>
         [JsonProperty("PositionAlignment")]
         public string PositionAlignment{ get; set; }
 
         /// <summary>
-        /// Text box size, a percentage of video width/height, with values (0, 100), default AUTO, can be empty.
+        /// The size of the text box, a percentage of video width/height, value (0, 100], default AUTO, can be empty.
         /// </summary>
         [JsonProperty("CueSize")]
         public string CueSize{ get; set; }
 
         /// <summary>
-        /// Text alignment, with possible values  START, CENTER, END, LEFT, and RIGHT; the default value is CENTER, which can be empty.
+        /// Text alignment mode, available values START, CENTER, END, LEFT, RIGHT; default value CENTER, can be empty.
         /// </summary>
         [JsonProperty("TextAlignment")]
         public string TextAlignment{ get; set; }

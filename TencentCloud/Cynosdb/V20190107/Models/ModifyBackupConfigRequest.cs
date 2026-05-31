@@ -25,52 +25,64 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
+        /// <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+        /// <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+        /// <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// Currently, this parameter does not support modification and is not required.
+        /// <p>This parameter currently does not support modification. No need to specify.</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Logical Backup Configuration
+        /// <p>Logical backup configuration</p>
         /// </summary>
         [JsonProperty("LogicBackupConfig")]
         public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
-        /// Whether to delete the automatic logical backup
+        /// <p>Whether to delete automatic logical backup</p>
         /// </summary>
         [JsonProperty("DeleteAutoLogicBackup")]
         public bool? DeleteAutoLogicBackup{ get; set; }
+
+        /// <summary>
+        /// <p>Second-level snapshot backup parameter</p>
+        /// </summary>
+        [JsonProperty("SnapshotSecondaryBackupConfig")]
+        public SnapshotBackupConfig SnapshotSecondaryBackupConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Sparse backup configuration</p>
+        /// </summary>
+        [JsonProperty("SparseBackupConfig")]
+        public SparseBackupConfig SparseBackupConfig{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
             this.SetParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
+            this.SetParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
+            this.SetParamObj(map, prefix + "SparseBackupConfig.", this.SparseBackupConfig);
         }
     }
 }

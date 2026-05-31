@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Channel ID
+        /// Channel ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Tag prompt information, this information will be attached when the tag operation fails.
+        /// Tag prompt message. When the operation fails, the information comes with it.
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }

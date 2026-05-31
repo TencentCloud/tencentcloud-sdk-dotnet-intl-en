@@ -231,6 +231,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         public TagInstance[] TagInstances{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Filter")]
+        public AlarmConditionFilter Filter{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("GroupBy")]
+        public AlarmGroupByItem[] GroupBy{ get; set; }
+
+        /// <summary>
         /// Information on the filter dimension associated with a policy.
         /// Note: This field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
@@ -307,6 +319,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
             this.SetParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "GroupBy.", this.GroupBy);
             this.SetParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
             this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
             this.SetParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);

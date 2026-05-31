@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// <p>Cpu cores</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
@@ -49,20 +49,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+        /// <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>ID of the associated VPC network.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID. If `VpcId` is set, `SubnetId` is required.
+        /// <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -80,47 +86,52 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+        /// <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values: 
-        /// <li> MYSQL </li>
+        /// <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Order source. String length range: [0,64).
+        /// <p>Order source, string length range [0,64)</p>
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+        /// <p>Transaction mode. 0: place order and pay; 1: place order</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Parameter template ID
+        /// <p>Parameter template ID</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+        /// <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
         /// </summary>
         [JsonProperty("InstanceParams")]
         public ModifyParamItem[] InstanceParams{ get; set; }
 
         /// <summary>
-        /// Security group ID. You can specify an security group when creating a read-only instance.
+        /// <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// <p>proxy sync upgrade</p>
+        /// </summary>
+        [JsonProperty("UpgradeProxy")]
+        public UpgradeProxy UpgradeProxy{ get; set; }
 
 
         /// <summary>
@@ -132,6 +143,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "ReadOnlyCount", this.ReadOnlyCount);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -144,6 +156,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
             this.SetParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
         }
     }
 }

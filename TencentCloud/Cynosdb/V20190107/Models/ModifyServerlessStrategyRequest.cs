@@ -25,72 +25,88 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the serverless cluster id.
+        /// <p>serverless cluster id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Specifies whether the cluster automatically pauses. valid values for the optional range.
-        /// <li>yes</li>
-        /// <li>no</li>
+        /// <p>Whether the cluster auto-pause feature is enabled. Optional range</p><li>yes</li><li>no</li>
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// Specifies the delay for cluster auto-pause in seconds. the value range is [600,691200]. the default value is 600.
+        /// <p>Delay of Cluster Auto-Pause in seconds, optional range [600,691200], default 600</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// The parameter is temporarily unavailable.
+        /// <p>This parameter is temporarily unavailable</p>
         /// </summary>
         [JsonProperty("AutoScaleUpDelay")]
         public long? AutoScaleUpDelay{ get; set; }
 
         /// <summary>
-        /// The parameter is temporarily unavailable.
+        /// <p>This parameter is temporarily invalid</p>
         /// </summary>
         [JsonProperty("AutoScaleDownDelay")]
         public long? AutoScaleDownDelay{ get; set; }
 
         /// <summary>
-        /// Minimum value of cpu. for the optional range, refer to the API response of DescribeServerlessInstanceSpecs.
+        /// <p>cpu minimum value. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// Maximum value of cpu, optional range refers to the API response of DescribeServerlessInstanceSpecs.
+        /// <p>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Minimum cpu value of a read-only instance. for valid values, refer to the API response of DescribeServerlessInstanceSpecs.
+        /// <p>Minimum value of read-only instance cpu. For the optional range, refer to the API response of DescribeServerlessInstanceSpecs.</p>
         /// </summary>
         [JsonProperty("MinRoCpu")]
         public float? MinRoCpu{ get; set; }
 
         /// <summary>
-        /// Maximum value of read-only cpu, optional range refer to the API response of DescribeServerlessInstanceSpecs.
+        /// <p>Read-only cpu maximum value of the optional range. For reference, see API response of DescribeServerlessInstanceSpecs.</p>
         /// </summary>
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }
 
         /// <summary>
-        /// Specifies the minimum count of read-only nodes.
+        /// <p>Minimum count of read-only nodes</p>
         /// </summary>
         [JsonProperty("MinRoCount")]
         public long? MinRoCount{ get; set; }
 
         /// <summary>
-        /// Maximum number of read-only nodes.
+        /// <p>Maximum number of read-only nodes</p>
         /// </summary>
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
+
+        /// <summary>
+        /// <p>Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+        /// </summary>
+        [JsonProperty("AutoArchive")]
+        public string AutoArchive{ get; set; }
+
+        /// <summary>
+        /// <p>Upgrade type. Default value: upgradeImmediate. Available values: upgradeImmediate - immediately complete the modification; upgradeInMaintain - complete the modification during maintenance window.</p>
+        /// </summary>
+        [JsonProperty("UpgradeType")]
+        public string UpgradeType{ get; set; }
+
+        /// <summary>
+        /// <p>List of security groups to which newly-added read-only instances need to be bound. This only applies to binding security groups to read-only instances generated during the process of this adjustment of policies. Existing instances are not bound.</p>
+        /// </summary>
+        [JsonProperty("SecurityGroupIdsForNewRo")]
+        public string[] SecurityGroupIdsForNewRo{ get; set; }
 
 
         /// <summary>
@@ -109,6 +125,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
             this.SetParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
             this.SetParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
+            this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIdsForNewRo.", this.SecurityGroupIdsForNewRo);
         }
     }
 }

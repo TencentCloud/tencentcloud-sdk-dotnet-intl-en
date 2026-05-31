@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Read-Only weight of an instance
+        /// Instance Read-Only Weight.
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
@@ -118,6 +118,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
+        /// <summary>
+        /// Whether to treat the libra node as an ordinary RO node
+        /// </summary>
+        [JsonProperty("ApNodeAsRoNode")]
+        public bool? ApNodeAsRoNode{ get; set; }
+
+        /// <summary>
+        /// libra node fault, whether to forward to other nodes
+        /// </summary>
+        [JsonProperty("ApQueryToOtherNode")]
+        public bool? ApQueryToOtherNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +151,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "OpenConnectionPool", this.OpenConnectionPool);
             this.SetParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
             this.SetParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
+            this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+            this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         }
     }
 }

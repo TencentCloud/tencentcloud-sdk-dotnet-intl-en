@@ -31,18 +31,15 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Output protocol
-        /// Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
-        ///  `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
-        ///  `DASH_STREAM_PACKAGE`, 
-        ///  `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+        /// Output protocol type.
+        /// Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Output information
-        /// If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+        /// Output information.
+        /// RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
         /// </summary>
         [JsonProperty("Outputs")]
         public OutputInfo[] Outputs{ get; set; }
@@ -54,36 +51,31 @@ namespace TencentCloud.Mdl.V20200326.Models
         public DestinationInfo[] Destinations{ get; set; }
 
         /// <summary>
-        /// HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
         /// </summary>
         [JsonProperty("HlsRemuxSettings")]
         public HlsRemuxSettingsInfo HlsRemuxSettings{ get; set; }
 
         /// <summary>
-        /// DRM configuration information
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// DRM configuration message.
         /// </summary>
         [JsonProperty("DrmSettings")]
         public DrmSettingsInfo DrmSettings{ get; set; }
 
         /// <summary>
-        /// DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
         /// </summary>
         [JsonProperty("DashRemuxSettings")]
         public DashRemuxSettingsInfo DashRemuxSettings{ get; set; }
 
         /// <summary>
-        /// StreamPackage configuration information, which is required if the output type is StreamPackage
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
         /// </summary>
         [JsonProperty("StreamPackageSettings")]
         public StreamPackageSettingsInfo StreamPackageSettings{ get; set; }
 
         /// <summary>
-        /// Time-shift configuration information
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Time shift configuration information.
         /// </summary>
         [JsonProperty("TimeShiftSettings")]
         public TimeShiftSettingsInfo TimeShiftSettings{ get; set; }

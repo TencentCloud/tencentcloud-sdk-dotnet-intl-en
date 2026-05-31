@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number
+        /// Limit on the number of records. The default value is 20.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

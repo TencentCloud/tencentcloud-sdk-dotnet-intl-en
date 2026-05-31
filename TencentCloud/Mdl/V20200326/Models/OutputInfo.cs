@@ -32,52 +32,49 @@ namespace TencentCloud.Mdl.V20200326.Models
 
         /// <summary>
         /// Audio transcoding template name array.
-        /// Quantity limit: [0,1] for RTMP; [0,20] for others.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// RTMP limit [0, 1], other limits [0, 20].
         /// </summary>
         [JsonProperty("AudioTemplateNames")]
         public string[] AudioTemplateNames{ get; set; }
 
         /// <summary>
-        /// Video transcoding template name array. Quantity limit: [0,1].
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Video transcoding template name array, with the maximum number of [0, 1].
         /// </summary>
         [JsonProperty("VideoTemplateNames")]
         public string[] VideoTemplateNames{ get; set; }
 
         /// <summary>
-        /// SCTE-35 information configuration.
+        /// Scte-35 information configuration.
         /// </summary>
         [JsonProperty("Scte35Settings")]
         public Scte35SettingsInfo Scte35Settings{ get; set; }
 
         /// <summary>
-        /// Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Audio/video transcoding template name array, with the maximum number of 1.
         /// </summary>
         [JsonProperty("AVTemplateNames")]
         public string[] AVTemplateNames{ get; set; }
 
         /// <summary>
-        /// For the subtitle template used, only the AVTemplateNames is valid.
+        /// The used subtitle template is only valid for merge template.
         /// </summary>
         [JsonProperty("CaptionTemplateNames")]
         public string[] CaptionTemplateNames{ get; set; }
 
         /// <summary>
-        /// Meta information controls configuration.
+        /// Meta-information control configuration.
         /// </summary>
         [JsonProperty("TimedMetadataSettings")]
         public TimedMetadataSettingInfo TimedMetadataSettings{ get; set; }
 
         /// <summary>
-        /// Frame capture template name array. Quantity limit: [0,1].
+        /// Screenshot transcode template name array. Limit: 1.
         /// </summary>
         [JsonProperty("FrameCaptureTemplateNames")]
         public string[] FrameCaptureTemplateNames{ get; set; }
 
         /// <summary>
-        /// Name modification for sub m3u8.
+        /// Modify the name of the sub-m3u8.
         /// </summary>
         [JsonProperty("NameModifier")]
         public string NameModifier{ get; set; }

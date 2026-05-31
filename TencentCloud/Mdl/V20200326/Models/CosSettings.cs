@@ -37,25 +37,25 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// File output path, which can be empty. If it is not empty, it  ends with /.
+        /// COS file output path, can be empty, ends with / if not empty.
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+        /// User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// File suffix, only supports `jpg`.
+        /// COS file suffix is only supported for jpg.
         /// </summary>
         [JsonProperty("FileExt")]
         public string FileExt{ get; set; }
 
         /// <summary>
-        /// Support `unix` or `utc0`, default unix.
+        /// Support [unix|utc0]. Default is unix.
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }

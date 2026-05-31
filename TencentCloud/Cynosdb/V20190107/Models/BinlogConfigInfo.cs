@@ -43,6 +43,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("BinlogCrossRegions")]
         public string[] BinlogCrossRegions{ get; set; }
 
+        /// <summary>
+        /// Safe info
+        /// </summary>
+        [JsonProperty("AutoCopyVaults")]
+        public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
             this.SetParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+            this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }
     }
 }

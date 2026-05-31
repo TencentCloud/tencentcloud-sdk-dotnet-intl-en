@@ -25,40 +25,52 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>vpc id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subnet id</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>vpc access point information</p>
         /// </summary>
         [JsonProperty("VpcEndpoint")]
         public string VpcEndpoint{ get; set; }
 
         /// <summary>
-        /// Access point status. valid values: OFF, ON, CREATING, DELETING.
+        /// <p>vpc access point status OFF/ON/CREATING/DELETING</p>
         /// </summary>
         [JsonProperty("VpcDataStreamEndpointStatus")]
         public string VpcDataStreamEndpointStatus{ get; set; }
 
         /// <summary>
-        /// Encrypted TLS data stream access point.
+        /// <p>TLS encrypted data stream access point</p>
         /// </summary>
         [JsonProperty("VpcTlsEndpoint")]
         public string VpcTlsEndpoint{ get; set; }
 
         /// <summary>
-        /// Error message for VPC access point operations.
+        /// <p>Error information of VPC access point operation failure</p>
         /// </summary>
         [JsonProperty("VpcErrorMessage")]
         public string VpcErrorMessage{ get; set; }
+
+        /// <summary>
+        /// <p>Access point ID</p>
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// <p>vpc Stream access point</p>
+        /// </summary>
+        [JsonProperty("VpcStreamEndpoint")]
+        public string VpcStreamEndpoint{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
             this.SetParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
             this.SetParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "VpcStreamEndpoint", this.VpcStreamEndpoint);
         }
     }
 }

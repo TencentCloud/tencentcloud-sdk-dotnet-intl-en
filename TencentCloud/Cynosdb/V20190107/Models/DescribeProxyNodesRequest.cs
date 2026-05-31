@@ -53,7 +53,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+        /// Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }

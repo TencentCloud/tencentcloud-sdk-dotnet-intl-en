@@ -31,40 +31,37 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string OutputUrl{ get; set; }
 
         /// <summary>
-        /// Authentication key. Length limit: [1,128].
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Authentication key, length limited to [1, 128].
         /// </summary>
         [JsonProperty("AuthKey")]
         public string AuthKey{ get; set; }
 
         /// <summary>
-        /// Authentication username. Length limit: [1,128].
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Authentication username, length limited to [1, 128].
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Authentication password. Length limit: [1,128].
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Authentication password, length limited to [1, 128].
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+        /// The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
 
         /// <summary>
-        /// Aws S3 destination setting.
+        /// Forward the Aws S3 address information.
         /// </summary>
         [JsonProperty("AmazonS3Settings")]
         public AmazonS3Settings AmazonS3Settings{ get; set; }
 
         /// <summary>
-        /// Cos destination setting.
+        /// Forward COS address information.
         /// </summary>
         [JsonProperty("CosSettings")]
         public CosSettings CosSettings{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+        /// Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+        /// Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+        /// Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
         /// </summary>
         [JsonProperty("EntropyEncoding")]
         public string EntropyEncoding{ get; set; }
 
         /// <summary>
-        /// Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+        /// Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
         /// </summary>
         [JsonProperty("AdaptiveQuantization")]
         public string AdaptiveQuantization{ get; set; }
 
         /// <summary>
-        /// Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+        /// Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
         /// </summary>
         [JsonProperty("LookAheadRateControl")]
         public string LookAheadRateControl{ get; set; }

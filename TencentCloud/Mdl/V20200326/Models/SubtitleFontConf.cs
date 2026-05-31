@@ -31,13 +31,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? LineSpacing{ get; set; }
 
         /// <summary>
-        /// Margins.
+        /// Margin.
         /// </summary>
         [JsonProperty("Margins")]
         public ulong? Margins{ get; set; }
 
         /// <summary>
-        /// Rows.
+        /// Number of rows.
         /// </summary>
         [JsonProperty("Lines")]
         public ulong? Lines{ get; set; }
@@ -49,31 +49,31 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? CharactersPerLine{ get; set; }
 
         /// <summary>
-        /// Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+        /// Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
         /// </summary>
         [JsonProperty("SourceTextFont")]
         public string SourceTextFont{ get; set; }
 
         /// <summary>
-        /// Font color is represented by 6 RGB hexadecimal characters.
+        /// Font color, represented by 6 characters in hexadecimal RGB.
         /// </summary>
         [JsonProperty("TextColor")]
         public string TextColor{ get; set; }
 
         /// <summary>
-        /// The background color is represented by 6 RGB hexadecimal characters.
+        /// Background color, represented by 6 characters in hexadecimal RGB.
         /// </summary>
         [JsonProperty("BackgroundColor")]
         public string BackgroundColor{ get; set; }
 
         /// <summary>
-        /// Background transparency, a number from 0-100.
+        /// Background opacity. A number from 0 to 100.
         /// </summary>
         [JsonProperty("BackgroundAlpha")]
         public ulong? BackgroundAlpha{ get; set; }
 
         /// <summary>
-        /// Preview copy.
+        /// Preview the copywriting.
         /// </summary>
         [JsonProperty("PreviewContent")]
         public string PreviewContent{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? PreviewWindowWidth{ get; set; }
 
         /// <summary>
-        /// Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+        /// Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
         /// </summary>
         [JsonProperty("TranslatedTextFont")]
         public string TranslatedTextFont{ get; set; }

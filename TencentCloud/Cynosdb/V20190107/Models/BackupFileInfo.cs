@@ -25,76 +25,106 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Snapshot file ID, which is deprecated. You need to use `BackupId`.
+        /// <p>Snapshot file ID, abandoned, please use BackupId</p>
         /// </summary>
         [JsonProperty("SnapshotId")]
         public ulong? SnapshotId{ get; set; }
 
         /// <summary>
-        /// Backup file name
+        /// <p>Backup file name</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Backup file size
+        /// <p>Backup file size</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// Backup start time
+        /// <p>Backup start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup end time
+        /// <p>Backup completion time.</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+        /// <p>Backup type: snapshot, snapshot backup; logic, logical backup</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Back mode. auto: auto backup; manual: manual backup
+        /// <p>Backup method: auto, automatic backup; manual, manual backup</p>
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
+        /// <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string BackupStatus{ get; set; }
 
         /// <summary>
-        /// Backup file time
+        /// <p>Backup file time</p>
         /// </summary>
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// Backup ID.
+        /// <p>Backup ID</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// Specifies the snapshot type. valid values: full (full snapshot); increment (incremental snapshot).
+        /// <p>Snapshot type. Value range: full, full; increment, incremental</p>
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
 
         /// <summary>
-        /// Specifies the remark of the backup file.
+        /// <p>Backup file remark</p>
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
+
+        /// <summary>
+        /// <p>Delivery status</p>
+        /// </summary>
+        [JsonProperty("CopyStatus")]
+        public string CopyStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Key id</p>
+        /// </summary>
+        [JsonProperty("EncryptKeyId")]
+        public string EncryptKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>Key region</p>
+        /// </summary>
+        [JsonProperty("EncryptRegion")]
+        public string EncryptRegion{ get; set; }
+
+        /// <summary>
+        /// <p>Safe info</p>
+        /// </summary>
+        [JsonProperty("VaultInfos")]
+        public VaultInfo[] VaultInfos{ get; set; }
+
+        /// <summary>
+        /// <p>Backup cycle policy</p>
+        /// </summary>
+        [JsonProperty("BackupPeriodStrategy")]
+        public string BackupPeriodStrategy{ get; set; }
 
 
         /// <summary>
@@ -114,6 +144,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+            this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+            this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+            this.SetParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+            this.SetParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
         }
     }
 }

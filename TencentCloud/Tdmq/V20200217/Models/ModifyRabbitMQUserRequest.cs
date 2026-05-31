@@ -25,47 +25,52 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+        /// <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
+        /// <p>Username, such as rabbitmq. To find an effective userName, log in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a>, click a cluster in the list, enter cluster details, and locate the list of users under the user and permission management tab so as to find the username. Modification of the admin password is not supported currently.</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+        /// <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Description. If this parameter is not passed in, it won't be modified.
+        /// <p>Description. Leave it empty to keep it unchanged.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// User tag, used to determine the access permission of the user for RabbitMQ Management.
-        /// management: ordinary console user. monitoring: administrative console user. other value: non-console user.
+        /// <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// The maximum number of connections for the user. If this parameter is not passed in, it won't be modified.
+        /// <p>Maximum number of connections for this user. Leave it blank to keep unchanged.</p>
         /// </summary>
         [JsonProperty("MaxConnections")]
         public long? MaxConnections{ get; set; }
 
         /// <summary>
-        /// The maximum number of channels for the user. If this parameter is not passed in, it won't be modified.
+        /// <p>Maximum number of channels for the user's. Leave blank to keep unchanged.</p>
         /// </summary>
         [JsonProperty("MaxChannels")]
         public long? MaxChannels{ get; set; }
+
+        /// <summary>
+        /// <p>Whether cam authentication is enabled</p>
+        /// </summary>
+        [JsonProperty("EnableCamAuth")]
+        public bool? EnableCamAuth{ get; set; }
 
 
         /// <summary>
@@ -80,6 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
             this.SetParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+            this.SetParamSimple(map, prefix + "EnableCamAuth", this.EnableCamAuth);
         }
     }
 }

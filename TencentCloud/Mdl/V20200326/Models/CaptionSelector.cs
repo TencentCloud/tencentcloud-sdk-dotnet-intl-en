@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Caption selector name, which can contain 1-32 letters, digits, and underscores.
+        /// Digits, uppercase and lowercase letters, underscore, length 1-32.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Caption source type, only support `SCTE-128`.
+        /// Supports only `SCTE-128`.
         /// </summary>
         [JsonProperty("CaptionSourceType")]
         public string CaptionSourceType{ get; set; }

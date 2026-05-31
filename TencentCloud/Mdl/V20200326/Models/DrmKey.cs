@@ -32,34 +32,30 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-        /// ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+        /// Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }
 
         /// <summary>
-        /// Required for Widevine encryption. It is a 32-bit hexadecimal string.
-        /// Note: uppercase letters in the string will be automatically converted to lowercase ones.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+        /// Note: The string will be modified to lowercase.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-        /// For more information about this parameter, please see: 
+        /// Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+        /// Iv parsing reference
         /// https://tools.ietf.org/html/rfc3826
-        /// Note: uppercase letters in the string will be automatically converted to lowercase ones.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Note: The string will be modified to lowercase.
         /// </summary>
         [JsonProperty("Iv")]
         public string Iv{ get; set; }
 
         /// <summary>
-        /// The URI of the license server when AES-128 is used. This parameter may be empty.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// uri of the license server. AES128 is used. Can be empty.
         /// </summary>
         [JsonProperty("KeyUri")]
         public string KeyUri{ get; set; }

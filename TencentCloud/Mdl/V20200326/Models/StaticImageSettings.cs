@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+        /// Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
         /// </summary>
         [JsonProperty("GlobalImageOverlayEnabled")]
         public long? GlobalImageOverlayEnabled{ get; set; }

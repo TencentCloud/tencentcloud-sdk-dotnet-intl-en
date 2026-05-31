@@ -25,113 +25,128 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// VPC ID, which is the same as that of the cluster by default.
+        /// VPC ID. By default, it remains consistent with the VPC ID of the cluster.
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// VPCe subnet ID, which is the same as that of the cluster by default.
+        /// Subnet ID of the VPC. By default, it remains consistent with the subnet ID of the cluster.
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+        /// Type of connection pool: SessionConnectionPool (session-level connection pool).
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+        /// Whether to enable the connection pool.
+        /// yes: indicates enabled.
+        /// no: indicates not enabled.
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// Connection pool threshold in seconds
+        /// Threshold of the connection pool: unit (seconds). Valid values: 0 - 300 seconds.
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// Array of security group IDs
+        /// Array of bound security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// VIP information
+        /// The vip information to be bound must correspond to the UniqueVpcId.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Weight mode. 
-        /// Valid values: `system` (system-assigned), `custom` (custom).
+        /// Weight mode:
+        /// system: system-assigned.
+        /// custom: custom.
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+        /// Whether to automatically add a read-only instance.
+        /// yes: indicates automatically adding a read-only instance.
+        /// no: indicates not to automatically add a read-only instance.
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// Whether to enable failover
+        /// Whether to enable failover.
+        /// yes: indicates enabled. After it is enabled, when the database proxy encounters faults, the connection address will be routed to the primary instance.
+        /// no: indicates not enabled.
+        /// Description:
+        /// Only when the value of the RwType parameter is READWRITE can this option be configured.
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// Consistency type. Valid values: 
-        /// `eventual`, `global`, `session`.
+        /// Consistency Type:
+        /// eventual: eventual consistency.
+        /// global: global consistency.
+        /// session: session consistency.
+        /// Description:
+        /// Only when the RwType parameter value is READWRITE can this option be configured.
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// Read-write attribute. Valid values: 
-        /// `READWRITE`, `READONLY`.
+        /// Read-Write Attribute:
+        /// READWRITE: indicates read/write splitting. Only when this parameter value is READWRITE can the FailOver and ConsistencyType parameters be configured.
+        /// READONLY: indicates read-only.
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// Consistency timeout period
+        /// The consistency timeout period. Value range: 0 - 1000000 (microseconds). When set to 0, if a read-only instance experiences latency causing the consistency policy to be unsatisfied, the request will wait indefinitely.
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// Transaction split
+        /// Whether to enable transaction split. After it is enabled, read and write operations in a transaction are split to different instances for execution.
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// Connection mode. Valid values:
-        /// `nearby`, `balance`.
+        /// Access mode:
+        /// nearby: nearby access.
+        /// balance: balanced allocation.
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// Instance weight
+        /// Instance weight.
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Ssl.V20191205
 
        private const string endpoint = "ssl.intl.tencentcloudapi.com";
        private const string version = "2019-12-05";
-       private const string sdkVersion = "SDK_NET_3.0.1318";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.
@@ -915,7 +915,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
+        /// This API requires contacting support to be whitelisted for use, and it only supports updating CLB resources related to certificates. This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
         /// </summary>
         /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
         /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
-        /// This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
+        /// This API requires contacting support to be whitelisted for use, and it only supports updating CLB resources related to certificates. This API is used to update certificate content (certificate ID unchanged) and update associated Tencent Cloud resources. This is an asynchronous API. After calling, a DeployRecordId of 0 indicates that the task is in progress. Repeatedly request this API, and when DeployRecordId is greater than 0, it means the task has been successfully created. If the task is not successfully created, an exception will be thrown.
         /// </summary>
         /// <param name="req"><see cref="UploadUpdateCertificateInstanceRequest"/></param>
         /// <returns><see cref="UploadUpdateCertificateInstanceResponse"/></returns>

@@ -1,0 +1,113 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cynosdb.V20190107.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class GdnTaskInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// Unique ID of the global database
+        /// </summary>
+        [JsonProperty("GdnId")]
+        public string GdnId{ get; set; }
+
+        /// <summary>
+        /// unique alias of the global database
+        /// </summary>
+        [JsonProperty("GdnName")]
+        public string GdnName{ get; set; }
+
+        /// <summary>
+        /// Primary Cluster ID
+        /// </summary>
+        [JsonProperty("PrimaryClusterId")]
+        public string PrimaryClusterId{ get; set; }
+
+        /// <summary>
+        /// Master cluster region
+        /// </summary>
+        [JsonProperty("PrimaryClusterRegion")]
+        public string PrimaryClusterRegion{ get; set; }
+
+        /// <summary>
+        /// from the cluster region
+        /// </summary>
+        [JsonProperty("StandbyClusterRegion")]
+        public string StandbyClusterRegion{ get; set; }
+
+        /// <summary>
+        /// Slave cluster ID
+        /// </summary>
+        [JsonProperty("StandbyClusterId")]
+        public string StandbyClusterId{ get; set; }
+
+        /// <summary>
+        /// From the cluster name
+        /// </summary>
+        [JsonProperty("StandbyClusterName")]
+        public string StandbyClusterName{ get; set; }
+
+        /// <summary>
+        /// Whether forced switchover is performed
+        /// </summary>
+        [JsonProperty("ForceSwitchGdn")]
+        public string ForceSwitchGdn{ get; set; }
+
+        /// <summary>
+        /// Return code
+        /// </summary>
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
+
+        /// <summary>
+        /// prompt message
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
+        /// Whether forced switchover is supported
+        /// </summary>
+        [JsonProperty("IsSupportForce")]
+        public string IsSupportForce{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "GdnName", this.GdnName);
+            this.SetParamSimple(map, prefix + "PrimaryClusterId", this.PrimaryClusterId);
+            this.SetParamSimple(map, prefix + "PrimaryClusterRegion", this.PrimaryClusterRegion);
+            this.SetParamSimple(map, prefix + "StandbyClusterRegion", this.StandbyClusterRegion);
+            this.SetParamSimple(map, prefix + "StandbyClusterId", this.StandbyClusterId);
+            this.SetParamSimple(map, prefix + "StandbyClusterName", this.StandbyClusterName);
+            this.SetParamSimple(map, prefix + "ForceSwitchGdn", this.ForceSwitchGdn);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "IsSupportForce", this.IsSupportForce);
+        }
+    }
+}
+

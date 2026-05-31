@@ -25,172 +25,178 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ.
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// During rollback, pass in the source cluster ID to find the source pool ID.
+        /// <p>During rollback, input the source cluster ID to search for the source poolId</p>
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// <p>VPC network ID</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID.
+        /// <p>Subnet ID</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+        /// <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+        /// <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+        /// <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
         /// </summary>
         [JsonProperty("ExpectTime")]
         public string ExpectTime{ get; set; }
 
         /// <summary>
-        /// Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+        /// <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Information about the tag array to be bound during cluster creation.
+        /// <p>tag Array information that should be bound for cluster creation</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+        /// <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+        /// <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+        /// <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+        /// <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+        /// <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// Security group ID array.
+        /// <p>Security group id array</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID array.
+        /// <p>Alarm policy Id array</p>
         /// </summary>
         [JsonProperty("AlarmPolicyIds")]
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+        /// <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
 
         /// <summary>
-        /// Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+        /// <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+        /// <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
 
         /// <summary>
-        /// 0 - place an order and pay; 1 - place an order.
+        /// <p>0-Place order and pay 1-Placing order</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+        /// <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Time.
+        /// <p>Time</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Unit.
+        /// <p>Unit</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Rollback database information.
+        /// <p>Rollback database info</p>
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// Rollback table information.
+        /// <p>Roll back table information</p>
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }
 
         /// <summary>
-        /// Source read-only instance information.
+        /// <p>Original ro instance information</p>
         /// </summary>
         [JsonProperty("OriginalROInstanceList")]
         public string[] OriginalROInstanceList{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Whether to enable archiving. Valid values: yes; no. The default value is yes.
+        /// <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to restore from the saved backup</p>
+        /// </summary>
+        [JsonProperty("FromSaveBackup")]
+        public bool? FromSaveBackup{ get; set; }
 
 
         /// <summary>
@@ -226,6 +232,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+            this.SetParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
         }
     }
 }

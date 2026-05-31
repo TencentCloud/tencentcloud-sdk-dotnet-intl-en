@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Audio track configuration information.
+        /// Audio track configuration message.
         /// </summary>
         [JsonProperty("Tracks")]
         public InputTrack[] Tracks{ get; set; }

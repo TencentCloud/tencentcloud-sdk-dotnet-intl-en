@@ -37,7 +37,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+        /// Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
         /// </summary>
         [JsonProperty("Acodec")]
         public string Acodec{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public ulong? AudioBitrate{ get; set; }
 
         /// <summary>
-        /// Audio language code, which length is between 2 and 20.
+        /// Audio language Code, length 2-20.
         /// </summary>
         [JsonProperty("LanguageCode")]
         public string LanguageCode{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Mdl.V20200326.Models
         public AudioCodecDetail AudioCodecDetails{ get; set; }
 
         /// <summary>
-        /// Audio language description, which maximum length is 100.
+        /// Audio language description, maximum length 100
         /// </summary>
         [JsonProperty("LanguageDescription")]
         public string LanguageDescription{ get; set; }

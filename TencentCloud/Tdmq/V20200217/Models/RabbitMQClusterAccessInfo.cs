@@ -25,119 +25,125 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Cluster public network access address</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PublicAccessEndpoint")]
         public string PublicAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Public network access URL of the cluster Web console</p>
         /// </summary>
         [JsonProperty("WebConsoleEndpoint")]
         public string WebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cluster Web console login username</p>
         /// </summary>
         [JsonProperty("WebConsoleUsername")]
         public string WebConsoleUsername{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cluster Web console login password</p>
         /// </summary>
         [JsonProperty("WebConsolePassword")]
         public string WebConsolePassword{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Abandoned</p>
         /// </summary>
         [JsonProperty("PublicAccessEndpointStatus")]
         public bool? PublicAccessEndpointStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Deprecated</p>
         /// </summary>
         [JsonProperty("PublicControlConsoleSwitchStatus")]
         public bool? PublicControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Abandoned</p>
         /// </summary>
         [JsonProperty("VpcControlConsoleSwitchStatus")]
         public bool? VpcControlConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>VPC access URL of the Web console</p>
         /// </summary>
         [JsonProperty("VpcWebConsoleEndpoint")]
         public string VpcWebConsoleEndpoint{ get; set; }
 
         /// <summary>
-        /// Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+        /// <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
         /// </summary>
         [JsonProperty("PublicWebConsoleSwitchStatus")]
         public string PublicWebConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Vpc console switch state. example value.
-        /// OFF/ON/CREATING/DELETING
+        /// <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
         /// </summary>
         [JsonProperty("VpcWebConsoleSwitchStatus")]
         public string VpcWebConsoleSwitchStatus{ get; set; }
 
         /// <summary>
-        /// Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+        /// <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
         /// </summary>
         [JsonProperty("PublicDataStreamStatus")]
         public string PublicDataStreamStatus{ get; set; }
 
         /// <summary>
-        /// Prometheus information.
+        /// <p>Prometheus info</p>
         /// </summary>
         [JsonProperty("PrometheusEndpointInfo")]
         public PrometheusEndpointInfo PrometheusEndpointInfo{ get; set; }
 
         /// <summary>
-        /// Public domain name access point.
+        /// <p>public domain name access point</p>
         /// </summary>
         [JsonProperty("WebConsoleDomainEndpoint")]
         public string WebConsoleDomainEndpoint{ get; set; }
 
         /// <summary>
-        /// VPC information used by the control plane.
+        /// <p>VPC information used by the control plane</p>
         /// </summary>
         [JsonProperty("ControlPlaneEndpointInfo")]
         public VpcEndpointInfo ControlPlaneEndpointInfo{ get; set; }
 
         /// <summary>
-        /// Encrypted TLS data stream public network access point.
+        /// <p>TLS encrypted data stream public network access point</p>
         /// </summary>
         [JsonProperty("PublicTlsAccessEndpoint")]
         public string PublicTlsAccessEndpoint{ get; set; }
 
         /// <summary>
-        /// Specifies whether to reuse the public IP address.
+        /// <p>Whether to reuse the public IP address</p>
         /// </summary>
         [JsonProperty("PublicIpReused")]
         public bool? PublicIpReused{ get; set; }
 
         /// <summary>
-        /// Error message for public network console access point operations.
+        /// <p>Error information of public network access operations for the Web console</p>
         /// </summary>
         [JsonProperty("PublicWebConsoleErrorMessage")]
         public string PublicWebConsoleErrorMessage{ get; set; }
 
         /// <summary>
-        /// Error message for private network console access point operations.
+        /// <p>Error information of VPC access operations in the Web console</p>
         /// </summary>
         [JsonProperty("VpcWebConsoleErrorMessage")]
         public string VpcWebConsoleErrorMessage{ get; set; }
 
         /// <summary>
-        /// Error message for public network access point operation failure.
+        /// <p>Error information of public network access point operations</p>
         /// </summary>
         [JsonProperty("PublicDataStreamErrorMessage")]
         public string PublicDataStreamErrorMessage{ get; set; }
+
+        /// <summary>
+        /// <p>Public network Stream access point</p>
+        /// </summary>
+        [JsonProperty("PublicStreamAccessEndpoint")]
+        public string PublicStreamAccessEndpoint{ get; set; }
 
 
         /// <summary>
@@ -164,6 +170,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
             this.SetParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
             this.SetParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
+            this.SetParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
         }
     }
 }

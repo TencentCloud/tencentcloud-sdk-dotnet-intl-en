@@ -25,55 +25,59 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// CPU After Resizing
+        /// 
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory After Resizing
+        /// 
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Storage Limit After Resizing
+        /// 
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// CPU Before Resizing
+        /// 
         /// </summary>
         [JsonProperty("OldCpu")]
         public long? OldCpu{ get; set; }
 
         /// <summary>
-        /// Memory Before Resizing
+        /// 
         /// </summary>
         [JsonProperty("OldMemory")]
         public long? OldMemory{ get; set; }
 
         /// <summary>
-        /// Storage Limit Before Resizing
+        /// 
         /// </summary>
         [JsonProperty("OldStorageLimit")]
         public long? OldStorageLimit{ get; set; }
 
         /// <summary>
-        /// Instance machine type before scaling.
+        /// Instance Machine Type Before Scaling
+        /// 1. common, universal type.
+        /// 2. exclusive, dedicated.
         /// </summary>
         [JsonProperty("OldDeviceType")]
         public string OldDeviceType{ get; set; }
 
         /// <summary>
-        /// Instance machine type after scaling.
+        /// Instance Machine Type After Scaling
+        /// 1. common, universal type.
+        /// 2. exclusive, dedicated.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+        /// 
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+        /// Sound track configuration. Available values: MONO, STEREO, 5.1.
         /// </summary>
         [JsonProperty("ChannelMode")]
         public string ChannelMode{ get; set; }
 
         /// <summary>
-        /// Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+        /// Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+        /// Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
         /// </summary>
         [JsonProperty("ColorSpace")]
         public string ColorSpace{ get; set; }

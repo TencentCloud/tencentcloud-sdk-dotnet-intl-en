@@ -25,7 +25,8 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+        /// Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MotionGraphicsOverlayEnabled")]
         public long? MotionGraphicsOverlayEnabled{ get; set; }

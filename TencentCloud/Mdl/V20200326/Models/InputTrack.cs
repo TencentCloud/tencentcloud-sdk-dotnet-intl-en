@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+        /// Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
         /// </summary>
         [JsonProperty("TrackIndex")]
         public ulong? TrackIndex{ get; set; }

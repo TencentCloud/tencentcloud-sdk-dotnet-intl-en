@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1323";
 
         /// <summary>
         /// Client constructor.
@@ -180,6 +180,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Add a read-only instance to the serverless cluster
+        /// </summary>
+        /// <param name="req"><see cref="AddServerlessRoInstancesRequest"/></param>
+        /// <returns><see cref="AddServerlessRoInstancesResponse"/></returns>
+        public Task<AddServerlessRoInstancesResponse> AddServerlessRoInstances(AddServerlessRoInstancesRequest req)
+        {
+            return InternalRequestAsync<AddServerlessRoInstancesResponse>(req, "AddServerlessRoInstances");
+        }
+
+        /// <summary>
+        /// Add a read-only instance to the serverless cluster
+        /// </summary>
+        /// <param name="req"><see cref="AddServerlessRoInstancesRequest"/></param>
+        /// <returns><see cref="AddServerlessRoInstancesResponse"/></returns>
+        public AddServerlessRoInstancesResponse AddServerlessRoInstancesSync(AddServerlessRoInstancesRequest req)
+        {
+            return InternalRequestAsync<AddServerlessRoInstancesResponse>(req, "AddServerlessRoInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to bulk bind security groups to cloud resources.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public Task<AssociateSecurityGroupsResponse> AssociateSecurityGroups(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to bulk bind security groups to cloud resources.
+        /// </summary>
+        /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="AssociateSecurityGroupsResponse"/></returns>
+        public AssociateSecurityGroupsResponse AssociateSecurityGroupsSync(AssociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<AssociateSecurityGroupsResponse>(req, "AssociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to bind resource packages to a cluster.
         /// </summary>
         /// <param name="req"><see cref="BindClusterResourcePackagesRequest"/></param>
@@ -201,6 +243,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Calculate the backup file list that will expire and be deleted after modifying the backup retention period
+        /// </summary>
+        /// <param name="req"><see cref="CalculateBackupSaveSecExpiresRequest"/></param>
+        /// <returns><see cref="CalculateBackupSaveSecExpiresResponse"/></returns>
+        public Task<CalculateBackupSaveSecExpiresResponse> CalculateBackupSaveSecExpires(CalculateBackupSaveSecExpiresRequest req)
+        {
+            return InternalRequestAsync<CalculateBackupSaveSecExpiresResponse>(req, "CalculateBackupSaveSecExpires");
+        }
+
+        /// <summary>
+        /// Calculate the backup file list that will expire and be deleted after modifying the backup retention period
+        /// </summary>
+        /// <param name="req"><see cref="CalculateBackupSaveSecExpiresRequest"/></param>
+        /// <returns><see cref="CalculateBackupSaveSecExpiresResponse"/></returns>
+        public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpiresSync(CalculateBackupSaveSecExpiresRequest req)
+        {
+            return InternalRequestAsync<CalculateBackupSaveSecExpiresResponse>(req, "CalculateBackupSaveSecExpires")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to verify whether it is possible to add a read-only analysis engine instance to the cluster.
         /// </summary>
         /// <param name="req"><see cref="CheckCreateLibraDBInstanceRequest"/></param>
@@ -218,6 +281,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstanceSync(CheckCreateLibraDBInstanceRequest req)
         {
             return InternalRequestAsync<CheckCreateLibraDBInstanceResponse>(req, "CheckCreateLibraDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to check if it is possible to trigger cross-AZ migration.
+        /// </summary>
+        /// <param name="req"><see cref="CheckTransferClusterZoneRequest"/></param>
+        /// <returns><see cref="CheckTransferClusterZoneResponse"/></returns>
+        public Task<CheckTransferClusterZoneResponse> CheckTransferClusterZone(CheckTransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<CheckTransferClusterZoneResponse>(req, "CheckTransferClusterZone");
+        }
+
+        /// <summary>
+        /// This API is used to check if it is possible to trigger cross-AZ migration.
+        /// </summary>
+        /// <param name="req"><see cref="CheckTransferClusterZoneRequest"/></param>
+        /// <returns><see cref="CheckTransferClusterZoneResponse"/></returns>
+        public CheckTransferClusterZoneResponse CheckTransferClusterZoneSync(CheckTransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<CheckTransferClusterZoneResponse>(req, "CheckTransferClusterZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -344,6 +428,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public CloseWanResponse CloseWanSync(CloseWanRequest req)
         {
             return InternalRequestAsync<CloseWanResponse>(req, "CloseWan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Copy backup files to the designated safe
+        /// </summary>
+        /// <param name="req"><see cref="CopyBackupToVaultRequest"/></param>
+        /// <returns><see cref="CopyBackupToVaultResponse"/></returns>
+        public Task<CopyBackupToVaultResponse> CopyBackupToVault(CopyBackupToVaultRequest req)
+        {
+            return InternalRequestAsync<CopyBackupToVaultResponse>(req, "CopyBackupToVault");
+        }
+
+        /// <summary>
+        /// Copy backup files to the designated safe
+        /// </summary>
+        /// <param name="req"><see cref="CopyBackupToVaultRequest"/></param>
+        /// <returns><see cref="CopyBackupToVaultResponse"/></returns>
+        public CopyBackupToVaultResponse CopyBackupToVaultSync(CopyBackupToVaultRequest req)
+        {
+            return InternalRequestAsync<CopyBackupToVaultResponse>(req, "CopyBackupToVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +747,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Create a backup safe
+        /// </summary>
+        /// <param name="req"><see cref="CreateVaultRequest"/></param>
+        /// <returns><see cref="CreateVaultResponse"/></returns>
+        public Task<CreateVaultResponse> CreateVault(CreateVaultRequest req)
+        {
+            return InternalRequestAsync<CreateVaultResponse>(req, "CreateVault");
+        }
+
+        /// <summary>
+        /// Create a backup safe
+        /// </summary>
+        /// <param name="req"><see cref="CreateVaultRequest"/></param>
+        /// <returns><see cref="CreateVaultResponse"/></returns>
+        public CreateVaultResponse CreateVaultSync(CreateVaultRequest req)
+        {
+            return InternalRequestAsync<CreateVaultResponse>(req, "CreateVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete user accounts.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountsRequest"/></param>
@@ -705,6 +831,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Delete specified backup files from the safe
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupVaultRequest"/></param>
+        /// <returns><see cref="DeleteBackupVaultResponse"/></returns>
+        public Task<DeleteBackupVaultResponse> DeleteBackupVault(DeleteBackupVaultRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupVaultResponse>(req, "DeleteBackupVault");
+        }
+
+        /// <summary>
+        /// Delete specified backup files from the safe
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBackupVaultRequest"/></param>
+        /// <returns><see cref="DeleteBackupVaultResponse"/></returns>
+        public DeleteBackupVaultResponse DeleteBackupVaultSync(DeleteBackupVaultRequest req)
+        {
+            return InternalRequestAsync<DeleteBackupVaultResponse>(req, "DeleteBackupVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete log delivery.
         /// </summary>
         /// <param name="req"><see cref="DeleteCLSDeliveryRequest"/></param>
@@ -743,6 +890,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteClusterDatabaseResponse DeleteClusterDatabaseSync(DeleteClusterDatabaseRequest req)
         {
             return InternalRequestAsync<DeleteClusterDatabaseResponse>(req, "DeleteClusterDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete residual backups for cluster deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSaveBackupRequest"/></param>
+        /// <returns><see cref="DeleteClusterSaveBackupResponse"/></returns>
+        public Task<DeleteClusterSaveBackupResponse> DeleteClusterSaveBackup(DeleteClusterSaveBackupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSaveBackupResponse>(req, "DeleteClusterSaveBackup");
+        }
+
+        /// <summary>
+        /// This API is used to delete residual backups for cluster deletion.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteClusterSaveBackupRequest"/></param>
+        /// <returns><see cref="DeleteClusterSaveBackupResponse"/></returns>
+        public DeleteClusterSaveBackupResponse DeleteClusterSaveBackupSync(DeleteClusterSaveBackupRequest req)
+        {
+            return InternalRequestAsync<DeleteClusterSaveBackupResponse>(req, "DeleteClusterSaveBackup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -806,6 +974,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DeleteParamTemplateResponse DeleteParamTemplateSync(DeleteParamTemplateRequest req)
         {
             return InternalRequestAsync<DeleteParamTemplateResponse>(req, "DeleteParamTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Bulk deletion of backup safes
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVaultsRequest"/></param>
+        /// <returns><see cref="DeleteVaultsResponse"/></returns>
+        public Task<DeleteVaultsResponse> DeleteVaults(DeleteVaultsRequest req)
+        {
+            return InternalRequestAsync<DeleteVaultsResponse>(req, "DeleteVaults");
+        }
+
+        /// <summary>
+        /// Bulk deletion of backup safes
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVaultsRequest"/></param>
+        /// <returns><see cref="DeleteVaultsResponse"/></returns>
+        public DeleteVaultsResponse DeleteVaultsSync(DeleteVaultsRequest req)
+        {
+            return InternalRequestAsync<DeleteVaultsResponse>(req, "DeleteVaults")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1020,6 +1209,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Query backup file list based on safe ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBackupListByVaultResponse"/></returns>
+        public Task<DescribeBackupListByVaultResponse> DescribeBackupListByVault(DescribeBackupListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault");
+        }
+
+        /// <summary>
+        /// Query backup file list based on safe ID
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBackupListByVaultResponse"/></returns>
+        public DescribeBackupListByVaultResponse DescribeBackupListByVaultSync(DescribeBackupListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query binlog configurations.
         /// </summary>
         /// <param name="req"><see cref="DescribeBinlogConfigRequest"/></param>
@@ -1058,6 +1268,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrlSync(DescribeBinlogDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeBinlogDownloadUrlResponse>(req, "DescribeBinlogDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query binlog backups in the insurance box
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBinlogListByVaultResponse"/></returns>
+        public Task<DescribeBinlogListByVaultResponse> DescribeBinlogListByVault(DescribeBinlogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogListByVaultResponse>(req, "DescribeBinlogListByVault");
+        }
+
+        /// <summary>
+        /// Query binlog backups in the insurance box
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeBinlogListByVaultResponse"/></returns>
+        public DescribeBinlogListByVaultResponse DescribeBinlogListByVaultSync(DescribeBinlogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeBinlogListByVaultResponse>(req, "DescribeBinlogListByVault")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,7 +1692,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the slow query logs of an instance.
+        /// This API is used to query the slow log details of an instance. Subject to platform return size limits, return results may be truncated if they are too large.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="DescribeInstanceSlowQueriesResponse"/></returns>
@@ -1471,7 +1702,7 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
-        /// This API is used to query the slow query logs of an instance.
+        /// This API is used to query the slow log details of an instance. Subject to platform return size limits, return results may be truncated if they are too large.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
         /// <returns><see cref="DescribeInstanceSlowQueriesResponse"/></returns>
@@ -1499,6 +1730,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeInstanceSpecsResponse DescribeInstanceSpecsSync(DescribeInstanceSpecsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceSpecsResponse>(req, "DescribeInstanceSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query instance specifications based on operation type
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecsByOperationTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecsByOperationTypeResponse"/></returns>
+        public Task<DescribeInstanceSpecsByOperationTypeResponse> DescribeInstanceSpecsByOperationType(DescribeInstanceSpecsByOperationTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecsByOperationTypeResponse>(req, "DescribeInstanceSpecsByOperationType");
+        }
+
+        /// <summary>
+        /// Query instance specifications based on operation type
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSpecsByOperationTypeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSpecsByOperationTypeResponse"/></returns>
+        public DescribeInstanceSpecsByOperationTypeResponse DescribeInstanceSpecsByOperationTypeSync(DescribeInstanceSpecsByOperationTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSpecsByOperationTypeResponse>(req, "DescribeInstanceSpecsByOperationType")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1650,6 +1902,216 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to view the advanced mapping rule of the analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAutoMapRuleRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAutoMapRuleResponse"/></returns>
+        public Task<DescribeLibraDBClusterAutoMapRuleResponse> DescribeLibraDBClusterAutoMapRule(DescribeLibraDBClusterAutoMapRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAutoMapRuleResponse>(req, "DescribeLibraDBClusterAutoMapRule");
+        }
+
+        /// <summary>
+        /// This API is used to view the advanced mapping rule of the analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterAutoMapRuleRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterAutoMapRuleResponse"/></returns>
+        public DescribeLibraDBClusterAutoMapRuleResponse DescribeLibraDBClusterAutoMapRuleSync(DescribeLibraDBClusterAutoMapRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterAutoMapRuleResponse>(req, "DescribeLibraDBClusterAutoMapRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TDSQL-C analysis cluster information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterDetailResponse"/></returns>
+        public Task<DescribeLibraDBClusterDetailResponse> DescribeLibraDBClusterDetail(DescribeLibraDBClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterDetailResponse>(req, "DescribeLibraDBClusterDetail");
+        }
+
+        /// <summary>
+        /// Query TDSQL-C analysis cluster information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterDetailResponse"/></returns>
+        public DescribeLibraDBClusterDetailResponse DescribeLibraDBClusterDetailSync(DescribeLibraDBClusterDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterDetailResponse>(req, "DescribeLibraDBClusterDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view the database/table mapping relationship of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterTableMappingRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterTableMappingResponse"/></returns>
+        public Task<DescribeLibraDBClusterTableMappingResponse> DescribeLibraDBClusterTableMapping(DescribeLibraDBClusterTableMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterTableMappingResponse>(req, "DescribeLibraDBClusterTableMapping");
+        }
+
+        /// <summary>
+        /// This API is used to view the database/table mapping relationship of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClusterTableMappingRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClusterTableMappingResponse"/></returns>
+        public DescribeLibraDBClusterTableMappingResponse DescribeLibraDBClusterTableMappingSync(DescribeLibraDBClusterTableMappingRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClusterTableMappingResponse>(req, "DescribeLibraDBClusterTableMapping")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the analysis cluster list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClustersRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClustersResponse"/></returns>
+        public Task<DescribeLibraDBClustersResponse> DescribeLibraDBClusters(DescribeLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClustersResponse>(req, "DescribeLibraDBClusters");
+        }
+
+        /// <summary>
+        /// Query the analysis cluster list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBClustersRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBClustersResponse"/></returns>
+        public DescribeLibraDBClustersResponse DescribeLibraDBClustersSync(DescribeLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBClustersResponse>(req, "DescribeLibraDBClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the source instance information of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBDataSourceResponse"/></returns>
+        public Task<DescribeLibraDBDataSourceResponse> DescribeLibraDBDataSource(DescribeLibraDBDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBDataSourceResponse>(req, "DescribeLibraDBDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to query the source instance information of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBDataSourceRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBDataSourceResponse"/></returns>
+        public DescribeLibraDBDataSourceResponse DescribeLibraDBDataSourceSync(DescribeLibraDBDataSourceRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBDataSourceResponse>(req, "DescribeLibraDBDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the analysis engine forwarding parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBForwardConfigResponse"/></returns>
+        public Task<DescribeLibraDBForwardConfigResponse> DescribeLibraDBForwardConfig(DescribeLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBForwardConfigResponse>(req, "DescribeLibraDBForwardConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query the analysis engine forwarding parameters.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBForwardConfigResponse"/></returns>
+        public DescribeLibraDBForwardConfigResponse DescribeLibraDBForwardConfigSync(DescribeLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBForwardConfigResponse>(req, "DescribeLibraDBForwardConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query read-only analysis engine details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceDetailResponse"/></returns>
+        public Task<DescribeLibraDBInstanceDetailResponse> DescribeLibraDBInstanceDetail(DescribeLibraDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceDetailResponse>(req, "DescribeLibraDBInstanceDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query read-only analysis engine details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceDetailResponse"/></returns>
+        public DescribeLibraDBInstanceDetailResponse DescribeLibraDBInstanceDetailSync(DescribeLibraDBInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceDetailResponse>(req, "DescribeLibraDBInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the specification list of the read-only analysis engine supported in the region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceSpecsResponse"/></returns>
+        public Task<DescribeLibraDBInstanceSpecsResponse> DescribeLibraDBInstanceSpecs(DescribeLibraDBInstanceSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceSpecsResponse>(req, "DescribeLibraDBInstanceSpecs");
+        }
+
+        /// <summary>
+        /// This API is used to query the specification list of the read-only analysis engine supported in the region.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBInstanceSpecsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBInstanceSpecsResponse"/></returns>
+        public DescribeLibraDBInstanceSpecsResponse DescribeLibraDBInstanceSpecsSync(DescribeLibraDBInstanceSpecsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBInstanceSpecsResponse>(req, "DescribeLibraDBInstanceSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query slow SQL details in the read-only analysis engine.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBSlowLogsResponse"/></returns>
+        public Task<DescribeLibraDBSlowLogsResponse> DescribeLibraDBSlowLogs(DescribeLibraDBSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBSlowLogsResponse>(req, "DescribeLibraDBSlowLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query slow SQL details in the read-only analysis engine.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBSlowLogsResponse"/></returns>
+        public DescribeLibraDBSlowLogsResponse DescribeLibraDBSlowLogsSync(DescribeLibraDBSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBSlowLogsResponse>(req, "DescribeLibraDBSlowLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the list of supported versions for the read-only analysis engine
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBVersionRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBVersionResponse"/></returns>
+        public Task<DescribeLibraDBVersionResponse> DescribeLibraDBVersion(DescribeLibraDBVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBVersionResponse>(req, "DescribeLibraDBVersion");
+        }
+
+        /// <summary>
+        /// Query the list of supported versions for the read-only analysis engine
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLibraDBVersionRequest"/></param>
+        /// <returns><see cref="DescribeLibraDBVersionResponse"/></returns>
+        public DescribeLibraDBVersionResponse DescribeLibraDBVersionSync(DescribeLibraDBVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeLibraDBVersionResponse>(req, "DescribeLibraDBVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintainPeriodRequest"/></param>
@@ -1797,6 +2259,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Query RedoLog backups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogListByVaultResponse"/></returns>
+        public Task<DescribeRedoLogListByVaultResponse> DescribeRedoLogListByVault(DescribeRedoLogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogListByVaultResponse>(req, "DescribeRedoLogListByVault");
+        }
+
+        /// <summary>
+        /// Query RedoLog backups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogListByVaultRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogListByVaultResponse"/></returns>
+        public DescribeRedoLogListByVaultResponse DescribeRedoLogListByVaultSync(DescribeRedoLogListByVaultRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogListByVaultResponse>(req, "DescribeRedoLogListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the redo log list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogsRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogsResponse"/></returns>
+        public Task<DescribeRedoLogsResponse> DescribeRedoLogs(DescribeRedoLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogsResponse>(req, "DescribeRedoLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query the redo log list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedoLogsRequest"/></param>
+        /// <returns><see cref="DescribeRedoLogsResponse"/></returns>
+        public DescribeRedoLogsResponse DescribeRedoLogsSync(DescribeRedoLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeRedoLogsResponse>(req, "DescribeRedoLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query resource package usage details.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourcePackageDetailRequest"/></param>
@@ -1898,6 +2402,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRangeSync(DescribeRollbackTimeRangeRequest req)
         {
             return InternalRequestAsync<DescribeRollbackTimeRangeResponse>(req, "DescribeRollbackTimeRange")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the execution plan details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSQLExecutionPlanRequest"/></param>
+        /// <returns><see cref="DescribeSQLExecutionPlanResponse"/></returns>
+        public Task<DescribeSQLExecutionPlanResponse> DescribeSQLExecutionPlan(DescribeSQLExecutionPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeSQLExecutionPlanResponse>(req, "DescribeSQLExecutionPlan");
+        }
+
+        /// <summary>
+        /// This API is used to query the execution plan details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSQLExecutionPlanRequest"/></param>
+        /// <returns><see cref="DescribeSQLExecutionPlanResponse"/></returns>
+        public DescribeSQLExecutionPlanResponse DescribeSQLExecutionPlanSync(DescribeSQLExecutionPlanRequest req)
+        {
+            return InternalRequestAsync<DescribeSQLExecutionPlanResponse>(req, "DescribeSQLExecutionPlan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query legacy backup cluster information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaveBackupClustersRequest"/></param>
+        /// <returns><see cref="DescribeSaveBackupClustersResponse"/></returns>
+        public Task<DescribeSaveBackupClustersResponse> DescribeSaveBackupClusters(DescribeSaveBackupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeSaveBackupClustersResponse>(req, "DescribeSaveBackupClusters");
+        }
+
+        /// <summary>
+        /// This API is used to query legacy backup cluster information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSaveBackupClustersRequest"/></param>
+        /// <returns><see cref="DescribeSaveBackupClustersResponse"/></returns>
+        public DescribeSaveBackupClustersResponse DescribeSaveBackupClustersSync(DescribeSaveBackupClustersRequest req)
+        {
+            return InternalRequestAsync<DescribeSaveBackupClustersResponse>(req, "DescribeSaveBackupClusters")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2007,6 +2553,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Query the cluster information list associated with the backup safe
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultBackupClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeVaultBackupClusterInfoResponse"/></returns>
+        public Task<DescribeVaultBackupClusterInfoResponse> DescribeVaultBackupClusterInfo(DescribeVaultBackupClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultBackupClusterInfoResponse>(req, "DescribeVaultBackupClusterInfo");
+        }
+
+        /// <summary>
+        /// Query the cluster information list associated with the backup safe
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultBackupClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeVaultBackupClusterInfoResponse"/></returns>
+        public DescribeVaultBackupClusterInfoResponse DescribeVaultBackupClusterInfoSync(DescribeVaultBackupClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultBackupClusterInfoResponse>(req, "DescribeVaultBackupClusterInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query backup safe list, support page, filter and sort.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultsRequest"/></param>
+        /// <returns><see cref="DescribeVaultsResponse"/></returns>
+        public Task<DescribeVaultsResponse> DescribeVaults(DescribeVaultsRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultsResponse>(req, "DescribeVaults");
+        }
+
+        /// <summary>
+        /// Query backup safe list, support page, filter and sort.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVaultsRequest"/></param>
+        /// <returns><see cref="DescribeVaultsResponse"/></returns>
+        public DescribeVaultsResponse DescribeVaultsSync(DescribeVaultsRequest req)
+        {
+            return InternalRequestAsync<DescribeVaultsResponse>(req, "DescribeVaults")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query marketable regional availability zone information.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
@@ -2024,6 +2612,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeZonesResponse DescribeZonesSync(DescribeZonesRequest req)
         {
             return InternalRequestAsync<DescribeZonesResponse>(req, "DescribeZones")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to unbind cloud resources from security groups in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public Task<DisassociateSecurityGroupsResponse> DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups");
+        }
+
+        /// <summary>
+        /// This API is used to unbind cloud resources from security groups in batches.
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateSecurityGroupsResponse"/></returns>
+        public DisassociateSecurityGroupsResponse DisassociateSecurityGroupsSync(DisassociateSecurityGroupsRequest req)
+        {
+            return InternalRequestAsync<DisassociateSecurityGroupsResponse>(req, "DisassociateSecurityGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Download the analysis cluster list
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLibraDBClusterListRequest"/></param>
+        /// <returns><see cref="DownloadLibraDBClusterListResponse"/></returns>
+        public Task<DownloadLibraDBClusterListResponse> DownloadLibraDBClusterList(DownloadLibraDBClusterListRequest req)
+        {
+            return InternalRequestAsync<DownloadLibraDBClusterListResponse>(req, "DownloadLibraDBClusterList");
+        }
+
+        /// <summary>
+        /// Download the analysis cluster list
+        /// </summary>
+        /// <param name="req"><see cref="DownloadLibraDBClusterListRequest"/></param>
+        /// <returns><see cref="DownloadLibraDBClusterListResponse"/></returns>
+        public DownloadLibraDBClusterListResponse DownloadLibraDBClusterListSync(DownloadLibraDBClusterListRequest req)
+        {
+            return InternalRequestAsync<DownloadLibraDBClusterListResponse>(req, "DownloadLibraDBClusterList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2087,6 +2717,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetailsSync(ExportResourcePackageDeductDetailsRequest req)
         {
             return InternalRequestAsync<ExportResourcePackageDeductDetailsResponse>(req, "ExportResourcePackageDeductDetails")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to grant permissions to authorized accounts in batch.
+        /// </summary>
+        /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
+        public Task<GrantAccountPrivilegesResponse> GrantAccountPrivileges(GrantAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<GrantAccountPrivilegesResponse>(req, "GrantAccountPrivileges");
+        }
+
+        /// <summary>
+        /// This API is used to grant permissions to authorized accounts in batch.
+        /// </summary>
+        /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="GrantAccountPrivilegesResponse"/></returns>
+        public GrantAccountPrivilegesResponse GrantAccountPrivilegesSync(GrantAccountPrivilegesRequest req)
+        {
+            return InternalRequestAsync<GrantAccountPrivilegesResponse>(req, "GrantAccountPrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2213,6 +2864,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public IsolateInstanceResponse IsolateInstanceSync(IsolateInstanceRequest req)
         {
             return InternalRequestAsync<IsolateInstanceResponse>(req, "IsolateInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Isolating a TDSQL-C Analysis Cluster
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBClusterResponse"/></returns>
+        public Task<IsolateLibraDBClusterResponse> IsolateLibraDBCluster(IsolateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBClusterResponse>(req, "IsolateLibraDBCluster");
+        }
+
+        /// <summary>
+        /// Isolating a TDSQL-C Analysis Cluster
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBClusterRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBClusterResponse"/></returns>
+        public IsolateLibraDBClusterResponse IsolateLibraDBClusterSync(IsolateLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBClusterResponse>(req, "IsolateLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to isolate read-only analysis engine instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBInstanceResponse"/></returns>
+        public Task<IsolateLibraDBInstanceResponse> IsolateLibraDBInstance(IsolateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBInstanceResponse>(req, "IsolateLibraDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to isolate read-only analysis engine instances.
+        /// </summary>
+        /// <param name="req"><see cref="IsolateLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateLibraDBInstanceResponse"/></returns>
+        public IsolateLibraDBInstanceResponse IsolateLibraDBInstanceSync(IsolateLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<IsolateLibraDBInstanceResponse>(req, "IsolateLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2448,6 +3141,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify cluster configuration to automatically copy Binlog and RedoLog to safe.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultRequest"/></param>
+        /// <returns><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultResponse"/></returns>
+        public Task<ModifyClusterBinlogRedoLogAutoCopyVaultResponse> ModifyClusterBinlogRedoLogAutoCopyVault(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterBinlogRedoLogAutoCopyVaultResponse>(req, "ModifyClusterBinlogRedoLogAutoCopyVault");
+        }
+
+        /// <summary>
+        /// This API is used to modify cluster configuration to automatically copy Binlog and RedoLog to safe.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultRequest"/></param>
+        /// <returns><see cref="ModifyClusterBinlogRedoLogAutoCopyVaultResponse"/></returns>
+        public ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVaultSync(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterBinlogRedoLogAutoCopyVaultResponse>(req, "ModifyClusterBinlogRedoLogAutoCopyVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify account authorization of a database.
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterDatabaseRequest"/></param>
@@ -2465,6 +3179,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterDatabaseResponse ModifyClusterDatabaseSync(ModifyClusterDatabaseRequest req)
         {
             return InternalRequestAsync<ModifyClusterDatabaseResponse>(req, "ModifyClusterDatabase")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable global encryption
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterGlobalEncryptionRequest"/></param>
+        /// <returns><see cref="ModifyClusterGlobalEncryptionResponse"/></returns>
+        public Task<ModifyClusterGlobalEncryptionResponse> ModifyClusterGlobalEncryption(ModifyClusterGlobalEncryptionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption");
+        }
+
+        /// <summary>
+        /// Enable global encryption
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterGlobalEncryptionRequest"/></param>
+        /// <returns><see cref="ModifyClusterGlobalEncryptionResponse"/></returns>
+        public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryptionSync(ModifyClusterGlobalEncryptionRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2658,6 +3393,174 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the description of a cluster account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountDescriptionResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountDescriptionResponse> ModifyLibraDBClusterAccountDescription(ModifyLibraDBClusterAccountDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountDescriptionResponse>(req, "ModifyLibraDBClusterAccountDescription");
+        }
+
+        /// <summary>
+        /// This API is used to modify the description of a cluster account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountDescriptionResponse"/></returns>
+        public ModifyLibraDBClusterAccountDescriptionResponse ModifyLibraDBClusterAccountDescriptionSync(ModifyLibraDBClusterAccountDescriptionRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountDescriptionResponse>(req, "ModifyLibraDBClusterAccountDescription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the log in to the host information of a cluster account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountHostResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountHostResponse> ModifyLibraDBClusterAccountHost(ModifyLibraDBClusterAccountHostRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountHostResponse>(req, "ModifyLibraDBClusterAccountHost");
+        }
+
+        /// <summary>
+        /// This API is used to modify the log in to the host information of a cluster account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountHostResponse"/></returns>
+        public ModifyLibraDBClusterAccountHostResponse ModifyLibraDBClusterAccountHostSync(ModifyLibraDBClusterAccountHostRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountHostResponse>(req, "ModifyLibraDBClusterAccountHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the permission of a cluster account for analytics.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountPrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountPrivilegeResponse"/></returns>
+        public Task<ModifyLibraDBClusterAccountPrivilegeResponse> ModifyLibraDBClusterAccountPrivilege(ModifyLibraDBClusterAccountPrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountPrivilegeResponse>(req, "ModifyLibraDBClusterAccountPrivilege");
+        }
+
+        /// <summary>
+        /// This API is used to modify the permission of a cluster account for analytics.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterAccountPrivilegeRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterAccountPrivilegeResponse"/></returns>
+        public ModifyLibraDBClusterAccountPrivilegeResponse ModifyLibraDBClusterAccountPrivilegeSync(ModifyLibraDBClusterAccountPrivilegeRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterAccountPrivilegeResponse>(req, "ModifyLibraDBClusterAccountPrivilege")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the TDSQL-C analytical cluster data source.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterDataSourceResponse"/></returns>
+        public Task<ModifyLibraDBClusterDataSourceResponse> ModifyLibraDBClusterDataSource(ModifyLibraDBClusterDataSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterDataSourceResponse>(req, "ModifyLibraDBClusterDataSource");
+        }
+
+        /// <summary>
+        /// This API is used to modify the TDSQL-C analytical cluster data source.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterDataSourceResponse"/></returns>
+        public ModifyLibraDBClusterDataSourceResponse ModifyLibraDBClusterDataSourceSync(ModifyLibraDBClusterDataSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterDataSourceResponse>(req, "ModifyLibraDBClusterDataSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterNameResponse"/></returns>
+        public Task<ModifyLibraDBClusterNameResponse> ModifyLibraDBClusterName(ModifyLibraDBClusterNameRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterNameResponse>(req, "ModifyLibraDBClusterName");
+        }
+
+        /// <summary>
+        /// This API is used to modify the name of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterNameResponse"/></returns>
+        public ModifyLibraDBClusterNameResponse ModifyLibraDBClusterNameSync(ModifyLibraDBClusterNameRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterNameResponse>(req, "ModifyLibraDBClusterName")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the project ID of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterProjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterProjectResponse"/></returns>
+        public Task<ModifyLibraDBClusterProjectResponse> ModifyLibraDBClusterProject(ModifyLibraDBClusterProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterProjectResponse>(req, "ModifyLibraDBClusterProject");
+        }
+
+        /// <summary>
+        /// This API is used to modify the project ID of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterProjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterProjectResponse"/></returns>
+        public ModifyLibraDBClusterProjectResponse ModifyLibraDBClusterProjectSync(ModifyLibraDBClusterProjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterProjectResponse>(req, "ModifyLibraDBClusterProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the sync object of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterReplicationObjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterReplicationObjectResponse"/></returns>
+        public Task<ModifyLibraDBClusterReplicationObjectResponse> ModifyLibraDBClusterReplicationObject(ModifyLibraDBClusterReplicationObjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterReplicationObjectResponse>(req, "ModifyLibraDBClusterReplicationObject");
+        }
+
+        /// <summary>
+        /// This API is used to modify the sync object of an analysis cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBClusterReplicationObjectRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBClusterReplicationObjectResponse"/></returns>
+        public ModifyLibraDBClusterReplicationObjectResponse ModifyLibraDBClusterReplicationObjectSync(ModifyLibraDBClusterReplicationObjectRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBClusterReplicationObjectResponse>(req, "ModifyLibraDBClusterReplicationObject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the automatic forwarding parameter of a read-only analysis instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBForwardConfigResponse"/></returns>
+        public Task<ModifyLibraDBForwardConfigResponse> ModifyLibraDBForwardConfig(ModifyLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBForwardConfigResponse>(req, "ModifyLibraDBForwardConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the automatic forwarding parameter of a read-only analysis instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLibraDBForwardConfigRequest"/></param>
+        /// <returns><see cref="ModifyLibraDBForwardConfigResponse"/></returns>
+        public ModifyLibraDBForwardConfigResponse ModifyLibraDBForwardConfigSync(ModifyLibraDBForwardConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyLibraDBForwardConfigResponse>(req, "ModifyLibraDBForwardConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify maintenance time configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintainPeriodConfigRequest"/></param>
@@ -2826,6 +3729,48 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to modify the snapshot backup cross-region configuration of a specified cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapBackupCrossRegionConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapBackupCrossRegionConfigResponse"/></returns>
+        public Task<ModifySnapBackupCrossRegionConfigResponse> ModifySnapBackupCrossRegionConfig(ModifySnapBackupCrossRegionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifySnapBackupCrossRegionConfigResponse>(req, "ModifySnapBackupCrossRegionConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the snapshot backup cross-region configuration of a specified cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapBackupCrossRegionConfigRequest"/></param>
+        /// <returns><see cref="ModifySnapBackupCrossRegionConfigResponse"/></returns>
+        public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfigSync(ModifySnapBackupCrossRegionConfigRequest req)
+        {
+            return InternalRequestAsync<ModifySnapBackupCrossRegionConfigResponse>(req, "ModifySnapBackupCrossRegionConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify backup safe configuration, including the name, description, retention duration, encryption key, lock time.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVaultRequest"/></param>
+        /// <returns><see cref="ModifyVaultResponse"/></returns>
+        public Task<ModifyVaultResponse> ModifyVault(ModifyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyVaultResponse>(req, "ModifyVault");
+        }
+
+        /// <summary>
+        /// Modify backup safe configuration, including the name, description, retention duration, encryption key, lock time.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVaultRequest"/></param>
+        /// <returns><see cref="ModifyVaultResponse"/></returns>
+        public ModifyVaultResponse ModifyVaultSync(ModifyVaultRequest req)
+        {
+            return InternalRequestAsync<ModifyVaultResponse>(req, "ModifyVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the ip and port of an instance group.
         /// </summary>
         /// <param name="req"><see cref="ModifyVipVportRequest"/></param>
@@ -2885,6 +3830,48 @@ namespace TencentCloud.Cynosdb.V20190107
         public OfflineInstanceResponse OfflineInstanceSync(OfflineInstanceRequest req)
         {
             return InternalRequestAsync<OfflineInstanceResponse>(req, "OfflineInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Decommission an analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBClusterRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBClusterResponse"/></returns>
+        public Task<OfflineLibraDBClusterResponse> OfflineLibraDBCluster(OfflineLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBClusterResponse>(req, "OfflineLibraDBCluster");
+        }
+
+        /// <summary>
+        /// Decommission an analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBClusterRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBClusterResponse"/></returns>
+        public OfflineLibraDBClusterResponse OfflineLibraDBClusterSync(OfflineLibraDBClusterRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBClusterResponse>(req, "OfflineLibraDBCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to decommission a read-only analysis engine instance.
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBInstanceResponse"/></returns>
+        public Task<OfflineLibraDBInstanceResponse> OfflineLibraDBInstance(OfflineLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to decommission a read-only analysis engine instance.
+        /// </summary>
+        /// <param name="req"><see cref="OfflineLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="OfflineLibraDBInstanceResponse"/></returns>
+        public OfflineLibraDBInstanceResponse OfflineLibraDBInstanceSync(OfflineLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3120,6 +4107,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Renew an analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="RenewLibraDBClustersRequest"/></param>
+        /// <returns><see cref="RenewLibraDBClustersResponse"/></returns>
+        public Task<RenewLibraDBClustersResponse> RenewLibraDBClusters(RenewLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<RenewLibraDBClustersResponse>(req, "RenewLibraDBClusters");
+        }
+
+        /// <summary>
+        /// Renew an analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="RenewLibraDBClustersRequest"/></param>
+        /// <returns><see cref="RenewLibraDBClustersResponse"/></returns>
+        public RenewLibraDBClustersResponse RenewLibraDBClustersSync(RenewLibraDBClustersRequest req)
+        {
+            return InternalRequestAsync<RenewLibraDBClustersResponse>(req, "RenewLibraDBClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to replay instance audit logs.
         /// </summary>
         /// <param name="req"><see cref="ReplayInstanceAuditLogRequest"/></param>
@@ -3162,6 +4170,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// Modify the cluster account password for analytics
+        /// </summary>
+        /// <param name="req"><see cref="ResetLibraDBClusterAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetLibraDBClusterAccountPasswordResponse"/></returns>
+        public Task<ResetLibraDBClusterAccountPasswordResponse> ResetLibraDBClusterAccountPassword(ResetLibraDBClusterAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetLibraDBClusterAccountPasswordResponse>(req, "ResetLibraDBClusterAccountPassword");
+        }
+
+        /// <summary>
+        /// Modify the cluster account password for analytics
+        /// </summary>
+        /// <param name="req"><see cref="ResetLibraDBClusterAccountPasswordRequest"/></param>
+        /// <returns><see cref="ResetLibraDBClusterAccountPasswordResponse"/></returns>
+        public ResetLibraDBClusterAccountPasswordResponse ResetLibraDBClusterAccountPasswordSync(ResetLibraDBClusterAccountPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetLibraDBClusterAccountPasswordResponse>(req, "ResetLibraDBClusterAccountPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to reboot an instance.
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
@@ -3179,6 +4208,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public RestartInstanceResponse RestartInstanceSync(RestartInstanceRequest req)
         {
             return InternalRequestAsync<RestartInstanceResponse>(req, "RestartInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Restart the read-only analysis engine
+        /// </summary>
+        /// <param name="req"><see cref="RestartLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="RestartLibraDBInstanceResponse"/></returns>
+        public Task<RestartLibraDBInstanceResponse> RestartLibraDBInstance(RestartLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartLibraDBInstanceResponse>(req, "RestartLibraDBInstance");
+        }
+
+        /// <summary>
+        /// Restart the read-only analysis engine
+        /// </summary>
+        /// <param name="req"><see cref="RestartLibraDBInstanceRequest"/></param>
+        /// <returns><see cref="RestartLibraDBInstanceResponse"/></returns>
+        public RestartLibraDBInstanceResponse RestartLibraDBInstanceSync(RestartLibraDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RestartLibraDBInstanceResponse>(req, "RestartLibraDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3284,6 +4334,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public SearchClusterTablesResponse SearchClusterTablesSync(SearchClusterTablesRequest req)
         {
             return InternalRequestAsync<SearchClusterTablesResponse>(req, "SearchClusterTables")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Set whether to renew the TDSQL-C analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="SetLibraDBClusterRenewFlagRequest"/></param>
+        /// <returns><see cref="SetLibraDBClusterRenewFlagResponse"/></returns>
+        public Task<SetLibraDBClusterRenewFlagResponse> SetLibraDBClusterRenewFlag(SetLibraDBClusterRenewFlagRequest req)
+        {
+            return InternalRequestAsync<SetLibraDBClusterRenewFlagResponse>(req, "SetLibraDBClusterRenewFlag");
+        }
+
+        /// <summary>
+        /// Set whether to renew the TDSQL-C analysis cluster
+        /// </summary>
+        /// <param name="req"><see cref="SetLibraDBClusterRenewFlagRequest"/></param>
+        /// <returns><see cref="SetLibraDBClusterRenewFlagResponse"/></returns>
+        public SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlagSync(SetLibraDBClusterRenewFlagRequest req)
+        {
+            return InternalRequestAsync<SetLibraDBClusterRenewFlagResponse>(req, "SetLibraDBClusterRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3410,6 +4481,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public SwitchProxyVpcResponse SwitchProxyVpcSync(SwitchProxyVpcRequest req)
         {
             return InternalRequestAsync<SwitchProxyVpcResponse>(req, "SwitchProxyVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to trigger cross-AZ migration.
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
+        /// <returns><see cref="TransferClusterZoneResponse"/></returns>
+        public Task<TransferClusterZoneResponse> TransferClusterZone(TransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone");
+        }
+
+        /// <summary>
+        /// This API is used to trigger cross-AZ migration.
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
+        /// <returns><see cref="TransferClusterZoneResponse"/></returns>
+        public TransferClusterZoneResponse TransferClusterZoneSync(TransferClusterZoneRequest req)
+        {
+            return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

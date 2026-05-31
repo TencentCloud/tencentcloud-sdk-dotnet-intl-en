@@ -25,7 +25,7 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// The callback configuration for push events.
+        /// Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
         /// </summary>
         [JsonProperty("PushEventSettings")]
         public PushEventSetting PushEventSettings{ get; set; }

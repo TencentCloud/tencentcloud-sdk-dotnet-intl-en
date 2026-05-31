@@ -49,6 +49,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
+        /// Instance Machine Type
+        /// 1. common: general.
+        /// 2. exclusive, dedicated.
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
         /// This parameter has been disused.
         /// </summary>
         [JsonProperty("StorageLimit")]
@@ -78,6 +86,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("UpgradeProxy")]
+        public UpgradeProxy UpgradeProxy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,11 +102,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+            this.SetParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
         }
     }
 }

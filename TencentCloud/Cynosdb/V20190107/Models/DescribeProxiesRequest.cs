@@ -25,41 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+        /// <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default value: `20`. Maximum value: `100`,
+        /// <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. Default value: `0`.
+        /// <p>Record offset. Default value is 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values:
-        /// <li> CREATETIME: Creation time</li>
-        /// <li> PERIODENDTIME: Expiration time</li>
+        /// <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values:
-        /// <li> `ASC`: Ascending.</li>
-        /// <li> `DESC`: Descending</li>
+        /// <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+        /// <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryParamFilter[] Filters{ get; set; }

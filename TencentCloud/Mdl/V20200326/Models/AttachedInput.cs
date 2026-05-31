@@ -52,7 +52,8 @@ namespace TencentCloud.Mdl.V20200326.Models
         public FailOverSettings FailOverSettings{ get; set; }
 
         /// <summary>
-        /// Caption selector for the input. There can be 0 to 1 audio selectors.
+        /// Subtitle selector.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CaptionSelectors")]
         public CaptionSelector[] CaptionSelectors{ get; set; }
