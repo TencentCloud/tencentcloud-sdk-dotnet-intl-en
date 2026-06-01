@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ForReadonlyInstance")]
         public bool? ForReadonlyInstance{ get; set; }
 
+        /// <summary>
+        /// When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+        /// </summary>
+        [JsonProperty("OpResourceId")]
+        public string OpResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
+            this.SetParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
         }
     }
 }

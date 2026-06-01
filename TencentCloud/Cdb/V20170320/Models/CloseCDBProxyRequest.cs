@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Proxy group ID
+        /// Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }

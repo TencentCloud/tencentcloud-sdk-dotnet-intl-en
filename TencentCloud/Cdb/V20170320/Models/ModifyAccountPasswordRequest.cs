@@ -37,10 +37,17 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string NewPassword{ get; set; }
 
         /// <summary>
-        /// TencentDB account
+        /// TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
+
+        /// <summary>
+        /// Deprecated.
+        /// </summary>
+        [JsonProperty("SkipValidatePassword")]
+        [System.Obsolete]
+        public bool? SkipValidatePassword{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "NewPassword", this.NewPassword);
             this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "SkipValidatePassword", this.SkipValidatePassword);
         }
     }
 }

@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// The maximum weight
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// Division ceiling
         /// </summary>
         [JsonProperty("LessThan")]
         public ulong? LessThan{ get; set; }
 
         /// <summary>
         /// Weight
-        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

@@ -25,7 +25,8 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+        /// Description: Only the primary instance supports querying. This item only supports input of the primary instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

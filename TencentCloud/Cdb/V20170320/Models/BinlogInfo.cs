@@ -25,82 +25,89 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Binlog backup filename
+        /// <p>binlog backup file name</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Backup file size in bytes
+        /// <p>Backup file size, unit: Byte</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// File stored time in the format of 2016-03-17 02:10:37
+        /// <p>File storage time. Time format: 2016-03-17 02:10:37</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// Download address
+        /// <p>Download link<br>Description: This download link is the same as the download address of the parameter InternetUrl.</p>
         /// </summary>
         [JsonProperty("IntranetUrl")]
         public string IntranetUrl{ get; set; }
 
         /// <summary>
-        /// Download address
+        /// <p>Download address<br>Description: This download address is the same as the IntranetUrl download address.</p>
         /// </summary>
         [JsonProperty("InternetUrl")]
         public string InternetUrl{ get; set; }
 
         /// <summary>
-        /// Log type. Value range: binlog
+        /// <p>Log specific type. Possible values: binlog - binary log</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Binlog file start file
+        /// <p>binlog file start time</p>
         /// </summary>
         [JsonProperty("BinlogStartTime")]
         public string BinlogStartTime{ get; set; }
 
         /// <summary>
-        /// Binlog file end time
+        /// <p>binlog file expiration time</p>
         /// </summary>
         [JsonProperty("BinlogFinishTime")]
         public string BinlogFinishTime{ get; set; }
 
         /// <summary>
-        /// The region where the binlog file resides
+        /// <p>Region where local binlog files are located</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+        /// <p>Backup task status. Possible values: "SUCCESS": backup successful, "FAILED": backup FAILED, "RUNNING": backup in progress.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The detailed information of remote binlog backups
+        /// <p>Detailed information of binlog offsite backup</p>
         /// </summary>
         [JsonProperty("RemoteInfo")]
         public RemoteBackupInfo[] RemoteInfo{ get; set; }
 
         /// <summary>
-        /// Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+        /// <p>Storage method: 0 - regular storage, 1 - archive storage, 2 - standard storage, defaults to 0.</p>
         /// </summary>
         [JsonProperty("CosStorageType")]
         public long? CosStorageType{ get; set; }
 
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+        /// <p>Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
+        [System.Obsolete]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>Backup completion progress</p>
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
 
 
         /// <summary>
@@ -121,6 +128,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
             this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }

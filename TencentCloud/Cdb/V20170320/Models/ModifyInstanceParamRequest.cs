@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// List of short instance IDs.
+        /// Instance ID list, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Parameter[] ParamList{ get; set; }
 
         /// <summary>
-        /// Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+        /// Template ID. At least one of ParamList and TemplateId must be provided. It can be obtained through the API [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

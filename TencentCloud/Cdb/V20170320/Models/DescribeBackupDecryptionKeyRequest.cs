@@ -25,16 +25,22 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of  cdb-XXXX,  which is the same as the instance ID displayed in the TencentDB console.
+        /// Instance ID, in the format such as cdb-fybaegd8. This matches the instance ID displayed on the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance backup ID, which can be obtained by the `DescribeBackups` API.
+        /// Backup ID of the instance, which can be obtained through the [DescribeBackups](https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
+
+        /// <summary>
+        /// Backup type. data - data backup, binlog - log backup. The default value is data.
+        /// </summary>
+        [JsonProperty("BackupType")]
+        public string BackupType{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
         }
     }
 }

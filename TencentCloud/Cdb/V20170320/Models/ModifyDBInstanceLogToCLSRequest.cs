@@ -25,58 +25,66 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log type. Valid values: error and slowLog.
+        /// Log type. error: error log. slowlog: slow log.
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Enabling status. Valid values: ON and OFF.
+        /// Delivery status. ON: Enabled, OFF: Disabled.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Indicates whether a log set needs to be created.
+        /// Whether required to create logset. Default to false.
         /// </summary>
         [JsonProperty("CreateLogset")]
         public bool? CreateLogset{ get; set; }
 
         /// <summary>
-        /// Log set name if the log set is to be created or ID of the selected existing log set.
+        /// Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
+        /// Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
         /// </summary>
         [JsonProperty("Logset")]
         public string Logset{ get; set; }
 
         /// <summary>
-        /// Indicates whether a log topic needs to be created.
+        /// Whether required to create log topic. Default to false.
         /// </summary>
         [JsonProperty("CreateLogTopic")]
         public bool? CreateLogTopic{ get; set; }
 
         /// <summary>
-        /// Log topic name if the topic is to be created or ID of the selected existing topic.
+        /// Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
+        /// Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
         /// </summary>
         [JsonProperty("LogTopic")]
         public string LogTopic{ get; set; }
 
         /// <summary>
-        /// Log topic validity period, which is 30 days by default if not specified.
+        /// Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Indicates whether to create an index when creating the log topic.
+        /// Whether to create an index when creating a log topic. Default to false.
         /// </summary>
         [JsonProperty("CreateIndex")]
         public bool? CreateIndex{ get; set; }
+
+        /// <summary>
+        /// The region of CLS. If left empty, it defaults to the parameter value of Region.
+        /// </summary>
+        [JsonProperty("ClsRegion")]
+        public string ClsRegion{ get; set; }
 
 
         /// <summary>
@@ -93,6 +101,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LogTopic", this.LogTopic);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
+            this.SetParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
         }
     }
 }

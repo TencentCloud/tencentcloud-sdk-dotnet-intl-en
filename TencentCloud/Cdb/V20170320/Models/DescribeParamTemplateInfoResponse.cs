@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Database engine version specified in the parameter template
+        /// The parameter template corresponds to the instance version. Valid values: 5.5, 5.6, 5.7, 8.0.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -67,8 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// Parameter template engine.  Valid values: `InnoDB`, `RocksDB`. 
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Parameter template engine. Supported values include "InnoDB", "RocksDB".
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

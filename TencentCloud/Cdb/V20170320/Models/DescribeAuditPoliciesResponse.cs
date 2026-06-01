@@ -31,8 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Audit policy details
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Audit policy details.
         /// </summary>
         [JsonProperty("Items")]
         public AuditPolicy[] Items{ get; set; }

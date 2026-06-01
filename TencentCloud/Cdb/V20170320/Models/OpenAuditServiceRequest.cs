@@ -25,37 +25,53 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// TencentDB for MySQL instance ID
+        /// CDB instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Retention period of the audit log. Valid values:  `7` (one week), `30` (one month), `90` (three months), `180` (six months), `365` (one year), `1095` (three years), `1825` (five years).
+        /// Audit log retention period. Supported values include:
+        /// 7 - A week;
+        /// 30 - one month
+        /// 90 - three months;
+        /// 180 - 6 months;
+        /// 365 - One year;
+        /// 1095 - Three years;
+        /// 1825 - Five years.
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// Retention period of high-frequency audit logs. Valid values:  `7` (one week), `30` (one month).
+        /// High frequency audit log retention period. Default value is 7. This item must take value less than or equal to LogExpireDay. Supported values include:
+        /// 3 - 3 days;
+        /// 7 - A week;
+        /// 30 - one month
+        /// 90 - three months;
+        /// 180 - 6 months;
+        /// 365 - One year;
+        /// 1095 - Three years;
+        /// 1825 - Five years.
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// Audit rule If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+        /// Audit rule (deprecated, no longer effective).
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
+        [System.Obsolete]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// Rule template ID. If both this parameter and AuditRuleFilters are not specified, all SQL statements will be recorded.
+        /// Rule template ID.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Audit type. Valid values: true: Record all; false: Record by rules (default value).
+        /// Audit type. true - full audit; default false - rule audit.
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }

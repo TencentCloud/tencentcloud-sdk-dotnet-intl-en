@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TranId{ get; set; }
 
         /// <summary>
-        /// <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
+        /// <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1098/40735">DescribeResourcesByDealName</a> api to query order associated instance.</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

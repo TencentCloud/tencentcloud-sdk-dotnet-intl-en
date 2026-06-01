@@ -36,6 +36,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EncryptionStatus")]
         public string EncryptionStatus{ get; set; }
 
+        /// <summary>
+        /// Set the default encryption status of the newly-added automated log backup file for the instance. Available values are on or off.
+        /// </summary>
+        [JsonProperty("BinlogEncryptionStatus")]
+        public string BinlogEncryptionStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
+            this.SetParamSimple(map, prefix + "BinlogEncryptionStatus", this.BinlogEncryptionStatus);
         }
     }
 }

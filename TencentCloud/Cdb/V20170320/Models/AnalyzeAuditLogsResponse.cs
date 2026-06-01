@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Information set of the aggregation bucket returned
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Returned aggregation bucket information set
         /// </summary>
         [JsonProperty("Items")]
         public AuditLogAggregationResult[] Items{ get; set; }
 
         /// <summary>
-        /// Number of scanned logs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of logs scanned
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

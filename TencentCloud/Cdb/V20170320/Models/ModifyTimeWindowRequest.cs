@@ -25,25 +25,35 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
+        /// The modified maintenance time slot. Among them, each time period is in the format of 10:00-12:00. The start and end time is aligned by half hour. The shortest is half hour and the longest is three hours. Up to two time periods can be set. The start and end time ranges from [00:00, 24:00].
+        /// Description: The following is an example of setting two time periods in json.
+        /// [
+        ///     "01:00-01:30",
+        ///     "02:00-02:30"
+        ///   ]
         /// </summary>
         [JsonProperty("TimeRanges")]
         public string[] TimeRanges{ get; set; }
 
         /// <summary>
-        /// Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+        /// Specify which day to modify the maintenance time slot. Possible values are: monday, tuesday, wednesday, thursday, friday, saturday, sunday. If not specified or empty, modify all seven days of the week by default.
+        /// Description: The json example for modifying more than one day is as follows.
+        /// [
+        ///     "monday",
+        ///     "tuesday"
+        ///   ]
         /// </summary>
         [JsonProperty("Weekdays")]
         public string[] Weekdays{ get; set; }
 
         /// <summary>
-        /// Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+        /// Data latency threshold (seconds), only applicable to primary instance and disaster recovery instance. No modification by default to keep the original threshold. Value ranges from 1 to 10 integers.
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public ulong? MaxDelayTime{ get; set; }

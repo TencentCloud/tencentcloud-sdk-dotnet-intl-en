@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
+        /// Query the cloning task list of the specified source instance. Obtain the instance ID through the [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results per page. Default value: `20`.
+        /// Number of entries per page for paging query. Default value: 20. Maximum value: 100 recommended.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

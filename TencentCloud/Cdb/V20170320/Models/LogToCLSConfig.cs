@@ -25,25 +25,28 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Enabling status of the feature.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Delivery status on or turn off
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// CLS log set ID.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// CLS Logset ID
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// Log topic ID.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Log topic ID
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// Region of the CLS service
+        /// </summary>
+        [JsonProperty("ClsRegion")]
+        public string ClsRegion{ get; set; }
 
 
         /// <summary>
@@ -54,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
         }
     }
 }

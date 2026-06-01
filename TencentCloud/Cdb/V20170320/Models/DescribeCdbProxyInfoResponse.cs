@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Number of proxy groups Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of proxy groups
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Proxy group information Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy group information
         /// </summary>
         [JsonProperty("ProxyInfos")]
         public ProxyGroupInfo[] ProxyInfos{ get; set; }

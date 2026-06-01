@@ -25,29 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Template ID. 
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Template ID.
         /// </summary>
         [JsonProperty("RuleTemplateId")]
         public string RuleTemplateId{ get; set; }
 
         /// <summary>
-        /// Template name.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Rule template name
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// Alarm level. Valid values: 1: Low risk; 2: Medium risk; 3: High risk. 
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public string AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Template change status. Valid values: 0: Unchanged; 1: Changed; 2: Deleted.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Rule template change status. Valid values: 0 - Not changed, 1 - changed, 2 - deleted.
         /// </summary>
         [JsonProperty("RuleTemplateStatus")]
         public long? RuleTemplateStatus{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Short order ID.
+        /// <p>Short order ID.</p>
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
 
         /// <summary>
-        /// Instance ID list
+        /// <p>Instance ID list.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

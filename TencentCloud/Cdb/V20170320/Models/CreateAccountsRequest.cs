@@ -37,13 +37,17 @@ namespace TencentCloud.Cdb.V20170320.Models
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Password of the new account
+        /// Password of the new account.
+        /// Note:
+        /// 1. Within 8–64 characters (recommend not exceeding 12).
+        /// 2. At least two of the following items: lowercase letter a – z or uppercase letter A – Z, digit 0 – 9, _+-,&=!@#$%^*().|.
+        /// 3. Cannot contain invalid characters.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remark information. Input limit: 255 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

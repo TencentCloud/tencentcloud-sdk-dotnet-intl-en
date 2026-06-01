@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Target IP. Either this parameter or `DstPort` must be passed in.
+        /// Target IP address.
         /// </summary>
         [JsonProperty("DstIp")]
         public string DstIp{ get; set; }
 
         /// <summary>
-        /// Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+        /// Destination port. Support scope: [1024-65535].
         /// </summary>
         [JsonProperty("DstPort")]
         public long? DstPort{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ReleaseDuration")]
         public long? ReleaseDuration{ get; set; }
 
+        /// <summary>
+        /// When updating the read-only group of a cluster edition instance, specify the instance id in InstanceId and this parameter is required to indicate the operation is for the read-only group. If you perform the operation on the read-write node, this parameter is not required.
+        /// </summary>
+        [JsonProperty("OpResourceId")]
+        public string OpResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
             this.SetParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
+            this.SetParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
         }
     }
 }

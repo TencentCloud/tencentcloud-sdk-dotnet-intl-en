@@ -25,36 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Device
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// device
         /// </summary>
         [JsonProperty("Device")]
         public string Device{ get; set; }
 
         /// <summary>
-        /// Type
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// Type.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Device type
-        /// Note: this field may return `null`, indicating that no valid value can be found.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Memory
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// Memory, measured in MB
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// Number of cores
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }

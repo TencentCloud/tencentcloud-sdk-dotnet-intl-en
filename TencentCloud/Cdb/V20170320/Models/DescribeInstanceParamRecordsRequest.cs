@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: 20.
+        /// Page size. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

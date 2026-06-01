@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// Original database name before rollback
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// New database name after rollback
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Name of the rolled back database
         /// </summary>
         [JsonProperty("NewDatabaseName")]
         public string NewDatabaseName{ get; set; }

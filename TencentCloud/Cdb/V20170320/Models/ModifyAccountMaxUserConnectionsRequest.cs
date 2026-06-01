@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// List of TencentDB accounts
+        /// Cloud Database account. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }

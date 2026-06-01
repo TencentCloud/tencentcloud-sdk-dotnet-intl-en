@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string AsyncRequestId{ get; set; }
 
         /// <summary>
-        /// Pagination parameter, i.e., the number of entries to be returned for a single request. Default value: 20. Maximum value: 100.
+        /// Pagination parameter. Number of records returned per request. Default value: 20. Maximum value: 100 is recommended.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

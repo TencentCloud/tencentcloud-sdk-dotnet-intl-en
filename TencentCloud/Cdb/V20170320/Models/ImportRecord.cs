@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Status value
+        /// Status value. 0 - Initializing, 1 - Running, 2 - Operation successful, 3 - Operation failure.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Status value
+        /// Status value. Task exception when the value is negative.
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// Execution duration
+        /// Execution time, unit: seconds.
         /// </summary>
         [JsonProperty("CostTime")]
         public long? CostTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Execution progress
+        /// Execution progress, measurement unit: percentage.
         /// </summary>
         [JsonProperty("Process")]
         public long? Process{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// File size
+        /// File size, unit: byte.
         /// </summary>
         [JsonProperty("FileSize")]
         public string FileSize{ get; set; }

@@ -43,22 +43,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Encryption{ get; set; }
 
         /// <summary>
-        /// Encryption key ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Key ID used for encryption.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
         /// Key region.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
-        /// The default region of the KMS service currently used by the TencentDB backend service.
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// The default region of the KMS service used by the current CDB backend service.
         /// </summary>
         [JsonProperty("DefaultKmsRegion")]
         public string DefaultKmsRegion{ get; set; }

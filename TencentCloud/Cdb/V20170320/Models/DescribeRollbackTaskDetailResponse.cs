@@ -32,7 +32,6 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// Rollback task details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Items")]
         public RollbackTask[] Items{ get; set; }

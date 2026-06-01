@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup task ID, which is the task ID returned by the [TencentDB instance backup creating API](https://intl.cloud.tencent.com/document/api/236/15844?from_cn_redirect=1).
+        /// Backup task ID. Confirm it by querying the data backup file list (https://www.tencentcloud.com/document/api/236/15842?from_cn_redirect=1) to get the target backup task ID.
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }

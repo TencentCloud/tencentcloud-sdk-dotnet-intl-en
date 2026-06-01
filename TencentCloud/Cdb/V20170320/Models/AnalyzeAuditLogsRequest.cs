@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,9 +49,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AggregationCondition[] AggregationConditions{ get; set; }
 
         /// <summary>
-        /// This parameter is disused. The result set of the audit log filtered by this condition is set as the analysis log.
+        /// Deprecated.
         /// </summary>
         [JsonProperty("AuditLogFilter")]
+        [System.Obsolete]
         public AuditLogFilter AuditLogFilter{ get; set; }
 
         /// <summary>

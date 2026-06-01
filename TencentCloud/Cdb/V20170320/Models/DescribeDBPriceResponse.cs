@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// <p>Instance price, unit: cent.</p>
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }
 
         /// <summary>
-        /// Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+        /// <p>Original price of instance. Measurement unit: cent.</p>
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// Currency: `CNY`, `USD`.
+        /// <p>Currency unit. CNY - RMB, USD - USD.</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Template ID.
+        /// Template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// Template name (up to 64 characters)
+        /// Template name, supports numbers, English uppercase and lowercase letters, Chinese, and special characters _-./()[]+=:@, and the length cannot exceed 60.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: 1-100. Default value: 20.
+        /// Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

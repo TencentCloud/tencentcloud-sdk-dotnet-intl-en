@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
+        /// Backup snapshot time. Time format: 2016-03-17.
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }

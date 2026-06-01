@@ -55,70 +55,95 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Weight allocation mode.
+        /// System Auto-Assignment: "system", Custom: "custom"
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable delay removal. Parameter value: "true" | "false"
         /// </summary>
         [JsonProperty("IsKickOut")]
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
-        /// Least read-only instances. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum retention quantity, minimum value: 0.
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// The delay threshold. Minimum value:  `0`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Delay removal threshold, minimum value: 0
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
 
         /// <summary>
-        /// Whether to automatically add newly created read-only instances. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Automatically add RO. Value: "true" | "false"
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }
 
         /// <summary>
-        /// Whether it is read-only. Valid values: `true`, `false`. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is read-only. Value: "true" | "false".
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Whether to enable transaction splitting Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether transaction splitting is enabled
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// Whether to enable failover Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether fault migration is enabled
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// Whether to enable the connection pool Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable connection pool
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
         /// <summary>
-        /// Note:  This field may return null, indicating that no valid values can be obtained.
+        /// Description
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Read weight assignment for an instance Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read weight distribution of an instance
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
+
+        /// <summary>
+        /// Access mode
+        /// </summary>
+        [JsonProperty("AccessMode")]
+        public string AccessMode{ get; set; }
+
+        /// <summary>
+        /// Whether automatic CLB is enabled
+        /// </summary>
+        [JsonProperty("AutoLoadBalance")]
+        public bool? AutoLoadBalance{ get; set; }
+
+        /// <summary>
+        /// Whether to treat libra as a read-only node
+        /// </summary>
+        [JsonProperty("ApNodeAsRoNode")]
+        public bool? ApNodeAsRoNode{ get; set; }
+
+        /// <summary>
+        /// libra node fault, whether to forward to other nodes
+        /// </summary>
+        [JsonProperty("ApQueryToOtherNode")]
+        public bool? ApQueryToOtherNode{ get; set; }
 
 
         /// <summary>
@@ -142,6 +167,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+            this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+            this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+            this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         }
     }
 }

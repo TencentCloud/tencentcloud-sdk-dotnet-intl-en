@@ -30,6 +30,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// Whether to enable association switchover. Enable for true and shutdown for false. Default false.
+        /// </summary>
+        [JsonProperty("IsRelatedSwitch")]
+        public bool? IsRelatedSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IsRelatedSwitch", this.IsRelatedSwitch);
         }
     }
 }

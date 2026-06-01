@@ -31,8 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Queried results.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Queried records.
         /// </summary>
         [JsonProperty("Items")]
         public SlowLogItem[] Items{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Order ID.
+        /// <p>Order ID.</p>
         /// </summary>
         [JsonProperty("DealIds")]
         public string[] DealIds{ get; set; }
 
         /// <summary>
-        /// Async task request ID, which can be used to query the execution result of an async task.
+        /// <p>Request ID of the async task. Use this ID to <a href="https://www.tencentcloud.com/document/product/236/20410?from_cn_redirect=1">query the outcome of the async task</a>.</p>
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

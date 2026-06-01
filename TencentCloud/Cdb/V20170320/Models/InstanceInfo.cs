@@ -25,163 +25,163 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
+        /// <p>Public network status. Possible returned values: 0 - External network not enabled; 1 - Public network enabled; 2 - Public network disabled</p>
         /// </summary>
         [JsonProperty("WanStatus")]
         public long? WanStatus{ get; set; }
 
         /// <summary>
-        /// AZ information
+        /// <p>AZ information</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Initialization flag. Value range: 0 (not initialized), 1 (initialized)
+        /// <p>Initialization flag. Possible returned values: 0 - uninitialized; 1 - initialized.</p>
         /// </summary>
         [JsonProperty("InitFlag")]
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// Read-only VIP information. This field is available only for read-only instances with dedicated access enabled.
+        /// <p>Read-only vip information. This field is available only for read-only instances with separate instance access enabled.</p>
         /// </summary>
         [JsonProperty("RoVipInfo")]
         public RoVipInfo RoVipInfo{ get; set; }
 
         /// <summary>
-        /// Memory capacity in MB
+        /// <p>Memory capacity, in MB.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+        /// <p>Instance status. Valid values: 0: creating; 1: running; 4: isolation operation in progress; 5: isolated.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// VPC ID, such as 51102
+        /// <p>VPC ID, for example: 51102</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Secondary server information.
+        /// <p>Secondary server information</p>
         /// </summary>
         [JsonProperty("SlaveInfo")]
         public SlaveInfo SlaveInfo{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Disk capacity in GB
+        /// <p>Disk capacity, in GB.</p>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. Value range: 0 (auto-renewal not enabled), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+        /// <p>Auto-renewal flag. Possible returned values: 0 - auto-renewal is not enabled; 1 - auto-renewal is enabled; 2 - automatic renewal is disabled.</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync)
+        /// <p>Data replication mode. 0 - async replication; 1 - semi-sync replication; 2 - strong sync replication</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Detailed information about the read-only group.
+        /// <p>Read-only group detailed information</p>
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }
 
         /// <summary>
-        /// Subnet ID, such as 2333
+        /// <p>Subnet ID, for example: 2333</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+        /// <p>Instance type. Possible returned values: 1 - Primary instance; 2 - Disaster recovery instance; 3 - Read-only instance.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Project ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region information
+        /// <p>Regional information</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance expiration time
+        /// <p>Instance expiration time</p>
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// AZ deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ)
+        /// <p>Availability Zone Deployment method. Valid values: 0 - single availability zone; 1 - multi-availability zone.</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+        /// <p>Instance task status. 0 - No tasks, 1 - Upgrading, 2 - Data import, 3 - Opening Slave, 4 - Public network access enabling, 5 - Batch operation executing, 6 - Rolling back, 7 - Public network access disabling, 8 - Password modification, 9 - Renaming instance, 10 - Restarting, 12 - Self-built migration, 13 - Database deletion, 14 - Disaster recovery instance creation sync, 15 - Upgrade pending switch, 16 - Upgrade and switch, 17 - Upgrade and switch completed</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// Detailed information about the primary instance.
+        /// <p>Detailed information about the primary instance.</p>
         /// </summary>
         [JsonProperty("MasterInfo")]
         public MasterInfo MasterInfo{ get; set; }
 
         /// <summary>
-        /// Instance type
+        /// <p>Instance type</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Kernel version
+        /// <p>Kernel version</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Detailed information about the disaster recovery instance.
+        /// <p>Disaster recovery instance details</p>
         /// </summary>
         [JsonProperty("DrInfo")]
         public DrInfo[] DrInfo{ get; set; }
 
         /// <summary>
-        /// Public domain name
+        /// <p>public network domain name</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// Public network port number
+        /// <p>Public network port number</p>
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
@@ -193,146 +193,155 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// Instance creation time
+        /// <p>Instance creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Instance IP
+        /// <p>Instance IP</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Port number
+        /// <p>Port number</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+        /// <p>Whether disk write is locked (data write volume of the instance exceeds disk quota). 0 - Unlocked 1 - Locked</p>
         /// </summary>
         [JsonProperty("CdbError")]
         public long? CdbError{ get; set; }
 
         /// <summary>
-        /// VPC descriptor, such as "vpc-5v8wn9mg"
+        /// <p>Private network descriptor, for example: "vpc-5v8wn9mg"</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet descriptor, such as "subnet-1typ0s7d"
+        /// <p>Subnet descriptor, such as "subnet-1typ0s7d"</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Physical ID
+        /// <p>Physical ID</p>
         /// </summary>
         [JsonProperty("PhysicalId")]
         public string PhysicalId{ get; set; }
 
         /// <summary>
-        /// Number of cores
+        /// <p>Core count</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Queries per second
+        /// <p>Queries per second.</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// AZ name
+        /// <p>Chinese Name of Availability Zone</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Physical server model.
+        /// <p>Physical machine model</p>
         /// </summary>
         [JsonProperty("DeviceClass")]
         public string DeviceClass{ get; set; }
 
         /// <summary>
-        /// Placement group ID.
+        /// <p>Placement group ID</p>
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// AZ ID.
+        /// <p>Availability zone ID</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Number of nodes
+        /// <p>Number of nodes</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
         /// <summary>
-        /// Tag list.
+        /// <p>Tag list</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfoItem[] TagList{ get; set; }
 
         /// <summary>
-        /// Engine type.
+        /// <p>Engine type</p>
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// Maximum delay threshold.
+        /// <p>Maximum delay threshold</p>
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
         /// <summary>
-        /// Instance disk type. Valid values are returned only for Cluster Edition and single-node (cloud disk) instances.
-        /// Note:
-        /// 1. If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is Enhanced SSD.
-        /// 2. If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is Cloud SSD.
-        /// 3. If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it indicates that the instance uses a local SSD.
+        /// <p>Instance disk type. Only CLOUD disk edition and single-node (CLOUD disk) instances will return a valid value.<br>Description:</p><ol><li>If "DiskType": "CLOUD_HSSD" is returned, it indicates that the instance disk type is enhanced SSD CLOUD disk.</li><li>If "DiskType": "CLOUD_SSD" is returned, it indicates that the instance disk type is SSD CLOUD Block Storage.</li><li>If "DiskType": "" is returned and the DeviceType parameter value is UNIVERSAL or EXCLUSIVE, it means that the instance uses local SSD.</li></ol>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Current number of CPU cores for scale-out.
+        /// <p>Current number of CPU cores for scale-out.</p>
         /// </summary>
         [JsonProperty("ExpandCpu")]
         public long? ExpandCpu{ get; set; }
 
         /// <summary>
-        /// Cluster Edition instance node information.
+        /// <p>Cloud Disk Edition instance node information</p>
         /// </summary>
         [JsonProperty("ClusterInfo")]
         public ClusterInfo[] ClusterInfo{ get; set; }
 
         /// <summary>
-        /// Analysis engine node list.
+        /// <p>Analysis engine node list</p>
         /// </summary>
         [JsonProperty("AnalysisNodeInfos")]
         public AnalysisNodeInfo[] AnalysisNodeInfos{ get; set; }
 
         /// <summary>
-        /// Device bandwidth, in GB. This parameter is valid when DeviceClass is specified. For example, 25 means the current device bandwidth is 25 GB; 10 means the current device bandwidth is 10 GB.
+        /// <p>Device bandwidth, in G. This parameter is valid only when DeviceClass is not empty. For example, 25 means the current device bandwidth is 25G; 10 means the current device bandwidth is 10G.</p>
         /// </summary>
         [JsonProperty("DeviceBandwidth")]
         public ulong? DeviceBandwidth{ get; set; }
 
         /// <summary>
-        /// Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.
+        /// <p>Instance termination protection status. on indicates enabled; otherwise, the protection is disabled.</p>
         /// </summary>
         [JsonProperty("DestroyProtect")]
         public string DestroyProtect{ get; set; }
+
+        /// <summary>
+        /// <p>TDSQL engine parameters</p>
+        /// </summary>
+        [JsonProperty("CpuModel")]
+        public string CpuModel{ get; set; }
+
+        /// <summary>
+        /// <p>Analysis engine instance version upgrade information</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AnalysisUpgradeVersionInfo")]
+        public UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo{ get; set; }
 
 
         /// <summary>
@@ -391,6 +400,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
             this.SetParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+            this.SetParamSimple(map, prefix + "CpuModel", this.CpuModel);
+            this.SetParamObj(map, prefix + "AnalysisUpgradeVersionInfo.", this.AnalysisUpgradeVersionInfo);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Parameter template ID.
+        /// Parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Error code.
+        /// Error code. `0` indicates success. Other values correspond to different error scenarios.
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
@@ -94,8 +94,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// ID of an instance associated with a task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the associated instance.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -105,6 +104,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }
+
+        /// <summary>
+        /// Additional information of the task.
+        /// </summary>
+        [JsonProperty("TaskAttachInfo")]
+        public TaskAttachInfo[] TaskAttachInfo{ get; set; }
 
 
         /// <summary>
@@ -122,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+            this.SetParamArrayObj(map, prefix + "TaskAttachInfo.", this.TaskAttachInfo);
         }
     }
 }

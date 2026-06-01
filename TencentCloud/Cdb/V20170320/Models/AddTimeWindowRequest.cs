@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Sunday{ get; set; }
 
         /// <summary>
-        /// Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+        /// Maximum delay threshold (seconds), only applicable to primary instance and disaster recovery instance. Default value: 10. Value ranges from 1 to 10 integers.
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public ulong? MaxDelayTime{ get; set; }

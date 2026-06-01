@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Async task ID, which can be passed in by calling the `DescribeAsyncRequest` API for task progress query.
+        /// Asynchronous Task ID. When calling [DescribeAsyncRequestInfo](https://www.tencentcloud.com/document/api/236/20410?from_cn_redirect=1) to query the task execution progress, you can pass in this ID.
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

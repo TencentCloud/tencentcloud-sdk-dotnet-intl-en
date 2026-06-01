@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+        /// Number of items returned per request. Default value: 20. Maximum value: 5000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

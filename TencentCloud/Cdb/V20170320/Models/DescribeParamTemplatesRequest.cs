@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Engine version. If it is left empty, all parameter templates will be queried.
+        /// Engine version. Query all if default. Valid values: 5.5, 5.6, 5.7, 8.0.
         /// </summary>
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
-        /// Engine type. If it is left empty, all engine types will be queried.
+        /// Engine type. Query all if default. Valid values: InnoDB, RocksDB. Case-insensitive.
         /// </summary>
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// Template name. If it is left empty, all template names will be queried.
+        /// Template name. Query all if default. Support fuzzy matching.
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// Template ID. If it is left empty, all template IDs will be queried.
+        /// Template ID. Query all if default.
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }

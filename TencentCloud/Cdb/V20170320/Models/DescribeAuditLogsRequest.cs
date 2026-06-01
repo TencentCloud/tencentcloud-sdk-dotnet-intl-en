@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time. We recommend that the interval between start and end time does not exceed 7 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time. We recommend that the interval between start and end time does not exceed 7 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,22 +49,22 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset
+        /// Log offset, supports up to 65535 log entries for offset querying. Fill in the range: 0 - 65535.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting order Valid values: `ASC (ascending), `DESC` (descending).
+        /// Sort order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "DESC".
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting field Valid values: 
-        /// `timestamp`: Timestamp,
-        /// `affectRows`: Number of affected rows,
-        /// `execTime`: Execution time.
+        /// Field to sort by. Valid values:
+        /// "timestamp" - timestamp;
+        /// "affectRows" - Number of affected rows.
+        /// "execTime" - Execution time.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

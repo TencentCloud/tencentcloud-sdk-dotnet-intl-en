@@ -58,6 +58,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// This parameter is deprecated.
         /// </summary>
         [JsonProperty("CreateTime")]
+        [System.Obsolete]
         public string CreateTime{ get; set; }
 
         /// <summary>
@@ -65,6 +66,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
+
+        /// <summary>
+        /// Is password rotation enabled for the user account?
+        /// </summary>
+        [JsonProperty("OpenCam")]
+        public bool? OpenCam{ get; set; }
 
 
         /// <summary>
@@ -79,6 +86,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+            this.SetParamSimple(map, prefix + "OpenCam", this.OpenCam);
         }
     }
 }

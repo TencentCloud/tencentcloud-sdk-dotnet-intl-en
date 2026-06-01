@@ -25,16 +25,10 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// CPU utilization threshold (percent value). Valid values: 70, 80, and 90. Automatic scale-out will be triggered when CPU utilization reaches the set threshold.
+        /// Auto scaling threshold. Available values: 40, 50, 60, 70, 80, 90. Represents the CPU utilization reaches 40%, 50%, 60%, 70%, 80%, or 90% to trigger auto scaling in the background.
         /// </summary>
         [JsonProperty("ExpandThreshold")]
         public long? ExpandThreshold{ get; set; }
-
-        /// <summary>
-        /// Interval, in seconds. Valid values: 1, 3, 5, 10, 15, and 30. The system backend determines whether automatic scale-out is required at the set interval.
-        /// </summary>
-        [JsonProperty("ExpandPeriod")]
-        public long? ExpandPeriod{ get; set; }
 
         /// <summary>
         /// CPU utilization threshold (percent value). Valid values: 10, 20, and 30. Automatic scale-in will be triggered when CPU utilization reaches the set threshold.
@@ -43,10 +37,32 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ShrinkThreshold{ get; set; }
 
         /// <summary>
-        /// Interval, in seconds. Valid values: 5, 10, 15, and 30. The system backend determines whether automatic scale-in is required at the set interval.
+        /// Auto-scaling observation period, in minutes, available values 1, 3, 5, 10, 15, 30. The backend will judge scaling out according to the configured period.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpandPeriod")]
+        [System.Obsolete]
+        public long? ExpandPeriod{ get; set; }
+
+        /// <summary>
+        /// Automatic scaling down observation period, in minutes, available values 5, 10, 15, 30. The backend performs scale-in judgment according to the configured period.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ShrinkPeriod")]
+        [System.Obsolete]
         public long? ShrinkPeriod{ get; set; }
+
+        /// <summary>
+        /// Elastic scaling observation period (in seconds). Value is 15, 30, 45, 60, 180, 300, 600, 900, or 1800.
+        /// </summary>
+        [JsonProperty("ExpandSecondPeriod")]
+        public long? ExpandSecondPeriod{ get; set; }
+
+        /// <summary>
+        /// Scale-down observation period (in seconds). Valid values: 300, 600, 900, 1800.
+        /// </summary>
+        [JsonProperty("ShrinkSecondPeriod")]
+        public long? ShrinkSecondPeriod{ get; set; }
 
 
         /// <summary>
@@ -55,9 +71,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ExpandThreshold", this.ExpandThreshold);
-            this.SetParamSimple(map, prefix + "ExpandPeriod", this.ExpandPeriod);
             this.SetParamSimple(map, prefix + "ShrinkThreshold", this.ShrinkThreshold);
+            this.SetParamSimple(map, prefix + "ExpandPeriod", this.ExpandPeriod);
             this.SetParamSimple(map, prefix + "ShrinkPeriod", this.ShrinkPeriod);
+            this.SetParamSimple(map, prefix + "ExpandSecondPeriod", this.ExpandSecondPeriod);
+            this.SetParamSimple(map, prefix + "ShrinkSecondPeriod", this.ShrinkSecondPeriod);
         }
     }
 }

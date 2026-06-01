@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Queries database error code
+        /// Query database error codes. 0 - Normal, 1600001 - Internal error, 1600003 - Input parameter exception, 1600009 - Instance does not exist, 1624001 - DB access exception.
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }

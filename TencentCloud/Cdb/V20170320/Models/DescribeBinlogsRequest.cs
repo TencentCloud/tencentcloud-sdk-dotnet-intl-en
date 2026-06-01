@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Value range: 1-100. Default value: 20.
+        /// Page size. Default value: 20. Minimum value: 1. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxStartTime")]
         public string MaxStartTime{ get; set; }
 
+        /// <summary>
+        /// Whether the binlog list contains the starting node MinStartTime, no by default
+        /// </summary>
+        [JsonProperty("ContainsMinStartTime")]
+        public bool? ContainsMinStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
             this.SetParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
+            this.SetParamSimple(map, prefix + "ContainsMinStartTime", this.ContainsMinStartTime);
         }
     }
 }

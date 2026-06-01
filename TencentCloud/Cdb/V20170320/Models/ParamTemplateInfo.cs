@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// parameter template ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Instance engine version
+        /// Instance engine version. Values: 5.5, 5.6, 5.7, and 8.0.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Parameter template type
+        /// Parameter template type. Valid values: HIGH_STABILITY, HIGH_PERFORMANCE.
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// Parameter template engine Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter template engine, values: InnoDB, RocksDB.
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

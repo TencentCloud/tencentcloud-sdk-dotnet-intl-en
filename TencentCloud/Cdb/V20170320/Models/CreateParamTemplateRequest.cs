@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Parameter template name.
+        /// Parameter template name. Up to 60 characters are allowed.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// MySQL version number.
+        /// MySQL version number. Available values: 5.6, 5.7, and 8.0.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Source parameter template ID.
+        /// Source parameter template ID, which can be obtained through the [DescribeParamTemplates](https://www.tencentcloud.com/document/api/236/32659?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
@@ -61,7 +61,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+        /// Instance engine type, defaults to "InnoDB". Supported values include "InnoDB" and "RocksDB".
+        /// Description: RocksDB is only supported in database versions MySQL 5.7 and MySQL 8.0.
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

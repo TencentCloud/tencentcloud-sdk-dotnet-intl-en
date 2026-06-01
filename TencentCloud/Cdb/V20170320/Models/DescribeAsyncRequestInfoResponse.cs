@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Task execution result. Valid values: INITIAL, RUNNING, SUCCESS, FAILED, KILLED, REMOVED, PAUSED.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task execution result. Possible values: INITIAL - Initialization, RUNNING - Running, SUCCESS - Execution successful, FAILED - Execution failed, KILLED - Terminated, REMOVED - Deleted, PAUSED - Terminating.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Task execution information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task execution information description.
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }

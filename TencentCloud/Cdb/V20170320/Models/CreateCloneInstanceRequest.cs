@@ -25,131 +25,179 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// ID of the instance to be cloned from
+        /// <p>Clone source instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
+        /// <p>If necessary, specify this value when cloning an instance and rolling back to a specified time. The time format is yyyy-mm-dd hh:mm:ss.<br>Note: This parameter and the SpecifiedBackupId parameter require a choice between the two for configuration.</p>
         /// </summary>
         [JsonProperty("SpecifiedRollbackTime")]
         public string SpecifiedRollbackTime{ get; set; }
 
         /// <summary>
-        /// To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
+        /// <p>If necessary to clone an instance and roll back to a designated backup set, specify this value as the Id of the backup file. Please use <a href="/document/api/236/15842">query data backup file list</a>.</p><p>If it is a clone of a two-node, three-node, or four-node instance, the backup file is a physical backup. If it is a clone of a single-node or cloud disk edition instance, the backup file is a snapshot backup.</p>
         /// </summary>
         [JsonProperty("SpecifiedBackupId")]
         public long? SpecifiedBackupId{ get; set; }
 
         /// <summary>
-        /// VPC ID, which can be obtained by the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API. If this parameter is left empty, the classic network will be used by default.
+        /// <p>VPC ID. Please use <a href="/document/api/215/15778">Querying VPC List</a>.</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID, which can be obtained by the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. If `UniqVpcId` is set, `UniqSubnetId` will be required.
+        /// <p>Subnet ID in the private network. If UniqVpcId is set up, UniqSubnetId is required. Please use <a href="/document/api/215/15784">query subnet list</a>.</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Memory of the cloned instance in MB, which should be equal to (by default) or larger than that of the original instance
+        /// <p>Instance memory size, unit: MB, must not be less than the clone source instance. Default is same as the source instance.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Disk capacity of the cloned instance in GB, which should be equal to (by default) or larger than that of the original instance
+        /// <p>Instance disk size, unit: GB, must not be less than the clone source instance. Default is same as the source instance.</p>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Name of the cloned instance
+        /// <p>Name of the newly generated clone instance. Support input of up to 60 characters.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
+        /// <p>Security group parameters. Use the API <a href="https://www.tencentcloud.com/document/api/236/15850?from_cn_redirect=1">Query Project Security Group Information</a> to query security group details of a certain project.</p>
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Information of the cloned instance tag
+        /// <p>Tag information of the instance.</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public TagInfo[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+        /// <p>Instance Cpu cores, must not be less than the clone source instance. Default is same as the source instance.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
+        /// <p>Data replication method, defaults to 0. Supported values include: 0 - means async replication, 1 - means semi-sync replication, 2 - means strong sync replication.</p>
         /// </summary>
         [JsonProperty("ProtectMode")]
         public long? ProtectMode{ get; set; }
 
         /// <summary>
-        /// Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
+        /// <p>Multiple Availability Zones, defaults to 0. Supported values include: 0 - means single availability zone, 1 - means multi-availability zone.</p>
         /// </summary>
         [JsonProperty("DeployMode")]
         public long? DeployMode{ get; set; }
 
         /// <summary>
-        /// Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
+        /// <p>The AZ information of the newly generated clone instance standby 1 is the same as the source instance Zone by default.</p>
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// Availability zone information of replica 2 of the cloned instance, 
-        /// which is left empty by default. Specify this parameter when cloning a strong sync source instance.
+        /// <p>AZ information of standby 2, empty by default. Specify this parameter when you clone a strong sync primary instance.</p>
         /// </summary>
         [JsonProperty("BackupZone")]
         public string BackupZone{ get; set; }
 
         /// <summary>
-        /// Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+        /// <p>Clone instance type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "CLOUD_NATIVE_CLUSTER" - standard type for CLOUD disk, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - enhanced type for CLOUD disk. If not specified, it defaults to general-purpose instance.</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+        /// <p>Number of nodes in the new clone instance.</p><p>To clone a three-node instance, set this value to 3 or specify the BackupZone parameter. To clone a dual-node instance, set this value to 2. By default, a dual-node instance is cloned. To clone a four-node instance, set this value to 4 or specify the FourthZone parameter.</p>
         /// </summary>
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
         /// <summary>
-        /// Placement group ID.
+        /// <p>Placement group ID.</p>
         /// </summary>
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
         /// <summary>
-        /// Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+        /// <p>Whether to only pre-check this request. true: Send a check request without creating an instance. Check items include required parameters, request format, and service limits. If the check fails, return the corresponding error code; if the check passes, return RequestId. Default false: Send a normal request and create the instance directly after passing the check.</p>
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// Financial cage ID.
+        /// <p>Financial Enclosure ID.</p>
         /// </summary>
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
         /// <summary>
-        /// Project ID. Default value: 0.
+        /// <p>Project ID. Default project ID 0.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// <p>Payment type. Valid values: PRE_PAID (prepaid, also known as yearly/monthly subscription) and USED_PAID (pay-as-you-go). Default billing mode is pay-as-you-go.</p>
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
+
+        /// <summary>
+        /// <p>Instance duration, required when PayType is PRE_PAID, measurement unit: month, optional values include [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
+        /// <summary>
+        /// <p>Topology configuration for cloud disk edition nodes.</p>
+        /// </summary>
+        [JsonProperty("ClusterTopology")]
+        public ClusterTopology ClusterTopology{ get; set; }
+
+        /// <summary>
+        /// <p>Original instance region. Required when importing a remote backup, for example: ap-guangzhou</p>
+        /// </summary>
+        [JsonProperty("SrcRegion")]
+        public string SrcRegion{ get; set; }
+
+        /// <summary>
+        /// <p>Offsite data backup id</p>
+        /// </summary>
+        [JsonProperty("SpecifiedSubBackupId")]
+        public long? SpecifiedSubBackupId{ get; set; }
+
+        /// <summary>
+        /// <p>The AZ information of the newly generated clone instance primary database is the same as the source instance Zone by default.</p>
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        [System.Obsolete]
+        public string MasterZone{ get; set; }
+
+        /// <summary>
+        /// <p>The AZ information of the newly generated clone instance's primary database defaults to the same as the source instance's Zone.</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// <p>AZ information of standby 3, empty by default. Specify this parameter when you proceed to purchase a four-node primary instance.</p>
+        /// </summary>
+        [JsonProperty("FourthZone")]
+        public string FourthZone{ get; set; }
 
 
         /// <summary>
@@ -178,6 +226,14 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+            this.SetParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
+            this.SetParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
+            this.SetParamSimple(map, prefix + "MasterZone", this.MasterZone);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
         }
     }
 }

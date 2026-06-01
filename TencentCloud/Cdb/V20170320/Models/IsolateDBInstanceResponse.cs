@@ -25,10 +25,10 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Async task request ID, which can be used to query the execution result of an async task. (This returned field has been disused. You can query the isolation status of an instance through the `DescribeDBInstances` API.)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Request ID of the async task. Use this ID to query the outcome of the async task. (This returned field is currently abandoned. The quarantined state of instances can be queried through the API to query instances.)
         /// </summary>
         [JsonProperty("AsyncRequestId")]
+        [System.Obsolete]
         public string AsyncRequestId{ get; set; }
 
         /// <summary>

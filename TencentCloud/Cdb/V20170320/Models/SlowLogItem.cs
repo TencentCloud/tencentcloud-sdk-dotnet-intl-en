@@ -25,78 +25,67 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// SQL execution time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Sql execution time. Unix second-level timestamp.
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// SQL execution duration in seconds.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Execution duration of Sql (seconds).
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
 
         /// <summary>
-        /// SQL statement.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Sql statement.
         /// </summary>
         [JsonProperty("SqlText")]
         public string SqlText{ get; set; }
 
         /// <summary>
-        /// Client address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Client IP address.
         /// </summary>
         [JsonProperty("UserHost")]
         public string UserHost{ get; set; }
 
         /// <summary>
         /// Username.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Database name.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// Lock duration in seconds.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Lock duration (unit: second).
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }
 
         /// <summary>
         /// Number of scanned rows.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RowsExamined")]
         public long? RowsExamined{ get; set; }
 
         /// <summary>
-        /// Number of rows in result set.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Result set row count.
         /// </summary>
         [JsonProperty("RowsSent")]
         public long? RowsSent{ get; set; }
 
         /// <summary>
-        /// SQL template.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Sql Template.
         /// </summary>
         [JsonProperty("SqlTemplate")]
         public string SqlTemplate{ get; set; }
 
         /// <summary>
-        /// SQL statement MD5.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// md5 of the Sql statement.
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }

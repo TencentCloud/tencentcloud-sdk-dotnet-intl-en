@@ -28,12 +28,14 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// Earliest start time point of automatic backup, such as 2 (for 2:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
         /// </summary>
         [JsonProperty("StartTimeMin")]
+        [System.Obsolete]
         public long? StartTimeMin{ get; set; }
 
         /// <summary>
         /// Latest start time point of automatic backup, such as 6 (for 6:00 AM). (This field has been disused. You are recommended to use the `BackupTimeWindow` field)
         /// </summary>
         [JsonProperty("StartTimeMax")]
+        [System.Obsolete]
         public long? StartTimeMax{ get; set; }
 
         /// <summary>

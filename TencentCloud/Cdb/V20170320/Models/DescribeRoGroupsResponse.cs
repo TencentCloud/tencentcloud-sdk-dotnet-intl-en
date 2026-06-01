@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO group information array. An instance can be associated with multiple RO groups.
+        /// RO group information array. An instance can associate with multiple RO groups.
         /// </summary>
         [JsonProperty("RoGroups")]
         public RoGroup[] RoGroups{ get; set; }

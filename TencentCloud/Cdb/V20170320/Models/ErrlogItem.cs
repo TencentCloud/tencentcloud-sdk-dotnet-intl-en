@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Error occurrence time.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Error occurrence time. Timestamp in seconds.
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
         /// Error details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

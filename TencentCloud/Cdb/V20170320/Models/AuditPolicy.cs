@@ -71,15 +71,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Audit rule name
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Audit rule name.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// Database instance name
-        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

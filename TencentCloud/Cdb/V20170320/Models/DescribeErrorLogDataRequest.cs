@@ -25,25 +25,25 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start timestamp, such as 1585142640.
+        /// Start timestamp. For example, 1585142640, in seconds.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End timestamp, such as 1585142640.
+        /// End timestamp. For example, 1585142640, in seconds.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// List of keywords to match. Up to 15 keywords are supported.
+        /// Keyword list to match, supports up to 15 keywords with fuzzy matching support.
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }

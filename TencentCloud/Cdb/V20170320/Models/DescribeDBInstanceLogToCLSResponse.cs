@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Configurations of sending error logs to CLS.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Error log delivery CLS configuration
         /// </summary>
         [JsonProperty("ErrorLog")]
         public LogToCLSConfig ErrorLog{ get; set; }
 
         /// <summary>
-        /// Configurations of sending slow logs to CLS.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Slow log delivery CLS configuration
         /// </summary>
         [JsonProperty("SlowLog")]
         public LogToCLSConfig SlowLog{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Tag to be added or modified.
+        /// Tags to add or modify. ReplaceTags or DeleteTags is mandatory to fill in one.
         /// </summary>
         [JsonProperty("ReplaceTags")]
         public TagInfo[] ReplaceTags{ get; set; }
 
         /// <summary>
-        /// Tag to be deleted.
+        /// Tag to delete. ReplaceTags or DeleteTags is mandatory to fill in one.
         /// </summary>
         [JsonProperty("DeleteTags")]
         public TagInfo[] DeleteTags{ get; set; }

@@ -31,55 +31,55 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Proxy version Note: This field may return null, indicating that no valid values can be obtained.
+        /// proxy version
         /// </summary>
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
         /// <summary>
-        /// Supported proxy upgrade version Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy supports edition upgrade
         /// </summary>
         [JsonProperty("SupportUpgradeProxyVersion")]
         public string SupportUpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// Proxy status Note: This field may return null, indicating that no valid values can be obtained.
+        /// Agent status. 0 - Initializing, 1 - Online, 2 - Online - Read-write separation, 3 - Offline, 4 - Terminated.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Proxy task status Note: This field may return null, indicating that no valid values can be obtained.
+        /// Agent task status, Upgrading - upgrading, UpgradeTo - upgrade pending switch, UpgradeSwitching - upgrade and switch in progress, ProxyCreateAddress - configuring address, ProxyModifyAddress - changing address, ProxyCloseAddress - closing address.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// Node information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy group node information
         /// </summary>
         [JsonProperty("ProxyNode")]
         public ProxyNode[] ProxyNode{ get; set; }
 
         /// <summary>
-        /// Address information of the proxy group Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy group address information
         /// </summary>
         [JsonProperty("ProxyAddress")]
         public ProxyAddress[] ProxyAddress{ get; set; }
 
         /// <summary>
-        /// Connection pool threshold Note: This field may return null, indicating that no valid values can be obtained.
+        /// Connection pool threshold
         /// </summary>
         [JsonProperty("ConnectionPoolLimit")]
         public ulong? ConnectionPoolLimit{ get; set; }
 
         /// <summary>
-        /// Whether to support address creation Note: This field may return null, indicating that no valid values can be obtained.
+        /// Support creating an address
         /// </summary>
         [JsonProperty("SupportCreateProxyAddress")]
         public bool? SupportCreateProxyAddress{ get; set; }
 
         /// <summary>
-        /// TencentDB versions supporting proxy versions upgrade Note: This field may return null, indicating that no valid values can be obtained.
+        /// cdb version required for proxy version upgrade
         /// </summary>
         [JsonProperty("SupportUpgradeProxyMysqlVersion")]
         public string SupportUpgradeProxyMysqlVersion{ get; set; }

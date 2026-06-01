@@ -25,13 +25,16 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// New account name
+        /// Account name, enter 1-32 characters.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// New account domain name
+        /// Account's host.
+        /// Note:
+        /// 1. IP format. You can specify a percent sign (%).
+        /// 2. Multiple hosts are separated by a separator, which supports ;, |, line break, and space.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

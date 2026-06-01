@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// SQL Type.
+        /// 
         /// </summary>
         [JsonProperty("SqlType")]
         public string SqlType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Database Name.
+        /// 
         /// </summary>
         [JsonProperty("DBName")]
         public string DBName{ get; set; }
 
         /// <summary>
-        /// SQL Statement.
+        /// 
         /// </summary>
         [JsonProperty("Sql")]
         public string Sql{ get; set; }
@@ -97,53 +97,59 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ThreadId{ get; set; }
 
         /// <summary>
-        /// Number of scanned rows
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of scanned rows.
         /// </summary>
         [JsonProperty("CheckRows")]
         public long? CheckRows{ get; set; }
 
         /// <summary>
-        /// CPU execution time (μs)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// cpu execution time, µs.
         /// </summary>
         [JsonProperty("CpuTime")]
         public float? CpuTime{ get; set; }
 
         /// <summary>
-        /// IO wait time (μs)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IO wait time, µs.
         /// </summary>
         [JsonProperty("IoWaitTime")]
         public ulong? IoWaitTime{ get; set; }
 
         /// <summary>
-        /// Lock wait time (μs)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Lock waiting time (unit: microsecond).
         /// </summary>
         [JsonProperty("LockWaitTime")]
         public ulong? LockWaitTime{ get; set; }
 
         /// <summary>
-        /// Start time, which forms a time accurate to nanoseconds with·`timestamp`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start time, which combines with timestamp to form a time accurate to nanoseconds.
         /// </summary>
         [JsonProperty("NsTime")]
         public ulong? NsTime{ get; set; }
 
         /// <summary>
-        /// Transaction duration (μs)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Transaction duration, µs.
         /// </summary>
         [JsonProperty("TrxLivingTime")]
         public ulong? TrxLivingTime{ get; set; }
 
         /// <summary>
-        /// Basic information on the rule template hit by the log.
-        /// Note: The return value may be null, indicating that no valid data can be obtained.
+        /// Basic info of the log hit rule template
         /// </summary>
         [JsonProperty("TemplateInfo")]
         public LogRuleTemplateInfo[] TemplateInfo{ get; set; }
+
+        /// <summary>
+        /// Transaction ID
+        /// </summary>
+        [JsonProperty("TrxId")]
+        public long? TrxId{ get; set; }
+
+        /// <summary>
+        /// Port.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClientPort")]
+        public long? ClientPort{ get; set; }
 
 
         /// <summary>
@@ -170,6 +176,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "NsTime", this.NsTime);
             this.SetParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
             this.SetParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
+            this.SetParamSimple(map, prefix + "TrxId", this.TrxId);
+            this.SetParamSimple(map, prefix + "ClientPort", this.ClientPort);
         }
     }
 }

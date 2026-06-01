@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID, in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed on the TencentDB for MySQL console page.
+        /// Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Information about the account for which password rotation needs to be enabled. The account and host names are included.
+        /// Currently, enable password rotation for account information, including account name and host name.
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }

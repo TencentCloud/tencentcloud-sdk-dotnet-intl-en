@@ -25,109 +25,109 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Region information
+        /// <p>Regional information</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// <p>Region ID</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// AZ ID
+        /// <p>Availability zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// AZ information
+        /// <p>AZ information</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Long instance ID
+        /// <p>Instance long ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Instance status
+        /// <p>Instance status</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance type
+        /// <p>Instance type</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Task status
+        /// <p>Task status.</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public long? TaskStatus{ get; set; }
 
         /// <summary>
-        /// Memory capacity
+        /// <p>Memory capacity</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Disk capacity
+        /// <p>Disk capacity</p>
         /// </summary>
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Instance model
+        /// <p>Instance model</p>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Queries per second
+        /// <p>Queries per second.</p>
         /// </summary>
         [JsonProperty("Qps")]
         public long? Qps{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// <p>subnet ID</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Dedicated cluster ID
+        /// <p>Dedicated cluster ID</p>
         /// </summary>
         [JsonProperty("ExClusterId")]
         public string ExClusterId{ get; set; }
 
         /// <summary>
-        /// Dedicated cluster name
+        /// <p>Dedicated cluster name</p>
         /// </summary>
         [JsonProperty("ExClusterName")]
         public string ExClusterName{ get; set; }

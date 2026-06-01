@@ -25,7 +25,12 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+        /// Description: Multiple instance IDs allowed for query. json format as follows.
+        /// [
+        ///     "cdb-30z11v8s",
+        ///     "cdb-93h11efg"
+        ///   ]
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

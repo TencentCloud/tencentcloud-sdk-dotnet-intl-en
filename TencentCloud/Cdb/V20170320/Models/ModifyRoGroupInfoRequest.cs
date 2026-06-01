@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// RO group ID.
+        /// ID of the RO group, which can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("RoGroupId")]
         public string RoGroupId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoGroupAttr RoGroupInfo{ get; set; }
 
         /// <summary>
-        /// Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
+        /// Weight of instances in the RO group. If modification is needed to set the weight mode of the RO group to user-defined mode (custom), this parameter must be set, and the weight value of each read-only instance needs to be set. The RO instance ID can be obtained through the [DescribeRoGroups](https://www.tencentcloud.com/document/api/236/40939?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("RoWeightValues")]
         public RoWeightValue[] RoWeightValues{ get; set; }
@@ -52,6 +52,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// This field has been deprecated.
         /// </summary>
         [JsonProperty("ReplicationDelayTime")]
+        [System.Obsolete]
         public long? ReplicationDelayTime{ get; set; }
 
 

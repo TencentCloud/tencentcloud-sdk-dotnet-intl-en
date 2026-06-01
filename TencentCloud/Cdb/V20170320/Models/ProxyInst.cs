@@ -25,46 +25,58 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance type. Valid values:  `master` (source instance), `ro` (read-only instance), `dr` (disaster recovery instance), `sdr` (disaster recovery instance of small specifications). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance type: 1 master primary instance; 2 read-only instance; 3 dr disaster recovery instance; 4 sdr (small disaster recovery) instance
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values:  `0` (creating), `1` (running), `4` (isolating), `5` (isolated). Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance status. Valid values: 0: creating; 1: running; 4: isolation; 5: isolated.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Read weight. If it is assigned by the system automatically, the modification will not take effect but represents whether the instance is enabled. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Read-only weight. If the weight is automatically assigned by the system, this value does not take effect and only indicates whether the instance is enabled or not.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// Instance region Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance AZ Note: This field may return null, indicating that no valid values can be obtained.
+        /// Availability zone to which the instance belongs
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// Instance Node ID
+        /// </summary>
+        [JsonProperty("InstNodeId")]
+        public string InstNodeId{ get; set; }
+
+        /// <summary>
+        /// Node role
+        /// </summary>
+        [JsonProperty("InstNodeRole")]
+        public string InstNodeRole{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "InstNodeId", this.InstNodeId);
+            this.SetParamSimple(map, prefix + "InstNodeRole", this.InstNodeRole);
         }
     }
 }

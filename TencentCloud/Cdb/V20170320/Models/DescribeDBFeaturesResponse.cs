@@ -55,7 +55,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? IsRemoteRo{ get; set; }
 
         /// <summary>
-        /// Region of the source instance
+        /// Primary instance region.
+        /// Description: This parameter may return null. You can ignore this return value. If needed, you can call the [Query Instance List](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API to obtain the instance region details.
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }

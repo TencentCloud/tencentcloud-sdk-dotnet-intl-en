@@ -26,14 +26,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// Aggregation dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AggregationField")]
         public string AggregationField{ get; set; }
 
         /// <summary>
-        /// Result set of an aggregation bucket
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Aggregate bucket result set
         /// </summary>
         [JsonProperty("Buckets")]
         public Bucket[] Buckets{ get; set; }

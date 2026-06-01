@@ -25,25 +25,34 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID
+        /// Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// The specification configuration of a node
+        /// Node specification configuration.
+        /// Parameter description in the example.
+        /// NodeCount: Number of nodes.
+        /// Region: Node region.
+        /// Zone: Node availability zone.
+        /// Cpu: Number of cores per proxy node (unit: core).
+        /// Mem: Memory size of each proxy node (unit: MB).
+        /// Remarks:
+        /// 1. Database proxy supported node specifications are: 2C4000MB, 4C8000MB, 8C16000MB.
+        /// 2. The above parameters (such as number of nodes, availability zone) are required. When calling the API, if incomplete, creation may fail.
         /// </summary>
         [JsonProperty("ProxyNodeCustom")]
         public ProxyNodeCustom[] ProxyNodeCustom{ get; set; }
@@ -62,9 +71,16 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// Connection pool threshold
+        /// Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
         /// </summary>
         [JsonProperty("ConnectionPoolLimit")]
         public ulong? ConnectionPoolLimit{ get; set; }
+
+        /// <summary>
+        /// Specify the Linux kernel version of the purchased proxy. Leave it blank to ship the latest version by default.
+        /// </summary>
+        [JsonProperty("ProxyVersion")]
+        public string ProxyVersion{ get; set; }
 
 
         /// <summary>
@@ -79,6 +95,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "ConnectionPoolLimit", this.ConnectionPoolLimit);
+            this.SetParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         }
     }
 }

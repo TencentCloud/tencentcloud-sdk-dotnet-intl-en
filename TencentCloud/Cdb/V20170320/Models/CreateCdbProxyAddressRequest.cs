@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Proxy group ID
+        /// Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// The delay threshold. Minimum value:  `0`
+        /// Delay removal threshold, minimum value: 1, range: 1–10000. The value is an integer.
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
@@ -85,19 +85,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID
+        /// Private subnet ID. Obtain through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Whether to enable the connection pool. Valid values: 
+        /// Whether to enable connection pool. Off by default.
+        /// Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be equal to or greater than MySQL 8.0 20230630.
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
@@ -109,13 +110,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// IP address
+        /// IP. Leave it blank to default to a random supported IP in the selected VPC.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port. Default value 3306.
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
@@ -127,19 +128,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Connection pool type, which will take effect only when `ConnectionPool` is `true`. Valid values:  `transaction` (transaction-level), `connection` (session-level).
+        /// Connection pool type. Available values: transaction (transaction-level connection pool), connection (session-level connection pool). This parameter is valid only when ConnectionPool is true. Default value: connection.
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Whether to enable adaptive load balancing. Disabled by default.
+        /// Whether adaptive load balancing is enabled. Off by default.
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+        /// Access mode. nearBy - proximity access, balance - balanced allocation. Default value: nearBy.
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }

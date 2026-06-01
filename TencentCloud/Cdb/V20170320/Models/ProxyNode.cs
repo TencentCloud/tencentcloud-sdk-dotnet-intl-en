@@ -25,43 +25,43 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Proxy node ID Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy node ID
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size Note: This field may return null, indicating that no valid values can be obtained.
+        /// Memory size, measured in MB.
         /// </summary>
         [JsonProperty("Mem")]
         public ulong? Mem{ get; set; }
 
         /// <summary>
-        /// Node status Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node status: 0 - Initializing, 1 - Online, 2 - Offline, 3 - Being destroyed, 4 - Recovering, 5 - Node fault, 6 - Switching.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Proxy node AZ Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy node availability zone
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Proxy node region Note: This field may return null, indicating that no valid values can be obtained.
+        /// Proxy Node Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Connections Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of connections
         /// </summary>
         [JsonProperty("Connection")]
         public ulong? Connection{ get; set; }

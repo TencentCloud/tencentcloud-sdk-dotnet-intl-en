@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// TencentDB account
+        /// TDSQL for MySQL accounts. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Database account remarks
+        /// Remark information of the database account. Input limit: 255 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

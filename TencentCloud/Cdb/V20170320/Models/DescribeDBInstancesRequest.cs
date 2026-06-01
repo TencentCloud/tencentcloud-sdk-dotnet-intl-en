@@ -31,213 +31,211 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
+        /// <p>Instance type. Valid values: 1 - Primary instance, 2 - Disaster recovery instance, 3 - Read-only instance.</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public ulong?[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// Private IP address of the instance.
+        /// <p>Private IP address of the instance.</p>
         /// </summary>
         [JsonProperty("Vips")]
         public string[] Vips{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+        /// <p>Instance status. Valid values:<br>0 - Creating<br>1 - Running<br>4 - Isolation operation in progress<br>5 - Isolated (can be restored from the Recycle Bin)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong?[] Status{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// <p>Offset. Default value is 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
+        /// <p>Number of items returned per request. Default value: 20. Maximum value: 2000.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.
+        /// <p>Security group ID. When using security group ID as the filter condition, the WithSecurityGroup parameter needs to be specified as 1.</p>
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.
+        /// <p>Payment type. Valid values: 0 - yearly/monthly subscription; 1 - bill by hour.</p>
         /// </summary>
         [JsonProperty("PayTypes")]
         public ulong?[] PayTypes{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// Instance task status. Valid values:<br>0 - no task;<br>1 - upgrading;<br>2 - importing data;<br>3 - enabling secondary nodes;<br>4 - enabling public network access;<br>5 - executing batch operations;<br>6 - rolling back;<br>7 - disabling public network access;<br>8 - changing the password;<br>9 - renaming the instance;<br>10 - restarting;<br>12 - migrating self-built databases;<br>13 - deleting databases and tables;<br>14 - synchronizing the creation of disaster recovery instances;<br>15 - pending upgrade switch;<br>16 - under upgrade switch;<br>17 - upgrade switch completed;<br>19 - parameter settings pending execution;<br>34 - in-place upgrade pending execution.
+        /// <p>Instance task status, possible values:<br>0 - No tasks<br>1 - Upgrading<br>2 - Data import in progress<br>3 - Enabling Slave<br>4 - Enabling public network access<br>5 - Batch operation in progress<br>6 - Rolling back<br>7 - Disabling public network access<br>8 - Password change in progress<br>9 - Renaming instance<br>10 - Restarting<br>12 - Self-built migration in progress<br>13 - Deleting database table<br>14 - Disaster recovery instance creation sync in progress<br>15 - Upgrade pending switch<br>16 - Upgrade and switch in progress<br>17 - Switch completed<br>19 - Parameter setting pending execution<br>34 - Node in-place upgrade to be executed</p>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong?[] TaskStatus{ get; set; }
 
         /// <summary>
-        /// Version of the instance database engine. Value range: 5.1, 5.5, 5.6, 5.7.
+        /// <p>Database engine version of the instance. Possible values: 5.1, 5.5, 5.6, and 5.7.</p>
         /// </summary>
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
         /// <summary>
-        /// VPC ID.
+        /// <p>VPC ID.</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public ulong?[] VpcIds{ get; set; }
 
         /// <summary>
-        /// AZ ID.
+        /// <p>Availability zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public ulong?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Subnet ID.
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public ulong?[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+        /// <p>Whether to set the lock flag. Available values: 0 - not lock, 1 - lock. Default is 0.</p>
         /// </summary>
         [JsonProperty("CdbErrors")]
         public long?[] CdbErrors{ get; set; }
 
         /// <summary>
-        /// Sorting field of the query results. Valid values: "instanceId", "instanceName", "createTime", and "deadlineTime".
+        /// <p>Sorting field of the returned result set. Currently supports: "instanceId", "instanceName", "createTime", and "deadlineTime".</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default value is "DESC".
+        /// <p>Sorting method of the returned result set. Valid values: "ASC" - ascending order; "DESC" - descending order. The default is "DESC".</p>
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// Whether to use the security group ID as the filter condition.
-        /// Note: 0 indicates no; 1 indicates yes.
+        /// <p>Whether to use security group ID as the filter condition.<br>Description: 0 indicates no, 1 indicates yes.</p>
         /// </summary>
         [JsonProperty("WithSecurityGroup")]
         public long? WithSecurityGroup{ get; set; }
 
         /// <summary>
-        /// Whether dedicated cluster details are included. Value range: 0 (not included), 1 (included)
+        /// <p>Whether the exclusive cluster detail is included. Value range: 0 - not contained, 1 - contained.</p>
         /// </summary>
         [JsonProperty("WithExCluster")]
         public long? WithExCluster{ get; set; }
 
         /// <summary>
-        /// Exclusive cluster ID.
+        /// <p>Dedicated cluster ID.</p>
         /// </summary>
         [JsonProperty("ExClusterId")]
         public string ExClusterId{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Initialization flag. Value range: 0 (not initialized), 1 (initialized).
+        /// <p>Initialization flag. Valid values: 0 - uninitialized, 1 - initialized.</p>
         /// </summary>
         [JsonProperty("InitFlag")]
         public long? InitFlag{ get; set; }
 
         /// <summary>
-        /// Whether instances corresponding to the disaster recovery relationship are included. Valid values: 0 (not included), 1 (included). Default value: 1. If a primary instance is pulled, the data of the disaster recovery relationship will be in the `DrInfo` field. If a disaster recovery instance is pulled, the data of the disaster recovery relationship will be in the `MasterInfo` field. The disaster recovery relationship contains only partial basic data. To get the detailed data, you need to call an API to pull it.
+        /// <p>Whether the corresponding instance in the disaster recovery relationship is included. Valid values: 0 - excluding, 1 - included. Default value: 1. If pulling the primary instance, the data of the disaster recovery relationship is in the DrInfo field. If pulling the disaster recovery instance, the data of the disaster recovery relationship is in the MasterInfo field. The disaster recovery relationship only contains partial basic data. Detailed data must be pulled manually via the interface.</p>
         /// </summary>
         [JsonProperty("WithDr")]
         public long? WithDr{ get; set; }
 
         /// <summary>
-        /// Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+        /// <p>Whether it contains read-only instances. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
         /// </summary>
         [JsonProperty("WithRo")]
         public long? WithRo{ get; set; }
 
         /// <summary>
-        /// Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
+        /// <p>Whether the primary instance is included. Valid values: 0 - does not include, 1 - includes. Default value is 1.</p>
         /// </summary>
         [JsonProperty("WithMaster")]
         public long? WithMaster{ get; set; }
 
         /// <summary>
-        /// Placement group ID list.
+        /// <p>Placement group ID list.</p>
         /// </summary>
         [JsonProperty("DeployGroupIds")]
         public string[] DeployGroupIds{ get; set; }
 
         /// <summary>
-        /// Whether to use the tag key as a filter condition
+        /// <p>Filter by tag key.</p>
         /// </summary>
         [JsonProperty("TagKeysForSearch")]
         public string[] TagKeysForSearch{ get; set; }
 
         /// <summary>
-        /// Financial cage IDs.
+        /// <p>Financial Enclosure ID.</p>
         /// </summary>
         [JsonProperty("CageIds")]
         public string[] CageIds{ get; set; }
 
         /// <summary>
-        /// Tag value
+        /// <p>Tag value</p>
         /// </summary>
         [JsonProperty("TagValues")]
         public string[] TagValues{ get; set; }
 
         /// <summary>
-        /// VPC character vpcId
+        /// <p>Character type VPC ID</p>
         /// </summary>
         [JsonProperty("UniqueVpcIds")]
         public string[] UniqueVpcIds{ get; set; }
 
         /// <summary>
-        /// VPC character subnetId
+        /// <p>VPC character type subnetId</p>
         /// </summary>
         [JsonProperty("UniqSubnetIds")]
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// Tag key value.
-        /// Note that tags cannot be queried for instances being created.
+        /// <p>Tag key value<br>Please note, tags of the instance being created are unable to query.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Database proxy IP
+        /// <p>Database proxy IP.</p>
         /// </summary>
         [JsonProperty("ProxyVips")]
         public string[] ProxyVips{ get; set; }
 
         /// <summary>
-        /// Database proxy ID
+        /// <p>Database proxy ID.</p>
         /// </summary>
         [JsonProperty("ProxyIds")]
         public string[] ProxyIds{ get; set; }
 
         /// <summary>
-        /// Database engine type. Valid values: InnoDB; RocksDB.
+        /// <p>Database engine type. Valid values: InnoDB, RocksDB.</p>
         /// </summary>
         [JsonProperty("EngineTypes")]
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.
+        /// <p>Whether to obtain the Cluster Edition instance node information. Valid values: true or false. The default value is false.</p>
         /// </summary>
         [JsonProperty("QueryClusterInfo")]
         public bool? QueryClusterInfo{ get; set; }

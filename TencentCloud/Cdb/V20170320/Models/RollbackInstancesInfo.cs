@@ -25,34 +25,31 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// TencentDB instance ID
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Cloud database instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Rollback policy. Valid values: `table` (ultrafast mode), `db` (faster mode), and `full` (fast mode). Default value: `full`. In the ultrafast mode, only backups and binlogs of the tables specified by the `Tables` parameter are imported; if `Tables` does not include all of the tables involved in cross-table operations, the rollback may fail; and the `Database` parameter must be left empty. In the faster mode, only backups and binlogs of the databases specified by the `Databases` parameter are imported, and if `Databases` does not include all of the databases involved in cross-database operations, the rollback may fail. In the fast mode, backups and binlogs of the entire instance will be imported in a speed slower than the other modes.
+        /// Rollback strategy. Optional values: table, db, full. table - Ultra-fast rollback mode, only imports selected table-level backups and binlog. If there are cross-table operations and the associated table hasn't been selected, it will cause rollback failure. In this mode, parameter Databases must be empty. db - Quick mode, only imports selected database-level backups and binlog. If there are cross-database operations and the associated database hasn't been selected, it will cause rollback failure. full - Standard rollback mode, imports backups and binlog of the entire instance, speed is not as fast.
         /// </summary>
         [JsonProperty("Strategy")]
         public string Strategy{ get; set; }
 
         /// <summary>
-        /// Database rollback time in the format of yyyy-mm-dd hh:mm:ss
+        /// Database rollback time in the format of yyyy-mm-dd hh:mm:ss.
         /// </summary>
         [JsonProperty("RollbackTime")]
         public string RollbackTime{ get; set; }
 
         /// <summary>
-        /// Information of the databases to be rolled back, which means rollback at the database level
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database information to be rolled back, which means database rollback.
         /// </summary>
         [JsonProperty("Databases")]
         public RollbackDBName[] Databases{ get; set; }
 
         /// <summary>
-        /// Information of the tables to be rolled back, which means rollback at the table level
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Database table information to be rolled back, which means rollback by table.
         /// </summary>
         [JsonProperty("Tables")]
         public RollbackTables[] Tables{ get; set; }

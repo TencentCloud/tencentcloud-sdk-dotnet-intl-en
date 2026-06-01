@@ -55,8 +55,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Rollback task details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Rollback task detail.
         /// </summary>
         [JsonProperty("Detail")]
         public RollbackInstancesInfo[] Detail{ get; set; }

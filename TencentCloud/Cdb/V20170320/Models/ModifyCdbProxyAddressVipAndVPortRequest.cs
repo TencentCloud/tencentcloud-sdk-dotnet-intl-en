@@ -25,43 +25,43 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Proxy group ID
+        /// Proxy group ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Address ID of the proxy group
+        /// Proxy group address ID. Obtain through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProxyAddressId")]
         public string ProxyAddressId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID
+        /// Private subnet ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// IP address
+        /// IP. If not specified, the system will assign an available IP under subnet.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port. Default value 3306, value ranges from 1024 to 65535.
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// Valid Hours of Old IP
+        /// Old IP valid hours. Measurement unit: hr, default value: 24, value ranges from 0 to 168.
         /// </summary>
         [JsonProperty("ReleaseDuration")]
         public ulong? ReleaseDuration{ get; set; }

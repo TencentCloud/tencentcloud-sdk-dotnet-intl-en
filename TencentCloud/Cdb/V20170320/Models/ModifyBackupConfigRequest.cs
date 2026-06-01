@@ -25,13 +25,15 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+        /// Instance ID, in the format such as cdb-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Backup file retention period in days. Value range: 7-1830.
+        /// Retention time of the data backup file, in days.
+        /// 1. MySQL two-node, three-node, and cloud disk edition data backup files can be retained for 7-1830 days.
+        /// 2. MySQL single-node (cloud disk) data backup files can be retained for 7-30 days.
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }
@@ -49,7 +51,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Binlog retention period in days. Value range: 7-1830. It can’t be greater than the retention period of backup files.
+        /// binlog retention time in days.
+        /// 1. MySQL two-node, three-node, and cloud disk log backup files can be retained for 7 to 3650 days.
+        /// 2. MySQL single-node (cloud disk) log backup files can be retained for 7-30 days.
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }
@@ -61,7 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
         /// <summary>
-        /// Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+        /// Periodic backup retention switch. off - periodic backup retention policy is not enabled, on - periodic backup retention policy is enabled. Default is off.
         /// </summary>
         [JsonProperty("EnableBackupPeriodSave")]
         public string EnableBackupPeriodSave{ get; set; }
@@ -97,7 +101,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string StartBackupPeriodSaveDate{ get; set; }
 
         /// <summary>
-        /// Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// Whether the data backup/archive policy is enabled. off - disabled, on - enabled. If not specified, remain unchanged.
         /// </summary>
         [JsonProperty("EnableBackupArchive")]
         public string EnableBackupArchive{ get; set; }
@@ -115,13 +119,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BinlogArchiveDays{ get; set; }
 
         /// <summary>
-        /// Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// Whether to enable log backup archive strategy. off - off, on - on. If not specified, remain unchanged.
         /// </summary>
         [JsonProperty("EnableBinlogArchive")]
         public string EnableBinlogArchive{ get; set; }
 
         /// <summary>
-        /// Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// Whether to enable the standard storage policy for data backup. off - disabled, on - enabled. If not specified, it remains unchanged.
         /// </summary>
         [JsonProperty("EnableBackupStandby")]
         public string EnableBackupStandby{ get; set; }
@@ -133,7 +137,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? BackupStandbyDays{ get; set; }
 
         /// <summary>
-        /// Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+        /// Whether to enable log backup standard storage policy. off - off, on - on. If not specified, remain unchanged.
         /// </summary>
         [JsonProperty("EnableBinlogStandby")]
         public string EnableBinlogStandby{ get; set; }

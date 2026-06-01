@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Retention period of local binlog. Value range: [72,168].
+        /// Local binlog retention duration. Valid values: [6,168].
         /// </summary>
         [JsonProperty("SaveHours")]
         public long? SaveHours{ get; set; }
 
         /// <summary>
-        /// Space utilization of local binlog. Value range: [30,50].
+        /// Local binlog space utilization. Valid values: [30,50].
         /// </summary>
         [JsonProperty("MaxUsage")]
         public long? MaxUsage{ get; set; }

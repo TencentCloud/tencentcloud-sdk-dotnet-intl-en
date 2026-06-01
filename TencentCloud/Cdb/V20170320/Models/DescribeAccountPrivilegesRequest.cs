@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database user account.
+        /// Account name of the database. Obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Database account domain name.
+        /// Domain name of the database account. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

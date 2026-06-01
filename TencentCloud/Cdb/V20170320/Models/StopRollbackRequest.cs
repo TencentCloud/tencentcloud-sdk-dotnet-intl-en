@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// ID of the instance whose rollback task is canceled
+        /// Revoke the corresponding instance ID of the rollback task. Obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/api/236/15872?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -31,7 +31,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string RoGroupName{ get; set; }
 
         /// <summary>
-        /// Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
+        /// Maximum delay threshold for the RO instance. Unit: seconds, minimum value is 1. Range: [1,10000], integer.
+        /// Note: The RO group must have enabled the instance latency removal policy for this value to be valid.
         /// </summary>
         [JsonProperty("RoMaxDelayTime")]
         public long? RoMaxDelayTime{ get; set; }
@@ -43,7 +44,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? RoOfflineDelay{ get; set; }
 
         /// <summary>
-        /// Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
+        /// Minimum reserved instances. Can be set to any value ≤ the number of instances in the RO group. Default value: 1.
+        /// Note: If the set value is larger than the RO instance count, do not remove. If set to 0, all instances with delay above the limit will be excluded.
         /// </summary>
         [JsonProperty("MinRoInGroup")]
         public long? MinRoInGroup{ get; set; }
@@ -55,7 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Replication delay.
+        /// Delayed replication time. Unit: second, range: 1 - 259200 seconds, not required to enable delayed replication for the instance.
         /// </summary>
         [JsonProperty("ReplicationDelayTime")]
         public long? ReplicationDelayTime{ get; set; }

@@ -37,17 +37,23 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
-        /// For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+        /// Database table information to be backed up. If this parameter is not set, the whole instance is backed up by default. This parameter can only be set when BackupMethod=logical. The specified database and tables must exist. Otherwise, backup may fail.
+        /// If necessary to back up tables tb1 and tb2 in database db1 and database db2, configure the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}].
         /// </summary>
         [JsonProperty("BackupDBTableList")]
         public BackupItem[] BackupDBTableList{ get; set; }
 
         /// <summary>
-        /// Manual backup alias
+        /// Manually back up the alias. Keep the input length within 60 characters.
         /// </summary>
         [JsonProperty("ManualBackupName")]
         public string ManualBackupName{ get; set; }
+
+        /// <summary>
+        /// Whether the physical backup needs encryption, optional values: on - yes, off - no. This value is meaningful only when BackupMethod is physical. If not specified, use the default encryption policy of instance backup. Here, the default encryption policy refers to the current instance encryption policy queried via the api for the query [DescribeBackupEncryptionStatus](https://www.tencentcloud.com/document/product/236/86508?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("EncryptionFlag")]
+        public string EncryptionFlag{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
             this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+            this.SetParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
         }
     }
 }

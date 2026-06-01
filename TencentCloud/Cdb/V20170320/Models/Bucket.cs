@@ -26,7 +26,6 @@ namespace TencentCloud.Cdb.V20170320.Models
         
         /// <summary>
         /// None
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database account, including username and domain name.
+        /// Database account, includes users and domain name. Obtain through the API [DescribeAccounts](https://www.tencentcloud.com/document/api/236/17499?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }

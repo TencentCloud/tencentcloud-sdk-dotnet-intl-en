@@ -49,22 +49,19 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? FreeVolume{ get; set; }
 
         /// <summary>
-        /// Total capacity of backups of a user in the current region
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Total offsite backup capacity of the user in current region.
         /// </summary>
         [JsonProperty("RemoteBackupVolume")]
         public long? RemoteBackupVolume{ get; set; }
 
         /// <summary>
-        /// Archive backup capacity, which includes data backups and log backups.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Archive backup capacity, including data backup and log backup.
         /// </summary>
         [JsonProperty("BackupArchiveVolume")]
         public long? BackupArchiveVolume{ get; set; }
 
         /// <summary>
-        /// Backup capacity of standard storage, which includes data backups and log backups.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Standard storage backup capacity includes data backup and log backup.
         /// </summary>
         [JsonProperty("BackupStandbyVolume")]
         public long? BackupStandbyVolume{ get; set; }

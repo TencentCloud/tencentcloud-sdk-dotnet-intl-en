@@ -25,8 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Async request ID
-        /// Note: this field may return `null`, indicating that no valid value can be found.
+        /// Async Processing ID
         /// </summary>
         [JsonProperty("AsyncRequestId")]
         public string AsyncRequestId{ get; set; }

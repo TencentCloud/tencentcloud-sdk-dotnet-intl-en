@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The modified instance name.
+        /// Modified instance name, which can only contain digits, English uppercase and lowercase letters, Chinese, and special characters -_./()[]（）+=:：@. Its length cannot exceed 60.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

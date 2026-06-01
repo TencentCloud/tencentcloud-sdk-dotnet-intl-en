@@ -91,7 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string MinFunc{ get; set; }
 
         /// <summary>
-        /// Whether the parameter can be modified Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the parameter cannot be modified
         /// </summary>
         [JsonProperty("IsNotSupportEdit")]
         public bool? IsNotSupportEdit{ get; set; }

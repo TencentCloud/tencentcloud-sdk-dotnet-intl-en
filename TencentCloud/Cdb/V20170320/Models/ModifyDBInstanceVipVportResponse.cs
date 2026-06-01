@@ -25,10 +25,10 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Async task ID. This parameter is deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Asynchronous Task ID. (This returned field is currently abandoned)
         /// </summary>
         [JsonProperty("AsyncRequestId")]
+        [System.Obsolete]
         public string AsyncRequestId{ get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// TencentDB product type to be queried. Currently, only `mysql` is supported.
+        /// The cloud database product type for which a backup overview needs to be queried. The value can be mysql (two-node/three-node high-availability instances), mysql-basic (single-node cloud disk edition instance), or mysql-cluster (cloud disk edition instance).
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Whether SSL is enabled. ON indicates enabled; OFF indicates not enabled.
+        /// Whether to enable SSL. ON represents enabled, OFF represents not enabled.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Certificate download link.
+        /// Certificate download URL.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

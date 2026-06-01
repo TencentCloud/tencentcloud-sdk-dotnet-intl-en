@@ -48,6 +48,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("AccountRegexp")]
         public string AccountRegexp{ get; set; }
 
+        /// <summary>
+        /// Default none, support: ASC, DESC, asc, desc
+        /// </summary>
+        [JsonProperty("SortBy")]
+        public string SortBy{ get; set; }
+
+        /// <summary>
+        /// Time field for sorting. Options: CreateTime (account creation time), ModifyTime (update time), ModifyPasswordTime (password modification time).
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// Regular expression to match the account host address (Host). The rule is the same as that on the MySQL official website.
+        /// </summary>
+        [JsonProperty("HostRegexp")]
+        public string HostRegexp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
+            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "HostRegexp", this.HostRegexp);
         }
     }
 }

@@ -25,19 +25,20 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+        /// Engine version. Currently supports ["5.1", "5.5", "5.6", "5.7", "8.0"].
+        /// Description: Engine version is required.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+        /// Default parameter template type. Supported values include "HIGH_STABILITY" - high-stability template, "HIGH_PERFORMANCE" - high-performance template. Default value: HIGH_STABILITY.
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// Parameter template engine. Default value: `InnoDB`.
+        /// Parameter template engine, default value: InnoDB, valid values: InnoDB, RocksDB.
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }

@@ -25,88 +25,100 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Proxy group ID
+        /// <p>Proxy group ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Assignment mode of weights. Valid values: `system` (auto-assigned), `custom`.
+        /// <p>Weight allocation mode,<br>system Auto-Assignment: "system", custom: "custom"</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Whether to remove delayed read-only instances from the proxy group Valid values: `true`, `false`.
+        /// <p>Whether delay removal is enabled. Value: "true" | "false"</p>
         /// </summary>
         [JsonProperty("IsKickOut")]
         public bool? IsKickOut{ get; set; }
 
         /// <summary>
-        /// Least read-only instances. Minimum value:  `0`
+        /// <p>Minimum retention quantity, minimum value: 0.<br>Description: Valid only when IsKickOut is true.</p>
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
 
         /// <summary>
-        /// The delay threshold. Minimum value:  `0`
+        /// <p>Delay removal threshold, minimum value: 1, value ranges from 1 to 10000, integer.</p>
         /// </summary>
         [JsonProperty("MaxDelay")]
         public ulong? MaxDelay{ get; set; }
 
         /// <summary>
-        /// Whether to enable failover. Valid values: `true`, `false`.
+        /// <p>Whether fault migration is enabled, value: "true" | "false"</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// Whether to automatically add newly created read-only instances. Valid values: `true`, `false`.
+        /// <p>Automatically add RO. Parameter: "true" | "false"</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }
 
         /// <summary>
-        /// Whether it is read-only. Valid values: `true`, `false`.
+        /// <p>Whether it is read-only. Value: "true" | "false".</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public bool? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Address ID of the proxy group
+        /// <p>Proxy group address ID. Obtain through the <a href="https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1">DescribeCdbProxyInfo</a> API.</p>
         /// </summary>
         [JsonProperty("ProxyAddressId")]
         public string ProxyAddressId{ get; set; }
 
         /// <summary>
-        /// Whether to enable transaction splitting. Valid values: `true`, `false`.
+        /// <p>Whether transaction splitting is enabled. Value: "true" | "false". Default value: false.</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// Whether to enable the connection pool
+        /// <p>Whether the connection pool is enabled. Off by default.<br>Note: If you need to use the database proxy connection pool capability, the kernel minor version of the MySQL 8.0 primary instance must be at least MySQL 8.0 20230630.</p>
         /// </summary>
         [JsonProperty("ConnectionPool")]
         public bool? ConnectionPool{ get; set; }
 
         /// <summary>
-        /// Assignment of read/write weights If `system` is passed in for `WeightMode`, only the default weight assigned by the system will take effect.
+        /// <p>Read-write weight allocation. If WeightMode is passed in as system, the passed-in weight does not take effect and the default weight is assigned by the system.</p>
         /// </summary>
         [JsonProperty("ProxyAllocation")]
         public ProxyAllocation[] ProxyAllocation{ get; set; }
 
         /// <summary>
-        /// Whether to enable adaptive load balancing. Disabled by default.
+        /// <p>Whether self-adaptive load balancing is enabled. Off by default.</p>
         /// </summary>
         [JsonProperty("AutoLoadBalance")]
         public bool? AutoLoadBalance{ get; set; }
 
         /// <summary>
-        /// Access Mode: nearby - nearby access, balance - balanced allocation. Default is nearby access.
+        /// <p>Access mode: nearby - proximity access, balance - balanced allocation. Default is proximity access.</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to treat the libra node as an ordinary RO node</p>
+        /// </summary>
+        [JsonProperty("ApNodeAsRoNode")]
+        public bool? ApNodeAsRoNode{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to forward to other nodes in case of a libra node fault</p>
+        /// </summary>
+        [JsonProperty("ApQueryToOtherNode")]
+        public bool? ApQueryToOtherNode{ get; set; }
 
 
         /// <summary>
@@ -128,6 +140,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
             this.SetParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
+            this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+            this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
         }
     }
 }

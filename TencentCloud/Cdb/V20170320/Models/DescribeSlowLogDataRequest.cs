@@ -25,19 +25,21 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start timestamp, such as 1585142640.
+        /// Session start timestamp. For example, 1585142640.
+        /// Description: This parameter is a timestamp in seconds.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End timestamp, such as 1585142640.
+        /// End timestamp. Example: 1585142640.
+        /// Description: This parameter is a timestamp in seconds.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
@@ -61,25 +63,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] DataBases{ get; set; }
 
         /// <summary>
-        /// Sort by field. Valid values: Timestamp, QueryTime, LockTime, RowsExamined, RowsSent.
+        /// Sorting field. Currently supported fields and their meanings are as follows. Default value is Timestamp.
+        /// 1. Timestamp: SQL execution time
+        /// 2. QueryTime: SQL execution duration (seconds)
+        /// 3. LockTime: Lock duration (seconds)
+        /// 4. RowsExamined: Number of scanned rows
+        /// 5. RowsSent: Result set row count
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: ASC (ascending), DESC (descending).
+        /// Ascending or descending order. Valid values: "ASC" - Ascending order, "DESC" - Descending order. Default value: "ASC".
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// Offset. The default is 0, and the maximum is 9999.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+        /// The number of records returned in a single use, default is 100, maximum is 800.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -89,6 +96,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         [JsonProperty("InstType")]
         public string InstType{ get; set; }
+
+        /// <summary>
+        /// Node ID.
+        /// </summary>
+        [JsonProperty("OpResourceId")]
+        public string OpResourceId{ get; set; }
 
 
         /// <summary>
@@ -107,6 +120,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "InstType", this.InstType);
+            this.SetParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
         }
     }
 }

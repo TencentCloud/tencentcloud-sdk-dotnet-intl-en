@@ -25,15 +25,13 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Original table name before rollback
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Original database table name before rollback
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// New table name after rollback
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Rolled back database table name
         /// </summary>
         [JsonProperty("NewTableName")]
         public string NewTableName{ get; set; }

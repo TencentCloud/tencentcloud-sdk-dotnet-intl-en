@@ -25,19 +25,26 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Proxy group ID
+        /// Proxy group ID, which can be obtained through the [DescribeCdbProxyInfo](https://www.tencentcloud.com/document/api/236/90585?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// The specification configuration of a node
+        /// Node specification configuration
+        /// Remark: Database proxy supported node specifications are 2C4000MB, 4C8000MB, 8C16000MB.
+        /// Parameter description in the example.
+        /// NodeCount: Number of nodes
+        /// Region: Node region
+        /// Zone: Node availability zone
+        /// Cpu: Number of node cores for one agent (Unit: core)
+        /// Mem: Memory size of each proxy node (unit: MB)
         /// </summary>
         [JsonProperty("ProxyNodeCustom")]
         public ProxyNodeCustom[] ProxyNodeCustom{ get; set; }
