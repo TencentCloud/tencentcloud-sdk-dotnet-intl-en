@@ -25,246 +25,256 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>User appid</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Region
+        /// <p>Region</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the delayed execution time.
+        /// <p>Delayed execution time</p>
         /// </summary>
         [JsonProperty("DelayTime")]
         public string DelayTime{ get; set; }
 
         /// <summary>
-        /// Task failure information.
+        /// <p>Task failure information</p>
         /// </summary>
         [JsonProperty("ErrMsg")]
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Asynchronous task flow id</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task input information</p>
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance group id.</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance group id.</p>
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task operation object id</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task operation object type.</p>
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Operator uin</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task output information</p>
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task type</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Parent task ID that triggers this task</p>
         /// </summary>
         [JsonProperty("TriggerTaskId")]
         public long? TriggerTaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task start time</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task end time</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task progress</p>
         /// </summary>
         [JsonProperty("Process")]
         public long? Process{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Modify parameter task information</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyParamsData")]
         [System.Obsolete]
         public ModifyParamsData[] ModifyParamsData{ get; set; }
 
         /// <summary>
-        /// Create cluster task information.
+        /// <p>Create cluster task information</p>
         /// </summary>
         [JsonProperty("CreateClustersData")]
         public CreateClustersData CreateClustersData{ get; set; }
 
         /// <summary>
-        /// Cluster rollback task information.
+        /// <p>Cluster rollback task information</p>
         /// </summary>
         [JsonProperty("RollbackData")]
         public RollbackData RollbackData{ get; set; }
 
         /// <summary>
-        /// Instance configuration change task information.
+        /// <p>Instance configuration change task information</p>
         /// </summary>
         [JsonProperty("ModifyInstanceData")]
         public ModifyInstanceData ModifyInstanceData{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Manual backup task information</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ManualBackupData")]
         public ManualBackupData ManualBackupData{ get; set; }
 
         /// <summary>
-        /// Modify kernel version task information.
+        /// <p>Modify kernel version task information</p>
         /// </summary>
         [JsonProperty("ModifyDbVersionData")]
         public ModifyDbVersionData ModifyDbVersionData{ get; set; }
 
         /// <summary>
-        /// Cluster availability zone information.
+        /// <p>Cluster Availability Zone Information</p>
         /// </summary>
         [JsonProperty("ClusterSlaveData")]
         public ClusterSlaveData ClusterSlaveData{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Convert cluster logs</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SwitchClusterLogBin")]
         public SwitchClusterLogBin SwitchClusterLogBin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Modify instance parameter data</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyInstanceParamsData")]
         public BizTaskModifyParamsData ModifyInstanceParamsData{ get; set; }
 
         /// <summary>
-        /// Maintenance time.
+        /// <p>Maintenance time</p>
         /// </summary>
         [JsonProperty("TaskMaintainInfo")]
         public TaskMaintainInfo TaskMaintainInfo{ get; set; }
 
         /// <summary>
-        /// Instance log delivery information.
+        /// <p>Instance Log Delivery Information</p>
         /// </summary>
         [JsonProperty("InstanceCLSDeliveryInfos")]
         public InstanceCLSDeliveryInfo[] InstanceCLSDeliveryInfos{ get; set; }
 
         /// <summary>
-        /// Task progress information.
+        /// <p>Task progress information</p>
         /// </summary>
         [JsonProperty("TaskProgressInfo")]
         public TaskProgressInfo TaskProgressInfo{ get; set; }
 
         /// <summary>
-        /// Global Database Network Task
+        /// <p>Global database network task</p>
         /// </summary>
         [JsonProperty("GdnTaskInfo")]
         public GdnTaskInfo GdnTaskInfo{ get; set; }
 
         /// <summary>
-        /// Safe id
+        /// <p>Safe id</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// Safe name
+        /// <p>Safe name</p>
         /// </summary>
         [JsonProperty("VaultName")]
         public string VaultName{ get; set; }
+
+        /// <summary>
+        /// <p>AI optimizer task information</p>
+        /// </summary>
+        [JsonProperty("AIOptimizerTaskData")]
+        public AIOptimizerTaskData AIOptimizerTaskData{ get; set; }
 
 
         /// <summary>
@@ -312,6 +322,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
             this.SetParamSimple(map, prefix + "VaultId", this.VaultId);
             this.SetParamSimple(map, prefix + "VaultName", this.VaultName);
+            this.SetParamObj(map, prefix + "AIOptimizerTaskData.", this.AIOptimizerTaskData);
         }
     }
 }

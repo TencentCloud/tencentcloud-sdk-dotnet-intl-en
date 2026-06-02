@@ -68,6 +68,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
+        /// <summary>
+        /// Peer IP address
+        /// </summary>
+        [JsonProperty("RemoteIp")]
+        public string RemoteIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RemoteIp", this.RemoteIp);
         }
     }
 }

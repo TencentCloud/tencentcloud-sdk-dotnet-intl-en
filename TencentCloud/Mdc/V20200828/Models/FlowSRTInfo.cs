@@ -78,6 +78,96 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("RecvPacketDropNumber")]
         public long? RecvPacketDropNumber{ get; set; }
 
+        /// <summary>
+        /// bandwidth
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public float? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// Transmit bandwidth
+        /// </summary>
+        [JsonProperty("SendBandwidth")]
+        public float? SendBandwidth{ get; set; }
+
+        /// <summary>
+        /// Receive bandwidth
+        /// </summary>
+        [JsonProperty("RecvBandwidth")]
+        public float? RecvBandwidth{ get; set; }
+
+        /// <summary>
+        /// Number of packets sent
+        /// </summary>
+        [JsonProperty("SendPackets")]
+        public long? SendPackets{ get; set; }
+
+        /// <summary>
+        /// Number of received packets
+        /// </summary>
+        [JsonProperty("RecvPackets")]
+        public long? RecvPackets{ get; set; }
+
+        /// <summary>
+        /// Send lost package
+        /// </summary>
+        [JsonProperty("SendLostPackets")]
+        public long? SendLostPackets{ get; set; }
+
+        /// <summary>
+        /// Accept lost packages
+        /// </summary>
+        [JsonProperty("RecvLostPackets")]
+        public long? RecvLostPackets{ get; set; }
+
+        /// <summary>
+        /// Number of retransmission packets sent
+        /// </summary>
+        [JsonProperty("SendRetransmitPackets")]
+        public long? SendRetransmitPackets{ get; set; }
+
+        /// <summary>
+        /// Number of received retransmission packets
+        /// </summary>
+        [JsonProperty("RecvRetransmitPackets")]
+        public long? RecvRetransmitPackets{ get; set; }
+
+        /// <summary>
+        /// Flight window size
+        /// </summary>
+        [JsonProperty("FlightSize")]
+        public long? FlightSize{ get; set; }
+
+        /// <summary>
+        /// congestion window
+        /// </summary>
+        [JsonProperty("CongestionWindow")]
+        public long? CongestionWindow{ get; set; }
+
+        /// <summary>
+        /// Send buffer (ms)
+        /// </summary>
+        [JsonProperty("SendBuffer")]
+        public long? SendBuffer{ get; set; }
+
+        /// <summary>
+        /// Receive buffer (ms)
+        /// </summary>
+        [JsonProperty("RecvBuffer")]
+        public long? RecvBuffer{ get; set; }
+
+        /// <summary>
+        /// Sending delay
+        /// </summary>
+        [JsonProperty("SendLatency")]
+        public long? SendLatency{ get; set; }
+
+        /// <summary>
+        /// Receiving delay
+        /// </summary>
+        [JsonProperty("RecvLatency")]
+        public long? RecvLatency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +183,21 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SendPacketDropNumber", this.SendPacketDropNumber);
             this.SetParamSimple(map, prefix + "RecvPacketDropNumber", this.RecvPacketDropNumber);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "SendBandwidth", this.SendBandwidth);
+            this.SetParamSimple(map, prefix + "RecvBandwidth", this.RecvBandwidth);
+            this.SetParamSimple(map, prefix + "SendPackets", this.SendPackets);
+            this.SetParamSimple(map, prefix + "RecvPackets", this.RecvPackets);
+            this.SetParamSimple(map, prefix + "SendLostPackets", this.SendLostPackets);
+            this.SetParamSimple(map, prefix + "RecvLostPackets", this.RecvLostPackets);
+            this.SetParamSimple(map, prefix + "SendRetransmitPackets", this.SendRetransmitPackets);
+            this.SetParamSimple(map, prefix + "RecvRetransmitPackets", this.RecvRetransmitPackets);
+            this.SetParamSimple(map, prefix + "FlightSize", this.FlightSize);
+            this.SetParamSimple(map, prefix + "CongestionWindow", this.CongestionWindow);
+            this.SetParamSimple(map, prefix + "SendBuffer", this.SendBuffer);
+            this.SetParamSimple(map, prefix + "RecvBuffer", this.RecvBuffer);
+            this.SetParamSimple(map, prefix + "SendLatency", this.SendLatency);
+            this.SetParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
         }
     }
 }
