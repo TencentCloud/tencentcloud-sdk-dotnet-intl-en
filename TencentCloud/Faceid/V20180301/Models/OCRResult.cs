@@ -25,62 +25,68 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Is the indentity verification or OCR process passed
+        /// <p>Whether the identity authentication or OCR process is successful.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsPass")]
         public bool? IsPass{ get; set; }
 
         /// <summary>
-        /// The Base64 of ID card image
+        /// <p>Base64 of the ID image</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardImageBase64")]
         public string CardImageBase64{ get; set; }
 
         /// <summary>
-        /// OCR result of the ID card.
+        /// <p>ID card recognition result</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardInfo")]
         [System.Obsolete]
         public CardInfo CardInfo{ get; set; }
 
         /// <summary>
-        /// OCR result of the ID card.
+        /// <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NormalCardInfo")]
         public NormalCardInfo NormalCardInfo{ get; set; }
 
         /// <summary>
-        /// The request id
+        /// <p>Request id</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// Base64 of cropped image of ID card
+        /// <p>Base64 of the cropped ID image</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardCutImageBase64")]
         public string CardCutImageBase64{ get; set; }
 
         /// <summary>
-        /// Base64 of the cropped image on the reverse side of the ID card
+        /// <p>Base64 of the cropped image of the back side of the ID</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardBackCutImageBase64")]
         public string CardBackCutImageBase64{ get; set; }
 
         /// <summary>
-        /// Card Warning Information
-        /// 
-        /// -9101 Alarm for covered certificate,
-        /// -9102 Alarm for photocopied certificate,
-        /// -9103 Alarm for photographed certificate,
-        /// -9104 Alarm for PS certificate,
-        /// -9107 Alarm for reflective certificate,
-        /// -9108 Alarm for blurry image,
-        /// -9109 This capability is not enabled.
+        /// <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: Alarm for incomplete document border</li><li>-9102: Alarm for document photocopy</li><li>-9103: Alarm for rephotographing</li><li>-9104: PS alarm</li><li>-9107: Reflective alarm</li><li>-9108: Blurry alarm</li><li>-9109: Alarm capability not enabled</li></ul>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
+
+        /// <summary>
+        /// <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("OriginalCardInfo")]
+        public string OriginalCardInfo{ get; set; }
 
 
         /// <summary>
@@ -96,6 +102,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "CardCutImageBase64", this.CardCutImageBase64);
             this.SetParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+            this.SetParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
         }
     }
 }

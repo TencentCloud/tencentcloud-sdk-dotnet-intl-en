@@ -25,66 +25,70 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+        /// <p>Instance ID, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log type. error: error log. slowlog: slow log.
+        /// <p>Log type. Error: error log, slowlog: slow log.</p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Delivery status. ON: Enabled, OFF: Disabled.
+        /// <p>Delivery status. ON: enabled, OFF: disabled.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Whether required to create logset. Default to false.
+        /// <p>Whether required to create logset. Default to false.</p>
         /// </summary>
         [JsonProperty("CreateLogset")]
         public bool? CreateLogset{ get; set; }
 
         /// <summary>
-        /// Logset name when creating a logset; logset ID when selecting an existing log set. Empty by default.
-        /// Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+        /// <p>Logset name when creating a logset; logset ID when selecting an existing logset. Empty by default.<br>Description: When the Status parameter is ON, either the Logset or LogTopic parameter must be filled.</p>
         /// </summary>
         [JsonProperty("Logset")]
         public string Logset{ get; set; }
 
         /// <summary>
-        /// Whether required to create log topic. Default to false.
+        /// <p>Whether required to create log topic. Default to false.</p>
         /// </summary>
         [JsonProperty("CreateLogTopic")]
         public bool? CreateLogTopic{ get; set; }
 
         /// <summary>
-        /// Log topic name when creating a log topic; log topic ID when selecting an existing log topic. Empty by default.
-        /// Description: When the parameter Status is set to ON, you must fill in either the Logset or LogTopic parameter.
+        /// <p>Enter a log topic name when creating a log topic, or enter a log topic ID when selecting an existing log topic. Empty by default.<br>Description: When the Status parameter is set to ON, either the Logset or LogTopic parameter must be specified.</p>
         /// </summary>
         [JsonProperty("LogTopic")]
         public string LogTopic{ get; set; }
 
         /// <summary>
-        /// Log topic valid period. Default value: 30 days if left empty. Maximum value: 3600.
+        /// <p>Valid period of the log topic. Default value: 30 days if left empty. Maximum value: 3600 days.</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to create an index when creating a log topic. Default to false.
+        /// <p>Whether to create an index when creating a log topic. Defaults to false.</p>
         /// </summary>
         [JsonProperty("CreateIndex")]
         public bool? CreateIndex{ get; set; }
 
         /// <summary>
-        /// The region of CLS. If left empty, it defaults to the parameter value of Region.
+        /// <p>CLS region. If left empty, it defaults to the Region parameter value.</p>
         /// </summary>
         [JsonProperty("ClsRegion")]
         public string ClsRegion{ get; set; }
+
+        /// <summary>
+        /// <p>Selectable when creating a log topic. Cannot exceed 10 tags</p>
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public TagInfoItem[] ResourceTags{ get; set; }
 
 
         /// <summary>
@@ -102,6 +106,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "CreateIndex", this.CreateIndex);
             this.SetParamSimple(map, prefix + "ClsRegion", this.ClsRegion);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

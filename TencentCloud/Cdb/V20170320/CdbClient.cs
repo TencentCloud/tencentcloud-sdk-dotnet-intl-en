@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.intl.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1324";
+       private const string sdkVersion = "SDK_NET_3.0.1326";
 
         /// <summary>
         /// Client constructor.
@@ -1329,6 +1329,27 @@ namespace TencentCloud.Cdb.V20170320
         public DescribeCloneListResponse DescribeCloneListSync(DescribeCloneListRequest req)
         {
             return InternalRequestAsync<DescribeCloneListResponse>(req, "DescribeCloneList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query cloud disk edition instance info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
+        public Task<DescribeClusterInfoResponse> DescribeClusterInfo(DescribeClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInfoResponse>(req, "DescribeClusterInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query cloud disk edition instance info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInfoRequest"/></param>
+        /// <returns><see cref="DescribeClusterInfoResponse"/></returns>
+        public DescribeClusterInfoResponse DescribeClusterInfoSync(DescribeClusterInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInfoResponse>(req, "DescribeClusterInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -98,7 +98,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string CurrentIssueDate{ get; set; }
 
         /// <summary>
-        /// Hong kong identity card version.
+        /// Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HKIDVersion")]

@@ -87,6 +87,30 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Seq")]
         public string Seq{ get; set; }
 
+        /// <summary>
+        /// Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+        /// -Details as follows:
+        /// 01-User eyes closed throughout
+        /// 02-User not completed specified action
+        /// 03-Suspected rephotography attack
+        /// 04-Suspected Synthesis Attack
+        /// 05-Suspected fraudulent template
+        /// 06-Suspected watermark
+        /// 07-Reflection validation failed
+        /// 08 - Suspected change of person midway
+        /// 09-Poor face quality
+        /// 10 - Distance validation failed
+        /// 11-Suspected adversarial sample attack
+        /// 12 - Suspected attack traces in the mouth area
+        /// 13 - Suspected attack traces exist in the eye area
+        /// 14 - Eye or mouth obstruction
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Example value: ["01"].
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("LivenessInfoTag")]
+        public string[] LivenessInfoTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +126,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ReqTimestamp", this.ReqTimestamp);
             this.SetParamSimple(map, prefix + "Similarity", this.Similarity);
             this.SetParamSimple(map, prefix + "Seq", this.Seq);
+            this.SetParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
         }
     }
 }

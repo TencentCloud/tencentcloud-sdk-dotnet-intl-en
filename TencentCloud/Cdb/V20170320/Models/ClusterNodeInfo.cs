@@ -15,32 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddProjectUserRoleRequest : AbstractModel
+    public class ClusterNodeInfo : AbstractModel
     {
         
         /// <summary>
-        /// Project ID
+        /// node id.
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
         /// <summary>
-        /// User UIN
+        /// Node role.
         /// </summary>
-        [JsonProperty("UserIds")]
-        public string[] UserIds{ get; set; }
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
         /// <summary>
-        /// Role ID
+        /// Node AZ.
         /// </summary>
-        [JsonProperty("RoleIds")]
-        public string[] RoleIds{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// Weight of the node
+        /// </summary>
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
+
+        /// <summary>
+        /// Node status.
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-            this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

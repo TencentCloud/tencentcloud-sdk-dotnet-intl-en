@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Cdb.V20170320.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AddProjectUserRoleRequest : AbstractModel
+    public class DescribeClusterInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Project ID
+        /// Instance ID, which can be obtained through the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872?from_cn_redirect=1) API.
+        /// Description: Only able to input the instance ID of instances with cloud disk architecture, corresponding to console instance configurations displayed as "Cloud Disk Edition (Cloud Disk)".
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// User UIN
-        /// </summary>
-        [JsonProperty("UserIds")]
-        public string[] UserIds{ get; set; }
-
-        /// <summary>
-        /// Role ID
-        /// </summary>
-        [JsonProperty("RoleIds")]
-        public string[] RoleIds{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +37,7 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-            this.SetParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
