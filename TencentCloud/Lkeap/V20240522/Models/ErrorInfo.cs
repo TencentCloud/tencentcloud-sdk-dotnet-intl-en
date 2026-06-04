@@ -15,33 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Lkeap.V20240522.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SearchConditionInstanceNew : AbstractModel
+    public class ErrorInfo : AbstractModel
     {
         
         /// <summary>
-        /// Execution space, optional 
-        ///  "DRY_RUN"
+        /// 
         /// </summary>
-        [JsonProperty("ExecutionSpace")]
-        public string ExecutionSpace{ get; set; }
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
 
         /// <summary>
-        /// Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+        /// 
         /// </summary>
-        [JsonProperty("ProductName")]
-        public string ProductName{ get; set; }
-
-        /// <summary>
-        /// Resource Group Information, optional
-        /// </summary>
-        [JsonProperty("ResourceGroup")]
-        public string ResourceGroup{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -49,9 +42,8 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ExecutionSpace", this.ExecutionSpace);
-            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
-            this.SetParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

@@ -15,33 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Lkeap.V20240522.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SearchConditionInstanceNew : AbstractModel
+    public class ChatUsage : AbstractModel
     {
         
         /// <summary>
-        /// Execution space, optional 
-        ///  "DRY_RUN"
+        /// Number of input tokens.
         /// </summary>
-        [JsonProperty("ExecutionSpace")]
-        public string ExecutionSpace{ get; set; }
+        [JsonProperty("PromptTokens")]
+        public long? PromptTokens{ get; set; }
 
         /// <summary>
-        /// Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+        /// Number of output tokens.
         /// </summary>
-        [JsonProperty("ProductName")]
-        public string ProductName{ get; set; }
+        [JsonProperty("CompletionTokens")]
+        public long? CompletionTokens{ get; set; }
 
         /// <summary>
-        /// Resource Group Information, optional
+        /// Total number of tokens.
         /// </summary>
-        [JsonProperty("ResourceGroup")]
-        public string ResourceGroup{ get; set; }
+        [JsonProperty("TotalTokens")]
+        public long? TotalTokens{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ExecutionSpace", this.ExecutionSpace);
-            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
-            this.SetParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
+            this.SetParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
+            this.SetParamSimple(map, prefix + "CompletionTokens", this.CompletionTokens);
+            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
         }
     }
 }

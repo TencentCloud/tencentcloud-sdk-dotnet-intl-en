@@ -15,33 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Wedata.V20210820.Models
+namespace TencentCloud.Lkeap.V20240522.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SearchConditionInstanceNew : AbstractModel
+    public class Delta : AbstractModel
     {
         
         /// <summary>
-        /// Execution space, optional 
-        ///  "DRY_RUN"
+        /// Role name.
         /// </summary>
-        [JsonProperty("ExecutionSpace")]
-        public string ExecutionSpace{ get; set; }
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
         /// <summary>
-        /// Business Products, options: DATA_DEV, DATA_QUALITY, DATA_INTEGRATION, default DATA_DEV. Non-empty. Default own project
+        /// Content details.
         /// </summary>
-        [JsonProperty("ProductName")]
-        public string ProductName{ get; set; }
+        [JsonProperty("Content")]
+        public string Content{ get; set; }
 
         /// <summary>
-        /// Resource Group Information, optional
+        /// Chain of thought content. The ReasoningConent parameter only supports output parameters, and is only returned by the deepseek-r1 model.
         /// </summary>
-        [JsonProperty("ResourceGroup")]
-        public string ResourceGroup{ get; set; }
+        [JsonProperty("ReasoningContent")]
+        public string ReasoningContent{ get; set; }
 
 
         /// <summary>
@@ -49,9 +48,9 @@ namespace TencentCloud.Wedata.V20210820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ExecutionSpace", this.ExecutionSpace);
-            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
-            this.SetParamSimple(map, prefix + "ResourceGroup", this.ResourceGroup);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
+            this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "ReasoningContent", this.ReasoningContent);
         }
     }
 }
