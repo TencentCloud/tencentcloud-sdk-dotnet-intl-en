@@ -79,73 +79,73 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? RecvPacketDropNumber{ get; set; }
 
         /// <summary>
-        /// bandwidth
+        /// Bandwidth
         /// </summary>
         [JsonProperty("Bandwidth")]
         public float? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Transmit bandwidth
+        /// transmit bandwidth
         /// </summary>
         [JsonProperty("SendBandwidth")]
         public float? SendBandwidth{ get; set; }
 
         /// <summary>
-        /// Receive bandwidth
+        /// Receiving bandwidth
         /// </summary>
         [JsonProperty("RecvBandwidth")]
         public float? RecvBandwidth{ get; set; }
 
         /// <summary>
-        /// Number of packets sent
+        /// Sent packet count
         /// </summary>
         [JsonProperty("SendPackets")]
         public long? SendPackets{ get; set; }
 
         /// <summary>
-        /// Number of received packets
+        /// Received packets
         /// </summary>
         [JsonProperty("RecvPackets")]
         public long? RecvPackets{ get; set; }
 
         /// <summary>
-        /// Send lost package
+        /// Sent lost packets
         /// </summary>
         [JsonProperty("SendLostPackets")]
         public long? SendLostPackets{ get; set; }
 
         /// <summary>
-        /// Accept lost packages
+        /// accept lost packets
         /// </summary>
         [JsonProperty("RecvLostPackets")]
         public long? RecvLostPackets{ get; set; }
 
         /// <summary>
-        /// Number of retransmission packets sent
+        /// Retransmitted packet count
         /// </summary>
         [JsonProperty("SendRetransmitPackets")]
         public long? SendRetransmitPackets{ get; set; }
 
         /// <summary>
-        /// Number of received retransmission packets
+        /// Retransmitted packets received
         /// </summary>
         [JsonProperty("RecvRetransmitPackets")]
         public long? RecvRetransmitPackets{ get; set; }
 
         /// <summary>
-        /// Flight window size
+        /// Window size
         /// </summary>
         [JsonProperty("FlightSize")]
         public long? FlightSize{ get; set; }
 
         /// <summary>
-        /// congestion window
+        /// Congestion window
         /// </summary>
         [JsonProperty("CongestionWindow")]
         public long? CongestionWindow{ get; set; }
 
         /// <summary>
-        /// Send buffer (ms)
+        /// Sending buffer (ms)
         /// </summary>
         [JsonProperty("SendBuffer")]
         public long? SendBuffer{ get; set; }
@@ -157,13 +157,13 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? RecvBuffer{ get; set; }
 
         /// <summary>
-        /// Sending delay
+        /// Send delay
         /// </summary>
         [JsonProperty("SendLatency")]
         public long? SendLatency{ get; set; }
 
         /// <summary>
-        /// Receiving delay
+        /// receive latency
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }

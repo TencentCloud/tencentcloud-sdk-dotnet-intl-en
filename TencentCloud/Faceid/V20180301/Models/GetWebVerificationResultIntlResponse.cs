@@ -61,8 +61,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string BestFrameBase64{ get; set; }
 
         /// <summary>
-        /// Card recognize result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Card recognize result
         /// </summary>
         [JsonProperty("OCRResult")]
         public OCRResult[] OCRResult{ get; set; }

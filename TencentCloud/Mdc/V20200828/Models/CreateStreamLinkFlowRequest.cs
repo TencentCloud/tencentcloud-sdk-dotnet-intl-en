@@ -48,6 +48,12 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// Flow output group.
+        /// </summary>
+        [JsonProperty("OutputGroup")]
+        public CreateOutputInfo[] OutputGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
         }
     }
 }

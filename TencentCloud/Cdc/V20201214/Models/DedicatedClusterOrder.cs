@@ -34,24 +34,28 @@ namespace TencentCloud.Cdc.V20201214.Models
         /// CDC type id (moved to the next level, obsolete and will be deleted later)
         /// </summary>
         [JsonProperty("DedicatedClusterTypeId")]
+        [System.Obsolete]
         public string DedicatedClusterTypeId{ get; set; }
 
         /// <summary>
         /// List of supported storage types (moved to the next level, obsolete and will be deleted later)
         /// </summary>
         [JsonProperty("SupportedStorageType")]
+        [System.Obsolete]
         public string[] SupportedStorageType{ get; set; }
 
         /// <summary>
         /// Supported uplink switch transmission rate (GiB) (moved to the next level, obsolete and will be deleted later)
         /// </summary>
         [JsonProperty("SupportedUplinkSpeed")]
+        [System.Obsolete]
         public long?[] SupportedUplinkSpeed{ get; set; }
 
         /// <summary>
         /// List of supported instance families (moved to the next level, obsolete and will be deleted later)
         /// </summary>
         [JsonProperty("SupportedInstanceFamily")]
+        [System.Obsolete]
         public string[] SupportedInstanceFamily{ get; set; }
 
         /// <summary>
@@ -154,43 +158,43 @@ namespace TencentCloud.Cdc.V20201214.Models
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// Acceptance Status
+        /// 
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// Expected Delivery Time
+        /// 
         /// </summary>
         [JsonProperty("DeliverExpectTime")]
         public string DeliverExpectTime{ get; set; }
 
         /// <summary>
-        /// Actual Delivery Completion Time
+        /// 
         /// </summary>
         [JsonProperty("DeliverFinishTime")]
         public string DeliverFinishTime{ get; set; }
 
         /// <summary>
-        /// Expected Acceptance Time
+        /// 
         /// </summary>
         [JsonProperty("CheckExpectTime")]
         public string CheckExpectTime{ get; set; }
 
         /// <summary>
-        /// Actual Acceptance Completion Time
+        /// 
         /// </summary>
         [JsonProperty("CheckFinishTime")]
         public string CheckFinishTime{ get; set; }
 
         /// <summary>
-        /// Order SLA
+        /// 
         /// </summary>
         [JsonProperty("OrderSLA")]
         public string OrderSLA{ get; set; }
 
         /// <summary>
-        /// Order Payment Plan
+        /// 
         /// </summary>
         [JsonProperty("OrderPayPlan")]
         public string OrderPayPlan{ get; set; }
