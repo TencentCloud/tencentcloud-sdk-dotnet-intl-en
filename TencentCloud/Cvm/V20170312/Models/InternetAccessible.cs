@@ -34,7 +34,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+        /// The maximum outbound bandwidth of the public network, in Mbps. The default value is 0 Mbps. The upper limit of bandwidth varies for different models. For more information, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/12523).
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> AntiDDoSEIP: specifies the anti-ddos eip. only partial regions support anti-ddos eip. details visible in the [elastic IP product overview](https://www.tencentcloud.com/document/product/213/5733).</li>.
         /// If needed, assign a public IPv4 address to the resource by specifying the IPv4 address type.
         /// 
-        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+        /// This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
         /// </summary>
         [JsonProperty("IPv4AddressType")]
         public string IPv4AddressType{ get; set; }
@@ -83,7 +83,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <Li>HighQualityEIPv6: specifies the high quality ipv6. highqualityeipv6 is only supported in hong kong (china).</li>.
         /// If needed, assign an elastic IPv6 address for resource allocation.
         /// 
-        /// This feature is in beta test in selected regions. submit a ticket for consultation (https://console.cloud.tencent.com/workorder/category) if needed.
+        /// This feature is in beta test in selected regions. [submit a ticket for consultation](https://console.tencentcloud.com/workorder/category) if needed.
         /// </summary>
         [JsonProperty("IPv6AddressType")]
         public string IPv6AddressType{ get; set; }

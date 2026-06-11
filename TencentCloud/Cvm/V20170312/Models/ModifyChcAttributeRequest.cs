@@ -49,7 +49,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string BmcUser{ get; set; }
 
         /// <summary>
-        /// The password can contain 8 to 16 characters, including letters, numbers and special symbols (()`~!@#$%^&*-+=_|{}).
+        /// The password can contain 8 to 16 characters, including letters, numbers and special symbols ()`~!@#$%^&*-+=_|{}[]:;'<>,.?/
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

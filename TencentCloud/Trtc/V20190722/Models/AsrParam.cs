@@ -92,6 +92,27 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VadLevel")]
         public ulong? VadLevel{ get; set; }
 
+        /// <summary>
+        /// Whether to filter out dirty words (currently only support basic language engine and standard language engine). Range: [0, 2]. Default value: 0.
+        /// 0: Not filtering; 1: Filter out dirty words; 2: Replace dirty words with "*".
+        /// </summary>
+        [JsonProperty("FilterDirty")]
+        public ulong? FilterDirty{ get; set; }
+
+        /// <summary>
+        /// Whether to filter filler words (currently only support basic language engine and standard language engine). Range:  [0, 2]. Default value 0.
+        /// 0:No filtering; 1: Partial filtering; 2: Strict filtering.
+        /// </summary>
+        [JsonProperty("FilterModal")]
+        public ulong? FilterModal{ get; set; }
+
+        /// <summary>
+        /// Whether to filter periods at the end of sentences (currently only support basic language engine and standard language engine), range [0, 1], default value 0.
+        /// 0: Do not filter out periods at the end of sentences; 1: Filter out periods at the end of sentences.
+        /// </summary>
+        [JsonProperty("FilterPunc")]
+        public ulong? FilterPunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +124,9 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "HotWordList", this.HotWordList);
             this.SetParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
             this.SetParamSimple(map, prefix + "VadLevel", this.VadLevel);
+            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
+            this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
         }
     }
 }

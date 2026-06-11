@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ProductCodeName{ get; set; }
 
         /// <summary>
-        /// Billing mode: The billing mode, which can be monthly subscription or pay-as-you-go.
+        /// Billing mode: The billing mode, which can be yearly/monthly subscriptionor pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Transaction type, which can be monthly subscription purchase, monthly subscription renewal, pay-as-you-go deduction, etc.
+        /// Transaction type, which can be yearly/monthly subscription purchase, yearly/monthly subscription renewal, pay-as-you-go deduction, etc.
         /// </summary>
         [JsonProperty("ActionTypeName")]
         public string ActionTypeName{ get; set; }
 
         /// <summary>
-        /// Order ID: The ID of a monthly subscription order.
+        /// Order ID: The ID of a yearly/monthly subscription order.
         /// </summary>
         [JsonProperty("OrderId")]
         public string OrderId{ get; set; }

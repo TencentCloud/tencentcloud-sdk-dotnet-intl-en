@@ -62,7 +62,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? MaxIdleTime{ get; set; }
 
         /// <summary>
-        /// Controls whether the custom data channel is enabled. Accepted values: 0 (disabled) or 1 (enabled). Defaults to 0 if omitted.
+        /// Custom data mode: 0 indicates disabled, 1 indicates enabled.
+        /// Leave blank defaults to 0, meaning custom data is disabled.
         /// </summary>
         [JsonProperty("SendCustomMode")]
         public ulong? SendCustomMode{ get; set; }

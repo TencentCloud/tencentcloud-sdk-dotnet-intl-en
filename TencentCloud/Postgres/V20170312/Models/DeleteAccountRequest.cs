@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+        /// Account name to be deleted. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

@@ -25,19 +25,21 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 
+        /// RealTime: Real-time Voice Analysis; 
+        /// VoiceMessage: Voice Message; 
+        /// GMECloudApi: GME Cloud API; 
         /// </summary>
         [JsonProperty("SceneId")]
         public string SceneId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Switch state, true for on, false for off.
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// callback URL
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }

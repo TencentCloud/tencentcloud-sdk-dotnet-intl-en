@@ -37,7 +37,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Specify an effective [mirror](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. there are four image types: <li>PUBLIC image</li> <li>custom image</li> <li>shared image</li> <li>service market image</li>  you can obtain available mirror ids in the following ways: <li>the mirror ids of `PUBLIC image`, `custom image` and `shared image` can be queried by logging in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_image); the mirror ids of `service market image` can be queried through the [cloud market](https://market.cloud.tencent.com/list).</li> <li>call the api [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1), input InstanceType to obtain the list of images supported by the current model, and take the `ImageId` field from the return information.</li>.
+        /// Specify an effective [mirror](https://www.tencentcloud.com/document/product/213/4940) ID in the format of `img-xxx`. there are four image types: <li>PUBLIC image</li> <li>custom image</li> <li>shared image</li> <li>service market image</li>  you can obtain available mirror ids in the following ways: <li>the mirror ids of `PUBLIC image`, `custom image` and `shared image` can be queried by logging in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_image); the mirror ids of `service market image` can be queried through the [cloud market](https://market.cloud.tencent.com/list).</li> <li>call the api [DescribeImages](https://www.tencentcloud.com/document/api/213/33272), input InstanceType to obtain the list of images supported by the current model, and take the `ImageId` field from the return information.</li>.
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <summary>
         /// Instance model. Different instance models specify different resource specifications.
         /// 
-        /// <br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs api to get the latest specification table or referring to the [instance specifications](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) description. if this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><li>for instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. the specific format is: CDH_XCXG. for example, for creating a CDH instance with 1 CPU core and 1 gb memory, this parameter should be CDH_1C1G.</li>.
+        /// <br><li>For instances created with the payment modes PREPAID or POSTPAID_BY_HOUR, the specific values can be obtained by calling the DescribeInstanceTypeConfigs api to get the latest specification table or referring to the [instance specifications](https://www.tencentcloud.com/document/product/213/11518) description. if this parameter is not specified, the system will dynamically assign a default model based on the current resource sales situation in a region.</li><li>for instances created with the payment mode CDHPAID, this parameter has the prefix "CDH_" and is generated based on the CPU and memory configuration. the specific format is: CDH_XCXG. for example, for creating a CDH instance with 1 CPU core and 1 gb memory, this parameter should be CDH_1C1G.</li>.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -81,7 +81,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Number of instances to purchase. value range for monthly subscription instances: [1, 300]. value range for pay-as-you-go instances: [1, 100]. default value: 1. the number of instances to purchase must not exceed the remaining user quota. for specific quota limitations, see [CVM instance purchase limitations](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1).
+        /// Number of instances to purchase. value range for monthly subscription instances: [1, 300]. value range for pay-as-you-go instances: [1, 100]. default value: 1. the number of instances to purchase must not exceed the remaining user quota. for specific quota limitations, see [CVM instance purchase limitations](https://www.tencentcloud.com/document/product/213/2664).
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
@@ -99,7 +99,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Security group to which an instance belongs. this parameter can be obtained by calling the sgId field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
+        /// Security group to which an instance belongs. this parameter can be obtained by calling the sgId field in the returned value of [DescribeSecurityGroups](https://www.tencentcloud.com/document/api/215/15808). if not specified, the default security group is bound.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -147,7 +147,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
-        /// User data provided for an instance must be encoded in base64. valid values for maximum data size are up to 16 KB. for details on obtaining this parameter, see running commands at startup for Windows (https://intl.cloud.tencent.com/document/product/213/17526?from_cn_redirect=1) and Linux (https://intl.cloud.tencent.com/document/product/213/17525?from_cn_redirect=1).
+        /// User data provided for an instance must be encoded in base64. valid values for maximum data size are up to 16 KB. for details on obtaining this parameter, see running commands at startup for [Windows](https://www.tencentcloud.com/document/product/213/17526) and [Linux](https://www.tencentcloud.com/document/product/213/17525).
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
@@ -175,7 +175,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string HpcClusterId{ get; set; }
 
         /// <summary>
-        /// Instance [billing mode](https://intl.cloud.tencent.com/document/product/213/2180?from_cn_redirect=1).<br><li>PREPAID: prepaid, that is, monthly subscription.</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour.</li><li>CDHPAID: CDH instance (created based on CDH; the resources of the host are free of charge).</li><li>SPOTPAID: spot payment.</li>Default value: POSTPAID_BY_HOUR.
+        /// Instance [billing mode](https://www.tencentcloud.com/document/product/213/2180).<br><li>PREPAID: prepaid, that is, monthly subscription.</li><li>POSTPAID_BY_HOUR: pay-as-you-go by hour.</li><li>CDHPAID: CDH instance (created based on CDH; the resources of the host are free of charge).</li><li>SPOTPAID: spot payment.</li>Default value: POSTPAID_BY_HOUR.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

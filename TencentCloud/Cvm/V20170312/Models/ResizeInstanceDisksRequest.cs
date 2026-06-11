@@ -25,14 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// Instance ID to be operated. can be obtained from the `InstanceId` in the return value from the DescribeInstances api (https://www.tencentcloud.com/document/api/213/15728?from_cn_redirect=1).
+        /// Instance ID to be operated. can be obtained from the `InstanceId` in the return value from the [DescribeInstances API](https://www.tencentcloud.com/document/api/213/33258) .
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the configuration information of the data disk to be expanded, only supporting specifying the target capacity of the disk to be expanded. only non-elastic data disks (with `Portable` being `false` in the return values of [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1)) can be expanded. the unit of data disk capacity is GiB. the minimum expansion step is 10 GiB. for data disk type selection, refer to [disk product introduction](https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1). the available data disk type is restricted by the instance type `InstanceType`. additionally, the maximum allowable capacity for expansion varies by data disk type.
-        /// <dx-alert infotype="explain" title="">You should specify either DataDisks or SystemDisk, but you cannot specify both at the same time.</dx-alert>
+        /// Specifies the configuration information of the data disk to be expanded, only supporting specifying the target capacity of the disk to be expanded. only non-elastic data disks (with `Portable` being `false` in the return values of [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315)) can be expanded. the unit of data disk capacity is GiB. the minimum expansion step is 10 GiB. for data disk type selection, refer to [disk product introduction](https://www.tencentcloud.com/document/product/362/31636). the available data disk type is restricted by the instance type `InstanceType`. additionally, the maximum allowable capacity for expansion varies by data disk type. You can specify either DataDisks or SystemDisk, but not both at the same time.
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
@@ -44,8 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public bool? ForceStop{ get; set; }
 
         /// <summary>
-        /// System disk configuration information to be expanded. only supports specifying the purpose capacity of the disk to be expanded. only supports cloud disk expansion.
-        /// <dx-alert infotype="explain" title="">You should specify either DataDisks or SystemDisk, but you cannot specify both at the same time.</dx-alert>
+        /// System disk configuration information to be expanded. only supports specifying the purpose capacity of the disk to be expanded. only supports cloud disk expansion. You can specify either DataDisks or SystemDisk, but not both at the same time.
         /// </summary>
         [JsonProperty("SystemDisk")]
         public SystemDisk SystemDisk{ get; set; }

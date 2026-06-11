@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1) api.
+        /// Modify the permission of this account for a database object. obtain through the [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109) api.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

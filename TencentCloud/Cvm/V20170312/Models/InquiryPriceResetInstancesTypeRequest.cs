@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// One or more instance IDs to be operated. You can obtain the instance ID through the `InstanceId` in the return value from the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1). The maximum number of instances per request is 1.
+        /// One or more instance IDs to be operated. You can obtain the instance ID through the `InstanceId` in the return value from the API [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258). The maximum number of instances per request is 1.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
+        /// Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types](https://www.tencentcloud.com/document/product/213/11518).
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

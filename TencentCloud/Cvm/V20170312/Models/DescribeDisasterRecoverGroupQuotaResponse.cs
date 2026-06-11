@@ -56,7 +56,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public long? CvmInRackGroupQuota{ get; set; }
 
         /// <summary>
-        /// 
+        /// Quota for instances in a disaster recovery group of the switch type.
         /// </summary>
         [JsonProperty("CvmInSwitchGroupQuota")]
         public long? CvmInSwitchGroupQuota{ get; set; }

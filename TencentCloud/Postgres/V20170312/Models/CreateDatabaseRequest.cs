@@ -38,7 +38,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+        /// Owner of the database. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
         /// </summary>
         [JsonProperty("DatabaseOwner")]
         public string DatabaseOwner{ get; set; }

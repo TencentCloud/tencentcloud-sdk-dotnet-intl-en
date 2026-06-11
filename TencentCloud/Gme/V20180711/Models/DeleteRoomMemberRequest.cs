@@ -48,6 +48,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Uids")]
         public string[] Uids{ get; set; }
 
+        /// <summary>
+        /// List of users to exclude (string type)
+        /// </summary>
+        [JsonProperty("StrUids")]
+        public string[] StrUids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "DeleteType", this.DeleteType);
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamArraySimple(map, prefix + "Uids.", this.Uids);
+            this.SetParamArraySimple(map, prefix + "StrUids.", this.StrUids);
         }
     }
 }

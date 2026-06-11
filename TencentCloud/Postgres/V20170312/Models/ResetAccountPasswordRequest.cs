@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+        /// Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/product/409/18109).
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -40,10 +40,10 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// Specifies the new password for the UserName account.
         /// Password settings rule specifies the following:.
         /// - valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
-        /// -Must not start with "/".
-        /// -Must include the following four items:.
-        /// Lowercase letters a ~ z.
-        /// Uppercase letters: A – Z.
+        /// - Must not start with "/".
+        /// - Must include the following four items:.
+        /// Lowercase letters a - z.
+        /// Uppercase letters: A - Z.
         /// Digits: 0-9.
         /// Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
         /// </summary>

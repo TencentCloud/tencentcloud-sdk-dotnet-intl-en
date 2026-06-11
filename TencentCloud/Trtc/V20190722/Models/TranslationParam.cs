@@ -25,28 +25,16 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Target language for translation. Example: ["en", "ja"].
-        /// 
-        /// Supported target languages:
-        /// 
-        /// - <code>"zh"</code>: Chinese
-        /// - <code>"en"</code>: English
-        /// - <code>"vi"</code>: Vietnamese
-        /// - <code>"ja"</code>: Japanese
-        /// - <code>"ko"</code>: Korean
-        /// - <code>"id"</code>: Indonesian
-        /// - <code>"th"</code>: Thai
-        /// - <code>"pt"</code>: Portuguese
-        /// - <code>"ar"</code>: Arabic
-        /// - <code>"es"</code>: Spanish
-        /// - <code>"fr"</code>: French
-        /// - <code>"ms"</code>: Malay
-        /// - <code>"de"</code>: German
-        /// - <code>"it"</code>: Italian
-        /// - <code>"ru"</code>: Russian
+        /// <p>Target language for translation, example value ["en", "ja"]. Target language list [Chinese "zh", English "en", Vietnamese "vi", Japanese "ja", Korean "ko", Indonesian "id", Thai "th", Portuguese "pt", Arabic "ar", Spanish "es", French "fr", Malay "ms", German "de", Italian "it", Russian "ru"].</p>
         /// </summary>
         [JsonProperty("TargetLang")]
         public string[] TargetLang{ get; set; }
+
+        /// <summary>
+        /// <p>Glossary configuration.</p>
+        /// </summary>
+        [JsonProperty("Terminologies")]
+        public TerminologyItem[] Terminologies{ get; set; }
 
 
         /// <summary>
@@ -55,6 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "TargetLang.", this.TargetLang);
+            this.SetParamArrayObj(map, prefix + "Terminologies.", this.Terminologies);
         }
     }
 }

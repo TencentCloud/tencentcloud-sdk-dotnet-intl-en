@@ -54,6 +54,36 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
+        /// <summary>
+        /// <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+        /// </summary>
+        [JsonProperty("VersionType")]
+        public long? VersionType{ get; set; }
+
+        /// <summary>
+        /// <p>Compilation condition.</p>
+        /// </summary>
+        [JsonProperty("CompileCondition")]
+        public string CompileCondition{ get; set; }
+
+        /// <summary>
+        /// <p>Compilation configuration.</p>
+        /// </summary>
+        [JsonProperty("CompileConfig")]
+        public string CompileConfig{ get; set; }
+
+        /// <summary>
+        /// <p>CI/CD key ID.</p>
+        /// </summary>
+        [JsonProperty("PipelineId")]
+        public string PipelineId{ get; set; }
+
+        /// <summary>
+        /// <p>Internal file URL.</p>
+        /// </summary>
+        [JsonProperty("FileInnerUrl")]
+        public string FileInnerUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "FileUrl", this.FileUrl);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "MNPVersionIntro", this.MNPVersionIntro);
+            this.SetParamSimple(map, prefix + "VersionType", this.VersionType);
+            this.SetParamSimple(map, prefix + "CompileCondition", this.CompileCondition);
+            this.SetParamSimple(map, prefix + "CompileConfig", this.CompileConfig);
+            this.SetParamSimple(map, prefix + "PipelineId", this.PipelineId);
+            this.SetParamSimple(map, prefix + "FileInnerUrl", this.FileInnerUrl);
         }
     }
 }

@@ -54,6 +54,24 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
+        /// <summary>
+        /// <p>QR code expiration time.</p>
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>Version QR code.</p>
+        /// </summary>
+        [JsonProperty("QRCode")]
+        public string QRCode{ get; set; }
+
+        /// <summary>
+        /// <p>Compilation package information.</p>
+        /// </summary>
+        [JsonProperty("SubPackageInfos")]
+        public MNPVersionSubPackageInfo[] SubPackageInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "TaskMsg", this.TaskMsg);
             this.SetParamSimple(map, prefix + "MNPVersionId", this.MNPVersionId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "QRCode", this.QRCode);
+            this.SetParamArrayObj(map, prefix + "SubPackageInfos.", this.SubPackageInfos);
         }
     }
 }

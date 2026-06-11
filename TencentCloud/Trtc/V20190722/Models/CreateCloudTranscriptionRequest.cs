@@ -25,40 +25,46 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid) of TRTC, which is the same as the SdkAppId corresponding to the transcribed room.
+        /// <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#sdkappid">SdkAppId</a> of TRTC is the same as the SdkAppId corresponding to the transcribe room.</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid) of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it via RoomIdType.
+        /// <p>The <a href="https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#roomid">RoomId</a> of TRTC, which is the RoomId corresponding to the transcribed TRTC room. Note: The room ID type defaults to integer. If the room ID type is string, specify it through RoomIdType.</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// Room information RoomType must be the same as the RoomId type of the corresponding transcribed room. 0 indicates an integer type room ID, and 1 indicates a string Room Number.
+        /// <p>The room information RoomType must be identical to the data type of the RoomId corresponding to the transcribed room. 0 indicates an integer room number, and 1 indicates a string Room Number.</p>
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }
 
         /// <summary>
-        /// Parameters for transcribe service to join TRTC room.
+        /// <p>Parameters for the transcribe service to join TRTC room.</p>
         /// </summary>
         [JsonProperty("TranscriptionParam")]
         public TranscriptionParam TranscriptionParam{ get; set; }
 
         /// <summary>
-        /// Parameters used by the ASR transcribe service.
+        /// <p>Parameters used by the ASR transcribe service.</p>
         /// </summary>
         [JsonProperty("AsrParam")]
         public AsrParam AsrParam{ get; set; }
 
         /// <summary>
-        /// Translation parameters used for transcription.
+        /// <p>Parameters used to transcribe the translation service.</p>
         /// </summary>
         [JsonProperty("TranslationParam")]
         public TranslationParam TranslationParam{ get; set; }
+
+        /// <summary>
+        /// <p>Parameters used by the TTS transcribe service.</p>
+        /// </summary>
+        [JsonProperty("TTSParam")]
+        public TTSParam[] TTSParam{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamObj(map, prefix + "TranscriptionParam.", this.TranscriptionParam);
             this.SetParamObj(map, prefix + "AsrParam.", this.AsrParam);
             this.SetParamObj(map, prefix + "TranslationParam.", this.TranslationParam);
+            this.SetParamArrayObj(map, prefix + "TTSParam.", this.TTSParam);
         }
     }
 }

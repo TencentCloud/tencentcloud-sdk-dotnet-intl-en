@@ -21,26 +21,20 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMNGVersionRequest : AbstractModel
+    public class MNPVersionSubPackageInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>Task ID returned by the CreateMNPVersion API.</p>
+        /// Package name.
         /// </summary>
-        [JsonProperty("BusinessId")]
-        public string BusinessId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID.</p>
+        /// Package size. 
         /// </summary>
-        [JsonProperty("PlatformId")]
-        public string PlatformId{ get; set; }
-
-        /// <summary>
-        /// <p>CI/CD key ID.</p>
-        /// </summary>
-        [JsonProperty("PipelineId")]
-        public string PipelineId{ get; set; }
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
-            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
-            this.SetParamSimple(map, prefix + "PipelineId", this.PipelineId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

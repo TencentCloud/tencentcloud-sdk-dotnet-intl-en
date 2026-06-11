@@ -67,7 +67,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+        /// Billing mode: Resource billing mode, which can be  yearly/monthly subscriptionor pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }

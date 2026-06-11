@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcsas.V20250106.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMNGVersionRequest : AbstractModel
+    public class TerminologyItem : AbstractModel
     {
         
         /// <summary>
-        /// <p>Task ID returned by the CreateMNPVersion API.</p>
+        /// <p>Target language.</p>
         /// </summary>
-        [JsonProperty("BusinessId")]
-        public string BusinessId{ get; set; }
+        [JsonProperty("TargetLang")]
+        public string TargetLang{ get; set; }
 
         /// <summary>
-        /// <p>Platform ID.</p>
+        /// <p>Terminology configuration.</p>
         /// </summary>
-        [JsonProperty("PlatformId")]
-        public string PlatformId{ get; set; }
-
-        /// <summary>
-        /// <p>CI/CD key ID.</p>
-        /// </summary>
-        [JsonProperty("PipelineId")]
-        public string PipelineId{ get; set; }
+        [JsonProperty("Terminology")]
+        public TermPair[] Terminology{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
-            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
-            this.SetParamSimple(map, prefix + "PipelineId", this.PipelineId);
+            this.SetParamSimple(map, prefix + "TargetLang", this.TargetLang);
+            this.SetParamArrayObj(map, prefix + "Terminology.", this.Terminology);
         }
     }
 }
