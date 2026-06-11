@@ -37,15 +37,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Base64-encoded YAML string
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Base64 Encoded YAML String
         /// </summary>
         [JsonProperty("Yaml")]
         public string Yaml{ get; set; }
 
         /// <summary>
         /// Policy description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -63,8 +61,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PolicySourceType{ get; set; }
 
         /// <summary>
-        /// Network plugin of the network policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Plugins Corresponding to Network Policies
         /// </summary>
         [JsonProperty("NetworkPolicyPlugin")]
         public string NetworkPolicyPlugin{ get; set; }
@@ -76,8 +73,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PublishStatus{ get; set; }
 
         /// <summary>
-        /// Policy publishing result
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Distribution Result
         /// </summary>
         [JsonProperty("PublishResult")]
         public string PublishResult{ get; set; }

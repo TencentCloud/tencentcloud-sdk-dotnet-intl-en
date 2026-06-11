@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// You can pass through the Context value returned by this API to continue to get more logs. Expire time: 1 hour.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

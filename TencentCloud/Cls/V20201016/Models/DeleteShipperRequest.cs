@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Shipping rule ID
+        /// Shipping Rule Id.
+        /// -Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ShipperId")]
         public string ShipperId{ get; set; }

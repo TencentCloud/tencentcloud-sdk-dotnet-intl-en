@@ -37,13 +37,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? To{ get; set; }
 
         /// <summary>
-        /// Query statement
+        /// Retrieval analysis statement.
+        /// The statement consists of [retrieval condition] | [SQL statement]. When there is no need to perform statistical analysis on logs, the pipe character | and SQL statement can be omitted.
+        /// Use * or an empty string to search all logs.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// ID of the log topic to be queried
+        /// Log topic ID to query
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

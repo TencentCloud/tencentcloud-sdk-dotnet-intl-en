@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Affected detection items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemSet")]
         public BaselineItemInfo[] ItemSet{ get; set; }
 
         /// <summary>
         /// Affected hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostSet")]
         public BaselineHost[] HostSet{ get; set; }

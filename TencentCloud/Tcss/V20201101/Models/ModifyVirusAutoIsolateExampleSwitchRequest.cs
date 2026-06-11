@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// MD5 checksum of the file
+        /// File MD5 Value
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }

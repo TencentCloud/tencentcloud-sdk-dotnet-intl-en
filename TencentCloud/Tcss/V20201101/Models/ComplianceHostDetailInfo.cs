@@ -25,18 +25,22 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Docker version on the server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Docker version on the host.
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// K8s version on the server
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// K8S version on the host.
         /// </summary>
         [JsonProperty("K8SVersion")]
         public string K8SVersion{ get; set; }
+
+        /// <summary>
+        /// Containerd Version on Host
+        /// </summary>
+        [JsonProperty("ContainerdVersion")]
+        public string ContainerdVersion{ get; set; }
 
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
             this.SetParamSimple(map, prefix + "K8SVersion", this.K8SVersion);
+            this.SetParamSimple(map, prefix + "ContainerdVersion", this.ContainerdVersion);
         }
     }
 }

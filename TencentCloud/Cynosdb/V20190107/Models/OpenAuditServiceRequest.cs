@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log retention period
+        /// Log retention period.
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// Frequent log retention period
+        /// Frequent log retention period.
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audit type. true - Full audit; default false - Rule-based audit.
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }

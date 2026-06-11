@@ -34,8 +34,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// UA blacklist/whitelist effect rule list
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Effective rule list for UA blacklist and whitelist. must not exceed 10 rules.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilterRules")]
         public UserAgentFilterRule[] FilterRules{ get; set; }

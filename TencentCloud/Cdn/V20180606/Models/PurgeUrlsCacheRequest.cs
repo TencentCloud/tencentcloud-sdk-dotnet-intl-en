@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// List of URLs. The protocol header such as "http://" or "https://" needs to be included.
+        /// List of URLs. The protocol header such as `http://` or `https://` needs to be included.
         /// </summary>
         [JsonProperty("Urls")]
         public string[] Urls{ get; set; }

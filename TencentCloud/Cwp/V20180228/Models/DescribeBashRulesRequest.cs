@@ -44,7 +44,13 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Filter criteria
-        /// <li>Keywords - String - required: no - keyword (rule name)</li>
+        /// <li>Name - String - required: no - rule name</li>
+        /// <li>Rule - String - Required: no - Rule content</li>
+        /// <li>Level - Int - required: no - threat level</li>
+        /// <li>White - Int - Required: no - Type of allowlist</li>
+        /// <li>RuleCategory - Int - required: no - policy type</li>
+        /// <li>BashAction - Int - required: no - action</li>
+        /// <li>Status - Int - required: no - effective status</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

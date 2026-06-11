@@ -25,29 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// Vulnerability level and quantity statistics list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulLevelList")]
         public VulLevelCountInfo[] VulLevelList{ get; set; }
 
         /// <summary>
         /// Host QUUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Top ratings
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// top rating
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }

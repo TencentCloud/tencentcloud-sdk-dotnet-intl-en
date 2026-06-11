@@ -74,7 +74,7 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Whether automatic vulnerability fixing is supported
-        /// 0: not supported on Windows/Linux; 1: supported on Windows/Linux; 2: supported on Linux only; 3: supported on Windows only.
+        /// 0 - Windows/Linux both off; 1 - Windows/Linux both on; 2 - Linux only; 3 - Windows only
         /// </summary>
         [JsonProperty("FixSwitch")]
         public ulong? FixSwitch{ get; set; }

@@ -139,15 +139,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NetSubStatus{ get; set; }
 
         /// <summary>
-        /// Isolation source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Isolate source
         /// </summary>
         [JsonProperty("IsolateSource")]
         public string IsolateSource{ get; set; }
 
         /// <summary>
         /// Isolation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
@@ -195,13 +193,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? PodMem{ get; set; }
 
         /// <summary>
-        /// Cluster Name
+        /// 
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// 
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }

@@ -200,14 +200,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Target File Update Time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetModifyTime")]
         public string TargetModifyTime{ get; set; }
 
         /// <summary>
         /// Target File Creation Time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetCreatTime")]
         public string TargetCreatTime{ get; set; }
@@ -238,14 +236,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Process name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExeName")]
         public string ExeName{ get; set; }
 
         /// <summary>
         ///  Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -254,7 +250,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// File threat behavior
         /// <li>read: read file</li>
         /// <li>write: modify file</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }

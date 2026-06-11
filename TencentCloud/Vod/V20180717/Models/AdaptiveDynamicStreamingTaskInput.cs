@@ -66,6 +66,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SubtitleInfoSet")]
         public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
+        /// <summary>
+        /// <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+        /// </summary>
+        [JsonProperty("DrmInfo")]
+        public ThirdPartyDrmInfo DrmInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
             this.SetParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
             this.SetParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
+            this.SetParamObj(map, prefix + "DrmInfo.", this.DrmInfo);
         }
     }
 }

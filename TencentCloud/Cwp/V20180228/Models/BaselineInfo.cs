@@ -26,62 +26,54 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Baseline name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// Number of check items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleCount")]
         public ulong? RuleCount{ get; set; }
 
         /// <summary>
         /// Number of affected servers
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
-        /// Pass status. 0: passed; 1: failed.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pass status: 0: Failed, 1: Approved
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// Baseline ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CategoryId")]
         public ulong? CategoryId{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// 5: checking
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 5: detecting
         /// </summary>
         [JsonProperty("MaxStatus")]
         public ulong? MaxStatus{ get; set; }
 
         /// <summary>
-        /// Baseline check items with risks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Baseline risk items
         /// </summary>
         [JsonProperty("BaselineFailCount")]
         public ulong? BaselineFailCount{ get; set; }

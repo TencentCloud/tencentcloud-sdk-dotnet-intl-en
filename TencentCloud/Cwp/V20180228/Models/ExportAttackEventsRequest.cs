@@ -37,13 +37,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// Sorting value: CreateTime
+        /// Sorting value: CreateTime
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// Sorting method: ASC, DESC
+        /// Sorting method: ASC, DESC
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

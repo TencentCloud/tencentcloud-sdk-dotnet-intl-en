@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Blocking rule ID.
+        /// Blocking rule ID. Retrieve the blocking rule ID via [retrieve alert masking configuration rules](https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Notification channel group ID.
+        /// id of the notification channel group. Retrieve alert masking configuration rules (https://www.tencentcloud.com/document/api/614/103650?from_cn_redirect=1) to get the id of the notification channel group.
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
-        /// Block start time (second-level timestamp).
+        /// Block start time, second-level (s) timestamp.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
@@ -68,6 +68,7 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Rule status. Only when the rule status is in effect (status:1) can it be modified to expired (status:2).
+        /// Enumerate: 0 (inactive), 1 (active), 2 (invalid)
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -25,76 +25,82 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
+        /// <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// Consistency timeout period
+        /// <p>Consistency timeout</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// Weight mode. Valid values: `system` (auto-assigned), `custom`.
+        /// <p>Weight mode system-system-assigned, custom-custom</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Whether to enable failover
+        /// <p>Whether fault migration is enabled</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// Whether to automatically add read-only instance. Valid value: `yes`, `no`.
+        /// <p>Automatically add read-only instance, yes-yes, no-no</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// Instance weight array
+        /// <p>Instance weight array</p>
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// Whether to enable read-write nodes. valid values: yes, no.
+        /// <p>Whether to enable the read-write node, yes - enable, no - disable</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
 
         /// <summary>
-        /// Read/write attribute. Valid values: `READWRITE`, `READONLY`.
+        /// <p>Read-write attribute, value range: READWRITE, READONLY</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// Transaction split
+        /// <p>Transaction split</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// Connection mode. Valid values: `balance`, `nearby`.
+        /// <p>Connection mode, available values: balance, nearby</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// Whether to treat the libra node as an ordinary RO node
+        /// <p>Whether to treat the libra node as an ordinary RO node</p>
         /// </summary>
         [JsonProperty("ApNodeAsRoNode")]
         public bool? ApNodeAsRoNode{ get; set; }
 
         /// <summary>
-        /// libra node fault, whether to forward to other nodes
+        /// <p>Whether to forward to other nodes when a libra node fault occurs</p>
         /// </summary>
         [JsonProperty("ApQueryToOtherNode")]
         public bool? ApQueryToOtherNode{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LoadBalanceMode")]
+        public string LoadBalanceMode{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AccessMode", this.AccessMode);
             this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
             this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
+            this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
         }
     }
 }

@@ -26,28 +26,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// Component name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Component version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Fixed component version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component Repair Version
         /// </summary>
         [JsonProperty("FixedVersion")]
         public string FixedVersion{ get; set; }
 
         /// <summary>
         /// Component path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }

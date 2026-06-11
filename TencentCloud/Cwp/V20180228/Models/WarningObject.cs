@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Event Alarm Type. 1: Offline; 2: Trojan; 3: Exceptional login; 4: Brute force; 5: Vulnerability (split into four types ranging from 9 to 12); 6: High-risk command; 7: Reverse sell; 8: Local privilege escalation;, 9: System component vulnerabilities; 10: Web application vulnerabilities; 11: Emergency vulnerabilities; 12: Security baseline; 14: Malicious request; 15: Network attack; 16: Windows system vulnerabilities; 17: Linux software vulnerabilities
+        /// Event alarm type: 1: offline, 2: Trojan, 3: abnormal login, 4: crack, 5: vulnerability (split into four types 9-12), 6: high-risk command, 7: rebound shell, 8: local privilege escalation, 9: system component vulnerability, 10: web application vulnerability, 11: emergency vulnerability, 12: security baseline, 14: malicious request, 15: network attack, 16: Windows system vulnerability, 17: Linux software vulnerability.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("HostRange")]
         public long? HostRange{ get; set; }
 
+        /// <summary>
+        /// Unit.
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "ControlBits", this.ControlBits);
             this.SetParamSimple(map, prefix + "HostRange", this.HostRange);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
         }
     }
 }

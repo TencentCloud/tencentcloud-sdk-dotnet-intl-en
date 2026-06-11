@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Image ID
+        /// <p>Image ID.</p>
         /// </summary>
         [JsonProperty("ImageID")]
         public string ImageID{ get; set; }

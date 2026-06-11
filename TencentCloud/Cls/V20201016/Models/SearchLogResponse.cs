@@ -25,72 +25,67 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Pass through the Context value returned by this API, which can access more logs later, with an expiration time of 1 hour.Note:* Applicable only for single log topic searches. When searching multiple log topics, please use the Context in Topics.
+        /// <p>Pass through the Context value returned by this API to obtain more logs later. The expiration time is 1 hour.<br>Note:</p><ul><li>Applicable only for single log topic retrieval. To retrieve multiple log topics, use the Context in Topics.</li></ul>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
-        /// Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+        /// <p>Whether all logs meeting the retrieval criteria have been returned. If not, use Context parameter to retrieve more logs.<br>Note: This is only valid when the search and analysis statement (Query) does not contain SQL.</p>
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// Whether the returned data is the analysis (SQL) result
+        /// <p>Whether the returned data is the SQL analysis result</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// Raw logs that meet the search conditions
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Raw logs matching the retrieval criteria</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// Column names of log analysis
-        /// This parameter is valid only when `UseNewAnalysis` is `false`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Column names of log statistics analysis results<br>This parameter is valid only when UseNewAnalysis is false</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ColNames")]
         public string[] ColNames{ get; set; }
 
         /// <summary>
-        /// Log analysis result
-        /// This parameter is valid only when `UseNewAnalysis` is `false`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Statistical analysis results of logs<br>This parameter is valid only when UseNewAnalysis is false</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// Log analysis result
-        /// This parameter is valid only when `UseNewAnalysis` is `true`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// Column attributes of log analysis
-        /// This parameter is valid only when `UseNewAnalysis` is `true`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Column attribute of log statistics and analysis results<br>This parameter is valid only when UseNewAnalysis is true</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Columns")]
         public Column[] Columns{ get; set; }
 
         /// <summary>
-        /// Sample rate used in this statistical analysis
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Sampling rate used in this analysis</p>
         /// </summary>
         [JsonProperty("SamplingRate")]
         public float? SamplingRate{ get; set; }
 
         /// <summary>
-        /// Refers to the basic information of each log topic when multiple log topics are used for search, such as error messages.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>When multiple log topics are used for retrieval, basic information of each log topic, such as error message.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Topics")]
         public SearchLogTopics Topics{ get; set; }

@@ -121,7 +121,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 0: Pro Edition; 1: Ultimate Edition; 2: LH Inclusive Edition (for Lighthouse only); 3: CVM Inclusive Edition (for CVM only).
+        /// 0: Pro Edition; 1: Flagship Edition; 2: LH Light Edition (for Lighthouse only); 3: CVM Light Edition (for CVM only).
         /// </summary>
         [JsonProperty("UpgradeType")]
         public long? UpgradeType{ get; set; }
@@ -140,7 +140,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

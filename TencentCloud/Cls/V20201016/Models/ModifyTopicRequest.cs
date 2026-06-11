@@ -25,65 +25,106 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// <p>Topic ID - Obtain the topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Topic List</a>.</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log topic name
+        /// <p>Topic name<br>Input restrictions:</p><ul><li>Cannot be an empty string</li><li>Cannot contain character '|'</li><li>Cannot use the following names ["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]</li></ul>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and they must be unique.
+        /// <p>List of tag descriptions. By specifying this parameter, you can bind tags to the appropriate topic simultaneously. Supports up to 10 tag key-value pairs, and no duplicate key-value pairs are allowed.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.The console currently does not support modifying this parameter.
+        /// <p>Whether the topic has log collection enabled. true: start collection; false: disable collection.<br>The console currently does not support modification of this parameter.</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Whether to enable automatic split
+        /// <p>Whether to enable auto-split</p>
         /// </summary>
         [JsonProperty("AutoSplit")]
         public bool? AutoSplit{ get; set; }
 
         /// <summary>
-        /// Maximum number of partitions to split into for this topic if automatic split is enabled
+        /// <p>If maximum split is enabled, the maximum number of partitions allowed for this topic;<br>default is 50; must be a positive number</p>
         /// </summary>
         [JsonProperty("MaxSplitPartitions")]
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days. Value range: 1 to 3600 (STANDARD storage); 7 to 3600 (IA storage). 3640 indicates permanent retention.
+        /// <p>Lifecycle in days. Standard storage value range is 1-3600. Infrequent storage value range is 7-3600. A value of 3640 indicates permanent retention.</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Log topic description
+        /// <p>Storage type: cold infrequent storage, hot standard storage</p>
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
+        /// <p>Topic description</p>
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// `0`: Disable log transitioning.
-        /// A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+        /// <p>0: The log topic disables log settlement.<br>Non-0: Number of days for standard storage after log settlement is enabled for the log topic. HotPeriod needs to be greater than or equal to 7 and less than Period.<br>Effective only when StorageType is hot. This configuration is not supported for metric topics.</p>
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// Free authentication switch. false: disabled; true: enabled.Once enabled, it will support specified operations for anonymous access to this log topic. For details, please see [log Topic](https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).
+        /// <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, anonymous access to the log topic will be supported for specified operations. For details, please see <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a>.</p>
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
+
+        /// <summary>
+        /// <p>Topic extended information</p>
+        /// </summary>
+        [JsonProperty("Extends")]
+        public TopicExtendInfo Extends{ get; set; }
+
+        /// <summary>
+        /// <p>Number of topic partitions.<br>Defaults to 1.<br>Value ranges and constraints:</p><ul><li>When the input value &lt;=0, the system automatically adjusts it to 1.</li><li>If MaxSplitPartitions is not passed, PartitionCount must be &lt;=50.</li><li>If MaxSplitPartitions is passed, PartitionCount must be &lt;=MaxSplitPartitions.</li></ul>
+        /// </summary>
+        [JsonProperty("PartitionCount")]
+        public ulong? PartitionCount{ get; set; }
+
+        /// <summary>
+        /// <p>id of the cancel switch storage task</p><ul><li>Obtain the id of the cancel switch storage task [TopicAsyncTaskID field in Topics] by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">get log topic list</a>.</li></ul>
+        /// </summary>
+        [JsonProperty("CancelTopicAsyncTaskID")]
+        public string CancelTopicAsyncTaskID{ get; set; }
+
+        /// <summary>
+        /// <p>Encryption-related parameters. Encrypted regions are supported and can be passed for allowlisted users. Cannot be passed in other scenarios.<br>Only support passing in 1: kms-cls secret key for cloud product encryption.</p>
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public ulong? Encryption{ get; set; }
+
+        /// <summary>
+        /// <p>Enable logging of public network source IP and server receipt time</p>
+        /// </summary>
+        [JsonProperty("IsSourceFrom")]
+        public bool? IsSourceFrom{ get; set; }
+
+        /// <summary>
+        /// <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Raw log size billing (currently only supports some customers)</li></ul><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("BillingMode")]
+        public ulong? BillingMode{ get; set; }
 
 
         /// <summary>
@@ -98,9 +139,16 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+            this.SetParamObj(map, prefix + "Extends.", this.Extends);
+            this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+            this.SetParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
+            this.SetParamSimple(map, prefix + "Encryption", this.Encryption);
+            this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+            this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
         }
     }
 }

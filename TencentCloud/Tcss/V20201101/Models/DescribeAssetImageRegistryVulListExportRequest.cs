@@ -57,7 +57,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
-        /// Image ID
+        /// Unique image ID, obtainable by calling the DescribeAssetImageRegistryList API.
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }

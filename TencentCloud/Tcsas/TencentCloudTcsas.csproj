@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4FE02EAD-36EB-3BF7-AED6-3FB3FCFD4DB8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1319</VersionPrefix>
+    <VersionPrefix>3.0.1329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,9 @@
     <Compile Include="V20250106\Models\CreateGlobalDomainACLRequest.cs" />
     <Compile Include="V20250106\Models\CreateGlobalDomainACLResponse.cs" />
     <Compile Include="V20250106\Models\CreateGlobalDomainResp.cs" />
+    <Compile Include="V20250106\Models\CreateMNGAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNGAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\CreateMNGAppSecretResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNGApprovalRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNGApprovalResp.cs" />
     <Compile Include="V20250106\Models\CreateMNGApprovalResponse.cs" />
@@ -87,9 +90,14 @@
     <Compile Include="V20250106\Models\CreateMNGResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNGSensitiveAPIPermissionApprovalRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNGSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNGSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNGSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNGVersionRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNGVersionResp.cs" />
     <Compile Include="V20250106\Models\CreateMNGVersionResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\CreateMNPAppSecretResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNPApprovalRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNPApprovalResp.cs" />
     <Compile Include="V20250106\Models\CreateMNPApprovalResponse.cs" />
@@ -102,6 +110,8 @@
     <Compile Include="V20250106\Models\CreateMNPSecretKeyResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNPSensitiveAPIPermissionApprovalRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNPSensitiveAPIPermissionApprovalResponse.cs" />
+    <Compile Include="V20250106\Models\CreateMNPSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\CreateMNPSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\CreateMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\CreateMNPVersionResp.cs" />
     <Compile Include="V20250106\Models\CreateMNPVersionResponse.cs" />
@@ -120,8 +130,12 @@
     <Compile Include="V20250106\Models\DeleteGlobalDomainResponse.cs" />
     <Compile Include="V20250106\Models\DeleteMNGRequest.cs" />
     <Compile Include="V20250106\Models\DeleteMNGResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteMNGSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteMNGSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\DeleteMNPRequest.cs" />
     <Compile Include="V20250106\Models\DeleteMNPResponse.cs" />
+    <Compile Include="V20250106\Models\DeleteMNPSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\DeleteMNPSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\DeleteTeamMemberRequest.cs" />
     <Compile Include="V20250106\Models\DeleteTeamMemberResponse.cs" />
     <Compile Include="V20250106\Models\DeleteTeamRequest.cs" />
@@ -182,6 +196,9 @@
     <Compile Include="V20250106\Models\DescribeMNGAllStageVersionsRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGAllStageVersionsResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGAllStageVersionsResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAppSecretResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGCategoryRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGCategoryResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGDomainACLRequest.cs" />
@@ -225,6 +242,22 @@
     <Compile Include="V20250106\Models\DescribeMNGSensitiveAPIPermissionListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGSensitiveAPIPermissionListResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGSensitiveAPIPermissionListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryKeywordData.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryKeywordInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateLibraryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionResponse.cs" />
@@ -236,6 +269,9 @@
     <Compile Include="V20250106\Models\DescribeMNPAdvertisingDetailResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPAllStageVersionsResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAppSecretResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListData.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListResp.cs" />
@@ -283,6 +319,17 @@
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSensitiveAPIPermissionListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateLibraryListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateLibraryListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateLibraryRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateLibraryResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResponse.cs" />
@@ -298,6 +345,11 @@
     <Compile Include="V20250106\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeRoleListResp.cs" />
     <Compile Include="V20250106\Models\DescribeRoleListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeSubscribeMessageTemplateLibraryInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeSubscribeMessageTemplateLibraryKeywordData.cs" />
+    <Compile Include="V20250106\Models\DescribeSubscribeMessageTemplateLibraryKeywordInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeSubscribeMessageTemplateLibraryListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeSubscribeMessageTemplateLibraryResp.cs" />
     <Compile Include="V20250106\Models\DescribeTeamDetailResp.cs" />
     <Compile Include="V20250106\Models\DescribeTeamListInfoResp.cs" />
     <Compile Include="V20250106\Models\DescribeTeamListRequest.cs" />
@@ -325,6 +377,7 @@
     <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIResponse.cs" />
     <Compile Include="V20250106\Models\GlobalDomainDeleteResp.cs" />
     <Compile Include="V20250106\Models\GlobalDomainModifyRespResp.cs" />
+    <Compile Include="V20250106\Models\I18nItem.cs" />
     <Compile Include="V20250106\Models\MAUChartData.cs" />
     <Compile Include="V20250106\Models\MAUDetail.cs" />
     <Compile Include="V20250106\Models\MAUDetailData.cs" />
@@ -332,12 +385,14 @@
     <Compile Include="V20250106\Models\MAULineChartData.cs" />
     <Compile Include="V20250106\Models\MNGMAULineChartData.cs" />
     <Compile Include="V20250106\Models\MNGPaymentOverview.cs" />
+    <Compile Include="V20250106\Models\MNGSubscribeMessageTemplateDetailResp.cs" />
     <Compile Include="V20250106\Models\MNGTypeDefine.cs" />
     <Compile Include="V20250106\Models\MNPAdOverview.cs" />
     <Compile Include="V20250106\Models\MNPAdvertisingOverview.cs" />
     <Compile Include="V20250106\Models\MNPDetailI18nVO.cs" />
     <Compile Include="V20250106\Models\MNPI18NSyncDto.cs" />
     <Compile Include="V20250106\Models\MNPPaymentOverview.cs" />
+    <Compile Include="V20250106\Models\MNPSubscribeMessageTemplateDetailResp.cs" />
     <Compile Include="V20250106\Models\MNPTypeDefine.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationConfigRequest.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationConfigResponse.cs" />
@@ -345,10 +400,16 @@
     <Compile Include="V20250106\Models\ModifyApplicationResponse.cs" />
     <Compile Include="V20250106\Models\ModifyGlobalDomainRequest.cs" />
     <Compile Include="V20250106\Models\ModifyGlobalDomainResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyMNGAppSecretStatusRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyMNGAppSecretStatusResp.cs" />
+    <Compile Include="V20250106\Models\ModifyMNGAppSecretStatusResponse.cs" />
     <Compile Include="V20250106\Models\ModifyMNGDomainRequest.cs" />
     <Compile Include="V20250106\Models\ModifyMNGDomainResponse.cs" />
     <Compile Include="V20250106\Models\ModifyMNGRequest.cs" />
     <Compile Include="V20250106\Models\ModifyMNGResponse.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPAppSecretStatusRequest.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPAppSecretStatusResp.cs" />
+    <Compile Include="V20250106\Models\ModifyMNPAppSecretStatusResponse.cs" />
     <Compile Include="V20250106\Models\ModifyMNPDomainRequest.cs" />
     <Compile Include="V20250106\Models\ModifyMNPDomainResponse.cs" />
     <Compile Include="V20250106\Models\ModifyMNPRequest.cs" />
@@ -379,6 +440,12 @@
     <Compile Include="V20250106\Models\RemoveMNPRequest.cs" />
     <Compile Include="V20250106\Models\RemoveMNPResponse.cs" />
     <Compile Include="V20250106\Models\ReportDataResult.cs" />
+    <Compile Include="V20250106\Models\ResetMNGAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\ResetMNGAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\ResetMNGAppSecretResponse.cs" />
+    <Compile Include="V20250106\Models\ResetMNPAppSecretRequest.cs" />
+    <Compile Include="V20250106\Models\ResetMNPAppSecretResp.cs" />
+    <Compile Include="V20250106\Models\ResetMNPAppSecretResponse.cs" />
     <Compile Include="V20250106\Models\ResourceIdInfo.cs" />
     <Compile Include="V20250106\Models\ResourceIdStringInfo.cs" />
     <Compile Include="V20250106\Models\RetentionData.cs" />
@@ -387,6 +454,7 @@
     <Compile Include="V20250106\Models\RollbackMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\RollbackMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\StringData.cs" />
+    <Compile Include="V20250106\Models\SubscribeMessageTemplateLibraryKeywordI18nInfoResp.cs" />
     <Compile Include="V20250106\Models\UploadFileTempSecret.cs" />
     <Compile Include="V20250106\Models\VisitData.cs" />
   </ItemGroup>

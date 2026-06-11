@@ -103,8 +103,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? EventID{ get; set; }
 
         /// <summary>
-        /// First discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// First detection time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -123,63 +122,56 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Last discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MergeTime")]
         public string MergeTime{ get; set; }
 
         /// <summary>
-        /// Container status
-        /// `RUNNING`: Running.
-        /// `PAUSED`: Paused.
-        /// `STOPPED`: Stopped.
-        /// `CREATED`: Created.
-        /// `DESTROYED`: Terminated.
-        /// `RESTARTING`: Restarting.
-        /// `REMOVING`: Removing.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container status.
+        /// RUNNING: running
+        /// PAUSED
+        /// Stop: STOPPED
+        /// CREATED
+        /// DESTROYED
+        /// RESTARTING
+        /// Migrating: REMOVING
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
-        /// Sub-status of the container
-        /// "AGENT_OFFLINE"       // The agent is offline.
-        /// 	"NODE_DESTROYED"      // The node is terminated.
-        /// 	"CONTAINER_EXITED"    // The container exited.
-        /// 	"CONTAINER_DESTROYED" // The container was terminated.
-        /// 	"SHARED_HOST"         // The container shares the network with the server.
-        /// 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-        /// 	"UNKNOW"              // The reason is unknown.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container sub-status
+        /// AGENT_OFFLINE
+        /// 	NODE_DESTROYED
+        /// 	CONTAINER_EXITED
+        /// 	"CONTAINER_DESTROYED" //Container destroyed
+        /// 	"SHARED_HOST"         // Container shares network with host
+        /// 	RESOURCE_LIMIT
+        /// 	"UNKNOW"              // Reason unknown
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// Container isolation operation source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container Isolation Operation Source
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// Node QUuid/Super node ID
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Host QUUID/Super Node ID
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }
 
         /// <summary>
-        /// Server private IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host private IP address
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// General node/Super node name
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Host Name/Super Node Name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
@@ -220,6 +212,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// Pod name
+        /// </summary>
+        [JsonProperty("PodName")]
+        public string PodName{ get; set; }
+
+        /// <summary>
+        /// pod ip
+        /// </summary>
+        [JsonProperty("PodIP")]
+        public string PodIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +258,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "PodName", this.PodName);
+            this.SetParamSimple(map, prefix + "PodIP", this.PodIP);
         }
     }
 }

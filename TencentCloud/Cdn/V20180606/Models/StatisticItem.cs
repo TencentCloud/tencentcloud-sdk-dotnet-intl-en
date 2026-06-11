@@ -46,8 +46,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ulong? BpsThreshold{ get; set; }
 
         /// <summary>
-        /// Specifies how to disable CDN service when the threshold is exceeded. `RETURN_404`: Return 404; `RESOLVE_DNS_TO_ORIGIN`: Forward to origin server.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Shutdown method RETURN 404: RETURN_404.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CounterMeasure")]
         public string CounterMeasure{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Metric{ get; set; }
 
         /// <summary>
-        /// Detection Cycle, Unit: Minutes, 60 or 1440
+        /// 
         /// </summary>
         [JsonProperty("Cycle")]
         public ulong? Cycle{ get; set; }

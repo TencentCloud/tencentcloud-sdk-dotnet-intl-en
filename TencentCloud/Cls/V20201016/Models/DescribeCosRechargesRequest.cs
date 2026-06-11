@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// ID of the log topic.
+        /// Log topic Id.
+        /// - Get the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

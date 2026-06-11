@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Obtain the number of vulnerabilities for corresponding days in batch
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obtain the vulnerability count for corresponding days in batch
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong?[] VulCount{ get; set; }

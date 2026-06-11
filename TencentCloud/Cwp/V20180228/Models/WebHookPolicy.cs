@@ -26,73 +26,75 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
         /// Policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Event type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Events")]
         public WebHookEventKv[] Events{ get; set; }
 
         /// <summary>
-        /// Host range
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host scope
         /// </summary>
         [JsonProperty("HostLabels")]
         public WebHookHostLabel[] HostLabels{ get; set; }
 
         /// <summary>
         /// Recipient
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Receivers")]
         public WebHookReceiver[] Receivers{ get; set; }
 
         /// <summary>
         /// Format. 0: text; 1: JSON.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }
 
         /// <summary>
         /// Custom passthrough field
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CustomFields")]
         public WebHookCustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// Enable/Disable [1-Disable, 0-Enable]
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is disabled [1: disabled|0: enabled]
         /// </summary>
         [JsonProperty("IsDisabled")]
         public long? IsDisabled{ get; set; }
 
         /// <summary>
-        /// Host list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of hosts
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// Number of hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
+
+        /// <summary>
+        /// List of machines to be excluded.
+        /// </summary>
+        [JsonProperty("ExcludedQuuids")]
+        public string[] ExcludedQuuids{ get; set; }
+
+        /// <summary>
+        /// Push language type, Chinese zh, English en	
+        /// </summary>
+        [JsonProperty("MsgLanguage")]
+        public string MsgLanguage{ get; set; }
 
 
         /// <summary>
@@ -110,6 +112,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
+            this.SetParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
         }
     }
 }

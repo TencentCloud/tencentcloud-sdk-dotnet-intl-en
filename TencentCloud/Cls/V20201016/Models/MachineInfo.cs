@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Machine instance IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Machine instance ID.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Machine disconnection time. If the value is empty, the machine is normal. If the machine is exceptional, a specific value will be returned.
+        /// Machine offline time. Null indicates normal. Return a specific time in case of exceptions. Time format: YYYY-MM-DD HH:mm:ss.
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }

@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// List of image vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image vulnerability list
         /// </summary>
         [JsonProperty("List")]
         public ImageVul[] List{ get; set; }
 
         /// <summary>
-        /// Total number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -25,15 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// The tag key.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// The tag value.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

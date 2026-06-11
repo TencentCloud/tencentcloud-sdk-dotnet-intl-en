@@ -67,8 +67,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -88,31 +87,27 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// Check result. Valid values: `RESULT_PASSED`: Passed.
+        /// Detection result. RESULT_PASSED: Passed.
         /// 
-        /// `RESULT_FAILED`: Failed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// RESULT_FAILED: failed
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
-        /// Number of assets that passed the check
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of assets passed detection
         /// </summary>
         [JsonProperty("PassedAssetCount")]
         public ulong? PassedAssetCount{ get; set; }
 
         /// <summary>
-        /// Number of assets that failed the check
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of assets with detection failed
         /// </summary>
         [JsonProperty("FailedAssetCount")]
         public ulong? FailedAssetCount{ get; set; }
 
         /// <summary>
-        /// Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
         /// </summary>
         [JsonProperty("WhitelistId")]
         public ulong? WhitelistId{ get; set; }
@@ -130,11 +125,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? BenchmarkStandardId{ get; set; }
 
         /// <summary>
-        /// TCSS editions that support this check item
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Applicable Version for Check Items
         /// </summary>
         [JsonProperty("ApplicableVersion")]
         public string ApplicableVersion{ get; set; }
+
+        /// <summary>
+        /// Check Item Description
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// Check Item Audit Method
+        /// </summary>
+        [JsonProperty("AuditProcedure")]
+        public string AuditProcedure{ get; set; }
+
+        /// <summary>
+        /// Whether enabled
+        /// <li>0 Off</li>
+        /// <li>1 Enable</li>
+        /// </summary>
+        [JsonProperty("IsEnable")]
+        public ulong? IsEnable{ get; set; }
 
 
         /// <summary>
@@ -158,6 +172,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
             this.SetParamSimple(map, prefix + "BenchmarkStandardId", this.BenchmarkStandardId);
             this.SetParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
+            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
         }
     }
 }

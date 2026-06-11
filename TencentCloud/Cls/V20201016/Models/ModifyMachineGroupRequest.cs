@@ -25,19 +25,25 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Machine group ID
+        /// Machine group Id
+        /// -Obtain the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/product/614/56438?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Machine group name
+        /// machine group name
+        /// Input limit:
+        /// -Cannot be an empty string
+        /// -Cannot contain character '|'
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Machine group type
+        /// Machine group type. 
+        /// Type: ip; Values contains the string list of IP machines.
+        /// Type: label. Values contains the string list of tag machine groups.
         /// </summary>
         [JsonProperty("MachineGroupType")]
         public MachineGroupTypeInfo MachineGroupType{ get; set; }
@@ -55,13 +61,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? AutoUpdate{ get; set; }
 
         /// <summary>
-        /// Update start time. We recommend you update LogListener during off-peak hours.
+        /// Start time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+        /// Time format: HH:mm:ss.
         /// </summary>
         [JsonProperty("UpdateStartTime")]
         public string UpdateStartTime{ get; set; }
 
         /// <summary>
-        /// Update end time. We recommend you update LogListener during off-peak hours.
+        /// End time of upgrade. It is suggested to upgrade LogListener in the off-peak period of the business.
+        /// Time format: HH:mm:ss.
         /// </summary>
         [JsonProperty("UpdateEndTime")]
         public string UpdateEndTime{ get; set; }
@@ -73,7 +81,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? ServiceLogging{ get; set; }
 
         /// <summary>
-        /// Regular offline cleaning time for machines in machine group
+        /// Periodic offline cleanup time for machines in a machine group. Unit: day
         /// </summary>
         [JsonProperty("DelayCleanupTime")]
         public long? DelayCleanupTime{ get; set; }

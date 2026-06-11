@@ -40,7 +40,6 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Whether Chinese characters are contained
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContainZH")]
         public bool? ContainZH{ get; set; }

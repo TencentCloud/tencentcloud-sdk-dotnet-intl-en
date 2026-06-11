@@ -55,22 +55,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Machine associated with the allowlist
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Machine associated with the allowlist.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Whether the allowlist is global
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the allowlist takes effect globally
         /// </summary>
         [JsonProperty("IsGlobal")]
         public bool? IsGlobal{ get; set; }
 
         /// <summary>
         /// Machine list associated with the allowlist
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }

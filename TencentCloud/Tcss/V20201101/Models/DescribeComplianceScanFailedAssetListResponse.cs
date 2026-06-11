@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of aggregated information of each type of asset that failed the check
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Return the list of summary information for assets with various types of detection failures.
         /// </summary>
         [JsonProperty("ScanFailedAssetList")]
         public ComplianceScanFailedAsset[] ScanFailedAssetList{ get; set; }

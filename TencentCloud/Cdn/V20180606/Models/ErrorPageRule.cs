@@ -40,7 +40,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// Redirect URL
-        /// Requires a full redirect path, such as https://www.test.com/error.html.
+        /// Requires a full redirect path, such as `https://www.test.com/error.html`.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

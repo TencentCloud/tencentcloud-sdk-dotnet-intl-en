@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Whether it is repeated
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Check for duplicates.
         /// </summary>
         [JsonProperty("IsRepeat")]
         public bool? IsRepeat{ get; set; }

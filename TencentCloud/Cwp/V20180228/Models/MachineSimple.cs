@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+        /// CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -89,7 +89,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
-        /// Instance status. TERMINATED_PRO_VERSION: terminated.
+        /// Refer to the instance status in the CVM instance list for the InstanceState value.
+        /// https://www.tencentcloud.com/document/api/213/15753?from_cn_redirect=1#Instance
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
@@ -113,28 +114,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// Protection Edition. BASIC_VERSION: Basic Edition; PRO_VERSION: Professional Edition; Flagship: Premium Edition; GENERAL_DISCOUNT: General Discount Edition
+        /// Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
         /// Authorization order object
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LicenseOrder")]
         public LicenseOrder LicenseOrder{ get; set; }
 
         /// <summary>
         /// Cloud Tag Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
         /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

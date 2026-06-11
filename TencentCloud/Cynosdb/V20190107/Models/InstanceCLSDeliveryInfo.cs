@@ -25,14 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// 
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -44,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log topic name
+        /// Log topic name.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Log set name.
-        /// 
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

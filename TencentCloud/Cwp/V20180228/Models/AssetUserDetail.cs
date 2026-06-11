@@ -85,13 +85,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only).
+        /// Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
         /// </summary>
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
 
         /// <summary>
-        /// Whether the account is a domain account. 0: no; 1: yes; 999: null (Windows only).
+        /// Whether it is a domain account: 0: no; 1: yes; 999: null (for Windows only).
         /// </summary>
         [JsonProperty("IsDomain")]
         public ulong? IsDomain{ get; set; }
@@ -187,14 +187,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? PasswordChangeType{ get; set; }
 
         /// <summary>
-        /// User public key listNote: This field may return null, indicating that no valid values can be obtained.
+        /// User public key list.
         /// </summary>
         [JsonProperty("Keys")]
         public AssetUserKeyInfo[] Keys{ get; set; }
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

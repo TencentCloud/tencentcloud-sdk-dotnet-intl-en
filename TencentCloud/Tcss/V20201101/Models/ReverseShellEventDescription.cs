@@ -37,8 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Solution{ get; set; }
 
         /// <summary>
-        /// Event remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event remark information
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -50,8 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string DstAddress{ get; set; }
 
         /// <summary>
-        /// Last processing time of the event
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last Time for Event Handling
         /// </summary>
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }

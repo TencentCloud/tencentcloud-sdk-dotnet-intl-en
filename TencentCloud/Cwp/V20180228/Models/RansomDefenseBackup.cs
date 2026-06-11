@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EventStatus{ get; set; }
 
         /// <summary>
-        /// Backup Status: 0 - Backing up, 1 - Normal, 2, 3 - Failed, 4 - Snapshot expired, 9 - Snapshot deleted
+        /// Backup status: 0 backup in progress, 1 normal, 2, 3 failure, 4 snapshot expired, 5 number of snapshots exceed the limit, 9 snapshot deleted.
         /// </summary>
         [JsonProperty("BackupStatus")]
         public ulong? BackupStatus{ get; set; }

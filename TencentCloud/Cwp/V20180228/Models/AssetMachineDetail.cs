@@ -109,7 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CpuLoad{ get; set; }
 
         /// <summary>
-        /// Protection Level. 0 Basic Edition; 1 Professional Edition; 2 Premium Edition; 3 General Discount Edition
+        /// Protection level: 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
         /// </summary>
         [JsonProperty("ProtectLevel")]
         public ulong? ProtectLevel{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CoreVersion{ get; set; }
 
         /// <summary>
-        /// linux/windows
+        /// Linux/Windows
         /// </summary>
         [JsonProperty("OsType")]
         public string OsType{ get; set; }
@@ -218,42 +218,36 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Offline time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
         /// Host ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// CpuLoadVul
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CpuLoadVul")]
         public string CpuLoadVul{ get; set; }
 
         /// <summary>
         /// Time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }

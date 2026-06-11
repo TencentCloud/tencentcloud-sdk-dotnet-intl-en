@@ -30,6 +30,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("CustomerAssetId")]
         public ulong? CustomerAssetId{ get; set; }
 
+        /// <summary>
+        /// Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CustomerAssetId", this.CustomerAssetId);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// <p>The mini game name and description in multiple languages.	</p>
+        /// <p>Mini game name and introduction in multiple languages.</p>
         /// </summary>
         [JsonProperty("I18nList")]
         public MNPI18NSyncDto[] I18nList{ get; set; }

@@ -37,18 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter criteria
-        /// <li>Status - String - required: no - processing status: 0: pending; 1: allowlisted; 2: deleted; 3: ignored</li>
-        /// <li>ModifyTime - String - required: no - last occurrence time</li>
-        /// <li>Uuid- String - required: no - query by host UUID</li>
-        /// <li>VulName- string -</li>
-        /// <li>VulCategory- string - required: no - vulnerability category: 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability</li>
-        /// <li>IsSupportDefense - int - required: no - support for defense: 0: not supported; 1: supported</li>
-        /// <li>Labels - string - required: no - tag for search</li>
-        /// <li>IsSupportAutoFix - string - required: no - whether automatic fixing is supported: 0: not supported; 1: supported</li>
-        /// <li>CvssScore - string - required: no - lower limit of CVSS score</li>
-        /// <li>AttackLevel - string - required: no - lower limit of attack level</li>
-        /// 
+        /// Filtering conditions. <li>Status - String - required: no - processing status.  0 - pending processing; 1 - allowlisted; 2 - deleted; 3 - fixed; 5 - detecting; 6 - fixing; 8 - fixing failed.</li><li>ModifyTime - String - required: no - last occurrence time.</li><li>Uuid- String - required: no - Query by host UUID.</li><li>VulName- String -</li><li>VulCategory- String - required: no - vulnerability category. 1: Web-CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.</li><li>IsSupportDefense - int- required: no - whether defense is supported. 0: not supported; 1: supported.</li><li>Labels- string- required: no - search by tag.</li><li>IsSupportAutoFix- string- required: no - whether automatic fixing is supported. 0: not supported; 1: supported.</li><li>CvssScore- string- required: no - lower limit of CVSS score.</li><li>AttackLevel- string- required: no - lower limit of attack level.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// All node information on the event corresponding to an alarm. Multiple events may be involved.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// All node information on the event corresponding to an alarm, which may include multiple events.
         /// </summary>
         [JsonProperty("IncidentNodes")]
         public IncidentVertexInfo[] IncidentNodes{ get; set; }

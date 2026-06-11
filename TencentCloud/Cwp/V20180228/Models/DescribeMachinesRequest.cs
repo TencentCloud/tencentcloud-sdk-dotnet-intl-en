@@ -35,7 +35,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Machine region. For example, ap-guangzhou and ap-shanghai.
+        /// Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }
@@ -54,17 +54,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Filter criteria
-        /// <li>Ips - String - required: no - query by IP</li>
+        /// <li>Ips - String - Required: No - Query by ip</li>
         /// <li>Names - String - required: no - query by instance name</li>
-        /// <li>InstanceIds - String - required: no - instance ID for query </li>
-        /// <li>Status - String - required: no - client online status (OFFLINE: offline/shut down | ONLINE: online | UNINSTALLED: not installed | AGENT_OFFLINE: agent offline | AGENT_SHUTDOWN: agent shut down)</li>
-        /// <li>Version - String required: no - current edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
+        /// <li>InstanceIds - String - Required: No - Query by instance id</li>
+        /// <li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
         /// <li>Risk - String - required: no - risky host (yes)</li>
-        /// <li>Os - String - required: no - operating system (value of DescribeMachineOsList)</li>
-        /// Each filter criterion supports only one value.
-        /// <li>Quuid - String - required: no - CVM instance UUID. Maximum value: 100.</li>
+        /// <li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
+        /// Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
+        /// <li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
         /// <li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
         /// <li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
+        /// <li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
+        /// <li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -74,6 +75,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MachineAppId")]
+        public ulong? MachineAppId{ get; set; }
 
 
         /// <summary>
@@ -87,6 +94,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+            this.SetParamSimple(map, prefix + "MachineAppId", this.MachineAppId);
         }
     }
 }

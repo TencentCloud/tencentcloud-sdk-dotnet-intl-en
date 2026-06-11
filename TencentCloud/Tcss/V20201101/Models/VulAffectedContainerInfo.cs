@@ -108,6 +108,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
+        /// <summary>
+        /// Container status. "RUNNING": running; "PAUSED": paused; "STOPPED": stopped; "CREATED": created; "DESTROYED": terminated; "RESTARTING": restarting; "REMOVING": migrating; "DEAD": dead; "UNKNOWN": unknown.
+        /// </summary>
+        [JsonProperty("ContainerStatus")]
+        public string ContainerStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
+            this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         }
     }
 }

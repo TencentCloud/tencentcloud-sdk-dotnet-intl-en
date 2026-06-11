@@ -45,15 +45,15 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Execution task status. valid values:.
         /// 
-        /// -PENDING: waiting for distribution.
-        /// - RUNNING: command RUNNING.
-        /// -Canceling.
-        /// -SUCCESS: command success.
-        /// -TIMEOUT: command timeout.
+        /// - PENDING: waiting for distribution.
+        /// - RUNNING: command is running.
+        /// - CANCELLING: canceling.
+        /// - SUCCESS: command success.
+        /// - TIMEOUT: command timeout.
         /// - FAILED: command FAILED.
-        /// -CANCELLED: all commands canceled.
-        /// -PARTIAL_FAILED: the command partially failed.
-        /// -PARTIAL_CANCELLED: the command is partially canceled.
+        /// - CANCELLED: all commands canceled.
+        /// - PARTIAL_FAILED: the command partially failed.
+        /// - PARTIAL_CANCELLED: the command is partially canceled.
         /// </summary>
         [JsonProperty("InvocationStatus")]
         public string InvocationStatus{ get; set; }
@@ -122,8 +122,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Invocation source.
         /// 
-        /// -USER: originate from user invocation.
-        /// -INVOKER: originate from scheduled execution.
+        /// - USER: originate from user invocation.
+        /// - INVOKER: originate from scheduled execution.
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }

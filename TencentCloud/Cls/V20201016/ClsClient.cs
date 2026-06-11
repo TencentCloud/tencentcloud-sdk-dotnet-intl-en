@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.intl.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,52 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to cancel creating a reindexing task.
+        /// </summary>
+        /// <param name="req"><see cref="CancelRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CancelRebuildIndexTaskResponse"/></returns>
+        public Task<CancelRebuildIndexTaskResponse> CancelRebuildIndexTask(CancelRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CancelRebuildIndexTaskResponse>(req, "CancelRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// This API is used to cancel creating a reindexing task.
+        /// </summary>
+        /// <param name="req"><see cref="CancelRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CancelRebuildIndexTaskResponse"/></returns>
+        public CancelRebuildIndexTaskResponse CancelRebuildIndexTaskSync(CancelRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CancelRebuildIndexTaskResponse>(req, "CancelRebuildIndexTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Call the API to initiate a dialogue request.
+        /// This API supports AI-powered logging features such as intelligently generating retrieval analysis statements.
+        /// Note: When calling this API via SSE streaming, ensure the request domain name is set to cls.ai.tencentcloudapi.com (configurable as cls.ai.internal.tencentcloudapi.com in a private network environment).
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionsRequest"/></param>
+        /// <returns><see cref="ChatCompletionsResponse"/></returns>
+        public Task<ChatCompletionsResponse> ChatCompletions(ChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<ChatCompletionsResponse>(req, "ChatCompletions");
+        }
+
+        /// <summary>
+        /// Call the API to initiate a dialogue request.
+        /// This API supports AI-powered logging features such as intelligently generating retrieval analysis statements.
+        /// Note: When calling this API via SSE streaming, ensure the request domain name is set to cls.ai.tencentcloudapi.com (configurable as cls.ai.internal.tencentcloudapi.com in a private network environment).
+        /// </summary>
+        /// <param name="req"><see cref="ChatCompletionsRequest"/></param>
+        /// <returns><see cref="ChatCompletionsResponse"/></returns>
+        public ChatCompletionsResponse ChatCompletionsSync(ChatCompletionsRequest req)
+        {
+            return InternalRequestAsync<ChatCompletionsResponse>(req, "ChatCompletions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to verify the syntax of data processing DSL functions.
         /// </summary>
         /// <param name="req"><see cref="CheckFunctionRequest"/></param>
@@ -159,6 +205,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to submit a consumption offset.
+        /// </summary>
+        /// <param name="req"><see cref="CommitConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="CommitConsumerOffsetsResponse"/></returns>
+        public Task<CommitConsumerOffsetsResponse> CommitConsumerOffsets(CommitConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<CommitConsumerOffsetsResponse>(req, "CommitConsumerOffsets");
+        }
+
+        /// <summary>
+        /// This API is used to submit a consumption offset.
+        /// </summary>
+        /// <param name="req"><see cref="CommitConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="CommitConsumerOffsetsResponse"/></returns>
+        public CommitConsumerOffsetsResponse CommitConsumerOffsetsSync(CommitConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<CommitConsumerOffsetsResponse>(req, "CommitConsumerOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create an alarm policy.
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmRequest"/></param>
@@ -180,7 +247,14 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a notification group.
+        /// This API is used to create a notification channel group with two configuration modes to choose from.
+        /// 1. Easy mode provides the most basic notification channel function. The following parameters are required:
+        /// - Type
+        /// - NoticeReceivers
+        /// - WebCallbacks
+        /// 
+        /// 2. Advanced mode: On the basis of easy mode, it supports setting rules, setting notification channels for different types of alarms, and escalating alarms. The following parameters are required:
+        /// - NoticeRules
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -190,7 +264,14 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a notification group.
+        /// This API is used to create a notification channel group with two configuration modes to choose from.
+        /// 1. Easy mode provides the most basic notification channel function. The following parameters are required:
+        /// - Type
+        /// - NoticeReceivers
+        /// - WebCallbacks
+        /// 
+        /// 2. Advanced mode: On the basis of easy mode, it supports setting rules, setting notification channels for different types of alarms, and escalating alarms. The following parameters are required:
+        /// - NoticeRules
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -222,6 +303,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="CreateCloudProductLogCollectionResponse"/></returns>
+        public Task<CreateCloudProductLogCollectionResponse> CreateCloudProductLogCollection(CreateCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudProductLogCollectionResponse>(req, "CreateCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="CreateCloudProductLogCollectionResponse"/></returns>
+        public CreateCloudProductLogCollectionResponse CreateCloudProductLogCollectionSync(CreateCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<CreateCloudProductLogCollectionResponse>(req, "CreateCloudProductLogCollection")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigRequest"/></param>
@@ -239,6 +341,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateConfigResponse CreateConfigSync(CreateConfigRequest req)
         {
             return InternalRequestAsync<CreateConfigResponse>(req, "CreateConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleRequest"/></param>
+        /// <returns><see cref="CreateConsoleResponse"/></returns>
+        public Task<CreateConsoleResponse> CreateConsole(CreateConsoleRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleResponse>(req, "CreateConsole");
+        }
+
+        /// <summary>
+        /// This API is used to create the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsoleRequest"/></param>
+        /// <returns><see cref="CreateConsoleResponse"/></returns>
+        public CreateConsoleResponse CreateConsoleSync(CreateConsoleRequest req)
+        {
+            return InternalRequestAsync<CreateConsoleResponse>(req, "CreateConsole")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -264,6 +387,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to check the heartbeat of a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public Task<CreateConsumerGroupResponse> CreateConsumerGroup(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup");
+        }
+
+        /// <summary>
+        /// This API is used to check the heartbeat of a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerGroupRequest"/></param>
+        /// <returns><see cref="CreateConsumerGroupResponse"/></returns>
+        public CreateConsumerGroupResponse CreateConsumerGroupSync(CreateConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<CreateConsumerGroupResponse>(req, "CreateConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a COS import task.
         /// </summary>
         /// <param name="req"><see cref="CreateCosRechargeRequest"/></param>
@@ -281,6 +425,48 @@ namespace TencentCloud.Cls.V20201016
         public CreateCosRechargeResponse CreateCosRechargeSync(CreateCosRechargeRequest req)
         {
             return InternalRequestAsync<CreateCosRechargeResponse>(req, "CreateCosRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardRequest"/></param>
+        /// <returns><see cref="CreateDashboardResponse"/></returns>
+        public Task<CreateDashboardResponse> CreateDashboard(CreateDashboardRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardResponse>(req, "CreateDashboard");
+        }
+
+        /// <summary>
+        /// This API is used to create a dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardRequest"/></param>
+        /// <returns><see cref="CreateDashboardResponse"/></returns>
+        public CreateDashboardResponse CreateDashboardSync(CreateDashboardRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardResponse>(req, "CreateDashboard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a dashboard subscription.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="CreateDashboardSubscribeResponse"/></returns>
+        public Task<CreateDashboardSubscribeResponse> CreateDashboardSubscribe(CreateDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardSubscribeResponse>(req, "CreateDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to create a dashboard subscription.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="CreateDashboardSubscribeResponse"/></returns>
+        public CreateDashboardSubscribeResponse CreateDashboardSubscribeSync(CreateDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateDashboardSubscribeResponse>(req, "CreateDashboardSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -327,7 +513,49 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+        /// Create a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="CreateDlcDeliverRequest"/></param>
+        /// <returns><see cref="CreateDlcDeliverResponse"/></returns>
+        public Task<CreateDlcDeliverResponse> CreateDlcDeliver(CreateDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateDlcDeliverResponse>(req, "CreateDlcDeliver");
+        }
+
+        /// <summary>
+        /// Create a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="CreateDlcDeliverRequest"/></param>
+        /// <returns><see cref="CreateDlcDeliverResponse"/></returns>
+        public CreateDlcDeliverResponse CreateDlcDeliverSync(CreateDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateDlcDeliverResponse>(req, "CreateDlcDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="CreateEsRechargeRequest"/></param>
+        /// <returns><see cref="CreateEsRechargeResponse"/></returns>
+        public Task<CreateEsRechargeResponse> CreateEsRecharge(CreateEsRechargeRequest req)
+        {
+            return InternalRequestAsync<CreateEsRechargeResponse>(req, "CreateEsRecharge");
+        }
+
+        /// <summary>
+        /// This API is used to create an es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="CreateEsRechargeRequest"/></param>
+        /// <returns><see cref="CreateEsRechargeResponse"/></returns>
+        public CreateEsRechargeResponse CreateEsRechargeSync(CreateEsRechargeRequest req)
+        {
+            return InternalRequestAsync<CreateEsRechargeResponse>(req, "CreateEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API only creates download tasks. The download address returned by the task can be obtained by user invocation of [DescribeExports](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1) to view task list, which includes the CosPath parameter for the download address.
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -337,13 +565,34 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a download task. To get the returned download address, call DescribeExports to view the task list. The CosPath parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
+        /// This API only creates download tasks. The download address returned by the task can be obtained by user invocation of [DescribeExports](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1) to view task list, which includes the CosPath parameter for the download address.
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
         public CreateExportResponse CreateExportSync(CreateExportRequest req)
         {
             return InternalRequestAsync<CreateExportResponse>(req, "CreateExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create host metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateHostMetricConfigResponse"/></returns>
+        public Task<CreateHostMetricConfigResponse> CreateHostMetricConfig(CreateHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateHostMetricConfigResponse>(req, "CreateHostMetricConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create host metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateHostMetricConfigResponse"/></returns>
+        public CreateHostMetricConfigResponse CreateHostMetricConfigSync(CreateHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateHostMetricConfigResponse>(req, "CreateHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +681,165 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateMetricConfigResponse"/></returns>
+        public Task<CreateMetricConfigResponse> CreateMetricConfig(CreateMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateMetricConfigResponse>(req, "CreateMetricConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricConfigRequest"/></param>
+        /// <returns><see cref="CreateMetricConfigResponse"/></returns>
+        public CreateMetricConfigResponse CreateMetricConfigSync(CreateMetricConfigRequest req)
+        {
+            return InternalRequestAsync<CreateMetricConfigResponse>(req, "CreateMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricSubscribeRequest"/></param>
+        /// <returns><see cref="CreateMetricSubscribeResponse"/></returns>
+        public Task<CreateMetricSubscribeResponse> CreateMetricSubscribe(CreateMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateMetricSubscribeResponse>(req, "CreateMetricSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to create metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMetricSubscribeRequest"/></param>
+        /// <returns><see cref="CreateMetricSubscribeResponse"/></returns>
+        public CreateMetricSubscribeResponse CreateMetricSubscribeSync(CreateMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<CreateMetricSubscribeResponse>(req, "CreateMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a network application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkApplicationRequest"/></param>
+        /// <returns><see cref="CreateNetworkApplicationResponse"/></returns>
+        public Task<CreateNetworkApplicationResponse> CreateNetworkApplication(CreateNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateNetworkApplicationResponse>(req, "CreateNetworkApplication");
+        }
+
+        /// <summary>
+        /// This API is used to create a network application.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkApplicationRequest"/></param>
+        /// <returns><see cref="CreateNetworkApplicationResponse"/></returns>
+        public CreateNetworkApplicationResponse CreateNetworkApplicationSync(CreateNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<CreateNetworkApplicationResponse>(req, "CreateNetworkApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create notification content.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentResponse"/></returns>
+        public Task<CreateNoticeContentResponse> CreateNoticeContent(CreateNoticeContentRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentResponse>(req, "CreateNoticeContent");
+        }
+
+        /// <summary>
+        /// This API is used to create notification content.
+        /// </summary>
+        /// <param name="req"><see cref="CreateNoticeContentRequest"/></param>
+        /// <returns><see cref="CreateNoticeContentResponse"/></returns>
+        public CreateNoticeContentResponse CreateNoticeContentSync(CreateNoticeContentRequest req)
+        {
+            return InternalRequestAsync<CreateNoticeContentResponse>(req, "CreateNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to creates rebuild index tasks.
+        /// Note:
+        /// -A single log topic allows only one index reconstruction task at a time and can have up to 10 rebuild index task records. Delete task records that are no longer needed before creating an index task.
+        /// -Logs within the same time range only allow rebuilding indexes once. Delete previous task records before rebuilding again.
+        /// -Deleting a rebuild index task record restores the index data before rebuilding an index.
+        /// -The log write traffic of the selected time range cannot exceed 5TB.
+        /// -The index rebuilding time range is subject to the log time. When the log uploading time has a deviation exceeding one hour from the index rebuilding time range (for example, reporting a new log at 16:00 for 02:00 to CLS and rebuilding the log index for 00:00–12:00), the logs will not be rebuilt and cannot be retrieved subsequently. When reporting a new log to the reconstructed log time range, it will not be rebuilt and cannot be retrieved subsequently.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CreateRebuildIndexTaskResponse"/></returns>
+        public Task<CreateRebuildIndexTaskResponse> CreateRebuildIndexTask(CreateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRebuildIndexTaskResponse>(req, "CreateRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// This API is used to creates rebuild index tasks.
+        /// Note:
+        /// -A single log topic allows only one index reconstruction task at a time and can have up to 10 rebuild index task records. Delete task records that are no longer needed before creating an index task.
+        /// -Logs within the same time range only allow rebuilding indexes once. Delete previous task records before rebuilding again.
+        /// -Deleting a rebuild index task record restores the index data before rebuilding an index.
+        /// -The log write traffic of the selected time range cannot exceed 5TB.
+        /// -The index rebuilding time range is subject to the log time. When the log uploading time has a deviation exceeding one hour from the index rebuilding time range (for example, reporting a new log at 16:00 for 02:00 to CLS and rebuilding the log index for 00:00–12:00), the logs will not be rebuilt and cannot be retrieved subsequently. When reporting a new log to the reconstructed log time range, it will not be rebuilt and cannot be retrieved subsequently.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="CreateRebuildIndexTaskResponse"/></returns>
+        public CreateRebuildIndexTaskResponse CreateRebuildIndexTaskSync(CreateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRebuildIndexTaskResponse>(req, "CreateRebuildIndexTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creating a Metric Pre-Aggregation Task
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleTaskResponse"/></returns>
+        public Task<CreateRecordingRuleTaskResponse> CreateRecordingRuleTask(CreateRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleTaskResponse>(req, "CreateRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// Creating a Metric Pre-Aggregation Task
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleTaskResponse"/></returns>
+        public CreateRecordingRuleTaskResponse CreateRecordingRuleTaskSync(CreateRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleTaskResponse>(req, "CreateRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creating a Metric Pre-Aggregation Task Through a YAML File
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleYamlTaskResponse"/></returns>
+        public Task<CreateRecordingRuleYamlTaskResponse> CreateRecordingRuleYamlTask(CreateRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleYamlTaskResponse>(req, "CreateRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// Creating a Metric Pre-Aggregation Task Through a YAML File
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleYamlTaskResponse"/></returns>
+        public CreateRecordingRuleYamlTaskResponse CreateRecordingRuleYamlTaskSync(CreateRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRecordingRuleYamlTaskResponse>(req, "CreateRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
@@ -449,6 +857,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateScheduledSqlResponse CreateScheduledSqlSync(CreateScheduledSqlRequest req)
         {
             return InternalRequestAsync<CreateScheduledSqlResponse>(req, "CreateScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a query view
+        /// </summary>
+        /// <param name="req"><see cref="CreateSearchViewRequest"/></param>
+        /// <returns><see cref="CreateSearchViewResponse"/></returns>
+        public Task<CreateSearchViewResponse> CreateSearchView(CreateSearchViewRequest req)
+        {
+            return InternalRequestAsync<CreateSearchViewResponse>(req, "CreateSearchView");
+        }
+
+        /// <summary>
+        /// Create a query view
+        /// </summary>
+        /// <param name="req"><see cref="CreateSearchViewRequest"/></param>
+        /// <returns><see cref="CreateSearchViewResponse"/></returns>
+        public CreateSearchViewResponse CreateSearchViewSync(CreateSearchViewRequest req)
+        {
+            return InternalRequestAsync<CreateSearchViewResponse>(req, "CreateSearchView")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,7 +903,28 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a log topic.
+        /// Create a Splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="CreateSplunkDeliverRequest"/></param>
+        /// <returns><see cref="CreateSplunkDeliverResponse"/></returns>
+        public Task<CreateSplunkDeliverResponse> CreateSplunkDeliver(CreateSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateSplunkDeliverResponse>(req, "CreateSplunkDeliver");
+        }
+
+        /// <summary>
+        /// Create a Splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="CreateSplunkDeliverRequest"/></param>
+        /// <returns><see cref="CreateSplunkDeliverResponse"/></returns>
+        public CreateSplunkDeliverResponse CreateSplunkDeliverSync(CreateSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<CreateSplunkDeliverResponse>(req, "CreateSplunkDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
@@ -484,13 +934,34 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to create a log topic.
+        /// This API is used to create logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
         /// <returns><see cref="CreateTopicResponse"/></returns>
         public CreateTopicResponse CreateTopicSync(CreateTopicRequest req)
         {
             return InternalRequestAsync<CreateTopicResponse>(req, "CreateTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebCallbackRequest"/></param>
+        /// <returns><see cref="CreateWebCallbackResponse"/></returns>
+        public Task<CreateWebCallbackResponse> CreateWebCallback(CreateWebCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateWebCallbackResponse>(req, "CreateWebCallback");
+        }
+
+        /// <summary>
+        /// This API is used to create alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="CreateWebCallbackRequest"/></param>
+        /// <returns><see cref="CreateWebCallbackResponse"/></returns>
+        public CreateWebCallbackResponse CreateWebCallbackSync(CreateWebCallbackRequest req)
+        {
+            return InternalRequestAsync<CreateWebCallbackResponse>(req, "CreateWebCallback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -537,7 +1008,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete an alarm blocking rule.
+        /// This API is used to delete an alarm blocking rule. When the alarm blocking rule is active or invalid, it cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
         /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
@@ -547,13 +1018,34 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete an alarm blocking rule.
+        /// This API is used to delete an alarm blocking rule. When the alarm blocking rule is active or invalid, it cannot be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmShieldRequest"/></param>
         /// <returns><see cref="DeleteAlarmShieldResponse"/></returns>
         public DeleteAlarmShieldResponse DeleteAlarmShieldSync(DeleteAlarmShieldRequest req)
         {
             return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="DeleteCloudProductLogCollectionResponse"/></returns>
+        public Task<DeleteCloudProductLogCollectionResponse> DeleteCloudProductLogCollection(DeleteCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudProductLogCollectionResponse>(req, "DeleteCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="DeleteCloudProductLogCollectionResponse"/></returns>
+        public DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollectionSync(DeleteCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudProductLogCollectionResponse>(req, "DeleteCloudProductLogCollection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,7 +1092,28 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a shipping task.
+        /// This API is used to delete the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleRequest"/></param>
+        /// <returns><see cref="DeleteConsoleResponse"/></returns>
+        public Task<DeleteConsoleResponse> DeleteConsole(DeleteConsoleRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleResponse>(req, "DeleteConsole");
+        }
+
+        /// <summary>
+        /// This API is used to delete the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsoleRequest"/></param>
+        /// <returns><see cref="DeleteConsoleResponse"/></returns>
+        public DeleteConsoleResponse DeleteConsoleSync(DeleteConsoleRequest req)
+        {
+            return InternalRequestAsync<DeleteConsoleResponse>(req, "DeleteConsole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deleting a CKafka Delivery Task
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
         /// <returns><see cref="DeleteConsumerResponse"/></returns>
@@ -610,13 +1123,97 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a shipping task.
+        /// Deleting a CKafka Delivery Task
         /// </summary>
         /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
         /// <returns><see cref="DeleteConsumerResponse"/></returns>
         public DeleteConsumerResponse DeleteConsumerSync(DeleteConsumerRequest req)
         {
             return InternalRequestAsync<DeleteConsumerResponse>(req, "DeleteConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete consumer groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public Task<DeleteConsumerGroupResponse> DeleteConsumerGroup(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup");
+        }
+
+        /// <summary>
+        /// Delete consumer groups.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerGroupRequest"/></param>
+        /// <returns><see cref="DeleteConsumerGroupResponse"/></returns>
+        public DeleteConsumerGroupResponse DeleteConsumerGroupSync(DeleteConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteConsumerGroupResponse>(req, "DeleteConsumerGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a cos Import Task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosRechargeRequest"/></param>
+        /// <returns><see cref="DeleteCosRechargeResponse"/></returns>
+        public Task<DeleteCosRechargeResponse> DeleteCosRecharge(DeleteCosRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteCosRechargeResponse>(req, "DeleteCosRecharge");
+        }
+
+        /// <summary>
+        /// This API is used to delete a cos Import Task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosRechargeRequest"/></param>
+        /// <returns><see cref="DeleteCosRechargeResponse"/></returns>
+        public DeleteCosRechargeResponse DeleteCosRechargeSync(DeleteCosRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteCosRechargeResponse>(req, "DeleteCosRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete dashboards.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardRequest"/></param>
+        /// <returns><see cref="DeleteDashboardResponse"/></returns>
+        public Task<DeleteDashboardResponse> DeleteDashboard(DeleteDashboardRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardResponse>(req, "DeleteDashboard");
+        }
+
+        /// <summary>
+        /// This API is used to delete dashboards.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardRequest"/></param>
+        /// <returns><see cref="DeleteDashboardResponse"/></returns>
+        public DeleteDashboardResponse DeleteDashboardSync(DeleteDashboardRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardResponse>(req, "DeleteDashboard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete dashboard subscriptions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteDashboardSubscribeResponse"/></returns>
+        public Task<DeleteDashboardSubscribeResponse> DeleteDashboardSubscribe(DeleteDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardSubscribeResponse>(req, "DeleteDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to delete dashboard subscriptions.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteDashboardSubscribeResponse"/></returns>
+        public DeleteDashboardSubscribeResponse DeleteDashboardSubscribeSync(DeleteDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteDashboardSubscribeResponse>(req, "DeleteDashboardSubscribe")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +1239,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Delete a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDlcDeliverRequest"/></param>
+        /// <returns><see cref="DeleteDlcDeliverResponse"/></returns>
+        public Task<DeleteDlcDeliverResponse> DeleteDlcDeliver(DeleteDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteDlcDeliverResponse>(req, "DeleteDlcDeliver");
+        }
+
+        /// <summary>
+        /// Delete a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDlcDeliverRequest"/></param>
+        /// <returns><see cref="DeleteDlcDeliverResponse"/></returns>
+        public DeleteDlcDeliverResponse DeleteDlcDeliverSync(DeleteDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteDlcDeliverResponse>(req, "DeleteDlcDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEsRechargeRequest"/></param>
+        /// <returns><see cref="DeleteEsRechargeResponse"/></returns>
+        public Task<DeleteEsRechargeResponse> DeleteEsRecharge(DeleteEsRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteEsRechargeResponse>(req, "DeleteEsRecharge");
+        }
+
+        /// <summary>
+        /// Delete es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEsRechargeRequest"/></param>
+        /// <returns><see cref="DeleteEsRechargeResponse"/></returns>
+        public DeleteEsRechargeResponse DeleteEsRechargeSync(DeleteEsRechargeRequest req)
+        {
+            return InternalRequestAsync<DeleteEsRechargeResponse>(req, "DeleteEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a log download task.
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
@@ -659,6 +1298,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteExportResponse DeleteExportSync(DeleteExportRequest req)
         {
             return InternalRequestAsync<DeleteExportResponse>(req, "DeleteExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete host metric collection configuration
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteHostMetricConfigResponse"/></returns>
+        public Task<DeleteHostMetricConfigResponse> DeleteHostMetricConfig(DeleteHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteHostMetricConfigResponse>(req, "DeleteHostMetricConfig");
+        }
+
+        /// <summary>
+        /// Delete host metric collection configuration
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHostMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteHostMetricConfigResponse"/></returns>
+        public DeleteHostMetricConfigResponse DeleteHostMetricConfigSync(DeleteHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteHostMetricConfigResponse>(req, "DeleteHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -768,6 +1428,132 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to delete metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteMetricConfigResponse"/></returns>
+        public Task<DeleteMetricConfigResponse> DeleteMetricConfig(DeleteMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricConfigResponse>(req, "DeleteMetricConfig");
+        }
+
+        /// <summary>
+        /// This API is used to delete metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricConfigRequest"/></param>
+        /// <returns><see cref="DeleteMetricConfigResponse"/></returns>
+        public DeleteMetricConfigResponse DeleteMetricConfigSync(DeleteMetricConfigRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricConfigResponse>(req, "DeleteMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteMetricSubscribeResponse"/></returns>
+        public Task<DeleteMetricSubscribeResponse> DeleteMetricSubscribe(DeleteMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricSubscribeResponse>(req, "DeleteMetricSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to delete metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMetricSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteMetricSubscribeResponse"/></returns>
+        public DeleteMetricSubscribeResponse DeleteMetricSubscribeSync(DeleteMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<DeleteMetricSubscribeResponse>(req, "DeleteMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a web application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkApplicationRequest"/></param>
+        /// <returns><see cref="DeleteNetworkApplicationResponse"/></returns>
+        public Task<DeleteNetworkApplicationResponse> DeleteNetworkApplication(DeleteNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteNetworkApplicationResponse>(req, "DeleteNetworkApplication");
+        }
+
+        /// <summary>
+        /// Delete a web application
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkApplicationRequest"/></param>
+        /// <returns><see cref="DeleteNetworkApplicationResponse"/></returns>
+        public DeleteNetworkApplicationResponse DeleteNetworkApplicationSync(DeleteNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<DeleteNetworkApplicationResponse>(req, "DeleteNetworkApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete notification content configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentResponse"/></returns>
+        public Task<DeleteNoticeContentResponse> DeleteNoticeContent(DeleteNoticeContentRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentResponse>(req, "DeleteNoticeContent");
+        }
+
+        /// <summary>
+        /// This API is used to delete notification content configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNoticeContentRequest"/></param>
+        /// <returns><see cref="DeleteNoticeContentResponse"/></returns>
+        public DeleteNoticeContentResponse DeleteNoticeContentSync(DeleteNoticeContentRequest req)
+        {
+            return InternalRequestAsync<DeleteNoticeContentResponse>(req, "DeleteNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a pre-aggregation analysis task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleTaskResponse"/></returns>
+        public Task<DeleteRecordingRuleTaskResponse> DeleteRecordingRuleTask(DeleteRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleTaskResponse>(req, "DeleteRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete a pre-aggregation analysis task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleTaskResponse"/></returns>
+        public DeleteRecordingRuleTaskResponse DeleteRecordingRuleTaskSync(DeleteRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleTaskResponse>(req, "DeleteRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the pre-aggregation task in yaml.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleYamlTaskResponse"/></returns>
+        public Task<DeleteRecordingRuleYamlTaskResponse> DeleteRecordingRuleYamlTask(DeleteRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleYamlTaskResponse>(req, "DeleteRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete the pre-aggregation task in yaml.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRuleYamlTaskResponse"/></returns>
+        public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTaskSync(DeleteRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRecordingRuleYamlTaskResponse>(req, "DeleteRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduledSqlRequest"/></param>
@@ -785,6 +1571,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteScheduledSqlResponse DeleteScheduledSqlSync(DeleteScheduledSqlRequest req)
         {
             return InternalRequestAsync<DeleteScheduledSqlResponse>(req, "DeleteScheduledSql")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a query view.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSearchViewRequest"/></param>
+        /// <returns><see cref="DeleteSearchViewResponse"/></returns>
+        public Task<DeleteSearchViewResponse> DeleteSearchView(DeleteSearchViewRequest req)
+        {
+            return InternalRequestAsync<DeleteSearchViewResponse>(req, "DeleteSearchView");
+        }
+
+        /// <summary>
+        /// This API is used to delete a query view.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSearchViewRequest"/></param>
+        /// <returns><see cref="DeleteSearchViewResponse"/></returns>
+        public DeleteSearchViewResponse DeleteSearchViewSync(DeleteSearchViewRequest req)
+        {
+            return InternalRequestAsync<DeleteSearchViewResponse>(req, "DeleteSearchView")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -810,7 +1617,28 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a log topic.
+        /// Delete a Splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSplunkDeliverRequest"/></param>
+        /// <returns><see cref="DeleteSplunkDeliverResponse"/></returns>
+        public Task<DeleteSplunkDeliverResponse> DeleteSplunkDeliver(DeleteSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteSplunkDeliverResponse>(req, "DeleteSplunkDeliver");
+        }
+
+        /// <summary>
+        /// Delete a Splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSplunkDeliverRequest"/></param>
+        /// <returns><see cref="DeleteSplunkDeliverResponse"/></returns>
+        public DeleteSplunkDeliverResponse DeleteSplunkDeliverSync(DeleteSplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<DeleteSplunkDeliverResponse>(req, "DeleteSplunkDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
@@ -820,13 +1648,34 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to delete a log topic.
+        /// This API is used to delete logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>
         /// <returns><see cref="DeleteTopicResponse"/></returns>
         public DeleteTopicResponse DeleteTopicSync(DeleteTopicRequest req)
         {
             return InternalRequestAsync<DeleteTopicResponse>(req, "DeleteTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebCallbackRequest"/></param>
+        /// <returns><see cref="DeleteWebCallbackResponse"/></returns>
+        public Task<DeleteWebCallbackResponse> DeleteWebCallback(DeleteWebCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteWebCallbackResponse>(req, "DeleteWebCallback");
+        }
+
+        /// <summary>
+        /// This API is used to delete alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebCallbackRequest"/></param>
+        /// <returns><see cref="DeleteWebCallbackResponse"/></returns>
+        public DeleteWebCallbackResponse DeleteWebCallbackSync(DeleteWebCallbackRequest req)
+        {
+            return InternalRequestAsync<DeleteWebCallbackResponse>(req, "DeleteWebCallback")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +1764,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Cloud product integration uses relevant APIs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudProductLogTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudProductLogTasksResponse"/></returns>
+        public Task<DescribeCloudProductLogTasksResponse> DescribeCloudProductLogTasks(DescribeCloudProductLogTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudProductLogTasksResponse>(req, "DescribeCloudProductLogTasks");
+        }
+
+        /// <summary>
+        /// Cloud product integration uses relevant APIs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudProductLogTasksRequest"/></param>
+        /// <returns><see cref="DescribeCloudProductLogTasksResponse"/></returns>
+        public DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasksSync(DescribeCloudProductLogTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudProductLogTasksResponse>(req, "DescribeCloudProductLogTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaseMetricConfigsResponse"/></returns>
+        public Task<DescribeClusterBaseMetricConfigsResponse> DescribeClusterBaseMetricConfigs(DescribeClusterBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaseMetricConfigsResponse>(req, "DescribeClusterBaseMetricConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaseMetricConfigsResponse"/></returns>
+        public DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigsSync(DescribeClusterBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaseMetricConfigsResponse>(req, "DescribeClusterBaseMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMetricConfigsResponse"/></returns>
+        public Task<DescribeClusterMetricConfigsResponse> DescribeClusterMetricConfigs(DescribeClusterMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMetricConfigsResponse>(req, "DescribeClusterMetricConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeClusterMetricConfigsResponse"/></returns>
+        public DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigsSync(DescribeClusterMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMetricConfigsResponse>(req, "DescribeClusterMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the machine group bound to collection rule configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigMachineGroupsRequest"/></param>
@@ -957,6 +1869,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// Query the DataSight console instance list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsolesRequest"/></param>
+        /// <returns><see cref="DescribeConsolesResponse"/></returns>
+        public Task<DescribeConsolesResponse> DescribeConsoles(DescribeConsolesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsolesResponse>(req, "DescribeConsoles");
+        }
+
+        /// <summary>
+        /// Query the DataSight console instance list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsolesRequest"/></param>
+        /// <returns><see cref="DescribeConsolesResponse"/></returns>
+        public DescribeConsolesResponse DescribeConsolesSync(DescribeConsolesRequest req)
+        {
+            return InternalRequestAsync<DescribeConsolesResponse>(req, "DescribeConsoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a shipping task.
         /// </summary>
         /// <param name="req"><see cref="DescribeConsumerRequest"/></param>
@@ -974,6 +1907,90 @@ namespace TencentCloud.Cls.V20201016
         public DescribeConsumerResponse DescribeConsumerSync(DescribeConsumerRequest req)
         {
             return InternalRequestAsync<DescribeConsumerResponse>(req, "DescribeConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the consumer group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public Task<DescribeConsumerGroupsResponse> DescribeConsumerGroups(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the consumer group list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerGroupsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerGroupsResponse"/></returns>
+        public DescribeConsumerGroupsResponse DescribeConsumerGroupsSync(DescribeConsumerGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerGroupsResponse>(req, "DescribeConsumerGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtaining the Consumer Group Point Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerOffsetsResponse"/></returns>
+        public Task<DescribeConsumerOffsetsResponse> DescribeConsumerOffsets(DescribeConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerOffsetsResponse>(req, "DescribeConsumerOffsets");
+        }
+
+        /// <summary>
+        /// Obtaining the Consumer Group Point Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerOffsetsRequest"/></param>
+        /// <returns><see cref="DescribeConsumerOffsetsResponse"/></returns>
+        public DescribeConsumerOffsetsResponse DescribeConsumerOffsetsSync(DescribeConsumerOffsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerOffsetsResponse>(req, "DescribeConsumerOffsets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to preview Kafka shipping data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeConsumerPreviewResponse"/></returns>
+        public Task<DescribeConsumerPreviewResponse> DescribeConsumerPreview(DescribeConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerPreviewResponse>(req, "DescribeConsumerPreview");
+        }
+
+        /// <summary>
+        /// This API is used to preview Kafka shipping data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeConsumerPreviewResponse"/></returns>
+        public DescribeConsumerPreviewResponse DescribeConsumerPreviewSync(DescribeConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumerPreviewResponse>(req, "DescribeConsumerPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the shipping rule information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumersRequest"/></param>
+        /// <returns><see cref="DescribeConsumersResponse"/></returns>
+        public Task<DescribeConsumersResponse> DescribeConsumers(DescribeConsumersRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumersResponse>(req, "DescribeConsumers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the shipping rule information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumersRequest"/></param>
+        /// <returns><see cref="DescribeConsumersResponse"/></returns>
+        public DescribeConsumersResponse DescribeConsumersSync(DescribeConsumersRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumersResponse>(req, "DescribeConsumers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -999,6 +2016,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to obtain the dashboard subscription list, and supports paging.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>
+        public Task<DescribeDashboardSubscribesResponse> DescribeDashboardSubscribes(DescribeDashboardSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardSubscribesResponse>(req, "DescribeDashboardSubscribes");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the dashboard subscription list, and supports paging.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeDashboardSubscribesResponse"/></returns>
+        public DescribeDashboardSubscribesResponse DescribeDashboardSubscribesSync(DescribeDashboardSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardSubscribesResponse>(req, "DescribeDashboardSubscribes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the basic information of data processing tasks.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>
@@ -1020,6 +2058,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to search alarm channel callback configuration lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDlcDeliversRequest"/></param>
+        /// <returns><see cref="DescribeDlcDeliversResponse"/></returns>
+        public Task<DescribeDlcDeliversResponse> DescribeDlcDelivers(DescribeDlcDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeDlcDeliversResponse>(req, "DescribeDlcDelivers");
+        }
+
+        /// <summary>
+        /// This API is used to search alarm channel callback configuration lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDlcDeliversRequest"/></param>
+        /// <returns><see cref="DescribeDlcDeliversResponse"/></returns>
+        public DescribeDlcDeliversResponse DescribeDlcDeliversSync(DescribeDlcDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeDlcDeliversResponse>(req, "DescribeDlcDelivers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Import Preview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargePreviewRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargePreviewResponse"/></returns>
+        public Task<DescribeEsRechargePreviewResponse> DescribeEsRechargePreview(DescribeEsRechargePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargePreviewResponse>(req, "DescribeEsRechargePreview");
+        }
+
+        /// <summary>
+        /// Import Preview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargePreviewRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargePreviewResponse"/></returns>
+        public DescribeEsRechargePreviewResponse DescribeEsRechargePreviewSync(DescribeEsRechargePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargePreviewResponse>(req, "DescribeEsRechargePreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargesRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargesResponse"/></returns>
+        public Task<DescribeEsRechargesResponse> DescribeEsRecharges(DescribeEsRechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargesResponse>(req, "DescribeEsRecharges");
+        }
+
+        /// <summary>
+        /// Retrieve the es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEsRechargesRequest"/></param>
+        /// <returns><see cref="DescribeEsRechargesResponse"/></returns>
+        public DescribeEsRechargesResponse DescribeEsRechargesSync(DescribeEsRechargesRequest req)
+        {
+            return InternalRequestAsync<DescribeEsRechargesResponse>(req, "DescribeEsRecharges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the list of log download tasks.
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
@@ -1037,6 +2138,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeExportsResponse DescribeExportsSync(DescribeExportsRequest req)
         {
             return InternalRequestAsync<DescribeExportsResponse>(req, "DescribeExports")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeHostMetricConfigsResponse"/></returns>
+        public Task<DescribeHostMetricConfigsResponse> DescribeHostMetricConfigs(DescribeHostMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeHostMetricConfigsResponse>(req, "DescribeHostMetricConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeHostMetricConfigsResponse"/></returns>
+        public DescribeHostMetricConfigsResponse DescribeHostMetricConfigsSync(DescribeHostMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeHostMetricConfigsResponse>(req, "DescribeHostMetricConfigs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1079,6 +2201,90 @@ namespace TencentCloud.Cls.V20201016
         public DescribeKafkaConsumerResponse DescribeKafkaConsumerSync(DescribeKafkaConsumerRequest req)
         {
             return InternalRequestAsync<DescribeKafkaConsumerResponse>(req, "DescribeKafkaConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve Kafka protocol consumption group details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupDetailResponse"/></returns>
+        public Task<DescribeKafkaConsumerGroupDetailResponse> DescribeKafkaConsumerGroupDetail(DescribeKafkaConsumerGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupDetailResponse>(req, "DescribeKafkaConsumerGroupDetail");
+        }
+
+        /// <summary>
+        /// Retrieve Kafka protocol consumption group details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupDetailRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupDetailResponse"/></returns>
+        public DescribeKafkaConsumerGroupDetailResponse DescribeKafkaConsumerGroupDetailSync(DescribeKafkaConsumerGroupDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupDetailResponse>(req, "DescribeKafkaConsumerGroupDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the information list of Kafka protocol consumption groups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupListResponse"/></returns>
+        public Task<DescribeKafkaConsumerGroupListResponse> DescribeKafkaConsumerGroupList(DescribeKafkaConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupListResponse>(req, "DescribeKafkaConsumerGroupList");
+        }
+
+        /// <summary>
+        /// Retrieve the information list of Kafka protocol consumption groups
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerGroupListRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerGroupListResponse"/></returns>
+        public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupListSync(DescribeKafkaConsumerGroupListRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerGroupListResponse>(req, "DescribeKafkaConsumerGroupList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to preview the Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerPreviewResponse"/></returns>
+        public Task<DescribeKafkaConsumerPreviewResponse> DescribeKafkaConsumerPreview(DescribeKafkaConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerPreviewResponse>(req, "DescribeKafkaConsumerPreview");
+        }
+
+        /// <summary>
+        /// This API is used to preview the Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerPreviewRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerPreviewResponse"/></returns>
+        public DescribeKafkaConsumerPreviewResponse DescribeKafkaConsumerPreviewSync(DescribeKafkaConsumerPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerPreviewResponse>(req, "DescribeKafkaConsumerPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the topic information list of Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerTopicsRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerTopicsResponse"/></returns>
+        public Task<DescribeKafkaConsumerTopicsResponse> DescribeKafkaConsumerTopics(DescribeKafkaConsumerTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerTopicsResponse>(req, "DescribeKafkaConsumerTopics");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the topic information list of Kafka consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKafkaConsumerTopicsRequest"/></param>
+        /// <returns><see cref="DescribeKafkaConsumerTopicsResponse"/></returns>
+        public DescribeKafkaConsumerTopicsResponse DescribeKafkaConsumerTopicsSync(DescribeKafkaConsumerTopicsRequest req)
+        {
+            return InternalRequestAsync<DescribeKafkaConsumerTopicsResponse>(req, "DescribeKafkaConsumerTopics")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1230,7 +2436,133 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of topic partitions.
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricCorrectDimensionRequest"/></param>
+        /// <returns><see cref="DescribeMetricCorrectDimensionResponse"/></returns>
+        public Task<DescribeMetricCorrectDimensionResponse> DescribeMetricCorrectDimension(DescribeMetricCorrectDimensionRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricCorrectDimensionResponse>(req, "DescribeMetricCorrectDimension");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricCorrectDimensionRequest"/></param>
+        /// <returns><see cref="DescribeMetricCorrectDimensionResponse"/></returns>
+        public DescribeMetricCorrectDimensionResponse DescribeMetricCorrectDimensionSync(DescribeMetricCorrectDimensionRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricCorrectDimensionResponse>(req, "DescribeMetricCorrectDimension")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribePreviewRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribePreviewResponse"/></returns>
+        public Task<DescribeMetricSubscribePreviewResponse> DescribeMetricSubscribePreview(DescribeMetricSubscribePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribePreviewResponse>(req, "DescribeMetricSubscribePreview");
+        }
+
+        /// <summary>
+        /// This API is used to create metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribePreviewRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribePreviewResponse"/></returns>
+        public DescribeMetricSubscribePreviewResponse DescribeMetricSubscribePreviewSync(DescribeMetricSubscribePreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribePreviewResponse>(req, "DescribeMetricSubscribePreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribesResponse"/></returns>
+        public Task<DescribeMetricSubscribesResponse> DescribeMetricSubscribes(DescribeMetricSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribesResponse>(req, "DescribeMetricSubscribes");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricSubscribesRequest"/></param>
+        /// <returns><see cref="DescribeMetricSubscribesResponse"/></returns>
+        public DescribeMetricSubscribesResponse DescribeMetricSubscribesSync(DescribeMetricSubscribesRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricSubscribesResponse>(req, "DescribeMetricSubscribes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve web application details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationDetailRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationDetailResponse"/></returns>
+        public Task<DescribeNetworkApplicationDetailResponse> DescribeNetworkApplicationDetail(DescribeNetworkApplicationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationDetailResponse>(req, "DescribeNetworkApplicationDetail");
+        }
+
+        /// <summary>
+        /// Retrieve web application details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationDetailRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationDetailResponse"/></returns>
+        public DescribeNetworkApplicationDetailResponse DescribeNetworkApplicationDetailSync(DescribeNetworkApplicationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationDetailResponse>(req, "DescribeNetworkApplicationDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the network application list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationsResponse"/></returns>
+        public Task<DescribeNetworkApplicationsResponse> DescribeNetworkApplications(DescribeNetworkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationsResponse>(req, "DescribeNetworkApplications");
+        }
+
+        /// <summary>
+        /// Retrieve the network application list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeNetworkApplicationsResponse"/></returns>
+        public DescribeNetworkApplicationsResponse DescribeNetworkApplicationsSync(DescribeNetworkApplicationsRequest req)
+        {
+            return InternalRequestAsync<DescribeNetworkApplicationsResponse>(req, "DescribeNetworkApplications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the notification content list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentsResponse"/></returns>
+        public Task<DescribeNoticeContentsResponse> DescribeNoticeContents(DescribeNoticeContentsRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentsResponse>(req, "DescribeNoticeContents");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the notification content list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNoticeContentsRequest"/></param>
+        /// <returns><see cref="DescribeNoticeContentsResponse"/></returns>
+        public DescribeNoticeContentsResponse DescribeNoticeContentsSync(DescribeNoticeContentsRequest req)
+        {
+            return InternalRequestAsync<DescribeNoticeContentsResponse>(req, "DescribeNoticeContents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is deprecated. If needed, please use the DescribeTopics API to get the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
         /// <returns><see cref="DescribePartitionsResponse"/></returns>
@@ -1240,13 +2572,76 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of topic partitions.
+        /// This API is deprecated. If needed, please use the DescribeTopics API to get the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="DescribePartitionsRequest"/></param>
         /// <returns><see cref="DescribePartitionsResponse"/></returns>
         public DescribePartitionsResponse DescribePartitionsSync(DescribePartitionsRequest req)
         {
             return InternalRequestAsync<DescribePartitionsResponse>(req, "DescribePartitions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of rebuild index tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildIndexTasksRequest"/></param>
+        /// <returns><see cref="DescribeRebuildIndexTasksResponse"/></returns>
+        public Task<DescribeRebuildIndexTasksResponse> DescribeRebuildIndexTasks(DescribeRebuildIndexTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRebuildIndexTasksResponse>(req, "DescribeRebuildIndexTasks");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of rebuild index tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRebuildIndexTasksRequest"/></param>
+        /// <returns><see cref="DescribeRebuildIndexTasksResponse"/></returns>
+        public DescribeRebuildIndexTasksResponse DescribeRebuildIndexTasksSync(DescribeRebuildIndexTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRebuildIndexTasksResponse>(req, "DescribeRebuildIndexTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the pre-aggregation task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleTaskResponse"/></returns>
+        public Task<DescribeRecordingRuleTaskResponse> DescribeRecordingRuleTask(DescribeRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleTaskResponse>(req, "DescribeRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the pre-aggregation task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleTaskResponse"/></returns>
+        public DescribeRecordingRuleTaskResponse DescribeRecordingRuleTaskSync(DescribeRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleTaskResponse>(req, "DescribeRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the pre-aggregation task list in yaml.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleYamlTaskResponse"/></returns>
+        public Task<DescribeRecordingRuleYamlTaskResponse> DescribeRecordingRuleYamlTask(DescribeRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleYamlTaskResponse>(req, "DescribeRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the pre-aggregation task list in yaml.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRuleYamlTaskResponse"/></returns>
+        public DescribeRecordingRuleYamlTaskResponse DescribeRecordingRuleYamlTaskSync(DescribeRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeRecordingRuleYamlTaskResponse>(req, "DescribeRecordingRuleYamlTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1268,6 +2663,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfoSync(DescribeScheduledSqlInfoRequest req)
         {
             return InternalRequestAsync<DescribeScheduledSqlInfoResponse>(req, "DescribeScheduledSqlInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query view list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchViewsRequest"/></param>
+        /// <returns><see cref="DescribeSearchViewsResponse"/></returns>
+        public Task<DescribeSearchViewsResponse> DescribeSearchViews(DescribeSearchViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchViewsResponse>(req, "DescribeSearchViews");
+        }
+
+        /// <summary>
+        /// Query view list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSearchViewsRequest"/></param>
+        /// <returns><see cref="DescribeSearchViewsResponse"/></returns>
+        public DescribeSearchViewsResponse DescribeSearchViewsSync(DescribeSearchViewsRequest req)
+        {
+            return InternalRequestAsync<DescribeSearchViewsResponse>(req, "DescribeSearchViews")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1314,7 +2730,91 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of log topics and supports pagination.
+        /// Retrieve the Splunk delivery task list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkDeliversRequest"/></param>
+        /// <returns><see cref="DescribeSplunkDeliversResponse"/></returns>
+        public Task<DescribeSplunkDeliversResponse> DescribeSplunkDelivers(DescribeSplunkDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkDeliversResponse>(req, "DescribeSplunkDelivers");
+        }
+
+        /// <summary>
+        /// Retrieve the Splunk delivery task list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkDeliversRequest"/></param>
+        /// <returns><see cref="DescribeSplunkDeliversResponse"/></returns>
+        public DescribeSplunkDeliversResponse DescribeSplunkDeliversSync(DescribeSplunkDeliversRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkDeliversResponse>(req, "DescribeSplunkDelivers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// splunk delivery task preview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkPreviewRequest"/></param>
+        /// <returns><see cref="DescribeSplunkPreviewResponse"/></returns>
+        public Task<DescribeSplunkPreviewResponse> DescribeSplunkPreview(DescribeSplunkPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkPreviewResponse>(req, "DescribeSplunkPreview");
+        }
+
+        /// <summary>
+        /// splunk delivery task preview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSplunkPreviewRequest"/></param>
+        /// <returns><see cref="DescribeSplunkPreviewResponse"/></returns>
+        public DescribeSplunkPreviewResponse DescribeSplunkPreviewSync(DescribeSplunkPreviewRequest req)
+        {
+            return InternalRequestAsync<DescribeSplunkPreviewResponse>(req, "DescribeSplunkPreview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicBaseMetricConfigsResponse"/></returns>
+        public Task<DescribeTopicBaseMetricConfigsResponse> DescribeTopicBaseMetricConfigs(DescribeTopicBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicBaseMetricConfigsResponse>(req, "DescribeTopicBaseMetricConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicBaseMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicBaseMetricConfigsResponse"/></returns>
+        public DescribeTopicBaseMetricConfigsResponse DescribeTopicBaseMetricConfigsSync(DescribeTopicBaseMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicBaseMetricConfigsResponse>(req, "DescribeTopicBaseMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMetricConfigsResponse"/></returns>
+        public Task<DescribeTopicMetricConfigsResponse> DescribeTopicMetricConfigs(DescribeTopicMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMetricConfigsResponse>(req, "DescribeTopicMetricConfigs");
+        }
+
+        /// <summary>
+        /// This API is used to obtain metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicMetricConfigsRequest"/></param>
+        /// <returns><see cref="DescribeTopicMetricConfigsResponse"/></returns>
+        public DescribeTopicMetricConfigsResponse DescribeTopicMetricConfigsSync(DescribeTopicMetricConfigsRequest req)
+        {
+            return InternalRequestAsync<DescribeTopicMetricConfigsResponse>(req, "DescribeTopicMetricConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain logs or metric topic lists and supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
@@ -1324,13 +2824,55 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to get the list of log topics and supports pagination.
+        /// This API is used to obtain logs or metric topic lists and supports pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
         /// <returns><see cref="DescribeTopicsResponse"/></returns>
         public DescribeTopicsResponse DescribeTopicsSync(DescribeTopicsRequest req)
         {
             return InternalRequestAsync<DescribeTopicsResponse>(req, "DescribeTopics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to search alarm channel callback configuration lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeWebCallbacksResponse"/></returns>
+        public Task<DescribeWebCallbacksResponse> DescribeWebCallbacks(DescribeWebCallbacksRequest req)
+        {
+            return InternalRequestAsync<DescribeWebCallbacksResponse>(req, "DescribeWebCallbacks");
+        }
+
+        /// <summary>
+        /// This API is used to search alarm channel callback configuration lists.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebCallbacksRequest"/></param>
+        /// <returns><see cref="DescribeWebCallbacksResponse"/></returns>
+        public DescribeWebCallbacksResponse DescribeWebCallbacksSync(DescribeWebCallbacksRequest req)
+        {
+            return InternalRequestAsync<DescribeWebCallbacksResponse>(req, "DescribeWebCallbacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to estimate rebuild index tasks.
+        /// </summary>
+        /// <param name="req"><see cref="EstimateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="EstimateRebuildIndexTaskResponse"/></returns>
+        public Task<EstimateRebuildIndexTaskResponse> EstimateRebuildIndexTask(EstimateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<EstimateRebuildIndexTaskResponse>(req, "EstimateRebuildIndexTask");
+        }
+
+        /// <summary>
+        /// This API is used to estimate rebuild index tasks.
+        /// </summary>
+        /// <param name="req"><see cref="EstimateRebuildIndexTaskRequest"/></param>
+        /// <returns><see cref="EstimateRebuildIndexTaskResponse"/></returns>
+        public EstimateRebuildIndexTaskResponse EstimateRebuildIndexTaskSync(EstimateRebuildIndexTaskRequest req)
+        {
+            return InternalRequestAsync<EstimateRebuildIndexTaskResponse>(req, "EstimateRebuildIndexTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1356,7 +2898,51 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to merge a topic partition in read/write state. During merge, a topic partition ID can be specified, and CLS will automatically merge the partition adjacent to the right of the range.
+        /// This API is used to check whether CLS is enabled.
+        /// This API is used to fill in any region for Region, recommend using Guangzhou (ap-guangzhou).
+        /// </summary>
+        /// <param name="req"><see cref="GetClsServiceRequest"/></param>
+        /// <returns><see cref="GetClsServiceResponse"/></returns>
+        public Task<GetClsServiceResponse> GetClsService(GetClsServiceRequest req)
+        {
+            return InternalRequestAsync<GetClsServiceResponse>(req, "GetClsService");
+        }
+
+        /// <summary>
+        /// This API is used to check whether CLS is enabled.
+        /// This API is used to fill in any region for Region, recommend using Guangzhou (ap-guangzhou).
+        /// </summary>
+        /// <param name="req"><see cref="GetClsServiceRequest"/></param>
+        /// <returns><see cref="GetClsServiceResponse"/></returns>
+        public GetClsServiceResponse GetClsServiceSync(GetClsServiceRequest req)
+        {
+            return InternalRequestAsync<GetClsServiceResponse>(req, "GetClsService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of time series label values.
+        /// </summary>
+        /// <param name="req"><see cref="GetMetricLabelValuesRequest"/></param>
+        /// <returns><see cref="GetMetricLabelValuesResponse"/></returns>
+        public Task<GetMetricLabelValuesResponse> GetMetricLabelValues(GetMetricLabelValuesRequest req)
+        {
+            return InternalRequestAsync<GetMetricLabelValuesResponse>(req, "GetMetricLabelValues");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of time series label values.
+        /// </summary>
+        /// <param name="req"><see cref="GetMetricLabelValuesRequest"/></param>
+        /// <returns><see cref="GetMetricLabelValuesResponse"/></returns>
+        public GetMetricLabelValuesResponse GetMetricLabelValuesSync(GetMetricLabelValuesRequest req)
+        {
+            return InternalRequestAsync<GetMetricLabelValuesResponse>(req, "GetMetricLabelValues")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="MergePartitionRequest"/></param>
         /// <returns><see cref="MergePartitionResponse"/></returns>
@@ -1366,7 +2952,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to merge a topic partition in read/write state. During merge, a topic partition ID can be specified, and CLS will automatically merge the partition adjacent to the right of the range.
+        /// This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="MergePartitionRequest"/></param>
         /// <returns><see cref="MergePartitionResponse"/></returns>
@@ -1419,7 +3005,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify alarm blocking rules.
+        /// This API is used to modify alarm blocking rules. When the alarm blocking rule is invalid, it cannot be modified.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
         /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
@@ -1429,13 +3015,34 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify alarm blocking rules.
+        /// This API is used to modify alarm blocking rules. When the alarm blocking rule is invalid, it cannot be modified.
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmShieldRequest"/></param>
         /// <returns><see cref="ModifyAlarmShieldResponse"/></returns>
         public ModifyAlarmShieldResponse ModifyAlarmShieldSync(ModifyAlarmShieldRequest req)
         {
             return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="ModifyCloudProductLogCollectionResponse"/></returns>
+        public Task<ModifyCloudProductLogCollectionResponse> ModifyCloudProductLogCollection(ModifyCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudProductLogCollectionResponse>(req, "ModifyCloudProductLogCollection");
+        }
+
+        /// <summary>
+        /// Cloud product integration uses internal APIs
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudProductLogCollectionRequest"/></param>
+        /// <returns><see cref="ModifyCloudProductLogCollectionResponse"/></returns>
+        public ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollectionSync(ModifyCloudProductLogCollectionRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudProductLogCollectionResponse>(req, "ModifyCloudProductLogCollection")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +3068,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to edit the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleRequest"/></param>
+        /// <returns><see cref="ModifyConsoleResponse"/></returns>
+        public Task<ModifyConsoleResponse> ModifyConsole(ModifyConsoleRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleResponse>(req, "ModifyConsole");
+        }
+
+        /// <summary>
+        /// This API is used to edit the DataSight Console
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsoleRequest"/></param>
+        /// <returns><see cref="ModifyConsoleResponse"/></returns>
+        public ModifyConsoleResponse ModifyConsoleSync(ModifyConsoleRequest req)
+        {
+            return InternalRequestAsync<ModifyConsoleResponse>(req, "ModifyConsole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a CKafka delivery task.
         /// </summary>
         /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
@@ -1478,6 +3106,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyConsumerResponse ModifyConsumerSync(ModifyConsumerRequest req)
         {
             return InternalRequestAsync<ModifyConsumerResponse>(req, "ModifyConsumer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the consumer group information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public Task<ModifyConsumerGroupResponse> ModifyConsumerGroup(ModifyConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupResponse>(req, "ModifyConsumerGroup");
+        }
+
+        /// <summary>
+        /// This API is used to update the consumer group information.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerGroupRequest"/></param>
+        /// <returns><see cref="ModifyConsumerGroupResponse"/></returns>
+        public ModifyConsumerGroupResponse ModifyConsumerGroupSync(ModifyConsumerGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyConsumerGroupResponse>(req, "ModifyConsumerGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1503,6 +3152,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to modify the dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardRequest"/></param>
+        /// <returns><see cref="ModifyDashboardResponse"/></returns>
+        public Task<ModifyDashboardResponse> ModifyDashboard(ModifyDashboardRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardResponse>(req, "ModifyDashboard");
+        }
+
+        /// <summary>
+        /// This API is used to modify the dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardRequest"/></param>
+        /// <returns><see cref="ModifyDashboardResponse"/></returns>
+        public ModifyDashboardResponse ModifyDashboardSync(ModifyDashboardRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardResponse>(req, "ModifyDashboard")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify dashboard subscriptions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyDashboardSubscribeResponse"/></returns>
+        public Task<ModifyDashboardSubscribeResponse> ModifyDashboardSubscribe(ModifyDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardSubscribeResponse>(req, "ModifyDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to modify dashboard subscriptions.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyDashboardSubscribeResponse"/></returns>
+        public ModifyDashboardSubscribeResponse ModifyDashboardSubscribeSync(ModifyDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyDashboardSubscribeResponse>(req, "ModifyDashboardSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a data processing task.
         /// </summary>
         /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
@@ -1520,6 +3211,69 @@ namespace TencentCloud.Cls.V20201016
         public ModifyDataTransformResponse ModifyDataTransformSync(ModifyDataTransformRequest req)
         {
             return InternalRequestAsync<ModifyDataTransformResponse>(req, "ModifyDataTransform")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDlcDeliverRequest"/></param>
+        /// <returns><see cref="ModifyDlcDeliverResponse"/></returns>
+        public Task<ModifyDlcDeliverResponse> ModifyDlcDeliver(ModifyDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifyDlcDeliverResponse>(req, "ModifyDlcDeliver");
+        }
+
+        /// <summary>
+        /// Modify a DLC delivery task
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDlcDeliverRequest"/></param>
+        /// <returns><see cref="ModifyDlcDeliverResponse"/></returns>
+        public ModifyDlcDeliverResponse ModifyDlcDeliverSync(ModifyDlcDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifyDlcDeliverResponse>(req, "ModifyDlcDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsRechargeRequest"/></param>
+        /// <returns><see cref="ModifyEsRechargeResponse"/></returns>
+        public Task<ModifyEsRechargeResponse> ModifyEsRecharge(ModifyEsRechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyEsRechargeResponse>(req, "ModifyEsRecharge");
+        }
+
+        /// <summary>
+        /// Modify es import configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEsRechargeRequest"/></param>
+        /// <returns><see cref="ModifyEsRechargeResponse"/></returns>
+        public ModifyEsRechargeResponse ModifyEsRechargeSync(ModifyEsRechargeRequest req)
+        {
+            return InternalRequestAsync<ModifyEsRechargeResponse>(req, "ModifyEsRecharge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify host metric collection configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyHostMetricConfigResponse"/></returns>
+        public Task<ModifyHostMetricConfigResponse> ModifyHostMetricConfig(ModifyHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyHostMetricConfigResponse>(req, "ModifyHostMetricConfig");
+        }
+
+        /// <summary>
+        /// Modify host metric collection configuration
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHostMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyHostMetricConfigResponse"/></returns>
+        public ModifyHostMetricConfigResponse ModifyHostMetricConfigSync(ModifyHostMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyHostMetricConfigResponse>(req, "ModifyHostMetricConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1566,6 +3320,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to modify Kafka protocol consumption group offsets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerGroupOffsetResponse"/></returns>
+        public Task<ModifyKafkaConsumerGroupOffsetResponse> ModifyKafkaConsumerGroupOffset(ModifyKafkaConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerGroupOffsetResponse>(req, "ModifyKafkaConsumerGroupOffset");
+        }
+
+        /// <summary>
+        /// This API is used to modify Kafka protocol consumption group offsets.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyKafkaConsumerGroupOffsetRequest"/></param>
+        /// <returns><see cref="ModifyKafkaConsumerGroupOffsetResponse"/></returns>
+        public ModifyKafkaConsumerGroupOffsetResponse ModifyKafkaConsumerGroupOffsetSync(ModifyKafkaConsumerGroupOffsetRequest req)
+        {
+            return InternalRequestAsync<ModifyKafkaConsumerGroupOffsetResponse>(req, "ModifyKafkaConsumerGroupOffset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a Kafka data subscription task.
         /// </summary>
         /// <param name="req"><see cref="ModifyKafkaRechargeRequest"/></param>
@@ -1608,7 +3383,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a machine group.
+        /// Modify machine group.
+        /// Note: Modifying the interface will directly overwrite historical data and change it to valid input parameters this time. Please be cautious when calling this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyMachineGroupRequest"/></param>
         /// <returns><see cref="ModifyMachineGroupResponse"/></returns>
@@ -1618,13 +3394,140 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a machine group.
+        /// Modify machine group.
+        /// Note: Modifying the interface will directly overwrite historical data and change it to valid input parameters this time. Please be cautious when calling this API.
         /// </summary>
         /// <param name="req"><see cref="ModifyMachineGroupRequest"/></param>
         /// <returns><see cref="ModifyMachineGroupResponse"/></returns>
         public ModifyMachineGroupResponse ModifyMachineGroupSync(ModifyMachineGroupRequest req)
         {
             return InternalRequestAsync<ModifyMachineGroupResponse>(req, "ModifyMachineGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyMetricConfigResponse"/></returns>
+        public Task<ModifyMetricConfigResponse> ModifyMetricConfig(ModifyMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricConfigResponse>(req, "ModifyMetricConfig");
+        }
+
+        /// <summary>
+        /// This API is used to create metric collection configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricConfigRequest"/></param>
+        /// <returns><see cref="ModifyMetricConfigResponse"/></returns>
+        public ModifyMetricConfigResponse ModifyMetricConfigSync(ModifyMetricConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricConfigResponse>(req, "ModifyMetricConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyMetricSubscribeResponse"/></returns>
+        public Task<ModifyMetricSubscribeResponse> ModifyMetricSubscribe(ModifyMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricSubscribeResponse>(req, "ModifyMetricSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to modify metric subscription configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMetricSubscribeRequest"/></param>
+        /// <returns><see cref="ModifyMetricSubscribeResponse"/></returns>
+        public ModifyMetricSubscribeResponse ModifyMetricSubscribeSync(ModifyMetricSubscribeRequest req)
+        {
+            return InternalRequestAsync<ModifyMetricSubscribeResponse>(req, "ModifyMetricSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a web application
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkApplicationRequest"/></param>
+        /// <returns><see cref="ModifyNetworkApplicationResponse"/></returns>
+        public Task<ModifyNetworkApplicationResponse> ModifyNetworkApplication(ModifyNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkApplicationResponse>(req, "ModifyNetworkApplication");
+        }
+
+        /// <summary>
+        /// Modify a web application
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkApplicationRequest"/></param>
+        /// <returns><see cref="ModifyNetworkApplicationResponse"/></returns>
+        public ModifyNetworkApplicationResponse ModifyNetworkApplicationSync(ModifyNetworkApplicationRequest req)
+        {
+            return InternalRequestAsync<ModifyNetworkApplicationResponse>(req, "ModifyNetworkApplication")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify notification content configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentResponse"/></returns>
+        public Task<ModifyNoticeContentResponse> ModifyNoticeContent(ModifyNoticeContentRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentResponse>(req, "ModifyNoticeContent");
+        }
+
+        /// <summary>
+        /// This API is used to modify notification content configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNoticeContentRequest"/></param>
+        /// <returns><see cref="ModifyNoticeContentResponse"/></returns>
+        public ModifyNoticeContentResponse ModifyNoticeContentSync(ModifyNoticeContentRequest req)
+        {
+            return InternalRequestAsync<ModifyNoticeContentResponse>(req, "ModifyNoticeContent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a scheduled pre-aggregation task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleTaskResponse"/></returns>
+        public Task<ModifyRecordingRuleTaskResponse> ModifyRecordingRuleTask(ModifyRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleTaskResponse>(req, "ModifyRecordingRuleTask");
+        }
+
+        /// <summary>
+        /// This API is used to modify a scheduled pre-aggregation task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleTaskResponse"/></returns>
+        public ModifyRecordingRuleTaskResponse ModifyRecordingRuleTaskSync(ModifyRecordingRuleTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleTaskResponse>(req, "ModifyRecordingRuleTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modifying a Metric Pre-Aggregation Task Through a YAML File
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleYamlTaskResponse"/></returns>
+        public Task<ModifyRecordingRuleYamlTaskResponse> ModifyRecordingRuleYamlTask(ModifyRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleYamlTaskResponse>(req, "ModifyRecordingRuleYamlTask");
+        }
+
+        /// <summary>
+        /// Modifying a Metric Pre-Aggregation Task Through a YAML File
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRecordingRuleYamlTaskRequest"/></param>
+        /// <returns><see cref="ModifyRecordingRuleYamlTaskResponse"/></returns>
+        public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTaskSync(ModifyRecordingRuleYamlTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRecordingRuleYamlTaskResponse>(req, "ModifyRecordingRuleYamlTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1650,6 +3553,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to modify a query view.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySearchViewRequest"/></param>
+        /// <returns><see cref="ModifySearchViewResponse"/></returns>
+        public Task<ModifySearchViewResponse> ModifySearchView(ModifySearchViewRequest req)
+        {
+            return InternalRequestAsync<ModifySearchViewResponse>(req, "ModifySearchView");
+        }
+
+        /// <summary>
+        /// This API is used to modify a query view.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySearchViewRequest"/></param>
+        /// <returns><see cref="ModifySearchViewResponse"/></returns>
+        public ModifySearchViewResponse ModifySearchViewSync(ModifySearchViewRequest req)
+        {
+            return InternalRequestAsync<ModifySearchViewResponse>(req, "ModifySearchView")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify an existing shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
         /// </summary>
         /// <param name="req"><see cref="ModifyShipperRequest"/></param>
@@ -1671,7 +3595,28 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a log topic.
+        /// Modify information related to splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="ModifySplunkDeliverRequest"/></param>
+        /// <returns><see cref="ModifySplunkDeliverResponse"/></returns>
+        public Task<ModifySplunkDeliverResponse> ModifySplunkDeliver(ModifySplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifySplunkDeliverResponse>(req, "ModifySplunkDeliver");
+        }
+
+        /// <summary>
+        /// Modify information related to splunk delivery task
+        /// </summary>
+        /// <param name="req"><see cref="ModifySplunkDeliverRequest"/></param>
+        /// <returns><see cref="ModifySplunkDeliverResponse"/></returns>
+        public ModifySplunkDeliverResponse ModifySplunkDeliverSync(ModifySplunkDeliverRequest req)
+        {
+            return InternalRequestAsync<ModifySplunkDeliverResponse>(req, "ModifySplunkDeliver")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
         /// <returns><see cref="ModifyTopicResponse"/></returns>
@@ -1681,13 +3626,78 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to modify a log topic.
+        /// This API is used to modify logs or metric topics.
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
         /// <returns><see cref="ModifyTopicResponse"/></returns>
         public ModifyTopicResponse ModifyTopicSync(ModifyTopicRequest req)
         {
             return InternalRequestAsync<ModifyTopicResponse>(req, "ModifyTopic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebCallbackRequest"/></param>
+        /// <returns><see cref="ModifyWebCallbackResponse"/></returns>
+        public Task<ModifyWebCallbackResponse> ModifyWebCallback(ModifyWebCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyWebCallbackResponse>(req, "ModifyWebCallback");
+        }
+
+        /// <summary>
+        /// This API is used to modify alarm channel callback configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebCallbackRequest"/></param>
+        /// <returns><see cref="ModifyWebCallbackResponse"/></returns>
+        public ModifyWebCallbackResponse ModifyWebCallbackSync(ModifyWebCallbackRequest req)
+        {
+            return InternalRequestAsync<ModifyWebCallbackResponse>(req, "ModifyWebCallback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create resources and indexes dependent on OpenClaw.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClawServiceRequest"/></param>
+        /// <returns><see cref="OpenClawServiceResponse"/></returns>
+        public Task<OpenClawServiceResponse> OpenClawService(OpenClawServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClawServiceResponse>(req, "OpenClawService");
+        }
+
+        /// <summary>
+        /// This API is used to create resources and indexes dependent on OpenClaw.
+        /// </summary>
+        /// <param name="req"><see cref="OpenClawServiceRequest"/></param>
+        /// <returns><see cref="OpenClawServiceResponse"/></returns>
+        public OpenClawServiceResponse OpenClawServiceSync(OpenClawServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClawServiceResponse>(req, "OpenClawService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable logging
+        /// This API is used to enable CLS in all regions by filling any region for Region, recommend using Guangzhou (ap-guangzhou).
+        /// </summary>
+        /// <param name="req"><see cref="OpenClsServiceRequest"/></param>
+        /// <returns><see cref="OpenClsServiceResponse"/></returns>
+        public Task<OpenClsServiceResponse> OpenClsService(OpenClsServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClsServiceResponse>(req, "OpenClsService");
+        }
+
+        /// <summary>
+        /// Enable logging
+        /// This API is used to enable CLS in all regions by filling any region for Region, recommend using Guangzhou (ap-guangzhou).
+        /// </summary>
+        /// <param name="req"><see cref="OpenClsServiceRequest"/></param>
+        /// <returns><see cref="OpenClsServiceResponse"/></returns>
+        public OpenClsServiceResponse OpenClsServiceSync(OpenClsServiceRequest req)
+        {
+            return InternalRequestAsync<OpenClsServiceResponse>(req, "OpenClsService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1734,7 +3744,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to query the latest metric value at a specified time.
+        /// Query the latest metric value at a specified time.
+        /// If there is no metric data in the 5 minutes before that moment, there will be no query result.
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>
@@ -1744,7 +3755,8 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to query the latest metric value at a specified time.
+        /// Query the latest metric value at a specified time.
+        /// If there is no metric data in the 5 minutes before that moment, there will be no query result.
         /// </summary>
         /// <param name="req"><see cref="QueryMetricRequest"/></param>
         /// <returns><see cref="QueryMetricResponse"/></returns>
@@ -1818,8 +3830,30 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
-        /// 3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+        /// This API is used to preview the dashboard subscription.
+        /// </summary>
+        /// <param name="req"><see cref="SearchDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="SearchDashboardSubscribeResponse"/></returns>
+        public Task<SearchDashboardSubscribeResponse> SearchDashboardSubscribe(SearchDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<SearchDashboardSubscribeResponse>(req, "SearchDashboardSubscribe");
+        }
+
+        /// <summary>
+        /// This API is used to preview the dashboard subscription.
+        /// </summary>
+        /// <param name="req"><see cref="SearchDashboardSubscribeRequest"/></param>
+        /// <returns><see cref="SearchDashboardSubscribeResponse"/></returns>
+        public SearchDashboardSubscribeResponse SearchDashboardSubscribeSync(SearchDashboardSubscribeRequest req)
+        {
+            return InternalRequestAsync<SearchDashboardSubscribeResponse>(req, "SearchDashboardSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+        /// 1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries cannot exceed 15.
+        /// 2. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -1829,8 +3863,9 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to search and analyze logs. When using this API, please note the following:1. Besides being subject to the default API request frequency limit by this API, for a single log topic, the concurrency number cannot exceed 15. 2. For search syntax, it's recommended to use the CQL syntax rule. Please use the SyntaxRule parameter and set its value to 1.
-        /// 3. The maximum value of API's response data packet is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+        /// This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+        /// 1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries cannot exceed 15.
+        /// 2. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -1841,7 +3876,28 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to split a topic partition.
+        /// This API is used to check the heartbeat of a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="SendConsumerHeartbeatRequest"/></param>
+        /// <returns><see cref="SendConsumerHeartbeatResponse"/></returns>
+        public Task<SendConsumerHeartbeatResponse> SendConsumerHeartbeat(SendConsumerHeartbeatRequest req)
+        {
+            return InternalRequestAsync<SendConsumerHeartbeatResponse>(req, "SendConsumerHeartbeat");
+        }
+
+        /// <summary>
+        /// This API is used to check the heartbeat of a consumer group.
+        /// </summary>
+        /// <param name="req"><see cref="SendConsumerHeartbeatRequest"/></param>
+        /// <returns><see cref="SendConsumerHeartbeatResponse"/></returns>
+        public SendConsumerHeartbeatResponse SendConsumerHeartbeatSync(SendConsumerHeartbeatRequest req)
+        {
+            return InternalRequestAsync<SendConsumerHeartbeatResponse>(req, "SendConsumerHeartbeat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="SplitPartitionRequest"/></param>
         /// <returns><see cref="SplitPartitionResponse"/></returns>
@@ -1851,7 +3907,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to split a topic partition.
+        /// This API is deprecated. If needed, please use the ModifyTopic API to change the number of partitions.
         /// </summary>
         /// <param name="req"><see cref="SplitPartitionRequest"/></param>
         /// <returns><see cref="SplitPartitionResponse"/></returns>
@@ -1862,81 +3918,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// ## Note
-        /// To ensure log data reliability and help you use CLS more efficiently, we recommend you use the optimized API to upload logs. For more information about the API, see [Uploading Log via API](https://intl.cloud.tencent.com/document/product/614/16873?from_cn_redirect=1).
+        /// ## Notification
+        /// To ensure the reliability of your log data and use the log service more efficiently, we recommend that you use the CLS-optimized API to upload structured logs (https://www.tencentcloud.com/document/product/614/16873?from_cn_redirect=1).
         /// 
-        /// For the optimized API, we have developed an SDK (available in multiple languages) that provides features including async sending, resource control, automatic retry, graceful shutdown, and detection-based reporting. For details, see [Uploading Log via SDK](https://intl.cloud.tencent.com/document/product/614/67157?from_cn_redirect=1).
+        /// Meanwhile, we have specially optimized and customized SDKs in multiple languages for this API for you to choose from. The SDK provides unified async sending, resource control, automatic retry, graceful shutdown, perception reporting, and other features to improve the log reporting function. For details, refer to [SDK Collection](https://www.tencentcloud.com/document/product/614/67157?from_cn_redirect=1).
         /// 
-        /// `UploadLog` allows you to synchronously upload log data. If you still want to continue to use this API instead of the optimized one, read this document.
+        /// Meanwhile, the log upload API also supports synchronous log data upload. If you select to continue using this API, refer to the following text.
         /// 
         /// ## Feature Description
         /// 
-        /// This API is used to write logs to a specified log topic.
+        /// This API is used to write logs to the designated log topic.
         /// 
-        /// CLS provides the following two modes:
+        /// #### Input parameter (pb binary stream, located in body)
         /// 
-        /// #### Load balancing mode
-        /// 
-        /// In this mode, logs will be automatically written to a target partition among all readable/writable partitions under the current log topic based on the load balancing principle. This mode is suitable for scenarios where sequential consumption is not needed.
-        /// 
-        /// #### Hash routing mode
-        /// 
-        /// In this mode, data will be written to a target partition that meets the range requirements based on the carried hash value (`X-CLS-HashKey`). For example, a log source can be bound to a topic partition through `HashKey`, strictly guaranteeing the sequence of the data written to and consumed in this partition.
-        /// 
-        ///                  
-        /// 
-        /// #### Input parameters (pb binary streams in `body`)
-        /// 
-        /// | Parameter       | Type    | Location | Required | Description                                                         |
+        /// | Field name | Data type | Location | Must | Description |
         /// | ------------ | ------- | ---- | ---- | ------------------------------------------------------------ |
-        /// | logGroupList | message | pb   | Yes   | The `logGroup` list, which describes the encapsulated log groups. We recommend you enter up to five `logGroup` values. |
+        /// | logGroupList | message | pb   | Yes | logGroup list, encapsulated content of the log group list. It is advisable not to exceed 5 logGroups. |
         /// 
-        /// `LogGroup` description:
+        /// Group description:
         /// 
-        /// | Parameter      | Required | Description                                                         |
+        /// | Field name | Required or optional | Description |
         /// | ----------- | -------- | ------------------------------------------------------------ |
-        /// | logs        | Yes       | Log array consisting of multiple `Log` values. The `Log` indicates a log, and a `LogGroup` can contain up to 10,000 `Log` values. |
-        /// | contextFlow | No       | Unique `LogGroup` ID, which should be passed in if the context feature needs to be used. Format: "{Context ID}-{LogGroupID}". <br>Context ID: Uniquely identifies the context (a series of log files that are continuously scrolling or a series of logs that need to be sequenced), which is a 64-bit integer hex string. <br>LogGroupID: A 64-bit integer hex string that continuously increases, such as `102700A66102516A-59F59`.                        |
-        /// | filename    | No       | Log filename                                                   |
-        /// | source      | No       | Log source, which is generally the machine IP                           |
-        /// | logTags     | No       | List of log tags                                               |
+        /// | logs        | is       | a log array, which means a set of multiple logs. One Log represents one log, and the number of logs in one LogGroup cannot exceed 10000 |
+        /// | contextFlow | No | The unique ID of LogGroup, which must be imported when using context features. Format: "{context ID}-{LogGroupID}".<br>Context ID: A unique identifier for a context (a series of consecutively scrolled log files or a sequence of logs requiring order preservation), a 64-bit integer string in base 16.<br>LogGroupID: A consecutively incremental integer string in base 16. Example: "102700A66102516A-59F59".
+        /// | filename    | No       | Log file name |
+        /// | source      | No       | Log source, using machine IP as a label in general use       |
+        /// | logTags     | No       | Log tag list                                               |
         /// 
-        /// `Log` description:
+        /// Log description:
         /// 
-        /// | Parameter   | Required | Description                                                         |
+        /// | field name | Required or optional | Description |
         /// | -------- | -------- | ------------------------------------------------------------ |
-        /// | time     | Yes       | Unix timestamp of log time in seconds or milliseconds (recommended)      |
-        /// | contents | No       | Log content in key-value format. A log can contain multiple key-value pairs. |
+        /// | time     | is       | log time (Unix timestamp), supports second, millisecond, microsecond, milliseconds is recommended |
+        /// | contents | No | Key-value formatted log content, representing multiple key-value composites in a log |
         /// 
-        /// `Content` description:
+        /// Content description:
         /// 
-        /// | Parameter | Required | Description                                                         |
+        /// | Field name | Required or optional | Description |
         /// | ------ | -------- | ------------------------------------------------------------ |
-        /// | key    | Yes       | Key of a field group in one log, which cannot start with `_`.                 |
-        /// | value  | Yes       | Value of a field group. The `value` of one log cannot exceed 1 MB and the total `value` in `LogGroup` cannot exceed 5 MB. |
+        /// | key    | Yes       | The key value of a field group in a single-line log. It cannot start with `_` |
+        /// | value  | Yes       | The value of a field group in a single-line log. The value of a single-line log must not exceed 1MB, and the sum of ALL values in a LogGroup cannot exceed 5MB. |
         /// 
-        /// `LogTag` description:
+        /// LogTag description:
         /// 
-        /// | Parameter | Required | Description                             |
+        /// | Field name | Required or optional | Description |
         /// | ------ | -------- | -------------------------------- |
-        /// | key    | Yes       | Key of a custom tag                 |
-        /// | value  | Yes       | Value corresponding to the custom tag key |
+        /// | key    | Yes      | Custom tag key                 |
+        /// | value  | is       | value corresponding to the custom tag key |
         /// 
-        /// ## pb Compilation Example
+        /// ## PB Compilation Example
         /// 
-        /// This example shows you how to use the protoc compiler to compile a pb description file into a log upload API in C++.
+        /// This example shows how to use the official protoc compiler to compile and generate a C++ language adjustable log upload API from a description file.
         /// 
-        /// > ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+        /// Currently protoc officially supports compilation for languages such as Java, C++, and Python. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// #### 1. Install protocol buffers
+        /// #### 1. Protocol Buffer installation
         /// 
-        /// Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
+        /// Download [Protocol Buffer](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), unzip and install. The example version is protobuf 2.6.1, and the environment is Centos 7.3 system. Decompress the `protobuf-2.6.1.tar.gz` compressed package to the `/usr/local` directory and enter the directory. Execute the command as follows:
         /// 
         /// ```
         /// tar -zxvf protobuf-2.6.1.tar.gz -C /usr/local/ && cd /usr/local/protobuf-2.6.1
         /// ```
         /// 
-        /// Run the following commands to start compilation and installation and configure the environment variables:
+        /// Start compilation and installation, configure environment variables, execute the command as follows:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# ./configure 
@@ -1944,22 +3988,22 @@ namespace TencentCloud.Cls.V20201016
         /// [root@VM_0_8_centos protobuf-2.6.1]# export PATH=$PATH:/usr/local/protobuf-2.6.1/bin
         /// ```
         /// 
-        /// After the compilation succeeds, run the following command to check the version:
+        /// After successful compilation, view the version using the following command:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# protoc --version
         /// liprotoc 2.6.1
         /// ```
         /// 
-        /// #### 2. Create a pb description file
+        /// #### 2. Create PB description file
         /// 
-        /// A pb description file is an agreed-on data interchange format for communication. To upload logs, compile the specified protocol format to an API in the target programming language and add the API to the project code. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+        /// The PB description file is the data interchange format agreed by the communication parties. When uploading logs, compile the specified protocol format into the calling interface of the corresponding language version, then add to engineering code. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// Create a pb message description file `cls.proto` based on the pb data format content specified by CLS.
+        /// Create a local PB message description file cls.proto based on the PB data format specified by the log service.
         /// 
-        /// > !The pb description file content cannot be modified, and the filename must end with `.proto`.
+        /// !PB description file content immutable, and the file name must end with `.proto`.
         /// 
-        /// The content of `cls.proto` (pb description file) is as follows:
+        /// The content of cls.proto (PB description file) is as follows:
         /// 
         /// ```
         /// package cls;
@@ -1968,11 +4012,11 @@ namespace TencentCloud.Cls.V20201016
         /// {
         ///     message Content
         ///     {
-        ///         required string key   = 1; // Key of each field group
-        ///         required string value = 2; // Value of each field group
+        /// required string key = 1; // key for each group of fields
+        /// required string value = 2; // The value of the group field
         ///     }
-        ///     required int64   time     = 1; // Unix timestamp
-        ///     repeated Content contents = 2; // Multiple key-value pairs in one log
+        /// required int64   time     = 1; // A timestamp in UNIX time format
+        /// repeated Content contents = 2; // multiple kv combinations in a log
         /// }
         /// 
         /// message LogTag
@@ -1983,30 +4027,30 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// message LogGroup
         /// {
-        ///     repeated Log    logs        = 1; // Log array consisting of multiple logs
-        ///     optional string contextFlow = 2; // This parameter does not take effect currently
-        ///     optional string filename    = 3; // Log filename
-        ///     optional string source      = 4; // Log source, which is generally the machine IP
+        /// repeated Log    logs        = 1; // log array composed of multiple logs
+        /// optional string contextFlow = 2; // Currently no utility
+        /// optional string filename = 3; // log file name
+        /// optional string source      = 4; // log source, general use machine IP
         ///     repeated LogTag logTags     = 5;
         /// }
         /// 
         /// message LogGroupList
         /// {
-        ///     repeated LogGroup logGroupList = 1; // Log group list
+        /// repeated LogGroup logGroupList = 1; // log group list
         /// }
         /// ```
         /// 
-        /// #### 3. Compile and generate the API
+        /// #### 3. Compile and generate
         /// 
-        /// This example uses the proto compiler to generate a C++ file in the same directory as the `cls.proto` file. Run the following compilation command:
+        /// In this example, use the proto compiler to generate C++ language files under the same directory as the cls.proto file and execute the following compilation command:
         /// 
         /// ```
         /// protoc --cpp_out=./ ./cls.proto 
         /// ```
         /// 
-        /// > ?`--cpp_out=./` indicates that the file will be compiled in cpp format and output to the current directory. `./cls.proto` indicates the `cls.proto` description file in the current directory.
+        /// `--cpp_out=./` means compile to cpp format and output in the current directory. `./cls.proto` refers to the cls.proto description file located in the current directory.
         /// 
-        /// After the compilation succeeds, the code file in the corresponding programming language will be generated. This example generates the `cls.pb.h` header file and [cls.pb.cc](http://cls.pb.cc) code implementation file as shown below:
+        /// After successful compilation, it will output the code file in the corresponding language. This routine generates the cls.pb.h header file and the cls.pb.cc code implementation file, as shown below:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# protoc --cpp_out=./ ./cls.proto
@@ -2014,9 +4058,9 @@ namespace TencentCloud.Cls.V20201016
         /// cls.pb.cc cls.pb.h cls.proto
         /// ```
         /// 
-        /// #### 4. Call the API
+        /// #### 4. Call
         /// 
-        /// Import the generated `cls.pb.h` header file into the code and call the API for data encapsulation.
+        /// Import the generated cls.pb.h header file into the code and call the interface to encapsulate the data format.
         /// </summary>
         /// <param name="req"><see cref="UploadLogRequest"/></param>
         /// <returns><see cref="UploadLogResponse"/></returns>
@@ -2026,81 +4070,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// ## Note
-        /// To ensure log data reliability and help you use CLS more efficiently, we recommend you use the optimized API to upload logs. For more information about the API, see [Uploading Log via API](https://intl.cloud.tencent.com/document/product/614/16873?from_cn_redirect=1).
+        /// ## Notification
+        /// To ensure the reliability of your log data and use the log service more efficiently, we recommend that you use the CLS-optimized API to upload structured logs (https://www.tencentcloud.com/document/product/614/16873?from_cn_redirect=1).
         /// 
-        /// For the optimized API, we have developed an SDK (available in multiple languages) that provides features including async sending, resource control, automatic retry, graceful shutdown, and detection-based reporting. For details, see [Uploading Log via SDK](https://intl.cloud.tencent.com/document/product/614/67157?from_cn_redirect=1).
+        /// Meanwhile, we have specially optimized and customized SDKs in multiple languages for this API for you to choose from. The SDK provides unified async sending, resource control, automatic retry, graceful shutdown, perception reporting, and other features to improve the log reporting function. For details, refer to [SDK Collection](https://www.tencentcloud.com/document/product/614/67157?from_cn_redirect=1).
         /// 
-        /// `UploadLog` allows you to synchronously upload log data. If you still want to continue to use this API instead of the optimized one, read this document.
+        /// Meanwhile, the log upload API also supports synchronous log data upload. If you select to continue using this API, refer to the following text.
         /// 
         /// ## Feature Description
         /// 
-        /// This API is used to write logs to a specified log topic.
+        /// This API is used to write logs to the designated log topic.
         /// 
-        /// CLS provides the following two modes:
+        /// #### Input parameter (pb binary stream, located in body)
         /// 
-        /// #### Load balancing mode
-        /// 
-        /// In this mode, logs will be automatically written to a target partition among all readable/writable partitions under the current log topic based on the load balancing principle. This mode is suitable for scenarios where sequential consumption is not needed.
-        /// 
-        /// #### Hash routing mode
-        /// 
-        /// In this mode, data will be written to a target partition that meets the range requirements based on the carried hash value (`X-CLS-HashKey`). For example, a log source can be bound to a topic partition through `HashKey`, strictly guaranteeing the sequence of the data written to and consumed in this partition.
-        /// 
-        ///                  
-        /// 
-        /// #### Input parameters (pb binary streams in `body`)
-        /// 
-        /// | Parameter       | Type    | Location | Required | Description                                                         |
+        /// | Field name | Data type | Location | Must | Description |
         /// | ------------ | ------- | ---- | ---- | ------------------------------------------------------------ |
-        /// | logGroupList | message | pb   | Yes   | The `logGroup` list, which describes the encapsulated log groups. We recommend you enter up to five `logGroup` values. |
+        /// | logGroupList | message | pb   | Yes | logGroup list, encapsulated content of the log group list. It is advisable not to exceed 5 logGroups. |
         /// 
-        /// `LogGroup` description:
+        /// Group description:
         /// 
-        /// | Parameter      | Required | Description                                                         |
+        /// | Field name | Required or optional | Description |
         /// | ----------- | -------- | ------------------------------------------------------------ |
-        /// | logs        | Yes       | Log array consisting of multiple `Log` values. The `Log` indicates a log, and a `LogGroup` can contain up to 10,000 `Log` values. |
-        /// | contextFlow | No       | Unique `LogGroup` ID, which should be passed in if the context feature needs to be used. Format: "{Context ID}-{LogGroupID}". <br>Context ID: Uniquely identifies the context (a series of log files that are continuously scrolling or a series of logs that need to be sequenced), which is a 64-bit integer hex string. <br>LogGroupID: A 64-bit integer hex string that continuously increases, such as `102700A66102516A-59F59`.                        |
-        /// | filename    | No       | Log filename                                                   |
-        /// | source      | No       | Log source, which is generally the machine IP                           |
-        /// | logTags     | No       | List of log tags                                               |
+        /// | logs        | is       | a log array, which means a set of multiple logs. One Log represents one log, and the number of logs in one LogGroup cannot exceed 10000 |
+        /// | contextFlow | No | The unique ID of LogGroup, which must be imported when using context features. Format: "{context ID}-{LogGroupID}".<br>Context ID: A unique identifier for a context (a series of consecutively scrolled log files or a sequence of logs requiring order preservation), a 64-bit integer string in base 16.<br>LogGroupID: A consecutively incremental integer string in base 16. Example: "102700A66102516A-59F59".
+        /// | filename    | No       | Log file name |
+        /// | source      | No       | Log source, using machine IP as a label in general use       |
+        /// | logTags     | No       | Log tag list                                               |
         /// 
-        /// `Log` description:
+        /// Log description:
         /// 
-        /// | Parameter   | Required | Description                                                         |
+        /// | field name | Required or optional | Description |
         /// | -------- | -------- | ------------------------------------------------------------ |
-        /// | time     | Yes       | Unix timestamp of log time in seconds or milliseconds (recommended)      |
-        /// | contents | No       | Log content in key-value format. A log can contain multiple key-value pairs. |
+        /// | time     | is       | log time (Unix timestamp), supports second, millisecond, microsecond, milliseconds is recommended |
+        /// | contents | No | Key-value formatted log content, representing multiple key-value composites in a log |
         /// 
-        /// `Content` description:
+        /// Content description:
         /// 
-        /// | Parameter | Required | Description                                                         |
+        /// | Field name | Required or optional | Description |
         /// | ------ | -------- | ------------------------------------------------------------ |
-        /// | key    | Yes       | Key of a field group in one log, which cannot start with `_`.                 |
-        /// | value  | Yes       | Value of a field group. The `value` of one log cannot exceed 1 MB and the total `value` in `LogGroup` cannot exceed 5 MB. |
+        /// | key    | Yes       | The key value of a field group in a single-line log. It cannot start with `_` |
+        /// | value  | Yes       | The value of a field group in a single-line log. The value of a single-line log must not exceed 1MB, and the sum of ALL values in a LogGroup cannot exceed 5MB. |
         /// 
-        /// `LogTag` description:
+        /// LogTag description:
         /// 
-        /// | Parameter | Required | Description                             |
+        /// | Field name | Required or optional | Description |
         /// | ------ | -------- | -------------------------------- |
-        /// | key    | Yes       | Key of a custom tag                 |
-        /// | value  | Yes       | Value corresponding to the custom tag key |
+        /// | key    | Yes      | Custom tag key                 |
+        /// | value  | is       | value corresponding to the custom tag key |
         /// 
-        /// ## pb Compilation Example
+        /// ## PB Compilation Example
         /// 
-        /// This example shows you how to use the protoc compiler to compile a pb description file into a log upload API in C++.
+        /// This example shows how to use the official protoc compiler to compile and generate a C++ language adjustable log upload API from a description file.
         /// 
-        /// > ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+        /// Currently protoc officially supports compilation for languages such as Java, C++, and Python. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// #### 1. Install protocol buffers
+        /// #### 1. Protocol Buffer installation
         /// 
-        /// Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the example is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
+        /// Download [Protocol Buffer](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), unzip and install. The example version is protobuf 2.6.1, and the environment is Centos 7.3 system. Decompress the `protobuf-2.6.1.tar.gz` compressed package to the `/usr/local` directory and enter the directory. Execute the command as follows:
         /// 
         /// ```
         /// tar -zxvf protobuf-2.6.1.tar.gz -C /usr/local/ && cd /usr/local/protobuf-2.6.1
         /// ```
         /// 
-        /// Run the following commands to start compilation and installation and configure the environment variables:
+        /// Start compilation and installation, configure environment variables, execute the command as follows:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# ./configure 
@@ -2108,22 +4140,22 @@ namespace TencentCloud.Cls.V20201016
         /// [root@VM_0_8_centos protobuf-2.6.1]# export PATH=$PATH:/usr/local/protobuf-2.6.1/bin
         /// ```
         /// 
-        /// After the compilation succeeds, run the following command to check the version:
+        /// After successful compilation, view the version using the following command:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# protoc --version
         /// liprotoc 2.6.1
         /// ```
         /// 
-        /// #### 2. Create a pb description file
+        /// #### 2. Create PB description file
         /// 
-        /// A pb description file is an agreed-on data interchange format for communication. To upload logs, compile the specified protocol format to an API in the target programming language and add the API to the project code. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
+        /// The PB description file is the data interchange format agreed by the communication parties. When uploading logs, compile the specified protocol format into the calling interface of the corresponding language version, then add to engineering code. For details, see [protoc](https://github.com/protocolbuffers/protobuf).
         /// 
-        /// Create a pb message description file `cls.proto` based on the pb data format content specified by CLS.
+        /// Create a local PB message description file cls.proto based on the PB data format specified by the log service.
         /// 
-        /// > !The pb description file content cannot be modified, and the filename must end with `.proto`.
+        /// !PB description file content immutable, and the file name must end with `.proto`.
         /// 
-        /// The content of `cls.proto` (pb description file) is as follows:
+        /// The content of cls.proto (PB description file) is as follows:
         /// 
         /// ```
         /// package cls;
@@ -2132,11 +4164,11 @@ namespace TencentCloud.Cls.V20201016
         /// {
         ///     message Content
         ///     {
-        ///         required string key   = 1; // Key of each field group
-        ///         required string value = 2; // Value of each field group
+        /// required string key = 1; // key for each group of fields
+        /// required string value = 2; // The value of the group field
         ///     }
-        ///     required int64   time     = 1; // Unix timestamp
-        ///     repeated Content contents = 2; // Multiple key-value pairs in one log
+        /// required int64   time     = 1; // A timestamp in UNIX time format
+        /// repeated Content contents = 2; // multiple kv combinations in a log
         /// }
         /// 
         /// message LogTag
@@ -2147,30 +4179,30 @@ namespace TencentCloud.Cls.V20201016
         /// 
         /// message LogGroup
         /// {
-        ///     repeated Log    logs        = 1; // Log array consisting of multiple logs
-        ///     optional string contextFlow = 2; // This parameter does not take effect currently
-        ///     optional string filename    = 3; // Log filename
-        ///     optional string source      = 4; // Log source, which is generally the machine IP
+        /// repeated Log    logs        = 1; // log array composed of multiple logs
+        /// optional string contextFlow = 2; // Currently no utility
+        /// optional string filename = 3; // log file name
+        /// optional string source      = 4; // log source, general use machine IP
         ///     repeated LogTag logTags     = 5;
         /// }
         /// 
         /// message LogGroupList
         /// {
-        ///     repeated LogGroup logGroupList = 1; // Log group list
+        /// repeated LogGroup logGroupList = 1; // log group list
         /// }
         /// ```
         /// 
-        /// #### 3. Compile and generate the API
+        /// #### 3. Compile and generate
         /// 
-        /// This example uses the proto compiler to generate a C++ file in the same directory as the `cls.proto` file. Run the following compilation command:
+        /// In this example, use the proto compiler to generate C++ language files under the same directory as the cls.proto file and execute the following compilation command:
         /// 
         /// ```
         /// protoc --cpp_out=./ ./cls.proto 
         /// ```
         /// 
-        /// > ?`--cpp_out=./` indicates that the file will be compiled in cpp format and output to the current directory. `./cls.proto` indicates the `cls.proto` description file in the current directory.
+        /// `--cpp_out=./` means compile to cpp format and output in the current directory. `./cls.proto` refers to the cls.proto description file located in the current directory.
         /// 
-        /// After the compilation succeeds, the code file in the corresponding programming language will be generated. This example generates the `cls.pb.h` header file and [cls.pb.cc](http://cls.pb.cc) code implementation file as shown below:
+        /// After successful compilation, it will output the code file in the corresponding language. This routine generates the cls.pb.h header file and the cls.pb.cc code implementation file, as shown below:
         /// 
         /// ```
         /// [root@VM_0_8_centos protobuf-2.6.1]# protoc --cpp_out=./ ./cls.proto
@@ -2178,9 +4210,9 @@ namespace TencentCloud.Cls.V20201016
         /// cls.pb.cc cls.pb.h cls.proto
         /// ```
         /// 
-        /// #### 4. Call the API
+        /// #### 4. Call
         /// 
-        /// Import the generated `cls.pb.h` header file into the code and call the API for data encapsulation.
+        /// Import the generated cls.pb.h header file into the code and call the interface to encapsulate the data format.
         /// </summary>
         /// <param name="req"><see cref="UploadLogRequest"/></param>
         /// <returns><see cref="UploadLogResponse"/></returns>

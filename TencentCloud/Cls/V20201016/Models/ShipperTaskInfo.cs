@@ -67,7 +67,11 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Result of the current shipping task. Valid values: `success`, `running`, `failed`
+        /// Result of this shipping: "success", "running", "failed".
+        /// 
+        /// -success: Task successful.
+        /// - running: Task processing.
+        /// - failed: Task failure.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

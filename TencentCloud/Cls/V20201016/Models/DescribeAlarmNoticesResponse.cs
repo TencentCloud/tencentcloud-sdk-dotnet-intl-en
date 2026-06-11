@@ -26,7 +26,6 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Alarm notification template list
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AlarmNotices")]
         public AlarmNotice[] AlarmNotices{ get; set; }

@@ -49,15 +49,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Number of component vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Component Vulnerabilities
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
         /// Image ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageID")]
         public string ImageID{ get; set; }

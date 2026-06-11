@@ -57,7 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string LogicCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// 
+        /// Regions covered by logical backup.
         /// </summary>
         [JsonProperty("LogicCrossRegions")]
         public string[] LogicCrossRegions{ get; set; }

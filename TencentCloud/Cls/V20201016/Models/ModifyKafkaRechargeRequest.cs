@@ -25,13 +25,17 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka data import configuration ID
+        /// Import configuration Id.
+        /// -Create a Kafka Data Subscription Task (https://www.tencentcloud.com/document/product/614/94448?from_cn_redirect=1) to obtain the Kafka import configuration Id.
+        /// -Get the Kafka import configuration Id by searching the [Kafka Data Subscription Task list](https://www.tencentcloud.com/document/product/614/94446?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Target topic ID
+        /// Import the target topic ID of CLS.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+        /// - Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -43,37 +47,40 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+        /// Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// CKafka instance ID, which is required when `KafkaType` is set to `0`
+        /// Tencent Cloud CKafka instance ID. Required when KafkaType is 0.
+        /// - Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// Service address
+        /// Service address, which is required when KafkaType is 1.
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Whether the service address uses an encrypted connection
+        /// Whether ServerAddr is an encrypted connection. Required when KafkaType is 1.
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encryption access protocol, which is required when IsEncryptionAddr` is set to `true`
+        /// Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// List of Kafka topics to import data from. Separate multiple topics with commas (,).
+        /// List of Kafka-related topics to be imported by the user, separated by commas.
+        /// 
+        /// -When Kafka Type is Tencent Cloud CKafka: Get TopicName by searching the topic list (https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
@@ -91,10 +98,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
 
         /// <summary>
-        /// Import control. Valid values: 1 (suspend) and 2 (resume).
+        /// Import control, 1: suspend; 2: start.
         /// </summary>
         [JsonProperty("StatusControl")]
         public ulong? StatusControl{ get; set; }
+
+        /// <summary>
+        /// User kafka extended information
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
 
 
         /// <summary>
@@ -114,6 +127,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
             this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
             this.SetParamSimple(map, prefix + "StatusControl", this.StatusControl);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

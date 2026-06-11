@@ -26,7 +26,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-        /// Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
+        /// Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
         /// </summary>
         [JsonProperty("VerificationUrl")]
         [System.Obsolete]

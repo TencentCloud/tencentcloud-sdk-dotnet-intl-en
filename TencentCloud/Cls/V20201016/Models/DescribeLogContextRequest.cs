@@ -25,26 +25,27 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID to be queried
+        /// Log topic Id to query.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+        /// - Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+        /// Log time, which is the Time in the Results structure in the returned information of the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api, should be converted from the millisecond-level Unix timestamp to a string in the YYYY-mm-dd HH:MM:SS.FFF format according to the UTC+8 time zone.
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }
 
         /// <summary>
-        /// Log package sequence number. PkgId in the Results structure of the returned information of SearchLog API.
+        /// Log package sequence number, which is the PkgId in the Results structure returned by the retrieve and analyze logs api (https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PkgId")]
         public string PkgId{ get; set; }
 
         /// <summary>
-        /// Sequence number of a log within the log package.
-        /// The PkgLogId in the Results structure of the SearchLog API returned information.
+        /// Sequence number of a log within the log package, which is the PkgLogId in the Results structure returned by the [retrieve and analyze logs](https://www.tencentcloud.com/document/product/614/56447?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("PkgLogId")]
         public long? PkgLogId{ get; set; }
@@ -61,6 +62,33 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("NextLogs")]
         public long? NextLogs{ get; set; }
 
+        /// <summary>
+        /// Query statement, filtering the log context with a maximum length of 12KB
+        /// The statement consists of <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[retrieval criteria]</a> and does not support SQL statement.
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// Context search start time, unit: millisecond-level timestamp
+        /// Note:
+        /// -When From is empty, it means no restrictions on the start time of context search.
+        /// -From and To are not empty, From < To
+        /// -Currently, the system only supports the Shanghai/Virginia/Singapore region.
+        /// </summary>
+        [JsonProperty("From")]
+        public ulong? From{ get; set; }
+
+        /// <summary>
+        /// End time of context search. Measurement unit: millisecond-level timestamp.
+        /// Note:
+        /// -When To is empty, it means no restrictions on the end time of context search.
+        /// -From and To are not empty, From < To
+        /// -Currently, the system only supports the Shanghai/Virginia/Singapore region.
+        /// </summary>
+        [JsonProperty("To")]
+        public ulong? To{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +101,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
             this.SetParamSimple(map, prefix + "PrevLogs", this.PrevLogs);
             this.SetParamSimple(map, prefix + "NextLogs", this.NextLogs);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "To", this.To);
         }
     }
 }

@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// Log topic Id.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -59,6 +60,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetadataFlag")]
         public ulong? MetadataFlag{ get; set; }
 
+        /// <summary>
+        /// Custom log parsing exception storage fields
+        /// </summary>
+        [JsonProperty("CoverageField")]
+        public string CoverageField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
             this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+            this.SetParamSimple(map, prefix + "CoverageField", this.CoverageField);
         }
     }
 }

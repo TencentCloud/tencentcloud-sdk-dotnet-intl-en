@@ -97,7 +97,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// The mini game name and description in multiple languages.
+        /// <p>Mini game information in multiple languages.</p>
         /// </summary>
         [JsonProperty("I18nList")]
         public MNPDetailI18nVO[] I18nList{ get; set; }

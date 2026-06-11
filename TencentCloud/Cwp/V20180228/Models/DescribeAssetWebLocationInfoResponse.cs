@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Site information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Site information.
         /// </summary>
         [JsonProperty("WebLocation")]
         public AssetWebLocationInfo WebLocation{ get; set; }

@@ -43,8 +43,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// `UserAgent` list
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// UserAgent list. the count cannot exceed 10.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UserAgents")]
         public string[] UserAgents{ get; set; }

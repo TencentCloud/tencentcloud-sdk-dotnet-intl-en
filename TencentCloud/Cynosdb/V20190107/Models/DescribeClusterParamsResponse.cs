@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of parameters
+        /// Number of parameters.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

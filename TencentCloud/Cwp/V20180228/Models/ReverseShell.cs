@@ -115,7 +115,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ParentProcPath{ get; set; }
 
         /// <summary>
-        /// Processing status: 0 - pending; 2 - allowlisted; 3 - processed; 4 - ignored
+        /// Processing status. 0 - pending processing; 2 - allowlisted; 3 - processed; 4 - ignored; 6 - blocked.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -146,24 +146,27 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         ///  Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// Process ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process id
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// Threat level: 0 - medium-risk; 1 - high-risk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Threat level. 0: medium risk, 1: high risk.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
+
+        /// <summary>
+        /// Escaped content of command details. It is used when regular expressions match allowlisted full strings.	
+        /// </summary>
+        [JsonProperty("CmdLineQuote")]
+        public string CmdLineQuote{ get; set; }
 
 
         /// <summary>
@@ -194,6 +197,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
         }
     }
 }

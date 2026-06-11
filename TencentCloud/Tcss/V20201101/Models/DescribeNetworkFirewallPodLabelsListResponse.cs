@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Details of the cluster Pod
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster Pod Details
         /// </summary>
         [JsonProperty("PodList")]
         public NetworkClusterPodInfo[] PodList{ get; set; }

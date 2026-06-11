@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Key name. Each key name cannot be empty, with a length of 1-512 characters. Allowed characters include letters, digits, hyphens, and underscores.
+        /// Key name. Each key name cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

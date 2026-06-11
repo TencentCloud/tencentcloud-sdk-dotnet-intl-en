@@ -25,22 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Recipient ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recipient ID.
         /// </summary>
         [JsonProperty("ReceiverId")]
         public long? ReceiverId{ get; set; }
 
         /// <summary>
-        /// Recipient name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Receiver name
         /// </summary>
         [JsonProperty("ReceiverName")]
         public string ReceiverName{ get; set; }
 
         /// <summary>
         /// Policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }

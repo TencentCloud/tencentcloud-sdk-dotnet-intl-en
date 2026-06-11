@@ -36,6 +36,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IsKillProgress")]
         public bool? IsKillProgress{ get; set; }
 
+        /// <summary>
+        /// Enabling status customized by the user.
+        /// </summary>
+        [JsonProperty("UserAutoIsolateKillSwitch")]
+        public bool? UserAutoIsolateKillSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "AutoIsolateSwitch", this.AutoIsolateSwitch);
             this.SetParamSimple(map, prefix + "IsKillProgress", this.IsKillProgress);
+            this.SetParamSimple(map, prefix + "UserAutoIsolateKillSwitch", this.UserAutoIsolateKillSwitch);
         }
     }
 }

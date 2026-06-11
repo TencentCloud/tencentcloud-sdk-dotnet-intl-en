@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database proxy node ID
+        /// Database proxy node ID.
         /// </summary>
         [JsonProperty("ProxyNodeId")]
         public string ProxyNodeId{ get; set; }
@@ -37,55 +37,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProxyNodeConnections{ get; set; }
 
         /// <summary>
-        /// CPU of the database proxy node
+        /// CPU of the database proxy node.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory of the database proxy node
+        /// Memory of the database proxy node.
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Status of the database proxy node
+        /// Status of the database proxy node.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Database proxy group ID
+        /// Database proxy group ID.
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// User AppID
+        /// User AppID.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Region
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ
+        /// AZ.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Database proxy node name.
         /// </summary>
         [JsonProperty("OssProxyNodeName")]
         public string OssProxyNodeName{ get; set; }

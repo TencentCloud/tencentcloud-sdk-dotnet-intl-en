@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OldMasterZone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Old slave availability zone.
         /// </summary>
         [JsonProperty("OldSlaveZone")]
         public string[] OldSlaveZone{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string NewMasterZone{ get; set; }
 
         /// <summary>
-        /// 
+        /// New slave availability zone.
         /// </summary>
         [JsonProperty("NewSlaveZone")]
         public string[] NewSlaveZone{ get; set; }

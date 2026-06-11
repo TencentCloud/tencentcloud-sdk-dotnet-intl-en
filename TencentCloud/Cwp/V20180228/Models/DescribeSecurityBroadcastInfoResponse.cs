@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Security broadcasting article details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Security report article details
         /// </summary>
         [JsonProperty("BroadcastInfo")]
         public BroadcastInfo BroadcastInfo{ get; set; }

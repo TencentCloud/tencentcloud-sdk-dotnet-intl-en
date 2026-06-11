@@ -25,7 +25,11 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// List of asset types
+        /// Asset type list.
+        /// ASSET_CONTAINER, container
+        /// ASSET_IMAGE - Mirror
+        /// ASSET_HOST, Host
+        /// ASSET_K8S, K8S asset
         /// </summary>
         [JsonProperty("AssetTypeSet")]
         public string[] AssetTypeSet{ get; set; }

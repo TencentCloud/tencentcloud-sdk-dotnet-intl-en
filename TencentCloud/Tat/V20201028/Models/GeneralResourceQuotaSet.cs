@@ -30,7 +30,7 @@ namespace TencentCloud.Tat.V20201028.Models
         /// Value is:.
         /// 
         /// - COMMAND: COMMAND.
-        /// -REGISTER_CODE: managed instance registration code.
+        /// - REGISTER_CODE: managed instance registration code.
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }

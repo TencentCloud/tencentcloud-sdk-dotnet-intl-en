@@ -30,6 +30,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
+        /// <summary>
+        /// Compatible with application protection vulnerability defense container perspective alerts for vulnerability details. Host perspective is selected by default. Optional fields. Source=tcss indicates container perspective vulnerability details. The backend converts VulId to VulId in host vul_vuls.
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

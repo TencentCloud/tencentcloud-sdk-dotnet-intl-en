@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Account name.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }

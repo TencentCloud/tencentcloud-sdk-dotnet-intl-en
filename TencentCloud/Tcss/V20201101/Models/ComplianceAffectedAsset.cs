@@ -25,88 +25,94 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Unique ID of the customer asset
+        /// <p>Unique asset item ID allocated to the customer.</p>
         /// </summary>
         [JsonProperty("CustomerAssetId")]
         public ulong? CustomerAssetId{ get; set; }
 
         /// <summary>
-        /// Asset name
+        /// <p>Asset item name.</p>
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type
+        /// <p>Asset item type.</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// Check status
-        /// 
-        /// `CHECK_INIT`: To be checked.
-        /// 
-        /// `CHECK_RUNNING`: Checking.
-        /// 
-        /// `CHECK_FINISHED`: Checked.
-        /// 
-        /// `CHECK_FAILED`: Check failed.
+        /// <p>Check status.</p><p>CHECK_INIT: pending check</p><p>CHECK_RUNNING: checking</p><p>CHECK_FINISHED: check completed</p><p>CHECK_FAILED: check failed</p>
         /// </summary>
         [JsonProperty("CheckStatus")]
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// Node name
+        /// <p>Node name.</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Last check time in the format of "YYYY-MM-DD HH:m::SS"
-        /// 
-        /// It is "0000-00-00 00:00:00" if no check has been performed.
+        /// <p>Last check time in the format of YYYY-MM-DD HH:m::SS.</p><p>If never checked, this field will be 0000-00-00 00:00:00.</p>
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
-        /// Check result. Valid values:
-        /// 
-        /// `RESULT_FAILED`: Failed.
-        /// 
-        /// `RESULT_PASSED`: Passed.
+        /// <p>Check result. Valid values:</p><p>RESULT_FAILED: failed</p><p>RESULT_PASSED: passed</p>
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
-        /// Server IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Host IP address.</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// Image tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Image tag.</p>
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// Verification information of the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Check item verification information.</p>
         /// </summary>
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }
 
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Host instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>Image repository information.</p>
+        /// </summary>
+        [JsonProperty("ImageRegistryInfo")]
+        public ImageRegistryInfo ImageRegistryInfo{ get; set; }
+
+        /// <summary>
+        /// <p>Cluster ID.</p>
+        /// </summary>
+        [JsonProperty("ClusterID")]
+        public string ClusterID{ get; set; }
+
+        /// <summary>
+        /// <p>Cluster name.</p>
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>Unique asset ID.</p><p>Default value: -</p>
+        /// </summary>
+        [JsonProperty("AssetUniqueID")]
+        public string AssetUniqueID{ get; set; }
 
 
         /// <summary>
@@ -125,6 +131,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageTag", this.ImageTag);
             this.SetParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
+            this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
         }
     }
 }

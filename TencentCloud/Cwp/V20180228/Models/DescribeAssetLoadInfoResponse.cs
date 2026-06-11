@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// System load
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CpuLoad")]
         public AssetLoadSummary CpuLoad{ get; set; }
 
         /// <summary>
-        /// Memory utilization
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Memory usage rate
         /// </summary>
         [JsonProperty("MemLoad")]
         public AssetLoadSummary MemLoad{ get; set; }
 
         /// <summary>
         /// Hard disk utilization
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskLoad")]
         public AssetLoadSummary DiskLoad{ get; set; }

@@ -163,7 +163,7 @@ namespace TencentCloud.As.V20180419.Models
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// Role name of the CAM role. can be obtained from roleName in the return value from the DescribeRoleList API (https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+        /// Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }

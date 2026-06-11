@@ -31,22 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Filter criteria
-        /// <li>AppName - string - required: no - application name for search</li>
-        /// <li>IP - String - required: no - host IP address</li>
-        /// <li>MachineName - String - required: no - host name</li>
-        /// <li>InstanceID - string - required: no - instance ID</li>
-        /// <li>Type - int - required: no - type	: Linux only
-        /// 0: all
-        /// 1: operations
-        /// 2: database
-        /// 3: Security
-        /// 4: suspicious application
-        /// 5: system architecture
-        /// 6: system application
-        /// 7: web service
-        /// 99: other</li>
-        /// <li>OsType - uint64 - required: no - Windows/Linux</li>
+        /// Filtering conditions.<li>AppName - string - required: no - application name for search.</li><li>IP - String - required: no - host IP address.</li><li>MachineName - String - required: no - host name.</li><li>InstanceID - string - required: no - instance ID.</li><li>Type - int - required: no - Type	: for Linux only. 0: all; 1: Ops; 2: database; 3: security; 4: suspicious application; 5: system architecture; 6: system application; 7: web service; 99: others.</li><li>OsType - uint64 - required: no - Windows or Linux.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

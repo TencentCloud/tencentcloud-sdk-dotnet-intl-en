@@ -115,18 +115,22 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? IsSuggest{ get; set; }
 
         /// <summary>
-        /// Number of the fixed version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Repair Version Number
         /// </summary>
         [JsonProperty("FixedVersions")]
         public string FixedVersions{ get; set; }
 
         /// <summary>
-        /// Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
+
+        /// <summary>
+        /// Attack Heat
+        /// </summary>
+        [JsonProperty("AttackLevel")]
+        public long? AttackLevel{ get; set; }
 
 
         /// <summary>
@@ -151,6 +155,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
             this.SetParamSimple(map, prefix + "FixedVersions", this.FixedVersions);
             this.SetParamArraySimple(map, prefix + "Tag.", this.Tag);
+            this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
         }
     }
 }

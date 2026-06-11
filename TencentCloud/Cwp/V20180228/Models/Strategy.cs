@@ -26,70 +26,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// Policy ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
 
         /// <summary>
         /// Total number of baseline detection items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleCount")]
         public ulong? RuleCount{ get; set; }
 
         /// <summary>
-        /// Number of Hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of hosts
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
         /// Scan cycle
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanCycle")]
         public ulong? ScanCycle{ get; set; }
 
         /// <summary>
         /// Scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanAt")]
         public string ScanAt{ get; set; }
 
         /// <summary>
         /// Available or not?
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Enabled")]
         public ulong? Enabled{ get; set; }
 
         /// <summary>
-        /// Pass rate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// pass rate
         /// </summary>
         [JsonProperty("PassRate")]
         public ulong? PassRate{ get; set; }
 
         /// <summary>
         /// Baseline ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CategoryIds")]
         public string CategoryIds{ get; set; }
 
         /// <summary>
         /// Whether a default policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsDefault")]
         public ulong? IsDefault{ get; set; }

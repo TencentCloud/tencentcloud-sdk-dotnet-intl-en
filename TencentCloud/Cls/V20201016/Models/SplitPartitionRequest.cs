@@ -26,12 +26,14 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Log topic ID
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// ID of the partition to be split
+        /// Partition Id to split
+        /// -Get the Id of the partition to be split by [getting the partition list](https://www.tencentcloud.com/document/product/614/56470?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PartitionId")]
         public long? PartitionId{ get; set; }

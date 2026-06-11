@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Logset ID
+        /// Log Set Id. It can be obtained through the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Logset name
+        /// Log set name. Supports a maximum of 255 characters. Unsupported character: `|`.
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }

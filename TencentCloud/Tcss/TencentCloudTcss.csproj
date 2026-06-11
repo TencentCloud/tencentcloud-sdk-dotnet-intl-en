@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1281</VersionPrefix>
+    <VersionPrefix>3.0.1329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,11 +53,13 @@
     <Compile Include="V20201101\Models\AbnormalProcessEventDescription.cs" />
     <Compile Include="V20201101\Models\AbnormalProcessEventInfo.cs" />
     <Compile Include="V20201101\Models\AbnormalProcessEventTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessRuleExtSetItem.cs" />
     <Compile Include="V20201101\Models\AbnormalProcessRuleInfo.cs" />
     <Compile Include="V20201101\Models\AbnormalProcessSystemChildRuleInfo.cs" />
     <Compile Include="V20201101\Models\AccessControlChildRuleInfo.cs" />
     <Compile Include="V20201101\Models\AccessControlEventDescription.cs" />
     <Compile Include="V20201101\Models\AccessControlEventInfo.cs" />
+    <Compile Include="V20201101\Models\AccessControlRuleExtSetItem.cs" />
     <Compile Include="V20201101\Models\AccessControlRuleInfo.cs" />
     <Compile Include="V20201101\Models\AccessControlSystemChildRuleInfo.cs" />
     <Compile Include="V20201101\Models\AddAndPublishNetworkFirewallPolicyDetailRequest.cs" />
@@ -92,6 +94,10 @@
     <Compile Include="V20201101\Models\AddNetworkFirewallPolicyDetailResponse.cs" />
     <Compile Include="V20201101\Models\AddNetworkFirewallPolicyYamlDetailRequest.cs" />
     <Compile Include="V20201101\Models\AddNetworkFirewallPolicyYamlDetailResponse.cs" />
+    <Compile Include="V20201101\Models\AddOrModifyMaliciousConnectionWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\AddOrModifyMaliciousConnectionWhiteListResponse.cs" />
+    <Compile Include="V20201101\Models\AddOrModifyVirusWhiteListRuleRequest.cs" />
+    <Compile Include="V20201101\Models\AddOrModifyVirusWhiteListRuleResponse.cs" />
     <Compile Include="V20201101\Models\AffectedNodeItem.cs" />
     <Compile Include="V20201101\Models\AffectedWorkloadItem.cs" />
     <Compile Include="V20201101\Models\AssetClusterListItem.cs" />
@@ -137,6 +143,7 @@
     <Compile Include="V20201101\Models\ComponentsInfo.cs" />
     <Compile Include="V20201101\Models\ConfirmNetworkFirewallPolicyRequest.cs" />
     <Compile Include="V20201101\Models\ConfirmNetworkFirewallPolicyResponse.cs" />
+    <Compile Include="V20201101\Models\ConnDetectConfig.cs" />
     <Compile Include="V20201101\Models\ContainerInfo.cs" />
     <Compile Include="V20201101\Models\ContainerMount.cs" />
     <Compile Include="V20201101\Models\ContainerNetwork.cs" />
@@ -156,6 +163,8 @@
     <Compile Include="V20201101\Models\CreateAssetImageVirusExportJobResponse.cs" />
     <Compile Include="V20201101\Models\CreateCheckComponentRequest.cs" />
     <Compile Include="V20201101\Models\CreateCheckComponentResponse.cs" />
+    <Compile Include="V20201101\Models\CreateClusterAccessRequest.cs" />
+    <Compile Include="V20201101\Models\CreateClusterAccessResponse.cs" />
     <Compile Include="V20201101\Models\CreateClusterCheckTaskRequest.cs" />
     <Compile Include="V20201101\Models\CreateClusterCheckTaskResponse.cs" />
     <Compile Include="V20201101\Models\CreateComplianceTaskRequest.cs" />
@@ -240,6 +249,8 @@
     <Compile Include="V20201101\Models\DeleteMachineResponse.cs" />
     <Compile Include="V20201101\Models\DeleteNetworkFirewallPolicyDetailRequest.cs" />
     <Compile Include="V20201101\Models\DeleteNetworkFirewallPolicyDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteRaspRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteRaspRulesResponse.cs" />
     <Compile Include="V20201101\Models\DeleteReverseShellEventsRequest.cs" />
     <Compile Include="V20201101\Models\DeleteReverseShellEventsResponse.cs" />
     <Compile Include="V20201101\Models\DeleteReverseShellWhiteListsRequest.cs" />
@@ -250,22 +261,20 @@
     <Compile Include="V20201101\Models\DeleteRiskSyscallWhiteListsResponse.cs" />
     <Compile Include="V20201101\Models\DeleteSearchTemplateRequest.cs" />
     <Compile Include="V20201101\Models\DeleteSearchTemplateResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteVirusWhiteListRuleRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteVirusWhiteListRuleResponse.cs" />
     <Compile Include="V20201101\Models\DescribeABTestConfigRequest.cs" />
     <Compile Include="V20201101\Models\DescribeABTestConfigResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessDetailResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessEventTendencyRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessEventTendencyResponse.cs" />
-    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsExportRequest.cs" />
-    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessLevelSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessLevelSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessRuleDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessRuleDetailResponse.cs" />
-    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesExportRequest.cs" />
-    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAccessControlDetailRequest.cs" />
@@ -276,8 +285,6 @@
     <Compile Include="V20201101\Models\DescribeAccessControlEventsResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAccessControlRuleDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAccessControlRuleDetailResponse.cs" />
-    <Compile Include="V20201101\Models\DescribeAccessControlRulesExportRequest.cs" />
-    <Compile Include="V20201101\Models\DescribeAccessControlRulesExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAccessControlRulesRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAccessControlRulesResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAffectedClusterCountRequest.cs" />
@@ -312,8 +319,6 @@
     <Compile Include="V20201101\Models\DescribeAssetImageDetailResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetImageHostListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetImageHostListResponse.cs" />
-    <Compile Include="V20201101\Models\DescribeAssetImageListExportRequest.cs" />
-    <Compile Include="V20201101\Models\DescribeAssetImageListExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetImageListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeAssetImageListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeAssetImageRegistryAssetStatusRequest.cs" />
@@ -420,8 +425,6 @@
     <Compile Include="V20201101\Models\DescribeEscapeEventTendencyResponse.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeEventTypeSummaryRequest.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeEventTypeSummaryResponse.cs" />
-    <Compile Include="V20201101\Models\DescribeEscapeEventsExportRequest.cs" />
-    <Compile Include="V20201101\Models\DescribeEscapeEventsExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeRuleInfoRequest.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeRuleInfoResponse.cs" />
     <Compile Include="V20201101\Models\DescribeEscapeSafeStateRequest.cs" />
@@ -444,6 +447,18 @@
     <Compile Include="V20201101\Models\DescribeImageAutoAuthorizedTaskListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageComponentListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventTendencyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyEventTendencyResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageDenyRuleSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryNamespaceListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskRequest.cs" />
@@ -474,6 +489,10 @@
     <Compile Include="V20201101\Models\DescribeK8sApiAbnormalTendencyResponse.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticRequest.cs" />
     <Compile Include="V20201101\Models\DescribeLogStorageStatisticResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionBlackListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionBlackListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeMaliciousConnectionWhiteListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallAuditRecordRequest.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallAuditRecordResponse.cs" />
     <Compile Include="V20201101\Models\DescribeNetworkFirewallClusterListRequest.cs" />
@@ -506,6 +525,10 @@
     <Compile Include="V20201101\Models\DescribePublicKeyResponse.cs" />
     <Compile Include="V20201101\Models\DescribePurchaseStateInfoRequest.cs" />
     <Compile Include="V20201101\Models\DescribePurchaseStateInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRaspRuleVulsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRaspRuleVulsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRaspRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRaspRulesResponse.cs" />
     <Compile Include="V20201101\Models\DescribeRefreshTaskRequest.cs" />
     <Compile Include="V20201101\Models\DescribeRefreshTaskResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellDetailRequest.cs" />
@@ -514,6 +537,10 @@
     <Compile Include="V20201101\Models\DescribeReverseShellEventsExportResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellEventsRequest.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellRegexpWhiteListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailRequest.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailResponse.cs" />
     <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsRequest.cs" />
@@ -594,10 +621,14 @@
     <Compile Include="V20201101\Models\DescribeVirusListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusManualScanEstimateTimeoutRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVirusManualScanEstimateTimeoutResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusMonitorConfigRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusMonitorConfigResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusMonitorSettingRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVirusMonitorSettingResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusSampleDownloadUrlRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVirusSampleDownloadUrlResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanConfigRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanConfigResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusScanSettingRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVirusScanSettingResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusScanTaskStatusRequest.cs" />
@@ -608,6 +639,8 @@
     <Compile Include="V20201101\Models\DescribeVirusSummaryResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVirusTaskListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVirusTaskListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusWhiteListRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusWhiteListRulesResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVulContainerListRequest.cs" />
     <Compile Include="V20201101\Models\DescribeVulContainerListResponse.cs" />
     <Compile Include="V20201101\Models\DescribeVulDefenceEventDetailRequest.cs" />
@@ -668,29 +701,38 @@
     <Compile Include="V20201101\Models\HostInfo.cs" />
     <Compile Include="V20201101\Models\ImageAutoAuthorizedTask.cs" />
     <Compile Include="V20201101\Models\ImageComponent.cs" />
+    <Compile Include="V20201101\Models\ImageDenyEvent.cs" />
+    <Compile Include="V20201101\Models\ImageDenyEventTendency.cs" />
+    <Compile Include="V20201101\Models\ImageDenyRule.cs" />
     <Compile Include="V20201101\Models\ImageHost.cs" />
     <Compile Include="V20201101\Models\ImageInfo.cs" />
     <Compile Include="V20201101\Models\ImageProgress.cs" />
+    <Compile Include="V20201101\Models\ImageRegistryInfo.cs" />
     <Compile Include="V20201101\Models\ImageRepoInfo.cs" />
     <Compile Include="V20201101\Models\ImageRepoRegistryInfo.cs" />
     <Compile Include="V20201101\Models\ImageRisk.cs" />
     <Compile Include="V20201101\Models\ImageRiskInfo.cs" />
     <Compile Include="V20201101\Models\ImageRiskTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\ImageScanInquireInfo.cs" />
     <Compile Include="V20201101\Models\ImageSimpleInfo.cs" />
     <Compile Include="V20201101\Models\ImageVirus.cs" />
     <Compile Include="V20201101\Models\ImageVirusInfo.cs" />
     <Compile Include="V20201101\Models\ImageVul.cs" />
+    <Compile Include="V20201101\Models\ImageVulLayerInfo.cs" />
     <Compile Include="V20201101\Models\ImagesBindRuleInfo.cs" />
     <Compile Include="V20201101\Models\ImagesInfo.cs" />
     <Compile Include="V20201101\Models\ImagesVul.cs" />
     <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentRequest.cs" />
     <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentResponse.cs" />
+    <Compile Include="V20201101\Models\K8SAPIRuleTypeCountItem.cs" />
+    <Compile Include="V20201101\Models\K8SAPIRuleTypeZhItem.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalEventInfo.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalEventListItem.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalRuleInfo.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalRuleListItem.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalRuleScopeInfo.cs" />
     <Compile Include="V20201101\Models\K8sApiAbnormalTendencyItem.cs" />
+    <Compile Include="V20201101\Models\MaliciousConnectionRuleInfo.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyAbnormalProcessStatusRequest.cs" />
@@ -711,6 +753,8 @@
     <Compile Include="V20201101\Models\ModifyCompliancePeriodTaskResponse.cs" />
     <Compile Include="V20201101\Models\ModifyContainerNetStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyContainerNetStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyDefendStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyDefendStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeEventStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeEventStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyEscapeRuleRequest.cs" />
@@ -726,8 +770,12 @@
     <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleInfoResponse.cs" />
     <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyK8sApiAbnormalRuleStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyRaspRulesRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyRaspRulesResponse.cs" />
     <Compile Include="V20201101\Models\ModifyReverseShellStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyReverseShellStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyRiskDnsEventStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyRiskDnsEventStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifyRiskSyscallStatusRequest.cs" />
     <Compile Include="V20201101\Models\ModifyRiskSyscallStatusResponse.cs" />
     <Compile Include="V20201101\Models\ModifySecLogCleanSettingInfoRequest.cs" />
@@ -776,6 +824,10 @@
     <Compile Include="V20201101\Models\ProjectInfo.cs" />
     <Compile Include="V20201101\Models\PromotionActivityContent.cs" />
     <Compile Include="V20201101\Models\RaspInfo.cs" />
+    <Compile Include="V20201101\Models\RaspRule.cs" />
+    <Compile Include="V20201101\Models\RaspRuleVul.cs" />
+    <Compile Include="V20201101\Models\RegexpRuleInfo.cs" />
+    <Compile Include="V20201101\Models\RegexpRuleListItem.cs" />
     <Compile Include="V20201101\Models\RegionInfo.cs" />
     <Compile Include="V20201101\Models\RegistryConnDetectResult.cs" />
     <Compile Include="V20201101\Models\RemoveAssetImageRegistryRegistryDetailRequest.cs" />
@@ -806,6 +858,7 @@
     <Compile Include="V20201101\Models\ScanComplianceScanFailedAssetsRequest.cs" />
     <Compile Include="V20201101\Models\ScanComplianceScanFailedAssetsResponse.cs" />
     <Compile Include="V20201101\Models\ScanIgnoreVul.cs" />
+    <Compile Include="V20201101\Models\ScanRangeInfo.cs" />
     <Compile Include="V20201101\Models\SearchTemplate.cs" />
     <Compile Include="V20201101\Models\SecLogAlertMsgInfo.cs" />
     <Compile Include="V20201101\Models\SecLogDeliveryClsSettingInfo.cs" />
@@ -828,6 +881,8 @@
     <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetResponse.cs" />
     <Compile Include="V20201101\Models\TagInfo.cs" />
     <Compile Include="V20201101\Models\UnauthorizedCoresTendency.cs" />
+    <Compile Include="V20201101\Models\UninstallClusterContainerSecurityRequest.cs" />
+    <Compile Include="V20201101\Models\UninstallClusterContainerSecurityResponse.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailRequest.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyDetailResponse.cs" />
     <Compile Include="V20201101\Models\UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest.cs" />
@@ -840,10 +895,12 @@
     <Compile Include="V20201101\Models\UpdateNetworkFirewallPolicyDetailResponse.cs" />
     <Compile Include="V20201101\Models\UpdateNetworkFirewallPolicyYamlDetailRequest.cs" />
     <Compile Include="V20201101\Models\UpdateNetworkFirewallPolicyYamlDetailResponse.cs" />
+    <Compile Include="V20201101\Models\VasInfoResourceDetail.cs" />
     <Compile Include="V20201101\Models\VirusAutoIsolateSampleInfo.cs" />
     <Compile Include="V20201101\Models\VirusInfo.cs" />
     <Compile Include="V20201101\Models\VirusTaskInfo.cs" />
     <Compile Include="V20201101\Models\VirusTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\VirusWhiteListRuleInfo.cs" />
     <Compile Include="V20201101\Models\VulAffectedComponentInfo.cs" />
     <Compile Include="V20201101\Models\VulAffectedContainerInfo.cs" />
     <Compile Include="V20201101\Models\VulAffectedImageComponentInfo.cs" />
@@ -862,5 +919,6 @@
     <Compile Include="V20201101\Models\VulTendencyInfo.cs" />
     <Compile Include="V20201101\Models\VulTopRankingInfo.cs" />
     <Compile Include="V20201101\Models\WarningRule.cs" />
+    <Compile Include="V20201101\Models\WhiteListRegexpExpressionInfo.cs" />
   </ItemGroup>
 </Project>

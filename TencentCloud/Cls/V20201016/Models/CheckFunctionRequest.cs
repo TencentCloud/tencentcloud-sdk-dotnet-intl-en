@@ -25,13 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Processing statement entered by the user
+        /// Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+        /// 
+        /// Other reference documents
+        /// 
+        /// -[Create processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+        /// -[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
 
         /// <summary>
-        /// Target topic ID and alias of the data processing task
+        /// Target topic_id and alias of the processing task. This parameter is required when FuncType is 1.
+        /// Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }

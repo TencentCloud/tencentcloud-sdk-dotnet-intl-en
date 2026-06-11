@@ -31,7 +31,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Mini program or mini game appid.</p>
+        /// <p>Mini program appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }

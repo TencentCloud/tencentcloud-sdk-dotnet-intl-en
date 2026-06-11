@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID to bind
+        /// Id of the log topic bound to the delivery task.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+        /// - Obtain the log topic Id through [Create Log Topic](https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
@@ -54,6 +56,24 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
+        /// <summary>
+        /// ARN [Create role](https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1)
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// external ID
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
+        /// <summary>
+        /// Advanced configuration item
+        /// </summary>
+        [JsonProperty("AdvancedConfig")]
+        public AdvancedConsumerConfiguration AdvancedConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +85,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamObj(map, prefix + "Ckafka.", this.Ckafka);
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
         }
     }
 }

@@ -25,10 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// ID array. Maximum number of IDs: 100.
+        /// ID array. Up to 1,000 items are allowed.
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
+
+        /// <summary>
+        /// Whether to delete all.
+        /// </summary>
+        [JsonProperty("All")]
+        public bool? All{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "All", this.All);
         }
     }
 }

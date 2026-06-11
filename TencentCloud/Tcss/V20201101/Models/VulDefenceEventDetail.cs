@@ -152,118 +152,104 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Process PID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PID")]
         public long? PID{ get; set; }
 
         /// <summary>
-        /// Main class name of the process
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Main class name of process
         /// </summary>
         [JsonProperty("MainClass")]
         public string MainClass{ get; set; }
 
         /// <summary>
         /// Stack information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StackTrace")]
         public string StackTrace{ get; set; }
 
         /// <summary>
-        /// Listened account
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Listen to account
         /// </summary>
         [JsonProperty("ServerAccount")]
         public string ServerAccount{ get; set; }
 
         /// <summary>
-        /// Listened port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Listening port
         /// </summary>
         [JsonProperty("ServerPort")]
         public string ServerPort{ get; set; }
 
         /// <summary>
         /// Process path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerExe")]
         public string ServerExe{ get; set; }
 
         /// <summary>
         /// Process command line parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerArg")]
         public string ServerArg{ get; set; }
 
         /// <summary>
-        /// Node QUuid/Super node ID
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Host QUUID/Super Node ID
         /// </summary>
         [JsonProperty("QUUID")]
         public string QUUID{ get; set; }
 
         /// <summary>
         /// Isolation status
-        /// `NORMAL`: 	Not isolated.
-        /// `ISOLATED`: 		Isolated.
-        /// `ISOLATING`: 		Isolating.
-        /// `ISOLATE_FAILED`: 	Isolation failed.
-        /// `RESTORING`: Recovering.
-        /// `RESTORE_FAILED`: Recovery failed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// UNISOLATED NORMAL
+        /// ISOLATED
+        /// ISOLATING
+        /// Isolation FAILED
+        /// RESTORING isolation
+        /// Isolation restoration failed RESTORE_FAILED
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
-        /// Sub-status of the container
-        /// "AGENT_OFFLINE"       // The agent is offline.
-        /// 	"NODE_DESTROYED"      // The node is terminated.
-        /// 	"CONTAINER_EXITED"    // The container exited.
-        /// 	"CONTAINER_DESTROYED" // The container was terminated.
-        /// 	"SHARED_HOST"         // The container shares the network with the server.
-        /// 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-        /// 	"UNKNOW"              // The reason is unknown.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container sub-status
+        /// AGENT_OFFLINE
+        /// 	NODE_DESTROYED
+        /// 	CONTAINER_EXITED
+        /// 	"CONTAINER_DESTROYED" //Container destroyed
+        /// 	"SHARED_HOST"         // Container shares network with host
+        /// 	RESOURCE_LIMIT
+        /// 	"UNKNOW"              // Reason unknown
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// Container isolation operation source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container Isolation Operation Source
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// Container status
-        /// `RUNNING`: Running.
-        /// `PAUSED`: Paused.
-        /// `STOPPED`: Stopped.
-        /// `CREATED`: Created.
-        /// `DESTROYED`: Terminated.
-        /// `RESTARTING`: Restarting.
-        /// `REMOVING`: Removing.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container status.
+        /// RUNNING: running
+        /// PAUSED
+        /// Stop: STOPPED
+        /// CREATED
+        /// DESTROYED
+        /// RESTARTING
+        /// Migrating: REMOVING
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
         /// API URL
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("JNDIUrl")]
         public string JNDIUrl{ get; set; }
 
         /// <summary>
-        /// RASP details
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// rasp detail
         /// </summary>
         [JsonProperty("RaspDetail")]
         public RaspInfo[] RaspDetail{ get; set; }
@@ -323,13 +309,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// 
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Workload
+        /// 
         /// </summary>
         [JsonProperty("WorkloadType")]
         public string WorkloadType{ get; set; }

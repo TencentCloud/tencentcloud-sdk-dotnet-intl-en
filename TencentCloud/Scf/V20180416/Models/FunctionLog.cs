@@ -88,12 +88,14 @@ namespace TencentCloud.Scf.V20180416.Models
         /// Log level
         /// </summary>
         [JsonProperty("Level")]
+        [System.Obsolete]
         public string Level{ get; set; }
 
         /// <summary>
         /// Log source
         /// </summary>
         [JsonProperty("Source")]
+        [System.Obsolete]
         public string Source{ get; set; }
 
         /// <summary>

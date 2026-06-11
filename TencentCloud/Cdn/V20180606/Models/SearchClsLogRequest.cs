@@ -61,7 +61,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+        /// Query statement. For more details, see [Syntax Rules](https://www.tencentcloud.com/document/product/614/37803).
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// List of baseline information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BaselineList")]
         public BaselineInfo[] BaselineList{ get; set; }
 
         /// <summary>
-        /// Total number of records for paging query
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of pagination query records
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

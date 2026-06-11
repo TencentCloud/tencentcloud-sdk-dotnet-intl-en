@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// Filter security report type: 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release
+        /// Filter by security report type. 0 - emergency notification; 1 - feature update; 2 - industry honor; 3 - version release; 4 - practical tutorial.
         /// </summary>
         [JsonProperty("BroadcastType")]
         public string BroadcastType{ get; set; }

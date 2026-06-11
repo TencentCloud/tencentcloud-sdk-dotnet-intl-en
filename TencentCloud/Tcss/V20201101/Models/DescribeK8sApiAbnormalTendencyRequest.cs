@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Trend period (default value: 7 days)
+        /// <p>Trend period (the default is 7 days).</p>
         /// </summary>
         [JsonProperty("TendencyPeriod")]
         public ulong? TendencyPeriod{ get; set; }

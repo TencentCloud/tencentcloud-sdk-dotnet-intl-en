@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// Task result, such as `NameRepeat` and `K8sRuleIngressPortError`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// NameRepeat, K8sRuleIngressPortError, etc.
         /// </summary>
         [JsonProperty("TaskResult")]
         public string[] TaskResult{ get; set; }

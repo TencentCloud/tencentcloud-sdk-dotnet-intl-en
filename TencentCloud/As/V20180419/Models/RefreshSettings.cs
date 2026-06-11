@@ -25,16 +25,25 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Rolling update settings parameters. RefreshMode is rolling update. this parameter must be filled in.
+        /// Rolling update settings. This parameter group must be configured if the RefreshMode parameter starts with ROLLING_UPDATE(e.g., ROLLING_UPDATE_RESET).
         /// </summary>
         [JsonProperty("RollingUpdateSettings")]
         public RollingUpdateSettings RollingUpdateSettings{ get; set; }
 
         /// <summary>
-        /// Whether to enable the backend service health check for the instance. Default value: FALSE. This parameter is valid only for the scaling group bound to an application-based CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
+        /// Whether to enable the backend service health check for the instance. Default value: FALSE. 
+        /// This parameter is valid only for the scaling group bound to CLB. After this feature is enabled, if the instance fails the check after refresh, the port weight of the CLB will be always 0, and it will be marked as a refresh failure. Valid values: <li>TRUE: enable;</li> <li>FALSE: disable.</li>
         /// </summary>
         [JsonProperty("CheckInstanceTargetHealth")]
         public bool? CheckInstanceTargetHealth{ get; set; }
+
+        /// <summary>
+        /// Specifies the timeout period for instance backend service health check, in seconds. 
+        /// Value range: [60,7200]. Default value: 1800 seconds. 
+        /// This parameter takes effect only when the CheckInstanceTargetHealth parameter is enabled.  If an instance health check times out, the instance will be marked as a refresh failure.
+        /// </summary>
+        [JsonProperty("CheckInstanceTargetHealthTimeout")]
+        public ulong? CheckInstanceTargetHealthTimeout{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamObj(map, prefix + "RollingUpdateSettings.", this.RollingUpdateSettings);
             this.SetParamSimple(map, prefix + "CheckInstanceTargetHealth", this.CheckInstanceTargetHealth);
+            this.SetParamSimple(map, prefix + "CheckInstanceTargetHealthTimeout", this.CheckInstanceTargetHealthTimeout);
         }
     }
 }

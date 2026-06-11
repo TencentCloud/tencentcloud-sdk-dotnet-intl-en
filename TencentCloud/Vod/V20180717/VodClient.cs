@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -376,7 +376,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create custom voice types for AIGC.
+        /// This API is used to create custom voice types. Note that calling this API will incur customization fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#5e5217e8-29fc-467e-ac2d-853648f988b7).
         /// </summary>
         /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
         /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>
@@ -386,7 +386,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// This API is used to create custom voice types for AIGC.
+        /// This API is used to create custom voice types. Note that calling this API will incur customization fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#5e5217e8-29fc-467e-ac2d-853648f988b7).
         /// </summary>
         /// <param name="req"><see cref="CreateAigcCustomVoiceRequest"/></param>
         /// <returns><see cref="CreateAigcCustomVoiceResponse"/></returns>
@@ -2100,6 +2100,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcFaceInfoResponse DescribeAigcFaceInfoSync(DescribeAigcFaceInfoRequest req)
         {
             return InternalRequestAsync<DescribeAigcFaceInfoResponse>(req, "DescribeAigcFaceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to asynchronously fetch AIGC face information. Note that calling this API incurs face recognition fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoAsyncResponse"/></returns>
+        public Task<DescribeAigcFaceInfoAsyncResponse> DescribeAigcFaceInfoAsync(DescribeAigcFaceInfoAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync");
+        }
+
+        /// <summary>
+        /// This API is used to asynchronously fetch AIGC face information. Note that calling this API incurs face recognition fees. Refer to the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcFaceInfoAsyncRequest"/></param>
+        /// <returns><see cref="DescribeAigcFaceInfoAsyncResponse"/></returns>
+        public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsyncSync(DescribeAigcFaceInfoAsyncRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

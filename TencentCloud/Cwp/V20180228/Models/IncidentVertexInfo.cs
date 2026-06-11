@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Event ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncidentId")]
         public string IncidentId{ get; set; }
 
         /// <summary>
         /// The name of the table where the event occurred
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
         /// <summary>
-        /// A list of node information, with array items containing detailed node information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node information list, in an array including detailed node information.
         /// </summary>
         [JsonProperty("Vertex")]
         public VertexInfo[] Vertex{ get; set; }
 
         /// <summary>
-        /// Total number of nodes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total number of nodes.
         /// </summary>
         [JsonProperty("VertexCount")]
         public long? VertexCount{ get; set; }

@@ -25,134 +25,115 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Node type. process - 1; network - 2; file - 3; SSH - 4
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node type. 1: process, 2: network, 3: file, 4: SSH.
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Time used for each node type, which is in the format of 2022-11-29 00:00:00.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time used by each node type, in the format of 2022-11-29 00:00:00.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// Alarm information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm information.
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public AlarmInfo[] AlarmInfo{ get; set; }
 
         /// <summary>
-        /// Process name, which is effective when the node type is process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process name. This parameter takes effect when this node is a process.
         /// </summary>
         [JsonProperty("ProcName")]
         public string ProcName{ get; set; }
 
         /// <summary>
-        /// Command line, which is effective when the node type is process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Command line. This parameter takes effect when this node is a process.
         /// </summary>
         [JsonProperty("CmdLine")]
         public string CmdLine{ get; set; }
 
         /// <summary>
-        /// Process ID, which is effective when the node type is process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process ID. This parameter takes effect when this node is a process.
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
-        /// File MD5, which is effective when the node type is file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File MD5. This parameter takes effect when this node is a file.
         /// </summary>
         [JsonProperty("FileMd5")]
         public string FileMd5{ get; set; }
 
         /// <summary>
-        /// Content written to the file, which is effective when the node type is file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File write content. This parameter takes effect when this node is a file.
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
 
         /// <summary>
-        /// File path, which is effective when the node type is file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File path. This parameter takes effect when this node is a file.
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// File creation time, which is effective when the node type is file.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File creation time. This parameter takes effect when this node is a file.
         /// </summary>
         [JsonProperty("FileCreateTime")]
         public string FileCreateTime{ get; set; }
 
         /// <summary>
-        /// Request destination address, which is effective when the node type is network.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request destination address. This parameter takes effect when this node is a network.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// Target port, which is effective when the node type is network.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Target port. This parameter takes effect when this node is a network.
         /// </summary>
         [JsonProperty("DstPort")]
         public ulong? DstPort{ get; set; }
 
         /// <summary>
-        /// Log-in source IP, which is effective when the node type is SSH.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Login source IP address. This parameter takes effect when this node is ssh.
         /// </summary>
         [JsonProperty("SrcIP")]
         public string SrcIP{ get; set; }
 
         /// <summary>
-        /// Log-in username and user group, which is effective when the node type is SSH.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Login username and user group. This parameter takes effect when this node is ssh.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Vulnerability name, which is effective when the node type is vulnerability.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability name. This parameter takes effect when this node is a vulnerability.
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
-        /// Vulnerability exploitation time, which is effective when the node type is vulnerability.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability exploitation time. This parameter takes effect when this node is a vulnerability.
         /// </summary>
         [JsonProperty("VulTime")]
         public string VulTime{ get; set; }
 
         /// <summary>
-        /// HTTP request content, which is effective when the node type is vulnerability.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// HTTP request content. This parameter takes effect when this node is a vulnerability.
         /// </summary>
         [JsonProperty("HttpContent")]
         public string HttpContent{ get; set; }
 
         /// <summary>
-        /// Vulnerability exploiter source IP, which is effective when the node type is vulnerability.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source IP address of the vulnerability exploiter. This parameter takes effect when this node is a vulnerability.
         /// </summary>
         [JsonProperty("VulSrcIP")]
         public string VulSrcIP{ get; set; }
 
         /// <summary>
-        /// Node ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Node ID.
         /// </summary>
         [JsonProperty("VertexId")]
         public string VertexId{ get; set; }

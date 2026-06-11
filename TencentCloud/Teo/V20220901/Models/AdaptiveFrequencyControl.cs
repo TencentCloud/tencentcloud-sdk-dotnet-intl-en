@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Enabled{ get; set; }
 
         /// <summary>
+        /// Rule ID of adaptive frequency control, returned as an output parameter.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
         /// </summary>
         [JsonProperty("Sensitivity")]
@@ -49,6 +55,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Sensitivity", this.Sensitivity);
             this.SetParamObj(map, prefix + "Action.", this.Action);
         }

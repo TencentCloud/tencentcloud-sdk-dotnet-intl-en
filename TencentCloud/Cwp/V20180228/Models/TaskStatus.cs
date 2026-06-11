@@ -43,8 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Fail{ get; set; }
 
         /// <summary>
-        /// Scan failed, with specific reason displayed: scan timeout, low client version, or client offline
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scan failed, with specific reason displayed: scan timeout, low client version, or client offline.
         /// </summary>
         [JsonProperty("Stop")]
         public string Stop{ get; set; }

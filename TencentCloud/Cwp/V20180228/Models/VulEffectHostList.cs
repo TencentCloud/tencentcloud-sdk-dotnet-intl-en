@@ -26,125 +26,141 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Event ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventId")]
         public ulong? EventId{ get; set; }
 
         /// <summary>
-        /// Status. 0: pending; 1: ignored; 3: fixed; 5: detecting; 6: fixing; 7: rolling back; 8: fixing failed.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status: 0 - pending processing; 1 - ignored; 3 - fixed; 5 - detecting; 6 - in remediation; 7 - rolling back; 8 - fix failed.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// Last detection time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// Host QUUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// Host UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// Host IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// Host alias
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
         /// Host tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Edition information. 0: Basic Edition; 1: Pro Edition; 2: Ultimate Edition; 3: Inclusive Edition.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
         /// </summary>
         [JsonProperty("HostVersion")]
         public ulong? HostVersion{ get; set; }
 
         /// <summary>
-        /// Whether automatic fixing is supported. 0: not supported; 1: supported; 2: client offline; 3: manual fixing supported for Ultimate Edition hosts; 4: not supported for this model; 5: fixing, 6: fixed; 7: detecting; 9: fixing failed; 10: ignored; 11: supported for Linux but not Windows; 12: supported for Windows but not Linux; 13: fixing failed but host is offline; 14: fixing failed but host is not of the Ultimate edition; 15: manually fixed.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether automatic fixing is supported 0: Cannot be automatically repaired, 1: Can be automatically repaired, 2: Client offline, 3: Host can only be manually repaired if not flagship, 4: Not supported for this model, 5: In remediation, 6: Fixed, 7: In-progress detection, 9: Fix failed, 10: Ignored, 11: Vulnerability supported only on linux, not Windows, 12: Vulnerability supported only on Windows, not on linux, 13: Fixing failed but host is offline, 14: Fixing failed but host is not flagship, 15: Manually fixed
         /// </summary>
         [JsonProperty("IsSupportAutoFix")]
         public ulong? IsSupportAutoFix{ get; set; }
 
         /// <summary>
-        /// Failure cause
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for failure
         /// </summary>
         [JsonProperty("FixStatusMsg")]
         public string FixStatusMsg{ get; set; }
 
         /// <summary>
         /// First detection time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstDiscoveryTime")]
         public string FirstDiscoveryTime{ get; set; }
 
         /// <summary>
-        /// Instance status. "PENDING": creating; "LAUNCH_FAILED" : creation failed; "RUNNING": running; "STOPPED": shut down; "STARTING": starting; "STOPPING": shutting down; "REBOOTING": restarting; "SHUTDOWN": shut down and pending termination; "TERMINATING": terminating.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance status: "PENDING" - creating, "LAUNCH_FAILED" - creation failed, "RUNNING" - running, "STOPPED" - shutdown, "STARTING" - starting, "STOPPING" - indicates shutdown in progress, "REBOOTING" - restarting, "SHUTDOWN" - indicate shutdown and pending termination, "TERMINATING" - indicates terminating in progress.
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
         /// Public IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PublicIpAddresses")]
         public string PublicIpAddresses{ get; set; }
 
         /// <summary>
-        /// Cloud tag information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cloud Tag Information
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
-        /// Host additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host Additional Information
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
+
+        /// <summary>
+        /// Host type
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// Availability zone ID.
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// Whether to create a snapshot for the fix task: 0: not created; other: created.
+        /// </summary>
+        [JsonProperty("HasSnapshot")]
+        public ulong? HasSnapshot{ get; set; }
+
+        /// <summary>
+        /// Last repair time
+        /// </summary>
+        [JsonProperty("LatestFixTime")]
+        public string LatestFixTime{ get; set; }
+
+        /// <summary>
+        /// Description
+        /// </summary>
+        [JsonProperty("DescriptionEn")]
+        public string DescriptionEn{ get; set; }
 
 
         /// <summary>
@@ -170,6 +186,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
             this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "HasSnapshot", this.HasSnapshot);
+            this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+            this.SetParamSimple(map, prefix + "DescriptionEn", this.DescriptionEn);
         }
     }
 }

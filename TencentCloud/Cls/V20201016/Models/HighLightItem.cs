@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Highlighted Log Key
+        /// Highlighted log field name.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Highlighted Syntax
+        /// Highlighted keywords.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

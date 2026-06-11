@@ -43,13 +43,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? AttackStatus{ get; set; }
 
         /// <summary>
-        /// The maximum attack bandwidth.
+        /// Maximum bandwidth of the attack in bps.
         /// </summary>
         [JsonProperty("AttackMaxBandWidth")]
         public long? AttackMaxBandWidth{ get; set; }
 
         /// <summary>
-        /// The peak attack packet rate.
+        /// Peak attack packet rate, unit: pps.
         /// </summary>
         [JsonProperty("AttackPacketMaxRate")]
         public long? AttackPacketMaxRate{ get; set; }

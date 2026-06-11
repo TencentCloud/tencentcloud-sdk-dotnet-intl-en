@@ -26,63 +26,54 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Top 5 accounts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("User")]
         public AssetKeyVal[] User{ get; set; }
 
         /// <summary>
         /// Top 5 ports
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Port")]
         public AssetKeyVal[] Port{ get; set; }
 
         /// <summary>
         /// Top 5 processes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Process")]
         public AssetKeyVal[] Process{ get; set; }
 
         /// <summary>
         /// Top 5 software
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Software")]
         public AssetKeyVal[] Software{ get; set; }
 
         /// <summary>
         /// Top 5 databases
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Database")]
         public AssetKeyVal[] Database{ get; set; }
 
         /// <summary>
-        /// Top 5 web applications
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top 5 Web Applications
         /// </summary>
         [JsonProperty("WebApp")]
         public AssetKeyVal[] WebApp{ get; set; }
 
         /// <summary>
-        /// Top 5 web sites
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top 5 Websites
         /// </summary>
         [JsonProperty("WebLocation")]
         public AssetKeyVal[] WebLocation{ get; set; }
 
         /// <summary>
-        /// Top 5 web frameworks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top 5 Web frameworks
         /// </summary>
         [JsonProperty("WebFrame")]
         public AssetKeyVal[] WebFrame{ get; set; }
 
         /// <summary>
-        /// Top 5 web services
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top 5 Web Services
         /// </summary>
         [JsonProperty("WebService")]
         public AssetKeyVal[] WebService{ get; set; }

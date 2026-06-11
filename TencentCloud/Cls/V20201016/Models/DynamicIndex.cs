@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Key-Value Index Auto-Config Switch
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Automatic configuration switch of the key-value index.
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

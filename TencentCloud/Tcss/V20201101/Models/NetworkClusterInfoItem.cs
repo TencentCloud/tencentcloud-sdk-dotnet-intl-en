@@ -91,15 +91,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NetworkPolicyPluginStatus{ get; set; }
 
         /// <summary>
-        /// Error message of the cluster network plugin
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster Network Plugin Error Message
         /// </summary>
         [JsonProperty("NetworkPolicyPluginError")]
         public string NetworkPolicyPluginError{ get; set; }
 
         /// <summary>
-        /// Cluster network plugin
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// container network plugin
         /// </summary>
         [JsonProperty("ClusterNetworkSettings")]
         public string ClusterNetworkSettings{ get; set; }

@@ -40,8 +40,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Key.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Key. the field is returned with masking.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

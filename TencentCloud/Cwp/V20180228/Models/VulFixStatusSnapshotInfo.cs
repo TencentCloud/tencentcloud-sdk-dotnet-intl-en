@@ -32,35 +32,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
         /// Host IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// Snapshot name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
         /// Snapshot creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// Snapshot ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
@@ -72,17 +67,22 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Snapshot status. 0: initial; 1: created successfully; 2: creation failed.
+        /// Snapshot status. 0: initial; 1: created successfully; 2: creation failed; 10: unsupported; 11: no need to create.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// Snapshot creation failure reason
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
+
+        /// <summary>
+        /// Host type
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -99,6 +99,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

@@ -25,41 +25,46 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Number of results to be returned. Default value: `10`. Maximum value: `100`.
+        /// <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: `0`.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter field
-        /// `IsAuthorized` (whether licensed). Valid values: `all` (all); `0` (unlicensed); `1` (licensed).
+        /// <p>Filter field.<br>IsAuthorized can be set to all, 0 (unauthorized), and 1 (authorized).</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// Sorting field
+        /// <p>Sorting field.</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc`, `desc`.
+        /// <p>Sorting method. Valid values: asc and desc.</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Whether to show only the latest repository images. Default value: `false`.
+        /// <p>Whether to display only the latest image of each repository. Default value: false.</p>
         /// </summary>
         [JsonProperty("OnlyShowLatest")]
         public bool? OnlyShowLatest{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to display only running container images.</p>
+        /// </summary>
+        [JsonProperty("IsRunning")]
+        public bool? IsRunning{ get; set; }
 
 
         /// <summary>
@@ -73,6 +78,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
+            this.SetParamSimple(map, prefix + "IsRunning", this.IsRunning);
         }
     }
 }

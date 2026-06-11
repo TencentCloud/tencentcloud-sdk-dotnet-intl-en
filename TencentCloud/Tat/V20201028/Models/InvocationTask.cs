@@ -45,19 +45,19 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Execution task status. valid values:.
         /// 
-        /// -PENDING: waiting for distribution.
-        /// -DELIVERING: distributing.
-        /// -DELIVER_DELAYED: delivery delay.
-        /// -DELIVER_FAILED: delivery fail.
-        /// -START_FAILED: command start failed.
+        /// - PENDING: waiting for distribution.
+        /// - DELIVERING: distributing.
+        /// - DELIVER_DELAYED: delivery delay.
+        /// - DELIVER_FAILED: delivery fail.
+        /// - START_FAILED: command start failed.
         /// - RUNNING: command RUNNING.
-        /// -SUCCESS: command success.
-        /// -FAILED: command execution failed, exit code not 0.
-        /// -TIMEOUT: command timeout.
-        /// -TASK_TIMEOUT: client no response.
-        /// -Canceling.
+        /// - SUCCESS: command success.
+        /// - FAILED: command execution failed, exit code not 0.
+        /// - TIMEOUT: command timeout.
+        /// - TASK_TIMEOUT: client no response.
+        /// - CANCELLING: canceling.
         /// - CANCELLED: canceled (command canceled before startup).
-        /// -TERMINATED: suspended (canceled during command execution).
+        /// - TERMINATED: suspended (canceled during command execution).
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
@@ -115,8 +115,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Invocation source.
         /// 
-        /// -USER: originate from user invocation.
-        /// -INVOKER: originate from scheduled execution.
+        /// - USER: originate from user invocation.
+        /// - INVOKER: originate from scheduled execution.
         /// </summary>
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }

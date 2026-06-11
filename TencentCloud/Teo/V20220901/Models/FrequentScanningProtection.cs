@@ -31,6 +31,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Enabled{ get; set; }
 
         /// <summary>
+        /// Rule ID of high frequency scan protection, returned as an output parameter.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.
         /// </summary>
         [JsonProperty("Action")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamObj(map, prefix + "Action.", this.Action);
             this.SetParamSimple(map, prefix + "CountBy", this.CountBy);
             this.SetParamSimple(map, prefix + "BlockThreshold", this.BlockThreshold);

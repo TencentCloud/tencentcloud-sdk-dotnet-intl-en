@@ -25,18 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Valid values:
-        /// <br><li> `Period`: periodic execution
-        /// <br><li> `Fixed`: scheduled execution
+        /// <p>Execution cycle. Value range: <code>Period</code>, <code>Fixed</code>, <code>Cron</code>.</p><ul><li>Period: at a fixed frequency</li><li>Fixed: fixed time</li><li>Cron: cron expression</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Execution interval or scheduled time point in minutes. Value range: 1–1440.
+        /// <p>Execution period or custom execution time point. Unit: minutes, value range: 1-1440.<br>When type is <code>Period</code> or <code>Fixed</code>, the time field takes effect.</p>
         /// </summary>
         [JsonProperty("Time")]
         public long? Time{ get; set; }
+
+        /// <summary>
+        /// <p>The cron expression for the execution period. Example: <code>0/1 * * * *</code>. From left to right, each field represents Minutes field, Hours field, Day of month field, Month field, Day of week field. No support for second level. When the type is <code>Cron</code>, the CronExpression field takes effect.</p>
+        /// </summary>
+        [JsonProperty("CronExpression")]
+        public string CronExpression{ get; set; }
 
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "CronExpression", this.CronExpression);
         }
     }
 }

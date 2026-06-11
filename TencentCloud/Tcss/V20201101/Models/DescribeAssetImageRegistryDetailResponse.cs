@@ -25,229 +25,221 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Image digest
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image Digest
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
 
         /// <summary>
-        /// Image address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image address.
         /// </summary>
         [JsonProperty("ImageRepoAddress")]
         public string ImageRepoAddress{ get; set; }
 
         /// <summary>
         /// Image type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
         /// Repository name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Image tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mirror version
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
         /// Scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
-        /// Scanning status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// scan status
         /// </summary>
         [JsonProperty("ScanStatus")]
         public string ScanStatus{ get; set; }
 
         /// <summary>
-        /// Number of vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of security vulnerabilities
         /// </summary>
         [JsonProperty("VulCnt")]
         public ulong? VulCnt{ get; set; }
 
         /// <summary>
-        /// Number of viruses and trojans
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Trojan viruses
         /// </summary>
         [JsonProperty("VirusCnt")]
         public ulong? VirusCnt{ get; set; }
 
         /// <summary>
         /// Number of risky behaviors
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskCnt")]
         public ulong? RiskCnt{ get; set; }
 
         /// <summary>
         /// Number of sensitive data items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SentiveInfoCnt")]
         [System.Obsolete]
         public ulong? SentiveInfoCnt{ get; set; }
 
         /// <summary>
-        /// Image system
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image system.
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
         /// <summary>
         /// Trojan scan error
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanVirusError")]
         public string ScanVirusError{ get; set; }
 
         /// <summary>
-        /// Vulnerability scan error
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability scanning error
         /// </summary>
         [JsonProperty("ScanVulError")]
         public string ScanVulError{ get; set; }
 
         /// <summary>
         /// Layer file information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LayerInfo")]
         public string LayerInfo{ get; set; }
 
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Namespace
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// High-risk scan error
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// High risk scan error
         /// </summary>
         [JsonProperty("ScanRiskError")]
         public string ScanRiskError{ get; set; }
 
         /// <summary>
-        /// Trojan scanning progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Trojan information scan progress
         /// </summary>
         [JsonProperty("ScanVirusProgress")]
         public ulong? ScanVirusProgress{ get; set; }
 
         /// <summary>
-        /// Vulnerability scanning progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability scan progress.
         /// </summary>
         [JsonProperty("ScanVulProgress")]
         public ulong? ScanVulProgress{ get; set; }
 
         /// <summary>
-        /// Sensitive data scanning progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sensitive scanning progress
         /// </summary>
         [JsonProperty("ScanRiskProgress")]
         public ulong? ScanRiskProgress{ get; set; }
 
         /// <summary>
-        /// Remaining scan time in seconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remaining scan time (seconds)
         /// </summary>
         [JsonProperty("ScanRemainTime")]
         public ulong? ScanRemainTime{ get; set; }
 
         /// <summary>
-        /// CVE scanning status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// cve scan status
         /// </summary>
         [JsonProperty("CveStatus")]
         public string CveStatus{ get; set; }
 
         /// <summary>
-        /// High-risk scanning status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// High risk scan status
         /// </summary>
         [JsonProperty("RiskStatus")]
         public string RiskStatus{ get; set; }
 
         /// <summary>
-        /// Trojan scanning status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Trojan scan status
         /// </summary>
         [JsonProperty("VirusStatus")]
         public string VirusStatus{ get; set; }
 
         /// <summary>
         /// Overall progress
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Licensing status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Authorization status
         /// </summary>
         [JsonProperty("IsAuthorized")]
         public ulong? IsAuthorized{ get; set; }
 
         /// <summary>
         /// Image size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageSize")]
         public ulong? ImageSize{ get; set; }
 
         /// <summary>
-        /// Image ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image ID.
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Image region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image Zone
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// Image creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image Creation Time
         /// </summary>
         [JsonProperty("ImageCreateTime")]
         public string ImageCreateTime{ get; set; }
+
+        /// <summary>
+        /// Number of sensitive data items
+        /// </summary>
+        [JsonProperty("SensitiveInfoCnt")]
+        public ulong? SensitiveInfoCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// Solution
+        /// </summary>
+        [JsonProperty("Solution")]
+        public string Solution{ get; set; }
+
+        /// <summary>
+        /// Reason
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -293,6 +285,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "ImageCreateTime", this.ImageCreateTime);
+            this.SetParamSimple(map, prefix + "SensitiveInfoCnt", this.SensitiveInfoCnt);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Solution", this.Solution);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

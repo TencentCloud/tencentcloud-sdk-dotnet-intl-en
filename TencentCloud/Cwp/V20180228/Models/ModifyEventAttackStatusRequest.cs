@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 0: Pending 1: Processed 2: Allowlisted 3: Ignored 4: Deleted 
+        /// 0: pending processing; 1: processed; 3: ignored; 4: deleted. 
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>Status: String event processing status: 0: pending 1: processed; 2: allowlisted; 3: ignored; 4: deleted: required: no</li>
         /// <li>SrcIP - String source IP - required: no</li>
         /// <li>DstPort - String attack target port - required: no</li>
-        /// <li>MachineName - String host name - required: no</li>
+        /// <li>MachineName - String host name - required: no</li>
         /// <li>InstanceID - String host instance ID - required: no</li>
         /// <li>Quuids - String host CVM UUID - required: no</li>
         /// </summary>

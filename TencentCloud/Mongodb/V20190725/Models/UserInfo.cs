@@ -25,37 +25,37 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 
+        /// The account name.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 
+        /// The account permission details.
         /// </summary>
         [JsonProperty("AuthRole")]
         public Auth[] AuthRole{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the account was created.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the account was last updated.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// The remarks for the account.
         /// </summary>
         [JsonProperty("UserDesc")]
         public string UserDesc{ get; set; }
 
         /// <summary>
-        /// Console password update time.
+        /// The time when the console password was last updated.
         /// </summary>
         [JsonProperty("ConsolePassUpdateTime")]
         public string ConsolePassUpdateTime{ get; set; }

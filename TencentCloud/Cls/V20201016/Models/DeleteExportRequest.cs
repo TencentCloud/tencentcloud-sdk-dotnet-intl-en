@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log export ID
+        /// Log export task ID.
+        /// -Obtain the log export task Id through [Get Log Download Task List](https://www.tencentcloud.com/document/product/614/56449?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }

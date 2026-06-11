@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Current number of abnormal plugins
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of plugin exceptions
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

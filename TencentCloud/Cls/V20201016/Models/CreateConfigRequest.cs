@@ -25,19 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Collection configuration name
+        /// collection configuration name
+        /// -Names do not contain special characters
+        /// - Name can be up to 255 characters, exceeding which will be truncated
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Log topic ID (TopicId) of collection configuration
+        /// Log topic ID to which the collection configuration belongs, i.e., topic ID
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
-        /// Log collection path containing the filename
+        /// Log collection path, which contains the file name. Multiple paths are supported and should be separated by English commas. It is required for file collection.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
@@ -75,6 +78,15 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("AdvancedConfig")]
         public string AdvancedConfig{ get; set; }
 
+        /// <summary>
+        /// Log input type (<span style="color:red; font-weight:bold">Note: Required for Windows scenario and only supports file and windows_event type</span>)
+        /// -file type collection
+        /// -windows event collection
+        /// -syslog: System log collection
+        /// </summary>
+        [JsonProperty("InputType")]
+        public string InputType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +101,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
             this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
             this.SetParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
+            this.SetParamSimple(map, prefix + "InputType", this.InputType);
         }
     }
 }

@@ -37,22 +37,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PeerType{ get; set; }
 
         /// <summary>
-        /// Namespace selector
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Namespace Selector
         /// </summary>
         [JsonProperty("NamespaceSelector")]
         public string NamespaceSelector{ get; set; }
 
         /// <summary>
-        /// Pod selector
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pod Selector
         /// </summary>
         [JsonProperty("PodSelector")]
         public string PodSelector{ get; set; }
 
         /// <summary>
-        /// IP selector
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IP Selector
         /// </summary>
         [JsonProperty("IPBlock")]
         public string IPBlock{ get; set; }

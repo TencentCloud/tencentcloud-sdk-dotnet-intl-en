@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Rule name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -57,7 +56,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Effective Host UUID. Empty means all hosts, and returned number of entries can be controlled through parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
@@ -87,10 +85,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? UuidTotalCount{ get; set; }
 
         /// <summary>
-        /// Allowlisted processing type
-        /// <li>cur: add the current items to the allowlist</li>
-        /// <li>all: add all items that meet the conditions to the allowlist</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Allowlist processing type
+        /// <li>cur: add only the current item to an allowlist</li>
+        /// <li>all: add all objects that meet the conditions to the allowlist</li>
         /// </summary>
         [JsonProperty("AddWhiteType")]
         public string AddWhiteType{ get; set; }

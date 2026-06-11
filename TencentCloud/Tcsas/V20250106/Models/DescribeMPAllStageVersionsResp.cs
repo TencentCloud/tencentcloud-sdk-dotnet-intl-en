@@ -91,7 +91,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Stage: Develop, preview, released.
+        /// Phase: Valid values: Develop; Platform; Online.
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Statement for search and analysis, with a maximum length of 12 KB
+        /// The retrieval analysis statement has a maximum length of 12KB. Refer to the query syntax in the referenced document https://www.tencentcloud.com/document/product/296/50508.?from_cn_redirect=1
         /// </summary>
         [JsonProperty("QueryString")]
         public string QueryString{ get; set; }

@@ -25,43 +25,37 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Message queue instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Message Queue Instance ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Message queue instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Message Queue Instance Name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Domain
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// List of log types
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log Type Queue
         /// </summary>
         [JsonProperty("LogTypeList")]
         public SecLogDeliveryKafkaSettingInfo[] LogTypeList{ get; set; }
 
         /// <summary>
-        /// Username
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Username.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Region ID
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Region ID.
         /// </summary>
         [JsonProperty("RegionID")]
         public string RegionID{ get; set; }

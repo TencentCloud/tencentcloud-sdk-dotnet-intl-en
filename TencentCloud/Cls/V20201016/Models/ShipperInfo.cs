@@ -25,139 +25,154 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Shipping rule ID
+        /// <p>Delivery Rule ID</p>
         /// </summary>
         [JsonProperty("ShipperId")]
         public string ShipperId{ get; set; }
 
         /// <summary>
-        /// Log topic ID
+        /// <p>Log topic ID.</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Bucket address shipped to
+        /// <p>bucket address for shipping</p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Shipping prefix directory
+        /// <p>Delivery prefix directory</p>
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// Shipping rule name
+        /// <p>Shipping rule name</p>
         /// </summary>
         [JsonProperty("ShipperName")]
         public string ShipperName{ get; set; }
 
         /// <summary>
-        /// Shipping time interval in seconds
+        /// <p>Shipping time interval. Unit: seconds</p>
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// Maximum size of shipped file in MB
+        /// <p>Maximum value of delivered files in MB</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// Whether it takes effect
+        /// <p>Whether effective</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Filter rule for shipped log
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Filter rules for log shipping</p>
         /// </summary>
         [JsonProperty("FilterRules")]
         public FilterRuleInfo[] FilterRules{ get; set; }
 
         /// <summary>
-        /// Partition rule of shipped log, which can be represented in `strftime` time format
+        /// <p>Partition rules for log shipping support strftime time format representation</p>
         /// </summary>
         [JsonProperty("Partition")]
         public string Partition{ get; set; }
 
         /// <summary>
-        /// Compression configuration of shipped log
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Compression configuration of shipped logs</p>
         /// </summary>
         [JsonProperty("Compress")]
         public CompressInfo Compress{ get; set; }
 
         /// <summary>
-        /// Format configuration of shipped log content
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Content format configuration for shipped logs</p>
         /// </summary>
         [JsonProperty("Content")]
         public ContentInfo Content{ get; set; }
 
         /// <summary>
-        /// Creation time of shipped log
+        /// <p>Creation time of shipped logs. Format: YYYY-MM-DD HH:MM:SS</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Delivery file naming configuration. 0: Random number naming, 1: Delivery time naming. Default: 0 (Random number naming).</p>
         /// </summary>
         [JsonProperty("FilenameMode")]
         public ulong? FilenameMode{ get; set; }
 
         /// <summary>
-        /// Start time for data shipping
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Start time of the data shipping range</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End time for data shipping
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>End time of the data delivery range</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Progress of historical data shipping (valid only when the selected data scope contains historical data)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Progress of historical data delivery (valid only when users select historical data within the dataset)</p>
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// Remaining time required for shipping all historical data (valid only when the selected data scope contains historical data)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Remaining time for all historical data delivery completion (valid only when there is historical data in the selected data)</p><p>Unit: second</p>
         /// </summary>
         [JsonProperty("RemainTime")]
         public long? RemainTime{ get; set; }
 
         /// <summary>
-        /// Status of historical data shipping. Valid values:
-        /// 0: Real-time data is being shipped.
-        /// 1: The system is preparing for historical data shipping.
-        /// 2: Historical data is being shipped.
-        /// 3: An error occurred while shipping historical data.
-        /// 4: Historical data shipping ended.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Historical task status:<br>0: Real-time task<br>1: Task preparing<br>2: Task running<br>3: Task execution exception<br>4: Task execution complete</p>
         /// </summary>
         [JsonProperty("HistoryStatus")]
         public long? HistoryStatus{ get; set; }
 
         /// <summary>
-        /// COS bucket type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Storage type. Default value is STANDARD. For enumeration values, see the <a href="https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1">storage type overview</a> document.<br>Reference values:<br>STANDARD: standard storage<br>STANDARD_IA: infrequent storage<br>ARCHIVE: archive storage<br>DEEP_ARCHIVE: deep archive storage<br>MAZ_STANDARD: standard storage (multi-AZ)<br>MAZ_STANDARD_IA: infrequent storage (multi-AZ)<br>INTELLIGENT_TIERING: intelligent tiering storage<br>MAZ_INTELLIGENT_TIERING: intelligent tiering storage (multi-AZ)</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
+
+        /// <summary>
+        /// <p>ARN <a href="https://www.tencentcloud.com/document/product/598/19381?from_cn_redirect=1">Create role</a></p>
+        /// </summary>
+        [JsonProperty("RoleArn")]
+        public string RoleArn{ get; set; }
+
+        /// <summary>
+        /// <p>External ID</p>
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
+
+        /// <summary>
+        /// <p>Task running status. Supports <code>0</code>, <code>1</code>, <code>2</code></p><ul><li><code>0</code>: Stop</li><li><code>1</code>: Running</li><li><code>2</code>: Exception</li></ul>
+        /// </summary>
+        [JsonProperty("TaskStatus")]
+        public ulong? TaskStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Time variable used to generate the file path shipped to COS</p>
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
+        /// <summary>
+        /// <p>Pre-filtering process - filter out original data before writing to COS</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -185,6 +200,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "RemainTime", this.RemainTime);
             this.SetParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "RoleArn", this.RoleArn);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

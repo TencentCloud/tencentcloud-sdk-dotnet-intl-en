@@ -67,10 +67,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong?[] VulIds{ get; set; }
 
         /// <summary>
-        /// 0 version comparison, 2 version comparison + poc
+        /// 0: version comparison, 2: version comparison + POC.
         /// </summary>
         [JsonProperty("ScanMethod")]
         public ulong? ScanMethod{ get; set; }
+
+        /// <summary>
+        /// kb No.
+        /// </summary>
+        [JsonProperty("KBNumber")]
+        public string[] KBNumber{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
             this.SetParamArraySimple(map, prefix + "VulIds.", this.VulIds);
             this.SetParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
+            this.SetParamArraySimple(map, prefix + "KBNumber.", this.KBNumber);
         }
     }
 }

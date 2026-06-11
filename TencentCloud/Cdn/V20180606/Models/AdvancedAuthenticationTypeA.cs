@@ -55,7 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? ExpireTimeRequired{ get; set; }
 
         /// <summary>
-        /// URL composition, e.g., `${private_key}${schema}${host}${full_uri}`.
+        /// URL format, for example: ${private_key}${schema}${host}${full_uri}.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

@@ -49,33 +49,33 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Region Id
         /// </summary>
         [JsonProperty("AreaIds")]
         public long?[] AreaIds{ get; set; }
 
         /// <summary>
-        /// Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: terminating; 8: terminated)
+        /// Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=being destroyed, 8=terminated). Deprecated. Please note in Filters.
         /// </summary>
         [JsonProperty("InstanceStatuses")]
         [System.Obsolete]
         public long?[] InstanceStatuses{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance Id, deprecated. Please note in Filters.
         /// </summary>
         [JsonProperty("InstanceIds")]
         [System.Obsolete]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Filter parameter
+        /// Filter parameters; In demo mode, pass {"Name": "IsDemo", "Values":["1"]}.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Whether it is in the demo mode. `1`: Yes; `2`: No.
+        /// Deprecated. For demo mode, please note in Filters.
         /// </summary>
         [JsonProperty("IsDemo")]
         [System.Obsolete]

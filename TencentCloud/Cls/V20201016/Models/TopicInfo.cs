@@ -25,127 +25,172 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Logset ID
+        /// <p>Logset ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        ///  Topic ID
+        /// <p>Topic ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Topic Name
+        /// <p>Topic name</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Number of topic partitions
+        /// <p>Topic partition count</p>
         /// </summary>
         [JsonProperty("PartitionCount")]
         public long? PartitionCount{ get; set; }
 
         /// <summary>
-        /// Whether the topic has indexing enabled (the topic type must be log topic)
+        /// <p>Whether the topic has indexing enabled (the topic type must be log topic)</p>
         /// </summary>
         [JsonProperty("Index")]
         public bool? Index{ get; set; }
 
         /// <summary>
-        /// Cloud product identifier. When the topic is created by other cloud products, this field displays the name of the cloud product, such as CDN, TKE.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>If AssumerUin is not empty, it indicates the Uin of the service provider creating the log topic</p>
+        /// </summary>
+        [JsonProperty("AssumerUin")]
+        public ulong? AssumerUin{ get; set; }
+
+        /// <summary>
+        /// <p>Cloud product identifier. When the topic is created by other cloud products, this field displays the cloud product name, such as CDN, TKE.</p>
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// <p>Creation time. Format: yyyy-MM-dd HH:mm:ss</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether the topic has log collection enabled. true: collection enabled; false: collection disabled.Log collection is enabled by default when creating a log topic, and this field can be modified by calling ModifyTopic through the SDK.The console currently does not support modifying this parameter.
+        /// <p>Whether the topic has log collection enabled. true: enable collection; false: disable collection.<br>Enabled by default during log topic creation. You can modify this field via SDK invocation of ModifyTopic.<br>The console currently does not support modification of this parameter.</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// Tag information bound to the topicNote: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Tag information bound to the topic</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Whether automatic split is enabled for this topic
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>If RoleName is not empty, it indicates the role used by the service provider creating the log topic</p>
+        /// </summary>
+        [JsonProperty("RoleName")]
+        public string RoleName{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the topic has auto-split enabled</p>
         /// </summary>
         [JsonProperty("AutoSplit")]
         public bool? AutoSplit{ get; set; }
 
         /// <summary>
-        /// Maximum number of partitions to split into for this topic if automatic split is enabled
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Maximum number of partitions allowed for the topic if auto-split is enabled</p>
         /// </summary>
         [JsonProperty("MaxSplitPartitions")]
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// Storage type of the topicNote: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Storage type of the topic</p><ul><li>hot: standard storage</li><li>cold: infrequent storage</li></ul>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Lifecycle in days, valid values 1~3600. A value of 3640 indicates permanent retention.</p>
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud product sub-identifier. When the log topic is created by other cloud products, this field displays the cloud product name and its log type sub-category, such as TKE-Audit, TKE-Event. Some cloud products only have the cloud product identifier (AssumerName) without this field.</p>
         /// </summary>
         [JsonProperty("SubAssumerName")]
         public string SubAssumerName{ get; set; }
 
         /// <summary>
-        /// Topic description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Topic description</p>
         /// </summary>
         [JsonProperty("Describes")]
         public string Describes{ get; set; }
 
         /// <summary>
-        /// Enable log sinking, with the lifecycle of standard storage, where hotPeriod < Period.For standard storage, hotPeriod is used, and for infrequent access storage, it is Period-hotPeriod. (The topic type must be a log topic)HotPeriod=0 indicates that log sinking is not enabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Enable log settlement, lifecycle of standard storage, hotPeriod &lt; Period.<br>Standard storage is hotPeriod, infrequent storage is Period-hotPeriod. (Topic type must be log topic)<br>HotPeriod=0 means log settlement is not enabled.</p>
         /// </summary>
         [JsonProperty("HotPeriod")]
         public ulong? HotPeriod{ get; set; }
 
         /// <summary>
-        /// Topic type.
-        /// - 0:  log  Topic  
-        /// - 1: Metric Topic
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>kms-cls service key id</p>
+        /// </summary>
+        [JsonProperty("KeyId")]
+        public string KeyId{ get; set; }
+
+        /// <summary>
+        /// <p>Topic type.</p><ul><li>0: Log topic</li><li>1: Metric topic</li></ul>
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }
 
         /// <summary>
-        /// Free authentication switch. false: disabled; true: enabled.After enabling, anonymous access to the log topic will be supported for specified operations. For details, please refer to Log Topic (https://intl.cloud.tencent.com/document/product/614/41035?from_cn_redirect=1).Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Free authentication switch. false: disabled; true: enabled.<br>Once enabled, designated operations will be supported for anonymous access to the log topic. See <a href="https://www.tencentcloud.com/document/product/614/41035?from_cn_redirect=1">log topic</a> for details.</p>
         /// </summary>
         [JsonProperty("IsWebTracking")]
         public bool? IsWebTracking{ get; set; }
 
         /// <summary>
-        /// Log topic extended information
+        /// <p>Log topic extended information</p>
         /// </summary>
         [JsonProperty("Extends")]
         public TopicExtendInfo Extends{ get; set; }
+
+        /// <summary>
+        /// <p>Async migration task ID</p>
+        /// </summary>
+        [JsonProperty("TopicAsyncTaskID")]
+        public string TopicAsyncTaskID{ get; set; }
+
+        /// <summary>
+        /// <p>Asynchronous migration status</p><ul><li>1: In progress</li><li>2: Completed</li><li>3: Failure</li><li>4: Canceled</li></ul>
+        /// </summary>
+        [JsonProperty("MigrationStatus")]
+        public ulong? MigrationStatus{ get; set; }
+
+        /// <summary>
+        /// <p>After async migration, expected effective date<br>Time format: yyyy-MM-dd HH:mm:ss</p>
+        /// </summary>
+        [JsonProperty("EffectiveDate")]
+        public string EffectiveDate{ get; set; }
+
+        /// <summary>
+        /// <p>IsSourceFrom Enable recording public network source IP and server receipt time</p>
+        /// </summary>
+        [JsonProperty("IsSourceFrom")]
+        public bool? IsSourceFrom{ get; set; }
+
+        /// <summary>
+        /// <p>Current billing mode</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently supported for some customers only)</li></ul>
+        /// </summary>
+        [JsonProperty("BillingMode")]
+        public ulong? BillingMode{ get; set; }
+
+        /// <summary>
+        /// <p>If there is an async task, the new billing model after the task succeeds</p><p>Enumeration value:</p><ul><li>0: Function billing by usage</li><li>1: Billing by raw log size (currently only supported for some customers)</li></ul>
+        /// </summary>
+        [JsonProperty("NewBillingMode")]
+        public ulong? NewBillingMode{ get; set; }
 
 
         /// <summary>
@@ -158,10 +203,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "Index", this.Index);
+            this.SetParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
             this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
@@ -169,9 +216,16 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
             this.SetParamSimple(map, prefix + "Describes", this.Describes);
             this.SetParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+            this.SetParamSimple(map, prefix + "KeyId", this.KeyId);
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
             this.SetParamObj(map, prefix + "Extends.", this.Extends);
+            this.SetParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
+            this.SetParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
+            this.SetParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
+            this.SetParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
+            this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
+            this.SetParamSimple(map, prefix + "NewBillingMode", this.NewBillingMode);
         }
     }
 }

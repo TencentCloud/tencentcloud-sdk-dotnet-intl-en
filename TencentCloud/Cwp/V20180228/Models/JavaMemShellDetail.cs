@@ -157,14 +157,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string SecurityAdvice{ get; set; }
 
         /// <summary>
-        /// Additional host information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        ///  Host Additional Information
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// Instance status: RUNNING, STOPPED, SHUTDOWN...
+        /// Agent status: OFFLINE; ONLINE.
         /// </summary>
         [JsonProperty("MachineState")]
         public string MachineState{ get; set; }

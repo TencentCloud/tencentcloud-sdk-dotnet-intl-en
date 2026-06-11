@@ -25,10 +25,10 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Whether to enable heuristic caching. Values:
-        /// `on`: Enable
-        /// `off`: Disable
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Specifies the heuristic cache configuration switch. valid values:.
+        /// on: enable.
+        /// Off: turn off the switch (default).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

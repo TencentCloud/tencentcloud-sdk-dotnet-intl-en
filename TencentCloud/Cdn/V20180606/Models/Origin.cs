@@ -83,11 +83,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CosPrivateAccess{ get; set; }
 
         /// <summary>
-        /// Origin-pull protocol configuration
-        /// http: forced HTTP origin-pull
-        /// follow: protocol follow origin-pull
-        /// https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Configures the origin-pull protocol.
+        /// Http: force http origin-pull.
+        /// follow protocol for origin pull.
+        /// Https: enforce https origin-pull.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
@@ -101,17 +101,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// Secondary origin type
-        /// <font color=red>This field is used together with `BackupOrigins`.</font>
-        /// Values:
-        /// `domain`: Domain name
-        /// `ip`: IP address
-        /// The following secondary origin types are only available to beta users. Submit a ticket to use it.
-        /// `ipv6_domain`: Multiple IPv6 addresses and one domain name
-        /// `ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
-        /// `ipv6_domain`: Multiple IPv6 addresses and one domain name
-        /// `ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Secondary origin type. valid values:.
+        /// BackupOrigins specifies the backup origin list. required when not empty.
+        /// Supports the following types.
+        /// domain type.
+        /// ip: ip list as the origin server.
+        /// The following backup origin server types are not fully available yet and require trial use application.
+        /// ipv6_domain: specifies the origin server list containing multiple ipv6 addresses and domain names.
+        /// ip_ipv6: specifies the origin server list containing multiple ipv4 addresses and ipv6 addresses.
+        /// ip_ipv6_domain: specifies the origin server list containing multiple ipv4 addresses, ipv6 addresses, and domain names.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupOriginType")]
         public string BackupOriginType{ get; set; }

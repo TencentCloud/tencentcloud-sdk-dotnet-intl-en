@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Tag information
+        /// Tag information.
         /// </summary>
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The number of results to be returned. Value range: (0,100]
+        /// The number of results to be returned. Value range: (0,100].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. Value range: [0,INF)
+        /// Record offset. Value range: [0,INF).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Backup ID
+        /// Backup ID.
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }
@@ -68,25 +68,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
 
         /// <summary>
-        /// Backup start time
+        /// Backup start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup end time
+        /// Backup end time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup file name, fuzzy search.
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
@@ -98,25 +98,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] BackupNames{ get; set; }
 
         /// <summary>
-        /// ID list of the snapshot backup
+        /// ID list of the snapshot backup.
         /// </summary>
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup region.
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether cross-region backup.
         /// </summary>
         [JsonProperty("IsCrossRegionsBackup")]
         public string IsCrossRegionsBackup{ get; set; }
 
         /// <summary>
-        /// Status you want to query
+        /// Status you want to query.
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string[] BackupStatus{ get; set; }

@@ -83,17 +83,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? FailedPolicyItemCount{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time.
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
-        /// Check result. Valid values:
-        /// `RESULT_FAILED`: Failed.
-        /// `RESULT_PASSED`: Passed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection result:
+        /// RESULT_FAILED: failed.
+        /// RESULT_PASSED: Passed.
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }

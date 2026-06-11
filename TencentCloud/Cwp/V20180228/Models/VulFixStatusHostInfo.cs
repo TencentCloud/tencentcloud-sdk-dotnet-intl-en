@@ -55,8 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Fixing failure cause
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Fix failure cause
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }

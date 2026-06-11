@@ -56,42 +56,36 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Public IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
-        /// Cloud tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cloud Tag
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tag[] CloudTags{ get; set; }
 
         /// <summary>
         /// Availability zone information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
-        /// CWPP tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host security tag
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
         /// Protection status: 0 Disabled, 1 Enabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// Policy ID. 0 indicates no binding to any policy.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyId")]
         public ulong? StrategyId{ get; set; }
@@ -99,66 +93,69 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// Hard disk information, all hard disks take effect when left blank:
         /// Separate diskId1|diskName1;diskId2|diskName2
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiskInfo")]
         public string DiskInfo{ get; set; }
 
         /// <summary>
         /// Policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
         /// Number of Backups
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupCount")]
         public ulong? BackupCount{ get; set; }
 
         /// <summary>
         /// Latest Backup Status: 0 - Backing Up, 1 - Normal, 2 - Failed, 9 - No Backup Yet
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastBackupStatus")]
         public ulong? LastBackupStatus{ get; set; }
 
         /// <summary>
         /// Reason for the Last Backup Failure
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastBackupMessage")]
         public string LastBackupMessage{ get; set; }
 
         /// <summary>
         /// Last Backup Time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastBackupTime")]
         public string LastBackupTime{ get; set; }
 
         /// <summary>
         /// Latest Rollback Progress Percentage
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RollBackPercent")]
         public ulong? RollBackPercent{ get; set; }
 
         /// <summary>
         /// Latest Rollback Status: 0 - In Progress, 1 - Succeeded, 2 - Failed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RollBackStatus")]
         public ulong? RollBackStatus{ get; set; }
 
         /// <summary>
         /// Backup Success Count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupSuccessCount")]
         public ulong? BackupSuccessCount{ get; set; }
+
+        /// <summary>
+        /// Version information: 0-Basic version, 1-Pro edition, 2-Flagship edition, 3-Lightweight edition
+        /// </summary>
+        [JsonProperty("HostVersion")]
+        public ulong? HostVersion{ get; set; }
+
+        /// <summary>
+        /// Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -186,6 +183,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RollBackPercent", this.RollBackPercent);
             this.SetParamSimple(map, prefix + "RollBackStatus", this.RollBackStatus);
             this.SetParamSimple(map, prefix + "BackupSuccessCount", this.BackupSuccessCount);
+            this.SetParamSimple(map, prefix + "HostVersion", this.HostVersion);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

@@ -62,7 +62,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
@@ -152,7 +151,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Digital signature. 0: no; 1: yes; 999: null (Windows only).
+        /// Digital signature: 0: none; 1: yes; 999: null (for Windows only).
         /// </summary>
         [JsonProperty("HasSign")]
         public ulong? HasSign{ get; set; }
@@ -177,7 +176,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -195,9 +193,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? IsNew{ get; set; }
 
         /// <summary>
-        /// Additional information
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        ///  Additional information
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

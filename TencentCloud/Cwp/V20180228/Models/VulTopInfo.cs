@@ -25,29 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Vulnerability name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability name.
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulLevel")]
         public ulong? VulLevel{ get; set; }
 
         /// <summary>
         /// Number of vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
         /// Vulnerability ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }

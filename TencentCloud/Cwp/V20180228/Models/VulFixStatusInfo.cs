@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Vulnerability ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
         /// <summary>
         /// Vulnerability name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
@@ -46,30 +44,51 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Vulnerability fixing status for corresponding hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostList")]
         public VulFixStatusHostInfo[] HostList{ get; set; }
 
         /// <summary>
         /// Number of hosts with failed vulnerability fixing
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailCnt")]
         public ulong? FailCnt{ get; set; }
 
         /// <summary>
-        /// Number of hosts with successful vulnerability fixing
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of successful repairs
         /// </summary>
         [JsonProperty("FixSuccessCnt")]
         public ulong? FixSuccessCnt{ get; set; }
 
         /// <summary>
-        /// Repair method: 0 component update or patch installation, 1 disable service
+        /// Repair method. 0: Update components or install patches. 1: Disable service.
         /// </summary>
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }
+
+        /// <summary>
+        /// kb ID
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
+        /// <summary>
+        /// kb number
+        /// </summary>
+        [JsonProperty("KbNumber")]
+        public string KbNumber{ get; set; }
+
+        /// <summary>
+        /// kb name
+        /// </summary>
+        [JsonProperty("KbName")]
+        public string KbName{ get; set; }
+
+        /// <summary>
+        /// Pre kb list
+        /// </summary>
+        [JsonProperty("PreKbList")]
+        public string[] PreKbList{ get; set; }
 
 
         /// <summary>
@@ -84,6 +103,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "FailCnt", this.FailCnt);
             this.SetParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
             this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
+            this.SetParamSimple(map, prefix + "KbNumber", this.KbNumber);
+            this.SetParamSimple(map, prefix + "KbName", this.KbName);
+            this.SetParamArraySimple(map, prefix + "PreKbList.", this.PreKbList);
         }
     }
 }

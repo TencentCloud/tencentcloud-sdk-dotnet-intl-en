@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Check progress (percentage)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection progress (percentage)
         /// </summary>
         [JsonProperty("Schedule")]
         public ulong? Schedule{ get; set; }

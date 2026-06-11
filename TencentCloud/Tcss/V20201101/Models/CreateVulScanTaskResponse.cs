@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// ID of the task to scan local images again for vulnerabilities
+        /// <p>Task ID for local image re-vulnerability scanning</p>
         /// </summary>
         [JsonProperty("LocalTaskID")]
         public long? LocalTaskID{ get; set; }
 
         /// <summary>
-        /// ID of the task to scan repository images again for vulnerabilities
+        /// <p>Task ID for repository image re-vulnerability scanning</p>
         /// </summary>
         [JsonProperty("RegistryTaskID")]
         public long? RegistryTaskID{ get; set; }

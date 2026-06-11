@@ -50,7 +50,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Scan duration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanDuration")]
         public float? ScanDuration{ get; set; }

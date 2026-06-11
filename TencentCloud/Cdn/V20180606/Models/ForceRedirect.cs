@@ -43,9 +43,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RedirectType{ get; set; }
 
         /// <summary>
-        /// Status code returned for forced redirect 
-        /// Supports 301, 302.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the return status code for forced redirection. 
+        /// Supports 301, 302, 307, and 308.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }

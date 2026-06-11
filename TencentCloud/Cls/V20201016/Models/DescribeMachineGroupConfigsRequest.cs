@@ -26,6 +26,7 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Machine group ID
+        /// -Obtain the machine group Id by searching the [machine group list](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }

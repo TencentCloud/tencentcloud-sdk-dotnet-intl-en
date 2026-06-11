@@ -25,13 +25,16 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
+        /// Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud CKafka Instance IDWhen KafkaType is 0, KafkaInstance is required
+        /// Tencent Cloud CKafka instance ID.
+        /// When KafkaType is 0, KafkaInstance is required
+        /// 
+        /// - Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
@@ -43,16 +46,22 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Whether the service address uses an encrypted connection
+        /// Whether ServerAddr is an encrypted connection. The default value is false. It is valid when KafkaType is 1, indicating a user self-built Kafka.
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encryption access protocol. Required when IsEncryptionAddr parameter is set to true
+        /// Encrypted access protocol. It is required when the parameter KafkaType is 1 and the parameter IsEncryptionAddr is true.
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
+
+        /// <summary>
+        /// User kafka extended information
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
 
 
         /// <summary>
@@ -65,6 +74,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ServerAddr", this.ServerAddr);
             this.SetParamSimple(map, prefix + "IsEncryptionAddr", this.IsEncryptionAddr);
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Arrays of malicious request lists
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskDnsList")]
         public RiskDnsList[] RiskDnsList{ get; set; }

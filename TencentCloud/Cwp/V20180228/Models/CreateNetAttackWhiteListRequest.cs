@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] SrcIp{ get; set; }
 
         /// <summary>
-        /// QUUID list
+        /// QUUID list
         /// </summary>
         [JsonProperty("QuuidList")]
         public string[] QuuidList{ get; set; }

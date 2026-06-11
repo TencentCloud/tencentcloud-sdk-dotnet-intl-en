@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Top Statistical Data on Network Attack Host Dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Agent")]
         public TopInfo[] Agent{ get; set; }
 
         /// <summary>
         /// Top Statistical Data on Network Attack IP Source Dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcIp")]
         public TopInfo[] SrcIp{ get; set; }
 
         /// <summary>
         /// Top Statistical Data on Network Attack Target Port Dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstPort")]
         public TopInfo[] DstPort{ get; set; }
 
         /// <summary>
         /// Top Statistical Data on Network Attack Vulnerability Dimension
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vul")]
         public TopInfo[] Vul{ get; set; }

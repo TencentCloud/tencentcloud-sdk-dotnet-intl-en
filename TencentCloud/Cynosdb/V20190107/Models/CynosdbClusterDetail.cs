@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ
+        /// AZ.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -56,13 +56,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Status. supported values are as follows:.
-        /// -Creating: creating.
+        /// - Creating: creating.
         /// - running: running.
-        /// -isolating.
-        /// -Isolated: isolated.
-        /// -activating: restore from recycle bin.
-        /// -offlining: offline.
-        /// -offlined: offline.
+        /// - isolating.
+        /// - Isolated: isolated.
+        /// - activating: restore from recycle bin.
+        /// - offlining: offline.
+        /// - offlined: offline.
         /// - deleting: deleting.
         /// - deleted: deleted.
         /// </summary>
@@ -116,43 +116,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// VPC name
+        /// VPC name.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// Unique VPC ID
+        /// Unique VPC ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet name
+        /// Subnet name.
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Character set
+        /// Character set.
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Database type
+        /// Database type.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
@@ -164,7 +164,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// Database version
+        /// Database version.
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -176,19 +176,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Used capacity
+        /// Used capacity.
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
 
         /// <summary>
-        /// VIP
+        /// VIP.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// vport
+        /// vport.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -248,31 +248,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// Instance information
+        /// Instance information.
         /// </summary>
         [JsonProperty("InstanceSet")]
         public ClusterInstanceDetail[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// Billing mode
+        /// Billing mode.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Expiration time
+        /// Expiration time.
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// Array of tags bound to instance
+        /// Array of tags bound to instance.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }

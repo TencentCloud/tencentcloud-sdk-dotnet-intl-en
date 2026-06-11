@@ -40,7 +40,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Key
+        /// Key. the field is returned with masking.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

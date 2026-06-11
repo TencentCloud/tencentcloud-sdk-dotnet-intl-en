@@ -181,15 +181,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NetSubStatus{ get; set; }
 
         /// <summary>
-        /// Isolation source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Isolate source
         /// </summary>
         [JsonProperty("IsolateSource")]
         public string IsolateSource{ get; set; }
 
         /// <summary>
         /// Isolation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }

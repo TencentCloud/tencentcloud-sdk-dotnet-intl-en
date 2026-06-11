@@ -25,47 +25,84 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Callback address
-        /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
-
-        /// <summary>
         /// Callback type. Valid values:
-        /// <li> WeCom
-        /// <li> Http
+        /// -Http (custom webhook configuration)
+        /// -WeCom
+        /// -DingTalk
+        /// -Lark
         /// </summary>
         [JsonProperty("CallbackType")]
         public string CallbackType{ get; set; }
 
         /// <summary>
+        /// Callback URL, supports a maximum of 1024 bytes.
+        /// You can also use WebCallbackId to refer to the URL in the integration configuration. At this point, please enter an empty string for this field.
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// Integration configuration ID. Obtain the integration configuration ID by searching the alarm channel callback configuration list (https://www.tencentcloud.com/document/product/614/115229?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("WebCallbackId")]
+        public string WebCallbackId{ get; set; }
+
+        /// <summary>
         /// Callback method. Valid values:
-        /// <li> POST
-        /// <li> PUT
-        /// Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// -POST (default value)
+        /// - PUT
+        /// 
+        /// Note:
+        /// -Required when CallbackType is Http. No need to specify for other callback methods.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// Request header
-        /// Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Notification content template ID. When Default-zh is used, DefaultTemplate (Chinese) is referenced. When Default-en is used, DefaultTemplate (English) is referenced.
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
+        /// <summary>
+        /// Reminder type.
+        /// 
+        /// 0: No reminder; 1: Specified individual; 2: Everyone
+        /// </summary>
+        [JsonProperty("RemindType")]
+        public ulong? RemindType{ get; set; }
+
+        /// <summary>
+        /// Mobile phone list.
+        /// </summary>
+        [JsonProperty("Mobiles")]
+        public string[] Mobiles{ get; set; }
+
+        /// <summary>
+        /// User ID list.
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
+        /// <summary>
+        /// This parameter is deprecated. Please use NoticeContentId.
         /// </summary>
         [JsonProperty("Headers")]
+        [System.Obsolete]
         public string[] Headers{ get; set; }
 
         /// <summary>
-        /// Request content
-        /// Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// This parameter is deprecated. Please use NoticeContentId.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Body")]
+        [System.Obsolete]
         public string Body{ get; set; }
 
         /// <summary>
-        /// Number
+        /// Serial number.
+        /// -Invalid input parameter.
+        /// -Output parameter is valid.
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
@@ -76,9 +113,14 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "CallbackType", this.CallbackType);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
+            this.SetParamSimple(map, prefix + "RemindType", this.RemindType);
+            this.SetParamArraySimple(map, prefix + "Mobiles.", this.Mobiles);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "Body", this.Body);
             this.SetParamSimple(map, prefix + "Index", this.Index);

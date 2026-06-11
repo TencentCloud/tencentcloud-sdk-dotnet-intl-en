@@ -44,7 +44,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Check frequency, in seconds. It indicates how often a health check task is initiated. Valid values: 30, 60, 180, 300, 600.
+        /// Check frequency, in seconds. It indicates how often a health check task is initiated. Configurable range: 10-600 seconds.
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }

@@ -52,7 +52,7 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// The earliest start time of the scaling activity, which will be ignored if ActivityIds is specified. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+        /// The earliest start time of the scaling operation. if ActivityIds is specified, this parameter will be ignored. value is in UTC time, following the ISO8601 standard, format: YYYY-MM-DDThh:MM:ssZ. note: currently, only scaling operations from the past two years are saved.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }

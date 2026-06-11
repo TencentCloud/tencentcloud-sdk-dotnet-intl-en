@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of exceptional processes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of Exceptional Processes
         /// </summary>
         [JsonProperty("List")]
         public RiskProcessEvent[] List{ get; set; }

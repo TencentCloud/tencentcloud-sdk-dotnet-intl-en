@@ -25,22 +25,28 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Vulnerability ID
-        /// </summary>
-        [JsonProperty("VulId")]
-        public ulong? VulId{ get; set; }
-
-        /// <summary>
         /// Hosts that need to fix vulnerabilities. All hosts need to have the vulnerability with the ID of VulId and be in a pending fix status.
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
-        /// Repair method: 0 component update or patch installation, 1 disable service
+        /// Vulnerability ID
+        /// </summary>
+        [JsonProperty("VulId")]
+        public ulong? VulId{ get; set; }
+
+        /// <summary>
+        /// Repair method. 0: Update components or install patches. 1: Disable service.
         /// </summary>
         [JsonProperty("FixMethod")]
         public ulong? FixMethod{ get; set; }
+
+        /// <summary>
+        /// kb id
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+            this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamSimple(map, prefix + "FixMethod", this.FixMethod);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
         }
     }
 }

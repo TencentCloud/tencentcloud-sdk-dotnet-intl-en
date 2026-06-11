@@ -25,127 +25,131 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Alarm policy ID
+        /// <p>Alert policy ID. - Search the alert policy ID by <a href="https://www.tencentcloud.com/document/product/614/56461?from_cn_redirect=1">obtaining the alarm policy list</a>.</p>
         /// </summary>
         [JsonProperty("AlarmId")]
         public string AlarmId{ get; set; }
 
         /// <summary>
-        /// Alarm policy name
+        /// <p>Alarm policy name. Supports a maximum of 255 bytes. The '|' character is unsupported.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Monitoring task running time point
+        /// <p>Monitoring task execution time point.</p>
         /// </summary>
         [JsonProperty("MonitorTime")]
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// Trigger condition. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// <p>Trigger condition for sending alarm information.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions is another set of configurations. The two sets are mutually exclusive.</li></ul>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// Alarm level.0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical)
-        /// 
-        /// Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// <p>Alarm level.</p><p>0: Warning (Warn); 1: Reminder (Info); 2: Emergency (Critical)</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets are mutually exclusive.</li></ul>
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Multiple trigger conditions. Note: - Condition and AlarmLevel are one set of configurations, MultiConditions is another set of configurations. The two sets of configurations are mutually exclusive.
+        /// <p>Multiple trigger conditions.</p><p>Note:</p><ul><li>Condition and AlarmLevel are one set of configurations, and MultiConditions are another set of configurations. The two sets of configurations are mutually exclusive.</li></ul>
         /// </summary>
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }
 
         /// <summary>
-        /// Alarm persistence cycle. An alarm will be triggered only after the corresponding trigger condition is met for the number of times specified by `TriggerCount`. Value range: 1 to 10
+        /// <p>Duration cycle. An alarm is triggered after the trigger conditions are constantly met for TriggerCount cycles. The minimum value is 1, and the maximum value is 2000.</p>
         /// </summary>
         [JsonProperty("TriggerCount")]
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// Repeated alarm interval in minutes. Value range: 0 to 1440
+        /// <p>Alarm repeat cycle. In minutes. Value ranges from 0 to 1440.</p>
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
 
         /// <summary>
-        /// List of associated alarm notification templates
-        /// </summary>
-        [JsonProperty("AlarmNoticeIds")]
-        public string[] AlarmNoticeIds{ get; set; }
-
-        /// <summary>
-        /// Monitoring object list
+        /// <p>Monitoring object list.</p>
         /// </summary>
         [JsonProperty("AlarmTargets")]
         public AlarmTarget[] AlarmTargets{ get; set; }
 
         /// <summary>
-        /// Whether to enable the alarm policy
+        /// <p>Whether to enable alarm policy.</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// This parameter has been deprecated. Use the Status parameter to control whether to enable the alarm policy.
+        /// <p>This parameter has been deprecated, please use the Status parameter to control whether to enable the alarm policy.</p>
         /// </summary>
         [JsonProperty("Enable")]
+        [System.Obsolete]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// Custom alarm content
+        /// <p>User-defined alarm content</p>
         /// </summary>
         [JsonProperty("MessageTemplate")]
         public string MessageTemplate{ get; set; }
 
         /// <summary>
-        /// Custom callback
+        /// <p>user-defined callback</p>
         /// </summary>
         [JsonProperty("CallBack")]
         public CallBackInfo CallBack{ get; set; }
 
         /// <summary>
-        /// Multi-Dimensional analysis
+        /// <p>Multi-dimensional analysis</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
-        /// Group trigger status. true: enabled; false: disabled (default)
+        /// <p>Group trigger status. true: enabled, false: disabled (default)</p>
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
         public bool? GroupTriggerStatus{ get; set; }
 
         /// <summary>
-        /// Grouping trigger conditions.
+        /// <p>Group trigger conditions.</p>
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public string[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
-        /// Tag description list, by specifying this parameter, you can simultaneously bind a Tag to the corresponding alarm policy. Up to 10 Tag key-value pairs are supported, and they must be unique.
+        /// <p>Tag description list, by specifying this parameter, you can simultaneously bind a tag to the corresponding alarm policy. Up to 10 tag key-value pairs are supported, and no duplicate key-value pairs are allowed.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Monitored Object Type. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.When the value is 1, the number of AlarmTargets Elements (XML) cannot exceed 10, and the Numbers in AlarmTargets must be continuous positive integers starting from 1, without duplication.
+        /// <p>Monitored object type. 0: Common monitoring object for execution statements; 1: Each execution statement selects its own monitored object.<br>When the value is 1, the number of elements in AlarmTargets cannot exceed 10. The Number in AlarmTargets must be consecutive positive integers starting from 1 and must be unique.</p>
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
         /// <summary>
-        /// Alarm additional classification information list.
-        /// The number of Classifications elements cannot exceed 20.The Key of Classifications element must not be empty and duplicated, and its length cannot exceed 50 characters, complying with the regular expression ^[a-z]([a-z0-9_]{0,49})$.The Value length of Classifications element cannot exceed 200 characters.
+        /// <p>Alert additional classification information list.<br>Number of Classifications Elements cannot exceed 20.<br>The Key of Classifications elements cannot be empty, must be unique, length cannot exceed 50 characters, and complies with the regular expression <code>^[a-z]([a-z0-9_]{0,49})$</code>.<br>Value of Classifications elements cannot exceed 200 characters.</p>
         /// </summary>
         [JsonProperty("Classifications")]
         public AlarmClassification[] Classifications{ get; set; }
+
+        /// <summary>
+        /// <p>List of associated CLS alarm notification channel groups. - Search the list of associated alarm notification channel groups via <a href="https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1">Query notification channel group list</a>. It is mutually exclusive with MonitorNotice.</p>
+        /// </summary>
+        [JsonProperty("AlarmNoticeIds")]
+        public string[] AlarmNoticeIds{ get; set; }
+
+        /// <summary>
+        /// <p>The associated observability platform notification template is mutually exclusive with the AlarmNoticeIds parameter and cannot include both.</p>
+        /// </summary>
+        [JsonProperty("MonitorNotice")]
+        public MonitorNotice MonitorNotice{ get; set; }
 
 
         /// <summary>
@@ -161,7 +165,6 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
             this.SetParamSimple(map, prefix + "TriggerCount", this.TriggerCount);
             this.SetParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
-            this.SetParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
             this.SetParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
@@ -173,6 +176,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
             this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
+            this.SetParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
+            this.SetParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
         }
     }
 }

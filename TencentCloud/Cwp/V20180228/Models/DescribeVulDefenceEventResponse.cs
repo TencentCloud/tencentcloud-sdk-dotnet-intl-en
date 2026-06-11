@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of vulnerability defense events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Defense Event List
         /// </summary>
         [JsonProperty("List")]
         public VulDefenceEvent[] List{ get; set; }

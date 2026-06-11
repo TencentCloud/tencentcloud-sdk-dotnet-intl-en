@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Filename
+        /// File name
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string VirusName{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -61,46 +61,46 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ContainerName{ get; set; }
 
         /// <summary>
-        /// Container ID
+        /// container id
         /// </summary>
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// Container status
-        /// `RUNNING`: Running.
-        /// `PAUSED`: Paused.
-        /// `STOPPED`: Stopped.
-        /// `CREATED`: Created.
-        /// `DESTROYED`: Terminated.
-        /// `RESTARTING`: Restarting.
-        /// `REMOVING`: Removing.
+        /// Container status.
+        /// RUNNING: running
+        /// Suspend: PAUSED
+        /// Stop: STOPPED
+        /// CREATED
+        /// DESTROYED
+        /// RESTARTING
+        /// Migrating: REMOVING
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
-        /// Image name
+        /// Image Name
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Image ID
+        /// Image id
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// `DEAL_NONE`: Pending.
-        /// `DEAL_IGNORE`: Ignored.
-        /// `DEAL_ADD_WHITELIST`: Allowed.
-        /// `DEAL_DEL`: Deleted.
-        /// `DEAL_ISOLATE`: Isolated.
-        /// `DEAL_ISOLATING`: Isolating.
-        /// `DEAL_ISOLATE_FAILED`: Isolation failed.
-        /// `DEAL_RECOVERING`: Recovering.
-        /// `DEAL_RECOVER_FAILED`: Recovery failed.
+        /// DEAL_NONE: File pending
+        /// DEAL_IGNORE: Already ignored
+        /// DEAL_ADD_WHITELIST: Add to whitelist
+        /// DEAL_DEL: File deleted
+        /// DEAL_ISOLATE: Has been isolated
+        /// DEAL_ISOLATING: Isolated
+        /// DEAL_ISOLATE_FAILED: Isolation failed
+        /// DEAL_RECOVERING: Recovering
+        /// DEAL_RECOVER_FAILED: Recovery failed
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -118,117 +118,114 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HarmDescribe{ get; set; }
 
         /// <summary>
-        /// Solution
+        /// Recommended solution
         /// </summary>
         [JsonProperty("SuggestScheme")]
         public string SuggestScheme{ get; set; }
 
         /// <summary>
-        /// Sub-status of the failure:
-        /// `FILE_NOT_FOUND`: The file does not exist.
-        /// `FILE_ABNORMAL`: The file is abnormal.
-        /// `FILE_ABNORMAL_DEAL_RECOVER`: The file is abnormal when recovered.
-        /// `BACKUP_FILE_NOT_FOUND`: The backup file does not exist.
-        /// `CONTAINER_NOT_FOUND_DEAL_ISOLATE`: The container does not exist during isolation.
-        /// `CONTAINER_NOT_FOUND_DEAL_RECOVER`: The container does not exist during recovery.
-        /// `TIMEOUT`: Timed out.
-        /// `TOO_MANY`: Too many tasks.
-        /// `OFFLINE`: Offline.
-        /// `INTERNAL`: Internal service error.
-        /// `VALIDATION`: Invalid parameter.
+        /// Failed sub-status
+        /// FILE_NOT_FOUND: File does not exist
+        /// FILE_ABNORMAL: abnormal file
+        /// FILE_ABNORMAL_DEAL_RECOVER: Abnormal file when recovering file.
+        /// BACKUP_FILE_NOT_FOUND: Backup file not found
+        /// CONTAINER_NOT_FOUND_DEAL_ISOLATE: Container not found in isolation
+        /// CONTAINER_NOT_FOUND_DEAL_RECOVER: Container not found when recovering
+        /// TIMEOUT: Timeout
+        /// TOO_MANY: Too many tasks
+        /// OFFLINE: Offline
+        /// INTERNAL Server Error
+        /// VALIDATION: Invalid parameter
         /// </summary>
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }
 
         /// <summary>
-        /// Network status
-        /// `NORMAL`: 	Not isolated.
-        /// `ISOLATED`: 		Isolated.
-        /// `ISOLATING`: 		Isolating.
-        /// `ISOLATE_FAILED`: 	Isolation failed.
-        /// `RESTORING`: Recovering.
-        /// `RESTORE_FAILED`: Recovery failed.
+        /// Network status.
+        /// Unisolated  NORMAL
+        /// ISOLATED
+        /// isolated
+        /// Isolation FAILED
+        /// RESTORING isolation
+        /// Isolation restoration failed RESTORE_FAILED
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
-        /// Sub-status of the container
-        /// "AGENT_OFFLINE"       // The agent is offline.
-        /// 	"NODE_DESTROYED"      // The node is terminated.
-        /// 	"CONTAINER_EXITED"    // The container exited.
-        /// 	"CONTAINER_DESTROYED" // The container was terminated.
-        /// 	"SHARED_HOST"         // The container shares the network with the server.
-        /// 	"RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-        /// 	"UNKNOW"              // The reason is unknown.
+        /// container sub-status
+        /// AGENT_OFFLINE
+        /// 	NODE_DESTROYED
+        /// 	CONTAINER_EXITED
+        /// 	"CONTAINER_DESTROYED" //Container destroyed
+        /// 	SHARED_HOST
+        /// 	RESOURCE_LIMIT
+        /// 	"UNKNOW": Unknown
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// Container isolation operation source
+        /// Container Isolation Operation Source
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// MD5 checksum
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MD5 Value
         /// </summary>
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
 
         /// <summary>
-        /// Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Check platform
-        /// `1`: Tencent Cloud Security Engine.
-        /// `2`: tav.
-        /// `3`: binaryAi.
-        /// `4`: Unusual behavior.
-        /// `5`: Threat intelligence.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection platform
+        /// 1: Cloud Killing Engine
+        /// 2: tav
+        /// 3: binaryAi
+        /// 4: Abnormal behavior
+        /// 5: Threat Intelligence
         /// </summary>
         [JsonProperty("CheckPlatform")]
         public string[] CheckPlatform{ get; set; }
 
         /// <summary>
-        /// Node ID.
+        /// Node ID
         /// </summary>
         [JsonProperty("NodeID")]
         public string NodeID{ get; set; }
 
         /// <summary>
-        /// Node name
+        /// Node name.
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Pod IP
+        /// pod ip
         /// </summary>
         [JsonProperty("PodIP")]
         public string PodIP{ get; set; }
 
         /// <summary>
-        /// Pod (instance) name
+        /// Name of the pod (instance)
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// ID of the cluster where the node resides
+        /// Node Cluster ID
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+        /// Node Type. NORMAL: Common Node; SUPER: Super Node
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
@@ -240,28 +237,34 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PublicIP{ get; set; }
 
         /// <summary>
-        /// Node private IP
+        /// Node private network IP
         /// </summary>
         [JsonProperty("InnerIP")]
         public string InnerIP{ get; set; }
 
         /// <summary>
-        /// UID of the node
+        /// Node Unique ID
         /// </summary>
         [JsonProperty("NodeUniqueID")]
         public string NodeUniqueID{ get; set; }
 
         /// <summary>
-        /// ID for the general node
+        /// Common Node ID
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// Private IP address of the node, which is the same as the value of InnerIP.
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
 
 
         /// <summary>
@@ -301,6 +304,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
         }
     }
 }

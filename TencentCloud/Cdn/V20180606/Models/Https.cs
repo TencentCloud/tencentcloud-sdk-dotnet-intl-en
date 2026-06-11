@@ -105,8 +105,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Hsts Hsts{ get; set; }
 
         /// <summary>
-        /// TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies the Tls version setting, which has partial support for Advance domain names and can be set to TLSv1, TLSv1.1, TLSv1.2, or TLSv1.3. consecutive versions must be enabled when modifying.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }

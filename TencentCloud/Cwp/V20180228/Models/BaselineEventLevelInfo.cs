@@ -26,14 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventLevel")]
         public ulong? EventLevel{ get; set; }
 
         /// <summary>
         /// Number of vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventCount")]
         public ulong? EventCount{ get; set; }

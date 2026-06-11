@@ -49,8 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string FixMessage{ get; set; }
 
         /// <summary>
-        /// Additional information of machine
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Additional Information on Machine
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

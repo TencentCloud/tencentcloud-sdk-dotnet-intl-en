@@ -56,14 +56,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Vulnerability type: 1 - web-cms vulnerabilities; 2 - application vulnerabilities; 4 - Linux software vulnerabilities; 5 - Windows system vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Category")]
         public ulong? Category{ get; set; }
 
         /// <summary>
-        /// Host UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host UUID.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

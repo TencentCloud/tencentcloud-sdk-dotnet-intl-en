@@ -37,21 +37,25 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time. Format `YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// If AssumerUin is not empty, it indicates the Uin of the service provider that created the log set.
+        /// </summary>
+        [JsonProperty("AssumerUin")]
+        public ulong? AssumerUin{ get; set; }
+
+        /// <summary>
+        /// Cloud product identifier. When the logset is created by other cloud products, this field displays the cloud product name, such as CDN and TKE.
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
-        /// Tag bound to logset
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Tag bound to log set
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -68,6 +72,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
+        /// <summary>
+        /// Number of metric topics under log sets
+        /// </summary>
+        [JsonProperty("MetricTopicCount")]
+        public long? MetricTopicCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,10 +87,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
             this.SetParamSimple(map, prefix + "AssumerName", this.AssumerName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "TopicCount", this.TopicCount);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamSimple(map, prefix + "MetricTopicCount", this.MetricTopicCount);
         }
     }
 }

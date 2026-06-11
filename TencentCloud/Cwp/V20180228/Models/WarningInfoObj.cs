@@ -68,14 +68,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Alarm Host Range Type. 0: All Hosts; 1: By Project; 2: By Tencent Cloud Tag; 3: By Host Security Tag; 4: Custom Hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostRange")]
         public long? HostRange{ get; set; }
 
         /// <summary>
         /// Configured Number of Hosts in the Range of Alarm, used by the frontend to decide when to display prompt information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

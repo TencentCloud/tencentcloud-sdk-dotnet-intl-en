@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 
+        /// Full details of the hit template; return solely the template with the maximum similarity.
         /// </summary>
         [JsonProperty("RetrievalLivenessExtraInfo")]
         public RetrievalLivenessExtraInfo[] RetrievalLivenessExtraInfo{ get; set; }

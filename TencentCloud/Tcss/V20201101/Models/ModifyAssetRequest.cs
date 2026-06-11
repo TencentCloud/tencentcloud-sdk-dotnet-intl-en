@@ -25,16 +25,34 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Sync all
+        /// Synchronizes all regular nodes.
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// List of servers to be synced. Either this parameter or `All` (preferred) must be selected.
+        /// List of UUIDs of hosts to be synchronized. 
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
+
+        /// <summary>
+        /// Synchronizes all super nodes.
+        /// </summary>
+        [JsonProperty("AllSuperHost")]
+        public bool? AllSuperHost{ get; set; }
+
+        /// <summary>
+        /// Unique IDs of super nodes to be synchronized.
+        /// </summary>
+        [JsonProperty("NodeUniqueIds")]
+        public string[] NodeUniqueIds{ get; set; }
+
+        /// <summary>
+        /// Timeout (in seconds). Minimum value: 3600.
+        /// </summary>
+        [JsonProperty("TimeoutSec")]
+        public ulong? TimeoutSec{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+            this.SetParamSimple(map, prefix + "AllSuperHost", this.AllSuperHost);
+            this.SetParamArraySimple(map, prefix + "NodeUniqueIds.", this.NodeUniqueIds);
+            this.SetParamSimple(map, prefix + "TimeoutSec", this.TimeoutSec);
         }
     }
 }

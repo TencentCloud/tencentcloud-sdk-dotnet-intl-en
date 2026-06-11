@@ -86,7 +86,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Attack source port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SourcePort")]
         public ulong?[] SourcePort{ get; set; }
@@ -171,7 +170,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

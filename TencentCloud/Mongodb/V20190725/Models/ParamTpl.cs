@@ -54,7 +54,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// Database type that the parameter template applies to.
         /// - REPLSET: replica set instance.
         /// - SHARD: shard instance.
-        /// -STANDALONE: Single-node instance.
+        /// - STANDALONE: Single-node instance.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }
@@ -67,8 +67,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
 
         /// <summary>
         /// Template type.
-        /// -DEFAULT: System default template.
-        /// -CUSTOMIZE: custom template.
+        /// - DEFAULT: System default template.
+        /// - CUSTOMIZE: custom template.
         /// </summary>
         [JsonProperty("TplType")]
         public string TplType{ get; set; }

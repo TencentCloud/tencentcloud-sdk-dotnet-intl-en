@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Availability zone
+        /// Availability zone.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/ with any three types).
+        /// Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }

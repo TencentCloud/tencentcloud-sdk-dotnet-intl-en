@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Mirror repository list
+        /// Image repository list
         /// </summary>
         [JsonProperty("List")]
         public ImageRepoRegistryInfo[] List{ get; set; }
 
         /// <summary>
-        /// Total quantity
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

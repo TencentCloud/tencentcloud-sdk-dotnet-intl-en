@@ -67,8 +67,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string OperationTime{ get; set; }
 
         /// <summary>
-        /// Operator `appid`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operator App ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -80,8 +79,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// The policy ID.
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Policy ID
         /// </summary>
         [JsonProperty("PolicyId")]
         public ulong? PolicyId{ get; set; }

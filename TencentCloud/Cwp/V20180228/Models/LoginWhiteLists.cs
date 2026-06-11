@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Yunjing client ID
+        /// Host Security UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

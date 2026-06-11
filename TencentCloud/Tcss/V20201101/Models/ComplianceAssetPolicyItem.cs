@@ -77,17 +77,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// Check result
-        /// `RESULT_PASSED`: Passed.
-        /// `RESULT_FAILED`: Failed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// detection result
+        /// RESULT_PASSED: Passed.
+        /// RESULT_FAILED: failed
         /// </summary>
         [JsonProperty("CheckResult")]
         public string CheckResult{ get; set; }
 
         /// <summary>
-        /// Allowed item ID of the check item. If it exists and is not `0`, the check item is ignored.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the allowlist item corresponding to the detection item. If it exists and is not 0, it means the detection item is ignored by the user.
         /// </summary>
         [JsonProperty("WhitelistId")]
         public ulong? WhitelistId{ get; set; }
@@ -99,15 +97,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string FixSuggestion{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time.
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
         /// <summary>
         /// Verification information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VerifyInfo")]
         public string VerifyInfo{ get; set; }

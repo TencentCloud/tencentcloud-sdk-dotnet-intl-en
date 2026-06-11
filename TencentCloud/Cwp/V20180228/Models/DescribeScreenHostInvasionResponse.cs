@@ -43,8 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ScreenVulInfo[] Vul{ get; set; }
 
         /// <summary>
-        /// List of baseline event
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of baseline events
         /// </summary>
         [JsonProperty("Baseline")]
         public ScreenBaselineInfo[] Baseline{ get; set; }

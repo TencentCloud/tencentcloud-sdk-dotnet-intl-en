@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Number of unfixed vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UndoVulCount")]
         public ulong? UndoVulCount{ get; set; }
 
         /// <summary>
-        /// Number of unfixed hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Unprocessed Hosts
         /// </summary>
         [JsonProperty("UndoHostCount")]
         public long? UndoHostCount{ get; set; }
 
         /// <summary>
         /// Number of Standard Edition hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NotProfessionCount")]
         public ulong? NotProfessionCount{ get; set; }

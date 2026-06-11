@@ -72,6 +72,21 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("EndTimeOffset")]
         public long? EndTimeOffset{ get; set; }
 
+        /// <summary>
+        /// Retrieval syntax rules. Default value is 0.
+        /// 0: Lucene syntax; 1: CQL syntax.
+        /// For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
+        /// </summary>
+        [JsonProperty("SyntaxRule")]
+        public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// Topic type.
+        /// 0: log topic; 1: metric topic
+        /// </summary>
+        [JsonProperty("BizType")]
+        public ulong? BizType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +101,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Number", this.Number);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "BizType", this.BizType);
         }
     }
 }

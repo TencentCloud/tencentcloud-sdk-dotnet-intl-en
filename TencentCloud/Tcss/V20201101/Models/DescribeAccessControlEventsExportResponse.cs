@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Excel download URL
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address for download the Excel file.
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }
 
         /// <summary>
-        /// Task ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task ID.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

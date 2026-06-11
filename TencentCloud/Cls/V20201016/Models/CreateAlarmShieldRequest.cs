@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Notification Channel Group ID
+        /// Notification channel group id. Search the notification channel group list (https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1) to get the notification channel group id.
         /// </summary>
         [JsonProperty("AlarmNoticeId")]
         public string AlarmNoticeId{ get; set; }
 
         /// <summary>
-        /// Block start time (second-level timestamp).
+        /// Block rule start time (second-level timestamp).
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// Block end time (second-level timestamp).
+        /// Block rule end time (second-level timestamp). The end time must be greater than the current time.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

@@ -25,23 +25,34 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <li> name
-        /// Filter by Notification Channel Group Name.Type: String
-        /// Required: No</li>
-        /// <li> alarmNoticeId
-        /// Filter by Notification Channel Group ID.Type: String
-        /// Required: No</li>
-        /// <li> uid
-        /// Filter by Receiving User ID.Type: String
-        /// Required: No</li>
-        /// <li> groupId
-        /// Filter by Receiving User Group ID.Type: String
-        /// Required: No</li>
-        /// 
-        /// <li> deliverFlag
-        /// Filter by Delivery Status.Type: String
+        /// name
+        /// Filter by [notification channel group name].
+        /// Type: String
+        /// "Filters":[{"Key":"name","Values":["test-notice"]}]
         /// Required: No
-        /// Optional Values: "1": Not Enabled, "2": Enabled, "3": Delivery Exception</li>The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
+        /// alarmNoticeId
+        /// Filter by [notification channel group ID].
+        /// Type: String
+        /// "Filters": [{Key: "alarmNoticeId", Values: ["notice-5281f1d2-6275-4e56-9ec3-a1eb19d8bc2f"]}]
+        /// Required: No
+        /// uid
+        /// Filter by [recipient user ID].
+        /// Type: String
+        /// "Filters": [{Key: "uid", Values: ["1137546"]}]
+        /// Required: No
+        /// groupId
+        /// Filter by [recipient user group ID].
+        /// Type: String
+        /// "Filters": [{Key: "groupId", Values: ["344098"]}]
+        /// Required: No
+        /// 
+        /// deliverFlag
+        /// Filter by [delivery status].
+        /// Type: String
+        /// Required: No
+        /// Available values: "1": disabled, "2": enabled, "3": delivery exception
+        /// "Filters":[{"Key":"deliverFlag","Values":["2"]}]
+        /// The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -58,6 +69,14 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Whether to return the quantity information of alarm silence statistics status in the configured notification channel group.
+        /// - true: Need to return.
+        /// - false: do not return (default false).
+        /// </summary>
+        [JsonProperty("HasAlarmShieldCount")]
+        public bool? HasAlarmShieldCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +86,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "HasAlarmShieldCount", this.HasAlarmShieldCount);
         }
     }
 }

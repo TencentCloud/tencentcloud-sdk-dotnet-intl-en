@@ -25,71 +25,61 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Passed item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Passed items
         /// </summary>
         [JsonProperty("PassCount")]
         public ulong? PassCount{ get; set; }
 
         /// <summary>
         /// Risky item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FailCount")]
         public ulong? FailCount{ get; set; }
 
         /// <summary>
-        /// First check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// First detection event
         /// </summary>
         [JsonProperty("FirstScanTime")]
         public string FirstScanTime{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// Risky item processing status. 0: failed; 1: passed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
         /// Host QUUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// Host IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
         /// Host alias
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
         /// Host UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Check status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// detecting state
         /// </summary>
         [JsonProperty("MaxStatus")]
         public ulong? MaxStatus{ get; set; }

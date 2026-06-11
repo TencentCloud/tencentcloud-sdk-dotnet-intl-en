@@ -81,9 +81,9 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// Authorization validity period
-        /// Monthly authorization
+        /// 0: Monthly authorization
         /// 1: Permanent license
-        /// -Unknown
+        /// -1: Unknown
         /// </summary>
         [JsonProperty("LicensePayMode")]
         public long? LicensePayMode{ get; set; }

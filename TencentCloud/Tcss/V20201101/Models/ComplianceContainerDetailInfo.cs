@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// Pod name of the container
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the Pod the container belongs to.
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }

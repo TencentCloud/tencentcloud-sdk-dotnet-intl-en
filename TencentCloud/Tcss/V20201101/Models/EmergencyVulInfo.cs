@@ -31,22 +31,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Vulnerability tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// vulnerability tag
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// CVSS V3 score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVSSV3Score")]
         public float? CVSSV3Score{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -59,21 +56,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Vulnerability type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// Vulnerability disclosure time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
         /// <summary>
         /// Last discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
@@ -97,29 +91,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PocID{ get; set; }
 
         /// <summary>
-        /// Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
         /// </summary>
         [JsonProperty("DefenceStatus")]
         public string DefenceStatus{ get; set; }
 
         /// <summary>
-        /// Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
         /// </summary>
         [JsonProperty("DefenceScope")]
         public string DefenceScope{ get; set; }
 
         /// <summary>
-        /// Number of servers with exploit prevention enabled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Hosts Defended Against Vulnerabilities
         /// </summary>
         [JsonProperty("DefenceHostCount")]
         public long? DefenceHostCount{ get; set; }
 
         /// <summary>
-        /// Number of attacks defended against
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Attacks Defended
         /// </summary>
         [JsonProperty("DefendedCount")]
         public long? DefendedCount{ get; set; }

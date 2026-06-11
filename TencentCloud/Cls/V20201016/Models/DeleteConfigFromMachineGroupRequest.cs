@@ -26,12 +26,14 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Machine group ID
+        /// -Get the machine group Id through [Get Machine Group List](https://www.tencentcloud.com/document/api/614/56438?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Collection configuration ID
+        /// Collection Configuration ID
+        /// -Obtain the collection configuration Id through [Access collection rule configuration](https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

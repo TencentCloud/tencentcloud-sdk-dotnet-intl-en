@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// List of top vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of top vulnerabilities.
         /// </summary>
         [JsonProperty("VulTopList")]
         public VulTopInfo[] VulTopList{ get; set; }

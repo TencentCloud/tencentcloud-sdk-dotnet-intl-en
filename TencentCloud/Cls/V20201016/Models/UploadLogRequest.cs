@@ -25,19 +25,23 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Topic ID
+        /// Log topic id
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Topic partition where data will be written into by `HashKey` 
+        /// This parameter has been deprecated and should not be used.
         /// </summary>
         [JsonProperty("HashKey")]
+        [System.Obsolete]
         public string HashKey{ get; set; }
 
         /// <summary>
-        /// Compression type
+        /// Compression method. Currently supports
+        /// - lz4
+        /// - zstd
         /// </summary>
         [JsonProperty("CompressType")]
         public string CompressType{ get; set; }

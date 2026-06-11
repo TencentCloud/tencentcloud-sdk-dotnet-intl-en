@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Authorization status. 0: not in use; 1: partially in use; 2: used up; 3: unavailable.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LicenseStatus")]
         public ulong? LicenseStatus{ get; set; }
@@ -110,15 +109,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Platform Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Platform tag
         /// </summary>
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// Number of frozen authorizations. 0: no authorization is frozen; other values: actual number of frozen authorizations.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of frozen licenses. 0: unfrozen, values other than 0: number of frozen licenses.
         /// </summary>
         [JsonProperty("FreezeNum")]
         public long? FreezeNum{ get; set; }

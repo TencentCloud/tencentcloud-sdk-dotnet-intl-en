@@ -43,7 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RedirectUrl{ get; set; }
 
         /// <summary>
-        /// Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+        /// Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, "http://[current domain name]" will be used by default.
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("RedirectHost")]
@@ -56,6 +56,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FullMatch")]
         public bool? FullMatch{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Regex")]
+        public bool? Regex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
             this.SetParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
             this.SetParamSimple(map, prefix + "FullMatch", this.FullMatch);
+            this.SetParamSimple(map, prefix + "Regex", this.Regex);
         }
     }
 }

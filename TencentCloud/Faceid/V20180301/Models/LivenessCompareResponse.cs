@@ -49,7 +49,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Best screenshot list.
+        /// Returned only when multiple best screenshots are configured to be returned.
         /// </summary>
         [JsonProperty("BestFrameList")]
         public string[] BestFrameList{ get; set; }

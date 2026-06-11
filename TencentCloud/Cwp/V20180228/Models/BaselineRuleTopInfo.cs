@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Baseline detection item name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// Detection item hazard level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// Total number of events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventCount")]
         public ulong? EventCount{ get; set; }
 
         /// <summary>
-        /// Detection Item ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection item ID
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }

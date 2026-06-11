@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// ID of the last compliance check task, which is the source of the displayed data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Return the ID of the last compliance check task. This task is the source of the data display this time.
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

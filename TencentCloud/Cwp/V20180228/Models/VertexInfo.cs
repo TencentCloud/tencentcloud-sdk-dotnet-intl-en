@@ -49,43 +49,37 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? IsLeaf{ get; set; }
 
         /// <summary>
-        /// Process name, used when Type=1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process name. This parameter is used when Type is 1.
         /// </summary>
         [JsonProperty("ProcNamePrefix")]
         public string ProcNamePrefix{ get; set; }
 
         /// <summary>
-        /// Process name MD5, used when Type=1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process name MD5. This parameter is used when Type is 1.
         /// </summary>
         [JsonProperty("ProcNameMd5")]
         public string ProcNameMd5{ get; set; }
 
         /// <summary>
-        /// Command line, used when Type=1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Command line. This parameter is used when Type is 1.
         /// </summary>
         [JsonProperty("CmdLinePrefix")]
         public string CmdLinePrefix{ get; set; }
 
         /// <summary>
-        /// Command line MD5, used when Type=1
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Command line MD5. This parameter is used when Type is 1.
         /// </summary>
         [JsonProperty("CmdLineMd5")]
         public string CmdLineMd5{ get; set; }
 
         /// <summary>
-        /// File path, used when Type=3
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File path. This parameter is used when Type is 3.
         /// </summary>
         [JsonProperty("FilePathPrefix")]
         public string FilePathPrefix{ get; set; }
 
         /// <summary>
-        /// Request destination address, used when Type=2
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request destination address. This parameter is used when Type is 2.
         /// </summary>
         [JsonProperty("AddressPrefix")]
         public string AddressPrefix{ get; set; }
@@ -103,15 +97,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? IsAlarm{ get; set; }
 
         /// <summary>
-        /// File path MD5, used when Type=3
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File path MD5. This parameter is used when Type is 3.
         /// </summary>
         [JsonProperty("FilePathMd5")]
         public string FilePathMd5{ get; set; }
 
         /// <summary>
-        /// Request destination address MD5, used when Type=2
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request destination address MD5. This parameter is used when Type is 2.
         /// </summary>
         [JsonProperty("AddressMd5")]
         public string AddressMd5{ get; set; }

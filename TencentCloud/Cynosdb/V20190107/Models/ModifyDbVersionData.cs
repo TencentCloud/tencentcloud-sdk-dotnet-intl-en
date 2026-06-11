@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Version before modification.
         /// </summary>
         [JsonProperty("OldVersion")]
         public string OldVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Version after modification.
         /// </summary>
         [JsonProperty("NewVersion")]
         public string NewVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Upgrade method.
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

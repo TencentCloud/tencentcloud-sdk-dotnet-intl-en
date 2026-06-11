@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Network policy description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Policy Description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -86,8 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string NetworkPolicyPlugin{ get; set; }
 
         /// <summary>
-        /// Policy publishing result
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Policy Distribution Result
         /// </summary>
         [JsonProperty("PublishResult")]
         public string PublishResult{ get; set; }
@@ -117,8 +115,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? ToPolicyRule{ get; set; }
 
         /// <summary>
-        /// Object
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Target Object
         /// </summary>
         [JsonProperty("PodSelector")]
         public string PodSelector{ get; set; }

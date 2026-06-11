@@ -37,8 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ImageScanCnt{ get; set; }
 
         /// <summary>
-        /// Scanning progress list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scan progress list
         /// </summary>
         [JsonProperty("ImageStatus")]
         public ImageProgress[] ImageStatus{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Remaining scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanRemainTime")]
         public ulong? ScanRemainTime{ get; set; }

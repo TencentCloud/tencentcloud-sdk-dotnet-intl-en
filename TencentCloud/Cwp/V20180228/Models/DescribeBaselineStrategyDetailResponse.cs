@@ -26,34 +26,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Policy scan pass rate
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PassRate")]
         public ulong? PassRate{ get; set; }
 
         /// <summary>
         /// Policy name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// policy scan cycle (days)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Policy scan cycle (days)
         /// </summary>
         [JsonProperty("ScanCycle")]
         public string ScanCycle{ get; set; }
 
         /// <summary>
         /// Regular scan time. The scan task is triggered at this time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanAt")]
         public string ScanAt{ get; set; }
 
         /// <summary>
-        /// Whether all hosts are scanned. 1: yes; 0: no. If the value is 1, all Pro Edition hosts are scanned.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether all servers are scanned: 1: yes; 0 :no. If the value is 1, all Professional Edition hosts are scanned.
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }
@@ -61,38 +57,34 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <summary>
         /// Machine type:
         /// cvm: Tencent Cloud Virtual Machine
-        /// bm: BM
-        /// ecm: Edge Computing Machine
-        /// lh: Lighthouse
-        /// other: Hybrid Cloud Machine
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// bm: bare metal server
+        /// ecm: edge computing host
+        /// Lightweight Application Server
+        /// Hybrid cloud machine
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
         /// Host region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// IDs of all user hosts involved in this policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// IDs of all user hosts under this policy
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
-        /// IDs of all user baselines involved in this policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// User baseline IDs under this policy
         /// </summary>
         [JsonProperty("CategoryIds")]
         public string[] CategoryIds{ get; set; }
 
         /// <summary>
-        /// 1: scanned; 0: not scanned.Note: This field may return null, indicating that no valid values can be obtained.
+        /// 1 means scanned, 0 means not scanned
         /// </summary>
         [JsonProperty("IfScanned")]
         public ulong? IfScanned{ get; set; }

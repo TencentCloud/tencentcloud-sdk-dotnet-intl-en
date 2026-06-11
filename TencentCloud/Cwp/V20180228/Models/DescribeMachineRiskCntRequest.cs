@@ -26,7 +26,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Filter criteria
-        /// <li>Uuids- String - required: no - host uuid</li>
+        /// <li>Uuids- String - required: no - host uuid</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -26,49 +26,42 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Severity level: 1: low-risk; 2: medium-risk; 3: high-risk; 4: critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Severity level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// Host tag array
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }
 
         /// <summary>
-        /// Status: 0: failed; 1: ignore; 3: passed; 5: detecting
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status: 0: failed; 1: ignore; 3: approved; 5: detecting
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
         /// Event ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventId")]
         public ulong? EventId{ get; set; }
 
         /// <summary>
         /// Host QUUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }

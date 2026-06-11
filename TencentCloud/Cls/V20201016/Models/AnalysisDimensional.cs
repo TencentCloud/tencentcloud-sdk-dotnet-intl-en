@@ -25,22 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Analysis name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Analysis Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Type of data being analyzed. Valid values: `query`, `field`, `original`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Analysis type: query (custom retrieval and analysis), field (TOP5 fields and proportion statistics), original (related raw logs)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Analysis content
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
@@ -48,36 +45,45 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// Multi-dimensional analysis configuration.
         /// 
-        /// Supported when the type field of Analysis is query (custom){
-        /// "Key": "SyntaxRule", // Syntax rules"Value": "1" // 0: Lucene syntax, 1: CQL syntax}
+        /// When the Type field of Analysis is query (custom), support
+        /// {
+        /// "Key": "SyntaxRule",  // Syntax rule
+        /// "Value": "1"  //0: Lucene syntax, 1: CQL syntax
+        /// }
         /// 
-        /// Supported when the Type field of Analysis is field (top5) {
+        /// When the Type field of Analysis is field (top5), it supports
+        ///  {
         ///     "Key": "QueryIndex",
-        /// "Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-        /// "Key": "CustomQuery", // Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+        /// "Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
+        /// },{
+        /// "Key": "CustomQuery", //Query statement. Required and valid when QueryIndex is -1.
+        ///     "Value": "* | select count(*) as count"
         /// },{
         /// "Key": "SyntaxRule", // If this field cannot be found, it's assumed to be the legacy syntax (Lucene)
         ///     "Value": "0"//0:Lucene, 1:CQL
         /// }       
         /// 
-        /// When the Type field of Analysis is original (original log), it supports
+        /// When the Type field of Analysis is original (raw log), it supports
         /// {
         ///     "Key": "Fields",
         ///     "Value": "__SOURCE__,__HOSTNAME__,__TIMESTAMP__,__PKG_LOGID__,__TAG__.pod_ip"
         /// }, {
         ///     "Key": "QueryIndex",
-        /// "Value": "-1" // -1: Custom, 1: Execute Statement 1, 2: Execute Statement 2},{
-        /// "Key": "CustomQuery", // //Search statement. Valid and required when QueryIndex is -1    "Value": "* | select count(*) as count"
+        /// "Value": "-1" // -1: Custom, 1: Execute statement 1, 2: Execute statement 2
         /// },{
-        /// "Key": "Format", // Display format. 1: One log per line, 2: One field per line for each log    "Value": "2"
+        /// "Key": "CustomQuery", // Retrieval statement. Required and valid when QueryIndex is -1.
+        ///     "Value": "* | select count(*) as count"
+        /// },{
+        /// "Key": "Format", //Display format. 1: one log per line, 2: one field per line for each log entry
+        ///     "Value": "2"
         /// },
         /// {
-        /// "Key": "Limit", // Maximum number of logs    "Value": "5"
+        /// "Key": "Limit", //Maximum number of logs
+        ///     "Value": "5"
         /// },{
-        /// "Key": "SyntaxRule", // If this field cannot be found, it's considered the legacy syntax
+        /// "Key": "SyntaxRule", // If this field is not found, it's also the old syntax
         ///     "Value": "0"//0:Lucene, 1:CQL
         /// }
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConfigInfo")]
         public AlarmAnalysisConfig[] ConfigInfo{ get; set; }

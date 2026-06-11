@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Machine group type. Valid values: `ip`: the IP addresses of collection machines are stored in `Values` of the machine group; `label`: the tags of the machines are stored in `Values` of the machine group
+        /// Machine group type. Support ip and label.
+        /// -ip: Indicates that Values in this machine group represent the ip address of the collection machine.
+        /// -label: means the Values in this group contain machine tags
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Machine description list
+        /// Machine description list.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

@@ -25,7 +25,11 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Metric Query Result Type
+        /// Metric Query Result Type, support
+        /// -scalar value
+        /// -string value
+        /// -instantaneous vector
+        /// -matrix interval vector
         /// </summary>
         [JsonProperty("ResultType")]
         public string ResultType{ get; set; }

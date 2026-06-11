@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Storage amount record
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage record.
         /// </summary>
         [JsonProperty("Records")]
         public LogStorageRecord[] Records{ get; set; }

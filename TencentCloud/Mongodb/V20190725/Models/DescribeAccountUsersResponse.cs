@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 
+        /// The list of instance accounts.
         /// </summary>
         [JsonProperty("Users")]
         public UserInfo[] Users{ get; set; }

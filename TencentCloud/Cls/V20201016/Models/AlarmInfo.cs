@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public MonitorTime MonitorTime{ get; set; }
 
         /// <summary>
-        /// Single trigger condition. Mutually exclusive with the MultiConditions parameter.
+        /// Single trigger condition for whether to trigger alarm. Mutually exclusive with the MultiConditions parameter.
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? AlarmPeriod{ get; set; }
 
         /// <summary>
-        /// List of associated alarm notification templates
+        /// List of associated alarm notification channel groups. - Search the list of associated alarm notification channel groups via [Query notification channel group list](https://www.tencentcloud.com/document/product/614/56462?from_cn_redirect=1). It is mutually exclusive with MonitorNotice.
         /// </summary>
         [JsonProperty("AlarmNoticeIds")]
         public string[] AlarmNoticeIds{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string AlarmId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time. Format: YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last update time
+        /// Latest update time. Format: YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -99,48 +99,64 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Custom callback template
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CallBack")]
         public CallBackInfo CallBack{ get; set; }
 
         /// <summary>
-        /// Multi-Dimensional analysis settings
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Multidimensional analysis settings
         /// </summary>
         [JsonProperty("Analysis")]
         public AnalysisDimensional[] Analysis{ get; set; }
 
         /// <summary>
-        /// Group trigger status. 1: Enabled, 0: Disabled (default)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Group trigger status. true: enabled, false: disabled (default)
         /// </summary>
         [JsonProperty("GroupTriggerStatus")]
         public bool? GroupTriggerStatus{ get; set; }
 
         /// <summary>
-        /// Group Trigger ConditionsNote: This field may return null, indicating that no valid values can be obtained.
+        /// Grouping Trigger Conditions.
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public string[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
-        /// Type of the monitored object. 0: common monitoring objects for execution statements; 1: separately selected monitoring objects for each execution statement.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag information bound to the alarm policy.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// Monitored object type. 0: shared monitored object for execution statements; 1: separate monitored object for each execution statement. 
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
 
         /// <summary>
-        /// Alarm severity. 0: warning (Warn); 1: Reminder (Info); 2: urgent (Critical).Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm level. 0: Warn; 1: Information; 2: Critical.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Multiple trigger conditions. Exclusive with Condition.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Additional classification field for alerts.
+        /// </summary>
+        [JsonProperty("Classifications")]
+        public AlarmClassification[] Classifications{ get; set; }
+
+        /// <summary>
+        /// Multiple trigger conditions.
+        /// Mutually exclusive conditions.
         /// </summary>
         [JsonProperty("MultiConditions")]
         public MultiCondition[] MultiConditions{ get; set; }
+
+        /// <summary>
+        /// Tencent Cloud observability platform channel-related information, mutually exclusive with AlarmNoticeIds
+        /// </summary>
+        [JsonProperty("MonitorNotice")]
+        public MonitorNotice MonitorNotice{ get; set; }
 
 
         /// <summary>
@@ -164,9 +180,12 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
             this.SetParamSimple(map, prefix + "GroupTriggerStatus", this.GroupTriggerStatus);
             this.SetParamArraySimple(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamArrayObj(map, prefix + "Classifications.", this.Classifications);
             this.SetParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
+            this.SetParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
         }
     }
 }

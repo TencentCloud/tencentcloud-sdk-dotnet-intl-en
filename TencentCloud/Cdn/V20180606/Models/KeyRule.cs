@@ -56,8 +56,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string FullUrlCache{ get; set; }
 
         /// <summary>
-        /// Whether caches are case insensitive
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Specifies whether to use case-insensitive cache.
+        /// on: enable.
+        /// Off: turn off the switch.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }

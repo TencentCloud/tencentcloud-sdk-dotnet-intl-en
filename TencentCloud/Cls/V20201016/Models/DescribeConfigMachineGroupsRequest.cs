@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Collection configuration ID
+        /// Collection Configuration ID
+        /// -Obtain the collection configuration Id by accessing the collection rule configuration (https://www.tencentcloud.com/document/product/614/58616?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ConfigId")]
         public string ConfigId{ get; set; }

@@ -49,10 +49,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// Number of servers
+        /// Number of hosts (includes regular nodes and super nodes).
         /// </summary>
         [JsonProperty("HostCnt")]
         public ulong? HostCnt{ get; set; }
+
+        /// <summary>
+        /// Number of super nodes.
+        /// </summary>
+        [JsonProperty("SuperNodeCnt")]
+        public ulong? SuperNodeCnt{ get; set; }
 
         /// <summary>
         /// Number of containers
@@ -150,6 +156,54 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ComponentCnt")]
         public ulong? ComponentCnt{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CriticalLevelVulCnt")]
+        public ulong? CriticalLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("HighLevelVulCnt")]
+        public ulong? HighLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MediumLevelVulCnt")]
+        public ulong? MediumLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LowLevelVulCnt")]
+        public ulong? LowLevelVulCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsLatestImage")]
+        public bool? IsLatestImage{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RecommendedFix")]
+        public bool? RecommendedFix{ get; set; }
+
+        /// <summary>
+        /// Solution
+        /// </summary>
+        [JsonProperty("Solution")]
+        public string Solution{ get; set; }
+
+        /// <summary>
+        /// Reason
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +215,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "HostCnt", this.HostCnt);
+            this.SetParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
             this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
             this.SetParamSimple(map, prefix + "ScanTime", this.ScanTime);
             this.SetParamSimple(map, prefix + "VulCnt", this.VulCnt);
@@ -177,6 +232,14 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
             this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
             this.SetParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
+            this.SetParamSimple(map, prefix + "CriticalLevelVulCnt", this.CriticalLevelVulCnt);
+            this.SetParamSimple(map, prefix + "HighLevelVulCnt", this.HighLevelVulCnt);
+            this.SetParamSimple(map, prefix + "MediumLevelVulCnt", this.MediumLevelVulCnt);
+            this.SetParamSimple(map, prefix + "LowLevelVulCnt", this.LowLevelVulCnt);
+            this.SetParamSimple(map, prefix + "IsLatestImage", this.IsLatestImage);
+            this.SetParamSimple(map, prefix + "RecommendedFix", this.RecommendedFix);
+            this.SetParamSimple(map, prefix + "Solution", this.Solution);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.intl.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add and publish a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and add and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="AddAndPublishNetworkFirewallPolicyDetailResponse"/></returns>
@@ -64,7 +66,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add and publish a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and add and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="AddAndPublishNetworkFirewallPolicyDetailResponse"/></returns>
@@ -75,7 +79,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to configure and publish a YAML network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a YAML network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -85,7 +91,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to configure and publish a YAML network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a YAML network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="AddAndPublishNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -352,7 +360,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy and add tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="AddNetworkFirewallPolicyDetailResponse"/></returns>
@@ -362,7 +372,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy and add tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="AddNetworkFirewallPolicyDetailResponse"/></returns>
@@ -373,7 +385,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a YAML network policy and add tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="AddNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -383,7 +397,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to add a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a YAML network policy and add tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="AddNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="AddNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -394,7 +410,51 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to check a YAML network policy in the container network.
+        /// Add or modify the allowlist for malicious external connections.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="AddOrModifyMaliciousConnectionWhiteListResponse"/></returns>
+        public Task<AddOrModifyMaliciousConnectionWhiteListResponse> AddOrModifyMaliciousConnectionWhiteList(AddOrModifyMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyMaliciousConnectionWhiteListResponse>(req, "AddOrModifyMaliciousConnectionWhiteList");
+        }
+
+        /// <summary>
+        /// Add or modify the allowlist for malicious external connections.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="AddOrModifyMaliciousConnectionWhiteListResponse"/></returns>
+        public AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteListSync(AddOrModifyMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyMaliciousConnectionWhiteListResponse>(req, "AddOrModifyMaliciousConnectionWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add or modify Trojan allowlist rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="AddOrModifyVirusWhiteListRuleResponse"/></returns>
+        public Task<AddOrModifyVirusWhiteListRuleResponse> AddOrModifyVirusWhiteListRule(AddOrModifyVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyVirusWhiteListRuleResponse>(req, "AddOrModifyVirusWhiteListRule");
+        }
+
+        /// <summary>
+        /// This API is used to add or modify Trojan allowlist rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddOrModifyVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="AddOrModifyVirusWhiteListRuleResponse"/></returns>
+        public AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRuleSync(AddOrModifyVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<AddOrModifyVirusWhiteListRuleResponse>(req, "AddOrModifyVirusWhiteListRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a task of check the YAML network policy for the container network.
         /// </summary>
         /// <param name="req"><see cref="CheckNetworkFirewallPolicyYamlRequest"/></param>
         /// <returns><see cref="CheckNetworkFirewallPolicyYamlResponse"/></returns>
@@ -404,7 +464,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to check a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a task of check the YAML network policy for the container network.
         /// </summary>
         /// <param name="req"><see cref="CheckNetworkFirewallPolicyYamlRequest"/></param>
         /// <returns><see cref="CheckNetworkFirewallPolicyYamlResponse"/></returns>
@@ -436,7 +498,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to confirm a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and confirm tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="ConfirmNetworkFirewallPolicyRequest"/></param>
         /// <returns><see cref="ConfirmNetworkFirewallPolicyResponse"/></returns>
@@ -446,7 +510,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to confirm a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and confirm tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="ConfirmNetworkFirewallPolicyRequest"/></param>
         /// <returns><see cref="ConfirmNetworkFirewallPolicyResponse"/></returns>
@@ -621,6 +687,27 @@ namespace TencentCloud.Tcss.V20201101
         public CreateCheckComponentResponse CreateCheckComponentSync(CreateCheckComponentRequest req)
         {
             return InternalRequestAsync<CreateCheckComponentResponse>(req, "CreateCheckComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create cluster access.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAccessRequest"/></param>
+        /// <returns><see cref="CreateClusterAccessResponse"/></returns>
+        public Task<CreateClusterAccessResponse> CreateClusterAccess(CreateClusterAccessRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAccessResponse>(req, "CreateClusterAccess");
+        }
+
+        /// <summary>
+        /// Create cluster access.
+        /// </summary>
+        /// <param name="req"><see cref="CreateClusterAccessRequest"/></param>
+        /// <returns><see cref="CreateClusterAccessResponse"/></returns>
+        public CreateClusterAccessResponse CreateClusterAccessSync(CreateClusterAccessRequest req)
+        {
+            return InternalRequestAsync<CreateClusterAccessResponse>(req, "CreateClusterAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -877,7 +964,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create K8sApi abnormal event rules.
+        /// Create a k8s API exception event RULE. The Action in RuleInfoList only supports RULE_MODE_ALERT (ALERT) and no longer supports RULE_MODE_RELEASE/PASS (allow). The EventID parameter has been removed. To add an event to the allowlist, use the ModifyK8sApiAbnormalWhitelist API.
         /// </summary>
         /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -887,7 +974,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create K8sApi abnormal event rules.
+        /// Create a k8s API exception event RULE. The Action in RuleInfoList only supports RULE_MODE_ALERT (ALERT) and no longer supports RULE_MODE_RELEASE/PASS (allow). The EventID parameter has been removed. To add an event to the allowlist, use the ModifyK8sApiAbnormalWhitelist API.
         /// </summary>
         /// <param name="req"><see cref="CreateK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="CreateK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -898,7 +985,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to distribute a refresh task in the container network cluster.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Distribute refresh tasks of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallClusterRefreshRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallClusterRefreshResponse"/></returns>
@@ -908,7 +997,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to distribute a refresh task in the container network cluster.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Distribute refresh tasks of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallClusterRefreshRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallClusterRefreshResponse"/></returns>
@@ -919,7 +1010,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to sync a network policy from the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create an auto-discovery task according to the container network and cluster network policies.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPolicyDiscoverRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallPolicyDiscoverResponse"/></returns>
@@ -929,7 +1022,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to sync a network policy from the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create an auto-discovery task according to the container network and cluster network policies.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPolicyDiscoverRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallPolicyDiscoverResponse"/></returns>
@@ -940,7 +1035,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to publish a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPublishRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallPublishResponse"/></returns>
@@ -950,7 +1047,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to publish a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallPublishRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallPublishResponse"/></returns>
@@ -961,7 +1060,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to revoke a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and cancel tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallUndoPublishRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallUndoPublishResponse"/></returns>
@@ -971,7 +1072,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to revoke a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and cancel tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="CreateNetworkFirewallUndoPublishRequest"/></param>
         /// <returns><see cref="CreateNetworkFirewallUndoPublishResponse"/></returns>
@@ -1383,7 +1486,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to remove the specified check item from the allowlist.
+        /// Product refactoring and optimization, none of these APIs are called.
+        /// 
+        /// Remove the designated detection item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
         /// <returns><see cref="DeleteCompliancePolicyItemFromWhitelistResponse"/></returns>
@@ -1393,7 +1498,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to remove the specified check item from the allowlist.
+        /// Product refactoring and optimization, none of these APIs are called.
+        /// 
+        /// Remove the designated detection item from the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteCompliancePolicyItemFromWhitelistRequest"/></param>
         /// <returns><see cref="DeleteCompliancePolicyItemFromWhitelistResponse"/></returns>
@@ -1488,7 +1595,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to delete a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and delete tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="DeleteNetworkFirewallPolicyDetailResponse"/></returns>
@@ -1498,13 +1607,36 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to delete a network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Create a network policy and delete tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="DeleteNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="DeleteNetworkFirewallPolicyDetailResponse"/></returns>
         public DeleteNetworkFirewallPolicyDetailResponse DeleteNetworkFirewallPolicyDetailSync(DeleteNetworkFirewallPolicyDetailRequest req)
         {
             return InternalRequestAsync<DeleteNetworkFirewallPolicyDetailResponse>(req, "DeleteNetworkFirewallPolicyDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deleting Entries from the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public Task<DeleteRaspRulesResponse> DeleteRaspRules(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules");
+        }
+
+        /// <summary>
+        /// Deleting Entries from the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public DeleteRaspRulesResponse DeleteRaspRulesSync(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1614,6 +1746,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// This API is used to delete Trojan allowlist rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="DeleteVirusWhiteListRuleResponse"/></returns>
+        public Task<DeleteVirusWhiteListRuleResponse> DeleteVirusWhiteListRule(DeleteVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteVirusWhiteListRuleResponse>(req, "DeleteVirusWhiteListRule");
+        }
+
+        /// <summary>
+        /// This API is used to delete Trojan allowlist rules.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVirusWhiteListRuleRequest"/></param>
+        /// <returns><see cref="DeleteVirusWhiteListRuleResponse"/></returns>
+        public DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRuleSync(DeleteVirusWhiteListRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteVirusWhiteListRuleResponse>(req, "DeleteVirusWhiteListRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the current canary configuration of the user.
         /// </summary>
         /// <param name="req"><see cref="DescribeABTestConfigRequest"/></param>
@@ -1698,31 +1851,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to query and export the list of abnormal process events at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessEventsExportResponse"/></returns>
-        public Task<DescribeAbnormalProcessEventsExportResponse> DescribeAbnormalProcessEventsExport(DescribeAbnormalProcessEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessEventsExportResponse>(req, "DescribeAbnormalProcessEventsExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to query and export the list of abnormal process events at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessEventsExportResponse"/></returns>
-        public DescribeAbnormalProcessEventsExportResponse DescribeAbnormalProcessEventsExportSync(DescribeAbnormalProcessEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessEventsExportResponse>(req, "DescribeAbnormalProcessEventsExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to count the number of pending abnormal process events at each severity level.
         /// </summary>
         /// <param name="req"><see cref="DescribeAbnormalProcessLevelSummaryRequest"/></param>
@@ -1782,31 +1910,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAbnormalProcessRulesResponse DescribeAbnormalProcessRulesSync(DescribeAbnormalProcessRulesRequest req)
         {
             return InternalRequestAsync<DescribeAbnormalProcessRulesResponse>(req, "DescribeAbnormalProcessRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to query and export the list of abnormal process policies at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessRulesExportResponse"/></returns>
-        public Task<DescribeAbnormalProcessRulesExportResponse> DescribeAbnormalProcessRulesExport(DescribeAbnormalProcessRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessRulesExportResponse>(req, "DescribeAbnormalProcessRulesExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to query and export the list of abnormal process policies at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalProcessRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalProcessRulesExportResponse"/></returns>
-        public DescribeAbnormalProcessRulesExportResponse DescribeAbnormalProcessRulesExportSync(DescribeAbnormalProcessRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAbnormalProcessRulesExportResponse>(req, "DescribeAbnormalProcessRulesExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1912,31 +2015,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAccessControlRulesResponse DescribeAccessControlRulesSync(DescribeAccessControlRulesRequest req)
         {
             return InternalRequestAsync<DescribeAccessControlRulesResponse>(req, "DescribeAccessControlRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of access control policies at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAccessControlRulesExportResponse"/></returns>
-        public Task<DescribeAccessControlRulesExportResponse> DescribeAccessControlRulesExport(DescribeAccessControlRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAccessControlRulesExportResponse>(req, "DescribeAccessControlRulesExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of access control policies at runtime.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccessControlRulesExportRequest"/></param>
-        /// <returns><see cref="DescribeAccessControlRulesExportResponse"/></returns>
-        public DescribeAccessControlRulesExportResponse DescribeAccessControlRulesExportSync(DescribeAccessControlRulesExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAccessControlRulesExportResponse>(req, "DescribeAccessControlRulesExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2294,31 +2372,6 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeAssetImageListResponse DescribeAssetImageListSync(DescribeAssetImageListRequest req)
         {
             return InternalRequestAsync<DescribeAssetImageListResponse>(req, "DescribeAssetImageList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of images.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
-        /// <returns><see cref="DescribeAssetImageListExportResponse"/></returns>
-        public Task<DescribeAssetImageListExportResponse> DescribeAssetImageListExport(DescribeAssetImageListExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAssetImageListExportResponse>(req, "DescribeAssetImageListExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of images.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAssetImageListExportRequest"/></param>
-        /// <returns><see cref="DescribeAssetImageListExportResponse"/></returns>
-        public DescribeAssetImageListExportResponse DescribeAssetImageListExportSync(DescribeAssetImageListExportRequest req)
-        {
-            return InternalRequestAsync<DescribeAssetImageListExportResponse>(req, "DescribeAssetImageListExport")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3415,31 +3468,6 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of container escape events.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeEscapeEventsExportResponse"/></returns>
-        public Task<DescribeEscapeEventsExportResponse> DescribeEscapeEventsExport(DescribeEscapeEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeEscapeEventsExportResponse>(req, "DescribeEscapeEventsExport");
-        }
-
-        /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to export the list of container escape events.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEscapeEventsExportRequest"/></param>
-        /// <returns><see cref="DescribeEscapeEventsExportResponse"/></returns>
-        public DescribeEscapeEventsExportResponse DescribeEscapeEventsExportSync(DescribeEscapeEventsExportRequest req)
-        {
-            return InternalRequestAsync<DescribeEscapeEventsExportResponse>(req, "DescribeEscapeEventsExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to query the information of a container escape scan rule.
         /// </summary>
         /// <param name="req"><see cref="DescribeEscapeRuleInfoRequest"/></param>
@@ -3545,7 +3573,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the result of an export task.
+        /// Query the progress of the export interface
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobResultRequest"/></param>
         /// <returns><see cref="DescribeExportJobResultResponse"/></returns>
@@ -3555,7 +3583,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the result of an export task.
+        /// Query the progress of the export interface
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobResultRequest"/></param>
         /// <returns><see cref="DescribeExportJobResultResponse"/></returns>
@@ -3667,6 +3695,132 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeImageComponentListResponse DescribeImageComponentListSync(DescribeImageComponentListRequest req)
         {
             return InternalRequestAsync<DescribeImageComponentListResponse>(req, "DescribeImageComponentList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query image interception event details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventDetailResponse"/></returns>
+        public Task<DescribeImageDenyEventDetailResponse> DescribeImageDenyEventDetail(DescribeImageDenyEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventDetailResponse>(req, "DescribeImageDenyEventDetail");
+        }
+
+        /// <summary>
+        /// Query image interception event details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventDetailResponse"/></returns>
+        public DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetailSync(DescribeImageDenyEventDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventDetailResponse>(req, "DescribeImageDenyEventDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the list of image interception events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventListResponse"/></returns>
+        public Task<DescribeImageDenyEventListResponse> DescribeImageDenyEventList(DescribeImageDenyEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventListResponse>(req, "DescribeImageDenyEventList");
+        }
+
+        /// <summary>
+        /// Query the list of image interception events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventListResponse"/></returns>
+        public DescribeImageDenyEventListResponse DescribeImageDenyEventListSync(DescribeImageDenyEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventListResponse>(req, "DescribeImageDenyEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the trend of image interception events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventTendencyRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventTendencyResponse"/></returns>
+        public Task<DescribeImageDenyEventTendencyResponse> DescribeImageDenyEventTendency(DescribeImageDenyEventTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventTendencyResponse>(req, "DescribeImageDenyEventTendency");
+        }
+
+        /// <summary>
+        /// Query the trend of image interception events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyEventTendencyRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyEventTendencyResponse"/></returns>
+        public DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendencySync(DescribeImageDenyEventTendencyRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyEventTendencyResponse>(req, "DescribeImageDenyEventTendency")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query image interception rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleDetailResponse"/></returns>
+        public Task<DescribeImageDenyRuleDetailResponse> DescribeImageDenyRuleDetail(DescribeImageDenyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleDetailResponse>(req, "DescribeImageDenyRuleDetail");
+        }
+
+        /// <summary>
+        /// Query image interception rule details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleDetailResponse"/></returns>
+        public DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetailSync(DescribeImageDenyRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleDetailResponse>(req, "DescribeImageDenyRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the image interception rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleListResponse"/></returns>
+        public Task<DescribeImageDenyRuleListResponse> DescribeImageDenyRuleList(DescribeImageDenyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleListResponse>(req, "DescribeImageDenyRuleList");
+        }
+
+        /// <summary>
+        /// Query the image interception rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleListRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleListResponse"/></returns>
+        public DescribeImageDenyRuleListResponse DescribeImageDenyRuleListSync(DescribeImageDenyRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleListResponse>(req, "DescribeImageDenyRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query image interception rule statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleSummaryResponse"/></returns>
+        public Task<DescribeImageDenyRuleSummaryResponse> DescribeImageDenyRuleSummary(DescribeImageDenyRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleSummaryResponse>(req, "DescribeImageDenyRuleSummary");
+        }
+
+        /// <summary>
+        /// Query image interception rule statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageDenyRuleSummaryRequest"/></param>
+        /// <returns><see cref="DescribeImageDenyRuleSummaryResponse"/></returns>
+        public DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummarySync(DescribeImageDenyRuleSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeImageDenyRuleSummaryResponse>(req, "DescribeImageDenyRuleSummary")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3881,7 +4035,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to the K8sApi abnormal request rule list.
+        /// This API is used to query the list of abnormal request rules for k8sapi. It supports fuzzy search by cluster name (ClusterName) and Cluster ID, with cluster rules (is_all=1) always returned. The response includes newly-added RuleInfoList (sub-rule content), RuleActions (deduplicated execution action list), and the EffectAllCluster field.
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
@@ -3891,7 +4045,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to the K8sApi abnormal request rule list.
+        /// This API is used to query the list of abnormal request rules for k8sapi. It supports fuzzy search by cluster name (ClusterName) and Cluster ID, with cluster rules (is_all=1) always returned. The response includes newly-added RuleInfoList (sub-rule content), RuleActions (deduplicated execution action list), and the EffectAllCluster field.
         /// </summary>
         /// <param name="req"><see cref="DescribeK8sApiAbnormalRuleListRequest"/></param>
         /// <returns><see cref="DescribeK8sApiAbnormalRuleListResponse"/></returns>
@@ -3986,7 +4140,51 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster policy audits.
+        /// Query the malicious external connection blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionBlackListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionBlackListResponse"/></returns>
+        public Task<DescribeMaliciousConnectionBlackListResponse> DescribeMaliciousConnectionBlackList(DescribeMaliciousConnectionBlackListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionBlackListResponse>(req, "DescribeMaliciousConnectionBlackList");
+        }
+
+        /// <summary>
+        /// Query the malicious external connection blocklist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionBlackListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionBlackListResponse"/></returns>
+        public DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackListSync(DescribeMaliciousConnectionBlackListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionBlackListResponse>(req, "DescribeMaliciousConnectionBlackList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the allowlist for malicious external connections.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionWhiteListResponse"/></returns>
+        public Task<DescribeMaliciousConnectionWhiteListResponse> DescribeMaliciousConnectionWhiteList(DescribeMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionWhiteListResponse>(req, "DescribeMaliciousConnectionWhiteList");
+        }
+
+        /// <summary>
+        /// Query the allowlist for malicious external connections.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaliciousConnectionWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeMaliciousConnectionWhiteListResponse"/></returns>
+        public DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteListSync(DescribeMaliciousConnectionWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeMaliciousConnectionWhiteListResponse>(req, "DescribeMaliciousConnectionWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the cluster policy audit list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallAuditRecordRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallAuditRecordResponse"/></returns>
@@ -3996,7 +4194,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster policy audits.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the cluster policy audit list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallAuditRecordRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallAuditRecordResponse"/></returns>
@@ -4007,7 +4207,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of clusters.
+        /// Query the network firewall cluster policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallClusterListResponse"/></returns>
@@ -4017,7 +4217,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of clusters.
+        /// Query the network firewall cluster policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallClusterListResponse"/></returns>
@@ -4028,7 +4228,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the progress of the asset query task in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the asset task progress for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterRefreshStatusRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallClusterRefreshStatusResponse"/></returns>
@@ -4038,7 +4240,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the progress of the asset query task in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the asset task progress for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallClusterRefreshStatusRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallClusterRefreshStatusResponse"/></returns>
@@ -4049,7 +4253,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster network namespace labels.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the cluster network space tag list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceLabelListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallNamespaceLabelListResponse"/></returns>
@@ -4059,7 +4265,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster network namespace labels.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the cluster network space tag list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallNamespaceLabelListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallNamespaceLabelListResponse"/></returns>
@@ -4070,7 +4278,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query cluster network Pod labels.
+        /// deprecated pending reconstruction
+        /// 
+        /// Query the cluster network pod tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPodLabelsListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPodLabelsListResponse"/></returns>
@@ -4080,7 +4290,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query cluster network Pod labels.
+        /// deprecated pending reconstruction
+        /// 
+        /// Query the cluster network pod tags.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPodLabelsListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPodLabelsListResponse"/></returns>
@@ -4091,7 +4303,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to view the details of a policy in the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// View policy details of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyDetailResponse"/></returns>
@@ -4101,7 +4315,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to view the details of a policy in the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// View policy details of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyDetailResponse"/></returns>
@@ -4112,7 +4328,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the progress of a network policy sync task in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the auto-discovery task process of the network policy for the network policy.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDiscoverRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyDiscoverResponse"/></returns>
@@ -4122,7 +4340,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the progress of a network policy sync task in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the auto-discovery task process of the network policy for the network policy.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyDiscoverRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyDiscoverResponse"/></returns>
@@ -4133,7 +4353,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster network policies.
+        /// deprecated pending reconstruction
+        /// 
+        /// Query the cluster network policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyListResponse"/></returns>
@@ -4143,7 +4365,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the list of cluster network policies.
+        /// deprecated pending reconstruction
+        /// 
+        /// Query the cluster network policy list.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyListRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyListResponse"/></returns>
@@ -4154,7 +4378,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the execution status of a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the network policy execution status for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyStatusRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyStatusResponse"/></returns>
@@ -4164,7 +4390,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the execution status of a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Query the network policy execution status for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyStatusRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyStatusResponse"/></returns>
@@ -4175,7 +4403,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to view the details of a YAML network policy in the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// View YAML network policy details of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -4185,7 +4415,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to view the details of a YAML network policy in the container network cluster.
+        /// deprecated pending reconstruction
+        /// 
+        /// View YAML network policy details of clusters for the container network.
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="DescribeNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -4322,6 +4554,48 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public Task<DescribeRaspRuleVulsResponse> DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls");
+        }
+
+        /// <summary>
+        /// Retrieve the list of vulnerabilities in the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public DescribeRaspRuleVulsResponse DescribeRaspRuleVulsSync(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the list of vulnerabilities that can be defensed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public Task<DescribeRaspRulesResponse> DescribeRaspRules(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules");
+        }
+
+        /// <summary>
+        /// Query the list of vulnerabilities that can be defensed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public DescribeRaspRulesResponse DescribeRaspRulesSync(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query a refresh task.
         /// </summary>
         /// <param name="req"><see cref="DescribeRefreshTaskRequest"/></param>
@@ -4402,6 +4676,48 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExportSync(DescribeReverseShellEventsExportRequest req)
         {
             return InternalRequestAsync<DescribeReverseShellEventsExportResponse>(req, "DescribeReverseShellEventsExport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the reverse shell regular expression allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListResponse"/></returns>
+        public Task<DescribeReverseShellRegexpWhiteListResponse> DescribeReverseShellRegexpWhiteList(DescribeReverseShellRegexpWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListResponse>(req, "DescribeReverseShellRegexpWhiteList");
+        }
+
+        /// <summary>
+        /// Query the reverse shell regular expression allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListResponse"/></returns>
+        public DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteListSync(DescribeReverseShellRegexpWhiteListRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListResponse>(req, "DescribeReverseShellRegexpWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query details of the reverse shell regular expression allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListInfoResponse"/></returns>
+        public Task<DescribeReverseShellRegexpWhiteListInfoResponse> DescribeReverseShellRegexpWhiteListInfo(DescribeReverseShellRegexpWhiteListInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListInfoResponse>(req, "DescribeReverseShellRegexpWhiteListInfo");
+        }
+
+        /// <summary>
+        /// Query details of the reverse shell regular expression allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRegexpWhiteListInfoRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRegexpWhiteListInfoResponse"/></returns>
+        public DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfoSync(DescribeReverseShellRegexpWhiteListInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRegexpWhiteListInfoResponse>(req, "DescribeReverseShellRegexpWhiteListInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5246,6 +5562,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// Query real-time monitoring settings of file scan at runtime.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusMonitorConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusMonitorConfigResponse"/></returns>
+        public Task<DescribeVirusMonitorConfigResponse> DescribeVirusMonitorConfig(DescribeVirusMonitorConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusMonitorConfigResponse>(req, "DescribeVirusMonitorConfig");
+        }
+
+        /// <summary>
+        /// Query real-time monitoring settings of file scan at runtime.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusMonitorConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusMonitorConfigResponse"/></returns>
+        public DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfigSync(DescribeVirusMonitorConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusMonitorConfigResponse>(req, "DescribeVirusMonitorConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the real-time monitoring settings of virus scanning at runtime.
         /// </summary>
         /// <param name="req"><see cref="DescribeVirusMonitorSettingRequest"/></param>
@@ -5284,6 +5621,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrlSync(DescribeVirusSampleDownloadUrlRequest req)
         {
             return InternalRequestAsync<DescribeVirusSampleDownloadUrlResponse>(req, "DescribeVirusSampleDownloadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query new settings of file scan at runtime.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusScanConfigResponse"/></returns>
+        public Task<DescribeVirusScanConfigResponse> DescribeVirusScanConfig(DescribeVirusScanConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusScanConfigResponse>(req, "DescribeVirusScanConfig");
+        }
+
+        /// <summary>
+        /// Query new settings of file scan at runtime.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeVirusScanConfigResponse"/></returns>
+        public DescribeVirusScanConfigResponse DescribeVirusScanConfigSync(DescribeVirusScanConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusScanConfigResponse>(req, "DescribeVirusScanConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5389,6 +5747,27 @@ namespace TencentCloud.Tcss.V20201101
         public DescribeVirusTaskListResponse DescribeVirusTaskListSync(DescribeVirusTaskListRequest req)
         {
             return InternalRequestAsync<DescribeVirusTaskListResponse>(req, "DescribeVirusTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the Trojan allowlist rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeVirusWhiteListRulesResponse"/></returns>
+        public Task<DescribeVirusWhiteListRulesResponse> DescribeVirusWhiteListRules(DescribeVirusWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusWhiteListRulesResponse>(req, "DescribeVirusWhiteListRules");
+        }
+
+        /// <summary>
+        /// This API is used to query the Trojan allowlist rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVirusWhiteListRulesRequest"/></param>
+        /// <returns><see cref="DescribeVirusWhiteListRulesResponse"/></returns>
+        public DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRulesSync(DescribeVirusWhiteListRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeVirusWhiteListRulesResponse>(req, "DescribeVirusWhiteListRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6128,6 +6507,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// This API is used to modify the protection status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyDefendStatusResponse"/></returns>
+        public Task<ModifyDefendStatusResponse> ModifyDefendStatus(ModifyDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDefendStatusResponse>(req, "ModifyDefendStatus");
+        }
+
+        /// <summary>
+        /// This API is used to modify the protection status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefendStatusRequest"/></param>
+        /// <returns><see cref="ModifyDefendStatusResponse"/></returns>
+        public ModifyDefendStatusResponse ModifyDefendStatusSync(ModifyDefendStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDefendStatusResponse>(req, "ModifyDefendStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to change the status of a container escape scan event.
         /// </summary>
         /// <param name="req"><see cref="ModifyEscapeEventStatusRequest"/></param>
@@ -6233,7 +6633,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to modify the information of K8sApi abnormal rules.
+        /// Modify the exception rule info of k8sapi. The Action in RuleInfoList only supports RULE_MODE_ALERT and no longer supports RULE_MODE_RELEASE/PASS.
         /// </summary>
         /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -6243,7 +6643,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to modify the information of K8sApi abnormal rules.
+        /// Modify the exception rule info of k8sapi. The Action in RuleInfoList only supports RULE_MODE_ALERT and no longer supports RULE_MODE_RELEASE/PASS.
         /// </summary>
         /// <param name="req"><see cref="ModifyK8sApiAbnormalRuleInfoRequest"/></param>
         /// <returns><see cref="ModifyK8sApiAbnormalRuleInfoResponse"/></returns>
@@ -6275,6 +6675,27 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
+        /// Edit or create a java Memory Trojan allowlist
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public Task<ModifyRaspRulesResponse> ModifyRaspRules(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules");
+        }
+
+        /// <summary>
+        /// Edit or create a java Memory Trojan allowlist
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public ModifyRaspRulesResponse ModifyRaspRulesSync(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to change the status of a reverse shell event.
         /// </summary>
         /// <param name="req"><see cref="ModifyReverseShellStatusRequest"/></param>
@@ -6292,6 +6713,27 @@ namespace TencentCloud.Tcss.V20201101
         public ModifyReverseShellStatusResponse ModifyReverseShellStatusSync(ModifyReverseShellStatusRequest req)
         {
             return InternalRequestAsync<ModifyReverseShellStatusResponse>(req, "ModifyReverseShellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Edit the malicious request event status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskDnsEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskDnsEventStatusResponse"/></returns>
+        public Task<ModifyRiskDnsEventStatusResponse> ModifyRiskDnsEventStatus(ModifyRiskDnsEventStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskDnsEventStatusResponse>(req, "ModifyRiskDnsEventStatus");
+        }
+
+        /// <summary>
+        /// Edit the malicious request event status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRiskDnsEventStatusRequest"/></param>
+        /// <returns><see cref="ModifyRiskDnsEventStatusResponse"/></returns>
+        public ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatusSync(ModifyRiskDnsEventStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyRiskDnsEventStatusResponse>(req, "ModifyRiskDnsEventStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6884,7 +7326,30 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update and publish a network policy in the container network.
+        /// Uninstall cluster container security.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterContainerSecurityRequest"/></param>
+        /// <returns><see cref="UninstallClusterContainerSecurityResponse"/></returns>
+        public Task<UninstallClusterContainerSecurityResponse> UninstallClusterContainerSecurity(UninstallClusterContainerSecurityRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterContainerSecurityResponse>(req, "UninstallClusterContainerSecurity");
+        }
+
+        /// <summary>
+        /// Uninstall cluster container security.
+        /// </summary>
+        /// <param name="req"><see cref="UninstallClusterContainerSecurityRequest"/></param>
+        /// <returns><see cref="UninstallClusterContainerSecurityResponse"/></returns>
+        public UninstallClusterContainerSecurityResponse UninstallClusterContainerSecuritySync(UninstallClusterContainerSecurityRequest req)
+        {
+            return InternalRequestAsync<UninstallClusterContainerSecurityResponse>(req, "UninstallClusterContainerSecurity")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy and update and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="UpdateAndPublishNetworkFirewallPolicyDetailResponse"/></returns>
@@ -6894,7 +7359,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update and publish a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy and update and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="UpdateAndPublishNetworkFirewallPolicyDetailResponse"/></returns>
@@ -6905,7 +7372,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update and publish a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Update the YAML network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -6915,7 +7384,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update and publish a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Update the YAML network policy and distribute tasks for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -6968,7 +7439,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy update task for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="UpdateNetworkFirewallPolicyDetailResponse"/></returns>
@@ -6978,7 +7451,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update a network policy in the container network.
+        /// This feature is deprecated pending tripartite reconstruction
+        /// 
+        /// Create a network policy update task for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyDetailRequest"/></param>
         /// <returns><see cref="UpdateNetworkFirewallPolicyDetailResponse"/></returns>
@@ -6989,7 +7464,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Update the YAML network policy task for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="UpdateNetworkFirewallPolicyYamlDetailResponse"/></returns>
@@ -6999,7 +7476,9 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a task to update a YAML network policy in the container network.
+        /// deprecated pending reconstruction
+        /// 
+        /// Update the YAML network policy task for the container network.
         /// </summary>
         /// <param name="req"><see cref="UpdateNetworkFirewallPolicyYamlDetailRequest"/></param>
         /// <returns><see cref="UpdateNetworkFirewallPolicyYamlDetailResponse"/></returns>

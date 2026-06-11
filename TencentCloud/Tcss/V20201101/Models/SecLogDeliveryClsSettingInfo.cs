@@ -55,18 +55,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TopicID{ get; set; }
 
         /// <summary>
-        /// Logset name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// logset name
         /// </summary>
         [JsonProperty("LogSetName")]
         public string LogSetName{ get; set; }
 
         /// <summary>
         /// Topic name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
+
+        /// <summary>
+        /// Log type	
+        /// </summary>
+        [JsonProperty("SubLogType")]
+        public string[] SubLogType{ get; set; }
+
+        /// <summary>
+        /// Error message
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
 
 
         /// <summary>
@@ -81,6 +91,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "TopicID", this.TopicID);
             this.SetParamSimple(map, prefix + "LogSetName", this.LogSetName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         }
     }
 }

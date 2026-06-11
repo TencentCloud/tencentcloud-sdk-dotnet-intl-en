@@ -31,57 +31,49 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string MD5{ get; set; }
 
         /// <summary>
-        /// File size (B)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File Size (B)
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
         /// Virus name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VirusName")]
         public string VirusName{ get; set; }
 
         /// <summary>
-        /// Risk level. Valid values: `RISK_CRITICAL`, `RISK_HIGH`, `RISK_MEDIUM`, `RISK_LOW`, `RISK_NOTICE`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Risk Level: RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, and RISK_NOTICE
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Anti-virus engine
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// antivirus engine
         /// </summary>
         [JsonProperty("KillEngine")]
         public string[] KillEngine{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// Event description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HarmDescribe")]
         public string HarmDescribe{ get; set; }
 
         /// <summary>
-        /// Solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recommended solution
         /// </summary>
         [JsonProperty("SuggestScheme")]
         public string SuggestScheme{ get; set; }
 
         /// <summary>
         /// Reference link
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReferenceLink")]
         public string ReferenceLink{ get; set; }

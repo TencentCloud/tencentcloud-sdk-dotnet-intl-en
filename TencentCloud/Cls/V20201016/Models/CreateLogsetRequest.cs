@@ -25,7 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Logset name, which must be unique
+        /// Log set name.
+        /// 
+        /// -Supports a maximum of 255 characters. The `|` character is not supported.
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
@@ -36,6 +38,16 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// Logset ID, format: custom part-User APPID. Automatically generate ID if left empty.
+        /// 
+        /// -The custom part only supports lowercase letters, digits, and -, cannot start or end with -, and has a length of 3 to 40 characters.
+        /// -The end requires the use of - to concatenate the User APPID, which can be queried on the https://console.cloud.tencent.com/developer page.
+        /// -If you specify this field, ensure uniqueness across all regions.
+        /// </summary>
+        [JsonProperty("LogsetId")]
+        public string LogsetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
         }
     }
 }

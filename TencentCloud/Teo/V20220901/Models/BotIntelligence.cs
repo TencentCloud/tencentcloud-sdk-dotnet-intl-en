@@ -25,12 +25,6 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
-        /// </summary>
-        [JsonProperty("BotRatings")]
-        public BotRatings BotRatings{ get; set; }
-
-        /// <summary>
         /// Specifies the switch for Bot intelligent analysis configuration. valid values:.
         /// 
         /// on: enabled.
@@ -39,14 +33,27 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
+        /// <summary>
+        /// Rule ID of Bot intelligent analysis, returned as an output parameter.
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+        /// </summary>
+        [JsonProperty("BotRatings")]
+        public BotRatings BotRatings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BotRatings.", this.BotRatings);
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "BotRatings.", this.BotRatings);
         }
     }
 }

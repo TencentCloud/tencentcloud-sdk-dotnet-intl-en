@@ -84,6 +84,36 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConnDetectConfig")]
+        public ConnDetectConfig[] ConnDetectConfig{ get; set; }
+
+        /// <summary>
+        /// Repository unique id
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public long? RegistryId{ get; set; }
+
+        /// <summary>
+        /// Synchronization method. 0: full synchronization; 1: incremental synchronization.
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
+        /// <summary>
+        /// Whether to perform authorization and scanning automatically. This parameter is valid for incremental synchronization, which involves all new images.
+        /// </summary>
+        [JsonProperty("NeedScan")]
+        public bool? NeedScan{ get; set; }
+
+        /// <summary>
+        /// TCR instance ID.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +130,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
+            this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+            this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

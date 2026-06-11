@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Data list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List
         /// </summary>
         [JsonProperty("List")]
         public RiskDnsPolicy[] List{ get; set; }

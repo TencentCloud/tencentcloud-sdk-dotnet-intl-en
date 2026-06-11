@@ -110,14 +110,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Total of Windows system vulnerability events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WindowVul")]
         public SecurityEventInfo WindowVul{ get; set; }
 
         /// <summary>
-        /// Total of Linux system vulnerability events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total of linux system vulnerability events
         /// </summary>
         [JsonProperty("LinuxVul")]
         public SecurityEventInfo LinuxVul{ get; set; }

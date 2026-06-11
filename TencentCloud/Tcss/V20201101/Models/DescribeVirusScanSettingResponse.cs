@@ -85,8 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] ScanPath{ get; set; }
 
         /// <summary>
-        /// Timeout settings of quick check
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// One-Click Detection Timeout Setting
         /// </summary>
         [JsonProperty("ClickTimeout")]
         public ulong? ClickTimeout{ get; set; }

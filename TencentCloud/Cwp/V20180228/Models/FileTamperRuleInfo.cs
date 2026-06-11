@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Rule name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -39,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Number of affected hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
@@ -81,22 +79,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// Number of write entries for the sub-rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of write entries for a subrule.
         /// </summary>
         [JsonProperty("WriteRuleCount")]
         public ulong? WriteRuleCount{ get; set; }
 
         /// <summary>
-        /// Number of read entries for the sub-rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of read entries for a subrule.
         /// </summary>
         [JsonProperty("ReadRuleCount")]
         public ulong? ReadRuleCount{ get; set; }
 
         /// <summary>
-        /// Number of read and write entries for the sub-rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of read and write entries for a subrule.
         /// </summary>
         [JsonProperty("ReadWriteRuleCount")]
         public ulong? ReadWriteRuleCount{ get; set; }
@@ -106,16 +101,14 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>read: read file</li>
         /// <li>write: modify file</li>
         /// <li>read-write: read and modify file</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }
 
         /// <summary>
         /// Allowlisted processing type
-        /// <li>cur: add the current items to the allowlist</li>
-        /// <li>all: add all items that meet the conditions to the allowlist</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>cur: add only the current item to an allowlist</li>
+        /// <li>all: add all objects that meet the conditions to the allowlist</li>
         /// </summary>
         [JsonProperty("AddWhiteType")]
         public string AddWhiteType{ get; set; }

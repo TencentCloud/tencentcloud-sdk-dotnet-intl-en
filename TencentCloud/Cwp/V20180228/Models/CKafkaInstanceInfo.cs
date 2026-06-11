@@ -44,7 +44,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Topic list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicList")]
         public CKafkaTopicInfo[] TopicList{ get; set; }

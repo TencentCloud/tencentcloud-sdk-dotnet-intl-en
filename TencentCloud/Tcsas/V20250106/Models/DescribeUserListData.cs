@@ -25,13 +25,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// User ID.
+        /// <p>User ID.</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User account.
+        /// <p>User account.</p>
         /// </summary>
         [JsonProperty("UserAccount")]
         public string UserAccount{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? AccountType{ get; set; }
 
         /// <summary>
-        /// User name.
+        /// <p>User name.</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }

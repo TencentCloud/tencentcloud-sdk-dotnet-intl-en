@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance return reason type.
         /// </summary>
         [JsonProperty("IsolateReasonTypes")]
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance return reason supplement.
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
-        /// Retain backup, true - Retained (incur fees)
+        /// Retain backup, true - Retained (incur fees).
         /// </summary>
         [JsonProperty("SaveBackup")]
         public bool? SaveBackup{ get; set; }

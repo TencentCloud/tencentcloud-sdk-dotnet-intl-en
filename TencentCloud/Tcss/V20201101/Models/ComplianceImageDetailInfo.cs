@@ -43,8 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// Path of the remote repository of the image
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path of the remote repository where the mirror resides.
         /// </summary>
         [JsonProperty("Repository")]
         public string Repository{ get; set; }

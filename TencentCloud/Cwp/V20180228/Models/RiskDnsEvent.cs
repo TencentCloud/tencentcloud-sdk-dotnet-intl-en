@@ -121,7 +121,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ReferenceLink{ get; set; }
 
         /// <summary>
-        /// Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored]
+        /// Processing status [0: pending|2: allowlisted|3: untrusted status|4: processed|5: ignored|6: blocked]
         /// </summary>
         [JsonProperty("HandleStatus")]
         public long? HandleStatus{ get; set; }
@@ -170,7 +170,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// Information about the key-value pair to be indexed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Information about the key-value pair that requires index creation.
         /// </summary>
         [JsonProperty("KeyValues")]
         public KeyValueArrayInfo[] KeyValues{ get; set; }

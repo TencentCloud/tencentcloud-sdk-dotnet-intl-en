@@ -25,15 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Article name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// article name
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
         /// Type: 0: emergency notification; 1: feature update; 2: industry honor; 3: version release
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

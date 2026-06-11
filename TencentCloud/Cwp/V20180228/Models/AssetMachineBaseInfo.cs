@@ -115,15 +115,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CpuLoad{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -142,14 +140,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// CPU load readings (only valid for Linux systems)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CPU load readings (only valid for Linux systems).
         /// </summary>
         [JsonProperty("CpuLoadNum")]
         public string CpuLoadNum{ get; set; }

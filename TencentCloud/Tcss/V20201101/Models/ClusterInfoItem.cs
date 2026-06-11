@@ -67,7 +67,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Status of the monitoring component. Valid values: `Defender_Uninstall`, `Defender_Normal`, `Defender_Error`, `Defender_Installing`.
+        /// Protection Status 
+        /// Defended 
+        /// Unprotected
+        /// Partially defended
         /// </summary>
         [JsonProperty("DefenderStatus")]
         public string DefenderStatus{ get; set; }
@@ -77,6 +80,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
+
+        /// <summary>
+        /// Cluster operation sub-status.
+        /// </summary>
+        [JsonProperty("ClusterSubStatus")]
+        public string ClusterSubStatus{ get; set; }
 
         /// <summary>
         /// Cluster check mode. Valid values: `Cluster_Normal`, `Cluster_Actived`.
@@ -144,6 +153,87 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("TaskCreateTime")]
         public string TaskCreateTime{ get; set; }
 
+        /// <summary>
+        /// Access status
+        /// Not connected
+        /// Defended
+        /// Unprotected: AccessedInstalled
+        /// Partial protection: AccessedPartialDefence
+        /// Access exception: AccessedException
+        /// Uninstallation Exception: AccessedUninstallException
+        /// ACCESSING: installing
+        /// Uninstalling: AccessedUninstalling
+        /// </summary>
+        [JsonProperty("AccessedStatus")]
+        public string AccessedStatus{ get; set; }
+
+        /// <summary>
+        /// Reason for Access Failure
+        /// </summary>
+        [JsonProperty("AccessedSubStatus")]
+        public string AccessedSubStatus{ get; set; }
+
+        /// <summary>
+        /// Access/Uninstallation failure reason.
+        /// </summary>
+        [JsonProperty("AccessedErrorReason")]
+        public string AccessedErrorReason{ get; set; }
+
+        /// <summary>
+        /// Total number of nodes
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public ulong? NodeCount{ get; set; }
+
+        /// <summary>
+        /// Offline Node Count
+        /// </summary>
+        [JsonProperty("OffLineNodeCount")]
+        public ulong? OffLineNodeCount{ get; set; }
+
+        /// <summary>
+        /// Number of Nodes Without Agent Installed
+        /// </summary>
+        [JsonProperty("UnInstallAgentNodeCount")]
+        public ulong? UnInstallAgentNodeCount{ get; set; }
+
+        /// <summary>
+        /// Number of billing cores (elastic billing cores + regular billing cores).
+        /// </summary>
+        [JsonProperty("ChargeCoresCnt")]
+        public ulong? ChargeCoresCnt{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MasterAddresses")]
+        public string[] MasterAddresses{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CoresCnt")]
+        public ulong? CoresCnt{ get; set; }
+
+        /// <summary>
+        /// Cluster audit switch status:
+        /// Closed / Closing / CloseFailed / Opened / Opening / OpenFailed
+        /// </summary>
+        [JsonProperty("ClusterAuditStatus")]
+        public string ClusterAuditStatus{ get; set; }
+
+        /// <summary>
+        /// Information on the failure to enable/disable cluster audit.
+        /// </summary>
+        [JsonProperty("ClusterAuditFailedInfo")]
+        public string ClusterAuditFailedInfo{ get; set; }
+
+        /// <summary>
+        /// Owner name.
+        /// </summary>
+        [JsonProperty("OwnerName")]
+        public string OwnerName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +249,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
             this.SetParamSimple(map, prefix + "ClusterCheckMode", this.ClusterCheckMode);
             this.SetParamSimple(map, prefix + "ClusterAutoCheck", this.ClusterAutoCheck);
             this.SetParamSimple(map, prefix + "DefenderErrorReason", this.DefenderErrorReason);
@@ -170,6 +261,18 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CheckFailReason", this.CheckFailReason);
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+            this.SetParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
+            this.SetParamSimple(map, prefix + "AccessedSubStatus", this.AccessedSubStatus);
+            this.SetParamSimple(map, prefix + "AccessedErrorReason", this.AccessedErrorReason);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
+            this.SetParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
+            this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+            this.SetParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
+            this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+            this.SetParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+            this.SetParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
+            this.SetParamSimple(map, prefix + "OwnerName", this.OwnerName);
         }
     }
 }

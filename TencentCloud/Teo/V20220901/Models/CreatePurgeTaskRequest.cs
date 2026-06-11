@@ -64,7 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? EncodeUrl{ get; set; }
 
         /// <summary>
-        /// The information attached when the node cache purge type is set to purge_cache_tag.
+        /// The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
         /// </summary>
         [JsonProperty("CacheTag")]
         public CacheTag CacheTag{ get; set; }

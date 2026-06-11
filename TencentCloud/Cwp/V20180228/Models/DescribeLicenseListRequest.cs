@@ -58,13 +58,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// ASC for ascending order; DESC for descending order.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of LicenseCnt authorizations.
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

@@ -25,10 +25,42 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
+        /// Whether take effect on all clusters. true indicates all clusters take effect. false indicates only specified clusters take effect.
+        /// </summary>
+        [JsonProperty("EffectAllCluster")]
+        public bool? EffectAllCluster{ get; set; }
+
+        /// <summary>
+        /// Total number of affected clusters
+        /// </summary>
+        [JsonProperty("EffectClusterCount")]
+        public ulong? EffectClusterCount{ get; set; }
+
+        /// <summary>
+        /// Edit account
+        /// </summary>
+        [JsonProperty("OprUin")]
+        public string OprUin{ get; set; }
+
+        /// <summary>
+        /// Deduplicated list of ALL execution actions in the rule group. The present blocklist contains only RULE_MODE_ALERT (Alert).
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleActions")]
+        public string[] RuleActions{ get; set; }
+
+        /// <summary>
         /// Rule ID
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
+
+        /// <summary>
+        /// Subrule content list, deserialized from rule_details JSON
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("RuleInfoList")]
+        public K8sApiAbnormalRuleScopeInfo[] RuleInfoList{ get; set; }
 
         /// <summary>
         /// Rule name
@@ -45,10 +77,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Total number of affected clusters
+        /// Status
         /// </summary>
-        [JsonProperty("EffectClusterCount")]
-        public ulong? EffectClusterCount{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
         /// <summary>
         /// Update time
@@ -56,31 +88,22 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
-        /// <summary>
-        /// Edit account
-        /// </summary>
-        [JsonProperty("OprUin")]
-        public string OprUin{ get; set; }
-
-        /// <summary>
-        /// Status
-        /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "EffectAllCluster", this.EffectAllCluster);
+            this.SetParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
+            this.SetParamSimple(map, prefix + "OprUin", this.OprUin);
+            this.SetParamArraySimple(map, prefix + "RuleActions.", this.RuleActions);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
+            this.SetParamArrayObj(map, prefix + "RuleInfoList.", this.RuleInfoList);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
-            this.SetParamSimple(map, prefix + "EffectClusterCount", this.EffectClusterCount);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "OprUin", this.OprUin);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

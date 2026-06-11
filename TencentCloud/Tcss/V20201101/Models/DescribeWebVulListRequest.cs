@@ -51,7 +51,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <li>ComponentName- string - Required: No - Component name</li>
         /// <li>ComponentVersion- string - Required: No - Component version</li>
         /// <li>Name- string - Required: No - Vulnerability name</li>
-        /// <li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
+        /// <li>FocusOnType - string - Required: No - Urgency. Valid values: `ALL` (all); `SERIOUS_LEVEL` (critical and high risks); `IS_SUGGEST` (high-priority); `POC_EXP` (POC/EXP); `NETWORK_EXP` (remote EXP).</li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

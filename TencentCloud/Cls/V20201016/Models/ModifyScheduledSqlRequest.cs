@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Task ID
+        /// Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Source log topic
+        /// Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// Scheduling interval (minutes)
+        /// Scheduling cycle (minutes), 1-1440 minutes
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution delay (seconds)
+        /// Execution delay (seconds), 0-120 seconds, default 60
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Region information of source topic ID 
+        /// Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// Task Name
+        /// Task name, 0-255 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

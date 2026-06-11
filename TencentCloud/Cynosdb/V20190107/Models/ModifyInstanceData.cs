@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// CPU after resizing.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Memory after resizing.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage upper limit after resizing.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// CPU before resizing.
         /// </summary>
         [JsonProperty("OldCpu")]
         public long? OldCpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Memory before resizing.
         /// </summary>
         [JsonProperty("OldMemory")]
         public long? OldMemory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage upper limit before resizing.
         /// </summary>
         [JsonProperty("OldStorageLimit")]
         public long? OldStorageLimit{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Upgrade method. Switch after upgrade completes or switch within maintenance window.
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }

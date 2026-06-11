@@ -67,15 +67,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Modules{ get; set; }
 
         /// <summary>
-        /// Parameter information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parameter information.
         /// </summary>
         [JsonProperty("Params")]
         public AssetCoreModuleParam[] Params{ get; set; }
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

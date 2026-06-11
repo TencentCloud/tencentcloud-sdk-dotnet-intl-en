@@ -25,41 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Filters.
-        /// <li>TimeRange - String - Optional - Time range. Example: ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-        /// <li>`MatchRules` - String - Optional - Hit rule</li>
-        /// <li>`RiskLevel` - String - Optional - Threat level</li>
-        /// <li>`Status` - String - Optional - Event status</li>
-        /// <li>`MatchRuleType` - String - Optional - Hit rule type</li>
-        /// <li>`ClusterRunningStatus` - String - Optional - Cluster running status</li>
-        /// <li>`ClusterName` - String - Optional - Cluster name</li>
-        /// <li>`ClusterID` - String - Optional - Cluster ID</li>
+        /// <p>Filter conditions.</p><li>TimeRange - String - Required: No - Time range filter ["2022-03-31 16:55:00", "2022-03-31 17:00:00"];</li><li>MatchRules - String - Required: No - Hit rule filter;</li><li>RiskLevel - String - Required: No - Threat level filter;</li><li>Status - String - Required: No - Event status filter;</li><li>MatchRuleType - String - Required: No - Hit rule type filter;</li><li>ClusterRunningStatus - String - Required: No - Cluster running status;</li><li>ClusterName - String - Required: No - Cluster name;</li><li>ClusterID - String - Required: No - Cluster ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// The number of results returned. Default value: 10. Maximum value: 100.
+        /// <p>Number of items to return. The default number is 10, and the maximum number is 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sort order
+        /// <p>Sorting method.</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting field
-        /// `LatestFoundTime`: Last creation time
-        /// `AlarmCount`: Number of alarms
+        /// <p>Sorting field.<br>LatestFoundTime: Last generation time.<br>AlarmCount: Number of alarms.</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

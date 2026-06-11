@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// ID of the created export task
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Return to create the ID of the export task
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }

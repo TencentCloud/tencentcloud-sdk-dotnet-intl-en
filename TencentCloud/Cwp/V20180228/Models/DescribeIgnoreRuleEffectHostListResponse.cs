@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// List of hosts affected by ignored check items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IgnoreRuleEffectHostList")]
         public IgnoreRuleEffectHostInfo[] IgnoreRuleEffectHostList{ get; set; }

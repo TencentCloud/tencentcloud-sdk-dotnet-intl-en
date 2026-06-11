@@ -34,10 +34,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist list
-        /// Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-        /// Up to 50 allowlists or blocklists can be entered.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// IP blocklist/allowlist configuration.
+        /// Supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or network segments in /X format (IPV4: 1≤X≤32; IPV6: 1≤X≤128).
+        /// Specifies a maximum of 500 allowlist or 200 blocklist entries.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
@@ -64,6 +64,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
+        /// <summary>
+        /// Remark information. supports up to 50 characters.
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

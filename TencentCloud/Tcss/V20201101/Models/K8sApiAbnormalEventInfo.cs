@@ -25,123 +25,130 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Hit rule name
+        /// <p>Hit rule name.</p>
         /// </summary>
         [JsonProperty("MatchRuleName")]
         public string MatchRuleName{ get; set; }
 
         /// <summary>
-        /// Hit rule type
+        /// <p>Hit rule type.</p>
         /// </summary>
         [JsonProperty("MatchRuleType")]
         public string MatchRuleType{ get; set; }
 
         /// <summary>
-        /// Alarm level
+        /// <p>Alarm level.</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Cluster running status
+        /// <p>Cluster running status: CSR_RUNNING, CSR_EXCEPTION, and CSR_CREATING</p>
         /// </summary>
         [JsonProperty("ClusterRunningStatus")]
         public string ClusterRunningStatus{ get; set; }
 
         /// <summary>
-        /// First creation time
+        /// <p>Initial generation time.</p>
         /// </summary>
         [JsonProperty("FirstCreateTime")]
         public string FirstCreateTime{ get; set; }
 
         /// <summary>
-        /// Last creation time
+        /// <p>Last generation time.</p>
         /// </summary>
         [JsonProperty("LastCreateTime")]
         public string LastCreateTime{ get; set; }
 
         /// <summary>
-        /// Number of alarms
+        /// <p>Number of alarms.</p>
         /// </summary>
         [JsonProperty("AlarmCount")]
         public ulong? AlarmCount{ get; set; }
 
         /// <summary>
-        /// Status
-        /// `EVENT_UNDEAL`: Unhandled
-        /// `EVENT_DEALED`: Handled
-        /// `EVENT_IGNORE`: Ignored
-        /// `EVENT_DEL`: Deleted
-        /// `EVENT_ADD_WHITE`: Added to an allowlist
+        /// <p>Status.<br>&quot;EVENT_UNDEAL&quot;: unhandled<br>&quot;EVENT_DEALED&quot;: handled<br>&quot;EVENT_IGNORE&quot;: ignored<br>&quot;EVENT_DEL&quot;: deleted<br>&quot;EVENT_ADD_WHITE&quot;: allowlisted</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The master IP of a cluster
+        /// <p>Cluster master IP address.</p>
         /// </summary>
         [JsonProperty("ClusterMasterIP")]
         public string ClusterMasterIP{ get; set; }
 
         /// <summary>
-        /// K8s version
+        /// <p>K8s version.</p>
         /// </summary>
         [JsonProperty("K8sVersion")]
         public string K8sVersion{ get; set; }
 
         /// <summary>
-        /// Runtime component
+        /// <p>Runtime component.</p>
         /// </summary>
         [JsonProperty("RunningComponent")]
         public string[] RunningComponent{ get; set; }
 
         /// <summary>
-        /// Description
+        /// <p>Description.</p>
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Suggestion
+        /// <p>Suggestion.</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Request information
+        /// <p>Request information.</p>
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }
 
         /// <summary>
-        /// Rule ID
+        /// <p>Rule ID.</p>
         /// </summary>
         [JsonProperty("MatchRuleID")]
         public string MatchRuleID{ get; set; }
 
         /// <summary>
-        /// An array of highlighted fields
+        /// <p>Array of highlighted fields.</p>
         /// </summary>
         [JsonProperty("HighLightFields")]
         public string[] HighLightFields{ get; set; }
 
         /// <summary>
-        /// Hit rule
+        /// <p>Hit rule.</p>
         /// </summary>
         [JsonProperty("MatchRule")]
         public K8sApiAbnormalRuleScopeInfo MatchRule{ get; set; }
+
+        /// <summary>
+        /// <p>Hit rule content corresponding to highlighted fields (JSON string, such as {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>Parameter format: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+        /// </summary>
+        [JsonProperty("HighLightFieldsVal")]
+        public string HighLightFieldsVal{ get; set; }
+
+        /// <summary>
+        /// <p>Rule type.</p>
+        /// </summary>
+        [JsonProperty("RuleTypeZH")]
+        public string RuleTypeZH{ get; set; }
 
 
         /// <summary>
@@ -168,6 +175,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "MatchRuleID", this.MatchRuleID);
             this.SetParamArraySimple(map, prefix + "HighLightFields.", this.HighLightFields);
             this.SetParamObj(map, prefix + "MatchRule.", this.MatchRule);
+            this.SetParamSimple(map, prefix + "HighLightFieldsVal", this.HighLightFieldsVal);
+            this.SetParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
         }
     }
 }

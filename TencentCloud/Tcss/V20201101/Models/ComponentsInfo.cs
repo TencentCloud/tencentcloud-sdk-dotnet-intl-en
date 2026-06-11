@@ -26,7 +26,6 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// Component name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Component")]
         [System.Obsolete]
@@ -34,35 +33,30 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Component version information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Fixed version
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Repairable Version
         /// </summary>
         [JsonProperty("FixedVersion")]
         public string FixedVersion{ get; set; }
 
         /// <summary>
-        /// Path
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Path.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Type
-        /// Note: This field may return·`null`, indicating that no valid values can be obtained.
+        /// Type.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Add-on name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

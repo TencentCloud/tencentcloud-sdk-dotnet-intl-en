@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// cos_recharge record ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// COS import task ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

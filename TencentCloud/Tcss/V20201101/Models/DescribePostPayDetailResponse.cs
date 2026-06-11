@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Elastic billing details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Elastic billing deduction details
         /// </summary>
         [JsonProperty("SoftQuotaDayDetail")]
         public SoftQuotaDayInfo[] SoftQuotaDayDetail{ get; set; }

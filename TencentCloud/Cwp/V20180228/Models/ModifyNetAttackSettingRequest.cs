@@ -60,6 +60,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("AutoInclude")]
         public ulong? AutoInclude{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ProductType")]
+        public ulong? ProductType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamArraySimple(map, prefix + "ExcludeInstanceIds.", this.ExcludeInstanceIds);
             this.SetParamSimple(map, prefix + "AutoInclude", this.AutoInclude);
+            this.SetParamSimple(map, prefix + "ProductType", this.ProductType);
         }
     }
 }

@@ -25,101 +25,94 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Address of output video file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>File URL of the transcoded video.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// For transcoding specification ID, see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1). 
-        /// <font color=red>Note: A value of 0 represents the original file. </font>
+        /// <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1">transcoding parameter template</a>.<br><font color="red">Note: A value of 0 means the raw file.</font></p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Sum of the average bitrate of a video stream and that of an audio stream in bps.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Sum of the mean bitrate of a stream and the mean audio stream bit rate, unit: bps.</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height of a video stream in px.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Maximum value of video stream height. Unit: px.</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width of a video stream in px.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Maximum value of video stream width. Unit: px.</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// The file size (bytes).
-        /// <li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+        /// <p>Total size of media files, measurement unit: byte.</p><li>When the media file is HLS, the size is the sum of m3u8 and ts file sizes.</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Video duration in seconds.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Video duration, in seconds.</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// MD5 value of video.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>md5 value of the video.</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// Container, such as m4a and mp4.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Container type, such as m4a, mp4.</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Video stream information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Video stream information.</p>
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
         /// <summary>
-        /// Audio stream information.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Audio stream information.</p>
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// The watermark type. Valid values:
-        /// <li>Trace: Digital watermark</li>
-        /// <li>None: Regular watermark</li>
+        /// <p>Digital watermark type. Available values:</p><li>Trace means transit watermark processing;</li><li>CopyRight means copyright watermark processing;</li><li>None means no digital watermark processing.</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Copyright information.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
 
         /// <summary>
-        /// Digital watermark template id.
+        /// <p>Digital watermark template id.</p>
         /// </summary>
         [JsonProperty("BlindWatermarkDefinition")]
         public long? BlindWatermarkDefinition{ get; set; }
+
+        /// <summary>
+        /// <p>Generated new FileId for transcoding. Valid when requesting to enable independence media output.</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
 
         /// <summary>
@@ -141,6 +134,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
             this.SetParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
             this.SetParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

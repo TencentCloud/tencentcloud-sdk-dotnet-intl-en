@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Operations - 0: Mark as Handled, 1: Ignore, 2: Delete Record, 3: Trojan Isolation, 4: Isolated Trojan Resumption, 5: Trojan Trust, 6: Trojan Untrust, 7: Kill Exceptional Process.
+        /// Operation. 0: mark as handled; 1: ignore; 2: delete records; 3: isolate Trojan viruses; 4: recover isolating Trojan viruses; 5: add files to the trusted list; 6: delete files from the trusted list; 7: scan abnormal processes; 8: add to the allowlist.
         /// </summary>
         [JsonProperty("Operate")]
         public ulong? Operate{ get; set; }
@@ -86,6 +86,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
+        /// <summary>
+        /// When Operate is Trojan isolation
+        /// <li>This operation will fix tampered system commands, scheduled tasks, and other system files. Please ensure that yum/apt is available during the operation.</li>
+        /// </summary>
+        [JsonProperty("DoClean")]
+        public bool? DoClean{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +107,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "KillProcess", this.KillProcess);
             this.SetParamArraySimple(map, prefix + "Ip.", this.Ip);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "DoClean", this.DoClean);
         }
     }
 }

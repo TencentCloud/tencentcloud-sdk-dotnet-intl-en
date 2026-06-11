@@ -43,15 +43,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// Selected hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specified hosts
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
         /// Custom Hosts to Exclude
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }

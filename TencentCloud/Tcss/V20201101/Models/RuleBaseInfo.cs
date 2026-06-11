@@ -25,10 +25,10 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Valid values: `true` (default policy); `false` (custom policy).
+        /// Name of the editing user
         /// </summary>
-        [JsonProperty("IsDefault")]
-        public bool? IsDefault{ get; set; }
+        [JsonProperty("EditUserName")]
+        public string EditUserName{ get; set; }
 
         /// <summary>
         /// Number of associated images
@@ -37,17 +37,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? EffectImageCount{ get; set; }
 
         /// <summary>
+        /// Valid values: `true` (default policy); `false` (custom policy).
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// Whether the rule applies to all images. true indicates it takes effect for all images.
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public bool? IsGlobal{ get; set; }
+
+        /// <summary>
+        /// Valid values: `true` (enable the policy); `false` (disable the policy).
+        /// </summary>
+        [JsonProperty("IsEnable")]
+        public bool? IsEnable{ get; set; }
+
+        /// <summary>
         /// Policy ID
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
-
-        /// <summary>
-        /// Policy update time, which can be empty.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Policy name
@@ -56,16 +67,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Name of the editing user
+        /// Policy update time. Can be empty.
         /// </summary>
-        [JsonProperty("EditUserName")]
-        public string EditUserName{ get; set; }
-
-        /// <summary>
-        /// Valid values: `true` (enable the policy); `false` (disable the policy).
-        /// </summary>
-        [JsonProperty("IsEnable")]
-        public bool? IsEnable{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -73,13 +78,14 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
-            this.SetParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "EditUserName", this.EditUserName);
+            this.SetParamSimple(map, prefix + "EffectImageCount", this.EffectImageCount);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

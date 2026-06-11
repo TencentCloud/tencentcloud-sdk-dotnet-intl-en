@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1315";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -1447,7 +1447,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to query instance information.
+        /// Query instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
         /// <returns><see cref="DescribeTawInstancesResponse"/></returns>
@@ -1457,7 +1457,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to query instance information.
+        /// Query instance information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTawInstancesRequest"/></param>
         /// <returns><see cref="DescribeTawInstancesResponse"/></returns>

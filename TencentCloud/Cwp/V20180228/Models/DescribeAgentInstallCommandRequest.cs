@@ -55,7 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong?[] TagIds{ get; set; }
 
         /// <summary>
-        /// Command validity period, required for non-Tencent Cloud instances
+        /// Command validity period, required for non-Tencent Cloud instances (abandoned, takes effect permanently).
         /// </summary>
         [JsonProperty("ExpireDate")]
         public string ExpireDate{ get; set; }

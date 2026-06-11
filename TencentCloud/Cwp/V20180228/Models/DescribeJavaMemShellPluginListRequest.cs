@@ -25,7 +25,9 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Filter Criteria: Keywords: Fuzzy query of IP or host name, JavaShellStatus, exact match of Exception
+        /// Filtering criteria: InstanceID and IP
+        /// 
+        /// MachineName fuzzy query, JavaShellStatus, Exception exact match
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

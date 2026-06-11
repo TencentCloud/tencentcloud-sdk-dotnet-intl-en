@@ -25,92 +25,79 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Category
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// category
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// Virus name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VirusName")]
         public string VirusName{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// Solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
         /// File type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
         /// File path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// MD5 checksum of the file
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File md5
         /// </summary>
         [JsonProperty("FileMd5")]
         public string FileMd5{ get; set; }
 
         /// <summary>
         /// Size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// First discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// First detection time
         /// </summary>
         [JsonProperty("FirstScanTime")]
         public string FirstScanTime{ get; set; }
 
         /// <summary>
         /// Last scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestScanTime")]
         public string LatestScanTime{ get; set; }

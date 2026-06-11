@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log start time
+        /// Log start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Log end time
+        /// Log end time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The max number of returned results
+        /// The max number of returned results.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Log level
+        /// Log level.
         /// </summary>
         [JsonProperty("LogLevels")]
         public string[] LogLevels{ get; set; }
 
         /// <summary>
-        /// 
+        /// KeyWords.
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Valid value: `Timestamp`
+        /// Valid value: `Timestamp`.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

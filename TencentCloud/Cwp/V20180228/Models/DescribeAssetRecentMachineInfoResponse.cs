@@ -25,29 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// List of total assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of total quantities
         /// </summary>
         [JsonProperty("TotalList")]
         public AssetKeyVal[] TotalList{ get; set; }
 
         /// <summary>
         /// List of online assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LiveList")]
         public AssetKeyVal[] LiveList{ get; set; }
 
         /// <summary>
         /// List of offline assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfflineList")]
         public AssetKeyVal[] OfflineList{ get; set; }
 
         /// <summary>
         /// List of risky assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskList")]
         public AssetKeyVal[] RiskList{ get; set; }

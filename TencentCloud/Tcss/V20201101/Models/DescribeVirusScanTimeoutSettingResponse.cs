@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Timeout period in hours
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Timeout Duration (Hours)
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

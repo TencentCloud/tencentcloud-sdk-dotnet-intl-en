@@ -25,10 +25,10 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Switch. Valid values: `true` (on); `false` (off).
+        /// Array of sub-policies of the user policy
         /// </summary>
-        [JsonProperty("IsEnable")]
-        public bool? IsEnable{ get; set; }
+        [JsonProperty("ChildRules")]
+        public AccessControlChildRuleInfo[] ChildRules{ get; set; }
 
         /// <summary>
         /// IDs of associated images. An empty array indicates all images.
@@ -37,10 +37,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] ImageIds{ get; set; }
 
         /// <summary>
-        /// Array of sub-policies of the user policy
+        /// Switch. Valid values: `true` (on); `false` (off).
         /// </summary>
-        [JsonProperty("ChildRules")]
-        public AccessControlChildRuleInfo[] ChildRules{ get; set; }
+        [JsonProperty("IsEnable")]
+        public bool? IsEnable{ get; set; }
 
         /// <summary>
         /// Policy name
@@ -49,8 +49,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleName{ get; set; }
 
         /// <summary>
+        /// Whether it is the default preset policy
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
+        /// <summary>
+        /// true: all images, false: specified images. When IsGlobal=true, ImageIds returns an empty array.
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public bool? IsGlobal{ get; set; }
+
+        /// <summary>
         /// Policy ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -61,25 +72,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SystemChildRules")]
         public AccessControlSystemChildRuleInfo[] SystemChildRules{ get; set; }
 
-        /// <summary>
-        /// Whether it is the default preset policy
-        /// </summary>
-        [JsonProperty("IsDefault")]
-        public bool? IsDefault{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
-            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
             this.SetParamArrayObj(map, prefix + "ChildRules.", this.ChildRules);
+            this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+            this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
-            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

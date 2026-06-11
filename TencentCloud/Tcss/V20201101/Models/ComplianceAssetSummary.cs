@@ -53,8 +53,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// Check progress. Value range: 0-100. This field is valid only if the check is running.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The detection progress of this category is a number between 0 and 100. If not in progress, field not found.
         /// </summary>
         [JsonProperty("CheckProgress")]
         public float? CheckProgress{ get; set; }
@@ -126,15 +125,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ScanFailedAssetCount{ get; set; }
 
         /// <summary>
-        /// Last check duration in seconds
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time taken for last detection, in seconds.
         /// </summary>
         [JsonProperty("CheckCostTime")]
         public float? CheckCostTime{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time.
         /// </summary>
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
@@ -146,18 +143,34 @@ namespace TencentCloud.Tcss.V20201101.Models
         public CompliancePeriodTaskRule PeriodRule{ get; set; }
 
         /// <summary>
-        /// Total number of enabled check items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total Number of Enabled Check Items
         /// </summary>
         [JsonProperty("OpenPolicyItemCount")]
         public ulong? OpenPolicyItemCount{ get; set; }
 
         /// <summary>
-        /// Total number of ignored check items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total Number of Ignored Check Items
         /// </summary>
         [JsonProperty("IgnoredPolicyItemCount")]
         public ulong? IgnoredPolicyItemCount{ get; set; }
+
+        /// <summary>
+        /// Total number of detection items.
+        /// </summary>
+        [JsonProperty("TotalPolicyItemCount")]
+        public ulong? TotalPolicyItemCount{ get; set; }
+
+        /// <summary>
+        /// Detection hosts
+        /// </summary>
+        [JsonProperty("DetectHostCount")]
+        public ulong? DetectHostCount{ get; set; }
+
+        /// <summary>
+        /// Remaining time of the current task, in seconds.
+        /// </summary>
+        [JsonProperty("LeftTime")]
+        public ulong? LeftTime{ get; set; }
 
 
         /// <summary>
@@ -185,6 +198,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
             this.SetParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
             this.SetParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
+            this.SetParamSimple(map, prefix + "TotalPolicyItemCount", this.TotalPolicyItemCount);
+            this.SetParamSimple(map, prefix + "DetectHostCount", this.DetectHostCount);
+            this.SetParamSimple(map, prefix + "LeftTime", this.LeftTime);
         }
     }
 }

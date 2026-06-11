@@ -74,7 +74,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -104,7 +103,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulDefenceStatus{ get; set; }
 
         /// <summary>
-        /// Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+        /// Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
         /// </summary>
         [JsonProperty("PayVersion")]
         public ulong? PayVersion{ get; set; }
@@ -126,6 +125,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("New")]
         public bool? New{ get; set; }
+
+        /// <summary>
+        /// Whether application protection is enabled. 0: disabled, 1: enabled
+        /// </summary>
+        [JsonProperty("RaspOpen")]
+        public long? RaspOpen{ get; set; }
+
+        /// <summary>
+        /// ip analysis
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
 
 
         /// <summary>
@@ -150,6 +161,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "New", this.New);
+            this.SetParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

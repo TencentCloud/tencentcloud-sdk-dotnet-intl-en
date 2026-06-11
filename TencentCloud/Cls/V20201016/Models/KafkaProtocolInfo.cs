@@ -25,26 +25,40 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Protocol type, including plaintext, sasl_plaintext, or sasl_ssl. sasl_ssl is recommended for encrypted connections and user authentication.Required input parameters
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Protocol type. Supported protocol types include plaintext, sasl_plaintext, or sasl_ssl. Recommend using sasl_ssl. Protocol enables encrypted connection and also requires user authentication.
+        /// 
+        /// -Protocol is required when IsEncryptionAddr is true.
+        /// -Supported protocol types are as follows:
+        /// -plaintext: Plaintext without encryption protocol
+        /// -sasl_ssl: sasl authentication + ssl encryption
+        /// -ssl: Pure ssl/TLS encryption protocol
+        /// -sasl_plaintext: SASL authentication + unencrypted tunnel
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.Required when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Encryption type, supports PLAIN, SCRAM-SHA-256, or SCRAM-SHA-512.
+        /// 
+        /// -Mechanism is required when Protocol is `sasl_plaintext` or `sasl_ssl`.
+        /// -Supported encryption types are as follows.
+        /// -PLAIN: plaintext authentication
+        /// -SCRAM-SHA-256: Based on challenge-response mechanism, uses PBKDF2-HMAC-SHA256 algorithm.
+        /// -SCRAM-SHA-512: Enhanced SCRAM that uses the PBKDF2-HMAC-SHA512 algorithm.
         /// </summary>
         [JsonProperty("Mechanism")]
         public string Mechanism{ get; set; }
 
         /// <summary>
-        /// UsernameRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Username.
+        /// Required when Protocol is sasl_plaintext or sasl_ssl
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// User PasswordRequired when the Protocol is sasl_plaintext or sasl_ssl.Note: This field may return null, indicating that no valid values can be obtained.
+        /// User password.
+        /// Required when Protocol is sasl_plaintext or sasl_ssl
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CopySrcRuleID{ get; set; }
 
         /// <summary>
-        /// Event ID (for adding events to an allowlist)
+        /// Event ID (abandoned, retained for compatibility. To add an event to the allowlist, use the API ModifyK8sApiAbnormalWhitelist).
         /// </summary>
         [JsonProperty("EventID")]
         public ulong? EventID{ get; set; }

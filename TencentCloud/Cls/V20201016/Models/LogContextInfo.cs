@@ -61,28 +61,25 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? BTime{ get; set; }
 
         /// <summary>
-        /// Source host name of logs
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Log source host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Raw log (only available when there is an error in creating the log index).
         /// </summary>
         [JsonProperty("RawLog")]
         public string RawLog{ get; set; }
 
         /// <summary>
-        /// The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cause for log index creation exception. It has a value only when a log index creation exception occurs.
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
-        /// Highlighted description of log contentNote: This field may return null, indicating that no valid values can be obtained.
+        /// Highlighted description of the log content
         /// </summary>
         [JsonProperty("HighLights")]
         public HighLightItem[] HighLights{ get; set; }

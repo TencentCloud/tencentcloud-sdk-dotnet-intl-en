@@ -43,16 +43,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Deadline{ get; set; }
 
         /// <summary>
-        /// Rule name, big asset center: asset_center
-        /// </summary>
-        [JsonProperty("RuleName")]
-        public string RuleName{ get; set; }
-
-        /// <summary>
         /// Order type. 1: trial; 2: free; 3: experience; 4: free SSL certificate gift; 5: free CVM
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
+
+        /// <summary>
+        /// Rule name, big asset center: asset_center
+        /// </summary>
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
         /// <summary>
         /// Region: 1 Guangzhou; 9 Singapore. The default is 1. Do not select 9 unless necessary.
@@ -75,8 +75,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "LicenseNum", this.LicenseNum);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
-            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         }

@@ -37,11 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filtering criteria
-        /// <li>StrategyId - Uint64 - baseline policy ID</li>
-        /// <li>Status - Uint64 - processing status: 1: passed; 0: failed</li><li>Level - Uint64[] - risk level: 1: low; 2: medium; 3: high; 4: critical</li><li>BaselineName - String - baseline name</li>
-        /// <li>Quuid - String - host QUUID</li>
-        /// <li>Uuid - String - host UUID</li>
+        /// Filter conditions <li>StrategyId- Uint64 - Baseline policy id</li> <li>Status - Uint64 - Processing status 1-Approved 0-Failed</li> <li>Level - Uint64 - Threat level 1-Low risk 2-Medium risk 3-High risk 4-Critical</li> <li>BaselineName  - String - Baseline name</li> <li>Quuid- String - Host quuid</li> <li>Uuid- String - Host uuid</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

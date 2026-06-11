@@ -73,22 +73,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string OsInfo{ get; set; }
 
         /// <summary>
-        /// Reference process list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reference process list.
         /// </summary>
         [JsonProperty("Process")]
         public AssetAppProcessInfo[] Process{ get; set; }
 
         /// <summary>
-        /// Jar package Md5
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// JAR package Md5
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

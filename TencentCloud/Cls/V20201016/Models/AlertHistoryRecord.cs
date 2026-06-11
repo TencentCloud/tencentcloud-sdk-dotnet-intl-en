@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TriggerCount{ get; set; }
 
         /// <summary>
-        /// Alarm notification frequency (minutes)
+        /// Alert notification sent frequency, in minutes
         /// </summary>
         [JsonProperty("AlarmPeriod")]
         public long? AlarmPeriod{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public AlertHistoryNotice[] Notices{ get; set; }
 
         /// <summary>
-        /// Alarm duration (minutes)
+        /// Duration of the alarm in minutes
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
@@ -97,32 +97,35 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Alarm generation time, which is a Unix timestamp in ms
+        /// Alarm occurrence time, Unix timestamp in milliseconds (ms)
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Group information corresponding to triggering by group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Corresponding group information when alarm grouping is triggered
         /// </summary>
         [JsonProperty("GroupTriggerCondition")]
         public GroupTriggerConditionInfo[] GroupTriggerCondition{ get; set; }
 
         /// <summary>
-        /// Alarm severity. Valid values: `0` (Warn), `1` (Info), `2` (Critical)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm level. 0: warning (Warn); 1: reminder (Info); 2: urgent (Critical).
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Type of the monitored object
-        /// `0`: The same object is specified for all statements. `1`: An object is separately specified for each statement. 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Monitored object type.
+        /// `0`: The same object is specified for all statements. `1`: An object is separately specified for each statement.
         /// </summary>
         [JsonProperty("MonitorObjectType")]
         public ulong? MonitorObjectType{ get; set; }
+
+        /// <summary>
+        /// Notification channel type. 0 represents the internal notification channel of cls. 1 represents the Tencent Cloud observability platform notification channel.
+        /// </summary>
+        [JsonProperty("SendType")]
+        public ulong? SendType{ get; set; }
 
 
         /// <summary>
@@ -146,6 +149,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "GroupTriggerCondition.", this.GroupTriggerCondition);
             this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
             this.SetParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
+            this.SetParamSimple(map, prefix + "SendType", this.SendType);
         }
     }
 }

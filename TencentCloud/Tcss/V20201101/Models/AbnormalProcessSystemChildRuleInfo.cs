@@ -25,16 +25,16 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Sub-policy ID
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
-
-        /// <summary>
         /// Sub-policy status. Valid values: `true` (enabled); `false` (disabled).
         /// </summary>
         [JsonProperty("IsEnable")]
         public bool? IsEnable{ get; set; }
+
+        /// <summary>
+        /// Sub-policy ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
 
         /// <summary>
         /// Policy mode. `RULE_MODE_RELEASE`: Allow.
@@ -58,8 +58,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Severity. Valid values: `HIGH` (high); `MIDDLE` (medium); `LOW` (low).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Threat Level. HIGH: High; MIDDLE: Medium; LOW: Low
         /// </summary>
         [JsonProperty("RuleLevel")]
         public string RuleLevel{ get; set; }
@@ -70,8 +69,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "RuleLevel", this.RuleLevel);

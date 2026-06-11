@@ -31,28 +31,58 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// xx
+        /// Billing mode. 0: pay-as-you-go; 1: prepaid.
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// Resource ID
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// Authorization type
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public ulong? LicenseType{ get; set; }
+
+        /// <summary>
+        /// Order type. 0: default billing order; 1: trial order; 2: gift; 3: experience.
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public ulong? SourceType{ get; set; }
+
+        /// <summary>
+        /// This field has been deprecated.
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// Auto-renewal flag. 0: default (no automatic payment); 1: automatic payment; 2: set manually (non-renewal).
         /// </summary>
-        [JsonProperty("SourceType")]
-        public ulong? SourceType{ get; set; }
+        [JsonProperty("AutoRenewFlag")]
+        public ulong? AutoRenewFlag{ get; set; }
+
+        /// <summary>
+        /// Expiry time. This value is empty for pay-as-you-go.
+        /// </summary>
+        [JsonProperty("Deadline")]
+        public string Deadline{ get; set; }
+
+        /// <summary>
+        /// Time of purchase
+        /// </summary>
+        [JsonProperty("BuyTime")]
+        public string BuyTime{ get; set; }
+
+        /// <summary>
+        /// Number of authorizations
+        /// </summary>
+        [JsonProperty("LicenseCnt")]
+        public ulong? LicenseCnt{ get; set; }
 
 
         /// <summary>
@@ -63,8 +93,13 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
-            this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
+            this.SetParamSimple(map, prefix + "InquireKey", this.InquireKey);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "BuyTime", this.BuyTime);
+            this.SetParamSimple(map, prefix + "LicenseCnt", this.LicenseCnt);
         }
     }
 }

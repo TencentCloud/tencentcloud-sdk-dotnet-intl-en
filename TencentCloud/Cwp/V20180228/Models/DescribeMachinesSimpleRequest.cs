@@ -36,7 +36,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Machine region. For example, ap-guangzhou and ap-shanghai.
+        /// Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }

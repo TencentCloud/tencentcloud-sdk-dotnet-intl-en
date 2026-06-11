@@ -25,7 +25,11 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Verify content Name or Rule. (Use a comma to separate them if both need to be verified.)
+        /// Verify content field, use commas to separate if necessary to detect multiple fields
+        /// <li>Name Policy name</li>
+        /// <li>Process</li>
+        /// <li>Name PProcess Parent process</li>
+        /// <li>Name AProcess Ancestor process</li>
         /// </summary>
         [JsonProperty("CheckField")]
         public string CheckField{ get; set; }
@@ -43,7 +47,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// The regular expression to be entered by the user: It must match command content corresponding to the submitted EventId.
+        /// This field is not in maintenance. If you fill in this parameter, it will automatically replace to Rules.Process.
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -53,6 +57,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
+
+        /// <summary>
+        /// Rule expression
+        /// </summary>
+        [JsonProperty("Rules")]
+        public PolicyRules Rules{ get; set; }
 
 
         /// <summary>
@@ -65,6 +75,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

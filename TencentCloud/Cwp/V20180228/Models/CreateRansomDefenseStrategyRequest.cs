@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ExcludeDir{ get; set; }
 
         /// <summary>
-        /// Backup pattern: 0 weekly, 1 daily.
+        /// Backup mode: 0 weekly, 1 daily, 2 do not backup.
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }

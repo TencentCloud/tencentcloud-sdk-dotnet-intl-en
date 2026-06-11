@@ -37,14 +37,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? EncodingFormat{ get; set; }
 
         /// <summary>
-        /// Whether to use the default time. Valid values: `true` (default) and `false`.
+        /// Use default time status. true: when enabled, current system time or Kafka message timestamp will be used as log timestamp. false: when disabled, time field in the log will be used as log timestamp. Default: true.
         /// </summary>
         [JsonProperty("DefaultTimeSwitch")]
         public bool? DefaultTimeSwitch{ get; set; }
 
         /// <summary>
-        /// Full log matching rule, which is valid only if `RechargeType` is `fullregex_log`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Full log matching rule. It is valid only when RechargeType is fullregex_log.
         /// </summary>
         [JsonProperty("LogRegex")]
         public string LogRegex{ get; set; }
@@ -56,67 +55,158 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? UnMatchLogSwitch{ get; set; }
 
         /// <summary>
-        /// Key of the log that failed to be parsed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// key name of parsing-failed logs
         /// </summary>
         [JsonProperty("UnMatchLogKey")]
         public string UnMatchLogKey{ get; set; }
 
         /// <summary>
-        /// Time source of the log that failed to be parsed. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time source for parsing failure logs. 0: current time of the system; 1: Kafka message timestamp.
         /// </summary>
         [JsonProperty("UnMatchLogTimeSrc")]
         public ulong? UnMatchLogTimeSrc{ get; set; }
 
         /// <summary>
-        /// Default time source. Valid values: 0 (current system time) and 1 (Kafka message timestamp).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Default time source. 0: Current system time; 1: Kafka message timestamp.
         /// </summary>
         [JsonProperty("DefaultTimeSrc")]
         public ulong? DefaultTimeSrc{ get; set; }
 
         /// <summary>
-        /// Time field
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time field. Field name representing time in logs.
+        /// 
+        /// -When DefaultTimeSwitch is false and RechargeType data extraction mode is `json_log` JSON file log or `fullregex_log` single-line full regex file log, TimeKey cannot be empty.
         /// </summary>
         [JsonProperty("TimeKey")]
         public string TimeKey{ get; set; }
 
         /// <summary>
-        /// Time regular expression
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time extraction regular expression.
+        /// -When DefaultTimeSwitch is false and the data extraction mode of RechargeType is `minimalist_log` (single-line full text - file log), TimeRegex cannot be empty.
+        /// -Only need to input the regular expression representing the time field in logs. If multiple fields are matched to, the first will be used.
+        /// Example: The original log is "message with time 2022-08-08 14:20:20". You can set the retrieval time regex to \d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.
         /// </summary>
         [JsonProperty("TimeRegex")]
         public string TimeRegex{ get; set; }
 
         /// <summary>
-        /// Time field format
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time field format.
+        /// -When DefaultTimeSwitch is false, TimeFormat cannot be empty.
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
         /// <summary>
-        /// Time zone
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time field time zone.
+        /// -When DefaultTimeSwitch is false, TimeZone cannot be empty.
+        /// -Time zone format rule
+        /// Prefix: Use GMT or UTC as the time zone benchmark.
+        /// Offset:
+        /// -`-` indicates a western time zone (later than the benchmark time).
+        /// -`+` means the east time zone (earlier than the benchmark time).
+        /// -Format ±HH:MM (hr:min)
+        /// 
+        /// -Currently supported:
+        /// ```
+        /// "GMT-12:00" 
+        /// "GMT-11:00" 
+        /// "GMT-10:00" 
+        /// "GMT-09:30" 
+        /// "GMT-09:00" 
+        /// "GMT-08:00" 
+        /// "GMT-07:00" 
+        /// "GMT-06:00" 
+        /// "GMT-05:00" 
+        /// "GMT-04:00" 
+        /// "GMT-03:30" 
+        /// "GMT-03:00" 
+        /// "GMT-02:00" 
+        /// "GMT-01:00" 
+        /// "GMT+00:00"
+        /// "GMT+01:00"
+        /// "GMT+02:00"
+        /// "GMT+03:30"
+        /// "GMT+04:00"
+        /// "GMT+04:30"
+        /// "GMT+05:00"
+        /// "GMT+05:30"
+        /// "GMT+05:45"
+        /// "GMT+06:00"
+        /// "GMT+06:30"
+        /// "GMT+07:00"
+        /// "GMT+08:00"
+        /// "GMT+09:00"
+        /// "GMT+09:30"
+        /// "GMT+10:00"
+        /// "GMT+10:30"
+        /// "GMT+11:00"
+        /// "GMT+11:30"
+        /// "GMT+12:00"
+        /// "GMT+12:45"
+        /// "GMT+13:00"
+        /// "GMT+14:00"
+        /// "UTC-11:00"
+        /// "UTC-10:00"
+        /// "UTC-09:00"
+        /// "UTC-08:00"
+        /// "UTC-12:00"
+        /// "UTC-07:00"
+        /// "UTC-06:00"
+        /// "UTC-05:00"
+        /// "UTC-04:30"
+        /// "UTC-04:00"
+        /// "UTC-03:30"
+        /// "UTC-03:00"
+        /// "UTC-02:00"
+        /// "UTC-01:00"
+        /// "UTC+00:00"
+        /// "UTC+01:00"
+        /// "UTC+02:00"
+        /// "UTC+03:00"
+        /// "UTC+03:30"
+        /// "UTC+04:00"
+        /// "UTC+04:30"
+        /// "UTC+05:00"
+        /// "UTC+05:45"
+        /// "UTC+06:00"
+        /// "UTC+06:30"
+        /// "UTC+07:00"
+        /// "UTC+08:00"
+        /// "UTC+09:00"
+        /// "UTC+09:30"
+        /// "UTC+10:00"
+        /// "UTC+11:00"
+        /// "UTC+12:00"
+        /// "UTC+13:00"
+        /// ```
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// Metadata information. Kafka supports import of kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Metadata information. Kafka import supports kafka_topic, kafka_partition, kafka_offset, and kafka_timestamp.
         /// </summary>
         [JsonProperty("Metadata")]
         public string[] Metadata{ get; set; }
 
         /// <summary>
-        /// List of log keys, which is required when `RechargeType` is set to `full_regex_log`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// log Key list. It is required when RechargeType is full_regex_log or delimiter_log.
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }
+
+        /// <summary>
+        /// JSON parsing mode. The first-level data parsing is enabled.
+        /// </summary>
+        [JsonProperty("ParseArray")]
+        public bool? ParseArray{ get; set; }
+
+        /// <summary>
+        /// Delimiter parsing mode - Separator
+        /// This field is required when the parsing format is delimiter extraction.
+        /// </summary>
+        [JsonProperty("Delimiter")]
+        public string Delimiter{ get; set; }
 
 
         /// <summary>
@@ -138,6 +228,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
             this.SetParamArraySimple(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "Keys.", this.Keys);
+            this.SetParamSimple(map, prefix + "ParseArray", this.ParseArray);
+            this.SetParamSimple(map, prefix + "Delimiter", this.Delimiter);
         }
     }
 }

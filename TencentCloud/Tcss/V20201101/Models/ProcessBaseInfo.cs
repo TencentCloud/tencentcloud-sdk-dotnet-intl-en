@@ -25,29 +25,25 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Process initiator
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// process startup user
         /// </summary>
         [JsonProperty("ProcessStartUser")]
         public string ProcessStartUser{ get; set; }
 
         /// <summary>
         /// Process user group
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcessUserGroup")]
         public string ProcessUserGroup{ get; set; }
 
         /// <summary>
         /// Process path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
 
         /// <summary>
-        /// Process command line parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process command line parameters
         /// </summary>
         [JsonProperty("ProcessParam")]
         public string ProcessParam{ get; set; }

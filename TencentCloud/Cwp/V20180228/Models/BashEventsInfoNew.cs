@@ -98,108 +98,99 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Process name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Exe")]
         public string Exe{ get; set; }
 
         /// <summary>
         /// Processing time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Rule category. 0 - system rule; 1 - user rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule category. 0: system rule; 1: user rule
         /// </summary>
         [JsonProperty("RuleCategory")]
         public ulong? RuleCategory{ get; set; }
 
         /// <summary>
         /// Automatically generated regular expression
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
 
         /// <summary>
-        /// Process tree json  pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: command execution; ssh_service: ssh service IP, ssh_source: log-in source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
         /// </summary>
         [JsonProperty("PsTree")]
         public string PsTree{ get; set; }
 
         /// <summary>
         /// Recommended solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuggestScheme")]
         public string SuggestScheme{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HarmDescribe")]
         public string HarmDescribe{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// Reference link
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("References")]
         public string[] References{ get; set; }
 
         /// <summary>
         /// Host public IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
         /// Host online status: OFFLINE; ONLINE
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
         /// Log-in user
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
         /// Process ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
-        /// 0: normal; 1: professional version; 2: ultimate edition
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: Ordinary 1: Pro Edition 2: Flagship Edition
         /// </summary>
         [JsonProperty("MachineType")]
         public long? MachineType{ get; set; }
 
         /// <summary>
         /// Source of Detection: 0: bash log; 1: real-time monitoring
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DetectBy")]
         public long? DetectBy{ get; set; }
+
+        /// <summary>
+        /// Execute commands (decoded)
+        /// </summary>
+        [JsonProperty("BashCmdDecoded")]
+        public string BashCmdDecoded{ get; set; }
 
 
         /// <summary>
@@ -234,6 +225,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
+            this.SetParamSimple(map, prefix + "BashCmdDecoded", this.BashCmdDecoded);
         }
     }
 }

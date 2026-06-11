@@ -25,49 +25,40 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Range
-        /// System event:
-        /// ANONYMOUS_ACCESS: Anonymous access
-        /// ABNORMAL_UA_REQ: Abnormal UA request
-        /// ANONYMOUS_ABNORMAL_PERMISSION: Abnormal changes on permissions of an anonymous user
-        /// GET_CREDENTIALS: Credential information acquisition
-        /// MOUNT_SENSITIVE_PATH: Sensitive path mounting
-        /// COMMAND_RUN: Command execution
-        /// PRIVILEGE_CONTAINER: Privilege container
-        /// EXCEPTION_CRONTAB_TASK: Aabnormal scheduled task
-        /// STATICS_POD: Static pod creation
-        /// ABNORMAL_CREATE_POD: Abnormal pod creation
-        /// USER_DEFINED: User defined
-        /// </summary>
-        [JsonProperty("Scope")]
-        public string Scope{ get; set; }
-
-        /// <summary>
-        /// Action (RULE_MODE_ALERT: Alarm RULE_MODE_RELEASE: Release)
+        /// <p>Execution action. The blocklist rule only supports RULE_MODE_ALERT (alert) and no longer supports RULE_MODE_RELEASE/PASS (allow). To allow, use the allowlist API ModifyK8sApiAbnormalWhitelist.</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Threat level: "HIGH": High-risk level; "MIDDLE": Middle-risk level; "LOW": Low-risk level; "NOTICE": Notice level
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Scope.<br>System events:<br>ANONYMOUS_ACCESS: anonymous access<br>ABNORMAL_UA_REQ: abnormal UA request<br>ANONYMOUS_ABNORMAL_PERMISSION: anonymous user permission change<br>GET_CREDENTIALS: credential information acquisition<br>MOUNT_SENSITIVE_PATH: sensitive path mounting<br>COMMAND_RUN: command execution<br>PRIVILEGE_CONTAINER: privileged container<br>EXCEPTION_CRONTAB_TASK: abnormal scheduled task<br>STATICS_POD: static Pod creation<br>ABNORMAL_CREATE_POD: abnormal Pod creation<br>USER_DEFINED: user-defined</p>
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
+
+        /// <summary>
+        /// <p>Whether it has been deleted.</p>
+        /// </summary>
+        [JsonProperty("IsDelete")]
+        public bool? IsDelete{ get; set; }
+
+        /// <summary>
+        /// <p>Threat level: HIGH, MIDDLE, LOW, and NOTICE.</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Switch status (true: On; false: Off): applicable to system rules.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Description of the rule type.</p>
+        /// </summary>
+        [JsonProperty("RuleTypeZH")]
+        public string RuleTypeZH{ get; set; }
+
+        /// <summary>
+        /// <p>Switch status (true: on, false: off) applicable to system rules.</p>
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
-
-        /// <summary>
-        /// Whether to delete: applicable to custom rule input parameters.
-        /// Note: This field may return `null`, indicating that no valid value was found.
-        /// </summary>
-        [JsonProperty("IsDelete")]
-        public bool? IsDelete{ get; set; }
 
 
         /// <summary>
@@ -75,11 +66,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamSimple(map, prefix + "Action", this.Action);
-            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
             this.SetParamSimple(map, prefix + "IsDelete", this.IsDelete);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

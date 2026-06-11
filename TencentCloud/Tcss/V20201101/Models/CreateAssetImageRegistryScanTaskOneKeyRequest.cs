@@ -49,6 +49,48 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
+        /// <summary>
+        /// List of image IDs excluded from scanning.
+        /// </summary>
+        [JsonProperty("ExcludeIDs")]
+        public ulong?[] ExcludeIDs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IsLatest")]
+        public bool? IsLatest{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("RegistryType")]
+        public string[] RegistryType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string[] Namespace{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +101,13 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "ScanType.", this.ScanType);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamArraySimple(map, prefix + "ExcludeIDs.", this.ExcludeIDs);
+            this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
+            this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

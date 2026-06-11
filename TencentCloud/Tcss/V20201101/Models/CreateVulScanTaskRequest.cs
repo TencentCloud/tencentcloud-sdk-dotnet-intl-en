@@ -25,40 +25,76 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Local image scan scope. Valid values: `ALL` (all local images); `NOT_SCAN` (all licensed but not scanned local images); `IMAGEIDS` (IDs of specified local images).
+        /// <p>Local image scan range type</p><p>Enumeration value:</p><ul><li>ALL: All local images</li><li>NOT_SCAN: All authorized unscanned local images</li><li>IMAGEIDS: Selected local image IDs</li><li>CLUSTER: Cluster filtering</li></ul>
         /// </summary>
         [JsonProperty("LocalImageScanType")]
         public string LocalImageScanType{ get; set; }
 
         /// <summary>
-        /// Scan by licensed local image ID, with a higher priority than scan by licensed local image that meets the condition.
+        /// <p>Scan by authorized local image IDs, which takes precedence over scanning by authorized local images that meet the conditions.</p>
         /// </summary>
         [JsonProperty("LocalImageIDs")]
         public string[] LocalImageIDs{ get; set; }
 
         /// <summary>
-        /// Repository image scan scope. Valid values: `ALL` (all repository images); `NOT_SCAN` (all licensed but not scanned repository images); `IMAGEIDS` (IDs of specified repository images).
+        /// <p>Repository image scan range type. ALL: All repository images. NOT_SCAN: Total authorized unscanned repository images. IMAGEIDS: Selected repository image IDs.</p>
         /// </summary>
         [JsonProperty("RegistryImageScanType")]
         public string RegistryImageScanType{ get; set; }
 
         /// <summary>
-        /// Scan by licensed repository image ID, with a higher priority than scan by licensed repository image that meets the condition.
+        /// <p>Scan by authorized repository image IDs, which takes precedence over scanning by authorized repository images that meet the conditions.</p>
         /// </summary>
         [JsonProperty("RegistryImageIDs")]
         public ulong?[] RegistryImageIDs{ get; set; }
 
         /// <summary>
-        /// ID of the task to scan local images again for vulnerabilities
+        /// <p>Task ID for local image re-vulnerability scanning</p>
         /// </summary>
         [JsonProperty("LocalTaskID")]
         public long? LocalTaskID{ get; set; }
 
         /// <summary>
-        /// ID of the task to scan repository images again for vulnerabilities
+        /// <p>Task ID for repository image re-vulnerability scanning</p>
         /// </summary>
         [JsonProperty("RegistryTaskID")]
         public long? RegistryTaskID{ get; set; }
+
+        /// <summary>
+        /// <p>Local image container runtime</p>
+        /// </summary>
+        [JsonProperty("LocalImageContainerRunning")]
+        public bool? LocalImageContainerRunning{ get; set; }
+
+        /// <summary>
+        /// <p>Image Container in repository is running</p>
+        /// </summary>
+        [JsonProperty("RegistryImageContainerRunning")]
+        public bool? RegistryImageContainerRunning{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the repository image is the latest</p>
+        /// </summary>
+        [JsonProperty("IsLatest")]
+        public bool? IsLatest{ get; set; }
+
+        /// <summary>
+        /// <p>Local image id to remove</p>
+        /// </summary>
+        [JsonProperty("ExcludeLocalImageIDs")]
+        public string[] ExcludeLocalImageIDs{ get; set; }
+
+        /// <summary>
+        /// <p>id of the repository image to remove</p>
+        /// </summary>
+        [JsonProperty("ExcludeRegistryImageIDs")]
+        public ulong?[] ExcludeRegistryImageIDs{ get; set; }
+
+        /// <summary>
+        /// <p>Cluster ID.</p>
+        /// </summary>
+        [JsonProperty("LocalClusterIDs")]
+        public string[] LocalClusterIDs{ get; set; }
 
 
         /// <summary>
@@ -72,6 +108,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "RegistryImageIDs.", this.RegistryImageIDs);
             this.SetParamSimple(map, prefix + "LocalTaskID", this.LocalTaskID);
             this.SetParamSimple(map, prefix + "RegistryTaskID", this.RegistryTaskID);
+            this.SetParamSimple(map, prefix + "LocalImageContainerRunning", this.LocalImageContainerRunning);
+            this.SetParamSimple(map, prefix + "RegistryImageContainerRunning", this.RegistryImageContainerRunning);
+            this.SetParamSimple(map, prefix + "IsLatest", this.IsLatest);
+            this.SetParamArraySimple(map, prefix + "ExcludeLocalImageIDs.", this.ExcludeLocalImageIDs);
+            this.SetParamArraySimple(map, prefix + "ExcludeRegistryImageIDs.", this.ExcludeRegistryImageIDs);
+            this.SetParamArraySimple(map, prefix + "LocalClusterIDs.", this.LocalClusterIDs);
         }
     }
 }

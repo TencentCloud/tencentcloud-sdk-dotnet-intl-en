@@ -26,136 +26,129 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// Vulnerability ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVEID")]
         public string CVEID{ get; set; }
 
         /// <summary>
-        /// POC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// viewpoint validation program ID
         /// </summary>
         [JsonProperty("POCID")]
         public string POCID{ get; set; }
 
         /// <summary>
         /// Vulnerability name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Component information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component Information
         /// </summary>
         [JsonProperty("Components")]
         public ComponentsInfo[] Components{ get; set; }
 
         /// <summary>
-        /// Category
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// category
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
         /// Category 2
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CategoryType")]
         public string CategoryType{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Des")]
         public string Des{ get; set; }
 
         /// <summary>
         /// Solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OfficialSolution")]
         public string OfficialSolution{ get; set; }
 
         /// <summary>
-        /// Reference
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Refer
         /// </summary>
         [JsonProperty("Reference")]
         public string Reference{ get; set; }
 
         /// <summary>
-        /// Defense solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// defense solution
         /// </summary>
         [JsonProperty("DefenseSolution")]
         public string DefenseSolution{ get; set; }
 
         /// <summary>
         /// Submission time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
         /// <summary>
-        /// CVSS score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CVSS Score
         /// </summary>
         [JsonProperty("CvssScore")]
         public string CvssScore{ get; set; }
 
         /// <summary>
-        /// CVSS information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CVSS information.
         /// </summary>
         [JsonProperty("CvssVector")]
         public string CvssVector{ get; set; }
 
         /// <summary>
-        /// Whether fix is suggested
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether repair is suggested.
         /// </summary>
         [JsonProperty("IsSuggest")]
         public string IsSuggest{ get; set; }
 
         /// <summary>
-        /// Number of the fixed version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Repair Version Number
         /// </summary>
         [JsonProperty("FixedVersions")]
         public string FixedVersions{ get; set; }
 
         /// <summary>
-        /// Vulnerability tag. Valid values: `CanBeFixed`, `DynamicLevelPoc`, `DynamicLevelExp`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Tag: "CanBeFixed", "DynamicLevelPoc", and "DynamicLevelExp"
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
-        /// Component name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Component name.
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
         /// Component version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
+
+        /// <summary>
+        /// Attack Heat 0-3
+        /// </summary>
+        [JsonProperty("AttackLevel")]
+        public long? AttackLevel{ get; set; }
+
+        /// <summary>
+        /// Image Layer Information List
+        /// </summary>
+        [JsonProperty("LayerInfos")]
+        public ImageVulLayerInfo[] LayerInfos{ get; set; }
 
 
         /// <summary>
@@ -182,6 +175,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "Component", this.Component);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+            this.SetParamArrayObj(map, prefix + "LayerInfos.", this.LayerInfos);
         }
     }
 }

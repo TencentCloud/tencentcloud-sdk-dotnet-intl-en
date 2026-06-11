@@ -32,28 +32,24 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// This field is returned when the asset is a container.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ContainerDetailInfo")]
         public ComplianceContainerDetailInfo ContainerDetailInfo{ get; set; }
 
         /// <summary>
-        /// This field is returned when the asset is an image.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// When the asset is a mirror, return this field.
         /// </summary>
         [JsonProperty("ImageDetailInfo")]
         public ComplianceImageDetailInfo ImageDetailInfo{ get; set; }
 
         /// <summary>
-        /// This field is returned when the asset is a server.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// This field is returned when the asset is a host.
         /// </summary>
         [JsonProperty("HostDetailInfo")]
         public ComplianceHostDetailInfo HostDetailInfo{ get; set; }
 
         /// <summary>
-        /// This field is returned when the asset is a K8s asset.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// When the asset is K8S, return this field.
         /// </summary>
         [JsonProperty("K8SDetailInfo")]
         public ComplianceK8SDetailInfo K8SDetailInfo{ get; set; }

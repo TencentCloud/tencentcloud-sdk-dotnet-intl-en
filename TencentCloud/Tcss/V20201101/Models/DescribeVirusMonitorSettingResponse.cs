@@ -31,22 +31,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? EnableScan{ get; set; }
 
         /// <summary>
-        /// Scan all paths
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scan all paths.
         /// </summary>
         [JsonProperty("ScanPathAll")]
         public bool? ScanPathAll{ get; set; }
 
         /// <summary>
-        /// Valid when `ScanPathAll` is `true`. Valid values of `ScanPathAll`: `0` (scan the following paths); `1` (scan all paths except the following).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// It is effective when ScanPathAll is true. 0: Scan the following paths; 1: Scan the following paths.
         /// </summary>
         [JsonProperty("ScanPathType")]
         public ulong? ScanPathType{ get; set; }
 
         /// <summary>
-        /// Specified path to be excluded or scanned
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom Excluded or Scanned Address
         /// </summary>
         [JsonProperty("ScanPath")]
         public string[] ScanPath{ get; set; }

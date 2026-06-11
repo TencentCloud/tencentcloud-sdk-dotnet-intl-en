@@ -25,28 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Policy mode. `RULE_MODE_RELEASE`: Allow.
-        ///    `RULE_MODE_ALERT`: Alert.
-        ///    `RULE_MODE_HOLDUP`: Block.
-        /// </summary>
-        [JsonProperty("RuleMode")]
-        public string RuleMode{ get; set; }
-
-        /// <summary>
-        /// Process path
+        /// <p>Process path.</p>
         /// </summary>
         [JsonProperty("ProcessPath")]
         public string ProcessPath{ get; set; }
 
         /// <summary>
-        /// Accessed file path, which is valid only for access control.
+        /// <p>Policy mode: RULE_MODE_RELEASE: allow<br>   RULE_MODE_ALERT: alarm<br>   RULE_MODE_HOLDUP: block</p>
+        /// </summary>
+        [JsonProperty("RuleMode")]
+        public string RuleMode{ get; set; }
+
+        /// <summary>
+        /// <p>Accessed file path, only effective during access control.</p>
         /// </summary>
         [JsonProperty("TargetFilePath")]
         public string TargetFilePath{ get; set; }
 
         /// <summary>
-        /// Sub-policy ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Command line parameters.</p>
+        /// </summary>
+        [JsonProperty("CmdLine")]
+        public string CmdLine{ get; set; }
+
+        /// <summary>
+        /// <p>Sub-policy ID.</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
@@ -57,9 +60,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
+            this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "TargetFilePath", this.TargetFilePath);
+            this.SetParamSimple(map, prefix + "CmdLine", this.CmdLine);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
         }
     }

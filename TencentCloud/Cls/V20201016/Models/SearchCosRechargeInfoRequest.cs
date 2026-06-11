@@ -25,25 +25,30 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// Log topic Id.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Logset ID
+        /// FL instance set ID.
+        /// 
+        /// -Obtain the logset Id by searching the [logset list](https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Delivery Task Name
+        /// COS import task name, supports up to 128 bytes.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// COS bucket, see the supported [bucket naming conventions](https://intl.cloud.tencent.com/document/product/436/13312?from_cn_redirect=1).
+        /// COS bucket, see the supported [bucket naming conventions](https://www.tencentcloud.com/document/product/436/13312?from_cn_redirect=1).	
+        /// 
+        /// -Get COS buckets via [GET Service (List Buckets)](https://www.tencentcloud.com/document/product/436/8291?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
@@ -55,13 +60,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// The prefix of the folder where COS files are located
+        /// The prefix of the folder where COS files are located. By default, it is null, meaning that all files under the bucket will be shipped.
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// Compression mode: "", "gzip", "lzop", and "snappy". The default mode is "".
+        /// Compression mode: "", "gzip", "lzop", "snappy". Default: ""; no compression.
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }

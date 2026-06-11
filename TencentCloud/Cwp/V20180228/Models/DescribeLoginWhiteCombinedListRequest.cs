@@ -37,11 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter criteria
-        /// <li>IpOrAlias - String - required: no - filter by host IP or alias</li>
-        /// <li>UserName - String - required: no - filter by username</li>
-        /// <li>ModifyBeginTime - String - required: no - filter by modification time; start time</li>
-        /// <li>ModifyEndTime - String - required: no - Filter by modification time; end time</li>
+        /// Filtering conditions. <li>IpOrAlias - String - required: no - filter by host IP address or alias.</li> <li>UserName - String - required: no - filter by username.</li> <li>SrcIP - String - required: no - filter by source IP address.</li> <li>Location - String - required: no - filter by login location.</li> <li>ModifyBeginTime - String - required: no - filter by modification time; start time.</li> <li>ModifyEndTime - String - required: no - filter by modification time; end time.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

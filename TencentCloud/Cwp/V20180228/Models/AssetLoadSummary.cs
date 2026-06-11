@@ -39,7 +39,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Top 5 Load
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Top5")]
         public AssetLoadDetail[] Top5{ get; set; }

@@ -38,6 +38,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Where")]
         public string[] Where{ get; set; }
 
+        /// <summary>
+        /// Sorting method (case insensitive): asc for ascending order; desc for descending order
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// Sort column, strictly equal: latest detection time RecentFoundTime
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +58,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "Where.", this.Where);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

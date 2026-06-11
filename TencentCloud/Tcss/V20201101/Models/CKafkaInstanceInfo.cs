@@ -25,36 +25,31 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Topic list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicList")]
         public CKafkaTopicInfo[] TopicList{ get; set; }
 
         /// <summary>
-        /// Route list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Routing List
         /// </summary>
         [JsonProperty("RouteList")]
         public CkafkaRouteInfo[] RouteList{ get; set; }
 
         /// <summary>
-        /// Kafka version number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Kafka Version Number
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }

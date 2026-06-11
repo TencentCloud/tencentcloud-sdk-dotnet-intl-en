@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Data list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List
         /// </summary>
         [JsonProperty("WebFrames")]
         public AssetWebFrameBaseInfo[] WebFrames{ get; set; }

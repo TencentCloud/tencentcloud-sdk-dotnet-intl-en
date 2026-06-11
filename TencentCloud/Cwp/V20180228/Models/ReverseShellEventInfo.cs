@@ -31,13 +31,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Yunjing UUID
+        /// Host Security UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Host ID
+        /// Host UUID
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
@@ -139,8 +139,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? DetectBy{ get; set; }
 
         /// <summary>
-        /// Process tree json; pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: ssh service IP, ssh_source: log-in source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process tree json pid: process ID; exe: file path; account: groups and users to which the process belongs; cmdline: execute commands; ssh_service: SSH service IP; ssh_source: log-in source
         /// </summary>
         [JsonProperty("PsTree")]
         public string PsTree{ get; set; }
@@ -187,6 +186,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// Escaped content of command details. It is used when regular expressions match allowlisted full strings.
+        /// </summary>
+        [JsonProperty("CmdLineQuote")]
+        public string CmdLineQuote{ get; set; }
+
+        /// <summary>
+        /// Risk level
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public ulong? RiskLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -220,6 +231,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "CmdLineQuote", this.CmdLineQuote);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         }
     }
 }

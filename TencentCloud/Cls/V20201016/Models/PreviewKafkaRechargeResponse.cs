@@ -31,8 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogSample{ get; set; }
 
         /// <summary>
-        /// Log preview result
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log preview results
         /// </summary>
         [JsonProperty("LogData")]
         public string LogData{ get; set; }

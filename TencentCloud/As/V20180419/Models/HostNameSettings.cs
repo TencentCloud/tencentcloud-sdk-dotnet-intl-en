@@ -59,9 +59,9 @@ namespace TencentCloud.As.V20180419.Models
         /// -  hyphen (-)
         /// - empty string.
         /// Delimiter used for concatenating host name, index, and suffix. Assuming host name is testGpu4090, index is 0007, and suffix is server.
-        /// -The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
-        /// -Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
-        /// -Delimiter is an empty string, finally concatenated as testGpu4090007server.
+        /// - The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+        /// - Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+        /// - Delimiter is an empty string, finally concatenated as testGpu4090007server.
         /// </summary>
         [JsonProperty("HostNameDelimiter")]
         public string HostNameDelimiter{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// List of top check items
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of Top check items
         /// </summary>
         [JsonProperty("RuleTopList")]
         public BaselineRuleTopInfo[] RuleTopList{ get; set; }

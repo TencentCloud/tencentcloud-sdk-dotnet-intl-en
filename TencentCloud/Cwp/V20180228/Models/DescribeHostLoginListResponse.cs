@@ -31,8 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Log-in an audit list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obtaining the List of Abnormal Logins
         /// </summary>
         [JsonProperty("HostLoginList")]
         public HostLoginList[] HostLoginList{ get; set; }

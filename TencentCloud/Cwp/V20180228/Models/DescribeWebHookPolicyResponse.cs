@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Policy list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Policy List
         /// </summary>
         [JsonProperty("List")]
         public WebHookPolicy[] List{ get; set; }

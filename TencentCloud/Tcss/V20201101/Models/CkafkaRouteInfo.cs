@@ -25,47 +25,41 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Route ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Routing ID
         /// </summary>
         [JsonProperty("RouteID")]
         public long? RouteID{ get; set; }
 
         /// <summary>
         /// Domain name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Domain port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Domain Port
         /// </summary>
         [JsonProperty("DomainPort")]
         public ulong? DomainPort{ get; set; }
 
         /// <summary>
-        /// VIP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Virtual IP
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// VIP type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Virtual IP Type
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
 
         /// <summary>
         /// Access type
-        /// // `0`: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-        /// 	// `1`: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-        /// 	// `2`: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-        /// 	// `3`: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition)
+        /// 	SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at the start of data transmission, only supported by community version).
+        /// 	2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition)
+        /// 	3: SASL_SSL (SSL encrypted communication. Authenticate the login with SASL when data transmission starts. Only supported by community version)
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }

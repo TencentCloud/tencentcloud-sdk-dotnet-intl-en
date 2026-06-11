@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Number of software applications
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of all software applications.
         /// </summary>
         [JsonProperty("Apps")]
         public AssetKeyVal[] Apps{ get; set; }

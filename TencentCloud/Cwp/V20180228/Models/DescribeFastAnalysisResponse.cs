@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Statistical data after analysis
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Analyze statistical information
         /// </summary>
         [JsonProperty("FieldValueRatioInfos")]
         public FieldValueRatioInfo[] FieldValueRatioInfos{ get; set; }

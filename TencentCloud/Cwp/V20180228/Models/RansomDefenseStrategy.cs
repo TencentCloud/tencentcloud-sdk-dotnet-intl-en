@@ -32,7 +32,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Operating UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -45,7 +44,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Policy Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -64,28 +62,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Includes directories, separated by semicolons (;).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IncludeDir")]
         public string IncludeDir{ get; set; }
 
         /// <summary>
         /// Includes directories, separated by semicolons (;).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExcludeDir")]
         public string ExcludeDir{ get; set; }
 
         /// <summary>
-        /// Backup pattern: 0 weekly, 1 daily.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup mode: 0 weekly, 1 daily, 2 do not backup.
         /// </summary>
         [JsonProperty("BackupType")]
         public ulong? BackupType{ get; set; }
 
         /// <summary>
         /// Backup days in a week (1-7): 1; 2; 3; 4.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Weekday")]
         public string Weekday{ get; set; }
@@ -104,21 +98,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Last modification time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// Number of Bound Machines
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineCount")]
         public ulong? MachineCount{ get; set; }

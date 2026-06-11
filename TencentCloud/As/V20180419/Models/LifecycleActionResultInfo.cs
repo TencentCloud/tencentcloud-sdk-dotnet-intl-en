@@ -44,7 +44,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Result of command invocation,
-        /// <li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+        /// <li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId`.</li>
         /// <li>`FAILED`: Failed to invoke the command</li>
         /// <li>`NONE`</li>
         /// </summary>

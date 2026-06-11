@@ -25,22 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Year and month
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Year and month.
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Used storage capacity, in bytes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage amount, in bytes.
         /// </summary>
         [JsonProperty("UsedSize")]
         public ulong? UsedSize{ get; set; }
 
         /// <summary>
-        /// Total capacity, in bytes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total volume, in bytes.
         /// </summary>
         [JsonProperty("InquireSize")]
         public ulong? InquireSize{ get; set; }

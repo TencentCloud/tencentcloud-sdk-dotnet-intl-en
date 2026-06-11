@@ -25,13 +25,13 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// Instance status (1: creating; 2: running; 3: exceptional; 4: restarting; 5: stopping; 6: stopped; 7: deleted)
+        /// Instance status (1=creating, 2=running, 3=abnormal, 4=restarting, 5=stopping, 6=stopped, 7=deleted)
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public long? InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Zone Id
         /// </summary>
         [JsonProperty("AreaId")]
         public long? AreaId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string InstanceDesc{ get; set; }
 
         /// <summary>
-        /// Billing status (1: in use; 2: expired; 3: terminated; 4: assigning; 5: assignment failed)
+        /// Billing status (1=Active, 2=Expired, 3=Terminated, 4=Allocating, 5=Allocation failure)
         /// </summary>
         [JsonProperty("ChargeStatus")]
         public long? ChargeStatus{ get; set; }
 
         /// <summary>
-        /// Billing type (1: free; 2: prepaid; 3: postpaid)
+        /// Billing type (1=Free edition, 2=Prepayment, 3=Pay-as-you-go)
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
@@ -79,25 +79,25 @@ namespace TencentCloud.Rum.V20210622.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// Data retention period (in days)
+        /// Data retention time (days)
         /// </summary>
         [JsonProperty("DataRetentionDays")]
         public long? DataRetentionDays{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance type 1: Original web-related class 2: app endpoint type
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }

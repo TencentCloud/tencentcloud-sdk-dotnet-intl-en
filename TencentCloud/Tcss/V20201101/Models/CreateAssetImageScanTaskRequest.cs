@@ -25,47 +25,77 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Whether to scan all images.
+        /// <p>Whether to scan all images; select one from all images, image list, and filter by condition.</p>
         /// </summary>
         [JsonProperty("All")]
         [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// List of images to be scanned.
+        /// <p>List of images to scan; choose one from all images, image list, and filter by condition.</p>
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// Scan for vulnerabilities.
+        /// <p>Scan vulnerabilities; select one from vulnerability, Trojan, and risk.</p>
         /// </summary>
         [JsonProperty("ScanVul")]
         public bool? ScanVul{ get; set; }
 
         /// <summary>
-        /// Scan for trojans.
+        /// <p>Scan for trojans; select either vulnerability, Trojan or risk.</p>
         /// </summary>
         [JsonProperty("ScanVirus")]
         public bool? ScanVirus{ get; set; }
 
         /// <summary>
-        /// Scan for risks.
+        /// <p>Scan risk; select one from vulnerability, Trojan, and risk.</p>
         /// </summary>
         [JsonProperty("ScanRisk")]
         public bool? ScanRisk{ get; set; }
 
         /// <summary>
-        /// Filter
+        /// <p>Filter images by conditions; select one from all images, image list, and filter by condition.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// Specified image IDs to be excluded
+        /// <p>Filter images by conditions and exclude individual images</p>
         /// </summary>
         [JsonProperty("ExcludeImageIds")]
         public string[] ExcludeImageIds{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the image has running containers</p>
+        /// </summary>
+        [JsonProperty("ContainerRunning")]
+        public bool? ContainerRunning{ get; set; }
+
+        /// <summary>
+        /// <p>Scan range 0 all authorized images, 1 selected images, 2 recommended scan, 3 cluster scan</p><p>Value ranges from 0 to 3</p><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("ScanScope")]
+        public ulong? ScanScope{ get; set; }
+
+        /// <summary>
+        /// <p>Task timeout duration unit seconds, default 1 hour.</p>
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
+        /// <summary>
+        /// <p>One-click scan task. Default false indicates non-one-click scan, true one-click scan.</p>
+        /// </summary>
+        [JsonProperty("IsOneClickScanningTask")]
+        public bool? IsOneClickScanningTask{ get; set; }
+
+        /// <summary>
+        /// <p>Cluster ID.</p>
+        /// </summary>
+        [JsonProperty("ClusterIDs")]
+        public string[] ClusterIDs{ get; set; }
 
 
         /// <summary>
@@ -80,6 +110,11 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
+            this.SetParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
+            this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "IsOneClickScanningTask", this.IsOneClickScanningTask);
+            this.SetParamArraySimple(map, prefix + "ClusterIDs.", this.ClusterIDs);
         }
     }
 }

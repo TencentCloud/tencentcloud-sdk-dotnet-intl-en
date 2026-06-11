@@ -25,85 +25,73 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Image ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image id
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Repository type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// repository type
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
         /// Image repository address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageRepoAddress")]
         public string ImageRepoAddress{ get; set; }
 
         /// <summary>
-        /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Namespace
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Repository name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// repository name
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
         /// Image tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// Image scanning status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image scan status
         /// </summary>
         [JsonProperty("ScanStatus")]
         public string ScanStatus{ get; set; }
 
         /// <summary>
-        /// CVE scanning progress of the image
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mirror cve scan progress
         /// </summary>
         [JsonProperty("CveProgress")]
         public ulong? CveProgress{ get; set; }
 
         /// <summary>
-        /// Sensitive data scanning progress of the image
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mirror sensitivity scan progress
         /// </summary>
         [JsonProperty("RiskProgress")]
         public ulong? RiskProgress{ get; set; }
 
         /// <summary>
-        /// Trojan scanning progress of the image
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Trojan mirror scan progress
         /// </summary>
         [JsonProperty("VirusProgress")]
         public ulong? VirusProgress{ get; set; }

@@ -91,7 +91,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// The session persistence duration.
+        /// Session hold time, unit: seconds.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }

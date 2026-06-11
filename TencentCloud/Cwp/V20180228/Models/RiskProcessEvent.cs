@@ -128,7 +128,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -138,6 +137,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
+
+        /// <summary>
+        /// First time detection method 0 scan;1 real-time monitoring
+        /// </summary>
+        [JsonProperty("FirstDetectionMethod")]
+        public ulong? FirstDetectionMethod{ get; set; }
 
 
         /// <summary>
@@ -164,6 +169,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "FirstDetectionMethod", this.FirstDetectionMethod);
         }
     }
 }

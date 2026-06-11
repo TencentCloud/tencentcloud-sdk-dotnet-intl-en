@@ -37,29 +37,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// Host status
-        /// <li>OFFLINE: Offline</li>
-        /// <li>ONLINE: Online</li>
-        /// <li>SHUTDOWN: Shut down</li>
-        /// <li>UNINSTALLED: Unprotected</li>
+        /// Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// RUNNING; is shut down; to be recycled	
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+        /// CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -186,42 +182,37 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Inclusive Edition
+        /// Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
         /// Cloud Tag Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
-        /// Whether a host added within the last 15 days: 0: no; 1: yes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
         /// </summary>
         [JsonProperty("IsAddedOnTheFifteen")]
         public ulong? IsAddedOnTheFifteen{ get; set; }
 
         /// <summary>
         /// Host IP List
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpList")]
         public string IpList{ get; set; }
 
         /// <summary>
         /// Network
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -234,16 +225,27 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Remarks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 
+        /// Host security agent version
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AppId")]
+        public ulong? AppId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CSIPProtectType")]
+        public string CSIPProtectType{ get; set; }
 
 
         /// <summary>
@@ -285,6 +287,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "CSIPProtectType", this.CSIPProtectType);
         }
     }
 }

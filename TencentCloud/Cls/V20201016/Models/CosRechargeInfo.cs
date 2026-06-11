@@ -26,109 +26,108 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// COS import configuration ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// ID of the log topic.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Log topic ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// ID of the logset.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Logset ID
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// COS import task name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// COS import task name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// COS bucket.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// COS bucket
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Region where the COS bucket is located.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// COS bucket location.
+        /// 
+        /// -Obtain region information via [regions and access endpoints](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// The prefix of the folder where COS files are located.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Prefix of the COS file folder location
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// The type of log collected. `json_log`: JSON logs; `delimiter_log`: separator logs; `minimalist_log`: full text in a single line
-        /// Default value: `minimalist_log`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Types of logs collected: json_log represents JSON logs, delimiter_log represents delimiter-separated format logs, minimalist_log represents single-line full-text representation.
+        /// default is minimalist_log
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Status. `0`: Created, `1`: Running, `2`: Stopped, `3`: Completed, `4`: Run failed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// status 0: Created, 1: Running, 2: Stopped, 3: Completed, 4: Execution failed.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Whether the configuration is enabled. `0`: Not enabled, `1`: Enabled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether this feature is enabled. 0: Disabled; 1: Enabled.
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }
 
         /// <summary>
-        /// Creation time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation time. Time format: YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update time. Time format: YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Progress in percentage.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Progress Bar Percentage
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Valid values: "" (default), "gzip", "lzop", "snappy"
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Compression methods supported: "", "gzip", "lzop", and "snappy". Default empty with no compression.
         /// </summary>
         [JsonProperty("Compress")]
         public string Compress{ get; set; }
 
         /// <summary>
-        /// See the description of the `ExtractRuleInfo` structure.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// See the description of the ExtractRuleInfo structure.
         /// </summary>
         [JsonProperty("ExtractRuleInfo")]
         public ExtractRuleInfo ExtractRuleInfo{ get; set; }
+
+        /// <summary>
+        /// COS import task type. Valid values: 1: one-time import task; 2: continuous import task.
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public ulong? TaskType{ get; set; }
+
+        /// <summary>
+        /// Metadata. Buckets and objects are supported.
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public string[] Metadata{ get; set; }
 
 
         /// <summary>
@@ -151,6 +150,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamObj(map, prefix + "ExtractRuleInfo.", this.ExtractRuleInfo);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamArraySimple(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

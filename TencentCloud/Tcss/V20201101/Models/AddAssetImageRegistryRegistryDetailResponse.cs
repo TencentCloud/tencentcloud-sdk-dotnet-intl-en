@@ -26,21 +26,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// Connection error message
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HealthCheckErr")]
         public string HealthCheckErr{ get; set; }
 
         /// <summary>
-        /// Name error message
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Error message of the name
         /// </summary>
         [JsonProperty("NameRepeatErr")]
         public string NameRepeatErr{ get; set; }
 
         /// <summary>
-        /// Unique repository ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Repository unique id
         /// </summary>
         [JsonProperty("RegistryId")]
         public long? RegistryId{ get; set; }

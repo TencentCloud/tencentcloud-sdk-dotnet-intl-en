@@ -48,6 +48,42 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("IsModify")]
         public bool? IsModify{ get; set; }
 
+        /// <summary>
+        /// Type
+        /// </summary>
+        [JsonProperty("Type")]
+        public ulong? Type{ get; set; }
+
+        /// <summary>
+        /// target region
+        /// </summary>
+        [JsonProperty("SCFRegion")]
+        public string SCFRegion{ get; set; }
+
+        /// <summary>
+        /// Namespace
+        /// </summary>
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
+
+        /// <summary>
+        /// function name
+        /// </summary>
+        [JsonProperty("FunctionName")]
+        public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// Function version
+        /// </summary>
+        [JsonProperty("FunctionVersion")]
+        public string FunctionVersion{ get; set; }
+
+        /// <summary>
+        /// Alias
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +94,12 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Addr", this.Addr);
             this.SetParamSimple(map, prefix + "IsModify", this.IsModify);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "SCFRegion", this.SCFRegion);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

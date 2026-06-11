@@ -25,8 +25,8 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>ItemId - int64 - whether required: no - item ID</i>
-        /// <li>RuleId - int64 - whether required: no - rule ID</li>
+        /// <li>ItemId - int64 - required: no - item ID</li>
+        /// <li>RuleId - int64 - required: no - rule ID</li>
         /// <li>HostId - string - whether required: no - host ID</li>
         /// </summary>
         [JsonProperty("Filters")]

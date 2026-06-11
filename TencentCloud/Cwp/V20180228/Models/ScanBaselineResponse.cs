@@ -25,15 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// QUUID of the host being scanned
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host Quuid being scanned
         /// </summary>
         [JsonProperty("ScanningQuuids")]
         public string[] ScanningQuuids{ get; set; }
 
         /// <summary>
-        /// TaskId returned upon successful task distribution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// TaskId returned upon successful task issuance
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }

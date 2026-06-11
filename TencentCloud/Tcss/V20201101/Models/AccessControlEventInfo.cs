@@ -25,261 +25,238 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Process name
+        /// <p>Process name.</p>
         /// </summary>
         [JsonProperty("ProcessName")]
         public string ProcessName{ get; set; }
 
         /// <summary>
-        /// Name of the hit rule
+        /// <p>Hit rule name.</p>
         /// </summary>
         [JsonProperty("MatchRuleName")]
         public string MatchRuleName{ get; set; }
 
         /// <summary>
-        /// Generation time
+        /// <p>Generation time.</p>
         /// </summary>
         [JsonProperty("FoundTime")]
         public string FoundTime{ get; set; }
 
         /// <summary>
-        /// Container name
+        /// <p>Container name.</p>
         /// </summary>
         [JsonProperty("ContainerName")]
         public string ContainerName{ get; set; }
 
         /// <summary>
-        /// Image name
+        /// <p>Image name.</p>
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Action execution result. `BEHAVIOR_NONE`: None.
-        ///     `BEHAVIOR_ALERT`: Alert.
-        ///     `BEHAVIOR_RELEASE`: Allow.
-        ///     `BEHAVIOR_HOLDUP_FAILED`: Failed to block.
-        ///     `BEHAVIOR_HOLDUP_SUCCESSED`: Blocked.
+        /// <p>Action execution result: BEHAVIOR_NONE: none<br>BEHAVIOR_ALERT: alarm<br>BEHAVIOR_RELEASE: allow<br>BEHAVIOR_HOLDUP_FAILED: block failed<br>BEHAVIOR_HOLDUP_SUCCESSED: block succeeded</p>
         /// </summary>
         [JsonProperty("Behavior")]
         public string Behavior{ get; set; }
 
         /// <summary>
-        /// Status. `0`: Pending. `EVENT_UNDEAL`: Pending.
-        ///     `EVENT_DEALED`: Processed.
-        ///     `EVENT_INGNORE`: Ignored.
+        /// <p>Status 0: unhandled  "EVENT_UNDEAL": event unhandled<br>    &quot;EVENT_DEALED&quot;: event handled<br>    &quot;EVENT_INGNORE&quot;: event ignored</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Unique event ID
+        /// <p>Unique ID of the event record.</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Filename
+        /// <p>File name.</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Event type. `FILE_ABNORMAL_READ`: Abnormal file read.
+        /// <p>Event type. FILE_ABNORMAL_READ: abnormal file read.</p>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// Image ID, which is used for redirect.
+        /// <p>Image ID, used for redirection.</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Container ID, which is used for redirect.
+        /// <p>Container ID, used for redirection.</p>
         /// </summary>
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// Event solution
+        /// <p>Event solution.</p>
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
-        /// Event description
+        /// <p>Event detailed description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Hit policy ID
+        /// <p>Hit policy ID.</p>
         /// </summary>
         [JsonProperty("MatchRuleId")]
         public string MatchRuleId{ get; set; }
 
         /// <summary>
-        /// Action of the hit rule:
-        /// `RULE_MODE_RELEASE`: Allow.
-        /// `RULE_MODE_ALERT`: Alert.
-        /// `RULE_MODE_HOLDUP`: Block.
+        /// <p>Hit rule action:<br>RULE_MODE_RELEASE: allow<br>RULE_MODE_ALERT: alarm<br>RULE_MODE_HOLDUP: block</p>
         /// </summary>
         [JsonProperty("MatchAction")]
         public string MatchAction{ get; set; }
 
         /// <summary>
-        /// Information of the process that hits the rule
+        /// <p>Hit rule process information.</p>
         /// </summary>
         [JsonProperty("MatchProcessPath")]
         public string MatchProcessPath{ get; set; }
 
         /// <summary>
-        /// Information of the file that hits the rule
+        /// <p>Hit rule file information.</p>
         /// </summary>
         [JsonProperty("MatchFilePath")]
         public string MatchFilePath{ get; set; }
 
         /// <summary>
-        /// File path containing the name
+        /// <p>File path, including name.</p>
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// Whether the rule exists
+        /// <p>Whether the rule exists.</p>
         /// </summary>
         [JsonProperty("RuleExist")]
         public bool? RuleExist{ get; set; }
 
         /// <summary>
-        /// Number of events
+        /// <p>Number of events.</p>
         /// </summary>
         [JsonProperty("EventCount")]
         public long? EventCount{ get; set; }
 
         /// <summary>
-        /// Last generation time
+        /// <p>Last generation time.</p>
         /// </summary>
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
 
         /// <summary>
-        /// Rule group ID
+        /// <p>Rule group ID.</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Network status
-        /// `NORMAL`: 	Not isolated.
-        /// `ISOLATED`: 		Isolated.
-        /// `ISOLATING`: 		Isolating.
-        /// `ISOLATE_FAILED`: 	Isolation failed.
-        /// `RESTORING`: Recovering.
-        /// `RESTORE_FAILED`: Recovery failed.
+        /// <p>Network status<br>Not isolated: NORMAL<br>Isolated: ISOLATED<br>Isolating: ISOLATING<br>Isolation failed: ISOLATE_FAILED<br>Restoring: RESTORING<br>Restoring failed: RESTORE_FAILED</p>
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
-        /// Sub-status of the container
-        /// "AGENT_OFFLINE"       // The agent is offline.
-        /// "NODE_DESTROYED"      // The node is terminated.
-        /// "CONTAINER_EXITED"    // The container exited.
-        /// "CONTAINER_DESTROYED" // The container was terminated.
-        /// "SHARED_HOST"         // The container shares the network with the server.
-        /// "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-        /// "UNKNOW"              // The reason is unknown.
+        /// <p>Container sub-status.<br>&quot;AGENT_OFFLINE&quot;       //Agent offline<br>&quot;NODE_DESTROYED&quot;      //Node destroyed<br>&quot;CONTAINER_EXITED&quot;    //Container exited<br>&quot;CONTAINER_DESTROYED&quot; //Container destroyed<br>&quot;SHARED_HOST&quot;         //Container and host sharing the network<br>&quot;RESOURCE_LIMIT&quot;      //Resource limit exceeded for the isolation operation<br>&quot;UNKNOW&quot;              //Unknown reason</p>
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// Container isolation operation source
+        /// <p>Source of container isolation operation.</p>
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
-        /// Container status
-        /// `RUNNING`: Running.
-        /// `PAUSED`: Paused.
-        /// `STOPPED`: Stopped.
-        /// `CREATED`: Created.
-        /// `DESTROYED`: Terminated.
-        /// `RESTARTING`: Restarting.
-        /// `REMOVING`: Removing.
+        /// <p>Container status.<br>RUNNING<br>PAUSED<br>STOPPED<br>CREATED<br>DESTROYED<br>RESTARTING<br>REMOVING</p>
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }
 
         /// <summary>
-        /// Node name: For super nodes, the node_id is displayed.
+        /// <p>Node name: For super nodes, the node_id is displayed instead.</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Pod name
+        /// <p>Pod name.</p>
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// Pod IP
+        /// <p>pod ip</p>
         /// </summary>
         [JsonProperty("PodIP")]
         public string PodIP{ get; set; }
 
         /// <summary>
-        /// Node type. Values: `NORMAL` (general node), `SUPER` (super node).
+        /// <p>Node type: NORMAL (normal node) and SUPER (super node).</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Node unique ID. It's used for super nodes.
+        /// <p>Unique node ID, primarily used for super nodes.</p>
         /// </summary>
         [JsonProperty("NodeUniqueID")]
         public string NodeUniqueID{ get; set; }
 
         /// <summary>
-        /// Node public IP
+        /// <p>Node public IP address.</p>
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
 
         /// <summary>
-        /// Node ID
+        /// <p>Node ID.</p>
         /// </summary>
         [JsonProperty("NodeID")]
         public string NodeID{ get; set; }
 
         /// <summary>
-        /// uuid
+        /// <p>uuid</p>
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
-        /// Private IP of the node
+        /// <p>Node private IP address.</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// Cluster name
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>Command line parameters.</p>
+        /// </summary>
+        [JsonProperty("CmdLine")]
+        public string CmdLine{ get; set; }
 
 
         /// <summary>
@@ -325,6 +302,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "CmdLine", this.CmdLine);
         }
     }
 }

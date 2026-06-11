@@ -25,7 +25,9 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Filtering criteria: Keywords: IP or host name for fuzzy query; Type or status for precise match; CreateBeginTime, CreateEndTime for time period query
+        /// Filtering criteria: InstanceID and IP
+        /// 
+        /// MachineName host name for fuzzy query; Type, status for precise match; CreateBeginTime, CreateEndTime for time period
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
@@ -42,6 +44,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// Sorting method (case insensitive): asc for ascending order; desc for descending order
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// Sort column, strictly equal: Latest detection time RecentFoundTime
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

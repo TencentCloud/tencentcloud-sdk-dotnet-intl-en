@@ -32,34 +32,30 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// List of Project or Tag Names, empty for custom hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemLabels")]
         public string[] ItemLabels{ get; set; }
 
         /// <summary>
         /// Machine list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
 
         /// <summary>
         /// Total Number of Machine Lists
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
         /// List of Project or Tag IDs, empty for custom hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemLabelIds")]
         public string[] ItemLabelIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of machines to be excluded.
         /// </summary>
         [JsonProperty("ExcludedQuuids")]
         public string[] ExcludedQuuids{ get; set; }

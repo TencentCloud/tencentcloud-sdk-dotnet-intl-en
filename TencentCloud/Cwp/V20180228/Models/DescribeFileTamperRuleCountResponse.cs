@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Information on Number of Host-associated Core File Rules
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("List")]
         public FileTamperRuleCount[] List{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? BashAction{ get; set; }
 
         /// <summary>
-        /// Regular expression
+        /// Regular expression, encrypted with Base64. This field is deprecated. If you enter this parameter, it will be automatically replaced with Rules.Process.CmdLine.
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -74,27 +74,24 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Policy description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Descript")]
         public string Descript{ get; set; }
 
         /// <summary>
-        /// When it is added to the allowlist, the EventId needs to be passed in.Note: This field may return null, indicating that no valid values can be obtained.
+        /// When it is added to the allowlist, the event ID needs to be passed in.
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// Whether to process old events as allowlisted ones: 0 - no; 1 - yes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to add existing events to the allowlist. 0: no; 1: yes.
         /// </summary>
         [JsonProperty("DealOldEvents")]
         public long? DealOldEvents{ get; set; }
 
         /// <summary>
-        /// A collection of QUUIDs for effective hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// QUUID set for effective hosts
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
@@ -123,6 +120,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
+        /// <summary>
+        /// Rule expression
+        /// </summary>
+        [JsonProperty("Rules")]
+        public PolicyRules Rules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +148,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+            this.SetParamObj(map, prefix + "Rules.", this.Rules);
         }
     }
 }

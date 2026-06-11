@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
+        /// CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
@@ -152,7 +152,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

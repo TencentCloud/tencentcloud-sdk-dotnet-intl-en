@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// <li>WeakPassword - string - required: no - weak password</li>
+        /// <li>WeakPassword - string - required: no - weak password</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting order [ASC: ascending|DESC: descending]
+        /// Sorting order [ASC: ascending|DESC: descending]
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting column [CreateTime|ModifyTime]
+        /// Sorting column [CreateTime|ModifyTime]
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

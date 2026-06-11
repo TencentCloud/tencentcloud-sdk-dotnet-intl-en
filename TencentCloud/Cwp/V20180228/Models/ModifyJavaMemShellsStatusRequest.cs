@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }
 
+        /// <summary>
+        /// Whether to update all statuses. This parameter takes effect only when the statuses are Ignored, Processed, and Deleted.
+        /// </summary>
+        [JsonProperty("UpdateAll")]
+        public bool? UpdateAll{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
+            this.SetParamSimple(map, prefix + "UpdateAll", this.UpdateAll);
         }
     }
 }

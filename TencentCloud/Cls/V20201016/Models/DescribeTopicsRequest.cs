@@ -25,7 +25,14 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <li>topicName: Filter by **log topic name**. Fuzzy match is implemented by default. You can use the `PreciseSearch` parameter to set exact match. Type: String. Required. No. <br><li>logsetName: Filter by **logset name**. Fuzzy match is implemented by default. You can use the `PreciseSearch` parameter to set exact match. Type: String. Required: No. <br><li>topicId: Filter by **log topic ID**. Type: String. Required: No. <br><li>logsetId: Filter by **logset ID**. You can call `DescribeLogsets` to query the list of created logsets or log in to the console to view them. You can also call `CreateLogset` to create a logset. Type: String. Required: No. <br><li>tagKey: Filter by **tag key**. Type: String. Required: No. <br><li>tag:tagKey: Filter by **tag key-value pair**. The `tagKey` should be replaced with a specified tag key, such as `tag:exampleKey`. Type: String. Required: No. <br><li>storageType: Filter by **log topic storage type**. Valid values: `hot` (standard storage) and `cold` (IA storage). Type: String. Required: No. Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+        /// <ul><li>Filter topicName by [topic name]. The default is fuzzy matching. You can set the PreciseSearch parameter to exact match. Type: String. Required: No</li>
+        /// <li>logsetName filters by [logset name], defaults to fuzzy matching, and can be set to exact match using the PreciseSearch parameter. Type: String. Required: No</li>
+        /// <li>topicId filters by [topic ID]. Type: String. Required: No</li>
+        /// <li>logsetId filters by [logset ID]. You can call the <a href="https://www.tencentcloud.com/document/product/614/58624?from_cn_redirect=1">DescribeLogsets</a> API to query the list of created logsets or log in to the console to view. You can also call the <a href="https://www.tencentcloud.com/document/product/614/58626?from_cn_redirect=1">CreateLogset</a> API to create logset. Type: String. Required: No</li>
+        /// <li>tagKey Filter by [tag key]. Type: String. Required: No</li>
+        /// <li>tag:tagKey - filter by [tag key-value pair]. Replace tagKey with a specific tag key, such as tag:exampleKey. Type: String. Required: no</li>
+        /// <li>storageType filters by [storage type of the topic]. Value range: hot (standard storage), cold (infrequent storage). Type: String. Required: No</li></ul>
+        /// Note: Each request can have up to 10 Filters. The upper limit of Filter.Values is 100.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -43,19 +50,19 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Match mode for `Filters` fields.
-        /// - 0: Fuzzy match for `topicName` and `logsetName`. This is the default value.
-        /// - 1: Exact match for `topicName`.
-        /// - 2: Exact match for `logsetName`.
-        /// - 3: Exact match for `topicName` and `logsetName`.
+        /// Control whether the related fields in Filters are exact matches.
+        /// <ul><li>0: Default value. topicName and logsetName use fuzzy matching</li>
+        /// <li>1: topicName   Exact match</li>
+        /// <li>2: Exact match by logsetName</li>
+        /// <li>3: Exact match by both topicName and logsetName</li></ul>
         /// </summary>
         [JsonProperty("PreciseSearch")]
         public ulong? PreciseSearch{ get; set; }
 
         /// <summary>
         /// Topic type
-        /// - 0 (default): Log topic.
-        /// - 1: Metric topic.
+        /// -0: Log topic, default value
+        /// -Metric topic
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }

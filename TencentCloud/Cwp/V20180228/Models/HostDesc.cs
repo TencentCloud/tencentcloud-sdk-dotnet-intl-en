@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Yunjing client ID
+        /// Machine UUID
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Host ID
+        /// Host Security UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

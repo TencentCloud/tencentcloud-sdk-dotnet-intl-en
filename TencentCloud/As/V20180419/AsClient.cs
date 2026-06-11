@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.intl.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -386,7 +386,8 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (CreateScalingPolicy) is used to create an alarm trigger policy.
+        /// This API is used to create an alarm-triggered scaling policy.
+        /// -The target tracking policy triggers scale-out when the specified type of metric exceeds the threshold (target value) for 3 consecutive cycles (1 minute each). It triggers auto scale-down when the specified type of metric is below the threshold (80% of the target value) for 15 consecutive cycles (1 minute each).
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>
         /// <returns><see cref="CreateScalingPolicyResponse"/></returns>
@@ -396,7 +397,8 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (CreateScalingPolicy) is used to create an alarm trigger policy.
+        /// This API is used to create an alarm-triggered scaling policy.
+        /// -The target tracking policy triggers scale-out when the specified type of metric exceeds the threshold (target value) for 3 consecutive cycles (1 minute each). It triggers auto scale-down when the specified type of metric is below the threshold (80% of the target value) for 15 consecutive cycles (1 minute each).
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>
         /// <returns><see cref="CreateScalingPolicyResponse"/></returns>
@@ -579,7 +581,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (DescribeAutoScalingActivities) is used to query the activity history of an auto scaling group.
+        /// This API is used to query the scaling activities of the scaling group. Currently, only scaling operations from the past two years are saved.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingActivitiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScalingActivitiesResponse"/></returns>
@@ -589,7 +591,7 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This API (DescribeAutoScalingActivities) is used to query the activity history of an auto scaling group.
+        /// This API is used to query the scaling activities of the scaling group. Currently, only scaling operations from the past two years are saved.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingActivitiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScalingActivitiesResponse"/></returns>

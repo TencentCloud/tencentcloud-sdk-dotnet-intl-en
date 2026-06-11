@@ -38,14 +38,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Description information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Number of additions today
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of new key-value pairs today
         /// </summary>
         [JsonProperty("NewCount")]
         public long? NewCount{ get; set; }

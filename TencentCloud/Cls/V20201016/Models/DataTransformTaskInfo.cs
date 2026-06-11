@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// Task type. Valid values: 1 (DSL) and 2 (SQL).
+        /// Processing task type, 1: DSL (processing task using custom language), 2: SQL (processing task using SQL)
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -61,19 +61,22 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Task creation time
+        /// Creation time.
+        /// Time format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time
+        /// Last modification time
+        /// Time format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Last enabled time. If you need to rebuild a cluster, modify this time.
+        /// Last enabled time. Modify this time if the cluster needs to be rebuilt.
+        /// Time format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("LastEnableTime")]
         public string LastEnableTime{ get; set; }
@@ -97,10 +100,79 @@ namespace TencentCloud.Cls.V20201016.Models
         public DataTransformResouceInfo[] DstResources{ get; set; }
 
         /// <summary>
-        /// Logical function for data processing
+        /// Processing logic function.
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
+
+        /// <summary>
+        /// Fallback Topic ID
+        /// </summary>
+        [JsonProperty("BackupTopicID")]
+        public string BackupTopicID{ get; set; }
+
+        /// <summary>
+        /// Whether to discard log data after the limit is exceeded
+        /// </summary>
+        [JsonProperty("BackupGiveUpData")]
+        public bool? BackupGiveUpData{ get; set; }
+
+        /// <summary>
+        /// Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// Number of the target log topics of a task.
+        /// </summary>
+        [JsonProperty("TaskDstCount")]
+        public ulong? TaskDstCount{ get; set; }
+
+        /// <summary>
+        /// Data processing type. Valid values: 0: standard processing task; 1: pre-processing task.
+        /// </summary>
+        [JsonProperty("DataTransformType")]
+        public ulong? DataTransformType{ get; set; }
+
+        /// <summary>
+        /// Whether to keep the failure log status. Valid values: 1: no; 2: yes.
+        /// </summary>
+        [JsonProperty("KeepFailureLog")]
+        public ulong? KeepFailureLog{ get; set; }
+
+        /// <summary>
+        /// Field name of a failed log.
+        /// </summary>
+        [JsonProperty("FailureLogKey")]
+        public string FailureLogKey{ get; set; }
+
+        /// <summary>
+        /// Specify the start time of data processing (a second-level timestamp).
+        /// -For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+        /// </summary>
+        [JsonProperty("ProcessFromTimestamp")]
+        public ulong? ProcessFromTimestamp{ get; set; }
+
+        /// <summary>
+        /// Specify the end time of data processing, a Unix second-level timestamp.
+        /// 1. Cannot specify a future time
+        /// 2. If left blank, it means that the task will run constantly.
+        /// </summary>
+        [JsonProperty("ProcessToTimestamp")]
+        public ulong? ProcessToTimestamp{ get; set; }
+
+        /// <summary>
+        /// sql data source information
+        /// </summary>
+        [JsonProperty("DataTransformSqlDataSources")]
+        public DataTransformSqlDataSource[] DataTransformSqlDataSources{ get; set; }
+
+        /// <summary>
+        /// Environment variable.
+        /// </summary>
+        [JsonProperty("EnvInfos")]
+        public EnvInfo[] EnvInfos{ get; set; }
 
 
         /// <summary>
@@ -121,6 +193,17 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
             this.SetParamSimple(map, prefix + "EtlContent", this.EtlContent);
+            this.SetParamSimple(map, prefix + "BackupTopicID", this.BackupTopicID);
+            this.SetParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "TaskDstCount", this.TaskDstCount);
+            this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+            this.SetParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+            this.SetParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+            this.SetParamSimple(map, prefix + "ProcessFromTimestamp", this.ProcessFromTimestamp);
+            this.SetParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
+            this.SetParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+            this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
         }
     }
 }

@@ -31,7 +31,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// ECM, Tencent Cloud Edge Computing Machine
         /// BM, Tencent BM 1.0
         /// Other, Other servers (non-Tencent Cloud)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -46,14 +45,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 6 Google
         /// 7 Oracle
         /// 8 Digital Ocean
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CloudFrom")]
         public ulong? CloudFrom{ get; set; }
 
         /// <summary>
-        /// List of regions
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region list
         /// </summary>
         [JsonProperty("RegionList")]
         public RegionInfo[] RegionList{ get; set; }

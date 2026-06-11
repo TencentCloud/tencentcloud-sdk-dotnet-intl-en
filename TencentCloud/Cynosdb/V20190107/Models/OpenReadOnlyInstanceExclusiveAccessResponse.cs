@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Activation process ID
+        /// Activation process ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

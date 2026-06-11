@@ -26,12 +26,14 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// Metric Topic ID
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
         /// Queries statements; using PromQL syntax
+        /// -Refer to the [syntax rules](https://www.tencentcloud.com/document/product/614/90334?from_cn_redirect=1) document.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Allowlist region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Allowlisted regions
         /// </summary>
         [JsonProperty("Places")]
         public Place[] Places{ get; set; }
@@ -110,7 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Login Location
+        /// Login location
         /// </summary>
         [JsonProperty("Locations")]
         public string Locations{ get; set; }

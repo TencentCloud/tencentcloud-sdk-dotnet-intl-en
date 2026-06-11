@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Status code
+        /// Status code: Scanning; Ok; Fail.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Failure details
+        /// Failure type. 3: offline; 4: timeout; 5: failed; 8: early agent version.
         /// </summary>
         [JsonProperty("FailType")]
         public ulong? FailType{ get; set; }
@@ -104,7 +104,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

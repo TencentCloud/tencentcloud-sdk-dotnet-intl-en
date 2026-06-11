@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Attribute information of specified point list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Attribute information of the specified node list.
         /// </summary>
         [JsonProperty("VertexDetails")]
         public VertexDetail[] VertexDetails{ get; set; }

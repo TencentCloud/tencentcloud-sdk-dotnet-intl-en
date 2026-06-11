@@ -26,35 +26,30 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Baseline check item name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Baseline check item ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Baseline detection item id
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Fixing suggestions
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Fixing suggestion
         /// </summary>
         [JsonProperty("Fix")]
         public string Fix{ get; set; }
 
         /// <summary>
         /// Number of affected hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EffectHostCount")]
         public ulong? EffectHostCount{ get; set; }

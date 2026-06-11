@@ -80,10 +80,25 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
+
+        /// <summary>
+        /// <li>RUNNING: running</li>
+        /// <li>STOPPED: Shut down</li>
+        /// <li> EXPIRED To be recycled</li>
+        /// </summary>
+        [JsonProperty("InstanceState")]
+        public string InstanceState{ get; set; }
+
+        /// <summary>
+        /// <li>ONLINE Offline</li>
+        /// <li>OFFLINE: Under protection</li>
+        /// <li>UNINSTALLED Client not installed</li>
+        /// </summary>
+        [JsonProperty("AgentState")]
+        public string AgentState{ get; set; }
 
 
         /// <summary>
@@ -101,6 +116,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsUnBind", this.IsUnBind);
             this.SetParamSimple(map, prefix + "IsSwitchBind", this.IsSwitchBind);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+            this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
+            this.SetParamSimple(map, prefix + "AgentState", this.AgentState);
         }
     }
 }

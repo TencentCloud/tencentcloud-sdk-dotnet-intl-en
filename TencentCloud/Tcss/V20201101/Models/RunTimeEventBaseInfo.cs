@@ -113,49 +113,44 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string LatestFoundTime{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Private IP address
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
 
         /// <summary>
-        /// Network status
-        /// `NORMAL`: 	Not isolated.
-        /// `ISOLATED`: 		Isolated.
-        /// `ISOLATING`: 		Isolating.
-        /// `ISOLATE_FAILED`: 	Isolation failed.
-        /// `RESTORING`: Recovering.
-        /// `RESTORE_FAILED`: Recovery failed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network status.
+        /// Unisolated  NORMAL
+        /// ISOLATED
+        /// isolated
+        /// Isolation FAILED
+        /// RESTORING isolation
+        /// Isolation restoration failed RESTORE_FAILED
         /// </summary>
         [JsonProperty("ContainerNetStatus")]
         public string ContainerNetStatus{ get; set; }
 
         /// <summary>
-        /// Sub-status of the container
-        /// "AGENT_OFFLINE"       // The agent is offline.
-        /// "NODE_DESTROYED"      // The node is terminated.
-        /// "CONTAINER_EXITED"    // The container exited.
-        /// "CONTAINER_DESTROYED" // The container was terminated.
-        /// "SHARED_HOST"         // The container shares the network with the server.
-        /// "RESOURCE_LIMIT"      // The number of resources to be isolated exceeds the limit.
-        /// "UNKNOW"              // The reason is unknown.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// container sub-status
+        /// AGENT_OFFLINE
+        /// NODE_DESTROYED
+        /// CONTAINER_EXITED
+        /// CONTAINER_DESTROYED
+        /// "SHARED_HOST"         // Container shares network with host
+        /// RESOURCE_LIMIT
+        /// "UNKNOW": Unknown
         /// </summary>
         [JsonProperty("ContainerNetSubStatus")]
         public string ContainerNetSubStatus{ get; set; }
 
         /// <summary>
-        /// Container isolation operation source
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container Isolation Operation Source
         /// </summary>
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
@@ -233,16 +228,22 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostID{ get; set; }
 
         /// <summary>
-        /// Namespace
+        /// 
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// WorkloadType
+        /// 
         /// </summary>
         [JsonProperty("WorkloadType")]
         public string WorkloadType{ get; set; }
+
+        /// <summary>
+        /// Container running status
+        /// </summary>
+        [JsonProperty("ContainerStatus")]
+        public string ContainerStatus{ get; set; }
 
 
         /// <summary>
@@ -281,6 +282,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostID", this.HostID);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "WorkloadType", this.WorkloadType);
+            this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         }
     }
 }

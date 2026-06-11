@@ -26,21 +26,25 @@ namespace TencentCloud.Cls.V20201016.Models
         
         /// <summary>
         /// configName
-        /// - Filter by fuzzy match of **collection configuration name**
-        /// - Type: String
-        /// - Required: No
+        /// -Filter by [collection configuration name] using fuzzy matching.
+        /// -Type: String
+        /// -Required: No
+        /// -Example: test-config.
         /// 
         /// configId
-        /// - Filter by **collection configuration ID**
-        /// - Type: String
-        /// - Required: No
+        /// -Filter by [collection configuration ID].
+        /// -Type: String
+        /// -Required: No
+        /// -Example: 3581a3be-aa41-423b-995a-54ec84da6264
         /// 
         /// topicId
-        /// - Filter by **log topic**
-        /// - Type: String
-        /// - Required: No
+        /// - Filter by [log topic].
+        /// -Type: String
+        /// -Required: No
+        /// -Example: 3b83f9d6-3a4d-47f9-9b7f-285c868b2f9a
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// 
-        /// Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+        /// The maximum number of Filters per request is 10, and the maximum for Filter.Values is 5.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

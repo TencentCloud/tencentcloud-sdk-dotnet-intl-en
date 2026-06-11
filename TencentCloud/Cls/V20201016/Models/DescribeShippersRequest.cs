@@ -25,11 +25,20 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// - shipperName: Filter by **shipping rule name**. Type: String. Required: No.
-        /// - shipperId: Filter by **shipping rule ID**. Type: String. Required: No.
-        /// - topicId: Filter by **log topic**. Type: String. Required: No.
+        /// -shipperName: Filter by [delivery rule name].
+        /// Type: String.
+        ///     Required: No
+        /// -shipperId: Filter by [Delivery Rule ID].
+        /// Type: String.
+        ///     Required: No
+        /// -topicId: Filter by [log topic].
+        /// Type: String.
+        ///     Required: No
+        /// -taskStatus: Filter by [task running status]. Supported values: `0`: stop, `1`: running, `2`: exception.
+        /// Type: String
+        ///     Required: No
         /// 
-        /// Each request can have up to 10 `Filters` and 100 `Filter.Values`.
+        /// Each request can have up to 10 Filters. The upper limit of Filter.Values is 10.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -46,6 +55,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// Control whether the relevant fields in Filters use exact matching. 0: Default value, fuzzy matching for shipperName. 1: Exact match for shipperName.
+        /// </summary>
+        [JsonProperty("PreciseSearch")]
+        public ulong? PreciseSearch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +70,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "PreciseSearch", this.PreciseSearch);
         }
     }
 }

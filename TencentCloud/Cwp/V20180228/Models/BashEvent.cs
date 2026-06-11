@@ -103,49 +103,43 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// 0: bash log; 1: real-time monitoring (thunder edition)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: bash log; 1: real-time monitoring (Thunder Edition)
         /// </summary>
         [JsonProperty("DetectBy")]
         public ulong? DetectBy{ get; set; }
 
         /// <summary>
-        /// Process ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process id
         /// </summary>
         [JsonProperty("Pid")]
         public string Pid{ get; set; }
 
         /// <summary>
         /// Process name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Exe")]
         public string Exe{ get; set; }
 
         /// <summary>
         /// Processing time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Rule category: 0 - system rule; 1 - user rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule category. 0: system rule; 1: user rule
         /// </summary>
         [JsonProperty("RuleCategory")]
         public ulong? RuleCategory{ get; set; }
 
         /// <summary>
-        /// Automatically generated regular expression\nNote: This field may return null, indicating that no valid values can be obtained.
+        /// Automatically generated regular expression
         /// </summary>
         [JsonProperty("RegexBashCmd")]
         public string RegexBashCmd{ get; set; }
 
         /// <summary>
-        /// Host HostName
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host name.
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

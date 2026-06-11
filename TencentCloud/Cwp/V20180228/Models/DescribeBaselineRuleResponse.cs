@@ -32,13 +32,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Baseline check item list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BaselineRuleList")]
         public BaselineRuleInfo[] BaselineRuleList{ get; set; }
 
         /// <summary>
-        /// Whether to display the description column. True: yes; false: no.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to display the description column: true-yes, false-no
         /// </summary>
         [JsonProperty("ShowRuleRemark")]
         public bool? ShowRuleRemark{ get; set; }

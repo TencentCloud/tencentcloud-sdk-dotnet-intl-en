@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Protocol of the network policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Policy Protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Port of the network policy
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Policy Port
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

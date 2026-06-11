@@ -31,22 +31,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PodName{ get; set; }
 
         /// <summary>
-        /// Pod space
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pod Space
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Pod label
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// pod tag
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
-        /// Pod type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pod Type
         /// </summary>
         [JsonProperty("WorkloadKind")]
         public string WorkloadKind{ get; set; }

@@ -27,8 +27,8 @@ namespace TencentCloud.Tat.V20201028.Models
         /// <summary>
         /// Execution policy.
         /// 
-        /// -ONCE: one-time execution.
-        /// -RECURRENCE: execute periodically.
+        /// - ONCE: one-time execution.
+        /// - RECURRENCE: execute periodically.
         /// </summary>
         [JsonProperty("Policy")]
         public string Policy{ get; set; }

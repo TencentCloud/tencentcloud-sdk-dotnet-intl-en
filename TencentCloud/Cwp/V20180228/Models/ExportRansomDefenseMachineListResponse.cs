@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Task ID, which is used to obtain the download URL (DownloadUrl) using the asynchronous task export API ExportTasks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task ID, required for obtaining the DownloadURL at API Asynchronous Export Task ExportTasks
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

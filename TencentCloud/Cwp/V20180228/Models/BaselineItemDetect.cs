@@ -26,98 +26,84 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Item ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemId")]
         public long? ItemId{ get; set; }
 
         /// <summary>
         /// Item Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemName")]
         public string ItemName{ get; set; }
 
         /// <summary>
         /// Item Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ItemDesc")]
         public string ItemDesc{ get; set; }
 
         /// <summary>
         /// Fixing Method
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FixMethod")]
         public string FixMethod{ get; set; }
 
         /// <summary>
         /// Rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 0: Failed; 1: Ignored; 3: Passed; 5: Under detection
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DetectStatus")]
         public long? DetectStatus{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
         /// Number of affected servers
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
 
         /// <summary>
         /// First detection time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Last Detection Time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
 
         /// <summary>
-        /// Detection result, JSON string
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection result; JSON string.
         /// </summary>
         [JsonProperty("DetectResult")]
         public string DetectResult{ get; set; }
 
         /// <summary>
-        /// Rule ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule ID.
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }
 
         /// <summary>
-        /// Number of servers passed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of servers passed.
         /// </summary>
         [JsonProperty("PassedHostCount")]
         public long? PassedHostCount{ get; set; }
 
         /// <summary>
-        /// Number of servers failed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of servers failed.
         /// </summary>
         [JsonProperty("NotPassedHostCount")]
         public long? NotPassedHostCount{ get; set; }

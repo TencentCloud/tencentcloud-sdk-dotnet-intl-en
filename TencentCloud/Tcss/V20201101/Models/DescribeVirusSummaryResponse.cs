@@ -31,50 +31,43 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Number of containers affected by the trojan
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Containers Affected by Trojans
         /// </summary>
         [JsonProperty("RiskContainerCnt")]
         public ulong? RiskContainerCnt{ get; set; }
 
         /// <summary>
-        /// Number of pending risks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Pending Risks
         /// </summary>
         [JsonProperty("RiskCnt")]
         public ulong? RiskCnt{ get; set; }
 
         /// <summary>
-        /// Update time of the virus library
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Virus database update time
         /// </summary>
         [JsonProperty("VirusDataBaseModifyTime")]
         public string VirusDataBaseModifyTime{ get; set; }
 
         /// <summary>
-        /// Increase in the number of containers affected by trojans from yesterday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Increase in the Number of Containers Affected by Trojans Compared to Yesterday
         /// </summary>
         [JsonProperty("RiskContainerIncrease")]
         public long? RiskContainerIncrease{ get; set; }
 
         /// <summary>
-        /// Increase in the number of pending risks from yesterday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Pending Risks Increased Compared to Yesterday
         /// </summary>
         [JsonProperty("RiskIncrease")]
         public long? RiskIncrease{ get; set; }
 
         /// <summary>
-        /// Increase in the number of isolated events from yesterday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Isolation Event Count Increased Compared to Yesterday
         /// </summary>
         [JsonProperty("IsolateIncrease")]
         public long? IsolateIncrease{ get; set; }
 
         /// <summary>
-        /// Total number of isolated events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total Number of Isolation Events
         /// </summary>
         [JsonProperty("IsolateCnt")]
         public long? IsolateCnt{ get; set; }

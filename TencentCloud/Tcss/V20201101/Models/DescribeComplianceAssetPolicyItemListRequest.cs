@@ -43,11 +43,17 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter list, which is supported by the `Name` field.
-        /// RiskLevel
+        /// Filter list. Name field support
+        /// RiskLevel, AppId
         /// </summary>
         [JsonProperty("Filters")]
         public ComplianceFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// Asset type. <li>ASSET_CONTAINER: Docker container.</li> <li>ASSET_IMAGE: Docker image.</li> <li>ASSET_HOST: Docker host.</li> <li>ASSET_K8S: Kubernetes.</li> <li>ASSET_CONTAINERD: Containerd host.</li> <li>ASSET_CONTAINERD_CONTAINER: Containerd container.</li>
+        /// </summary>
+        [JsonProperty("AssetType")]
+        public string AssetType{ get; set; }
 
 
         /// <summary>
@@ -59,6 +65,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
         }
     }
 }

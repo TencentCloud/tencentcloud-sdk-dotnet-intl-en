@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Start time of the query range, which is a Unix timestamp in ms
+        /// Start time of the query time range, unix timestamp in milliseconds (ms)
         /// </summary>
         [JsonProperty("From")]
         public ulong? From{ get; set; }
 
         /// <summary>
-        /// End time of the query range, which is a Unix timestamp in ms
+        /// End time of query time range, unix timestamp in milliseconds (ms)
         /// </summary>
         [JsonProperty("To")]
         public ulong? To{ get; set; }

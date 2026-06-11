@@ -32,16 +32,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>OsType - String - required: no - Windows or Linux</li>
         /// <li>CpuLoad - Int - required: no - 
         /// 0: 0% or unknown; 1: 0% to 20%
-        /// 2: 20%～50%  3: 50%～80%
-        /// 4: 80%～100%</li>
+        /// 2: 20%~50%  3: 50%~80%
+        /// 4: 80%~100%</li>
         /// <li>DiskLoad - Int - required: no - 
         /// 0: 0% or unknown; 1: 0% to 20%
-        /// 2: 20%～50%  3: 50%～80%
-        /// 4: 80%～100%</li>
+        /// 2: 20%~50%  3: 50%=~80%
+        /// 4: 80%~100%</li>
         /// <li>MemLoad - Int - required: no - 
         /// 0: 0% or unknown; 1: 0% to 20%
-        /// 2: 20%～50%  3: 50%～80%
-        /// 4: 80%～100%</li>
+        /// 2: 20%~50%  3: 50%~80%
+        /// 4: 80%~100%</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

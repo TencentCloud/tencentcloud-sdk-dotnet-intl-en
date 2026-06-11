@@ -98,29 +98,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Hostip{ get; set; }
 
         /// <summary>
-        /// Arrays of UUIDs for servers to be effective
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Array of UUIDs for active servers
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
         /// <summary>
-        /// 0= blocklist; 1= allowlist
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: blocklist 1: allowlist
         /// </summary>
         [JsonProperty("White")]
         public ulong? White{ get; set; }
 
         /// <summary>
         /// Whether to process previous events: 0: do not process; 1: process
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DealOldEvents")]
         public ulong? DealOldEvents{ get; set; }
 
         /// <summary>
         /// Rule description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

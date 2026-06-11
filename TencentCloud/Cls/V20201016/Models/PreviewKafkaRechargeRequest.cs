@@ -25,38 +25,40 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Preview type. Valid values: 1 (source data preview) and 2 (result preview).
+        /// Preview type. 1: preview of source data; 2: preview of exported results.
         /// </summary>
         [JsonProperty("PreviewType")]
         public ulong? PreviewType{ get; set; }
 
         /// <summary>
-        /// Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka)
+        /// Import Kafka type. 0: Tencent Cloud CKafka; 1: user-built kafka.
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// List of Kafka-related topics that the user needs to import, separated by commas. Supports up to 100 topics.
+        /// List of Kafka-related topics to be imported by the user, topics separated by commas.
+        /// Supports up to 100.
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
 
         /// <summary>
-        /// Position for data import. Valid values: -2 (earliest, default) and -1 (latest).
+        /// Import data location. -2: earliest; -1: latest.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud CKafka instance ID.
-        /// KafkaInstance is required when KafkaType is 0
+        /// Tencent Cloud CKafka instance ID. The parameter KafkaInstance is valid and required when KafkaType is 0.
+        /// -Get the instance id through [Get Instance List](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
-        /// Service AddressServerAddr is required when KafkaType is 1
+        /// Service address.
+        /// When KafkaType is 1, ServerAddr is required.
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
@@ -69,13 +71,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? IsEncryptionAddr{ get; set; }
 
         /// <summary>
-        /// Encrypted Access ProtocolWhen KafkaType is 1 and IsEncryptionAddr is true, Protocol is required
+        /// Encrypted Access Protocol.
+        /// When KafkaType is 1 and IsEncryptionAddr is true, Protocol is required.
         /// </summary>
         [JsonProperty("Protocol")]
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// Kafka consumer group name
+        /// User Kafka consumer group.
+        /// 
+        /// -A consumption group is a scalable and fault-tolerant consumer mechanism provided by Kafka. Multiple consumers exist in a consumption group, and all consumers in the group consume subscribed data of messages in the Topic. A consumer can consume multiple partitions simultaneously, but one Partition can only be consumed by a single consumer in the group.
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
@@ -85,6 +90,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
+
+        /// <summary>
+        /// User kafka extended information
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
 
 
         /// <summary>
@@ -102,6 +113,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Protocol.", this.Protocol);
             this.SetParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
             this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

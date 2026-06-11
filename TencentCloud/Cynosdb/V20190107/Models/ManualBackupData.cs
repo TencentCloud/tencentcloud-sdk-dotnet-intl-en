@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Backup type. snapshot - Snapshot backup.
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup method. auto - Automatic backup, manual - Manual backup.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Backup time.
         /// </summary>
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }

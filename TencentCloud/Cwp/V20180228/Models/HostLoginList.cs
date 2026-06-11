@@ -31,36 +31,31 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// UUID string
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Host IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host IP address
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
         /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Username
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Username.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
         /// Source IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
@@ -73,112 +68,103 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Country/Region ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Country")]
         public ulong? Country{ get; set; }
 
         /// <summary>
         /// City ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("City")]
         public ulong? City{ get; set; }
 
         /// <summary>
-        /// Province ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Province id
         /// </summary>
         [JsonProperty("Province")]
         public ulong? Province{ get; set; }
 
         /// <summary>
         /// Log-in time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LoginTime")]
         public string LoginTime{ get; set; }
 
         /// <summary>
         /// Modification time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
-        /// Whether hit the exception of cross-region log-in: 1: yes; 0: no
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether hit the exception of cross-region log-in: 1 means hit the exception, 0 means not hit
         /// </summary>
         [JsonProperty("IsRiskArea")]
         public ulong? IsRiskArea{ get; set; }
 
         /// <summary>
         /// Whether hit the exception of abnormal user: 1: yes; 0: no
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsRiskUser")]
         public ulong? IsRiskUser{ get; set; }
 
         /// <summary>
         /// Whether hit the exception of abnormal time: 1: yes; 0: no
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsRiskTime")]
         public ulong? IsRiskTime{ get; set; }
 
         /// <summary>
         /// Whether hit the exception of abnormal IP: 1: yes; 0: no
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsRiskSrcIp")]
         public ulong? IsRiskSrcIp{ get; set; }
 
         /// <summary>
         /// Risk level:
-        /// 0: high
-        /// 1: suspicious
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 0: high risk
+        /// 1: Suspicious
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
         /// Location name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
         /// Host QUUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// High-risk information description:
-        /// ABROAD - overseas IP
-        /// XTI - threat intelligence
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ABROAD - IP outside Chinese mainland
+        /// XTI - Threat Intelligence
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// Request destination port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request destination port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
+
+        /// <summary>
+        /// ip analysis
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
 
 
         /// <summary>
@@ -208,6 +194,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

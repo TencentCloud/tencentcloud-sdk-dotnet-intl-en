@@ -84,6 +84,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("DealOldEvents")]
         public ulong? DealOldEvents{ get; set; }
 
+        /// <summary>
+        /// Policy description
+        /// </summary>
+        [JsonProperty("Descript")]
+        public string Descript{ get; set; }
+
+        /// <summary>
+        /// Effective or not [0: not effective, 1: effective]
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 0: alarm; 1: allowlist; 2: intercept
+        /// </summary>
+        [JsonProperty("BashAction")]
+        public long? BashAction{ get; set; }
+
+        /// <summary>
+        /// Effective range (0: a set of quuid 1: all Pro edition hosts 2: all Pro edition and Ultimate edition hosts 3: all hosts)
+        /// </summary>
+        [JsonProperty("Scope")]
+        public long? Scope{ get; set; }
+
+        /// <summary>
+        /// QUUID set for effective hosts
+        /// </summary>
+        [JsonProperty("Quuids")]
+        public string[] Quuids{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +130,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "White", this.White);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
+            this.SetParamSimple(map, prefix + "Descript", this.Descript);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "BashAction", this.BashAction);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
+            this.SetParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         }
     }
 }

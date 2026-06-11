@@ -51,10 +51,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter
-        /// Name - String
-        /// Name. Valid values: `ItemType`, `StandardId`, `RiskLevel`.
-        /// `ClusterName` is also available for K8s assets.
+        /// Filtering conditions. <li>Name      string Detection item name.</li> <li>ItemType  string Detection item type.</li> <li>RiskLevel string Risk level.</li> <li>IsOpen    int    Enabling status.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public ComplianceFilters[] Filters{ get; set; }

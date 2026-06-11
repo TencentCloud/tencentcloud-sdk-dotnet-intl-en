@@ -66,6 +66,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
+        /// <summary>
+        /// Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CveId", this.CveId);
             this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

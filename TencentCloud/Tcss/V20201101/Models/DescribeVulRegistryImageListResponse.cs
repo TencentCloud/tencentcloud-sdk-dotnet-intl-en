@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result list
         /// </summary>
         [JsonProperty("List")]
         public VulAffectedRegistryImageInfo[] List{ get; set; }

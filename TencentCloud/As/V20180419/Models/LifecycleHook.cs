@@ -44,8 +44,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Action to be taken by the scaling group in case of lifecycle hook timeout or LifecycleCommand execution failure. valid values:.
-        /// -CONTINUE execution by default means capacity expansion or reduction.
-        /// -For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
+        /// - CONTINUE execution by default means capacity expansion or reduction.
+        /// - For scale-out hooks, cvms with hook timeout or failed LifecycleCommand execution will be released directly or removed; for scale-in hooks, scale-in activities will continue.
         /// </summary>
         [JsonProperty("DefaultResult")]
         public string DefaultResult{ get; set; }
@@ -58,8 +58,8 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// Scenario for entering the lifecycle hook. valid values:.
-        /// -`INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
-        /// -INSTANCE_TERMINATING: scale-in lifecycle hook.
+        /// - `INSTANCE_LAUNCHING`: the lifecycle hook is being scaled out.
+        /// - `INSTANCE_TERMINATING`: scale-in lifecycle hook.
         /// </summary>
         [JsonProperty("LifecycleTransition")]
         public string LifecycleTransition{ get; set; }

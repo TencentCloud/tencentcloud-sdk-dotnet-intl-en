@@ -31,15 +31,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string LogsetID{ get; set; }
 
         /// <summary>
-        /// Logset name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// logset name
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
         /// <summary>
-        /// List of CLS topics
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CLS Topic List
         /// </summary>
         [JsonProperty("TopicList")]
         public ClsTopicInfo[] TopicList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Availability zone
+        /// Availability zone.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

@@ -34,13 +34,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// List of QUuids of bound servers
+        /// Bound list
         /// </summary>
         [JsonProperty("BindList")]
         public string[] BindList{ get; set; }
 
         /// <summary>
-        /// List of QUuids of servers to be unbound
+        /// List of assets to be unbound. When the node scope involves all nodes, this parameter indicates the list of assets to be excluded.
         /// </summary>
         [JsonProperty("UnBindList")]
         public string[] UnBindList{ get; set; }
@@ -53,6 +53,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
+        /// <summary>
+        /// Log node scope type. 0: specified; 1: all.
+        /// </summary>
+        [JsonProperty("RangeType")]
+        public long? RangeType{ get; set; }
+
+        /// <summary>
+        /// Whether new assets are accessed automatically. This parameter is valid only when the node scope involves all nodes.
+        /// </summary>
+        [JsonProperty("AutoJoin")]
+        public bool? AutoJoin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +75,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "BindList.", this.BindList);
             this.SetParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
+            this.SetParamSimple(map, prefix + "RangeType", this.RangeType);
+            this.SetParamSimple(map, prefix + "AutoJoin", this.AutoJoin);
         }
     }
 }

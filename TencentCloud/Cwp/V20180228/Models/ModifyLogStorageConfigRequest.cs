@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Whether to modify the validity period
+        /// Whether to modify the validity period (deprecated).
         /// </summary>
         [JsonProperty("IsModifyPeriod")]
         public bool? IsModifyPeriod{ get; set; }
@@ -37,10 +37,22 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] Type{ get; set; }
 
         /// <summary>
-        /// Log retention days. The value 3640 indicates that the number of days is unlimited.
+        /// Log retention time. The value 3640 indicates that the time is unlimited.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
+
+        /// <summary>
+        /// Log storage duration unit: year/month/day
+        /// </summary>
+        [JsonProperty("Granularity")]
+        public string Granularity{ get; set; }
+
+        /// <summary>
+        /// Language type
+        /// </summary>
+        [JsonProperty("MsgLanguage")]
+        public string MsgLanguage{ get; set; }
 
 
         /// <summary>
@@ -51,6 +63,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsModifyPeriod", this.IsModifyPeriod);
             this.SetParamArraySimple(map, prefix + "Type.", this.Type);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
+            this.SetParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
         }
     }
 }

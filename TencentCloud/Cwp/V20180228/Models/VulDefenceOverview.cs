@@ -43,22 +43,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? ExceptionCount{ get; set; }
 
         /// <summary>
-        /// Daily attack trends
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Daily attack trend
         /// </summary>
         [JsonProperty("AttackCounts")]
         public long?[] AttackCounts{ get; set; }
 
         /// <summary>
         /// Daily defense trends
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefendCounts")]
         public long?[] DefendCounts{ get; set; }
 
         /// <summary>
         /// Date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Date")]
         public string[] Date{ get; set; }

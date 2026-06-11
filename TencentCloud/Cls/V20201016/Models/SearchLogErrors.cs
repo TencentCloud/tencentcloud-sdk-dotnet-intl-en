@@ -25,19 +25,19 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Log topic ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Error MessageNote: This field may return null, indicating that no valid values can be obtained.
+        /// Error message
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// Error CodeNote: This field may return null, indicating that no valid values can be obtained.
+        /// Error code.
         /// </summary>
         [JsonProperty("ErrorCodeStr")]
         public string ErrorCodeStr{ get; set; }

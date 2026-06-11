@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Direction{ get; set; }
 
         /// <summary>
-        /// Network policy port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Network Policy Port
         /// </summary>
         [JsonProperty("Ports")]
         public NetworkPorts[] Ports{ get; set; }
@@ -40,16 +39,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <summary>
         /// Network policy object
         /// 
-        /// `PublishedNoConfirm`: Enabled and to be confirmed.
+        /// Enable but not confirmed: PublishedNoConfirm
         /// 
-        /// `PublishedConfirmed`: Enabled and confirmed.
+        /// Enabled and confirmed: PublishedConfirmed
         /// 
-        /// `unPublishing`: Disabled.
+        /// Disabling: unPublishing
         /// 
-        /// `Publishing`: Enabled.
+        /// Enabled: Publishing
         /// 
-        /// `unPublishEdit`: To be enabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Enable: unPublishEdit
         /// </summary>
         [JsonProperty("Peer")]
         public NetworkPeer[] Peer{ get; set; }

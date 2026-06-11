@@ -84,7 +84,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// Duration for the persistent session. The value takes effect only when `SessionPersist = true`.
+        /// Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }

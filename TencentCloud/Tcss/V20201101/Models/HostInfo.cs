@@ -25,126 +25,160 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Server ID
+        /// <p>Host ID.</p>
         /// </summary>
         [JsonProperty("HostID")]
         public string HostID{ get; set; }
 
         /// <summary>
-        /// Server IP, which is the private IP
+        /// <p>Host IP address, which is the private IP address.</p>
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// Server name
+        /// <p>Host name.</p>
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Project
+        /// <p>Business group.</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// Docker version
+        /// <p>Docker version.</p>
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// Docker file system type
+        /// <p>Docker file system type.</p>
         /// </summary>
         [JsonProperty("DockerFileSystemDriver")]
         public string DockerFileSystemDriver{ get; set; }
 
         /// <summary>
-        /// Number of images
+        /// <p>Number of images.</p>
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
 
         /// <summary>
-        /// Number of containers
+        /// <p>Number of containers.</p>
         /// </summary>
         [JsonProperty("ContainerCnt")]
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// Agent status
+        /// <p>Agent running status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Whether it is Containerd
+        /// <p>Whether it is containerd.</p>
         /// </summary>
         [JsonProperty("IsContainerd")]
         public bool? IsContainerd{ get; set; }
 
         /// <summary>
-        /// Server source. Valid values: `CVM`, `ECM`, `LH`, `BM`, `Other`. The first four values indicate Tencent Cloud instances, while the last one indicates non-Tencent Cloud instances.
+        /// <p>Server source: one of ["CVM", "ECM", "LH", "BM"] is a Tencent Cloud server; one of ["Other"] is a non-Tencent Cloud server;</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Public IP
+        /// <p>Public IP address.</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Server UUID
+        /// <p>Host UUID.</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Server instance ID
+        /// <p>Host instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("RegionID")]
         public long? RegionID{ get; set; }
 
         /// <summary>
-        /// Project
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Project.</p>
         /// </summary>
         [JsonProperty("Project")]
         public ProjectInfo Project{ get; set; }
 
         /// <summary>
-        /// Tags
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Tag.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Cluster Name
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Cluster Access Status
+        /// <p>Cluster access status.</p>
         /// </summary>
         [JsonProperty("ClusterAccessedStatus")]
         public string ClusterAccessedStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Cluster access sub-status.</p><p>Enumeration values:</p><ul><li>AccessedSubNone: none</li><li>AccessedSubUninstallException: uninstallation exception</li><li>AccessedSubTimeout: access timeout</li><li>AccessedSubUninstallTimeout: uninstallation timeout</li><li>AccessedSubResourceException: cluster component check exception, including Deployment and DaemonSet</li><li>AccessedSubCAMPermissionDenied: insufficient CAM permissions</li></ul>
+        /// </summary>
+        [JsonProperty("ClusterAccessedSubStatus")]
+        public string ClusterAccessedSubStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Detailed description of the failure reason.</p>
+        /// </summary>
+        [JsonProperty("ClusterAccessedErrorReason")]
+        public string ClusterAccessedErrorReason{ get; set; }
+
+        /// <summary>
+        /// <p>Billable cores.</p>
+        /// </summary>
+        [JsonProperty("ChargeCoresCnt")]
+        public ulong? ChargeCoresCnt{ get; set; }
+
+        /// <summary>
+        /// <p>Protection status:<br>Defended<br>Undefended</p>
+        /// </summary>
+        [JsonProperty("DefendStatus")]
+        public string DefendStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Number of cores.</p>
+        /// </summary>
+        [JsonProperty("CoresCnt")]
+        public ulong? CoresCnt{ get; set; }
+
+        /// <summary>
+        /// <p>Last online time.</p>
+        /// </summary>
+        [JsonProperty("LastOnlineTime")]
+        public string LastOnlineTime{ get; set; }
 
 
         /// <summary>
@@ -172,6 +206,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ClusterID", this.ClusterID);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+            this.SetParamSimple(map, prefix + "ClusterAccessedSubStatus", this.ClusterAccessedSubStatus);
+            this.SetParamSimple(map, prefix + "ClusterAccessedErrorReason", this.ClusterAccessedErrorReason);
+            this.SetParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+            this.SetParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
+            this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+            this.SetParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the repeating mode of the scheduled task. the Recurrence parameter limits (https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
+        /// Specifies the repeating mode of the scheduled task. The [Recurrence parameter limits](https://intl.cloud.tencent.com/document/product/377/88119?from_cn_redirect=1) consist of 5 fields separated by space, with the structure: minute, hour, date, month, week.
         /// </summary>
         [JsonProperty("Recurrence")]
         public string Recurrence{ get; set; }
@@ -93,7 +93,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ScheduledType{ get; set; }
 
         /// <summary>
-        /// Disable update DesiredCapacity Indicates the DesiredCapacity is updated normally during scheduled task triggering.
+        /// This flag disables the normal update of the DesiredCapacityproperty that would otherwise occur when a scheduled scaling task is triggered.
         /// 
         /// Specifies whether the scheduled task triggers proactive modification of the DesiredCapacity when the value is True. DesiredCapacity may be modified by the minSize and maxSize mechanism.
         /// The following cases assume that DisableUpdateDesiredCapacity is True:

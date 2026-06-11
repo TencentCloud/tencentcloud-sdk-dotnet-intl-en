@@ -25,49 +25,43 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// ID of the Kafka data subscription configuration.Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of Kafka data subscription configuration.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// Log topic ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Kafka data import task name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the Kafka import task
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Kafka type. Valid values: 0 (Tencent Cloud CKafka) and 1 (customer's Kafka).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Imports Kafka type. 0: Cloud CKafka; 1: user-built Kafka
         /// </summary>
         [JsonProperty("KafkaType")]
         public ulong? KafkaType{ get; set; }
 
         /// <summary>
-        /// CKafka instance ID, which is required when `KafkaType` is set to `0`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CKafka instance ID of cloud platform, required when KafkaType is 0.
         /// </summary>
         [JsonProperty("KafkaInstance")]
         public string KafkaInstance{ get; set; }
 
         /// <summary>
         /// Service address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Whether the service address uses an encrypted connection	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether ServerAddr is an encrypted connection	
         /// </summary>
         [JsonProperty("IsEncryptionAddr")]
         public bool? IsEncryptionAddr{ get; set; }
@@ -79,51 +73,52 @@ namespace TencentCloud.Cls.V20201016.Models
         public KafkaProtocolInfo Protocol{ get; set; }
 
         /// <summary>
-        /// List of Kafka topics to import data from. Separate multiple topics with commas (,).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The list of Kafka-related topics that the user needs to import. Separate multiple topics by commas.
         /// </summary>
         [JsonProperty("UserKafkaTopics")]
         public string UserKafkaTopics{ get; set; }
 
         /// <summary>
-        /// Kafka consumer group name	
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Kafka consumer group name of the user	
         /// </summary>
         [JsonProperty("ConsumerGroupName")]
         public string ConsumerGroupName{ get; set; }
 
         /// <summary>
-        /// Status, 1: running; 2: paused.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status. 1: Running; 2: Suspension.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Import data position, -2: earliest (default), -1: latestNote: This field may return null, indicating that no valid values can be obtained.
+        /// Data import position. -2: earliest (default); -1: latest
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation time. Format `YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update time. Format: `YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// Log import rule
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LogRechargeRule")]
         public LogRechargeRuleInfo LogRechargeRule{ get; set; }
+
+        /// <summary>
+        /// User kafka extended information
+        /// </summary>
+        [JsonProperty("UserKafkaMeta")]
+        public UserKafkaMeta UserKafkaMeta{ get; set; }
 
 
         /// <summary>
@@ -146,6 +141,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamObj(map, prefix + "LogRechargeRule.", this.LogRechargeRule);
+            this.SetParamObj(map, prefix + "UserKafkaMeta.", this.UserKafkaMeta);
         }
     }
 }

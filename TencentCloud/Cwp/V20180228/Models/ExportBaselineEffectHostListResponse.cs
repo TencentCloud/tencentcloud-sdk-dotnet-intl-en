@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// This parameter has been discarded.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string DownloadUrl{ get; set; }

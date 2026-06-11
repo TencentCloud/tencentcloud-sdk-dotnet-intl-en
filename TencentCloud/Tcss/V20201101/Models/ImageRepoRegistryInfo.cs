@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Repository id
+        /// Repository ID
         /// </summary>
         [JsonProperty("RegistryId")]
         public ulong? RegistryId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Repository Type, list: harbor, tcr
+        /// Repository type, list: harbor, tcr
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// Repository url
+        /// Warehouse url
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Network Type, list: public
+        /// Network type, list: public
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -61,49 +61,49 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// Repository Version
+        /// warehouse version
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// Repository connection error message (to be deprecated, use ConnDetectException instead)
+        /// Repository connection error message (to be deprecated). Use ConnDetectException.
         /// </summary>
         [JsonProperty("ConnectMsg")]
         public string ConnectMsg{ get; set; }
 
         /// <summary>
-        /// Connectivity Detection Method
+        /// Connectivity Check Method
         /// </summary>
         [JsonProperty("ConnDetectType")]
         public string ConnDetectType{ get; set; }
 
         /// <summary>
-        /// Connectivity Detection Host Count
+        /// Connectivity Check Host Count
         /// </summary>
         [JsonProperty("ConnDetectHostCount")]
         public ulong? ConnDetectHostCount{ get; set; }
 
         /// <summary>
-        /// Connectivity Detection Details
+        /// Connectivity Check Details
         /// </summary>
         [JsonProperty("ConnDetectDetail")]
         public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
 
         /// <summary>
-        /// instance_id in tcr
+        /// Instance ID in TCR Scenario
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Latest Successful Synchronization Time
+        /// Most Recent Time for Successful Synchronization
         /// </summary>
         [JsonProperty("LatestSyncTime")]
         public string LatestSyncTime{ get; set; }
 
         /// <summary>
-        /// Synchronization Status
+        /// Synchronization status
         /// </summary>
         [JsonProperty("SyncStatus")]
         public string SyncStatus{ get; set; }
@@ -121,10 +121,16 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string SyncSolution{ get; set; }
 
         /// <summary>
-        /// Synchronization Failure Message
+        /// Synchronization Failure Information
         /// </summary>
         [JsonProperty("SyncMessage")]
         public string SyncMessage{ get; set; }
+
+        /// <summary>
+        /// Synchronization method. 0: full synchronization; 1: incremental synchronization.	
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SyncFailReason", this.SyncFailReason);
             this.SetParamSimple(map, prefix + "SyncSolution", this.SyncSolution);
             this.SetParamSimple(map, prefix + "SyncMessage", this.SyncMessage);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

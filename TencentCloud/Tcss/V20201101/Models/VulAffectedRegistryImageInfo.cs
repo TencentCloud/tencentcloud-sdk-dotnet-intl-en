@@ -31,43 +31,43 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageID{ get; set; }
 
         /// <summary>
-        /// Image name
+        /// Image Name
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// Image tag
+        /// Mirror version
         /// </summary>
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// Image namespace
+        /// Image Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Image address
+        /// Image address.
         /// </summary>
         [JsonProperty("ImageRepoAddress")]
         public string ImageRepoAddress{ get; set; }
 
         /// <summary>
-        /// List of components
+        /// Component List
         /// </summary>
         [JsonProperty("ComponentList")]
         public VulAffectedImageComponentInfo[] ComponentList{ get; set; }
 
         /// <summary>
-        /// Whether it is the latest image tag
+        /// Whether the Latest Version of the Image
         /// </summary>
         [JsonProperty("IsLatestImage")]
         public bool? IsLatestImage{ get; set; }
 
         /// <summary>
-        /// Internal image asset ID
+        /// Internal Image Asset ID
         /// </summary>
         [JsonProperty("ImageAssetId")]
         public long? ImageAssetId{ get; set; }

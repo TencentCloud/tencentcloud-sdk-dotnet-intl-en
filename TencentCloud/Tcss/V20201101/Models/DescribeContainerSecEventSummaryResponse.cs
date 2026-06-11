@@ -67,8 +67,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? UnhandledMaliciousConnectionEventCnt{ get; set; }
 
         /// <summary>
-        /// Unhandled K8sApi events
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Unresolved Kubernetes API Events
         /// </summary>
         [JsonProperty("UnhandledK8sApiEventCnt")]
         public ulong? UnhandledK8sApiEventCnt{ get; set; }

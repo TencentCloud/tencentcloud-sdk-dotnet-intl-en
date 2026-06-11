@@ -49,7 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Repository type, which can be `harbor`.
+        /// Repository type. Valid values: harbor, quay, jfrog, aws, azure, and other-tcr.
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
@@ -84,6 +84,42 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConnDetectConfig")]
+        public ConnDetectConfig[] ConnDetectConfig{ get; set; }
+
+        /// <summary>
+        /// Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+        /// </summary>
+        [JsonProperty("NeedScan")]
+        public bool? NeedScan{ get; set; }
+
+        /// <summary>
+        /// Synchronization method. 0: full synchronization; 1: incremental synchronization.
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public ulong? SyncMode{ get; set; }
+
+        /// <summary>
+        /// Webhook access address.
+        /// </summary>
+        [JsonProperty("WebhookUrl")]
+        public string WebhookUrl{ get; set; }
+
+        /// <summary>
+        /// Webhook access token.
+        /// </summary>
+        [JsonProperty("WebhookToken")]
+        public string WebhookToken{ get; set; }
+
+        /// <summary>
+        /// TCR instance ID.
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +136,12 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
             this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
+            this.SetParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+            this.SetParamSimple(map, prefix + "NeedScan", this.NeedScan);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
+            this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
+            this.SetParamSimple(map, prefix + "WebhookToken", this.WebhookToken);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

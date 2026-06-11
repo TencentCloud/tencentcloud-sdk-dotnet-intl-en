@@ -32,14 +32,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Server name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
         /// Server IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
@@ -82,17 +80,45 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
         /// Server UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
+
+        /// <summary>
+        /// Class name
+        /// </summary>
+        [JsonProperty("ClassName")]
+        public string ClassName{ get; set; }
+
+        /// <summary>
+        /// Parent class name
+        /// </summary>
+        [JsonProperty("SuperClassName")]
+        public string SuperClassName{ get; set; }
+
+        /// <summary>
+        /// Inherited API
+        /// </summary>
+        [JsonProperty("Interfaces")]
+        public string Interfaces{ get; set; }
+
+        /// <summary>
+        /// Annotation
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public string Annotations{ get; set; }
+
+        /// <summary>
+        /// Associated class loader.
+        /// </summary>
+        [JsonProperty("LoaderClassName")]
+        public string LoaderClassName{ get; set; }
 
 
         /// <summary>
@@ -111,6 +137,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
+            this.SetParamSimple(map, prefix + "SuperClassName", this.SuperClassName);
+            this.SetParamSimple(map, prefix + "Interfaces", this.Interfaces);
+            this.SetParamSimple(map, prefix + "Annotations", this.Annotations);
+            this.SetParamSimple(map, prefix + "LoaderClassName", this.LoaderClassName);
         }
     }
 }

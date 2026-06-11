@@ -74,63 +74,54 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// CVE ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
         /// CVSS score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CvssScore")]
         public float? CvssScore{ get; set; }
 
         /// <summary>
         /// Vulnerability Tags, Separated by Multiple Commas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
         /// Number of affected machines
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
         /// <summary>
-        /// Whether to support defense: 0: no; 1: yes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Support defense: 0-no support 1-support
         /// </summary>
         [JsonProperty("IsSupportDefense")]
         public ulong? IsSupportDefense{ get; set; }
 
         /// <summary>
         /// Number of Attacks Defended
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
         /// <summary>
-        /// Detection rule: 0: version comparison; 1: POC verification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection rule. 0: version comparison, 1: POC verification.
         /// </summary>
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
 
         /// <summary>
-        /// Attack intensity level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Attack intensity level.
         /// </summary>
         [JsonProperty("AttackLevel")]
         public ulong? AttackLevel{ get; set; }
 
         /// <summary>
-        /// Whether vulnerability defense is enabled on hosts with vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether vulnerable hosts are enabled with vulnerability defense.
         /// </summary>
         [JsonProperty("DefenseState")]
         public bool? DefenseState{ get; set; }

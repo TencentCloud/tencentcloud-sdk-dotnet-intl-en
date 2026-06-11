@@ -73,126 +73,144 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// This field has been deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obsolete
         /// </summary>
         [JsonProperty("From")]
         public ulong? From{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Descript")]
         public string Descript{ get; set; }
 
         /// <summary>
-        /// This field has been deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obsolete
         /// </summary>
         [JsonProperty("PublishTimeWisteria")]
         public string PublishTimeWisteria{ get; set; }
 
         /// <summary>
-        /// This field has been deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obsolete
         /// </summary>
         [JsonProperty("NameWisteria")]
         public string NameWisteria{ get; set; }
 
         /// <summary>
-        /// This field has been deprecated.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Obsolete
         /// </summary>
         [JsonProperty("DescriptWisteria")]
         public string DescriptWisteria{ get; set; }
 
         /// <summary>
         /// Event status after aggregation
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusStr")]
         public string StatusStr{ get; set; }
 
         /// <summary>
         /// CVE ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
         /// CVSS score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CvssScore")]
         public float? CvssScore{ get; set; }
 
         /// <summary>
-        /// Vulnerability tags, separated by multiple commas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Tags, Separated by Multiple Commas
+        /// 
+        /// EXP exists
+        /// Wild Attacks: KNOWN_EXPLOITED
+        /// LOCAL: Local use
+        /// Mandatory vulnerabilities: NEED_FIX
+        /// RemoteExploit:NETWORK
+        /// POC exists: POC
+        /// System RESTART
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
-        /// Whether automatic fixing is supported and hosts that support automatic fixing are included. 0: no; 1: yes.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether automatic fixing is supported and hosts that support automatic fixing, 0=No 1=Yes
         /// </summary>
         [JsonProperty("FixSwitch")]
         public ulong? FixSwitch{ get; set; }
 
         /// <summary>
-        /// ID of the last scan task
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// id of the last scan task
         /// </summary>
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// Whether defense is supported. 0: not supported; 1: supported.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Support defense, 0: no support 1: support
         /// </summary>
         [JsonProperty("IsSupportDefense")]
         public ulong? IsSupportDefense{ get; set; }
 
         /// <summary>
-        /// Number of attacks defended
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Attacks Defended
         /// </summary>
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
         /// <summary>
-        /// First occurrence time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// first occurrence time
         /// </summary>
         [JsonProperty("FirstAppearTime")]
         public string FirstAppearTime{ get; set; }
 
         /// <summary>
-        /// Vulnerability category. 1: web CMS vulnerability; 2: application vulnerability; 4: Linux software vulnerability; 5: Windows system vulnerability.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Category 1: web-cms Vulnerability 2: Application Vulnerability 4: Linux Software Vulnerability 5: Windows System Vulnerability
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }
 
         /// <summary>
-        /// Attack intensity
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Attack intensity level.
         /// </summary>
         [JsonProperty("AttackLevel")]
         public ulong? AttackLevel{ get; set; }
 
         /// <summary>
-        /// Whether a restart is required after the vulnerability is fixed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether a restart is required after vulnerability repair.
         /// </summary>
         [JsonProperty("FixNoNeedRestart")]
         public bool? FixNoNeedRestart{ get; set; }
 
         /// <summary>
-        /// Detection method. 0: version comparison; 1: POC verification.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection method. 0: version comparison, 1: POC verification.
         /// </summary>
         [JsonProperty("Method")]
         public ulong? Method{ get; set; }
+
+        /// <summary>
+        /// Whether vulnerability fixing is supported. 0: not supported; 1: supported.
+        /// </summary>
+        [JsonProperty("VulFixSwitch")]
+        public ulong? VulFixSwitch{ get; set; }
+
+        /// <summary>
+        /// Latest remediation time
+        /// </summary>
+        [JsonProperty("LatestFixTime")]
+        public string LatestFixTime{ get; set; }
+
+        /// <summary>
+        /// Number of application protection activations for machines with vulnerability correspondence
+        /// </summary>
+        [JsonProperty("RaspOpenNodeCount")]
+        public long? RaspOpenNodeCount{ get; set; }
+
+        /// <summary>
+        /// Number of application protection deactivations for machines with vulnerability correspondence
+        /// </summary>
+        [JsonProperty("RaspClosedNodeCount")]
+        public long? RaspClosedNodeCount{ get; set; }
 
 
         /// <summary>
@@ -226,6 +244,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
             this.SetParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
+            this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+            this.SetParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+            this.SetParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
         }
     }
 }

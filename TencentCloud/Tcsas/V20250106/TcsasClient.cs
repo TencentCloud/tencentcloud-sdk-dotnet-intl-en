@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -222,6 +222,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to generate a mini game secret key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNGAppSecretRequest"/></param>
+        /// <returns><see cref="CreateMNGAppSecretResponse"/></returns>
+        public Task<CreateMNGAppSecretResponse> CreateMNGAppSecret(CreateMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<CreateMNGAppSecretResponse>(req, "CreateMNGAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to generate a mini game secret key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNGAppSecretRequest"/></param>
+        /// <returns><see cref="CreateMNGAppSecretResponse"/></returns>
+        public CreateMNGAppSecretResponse CreateMNGAppSecretSync(CreateMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<CreateMNGAppSecretResponse>(req, "CreateMNGAppSecret")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a mini game approval request.
         /// </summary>
         /// <param name="req"><see cref="CreateMNGApprovalRequest"/></param>
@@ -285,6 +306,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to create a mini game subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="CreateMNGSubscribeMessageTemplateResponse"/></returns>
+        public Task<CreateMNGSubscribeMessageTemplateResponse> CreateMNGSubscribeMessageTemplate(CreateMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMNGSubscribeMessageTemplateResponse>(req, "CreateMNGSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a mini game subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="CreateMNGSubscribeMessageTemplateResponse"/></returns>
+        public CreateMNGSubscribeMessageTemplateResponse CreateMNGSubscribeMessageTemplateSync(CreateMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMNGSubscribeMessageTemplateResponse>(req, "CreateMNGSubscribeMessageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a mini game version.
         /// </summary>
         /// <param name="req"><see cref="CreateMNGVersionRequest"/></param>
@@ -323,6 +365,27 @@ namespace TencentCloud.Tcsas.V20250106
         public CreateMNPResponse CreateMNPSync(CreateMNPRequest req)
         {
             return InternalRequestAsync<CreateMNPResponse>(req, "CreateMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate a mini program secret key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPAppSecretRequest"/></param>
+        /// <returns><see cref="CreateMNPAppSecretResponse"/></returns>
+        public Task<CreateMNPAppSecretResponse> CreateMNPAppSecret(CreateMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<CreateMNPAppSecretResponse>(req, "CreateMNPAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to generate a mini program secret key.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPAppSecretRequest"/></param>
+        /// <returns><see cref="CreateMNPAppSecretResponse"/></returns>
+        public CreateMNPAppSecretResponse CreateMNPAppSecretSync(CreateMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<CreateMNPAppSecretResponse>(req, "CreateMNPAppSecret")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +470,27 @@ namespace TencentCloud.Tcsas.V20250106
         public CreateMNPSensitiveAPIPermissionApprovalResponse CreateMNPSensitiveAPIPermissionApprovalSync(CreateMNPSensitiveAPIPermissionApprovalRequest req)
         {
             return InternalRequestAsync<CreateMNPSensitiveAPIPermissionApprovalResponse>(req, "CreateMNPSensitiveAPIPermissionApproval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="CreateMNPSubscribeMessageTemplateResponse"/></returns>
+        public Task<CreateMNPSubscribeMessageTemplateResponse> CreateMNPSubscribeMessageTemplate(CreateMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSubscribeMessageTemplateResponse>(req, "CreateMNPSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to create a mini program subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="CreateMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="CreateMNPSubscribeMessageTemplateResponse"/></returns>
+        public CreateMNPSubscribeMessageTemplateResponse CreateMNPSubscribeMessageTemplateSync(CreateMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<CreateMNPSubscribeMessageTemplateResponse>(req, "CreateMNPSubscribeMessageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -579,6 +663,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to delete a mini game subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMNGSubscribeMessageTemplateResponse"/></returns>
+        public Task<DeleteMNGSubscribeMessageTemplateResponse> DeleteMNGSubscribeMessageTemplate(DeleteMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMNGSubscribeMessageTemplateResponse>(req, "DeleteMNGSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a mini game subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMNGSubscribeMessageTemplateResponse"/></returns>
+        public DeleteMNGSubscribeMessageTemplateResponse DeleteMNGSubscribeMessageTemplateSync(DeleteMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMNGSubscribeMessageTemplateResponse>(req, "DeleteMNGSubscribeMessageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a mini program.
         /// </summary>
         /// <param name="req"><see cref="DeleteMNPRequest"/></param>
@@ -596,6 +701,27 @@ namespace TencentCloud.Tcsas.V20250106
         public DeleteMNPResponse DeleteMNPSync(DeleteMNPRequest req)
         {
             return InternalRequestAsync<DeleteMNPResponse>(req, "DeleteMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a mini program subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMNPSubscribeMessageTemplateResponse"/></returns>
+        public Task<DeleteMNPSubscribeMessageTemplateResponse> DeleteMNPSubscribeMessageTemplate(DeleteMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMNPSubscribeMessageTemplateResponse>(req, "DeleteMNPSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to delete a mini program subscription message template.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DeleteMNPSubscribeMessageTemplateResponse"/></returns>
+        public DeleteMNPSubscribeMessageTemplateResponse DeleteMNPSubscribeMessageTemplateSync(DeleteMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DeleteMNPSubscribeMessageTemplateResponse>(req, "DeleteMNPSubscribeMessageTemplate")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1104,7 +1230,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game version information.
+        /// This API is used to query mini game version information across all phases.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNGAllStageVersionsResponse"/></returns>
@@ -1114,13 +1240,34 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game version information.
+        /// This API is used to query mini game version information across all phases.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNGAllStageVersionsResponse"/></returns>
         public DescribeMNGAllStageVersionsResponse DescribeMNGAllStageVersionsSync(DescribeMNGAllStageVersionsRequest req)
         {
             return InternalRequestAsync<DescribeMNGAllStageVersionsResponse>(req, "DescribeMNGAllStageVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini game secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAppSecretRequest"/></param>
+        /// <returns><see cref="DescribeMNGAppSecretResponse"/></returns>
+        public Task<DescribeMNGAppSecretResponse> DescribeMNGAppSecret(DescribeMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAppSecretResponse>(req, "DescribeMNGAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to query mini game secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGAppSecretRequest"/></param>
+        /// <returns><see cref="DescribeMNGAppSecretResponse"/></returns>
+        public DescribeMNGAppSecretResponse DescribeMNGAppSecretSync(DescribeMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGAppSecretResponse>(req, "DescribeMNGAppSecret")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1461,6 +1608,90 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query mini game subscription message template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateResponse"/></returns>
+        public Task<DescribeMNGSubscribeMessageTemplateResponse> DescribeMNGSubscribeMessageTemplate(DescribeMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateResponse>(req, "DescribeMNGSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to query mini game subscription message template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateResponse"/></returns>
+        public DescribeMNGSubscribeMessageTemplateResponse DescribeMNGSubscribeMessageTemplateSync(DescribeMNGSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateResponse>(req, "DescribeMNGSubscribeMessageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini game subscription message template library details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateLibraryRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateLibraryResponse"/></returns>
+        public Task<DescribeMNGSubscribeMessageTemplateLibraryResponse> DescribeMNGSubscribeMessageTemplateLibrary(DescribeMNGSubscribeMessageTemplateLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateLibraryResponse>(req, "DescribeMNGSubscribeMessageTemplateLibrary");
+        }
+
+        /// <summary>
+        /// This API is used to query mini game subscription message template library details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateLibraryRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateLibraryResponse"/></returns>
+        public DescribeMNGSubscribeMessageTemplateLibraryResponse DescribeMNGSubscribeMessageTemplateLibrarySync(DescribeMNGSubscribeMessageTemplateLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateLibraryResponse>(req, "DescribeMNGSubscribeMessageTemplateLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the mini game subscription message template library list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateLibraryListResponse"/></returns>
+        public Task<DescribeMNGSubscribeMessageTemplateLibraryListResponse> DescribeMNGSubscribeMessageTemplateLibraryList(DescribeMNGSubscribeMessageTemplateLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateLibraryListResponse>(req, "DescribeMNGSubscribeMessageTemplateLibraryList");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini game subscription message template library list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateLibraryListResponse"/></returns>
+        public DescribeMNGSubscribeMessageTemplateLibraryListResponse DescribeMNGSubscribeMessageTemplateLibraryListSync(DescribeMNGSubscribeMessageTemplateLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateLibraryListResponse>(req, "DescribeMNGSubscribeMessageTemplateLibraryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the mini game subscription message template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateListResponse"/></returns>
+        public Task<DescribeMNGSubscribeMessageTemplateListResponse> DescribeMNGSubscribeMessageTemplateList(DescribeMNGSubscribeMessageTemplateListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateListResponse>(req, "DescribeMNGSubscribeMessageTemplateList");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini game subscription message template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGSubscribeMessageTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeMNGSubscribeMessageTemplateListResponse"/></returns>
+        public DescribeMNGSubscribeMessageTemplateListResponse DescribeMNGSubscribeMessageTemplateListSync(DescribeMNGSubscribeMessageTemplateListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGSubscribeMessageTemplateListResponse>(req, "DescribeMNGSubscribeMessageTemplateList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini game version creation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGVersionRequest"/></param>
@@ -1566,7 +1797,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query versions of a mini program across all stages.
+        /// This API is used to query mini program version information across all phases.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
@@ -1576,13 +1807,34 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query versions of a mini program across all stages.
+        /// This API is used to query mini program version information across all phases.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPAllStageVersionsRequest"/></param>
         /// <returns><see cref="DescribeMNPAllStageVersionsResponse"/></returns>
         public DescribeMNPAllStageVersionsResponse DescribeMNPAllStageVersionsSync(DescribeMNPAllStageVersionsRequest req)
         {
             return InternalRequestAsync<DescribeMNPAllStageVersionsResponse>(req, "DescribeMNPAllStageVersions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini program secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAppSecretRequest"/></param>
+        /// <returns><see cref="DescribeMNPAppSecretResponse"/></returns>
+        public Task<DescribeMNPAppSecretResponse> DescribeMNPAppSecret(DescribeMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAppSecretResponse>(req, "DescribeMNPAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to query mini program secret keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPAppSecretRequest"/></param>
+        /// <returns><see cref="DescribeMNPAppSecretResponse"/></returns>
+        public DescribeMNPAppSecretResponse DescribeMNPAppSecretSync(DescribeMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPAppSecretResponse>(req, "DescribeMNPAppSecret")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1944,6 +2196,90 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query mini program subscription message template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateResponse"/></returns>
+        public Task<DescribeMNPSubscribeMessageTemplateResponse> DescribeMNPSubscribeMessageTemplate(DescribeMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateResponse>(req, "DescribeMNPSubscribeMessageTemplate");
+        }
+
+        /// <summary>
+        /// This API is used to query mini program subscription message template details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateResponse"/></returns>
+        public DescribeMNPSubscribeMessageTemplateResponse DescribeMNPSubscribeMessageTemplateSync(DescribeMNPSubscribeMessageTemplateRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateResponse>(req, "DescribeMNPSubscribeMessageTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini program subscription message template library details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateLibraryRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateLibraryResponse"/></returns>
+        public Task<DescribeMNPSubscribeMessageTemplateLibraryResponse> DescribeMNPSubscribeMessageTemplateLibrary(DescribeMNPSubscribeMessageTemplateLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateLibraryResponse>(req, "DescribeMNPSubscribeMessageTemplateLibrary");
+        }
+
+        /// <summary>
+        /// This API is used to query mini program subscription message template library details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateLibraryRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateLibraryResponse"/></returns>
+        public DescribeMNPSubscribeMessageTemplateLibraryResponse DescribeMNPSubscribeMessageTemplateLibrarySync(DescribeMNPSubscribeMessageTemplateLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateLibraryResponse>(req, "DescribeMNPSubscribeMessageTemplateLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program subscription message template library list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateLibraryListResponse"/></returns>
+        public Task<DescribeMNPSubscribeMessageTemplateLibraryListResponse> DescribeMNPSubscribeMessageTemplateLibraryList(DescribeMNPSubscribeMessageTemplateLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateLibraryListResponse>(req, "DescribeMNPSubscribeMessageTemplateLibraryList");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program subscription message template library list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateLibraryListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateLibraryListResponse"/></returns>
+        public DescribeMNPSubscribeMessageTemplateLibraryListResponse DescribeMNPSubscribeMessageTemplateLibraryListSync(DescribeMNPSubscribeMessageTemplateLibraryListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateLibraryListResponse>(req, "DescribeMNPSubscribeMessageTemplateLibraryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program subscription message template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateListResponse"/></returns>
+        public Task<DescribeMNPSubscribeMessageTemplateListResponse> DescribeMNPSubscribeMessageTemplateList(DescribeMNPSubscribeMessageTemplateListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateListResponse>(req, "DescribeMNPSubscribeMessageTemplateList");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program subscription message template list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPSubscribeMessageTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeMNPSubscribeMessageTemplateListResponse"/></returns>
+        public DescribeMNPSubscribeMessageTemplateListResponse DescribeMNPSubscribeMessageTemplateListSync(DescribeMNPSubscribeMessageTemplateListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPSubscribeMessageTemplateListResponse>(req, "DescribeMNPSubscribeMessageTemplateList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini program version creation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPVersionRequest"/></param>
@@ -2301,6 +2637,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to modify the secret key status of a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNGAppSecretStatusRequest"/></param>
+        /// <returns><see cref="ModifyMNGAppSecretStatusResponse"/></returns>
+        public Task<ModifyMNGAppSecretStatusResponse> ModifyMNGAppSecretStatus(ModifyMNGAppSecretStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMNGAppSecretStatusResponse>(req, "ModifyMNGAppSecretStatus");
+        }
+
+        /// <summary>
+        /// This API is used to modify the secret key status of a mini game.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNGAppSecretStatusRequest"/></param>
+        /// <returns><see cref="ModifyMNGAppSecretStatusResponse"/></returns>
+        public ModifyMNGAppSecretStatusResponse ModifyMNGAppSecretStatusSync(ModifyMNGAppSecretStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMNGAppSecretStatusResponse>(req, "ModifyMNGAppSecretStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to edit the mini game domain information.
         /// </summary>
         /// <param name="req"><see cref="ModifyMNGDomainRequest"/></param>
@@ -2339,6 +2696,27 @@ namespace TencentCloud.Tcsas.V20250106
         public ModifyMNPResponse ModifyMNPSync(ModifyMNPRequest req)
         {
             return InternalRequestAsync<ModifyMNPResponse>(req, "ModifyMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the secret key status of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNPAppSecretStatusRequest"/></param>
+        /// <returns><see cref="ModifyMNPAppSecretStatusResponse"/></returns>
+        public Task<ModifyMNPAppSecretStatusResponse> ModifyMNPAppSecretStatus(ModifyMNPAppSecretStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMNPAppSecretStatusResponse>(req, "ModifyMNPAppSecretStatus");
+        }
+
+        /// <summary>
+        /// This API is used to modify the secret key status of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMNPAppSecretStatusRequest"/></param>
+        /// <returns><see cref="ModifyMNPAppSecretStatusResponse"/></returns>
+        public ModifyMNPAppSecretStatusResponse ModifyMNPAppSecretStatusSync(ModifyMNPAppSecretStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyMNPAppSecretStatusResponse>(req, "ModifyMNPAppSecretStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2549,6 +2927,48 @@ namespace TencentCloud.Tcsas.V20250106
         public RemoveMNPResponse RemoveMNPSync(RemoveMNPRequest req)
         {
             return InternalRequestAsync<RemoveMNPResponse>(req, "RemoveMNP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset a mini game secret key.
+        /// </summary>
+        /// <param name="req"><see cref="ResetMNGAppSecretRequest"/></param>
+        /// <returns><see cref="ResetMNGAppSecretResponse"/></returns>
+        public Task<ResetMNGAppSecretResponse> ResetMNGAppSecret(ResetMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<ResetMNGAppSecretResponse>(req, "ResetMNGAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to reset a mini game secret key.
+        /// </summary>
+        /// <param name="req"><see cref="ResetMNGAppSecretRequest"/></param>
+        /// <returns><see cref="ResetMNGAppSecretResponse"/></returns>
+        public ResetMNGAppSecretResponse ResetMNGAppSecretSync(ResetMNGAppSecretRequest req)
+        {
+            return InternalRequestAsync<ResetMNGAppSecretResponse>(req, "ResetMNGAppSecret")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset a mini program secret key.
+        /// </summary>
+        /// <param name="req"><see cref="ResetMNPAppSecretRequest"/></param>
+        /// <returns><see cref="ResetMNPAppSecretResponse"/></returns>
+        public Task<ResetMNPAppSecretResponse> ResetMNPAppSecret(ResetMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<ResetMNPAppSecretResponse>(req, "ResetMNPAppSecret");
+        }
+
+        /// <summary>
+        /// This API is used to reset a mini program secret key.
+        /// </summary>
+        /// <param name="req"><see cref="ResetMNPAppSecretRequest"/></param>
+        /// <returns><see cref="ResetMNPAppSecretResponse"/></returns>
+        public ResetMNPAppSecretResponse ResetMNPAppSecretSync(ResetMNPAppSecretRequest req)
+        {
+            return InternalRequestAsync<ResetMNPAppSecretResponse>(req, "ResetMNPAppSecret")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Modified alarm setting content
+        /// Modify alarm settings.
         /// </summary>
         [JsonProperty("WarningObjects")]
         public WarningObject[] WarningObjects{ get; set; }

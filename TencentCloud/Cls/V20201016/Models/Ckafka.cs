@@ -25,40 +25,54 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// CKafka VIP
-        /// </summary>
-        [JsonProperty("Vip")]
-        public string Vip{ get; set; }
-
-        /// <summary>
-        /// CKafka Vport
-        /// </summary>
-        [JsonProperty("Vport")]
-        public string Vport{ get; set; }
-
-        /// <summary>
-        /// CKafka instance ID
+        /// InstanceId of Ckafka.
+        /// - Obtain the instance id by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+        /// - Obtain the instance id by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// CKafka instance name
+        /// TopicName of Ckafka
+        /// -Obtain the TopicName by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+        /// -Obtain the TopicName through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
+        /// <summary>
+        /// Vip of Ckafka.
+        /// - Obtain vip information by searching the instance attributes (https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+        /// -If the delivery task is created via the role ARN method, the Vip field can be empty.
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
+        /// <summary>
+        /// Vport of Ckafka.
+        /// -Obtain vip port information by [obtaining instance attributes](https://www.tencentcloud.com/document/product/597/40836?from_cn_redirect=1).
+        /// -If it is created by the role ARN method, the Vport field can be empty.
+        /// </summary>
+        [JsonProperty("Vport")]
+        public string Vport{ get; set; }
+
+        /// <summary>
+        /// InstanceName of Ckafka.
+        /// - Obtain the InstanceName by searching the instance list information (https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+        /// -Get InstanceName by [creating an instance](https://www.tencentcloud.com/document/product/597/53207?from_cn_redirect=1).
+        /// - If the delivery task is created via the role ARN method, the InstanceName field can be empty.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// CKafka topic ID
+        /// Topic ID of Ckafka.
+        /// -Obtain the TopicId by creating a topic (https://www.tencentcloud.com/document/product/597/73566?from_cn_redirect=1).
+        /// -Obtain the TopicId through [Get Topic List](https://www.tencentcloud.com/document/product/597/40847?from_cn_redirect=1).
+        /// - If the delivery task is created via the role ARN method, the TopicId field can be empty.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
-
-        /// <summary>
-        /// CKafka topic name
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
 
 
         /// <summary>
@@ -66,12 +80,12 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

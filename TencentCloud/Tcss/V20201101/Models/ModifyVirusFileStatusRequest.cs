@@ -31,14 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] EventIdSet{ get; set; }
 
         /// <summary>
-        /// Event status   
-        ///     `EVENT_DEALED`: Processed.
-        ///     `EVENT_INGNORE`: Ignored.
-        ///     `EVENT_DEL`: Deleted.
-        ///     `EVENT_ADD_WHITE`: Allowed.
-        ///     `EVENT_PENDING`: Pending.
-        /// 	`EVENT_ISOLATE_CONTAINER`: Container isolated.
-        /// 	`EVENT_RESOTRE_CONTAINER`: Container recovered.
+        /// Identifies the event status.       EVENT_DEALED: event handled; EVENT_IGNORE: event ignored; EVENT_DEL: event deleted; EVENT_ADD_WHITE: event allowlisted; EVENT_PENDING: event pending handling;	EVENT_ISOLATE_CONTAINER: container isolated;	EVENT_RESOTRE_CONTAINER: container restored.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

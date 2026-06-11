@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// Rule for shielding, mandatory when Type is 2. See Product Documentation (https://intl.cloud.tencent.com/document/product/614/103178?from_cn_redirect=1#rule) for rule writing details.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Blocking rules, required when Type is 2. For detailed information on filling in rules, see [Product Documentation](https://www.tencentcloud.com/document/product/614/103178?from_cn_redirect=1#rule).
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -87,13 +87,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Rule Creation Time.
+        /// Rule creation time. Unix second-level timestamp (s).
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Rule Update Time.
+        /// Rule update time. Unix second-level timestamp (s).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }

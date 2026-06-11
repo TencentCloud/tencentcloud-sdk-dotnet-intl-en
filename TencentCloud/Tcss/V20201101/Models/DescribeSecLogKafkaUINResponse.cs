@@ -26,14 +26,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         
         /// <summary>
         /// Target UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstUIN")]
         public string DstUIN{ get; set; }
 
         /// <summary>
-        /// Licensing status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Authorization status
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

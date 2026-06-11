@@ -25,90 +25,78 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Path
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
         /// Virus name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VirusName")]
         public string VirusName{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Fix suggestion
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Remediation Suggestions
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
         /// Size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }
 
         /// <summary>
-        /// First discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// First detection time
         /// </summary>
         [JsonProperty("FirstScanTime")]
         public string FirstScanTime{ get; set; }
 
         /// <summary>
         /// Last scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestScanTime")]
         public string LatestScanTime{ get; set; }
 
         /// <summary>
-        /// MD5 checksum of the file
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File md5
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// Filename
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File name
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Check platform
-        /// `1`: Tencent Cloud Security Engine.
-        /// `2`: tav.
-        /// `3`: binaryAi.
-        /// `4`: Unusual behavior.
-        /// `5`: Threat intelligence.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection platform
+        /// 1: Cloud Killing Engine
+        /// 2: tav
+        /// 3: binaryAi
+        /// 4: Abnormal behavior
+        /// 5: Threat Intelligence
         /// </summary>
         [JsonProperty("CheckPlatform")]
         public string[] CheckPlatform{ get; set; }

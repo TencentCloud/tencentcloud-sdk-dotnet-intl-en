@@ -46,16 +46,15 @@ namespace TencentCloud.Cls.V20201016.Models
         public string[] MetaFields{ get; set; }
 
         /// <summary>
-        /// Tag data processing mode: 1: Do not tile (default); 2: Tile.
+        /// tag data processing method: 1: Not Tiled (default value); 2: Tile.
         /// 
         /// Untiled example:
         /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-        /// Untiled: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
+        /// No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
         /// 
         /// Tiled example:
         /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
         /// Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TagTransaction")]
         public long? TagTransaction{ get; set; }

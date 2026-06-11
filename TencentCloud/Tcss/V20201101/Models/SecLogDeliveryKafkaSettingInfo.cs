@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Log type
+        /// Security log module.
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
@@ -38,7 +38,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Topic name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -48,6 +47,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("State")]
         public bool? State{ get; set; }
+
+        /// <summary>
+        /// Log type
+        /// </summary>
+        [JsonProperty("SubLogType")]
+        public string[] SubLogType{ get; set; }
+
+        /// <summary>
+        /// Error message
+        /// </summary>
+        [JsonProperty("ErrMsg")]
+        public string ErrMsg{ get; set; }
 
 
         /// <summary>
@@ -59,6 +70,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "TopicID", this.TopicID);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamArraySimple(map, prefix + "SubLogType.", this.SubLogType);
+            this.SetParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         }
     }
 }

@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// List of alarm IDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm node ID list.
         /// </summary>
         [JsonProperty("AlarmVertexIds")]
         public string[] AlarmVertexIds{ get; set; }

@@ -146,14 +146,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Public IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
-        /// Host online status. OFFLINE: offline; ONLINE: online; UNKNOWN: unknown.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host online status [OFFLINE: offline|ONLINE: online|UNKNOWN: unknown]
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }

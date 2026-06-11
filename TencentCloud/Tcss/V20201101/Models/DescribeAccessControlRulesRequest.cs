@@ -25,6 +25,22 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
+        /// Sorting field
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// Filter parameters,"Filters":[{"Name":"Status","Values":["2"]}]
+        /// <li>ImageName - String - required: no - mirror name, fuzzy search for rules bound to the image</li>
+        /// <li>ImageId - String - required: no - image ID, fuzzy search for rules bound to the image</li>
+        /// <li>RuleType- String - Required: No - Filter by policy type. Value: system (system policy), user (user policy) </li>
+        /// <li>RuleAction - String - Required: No - Execution action filter. Value: RULE_MODE_ALERT (Alert), RULE_MODE_HOLDUP (Intercept)</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public RunTimeFilters[] Filters{ get; set; }
+
+        /// <summary>
         /// Number of results to be returned. Default value: `10`. Maximum value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
@@ -37,22 +53,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter parameter. "Filters":[{"Name":"Status","Values":["2"]}]
-        /// </summary>
-        [JsonProperty("Filters")]
-        public RunTimeFilters[] Filters{ get; set; }
-
-        /// <summary>
         /// Valid values: `asc`, `desc`.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
-
-        /// <summary>
-        /// Sorting field
-        /// </summary>
-        [JsonProperty("By")]
-        public string By{ get; set; }
 
 
         /// <summary>
@@ -60,11 +64,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

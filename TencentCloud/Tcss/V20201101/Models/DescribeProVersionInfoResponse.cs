@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Start time of the Pro Edition, which is not empty only when the edition is purchased.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pro Edition start time, not null during supplement purchase
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the Pro Edition, which is not empty only when more resources are purchased.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pro Edition end time, not null when supplement purchase is made
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -52,7 +50,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Resource ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

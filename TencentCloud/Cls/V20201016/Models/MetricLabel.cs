@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Metric NameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Metric name
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Metric content Note: This field may return null, indicating that no valid values can be obtained.
+        /// Metric content.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

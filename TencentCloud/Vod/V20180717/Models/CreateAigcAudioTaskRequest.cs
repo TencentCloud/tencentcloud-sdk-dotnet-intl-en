@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <p>VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</p>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
@@ -37,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>Designated scenarios currently support sfx (sound effects).</p>
+        /// <p>Designated scenarios currently support sfx (sound effects) and music.</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
@@ -78,6 +84,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);

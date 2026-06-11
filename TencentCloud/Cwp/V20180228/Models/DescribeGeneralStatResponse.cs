@@ -92,21 +92,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Number of Ultimate Edition hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FlagshipMachineCnt")]
         public ulong? FlagshipMachineCnt{ get; set; }
 
         /// <summary>
-        /// Protection duration, in days
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// protection days
         /// </summary>
         [JsonProperty("ProtectDays")]
         public ulong? ProtectDays{ get; set; }
 
         /// <summary>
         /// Number of hosts added in the last 15 days
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddedOnTheFifteen")]
         public ulong? AddedOnTheFifteen{ get; set; }

@@ -31,22 +31,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Vulnerability tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// vulnerability tag
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
         /// CVSS V3 score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVSSV3Score")]
         public float? CVSSV3Score{ get; set; }
 
         /// <summary>
         /// Risk level
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -58,22 +55,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string CVEID{ get; set; }
 
         /// <summary>
-        /// Vulnerability sub-category
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Subtype
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// First discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// First detection time
         /// </summary>
         [JsonProperty("FoundTime")]
         public string FoundTime{ get; set; }
 
         /// <summary>
         /// Last discovery time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
@@ -91,53 +85,58 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? LocalImageCount{ get; set; }
 
         /// <summary>
-        /// Number of affected containers
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected Container Count
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }
 
         /// <summary>
-        /// Number of affected repository images
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected Repository Image Count
         /// </summary>
         [JsonProperty("RegistryImageCount")]
         public long? RegistryImageCount{ get; set; }
 
         /// <summary>
-        /// POC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Poc ID
         /// </summary>
         [JsonProperty("PocID")]
         public string PocID{ get; set; }
 
         /// <summary>
-        /// Defense status. Valid values: `NO_DEFENDED`, `DEFENDED`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Defense Status. NO_DEFENDED: Not Defended; DEFENDED: Defended
         /// </summary>
         [JsonProperty("DefenceStatus")]
         public string DefenceStatus{ get; set; }
 
         /// <summary>
-        /// Scope of servers with exploit prevention enabled. Valid values: `MANUAL` (specified servers); `ALL` (all servers).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability Defense Host Range. MANUAL: Selected Host Nodes; ALL: All
         /// </summary>
         [JsonProperty("DefenceScope")]
         public string DefenceScope{ get; set; }
 
         /// <summary>
-        /// Number of servers with exploit prevention enabled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Hosts Defended Against Vulnerabilities
         /// </summary>
         [JsonProperty("DefenceHostCount")]
         public long? DefenceHostCount{ get; set; }
 
         /// <summary>
-        /// Number of attacks defended against
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Attacks Defended
         /// </summary>
         [JsonProperty("DefendedCount")]
         public long? DefendedCount{ get; set; }
+
+        /// <summary>
+        /// Number of hosts with application protection enabled for the vulnerability.
+        /// </summary>
+        [JsonProperty("RaspOpenNodeCount")]
+        public long? RaspOpenNodeCount{ get; set; }
+
+        /// <summary>
+        /// Number of hosts with application protection disabled for the vulnerability.
+        /// </summary>
+        [JsonProperty("RaspClosedNodeCount")]
+        public long? RaspClosedNodeCount{ get; set; }
 
 
         /// <summary>
@@ -162,6 +161,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "DefenceScope", this.DefenceScope);
             this.SetParamSimple(map, prefix + "DefenceHostCount", this.DefenceHostCount);
             this.SetParamSimple(map, prefix + "DefendedCount", this.DefendedCount);
+            this.SetParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+            this.SetParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
         }
     }
 }

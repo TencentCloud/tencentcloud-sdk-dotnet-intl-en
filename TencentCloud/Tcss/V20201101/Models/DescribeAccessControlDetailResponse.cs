@@ -56,7 +56,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Ancestor process information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AncestorProcessInfo")]
         public ProcessBaseInfo AncestorProcessInfo{ get; set; }

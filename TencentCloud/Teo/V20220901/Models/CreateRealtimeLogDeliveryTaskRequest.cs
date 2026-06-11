@@ -31,56 +31,37 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
+        /// Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// Data delivery type. Available values: <ul><li>domain: site acceleration log;</li><li>application: four-layer proxy logs;</li><li>function: edge function logs;</li><li>web-rateLiming: rate limit and CC attack defense log;</li><li>web-attack: managed rule log;</li><li>web-rule: custom rule logs;</li><li>web-bot: bot management log.</li></ul>
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
+
+        /// <summary>
         /// Name of a real-time log delivery task, which can contain up to 200 characters, including digits, English letters, hyphens (-) and underscores (_).
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Type of a real-time log shipping task. valid values:.
-        /// <li>cls: push to tencent cloud cls.</li>.
-        /// <li>custom_endpoint: push to a custom HTTP(S) address.</li>.
-        /// <li>s3: push to an AWS s3-compatible bucket address.</li>.
-        /// <li>log_analysis: pushes to EdgeOne log analytics. this task type only supports the "site acceleration log" data delivery type.</li>.
+        /// Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. Only supported when LogType = domain or web-attack.</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Entity list corresponding to the real-time log delivery task. example values:.
-        /// <Li>Specifies the layer-7 domain name: domain.example.com.</li>.
-        /// <Li>Specifies the l4 proxy instance: sid-2s69eb5wcms7.</li>.
-        /// <Li>Edge function instance: test-zone-2mxigizoh9l9-1257626257.</li>.
+        /// List of entities corresponding to the real-time log delivery task. Example values are as follows: <ul><li>Layer 7 domain: domain.example.com</li><li>L4 proxy instance: sid-2s69eb5wcms7</li><li>Cloud function instance: test-zone-2mxigizoh9l9-1257626257</li></ul>
         /// </summary>
         [JsonProperty("EntityList")]
         public string[] EntityList{ get; set; }
 
         /// <summary>
-        /// Data delivery type. valid values:.
-        /// <li>domain: specifies the site acceleration logs.</li>.
-        /// <li>application: four-layer proxy logs.</li>.
-        /// <Li>Function: specifies the edge function logs.</li>.
-        /// <li>web-rateLiming: specifies the rate limit and CC attack defense logs.</li>.
-        /// <li>web-attack: managed rule logs;</li>.
-        /// <li>web-rule: custom rule logs;</li>.
-        /// <li>web-bot: Bot management logs.</li>
-        /// </summary>
-        [JsonProperty("LogType")]
-        public string LogType{ get; set; }
-
-        /// <summary>
-        /// Data area. Valid values:
-        /// <li>mainland: within the Chinese mainland;</li>
-        /// <li>overseas: global (excluding the Chinese mainland).</li>
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
-
-        /// <summary>
-        /// Predefined fields for delivery. valid values:.
-        /// <Li>[Site acceleration log (l7 access log)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li>.
-        /// <Li><A href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li>.
-        /// <Li>Specifies the edge function logs (https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1).</li>.
+        /// Predefined fields for delivery. Value reference: <ul><li>[Site acceleration log (Layer 7 Access Logs)](https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1)</li><li>[Four-layer proxy logs](https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1)</li><li>[Edge Function logs](https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1)</li></ul>
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
@@ -104,9 +85,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Sample{ get; set; }
 
         /// <summary>
-        /// Output format for log delivery. if this field is not specified, the default format is used, which works as follows:.
-        /// <li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, with each JSON object representing a log entry;</li>.
-        /// <li>When TaskType is 's3', the default format is JSON Lines;</li>specifically, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'JSON', and other parameters in LogFormat will be ignored. it is recommended not to transfer LogFormat.
+        /// Output format for log delivery. If left empty, the default format is used. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.
         /// </summary>
         [JsonProperty("LogFormat")]
         public LogFormat LogFormat{ get; set; }
@@ -136,11 +115,11 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamArraySimple(map, prefix + "EntityList.", this.EntityList);
-            this.SetParamSimple(map, prefix + "LogType", this.LogType);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArraySimple(map, prefix + "Fields.", this.Fields);
             this.SetParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
             this.SetParamArrayObj(map, prefix + "DeliveryConditions.", this.DeliveryConditions);

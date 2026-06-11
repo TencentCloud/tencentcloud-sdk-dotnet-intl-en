@@ -26,70 +26,60 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Total Number of Attacks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PendingAttackCount")]
         public ulong? PendingAttackCount{ get; set; }
 
         /// <summary>
         /// Total Attack Attempts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PendingTryAttackCount")]
         public ulong? PendingTryAttackCount{ get; set; }
 
         /// <summary>
         /// Total Number of Successful Attacks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PendingSuccAttackCount")]
         public ulong? PendingSuccAttackCount{ get; set; }
 
         /// <summary>
         /// Number of New Attacks Today
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PendingNewAttackCount")]
         public ulong? PendingNewAttackCount{ get; set; }
 
         /// <summary>
         /// Total Number of Assets Under Attack
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AttackedAssetCount")]
         public ulong? AttackedAssetCount{ get; set; }
 
         /// <summary>
         /// Number of New Attacked Assets Today
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NewAttackedAssetCount")]
         public ulong? NewAttackedAssetCount{ get; set; }
 
         /// <summary>
         /// Total Number of Attacked Ports
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AttackedPortCount")]
         public ulong? AttackedPortCount{ get; set; }
 
         /// <summary>
         /// Number of New Attacked Ports Today
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NewAttackedPortCount")]
         public ulong? NewAttackedPortCount{ get; set; }
 
         /// <summary>
         /// Total Number of Attack Source IPs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AttackSrcIpCount")]
         public ulong? AttackSrcIpCount{ get; set; }
 
         /// <summary>
         /// Number of New Attacking Source IPs Today
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NewAttackSrcIpCount")]
         public ulong? NewAttackSrcIpCount{ get; set; }

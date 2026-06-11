@@ -49,14 +49,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ExclusiveEndKey{ get; set; }
 
         /// <summary>
-        /// Partition creation time
+        /// Partition Creation Time
+        /// Time format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified of read-only partition
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Time to stop writing data to the read-only partition
+        /// Time format: yyyy-MM-dd HH:mm:ss
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastWriteTime")]
         public string LastWriteTime{ get; set; }

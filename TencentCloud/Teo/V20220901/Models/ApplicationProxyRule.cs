@@ -51,9 +51,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Origin server information.
+        /// Details of the origin server:
         /// <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-        /// <li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-xdffsfasdfs"];</li>
+        /// <li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
         /// <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
         /// </summary>
         [JsonProperty("OriginValue")]
@@ -95,7 +95,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// Duration for session persistence. the value takes effect only when SessionPersist is true.
+        /// Duration for session persistence, in seconds. The value takes effect only when SessionPersist is true.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }

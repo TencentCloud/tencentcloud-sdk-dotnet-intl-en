@@ -25,14 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Trigger condition.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Trigger conditions
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).<li> If not specified, the default is 0.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm severity. 0: Warning (Warn); 1: Reminder (Info); 2: Urgent (Critical).
+        /// 
+        /// - If not specified, the default is 0.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }

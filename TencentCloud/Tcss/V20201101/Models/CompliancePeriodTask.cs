@@ -42,7 +42,6 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Last trigger time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastTriggerTime")]
         public string LastTriggerTime{ get; set; }

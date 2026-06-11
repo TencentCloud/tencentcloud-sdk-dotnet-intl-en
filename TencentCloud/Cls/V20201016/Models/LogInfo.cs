@@ -67,29 +67,31 @@ namespace TencentCloud.Cls.V20201016.Models
         public string PkgLogId{ get; set; }
 
         /// <summary>
-        /// Serialized JSON string of log content
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Keywords that meet search criteria are generally highlighted. Only key-value search is supported, not full-text search.	
+        /// </summary>
+        [JsonProperty("HighLights")]
+        public HighLightItem[] HighLights{ get; set; }
+
+        /// <summary>
+        /// JSON serialized string of the log content
         /// </summary>
         [JsonProperty("LogJson")]
         public string LogJson{ get; set; }
 
         /// <summary>
-        /// Source host name of logs
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Log source host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Raw log (only available when there is an error in creating the log index).
         /// </summary>
         [JsonProperty("RawLog")]
         public string RawLog{ get; set; }
 
         /// <summary>
-        /// The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cause for log index creation exception. It has a value only when a log index creation exception occurs.
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
@@ -107,6 +109,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
             this.SetParamSimple(map, prefix + "PkgId", this.PkgId);
             this.SetParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
+            this.SetParamArrayObj(map, prefix + "HighLights.", this.HighLights);
             this.SetParamSimple(map, prefix + "LogJson", this.LogJson);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "RawLog", this.RawLog);

@@ -26,7 +26,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Top host baseline policy events
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BaselineHostTopList")]
         public BaselineHostTopList[] BaselineHostTopList{ get; set; }

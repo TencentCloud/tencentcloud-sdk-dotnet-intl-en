@@ -40,10 +40,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Layer{ get; set; }
 
         /// <summary>
-        /// Specifies a region to query.
-        /// `mainland`: Nodes in the Chinese mainland
-        /// `overseas`: Nodes outside the Chinese mainland
-        /// `global`: Global nodes
+        /// Query region: mainland: node in chinese mainland; overseas: node outside the chinese mainland; global: global node.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -55,7 +52,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Segment{ get; set; }
 
         /// <summary>
-        /// whether to query node IPV6 information.
+        /// 
         /// </summary>
         [JsonProperty("ShowIpv6")]
         public bool? ShowIpv6{ get; set; }

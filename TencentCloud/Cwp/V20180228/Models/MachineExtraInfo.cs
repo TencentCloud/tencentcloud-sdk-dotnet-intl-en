@@ -26,42 +26,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Public IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
         /// Private IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivateIP")]
         public string PrivateIP{ get; set; }
 
         /// <summary>
         /// Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetworkType")]
         public long? NetworkType{ get; set; }
 
         /// <summary>
         /// Network Name, returns vpc_id in the case of a VPC network
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetworkName")]
         public string NetworkName{ get; set; }
 
         /// <summary>
         /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Proxy node information
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rebalance
         /// </summary>
         [JsonProperty("ReloadBalance")]
         public string ReloadBalance{ get; set; }

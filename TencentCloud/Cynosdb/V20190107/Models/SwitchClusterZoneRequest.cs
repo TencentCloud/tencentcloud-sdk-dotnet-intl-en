@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster Id</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The current AZ
+        /// <p>Current availability zone</p>
         /// </summary>
         [JsonProperty("OldZone")]
         public string OldZone{ get; set; }
 
         /// <summary>
-        /// New AZ
+        /// <p>Availability zone to switch to</p>
         /// </summary>
         [JsonProperty("NewZone")]
         public string NewZone{ get; set; }
 
         /// <summary>
-        /// Valid values: `yes` (execute during maintenance time), `no` (execute now)
+        /// <p>Execute during maintenance period - yes, immediately execute - no</p>
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

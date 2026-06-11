@@ -49,22 +49,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? ExceptionHostCount{ get; set; }
 
         /// <summary>
-        /// Specified servers with exploit prevention enabled
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Custom Vulnerability Defense Hosts
         /// </summary>
         [JsonProperty("HostIDs")]
         public string[] HostIDs{ get; set; }
 
         /// <summary>
-        /// Total number of servers with TCSS activated
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total Number of Hosts with Container Security Enabled
         /// </summary>
         [JsonProperty("HostTotalCount")]
         public long? HostTotalCount{ get; set; }
 
         /// <summary>
-        /// Number of vulnerabilities that can be prevented
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Supported Defense Vulnerability Count
         /// </summary>
         [JsonProperty("SupportDefenseVulCount")]
         public long? SupportDefenseVulCount{ get; set; }

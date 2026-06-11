@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Field type. Valid values: `long`, `text`, `double`
+        /// Field type. Supported types: long, text, double, json.
+        /// Note: The json data type is currently supported by partial users or log topics. If needed, contact us to enable the allowlist.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -46,11 +47,30 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? SqlFlag{ get; set; }
 
         /// <summary>
-        /// Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to include node data. Set this parameter to false for the long and double fields.
         /// </summary>
         [JsonProperty("ContainZH")]
         public bool? ContainZH{ get; set; }
+
+        /// <summary>
+        /// field alias
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
+        /// <summary>
+        /// Enable index only for sub-node. This field is not enabled.
+        /// Note: Only json type fields can configure this parameter.
+        /// </summary>
+        [JsonProperty("OpenIndexForChildOnly")]
+        public bool? OpenIndexForChildOnly{ get; set; }
+
+        /// <summary>
+        /// subnode list
+        /// Note: Only json type fields can configure this parameter.
+        /// </summary>
+        [JsonProperty("ChildNode")]
+        public KeyValueInfo[] ChildNode{ get; set; }
 
 
         /// <summary>
@@ -62,6 +82,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
             this.SetParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
             this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "OpenIndexForChildOnly", this.OpenIndexForChildOnly);
+            this.SetParamArrayObj(map, prefix + "ChildNode.", this.ChildNode);
         }
     }
 }

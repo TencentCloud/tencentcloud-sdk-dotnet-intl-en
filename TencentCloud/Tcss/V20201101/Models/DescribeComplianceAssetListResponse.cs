@@ -31,8 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Return a list of various assets.
         /// </summary>
         [JsonProperty("AssetInfoList")]
         public ComplianceAssetInfo[] AssetInfoList{ get; set; }

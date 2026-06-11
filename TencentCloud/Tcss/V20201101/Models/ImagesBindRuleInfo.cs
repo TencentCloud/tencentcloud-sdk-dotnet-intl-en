@@ -43,29 +43,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// Bound rule ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Binding rule id
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// Rule name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Image size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// image size
         /// </summary>
         [JsonProperty("ImageSize")]
         public long? ImageSize{ get; set; }
 
         /// <summary>
         /// Last scan time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }

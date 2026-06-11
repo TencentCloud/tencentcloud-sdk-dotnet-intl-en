@@ -109,13 +109,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (Windows only)
+        /// Account type. 0: guest user; 1: standard user; 2: administrator user; 999: null (for Windows only).
         /// </summary>
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
 
         /// <summary>
-        /// Whether a domain account. 0: no; 1: yes; 2: no; 999: null (Windows only)
+        /// Whether it is a domain account: 0: no; 1: yes; 2: no; 999: null (for Windows only).
         /// </summary>
         [JsonProperty("IsDomain")]
         public ulong? IsDomain{ get; set; }
@@ -176,7 +176,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -194,8 +193,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? IsNew{ get; set; }
 
         /// <summary>
-        /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        ///  Additional information
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

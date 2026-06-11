@@ -25,14 +25,29 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// `Body` during callback
+        /// Callback Body.
+        /// Place various alarm variables in the request content. For details, see the help documentation (https://www.tencentcloud.com/document/product/614/74718?from_cn_redirect=1).
+        /// in the following example:
+        /// 
+        /// ```
+        /// {
+        /// "TopicId": "{{ .QueryLog[0][0].topicId }}",
+        /// "key": "{{.Alarm}}",
+        /// "time": "{{ .QueryLog[0][0].time }}",
+        /// "log": "{{ .QueryLog[0][0].content.__CONTENT__ }}",
+        /// "namespace": "{{ .QueryLog[0][0].content.__TAG__.namespace }}"
+        /// }
+        /// ```
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }
 
         /// <summary>
-        /// `Headers` during callback
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// HTTP request header field for callbacks.
+        /// For example, the following request header field informs the server request content type is JSON.
+        /// ```
+        /// "Content-Type: application/json"
+        /// ```
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }

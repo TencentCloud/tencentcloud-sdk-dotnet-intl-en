@@ -25,88 +25,94 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// <p>Log topic ID.</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log export task ID
+        /// <p>Log export task ID</p>
         /// </summary>
         [JsonProperty("ExportId")]
         public string ExportId{ get; set; }
 
         /// <summary>
-        /// Log export query statement
+        /// <p>Query statements of log export</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// Log export filename
+        /// <p>Filenames of exported logs</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Log file size
+        /// <p>Log file size</p><p>Unit: Byte</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// Log export time sorting
+        /// <p>Sorting of log export time</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Log export format
+        /// <p>Log export format</p>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Number of logs to be exported
+        /// <p>Number of logs to be exported</p>
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+        /// <p>Log download status. Processing: export in progress, Completed: export completed, Failed: export failure, Expired: log export expired (valid for 3 days), Queuing: queuing</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Log export start time
+        /// <p>Start time of log export, with a timestamp in milliseconds</p>
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// Log export end time
+        /// <p>End time of log export, timestamp in milliseconds</p>
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
 
         /// <summary>
-        /// Log export path, valid for one hour. Please download using this path as soon as possible.
+        /// <p>Log export path, valid for one hour. Please download using this path as soon as possible.</p>
         /// </summary>
         [JsonProperty("CosPath")]
         public string CosPath{ get; set; }
 
         /// <summary>
-        /// Log export creation time
+        /// <p>Log export creation time<br>Date and Time Formats: yyyy-MM-dd HH:mm:ss</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Syntax rules. The default value is 0.0: Lucene syntax, 1: CQL syntax.
+        /// <p>Syntax rule. Default value is 0.<br>0: Lucene syntax, 1: CQL syntax.</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// <p>Export fields</p>
+        /// </summary>
+        [JsonProperty("DerivedFields")]
+        public string[] DerivedFields{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "CosPath", this.CosPath);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
         }
     }
 }

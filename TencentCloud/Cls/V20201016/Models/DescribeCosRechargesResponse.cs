@@ -25,8 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// See the description of the `CosRechargeInfo` structure.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// See CosRechargeInfo structural description.
         /// </summary>
         [JsonProperty("Data")]
         public CosRechargeInfo[] Data{ get; set; }

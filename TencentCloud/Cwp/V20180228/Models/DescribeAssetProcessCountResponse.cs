@@ -25,8 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Number of individual processes
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of processes
         /// </summary>
         [JsonProperty("Process")]
         public AssetKeyVal[] Process{ get; set; }

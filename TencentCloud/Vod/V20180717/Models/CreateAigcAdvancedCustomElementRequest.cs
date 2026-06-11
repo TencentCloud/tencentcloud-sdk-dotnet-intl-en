@@ -73,6 +73,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TagList{ get; set; }
 
         /// <summary>
+        /// <p>If the overseas custom subject library is enabled, you can input <code>True</code> to use it.</p><p>Enumeration value:</p><ul><li>True: Use the overseas custom subject library.</li><li>False: Non-use of the overseas custom subject library.</li></ul>
+        /// </summary>
+        [JsonProperty("DisableModeration")]
+        public string DisableModeration{ get; set; }
+
+        /// <summary>
         /// <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
         /// </summary>
         [JsonProperty("SessionId")]
@@ -104,6 +110,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "ElementVideoList", this.ElementVideoList);
             this.SetParamSimple(map, prefix + "ElementImageList", this.ElementImageList);
             this.SetParamSimple(map, prefix + "TagList", this.TagList);
+            this.SetParamSimple(map, prefix + "DisableModeration", this.DisableModeration);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

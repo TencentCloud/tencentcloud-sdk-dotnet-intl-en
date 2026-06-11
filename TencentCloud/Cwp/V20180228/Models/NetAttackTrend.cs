@@ -26,28 +26,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Time Point, e.g., 2023-05-06
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DateTime")]
         public string DateTime{ get; set; }
 
         /// <summary>
-        /// Number of attacks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Attack count
         /// </summary>
         [JsonProperty("AttackCount")]
         public ulong? AttackCount{ get; set; }
 
         /// <summary>
         /// Attack Attempts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TryAttackCount")]
         public ulong? TryAttackCount{ get; set; }
 
         /// <summary>
         /// Attack Success Count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuccAttackCount")]
         public ulong? SuccAttackCount{ get; set; }

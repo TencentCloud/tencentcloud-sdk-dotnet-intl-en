@@ -25,13 +25,15 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic ID
+        /// Log topic Id.
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// It does not take effect by default
+        /// Index status. false: close index, true: enable index.
+        /// Once enabled, retrieval and analysis of logs will generate indexing traffic, index storage and corresponding fees. [Billing details](https://www.tencentcloud.com/document/product/614/45802?from_cn_redirect=1#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
@@ -59,6 +61,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetadataFlag")]
         public ulong? MetadataFlag{ get; set; }
 
+        /// <summary>
+        /// Custom log parsing exception storage fields
+        /// </summary>
+        [JsonProperty("CoverageField")]
+        public string CoverageField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +78,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
             this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+            this.SetParamSimple(map, prefix + "CoverageField", this.CoverageField);
         }
     }
 }

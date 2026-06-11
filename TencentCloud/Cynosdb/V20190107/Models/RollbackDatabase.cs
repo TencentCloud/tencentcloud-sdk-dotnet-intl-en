@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Old database name.
         /// </summary>
         [JsonProperty("OldDatabase")]
         public string OldDatabase{ get; set; }
 
         /// <summary>
-        /// 
+        /// New database name.
         /// </summary>
         [JsonProperty("NewDatabase")]
         public string NewDatabase{ get; set; }

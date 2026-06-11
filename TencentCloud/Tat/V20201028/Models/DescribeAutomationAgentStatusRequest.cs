@@ -37,9 +37,18 @@ namespace TencentCloud.Tat.V20201028.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// -agent-status - String - required: no - (filter condition) filters by agent status. valid values: Online, Offline. 
-        /// -environment - String - required: no - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
-        /// -instance-id - String - required: no - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
+        /// - agent-status 
+        ///     - String 
+        ///     - required: no 
+        ///     - (filter condition) filters by agent status. valid values: Online, Offline. 
+        /// - environment 
+        ///     - String 
+        ///     - required: no 
+        ///     - (filter condition) query by agent runtime environment. valid values: Linux, Windows.
+        /// - instance-id 
+        ///     - String 
+        ///     - required: no 
+        ///     - (filter condition) filter by instance id. you can get the instance id through the query instance API of the corresponding cloud services. currently supports instance types: CVM, Lighthouse, and managed instances.
         /// 
         /// The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `InstanceIds` and `Filters` parameters cannot be specified at the same time.
         /// </summary>

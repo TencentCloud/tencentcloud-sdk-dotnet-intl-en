@@ -97,19 +97,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ServerlessClusterCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// TKE Cluster Count
         /// </summary>
         [JsonProperty("TkeClusterCount")]
         public ulong? TkeClusterCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of User-Built Tencent Cloud Clusters
         /// </summary>
         [JsonProperty("UserCreateTencentClusterCount")]
         public ulong? UserCreateTencentClusterCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of User-Built Cluster Hybrid Clouds
         /// </summary>
         [JsonProperty("UserCreateHybridClusterCount")]
         public ulong? UserCreateHybridClusterCount{ get; set; }

@@ -44,7 +44,14 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// Fields to be exported
         /// </summary>
         [JsonProperty("Fields")]
+        [System.Obsolete]
         public string Fields{ get; set; }
+
+        /// <summary>
+        /// Fields to be exported
+        /// </summary>
+        [JsonProperty("Where")]
+        public string[] Where{ get; set; }
 
 
         /// <summary>
@@ -55,6 +62,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "Fileds.", this.Fileds);
             this.SetParamSimple(map, prefix + "Fields", this.Fields);
+            this.SetParamArraySimple(map, prefix + "Where.", this.Where);
         }
     }
 }

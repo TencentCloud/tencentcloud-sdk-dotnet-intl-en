@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Error information for multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+        /// Error information corresponding to multi-log topic retrieval
         /// </summary>
         [JsonProperty("Errors")]
         public SearchLogErrors[] Errors{ get; set; }
 
         /// <summary>
-        /// Information for each log topic in multi-log topic searchNote: This field may return null, indicating that no valid values can be obtained.
+        /// Information for each log topic during multi-log topic retrieval
         /// </summary>
         [JsonProperty("Infos")]
         public SearchLogInfos[] Infos{ get; set; }

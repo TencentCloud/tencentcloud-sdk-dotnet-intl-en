@@ -25,44 +25,55 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Recipient type. Valid values:
-        /// <br><li> `Uin`: user ID
-        /// <br><li> `Group`: user group ID
-        /// Currently, other recipient types are not supported.
+        /// Recipient type. Available values:
+        /// -Uin - User ID
+        /// -Group - User group ID
+        /// Other recipient types are not currently supported.
         /// </summary>
         [JsonProperty("ReceiverType")]
         public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// Recipient
+        /// Recipient.
+        /// When ReceiverType is Uin, the value of ReceiverIds is the user uid. [Sub-user information query](https://www.tencentcloud.com/document/api/598/53486?from_cn_redirect=1)
+        /// When ReceiverType is Group, ReceiverIds is the user Group id. [CAM User Group](https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("ReceiverIds")]
         public long?[] ReceiverIds{ get; set; }
 
         /// <summary>
-        /// Notification method
-        /// <br><li> `Email`: email
-        /// <br><li> `Sms`: SMS
-        /// <br><li> `WeChat`: WeChat
-        /// <br><li> `Phone`: phone
+        /// Notification receiving channel
+        /// -Mail
+        /// -Sms
+        /// -WeChat
+        /// -Phone - phone
         /// </summary>
         [JsonProperty("ReceiverChannels")]
         public string[] ReceiverChannels{ get; set; }
 
         /// <summary>
-        /// Start time for allowed message receipt
+        /// Notification content template ID. Use Default-zh to refer to the Default template (Chinese). Use Default-en to refer to DefaultTemplate (English). Get the notification content template ID by searching the notification content template (https://www.tencentcloud.com/document/product/614/111714?from_cn_redirect=1).
+        /// </summary>
+        [JsonProperty("NoticeContentId")]
+        public string NoticeContentId{ get; set; }
+
+        /// <summary>
+        /// Start time to allow receipt of information. Format: `15:04:05`. Required.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time for allowed message receipt
+        /// Allow receipt of information end time. Format: `15:04:05`. Required
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Index
+        /// Bit order.
+        /// 
+        /// -Invalid when passed as an input parameter.
+        /// -Valid at that time.
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
@@ -76,6 +87,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
             this.SetParamArraySimple(map, prefix + "ReceiverIds.", this.ReceiverIds);
             this.SetParamArraySimple(map, prefix + "ReceiverChannels.", this.ReceiverChannels);
+            this.SetParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Index", this.Index);

@@ -31,22 +31,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ExportStatus{ get; set; }
 
         /// <summary>
-        /// Download URL
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// return download URL
         /// </summary>
         [JsonProperty("DownloadURL")]
         public string DownloadURL{ get; set; }
 
         /// <summary>
-        /// Export progress when `ExportStatus` is `RUNNING`. Value range: Floating points between `0` and `100`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// When ExportStatus is RUNNING, return the export progress. A floating-point number in the range of 0 to 100.
         /// </summary>
         [JsonProperty("ExportProgress")]
         public float? ExportProgress{ get; set; }
 
         /// <summary>
-        /// Failure cause
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reason for failure
         /// </summary>
         [JsonProperty("FailureMsg")]
         public string FailureMsg{ get; set; }

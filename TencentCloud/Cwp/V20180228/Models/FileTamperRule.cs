@@ -47,10 +47,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>read: read file</li>
         /// <li>write: modify file</li>
         /// <li>read-write: read and modify file</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileAction")]
         public string FileAction{ get; set; }
+
+        /// <summary>
+        /// Command line parameter not filled
+        /// </summary>
+        [JsonProperty("Args")]
+        public string Args{ get; set; }
 
 
         /// <summary>
@@ -62,6 +67,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Target", this.Target);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "FileAction", this.FileAction);
+            this.SetParamSimple(map, prefix + "Args", this.Args);
         }
     }
 }

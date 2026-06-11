@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -71,27 +71,6 @@ namespace TencentCloud.Cwp.V20180228
         public AddLoginWhiteListsResponse AddLoginWhiteListsSync(AddLoginWhiteListsRequest req)
         {
             return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to unignore the vulnerabilities.
-        /// </summary>
-        /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
-        /// <returns><see cref="CancelIgnoreVulResponse"/></returns>
-        public Task<CancelIgnoreVulResponse> CancelIgnoreVul(CancelIgnoreVulRequest req)
-        {
-            return InternalRequestAsync<CancelIgnoreVulResponse>(req, "CancelIgnoreVul");
-        }
-
-        /// <summary>
-        /// This API is used to unignore the vulnerabilities.
-        /// </summary>
-        /// <param name="req"><see cref="CancelIgnoreVulRequest"/></param>
-        /// <returns><see cref="CancelIgnoreVulResponse"/></returns>
-        public CancelIgnoreVulResponse CancelIgnoreVulSync(CancelIgnoreVulRequest req)
-        {
-            return InternalRequestAsync<CancelIgnoreVulResponse>(req, "CancelIgnoreVul")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -459,7 +438,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to create a network attack allowlist.
+        /// This API is used to create a network attack allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateNetAttackWhiteListRequest"/></param>
         /// <returns><see cref="CreateNetAttackWhiteListResponse"/></returns>
@@ -469,7 +448,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to create a network attack allowlist.
+        /// This API is used to create a network attack allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateNetAttackWhiteListRequest"/></param>
         /// <returns><see cref="CreateNetAttackWhiteListResponse"/></returns>
@@ -1110,6 +1089,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Deleting Entries from the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public Task<DeleteRaspRulesResponse> DeleteRaspRules(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules");
+        }
+
+        /// <summary>
+        /// Deleting Entries from the Vulnerability Defense Allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
+        /// <returns><see cref="DeleteRaspRulesResponse"/></returns>
+        public DeleteRaspRulesResponse DeleteRaspRulesSync(DeleteRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DeleteRaspRulesResponse>(req, "DeleteRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete Reverse Shell events based on IDs.
         /// </summary>
         /// <param name="req"><see cref="DeleteReverseShellEventsRequest"/></param>
@@ -1362,7 +1362,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to obtain the account statistics data.
+        /// This API is used to obtain account statistics list data.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountStatisticsRequest"/></param>
         /// <returns><see cref="DescribeAccountStatisticsResponse"/></returns>
@@ -1372,7 +1372,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to obtain the account statistics data.
+        /// This API is used to obtain account statistics list data.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccountStatisticsRequest"/></param>
         /// <returns><see cref="DescribeAccountStatisticsResponse"/></returns>
@@ -2454,81 +2454,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// DescribeAttackEvents 代替
-        /// 
-        /// This API is used to display the list of network attack logs in pagination.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogsResponse"/></returns>
-        public Task<DescribeAttackLogsResponse> DescribeAttackLogs(DescribeAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogsResponse>(req, "DescribeAttackLogs");
-        }
-
-        /// <summary>
-        /// DescribeAttackEvents 代替
-        /// 
-        /// This API is used to display the list of network attack logs in pagination.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackLogsRequest"/></param>
-        /// <returns><see cref="DescribeAttackLogsResponse"/></returns>
-        public DescribeAttackLogsResponse DescribeAttackLogsSync(DescribeAttackLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackLogsResponse>(req, "DescribeAttackLogs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// This API is used to backtrack attacks.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceResponse"/></returns>
-        public Task<DescribeAttackSourceResponse> DescribeAttackSource(DescribeAttackSourceRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceResponse>(req, "DescribeAttackSource");
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// This API is used to backtrack attacks.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceResponse"/></returns>
-        public DescribeAttackSourceResponse DescribeAttackSourceSync(DescribeAttackSourceRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceResponse>(req, "DescribeAttackSource")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// This API is used to query attack backtracking events.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceEventsResponse"/></returns>
-        public Task<DescribeAttackSourceEventsResponse> DescribeAttackSourceEvents(DescribeAttackSourceEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceEventsResponse>(req, "DescribeAttackSourceEvents");
-        }
-
-        /// <summary>
-        /// 已废弃
-        /// 
-        /// This API is used to query attack backtracking events.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAttackSourceEventsRequest"/></param>
-        /// <returns><see cref="DescribeAttackSourceEventsResponse"/></returns>
-        public DescribeAttackSourceEventsResponse DescribeAttackSourceEventsSync(DescribeAttackSourceEventsRequest req)
-        {
-            return InternalRequestAsync<DescribeAttackSourceEventsResponse>(req, "DescribeAttackSourceEvents")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to obtain the statistics of network attack data.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackStatisticsRequest"/></param>
@@ -2592,6 +2517,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to query the application protection allowlist attack type list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackTypeRequest"/></param>
+        /// <returns><see cref="DescribeAttackTypeResponse"/></returns>
+        public Task<DescribeAttackTypeResponse> DescribeAttackType(DescribeAttackTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackTypeResponse>(req, "DescribeAttackType");
+        }
+
+        /// <summary>
+        /// This API is used to query the application protection allowlist attack type list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAttackTypeRequest"/></param>
+        /// <returns><see cref="DescribeAttackTypeResponse"/></returns>
+        public DescribeAttackTypeResponse DescribeAttackTypeSync(DescribeAttackTypeRequest req)
+        {
+            return InternalRequestAsync<DescribeAttackTypeResponse>(req, "DescribeAttackType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of network attack threat types.
         /// </summary>
         /// <param name="req"><see cref="DescribeAttackVulTypeListRequest"/></param>
@@ -2609,27 +2555,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeAttackVulTypeListResponse DescribeAttackVulTypeListSync(DescribeAttackVulTypeListRequest req)
         {
             return InternalRequestAsync<DescribeAttackVulTypeListResponse>(req, "DescribeAttackVulTypeList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to obtain available order details.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAvailableExpertServiceDetailRequest"/></param>
-        /// <returns><see cref="DescribeAvailableExpertServiceDetailResponse"/></returns>
-        public Task<DescribeAvailableExpertServiceDetailResponse> DescribeAvailableExpertServiceDetail(DescribeAvailableExpertServiceDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeAvailableExpertServiceDetailResponse>(req, "DescribeAvailableExpertServiceDetail");
-        }
-
-        /// <summary>
-        /// This API is used to obtain available order details.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAvailableExpertServiceDetailRequest"/></param>
-        /// <returns><see cref="DescribeAvailableExpertServiceDetailResponse"/></returns>
-        public DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetailSync(DescribeAvailableExpertServiceDetailRequest req)
-        {
-            return InternalRequestAsync<DescribeAvailableExpertServiceDetailResponse>(req, "DescribeAvailableExpertServiceDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3285,31 +3210,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 接口已无效
-        /// 
-        /// This API is used to obtain the data of the component statistics list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeComponentStatisticsResponse"/></returns>
-        public Task<DescribeComponentStatisticsResponse> DescribeComponentStatistics(DescribeComponentStatisticsRequest req)
-        {
-            return InternalRequestAsync<DescribeComponentStatisticsResponse>(req, "DescribeComponentStatistics");
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// This API is used to obtain the data of the component statistics list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeComponentStatisticsRequest"/></param>
-        /// <returns><see cref="DescribeComponentStatisticsResponse"/></returns>
-        public DescribeComponentStatisticsResponse DescribeComponentStatisticsSync(DescribeComponentStatisticsRequest req)
-        {
-            return InternalRequestAsync<DescribeComponentStatisticsResponse>(req, "DescribeComponentStatistics")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to obtain vulnerability defense event details.
         /// </summary>
         /// <param name="req"><see cref="DescribeDefenceEventDetailRequest"/></param>
@@ -3373,27 +3273,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to obtain the emergency response list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEmergencyResponseListRequest"/></param>
-        /// <returns><see cref="DescribeEmergencyResponseListResponse"/></returns>
-        public Task<DescribeEmergencyResponseListResponse> DescribeEmergencyResponseList(DescribeEmergencyResponseListRequest req)
-        {
-            return InternalRequestAsync<DescribeEmergencyResponseListResponse>(req, "DescribeEmergencyResponseList");
-        }
-
-        /// <summary>
-        /// This API is used to obtain the emergency response list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeEmergencyResponseListRequest"/></param>
-        /// <returns><see cref="DescribeEmergencyResponseListResponse"/></returns>
-        public DescribeEmergencyResponseListResponse DescribeEmergencyResponseListSync(DescribeEmergencyResponseListRequest req)
-        {
-            return InternalRequestAsync<DescribeEmergencyResponseListResponse>(req, "DescribeEmergencyResponseList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to obtain the list of emergency vulnerabilities.
         /// </summary>
         /// <param name="req"><see cref="DescribeEmergencyVulListRequest"/></param>
@@ -3432,48 +3311,6 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeEventByTableResponse DescribeEventByTableSync(DescribeEventByTableRequest req)
         {
             return InternalRequestAsync<DescribeEventByTableResponse>(req, "DescribeEventByTable")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to obtain the security manager list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceListResponse"/></returns>
-        public Task<DescribeExpertServiceListResponse> DescribeExpertServiceList(DescribeExpertServiceListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceListResponse>(req, "DescribeExpertServiceList");
-        }
-
-        /// <summary>
-        /// This API is used to obtain the security manager list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceListResponse"/></returns>
-        public DescribeExpertServiceListResponse DescribeExpertServiceListSync(DescribeExpertServiceListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceListResponse>(req, "DescribeExpertServiceList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to obtain the expert service order list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceOrderListResponse"/></returns>
-        public Task<DescribeExpertServiceOrderListResponse> DescribeExpertServiceOrderList(DescribeExpertServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceOrderListResponse>(req, "DescribeExpertServiceOrderList");
-        }
-
-        /// <summary>
-        /// This API is used to obtain the expert service order list.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeExpertServiceOrderListRequest"/></param>
-        /// <returns><see cref="DescribeExpertServiceOrderListResponse"/></returns>
-        public DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderListSync(DescribeExpertServiceOrderListRequest req)
-        {
-            return InternalRequestAsync<DescribeExpertServiceOrderListResponse>(req, "DescribeExpertServiceOrderList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3646,7 +3483,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to obtain the data of the account change history list.
+        /// This API is used to obtain the account change history list data.
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>
         /// <returns><see cref="DescribeHistoryAccountsResponse"/></returns>
@@ -3656,7 +3493,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to obtain the data of the account change history list.
+        /// This API is used to obtain the account change history list data.
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryAccountsRequest"/></param>
         /// <returns><see cref="DescribeHistoryAccountsResponse"/></returns>
@@ -3709,7 +3546,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to retrieve the log-in audit list.
+        /// Retrieve the abnormal login list
         /// </summary>
         /// <param name="req"><see cref="DescribeHostLoginListRequest"/></param>
         /// <returns><see cref="DescribeHostLoginListResponse"/></returns>
@@ -3719,7 +3556,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to retrieve the log-in audit list.
+        /// Retrieve the abnormal login list
         /// </summary>
         /// <param name="req"><see cref="DescribeHostLoginListRequest"/></param>
         /// <returns><see cref="DescribeHostLoginListResponse"/></returns>
@@ -3814,27 +3651,23 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to obtain the index list.
+        /// Query java memory horse and rasp whether inject risk service configuration
         /// </summary>
-        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
-        /// <returns><see cref="DescribeIndexListResponse"/></returns>
-        public Task<DescribeIndexListResponse> DescribeIndexList(DescribeIndexListRequest req)
+        /// <param name="req"><see cref="DescribeInjectRiskyServiceSwitchRequest"/></param>
+        /// <returns><see cref="DescribeInjectRiskyServiceSwitchResponse"/></returns>
+        public Task<DescribeInjectRiskyServiceSwitchResponse> DescribeInjectRiskyServiceSwitch(DescribeInjectRiskyServiceSwitchRequest req)
         {
-            return InternalRequestAsync<DescribeIndexListResponse>(req, "DescribeIndexList");
+            return InternalRequestAsync<DescribeInjectRiskyServiceSwitchResponse>(req, "DescribeInjectRiskyServiceSwitch");
         }
 
         /// <summary>
-        /// 接口已废弃
-        /// 
-        /// This API is used to obtain the index list.
+        /// Query java memory horse and rasp whether inject risk service configuration
         /// </summary>
-        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
-        /// <returns><see cref="DescribeIndexListResponse"/></returns>
-        public DescribeIndexListResponse DescribeIndexListSync(DescribeIndexListRequest req)
+        /// <param name="req"><see cref="DescribeInjectRiskyServiceSwitchRequest"/></param>
+        /// <returns><see cref="DescribeInjectRiskyServiceSwitchResponse"/></returns>
+        public DescribeInjectRiskyServiceSwitchResponse DescribeInjectRiskyServiceSwitchSync(DescribeInjectRiskyServiceSwitchRequest req)
         {
-            return InternalRequestAsync<DescribeIndexListResponse>(req, "DescribeIndexList")
+            return InternalRequestAsync<DescribeInjectRiskyServiceSwitchResponse>(req, "DescribeInjectRiskyServiceSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4234,6 +4067,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeLogTypeResponse DescribeLogTypeSync(DescribeLogTypeRequest req)
         {
             return InternalRequestAsync<DescribeLogTypeResponse>(req, "DescribeLogType")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the global configuration for uninstall protection
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public Task<DescribeLoginTypeGlobalConfResponse> DescribeLoginTypeGlobalConf(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf");
+        }
+
+        /// <summary>
+        /// Retrieve the global configuration for uninstall protection
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
+        public DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConfSync(DescribeLoginTypeGlobalConfRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeGlobalConfResponse>(req, "DescribeLoginTypeGlobalConf")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the host list via QR code log-in
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public Task<DescribeLoginTypeHostResponse> DescribeLoginTypeHost(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost");
+        }
+
+        /// <summary>
+        /// Retrieve the host list via QR code log-in
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginTypeHostRequest"/></param>
+        /// <returns><see cref="DescribeLoginTypeHostResponse"/></returns>
+        public DescribeLoginTypeHostResponse DescribeLoginTypeHostSync(DescribeLoginTypeHostRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginTypeHostResponse>(req, "DescribeLoginTypeHost")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4742,23 +4617,23 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to download the monthly inspection report of the security manager.
+        /// This API is used to obtain the list of Reverse Shell rules.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMonthInspectionReportRequest"/></param>
-        /// <returns><see cref="DescribeMonthInspectionReportResponse"/></returns>
-        public Task<DescribeMonthInspectionReportResponse> DescribeMonthInspectionReport(DescribeMonthInspectionReportRequest req)
+        /// <param name="req"><see cref="DescribeMemShellRulesRequest"/></param>
+        /// <returns><see cref="DescribeMemShellRulesResponse"/></returns>
+        public Task<DescribeMemShellRulesResponse> DescribeMemShellRules(DescribeMemShellRulesRequest req)
         {
-            return InternalRequestAsync<DescribeMonthInspectionReportResponse>(req, "DescribeMonthInspectionReport");
+            return InternalRequestAsync<DescribeMemShellRulesResponse>(req, "DescribeMemShellRules");
         }
 
         /// <summary>
-        /// This API is used to download the monthly inspection report of the security manager.
+        /// This API is used to obtain the list of Reverse Shell rules.
         /// </summary>
-        /// <param name="req"><see cref="DescribeMonthInspectionReportRequest"/></param>
-        /// <returns><see cref="DescribeMonthInspectionReportResponse"/></returns>
-        public DescribeMonthInspectionReportResponse DescribeMonthInspectionReportSync(DescribeMonthInspectionReportRequest req)
+        /// <param name="req"><see cref="DescribeMemShellRulesRequest"/></param>
+        /// <returns><see cref="DescribeMemShellRulesResponse"/></returns>
+        public DescribeMemShellRulesResponse DescribeMemShellRulesSync(DescribeMemShellRulesRequest req)
         {
-            return InternalRequestAsync<DescribeMonthInspectionReportResponse>(req, "DescribeMonthInspectionReport")
+            return InternalRequestAsync<DescribeMemShellRulesResponse>(req, "DescribeMemShellRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4843,6 +4718,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeOverviewStatisticsResponse DescribeOverviewStatisticsSync(DescribeOverviewStatisticsRequest req)
         {
             return InternalRequestAsync<DescribeOverviewStatisticsResponse>(req, "DescribeOverviewStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the information list of affected hosts by a patch
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribePatchEffectHostListResponse"/></returns>
+        public Task<DescribePatchEffectHostListResponse> DescribePatchEffectHostList(DescribePatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<DescribePatchEffectHostListResponse>(req, "DescribePatchEffectHostList");
+        }
+
+        /// <summary>
+        /// Query the information list of affected hosts by a patch
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribePatchEffectHostListResponse"/></returns>
+        public DescribePatchEffectHostListResponse DescribePatchEffectHostListSync(DescribePatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<DescribePatchEffectHostListResponse>(req, "DescribePatchEffectHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Patch details
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchInfoRequest"/></param>
+        /// <returns><see cref="DescribePatchInfoResponse"/></returns>
+        public Task<DescribePatchInfoResponse> DescribePatchInfo(DescribePatchInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePatchInfoResponse>(req, "DescribePatchInfo");
+        }
+
+        /// <summary>
+        /// Patch details
+        /// </summary>
+        /// <param name="req"><see cref="DescribePatchInfoRequest"/></param>
+        /// <returns><see cref="DescribePatchInfoResponse"/></returns>
+        public DescribePatchInfoResponse DescribePatchInfoSync(DescribePatchInfoRequest req)
+        {
+            return InternalRequestAsync<DescribePatchInfoResponse>(req, "DescribePatchInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5204,6 +5121,237 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to query application protection event lists
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventCWPResponse"/></returns>
+        public Task<DescribeRaspEventCWPResponse> DescribeRaspEventCWP(DescribeRaspEventCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventCWPResponse>(req, "DescribeRaspEventCWP");
+        }
+
+        /// <summary>
+        /// This API is used to query application protection event lists
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventCWPResponse"/></returns>
+        public DescribeRaspEventCWPResponse DescribeRaspEventCWPSync(DescribeRaspEventCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventCWPResponse>(req, "DescribeRaspEventCWP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Application defense event details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailCWPResponse"/></returns>
+        public Task<DescribeRaspEventDetailCWPResponse> DescribeRaspEventDetailCWP(DescribeRaspEventDetailCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailCWPResponse>(req, "DescribeRaspEventDetailCWP");
+        }
+
+        /// <summary>
+        /// Application defense event details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailCWPRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailCWPResponse"/></returns>
+        public DescribeRaspEventDetailCWPResponse DescribeRaspEventDetailCWPSync(DescribeRaspEventDetailCWPRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailCWPResponse>(req, "DescribeRaspEventDetailCWP")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Application defense event details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailTCSSResponse"/></returns>
+        public Task<DescribeRaspEventDetailTCSSResponse> DescribeRaspEventDetailTCSS(DescribeRaspEventDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailTCSSResponse>(req, "DescribeRaspEventDetailTCSS");
+        }
+
+        /// <summary>
+        /// Application defense event details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventDetailTCSSResponse"/></returns>
+        public DescribeRaspEventDetailTCSSResponse DescribeRaspEventDetailTCSSSync(DescribeRaspEventDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventDetailTCSSResponse>(req, "DescribeRaspEventDetailTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query application protection event lists
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventTCSSResponse"/></returns>
+        public Task<DescribeRaspEventTCSSResponse> DescribeRaspEventTCSS(DescribeRaspEventTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventTCSSResponse>(req, "DescribeRaspEventTCSS");
+        }
+
+        /// <summary>
+        /// This API is used to query application protection event lists
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspEventTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspEventTCSSResponse"/></returns>
+        public DescribeRaspEventTCSSResponse DescribeRaspEventTCSSSync(DescribeRaspEventTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspEventTCSSResponse>(req, "DescribeRaspEventTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the application protection license list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public Task<DescribeRaspLicenseListResponse> DescribeRaspLicenseList(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList");
+        }
+
+        /// <summary>
+        /// Query the application protection license list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeRaspLicenseListResponse"/></returns>
+        public DescribeRaspLicenseListResponse DescribeRaspLicenseListSync(DescribeRaspLicenseListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspLicenseListResponse>(req, "DescribeRaspLicenseList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the maximum cpu limitation for vulnerability defense
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="DescribeRaspMaxCpuResponse"/></returns>
+        public Task<DescribeRaspMaxCpuResponse> DescribeRaspMaxCpu(DescribeRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMaxCpuResponse>(req, "DescribeRaspMaxCpu");
+        }
+
+        /// <summary>
+        /// View the maximum cpu limitation for vulnerability defense
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="DescribeRaspMaxCpuResponse"/></returns>
+        public DescribeRaspMaxCpuResponse DescribeRaspMaxCpuSync(DescribeRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMaxCpuResponse>(req, "DescribeRaspMaxCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve application protection Java Webshell scan event details from container perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellDetailTCSSResponse"/></returns>
+        public Task<DescribeRaspMemShellDetailTCSSResponse> DescribeRaspMemShellDetailTCSS(DescribeRaspMemShellDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellDetailTCSSResponse>(req, "DescribeRaspMemShellDetailTCSS");
+        }
+
+        /// <summary>
+        /// Retrieve application protection Java Webshell scan event details from container perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellDetailTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellDetailTCSSResponse"/></returns>
+        public DescribeRaspMemShellDetailTCSSResponse DescribeRaspMemShellDetailTCSSSync(DescribeRaspMemShellDetailTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellDetailTCSSResponse>(req, "DescribeRaspMemShellDetailTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve Java Webshell scan event list from container perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellListTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellListTCSSResponse"/></returns>
+        public Task<DescribeRaspMemShellListTCSSResponse> DescribeRaspMemShellListTCSS(DescribeRaspMemShellListTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellListTCSSResponse>(req, "DescribeRaspMemShellListTCSS");
+        }
+
+        /// <summary>
+        /// Retrieve Java Webshell scan event list from container perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspMemShellListTCSSRequest"/></param>
+        /// <returns><see cref="DescribeRaspMemShellListTCSSResponse"/></returns>
+        public DescribeRaspMemShellListTCSSResponse DescribeRaspMemShellListTCSSSync(DescribeRaspMemShellListTCSSRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspMemShellListTCSSResponse>(req, "DescribeRaspMemShellListTCSS")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Important Period Guarantee Protection License Plugin Detail List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspPluginListRequest"/></param>
+        /// <returns><see cref="DescribeRaspPluginListResponse"/></returns>
+        public Task<DescribeRaspPluginListResponse> DescribeRaspPluginList(DescribeRaspPluginListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspPluginListResponse>(req, "DescribeRaspPluginList");
+        }
+
+        /// <summary>
+        /// Important Period Guarantee Protection License Plugin Detail List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspPluginListRequest"/></param>
+        /// <returns><see cref="DescribeRaspPluginListResponse"/></returns>
+        public DescribeRaspPluginListResponse DescribeRaspPluginListSync(DescribeRaspPluginListRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspPluginListResponse>(req, "DescribeRaspPluginList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the vulnerability list of the vulnerability defense allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public Task<DescribeRaspRuleVulsResponse> DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls");
+        }
+
+        /// <summary>
+        /// Retrieve the vulnerability list of the vulnerability defense allowlist
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRuleVulsRequest"/></param>
+        /// <returns><see cref="DescribeRaspRuleVulsResponse"/></returns>
+        public DescribeRaspRuleVulsResponse DescribeRaspRuleVulsSync(DescribeRaspRuleVulsRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRuleVulsResponse>(req, "DescribeRaspRuleVuls")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This example shows you how to query the vulnerability defense allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public Task<DescribeRaspRulesResponse> DescribeRaspRules(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules");
+        }
+
+        /// <summary>
+        /// This example shows you how to query the vulnerability defense allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRaspRulesRequest"/></param>
+        /// <returns><see cref="DescribeRaspRulesResponse"/></returns>
+        public DescribeRaspRulesResponse DescribeRaspRulesSync(DescribeRaspRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRaspRulesResponse>(req, "DescribeRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the recommended number of protection cores for purchase.
         /// </summary>
         /// <param name="req"><see cref="DescribeRecommendedProtectCpuRequest"/></param>
@@ -5284,6 +5432,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeReverseShellRulesResponse DescribeReverseShellRulesSync(DescribeReverseShellRulesRequest req)
         {
             return InternalRequestAsync<DescribeReverseShellRulesResponse>(req, "DescribeReverseShellRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of Reverse Shell rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRulesAggregationResponse"/></returns>
+        public Task<DescribeReverseShellRulesAggregationResponse> DescribeReverseShellRulesAggregation(DescribeReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRulesAggregationResponse>(req, "DescribeReverseShellRulesAggregation");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of Reverse Shell rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellRulesAggregationResponse"/></returns>
+        public DescribeReverseShellRulesAggregationResponse DescribeReverseShellRulesAggregationSync(DescribeReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellRulesAggregationResponse>(req, "DescribeReverseShellRulesAggregation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the configuration of the reverse shell system policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public Task<DescribeReverseShellSystemPolicyConfigResponse> DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig");
+        }
+
+        /// <summary>
+        /// Query the configuration of the reverse shell system policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReverseShellSystemPolicyConfigRequest"/></param>
+        /// <returns><see cref="DescribeReverseShellSystemPolicyConfigResponse"/></returns>
+        public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfigSync(DescribeReverseShellSystemPolicyConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeReverseShellSystemPolicyConfigResponse>(req, "DescribeReverseShellSystemPolicyConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5981,31 +6171,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 接口已无效
-        /// 
-        /// This API is used to obtain the summary of security protection statuses.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>
-        /// <returns><see cref="DescribeSecurityProtectionStatResponse"/></returns>
-        public Task<DescribeSecurityProtectionStatResponse> DescribeSecurityProtectionStat(DescribeSecurityProtectionStatRequest req)
-        {
-            return InternalRequestAsync<DescribeSecurityProtectionStatResponse>(req, "DescribeSecurityProtectionStat");
-        }
-
-        /// <summary>
-        /// 接口已无效
-        /// 
-        /// This API is used to obtain the summary of security protection statuses.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSecurityProtectionStatRequest"/></param>
-        /// <returns><see cref="DescribeSecurityProtectionStatResponse"/></returns>
-        public DescribeSecurityProtectionStatResponse DescribeSecurityProtectionStatSync(DescribeSecurityProtectionStatRequest req)
-        {
-            return InternalRequestAsync<DescribeSecurityProtectionStatResponse>(req, "DescribeSecurityProtectionStat")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to obtain the security event statistics data.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityTrendsRequest"/></param>
@@ -6044,6 +6209,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeServersAndRiskAndFirstInfoResponse DescribeServersAndRiskAndFirstInfoSync(DescribeServersAndRiskAndFirstInfoRequest req)
         {
             return InternalRequestAsync<DescribeServersAndRiskAndFirstInfoResponse>(req, "DescribeServersAndRiskAndFirstInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of reverse shell policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShellPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeShellPolicyListResponse"/></returns>
+        public Task<DescribeShellPolicyListResponse> DescribeShellPolicyList(DescribeShellPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeShellPolicyListResponse>(req, "DescribeShellPolicyList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of reverse shell policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShellPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeShellPolicyListResponse"/></returns>
+        public DescribeShellPolicyListResponse DescribeShellPolicyListSync(DescribeShellPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeShellPolicyListResponse>(req, "DescribeShellPolicyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Patch details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillInfoResponse"/></returns>
+        public Task<DescribeSkillInfoResponse> DescribeSkillInfo(DescribeSkillInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillInfoResponse>(req, "DescribeSkillInfo");
+        }
+
+        /// <summary>
+        /// Patch details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillInfoResponse"/></returns>
+        public DescribeSkillInfoResponse DescribeSkillInfoSync(DescribeSkillInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillInfoResponse>(req, "DescribeSkillInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6384,6 +6591,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to obtain vulnerability defense policies and event statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceOverviewCountRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceOverviewCountResponse"/></returns>
+        public Task<DescribeVulDefenceOverviewCountResponse> DescribeVulDefenceOverviewCount(DescribeVulDefenceOverviewCountRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceOverviewCountResponse>(req, "DescribeVulDefenceOverviewCount");
+        }
+
+        /// <summary>
+        /// This API is used to obtain vulnerability defense policies and event statistics.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceOverviewCountRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceOverviewCountResponse"/></returns>
+        public DescribeVulDefenceOverviewCountResponse DescribeVulDefenceOverviewCountSync(DescribeVulDefenceOverviewCountRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceOverviewCountResponse>(req, "DescribeVulDefenceOverviewCount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the vulnerability defense plugin information on a single host.
         /// </summary>
         /// <param name="req"><see cref="DescribeVulDefencePluginDetailRequest"/></param>
@@ -6464,6 +6692,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeVulDefenceSettingResponse DescribeVulDefenceSettingSync(DescribeVulDefenceSettingRequest req)
         {
             return InternalRequestAsync<DescribeVulDefenceSettingResponse>(req, "DescribeVulDefenceSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of vulnerability defense settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceSettingListRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceSettingListResponse"/></returns>
+        public Task<DescribeVulDefenceSettingListResponse> DescribeVulDefenceSettingList(DescribeVulDefenceSettingListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceSettingListResponse>(req, "DescribeVulDefenceSettingList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of vulnerability defense settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulDefenceSettingListRequest"/></param>
+        /// <returns><see cref="DescribeVulDefenceSettingListResponse"/></returns>
+        public DescribeVulDefenceSettingListResponse DescribeVulDefenceSettingListSync(DescribeVulDefenceSettingListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulDefenceSettingListResponse>(req, "DescribeVulDefenceSettingList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6909,6 +7158,48 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Search patch information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWindowsPatchListRequest"/></param>
+        /// <returns><see cref="DescribeWindowsPatchListResponse"/></returns>
+        public Task<DescribeWindowsPatchListResponse> DescribeWindowsPatchList(DescribeWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<DescribeWindowsPatchListResponse>(req, "DescribeWindowsPatchList");
+        }
+
+        /// <summary>
+        /// Search patch information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWindowsPatchListRequest"/></param>
+        /// <returns><see cref="DescribeWindowsPatchListResponse"/></returns>
+        public DescribeWindowsPatchListResponse DescribeWindowsPatchListSync(DescribeWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<DescribeWindowsPatchListResponse>(req, "DescribeWindowsPatchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query application protection allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYDRaspBlackWhiteRequest"/></param>
+        /// <returns><see cref="DescribeYDRaspBlackWhiteResponse"/></returns>
+        public Task<DescribeYDRaspBlackWhiteResponse> DescribeYDRaspBlackWhite(DescribeYDRaspBlackWhiteRequest req)
+        {
+            return InternalRequestAsync<DescribeYDRaspBlackWhiteResponse>(req, "DescribeYDRaspBlackWhite");
+        }
+
+        /// <summary>
+        /// Query application protection allowlist rules
+        /// </summary>
+        /// <param name="req"><see cref="DescribeYDRaspBlackWhiteRequest"/></param>
+        /// <returns><see cref="DescribeYDRaspBlackWhiteResponse"/></returns>
+        public DescribeYDRaspBlackWhiteResponse DescribeYDRaspBlackWhiteSync(DescribeYDRaspBlackWhiteRequest req)
+        {
+            return InternalRequestAsync<DescribeYDRaspBlackWhiteResponse>(req, "DescribeYDRaspBlackWhite")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to terminate resources.
         /// </summary>
         /// <param name="req"><see cref="DestroyOrderRequest"/></param>
@@ -6972,7 +7263,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to edit reverse shell rules (multiple servers supported).
+        /// Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
         /// </summary>
         /// <param name="req"><see cref="EditReverseShellRulesRequest"/></param>
         /// <returns><see cref="EditReverseShellRulesResponse"/></returns>
@@ -6982,7 +7273,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// This API is used to edit reverse shell rules (multiple servers supported).
+        /// Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
         /// </summary>
         /// <param name="req"><see cref="EditReverseShellRulesRequest"/></param>
         /// <returns><see cref="EditReverseShellRulesResponse"/></returns>
@@ -7812,6 +8103,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Export the affected host list of a patch
+        /// </summary>
+        /// <param name="req"><see cref="ExportPatchEffectHostListRequest"/></param>
+        /// <returns><see cref="ExportPatchEffectHostListResponse"/></returns>
+        public Task<ExportPatchEffectHostListResponse> ExportPatchEffectHostList(ExportPatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<ExportPatchEffectHostListResponse>(req, "ExportPatchEffectHostList");
+        }
+
+        /// <summary>
+        /// Export the affected host list of a patch
+        /// </summary>
+        /// <param name="req"><see cref="ExportPatchEffectHostListRequest"/></param>
+        /// <returns><see cref="ExportPatchEffectHostListResponse"/></returns>
+        public ExportPatchEffectHostListResponse ExportPatchEffectHostListSync(ExportPatchEffectHostListRequest req)
+        {
+            return InternalRequestAsync<ExportPatchEffectHostListResponse>(req, "ExportPatchEffectHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to export local privilege escalation events.
         /// </summary>
         /// <param name="req"><see cref="ExportPrivilegeEventsRequest"/></param>
@@ -8253,6 +8565,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Export Windows patch list
+        /// </summary>
+        /// <param name="req"><see cref="ExportWindowsPatchListRequest"/></param>
+        /// <returns><see cref="ExportWindowsPatchListResponse"/></returns>
+        public Task<ExportWindowsPatchListResponse> ExportWindowsPatchList(ExportWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<ExportWindowsPatchListResponse>(req, "ExportWindowsPatchList");
+        }
+
+        /// <summary>
+        /// Export Windows patch list
+        /// </summary>
+        /// <param name="req"><see cref="ExportWindowsPatchListRequest"/></param>
+        /// <returns><see cref="ExportWindowsPatchListResponse"/></returns>
+        public ExportWindowsPatchListResponse ExportWindowsPatchListSync(ExportWindowsPatchListRequest req)
+        {
+            return InternalRequestAsync<ExportWindowsPatchListResponse>(req, "ExportWindowsPatchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the locally stored data.
         /// </summary>
         /// <param name="req"><see cref="GetLocalStorageItemRequest"/></param>
@@ -8270,27 +8603,6 @@ namespace TencentCloud.Cwp.V20180228
         public GetLocalStorageItemResponse GetLocalStorageItemSync(GetLocalStorageItemRequest req)
         {
             return InternalRequestAsync<GetLocalStorageItemResponse>(req, "GetLocalStorageItem")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to ignore vulnerabilities.
-        /// </summary>
-        /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
-        /// <returns><see cref="IgnoreImpactedHostsResponse"/></returns>
-        public Task<IgnoreImpactedHostsResponse> IgnoreImpactedHosts(IgnoreImpactedHostsRequest req)
-        {
-            return InternalRequestAsync<IgnoreImpactedHostsResponse>(req, "IgnoreImpactedHosts");
-        }
-
-        /// <summary>
-        /// This API is used to ignore vulnerabilities.
-        /// </summary>
-        /// <param name="req"><see cref="IgnoreImpactedHostsRequest"/></param>
-        /// <returns><see cref="IgnoreImpactedHostsResponse"/></returns>
-        public IgnoreImpactedHostsResponse IgnoreImpactedHostsSync(IgnoreImpactedHostsRequest req)
-        {
-            return InternalRequestAsync<IgnoreImpactedHostsResponse>(req, "IgnoreImpactedHosts")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8946,6 +9258,69 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Edit the maximum cpu configuration for vulnerability defense
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="ModifyRaspMaxCpuResponse"/></returns>
+        public Task<ModifyRaspMaxCpuResponse> ModifyRaspMaxCpu(ModifyRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspMaxCpuResponse>(req, "ModifyRaspMaxCpu");
+        }
+
+        /// <summary>
+        /// Edit the maximum cpu configuration for vulnerability defense
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspMaxCpuRequest"/></param>
+        /// <returns><see cref="ModifyRaspMaxCpuResponse"/></returns>
+        public ModifyRaspMaxCpuResponse ModifyRaspMaxCpuSync(ModifyRaspMaxCpuRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspMaxCpuResponse>(req, "ModifyRaspMaxCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This example shows you how to add entries to the vulnerability defense allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public Task<ModifyRaspRulesResponse> ModifyRaspRules(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules");
+        }
+
+        /// <summary>
+        /// This example shows you how to add entries to the vulnerability defense allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRaspRulesRequest"/></param>
+        /// <returns><see cref="ModifyRaspRulesResponse"/></returns>
+        public ModifyRaspRulesResponse ModifyRaspRulesSync(ModifyRaspRulesRequest req)
+        {
+            return InternalRequestAsync<ModifyRaspRulesResponse>(req, "ModifyRaspRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellRulesAggregationResponse"/></returns>
+        public Task<ModifyReverseShellRulesAggregationResponse> ModifyReverseShellRulesAggregation(ModifyReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellRulesAggregationResponse>(req, "ModifyReverseShellRulesAggregation");
+        }
+
+        /// <summary>
+        /// Editing Reverse Shell Rules. (Supporting Selecting Multiple Servers)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyReverseShellRulesAggregationRequest"/></param>
+        /// <returns><see cref="ModifyReverseShellRulesAggregationResponse"/></returns>
+        public ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregationSync(ModifyReverseShellRulesAggregationRequest req)
+        {
+            return InternalRequestAsync<ModifyReverseShellRulesAggregationResponse>(req, "ModifyReverseShellRulesAggregation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify malicious request policies.
         /// </summary>
         /// <param name="req"><see cref="ModifyRiskDnsPolicyRequest"/></param>
@@ -9263,6 +9638,27 @@ namespace TencentCloud.Cwp.V20180228
         public RansomDefenseRollbackResponse RansomDefenseRollbackSync(RansomDefenseRollbackRequest req)
         {
             return InternalRequestAsync<RansomDefenseRollbackResponse>(req, "RansomDefenseRollback")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the vulnerability defense overview information, including event trend and plugin enabling status.
+        /// </summary>
+        /// <param name="req"><see cref="RaspEventOverviewRequest"/></param>
+        /// <returns><see cref="RaspEventOverviewResponse"/></returns>
+        public Task<RaspEventOverviewResponse> RaspEventOverview(RaspEventOverviewRequest req)
+        {
+            return InternalRequestAsync<RaspEventOverviewResponse>(req, "RaspEventOverview");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the vulnerability defense overview information, including event trend and plugin enabling status.
+        /// </summary>
+        /// <param name="req"><see cref="RaspEventOverviewRequest"/></param>
+        /// <returns><see cref="RaspEventOverviewResponse"/></returns>
+        public RaspEventOverviewResponse RaspEventOverviewSync(RaspEventOverviewRequest req)
+        {
+            return InternalRequestAsync<RaspEventOverviewResponse>(req, "RaspEventOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

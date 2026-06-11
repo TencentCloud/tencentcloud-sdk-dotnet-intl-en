@@ -26,122 +26,111 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Vulnerability ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulId")]
         public ulong? VulId{ get; set; }
 
         /// <summary>
         /// Vulnerability name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulLevel")]
         public ulong? VulLevel{ get; set; }
 
         /// <summary>
         /// Vulnerability Classification: 1: Web-CMS Vulnerability 2: Application Vulnerabilities 4: Linux Software Vulnerabilities 5: Windows System Vulnerabilities
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulType")]
         public ulong? VulType{ get; set; }
 
         /// <summary>
         /// Vulnerability Description Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
         /// Fixing solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RepairPlan")]
         public string RepairPlan{ get; set; }
 
         /// <summary>
-        /// Vulnerability CVE ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability CVEID
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
         /// Reference link
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Reference")]
         public string Reference{ get; set; }
 
         /// <summary>
         /// CVSS Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVSS")]
         public string CVSS{ get; set; }
 
         /// <summary>
-        /// Release date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Release time
         /// </summary>
         [JsonProperty("PublicDate")]
         public string PublicDate{ get; set; }
 
         /// <summary>
         /// CVSS Score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CvssScore")]
         public ulong? CvssScore{ get; set; }
 
         /// <summary>
         /// CVSS Details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CveInfo")]
         public string CveInfo{ get; set; }
 
         /// <summary>
         /// CVSS score, floating point type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CvssScoreFloat")]
         public float? CvssScoreFloat{ get; set; }
 
         /// <summary>
         /// Vulnerability Tags, Separated by Multiple Commas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Labels")]
         public string Labels{ get; set; }
 
         /// <summary>
         /// Number of Attacks Defended
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefenseAttackCount")]
         public ulong? DefenseAttackCount{ get; set; }
 
         /// <summary>
         /// Total Number of Successful Network Repairs. Returns 0 by default for unsupported auto-repair vulnerabilities.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SuccessFixCount")]
         public ulong? SuccessFixCount{ get; set; }
 
         /// <summary>
         /// Repair support: 0 - Neither Windows nor Linux supports for repair; 1 - Both Windows and Linux support for repair; 2 - Only Linux supports for repair; 3 - Only Windows supports for repair.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FixSwitch")]
         public long? FixSwitch{ get; set; }
+
+        /// <summary>
+        /// Support defense: 0-no support 1-support
+        /// </summary>
+        [JsonProperty("SupportDefence")]
+        public long? SupportDefence{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -172,6 +161,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
             this.SetParamSimple(map, prefix + "SuccessFixCount", this.SuccessFixCount);
             this.SetParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
+            this.SetParamSimple(map, prefix + "SupportDefence", this.SupportDefence);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

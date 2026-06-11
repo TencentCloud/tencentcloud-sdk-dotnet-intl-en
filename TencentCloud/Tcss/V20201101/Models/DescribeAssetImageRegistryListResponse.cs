@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// List of image repositories
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Image repository list.</p>
         /// </summary>
         [JsonProperty("List")]
         public ImageRepoInfo[] List{ get; set; }
 
         /// <summary>
-        /// Total number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Total quantity.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -62,7 +62,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
@@ -131,21 +130,18 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Data update time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Whether the web service is newly added [0: no|1: yes]
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is newly added [0: no | 1: yes]
         /// </summary>
         [JsonProperty("IsNew")]
         public long? IsNew{ get; set; }
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }

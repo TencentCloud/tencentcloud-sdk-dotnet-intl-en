@@ -55,13 +55,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// Creation Time
+        /// Task creation time. Format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Task Update Time
+        /// Task update time. Format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// Schedule Start Time
+        /// Schedule start time. Format: yyyy-MM-dd HH:mm:ss
         /// </summary>
         [JsonProperty("ProcessStartTime")]
         public string ProcessStartTime{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// Schedule End Time, required when process_type=2
+        /// Schedule End Time, format: yyyy-MM-dd HH:mm:ss, required when process_type=2
         /// </summary>
         [JsonProperty("ProcessEndTime")]
         public string ProcessEndTime{ get; set; }
 
         /// <summary>
-        /// Scheduling Interval (Minutes)
+        /// Scheduling cycle (minutes), 1-1440 minutes
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -115,22 +115,34 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution Delay (Seconds)
+        /// Execution delay (seconds), 0-120 seconds, default 60
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Source Topic ID Region Information
+        /// Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// Syntax Rules: 0 Lucene syntax, 1 CQL syntaxNote: This field may return null, indicating that no valid values can be obtained.
+        /// Syntax rules. 0: Lucene syntax; 1: CQL syntax.
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// Full-text search tag. 1: Off, 2: On.
+        /// </summary>
+        [JsonProperty("FullQuery")]
+        public ulong? FullQuery{ get; set; }
 
 
         /// <summary>
@@ -156,6 +168,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
         }
     }
 }

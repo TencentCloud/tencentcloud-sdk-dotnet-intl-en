@@ -25,15 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Article name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// article name
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// Redirection location: 0: no redirection; 1: virus scanning; 2: vulnerability scan; 3: security baseline
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Redirection location: 0: no redirection; 1: malicious file scan; 2: vulnerability scanning; 3: security baseline
         /// </summary>
         [JsonProperty("GotoType")]
         public ulong? GotoType{ get; set; }

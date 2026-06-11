@@ -37,8 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string KeyType{ get; set; }
 
         /// <summary>
-        /// Assignment information returned upon resolution failure
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Assigned value for parsing failure
         /// </summary>
         [JsonProperty("KeyNonExistingField")]
         public string KeyNonExistingField{ get; set; }

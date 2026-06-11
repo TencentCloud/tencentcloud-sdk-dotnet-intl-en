@@ -110,7 +110,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
@@ -128,45 +127,52 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Machine payment edition. 0: Basic Edition; 1: Professional Edition; 2: Premium Edition; 3: General Discount Edition
+        /// Machine payment version, 0 Basic version, 1 Pro edition, 2 Flagship edition, 3 Lightweight edition
         /// </summary>
         [JsonProperty("PayVersion")]
         public ulong? PayVersion{ get; set; }
 
         /// <summary>
         /// cvm uuid
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
         /// Time of Attack
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MergeTime")]
         public string MergeTime{ get; set; }
 
         /// <summary>
         /// 0: Attack Attempt 1: Successful Attack
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
         /// 0: No Compromised Behavior 1: RCE (command execution) 2: Dnslog 3: Writefile
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostOpType")]
         public ulong? HostOpType{ get; set; }
 
         /// <summary>
         /// Process Tree, needs to be decoded with base64.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HostOpProcessTree")]
         public string HostOpProcessTree{ get; set; }
+
+        /// <summary>
+        /// IP analysis
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
+
+        /// <summary>
+        /// Response packet base64 encoded
+        /// </summary>
+        [JsonProperty("NetResponsePayload")]
+        public string NetResponsePayload{ get; set; }
 
 
         /// <summary>
@@ -197,6 +203,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "HostOpType", this.HostOpType);
             this.SetParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
+            this.SetParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
         }
     }
 }

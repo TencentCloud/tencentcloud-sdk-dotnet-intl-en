@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Postpay yesterday's charge
+        /// Payment details for [Pro Edition - pay-as-you-go] yesterday (the actual bill prevails).
         /// </summary>
         [JsonProperty("PostPayCost")]
         public ulong? PostPayCost{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? IsAutoOpenProVersion{ get; set; }
 
         /// <summary>
-        /// Number of hosts with Pro Edition activated
+        /// Number of hosts with Pro Edition.
         /// </summary>
         [JsonProperty("ProVersionNum")]
         public ulong? ProVersionNum{ get; set; }

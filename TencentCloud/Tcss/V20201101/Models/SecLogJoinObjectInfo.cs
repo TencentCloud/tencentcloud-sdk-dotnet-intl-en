@@ -31,15 +31,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostID{ get; set; }
 
         /// <summary>
-        /// Server name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Server IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Host IP address
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
@@ -52,21 +50,18 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// Cluster ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// Cluster name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
@@ -78,8 +73,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? JoinState{ get; set; }
 
         /// <summary>
-        /// Cluster version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// cluster edition
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
@@ -89,6 +83,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("ClusterMainAddress")]
         public string ClusterMainAddress{ get; set; }
+
+        /// <summary>
+        /// Number of containers
+        /// </summary>
+        [JsonProperty("ContainerCnt")]
+        public ulong? ContainerCnt{ get; set; }
+
+        /// <summary>
+        /// Cluster type.
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
+        /// <summary>
+        /// Cluster status
+        /// </summary>
+        [JsonProperty("ClusterStatus")]
+        public string ClusterStatus{ get; set; }
 
 
         /// <summary>
@@ -106,6 +118,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "JoinState", this.JoinState);
             this.SetParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
             this.SetParamSimple(map, prefix + "ClusterMainAddress", this.ClusterMainAddress);
+            this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         }
     }
 }

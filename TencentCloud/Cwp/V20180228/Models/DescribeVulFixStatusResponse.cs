@@ -26,21 +26,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Fixing start time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FixStartTime")]
         public string FixStartTime{ get; set; }
 
         /// <summary>
         /// Fixing end time. If this parameter is left blank, fixing is not ended.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FixEndTime")]
         public string FixEndTime{ get; set; }
 
         /// <summary>
         /// Number of successfully fixed hosts
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FixSuccessCnt")]
         public ulong? FixSuccessCnt{ get; set; }
@@ -65,14 +62,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// Status list of snapshots to be fixed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotList")]
         public VulFixStatusSnapshotInfo[] SnapshotList{ get; set; }
 
         /// <summary>
         /// Details list of vulnerabilities to be fixed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulFixList")]
         public VulFixStatusInfo[] VulFixList{ get; set; }
@@ -84,7 +79,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? SnapshotProgress{ get; set; }
 
         /// <summary>
-        /// Fixing progress (0-100)
+        /// Fixing progress (0-100).
         /// </summary>
         [JsonProperty("FixProgress")]
         public ulong? FixProgress{ get; set; }
@@ -102,14 +97,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? IsRetrySnapshot{ get; set; }
 
         /// <summary>
-        /// Number of snapshots failed to be created
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Snapshot creation failures
         /// </summary>
         [JsonProperty("SnapshotFailCnt")]
         public ulong? SnapshotFailCnt{ get; set; }
 
         /// <summary>
-        /// Whether retry is allowed. 0: not allowed; 1: allowed.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to allow retry 0: not allowed 1: allowed
         /// </summary>
         [JsonProperty("IsAllowRetry")]
         public ulong? IsAllowRetry{ get; set; }

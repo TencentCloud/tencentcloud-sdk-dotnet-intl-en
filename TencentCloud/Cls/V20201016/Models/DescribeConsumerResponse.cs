@@ -50,8 +50,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
-        /// Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Compression mode [0:NONE；2:SNAPPY；3:LZ4]
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }

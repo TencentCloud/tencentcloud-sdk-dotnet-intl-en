@@ -25,44 +25,45 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Log topic ID. Obtain the log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Query statementNote: This field may return null, indicating that no valid values can be obtained.
+        /// Query statement.
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// Serial number of alarm object, which is incremental from 1.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Alarm object SN. It starts from 1 and increments.
         /// </summary>
         [JsonProperty("Number")]
         public long? Number{ get; set; }
 
         /// <summary>
-        /// Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Offset of the start time of the query time range from alarm execution time, in minutes. The value cannot be positive. Maximum value: 0. Minimum value: -1,440.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public long? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Offset of the end time of the query time range from alarm execution time, in minutes. The value cannot be positive and should be greater than StartTimeOffset. Maximum value: 0. Minimum value: -1440.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public long? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Logset IDNote: This field may return null, indicating that no valid values can be obtained.
+        /// Logset ID. Obtain the logset ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Search syntax rules; default value: 0.0: Lucene syntax; 1: CQL syntax.For detailed instructions, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Search Condition Syntax Rules</a>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Search syntax rules. Default value is 0.
+        /// 0: Lucene syntax; 1: CQL syntax.
+        /// For detailed explanation, refer to <a href="https://www.tencentcloud.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Retrieve Syntax Rules</a>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }

@@ -25,7 +25,8 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Log topic authentication-free configuration information
+        /// Log topic authentication-free configuration information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AnonymousAccess")]
         public AnonymousInfo AnonymousAccess{ get; set; }

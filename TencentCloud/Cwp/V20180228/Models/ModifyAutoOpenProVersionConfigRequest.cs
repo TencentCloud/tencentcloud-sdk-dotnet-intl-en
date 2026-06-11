@@ -33,6 +33,15 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Status{ get; set; }
 
         /// <summary>
+        /// Strengthen protection mode
+        /// PROVERSION_POSTPAY indicates the Pro Edition pay-as-you-go mode.
+        /// PROVERSION_PREPAY Professional Edition - Subscription
+        /// FLAGSHIP_PREPAY Flagship Edition - Subscription
+        /// </summary>
+        [JsonProperty("ProtectType")]
+        public string ProtectType{ get; set; }
+
+        /// <summary>
         /// Automatic purchase/expansion authorization switch, 1 by default, 0 for OFF, 1 for ON.
         /// </summary>
         [JsonProperty("AutoRepurchaseSwitch")]
@@ -50,6 +59,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RepurchaseRenewSwitch")]
         public ulong? RepurchaseRenewSwitch{ get; set; }
 
+        /// <summary>
+        /// Automatically add machines and bind rasp. 0: Turn off. 1: Turn on.
+        /// </summary>
+        [JsonProperty("AutoBindRaspSwitch")]
+        public ulong? AutoBindRaspSwitch{ get; set; }
+
+        /// <summary>
+        /// Automatically add machines with rasp protection enabled, off by default. 0: Off, 1: On
+        /// </summary>
+        [JsonProperty("AutoOpenRaspSwitch")]
+        public ulong? AutoOpenRaspSwitch{ get; set; }
+
+        /// <summary>
+        /// Automatic scaling down switch, 0 for off and 1 for on
+        /// </summary>
+        [JsonProperty("AutoDowngradeSwitch")]
+        public ulong? AutoDowngradeSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,9 +84,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
             this.SetParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
             this.SetParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
             this.SetParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
+            this.SetParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+            this.SetParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
         }
     }
 }

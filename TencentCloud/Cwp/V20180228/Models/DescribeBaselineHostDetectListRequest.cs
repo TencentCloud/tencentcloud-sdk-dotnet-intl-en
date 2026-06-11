@@ -26,12 +26,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// <li>PolicyId - int64 - required: no - policy ID</li>
-        /// </li>HostName - string - required: no - host name</i>
-        /// <li>HostIp - string - required: no - host IP</i>
-        /// <li>ItemId - int64 - required: no - item ID</i>
+        /// <li>HostName - string - required: no - host name</li>
+        /// <li>HostIp - string - required: no - host IP</li>
+        /// <li>ItemId - int64 - required: no - item ID</li>
         /// <li>RuleId - int64 - required: no - rule ID</li>
         /// <li>DetectStatus - int - required: no - detection status</li>
-        /// <li>Level - int - required: no - risk level<li>
+        /// <li>Level - int - Required: No - Risk level</li>
         /// <li>StartTime - string - required: no - start time</li>
         /// <li>EndTime - string - required: no - end time</li>
         /// </summary>

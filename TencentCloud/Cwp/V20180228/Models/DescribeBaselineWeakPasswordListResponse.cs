@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? Total{ get; set; }
 
         /// <summary>
-        /// None
+        /// List
         /// </summary>
         [JsonProperty("List")]
         public BaselineWeakPassword[] List{ get; set; }

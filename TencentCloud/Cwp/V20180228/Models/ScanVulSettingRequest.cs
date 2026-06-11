@@ -73,13 +73,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EnableScan{ get; set; }
 
         /// <summary>
-        /// If empty, scan hosts with all Professional, Premium, and General Discount editions by default; if not empty, only scan the selected hosts.
+        /// If empty, scan all Pro Edition, Flagship Edition, and Lite hosts by default. If not empty, only scan selected hosts.
         /// </summary>
         [JsonProperty("Uuids")]
         public string[] Uuids{ get; set; }
 
         /// <summary>
-        /// 0 version comparison, 2 version comparison + poc
+        /// 0: version comparison, 2: version comparison + POC.
         /// </summary>
         [JsonProperty("ScanMethod")]
         public ulong? ScanMethod{ get; set; }

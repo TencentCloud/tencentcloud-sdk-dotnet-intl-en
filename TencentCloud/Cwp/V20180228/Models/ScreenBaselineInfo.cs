@@ -26,42 +26,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         
         /// <summary>
         /// Baseline name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Hazard level: 1-Low-risk; 2-Medium-risk; 3-High-risk; 4-Critical
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
         /// Baseline ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CategoryId")]
         public ulong? CategoryId{ get; set; }
 
         /// <summary>
-        /// Last check time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last detection time
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Baseline check items with risks
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Baseline risk items
         /// </summary>
         [JsonProperty("BaselineFailCount")]
         public ulong? BaselineFailCount{ get; set; }
 
         /// <summary>
         /// Host UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

@@ -25,76 +25,82 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Date
+        /// <p>Date</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// The number of abnormal UA request events
+        /// <p>Number of abnormal UA request events.</p>
         /// </summary>
         [JsonProperty("ExceptionUARequestCount")]
         public ulong? ExceptionUARequestCount{ get; set; }
 
         /// <summary>
-        /// The number of anonymous user permission events
+        /// <p>Number of anonymous user permission events.</p>
         /// </summary>
         [JsonProperty("AnonymousUserRightCount")]
         public ulong? AnonymousUserRightCount{ get; set; }
 
         /// <summary>
-        /// The number of credential information acquisition events
+        /// <p>Number of credential information acquisition events.</p>
         /// </summary>
         [JsonProperty("CredentialInformationObtainCount")]
         public ulong? CredentialInformationObtainCount{ get; set; }
 
         /// <summary>
-        /// The number of sensitive data mounting events
+        /// <p>Number of sensitive data mount events.</p>
         /// </summary>
         [JsonProperty("SensitiveDataMountCount")]
         public ulong? SensitiveDataMountCount{ get; set; }
 
         /// <summary>
-        /// The number of command execution events
+        /// <p>Number of command execution events.</p>
         /// </summary>
         [JsonProperty("CmdExecCount")]
         public ulong? CmdExecCount{ get; set; }
 
         /// <summary>
-        /// The number of abnormal scheduled task events
+        /// <p>Number of abnormal scheduled task events.</p>
         /// </summary>
         [JsonProperty("AbnormalScheduledTaskCount")]
         public ulong? AbnormalScheduledTaskCount{ get; set; }
 
         /// <summary>
-        /// The number of static pods created
+        /// <p>Number of static Pod creations.</p>
         /// </summary>
         [JsonProperty("StaticsPodCreateCount")]
         public ulong? StaticsPodCreateCount{ get; set; }
 
         /// <summary>
-        /// The number of suspicious containers created
+        /// <p>Number of suspicious container creations.</p>
         /// </summary>
         [JsonProperty("DoubtfulContainerCreateCount")]
         public ulong? DoubtfulContainerCreateCount{ get; set; }
 
         /// <summary>
-        /// The number of custom rule events
+        /// <p>Number of custom rule events.</p>
         /// </summary>
         [JsonProperty("UserDefinedRuleCount")]
         public ulong? UserDefinedRuleCount{ get; set; }
 
         /// <summary>
-        /// The number of anonymous access events
+        /// <p>Number of anonymous access events.</p>
         /// </summary>
         [JsonProperty("AnonymousAccessCount")]
         public ulong? AnonymousAccessCount{ get; set; }
 
         /// <summary>
-        /// The number of privilege container events
+        /// <p>Number of privileged container events.</p>
         /// </summary>
         [JsonProperty("PrivilegeContainerCount")]
         public ulong? PrivilegeContainerCount{ get; set; }
+
+        /// <summary>
+        /// <p>Number of alarms corresponding to the rule type.</p>
+        /// </summary>
+        [JsonProperty("RuleTypeCountSet")]
+        public K8SAPIRuleTypeCountItem[] RuleTypeCountSet{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "UserDefinedRuleCount", this.UserDefinedRuleCount);
             this.SetParamSimple(map, prefix + "AnonymousAccessCount", this.AnonymousAccessCount);
             this.SetParamSimple(map, prefix + "PrivilegeContainerCount", this.PrivilegeContainerCount);
+            this.SetParamArrayObj(map, prefix + "RuleTypeCountSet.", this.RuleTypeCountSet);
         }
     }
 }

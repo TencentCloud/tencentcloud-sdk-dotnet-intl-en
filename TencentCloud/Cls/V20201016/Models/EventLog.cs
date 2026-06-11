@@ -25,25 +25,37 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Event channel, supports Application, Security, Setup, System, ALL
+        /// Event channel, support
+        /// -Application log
+        /// -Security log
+        /// -Startup log
+        /// -System log
+        /// -ALL logs
         /// </summary>
         [JsonProperty("EventChannel")]
         public string EventChannel{ get; set; }
 
         /// <summary>
-        /// Time type, 1: User-defined, 2: Current time
+        /// Supported types of the time field (Timestamp)
+        /// -1 (User-customized time)
+        /// -2 (current time)
         /// </summary>
         [JsonProperty("TimeType")]
         public ulong? TimeType{ get; set; }
 
         /// <summary>
-        /// Time, when choosing custom time type, a specific time is required
+        /// Time, when users choose custom time type, specify the time in seconds
+        /// Format: timestamp, 1754897446
         /// </summary>
         [JsonProperty("Timestamp")]
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
         /// Event ID filter list
+        /// 	
+        /// Optional. Being empty indicates no filtering is applied.
+        /// Support forward filtering for a single value (for example: 20) or a range (for example: 0-20), also support reverse filtering for a single value (for example: -20).
+        /// Multiple filter items can be separated by commas, for example: 1-200,-100 means collect event logs within the range of 1-200 except 100.
         /// </summary>
         [JsonProperty("EventIDs")]
         public string[] EventIDs{ get; set; }

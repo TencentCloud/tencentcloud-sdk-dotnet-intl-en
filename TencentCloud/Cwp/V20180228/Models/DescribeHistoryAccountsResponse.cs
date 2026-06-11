@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Total number of records in the history account list
+        /// Total number of records in the account change history list.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Array of history accounts
+        /// Array of account change history data.
         /// </summary>
         [JsonProperty("HistoryAccounts")]
         public HistoryAccount[] HistoryAccounts{ get; set; }

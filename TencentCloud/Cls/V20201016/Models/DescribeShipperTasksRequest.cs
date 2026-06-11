@@ -25,19 +25,23 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Shipping rule ID
+        /// Shipping Rule Id.
+        /// 
+        /// -Obtain the ShipperId by [obtaining the shipping task list](https://www.tencentcloud.com/document/product/614/58745?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ShipperId")]
         public string ShipperId{ get; set; }
 
         /// <summary>
-        /// Query start timestamp in milliseconds, which can be within the last three days
+        /// Start timestamp for the query. Supports queries within the most recent 3 days in ms.
+        /// StartTime must be less than EndTime
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Query end timestamp in milliseconds
+        /// Query end timestamp, in ms.
+        /// StartTime must be less than EndTime
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

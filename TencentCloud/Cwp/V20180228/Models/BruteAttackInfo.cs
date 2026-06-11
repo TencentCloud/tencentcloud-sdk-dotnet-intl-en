@@ -31,192 +31,178 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// CWPP client UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CWP client UUID.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// Host IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
-        /// Host name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// host name
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Username
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Username.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Source IP address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source IP
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
         /// SUCCESS: cracking successful; FAILED: cracking failed
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// Country/Region ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Country")]
         public ulong? Country{ get; set; }
 
         /// <summary>
         /// City ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("City")]
         public ulong? City{ get; set; }
 
         /// <summary>
-        /// Province ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Province id
         /// </summary>
         [JsonProperty("Province")]
         public ulong? Province{ get; set; }
 
         /// <summary>
         /// Creation time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 0: no blocking (not supported for the client version)1: blocked
-        /// 2: blocking failed (program exception)
-        /// 3: no blocking (do not block for the private network)
-        /// 4: availability zone does not support blocking
+        /// 0 - No blocking (not supported by the client version)
+        /// 1: blocked
+        /// 2: Blocking failed (program exception)
+        /// 3: No blocking (No blocking for the private network)
+        /// 4: Availability zone does not support blocking
         /// 10: blocking
         /// 81: no blocking (blocking disabled)
-        /// 82: no blocking (non-Pro Edition)
+        /// 82-No Blocking (Non-Pro Edition)
         /// 83: no blocking (added to the allowlist)
         /// 86: no blocking (system allowlist)
-        /// 87: no blocking (client offline)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 87: No blocking (client offline)
+        /// 88-No blocking (Source Ip belongs to the same customer)
+        /// 89: no blocking (blocking is not supported for ipv6)
         /// </summary>
         [JsonProperty("BanStatus")]
         public ulong? BanStatus{ get; set; }
 
         /// <summary>
-        /// Event type. 200: brute force cracking event; 300: event of successful brute force cracking (page display); 400: event of brute force cracking on a non-existent account.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event type: 200 - brute force cracking event; 300 - successful brute force cracking event (the status is displayed on the page); 400 - brute force cracking event for non-existent accounts.
         /// </summary>
         [JsonProperty("EventType")]
         public ulong? EventType{ get; set; }
 
         /// <summary>
         /// Occurrence count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// Machine UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CVM instance UUID.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Whether it is of the Pro Edition (true/false)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether it is the Pro Edition (true/false)
         /// </summary>
         [JsonProperty("IsProVersion")]
         public bool? IsProVersion{ get; set; }
 
         /// <summary>
         /// Username of the attacked service
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
         /// Port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
         /// Last attack time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
         /// <summary>
         /// Instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// 0: pending; 1: ignored; 5: fixed; 6: added to allowlist
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataStatus")]
         public ulong? DataStatus{ get; set; }
 
         /// <summary>
         /// Additional information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// Geo-location in Chinese
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Chinese name of a geo location.
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// Threat level. 0: low-risk; 1: medium-risk; 2: high-risk.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Threat level. 0: low risk, 1: medium risk, 2: high risk.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong? RiskLevel{ get; set; }
 
         /// <summary>
-        /// Event source. 0: blocking rule; 1: threat intelligence.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Event source. 0: blocking rule, 1: threat intelligence.
         /// </summary>
         [JsonProperty("DataFrom")]
         public long? DataFrom{ get; set; }
 
         /// <summary>
-        /// Description of the brute force cracking status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cracking status description.
         /// </summary>
         [JsonProperty("AttackStatusDesc")]
         public string AttackStatusDesc{ get; set; }
 
         /// <summary>
-        /// Blocking expiration time (valid only for events in blocking status)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Block expiration time (only valid for blocked events).
         /// </summary>
         [JsonProperty("BanExpiredTime")]
         public string BanExpiredTime{ get; set; }
+
+        /// <summary>
+        /// IP analysis
+        /// </summary>
+        [JsonProperty("IPAnalyse")]
+        public IPAnalyse IPAnalyse{ get; set; }
 
 
         /// <summary>
@@ -251,6 +237,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DataFrom", this.DataFrom);
             this.SetParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
             this.SetParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
+            this.SetParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
         }
     }
 }

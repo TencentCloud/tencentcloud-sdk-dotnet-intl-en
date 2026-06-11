@@ -37,8 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// List of affected host QUUIDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected host quuid list
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }
@@ -50,8 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? FlagshipCount{ get; set; }
 
         /// <summary>
-        /// List of affected host IDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected host ID list.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
@@ -63,8 +61,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? AutoInclude{ get; set; }
 
         /// <summary>
-        /// List of excluded host IDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Excluded host ID list.
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }

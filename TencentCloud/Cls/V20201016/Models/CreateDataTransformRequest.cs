@@ -31,19 +31,29 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? FuncType{ get; set; }
 
         /// <summary>
-        /// Source log topic
+        /// Log topic ID
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// Data processing task name
+        /// Processing task name
+        /// Name limit
+        /// -Cannot be an empty string
+        /// -Cannot contain character '|'
+        /// -Longest 128 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Data processing statement
+        /// Processing statement. When FuncType is 2, EtlContent must use [log_auto_output](https://www.tencentcloud.com/document/product/614/70733?from_cn_redirect=1#b3c58797-4825-4807-bef4-68106e25024f). 
+        /// 
+        /// Other reference documents
+        /// 
+        /// -[Create a processing task](https://www.tencentcloud.com/document/product/614/63940?from_cn_redirect=1) 
+        /// -[Function overview](https://www.tencentcloud.com/document/product/614/70395?from_cn_redirect=1)
         /// </summary>
         [JsonProperty("EtlContent")]
         public string EtlContent{ get; set; }
@@ -56,7 +66,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// Destination topic_id and alias of processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+        /// Target topic_id and alias of the processing task. This parameter is required when FuncType=1, and not required when FuncType=2.
+        /// Target topic_id. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+        /// Alias limitation: 1. Cannot be an empty string. 2. Cannot contain the character '|'.
         /// </summary>
         [JsonProperty("DstResources")]
         public DataTransformResouceInfo[] DstResources{ get; set; }
@@ -68,10 +80,79 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// Test data used for previewing the processing result
+        /// Test data for preview processing results
+        /// Obtain the target log topic ID through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("PreviewLogStatistics")]
         public PreviewLogStatistic[] PreviewLogStatistics{ get; set; }
+
+        /// <summary>
+        /// When FuncType is 2, whether to discard data if the count of dynamically created logsets and log topics exceeds product specification limits, default false.
+        /// 
+        /// false: Create a fallback logset and log topic and write to fallback topic.
+        /// true: Discard log data.
+        /// </summary>
+        [JsonProperty("BackupGiveUpData")]
+        public bool? BackupGiveUpData{ get; set; }
+
+        /// <summary>
+        /// Whether to enable service log shipping. Valid values: 1: disable; 2: enable.
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// Data processing type. Valid values: 0: standard processing task; 1: pre-processing task. A pre-processing task can process the collected logs and then write them into a log topic.
+        /// </summary>
+        [JsonProperty("DataTransformType")]
+        public ulong? DataTransformType{ get; set; }
+
+        /// <summary>
+        /// Log status of failed jobs, 1: not retain (default), 2: retain.
+        /// </summary>
+        [JsonProperty("KeepFailureLog")]
+        public ulong? KeepFailureLog{ get; set; }
+
+        /// <summary>
+        /// Field name of a failed log.
+        /// </summary>
+        [JsonProperty("FailureLogKey")]
+        public string FailureLogKey{ get; set; }
+
+        /// <summary>
+        /// Specify the start time of data processing, a Unix second-level timestamp.
+        /// -For any time range within the log topic lifecycle, if it exceeds the lifecycle, only process the part with data within the lifecycle.
+        /// </summary>
+        [JsonProperty("ProcessFromTimestamp")]
+        public ulong? ProcessFromTimestamp{ get; set; }
+
+        /// <summary>
+        /// Specify the end time of data processing, a Unix second-level timestamp.
+        /// 
+        /// -Cannot specify a future time
+        /// -Leave blank to run constantly
+        /// </summary>
+        [JsonProperty("ProcessToTimestamp")]
+        public ulong? ProcessToTimestamp{ get; set; }
+
+        /// <summary>
+        /// Preview a task (TaskType is 1 or 2) that is already created and used the capacity to associate with external data. This parameter is required.
+        /// Data processing task ID - Search the data processing task list basic information (https://www.tencentcloud.com/document/product/614/72182?from_cn_redirect=1) to get the data processing task ID.
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// Associated data source information
+        /// </summary>
+        [JsonProperty("DataTransformSqlDataSources")]
+        public DataTransformSqlDataSource[] DataTransformSqlDataSources{ get; set; }
+
+        /// <summary>
+        /// Set environment variable
+        /// </summary>
+        [JsonProperty("EnvInfos")]
+        public EnvInfo[] EnvInfos{ get; set; }
 
 
         /// <summary>
@@ -87,6 +168,16 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArrayObj(map, prefix + "DstResources.", this.DstResources);
             this.SetParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
             this.SetParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
+            this.SetParamSimple(map, prefix + "BackupGiveUpData", this.BackupGiveUpData);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+            this.SetParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+            this.SetParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
+            this.SetParamSimple(map, prefix + "ProcessFromTimestamp", this.ProcessFromTimestamp);
+            this.SetParamSimple(map, prefix + "ProcessToTimestamp", this.ProcessToTimestamp);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "DataTransformSqlDataSources.", this.DataTransformSqlDataSources);
+            this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
         }
     }
 }

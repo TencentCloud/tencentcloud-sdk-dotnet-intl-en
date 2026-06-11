@@ -66,6 +66,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SubmitTime")]
         public string SubmitTime{ get; set; }
 
+        /// <summary>
+        /// Vulnerability ID
+        /// </summary>
+        [JsonProperty("VulId")]
+        public long? VulId{ get; set; }
+
+        /// <summary>
+        /// Status. 0: defending; 1: allowlisted. It indicates that the vulnerability is included in an allowlist, which may not be a global allowlist.
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "CVEID", this.CVEID);
             this.SetParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
+            this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

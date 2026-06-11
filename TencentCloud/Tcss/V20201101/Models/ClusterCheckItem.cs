@@ -25,8 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Unique ID of the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique Check Item ID
         /// </summary>
         [JsonProperty("CheckItemId")]
         public long? CheckItemId{ get; set; }
@@ -38,120 +37,111 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Detailed description of the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Check Item Details
         /// </summary>
         [JsonProperty("ItemDetail")]
         public string ItemDetail{ get; set; }
 
         /// <summary>
-        /// Severity. Valid values: `Serious` (critical); `High` (high); `Middle` (medium); `Hint` (prompt).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Threat Level: Serious, High, Medium, Hint
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Check target and risky target. Valid values: `Runc`, `Kubelet`, `Containerd`, `Pods`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Check Object and Risk Object: Runc, Kubelet, Containerd, and Pods
         /// </summary>
         [JsonProperty("RiskTarget")]
         public string RiskTarget{ get; set; }
 
         /// <summary>
-        /// Risk type. Valid values: `CVERisk` (vulnerability risk); `ConfigRisk` (configuration risk).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Risk Category. CVERisk: Vulnerability Risk; ConfigRisk: Configuration Risk
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// Risk type of the check item. Valid values: `PrivilegePromotion` (privilege escalation); `RefuseService` (service rejected); `DirectoryEscape` (directory traversal); `UnauthorizedAccess` (unauthorized access); `PrivilegeAndAccessControl` (permissions, privileges, and access controls); `SensitiveInfoLeak` (sensitive data leakage).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Risk Type of Check Item. PrivilegePromotion: Privilege Promotion; RefuseService: Refuse of Service; DirectoryEscape: Directory Traversal; UnauthorizedAccess: Unauthorized Access; PrivilegeAndAccessControl: Permission and Access Control Issues; SensitiveInfoLeak: Sensitive Information Leakage
         /// </summary>
         [JsonProperty("RiskAttribute")]
         public string RiskAttribute{ get; set; }
 
         /// <summary>
-        /// Risk characteristic and tag. Valid values: `ExistEXP` (an EXP exists); `ExistPOC` (a POC exists); `NoNeedReboot` (restart not required); `ServerRestart` (service restart); `RemoteInfoLeak` (remote information leakage); `RemoteRefuseService` (remote denial of service); `RemoteExploit` (remote exploit); `RemoteExecute` (remote execution).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Risk Characteristics Tag
+        /// ExistEXP: With EXP
+        /// ExistPOC: With POD
+        /// NoNeedReboot: No Need of Reboot
+        /// ServerRestart: Service Reboot
+        /// RemoteInfoLeak: Remote Information Leakage
+        /// RemoteRefuseService: Remote Refuse Service
+        /// RemoteExploit: Remote Exploitation
+        /// RemoteExecute: Remote Execution
         /// </summary>
         [JsonProperty("RiskProperty")]
         public string RiskProperty{ get; set; }
 
         /// <summary>
-        /// CVE No.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CVE id
         /// </summary>
         [JsonProperty("CVENumber")]
         public string CVENumber{ get; set; }
 
         /// <summary>
         /// Disclosure time
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DiscoverTime")]
         public string DiscoverTime{ get; set; }
 
         /// <summary>
         /// Solution
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Solution")]
         public string Solution{ get; set; }
 
         /// <summary>
-        /// CVSS information, which is used for drawing.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CVSS Information, Used for Drawing
         /// </summary>
         [JsonProperty("CVSS")]
         public string CVSS{ get; set; }
 
         /// <summary>
         /// CVSS score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVSSScore")]
         public string CVSSScore{ get; set; }
 
         /// <summary>
         /// Reference link
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelateLink")]
         public string RelateLink{ get; set; }
 
         /// <summary>
-        /// Affected type. Valid values: `Node`, `Workload`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Impact Type: Node or Workload
         /// </summary>
         [JsonProperty("AffectedType")]
         public string AffectedType{ get; set; }
 
         /// <summary>
-        /// Affected version information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected Version Information
         /// </summary>
         [JsonProperty("AffectedVersion")]
         public string AffectedVersion{ get; set; }
 
         /// <summary>
-        /// Number of ignored assets
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of Ignored Assets
         /// </summary>
         [JsonProperty("IgnoredAssetNum")]
         public long? IgnoredAssetNum{ get; set; }
 
         /// <summary>
-        /// Whether to ignore the check item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to Ignore the Check Item
         /// </summary>
         [JsonProperty("IsIgnored")]
         public bool? IsIgnored{ get; set; }
 
         /// <summary>
-        /// Impact assessment
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Affected Critique
         /// </summary>
         [JsonProperty("RiskAssessment")]
         public string RiskAssessment{ get; set; }

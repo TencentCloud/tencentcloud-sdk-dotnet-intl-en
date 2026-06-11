@@ -25,55 +25,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// Instance CPU.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance memory.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster storage upper limit.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original cluster ID.
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Original cluster name.
         /// </summary>
         [JsonProperty("OriginalClusterName")]
         public string OriginalClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback method.
         /// </summary>
         [JsonProperty("RollbackStrategy")]
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// 
+        /// Snapshot time.
         /// </summary>
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// Roll back to the Serverless cluster with minimum CPU
+        /// Roll back to the Serverless cluster with minimum CPU.
         /// </summary>
         [JsonProperty("MinCpu")]
         public long? MinCpu{ get; set; }
 
         /// <summary>
-        /// Roll back to the Serverless cluster with maximum CPU
+        /// Roll back to the Serverless cluster with maximum CPU.
         /// </summary>
         [JsonProperty("MaxCpu")]
         public long? MaxCpu{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? SnapShotId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback database.
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rollback data table.
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }

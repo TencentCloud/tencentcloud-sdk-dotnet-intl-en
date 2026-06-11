@@ -25,46 +25,52 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Whether to scan all images
+        /// <p>Whether to scan all images.</p>
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// List of scanned images
+        /// <p>List of images to be scanned.</p>
         /// </summary>
         [JsonProperty("Images")]
         public ImageInfo[] Images{ get; set; }
 
         /// <summary>
-        /// Array of scan types
+        /// <p>Scan type array.</p>
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }
 
         /// <summary>
-        /// List of scanned images
+        /// <p>List of images to be scanned.</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
         /// <summary>
-        /// Filter
+        /// <p>Filter conditions.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// List of images not to be scanned, which is used together with `Filters`.
+        /// <p>List of images that do not need to be scanned, used in conjunction with Filters.</p>
         /// </summary>
         [JsonProperty("ExcludeImageList")]
         public ulong?[] ExcludeImageList{ get; set; }
 
         /// <summary>
-        /// Whether to scan only the latest repository images, which is used together with `Filters`.
+        /// <p>Whether to scan only the latest version of the image in each repository, used in conjunction with Filters.</p>
         /// </summary>
         [JsonProperty("OnlyScanLatest")]
         public bool? OnlyScanLatest{ get; set; }
+
+        /// <summary>
+        /// <p>Task timeout duration.</p><p>Unit: seconds.</p>
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
             this.SetParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

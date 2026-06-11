@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulId{ get; set; }
 
         /// <summary>
-        /// Vulnerability publish time
+        /// Vulnerability disclosure time
         /// </summary>
         [JsonProperty("PublishTime")]
         public string PublishTime{ get; set; }
@@ -42,6 +42,36 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// Vulnerability name, English description
+        /// </summary>
+        [JsonProperty("NameEn")]
+        public string NameEn{ get; set; }
+
+        /// <summary>
+        /// Is auto-repair supported 0: not supported >0: supported
+        /// </summary>
+        [JsonProperty("SupportFix")]
+        public long? SupportFix{ get; set; }
+
+        /// <summary>
+        /// Whether automatic defense is supported 0: no support 1: support
+        /// </summary>
+        [JsonProperty("SupportDefense")]
+        public long? SupportDefense{ get; set; }
+
+        /// <summary>
+        /// KB ID
+        /// </summary>
+        [JsonProperty("KbId")]
+        public ulong? KbId{ get; set; }
+
+        /// <summary>
+        /// KB number
+        /// </summary>
+        [JsonProperty("KbNumber")]
+        public string KbNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +81,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "VulId", this.VulId);
             this.SetParamSimple(map, prefix + "PublishTime", this.PublishTime);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "NameEn", this.NameEn);
+            this.SetParamSimple(map, prefix + "SupportFix", this.SupportFix);
+            this.SetParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
+            this.SetParamSimple(map, prefix + "KbId", this.KbId);
+            this.SetParamSimple(map, prefix + "KbNumber", this.KbNumber);
         }
     }
 }

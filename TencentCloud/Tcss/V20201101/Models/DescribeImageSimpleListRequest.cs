@@ -43,13 +43,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting order
+        /// Sorting method. Valid values: asc and desc.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting field
+        /// Sorting field. For example, ContainerCnt.
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

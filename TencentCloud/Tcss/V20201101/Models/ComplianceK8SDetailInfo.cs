@@ -25,15 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// K8s cluster name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name of the K8S cluster.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// K8s cluster version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Kubernetes Cluster Version
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Source log topic
+        /// Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// Task name
+        /// Task name, 0-255 characters
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// Scheduling interval (minutes)
+        /// Scheduling Interval (Minutes), 1-1440 minutes
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution delay (Seconds)
+        /// Execution Delay (Seconds), 0-120 seconds, default 60 seconds
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Source topic ID region information
+        /// Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }

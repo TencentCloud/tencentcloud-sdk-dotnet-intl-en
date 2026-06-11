@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database CPU
+        /// Database CPU.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Database memory in GB
+        /// Database memory in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
+        /// Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+        /// Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpgradeMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Proxy synchronous upgrade.
         /// </summary>
         [JsonProperty("UpgradeProxy")]
         public UpgradeProxy UpgradeProxy{ get; set; }

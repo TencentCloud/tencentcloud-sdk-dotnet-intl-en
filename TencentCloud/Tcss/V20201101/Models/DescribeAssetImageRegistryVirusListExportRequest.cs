@@ -25,12 +25,6 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Export field
-        /// </summary>
-        [JsonProperty("ExportField")]
-        public string[] ExportField{ get; set; }
-
-        /// <summary>
         /// Number of results to be returned. Default value: `10`. Maximum value: `100`.
         /// </summary>
         [JsonProperty("Limit")]
@@ -57,6 +51,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ImageInfo ImageInfo{ get; set; }
 
         /// <summary>
+        /// Export field
+        /// </summary>
+        [JsonProperty("ExportField")]
+        public string[] ExportField{ get; set; }
+
+        /// <summary>
         /// Image ID
         /// </summary>
         [JsonProperty("Id")]
@@ -68,11 +68,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
+            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
             this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }

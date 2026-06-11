@@ -31,25 +31,29 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogContent{ get; set; }
 
         /// <summary>
-        /// Line number
+        /// Line number. Starts from 0.
         /// </summary>
         [JsonProperty("LineNum")]
         public long? LineNum{ get; set; }
 
         /// <summary>
-        /// Target log topic
+        /// target log topic ID
+        /// -Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DstTopicId")]
         public string DstTopicId{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string "" indicates no error.
+        /// Error message for failure. A null string "" indicates normal.
         /// </summary>
         [JsonProperty("FailReason")]
         public string FailReason{ get; set; }
 
         /// <summary>
-        /// Log timestamp
+        /// Log time, format: `2024-05-07 17:13:17.105`
+        /// 
+        /// -Invalid input parameter
+        /// -Valid at that time, the time format in logs
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -59,6 +63,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DstTopicName")]
+        [System.Obsolete]
         public string DstTopicName{ get; set; }
 
 

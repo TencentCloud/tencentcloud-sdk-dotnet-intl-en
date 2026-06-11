@@ -38,7 +38,6 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// ID of the Rule to Which the Detection Item Belongs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
@@ -69,14 +68,12 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// System Rule ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SysRuleId")]
         public long? SysRuleId{ get; set; }
 
         /// <summary>
         /// Referenced Custom Rule Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RelatedCustomRuleInfo")]
         public BaselineCustomRuleIdName[] RelatedCustomRuleInfo{ get; set; }

@@ -42,10 +42,10 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string HeaderName{ get; set; }
 
         /// <summary>
-        /// HTTP header value. Up to 1000 characters can be set.
-        /// Not required when Mode is del
-        /// Required when Mode is add/set
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// http header value. custom request header supports up to 1000 characters. custom response header can be set up to 2000 characters.
+        /// Optional when Mode is del.
+        /// Required when Mode is add/set.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeaderValue")]
         public string HeaderValue{ get; set; }

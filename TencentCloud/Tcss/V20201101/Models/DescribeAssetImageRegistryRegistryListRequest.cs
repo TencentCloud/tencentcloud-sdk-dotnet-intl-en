@@ -25,31 +25,32 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Number to return, default is 10, maximum is 100
+        /// Number of entries to be returned. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, the default is 0
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter field IsAuthorized Whether to authorize. The value can be all, 0 unauthorized, 1 authorized
+        /// Filter fields
+        /// Authorization status, with possible values: all, unauthorized (0), authorized (1)
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// Sort field
+        /// Sorting field.
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// Sort by asc, desc
+        /// Sorting method: asc, desc
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

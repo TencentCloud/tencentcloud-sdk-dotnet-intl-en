@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1319";
+       private const string sdkVersion = "SDK_NET_3.0.1329";
 
         /// <summary>
         /// Client constructor.
@@ -1053,6 +1053,27 @@ namespace TencentCloud.Billing.V20180709
         public DescribeGatherRuleDetailResponse DescribeGatherRuleDetailSync(DescribeGatherRuleDetailRequest req)
         {
             return InternalRequestAsync<DescribeGatherRuleDetailResponse>(req, "DescribeGatherRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query member available balance in batches
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrgMemberAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeOrgMemberAccountBalanceResponse"/></returns>
+        public Task<DescribeOrgMemberAccountBalanceResponse> DescribeOrgMemberAccountBalance(DescribeOrgMemberAccountBalanceRequest req)
+        {
+            return InternalRequestAsync<DescribeOrgMemberAccountBalanceResponse>(req, "DescribeOrgMemberAccountBalance");
+        }
+
+        /// <summary>
+        /// Query member available balance in batches
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrgMemberAccountBalanceRequest"/></param>
+        /// <returns><see cref="DescribeOrgMemberAccountBalanceResponse"/></returns>
+        public DescribeOrgMemberAccountBalanceResponse DescribeOrgMemberAccountBalanceSync(DescribeOrgMemberAccountBalanceRequest req)
+        {
+            return InternalRequestAsync<DescribeOrgMemberAccountBalanceResponse>(req, "DescribeOrgMemberAccountBalance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

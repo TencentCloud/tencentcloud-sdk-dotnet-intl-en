@@ -85,15 +85,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string LastTime{ get; set; }
 
         /// <summary>
-        /// CWPP UUID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CWP UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
         /// Host Additional Information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
