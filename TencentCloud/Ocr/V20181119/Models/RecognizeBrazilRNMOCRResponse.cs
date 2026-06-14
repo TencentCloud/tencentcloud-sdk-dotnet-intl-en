@@ -79,13 +79,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CPF{ get; set; }
 
         /// <summary>
-        /// 
+        /// Residence category
         /// </summary>
         [JsonProperty("CLASSIFICATION")]
         public string CLASSIFICATION{ get; set; }
 
         /// <summary>
-        /// 
+        /// Residence validity term
         /// </summary>
         [JsonProperty("PRAZODERESIDENCIA")]
         public string PRAZODERESIDENCIA{ get; set; }

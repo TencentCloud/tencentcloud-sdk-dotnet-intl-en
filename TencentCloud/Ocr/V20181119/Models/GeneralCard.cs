@@ -110,9 +110,9 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// Gender on the document.
-        /// -M: man.
-        /// -F: woman.
-        /// -X: other gender identity.
+        /// - M: man.
+        /// - F: woman.
+        /// - X: other gender identity.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Sex")]
