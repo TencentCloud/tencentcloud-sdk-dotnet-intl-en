@@ -37,16 +37,16 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The path or file to be settled supports passing only one path and cannot be empty.
-        /// </summary>
-        [JsonProperty("TaskPath")]
-        public string TaskPath{ get; set; }
-
-        /// <summary>
         /// Task name.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
+
+        /// <summary>
+        /// The path or file to be settled supports passing only one path and cannot be empty.
+        /// </summary>
+        [JsonProperty("TaskPath")]
+        public string TaskPath{ get; set; }
 
         /// <summary>
         /// Data flow ID. this api can be accessed through DescribeDataFlow.
@@ -68,8 +68,8 @@ namespace TencentCloud.Cfs.V20190719.Models
         {
             this.SetParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "TaskPath", this.TaskPath);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
+            this.SetParamSimple(map, prefix + "TaskPath", this.TaskPath);
             this.SetParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
             this.SetParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
         }

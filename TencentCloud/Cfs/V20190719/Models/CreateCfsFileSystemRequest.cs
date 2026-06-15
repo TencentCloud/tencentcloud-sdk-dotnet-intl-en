@@ -81,6 +81,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FsName{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
+
+        /// <summary>
         /// File system tag
         /// </summary>
         [JsonProperty("ResourceTags")]
@@ -162,6 +168,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "MountIP", this.MountIP);
             this.SetParamSimple(map, prefix + "FsName", this.FsName);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
