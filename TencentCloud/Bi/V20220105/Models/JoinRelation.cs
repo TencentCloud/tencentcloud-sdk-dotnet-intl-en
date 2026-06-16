@@ -21,52 +21,43 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionComponent : AbstractModel
+    public class JoinRelation : AbstractModel
     {
         
         /// <summary>
-        /// Permission value.
+        /// Association relationship id, used by the frontend
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("JoinId")]
+        public string JoinId{ get; set; }
 
         /// <summary>
-        /// Availability.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// Original table node id
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("SourceTableNodeId")]
+        public string SourceTableNodeId{ get; set; }
 
         /// <summary>
-        /// Target upgrade version.
+        /// Target table node id
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpgradeVersionType")]
-        public string UpgradeVersionType{ get; set; }
+        [JsonProperty("TargetTableNodeId")]
+        public string TargetTableNodeId{ get; set; }
 
         /// <summary>
-        /// Supplemental information.
+        /// Association type of multi-table join
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Tips")]
-        public string Tips{ get; set; }
+        [JsonProperty("JoinType")]
+        public string JoinType{ get; set; }
 
         /// <summary>
-        /// Key for supplementary information.
+        /// Field list for joined tables
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TipsKey")]
-        public string TipsKey{ get; set; }
+        [JsonProperty("Fields")]
+        public JoinRelationField[] Fields{ get; set; }
 
 
         /// <summary>
@@ -74,11 +65,11 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
-            this.SetParamSimple(map, prefix + "Tips", this.Tips);
-            this.SetParamSimple(map, prefix + "TipsKey", this.TipsKey);
+            this.SetParamSimple(map, prefix + "JoinId", this.JoinId);
+            this.SetParamSimple(map, prefix + "SourceTableNodeId", this.SourceTableNodeId);
+            this.SetParamSimple(map, prefix + "TargetTableNodeId", this.TargetTableNodeId);
+            this.SetParamSimple(map, prefix + "JoinType", this.JoinType);
+            this.SetParamArrayObj(map, prefix + "Fields.", this.Fields);
         }
     }
 }

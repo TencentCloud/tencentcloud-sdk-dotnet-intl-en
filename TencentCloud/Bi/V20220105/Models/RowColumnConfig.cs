@@ -21,38 +21,22 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProjectConfigResult : AbstractModel
+    public class RowColumnConfig : AbstractModel
     {
         
         /// <summary>
-        /// Configuration name.
+        /// Row column permission rule
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("RulerInfo")]
+        public string RulerInfo{ get; set; }
 
         /// <summary>
-        /// Configuration mode.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// Tag value list
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
-
-        /// <summary>
-        /// Additional parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("Params")]
-        public string Params{ get; set; }
+        [JsonProperty("TagValueList")]
+        public RowColumnTagValue[] TagValueList{ get; set; }
 
 
         /// <summary>
@@ -60,9 +44,8 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "Params", this.Params);
+            this.SetParamSimple(map, prefix + "RulerInfo", this.RulerInfo);
+            this.SetParamArrayObj(map, prefix + "TagValueList.", this.TagValueList);
         }
     }
 }

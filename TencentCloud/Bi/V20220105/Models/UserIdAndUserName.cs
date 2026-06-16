@@ -61,8 +61,8 @@ namespace TencentCloud.Bi.V20220105.Models
         /// User status.
         /// Valid values:.
         /// 
-        /// -Enable.
-        /// -0: disabled.
+        /// - 1: Enable.
+        /// - 0: disabled.
         /// 
         /// The default value is 1.
         /// Example value: 1.

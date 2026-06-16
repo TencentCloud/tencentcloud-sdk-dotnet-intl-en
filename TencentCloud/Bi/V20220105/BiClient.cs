@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.intl.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1277";
+       private const string sdkVersion = "SDK_NET_3.0.1334";
 
         /// <summary>
         /// Client constructor.
@@ -96,6 +96,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// Add a data table
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTableRequest"/></param>
+        /// <returns><see cref="CreateDataTableResponse"/></returns>
+        public Task<CreateDataTableResponse> CreateDataTable(CreateDataTableRequest req)
+        {
+            return InternalRequestAsync<CreateDataTableResponse>(req, "CreateDataTable");
+        }
+
+        /// <summary>
+        /// Add a data table
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataTableRequest"/></param>
+        /// <returns><see cref="CreateDataTableResponse"/></returns>
+        public CreateDataTableResponse CreateDataTableSync(CreateDataTableRequest req)
+        {
+            return InternalRequestAsync<CreateDataTableResponse>(req, "CreateDataTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a data source.
         /// </summary>
         /// <param name="req"><see cref="CreateDatasourceRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateEmbedTokenResponse CreateEmbedTokenSync(CreateEmbedTokenRequest req)
         {
             return InternalRequestAsync<CreateEmbedTokenResponse>(req, "CreateEmbedToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create row/column permissions
+        /// </summary>
+        /// <param name="req"><see cref="CreatePermissionRanksRequest"/></param>
+        /// <returns><see cref="CreatePermissionRanksResponse"/></returns>
+        public Task<CreatePermissionRanksResponse> CreatePermissionRanks(CreatePermissionRanksRequest req)
+        {
+            return InternalRequestAsync<CreatePermissionRanksResponse>(req, "CreatePermissionRanks");
+        }
+
+        /// <summary>
+        /// Create row/column permissions
+        /// </summary>
+        /// <param name="req"><see cref="CreatePermissionRanksRequest"/></param>
+        /// <returns><see cref="CreatePermissionRanksResponse"/></returns>
+        public CreatePermissionRanksResponse CreatePermissionRanksSync(CreatePermissionRanksRequest req)
+        {
+            return InternalRequestAsync<CreatePermissionRanksResponse>(req, "CreatePermissionRanks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -390,6 +432,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// API information for raw data table fields
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceFieldListRequest"/></param>
+        /// <returns><see cref="DescribeSourceFieldListResponse"/></returns>
+        public Task<DescribeSourceFieldListResponse> DescribeSourceFieldList(DescribeSourceFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceFieldListResponse>(req, "DescribeSourceFieldList");
+        }
+
+        /// <summary>
+        /// API information for raw data table fields
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSourceFieldListRequest"/></param>
+        /// <returns><see cref="DescribeSourceFieldListResponse"/></returns>
+        public DescribeSourceFieldListResponse DescribeSourceFieldListSync(DescribeSourceFieldListRequest req)
+        {
+            return InternalRequestAsync<DescribeSourceFieldListResponse>(req, "DescribeSourceFieldList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the user interface in the project.
         /// </summary>
         /// <param name="req"><see cref="DescribeUserProjectListRequest"/></param>
@@ -533,6 +596,48 @@ namespace TencentCloud.Bi.V20220105
         public ModifyProjectResponse ModifyProjectSync(ModifyProjectRequest req)
         {
             return InternalRequestAsync<ModifyProjectResponse>(req, "ModifyProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify by user resource.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserResponse"/></returns>
+        public Task<ModifyResourceUserResponse> ModifyResourceUser(ModifyResourceUserRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserResponse>(req, "ModifyResourceUser");
+        }
+
+        /// <summary>
+        /// This API is used to modify by user resource.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserResponse"/></returns>
+        public ModifyResourceUserResponse ModifyResourceUserSync(ModifyResourceUserRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserResponse>(req, "ModifyResourceUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Update user group permission based on resources
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResourceResponse"/></returns>
+        public Task<ModifyResourceUserGroupResourceResponse> ModifyResourceUserGroupResource(ModifyResourceUserGroupResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResourceResponse>(req, "ModifyResourceUserGroupResource");
+        }
+
+        /// <summary>
+        /// Update user group permission based on resources
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceUserGroupResourceRequest"/></param>
+        /// <returns><see cref="ModifyResourceUserGroupResourceResponse"/></returns>
+        public ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResourceSync(ModifyResourceUserGroupResourceRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceUserGroupResourceResponse>(req, "ModifyResourceUserGroupResource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

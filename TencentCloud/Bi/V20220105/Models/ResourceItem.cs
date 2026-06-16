@@ -21,52 +21,36 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionComponent : AbstractModel
+    public class ResourceItem : AbstractModel
     {
         
         /// <summary>
-        /// Permission value.
+        /// Resource name
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
 
         /// <summary>
-        /// Availability.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// resource value
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("ResourceValue")]
+        public bool? ResourceValue{ get; set; }
 
         /// <summary>
-        /// Target upgrade version.
+        /// Changeable
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpgradeVersionType")]
-        public string UpgradeVersionType{ get; set; }
+        [JsonProperty("CanChange")]
+        public bool? CanChange{ get; set; }
 
         /// <summary>
-        /// Supplemental information.
+        /// Prompt message
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
-
-        /// <summary>
-        /// Key for supplementary information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("TipsKey")]
-        public string TipsKey{ get; set; }
 
 
         /// <summary>
@@ -74,11 +58,10 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
+            this.SetParamSimple(map, prefix + "ResourceValue", this.ResourceValue);
+            this.SetParamSimple(map, prefix + "CanChange", this.CanChange);
             this.SetParamSimple(map, prefix + "Tips", this.Tips);
-            this.SetParamSimple(map, prefix + "TipsKey", this.TipsKey);
         }
     }
 }

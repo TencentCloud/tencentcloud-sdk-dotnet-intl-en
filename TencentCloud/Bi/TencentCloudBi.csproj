@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1277</VersionPrefix>
+    <VersionPrefix>3.0.1334</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20220105\BiClient.cs" />
+    <Compile Include="V20220105\Models\ApiDatasourceConfig.cs" />
     <Compile Include="V20220105\Models\ApplyEmbedIntervalRequest.cs" />
     <Compile Include="V20220105\Models\ApplyEmbedIntervalResponse.cs" />
     <Compile Include="V20220105\Models\ApplyEmbedTokenInfo.cs" />
@@ -55,12 +56,16 @@
     <Compile Include="V20220105\Models\ClearEmbedTokenRequest.cs" />
     <Compile Include="V20220105\Models\ClearEmbedTokenResponse.cs" />
     <Compile Include="V20220105\Models\CorpUserListData.cs" />
+    <Compile Include="V20220105\Models\CreateDataTableRequest.cs" />
+    <Compile Include="V20220105\Models\CreateDataTableResponse.cs" />
     <Compile Include="V20220105\Models\CreateDatasourceCloudRequest.cs" />
     <Compile Include="V20220105\Models\CreateDatasourceCloudResponse.cs" />
     <Compile Include="V20220105\Models\CreateDatasourceRequest.cs" />
     <Compile Include="V20220105\Models\CreateDatasourceResponse.cs" />
     <Compile Include="V20220105\Models\CreateEmbedTokenRequest.cs" />
     <Compile Include="V20220105\Models\CreateEmbedTokenResponse.cs" />
+    <Compile Include="V20220105\Models\CreatePermissionRanksRequest.cs" />
+    <Compile Include="V20220105\Models\CreatePermissionRanksResponse.cs" />
     <Compile Include="V20220105\Models\CreateProjectRequest.cs" />
     <Compile Include="V20220105\Models\CreateProjectResponse.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleProjectRequest.cs" />
@@ -87,6 +92,8 @@
     <Compile Include="V20220105\Models\DescribeProjectInfoResponse.cs" />
     <Compile Include="V20220105\Models\DescribeProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeProjectListResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeSourceFieldListRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeSourceFieldListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeUserProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeUserProjectListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeUserRoleListRequest.cs" />
@@ -94,31 +101,50 @@
     <Compile Include="V20220105\Models\DescribeUserRoleProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeUserRoleProjectListResponse.cs" />
     <Compile Include="V20220105\Models\EmbedTokenInfo.cs" />
+    <Compile Include="V20220105\Models\EmptyValue.cs" />
+    <Compile Include="V20220105\Models\EmptyValueConfig.cs" />
     <Compile Include="V20220105\Models\ErrorInfo.cs" />
     <Compile Include="V20220105\Models\ExportScreenPageRequest.cs" />
     <Compile Include="V20220105\Models\ExportScreenPageResponse.cs" />
+    <Compile Include="V20220105\Models\FieldRemarkDTO.cs" />
+    <Compile Include="V20220105\Models\FrequencyConfig.cs" />
     <Compile Include="V20220105\Models\IdDTO.cs" />
+    <Compile Include="V20220105\Models\JoinRelation.cs" />
+    <Compile Include="V20220105\Models\JoinRelationField.cs" />
+    <Compile Include="V20220105\Models\JoinSourceTable.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceCloudRequest.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceCloudResponse.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceRequest.cs" />
     <Compile Include="V20220105\Models\ModifyDatasourceResponse.cs" />
     <Compile Include="V20220105\Models\ModifyProjectRequest.cs" />
     <Compile Include="V20220105\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyResourceUserResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleResponse.cs" />
     <Compile Include="V20220105\Models\PageScreenListVO.cs" />
     <Compile Include="V20220105\Models\PageScreenVO.cs" />
+    <Compile Include="V20220105\Models\ParamCreateDTO.cs" />
     <Compile Include="V20220105\Models\PermissionComponent.cs" />
     <Compile Include="V20220105\Models\PermissionGroup.cs" />
     <Compile Include="V20220105\Models\Project.cs" />
     <Compile Include="V20220105\Models\ProjectConfigList.cs" />
     <Compile Include="V20220105\Models\ProjectConfigResult.cs" />
     <Compile Include="V20220105\Models\ProjectListData.cs" />
+    <Compile Include="V20220105\Models\ResourceItem.cs" />
+    <Compile Include="V20220105\Models\RowColumnConfig.cs" />
+    <Compile Include="V20220105\Models\RowColumnTagValue.cs" />
+    <Compile Include="V20220105\Models\TableColumn.cs" />
+    <Compile Include="V20220105\Models\TableColumnListData.cs" />
+    <Compile Include="V20220105\Models\TableField.cs" />
     <Compile Include="V20220105\Models\UserGroupDTO.cs" />
     <Compile Include="V20220105\Models\UserIdAndUserName.cs" />
     <Compile Include="V20220105\Models\UserInfo.cs" />
+    <Compile Include="V20220105\Models\UserResourceDTO.cs" />
     <Compile Include="V20220105\Models\UserRoleListData.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataRoleInfo.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataUserRoleInfo.cs" />

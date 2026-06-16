@@ -21,52 +21,36 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionComponent : AbstractModel
+    public class UserResourceDTO : AbstractModel
     {
         
         /// <summary>
-        /// Permission value.
+        /// Enterprise ID.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("CorpId")]
+        public string CorpId{ get; set; }
 
         /// <summary>
-        /// Availability.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// User ID
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// Target upgrade version.
+        /// Username.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpgradeVersionType")]
-        public string UpgradeVersionType{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// Supplemental information.
+        /// Resource list
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Tips")]
-        public string Tips{ get; set; }
-
-        /// <summary>
-        /// Key for supplementary information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("TipsKey")]
-        public string TipsKey{ get; set; }
+        [JsonProperty("ResourceList")]
+        public ResourceItem[] ResourceList{ get; set; }
 
 
         /// <summary>
@@ -74,11 +58,10 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
-            this.SetParamSimple(map, prefix + "Tips", this.Tips);
-            this.SetParamSimple(map, prefix + "TipsKey", this.TipsKey);
+            this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamArrayObj(map, prefix + "ResourceList.", this.ResourceList);
         }
     }
 }

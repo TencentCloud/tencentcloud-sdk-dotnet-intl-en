@@ -21,52 +21,50 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionComponent : AbstractModel
+    public class ParamCreateDTO : AbstractModel
     {
         
         /// <summary>
-        /// Permission value.
+        /// Parameter name.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("ParamName")]
+        public string ParamName{ get; set; }
 
         /// <summary>
-        /// Availability.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// Default value
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("DefaultValue")]
+        public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Target upgrade version.
+        /// Parameter type, string/datetime/number
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpgradeVersionType")]
-        public string UpgradeVersionType{ get; set; }
+        [JsonProperty("ParamType")]
+        public string ParamType{ get; set; }
 
         /// <summary>
-        /// Supplemental information.
+        /// Format type, yyyy-MM-dd HH:mm:ss.SSS (only time required)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Tips")]
-        public string Tips{ get; set; }
+        [JsonProperty("FormatRule")]
+        public string FormatRule{ get; set; }
 
         /// <summary>
-        /// Key for supplementary information.
+        /// Complex type, another format expression, such as YYYY-MM
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TipsKey")]
-        public string TipsKey{ get; set; }
+        [JsonProperty("ComplexType")]
+        public string ComplexType{ get; set; }
+
+        /// <summary>
+        /// Application scope
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
 
 
         /// <summary>
@@ -74,11 +72,12 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
-            this.SetParamSimple(map, prefix + "Tips", this.Tips);
-            this.SetParamSimple(map, prefix + "TipsKey", this.TipsKey);
+            this.SetParamSimple(map, prefix + "ParamName", this.ParamName);
+            this.SetParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
+            this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamSimple(map, prefix + "FormatRule", this.FormatRule);
+            this.SetParamSimple(map, prefix + "ComplexType", this.ComplexType);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
         }
     }
 }

@@ -21,52 +21,57 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PermissionComponent : AbstractModel
+    public class FrequencyConfig : AbstractModel
     {
         
         /// <summary>
-        /// Permission value.
+        /// Cycle
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("Frequency")]
+        public string Frequency{ get; set; }
 
         /// <summary>
-        /// Availability.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// Date
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("Dates")]
+        public long?[] Dates{ get; set; }
 
         /// <summary>
-        /// Target upgrade version.
+        /// Time
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpgradeVersionType")]
-        public string UpgradeVersionType{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// Supplemental information.
+        /// Interval
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Tips")]
-        public string Tips{ get; set; }
+        [JsonProperty("IntervalTime")]
+        public ulong? IntervalTime{ get; set; }
 
         /// <summary>
-        /// Key for supplementary information.
+        /// 1:SECOND,2:MINUTE,3:HOUR,4:DAY
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TipsKey")]
-        public string TipsKey{ get; set; }
+        [JsonProperty("IntervalTimeUnit")]
+        public ulong? IntervalTimeUnit{ get; set; }
+
+        /// <summary>
+        /// hourly list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Hours")]
+        public long?[] Hours{ get; set; }
+
+        /// <summary>
+        /// Minute list
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Minute")]
+        public long?[] Minute{ get; set; }
 
 
         /// <summary>
@@ -74,11 +79,13 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "UpgradeVersionType", this.UpgradeVersionType);
-            this.SetParamSimple(map, prefix + "Tips", this.Tips);
-            this.SetParamSimple(map, prefix + "TipsKey", this.TipsKey);
+            this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
+            this.SetParamArraySimple(map, prefix + "Dates.", this.Dates);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "IntervalTime", this.IntervalTime);
+            this.SetParamSimple(map, prefix + "IntervalTimeUnit", this.IntervalTimeUnit);
+            this.SetParamArraySimple(map, prefix + "Hours.", this.Hours);
+            this.SetParamArraySimple(map, prefix + "Minute.", this.Minute);
         }
     }
 }

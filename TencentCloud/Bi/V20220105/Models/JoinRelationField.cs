@@ -21,38 +21,29 @@ namespace TencentCloud.Bi.V20220105.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProjectConfigResult : AbstractModel
+    public class JoinRelationField : AbstractModel
     {
         
         /// <summary>
-        /// Configuration name.
+        /// Field association id, frontend usage
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("ModuleId")]
-        public string ModuleId{ get; set; }
+        [JsonProperty("FieldJoinId")]
+        public string FieldJoinId{ get; set; }
 
         /// <summary>
-        /// Configuration mode.
-        /// Valid values:.
-        /// 
-        /// - usable.
-        /// - visible.
-        /// - disabled: unavailable.
-        /// - hidden: hide.
-        /// 
-        /// Default value: disabled.
-        /// Example value: disabled.
+        /// Original table field
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IncludeType")]
-        public string IncludeType{ get; set; }
+        [JsonProperty("SourceField")]
+        public TableField SourceField{ get; set; }
 
         /// <summary>
-        /// Additional parameters.
+        /// Target table field
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Params")]
-        public string Params{ get; set; }
+        [JsonProperty("TargetField")]
+        public TableField TargetField{ get; set; }
 
 
         /// <summary>
@@ -60,9 +51,9 @@ namespace TencentCloud.Bi.V20220105.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
-            this.SetParamSimple(map, prefix + "IncludeType", this.IncludeType);
-            this.SetParamSimple(map, prefix + "Params", this.Params);
+            this.SetParamSimple(map, prefix + "FieldJoinId", this.FieldJoinId);
+            this.SetParamObj(map, prefix + "SourceField.", this.SourceField);
+            this.SetParamObj(map, prefix + "TargetField.", this.TargetField);
         }
     }
 }
