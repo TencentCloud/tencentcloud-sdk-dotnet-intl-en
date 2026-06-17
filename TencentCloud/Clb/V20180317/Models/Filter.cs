@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Filter name
+        /// <p>Filter name</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Filter value array
+        /// <p>filter value array</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

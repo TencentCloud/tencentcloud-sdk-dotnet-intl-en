@@ -25,129 +25,130 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Target group ID
+        /// <p>Target group ID</p>
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// `vpcid` of target group
+        /// <p>VPC ID of the target group</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Target group name
+        /// <p>Target group name</p>
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// Specifies the default port of the target group. for a full listen target group, this field returns 0, indicating an invalid port.
+        /// <p>Default port of target group. This field returns 0 for full listen target group, indicating an invalid port.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Target group creation time
+        /// <p>Creation time of target group</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Target group modification time
+        /// <p>Target group modification time</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// Associated rule array. This parameter cannot be obtained when the DescribeTargetGroupList API is called.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Associated rule array. This parameter cannot be obtained in the DescribeTargetGroupList API call.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssociatedRule")]
         public AssociationItem[] AssociatedRule{ get; set; }
 
         /// <summary>
-        /// Backend forwarding protocol of the target group. only returns valid values for the new version (v2) target group.
+        /// <p>Backend forwarding protocol of the target group. Only the new version target group v2 returns a valid value.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Scheduling algorithm. returns a valid value only when the backend forwarding protocol is HTTP, HTTPS, or GRPC. available values:.
-        /// <ur>
-        /// <Li>WRR: weighted round-robin.</li>.
-        /// <Li>LEAST_CONN: specifies the least connection.</li>.
-        /// <Li>IP_HASH: based on ip hash.</li>.
-        /// </ur>
-        /// 
+        /// <p>Scheduling algorithm. This parameter returns valid values only for target groups with backend forwarding protocol (HTTP, HTTPS, GRPC). Available values:</p><ur></p><li>WRR: weighted round-robin.</li><li>LEAST_CONN: LEAST connection.</li><li>IP_HASH: based on IP HASH.</li></ur>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ScheduleAlgorithm")]
         public string ScheduleAlgorithm{ get; set; }
 
         /// <summary>
-        /// Health check details.
+        /// <p>Health check details.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public TargetGroupHealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Target group type, currently supported v1 (legacy version target group) and v2 (new version target group). defaults to v1 (legacy version target group).
+        /// <p>Target Group Type, currently supported v1 (legacy version target group), v2 (new version target group). Defaults to v1 (legacy version target group).</p>
         /// </summary>
         [JsonProperty("TargetGroupType")]
         public string TargetGroupType{ get; set; }
 
         /// <summary>
-        /// Number of rules associated with the target group.
+        /// <p>Number of rules associated with the target group.</p>
         /// </summary>
         [JsonProperty("AssociatedRuleCount")]
         public long? AssociatedRuleCount{ get; set; }
 
         /// <summary>
-        /// Specifies the number of instances in the target group.
+        /// <p>Number of instances in the target group.</p>
         /// </summary>
         [JsonProperty("RegisteredInstancesCount")]
         public long? RegisteredInstancesCount{ get; set; }
 
         /// <summary>
-        /// Tag.
+        /// <p>Tag.</p>
         /// </summary>
         [JsonProperty("Tag")]
         public TagInfo[] Tag{ get; set; }
 
         /// <summary>
-        /// Default weight. only target groups of v2 type return this field. when NULL is returned, it means the default weight is not set.
+        /// <p>Default weight. Only target groups of v2 type return this field. When NULL is returned, it means the default weight is not set.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// Specifies whether to listen to all target groups.
+        /// <p>Whether to listen to the target group.</p>
         /// </summary>
         [JsonProperty("FullListenSwitch")]
         public bool? FullListenSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to enable persistent connections. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and returned by the target group.
+        /// <p>Whether to enable long connections. Only target groups with HTTP/HTTPS/GRPC as the backend forwarding protocol return a valid value.</p>
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public bool? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// Session persistence time. valid only when the backend forwarding protocol is HTTP/HTTPS/GRPC and the target group returns a valid value.
+        /// <p>Session hold time. Only target groups with backend forwarding protocol set to HTTP/HTTPS/GRPC return a valid value.</p>
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// IP version.
+        /// <p>IP version.</p>
         /// </summary>
         [JsonProperty("IpVersion")]
         public string IpVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable SNAT</p>
+        /// </summary>
+        [JsonProperty("SnatEnable")]
+        public bool? SnatEnable{ get; set; }
 
 
         /// <summary>
@@ -174,6 +175,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
             this.SetParamSimple(map, prefix + "IpVersion", this.IpVersion);
+            this.SetParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
         }
     }
 }

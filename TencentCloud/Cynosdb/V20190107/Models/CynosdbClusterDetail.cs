@@ -25,359 +25,349 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name.
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region.
+        /// <p>Region</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ.
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Physical availability zone.
+        /// <p>Physical AZ</p>
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Status. supported values are as follows:.
-        /// - Creating: creating.
-        /// - running: running.
-        /// - isolating.
-        /// - Isolated: isolated.
-        /// - activating: restore from recycle bin.
-        /// - offlining: offline.
-        /// - offlined: offline.
-        /// - deleting: deleting.
-        /// - deleted: deleted.
+        /// <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Status description
+        /// <p>Status description</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-        /// resume
-        /// resuming
-        /// pause
-        /// pausing
+        /// <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// Storage Id.
+        /// <p>Storage Id</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// Storage size in gb.
+        /// <p>Storage size in GB</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Maximum storage specification, in gb.
+        /// <p>Maximum storage specification, in GB</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Specifies the minimum storage specification, in gb.
+        /// <p>Minimum storage specification, in GB</p>
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+        /// <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// VPC name.
+        /// <p>VPC name</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// Unique VPC ID.
+        /// <p>vpc Unique id</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet name.
+        /// <p>Subnet name.</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// Subnet ID.
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Character set.
+        /// <p>Character set.</p>
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Database type.
+        /// <p>Database type</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Db type: <li>NORMAL</li> <li>SERVERLESS</li>.
+        /// <p>Db type: <li>NORMAL</li><li>SERVERLESS</li></p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// Database version.
+        /// <p>Database version</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum storage space.
+        /// <p>Storage space limit</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Used capacity.
+        /// <p>Used capacity</p>
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
 
         /// <summary>
-        /// VIP.
+        /// <p>vip address</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// vport.
+        /// <p>vport port</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// VIP and vport of the read-only instance in a cluster.
+        /// <p>vip address and vport of the cluster read-only instance</p>
         /// </summary>
         [JsonProperty("RoAddr")]
         public Addr[] RoAddr{ get; set; }
 
         /// <summary>
-        /// Functions supported by the cluster.
+        /// <p>Functions supported by the cluster</p>
         /// </summary>
         [JsonProperty("Ability")]
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// Specifies the cynos version.
+        /// <p>cynos version</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// Business type.
+        /// <p>Business type</p>
         /// </summary>
         [JsonProperty("BusinessType")]
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// Whether there is an availability zone.
+        /// <p>Whether there is a secondary AZ</p>
         /// </summary>
         [JsonProperty("HasSlaveZone")]
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// Whether to freeze.
+        /// <p>Freeze or not</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
 
         /// <summary>
-        /// Task list.
+        /// <p>Task List</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Primary AZ.
+        /// <p>Primary AZ</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// Availability zone list.
+        /// <p>From the AZ list</p>
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// Instance information.
+        /// <p>Instance information</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public ClusterInstanceDetail[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// Billing mode.
+        /// <p>Payment mode</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Expiration time.
+        /// <p>Expiry time.</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectID")]
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// Array of tags bound to instance.
+        /// <p>tag Array information for instance binding</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Proxy status.
+        /// <p>Proxy status</p>
         /// </summary>
         [JsonProperty("ProxyStatus")]
         public string ProxyStatus{ get; set; }
 
         /// <summary>
-        /// binlog switch. valid values: ON, OFF.
+        /// <p>binlog switch, available values: ON, OFF</p>
         /// </summary>
         [JsonProperty("LogBin")]
         public string LogBin{ get; set; }
 
         /// <summary>
-        /// Specifies whether to skip the transaction.
+        /// <p>Skip transaction or not</p>
         /// </summary>
         [JsonProperty("IsSkipTrade")]
         public string IsSkipTrade{ get; set; }
 
         /// <summary>
-        /// PITR type: valid values: normal, redo_pitr.
+        /// <p>PITR type, available values: normal, redo_pitr</p>
         /// </summary>
         [JsonProperty("PitrType")]
         public string PitrType{ get; set; }
 
         /// <summary>
-        /// Whether to enable password complexity.
+        /// <p>Whether to toggle on password complexity</p>
         /// </summary>
         [JsonProperty("IsOpenPasswordComplexity")]
         public string IsOpenPasswordComplexity{ get; set; }
 
         /// <summary>
-        /// Network type.
+        /// <p>Network type</p>
         /// </summary>
         [JsonProperty("NetworkStatus")]
         public string NetworkStatus{ get; set; }
 
         /// <summary>
-        /// The resource package information that is bound to the cluster.	
+        /// <p>Package info of the bound resource for the cluster</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// Auto-Renewal flag. 1 indicates auto-renewal. 0 indicates non-renewal upon expiration.
+        /// <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// Specifies the node network type.
+        /// <p>Node network type</p>
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// Secondary availability zone property.
+        /// <p>Secondary availability zone property</p>
         /// </summary>
         [JsonProperty("SlaveZoneAttr")]
         public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
 
         /// <summary>
-        /// Version Tag.
+        /// <p>Version tag</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// Global database network unique id.
+        /// <p>Unique ID of the global database network</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// The role of clusters in the global data network.
-        /// primary cluster.
-        /// Slave cluster - standby.
-        /// If empty, the field is invalid.
+        /// <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
         /// </summary>
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }
 
         /// <summary>
-        /// Secondary storage usage, unit: G.
+        /// <p>Second-level storage usage in GB</p>
         /// </summary>
         [JsonProperty("UsedArchiveStorage")]
         public long? UsedArchiveStorage{ get; set; }
 
         /// <summary>
-        /// Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+        /// <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
         /// </summary>
         [JsonProperty("ArchiveStatus")]
         public string ArchiveStatus{ get; set; }
 
         /// <summary>
-        /// Archive progress, percentage.
+        /// <p>Archive progress, percentage.</p>
         /// </summary>
         [JsonProperty("ArchiveProgress")]
         public long? ArchiveProgress{ get; set; }
 
         /// <summary>
-        /// Whether transparent encryption is enabled.
+        /// <p>Cluster level. For example P0, P1</p>
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable transparent data encryption</p>
         /// </summary>
         [JsonProperty("IsOpenTDE")]
         public bool? IsOpenTDE{ get; set; }
@@ -444,6 +434,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
             this.SetParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
             this.SetParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
         }
     }

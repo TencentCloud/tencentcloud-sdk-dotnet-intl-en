@@ -25,64 +25,61 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Specifies the unique ID of the cloud load balancer. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1) API to obtain the ID.
+        /// <p>Unique ID of the Cloud Load Balancer (CLB). You can call the <a href="https://www.tencentcloud.com/document/product/214/30685?from_cn_redirect=1">DescribeLoadBalancers</a> API to obtain the ID.</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// Load balancing instance name. rule: 1-60 english letters, chinese characters, digits, hyphens "-", or underscores "_".
+        /// <p>CLB instance name. Rules: 1-80 internationally compatible characters including letters, Chinese characters, digits, "-", "_", and other common characters (Unicode supplementary characters such as emojis and rare Chinese characters are forbidden).</p>
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// The backend service information of cross-region binding 1.0
+        /// <p>Set the backend service information for cross-region binding 1.0 of Cloud Load Balancer.</p>
         /// </summary>
         [JsonProperty("TargetRegionInfo")]
         public TargetRegionInfo TargetRegionInfo{ get; set; }
 
         /// <summary>
-        /// Network billing parameter
+        /// <p>Network billing related parameters</p>
         /// </summary>
         [JsonProperty("InternetChargeInfo")]
         public InternetAccessible InternetChargeInfo{ get; set; }
 
         /// <summary>
-        /// Specifies whether to allow CLB traffic to the Target.
-        /// Enable pass-through (true): verify security groups on CLB only.
-        /// Denies CLB traffic to the target (false): verify security groups on both CLB and backend instances.
-        /// Specifies no modification if left blank.
+        /// <p>Allow CLB traffic to the Target.<br>Enable (true): verify security groups on CLB;<br>deny CLB traffic to the Target (false): verify security groups on both CLB and backend instances.<br>Leave blank for no modification.</p>
         /// </summary>
         [JsonProperty("LoadBalancerPassToTarget")]
         public bool? LoadBalancerPassToTarget{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Switchover between different billing modes: 0 means no switchover, 1 means switch between prepaid and postpaid, 2 means switch between postpaid modes. Default value: 0</p>
         /// </summary>
         [JsonProperty("SwitchFlag")]
         public ulong? SwitchFlag{ get; set; }
 
         /// <summary>
-        /// Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
+        /// <p>Whether cross-region binding 2.0 is enabled. Leave it blank for no modification.</p>
         /// </summary>
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable deletion protection. leave it blank to keep the current setting.
+        /// <p>Whether to enable deletion protection. Leave it empty to skip modification.</p>
         /// </summary>
         [JsonProperty("DeleteProtect")]
         public bool? DeleteProtect{ get; set; }
 
         /// <summary>
-        /// Modifies the second-level domain name of cloud load balancer from mycloud.com to tencentclb.com. the subdomain will be transformed, and the mycloud.com domain name will become invalid after modification. leave it blank if no modification is required.
+        /// <p>Change the second-level domain name of Cloud Load Balancer (CLB) from mycloud.com to tencentclb.com. The subdomain will also be transformed. After modification, the mycloud.com domain name will become invalid. Leave it blank if no modification is needed.</p>
         /// </summary>
         [JsonProperty("ModifyClassicDomain")]
         public bool? ModifyClassicDomain{ get; set; }
 
         /// <summary>
-        /// The associated endpoint Id, which can be queried via the [DescribeVpcEndPoint](https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1) api. input an empty string to unbind.
+        /// <p>Id of the associated endpoint, which can be queried via the <a href="https://www.tencentcloud.com/document/product/215/54679?from_cn_redirect=1">DescribeVpcEndPoint</a> api. Input an empty string to unbind.</p>
         /// </summary>
         [JsonProperty("AssociateEndpoint")]
         public string AssociateEndpoint{ get; set; }

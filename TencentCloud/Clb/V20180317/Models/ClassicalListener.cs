@@ -25,109 +25,109 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB listener ID
+        /// <p>CLB listener ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// CLB listener port
+        /// <p>CLB listener port</p>
         /// </summary>
         [JsonProperty("ListenerPort")]
         public long? ListenerPort{ get; set; }
 
         /// <summary>
-        /// Backend forwarding port of a listener
+        /// <p>listener backend forwarding port</p>
         /// </summary>
         [JsonProperty("InstancePort")]
         public long? InstancePort{ get; set; }
 
         /// <summary>
-        /// Listener name
+        /// <p>Listener name</p>
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// Listener protocol type
+        /// <p>Listener protocol type</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Session persistence time
+        /// <p>Session persistence time</p>
         /// </summary>
         [JsonProperty("SessionExpire")]
         public long? SessionExpire{ get; set; }
 
         /// <summary>
-        /// Whether health check is enabled. 1: enabled; 0: disabled.
+        /// <p>Whether health check is enabled: 1 (enabled), 0 (disabled)</p>
         /// </summary>
         [JsonProperty("HealthSwitch")]
         public long? HealthSwitch{ get; set; }
 
         /// <summary>
-        /// Response timeout period
+        /// <p>Response timeout</p><p>Unit: second</p>
         /// </summary>
         [JsonProperty("TimeOut")]
         public long? TimeOut{ get; set; }
 
         /// <summary>
-        /// Check interval
+        /// <p>Check interval</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("IntervalTime")]
         public long? IntervalTime{ get; set; }
 
         /// <summary>
-        /// Health threshold
+        /// <p>Health threshold</p>
         /// </summary>
         [JsonProperty("HealthNum")]
         public long? HealthNum{ get; set; }
 
         /// <summary>
-        /// Unhealthy threshold
+        /// <p>Unhealthy threshold</p>
         /// </summary>
         [JsonProperty("UnhealthNum")]
         public long? UnhealthNum{ get; set; }
 
         /// <summary>
-        /// Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.
+        /// <p>Request balancing method for listeners of the classic public network CLB. An empty string or wrr indicates weighted round robin. ip_hash indicates consistent hashing based on the accessed source IP address. least_conn indicates least connections.</p>
         /// </summary>
         [JsonProperty("HttpHash")]
         public string HttpHash{ get; set; }
 
         /// <summary>
-        /// Health check return code for HTTP and HTTPS listeners of a public network classic CLB. For more information, see the explanation of the field in the listener creating API.
+        /// <p>Health check return code of HTTP and HTTPS listeners for public network CLB. For details, see the explanation of this field in listener creation API.</p>
         /// </summary>
         [JsonProperty("HttpCode")]
         public long? HttpCode{ get; set; }
 
         /// <summary>
-        /// Health check path for HTTP and HTTPS listeners of a public network classic CLB
+        /// <p>Health check path of HTTP and HTTPS listeners for public network CLB</p>
         /// </summary>
         [JsonProperty("HttpCheckPath")]
         public string HttpCheckPath{ get; set; }
 
         /// <summary>
-        /// Authentication method for an HTTPS listener of a public network classic CLB
+        /// <p>Authentication method of the HTTPS listener for public network CLB</p>
         /// </summary>
         [JsonProperty("SSLMode")]
         public string SSLMode{ get; set; }
 
         /// <summary>
-        /// Server certificate ID for an HTTPS listener of a public network classic CLB
+        /// <p>Server certificate ID of the HTTPS listener for the public network CLB</p>
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Client certificate ID for an HTTPS listener of a public network classic CLB
+        /// <p>Client certificate ID of the HTTPS listener for public network CLB</p>
         /// </summary>
         [JsonProperty("CertCaId")]
         public string CertCaId{ get; set; }
 
         /// <summary>
-        /// Listener status. Value range: 0 (creating), 1 (running)
+        /// <p>Listener status. 0 indicates creating in progress, 1 indicates running.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

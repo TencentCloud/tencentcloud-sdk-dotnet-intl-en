@@ -314,6 +314,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Exclusive")]
         public ulong? Exclusive{ get; set; }
 
+        /// <summary>
+        /// Availability zone forwarding affinity info
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AvailableZoneAffinityInfo")]
+        public AvailableZoneAffinityInfo AvailableZoneAffinityInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -362,6 +369,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
             this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
             this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
+            this.SetParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
         }
     }
 }

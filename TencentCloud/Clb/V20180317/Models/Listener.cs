@@ -25,166 +25,167 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// CLB listener ID
+        /// <p>CLB listener ID</p>
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// Listener protocol. valid values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC.
+        /// <p>Listener protocol. Available values: TCP, UDP, HTTP, HTTPS, TCP_SSL, QUIC</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Listener port. value range: 1-65535.
+        /// <p>Listener port, port range: 1–65535</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Information of certificates bound to the listener
+        /// <p>Listener bound certificate information</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateOutput Certificate{ get; set; }
 
         /// <summary>
-        /// Health check information of the listener
+        /// <p>Health check information of the listener</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// Request scheduling method. WRR, LEAST_CONN, and IP_HASH respectively indicate weighted round robin, least connections, and IP hash.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Requested scheduling method. WRR, LEAST_CONN, and IP_HASH indicate weighted round-robin, least connection, and IP Hash respectively.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Session persistence time, in seconds. value range: 30-3600. default value: 0, indicating that session persistence is not enabled by default. this parameter applies only to TCP and UDP listeners.
+        /// <p>Session persistence time, unit: second. Available values: 30-3600, default 0, disabled by default. This parameter is applicable only to TCP/UDP listener.</p><p>Unit: second</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the SNI feature. 1: enable; 0: disable. this parameter is applicable only to HTTPS listeners.
+        /// <p>Whether to enable SNI feature. 1: enable, 0: disabled (this parameter is applicable only to HTTPS listeners)</p>
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
         /// <summary>
-        /// All forwarding rules under a listener (this parameter is meaningful only for HTTP/HTTPS listeners)
+        /// <p>All forwarding rules under a listener (this parameter is only meaningful for HTTP/HTTPS listeners)</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Rules")]
         public RuleOutput[] Rules{ get; set; }
 
         /// <summary>
-        /// Listener name
+        /// <p>Listener name</p>
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// Listener creation time
+        /// <p>Listener creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// End port of the port range. value range: 2-65535.
+        /// <p>End port of the port range: 2–65535</p>
         /// </summary>
         [JsonProperty("EndPort")]
         public long? EndPort{ get; set; }
 
         /// <summary>
-        /// Backend server type. available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.
+        /// <p>Backend server type. Available values: NODE, POLARIS, TARGETGROUP, TARGETGROUP-V2.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// Basic information of a bound target group. This field will be returned when a target group is bound to a listener.
+        /// <p>Bound target group basic information; return this field when listener binding target group.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetGroup")]
         public BasicTargetGroupInfo TargetGroup{ get; set; }
 
         /// <summary>
-        /// Session persistence type. NORMAL: Default session persistence type; QUIC_CID: Session persistence by Quic Connection ID.
+        /// <p>Session persistence type. NORMAL means the default session persistence type. QUIC_CID refers to maintaining the session based on Quic Connection ID.</p>
         /// </summary>
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
         /// <summary>
-        /// Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Whether to enable long connections. 1: enable, 0: disable (this parameter is applicable only to HTTP/HTTPS listeners)</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
 
         /// <summary>
-        /// Supports Nat64 CLB TCP listeners only
+        /// <p>Only supports Nat64 CLB TCP listener</p>
         /// </summary>
         [JsonProperty("Toa")]
         public bool? Toa{ get; set; }
 
         /// <summary>
-        /// Reschedules when unbinding real servers. only supported for TCP/UDP listeners. toggle on to enable this feature.
+        /// <p>Rescheduling feature, which provides a switch for scaling out the backend service. If the switch is toggled on, rescheduling is triggered when the backend service is unbound. This parameter is applicable only to TCP/UDP listeners.</p>
         /// </summary>
         [JsonProperty("DeregisterTargetRst")]
         public bool? DeregisterTargetRst{ get; set; }
 
         /// <summary>
-        /// Describes the attributes of the listener.
+        /// <p>Listener attribute.</p>
         /// </summary>
         [JsonProperty("AttrFlags")]
         public string[] AttrFlags{ get; set; }
 
         /// <summary>
-        /// List of bound target groups
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>List of bound target groups</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TargetGroupList")]
         public BasicTargetGroupInfo[] TargetGroupList{ get; set; }
 
         /// <summary>
-        /// Maximum number of connections to a listener. -1 indicates unlimited speed at the listener dimension.
+        /// <p>Maximum number of connections to a listener. -1 means no speed limit at the listener dimension.</p>
         /// </summary>
         [JsonProperty("MaxConn")]
         public long? MaxConn{ get; set; }
 
         /// <summary>
-        /// Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.
+        /// <p>Maximum number of new connections to a listener. -1 means no speed limit at the listener dimension.</p>
         /// </summary>
         [JsonProperty("MaxCps")]
         public long? MaxCps{ get; set; }
 
         /// <summary>
-        /// Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Idle connection timeout is only supported for TCP listeners. Default value: 900. Value range: 300–900 for shared instances and dedicated instances and 300–1980 for LCU-supported instances.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdleConnectTimeout")]
         public long? IdleConnectTimeout{ get; set; }
 
         /// <summary>
-        /// Rescheduling trigger duration, valid values: 0-3600s. only TCP/UDP listeners support this. after triggering rescheduling, persistent connections will disconnect and be reassigned within the set scheduling time.
+        /// <p>Rescheduling trigger duration. Value range: 0–3600. Unit: s. This parameter is applicable only to TCP/UDP listeners. After rescheduling is triggered, persistent connections will be disconnected and reassigned within the scheduled time window. </p><p>Unit: s.</p>
         /// </summary>
         [JsonProperty("RescheduleInterval")]
         public ulong? RescheduleInterval{ get; set; }
 
         /// <summary>
-        /// Data compression mode.
+        /// <p>Data compression mode</p>
         /// </summary>
         [JsonProperty("DataCompressMode")]
         public string DataCompressMode{ get; set; }
 
         /// <summary>
-        /// Reschedules the startup time. when configured, rescheduling will be triggered upon arrival of the start time.
+        /// <p>Rescheduling startup time: After the rescheduling startup time is configured, rescheduling is triggered when the startup time is arrived.</p>
         /// </summary>
         [JsonProperty("RescheduleStartTime")]
         public long? RescheduleStartTime{ get; set; }

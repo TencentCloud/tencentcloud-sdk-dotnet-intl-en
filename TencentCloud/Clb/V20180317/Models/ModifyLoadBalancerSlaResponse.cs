@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 
+        /// Order number.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

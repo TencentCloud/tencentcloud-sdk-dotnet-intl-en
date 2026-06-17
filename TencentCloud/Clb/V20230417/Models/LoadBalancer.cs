@@ -1,0 +1,466 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Clb.V20230417.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class LoadBalancer : AbstractModel
+    {
+        
+        /// <summary>
+        /// CLB instance ID.
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// CLB instance name.
+        /// </summary>
+        [JsonProperty("LoadBalancerName")]
+        public string LoadBalancerName{ get; set; }
+
+        /// <summary>
+        /// Network type of the CLB instance:
+        /// OPEN: Public network attribute. INTERNAL: Intranet attribute. For a CLB with intranet attribute, you can bind EIP for public network access. For details, see the EIP document.
+        /// </summary>
+        [JsonProperty("LoadBalancerType")]
+        public string LoadBalancerType{ get; set; }
+
+        /// <summary>
+        /// Load balancer type identifier. 1: CLB; 0: Classic CLB.
+        /// </summary>
+        [JsonProperty("Forward")]
+        public ulong? Forward{ get; set; }
+
+        /// <summary>
+        /// The domain name of the Cloud Load Balancer instance. This field is only provided by public network-based and domain name-based CLB instances. It is being gradually phased out. We recommend using LoadBalancerDomain instead.
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// List of VIPs of a CLB instance.
+        /// </summary>
+        [JsonProperty("LoadBalancerVips")]
+        public string[] LoadBalancerVips{ get; set; }
+
+        /// <summary>
+        /// CLB instance state, including
+        /// 0: creating, 1: normal operation.
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// CLB instance creation time
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Last status transition time of the CLB instance.
+        /// </summary>
+        [JsonProperty("StatusTime")]
+        public string StatusTime{ get; set; }
+
+        /// <summary>
+        /// The ID of the project to which the CLB instance belongs. 0: Default project.
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
+        /// <summary>
+        /// VPC ID
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// Anti-DDoS Pro identifier for CLB. 1: CLB with Anti-DDoS Pro; 0: CLB without Anti-DDoS Pro.
+        /// </summary>
+        [JsonProperty("OpenBgp")]
+        public ulong? OpenBgp{ get; set; }
+
+        /// <summary>
+        /// Private network Classic CLB instances before December 2016 had SNAT enabled.
+        /// </summary>
+        [JsonProperty("Snat")]
+        public bool? Snat{ get; set; }
+
+        /// <summary>
+        /// 0: Not isolated; 1: Isolated.
+        /// </summary>
+        [JsonProperty("Isolation")]
+        public ulong? Isolation{ get; set; }
+
+        /// <summary>
+        /// User-enabled log information. Only public network CLB instances that have an HTTP or HTTPS listener can generate logs.
+        /// </summary>
+        [JsonProperty("Log")]
+        public string Log{ get; set; }
+
+        /// <summary>
+        /// Subnet of the CLB instance (applicable only to VPC-type CLB instances on private networks)
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// CLB instance tag information
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// Security group of the CLB instance
+        /// </summary>
+        [JsonProperty("SecureGroups")]
+        public string[] SecureGroups{ get; set; }
+
+        /// <summary>
+        /// Basic information of real servers bound to the CLB instance
+        /// </summary>
+        [JsonProperty("TargetRegionInfo")]
+        public TargetRegionInfo TargetRegionInfo{ get; set; }
+
+        /// <summary>
+        /// Anycast CLB release domain. For non-anycast CLB, this field returns an empty string.
+        /// </summary>
+        [JsonProperty("AnycastZone")]
+        public string AnycastZone{ get; set; }
+
+        /// <summary>
+        /// IP Version, ipv4 | ipv6
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// VPC ID in numerical format
+        /// </summary>
+        [JsonProperty("NumericalVpcId")]
+        public ulong? NumericalVpcId{ get; set; }
+
+        /// <summary>
+        /// ISP of the load balancer IP. Value ranges from BGP to CUCC.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
+
+        /// <summary>
+        /// Primary AZ.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MasterZone")]
+        public ZoneInfo MasterZone{ get; set; }
+
+        /// <summary>
+        /// standby availability zone
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackupZoneSet")]
+        public ZoneInfo[] BackupZoneSet{ get; set; }
+
+        /// <summary>
+        /// CLB instance isolation time
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IsolatedTime")]
+        public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// Expiration Time of the CLB instance
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Billing type of the Cloud Load Balancer instance, PREPAID: Monthly Subscription, POSTPAID_BY_HOUR: Pay-As-You-Go
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
+        /// <summary>
+        /// CLB instance network attributes
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("NetworkAttributes")]
+        public InternetAccessible NetworkAttributes{ get; set; }
+
+        /// <summary>
+        /// Reserved field.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("PrepaidAttributes")]
+        public LBChargePrepaid PrepaidAttributes{ get; set; }
+
+        /// <summary>
+        /// Log set ID of Cloud Log Service (CLS) for CLB
+        /// </summary>
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
+
+        /// <summary>
+        /// Log topic ID of Cloud Log Service (CLS) for CLB
+        /// </summary>
+        [JsonProperty("LogTopicId")]
+        public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// IPv6 address of the CLB instance
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("AddressIPv6")]
+        public string AddressIPv6{ get; set; }
+
+        /// <summary>
+        /// Reserved. Generally unnecessary for users to concern.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ExtraInfo")]
+        public ExtraInfo ExtraInfo{ get; set; }
+
+        /// <summary>
+        /// Whether an Anti-DDoS Pro instance can be bound
+        /// </summary>
+        [JsonProperty("IsDDos")]
+        public bool? IsDDos{ get; set; }
+
+        /// <summary>
+        /// Custom configuration IDs of CLB instances
+        /// </summary>
+        [JsonProperty("ConfigId")]
+        public string ConfigId{ get; set; }
+
+        /// <summary>
+        /// Whether the real server allows traffic from CLB
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
+        /// <summary>
+        /// Exclusive cluster on the private network
+        /// </summary>
+        [JsonProperty("ExclusiveCluster")]
+        public ExclusiveCluster ExclusiveCluster{ get; set; }
+
+        /// <summary>
+        /// This field is meaningful when the IP address version is IPv6. IPv6Nat64 | IPv6FullChain
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("IPv6Mode")]
+        public string IPv6Mode{ get; set; }
+
+        /// <summary>
+        /// Is SnatPro enabled?
+        /// </summary>
+        [JsonProperty("SnatPro")]
+        public bool? SnatPro{ get; set; }
+
+        /// <summary>
+        /// After enabling SnatPro load balancing, the SnatIp list.
+        /// </summary>
+        [JsonProperty("SnatIps")]
+        public SnatIp[] SnatIps{ get; set; }
+
+        /// <summary>
+        /// Performance capacity specification.<ul><li> clb.c1.small: Minimalist specification </li><li> clb.c2.medium: Standard specification </li><li> clb.c3.small: High-tier 1 specification </li><li> clb.c3.medium: High-tier 2 specification </li><li> clb.c4.small: Super-tier 1 specification </li><li> clb.c4.medium: Super-tier 2 specification </li><li> clb.c4.large: Super-tier 3 specification </li><li> clb.c4.xlarge: Super-tier 4 specification </li><li>"": Non-LCU-supported instance</li></ul>
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
+        /// Whether VIP is blocked
+        /// </summary>
+        [JsonProperty("IsBlock")]
+        public bool? IsBlock{ get; set; }
+
+        /// <summary>
+        /// Blocking or unblocking time
+        /// </summary>
+        [JsonProperty("IsBlockTime")]
+        public string IsBlockTime{ get; set; }
+
+        /// <summary>
+        /// Whether the IP type is Local BGP
+        /// </summary>
+        [JsonProperty("LocalBgp")]
+        public bool? LocalBgp{ get; set; }
+
+        /// <summary>
+        /// Layer-7 exclusive tag.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterTag")]
+        public string ClusterTag{ get; set; }
+
+        /// <summary>
+        /// If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with IPv4 and IPv6 CVM instances simultaneously.
+        /// </summary>
+        [JsonProperty("MixIpTarget")]
+        public bool? MixIpTarget{ get; set; }
+
+        /// <summary>
+        /// VPC-based private network CLB. AZ where the rule is in proximity access mode
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Whether CLB is NFV. Empty: No; l7nfv: NFV for layer 7.
+        /// </summary>
+        [JsonProperty("NfvInfo")]
+        public string NfvInfo{ get; set; }
+
+        /// <summary>
+        /// Health check log set ID of Cloud Log Service (CLS) for CLB
+        /// </summary>
+        [JsonProperty("HealthLogSetId")]
+        public string HealthLogSetId{ get; set; }
+
+        /// <summary>
+        /// Health check log topic ID of Cloud Log Service (CLS) for CLB
+        /// </summary>
+        [JsonProperty("HealthLogTopicId")]
+        public string HealthLogTopicId{ get; set; }
+
+        /// <summary>
+        /// Cluster ID
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
+        /// Attributes of Cloud Load Balancer
+        /// </summary>
+        [JsonProperty("AttributeFlags")]
+        public string[] AttributeFlags{ get; set; }
+
+        /// <summary>
+        /// Domain name of the CLB instance.
+        /// </summary>
+        [JsonProperty("LoadBalancerDomain")]
+        public string LoadBalancerDomain{ get; set; }
+
+        /// <summary>
+        /// Network outbound
+        /// </summary>
+        [JsonProperty("Egress")]
+        public string Egress{ get; set; }
+
+        /// <summary>
+        /// Whether the instance type is exclusive type. 1: Dedicated instance. 0: Non-dedicated instance.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Exclusive")]
+        public ulong? Exclusive{ get; set; }
+
+        /// <summary>
+        /// Number of bound backend services.
+        /// </summary>
+        [JsonProperty("TargetCount")]
+        public ulong? TargetCount{ get; set; }
+
+        /// <summary>
+        /// Endpoint Id associated with the CLB instance.
+        /// </summary>
+        [JsonProperty("AssociateEndpoint")]
+        public string AssociateEndpoint{ get; set; }
+
+        /// <summary>
+        /// Availability zone forward affinity info
+        /// </summary>
+        [JsonProperty("AvailableZoneAffinityInfo")]
+        public AvailableZoneAffinityInfo AvailableZoneAffinityInfo{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+            this.SetParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
+            this.SetParamSimple(map, prefix + "Forward", this.Forward);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArraySimple(map, prefix + "LoadBalancerVips.", this.LoadBalancerVips);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "StatusTime", this.StatusTime);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "OpenBgp", this.OpenBgp);
+            this.SetParamSimple(map, prefix + "Snat", this.Snat);
+            this.SetParamSimple(map, prefix + "Isolation", this.Isolation);
+            this.SetParamSimple(map, prefix + "Log", this.Log);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
+            this.SetParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
+            this.SetParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
+            this.SetParamObj(map, prefix + "MasterZone.", this.MasterZone);
+            this.SetParamArrayObj(map, prefix + "BackupZoneSet.", this.BackupZoneSet);
+            this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
+            this.SetParamObj(map, prefix + "PrepaidAttributes.", this.PrepaidAttributes);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
+            this.SetParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
+            this.SetParamSimple(map, prefix + "IsDDos", this.IsDDos);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+            this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
+            this.SetParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
+            this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
+            this.SetParamSimple(map, prefix + "IsBlock", this.IsBlock);
+            this.SetParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
+            this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+            this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
+            this.SetParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
+            this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+            this.SetParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+            this.SetParamSimple(map, prefix + "Egress", this.Egress);
+            this.SetParamSimple(map, prefix + "Exclusive", this.Exclusive);
+            this.SetParamSimple(map, prefix + "TargetCount", this.TargetCount);
+            this.SetParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
+            this.SetParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
+        }
+    }
+}
+

@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// Number of displayed results
+        /// <p>Number of displayed results.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Information set of displayed target groups
+        /// <p>Collection of displayed target group information.</p>
         /// </summary>
         [JsonProperty("TargetGroupSet")]
         public TargetGroupInfo[] TargetGroupSet{ get; set; }

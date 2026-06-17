@@ -49,7 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Forwarding path of the forwarding rule to be deleted can be accessed through the DescribeLoadBalancersDetail api (https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1).
+        /// Forwarding path of the forwarding rule to be deleted can be accessed through the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/api/214/46916?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -87,6 +87,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
+        /// <summary>
+        /// The availability zone where the backend service resides, such as ap-guangzhou-1
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
             this.SetParamSimple(map, prefix + "EniId", this.EniId);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

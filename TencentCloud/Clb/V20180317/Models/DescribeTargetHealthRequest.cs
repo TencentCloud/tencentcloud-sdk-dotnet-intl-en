@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// List of IDs of CLB instances to be queried
+        /// <p>List of Cloud Load Balancer instance IDs to query. The array size supports up to 30.</p>
         /// </summary>
         [JsonProperty("LoadBalancerIds")]
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// Specifies the listener ID list to query.
+        /// <p>Listener ID list to query.</p>
         /// </summary>
         [JsonProperty("ListenerIds")]
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// Specifies the list of rule ids to be queried.
+        /// <p>List of forwarding rule IDs to query.</p>
         /// </summary>
         [JsonProperty("LocationIds")]
         public string[] LocationIds{ get; set; }

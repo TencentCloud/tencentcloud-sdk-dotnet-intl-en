@@ -133,7 +133,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
         /// </summary>
         [JsonProperty("LoadBalanceMode")]
         public string LoadBalanceMode{ get; set; }

@@ -97,7 +97,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? ApQueryToOtherNode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
         /// </summary>
         [JsonProperty("LoadBalanceMode")]
         public string LoadBalanceMode{ get; set; }

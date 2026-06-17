@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1335";
 
         /// <summary>
         /// Client constructor.
@@ -3872,6 +3872,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public OfflineLibraDBInstanceResponse OfflineLibraDBInstanceSync(OfflineLibraDBInstanceRequest req)
         {
             return InternalRequestAsync<OfflineLibraDBInstanceResponse>(req, "OfflineLibraDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to start the optimizer switch of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAIOptimizerRequest"/></param>
+        /// <returns><see cref="OpenAIOptimizerResponse"/></returns>
+        public Task<OpenAIOptimizerResponse> OpenAIOptimizer(OpenAIOptimizerRequest req)
+        {
+            return InternalRequestAsync<OpenAIOptimizerResponse>(req, "OpenAIOptimizer");
+        }
+
+        /// <summary>
+        /// This API is used to start the optimizer switch of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="OpenAIOptimizerRequest"/></param>
+        /// <returns><see cref="OpenAIOptimizerResponse"/></returns>
+        public OpenAIOptimizerResponse OpenAIOptimizerSync(OpenAIOptimizerRequest req)
+        {
+            return InternalRequestAsync<OpenAIOptimizerResponse>(req, "OpenAIOptimizer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
