@@ -25,20 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Cross-region log-in allowlist entity
+        /// <p>Unusual-login allowlist entry</p>
         /// </summary>
         [JsonProperty("HostLoginWhiteObj")]
         public HostLoginWhiteObj HostLoginWhiteObj{ get; set; }
 
         /// <summary>
-        /// Synchronous event processing method:
-        /// "": do not process"All": add all events that match this configuration to the allowlist"Id": add the event corresponding to the event ID to the allowlist
+        /// <p>Event sync processing method:<br>"" -- No action<br>"All" -- Add all event records matching this configuration to the allowlist<br>"Id" -- Add the event record corresponding to EventId to the allowlist</p>
         /// </summary>
         [JsonProperty("ProcessType")]
         public string ProcessType{ get; set; }
 
         /// <summary>
-        /// Cross-region log-in event ID. This parameter is required when ProcessType is set to Id.
+        /// <p>Unusual-login event ID. This parameter is required when ProcessType is Id.</p>
         /// </summary>
         [JsonProperty("EventId")]
         public ulong? EventId{ get; set; }

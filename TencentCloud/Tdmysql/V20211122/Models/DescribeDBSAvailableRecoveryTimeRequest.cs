@@ -30,12 +30,6 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
-        /// <summary>
-        /// <p>Backup set ID. the value comes from the DescribeDBSBackupSets api response.</p>
-        /// </summary>
-        [JsonProperty("BackupSetId")]
-        public long? BackupSetId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -43,7 +37,6 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
         }
     }
 }

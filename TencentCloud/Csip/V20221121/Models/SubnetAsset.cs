@@ -67,8 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// Tags
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
@@ -128,15 +127,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Whether it's a critical asset
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Core or Not
         /// </summary>
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }
 
         /// <summary>
-        /// Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// New Asset or Not. 1: New
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }

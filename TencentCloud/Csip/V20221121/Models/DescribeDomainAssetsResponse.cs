@@ -25,43 +25,37 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// u200c-
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Total number.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// u200c-
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Domain name list
         /// </summary>
         [JsonProperty("Data")]
         public DomainAssetVO[] Data{ get; set; }
 
         /// <summary>
-        /// List of WAF protection status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Protection Status List
         /// </summary>
         [JsonProperty("DefenseStatusList")]
         public FilterDataObject[] DefenseStatusList{ get; set; }
 
         /// <summary>
-        /// List of asset locations
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Attribution List
         /// </summary>
         [JsonProperty("AssetLocationList")]
         public FilterDataObject[] AssetLocationList{ get; set; }
 
         /// <summary>
-        /// List of asset types
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Type List
         /// </summary>
         [JsonProperty("SourceTypeList")]
         public FilterDataObject[] SourceTypeList{ get; set; }
 
         /// <summary>
-        /// List of regions
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region list
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }

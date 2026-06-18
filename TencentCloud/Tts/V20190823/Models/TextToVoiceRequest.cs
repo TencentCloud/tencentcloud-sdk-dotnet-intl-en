@@ -72,7 +72,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public long? VoiceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instant Voice Clone Voice ID. Required when using Instant Voice Clone voices.
         /// </summary>
         [JsonProperty("FastVoiceType")]
         public string FastVoiceType{ get; set; }
@@ -108,13 +108,13 @@ namespace TencentCloud.Tts.V20190823.Models
         public ulong? SegmentRate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Controls the emotion of synthesized speech. This parameter is supported only by multi-emotion voices. Valid values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao, disgusted, amaze, peaceful, exciting, aojiao, jieshuo. <br>Example value: neutral.
         /// </summary>
         [JsonProperty("EmotionCategory")]
         public string EmotionCategory{ get; set; }
 
         /// <summary>
-        /// 
+        /// Controls the intensity of emotion in synthesized speech. Valid values: [50, 200]. Default: 100. Takes effect only when EmotionCategoryis specified.
         /// </summary>
         [JsonProperty("EmotionIntensity")]
         public long? EmotionIntensity{ get; set; }

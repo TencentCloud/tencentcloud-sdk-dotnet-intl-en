@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Details of a database asset. 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// DB Asset Details
         /// </summary>
         [JsonProperty("Data")]
         public DbAssetInfo Data{ get; set; }

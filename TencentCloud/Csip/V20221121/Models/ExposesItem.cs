@@ -25,220 +25,232 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud service provider.
+        /// <p>Cloud vendor</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// Account name.
+        /// <p>Cloud account name</p>
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// Cloud account.
+        /// <p>Cloud Account</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// Domain
+        /// <p>Domain name</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// IP
+        /// <p>IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Port or port range.
+        /// <p>Port or port range</p>
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// Open.
+        /// <p>Open</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Risk type.
+        /// <p>Risk type</p>
         /// </summary>
         [JsonProperty("RiskType")]
         public string RiskType{ get; set; }
 
         /// <summary>
-        /// acl type.
+        /// <p>acl type</p>
         /// </summary>
         [JsonProperty("AclType")]
         public string AclType{ get; set; }
 
         /// <summary>
-        /// ACL list.
+        /// <p>acl list</p>
         /// </summary>
         [JsonProperty("AclList")]
         public string AclList{ get; set; }
 
         /// <summary>
-        /// Asset ID.
+        /// <p>Asset ID</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// <p>Asset type</p>
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// Port service quantity.
+        /// <p>Number of port services</p>
         /// </summary>
         [JsonProperty("PortServiceCount")]
         public ulong? PortServiceCount{ get; set; }
 
         /// <summary>
-        /// Number of high-risk ports.
+        /// <p>Number of high-risk ports</p>
         /// </summary>
         [JsonProperty("HighRiskPortServiceCount")]
         public ulong? HighRiskPortServiceCount{ get; set; }
 
         /// <summary>
-        /// Number of web applications.
+        /// <p>Number of web applications</p>
         /// </summary>
         [JsonProperty("WebAppCount")]
         public ulong? WebAppCount{ get; set; }
 
         /// <summary>
-        /// Number of web applications at risk.
+        /// <p>Number of web applications at risk</p>
         /// </summary>
         [JsonProperty("RiskWebAppCount")]
         public ulong? RiskWebAppCount{ get; set; }
 
         /// <summary>
-        /// Number of Weak Passwords
+        /// <p>Number of weak passwords.</p>
         /// </summary>
         [JsonProperty("WeakPasswordCount")]
         public ulong? WeakPasswordCount{ get; set; }
 
         /// <summary>
-        /// Number of vulnerabilities
+        /// <p>Vulnerability count</p>
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
-        /// First detection time
+        /// <p>First discovery time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Latest update time.
+        /// <p>Latest update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Instance Type Name
+        /// <p>Instance Type Name</p>
         /// </summary>
         [JsonProperty("AssetTypeName")]
         public string AssetTypeName{ get; set; }
 
         /// <summary>
-        /// Open status.
+        /// <p>Open status</p>
         /// </summary>
         [JsonProperty("DisplayStatus")]
         public string DisplayStatus{ get; set; }
 
         /// <summary>
-        /// Port status.
+        /// <p>Port status</p>
         /// </summary>
         [JsonProperty("DisplayRiskType")]
         public string DisplayRiskType{ get; set; }
 
         /// <summary>
-        /// Scan task status.
+        /// <p>Scan task status</p>
         /// </summary>
         [JsonProperty("ScanTaskStatus")]
         public string ScanTaskStatus{ get; set; }
 
         /// <summary>
-        /// uuid
+        /// <p>uuid</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Whether a security check has been performed.
+        /// <p>Whether a security check has been performed</p>
         /// </summary>
         [JsonProperty("HasScan")]
         public string HasScan{ get; set; }
 
         /// <summary>
-        /// Tenant ID.
+        /// <p>Tenant ID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// Tenant ID string.
+        /// <p>Tenant ID string</p>
         /// </summary>
         [JsonProperty("AppIdStr")]
         public string AppIdStr{ get; set; }
 
         /// <summary>
-        /// Record ID
+        /// <p>Record ID</p>
         /// </summary>
         [JsonProperty("ExposureID")]
         public ulong? ExposureID{ get; set; }
 
         /// <summary>
-        /// Number of ports open.
+        /// <p>Number of open ports</p>
         /// </summary>
         [JsonProperty("PortDetectCount")]
         public ulong? PortDetectCount{ get; set; }
 
         /// <summary>
-        /// Port exposure result.
+        /// <p>Port exposure result</p>
         /// </summary>
         [JsonProperty("PortDetectResult")]
         public string PortDetectResult{ get; set; }
 
         /// <summary>
-        /// Tag.
+        /// <p>Tag.</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// <p>Remark</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Number of risks to be governed.
+        /// <p>Number of risks to be governed</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskCount")]
         public ulong? ToGovernedRiskCount{ get; set; }
 
         /// <summary>
-        /// Risk content to be governed.
+        /// <p>Risk content to be governed</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskContent")]
         public string ToGovernedRiskContent{ get; set; }
+
+        /// <summary>
+        /// <p>Type icon of asset</p>
+        /// </summary>
+        [JsonProperty("AssetTypeIconURL")]
+        public string AssetTypeIconURL{ get; set; }
+
+        /// <summary>
+        /// <p>Asset type 3D icon</p>
+        /// </summary>
+        [JsonProperty("AssetTypeIconSolidURL")]
+        public string AssetTypeIconSolidURL{ get; set; }
 
 
         /// <summary>
@@ -282,6 +294,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
             this.SetParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
+            this.SetParamSimple(map, prefix + "AssetTypeIconURL", this.AssetTypeIconURL);
+            this.SetParamSimple(map, prefix + "AssetTypeIconSolidURL", this.AssetTypeIconSolidURL);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Suggestion{ get; set; }
 
         /// <summary>
-        /// Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Unique ID of the asset
+        /// Risk ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -121,24 +121,34 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `uin`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Source of the task
+        /// Recognition Source. See Enumeration Return for details.
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
+
+        /// <summary>
+        /// Service judgment, high-risk service, web service, other service
+        /// </summary>
+        [JsonProperty("ServiceJudge")]
+        public string ServiceJudge{ get; set; }
+
+        /// <summary>
+        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+        /// </summary>
+        [JsonProperty("XspmStatus")]
+        public ulong? XspmStatus{ get; set; }
 
 
         /// <summary>
@@ -165,6 +175,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
             this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "ServiceJudge", this.ServiceJudge);
+            this.SetParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
         }
     }
 }

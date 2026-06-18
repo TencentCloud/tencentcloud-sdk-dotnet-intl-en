@@ -26,273 +26,234 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// Asset ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetId")]
         public string[] AssetId{ get; set; }
 
         /// <summary>
-        /// Asset name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Name
         /// </summary>
         [JsonProperty("AssetName")]
         public string[] AssetName{ get; set; }
 
         /// <summary>
         /// Asset type
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetType")]
         public string[] AssetType{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// WAF status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// WAF Status
         /// </summary>
         [JsonProperty("WAFStatus")]
         public ulong? WAFStatus{ get; set; }
 
         /// <summary>
-        /// Asset creation time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Creation Time
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
 
         /// <summary>
         /// Appid
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
         /// Account ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// Account name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// Whether it's a critical asset
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Core or Not
         /// </summary>
         [JsonProperty("IsCore")]
         public ulong? IsCore{ get; set; }
 
         /// <summary>
-        /// Whether it's a cloud asset
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Whether it is on-cloud asset.
         /// </summary>
         [JsonProperty("IsCloud")]
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
-        /// Network attacks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// network attack
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
         /// Network access
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }
 
         /// <summary>
-        /// Number of blocked attacks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Network Interception
         /// </summary>
         [JsonProperty("Intercept")]
         public ulong? Intercept{ get; set; }
 
         /// <summary>
         /// Inbound peak bandwidth
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InBandwidth")]
         public string InBandwidth{ get; set; }
 
         /// <summary>
         /// Outbound peak bandwidth
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutBandwidth")]
         public string OutBandwidth{ get; set; }
 
         /// <summary>
-        /// Total inbound traffic
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cumulative Inbound Traffic
         /// </summary>
         [JsonProperty("InFlow")]
         public string InFlow{ get; set; }
 
         /// <summary>
-        /// Total outbound traffic
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cumulative Outbound Traffic
         /// </summary>
         [JsonProperty("OutFlow")]
         public string OutFlow{ get; set; }
 
         /// <summary>
         /// Last scan time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastScanTime")]
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Port risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// port risk
         /// </summary>
         [JsonProperty("PortRisk")]
         public ulong? PortRisk{ get; set; }
 
         /// <summary>
-        /// Vulnerabilities
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Vulnerability risk
         /// </summary>
         [JsonProperty("VulnerabilityRisk")]
         public ulong? VulnerabilityRisk{ get; set; }
 
         /// <summary>
-        /// Configuration risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         public ulong? ConfigurationRisk{ get; set; }
 
         /// <summary>
-        /// Scan tasks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Scan Task
         /// </summary>
         [JsonProperty("ScanTask")]
         public ulong? ScanTask{ get; set; }
 
         /// <summary>
-        /// Domain name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Domain
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Resolved IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Resolve IP
         /// </summary>
         [JsonProperty("SeverIp")]
         public string[] SeverIp{ get; set; }
 
         /// <summary>
-        /// Bot access requests
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Bot Attacks
         /// </summary>
         [JsonProperty("BotCount")]
         public ulong? BotCount{ get; set; }
 
         /// <summary>
-        /// Weak password risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Weak password risk
         /// </summary>
         [JsonProperty("WeakPassword")]
         public ulong? WeakPassword{ get; set; }
 
         /// <summary>
-        /// Content risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Content risk
         /// </summary>
         [JsonProperty("WebContentRisk")]
         public ulong? WebContentRisk{ get; set; }
 
         /// <summary>
-        /// Tags
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// tag
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// The type of associated instances.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Associated instance type
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// Member ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Member ID information
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// CC attacks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CC Attack
         /// </summary>
         [JsonProperty("CCAttack")]
         public long? CCAttack{ get; set; }
 
         /// <summary>
-        /// Web attack
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Web Attack
         /// </summary>
         [JsonProperty("WebAttack")]
         public long? WebAttack{ get; set; }
 
         /// <summary>
-        /// Services exposed to risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Risk Service Exposures
         /// </summary>
         [JsonProperty("ServiceRisk")]
         public ulong? ServiceRisk{ get; set; }
 
         /// <summary>
-        /// Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// New Asset or Not. 1: New
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }
 
         /// <summary>
-        /// Random third-level domain name of the asset pending ownership verification
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Random Layer-3 Domain of Assets to Be Recognized
         /// </summary>
         [JsonProperty("VerifyDomain")]
         public string VerifyDomain{ get; set; }
 
         /// <summary>
-        /// TXT record of the asset pending ownership verification
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// TXT Record Content of Pending Confirmation Assets
         /// </summary>
         [JsonProperty("VerifyTXTRecord")]
         public string VerifyTXTRecord{ get; set; }
 
         /// <summary>
-        /// Ownership verification status of the asset. `0`: Pending verification; `1`: Verified; `2`: Verifying; `3`: TXT record verification failed; `4`: Human verification failed.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Authentication Status of Assets Pending Recognition. 0: Pending Authentication; 1: Authentication Succeeded; 2: Authentication in Progress; 3: TXT Authentication Failed; 4: Manual Authentication Failed.
         /// </summary>
         [JsonProperty("VerifyStatus")]
         public long? VerifyStatus{ get; set; }
 
         /// <summary>
-        /// u200cNumber of bot attacks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Bot Access Count
         /// </summary>
         [JsonProperty("BotAccessCount")]
         public long? BotAccessCount{ get; set; }

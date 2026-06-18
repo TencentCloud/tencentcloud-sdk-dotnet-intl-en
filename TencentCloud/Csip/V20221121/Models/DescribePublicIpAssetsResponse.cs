@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Data list
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// List
         /// </summary>
         [JsonProperty("Data")]
         public IpAssetListVO[] Data{ get; set; }
@@ -38,43 +37,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// List of asset locations
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Attribution
         /// </summary>
         [JsonProperty("AssetLocationList")]
         public FilterDataObject[] AssetLocationList{ get; set; }
 
         /// <summary>
-        /// List of IP types
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// IP List Enumeration
         /// </summary>
         [JsonProperty("IpTypeList")]
         public FilterDataObject[] IpTypeList{ get; set; }
 
         /// <summary>
-        /// List of regions
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region List Enumeration
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }
 
         /// <summary>
-        /// List of protection status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Protection Enumeration
         /// </summary>
         [JsonProperty("DefenseStatusList")]
         public FilterDataObject[] DefenseStatusList{ get; set; }
 
         /// <summary>
-        /// List of asset types
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Asset Type Enumeration
         /// </summary>
         [JsonProperty("AssetTypeList")]
         public FilterDataObject[] AssetTypeList{ get; set; }
 
         /// <summary>
-        /// List of AppIds 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// AppId Enumeration
         /// </summary>
         [JsonProperty("AppIdList")]
         public FilterDataObject[] AppIdList{ get; set; }

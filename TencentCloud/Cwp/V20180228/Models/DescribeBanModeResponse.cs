@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.
+        /// <p>Blocking mode. STANDARD_MODE: standard mode; DEEP_MODE: deep mode.</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Configuration of the standard blocking mode
+        /// <p>Configuration of the standard blocking mode</p>
         /// </summary>
         [JsonProperty("StandardModeConfig")]
         public StandardModeConfig StandardModeConfig{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// IDs of records to be deleted, up to 100 characters in length
+        /// <p>IDs of the records to be deleted. Maximum: 100</p>
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

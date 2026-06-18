@@ -25,39 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Authorization ID
+        /// <p>License ID. The value is the value of the LicenseId parameter under the List object of the DescribeLicenseList API.</p>
         /// </summary>
         [JsonProperty("LicenseId")]
         public ulong? LicenseId{ get; set; }
 
         /// <summary>
-        /// Authorization type
+        /// <p>License type</p><p>Valid values:</p><ul><li>0: Pro Edition - pay-as-you-go</li><li>1: Pro Edition - monthly subscription (CWP)</li><li>2: Ultimate Edition - monthly subscription (CWP)</li><li>3: Lightweight Edition - LH monthly subscription</li><li>6: Pro Edition - monthly subscription (CSC)</li><li>7: Ultimate Edition - monthly subscription (CSC)</li></ul>
         /// </summary>
         [JsonProperty("LicenseType")]
         public ulong? LicenseType{ get; set; }
 
         /// <summary>
-        /// Resource ID
+        /// <p>Resource ID. The value is the value of the ResourceId parameter under the List object of the DescribeLicenseList API.</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <li>InstanceID, IP,
-        /// 
-        /// and MachineName for fuzzy search</li>
+        /// <li>Fuzzy search by InstanceID, IP, or <p>MachineName</p></li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// Limit number, 10 by default.
+        /// <p>The maximum number of entries. Default value: 10.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

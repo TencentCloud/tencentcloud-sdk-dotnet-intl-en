@@ -25,151 +25,151 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Total number of authorizations (including those that are isolated, expired, and in other states)
+        /// <p>Total number of licenses (including unavailable licenses such as isolated and expired ones)</p>
         /// </summary>
         [JsonProperty("LicenseCnt")]
         public ulong? LicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of available authorizations
+        /// <p>Available licenses</p>
         /// </summary>
         [JsonProperty("AvailableLicenseCnt")]
         public ulong? AvailableLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of available Professional Edition authorizations (including those in postpaid mode)
+        /// <p>Number of available Pro Edition licenses (including postpaid licenses)</p>
         /// </summary>
         [JsonProperty("AvailableProVersionLicenseCnt")]
         public ulong? AvailableProVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of available Ultimate Edition authorizations
+        /// <p>Number of available Ultimate Edition licenses</p>
         /// </summary>
         [JsonProperty("AvailableFlagshipVersionLicenseCnt")]
         public ulong? AvailableFlagshipVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of authorizations about to expire (no more than 15 days left)
+        /// <p>Number of licenses expiring within 15 days</p>
         /// </summary>
         [JsonProperty("NearExpiryLicenseCnt")]
         public ulong? NearExpiryLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of expired authorizations (excluding deleted ones)
+        /// <p>Number of expired licenses (excluding deleted records)</p>
         /// </summary>
         [JsonProperty("ExpireLicenseCnt")]
         public ulong? ExpireLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Automatic upgrade enabling status. True: enabled; false: disabled. Default value: false.
+        /// <p>Automatic upgrade switch status. Default value: false. true: enabled; false: disabled.</p>
         /// </summary>
         [JsonProperty("AutoOpenStatus")]
         public bool? AutoOpenStatus{ get; set; }
 
         /// <summary>
-        /// PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.
+        /// <p>PROVERSION_POSTPAY: Pro Edition - postpaid; PROVERSION_PREPAY: Pro Edition - prepaid; FLAGSHIP_PREPAY: Ultimate Edition - prepaid.</p>
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
-        /// Whether automatic upgrade has been enabled before
+        /// <p>Whether automatic upgrade has been enabled before</p>
         /// </summary>
         [JsonProperty("IsOpenStatusHistory")]
         public bool? IsOpenStatusHistory{ get; set; }
 
         /// <summary>
-        /// Number of used authorizations
+        /// <p>Number of used licenses</p>
         /// </summary>
         [JsonProperty("UsedLicenseCnt")]
         public ulong? UsedLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of authorizations that have not expired
+        /// <p>Number of unexpired licenses</p>
         /// </summary>
         [JsonProperty("NotExpiredLicenseCnt")]
         public ulong? NotExpiredLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Total number of Ultimate Edition authorizations (valid orders)
+        /// <p>Total number of Ultimate Edition licenses (valid orders)</p>
         /// </summary>
         [JsonProperty("FlagshipVersionLicenseCnt")]
         public ulong? FlagshipVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Total number of Pro Edition authorizations (valid orders)
+        /// <p>Total number of Pro Edition licenses (valid orders)</p>
         /// </summary>
         [JsonProperty("ProVersionLicenseCnt")]
         public ulong? ProVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Total number of Lite Edition authorizations (those of valid orders)
+        /// <p>Lightweight edition total number of licenses (valid order licenses count)</p>
         /// </summary>
         [JsonProperty("CwpVersionLicenseCnt")]
         public ulong? CwpVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Number of available Inclusive Edition authorizations
+        /// <p>Number of available Lightweight Edition licenses</p>
         /// </summary>
         [JsonProperty("AvailableLHLicenseCnt")]
         public ulong? AvailableLHLicenseCnt{ get; set; }
 
         /// <summary>
-        /// Auto-purchase switch, true for ON, false for OFF
+        /// <p>Auto-purchase switch. true: enabled; false: disabled.</p>
         /// </summary>
         [JsonProperty("AutoRepurchaseSwitch")]
         public bool? AutoRepurchaseSwitch{ get; set; }
 
         /// <summary>
-        /// Is auto-renewal required for auto-purchase orders, true for ON, false for OFF
+        /// <p>Whether auto-purchase orders are automatically renewed. true: enabled; false: disabled.</p>
         /// </summary>
         [JsonProperty("AutoRepurchaseRenewSwitch")]
         public bool? AutoRepurchaseRenewSwitch{ get; set; }
 
         /// <summary>
-        /// Number of terminated orders
+        /// <p>Number of terminated orders</p>
         /// </summary>
         [JsonProperty("DestroyOrderNum")]
         public ulong? DestroyOrderNum{ get; set; }
 
         /// <summary>
-        /// Whether automatic renewal is enabled for additional purchase. true: enabled; false: disabled.
+        /// <p>Auto-renewal switch for auto-purchase. true: enabled; false: disabled.</p>
         /// </summary>
         [JsonProperty("RepurchaseRenewSwitch")]
         public bool? RepurchaseRenewSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to automatically bind new machines to rasp protection. false indicates disabled, enabled otherwise.
+        /// <p>Whether to automatically bind RASP protection to newly added machines. false: disabled; true: enabled.</p>
         /// </summary>
         [JsonProperty("AutoBindRaspSwitch")]
         public bool? AutoBindRaspSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to enable automatic addition of machines for rasp protection. false indicates disabled, enabled.
+        /// <p>Whether to automatically enable RASP protection for newly added machines. false: disabled; true: enabled.</p>
         /// </summary>
         [JsonProperty("AutoOpenRaspSwitch")]
         public bool? AutoOpenRaspSwitch{ get; set; }
 
         /// <summary>
-        /// Whether the automatic scaling down switch is on
+        /// <p>Whether the auto-downgrade switch is enabled</p>
         /// </summary>
         [JsonProperty("AutoDowngradeSwitch")]
         public bool? AutoDowngradeSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of available AI Protection Edition licenses</p>
         /// </summary>
         [JsonProperty("AvailableAISecurityLicenseCnt")]
         public ulong? AvailableAISecurityLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Total number of AI Protection Edition licenses</p>
         /// </summary>
         [JsonProperty("AISecurityVersionLicenseCnt")]
         public ulong? AISecurityVersionLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of available licenses after combining application protection licenses with Ultimate Edition licenses</p>
         /// </summary>
         [JsonProperty("ApplicationAvailableLicenseCnt")]
         public ulong? ApplicationAvailableLicenseCnt{ get; set; }

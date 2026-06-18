@@ -25,29 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of reports
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Report List
         /// </summary>
         [JsonProperty("Data")]
         public TaskLogInfo[] Data{ get; set; }
 
         /// <summary>
-        /// Number of reports pending viewed
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Pending Viewing Count
         /// </summary>
         [JsonProperty("NotViewNumber")]
         public long? NotViewNumber{ get; set; }
 
         /// <summary>
-        /// Number of report templates
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Report Templates
         /// </summary>
         [JsonProperty("ReportTemplateNumber")]
         public long? ReportTemplateNumber{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Ultimate Edition configuration information
+        /// <p>Ultimate Edition configuration information</p>
         /// </summary>
         [JsonProperty("FlagShip")]
         public VersionWhiteConfig FlagShip{ get; set; }
 
         /// <summary>
-        /// Pro Edition configuration information
+        /// <p>Pro Edition configuration information</p>
         /// </summary>
         [JsonProperty("Professional")]
         public VersionWhiteConfig Professional{ get; set; }
 
         /// <summary>
-        /// Lightweight Edition configuration information
+        /// <p>Lightweight Edition configuration information</p>
         /// </summary>
         [JsonProperty("PrattWhitney")]
         public VersionWhiteConfig PrattWhitney{ get; set; }
 
         /// <summary>
-        /// Authorization package configuration message
+        /// <p>License package configuration message</p>
         /// </summary>
         [JsonProperty("RASP")]
         public VersionWhiteConfig RASP{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Log analysis configuration information</p>
         /// </summary>
         [JsonProperty("LOG")]
         public VersionWhiteConfig LOG{ get; set; }

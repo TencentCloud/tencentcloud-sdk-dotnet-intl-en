@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// u200c-
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Data.
         /// </summary>
         [JsonProperty("Data")]
         public AssetBaseInfoResponse Data{ get; set; }

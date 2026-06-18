@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Report name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// report name
         /// </summary>
         [JsonProperty("TaskLogName")]
         public string TaskLogName{ get; set; }
@@ -38,85 +37,73 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskLogId{ get; set; }
 
         /// <summary>
-        /// Number of associated assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Associated Asset Count
         /// </summary>
         [JsonProperty("AssetsNumber")]
         public long? AssetsNumber{ get; set; }
 
         /// <summary>
-        /// Number of risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Security Risk Count
         /// </summary>
         [JsonProperty("RiskNumber")]
         public long? RiskNumber{ get; set; }
 
         /// <summary>
         /// Report generation time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// Task status. `0`: Initial value; `1`: Scanning; `2`: Completed; `3`: Failed; `4`: Stopped; `5`: Paused; `6`: Retried
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Status Code. 0-Initial Value; 1-Scanning; 2-Scan Completed; 3-Scan Error; 4-Stopped; 5-Halted; 6-Task Has Been Restarted.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Name of the associated task
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Associated Task Name
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
         /// Scan start time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Scan task ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Center Scan Task ID
         /// </summary>
         [JsonProperty("TaskCenterTaskId")]
         public string TaskCenterTaskId{ get; set; }
 
         /// <summary>
-        /// User AppId
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tenant ID
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User UIN
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Host Account ID
         /// </summary>
         [JsonProperty("UIN")]
         public string UIN{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User name
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Report type: `1`: Health check report; `2`: Daily report; `3`: Weekly report; `4`: Monthly report
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Report Type. 1: Security Checkup; 2: Daily Report; 3: Weekly Report; 4: Monthly Report.
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
         /// <summary>
-        /// Report template ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Report Template ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

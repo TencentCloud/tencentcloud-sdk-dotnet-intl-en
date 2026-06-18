@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VULName{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
@@ -49,8 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckFrom{ get; set; }
 
         /// <summary>
-        /// Whether it's enabled. `1`: Enable; `0`: Disabled
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Enable/Disable. 1-Enable; 0-Disable.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
@@ -68,8 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ImpactVersion{ get; set; }
 
         /// <summary>
-        /// CVE number
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CVE
         /// </summary>
         [JsonProperty("CVE")]
         public string CVE{ get; set; }
@@ -81,39 +79,70 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] VULTag{ get; set; }
 
         /// <summary>
-        /// Fix solution
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Repair method
         /// </summary>
         [JsonProperty("FixMethod")]
         public string[] FixMethod{ get; set; }
 
         /// <summary>
         /// Disclosure time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReleaseTime")]
         public string ReleaseTime{ get; set; }
 
         /// <summary>
-        /// Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
         /// </summary>
         [JsonProperty("EMGCVulType")]
         public long? EMGCVulType{ get; set; }
 
         /// <summary>
         /// Vulnerability description
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VULDescribe")]
         public string VULDescribe{ get; set; }
 
         /// <summary>
-        /// Affected components
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Affected component
         /// </summary>
         [JsonProperty("ImpactComponent")]
         public string ImpactComponent{ get; set; }
+
+        /// <summary>
+        /// Vulnerability Payload
+        /// </summary>
+        [JsonProperty("Payload")]
+        public string Payload{ get; set; }
+
+        /// <summary>
+        /// Technology reference
+        /// </summary>
+        [JsonProperty("References")]
+        public string References{ get; set; }
+
+        /// <summary>
+        /// CVSS Score
+        /// </summary>
+        [JsonProperty("CVSS")]
+        public string CVSS{ get; set; }
+
+        /// <summary>
+        /// Attack intensity
+        /// </summary>
+        [JsonProperty("AttackHeat")]
+        public string AttackHeat{ get; set; }
+
+        /// <summary>
+        /// Security Product Support Status
+        /// </summary>
+        [JsonProperty("ServiceSupport")]
+        public ServiceSupport[] ServiceSupport{ get; set; }
+
+        /// <summary>
+        /// Latest detection time
+        /// </summary>
+        [JsonProperty("RecentScanTime")]
+        public string RecentScanTime{ get; set; }
 
 
         /// <summary>
@@ -135,6 +164,12 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "EMGCVulType", this.EMGCVulType);
             this.SetParamSimple(map, prefix + "VULDescribe", this.VULDescribe);
             this.SetParamSimple(map, prefix + "ImpactComponent", this.ImpactComponent);
+            this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamSimple(map, prefix + "References", this.References);
+            this.SetParamSimple(map, prefix + "CVSS", this.CVSS);
+            this.SetParamSimple(map, prefix + "AttackHeat", this.AttackHeat);
+            this.SetParamArrayObj(map, prefix + "ServiceSupport.", this.ServiceSupport);
+            this.SetParamSimple(map, prefix + "RecentScanTime", this.RecentScanTime);
         }
     }
 }

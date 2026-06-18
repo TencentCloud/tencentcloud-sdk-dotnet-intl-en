@@ -43,8 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Nick{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -62,99 +61,85 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Creation time of the pod
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Pod Creation Time
         /// </summary>
         [JsonProperty("InstanceCreateTime")]
         public string InstanceCreateTime{ get; set; }
 
         /// <summary>
         /// Namespace
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Cluster ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Server ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Host ID
         /// </summary>
         [JsonProperty("MachineId")]
         public string MachineId{ get; set; }
 
         /// <summary>
-        /// Server name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// host name
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Pod IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// pod ip
         /// </summary>
         [JsonProperty("PodIp")]
         public string PodIp{ get; set; }
 
         /// <summary>
-        /// Number of associated services
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Associated Service Count
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// Number of associated containers
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Associated container number
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Private IP address
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// Whether it's a critical asset. Values: `1` (critical asset), `0` (non-critical asset)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Whether it is core. 1: Core; 2: Non-core.
         /// </summary>
         [JsonProperty("IsCore")]
         public long? IsCore{ get; set; }
 
         /// <summary>
-        /// Whether it's a newly-added asset. Values: `1` (Yes), `0` (No)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// New Asset or Not. 1: New
         /// </summary>
         [JsonProperty("IsNewAsset")]
         public ulong? IsNewAsset{ get; set; }

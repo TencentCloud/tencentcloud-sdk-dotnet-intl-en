@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Modify Group Account Status. 1: Enabled; 2: Disabled.
+        /// Modify group account status. 1 Enable, 0 Disable.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

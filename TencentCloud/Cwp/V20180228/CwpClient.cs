@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1336";
 
         /// <summary>
         /// Client constructor.
@@ -4256,6 +4256,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeMachineGeneralResponse DescribeMachineGeneralSync(DescribeMachineGeneralRequest req)
         {
             return InternalRequestAsync<DescribeMachineGeneralResponse>(req, "DescribeMachineGeneral")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get server details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeMachineInfoResponse"/></returns>
+        public Task<DescribeMachineInfoResponse> DescribeMachineInfo(DescribeMachineInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineInfoResponse>(req, "DescribeMachineInfo");
+        }
+
+        /// <summary>
+        /// This API is used to get server details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeMachineInfoResponse"/></returns>
+        public DescribeMachineInfoResponse DescribeMachineInfoSync(DescribeMachineInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineInfoResponse>(req, "DescribeMachineInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

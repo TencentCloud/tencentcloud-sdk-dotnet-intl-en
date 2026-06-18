@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1321";
+       private const string sdkVersion = "SDK_NET_3.0.1336";
 
         /// <summary>
         /// Client constructor.
@@ -138,6 +138,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to create users in batches.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUsersRequest"/></param>
+        /// <returns><see cref="CreateUsersResponse"/></returns>
+        public Task<CreateUsersResponse> CreateUsers(CreateUsersRequest req)
+        {
+            return InternalRequestAsync<CreateUsersResponse>(req, "CreateUsers");
+        }
+
+        /// <summary>
+        /// This API is used to create users in batches.
+        /// </summary>
+        /// <param name="req"><see cref="CreateUsersRequest"/></param>
+        /// <returns><see cref="CreateUsersResponse"/></returns>
+        public CreateUsersResponse CreateUsersSync(CreateUsersRequest req)
+        {
+            return InternalRequestAsync<CreateUsersResponse>(req, "CreateUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete manual backups of instances.
         /// </summary>
         /// <param name="req"><see cref="DeleteDBSBackupSetsRequest"/></param>
@@ -155,6 +176,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteDBSBackupSetsResponse DeleteDBSBackupSetsSync(DeleteDBSBackupSetsRequest req)
         {
             return InternalRequestAsync<DeleteDBSBackupSetsResponse>(req, "DeleteDBSBackupSets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch delete users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public Task<DeleteUsersResponse> DeleteUsers(DeleteUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers");
+        }
+
+        /// <summary>
+        /// This API is used to batch delete users.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
+        {
+            return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,6 +495,48 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to query the SSL status of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLStatusResponse"/></returns>
+        public Task<DescribeInstanceSSLStatusResponse> DescribeInstanceSSLStatus(DescribeInstanceSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLStatusResponse>(req, "DescribeInstanceSSLStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the SSL status of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSSLStatusRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSSLStatusResponse"/></returns>
+        public DescribeInstanceSSLStatusResponse DescribeInstanceSSLStatusSync(DescribeInstanceSSLStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceSSLStatusResponse>(req, "DescribeInstanceSSLStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query maintenance time window configurations
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public Task<DescribeMaintenanceWindowResponse> DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintenanceWindowResponse>(req, "DescribeMaintenanceWindow");
+        }
+
+        /// <summary>
+        /// Query maintenance time window configurations
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="DescribeMaintenanceWindowResponse"/></returns>
+        public DescribeMaintenanceWindowResponse DescribeMaintenanceWindowSync(DescribeMaintenanceWindowRequest req)
+        {
+            return InternalRequestAsync<DescribeMaintenanceWindowResponse>(req, "DescribeMaintenanceWindow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query available regions.
         /// </summary>
         /// <param name="req"><see cref="DescribeSaleInfoRequest"/></param>
@@ -470,6 +554,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DescribeSaleInfoResponse DescribeSaleInfoSync(DescribeSaleInfoRequest req)
         {
             return InternalRequestAsync<DescribeSaleInfoResponse>(req, "DescribeSaleInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query slow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public Task<DescribeSlowLogsResponse> DescribeSlowLogs(DescribeSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeSlowLogsResponse>(req, "DescribeSlowLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query slow logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogsResponse"/></returns>
+        public DescribeSlowLogsResponse DescribeSlowLogsSync(DescribeSlowLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeSlowLogsResponse>(req, "DescribeSlowLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -642,6 +747,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to modify the VPC port of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceVPortRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceVPortResponse"/></returns>
+        public Task<ModifyDBInstanceVPortResponse> ModifyDBInstanceVPort(ModifyDBInstanceVPortRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceVPortResponse>(req, "ModifyDBInstanceVPort");
+        }
+
+        /// <summary>
+        /// This API is used to modify the VPC port of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceVPortRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceVPortResponse"/></returns>
+        public ModifyDBInstanceVPortResponse ModifyDBInstanceVPortSync(ModifyDBInstanceVPortRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceVPortResponse>(req, "ModifyDBInstanceVPort")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify instance parameters.
         /// </summary>
         /// <param name="req"><see cref="ModifyDBParametersRequest"/></param>
@@ -726,6 +852,69 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to modify the network to which the instance belongs.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public Task<ModifyInstanceNetworkResponse> ModifyInstanceNetwork(ModifyInstanceNetworkRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceNetworkResponse>(req, "ModifyInstanceNetwork");
+        }
+
+        /// <summary>
+        /// This API is used to modify the network to which the instance belongs.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNetworkRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNetworkResponse"/></returns>
+        public ModifyInstanceNetworkResponse ModifyInstanceNetworkSync(ModifyInstanceNetworkRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceNetworkResponse>(req, "ModifyInstanceNetwork")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the SSL feature of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceSSLStatusRequest"/></param>
+        /// <returns><see cref="ModifyInstanceSSLStatusResponse"/></returns>
+        public Task<ModifyInstanceSSLStatusResponse> ModifyInstanceSSLStatus(ModifyInstanceSSLStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceSSLStatusResponse>(req, "ModifyInstanceSSLStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the SSL feature of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceSSLStatusRequest"/></param>
+        /// <returns><see cref="ModifyInstanceSSLStatusResponse"/></returns>
+        public ModifyInstanceSSLStatusResponse ModifyInstanceSSLStatusSync(ModifyInstanceSSLStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceSSLStatusResponse>(req, "ModifyInstanceSSLStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add new or modify instance maintenance time window configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public Task<ModifyMaintenanceWindowResponse> ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintenanceWindowResponse>(req, "ModifyMaintenanceWindow");
+        }
+
+        /// <summary>
+        /// Add new or modify instance maintenance time window configurations
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>
+        /// <returns><see cref="ModifyMaintenanceWindowResponse"/></returns>
+        public ModifyMaintenanceWindowResponse ModifyMaintenanceWindowSync(ModifyMaintenanceWindowRequest req)
+        {
+            return InternalRequestAsync<ModifyMaintenanceWindowResponse>(req, "ModifyMaintenanceWindow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify user permissions.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserPrivilegesRequest"/></param>
@@ -743,6 +932,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to reset user password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetUserPasswordRequest"/></param>
+        /// <returns><see cref="ResetUserPasswordResponse"/></returns>
+        public Task<ResetUserPasswordResponse> ResetUserPassword(ResetUserPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword");
+        }
+
+        /// <summary>
+        /// This API is used to reset user password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetUserPasswordRequest"/></param>
+        /// <returns><see cref="ResetUserPasswordResponse"/></returns>
+        public ResetUserPasswordResponse ResetUserPasswordSync(ResetUserPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

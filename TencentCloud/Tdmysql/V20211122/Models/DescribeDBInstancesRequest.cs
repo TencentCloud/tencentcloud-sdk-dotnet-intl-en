@@ -25,22 +25,28 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Filter parameters.
+        /// <p>Filter parameters</p>
         /// </summary>
         [JsonProperty("Filters")]
         public InstanceFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Maximum return count, defaults to 20, maximum 100
+        /// <p>Maximum return count, defaults to 20, maximum 100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is an integer multiple of Limit.
+        /// <p>Offset, which is an integer multiple of Limit.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

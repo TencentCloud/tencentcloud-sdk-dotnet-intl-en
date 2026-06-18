@@ -25,20 +25,20 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 0 represents Tencent Cloud
-        /// 1 represents AWS
+        /// 0 means Tencent Cloud
+        /// 1 indicates AWS
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// Account quantity
+        /// Account Quantity
         /// </summary>
         [JsonProperty("CloudCount")]
         public long? CloudCount{ get; set; }
 
         /// <summary>
-        /// The cloud account type description
+        /// Description of The Cloud Account Type
         /// </summary>
         [JsonProperty("CloudDesc")]
         public string CloudDesc{ get; set; }

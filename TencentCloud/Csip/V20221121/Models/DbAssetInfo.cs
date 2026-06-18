@@ -25,77 +25,67 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// CFW status
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cloud Defense Status
         /// </summary>
         [JsonProperty("CFWStatus")]
         public ulong? CFWStatus{ get; set; }
 
         /// <summary>
         /// Asset ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
         /// VPC information
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// Asset type
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// VPC IP
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// vpc information
+        /// VPC information
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// Asset name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// CFW edition
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Cloud Defense Protection Edition
         /// </summary>
         [JsonProperty("CFWProtectLevel")]
         public ulong? CFWProtectLevel{ get; set; }
 
         /// <summary>
-        /// Tag information
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag Information
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }

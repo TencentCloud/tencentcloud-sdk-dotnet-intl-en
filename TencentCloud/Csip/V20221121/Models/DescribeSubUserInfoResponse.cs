@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// total
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public SubUserInfo[] Data{ get; set; }
 
         /// <summary>
-        /// Manufacturer Enumeration List
+        /// Manufacturer list
         /// </summary>
         [JsonProperty("CloudTypeLst")]
         public FilterDataObject[] CloudTypeLst{ get; set; }
 
         /// <summary>
-        /// Enumeration of appid of the main account
+        /// Enumerate appid belonging to main account
         /// </summary>
         [JsonProperty("OwnerAppIDLst")]
         public FilterDataObject[] OwnerAppIDLst{ get; set; }

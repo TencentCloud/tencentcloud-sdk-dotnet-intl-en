@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Unique ID of the asset
+        /// ID, use to handle risk
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -85,15 +85,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `uin`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

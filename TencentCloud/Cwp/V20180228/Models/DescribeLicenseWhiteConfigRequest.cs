@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Rule name. For example, cwp.
+        /// <p>Rule name, for example: cwp</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

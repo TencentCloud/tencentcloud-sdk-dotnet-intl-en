@@ -25,55 +25,55 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Member account name
+        /// member account name
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// Department node name, department of account
+        /// Department Node Name, Account's Department
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+        /// Member/Admin/DelegatedAdmin/EntityAdmin, corresponding to Member/Administrator/Delegated Administrator/Entity Administrator
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// Member account id
+        /// Member Account ID
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// account joining method,create/invite
+        /// Account Joining Method: Create/Invite.
         /// </summary>
         [JsonProperty("JoinType")]
         public string JoinType{ get; set; }
 
         /// <summary>
-        /// Group name
+        /// Group Name
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Admin account name
+        /// administrator account name
         /// </summary>
         [JsonProperty("AdminName")]
         public string AdminName{ get; set; }
 
         /// <summary>
-        /// Admin Uin
+        /// Administrator UIN
         /// </summary>
         [JsonProperty("AdminUin")]
         public string AdminUin{ get; set; }
 
         /// <summary>
-        /// Creation Time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -91,19 +91,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? MemberCount{ get; set; }
 
         /// <summary>
-        /// Sub-account count
+        /// Number of sub-accounts
         /// </summary>
         [JsonProperty("SubAccountCount")]
         public long? SubAccountCount{ get; set; }
 
         /// <summary>
-        /// Abnormal sub-account quantity
+        /// Number of abnormal sub-accounts
         /// </summary>
         [JsonProperty("AbnormalSubUserCount")]
         public long? AbnormalSubUserCount{ get; set; }
 
         /// <summary>
-        /// Organization Relationship Policy Permissions
+        /// Group Relationship Policy Permissions
         /// </summary>
         [JsonProperty("GroupPermission")]
         public string[] GroupPermission{ get; set; }
@@ -115,37 +115,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberPermission{ get; set; }
 
         /// <summary>
-        /// Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+        /// Group Payment Mode. 0: Self-payment; 1: Proxy Payment.
         /// </summary>
         [JsonProperty("GroupPayMode")]
         public long? GroupPayMode{ get; set; }
 
         /// <summary>
-        /// Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+        /// Personal Payment Mode. 0: Self-payment; 1: Proxy payment.
         /// </summary>
         [JsonProperty("MemberPayMode")]
         public long? MemberPayMode{ get; set; }
 
         /// <summary>
-        /// If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+        /// Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
         /// </summary>
         [JsonProperty("CFWProtect")]
         public string CFWProtect{ get; set; }
 
         /// <summary>
-        /// If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+        /// Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
         /// </summary>
         [JsonProperty("WAFProtect")]
         public string WAFProtect{ get; set; }
 
         /// <summary>
-        /// If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+        /// Not enabled if empty. Otherwise, different strings correspond to different versions. Common for General, regardless of version.
         /// </summary>
         [JsonProperty("CWPProtect")]
         public string CWPProtect{ get; set; }
 
         /// <summary>
-        /// Array of all departments
+        /// Array of Collections for All Departments
         /// </summary>
         [JsonProperty("Departments")]
         public string[] Departments{ get; set; }
@@ -163,25 +163,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CSIPProtect{ get; set; }
 
         /// <summary>
-        /// 1 indicates the quota consumer
+        /// 1 indicates the quota consumer.
         /// </summary>
         [JsonProperty("QuotaConsumer")]
         public long? QuotaConsumer{ get; set; }
 
         /// <summary>
-        /// Number of enabled Admin/Delegated Admin accounts
+        /// Number of activations by admin/delegated admin
         /// </summary>
         [JsonProperty("EnableAdminCount")]
         public long? EnableAdminCount{ get; set; }
 
         /// <summary>
-        /// Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+        /// Account Multi-Cloud Information Statistics, in array format. Refer to the description of CloudCountDesc for details.
         /// </summary>
         [JsonProperty("CloudCountDesc")]
         public CloudCountDesc[] CloudCountDesc{ get; set; }
 
         /// <summary>
-        /// Total Number of Admin/Delegated Admin Accounts
+        /// Total number of admins/delegated admins
         /// </summary>
         [JsonProperty("AdminCount")]
         public long? AdminCount{ get; set; }

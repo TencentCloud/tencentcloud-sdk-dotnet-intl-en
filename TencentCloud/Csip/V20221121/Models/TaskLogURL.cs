@@ -25,29 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Temp download URL for the report
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Temporary Link for Report Download
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
-        /// Task report ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Report ID
         /// </summary>
         [JsonProperty("LogId")]
         public string LogId{ get; set; }
 
         /// <summary>
-        /// Task report name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Report Name
         /// </summary>
         [JsonProperty("TaskLogName")]
         public string TaskLogName{ get; set; }
 
         /// <summary>
         /// APP ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

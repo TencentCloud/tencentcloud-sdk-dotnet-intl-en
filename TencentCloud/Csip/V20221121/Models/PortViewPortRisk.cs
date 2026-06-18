@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Affected assets
+        /// Unprocessed quantity.
         /// </summary>
         [JsonProperty("NoHandleCount")]
         public long? NoHandleCount{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Suggestion{ get; set; }
 
         /// <summary>
-        /// Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+        /// Number of Affected Assets
         /// </summary>
         [JsonProperty("AffectAssetCount")]
         public string AffectAssetCount{ get; set; }
 
         /// <summary>
-        /// Unique ID of the asset
+        /// ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Asset sub-category
+        /// Source recognition
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
@@ -103,15 +103,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `uin`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

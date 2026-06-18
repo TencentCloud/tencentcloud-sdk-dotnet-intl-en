@@ -25,85 +25,73 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Task ID Id
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task ID
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task name.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Task status. `1`: Pending start; `2`: Scanning; `3`: Failed; `4`: Completed
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Status Code: 1-Awaiting Start, 2-Scanning, 3-Scan Error, 4-Scan Completed.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
         /// Task progress
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Displayed time point
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Completion Time
         /// </summary>
         [JsonProperty("TaskTime")]
         public string TaskTime{ get; set; }
 
         /// <summary>
-        /// Report ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// report ID
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// Report name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// report name
         /// </summary>
         [JsonProperty("ReportName")]
         public string ReportName{ get; set; }
 
         /// <summary>
-        /// Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Scanning Schedule. 0-Periodic Task; 1-Scan Now; 2-Scheduled Scan; 3-Custom.
         /// </summary>
         [JsonProperty("ScanPlan")]
         public long? ScanPlan{ get; set; }
 
         /// <summary>
-        /// Number of associated assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Associated Assets
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
-        /// User AppId
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// APP ID
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User UIN
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Host Account ID
         /// </summary>
         [JsonProperty("UIN")]
         public string UIN{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User name
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

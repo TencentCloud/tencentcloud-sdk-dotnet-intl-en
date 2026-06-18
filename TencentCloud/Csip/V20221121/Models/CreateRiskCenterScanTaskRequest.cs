@@ -49,6 +49,12 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ScanPlanType{ get; set; }
 
         /// <summary>
+        /// Group Account Member ID
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
         /// List of assets to scan
         /// </summary>
         [JsonProperty("Assets")]
@@ -67,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
-        /// Request source. Values: `vss` (Vulnerability Scan Service), `csip` (Cloud Security Center). It defaults to `vss`.
+        /// Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
         /// </summary>
         [JsonProperty("ScanFrom")]
         public string ScanFrom{ get; set; }
@@ -90,6 +96,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("Tags")]
         public AssetTag Tags{ get; set; }
 
+        /// <summary>
+        /// Task completed callback webhook url
+        /// </summary>
+        [JsonProperty("FinishWebHook")]
+        public string FinishWebHook{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ScanAssetType", this.ScanAssetType);
             this.SetParamArraySimple(map, prefix + "ScanItem.", this.ScanItem);
             this.SetParamSimple(map, prefix + "ScanPlanType", this.ScanPlanType);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamArrayObj(map, prefix + "Assets.", this.Assets);
             this.SetParamSimple(map, prefix + "ScanPlanContent", this.ScanPlanContent);
             this.SetParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
@@ -107,6 +120,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
             this.SetParamSimple(map, prefix + "TaskMode", this.TaskMode);
             this.SetParamObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "FinishWebHook", this.FinishWebHook);
         }
     }
 }

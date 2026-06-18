@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// List of rules for blocking brute force cracking
+        /// <p>Rules for blocking brute-force attacks</p>
         /// </summary>
         [JsonProperty("Rules")]
         public BruteAttackRuleList[] Rules{ get; set; }

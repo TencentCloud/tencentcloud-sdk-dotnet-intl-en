@@ -25,37 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// (Abandoned) Block switch status: 0 -- Off 1 -- Advanced blocking 2 -- Basic block (blocklist IPs in the intelligence database)
+        /// <p>(Deprecated) Blocking switch status: 0 -- Off; 1 -- Advanced blocking; 2 -- Basic blocking (blocks only blacklisted IPs in the intelligence database)</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Whether to display the pop-up prompt. False: no; true: yes.
+        /// <p>Whether to show pop-up prompts. false: disabled; true: enabled</p>
         /// </summary>
         [JsonProperty("ShowTips")]
         public bool? ShowTips{ get; set; }
 
         /// <summary>
-        /// Whether to enable intelligent over-allowing mode
+        /// <p>Whether to enable intelligent allowlisting mode</p>
         /// </summary>
         [JsonProperty("OpenSmartMode")]
         public bool? OpenSmartMode{ get; set; }
 
         /// <summary>
-        /// Whether intelligence IP blocking is enabled
+        /// <p>Whether to enable threat-intelligence IP blocking</p>
         /// </summary>
         [JsonProperty("BanBlackIp")]
         public bool? BanBlackIp{ get; set; }
 
         /// <summary>
-        /// Whether vulnerability IP blocking is enabled
+        /// <p>Whether to enable vulnerability-related IP blocking</p>
         /// </summary>
         [JsonProperty("BanVulIp")]
         public bool? BanVulIp{ get; set; }
 
         /// <summary>
-        /// Whether to enable rule blocking
+        /// <p>Whether to enable rule blocking</p>
         /// </summary>
         [JsonProperty("BanByRule")]
         public bool? BanByRule{ get; set; }

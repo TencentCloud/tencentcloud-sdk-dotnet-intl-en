@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Clean-up rule time, 0 for OFF, in days, up to 30 days
+        /// <p>Cleanup rule retention period. 0: Disabled. Unit: day. Maximum: 30 days</p>
         /// </summary>
         [JsonProperty("ClearRule")]
         public ulong? ClearRule{ get; set; }

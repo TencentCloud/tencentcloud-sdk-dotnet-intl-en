@@ -25,37 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 0 - Disable Network Attack Detection; 1 - Enable Network Attack Detection.
+        /// <p>0: Disable network attack detection; 1: Enable network attack detection</p>
         /// </summary>
         [JsonProperty("NetAttackEnable")]
         public ulong? NetAttackEnable{ get; set; }
 
         /// <summary>
-        /// 0: New warning events pending processing by default, 1: New warning events processed by default, 3: New warning events ignored by default.
+        /// <p>0: Newly added alert events are pending by default; 1: newly added alert events are processed by default; 3: newly added alert events are ignored by default</p>
         /// </summary>
         [JsonProperty("NetAttackAlarmStatus")]
         public ulong? NetAttackAlarmStatus{ get; set; }
 
         /// <summary>
-        /// 1 - All Premium Edition Hosts, 0 - Hosts in InstanceIds List
+        /// <p>1 - All Ultimate Edition hosts; 0 - hosts in InstanceIds list</p>
         /// </summary>
         [JsonProperty("Scope")]
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// Specified hosts
+        /// <p>Selected hosts</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Custom Hosts to Exclude
+        /// <p>Custom excluded hosts</p>
         /// </summary>
         [JsonProperty("ExcludeInstanceIds")]
         public string[] ExcludeInstanceIds{ get; set; }
 
         /// <summary>
-        /// New assets automatically include: 0 - Do not include, 1 - include.
+        /// <p>Automatically include newly added assets. 0: No; 1: Yes</p>
         /// </summary>
         [JsonProperty("AutoInclude")]
         public ulong? AutoInclude{ get; set; }

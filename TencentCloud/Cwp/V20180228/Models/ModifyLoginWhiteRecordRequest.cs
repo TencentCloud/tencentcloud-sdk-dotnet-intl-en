@@ -25,55 +25,55 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Allowlisted users (Multiple users are separated by commas.)
+        /// <p>Allowlisted users (multiple users separated by commas)</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Allowlisted dimension information recorded after the update
+        /// <p>Allowlisted dimension information recorded after the update</p>
         /// </summary>
         [JsonProperty("SrcIp")]
         public string SrcIp{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// <p>Start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// <p>End time.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// <p>Remark</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether it applies to all servers: 0: no; 1: yes
+        /// <p>Whether it applies to all servers: 0 - no; 1 - yes</p>
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
-        /// Allowlist ID
+        /// <p>Allowlist ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Server list
+        /// <p>Server list</p>
         /// </summary>
         [JsonProperty("Hosts")]
         public HostInfo[] Hosts{ get; set; }
 
         /// <summary>
-        /// Region list
+        /// <p>Region list</p>
         /// </summary>
         [JsonProperty("Places")]
         public Place[] Places{ get; set; }

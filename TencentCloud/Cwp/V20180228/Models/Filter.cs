@@ -25,19 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Name of filter key
+        /// <p>Name of filter key.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// One or more filter values
+        /// <p>One or more filter values.</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Fuzzy search
+        /// <p>Fuzzy search</p>
         /// </summary>
         [JsonProperty("ExactMatch")]
         public bool? ExactMatch{ get; set; }

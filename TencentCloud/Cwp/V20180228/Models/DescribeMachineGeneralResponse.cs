@@ -25,126 +25,126 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Total number of assets
+        /// <p>Total number of assets</p>
         /// </summary>
         [JsonProperty("MachineCnt")]
         public ulong? MachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of Tencent Cloud machines
+        /// <p>Number of Tencent Cloud machines</p>
         /// </summary>
         [JsonProperty("TencentCloudMachineCnt")]
         [System.Obsolete]
         public ulong? TencentCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of Alibaba Cloud machines
+        /// <p>Number of Alibaba Cloud machines</p>
         /// </summary>
         [JsonProperty("AliCloudMachineCnt")]
         [System.Obsolete]
         public ulong? AliCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of Baidu Cloud machines
+        /// <p>Number of Baidu Cloud machines</p>
         /// </summary>
         [JsonProperty("BaiduCloudMachineCnt")]
         [System.Obsolete]
         public ulong? BaiduCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of IDC machines
+        /// <p>Number of IDC machines</p>
         /// </summary>
         [JsonProperty("IDCMachineCnt")]
         [System.Obsolete]
         public ulong? IDCMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of machines from other cloud service vendors
+        /// <p>Number of machines from other cloud service vendors</p>
         /// </summary>
         [JsonProperty("OtherCloudMachineCnt")]
         [System.Obsolete]
         public ulong? OtherCloudMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of protected machines
+        /// <p>Number of protected machines</p>
         /// </summary>
         [JsonProperty("ProtectMachineCnt")]
         public ulong? ProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of protected Basic Edition machines
+        /// <p>Number of protected Basic Edition machines</p>
         /// </summary>
         [JsonProperty("BaseMachineCnt")]
         public ulong? BaseMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of protected Pro Edition machines
+        /// <p>Number of protected Pro Edition machines</p>
         /// </summary>
         [JsonProperty("SpecialtyMachineCnt")]
         public ulong? SpecialtyMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of protected Ultimate Edition machines
+        /// <p>Number of protected Ultimate Edition machines</p>
         /// </summary>
         [JsonProperty("FlagshipMachineCnt")]
         public ulong? FlagshipMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of risky machines
+        /// <p>Number of risky machines</p>
         /// </summary>
         [JsonProperty("RiskMachineCnt")]
         public ulong? RiskMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of new risky machines compared with that yesterday
+        /// <p>Change in the number of risky machines compared with yesterday</p>
         /// </summary>
         [JsonProperty("CompareYesterdayRiskMachineCnt")]
         public long? CompareYesterdayRiskMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of new unprotected machines compared with that yesterday
+        /// <p>Change in the number of unprotected machines compared with yesterday</p>
         /// </summary>
         [JsonProperty("CompareYesterdayNotProtectMachineCnt")]
         public long? CompareYesterdayNotProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of new machines about to expire compared with that yesterday
+        /// <p>Change in the number of machines expiring soon compared with yesterday</p>
         /// </summary>
         [JsonProperty("CompareYesterdayDeadlineMachineCnt")]
         public long? CompareYesterdayDeadlineMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of machines about to expire
+        /// <p>Number of machines about to expire</p>
         /// </summary>
         [JsonProperty("DeadlineMachineCnt")]
         public ulong? DeadlineMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of unprotected machines
+        /// <p>Number of unprotected machines</p>
         /// </summary>
         [JsonProperty("NotProtectMachineCnt")]
         public ulong? NotProtectMachineCnt{ get; set; }
 
         /// <summary>
-        /// Number of protected Lighthouse machines (Lighthouse machines)
+        /// <p>Number of protected Lighthouse machines</p>
         /// </summary>
         [JsonProperty("LHGeneralDiscountCnt")]
         public ulong? LHGeneralDiscountCnt{ get; set; }
 
         /// <summary>
-        /// Number of new hosts compared with that yesterday
+        /// <p>Change in the number of newly added hosts compared with yesterday</p>
         /// </summary>
         [JsonProperty("CompareYesterdayMachineCnt")]
         public long? CompareYesterdayMachineCnt{ get; set; }
 
         /// <summary>
-        /// Auto-cleanup Time, maximum 720 hours, minimum 0, 0 by default, 0=OFF
+        /// <p>Automatic cleanup time, maximum 720 hours, minimum 0, default 0, 0=disabled</p>
         /// </summary>
         [JsonProperty("MachineDestroyAfterOfflineHours")]
         public ulong? MachineDestroyAfterOfflineHours{ get; set; }
 
         /// <summary>
-        /// Machine type array
+        /// <p>Cloud server type array</p>
         /// </summary>
         [JsonProperty("CloudFrom")]
         public CloudFromCnt[] CloudFrom{ get; set; }

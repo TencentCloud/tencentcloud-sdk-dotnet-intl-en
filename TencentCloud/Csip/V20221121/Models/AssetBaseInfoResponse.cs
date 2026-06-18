@@ -32,196 +32,168 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// vpc-name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
         /// Asset name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Operating system
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Operating system.
         /// </summary>
         [JsonProperty("Os")]
         public string Os{ get; set; }
 
         /// <summary>
-        /// Public IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Private IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Private IP address
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// Asset type
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
         /// Asset ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Total number of accounts
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of accounts
         /// </summary>
         [JsonProperty("AccountNum")]
         public ulong? AccountNum{ get; set; }
 
         /// <summary>
-        /// Number of ports
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Ports
         /// </summary>
         [JsonProperty("PortNum")]
         public ulong? PortNum{ get; set; }
 
         /// <summary>
-        /// Number of processes
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Process quantity
         /// </summary>
         [JsonProperty("ProcessNum")]
         public ulong? ProcessNum{ get; set; }
 
         /// <summary>
-        /// Numbernumb of software applications
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Software Applications
         /// </summary>
         [JsonProperty("SoftApplicationNum")]
         public ulong? SoftApplicationNum{ get; set; }
 
         /// <summary>
-        /// Number of databases
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Database Count
         /// </summary>
         [JsonProperty("DatabaseNum")]
         public ulong? DatabaseNum{ get; set; }
 
         /// <summary>
-        /// Number of web applications
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Web Applications
         /// </summary>
         [JsonProperty("WebApplicationNum")]
         public ulong? WebApplicationNum{ get; set; }
 
         /// <summary>
         /// Number of services
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceNum")]
         public ulong? ServiceNum{ get; set; }
 
         /// <summary>
-        /// Number of web frameworks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Web Framework Count
         /// </summary>
         [JsonProperty("WebFrameworkNum")]
         public ulong? WebFrameworkNum{ get; set; }
 
         /// <summary>
-        /// Number of websites
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Website Count
         /// </summary>
         [JsonProperty("WebSiteNum")]
         public ulong? WebSiteNum{ get; set; }
 
         /// <summary>
-        /// Number of JAR packages
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Jar Package Count
         /// </summary>
         [JsonProperty("JarPackageNum")]
         public ulong? JarPackageNum{ get; set; }
 
         /// <summary>
-        /// Number of enabled services
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Started Service Count
         /// </summary>
         [JsonProperty("StartServiceNum")]
         public ulong? StartServiceNum{ get; set; }
 
         /// <summary>
-        /// Number of scheduled tasks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Scheduled Tasks
         /// </summary>
         [JsonProperty("ScheduledTaskNum")]
         public ulong? ScheduledTaskNum{ get; set; }
 
         /// <summary>
-        /// Number of environment variables
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Environment Variables
         /// </summary>
         [JsonProperty("EnvironmentVariableNum")]
         public ulong? EnvironmentVariableNum{ get; set; }
 
         /// <summary>
-        /// Number of kernel modules
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Kernel Modules
         /// </summary>
         [JsonProperty("KernelModuleNum")]
         public ulong? KernelModuleNum{ get; set; }
 
         /// <summary>
-        /// Number of system installation packages
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// System Installation Package Count
         /// </summary>
         [JsonProperty("SystemInstallationPackageNum")]
         public ulong? SystemInstallationPackageNum{ get; set; }
 
         /// <summary>
-        /// Remaining service validity in days
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// remaining protection duration
         /// </summary>
         [JsonProperty("SurplusProtectDay")]
         public ulong? SurplusProtectDay{ get; set; }
 
         /// <summary>
-        /// Whether the CWPP agent is installed. Values: `1` (installed) and `0` (not installed)
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Whether client is installed. 1 for Installed, 0 for Not Installed.
         /// </summary>
         [JsonProperty("CWPStatus")]
         public ulong? CWPStatus{ get; set; }
 
         /// <summary>
-        /// Tags
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
         /// <summary>
         /// Protection level
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProtectLevel")]
         public string ProtectLevel{ get; set; }
 
         /// <summary>
-        /// Usage of CWPP service in days
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// protection duration
         /// </summary>
         [JsonProperty("ProtectedDay")]
         public ulong? ProtectedDay{ get; set; }

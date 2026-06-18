@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Product type. 0:CWP; 1:CSC</p>
         /// </summary>
         [JsonProperty("ProductType")]
         public ulong? ProductType{ get; set; }

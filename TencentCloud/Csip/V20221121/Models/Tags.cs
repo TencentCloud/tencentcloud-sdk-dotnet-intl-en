@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// None
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Host tag key
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
-        /// None
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Host tag value
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

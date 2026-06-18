@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Allowlisted IDs (The maximum number is 100.)
+        /// <p>Allowlist ID (maximum 100)</p>
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Allowlist ID
+        /// <p>Allowlist ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Number of results to be returned. Maximum value: 1000.
+        /// <p>Number of items to return. Maximum value: 1000.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filtering criteria <li>IpOrAlias - String - required: no - host IP or alias for filtering</li>
+        /// <p>Filter criteria<li>IpOrAlias - String - Required: No - Host IP or alias filter</li></p>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

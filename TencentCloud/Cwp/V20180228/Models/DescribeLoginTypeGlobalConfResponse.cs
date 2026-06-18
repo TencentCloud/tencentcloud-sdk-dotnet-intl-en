@@ -25,49 +25,49 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Whether anti-uninstall is enabled <li>0 No</li> <li>1 Yes</li> <li>9 Not set, same as 0 means not enabled</li>
+        /// <p>Whether uninstall protection is enabled <li>0: No</li> <li>1: Yes</li> <li>9: Not set, equivalent to 0 (disabled)</li></p>
         /// </summary>
         [JsonProperty("Enable")]
         public ulong? Enable{ get; set; }
 
         /// <summary>
-        /// Scope <li>0 Selected host</li> <li>1 All hosts</li>
+        /// <p>Scope <li>0: Selected hosts</li> <li>1: All hosts</li></p>
         /// </summary>
         [JsonProperty("Scope")]
         public ulong? Scope{ get; set; }
 
         /// <summary>
-        /// Selected host configuration count
+        /// <p>Number of selected host configurations</p>
         /// </summary>
         [JsonProperty("IncludeHostCount")]
         public ulong? IncludeHostCount{ get; set; }
 
         /// <summary>
-        /// Deselect host configuration count
+        /// <p>Number of excluded host configurations</p>
         /// </summary>
         [JsonProperty("ExcludeHostCount")]
         public ulong? ExcludeHostCount{ get; set; }
 
         /// <summary>
-        /// Select quuid configuration list
+        /// <p>List of selected QUUID configurations</p>
         /// </summary>
         [JsonProperty("IncludeQuuid")]
         public string[] IncludeQuuid{ get; set; }
 
         /// <summary>
-        /// Exclude quuid configuration list
+        /// <p>List of excluded QUUID configurations</p>
         /// </summary>
         [JsonProperty("ExcludeQuuid")]
         public string[] ExcludeQuuid{ get; set; }
 
         /// <summary>
-        /// Number of Machines Enabled
+        /// <p>Number of enabled machines</p>
         /// </summary>
         [JsonProperty("EnableCount")]
         public ulong? EnableCount{ get; set; }
 
         /// <summary>
-        /// Number of inactive machines
+        /// <p>Number of disabled machines</p>
         /// </summary>
         [JsonProperty("DisableCount")]
         public ulong? DisableCount{ get; set; }

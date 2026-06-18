@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of results
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Total number.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// List of listeners
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Listener list
         /// </summary>
         [JsonProperty("Data")]
         public ClbListenerListInfo[] Data{ get; set; }

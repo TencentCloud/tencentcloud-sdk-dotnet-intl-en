@@ -25,22 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Instance ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filter condition name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Instance ID content.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filter condition value list
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Fuzzy matching.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Exact match: 1 - exact match; default - fuzzy match
         /// </summary>
         [JsonProperty("ExactMatch")]
         public string ExactMatch{ get; set; }

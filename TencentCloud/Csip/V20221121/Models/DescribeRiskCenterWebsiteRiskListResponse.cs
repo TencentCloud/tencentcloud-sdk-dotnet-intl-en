@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of content risks
+        /// Content Risk List
         /// </summary>
         [JsonProperty("Data")]
         public WebsiteRisk[] Data{ get; set; }

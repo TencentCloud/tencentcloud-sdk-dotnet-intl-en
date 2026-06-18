@@ -31,53 +31,58 @@ namespace TencentCloud.Csip.V20221121.Models
         public string StateCode{ get; set; }
 
         /// <summary>
-        ///  
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Vulnerability details
         /// </summary>
         [JsonProperty("DataBug")]
         public BugInfoDetail[] DataBug{ get; set; }
 
         /// <summary>
-        /// None
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Vulnerability impact assets details
         /// </summary>
         [JsonProperty("DataAsset")]
         public AssetInfoDetail[] DataAsset{ get; set; }
 
         /// <summary>
-        /// `true`: Support vulnerability scan; `false`: Do not support vulnerability scan
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// True supports scanning. False does not support scanning.
         /// </summary>
         [JsonProperty("VSSScan")]
         public bool? VSSScan{ get; set; }
 
         /// <summary>
-        /// `0`: Do not support; `1`: Support
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// 0-Not Supported; 1-Supported
         /// </summary>
         [JsonProperty("CWPScan")]
         public string CWPScan{ get; set; }
 
         /// <summary>
-        /// `1`: Support virtual patches; `0` or null: Do not support
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// 1 indicates virtual patches supported, 0 or null indicates not supported.
         /// </summary>
         [JsonProperty("CFWPatch")]
         public string CFWPatch{ get; set; }
 
         /// <summary>
-        /// `0`: Do not support; `1`: Support
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// 0-Not Supported; 1-Supported
         /// </summary>
         [JsonProperty("WafPatch")]
         public long? WafPatch{ get; set; }
 
         /// <summary>
-        /// `0`: Do not support; `1`: Support
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// 0-Not Supported; 1-Supported
         /// </summary>
         [JsonProperty("CWPFix")]
         public long? CWPFix{ get; set; }
+
+        /// <summary>
+        /// Product Support Status
+        /// </summary>
+        [JsonProperty("DataSupport")]
+        public ProductSupport[] DataSupport{ get; set; }
+
+        /// <summary>
+        /// cveId
+        /// </summary>
+        [JsonProperty("CveId")]
+        public string CveId{ get; set; }
 
 
         /// <summary>
@@ -93,6 +98,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CFWPatch", this.CFWPatch);
             this.SetParamSimple(map, prefix + "WafPatch", this.WafPatch);
             this.SetParamSimple(map, prefix + "CWPFix", this.CWPFix);
+            this.SetParamArrayObj(map, prefix + "DataSupport.", this.DataSupport);
+            this.SetParamSimple(map, prefix + "CveId", this.CveId);
         }
     }
 }

@@ -25,29 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of scan tasks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Log List
         /// </summary>
         [JsonProperty("Data")]
         public ScanTaskInfoList[] Data{ get; set; }
 
         /// <summary>
-        /// List of account UINs
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Host Account ID List
         /// </summary>
         [JsonProperty("UINList")]
         public string[] UINList{ get; set; }
 
         /// <summary>
-        /// List of task modes
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Health Checkup Mode Filter List
         /// </summary>
         [JsonProperty("TaskModeList")]
         public FilterDataObject[] TaskModeList{ get; set; }

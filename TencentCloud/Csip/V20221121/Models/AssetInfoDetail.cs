@@ -25,71 +25,61 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// AppID of the user
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User appid.
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
-        /// CVE number
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CVE id
         /// </summary>
         [JsonProperty("CVEId")]
         public string CVEId{ get; set; }
 
         /// <summary>
-        /// Whether the asset is scanned. Values: `0`: (default) Not scanned; `1`: Scanning; `2`: Scan completed; `3`: Error while scanning
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Scan Status. 0-Not Scanned by Default; 1-Scanning; 2-Scan Completed; 3-Scan Error.
         /// </summary>
         [JsonProperty("IsScan")]
         public long? IsScan{ get; set; }
 
         /// <summary>
-        /// Number of affected assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Affected Assets
         /// </summary>
         [JsonProperty("InfluenceAsset")]
         public long? InfluenceAsset{ get; set; }
 
         /// <summary>
-        /// Number of not fixed assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Number of Unfixed Assets
         /// </summary>
         [JsonProperty("NotRepairAsset")]
         public long? NotRepairAsset{ get; set; }
 
         /// <summary>
-        /// Number of not protected assets
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Unprotected Asset Count
         /// </summary>
         [JsonProperty("NotProtectAsset")]
         public long? NotProtectAsset{ get; set; }
 
         /// <summary>
-        /// Task ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task progress in terms of percentage
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Percentage
         /// </summary>
         [JsonProperty("TaskPercent")]
         public long? TaskPercent{ get; set; }
 
         /// <summary>
-        /// Task creation time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Time
         /// </summary>
         [JsonProperty("TaskTime")]
         public long? TaskTime{ get; set; }
 
         /// <summary>
-        /// Scan start time
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Scan time
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }

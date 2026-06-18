@@ -31,8 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ServiceTag{ get; set; }
 
         /// <summary>
-        /// Port
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
@@ -62,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -98,8 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Risk Details
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Risk details
         /// </summary>
         [JsonProperty("RiskDetails")]
         public string RiskDetails{ get; set; }
@@ -111,7 +109,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Status of the risk. `0`: Not handled, `1`: Handled; `2`: Ignored
+        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -129,60 +127,64 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `uin`
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User UIN
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Service snapshot
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Service Snapshot
         /// </summary>
         [JsonProperty("ServiceSnapshot")]
         public string ServiceSnapshot{ get; set; }
 
         /// <summary>
-        /// Service access URL.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Service Access URL
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Data entry key
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// List Index Value
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// List of risks
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Risk list
         /// </summary>
         [JsonProperty("RiskList")]
         public ServerRiskSuggestion[] RiskList{ get; set; }
 
         /// <summary>
-        /// List of fix suggestions 
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Recommendation List
         /// </summary>
         [JsonProperty("SuggestionList")]
         public ServerRiskSuggestion[] SuggestionList{ get; set; }
 
         /// <summary>
-        /// HTTP response code
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// HTTP Response Status Code
         /// </summary>
         [JsonProperty("StatusCode")]
         public string StatusCode{ get; set; }
+
+        /// <summary>
+        /// New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+        /// </summary>
+        [JsonProperty("NewLevel")]
+        public string NewLevel{ get; set; }
+
+        /// <summary>
+        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+        /// </summary>
+        [JsonProperty("XspmStatus")]
+        public ulong? XspmStatus{ get; set; }
 
 
         /// <summary>
@@ -215,6 +217,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "RiskList.", this.RiskList);
             this.SetParamArrayObj(map, prefix + "SuggestionList.", this.SuggestionList);
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "NewLevel", this.NewLevel);
+            this.SetParamSimple(map, prefix + "XspmStatus", this.XspmStatus);
         }
     }
 }

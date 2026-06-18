@@ -25,35 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Filtering criteria
-        /// Return entries that match both Keywords and TimeBetween when multiple filtering criteria are used
-        /// <li> Keywords: instance name, private IP address, public IP address</li>
-        /// <li> TimeBetween: time interval</li>
+        /// <p>Filter conditions<br>When multiple conditions are used, Keywords and TimeBetween are intersected</p><li>Keywords: instance name, private IP, or public IP</li><li>TimeBetween: time range</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
 
         /// <summary>
-        /// Limit Entries, 10 by default, up to 100.
+        /// <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Ascending order, ASC, Descending order DESC, ASC by default.
+        /// <p>Sort order: ASC for ascending, DESC for descending. Default: ASC</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// AgentLastOfflineTime: last offline time of client
-        /// AutoClearTime: clearing time
+        /// <p>AgentLastOfflineTime: Time when the client was last offline<br>AutoClearTime: Cleanup time</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

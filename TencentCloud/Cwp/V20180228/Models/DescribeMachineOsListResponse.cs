@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Operating system list
+        /// <p>Operating system list</p>
         /// </summary>
         [JsonProperty("List")]
         public OsName[] List{ get; set; }

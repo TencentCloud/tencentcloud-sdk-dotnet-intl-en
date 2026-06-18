@@ -25,59 +25,43 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Type of the machine's zone
-        /// CVM: Cloud Virtual Machine
-        /// BM: BMECM: Edge Computing Machine
-        /// LH: Lighthouse
-        /// Other: Hybrid Cloud Zone
+        /// <p>Machine zone type<br>CVM: Cloud Virtual Machine<br>BM: Blackstone<br>ECM: Edge Computing Machine<br>LH: Lighthouse<br>Other: Hybrid cloud zone</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Machine region. For example, ap-guangzhou, ap-shanghai. For non-Tencent Cloud hosts, use ap-others.
+        /// <p>Machine region, for example, ap-guangzhou or ap-shanghai. For non-Tencent Cloud hosts, use ap-others.</p>
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }
 
         /// <summary>
-        /// Number of returns. It is 10 by default, and the maximum value is 100.
+        /// <p>Number of returned results. The default number is 10, and the maximum value is 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Filter criteria
-        /// <li>Ips - String - Required: No - Query by ip</li>
-        /// <li>Names - String - required: no - query by instance name</li>
-        /// <li>InstanceIds - String - Required: No - Query by instance id</li>
-        /// <li>Version - String required: no - current protection version ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions)</li>
-        /// <li>Risk - String - required: no - risky host (yes)</li>
-        /// <li>Os - String - required: no - operating system (DescribeMachineOsList API value)</li>
-        /// Each filtering criterion supports only one value; queries of multiple values with OR relationship are not supported.</li>
-        /// <li>Quuid - String - Required: no - CVM instance UUID. Maximum value: 100.</li>
-        /// <li>AddedOnTheFifteen - String required: no - whether to query only hosts added within the last 15 days (1: yes) </li>
-        /// <li> TagId - String required: no - query the list of hosts associated with the specified tag </li>
-        /// <li>AgentStatus - String - required: no - ALL total; ONLINE under protection; OFFLINE offline; UNINSTALLED not installed</li>
-        /// <li>MachineStatus - String required: no - ALL all; RUNNING running; STOPPED is shut down; EXPIRED to be recycled</li>
+        /// <p>Filter criteria.</p><li>Ips - String - Required: No - Query by IP</li><li>Names - String - Required: No - Query by instance name</li><li>InstanceIds - String - Required: No - Query by instance id</li><li>Version - String - Required: No - Current protection edition (PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Version | Flagship: Ultimate Edition | ProtectedMachines: Pro Edition + Ultimate Edition)</li><li>Risk - String - Required: No - Risk host (yes)</li><li>Os - String - Required: No - Operating system (DescribeMachineOsList API value). Each filter criterion only supports one value and does not support multiple values or relationship query.</li><li>Quuid - String - Required: No - Cloud server UUID. Maximum 100 entries.</li><li>AddedOnTheFifteen - String - Required: No - Query only hosts added within the last 15 days (1: yes)</li><li>TagId - String - Required: No - Query host list associated with the specified tag</li><li>AgentStatus - String - Required: No - ALL: All; ONLINE: Under protection; OFFLINE: Offline; UNINSTALLED: Not installed</li><li>MachineStatus - String - Required: No - ALL: All; RUNNING: Running; STOPPED: Shut down; EXPIRED: Pending recycling</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// ID List of Businesses to which machines belong
+        /// <p>List of business IDs to which the machines belong</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public ulong?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>APPID of the machine</p>
         /// </summary>
         [JsonProperty("MachineAppId")]
         public ulong? MachineAppId{ get; set; }

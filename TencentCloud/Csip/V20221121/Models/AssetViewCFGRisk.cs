@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level
+        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// u200c-
+        /// relevant standards
         /// </summary>
         [JsonProperty("CFGSTD")]
         public string CFGSTD{ get; set; }
@@ -133,18 +133,22 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// User name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// User Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
+
+        /// <summary>
+        /// When the asset type is LBL, show this field to locate the specific LB.
+        /// </summary>
+        [JsonProperty("ClbId")]
+        public string ClbId{ get; set; }
 
 
         /// <summary>
@@ -172,6 +176,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "ClbId", this.ClbId);
         }
     }
 }

@@ -25,7 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// u200c-
+        /// Group Account Member ID
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// Filter parameters.
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }
@@ -36,6 +42,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
         }
     }

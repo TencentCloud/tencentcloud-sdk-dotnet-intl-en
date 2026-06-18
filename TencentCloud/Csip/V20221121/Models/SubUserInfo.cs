@@ -25,112 +25,118 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Primary key ID, which has no business meaning and serves solely as a unique identifier
+        /// <p>Primary key ID, with no business significance, only serves as a unique key.</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// sub-account Appid
+        /// <p>Sub-account Appid</p>
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
 
         /// <summary>
-        /// sub-account UIn
+        /// <p>Sub-account UIn</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Sub-account name
+        /// <p>Sub-account name</p>
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// master account Appid
+        /// <p>Root Account Appid</p>
         /// </summary>
         [JsonProperty("OwnerAppID")]
         public string OwnerAppID{ get; set; }
 
         /// <summary>
-        /// master account Uin
+        /// <p>Root account Uin</p>
         /// </summary>
         [JsonProperty("OwnerUin")]
         public string OwnerUin{ get; set; }
 
         /// <summary>
-        /// master account name
+        /// <p>Root account name</p>
         /// </summary>
         [JsonProperty("OwnerNickName")]
         public string OwnerNickName{ get; set; }
 
         /// <summary>
-        /// master account's memberId information
+        /// <p>Member ID information belonging to main account</p>
         /// </summary>
         [JsonProperty("OwnerMemberID")]
         public string OwnerMemberID{ get; set; }
 
         /// <summary>
-        /// Account type: 0 for Tencent Cloud account, 1 for AWS account
+        /// <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// Accessible services count
+        /// <p>Number of accessible services</p>
         /// </summary>
         [JsonProperty("ServiceCount")]
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// Accessible API count
+        /// <p>Number of accessible APIs</p>
         /// </summary>
         [JsonProperty("InterfaceCount")]
         public long? InterfaceCount{ get; set; }
 
         /// <summary>
-        /// Accessible resources count
+        /// <p>Number of accessible resources</p>
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
 
         /// <summary>
-        /// Access/Behavior Logs Count
+        /// <p>Number of access/behavior logs</p>
         /// </summary>
         [JsonProperty("LogCount")]
         public long? LogCount{ get; set; }
 
         /// <summary>
-        /// Permissions configuration risk
+        /// <p>Permission configuration risk</p>
         /// </summary>
         [JsonProperty("ConfigRiskCount")]
         public long? ConfigRiskCount{ get; set; }
 
         /// <summary>
-        /// Dangerous behavior alarm
+        /// <p>Dangerous behavior alarm</p>
         /// </summary>
         [JsonProperty("ActionRiskCount")]
         public long? ActionRiskCount{ get; set; }
 
         /// <summary>
-        /// whether to enable CloudAudit logs
+        /// <p>Whether to access operation audit log</p>
         /// </summary>
         [JsonProperty("IsAccessCloudAudit")]
         public bool? IsAccessCloudAudit{ get; set; }
 
         /// <summary>
-        /// whether risk configuration security assessment
+        /// <p>Security check for configuration risk required or not</p>
         /// </summary>
         [JsonProperty("IsAccessCheck")]
         public bool? IsAccessCheck{ get; set; }
 
         /// <summary>
-        /// whether to configure user behavior management policies
+        /// <p>Whether configure user behavior management policy</p>
         /// </summary>
         [JsonProperty("IsAccessUeba")]
         public bool? IsAccessUeba{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time (Unix timestamp).</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "IsAccessCloudAudit", this.IsAccessCloudAudit);
             this.SetParamSimple(map, prefix + "IsAccessCheck", this.IsAccessCheck);
             this.SetParamSimple(map, prefix + "IsAccessUeba", this.IsAccessUeba);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of scan reports
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Task Log List
         /// </summary>
         [JsonProperty("Data")]
         public ScanTaskInfo[] Data{ get; set; }

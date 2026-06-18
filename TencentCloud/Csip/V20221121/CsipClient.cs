@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1336";
 
         /// <summary>
         /// Client constructor.
@@ -138,6 +138,69 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Create an IaC detection integration Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateIaCAccessTokenResponse"/></returns>
+        public Task<CreateIaCAccessTokenResponse> CreateIaCAccessToken(CreateIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateIaCAccessTokenResponse>(req, "CreateIaCAccessToken");
+        }
+
+        /// <summary>
+        /// Create an IaC detection integration Token
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="CreateIaCAccessTokenResponse"/></returns>
+        public CreateIaCAccessTokenResponse CreateIaCAccessTokenSync(CreateIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<CreateIaCAccessTokenResponse>(req, "CreateIaCAccessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an IaC detection file export task
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileExportJobRequest"/></param>
+        /// <returns><see cref="CreateIaCFileExportJobResponse"/></returns>
+        public Task<CreateIaCFileExportJobResponse> CreateIaCFileExportJob(CreateIaCFileExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileExportJobResponse>(req, "CreateIaCFileExportJob");
+        }
+
+        /// <summary>
+        /// Create an IaC detection file export task
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileExportJobRequest"/></param>
+        /// <returns><see cref="CreateIaCFileExportJobResponse"/></returns>
+        public CreateIaCFileExportJobResponse CreateIaCFileExportJobSync(CreateIaCFileExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileExportJobResponse>(req, "CreateIaCFileExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an IaC detection file rescan task
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileReScanTaskRequest"/></param>
+        /// <returns><see cref="CreateIaCFileReScanTaskResponse"/></returns>
+        public Task<CreateIaCFileReScanTaskResponse> CreateIaCFileReScanTask(CreateIaCFileReScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileReScanTaskResponse>(req, "CreateIaCFileReScanTask");
+        }
+
+        /// <summary>
+        /// Create an IaC detection file rescan task
+        /// </summary>
+        /// <param name="req"><see cref="CreateIaCFileReScanTaskRequest"/></param>
+        /// <returns><see cref="CreateIaCFileReScanTaskResponse"/></returns>
+        public CreateIaCFileReScanTaskResponse CreateIaCFileReScanTaskSync(CreateIaCFileReScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateIaCFileReScanTaskResponse>(req, "CreateIaCFileReScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a risk scan task. 
         /// </summary>
         /// <param name="req"><see cref="CreateRiskCenterScanTaskRequest"/></param>
@@ -155,6 +218,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTaskSync(CreateRiskCenterScanTaskRequest req)
         {
             return InternalRequestAsync<CreateRiskCenterScanTaskResponse>(req, "CreateRiskCenterScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Upload the Skill ZIP file to trigger asynchronous security detection. After a successful upload, use the returned ContentHash and EngineVersion to poll the DescribeSkillScanResult API to obtain the result. The upload API is idempotent, and uploading the same file with an identical hash will not create a repetition task. The detection result is reserved for 90 days. If overdue, reupload the file for detection.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillScanRequest"/></param>
+        /// <returns><see cref="CreateSkillScanResponse"/></returns>
+        public Task<CreateSkillScanResponse> CreateSkillScan(CreateSkillScanRequest req)
+        {
+            return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan");
+        }
+
+        /// <summary>
+        /// Upload the Skill ZIP file to trigger asynchronous security detection. After a successful upload, use the returned ContentHash and EngineVersion to poll the DescribeSkillScanResult API to obtain the result. The upload API is idempotent, and uploading the same file with an identical hash will not create a repetition task. The detection result is reserved for 90 days. If overdue, reupload the file for detection.
+        /// </summary>
+        /// <param name="req"><see cref="CreateSkillScanRequest"/></param>
+        /// <returns><see cref="CreateSkillScanResponse"/></returns>
+        public CreateSkillScanResponse CreateSkillScanSync(CreateSkillScanRequest req)
+        {
+            return InternalRequestAsync<CreateSkillScanResponse>(req, "CreateSkillScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -180,6 +264,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Delete an IaC detection integration Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="DeleteIaCAccessTokenResponse"/></returns>
+        public Task<DeleteIaCAccessTokenResponse> DeleteIaCAccessToken(DeleteIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCAccessTokenResponse>(req, "DeleteIaCAccessToken");
+        }
+
+        /// <summary>
+        /// Delete an IaC detection integration Token
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCAccessTokenRequest"/></param>
+        /// <returns><see cref="DeleteIaCAccessTokenResponse"/></returns>
+        public DeleteIaCAccessTokenResponse DeleteIaCAccessTokenSync(DeleteIaCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCAccessTokenResponse>(req, "DeleteIaCAccessToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete IaC detection file
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCFileRequest"/></param>
+        /// <returns><see cref="DeleteIaCFileResponse"/></returns>
+        public Task<DeleteIaCFileResponse> DeleteIaCFile(DeleteIaCFileRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCFileResponse>(req, "DeleteIaCFile");
+        }
+
+        /// <summary>
+        /// Delete IaC detection file
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIaCFileRequest"/></param>
+        /// <returns><see cref="DeleteIaCFileResponse"/></returns>
+        public DeleteIaCFileResponse DeleteIaCFileSync(DeleteIaCFileRequest req)
+        {
+            return InternalRequestAsync<DeleteIaCFileResponse>(req, "DeleteIaCFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a risk scan task.
         /// </summary>
         /// <param name="req"><see cref="DeleteRiskScanTaskRequest"/></param>
@@ -197,6 +323,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the AI agent asset list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentAssetListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentAssetListResponse"/></returns>
+        public Task<DescribeAIAgentAssetListResponse> DescribeAIAgentAssetList(DescribeAIAgentAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList");
+        }
+
+        /// <summary>
+        /// Retrieve the AI agent asset list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIAgentAssetListRequest"/></param>
+        /// <returns><see cref="DescribeAIAgentAssetListResponse"/></returns>
+        public DescribeAIAgentAssetListResponse DescribeAIAgentAssetListSync(DescribeAIAgentAssetListRequest req)
+        {
+            return InternalRequestAsync<DescribeAIAgentAssetListResponse>(req, "DescribeAIAgentAssetList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Access key alarm record AI analysis result details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAKAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeAKAnalysisDetailResponse"/></returns>
+        public Task<DescribeAKAnalysisDetailResponse> DescribeAKAnalysisDetail(DescribeAKAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAKAnalysisDetailResponse>(req, "DescribeAKAnalysisDetail");
+        }
+
+        /// <summary>
+        /// Access key alarm record AI analysis result details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAKAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeAKAnalysisDetailResponse"/></returns>
+        public DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetailSync(DescribeAKAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeAKAnalysisDetailResponse>(req, "DescribeAKAnalysisDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -369,6 +537,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to list all alarms in the alert center.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertListRequest"/></param>
+        /// <returns><see cref="DescribeAlertListResponse"/></returns>
+        public Task<DescribeAlertListResponse> DescribeAlertList(DescribeAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeAlertListResponse>(req, "DescribeAlertList");
+        }
+
+        /// <summary>
+        /// This API is used to list all alarms in the alert center.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlertListRequest"/></param>
+        /// <returns><see cref="DescribeAlertListResponse"/></returns>
+        public DescribeAlertListResponse DescribeAlertListSync(DescribeAlertListRequest req)
+        {
+            return InternalRequestAsync<DescribeAlertListResponse>(req, "DescribeAlertList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the process list of host nodes under the exposed path in cloud boundary analysis.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetProcessListRequest"/></param>
@@ -386,6 +575,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeAssetProcessListResponse DescribeAssetProcessListSync(DescribeAssetProcessListRequest req)
         {
             return InternalRequestAsync<DescribeAssetProcessListResponse>(req, "DescribeAssetProcessList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cloud resource configuration risk list from asset perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetRiskListResponse"/></returns>
+        public Task<DescribeAssetRiskListResponse> DescribeAssetRiskList(DescribeAssetRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetRiskListResponse>(req, "DescribeAssetRiskList");
+        }
+
+        /// <summary>
+        /// Cloud resource configuration risk list from asset perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetRiskListResponse"/></returns>
+        public DescribeAssetRiskListResponse DescribeAssetRiskListSync(DescribeAssetRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetRiskListResponse>(req, "DescribeAssetRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain Vulnerability Risk List from Asset's Perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetViewVulRiskListResponse"/></returns>
+        public Task<DescribeAssetViewVulRiskListResponse> DescribeAssetViewVulRiskList(DescribeAssetViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetViewVulRiskListResponse>(req, "DescribeAssetViewVulRiskList");
+        }
+
+        /// <summary>
+        /// Obtain Vulnerability Risk List from Asset's Perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetViewVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetViewVulRiskListResponse"/></returns>
+        public DescribeAssetViewVulRiskListResponse DescribeAssetViewVulRiskListSync(DescribeAssetViewVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetViewVulRiskListResponse>(req, "DescribeAssetViewVulRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -453,7 +684,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to query the list of CVM assets.
+        /// Retrieve the cvm list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCVMAssetsRequest"/></param>
         /// <returns><see cref="DescribeCVMAssetsResponse"/></returns>
@@ -463,7 +694,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to query the list of CVM assets.
+        /// Retrieve the cvm list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCVMAssetsRequest"/></param>
         /// <returns><see cref="DescribeCVMAssetsResponse"/></returns>
@@ -491,6 +722,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeCallRecordResponse DescribeCallRecordSync(DescribeCallRecordRequest req)
         {
             return InternalRequestAsync<DescribeCallRecordResponse>(req, "DescribeCallRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// List of cloud resource configuration risks from a check perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCheckViewRisksRequest"/></param>
+        /// <returns><see cref="DescribeCheckViewRisksResponse"/></returns>
+        public Task<DescribeCheckViewRisksResponse> DescribeCheckViewRisks(DescribeCheckViewRisksRequest req)
+        {
+            return InternalRequestAsync<DescribeCheckViewRisksResponse>(req, "DescribeCheckViewRisks");
+        }
+
+        /// <summary>
+        /// List of cloud resource configuration risks from a check perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCheckViewRisksRequest"/></param>
+        /// <returns><see cref="DescribeCheckViewRisksResponse"/></returns>
+        public DescribeCheckViewRisksResponse DescribeCheckViewRisksSync(DescribeCheckViewRisksRequest req)
+        {
+            return InternalRequestAsync<DescribeCheckViewRisksResponse>(req, "DescribeCheckViewRisks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -533,6 +785,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeClusterPodAssetsResponse DescribeClusterPodAssetsSync(DescribeClusterPodAssetsRequest req)
         {
             return InternalRequestAsync<DescribeClusterPodAssetsResponse>(req, "DescribeClusterPodAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Cloud Resource Configuration Risk Rule List Example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigCheckRulesRequest"/></param>
+        /// <returns><see cref="DescribeConfigCheckRulesResponse"/></returns>
+        public Task<DescribeConfigCheckRulesResponse> DescribeConfigCheckRules(DescribeConfigCheckRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules");
+        }
+
+        /// <summary>
+        /// Cloud Resource Configuration Risk Rule List Example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConfigCheckRulesRequest"/></param>
+        /// <returns><see cref="DescribeConfigCheckRulesResponse"/></returns>
+        public DescribeConfigCheckRulesResponse DescribeConfigCheckRulesSync(DescribeConfigCheckRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -705,6 +978,132 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Retrieve the IaC detection file list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileListRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileListResponse"/></returns>
+        public Task<DescribeIaCFileListResponse> DescribeIaCFileList(DescribeIaCFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileListResponse>(req, "DescribeIaCFileList");
+        }
+
+        /// <summary>
+        /// Retrieve the IaC detection file list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileListRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileListResponse"/></returns>
+        public DescribeIaCFileListResponse DescribeIaCFileListSync(DescribeIaCFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileListResponse>(req, "DescribeIaCFileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve IaC detection file overview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileOverviewRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileOverviewResponse"/></returns>
+        public Task<DescribeIaCFileOverviewResponse> DescribeIaCFileOverview(DescribeIaCFileOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileOverviewResponse>(req, "DescribeIaCFileOverview");
+        }
+
+        /// <summary>
+        /// Retrieve IaC detection file overview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileOverviewRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileOverviewResponse"/></returns>
+        public DescribeIaCFileOverviewResponse DescribeIaCFileOverviewSync(DescribeIaCFileOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileOverviewResponse>(req, "DescribeIaCFileOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the IaC detection file report
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileReportRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileReportResponse"/></returns>
+        public Task<DescribeIaCFileReportResponse> DescribeIaCFileReport(DescribeIaCFileReportRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileReportResponse>(req, "DescribeIaCFileReport");
+        }
+
+        /// <summary>
+        /// Retrieve the IaC detection file report
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCFileReportRequest"/></param>
+        /// <returns><see cref="DescribeIaCFileReportResponse"/></returns>
+        public DescribeIaCFileReportResponse DescribeIaCFileReportSync(DescribeIaCFileReportRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCFileReportResponse>(req, "DescribeIaCFileReport")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the IaC detection integration Token list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCTokenListRequest"/></param>
+        /// <returns><see cref="DescribeIaCTokenListResponse"/></returns>
+        public Task<DescribeIaCTokenListResponse> DescribeIaCTokenList(DescribeIaCTokenListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCTokenListResponse>(req, "DescribeIaCTokenList");
+        }
+
+        /// <summary>
+        /// Retrieve the IaC detection integration Token list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIaCTokenListRequest"/></param>
+        /// <returns><see cref="DescribeIaCTokenListResponse"/></returns>
+        public DescribeIaCTokenListResponse DescribeIaCTokenListSync(DescribeIaCTokenListRequest req)
+        {
+            return InternalRequestAsync<DescribeIaCTokenListResponse>(req, "DescribeIaCTokenList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query credential details and return credential metadata and masked credential data. The access kind returns an Access array (original Key, masked Value), and the sts kind returns an STS object (original System, masked SecretID and SecretKey).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialResponse"/></returns>
+        public Task<DescribeKeySandboxCredentialResponse> DescribeKeySandboxCredential(DescribeKeySandboxCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialResponse>(req, "DescribeKeySandboxCredential");
+        }
+
+        /// <summary>
+        /// Query credential details and return credential metadata and masked credential data. The access kind returns an Access array (original Key, masked Value), and the sts kind returns an STS object (original System, masked SecretID and SecretKey).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialResponse"/></returns>
+        public DescribeKeySandboxCredentialResponse DescribeKeySandboxCredentialSync(DescribeKeySandboxCredentialRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialResponse>(req, "DescribeKeySandboxCredential")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the voucher list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialListResponse"/></returns>
+        public Task<DescribeKeySandboxCredentialListResponse> DescribeKeySandboxCredentialList(DescribeKeySandboxCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialListResponse>(req, "DescribeKeySandboxCredentialList");
+        }
+
+        /// <summary>
+        /// Query the voucher list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeySandboxCredentialListRequest"/></param>
+        /// <returns><see cref="DescribeKeySandboxCredentialListResponse"/></returns>
+        public DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialListSync(DescribeKeySandboxCredentialListRequest req)
+        {
+            return InternalRequestAsync<DescribeKeySandboxCredentialListResponse>(req, "DescribeKeySandboxCredentialList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of TCP listeners.
         /// </summary>
         /// <param name="req"><see cref="DescribeListenerListRequest"/></param>
@@ -747,7 +1146,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Check group account details
+        /// Query Group Account Details
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
         /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
@@ -757,7 +1156,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Check group account details
+        /// Query Group Account Details
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationInfoRequest"/></param>
         /// <returns><see cref="DescribeOrganizationInfoResponse"/></returns>
@@ -768,7 +1167,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Query group account user list
+        /// Query Group Account User List
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
         /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
@@ -778,7 +1177,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Query group account user list
+        /// Query Group Account User List
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationUserInfoRequest"/></param>
         /// <returns><see cref="DescribeOrganizationUserInfoResponse"/></returns>
@@ -1041,7 +1440,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to get the list of content risks.
+        /// Obtain Content Risk List
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterWebsiteRiskListRequest"/></param>
         /// <returns><see cref="DescribeRiskCenterWebsiteRiskListResponse"/></returns>
@@ -1051,13 +1450,76 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to get the list of content risks.
+        /// Obtain Content Risk List
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCenterWebsiteRiskListRequest"/></param>
         /// <returns><see cref="DescribeRiskCenterWebsiteRiskListResponse"/></returns>
         public DescribeRiskCenterWebsiteRiskListResponse DescribeRiskCenterWebsiteRiskListSync(DescribeRiskCenterWebsiteRiskListRequest req)
         {
             return InternalRequestAsync<DescribeRiskCenterWebsiteRiskListResponse>(req, "DescribeRiskCenterWebsiteRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Risk detail list example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDetailListRequest"/></param>
+        /// <returns><see cref="DescribeRiskDetailListResponse"/></returns>
+        public Task<DescribeRiskDetailListResponse> DescribeRiskDetailList(DescribeRiskDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskDetailListResponse>(req, "DescribeRiskDetailList");
+        }
+
+        /// <summary>
+        /// Risk detail list example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskDetailListRequest"/></param>
+        /// <returns><see cref="DescribeRiskDetailListResponse"/></returns>
+        public DescribeRiskDetailListResponse DescribeRiskDetailListSync(DescribeRiskDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskDetailListResponse>(req, "DescribeRiskDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query risk rule details example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeRiskRuleDetailResponse"/></returns>
+        public Task<DescribeRiskRuleDetailResponse> DescribeRiskRuleDetail(DescribeRiskRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskRuleDetailResponse>(req, "DescribeRiskRuleDetail");
+        }
+
+        /// <summary>
+        /// Query risk rule details example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskRuleDetailRequest"/></param>
+        /// <returns><see cref="DescribeRiskRuleDetailResponse"/></returns>
+        public DescribeRiskRuleDetailResponse DescribeRiskRuleDetailSync(DescribeRiskRuleDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskRuleDetailResponse>(req, "DescribeRiskRuleDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Advanced configuration risk rule list illustrative example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskRulesRequest"/></param>
+        /// <returns><see cref="DescribeRiskRulesResponse"/></returns>
+        public Task<DescribeRiskRulesResponse> DescribeRiskRules(DescribeRiskRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskRulesResponse>(req, "DescribeRiskRules");
+        }
+
+        /// <summary>
+        /// Advanced configuration risk rule list illustrative example
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskRulesRequest"/></param>
+        /// <returns><see cref="DescribeRiskRulesResponse"/></returns>
+        public DescribeRiskRulesResponse DescribeRiskRulesSync(DescribeRiskRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskRulesResponse>(req, "DescribeRiskRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1146,6 +1608,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to query the billing information of Skill security detection, including order status, total quota, consumed quota, expiry time, and payment mode. It returns zero values (only TimeNow and BetaEndTime included) when no order exists. Trial orders can be claimed via ModifyTrialStatus(Module=9), and official orders are generated by the billing system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
+        public Task<DescribeSkillScanPayInfoResponse> DescribeSkillScanPayInfo(DescribeSkillScanPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanPayInfoResponse>(req, "DescribeSkillScanPayInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the billing information of Skill security detection, including order status, total quota, consumed quota, expiry time, and payment mode. It returns zero values (only TimeNow and BetaEndTime included) when no order exists. Trial orders can be claimed via ModifyTrialStatus(Module=9), and official orders are generated by the billing system.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanPayInfoResponse"/></returns>
+        public DescribeSkillScanPayInfoResponse DescribeSkillScanPayInfoSync(DescribeSkillScanPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanPayInfoResponse>(req, "DescribeSkillScanPayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the security detection result of Skill. After successfully calling CreateSkillScan, use the returned ContentHash + EngineVersion to poll this interface and obtain the result. For the first time, poll 5 minutes after successful upload. If detection is not completed, poll every 1 minute afterward. The response distinguishes four types of status via the Status field: detection complete (SUCCESS), in-progress detection (SCANNING), no record (NOT_FOUND), and detection failed (FAILED). Note: The detection result is retained for 90 days. It will return NOT_FOUND when overdue.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanResultResponse"/></returns>
+        public Task<DescribeSkillScanResultResponse> DescribeSkillScanResult(DescribeSkillScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanResultResponse>(req, "DescribeSkillScanResult");
+        }
+
+        /// <summary>
+        /// Query the security detection result of Skill. After successfully calling CreateSkillScan, use the returned ContentHash + EngineVersion to poll this interface and obtain the result. For the first time, poll 5 minutes after successful upload. If detection is not completed, poll every 1 minute afterward. The response distinguishes four types of status via the Status field: detection complete (SUCCESS), in-progress detection (SCANNING), no record (NOT_FOUND), and detection failed (FAILED). Note: The detection result is retained for 90 days. It will return NOT_FOUND when overdue.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillScanResultResponse"/></returns>
+        public DescribeSkillScanResultResponse DescribeSkillScanResultSync(DescribeSkillScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillScanResultResponse>(req, "DescribeSkillScanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain user access key asset list (source IP perspective).
         /// </summary>
         /// <param name="req"><see cref="DescribeSourceIPAssetRequest"/></param>
@@ -1167,7 +1671,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Query the group's sub-account list
+        /// Query the sub-account list of the group
         /// </summary>
         /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
         /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
@@ -1177,7 +1681,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// Query the group's sub-account list
+        /// Query the sub-account list of the group
         /// </summary>
         /// <param name="req"><see cref="DescribeSubUserInfoRequest"/></param>
         /// <returns><see cref="DescribeSubUserInfoResponse"/></returns>
@@ -1247,6 +1751,48 @@ namespace TencentCloud.Csip.V20221121
         public DescribeTaskLogURLResponse DescribeTaskLogURLSync(DescribeTaskLogURLRequest req)
         {
             return InternalRequestAsync<DescribeTaskLogURLResponse>(req, "DescribeTaskLogURL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query TOP attack information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopAttackInfoRequest"/></param>
+        /// <returns><see cref="DescribeTopAttackInfoResponse"/></returns>
+        public Task<DescribeTopAttackInfoResponse> DescribeTopAttackInfo(DescribeTopAttackInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTopAttackInfoResponse>(req, "DescribeTopAttackInfo");
+        }
+
+        /// <summary>
+        /// Query TOP attack information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopAttackInfoRequest"/></param>
+        /// <returns><see cref="DescribeTopAttackInfoResponse"/></returns>
+        public DescribeTopAttackInfoResponse DescribeTopAttackInfoSync(DescribeTopAttackInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeTopAttackInfoResponse>(req, "DescribeTopAttackInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the user behavior analysis policy list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaRuleRequest"/></param>
+        /// <returns><see cref="DescribeUebaRuleResponse"/></returns>
+        public Task<DescribeUebaRuleResponse> DescribeUebaRule(DescribeUebaRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaRuleResponse>(req, "DescribeUebaRule");
+        }
+
+        /// <summary>
+        /// Query the user behavior analysis policy list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUebaRuleRequest"/></param>
+        /// <returns><see cref="DescribeUebaRuleResponse"/></returns>
+        public DescribeUebaRuleResponse DescribeUebaRuleSync(DescribeUebaRuleRequest req)
+        {
+            return InternalRequestAsync<DescribeUebaRuleResponse>(req, "DescribeUebaRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1398,6 +1944,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to modify the storage cycle of the IaC detection integration Token.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIaCTokenPeriodRequest"/></param>
+        /// <returns><see cref="ModifyIaCTokenPeriodResponse"/></returns>
+        public Task<ModifyIaCTokenPeriodResponse> ModifyIaCTokenPeriod(ModifyIaCTokenPeriodRequest req)
+        {
+            return InternalRequestAsync<ModifyIaCTokenPeriodResponse>(req, "ModifyIaCTokenPeriod");
+        }
+
+        /// <summary>
+        /// This API is used to modify the storage cycle of the IaC detection integration Token.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyIaCTokenPeriodRequest"/></param>
+        /// <returns><see cref="ModifyIaCTokenPeriodResponse"/></returns>
+        public ModifyIaCTokenPeriodResponse ModifyIaCTokenPeriodSync(ModifyIaCTokenPeriodRequest req)
+        {
+            return InternalRequestAsync<ModifyIaCTokenPeriodResponse>(req, "ModifyIaCTokenPeriod")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Modify group account status
         /// </summary>
         /// <param name="req"><see cref="ModifyOrganizationAccountStatusRequest"/></param>
@@ -1461,6 +2028,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Refresh the custom policy switch
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUebaRuleSwitchRequest"/></param>
+        /// <returns><see cref="ModifyUebaRuleSwitchResponse"/></returns>
+        public Task<ModifyUebaRuleSwitchResponse> ModifyUebaRuleSwitch(ModifyUebaRuleSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyUebaRuleSwitchResponse>(req, "ModifyUebaRuleSwitch");
+        }
+
+        /// <summary>
+        /// Refresh the custom policy switch
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUebaRuleSwitchRequest"/></param>
+        /// <returns><see cref="ModifyUebaRuleSwitchResponse"/></returns>
+        public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitchSync(ModifyUebaRuleSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyUebaRuleSwitchResponse>(req, "ModifyUebaRuleSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to stop a scan task. 
         /// </summary>
         /// <param name="req"><see cref="StopRiskCenterTaskRequest"/></param>
@@ -1520,6 +2108,27 @@ namespace TencentCloud.Csip.V20221121
         public UpdateAccessKeyRemarkResponse UpdateAccessKeyRemarkSync(UpdateAccessKeyRemarkRequest req)
         {
             return InternalRequestAsync<UpdateAccessKeyRemarkResponse>(req, "UpdateAccessKeyRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch alarm status process API
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertStatusListRequest"/></param>
+        /// <returns><see cref="UpdateAlertStatusListResponse"/></returns>
+        public Task<UpdateAlertStatusListResponse> UpdateAlertStatusList(UpdateAlertStatusListRequest req)
+        {
+            return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList");
+        }
+
+        /// <summary>
+        /// Batch alarm status process API
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAlertStatusListRequest"/></param>
+        /// <returns><see cref="UpdateAlertStatusListResponse"/></returns>
+        public UpdateAlertStatusListResponse UpdateAlertStatusListSync(UpdateAlertStatusListRequest req)
+        {
+            return InternalRequestAsync<UpdateAlertStatusListResponse>(req, "UpdateAlertStatusList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

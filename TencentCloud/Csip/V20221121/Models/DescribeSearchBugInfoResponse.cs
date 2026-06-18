@@ -25,8 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Vulnerability and asset information
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Vulnerability information and asset information
         /// </summary>
         [JsonProperty("Data")]
         public DataSearchBug Data{ get; set; }

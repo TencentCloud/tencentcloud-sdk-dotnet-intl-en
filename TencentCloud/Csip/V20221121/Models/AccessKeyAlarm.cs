@@ -25,170 +25,166 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm name.
+        /// <p>Alarm name</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Alarm level.
-        /// 0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+        /// <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
-        /// Alarm record ID.
+        /// <p>Alarm record ID</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Alarm rule ID.
+        /// <p>Alarm rule ID</p>
         /// </summary>
         [JsonProperty("AlarmRuleID")]
         public long? AlarmRuleID{ get; set; }
 
         /// <summary>
-        /// Alarm type
-        /// Abnormal call.
-        /// Leak monitoring.
+        /// <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
         /// </summary>
         [JsonProperty("AlarmType")]
         public long? AlarmType{ get; set; }
 
         /// <summary>
-        /// Access key.
+        /// <p>Access key</p>
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Access key ID.
+        /// <p>Access Key ID</p>
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public ulong? AccessKeyID{ get; set; }
 
         /// <summary>
-        /// Access key remark.
+        /// <p>Access key remark</p>
         /// </summary>
         [JsonProperty("AccessKeyRemark")]
         public string AccessKeyRemark{ get; set; }
 
         /// <summary>
-        /// Last Alarm Time
+        /// <p>Last alarm time</p>
         /// </summary>
         [JsonProperty("LastAlarmTime")]
         public string LastAlarmTime{ get; set; }
 
         /// <summary>
-        /// Alarm status.
-        /// 0 - unprocessed 1 - processed 2 - ignored.
+        /// <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Aggregate date.
+        /// <p>Aggregate date</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// Alarm Tag.
+        /// <p>Alarm tag</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
-        /// Account associate Uin belonging to main account.
+        /// <p>Uin of the main account</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Nickname of the main account.
+        /// <p>Nickname of the main account</p>
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Sub-Account Uin belonging to.
+        /// <p>Sub-account Uin</p>
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// Sub-Account nickname.
+        /// <p>Sub-account nickname</p>
         /// </summary>
         [JsonProperty("SubNickname")]
         public string SubNickname{ get; set; }
 
         /// <summary>
-        /// Account type.
-        /// 0 root account AK 1 sub-account AK 2 temporary key.
+        /// <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// App ID
+        /// <p>App ID</p>
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Leakage evidence.
+        /// <p>Leakage evidence</p>
         /// </summary>
         [JsonProperty("LeakEvidence")]
         public string[] LeakEvidence{ get; set; }
 
         /// <summary>
-        /// Whether editing a trusted account is supported.
+        /// <p>Whether support editing trust account</p>
         /// </summary>
         [JsonProperty("IsSupportEditWhiteAccount")]
         public bool? IsSupportEditWhiteAccount{ get; set; }
 
         /// <summary>
-        /// Alarm evidence.
+        /// <p>Alert evidence</p>
         /// </summary>
         [JsonProperty("Evidence")]
         public string Evidence{ get; set; }
 
         /// <summary>
-        /// Alarm rule flag.
+        /// <p>Alarm rule flag</p>
         /// </summary>
         [JsonProperty("RuleKey")]
         public string RuleKey{ get; set; }
 
         /// <summary>
-        /// Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+        /// <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// Alarm AI analysis status.
-        /// -Analysis failed.
-        /// 0 not analyzed.
-        /// Under analysis.
-        /// 2 analysis successful, real Alarm.
-        /// 3 analysis successful, suspicious Alarm.
+        /// <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
         /// </summary>
         [JsonProperty("AIStatus")]
         public long? AIStatus{ get; set; }
 
         /// <summary>
-        /// First Alarm timestamp (in seconds).
+        /// <p>First alarm timestamp (in seconds)</p>
         /// </summary>
         [JsonProperty("FirstAlarmTimestamp")]
         public long? FirstAlarmTimestamp{ get; set; }
 
         /// <summary>
-        /// Last Alarm timestamp (in seconds).
+        /// <p>Last alarm timestamp (in seconds)</p>
         /// </summary>
         [JsonProperty("LastAlarmTimestamp")]
         public long? LastAlarmTimestamp{ get; set; }
+
+        /// <summary>
+        /// <p>AI analysis failure description. Empty string if not failed.</p>
+        /// </summary>
+        [JsonProperty("AIFailedReason")]
+        public string AIFailedReason{ get; set; }
 
 
         /// <summary>
@@ -222,6 +218,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "AIStatus", this.AIStatus);
             this.SetParamSimple(map, prefix + "FirstAlarmTimestamp", this.FirstAlarmTimestamp);
             this.SetParamSimple(map, prefix + "LastAlarmTimestamp", this.LastAlarmTimestamp);
+            this.SetParamSimple(map, prefix + "AIFailedReason", this.AIFailedReason);
         }
     }
 }

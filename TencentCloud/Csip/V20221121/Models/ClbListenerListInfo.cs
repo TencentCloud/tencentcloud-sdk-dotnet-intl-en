@@ -26,91 +26,78 @@ namespace TencentCloud.Csip.V20221121.Models
         
         /// <summary>
         /// Listener ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// The listener name.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// listener name
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
 
         /// <summary>
-        /// Load balancer ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CLB Id
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// CLB instance name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CLB name
         /// </summary>
         [JsonProperty("LoadBalancerName")]
         public string LoadBalancerName{ get; set; }
 
         /// <summary>
-        /// Network protocol
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// CLB instance IP
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Load balancing ip
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Port
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Port.
         /// </summary>
         [JsonProperty("VPort")]
         public long? VPort{ get; set; }
 
         /// <summary>
-        /// Availability zone
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// VPC ID
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// VPC id
         /// </summary>
         [JsonProperty("NumericalVpcId")]
         public long? NumericalVpcId{ get; set; }
 
         /// <summary>
-        /// CLB instance type
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CLB Type
         /// </summary>
         [JsonProperty("LoadBalancerType")]
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// Listener domain name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Listener Domain Name
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Load balancer domain name
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// CLB domain name
         /// </summary>
         [JsonProperty("LoadBalancerDomain")]
         public string LoadBalancerDomain{ get; set; }

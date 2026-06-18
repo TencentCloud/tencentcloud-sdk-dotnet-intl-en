@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Type of the query action. `1`: Query emergency vulnerabilities; `2`: Query all vulnerabilities; `3`: Query a specific vulnerability. When `Id=3`, `CVEId` is required. 
+        /// 1 when return emergency vulnerability, 2 when return emergency vulnerability list, 3 when collocation input CVEId field display vulnerability data
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

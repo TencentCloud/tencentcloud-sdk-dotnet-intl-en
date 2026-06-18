@@ -25,224 +25,217 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Host name.
+        /// <p>Host name.</p>
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Host System.
+        /// <p>Host operating system.</p>
         /// </summary>
         [JsonProperty("MachineOs")]
         public string MachineOs{ get; set; }
 
         /// <summary>
-        /// Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shutdown</li> <li>UNINSTALLED: No protection</li>	
+        /// <p>Host status. <li>OFFLINE: Offline</li> <li>ONLINE: Online</li> <li>SHUTDOWN: Shut down</li> <li>UNINSTALLED: Unprotected</li></p>
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
 
         /// <summary>
-        /// ONLINE Under protection; OFFLINE OFFLINE; UNINStALLED Not installed
+        /// <p>ONLINE: Protected; OFFLINE: Offline; UNINSTALLED: Not installed</p>
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// RUNNING; is shut down; to be recycled	
+        /// <p>RUNNING: Running; STOPED: Shut down; EXPIRED: Pending reclamation</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// CWP UUID. If the CWP client is offline for a long time, an empty character is returned.
+        /// <p>CWP Uuid. Returns an empty string if the client is offline long-term.</p>
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// CVM or BM Machine Unique UUID.
+        /// <p>Unique Uuid of a CVM or BM machine.</p>
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// Number of vulnerabilities
+        /// <p>Number of vulnerabilities.</p>
         /// </summary>
         [JsonProperty("VulNum")]
         public long? VulNum{ get; set; }
 
         /// <summary>
-        /// Host IP.
+        /// <p>Host IP.</p>
         /// </summary>
         [JsonProperty("MachineIp")]
         public string MachineIp{ get; set; }
 
         /// <summary>
-        /// Whether the edition is Pro Edition
-        /// <li>true: yes</li>
-        /// <li>false: no</li>
+        /// <p>Whether the host is Pro Edition.</p><li>true: Yes</li><li>false: No</li>
         /// </summary>
         [JsonProperty("IsProVersion")]
         public bool? IsProVersion{ get; set; }
 
         /// <summary>
-        /// Public IP address of a host
+        /// <p>Host public IP.</p>
         /// </summary>
         [JsonProperty("MachineWanIp")]
         public string MachineWanIp{ get; set; }
 
         /// <summary>
-        /// Host status
-        /// <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-        /// <li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
+        /// <p>Host status.</p><li>POSTPAY: Postpaid (pay-as-you-go)</li><li>PREPAY: Prepaid (monthly or yearly subscription)</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Number of Trojans
+        /// <p>Number of trojans.</p>
         /// </summary>
         [JsonProperty("MalwareNum")]
         public long? MalwareNum{ get; set; }
 
         /// <summary>
-        /// Tag information
+        /// <p>Tag information</p>
         /// </summary>
         [JsonProperty("Tag")]
         public MachineTag[] Tag{ get; set; }
 
         /// <summary>
-        /// Number of baseline risks
+        /// <p>Number of baseline risks.</p>
         /// </summary>
         [JsonProperty("BaselineNum")]
         public long? BaselineNum{ get; set; }
 
         /// <summary>
-        /// Number of network risks
+        /// <p>Number of network risks.</p>
         /// </summary>
         [JsonProperty("CyberAttackNum")]
         public long? CyberAttackNum{ get; set; }
 
         /// <summary>
-        /// Risk status
-        /// <li>SAFE: Safe</li>
-        /// <li>RISK: Risk</li>
-        /// <li>UNKNOWN: Unknown</li>
+        /// <p>Risk status.</p><li>SAFE: Safe</li><li>RISK: Risk</li><li>UNKNOWN: Unknown</li>
         /// </summary>
         [JsonProperty("SecurityStatus")]
         public string SecurityStatus{ get; set; }
 
         /// <summary>
-        /// Number of intrusion events
+        /// <p>Number of intrusion events</p>
         /// </summary>
         [JsonProperty("InvasionNum")]
         public long? InvasionNum{ get; set; }
 
         /// <summary>
-        /// Region information
+        /// <p>Region information</p>
         /// </summary>
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
-        /// Instance status: TERMINATED_PRO_VERSION - terminated
+        /// <p>Instance status. TERMINATED_PRO_VERSION: terminated.</p>
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
-        /// Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized
+        /// <p>Tamper-proof; authorization status: 1 - authorized; 0 - unauthorized</p>
         /// </summary>
         [JsonProperty("LicenseStatus")]
         public ulong? LicenseStatus{ get; set; }
 
         /// <summary>
-        /// Project ID
+        /// <p>Project ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Whether there is an available asset scanning API: 0 - no; 1 - yes
+        /// <p>Whether the asset scanning API is available. 0: No; 1: Yes</p>
         /// </summary>
         [JsonProperty("HasAssetScan")]
         public ulong? HasAssetScan{ get; set; }
 
         /// <summary>
-        /// Machine Zone Type. CVM - Cloud Virtual Machine; BM: Bare Metal; ECM: Edge Computing Machine; LH: Lightweight Application Server; Other: Hybrid Cloud Zone
+        /// <p>Machine zone type. CVM: Cloud Virtual Machine; BM: Blackstone; ECM: Edge Computing Machine; LH: Lighthouse; Other: Hybrid cloud zone</p>
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Kernel version
+        /// <p>Kernel version</p>
         /// </summary>
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// Protection version: BASIC_VERSION - Basic Edition; PRO_VERSION - Professional Edition; Flagship - Ultimate Edition; GENERAL_DISCOUNT - Lightweight Edition
+        /// <p>Protection edition: BASIC_VERSION: Basic Edition; PRO_VERSION: Pro Edition; Flagship: Ultimate Edition; GENERAL_DISCOUNT: Lighthouse Edition</p>
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
 
         /// <summary>
-        /// Cloud Tag Information
+        /// <p>Cloud tag information</p>
         /// </summary>
         [JsonProperty("CloudTags")]
         public Tags[] CloudTags{ get; set; }
 
         /// <summary>
-        /// Whether the host is added within 15 days. 0: Host not added within 15 days. 1: Host added within 15 days.
+        /// <p>Whether the host was added within the last 15 days. 0: No; 1: Yes</p>
         /// </summary>
         [JsonProperty("IsAddedOnTheFifteen")]
         public ulong? IsAddedOnTheFifteen{ get; set; }
 
         /// <summary>
-        /// Host IP List
+        /// <p>Host IP list</p>
         /// </summary>
         [JsonProperty("IpList")]
         public string IpList{ get; set; }
 
         /// <summary>
-        /// Network
+        /// <p>Network</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Additional information
+        /// <p>Additional information</p>
         /// </summary>
         [JsonProperty("MachineExtraInfo")]
         public MachineExtraInfo MachineExtraInfo{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// <p>Remarks</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Host security agent version
+        /// <p>CWP agent version</p>
         /// </summary>
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>APPID of the machine</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CSC paid edition</p>
         /// </summary>
         [JsonProperty("CSIPProtectType")]
         public string CSIPProtectType{ get; set; }

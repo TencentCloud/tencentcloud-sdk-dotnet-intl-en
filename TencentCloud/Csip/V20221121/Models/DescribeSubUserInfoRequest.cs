@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Member ID of the group account
+        /// Group Account Member ID
         /// </summary>
         [JsonProperty("MemberId")]
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Filter content
+        /// Filtered Content
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }

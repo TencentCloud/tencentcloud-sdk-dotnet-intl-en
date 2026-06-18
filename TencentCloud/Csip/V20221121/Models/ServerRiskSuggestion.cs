@@ -25,15 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk title
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Title.
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// Risk details
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Details.
         /// </summary>
         [JsonProperty("Body")]
         public string Body{ get; set; }

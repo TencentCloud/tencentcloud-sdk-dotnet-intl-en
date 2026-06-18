@@ -31,25 +31,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Limit Entries, 10 by default, up to 100
+        /// <p>The maximum number of entries. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset, which is 0 by default.
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting Method: [ASC: Ascending Order, DESC: Descending Order]
+        /// <p>Sort order: [ASC: ascending | DESC: descending]</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting column: [Id].
+        /// <p>Optional sorting column: [Id]</p>
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
