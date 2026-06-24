@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Billing mode, which can be monthly subscription or pay-as-you-go.
+        /// Billing mode, which can be yearly/monthly subscription or pay-as-you-go.
         /// </summary>
         [JsonProperty("PayModeName")]
         public string PayModeName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string RealTotalCost{ get; set; }
 
         /// <summary>
-        /// Cash credit: The amount paid from the user’s cash balance
+        /// Cash credit: The amount paid from the user's cash balance
         /// </summary>
         [JsonProperty("CashPayAmount")]
         public string CashPayAmount{ get; set; }
 
         /// <summary>
-        /// Free credit: The amount paid with the user’s free credit
+        /// Free credit: The amount paid with the user's free credit
         /// </summary>
         [JsonProperty("IncentivePayAmount")]
         public string IncentivePayAmount{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string VoucherPayAmount{ get; set; }
 
         /// <summary>
-        /// Commission credit: The amount paid with the user’s commission credit.
+        /// Commission credit: The amount paid with the user's commission credit.
         /// </summary>
         [JsonProperty("TransferPayAmount")]
         public string TransferPayAmount{ get; set; }

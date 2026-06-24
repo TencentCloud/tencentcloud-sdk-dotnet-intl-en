@@ -25,25 +25,31 @@ namespace TencentCloud.Facefusion.V20220927.Models
     {
         
         /// <summary>
-        /// 
+        /// Reserved field
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 
+        /// Label Names Matched by Content Moderation
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 
+        /// Confidence score of the detection label. A higher score means a greater likelihood of violations.
+        /// 0-70: Suggestion = PASS
+        /// 70-80: Suggestion = REVIEW
+        /// 80-100: Suggestion = BLOCK
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Moderation Conclusion for Detection Scenarios
+        /// PASS: Normal
+        /// REVIEW: Suspicious
+        /// BLOCK: Violation
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
