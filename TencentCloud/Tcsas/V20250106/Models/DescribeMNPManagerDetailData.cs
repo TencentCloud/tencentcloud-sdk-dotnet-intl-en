@@ -102,6 +102,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("I18nList")]
         public MNPDetailI18nVO[] I18nList{ get; set; }
 
+        /// <summary>
+        /// Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+        /// </summary>
+        [JsonProperty("TeamTypeId")]
+        public long? TeamTypeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
+            this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
         }
     }
 }

@@ -26,7 +26,7 @@ namespace TencentCloud.Billing.V20180709.Models
         
         /// <summary>
         /// Start time 
-        /// Example :2016-01-01 00:00:00
+        /// Example :2016-01-01 00:00:00.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -58,11 +58,11 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 2: paid 
         /// 3: shipment in progress
         /// 4: shipped
-        /// 5`: Shipment Failed
-        /// 6`: Refunded
-        /// 7`: Ticket closed
-        /// 8`: Order expired
-        /// 9`: Order invalid
+        /// 5: Shipment Failed
+        /// 6: Refunded
+        /// 7: Ticket closed
+        /// 8: Order expired
+        /// 9: Order invalid
         /// 10: product invalidated
         /// 11: third-party payment refused
         /// 12: payment in process

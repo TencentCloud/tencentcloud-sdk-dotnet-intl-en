@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0E2E4A0A-F402-371E-ABDD-F5704C69EAD3}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1334</VersionPrefix>
+    <VersionPrefix>3.0.1340</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20220105\Models\ClearEmbedTokenRequest.cs" />
     <Compile Include="V20220105\Models\ClearEmbedTokenResponse.cs" />
     <Compile Include="V20220105\Models\CorpUserListData.cs" />
+    <Compile Include="V20220105\Models\CreateCorpTagRequest.cs" />
+    <Compile Include="V20220105\Models\CreateCorpTagResponse.cs" />
     <Compile Include="V20220105\Models\CreateDataTableRequest.cs" />
     <Compile Include="V20220105\Models\CreateDataTableResponse.cs" />
     <Compile Include="V20220105\Models\CreateDatasourceCloudRequest.cs" />
@@ -68,6 +70,9 @@
     <Compile Include="V20220105\Models\CreatePermissionRanksResponse.cs" />
     <Compile Include="V20220105\Models\CreateProjectRequest.cs" />
     <Compile Include="V20220105\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20220105\Models\CreateTagTableRequest.cs" />
+    <Compile Include="V20220105\Models\CreateTagTableResponse.cs" />
+    <Compile Include="V20220105\Models\CreateTagTableVO.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\CreateUserRoleRequest.cs" />
@@ -100,6 +105,9 @@
     <Compile Include="V20220105\Models\DescribeUserRoleListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeUserRoleProjectListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeUserRoleProjectListResponse.cs" />
+    <Compile Include="V20220105\Models\EditCorpTagRequest.cs" />
+    <Compile Include="V20220105\Models\EditCorpTagResponse.cs" />
+    <Compile Include="V20220105\Models\EditTagVO.cs" />
     <Compile Include="V20220105\Models\EmbedTokenInfo.cs" />
     <Compile Include="V20220105\Models\EmptyValue.cs" />
     <Compile Include="V20220105\Models\EmptyValueConfig.cs" />
@@ -122,10 +130,15 @@
     <Compile Include="V20220105\Models\ModifyResourceUserGroupResourceResponse.cs" />
     <Compile Include="V20220105\Models\ModifyResourceUserRequest.cs" />
     <Compile Include="V20220105\Models\ModifyResourceUserResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyTagTableRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyTagTableResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyTagTableVO.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleProjectResponse.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleRequest.cs" />
     <Compile Include="V20220105\Models\ModifyUserRoleResponse.cs" />
+    <Compile Include="V20220105\Models\ModifyUserTagRequest.cs" />
+    <Compile Include="V20220105\Models\ModifyUserTagResponse.cs" />
     <Compile Include="V20220105\Models\PageScreenListVO.cs" />
     <Compile Include="V20220105\Models\PageScreenVO.cs" />
     <Compile Include="V20220105\Models\ParamCreateDTO.cs" />
@@ -148,6 +161,7 @@
     <Compile Include="V20220105\Models\UserRoleListData.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataRoleInfo.cs" />
     <Compile Include="V20220105\Models\UserRoleListDataUserRoleInfo.cs" />
+    <Compile Include="V20220105\Models\UserTagInfo.cs" />
     <Compile Include="V20220105\Models\WidgetListVO.cs" />
     <Compile Include="V20220105\Models\WidgetVO.cs" />
   </ItemGroup>

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusRequest : AbstractModel
+    public class ResetUsersPasswordRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of IP resources.
+        /// <p>Instance id</p>
         /// </summary>
-        [JsonProperty("IpList")]
-        public string[] IpList{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of domain asset IDs.
+        /// <p>Reset user password list</p>
         /// </summary>
-        [JsonProperty("IdList")]
-        public string[] IdList{ get; set; }
-
-        /// <summary>
-        /// Region name for filtering.
-        /// </summary>
-        [JsonProperty("FilterRegion")]
-        public ulong? FilterRegion{ get; set; }
-
-        /// <summary>
-        /// List of CNAME WAF resource IDs.
-        /// </summary>
-        [JsonProperty("CnameWafIdList")]
-        public string[] CnameWafIdList{ get; set; }
+        [JsonProperty("Users")]
+        public ResetUserPasswordInfo[] Users{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
-            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
-            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
-            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Users.", this.Users);
         }
     }
 }

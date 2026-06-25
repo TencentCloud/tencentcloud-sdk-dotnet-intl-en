@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Tdmysql.V20211122.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusRequest : AbstractModel
+    public class ResetUserPasswordInfo : AbstractModel
     {
         
         /// <summary>
-        /// List of IP resources.
+        /// <p>Username.</p>
         /// </summary>
-        [JsonProperty("IpList")]
-        public string[] IpList{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// List of domain asset IDs.
+        /// <p>host</p>
         /// </summary>
-        [JsonProperty("IdList")]
-        public string[] IdList{ get; set; }
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
 
         /// <summary>
-        /// Region name for filtering.
+        /// <p>plaintext password</p>
         /// </summary>
-        [JsonProperty("FilterRegion")]
-        public ulong? FilterRegion{ get; set; }
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
         /// <summary>
-        /// List of CNAME WAF resource IDs.
+        /// <p>Encryption password</p>
         /// </summary>
-        [JsonProperty("CnameWafIdList")]
-        public string[] CnameWafIdList{ get; set; }
+        [JsonProperty("EncryptedPassword")]
+        public string EncryptedPassword{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
-            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
-            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
-            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
         }
     }
 }

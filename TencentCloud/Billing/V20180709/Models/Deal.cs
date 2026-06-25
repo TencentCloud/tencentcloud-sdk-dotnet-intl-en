@@ -158,16 +158,15 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// Transaction type
-        /// 
         /// Modify network mode adjust bandwidth mode.
         /// Adjust bandwidth size.
-        /// `Refund`: refund.
+        /// Refund: refund.
         /// downgrade.
         /// upgrade configuration.
         /// renew.
         /// purchase.
-        /// preMoveOut monthly subscription resource migration out.
-        /// preMoveIn specifies the monthly subscription resources to migrate.
+        /// preMoveOut yearly/monthly subscription resource migration out.
+        /// preMoveIn specifies the yearly/monthly subscription resources to migrate.
         /// preToPost specifies the prepaid to postpaid conversion.
         /// postMoveOut specifies the pay-as-you-go resources to be migrated out.
         /// postMoveIn specifies the pay-as-you-go resources for inbound migration.

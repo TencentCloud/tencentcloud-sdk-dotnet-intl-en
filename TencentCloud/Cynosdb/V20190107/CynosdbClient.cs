@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1335";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -1436,6 +1436,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterDetailDatabasesResponse DescribeClusterDetailDatabasesSync(DescribeClusterDetailDatabasesRequest req)
         {
             return InternalRequestAsync<DescribeClusterDetailDatabasesResponse>(req, "DescribeClusterDetailDatabases")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query instance group info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstanceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstanceGroupsResponse"/></returns>
+        public Task<DescribeClusterInstanceGroupsResponse> DescribeClusterInstanceGroups(DescribeClusterInstanceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstanceGroupsResponse>(req, "DescribeClusterInstanceGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query instance group info.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterInstanceGroupsRequest"/></param>
+        /// <returns><see cref="DescribeClusterInstanceGroupsResponse"/></returns>
+        public DescribeClusterInstanceGroupsResponse DescribeClusterInstanceGroupsSync(DescribeClusterInstanceGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterInstanceGroupsResponse>(req, "DescribeClusterInstanceGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

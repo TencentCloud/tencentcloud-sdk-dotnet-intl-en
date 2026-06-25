@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusRequest : AbstractModel
+    public class EditTagVO : AbstractModel
     {
         
         /// <summary>
-        /// List of IP resources.
+        /// Transaction ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IpList")]
-        public string[] IpList{ get; set; }
+        [JsonProperty("TranId")]
+        public string TranId{ get; set; }
 
         /// <summary>
-        /// List of domain asset IDs.
+        /// Transaction status
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("IdList")]
-        public string[] IdList{ get; set; }
+        [JsonProperty("TranStatus")]
+        public long? TranStatus{ get; set; }
 
         /// <summary>
-        /// Region name for filtering.
+        /// Tag information.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FilterRegion")]
-        public ulong? FilterRegion{ get; set; }
-
-        /// <summary>
-        /// List of CNAME WAF resource IDs.
-        /// </summary>
-        [JsonProperty("CnameWafIdList")]
-        public string[] CnameWafIdList{ get; set; }
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
-            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
-            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
-            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
+            this.SetParamSimple(map, prefix + "TranId", this.TranId);
+            this.SetParamSimple(map, prefix + "TranStatus", this.TranStatus);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

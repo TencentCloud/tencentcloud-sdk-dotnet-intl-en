@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1336";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -953,6 +953,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ResetUserPasswordResponse ResetUserPasswordSync(ResetUserPasswordRequest req)
         {
             return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to batch reset user password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetUsersPasswordRequest"/></param>
+        /// <returns><see cref="ResetUsersPasswordResponse"/></returns>
+        public Task<ResetUsersPasswordResponse> ResetUsersPassword(ResetUsersPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUsersPasswordResponse>(req, "ResetUsersPassword");
+        }
+
+        /// <summary>
+        /// This API is used to batch reset user password.
+        /// </summary>
+        /// <param name="req"><see cref="ResetUsersPasswordRequest"/></param>
+        /// <returns><see cref="ResetUsersPasswordResponse"/></returns>
+        public ResetUsersPasswordResponse ResetUsersPasswordSync(ResetUsersPasswordRequest req)
+        {
+            return InternalRequestAsync<ResetUsersPasswordResponse>(req, "ResetUsersPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

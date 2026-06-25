@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusRequest : AbstractModel
+    public class CreateTagTableRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of IP resources.
+        /// Tag table name
         /// </summary>
-        [JsonProperty("IpList")]
-        public string[] IpList{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// List of domain asset IDs.
+        /// Project id associated with the tag table
         /// </summary>
-        [JsonProperty("IdList")]
-        public string[] IdList{ get; set; }
+        [JsonProperty("AutoImportProjectId")]
+        public long? AutoImportProjectId{ get; set; }
 
         /// <summary>
-        /// Region name for filtering.
+        /// id of the data table associated with the tag table
         /// </summary>
-        [JsonProperty("FilterRegion")]
-        public ulong? FilterRegion{ get; set; }
+        [JsonProperty("AutoImportTableId")]
+        public long? AutoImportTableId{ get; set; }
 
         /// <summary>
-        /// List of CNAME WAF resource IDs.
+        /// Corresponding field of uin
         /// </summary>
-        [JsonProperty("CnameWafIdList")]
-        public string[] CnameWafIdList{ get; set; }
+        [JsonProperty("AutoImportUinField")]
+        public string AutoImportUinField{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
-            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
-            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
-            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "AutoImportProjectId", this.AutoImportProjectId);
+            this.SetParamSimple(map, prefix + "AutoImportTableId", this.AutoImportTableId);
+            this.SetParamSimple(map, prefix + "AutoImportUinField", this.AutoImportUinField);
         }
     }
 }

@@ -90,6 +90,24 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("CategoryList")]
         public CategoryInfo[] CategoryList{ get; set; }
 
+        /// <summary>
+        /// Team ID.
+        /// </summary>
+        [JsonProperty("TeamId")]
+        public string TeamId{ get; set; }
+
+        /// <summary>
+        /// Team name.
+        /// </summary>
+        [JsonProperty("TeamName")]
+        public string TeamName{ get; set; }
+
+        /// <summary>
+        /// Team type ID.
+        /// </summary>
+        [JsonProperty("TeamTypeId")]
+        public long? TeamTypeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "OnlineStatus", this.OnlineStatus);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArrayObj(map, prefix + "CategoryList.", this.CategoryList);
+            this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
+            this.SetParamSimple(map, prefix + "TeamName", this.TeamName);
+            this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
         }
     }
 }

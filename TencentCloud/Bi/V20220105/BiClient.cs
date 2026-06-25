@@ -28,7 +28,7 @@ namespace TencentCloud.Bi.V20220105
 
        private const string endpoint = "bi.intl.tencentcloudapi.com";
        private const string version = "2022-01-05";
-       private const string sdkVersion = "SDK_NET_3.0.1334";
+       private const string sdkVersion = "SDK_NET_3.0.1340";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Bi.V20220105
         public ClearEmbedTokenResponse ClearEmbedTokenSync(ClearEmbedTokenRequest req)
         {
             return InternalRequestAsync<ClearEmbedTokenResponse>(req, "ClearEmbedToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a business tag
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
+        /// <returns><see cref="CreateCorpTagResponse"/></returns>
+        public Task<CreateCorpTagResponse> CreateCorpTag(CreateCorpTagRequest req)
+        {
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag");
+        }
+
+        /// <summary>
+        /// Create a business tag
+        /// </summary>
+        /// <param name="req"><see cref="CreateCorpTagRequest"/></param>
+        /// <returns><see cref="CreateCorpTagResponse"/></returns>
+        public CreateCorpTagResponse CreateCorpTagSync(CreateCorpTagRequest req)
+        {
+            return InternalRequestAsync<CreateCorpTagResponse>(req, "CreateCorpTag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -218,6 +239,27 @@ namespace TencentCloud.Bi.V20220105
         public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
         {
             return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a tag table
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagTableRequest"/></param>
+        /// <returns><see cref="CreateTagTableResponse"/></returns>
+        public Task<CreateTagTableResponse> CreateTagTable(CreateTagTableRequest req)
+        {
+            return InternalRequestAsync<CreateTagTableResponse>(req, "CreateTagTable");
+        }
+
+        /// <summary>
+        /// Create a tag table
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagTableRequest"/></param>
+        /// <returns><see cref="CreateTagTableResponse"/></returns>
+        public CreateTagTableResponse CreateTagTableSync(CreateTagTableRequest req)
+        {
+            return InternalRequestAsync<CreateTagTableResponse>(req, "CreateTagTable")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +558,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// Edit business tags (async)
+        /// </summary>
+        /// <param name="req"><see cref="EditCorpTagRequest"/></param>
+        /// <returns><see cref="EditCorpTagResponse"/></returns>
+        public Task<EditCorpTagResponse> EditCorpTag(EditCorpTagRequest req)
+        {
+            return InternalRequestAsync<EditCorpTagResponse>(req, "EditCorpTag");
+        }
+
+        /// <summary>
+        /// Edit business tags (async)
+        /// </summary>
+        /// <param name="req"><see cref="EditCorpTagRequest"/></param>
+        /// <returns><see cref="EditCorpTagResponse"/></returns>
+        public EditCorpTagResponse EditCorpTagSync(EditCorpTagRequest req)
+        {
+            return InternalRequestAsync<EditCorpTagResponse>(req, "EditCorpTag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to export a screenshot.
         /// </summary>
         /// <param name="req"><see cref="ExportScreenPageRequest"/></param>
@@ -642,6 +705,27 @@ namespace TencentCloud.Bi.V20220105
         }
 
         /// <summary>
+        /// Edit tag table
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagTableRequest"/></param>
+        /// <returns><see cref="ModifyTagTableResponse"/></returns>
+        public Task<ModifyTagTableResponse> ModifyTagTable(ModifyTagTableRequest req)
+        {
+            return InternalRequestAsync<ModifyTagTableResponse>(req, "ModifyTagTable");
+        }
+
+        /// <summary>
+        /// Edit tag table
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagTableRequest"/></param>
+        /// <returns><see cref="ModifyTagTableResponse"/></returns>
+        public ModifyTagTableResponse ModifyTagTableSync(ModifyTagTableRequest req)
+        {
+            return InternalRequestAsync<ModifyTagTableResponse>(req, "ModifyTagTable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify user role info.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserRoleRequest"/></param>
@@ -680,6 +764,27 @@ namespace TencentCloud.Bi.V20220105
         public ModifyUserRoleProjectResponse ModifyUserRoleProjectSync(ModifyUserRoleProjectRequest req)
         {
             return InternalRequestAsync<ModifyUserRoleProjectResponse>(req, "ModifyUserRoleProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify user tag value
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTagRequest"/></param>
+        /// <returns><see cref="ModifyUserTagResponse"/></returns>
+        public Task<ModifyUserTagResponse> ModifyUserTag(ModifyUserTagRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTagResponse>(req, "ModifyUserTag");
+        }
+
+        /// <summary>
+        /// Modify user tag value
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserTagRequest"/></param>
+        /// <returns><see cref="ModifyUserTagResponse"/></returns>
+        public ModifyUserTagResponse ModifyUserTagSync(ModifyUserTagRequest req)
+        {
+            return InternalRequestAsync<ModifyUserTagResponse>(req, "ModifyUserTag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

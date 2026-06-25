@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Bi.V20220105.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBasicDeviceStatusRequest : AbstractModel
+    public class ModifyUserTagRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of IP resources.
+        /// User ID.
         /// </summary>
-        [JsonProperty("IpList")]
-        public string[] IpList{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// List of domain asset IDs.
+        /// Tag information.
         /// </summary>
-        [JsonProperty("IdList")]
-        public string[] IdList{ get; set; }
-
-        /// <summary>
-        /// Region name for filtering.
-        /// </summary>
-        [JsonProperty("FilterRegion")]
-        public ulong? FilterRegion{ get; set; }
-
-        /// <summary>
-        /// List of CNAME WAF resource IDs.
-        /// </summary>
-        [JsonProperty("CnameWafIdList")]
-        public string[] CnameWafIdList{ get; set; }
+        [JsonProperty("TagList")]
+        public UserTagInfo[] TagList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
-            this.SetParamArraySimple(map, prefix + "IdList.", this.IdList);
-            this.SetParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
-            this.SetParamArraySimple(map, prefix + "CnameWafIdList.", this.CnameWafIdList);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }
