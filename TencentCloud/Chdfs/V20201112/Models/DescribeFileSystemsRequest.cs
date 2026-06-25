@@ -24,12 +24,19 @@ namespace TencentCloud.Chdfs.V20201112.Models
     public class DescribeFileSystemsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FileSystemIdMarker")]
+        public string FileSystemIdMarker{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FileSystemIdMarker", this.FileSystemIdMarker);
         }
     }
 }

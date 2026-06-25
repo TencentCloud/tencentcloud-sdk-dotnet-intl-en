@@ -60,6 +60,12 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Arguments")]
+        public RabbitMQServerlessKeyValuePair[] Arguments{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "DestinationType", this.DestinationType);
             this.SetParamSimple(map, prefix + "Destination", this.Destination);
             this.SetParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
+            this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         }
     }
 }

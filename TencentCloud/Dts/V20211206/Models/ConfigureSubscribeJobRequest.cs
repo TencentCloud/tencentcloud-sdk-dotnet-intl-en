@@ -78,6 +78,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ExtraAttr")]
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConsumerVpcId")]
+        public string ConsumerVpcId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ConsumerSubnetId")]
+        public string ConsumerSubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "PipelineInfo.", this.PipelineInfo);
             this.SetParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+            this.SetParamSimple(map, prefix + "ConsumerVpcId", this.ConsumerVpcId);
+            this.SetParamSimple(map, prefix + "ConsumerSubnetId", this.ConsumerSubnetId);
         }
     }
 }

@@ -31,12 +31,6 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string FileSystemName{ get; set; }
 
         /// <summary>
-        /// File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
-        /// </summary>
-        [JsonProperty("CapacityQuota")]
-        public ulong? CapacityQuota{ get; set; }
-
-        /// <summary>
         /// Whether to verify POSIX ACL
         /// </summary>
         [JsonProperty("PosixAcl")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
+
+        /// <summary>
+        /// File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
+        /// </summary>
+        [JsonProperty("CapacityQuota")]
+        public ulong? CapacityQuota{ get; set; }
 
         /// <summary>
         /// List of superuser names, which is an empty array by default
@@ -91,9 +91,9 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileSystemName", this.FileSystemName);
-            this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
             this.SetParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);

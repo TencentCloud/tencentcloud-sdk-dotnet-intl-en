@@ -66,6 +66,24 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("RolloverBackingIndex")]
         public bool? RolloverBackingIndex{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MountIndex")]
+        public bool? MountIndex{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IndexUuid")]
+        public string IndexUuid{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BackingIndexName")]
+        public string BackingIndexName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
+            this.SetParamSimple(map, prefix + "MountIndex", this.MountIndex);
+            this.SetParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
+            this.SetParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
         }
     }
 }

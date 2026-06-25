@@ -15,21 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20211206.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OnlineDDL : AbstractModel
+    public class DeleteAutoBackUpStrategyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance name.
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Policy name.
+        /// </summary>
+        [JsonProperty("StrategyName")]
+        public string[] StrategyName{ get; set; }
 
 
         /// <summary>
@@ -37,7 +42,8 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "StrategyName.", this.StrategyName);
         }
     }
 }

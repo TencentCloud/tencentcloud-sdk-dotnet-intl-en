@@ -61,6 +61,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Specification{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public ulong? TimeSpan{ get; set; }
+
+        /// <summary>
         /// Tag information
         /// </summary>
         [JsonProperty("Tags")]
@@ -108,6 +114,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "DstDatabaseType", this.DstDatabaseType);
             this.SetParamSimple(map, prefix + "DstRegion", this.DstRegion);
             this.SetParamSimple(map, prefix + "Specification", this.Specification);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);

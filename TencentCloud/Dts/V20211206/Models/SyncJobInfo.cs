@@ -256,6 +256,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string OfflineTime{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OptObjStatus")]
+        public string OptObjStatus{ get; set; }
+
+        /// <summary>
         /// Settings of automatic retry time
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -308,6 +314,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+            this.SetParamSimple(map, prefix + "OptObjStatus", this.OptObjStatus);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
             this.SetParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
         }

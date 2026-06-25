@@ -44,6 +44,12 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("ThreadCount")]
         public long? ThreadCount{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -43,13 +43,6 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }
 
-        /// <summary>
-        /// A redundant field that specifies the online DDL type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("OnlineDDL")]
-        public OnlineDDL OnlineDDL{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,7 +52,6 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "Databases.", this.Databases);
             this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
-            this.SetParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
         }
     }
 }

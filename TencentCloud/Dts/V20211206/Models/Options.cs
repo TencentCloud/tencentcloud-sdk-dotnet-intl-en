@@ -95,13 +95,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
-        /// Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+        /// 
+        /// </summary>
+        [JsonProperty("StartPosition")]
+        public string StartPosition{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("FilterBeginCommit")]
         public bool? FilterBeginCommit{ get; set; }
 
         /// <summary>
-        /// Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+        /// 
         /// </summary>
         [JsonProperty("FilterCheckpoint")]
         public bool? FilterCheckpoint{ get; set; }
@@ -122,6 +128,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
             this.SetParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
             this.SetParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+            this.SetParamSimple(map, prefix + "StartPosition", this.StartPosition);
             this.SetParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
             this.SetParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
         }

@@ -36,6 +36,36 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
+        /// <summary>
+        /// Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+        /// </summary>
+        [JsonProperty("SortElement")]
+        public string SortElement{ get; set; }
+
+        /// <summary>
+        /// Sort order: ASC, DESC
+        /// </summary>
+        [JsonProperty("SortType")]
+        public string SortType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +74,11 @@ namespace TencentCloud.Trabbit.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
+            this.SetParamSimple(map, prefix + "SortElement", this.SortElement);
+            this.SetParamSimple(map, prefix + "SortType", this.SortType);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

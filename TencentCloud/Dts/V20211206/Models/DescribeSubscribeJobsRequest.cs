@@ -31,6 +31,12 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SubscribeId{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SubscribeIds")]
+        public string[] SubscribeIds{ get; set; }
+
+        /// <summary>
         /// Subscription name (prefix fuzzy match)
         /// </summary>
         [JsonProperty("SubscribeName")]
@@ -41,6 +47,12 @@ namespace TencentCloud.Dts.V20211206.Models
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Topic")]
+        public string Topic{ get; set; }
 
         /// <summary>
         /// Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
@@ -97,8 +109,10 @@ namespace TencentCloud.Dts.V20211206.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
+            this.SetParamArraySimple(map, prefix + "SubscribeIds.", this.SubscribeIds);
             this.SetParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "Product", this.Product);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);

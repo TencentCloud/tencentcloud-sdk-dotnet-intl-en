@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.intl.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1339";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Es.V20180416
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to create an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoBackUpStrategyResponse"/></returns>
+        public Task<CreateAutoBackUpStrategyResponse> CreateAutoBackUpStrategy(CreateAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoBackUpStrategyResponse>(req, "CreateAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to create an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="CreateAutoBackUpStrategyResponse"/></returns>
+        public CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategySync(CreateAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoBackUpStrategyResponse>(req, "CreateAutoBackUpStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -96,6 +117,27 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// This API is used to delete an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoBackUpStrategyResponse"/></returns>
+        public Task<DeleteAutoBackUpStrategyResponse> DeleteAutoBackUpStrategy(DeleteAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoBackUpStrategyResponse>(req, "DeleteAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to delete an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DeleteAutoBackUpStrategyResponse"/></returns>
+        public DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategySync(DeleteAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoBackUpStrategyResponse>(req, "DeleteAutoBackUpStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete indices.
         /// </summary>
         /// <param name="req"><see cref="DeleteIndexRequest"/></param>
@@ -134,6 +176,27 @@ namespace TencentCloud.Es.V20180416
         public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
         {
             return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeAutoBackUpStrategyResponse"/></returns>
+        public Task<DescribeAutoBackUpStrategyResponse> DescribeAutoBackUpStrategy(DescribeAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoBackUpStrategyResponse>(req, "DescribeAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to obtain an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeAutoBackUpStrategyResponse"/></returns>
+        public DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategySync(DescribeAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoBackUpStrategyResponse>(req, "DescribeAutoBackUpStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -281,6 +344,48 @@ namespace TencentCloud.Es.V20180416
         public GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypesSync(GetRequestTargetNodeTypesRequest req)
         {
             return InternalRequestAsync<GetRequestTargetNodeTypesResponse>(req, "GetRequestTargetNodeTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the common information of an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpCommonInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpCommonInfoResponse"/></returns>
+        public Task<ModifyAutoBackUpCommonInfoResponse> ModifyAutoBackUpCommonInfo(ModifyAutoBackUpCommonInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpCommonInfoResponse>(req, "ModifyAutoBackUpCommonInfo");
+        }
+
+        /// <summary>
+        /// This API is used to modify the common information of an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpCommonInfoRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpCommonInfoResponse"/></returns>
+        public ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfoSync(ModifyAutoBackUpCommonInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpCommonInfoResponse>(req, "ModifyAutoBackUpCommonInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpStrategyResponse"/></returns>
+        public Task<ModifyAutoBackUpStrategyResponse> ModifyAutoBackUpStrategy(ModifyAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpStrategyResponse>(req, "ModifyAutoBackUpStrategy");
+        }
+
+        /// <summary>
+        /// This API is used to modify an auto backup snapshot policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoBackUpStrategyRequest"/></param>
+        /// <returns><see cref="ModifyAutoBackUpStrategyResponse"/></returns>
+        public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategySync(ModifyAutoBackUpStrategyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoBackUpStrategyResponse>(req, "ModifyAutoBackUpStrategy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

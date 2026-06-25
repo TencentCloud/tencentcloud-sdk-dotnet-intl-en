@@ -39,6 +39,12 @@ namespace TencentCloud.Es.V20180416.Models
         public string IndexName{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("IndexMetaJson")]
+        public string IndexMetaJson{ get; set; }
+
+        /// <summary>
         /// Index status
         /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
@@ -130,6 +136,7 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "IndexType", this.IndexType);
             this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "IndexMetaJson", this.IndexMetaJson);
             this.SetParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
             this.SetParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
             this.SetParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);

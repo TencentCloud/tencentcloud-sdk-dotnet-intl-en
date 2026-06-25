@@ -40,12 +40,14 @@ namespace TencentCloud.Dts.V20180330.Models
         /// Target instance VIP, which has been disused and does not need to be entered
         /// </summary>
         [JsonProperty("Ip")]
+        [System.Obsolete]
         public string Ip{ get; set; }
 
         /// <summary>
         /// Target instance Vport, which has been disused and does not need to be entered
         /// </summary>
         [JsonProperty("Port")]
+        [System.Obsolete]
         public long? Port{ get; set; }
 
         /// <summary>
