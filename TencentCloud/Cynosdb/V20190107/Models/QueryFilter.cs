@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-        /// </summary>
-        [JsonProperty("Names")]
-        public string[] Names{ get; set; }
-
-        /// <summary>
-        /// Search string
+        /// Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Whether to use exact match
+        /// Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
+
+        /// <summary>
+        /// Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
         /// </summary>
         [JsonProperty("ExactMatch")]
         public bool? ExactMatch{ get; set; }
 
         /// <summary>
-        /// Search field
+        /// Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Operator
+        /// Operator (reserved field, currently disabled). Available values: >, >=, !=, =, <, <=
         /// </summary>
         [JsonProperty("Operator")]
         [System.Obsolete]
@@ -61,8 +61,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);

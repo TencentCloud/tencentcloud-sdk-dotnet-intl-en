@@ -25,48 +25,61 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Indicates the status. valid values: 
-        /// PASSED
+        /// Verification status. Valid values: 
         /// PROCESSING
-        /// WARNING
+        /// ABNORMAL
+        /// COMPLETED
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Indicates the anti-counterfeiting information.
-        /// -ScreenshotSuspected: The image is a screenshot.
-        /// -RetakeSuspected: The image is taken from another screen.
-        /// -PaperCopy: The image is a black and white, or color photocopy.
-        /// -FakeSuspected: The image of the card, or the information on the card has been edited or altered.
-        /// -OtherWarning: Document's authenticity is not verified for various reasons.
+        /// Anti-counterfeiting information. 
+        /// - ScreenshotSuspected: The image is a screenshot.
+        /// - RetakeSuspected: The image is taken from another screen.
+        /// - PaperCopy: The image is a black and white, or color photocopy.
+        /// - FakeSuspected: The image of the card, or the information on the card has been edited or altered.
+        /// - PoorImageQuality: The image is bad quality.
+        /// - InformationVerificationFailed: Information verification failed based on OCR recognition results
+        /// - TooManyCards: Multiple cards present in the frame.
+        /// - IncompleteCard: Captured document is incomplete.
+        /// - OtherWarning: Document's authenticity is not verified for various reasons.
+        /// 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WarnInfo")]
         public string[] WarnInfo{ get; set; }
 
         /// <summary>
-        /// Country Code.
+        /// Country or region of the document.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nationality")]
+        [System.Obsolete]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// Recognition result of the text in the id photo.	
+        /// Front-side document recognition results. 
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardInfo")]
         public GeneralCard CardInfo{ get; set; }
 
         /// <summary>
-        /// Specifies the token in the request parameters.
+        /// Back-side document recognition results.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BackCardInfo")]
+        public GeneralCard BackCardInfo{ get; set; }
+
+        /// <summary>
+        /// The token passed in the input parameters.
         /// </summary>
         [JsonProperty("CardVerificationToken")]
         public string CardVerificationToken{ get; set; }
 
         /// <summary>
-        /// If the ReturnHeadImage is false or not passed when initiating the card and certificate recognition, the HeadImageBase64 will return an empty string. If the ReturnHeadImage is true when initiating the card and certificate recognition and the HeadImageBase64 returns an empty string, it indicates that the face image recognition has failed. Please check the image.
+        /// Base64-encoded head image from the document. If ReturnHeadImage was set to false or not provided in the request, this field returns an empty string. If ReturnHeadImage was set to true and this field returns an empty string, indicating a failure to extract the head image extraction failed. Please check the input document photo.
         /// </summary>
         [JsonProperty("HeadImageBase64")]
         public string HeadImageBase64{ get; set; }
@@ -87,6 +100,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "WarnInfo.", this.WarnInfo);
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamObj(map, prefix + "CardInfo.", this.CardInfo);
+            this.SetParamObj(map, prefix + "BackCardInfo.", this.BackCardInfo);
             this.SetParamSimple(map, prefix + "CardVerificationToken", this.CardVerificationToken);
             this.SetParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

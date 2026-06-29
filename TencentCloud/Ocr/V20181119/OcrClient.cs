@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1332";
+       private const string sdkVersion = "SDK_NET_3.0.1341";
 
         /// <summary>
         /// Client constructor.
@@ -54,9 +54,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used for general recognition of overseas cards.
+        /// This API provides general OCR recognition for overseas identity documents.
         /// 
-        /// The following list details the countries or regions, document types supported by the overseas document recognition API and whether the back side of the document is required:
+        /// The following table lists the supported countries or regions, document types, and whether the back side is required:
         /// 
         /// <table>
         /// <thead>
@@ -418,9 +418,9 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used for general recognition of overseas cards.
+        /// This API provides general OCR recognition for overseas identity documents.
         /// 
-        /// The following list details the countries or regions, document types supported by the overseas document recognition API and whether the back side of the document is required:
+        /// The following table lists the supported countries or regions, document types, and whether the back side is required:
         /// 
         /// <table>
         /// <thead>

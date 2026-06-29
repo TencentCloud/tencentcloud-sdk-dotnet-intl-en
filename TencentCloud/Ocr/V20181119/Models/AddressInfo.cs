@@ -39,21 +39,35 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Specifies the sub-region.
+        /// Sub-region or state/province.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Subdivision")]
         public string Subdivision{ get; set; }
 
         /// <summary>
-        /// Specifies the city.
+        /// District or county.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("District")]
+        public string District{ get; set; }
+
+        /// <summary>
+        /// City name.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// Complete address.
+        /// Subdistrict or township.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Subdistrict")]
+        public string Subdistrict{ get; set; }
+
+        /// <summary>
+        /// Formatted complete address.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FormattedAddress")]
@@ -88,7 +102,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string LineFour{ get; set; }
 
         /// <summary>
-        /// Specifies the fifth line in the address bar.
+        /// Specifies the fifth line of the address bar.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LineFive")]
@@ -103,7 +117,9 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Country", this.Country);
             this.SetParamSimple(map, prefix + "PostalCode", this.PostalCode);
             this.SetParamSimple(map, prefix + "Subdivision", this.Subdivision);
+            this.SetParamSimple(map, prefix + "District", this.District);
             this.SetParamSimple(map, prefix + "City", this.City);
+            this.SetParamSimple(map, prefix + "Subdistrict", this.Subdistrict);
             this.SetParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
             this.SetParamSimple(map, prefix + "LineOne", this.LineOne);
             this.SetParamSimple(map, prefix + "LineTwo", this.LineTwo);
