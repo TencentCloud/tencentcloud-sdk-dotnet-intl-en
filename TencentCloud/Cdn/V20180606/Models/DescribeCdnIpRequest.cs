@@ -25,7 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// List of IPs to be queried
+        /// IP list you want to query. supports 1-20 ip inquiries at a time.
         /// </summary>
         [JsonProperty("Ips")]
         public string[] Ips{ get; set; }

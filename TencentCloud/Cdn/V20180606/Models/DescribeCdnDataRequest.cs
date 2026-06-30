@@ -90,8 +90,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-        /// You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+        /// Queries multiple domain names and returns aggregated data by default (false).
+        /// Specifies as required to be true, returns detailed data for each Domain (statusCode, 2xx, 3xx, 4xx, 5xx metrics not currently supported).
         /// </summary>
         [JsonProperty("Detail")]
         public bool? Detail{ get; set; }

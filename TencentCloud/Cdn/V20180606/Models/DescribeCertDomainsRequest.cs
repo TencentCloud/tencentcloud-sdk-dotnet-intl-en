@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Cert{ get; set; }
 
         /// <summary>
-        /// Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+        /// Managed certificate ID. Cert and CertId cannot both be empty. if both are filled in, CertId takes precedence.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }

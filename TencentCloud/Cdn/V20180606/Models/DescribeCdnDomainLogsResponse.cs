@@ -25,8 +25,8 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// Download link of the log package.
-        /// You can open the link to download a .gz log package that contains all log files without extension.
+        /// Specifies the download url of the log package.
+        /// Download content is a compression package with the gz suffix. after decompression, it becomes a text file without an extension. link validity period is 1 day.
         /// </summary>
         [JsonProperty("DomainLogs")]
         public DomainLog[] DomainLogs{ get; set; }

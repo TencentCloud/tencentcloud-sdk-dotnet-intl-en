@@ -48,6 +48,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Channel")]
         public string Channel{ get; set; }
 
+        /// <summary>
+        /// Specifies whether to inherit the domain name tag. default reservation is the value changed last time.
+        /// </summary>
+        [JsonProperty("InheritDomainTags")]
+        public bool? InheritDomainTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamArrayObj(map, prefix + "DomainAreaConfigs.", this.DomainAreaConfigs);
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "InheritDomainTags", this.InheritDomainTags);
         }
     }
 }

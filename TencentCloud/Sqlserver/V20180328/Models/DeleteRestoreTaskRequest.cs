@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnAclRule : AbstractModel
+    public class DeleteRestoreTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Keyword
+        /// Instance ID
         /// </summary>
-        [JsonProperty("MatchKey")]
-        public string MatchKey{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Logical operator. Valid values:
+        /// Rollback task record ID set. Up to 10 records can be deleted once.
         /// </summary>
-        [JsonProperty("LogiOperator")]
-        public string LogiOperator{ get; set; }
-
-        /// <summary>
-        /// Matched value
-        /// </summary>
-        [JsonProperty("MatchValue")]
-        public string MatchValue{ get; set; }
+        [JsonProperty("RestoreIds")]
+        public long?[] RestoreIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MatchKey", this.MatchKey);
-            this.SetParamSimple(map, prefix + "LogiOperator", this.LogiOperator);
-            this.SetParamSimple(map, prefix + "MatchValue", this.MatchValue);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "RestoreIds.", this.RestoreIds);
         }
     }
 }

@@ -25,13 +25,15 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Data columns
+        /// Data column
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Columns")]
         public string[] Columns{ get; set; }
 
         /// <summary>
-        /// Data values
+        /// Data value.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Values")]
         public RowValues[] Values{ get; set; }

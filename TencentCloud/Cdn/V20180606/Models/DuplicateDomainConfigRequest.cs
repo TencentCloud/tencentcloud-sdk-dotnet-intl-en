@@ -21,20 +21,20 @@ namespace TencentCloud.Cdn.V20180606.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnWafRule : AbstractModel
+    public class DuplicateDomainConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// Attack type
+        /// Adds a domain name.
         /// </summary>
-        [JsonProperty("AttackType")]
-        public string AttackType{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
 
         /// <summary>
-        /// Defense action. Valid value: `observe`.
+        /// Specifies the configured domain name to be copied.
         /// </summary>
-        [JsonProperty("Operate")]
-        public string Operate{ get; set; }
+        [JsonProperty("ReferenceDomain")]
+        public string ReferenceDomain{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
-            this.SetParamSimple(map, prefix + "Operate", this.Operate);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "ReferenceDomain", this.ReferenceDomain);
         }
     }
 }

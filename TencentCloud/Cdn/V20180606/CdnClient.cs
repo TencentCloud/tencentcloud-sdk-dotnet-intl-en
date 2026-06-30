@@ -28,7 +28,7 @@ namespace TencentCloud.Cdn.V20180606
 
        private const string endpoint = "cdn.intl.tencentcloudapi.com";
        private const string version = "2018-06-06";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1342";
 
         /// <summary>
         /// Client constructor.
@@ -113,27 +113,6 @@ namespace TencentCloud.Cdn.V20180606
         public CreateClsLogTopicResponse CreateClsLogTopicSync(CreateClsLogTopicRequest req)
         {
             return InternalRequestAsync<CreateClsLogTopicResponse>(req, "CreateClsLogTopic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to recreate a failed event log task.
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
-        public Task<CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnFailedLogTaskResponse>(req, "CreateScdnFailedLogTask");
-        }
-
-        /// <summary>
-        /// This API is used to recreate a failed event log task.
-        /// </summary>
-        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
-        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
-        public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTaskSync(CreateScdnFailedLogTaskRequest req)
-        {
-            return InternalRequestAsync<CreateScdnFailedLogTaskResponse>(req, "CreateScdnFailedLogTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -274,6 +253,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to query CDN IP ownership.
+        /// This API is used to create and bind a policy. (Note: The API request frequency limit follows CDN's restriction: 200 requests/10 minutes).
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -284,6 +264,7 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// This API is used to query CDN IP ownership.
+        /// This API is used to create and bind a policy. (Note: The API request frequency limit follows CDN's restriction: 200 requests/10 minutes).
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnIpRequest"/></param>
         /// <returns><see cref="DescribeCdnIpResponse"/></returns>
@@ -294,7 +275,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
+        /// **This API is deprecated.**.
+        /// This API is used to query the IP information of CDN origin-pull nodes. (Note: The replace API is DescribeIpStatus.).
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -304,7 +286,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon and no longer be maintained. Please call `DescribeIpStatus` instead.
+        /// **This API is deprecated.**.
+        /// This API is used to query the IP information of CDN origin-pull nodes. (Note: The replace API is DescribeIpStatus.).
         /// </summary>
         /// <param name="req"><see cref="DescribeCdnOriginIpRequest"/></param>
         /// <returns><see cref="DescribeCdnOriginIpResponse"/></returns>
@@ -618,8 +601,8 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-        /// It corresponds to the **Pornography Detection** page on the CDN Console.
+        /// This API is used to query the URL list with domain violations detected by the CDN system scan and their status.
+        /// This API is used to correspond to the content compliant webpage in the CDN console.
         /// </summary>
         /// <param name="req"><see cref="DescribeUrlViolationsRequest"/></param>
         /// <returns><see cref="DescribeUrlViolationsResponse"/></returns>
@@ -629,35 +612,14 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-        /// It corresponds to the **Pornography Detection** page on the CDN Console.
+        /// This API is used to query the URL list with domain violations detected by the CDN system scan and their status.
+        /// This API is used to correspond to the content compliant webpage in the CDN console.
         /// </summary>
         /// <param name="req"><see cref="DescribeUrlViolationsRequest"/></param>
         /// <returns><see cref="DescribeUrlViolationsResponse"/></returns>
         public DescribeUrlViolationsResponse DescribeUrlViolationsSync(DescribeUrlViolationsRequest req)
         {
             return InternalRequestAsync<DescribeUrlViolationsResponse>(req, "DescribeUrlViolations")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
-        /// </summary>
-        /// <param name="req"><see cref="DisableCachesRequest"/></param>
-        /// <returns><see cref="DisableCachesResponse"/></returns>
-        public Task<DisableCachesResponse> DisableCaches(DisableCachesRequest req)
-        {
-            return InternalRequestAsync<DisableCachesResponse>(req, "DisableCaches");
-        }
-
-        /// <summary>
-        /// This API is used to block access to a specific URL on CDN. When a URL is blocked, error 403 will be returned for requests from the Chinese mainland. URL blocking is not permanent. Note that this API is only available to beta users now. 
-        /// </summary>
-        /// <param name="req"><see cref="DisableCachesRequest"/></param>
-        /// <returns><see cref="DisableCachesResponse"/></returns>
-        public DisableCachesResponse DisableCachesSync(DisableCachesRequest req)
-        {
-            return InternalRequestAsync<DisableCachesResponse>(req, "DisableCaches")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -683,23 +645,23 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
+        /// This API is used to copy the configuration of a reference domain to a new domain name. Self-owned certificates and customization options are not currently supported.
         /// </summary>
-        /// <param name="req"><see cref="EnableCachesRequest"/></param>
-        /// <returns><see cref="EnableCachesResponse"/></returns>
-        public Task<EnableCachesResponse> EnableCaches(EnableCachesRequest req)
+        /// <param name="req"><see cref="DuplicateDomainConfigRequest"/></param>
+        /// <returns><see cref="DuplicateDomainConfigResponse"/></returns>
+        public Task<DuplicateDomainConfigResponse> DuplicateDomainConfig(DuplicateDomainConfigRequest req)
         {
-            return InternalRequestAsync<EnableCachesResponse>(req, "EnableCaches");
+            return InternalRequestAsync<DuplicateDomainConfigResponse>(req, "DuplicateDomainConfig");
         }
 
         /// <summary>
-        /// This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
+        /// This API is used to copy the configuration of a reference domain to a new domain name. Self-owned certificates and customization options are not currently supported.
         /// </summary>
-        /// <param name="req"><see cref="EnableCachesRequest"/></param>
-        /// <returns><see cref="EnableCachesResponse"/></returns>
-        public EnableCachesResponse EnableCachesSync(EnableCachesRequest req)
+        /// <param name="req"><see cref="DuplicateDomainConfigRequest"/></param>
+        /// <returns><see cref="DuplicateDomainConfigResponse"/></returns>
+        public DuplicateDomainConfigResponse DuplicateDomainConfigSync(DuplicateDomainConfigRequest req)
         {
-            return InternalRequestAsync<EnableCachesResponse>(req, "EnableCaches")
+            return InternalRequestAsync<DuplicateDomainConfigResponse>(req, "DuplicateDomainConfig")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -721,27 +683,6 @@ namespace TencentCloud.Cdn.V20180606
         public EnableClsLogTopicResponse EnableClsLogTopicSync(EnableClsLogTopicRequest req)
         {
             return InternalRequestAsync<EnableClsLogTopicResponse>(req, "EnableClsLogTopic")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
-        /// </summary>
-        /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
-        /// <returns><see cref="GetDisableRecordsResponse"/></returns>
-        public Task<GetDisableRecordsResponse> GetDisableRecords(GetDisableRecordsRequest req)
-        {
-            return InternalRequestAsync<GetDisableRecordsResponse>(req, "GetDisableRecords");
-        }
-
-        /// <summary>
-        /// This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
-        /// </summary>
-        /// <param name="req"><see cref="GetDisableRecordsRequest"/></param>
-        /// <returns><see cref="GetDisableRecordsResponse"/></returns>
-        public GetDisableRecordsResponse GetDisableRecordsSync(GetDisableRecordsRequest req)
-        {
-            return InternalRequestAsync<GetDisableRecordsResponse>(req, "GetDisableRecords")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1051,27 +992,6 @@ namespace TencentCloud.Cdn.V20180606
         public UpdatePayTypeResponse UpdatePayTypeSync(UpdatePayTypeRequest req)
         {
             return InternalRequestAsync<UpdatePayTypeResponse>(req, "UpdatePayType")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to modify security configurations of SCDN acceleration domain names.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
-        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
-        public Task<UpdateScdnDomainResponse> UpdateScdnDomain(UpdateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<UpdateScdnDomainResponse>(req, "UpdateScdnDomain");
-        }
-
-        /// <summary>
-        /// This API is used to modify security configurations of SCDN acceleration domain names.
-        /// </summary>
-        /// <param name="req"><see cref="UpdateScdnDomainRequest"/></param>
-        /// <returns><see cref="UpdateScdnDomainResponse"/></returns>
-        public UpdateScdnDomainResponse UpdateScdnDomainSync(UpdateScdnDomainRequest req)
-        {
-            return InternalRequestAsync<UpdateScdnDomainResponse>(req, "UpdateScdnDomain")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ScdnErrorPage : AbstractModel
+    public class StopMigrationRequest : AbstractModel
     {
         
         /// <summary>
-        /// Status code
-        /// `403` is passed in when the action is `intercept`.
-        /// `301` is passed in when the action is `redirect`.
+        /// Migration task ID.
         /// </summary>
-        [JsonProperty("RedirectCode")]
-        public long? RedirectCode{ get; set; }
-
-        /// <summary>
-        /// URL to be redirected
-        /// </summary>
-        [JsonProperty("RedirectUrl")]
-        public string RedirectUrl{ get; set; }
+        [JsonProperty("MigrateId")]
+        public long? MigrateId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RedirectCode", this.RedirectCode);
-            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamSimple(map, prefix + "MigrateId", this.MigrateId);
         }
     }
 }

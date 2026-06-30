@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WafSubRuleStatus : AbstractModel
+    public class StartMigrationCheckRequest : AbstractModel
     {
         
         /// <summary>
-        /// Whether to enable WAF sub-rules. Values:
-        /// `on`: Enable
-        /// `off`: Disable
+        /// Migration task ID.
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// List of rule IDs
-        /// </summary>
-        [JsonProperty("SubIds")]
-        public long?[] SubIds{ get; set; }
+        [JsonProperty("MigrateId")]
+        public long? MigrateId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +36,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "SubIds.", this.SubIds);
+            this.SetParamSimple(map, prefix + "MigrateId", this.MigrateId);
         }
     }
 }

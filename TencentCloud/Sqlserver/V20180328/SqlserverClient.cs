@@ -28,7 +28,7 @@ namespace TencentCloud.Sqlserver.V20180328
 
        private const string endpoint = "sqlserver.intl.tencentcloudapi.com";
        private const string version = "2018-03-28";
-       private const string sdkVersion = "SDK_NET_3.0.1285";
+       private const string sdkVersion = "SDK_NET_3.0.1342";
 
         /// <summary>
         /// Client constructor.
@@ -659,6 +659,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public DeletePublishSubscribeResponse DeletePublishSubscribeSync(DeletePublishSubscribeRequest req)
         {
             return InternalRequestAsync<DeletePublishSubscribeResponse>(req, "DeletePublishSubscribe")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete rollback task records.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRestoreTaskRequest"/></param>
+        /// <returns><see cref="DeleteRestoreTaskResponse"/></returns>
+        public Task<DeleteRestoreTaskResponse> DeleteRestoreTask(DeleteRestoreTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRestoreTaskResponse>(req, "DeleteRestoreTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete rollback task records.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRestoreTaskRequest"/></param>
+        /// <returns><see cref="DeleteRestoreTaskResponse"/></returns>
+        public DeleteRestoreTaskResponse DeleteRestoreTaskSync(DeleteRestoreTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRestoreTaskResponse>(req, "DeleteRestoreTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1860,6 +1881,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to query upload permissions for incremental backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadIncrementalInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadIncrementalInfoResponse"/></returns>
+        public Task<DescribeUploadIncrementalInfoResponse> DescribeUploadIncrementalInfo(DescribeUploadIncrementalInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUploadIncrementalInfoResponse>(req, "DescribeUploadIncrementalInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query upload permissions for incremental backups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUploadIncrementalInfoRequest"/></param>
+        /// <returns><see cref="DescribeUploadIncrementalInfoResponse"/></returns>
+        public DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfoSync(DescribeUploadIncrementalInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeUploadIncrementalInfoResponse>(req, "DescribeUploadIncrementalInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of extended events.
         /// </summary>
         /// <param name="req"><see cref="DescribeXEventsRequest"/></param>
@@ -1940,6 +1982,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstancesSync(InquiryPriceCreateDBInstancesRequest req)
         {
             return InternalRequestAsync<InquiryPriceCreateDBInstancesResponse>(req, "InquiryPriceCreateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a monthly subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDBInstanceResponse"/></returns>
+        public Task<InquiryPriceRenewDBInstanceResponse> InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewDBInstanceResponse>(req, "InquiryPriceRenewDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to query the renewal price of a monthly subscription instance.
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceRenewDBInstanceRequest"/></param>
+        /// <returns><see cref="InquiryPriceRenewDBInstanceResponse"/></returns>
+        public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstanceSync(InquiryPriceRenewDBInstanceRequest req)
+        {
+            return InternalRequestAsync<InquiryPriceRenewDBInstanceResponse>(req, "InquiryPriceRenewDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2215,6 +2278,27 @@ namespace TencentCloud.Sqlserver.V20180328
         public ModifyDBInstanceProjectResponse ModifyDBInstanceProjectSync(ModifyDBInstanceProjectRequest req)
         {
             return InternalRequestAsync<ModifyDBInstanceProjectResponse>(req, "ModifyDBInstanceProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance renewal flag.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceRenewFlagResponse"/></returns>
+        public Task<ModifyDBInstanceRenewFlagResponse> ModifyDBInstanceRenewFlag(ModifyDBInstanceRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceRenewFlagResponse>(req, "ModifyDBInstanceRenewFlag");
+        }
+
+        /// <summary>
+        /// This API is used to modify the instance renewal flag.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceRenewFlagResponse"/></returns>
+        public ModifyDBInstanceRenewFlagResponse ModifyDBInstanceRenewFlagSync(ModifyDBInstanceRenewFlagRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceRenewFlagResponse>(req, "ModifyDBInstanceRenewFlag")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2727,6 +2811,27 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// This API is used to renew instances. For pay-as-you-go instances, the billing method will change to monthly subscription after renewal. You can call the InquiryPriceRenewDBInstance API for the renewal price of pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewDBInstanceResponse"/></returns>
+        public Task<RenewDBInstanceResponse> RenewDBInstance(RenewDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewDBInstanceResponse>(req, "RenewDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to renew instances. For pay-as-you-go instances, the billing method will change to monthly subscription after renewal. You can call the InquiryPriceRenewDBInstance API for the renewal price of pay-as-you-go instances.
+        /// </summary>
+        /// <param name="req"><see cref="RenewDBInstanceRequest"/></param>
+        /// <returns><see cref="RenewDBInstanceResponse"/></returns>
+        public RenewDBInstanceResponse RenewDBInstanceSync(RenewDBInstanceRequest req)
+        {
+            return InternalRequestAsync<RenewDBInstanceResponse>(req, "RenewDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to recover the pay-as-you-go instance that is manually isolated through the API TerminateDBInstance from the recycle bin.
         /// </summary>
         /// <param name="req"><see cref="RenewPostpaidDBInstanceRequest"/></param>
@@ -2912,6 +3017,48 @@ namespace TencentCloud.Sqlserver.V20180328
         public StartInstanceXEventResponse StartInstanceXEventSync(StartInstanceXEventRequest req)
         {
             return InternalRequestAsync<StartInstanceXEventResponse>(req, "StartInstanceXEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to start a pre-migration verification task, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+        /// </summary>
+        /// <param name="req"><see cref="StartMigrationCheckRequest"/></param>
+        /// <returns><see cref="StartMigrationCheckResponse"/></returns>
+        public Task<StartMigrationCheckResponse> StartMigrationCheck(StartMigrationCheckRequest req)
+        {
+            return InternalRequestAsync<StartMigrationCheckResponse>(req, "StartMigrationCheck");
+        }
+
+        /// <summary>
+        /// This API is used to start a pre-migration verification task, applicable to the migration method where the migration source type is TencentDB for SQL Server.
+        /// </summary>
+        /// <param name="req"><see cref="StartMigrationCheckRequest"/></param>
+        /// <returns><see cref="StartMigrationCheckResponse"/></returns>
+        public StartMigrationCheckResponse StartMigrationCheckSync(StartMigrationCheckRequest req)
+        {
+            return InternalRequestAsync<StartMigrationCheckResponse>(req, "StartMigrationCheck")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationRequest"/></param>
+        /// <returns><see cref="StopMigrationResponse"/></returns>
+        public Task<StopMigrationResponse> StopMigration(StopMigrationRequest req)
+        {
+            return InternalRequestAsync<StopMigrationResponse>(req, "StopMigration");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a migration task.
+        /// </summary>
+        /// <param name="req"><see cref="StopMigrationRequest"/></param>
+        /// <returns><see cref="StopMigrationResponse"/></returns>
+        public StopMigrationResponse StopMigrationSync(StopMigrationRequest req)
+        {
+            return InternalRequestAsync<StopMigrationResponse>(req, "StopMigration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

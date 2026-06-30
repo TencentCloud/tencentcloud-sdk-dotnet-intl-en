@@ -25,19 +25,22 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// StatementID value, fixed at 0 for Monitoring Dashboard.
+        /// The StatementID value is fixed as 0 in the monitoring dashboard.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatementID")]
         public long? StatementID{ get; set; }
 
         /// <summary>
-        /// Query result data, returned in Columns-Values format.
+        /// Query result data is returned in Columns-Values format.	
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Series")]
         public SeriesInfos[] Series{ get; set; }
 
         /// <summary>
-        /// Total value, fixed at 1 for Monitoring Dashboard.
+        /// The Total value is fixed as 1 in the dashboard feature monitoring.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

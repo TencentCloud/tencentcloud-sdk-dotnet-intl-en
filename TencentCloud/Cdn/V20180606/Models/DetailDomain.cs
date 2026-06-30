@@ -504,6 +504,19 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OthersPrivateAccess")]
         public OthersPrivateAccess OthersPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// Specifies the blocklist parameter.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ParamFilter")]
+        public ParamFilter ParamFilter{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoGuard")]
+        public AutoGuard AutoGuard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -576,6 +589,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
             this.SetParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
             this.SetParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
+            this.SetParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
+            this.SetParamObj(map, prefix + "AutoGuard.", this.AutoGuard);
         }
     }
 }

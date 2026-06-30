@@ -25,10 +25,17 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// Data value
+        /// Data value.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RowValue")]
         public long?[] RowValue{ get; set; }
+
+        /// <summary>
+        /// Data value.
+        /// </summary>
+        [JsonProperty("RowValueFloat")]
+        public float?[] RowValueFloat{ get; set; }
 
 
         /// <summary>
@@ -37,6 +44,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "RowValue.", this.RowValue);
+            this.SetParamArraySimple(map, prefix + "RowValueFloat.", this.RowValueFloat);
         }
     }
 }

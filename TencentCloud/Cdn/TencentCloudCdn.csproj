@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1329</VersionPrefix>
+    <VersionPrefix>3.0.1342</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,10 +64,7 @@
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeD.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeE.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeF.cs" />
-    <Compile Include="V20180606\Models\AdvancedCCRules.cs" />
     <Compile Include="V20180606\Models\AdvancedCache.cs" />
-    <Compile Include="V20180606\Models\AdvancedScdnAclGroup.cs" />
-    <Compile Include="V20180606\Models\AdvancedScdnAclRule.cs" />
     <Compile Include="V20180606\Models\Authentication.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeA.cs" />
     <Compile Include="V20180606\Models\AuthenticationTypeB.cs" />
@@ -77,8 +74,6 @@
     <Compile Include="V20180606\Models\AvifAdapter.cs" />
     <Compile Include="V20180606\Models\AwsPrivateAccess.cs" />
     <Compile Include="V20180606\Models\BandwidthAlert.cs" />
-    <Compile Include="V20180606\Models\BotCookie.cs" />
-    <Compile Include="V20180606\Models\BotJavaScript.cs" />
     <Compile Include="V20180606\Models\BriefDomain.cs" />
     <Compile Include="V20180606\Models\Cache.cs" />
     <Compile Include="V20180606\Models\CacheConfig.cs" />
@@ -86,7 +81,6 @@
     <Compile Include="V20180606\Models\CacheConfigFollowOrigin.cs" />
     <Compile Include="V20180606\Models\CacheConfigNoCache.cs" />
     <Compile Include="V20180606\Models\CacheKey.cs" />
-    <Compile Include="V20180606\Models\CacheOptResult.cs" />
     <Compile Include="V20180606\Models\CacheTagKey.cs" />
     <Compile Include="V20180606\Models\CappingRule.cs" />
     <Compile Include="V20180606\Models\CdnData.cs" />
@@ -101,8 +95,6 @@
     <Compile Include="V20180606\Models\CookieKey.cs" />
     <Compile Include="V20180606\Models\CreateClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\CreateClsLogTopicResponse.cs" />
-    <Compile Include="V20180606\Models\CreateScdnFailedLogTaskRequest.cs" />
-    <Compile Include="V20180606\Models\CreateScdnFailedLogTaskResponse.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\DeleteClsLogTopicRequest.cs" />
@@ -146,16 +138,14 @@
     <Compile Include="V20180606\Models\DescribeUrlViolationsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeUrlViolationsResponse.cs" />
     <Compile Include="V20180606\Models\DetailDomain.cs" />
-    <Compile Include="V20180606\Models\DisableCachesRequest.cs" />
-    <Compile Include="V20180606\Models\DisableCachesResponse.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\DisableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\DomainAreaConfig.cs" />
     <Compile Include="V20180606\Models\DomainFilter.cs" />
     <Compile Include="V20180606\Models\DomainLog.cs" />
     <Compile Include="V20180606\Models\DownstreamCapping.cs" />
-    <Compile Include="V20180606\Models\EnableCachesRequest.cs" />
-    <Compile Include="V20180606\Models\EnableCachesResponse.cs" />
+    <Compile Include="V20180606\Models\DuplicateDomainConfigRequest.cs" />
+    <Compile Include="V20180606\Models\DuplicateDomainConfigResponse.cs" />
     <Compile Include="V20180606\Models\EnableClsLogTopicRequest.cs" />
     <Compile Include="V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\ErrorPage.cs" />
@@ -164,8 +154,6 @@
     <Compile Include="V20180606\Models\FilterRules.cs" />
     <Compile Include="V20180606\Models\FollowRedirect.cs" />
     <Compile Include="V20180606\Models\ForceRedirect.cs" />
-    <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />
-    <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="V20180606\Models\HTTPHeader.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />
@@ -249,17 +237,6 @@
     <Compile Include="V20180606\Models\RuleCacheConfig.cs" />
     <Compile Include="V20180606\Models\RuleEngine.cs" />
     <Compile Include="V20180606\Models\RuleQueryString.cs" />
-    <Compile Include="V20180606\Models\ScdnAclConfig.cs" />
-    <Compile Include="V20180606\Models\ScdnAclGroup.cs" />
-    <Compile Include="V20180606\Models\ScdnAclRule.cs" />
-    <Compile Include="V20180606\Models\ScdnBotConfig.cs" />
-    <Compile Include="V20180606\Models\ScdnCCRules.cs" />
-    <Compile Include="V20180606\Models\ScdnConfig.cs" />
-    <Compile Include="V20180606\Models\ScdnDdosConfig.cs" />
-    <Compile Include="V20180606\Models\ScdnErrorPage.cs" />
-    <Compile Include="V20180606\Models\ScdnSevenLayerRules.cs" />
-    <Compile Include="V20180606\Models\ScdnWafConfig.cs" />
-    <Compile Include="V20180606\Models\ScdnWafRule.cs" />
     <Compile Include="V20180606\Models\SchemeKey.cs" />
     <Compile Include="V20180606\Models\SearchClsLogRequest.cs" />
     <Compile Include="V20180606\Models\SearchClsLogResponse.cs" />
@@ -289,16 +266,12 @@
     <Compile Include="V20180606\Models\UpdateDomainConfigResponse.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeRequest.cs" />
     <Compile Include="V20180606\Models\UpdatePayTypeResponse.cs" />
-    <Compile Include="V20180606\Models\UpdateScdnDomainRequest.cs" />
-    <Compile Include="V20180606\Models\UpdateScdnDomainResponse.cs" />
-    <Compile Include="V20180606\Models\UrlRecord.cs" />
     <Compile Include="V20180606\Models\UrlRedirect.cs" />
     <Compile Include="V20180606\Models\UrlRedirectRule.cs" />
     <Compile Include="V20180606\Models\UserAgentFilter.cs" />
     <Compile Include="V20180606\Models\UserAgentFilterRule.cs" />
     <Compile Include="V20180606\Models\VideoSeek.cs" />
     <Compile Include="V20180606\Models\ViolationUrl.cs" />
-    <Compile Include="V20180606\Models\WafSubRuleStatus.cs" />
     <Compile Include="V20180606\Models\WebSocket.cs" />
     <Compile Include="V20180606\Models\WebpAdapter.cs" />
   </ItemGroup>

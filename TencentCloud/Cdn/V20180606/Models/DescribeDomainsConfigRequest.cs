@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: 100. Maximum value: 1000.
+        /// Number limit of paginated query. default value: 100. maximum settable: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

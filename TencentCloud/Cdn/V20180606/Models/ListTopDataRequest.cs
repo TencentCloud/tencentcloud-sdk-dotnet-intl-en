@@ -41,12 +41,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Objects to be sorted. Valid values:
-        /// `url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-        /// `district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
-        /// `isp`: sorts ISPs. Supported filters are `flux` and `request`.
-        /// `host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-        /// `originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+        /// Sorting object, which supports the following formats.
+        /// url: specifies the access url in alphabetical order (no parameters). supported filters: flux, request.
+        /// district: specifies the province or country/region sorting order. supported filters are flux and request.
+        /// isp: specifies the carrier sorting order. supported filters are flux and request.
+        /// host: specifies the domain name data access sorting order. supported filters: flux, request, bandwidth, fluxHitRate, 2XX, 3XX, 4XX, 5XX, statusCode.   
+        /// originHost: specifies the domain name origin-pull data sort. supported filters: flux, request, bandwidth, origin_2XX, origin_3XX, origin_4XX, origin_5XX, OriginStatusCode.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }

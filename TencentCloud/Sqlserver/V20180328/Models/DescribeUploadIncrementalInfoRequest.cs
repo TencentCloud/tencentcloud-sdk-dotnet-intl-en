@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CacheOptResult : AbstractModel
+    public class DescribeUploadIncrementalInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of succeeded URLs
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Imports the target instance ID.
         /// </summary>
-        [JsonProperty("SuccessUrls")]
-        public string[] SuccessUrls{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of failed URLs
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Backup import task ID, which is returned by the CreateBackupMigration API.
         /// </summary>
-        [JsonProperty("FailUrls")]
-        public string[] FailUrls{ get; set; }
+        [JsonProperty("BackupMigrationId")]
+        public string BackupMigrationId{ get; set; }
+
+        /// <summary>
+        /// Incremental import task ID.
+        /// </summary>
+        [JsonProperty("IncrementalMigrationId")]
+        public string IncrementalMigrationId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "SuccessUrls.", this.SuccessUrls);
-            this.SetParamArraySimple(map, prefix + "FailUrls.", this.FailUrls);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "BackupMigrationId", this.BackupMigrationId);
+            this.SetParamSimple(map, prefix + "IncrementalMigrationId", this.IncrementalMigrationId);
         }
     }
 }

@@ -25,7 +25,8 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// TRTC Data Dashboard output parameters
+        /// TRTC monitoring data output parameters.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]
         public TRTCDataResult Data{ get; set; }

@@ -25,15 +25,13 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// List of domain names connected to CDN
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of domain names integrated with CDN.
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// List of CDN domain names with certificates configured
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of CDN domain names with configured certificates.
         /// </summary>
         [JsonProperty("CertifiedDomains")]
         public string[] CertifiedDomains{ get; set; }

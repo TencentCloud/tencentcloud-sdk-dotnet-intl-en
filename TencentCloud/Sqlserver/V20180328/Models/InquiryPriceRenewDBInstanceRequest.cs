@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdn.V20180606.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnableCachesRequest : AbstractModel
+    public class InquiryPriceRenewDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// List of unblocked URLs
+        /// Instance ID.
         /// </summary>
-        [JsonProperty("Urls")]
-        public string[] Urls{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// URL blocking date
+        /// Renewal duration. It can be up to 48 months for monthly renewal. By default, the price of a one-month renewal is queried.
         /// </summary>
-        [JsonProperty("Date")]
-        public string Date{ get; set; }
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
+
+        /// <summary>
+        /// Renewal duration unit. month: monthly renewal. Currently, only monthly renewal is supported.
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
-            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         }
     }
 }

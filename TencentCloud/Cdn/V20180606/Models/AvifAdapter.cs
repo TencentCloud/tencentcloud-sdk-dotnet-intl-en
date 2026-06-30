@@ -33,6 +33,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// When the original image is avif and the client Accept header contains image/avif, return directly the original image.
+        /// When the original image is in avif format and the client Accept header does not include image/avif but includes image/webp, convert avif to webp format and return. if the Accept header does not include image/webp, convert to jpeg and return.
+        /// 
+        /// Valid values:. 
+        /// - []
+        /// - ["webp"]
+        /// - ["jpeg"]
+        /// - ["webp", "jpeg"]
+        /// 
+        /// "Webp": whether avif to webp is enabled, "jpeg": whether avif to jpeg is enabled. if both webp and jpeg are enabled, webp must be before jpeg.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("FallbackFormats")]
+        public string[] FallbackFormats{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +56,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "FallbackFormats.", this.FallbackFormats);
         }
     }
 }

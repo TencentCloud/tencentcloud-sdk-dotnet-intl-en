@@ -31,13 +31,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Starting time, such as `2019-09-04 00:00:00`
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time, such as `2019-09-04 12:00:00`
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -55,18 +55,17 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Specifies a region for the query.
-        /// `mainland`: specifies to return the download link of logs on acceleration within Mainland China;
-        /// `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
-        /// `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
-        /// Default value: `mainland`.
+        /// Specifies the region for log download, defaults to mainland. valid values:.
+        /// <li>mainland: specifies the download url for the domestic acceleration log package.</li>.
+        /// <Li>Overseas: specifies the url for obtaining overseas acceleration logs package download.</li>.
+        /// <li>global: simultaneously obtain domestic and overseas acceleration logs package download urls (separately packaged).</li>.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Specifies the type of logs to download (only access logs supported).
-        /// `access`: Access logs.
+        /// Specifies the type of logs to download. valid values:.
+        /// <Li>Access: specifies the access log.</li>.
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
