@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.intl.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1333";
+       private const string sdkVersion = "SDK_NET_3.0.1344";
 
         /// <summary>
         /// Client constructor.
@@ -2310,6 +2310,55 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// Prometheus internal read-only dynamic api proxy supports accessing native Prometheus APIs via cloud api format
+        /// support the following APIs:
+        /// 
+        /// | path | method | purpose |
+        /// | - | - | - |
+        /// /api/v1/query | GET, POST | point query
+        /// /api/v1/query_range | GET, POST | Range query
+        /// /api/v1/series | GET, POST | Query the series list
+        /// /api/v1/labels | GET, POST | Query labels
+        /// /api/v1/label/{label_name}/values | GET | Query label values.
+        /// /api/v1/rules | GET | Query pre-aggregation and alert rules.
+        /// /api/v1/user_limits | GET | Query prometheus instance limits
+        ///  /alertmanager/api/v2/alerts/groups | GET | Query current alarm information 
+        /// /alertmanager/api/v2/silences | GET | Query alert silences
+        /// /alertmanager/api/v2/silence/{id} | GET | Query alert silence details
+        /// </summary>
+        /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
+        /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>
+        public Task<ExportPrometheusReadOnlyDynamicAPIResponse> ExportPrometheusReadOnlyDynamicAPI(ExportPrometheusReadOnlyDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<ExportPrometheusReadOnlyDynamicAPIResponse>(req, "ExportPrometheusReadOnlyDynamicAPI");
+        }
+
+        /// <summary>
+        /// Prometheus internal read-only dynamic api proxy supports accessing native Prometheus APIs via cloud api format
+        /// support the following APIs:
+        /// 
+        /// | path | method | purpose |
+        /// | - | - | - |
+        /// /api/v1/query | GET, POST | point query
+        /// /api/v1/query_range | GET, POST | Range query
+        /// /api/v1/series | GET, POST | Query the series list
+        /// /api/v1/labels | GET, POST | Query labels
+        /// /api/v1/label/{label_name}/values | GET | Query label values.
+        /// /api/v1/rules | GET | Query pre-aggregation and alert rules.
+        /// /api/v1/user_limits | GET | Query prometheus instance limits
+        ///  /alertmanager/api/v2/alerts/groups | GET | Query current alarm information 
+        /// /alertmanager/api/v2/silences | GET | Query alert silences
+        /// /alertmanager/api/v2/silence/{id} | GET | Query alert silence details
+        /// </summary>
+        /// <param name="req"><see cref="ExportPrometheusReadOnlyDynamicAPIRequest"/></param>
+        /// <returns><see cref="ExportPrometheusReadOnlyDynamicAPIResponse"/></returns>
+        public ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPISync(ExportPrometheusReadOnlyDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<ExportPrometheusReadOnlyDynamicAPIResponse>(req, "ExportPrometheusReadOnlyDynamicAPI")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, use the [DescribeStatisticData](https://www.tencentcloud.com/document/product/248/39481) API.
         /// You can get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
         /// API call rate limit: 20 calls/second (1,200 calls/minute). A single request can get the data of up to 10 instances for up to 1,440 data points.
@@ -2732,6 +2781,59 @@ namespace TencentCloud.Monitor.V20180724
         public ResumeGrafanaInstanceResponse ResumeGrafanaInstanceSync(ResumeGrafanaInstanceRequest req)
         {
             return InternalRequestAsync<ResumeGrafanaInstanceResponse>(req, "ResumeGrafanaInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Prometheus internal dynamics api proxy supports accessing Prometheus native APIs via cloud APIs.
+        /// support the following APIs:
+        ///  
+        /// It is recommended to use the ExportPrometheusReadOnlyDynamicAPI call for Read API, supporting longer query latency and response size. Meanwhile, it makes permission management easy.
+        /// 
+        /// | path | method | purpose |
+        /// | - | - | - |
+        /// /api/v1/query | GET, POST | point query
+        /// /api/v1/query_range | GET, POST | Range query
+        /// /api/v1/series | GET, POST | Query the series list
+        /// /api/v1/labels | GET, POST | Query labels
+        /// /api/v1/label/{label_name}/values | GET | Query label values.
+        /// /api/v1/rules | GET | Query pre-aggregation and alert rules.
+        /// /api/v1/user_limits | GET | Query prometheus instance limits
+        ///  /alertmanager/api/v2/alerts/groups | GET | Query current alarm information 
+        /// /alertmanager/api/v2/silences | GET, POST | Query, create, or modify alert silences
+        /// /alertmanager/api/v2/silence/{id} | GET, DELETE | Query alert silence details, Delete alert silence
+        /// </summary>
+        /// <param name="req"><see cref="RoutePrometheusDynamicAPIRequest"/></param>
+        /// <returns><see cref="RoutePrometheusDynamicAPIResponse"/></returns>
+        public Task<RoutePrometheusDynamicAPIResponse> RoutePrometheusDynamicAPI(RoutePrometheusDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<RoutePrometheusDynamicAPIResponse>(req, "RoutePrometheusDynamicAPI");
+        }
+
+        /// <summary>
+        /// Prometheus internal dynamics api proxy supports accessing Prometheus native APIs via cloud APIs.
+        /// support the following APIs:
+        ///  
+        /// It is recommended to use the ExportPrometheusReadOnlyDynamicAPI call for Read API, supporting longer query latency and response size. Meanwhile, it makes permission management easy.
+        /// 
+        /// | path | method | purpose |
+        /// | - | - | - |
+        /// /api/v1/query | GET, POST | point query
+        /// /api/v1/query_range | GET, POST | Range query
+        /// /api/v1/series | GET, POST | Query the series list
+        /// /api/v1/labels | GET, POST | Query labels
+        /// /api/v1/label/{label_name}/values | GET | Query label values.
+        /// /api/v1/rules | GET | Query pre-aggregation and alert rules.
+        /// /api/v1/user_limits | GET | Query prometheus instance limits
+        ///  /alertmanager/api/v2/alerts/groups | GET | Query current alarm information 
+        /// /alertmanager/api/v2/silences | GET, POST | Query, create, or modify alert silences
+        /// /alertmanager/api/v2/silence/{id} | GET, DELETE | Query alert silence details, Delete alert silence
+        /// </summary>
+        /// <param name="req"><see cref="RoutePrometheusDynamicAPIRequest"/></param>
+        /// <returns><see cref="RoutePrometheusDynamicAPIResponse"/></returns>
+        public RoutePrometheusDynamicAPIResponse RoutePrometheusDynamicAPISync(RoutePrometheusDynamicAPIRequest req)
+        {
+            return InternalRequestAsync<RoutePrometheusDynamicAPIResponse>(req, "RoutePrometheusDynamicAPI")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

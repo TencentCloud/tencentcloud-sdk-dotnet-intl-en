@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1339";
+       private const string sdkVersion = "SDK_NET_3.0.1344";
 
         /// <summary>
         /// Client constructor.
@@ -414,6 +414,35 @@ namespace TencentCloud.Vod.V20180717
         public CreateAigcImageTaskResponse CreateAigcImageTaskSync(CreateAigcImageTaskRequest req)
         {
             return InternalRequestAsync<CreateAigcImageTaskResponse>(req, "CreateAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create and enable AIGC quota configuration. Quota usage starts accumulating when the quota feature is enabled. The AIGC feature will no longer be usable when the quota is reached.
+        /// 
+        /// If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+        /// 
+        /// Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcQuotaRequest"/></param>
+        /// <returns><see cref="CreateAigcQuotaResponse"/></returns>
+        public Task<CreateAigcQuotaResponse> CreateAigcQuota(CreateAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateAigcQuotaResponse>(req, "CreateAigcQuota");
+        }
+
+        /// <summary>
+        /// This API is used to create and enable AIGC quota configuration. Quota usage starts accumulating when the quota feature is enabled. The AIGC feature will no longer be usable when the quota is reached.
+        /// 
+        /// If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+        /// 
+        /// Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAigcQuotaRequest"/></param>
+        /// <returns><see cref="CreateAigcQuotaResponse"/></returns>
+        public CreateAigcQuotaResponse CreateAigcQuotaSync(CreateAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<CreateAigcQuotaResponse>(req, "CreateAigcQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1366,6 +1395,31 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to delete AIGC quota configurations. Once deleted, it will no longer limit the initiation of AIGC tasks.
+        /// 
+        /// If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcQuotaRequest"/></param>
+        /// <returns><see cref="DeleteAigcQuotaResponse"/></returns>
+        public Task<DeleteAigcQuotaResponse> DeleteAigcQuota(DeleteAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcQuotaResponse>(req, "DeleteAigcQuota");
+        }
+
+        /// <summary>
+        /// This API is used to delete AIGC quota configurations. Once deleted, it will no longer limit the initiation of AIGC tasks.
+        /// 
+        /// If the quota is re-enabled after deletion, the amount will be cleared and recalculated.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAigcQuotaRequest"/></param>
+        /// <returns><see cref="DeleteAigcQuotaResponse"/></returns>
+        public DeleteAigcQuotaResponse DeleteAigcQuotaSync(DeleteAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<DeleteAigcQuotaResponse>(req, "DeleteAigcQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom animated image generating template.
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
@@ -2121,6 +2175,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcFaceInfoAsyncResponse DescribeAigcFaceInfoAsyncSync(DescribeAigcFaceInfoAsyncRequest req)
         {
             return InternalRequestAsync<DescribeAigcFaceInfoAsyncResponse>(req, "DescribeAigcFaceInfoAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the AIGC quota configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAigcQuotasResponse"/></returns>
+        public Task<DescribeAigcQuotasResponse> DescribeAigcQuotas(DescribeAigcQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcQuotasResponse>(req, "DescribeAigcQuotas");
+        }
+
+        /// <summary>
+        /// This API is used to query the AIGC quota configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcQuotasRequest"/></param>
+        /// <returns><see cref="DescribeAigcQuotasResponse"/></returns>
+        public DescribeAigcQuotasResponse DescribeAigcQuotasSync(DescribeAigcQuotasRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcQuotasResponse>(req, "DescribeAigcQuotas")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3816,6 +3891,31 @@ namespace TencentCloud.Vod.V20180717
         public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplateSync(ModifyAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<ModifyAdaptiveDynamicStreamingTemplateResponse>(req, "ModifyAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to edit AIGC quota configuration. Quota usage starts accumulating when the quota functionality is enabled. The AIGC functionality will no longer be usable once the quota is reached.
+        /// 
+        /// Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAigcQuotaRequest"/></param>
+        /// <returns><see cref="ModifyAigcQuotaResponse"/></returns>
+        public Task<ModifyAigcQuotaResponse> ModifyAigcQuota(ModifyAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyAigcQuotaResponse>(req, "ModifyAigcQuota");
+        }
+
+        /// <summary>
+        /// This API is used to edit AIGC quota configuration. Quota usage starts accumulating when the quota functionality is enabled. The AIGC functionality will no longer be usable once the quota is reached.
+        /// 
+        /// Since AGC content generation is an async task, real-time usage data cannot be obtained. Therefore, the Quota limit may result in some errors, and completely precise control cannot be achieved with the set limit.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAigcQuotaRequest"/></param>
+        /// <returns><see cref="ModifyAigcQuotaResponse"/></returns>
+        public ModifyAigcQuotaResponse ModifyAigcQuotaSync(ModifyAigcQuotaRequest req)
+        {
+            return InternalRequestAsync<ModifyAigcQuotaResponse>(req, "ModifyAigcQuota")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

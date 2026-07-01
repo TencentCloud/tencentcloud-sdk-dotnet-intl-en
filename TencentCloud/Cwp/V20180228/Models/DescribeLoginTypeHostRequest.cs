@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Sort order: [ASC: ascending | DESC: descending]</p>
+        /// <p>Sort order: [ASC: ascending, DESC: descending]</p>
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
