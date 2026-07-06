@@ -37,13 +37,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ThaiName{ get; set; }
 
         /// <summary>
-        /// Name in English
+        /// First name in English
         /// </summary>
         [JsonProperty("EnFirstName")]
         public string EnFirstName{ get; set; }
 
         /// <summary>
-        /// Name in English
+        /// Last name in English
         /// </summary>
         [JsonProperty("EnLastName")]
         public string EnLastName{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// LaserID in the back of the card.
+        /// Laser ID on the back of the card.
         /// </summary>
         [JsonProperty("LaserID")]
         public string LaserID{ get; set; }

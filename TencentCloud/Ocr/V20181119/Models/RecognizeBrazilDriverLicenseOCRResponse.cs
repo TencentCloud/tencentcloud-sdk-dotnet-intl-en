@@ -25,37 +25,37 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Name
+        /// Name of the license holder.
         /// </summary>
         [JsonProperty("NOME")]
         public string NOME{ get; set; }
 
         /// <summary>
-        /// Driving license type
+        /// Driver's license category.
         /// </summary>
         [JsonProperty("CatHab")]
         public string CatHab{ get; set; }
 
         /// <summary>
-        /// CNH number
+        /// Driver's license number (CNH).
         /// </summary>
         [JsonProperty("CNHNumber")]
         public string CNHNumber{ get; set; }
 
         /// <summary>
-        /// Valid date
+        /// Validity date (valid until).
         /// </summary>
         [JsonProperty("VALIDADE")]
         public string VALIDADE{ get; set; }
 
         /// <summary>
-        /// Qualification
+        /// Qualification information.
         /// </summary>
         [JsonProperty("QUALIFICATION")]
         public string QUALIFICATION{ get; set; }
 
         /// <summary>
-        /// ID number
+        /// ID number (Identity document number).
         /// </summary>
         [JsonProperty("IDENTIDADE")]
         public string IDENTIDADE{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CPF{ get; set; }
 
         /// <summary>
-        /// Birthday
+        /// Date of birth.
         /// </summary>
         [JsonProperty("NASCIMENTO")]
         public string NASCIMENTO{ get; set; }
@@ -85,33 +85,34 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string REGISTRO{ get; set; }
 
         /// <summary>
-        /// Remark
+        /// Remarks
         /// </summary>
         [JsonProperty("OBSERVATIONS")]
         public string OBSERVATIONS{ get; set; }
 
         /// <summary>
-        /// Issue date
+        /// Date of issue.
         /// </summary>
         [JsonProperty("IssueDate")]
         public string IssueDate{ get; set; }
 
         /// <summary>
-        /// Issue location
+        /// Place of issue.
         /// </summary>
         [JsonProperty("LOCAL")]
         public string LOCAL{ get; set; }
 
         /// <summary>
-        /// Number in the back of the card
+        /// Registration number on the back of the card.
         /// </summary>
         [JsonProperty("BackNumber")]
         public string BackNumber{ get; set; }
 
         /// <summary>
-        /// Field confidence
+        /// This field is deprecated and will always return "1". Usage is not recommended.
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>

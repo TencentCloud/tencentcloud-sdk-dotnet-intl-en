@@ -25,13 +25,17 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Specifies the type of document in brazil. valid values: 1. RNE 2. RNM 3. IDCard 4. DrivingLicense.
+        /// Specifies the type of document in brazil. valid values: 
+        /// 1. RNE 
+        /// 2. RNM 
+        /// 3. IDCard 
+        /// 4. DrivingLicense.
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// Identifies the content of a brazil document.
+        /// The recognized content of the Brazilian document.
         /// </summary>
         [JsonProperty("Result")]
         public BrazilCardInfo Result{ get; set; }

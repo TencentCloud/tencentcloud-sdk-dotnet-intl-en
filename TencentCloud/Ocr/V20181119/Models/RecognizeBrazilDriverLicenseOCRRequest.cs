@@ -54,6 +54,16 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("CropPortrait")]
         public bool? CropPortrait{ get; set; }
 
+        /// <summary>
+        /// Version of the driver's license image. 
+        /// Valid values: 
+        /// OLD (old version), 
+        /// NEW (new version). 
+        /// The default value is OLD.
+        /// </summary>
+        [JsonProperty("LicenceVersion")]
+        public string LicenceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +75,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "BackImageUrl", this.BackImageUrl);
             this.SetParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
+            this.SetParamSimple(map, prefix + "LicenceVersion", this.LicenceVersion);
         }
     }
 }

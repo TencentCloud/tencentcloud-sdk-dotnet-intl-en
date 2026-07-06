@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The confidence score for a segment. Value range: 0-100.
+        /// <p>Confidence of the recognized segment. Value range: 0–100.</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The start time offset (seconds) of a segment.
+        /// <p>Start time offset of the recognized segment, in seconds.</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end time offset (seconds) of a segment.
+        /// <p>End time offset of the recognized segment, in seconds.</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The text transcript.
+        /// <p>Recognized text.</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// The translation.
+        /// <p>Translated text.</p>
         /// </summary>
         [JsonProperty("Trans")]
         public string Trans{ get; set; }
 
         /// <summary>
-        /// Word timestamp information.
+        /// <p>Word timestamp information.</p>
         /// </summary>
         [JsonProperty("Wordlist")]
         public WordResult[] Wordlist{ get; set; }

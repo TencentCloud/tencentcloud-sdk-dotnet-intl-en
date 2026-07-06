@@ -25,25 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Image encoding configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Image encoding configuration.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
-        /// Image enhancement configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Image enhancement configuration.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// Image erasing configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Image erasing configuration.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EraseConfig")]
         public ImageEraseConfig EraseConfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AiPosterSuiteConfig")]
+        public AiPosterSuiteConfig AiPosterSuiteConfig{ get; set; }
 
 
         /// <summary>
@@ -54,6 +60,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
+            this.SetParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
         }
     }
 }

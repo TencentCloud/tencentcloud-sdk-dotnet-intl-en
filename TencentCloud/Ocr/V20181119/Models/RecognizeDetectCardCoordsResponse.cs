@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Detected coordinate information.
+        /// Coordinate information of the detected four corners of the card.
         /// </summary>
         [JsonProperty("ItemList")]
         public CoordsItem[] ItemList{ get; set; }

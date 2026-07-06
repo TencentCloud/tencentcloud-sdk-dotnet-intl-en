@@ -31,19 +31,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Sex((portrait side))
+        /// Gender (portrait side)
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Nation((portrait side))
+        /// Ethnicity (portrait side)
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
-        /// Brithday((portrait side))
+        /// Date of birth (portrait side)
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
@@ -61,27 +61,26 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// Card authority(national emblem side)
+        /// Issuing authority (national emblem side)
         /// </summary>
         [JsonProperty("Authority")]
         public string Authority{ get; set; }
 
         /// <summary>
-        /// Card valid date (national emblem side)
+        /// Validity period (national emblem side)
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// Card Warning Information
-        /// 
-        /// -9101 Alarm for covered certificate,
-        /// -9102 Alarm for photocopied certificate,
-        /// -9103 Alarm for photographed certificate,
-        /// -9104 Alarm for PS certificate,
-        /// -9107 Alarm for reflective certificate,
-        /// -9108 Alarm for blurry image,
-        /// -9109 This capability is not enabled.
+        /// Warning information for the ID card. Valid warning codes: 
+        /// -9101 (incomplete card border), 
+        /// -9102 (photocopied document), 
+        /// -9103 (re-photographed document), 
+        /// -9104 (PS-altered document), 
+        /// -9107 (reflective document), 
+        /// -9108 (blurry image), 
+        /// -9109 (warning capability not enabled).
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// Country/region code
+        /// Nationality code (MRZ field)
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] Warn{ get; set; }
 
         /// <summary>
-        /// Identity photo
+        /// Base64-encoded identity photo
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
@@ -119,21 +119,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Document content in Information Zone
+        /// Document content in the visual zone
         /// </summary>
         [JsonProperty("PassportRecognizeInfos")]
         public PassportRecognizeInfos PassportRecognizeInfos{ get; set; }
 
         /// <summary>
-        /// Card Warning Information
-        /// 
-        /// -9101 Alarm for covered certificate,
-        /// -9102 Alarm for photocopied certificate,
-        /// -9103 Alarm for photographed certificate,
-        /// -9104 Alarm for PS certificate,
-        /// -9107 Alarm for reflective certificate,
-        /// -9108 Alarm for blurry image,
-        /// -9109 This capability is not enabled.
+        /// Warning information for the document. This field applies only to international site requests and will return an empty array for domestic site requests. Valid warning codes: 
+        /// -9101 (incomplete card border), 
+        /// -9102 (photocopied document), 
+        /// -9103 (re-photographed document), -9104 (PS-altered document), 
+        /// -9107 (reflective document), 
+        /// -9108 (blurry image), 
+        /// -9109 (warning capability not enabled).
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
@@ -145,7 +143,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? CardCount{ get; set; }
 
         /// <summary>
-        /// complete or not
+        /// Whether the passport information is complete.
         /// </summary>
         [JsonProperty("IsComplete")]
         public bool? IsComplete{ get; set; }

@@ -31,9 +31,10 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// The coordinates, represented in the coordinates of the four points.
+        /// This field is deprecated and will always return an empty array. Usage is not recommended.
         /// </summary>
         [JsonProperty("Polygon")]
+        [System.Obsolete]
         public Coord[] Polygon{ get; set; }
 
 

@@ -50,6 +50,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VoiceId{ get; set; }
 
         /// <summary>
+        /// <p>Audition audio URL.</p>
+        /// </summary>
+        [JsonProperty("AudioUrl")]
+        public string AudioUrl{ get; set; }
+
+        /// <summary>
         /// <p>Extended information.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

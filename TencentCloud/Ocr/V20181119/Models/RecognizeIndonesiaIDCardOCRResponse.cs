@@ -61,7 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Alamat{ get; set; }
 
         /// <summary>
-        /// The street.
+        /// The neighborhood/community unit (RT/RW).
         /// </summary>
         [JsonProperty("RTRW")]
         public string RTRW{ get; set; }

@@ -25,67 +25,67 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Chinese last name
+        /// Last name in Chinese
         /// </summary>
         [JsonProperty("CnLastName")]
         public string CnLastName{ get; set; }
 
         /// <summary>
-        /// English last name
+        /// Last name in English
         /// </summary>
         [JsonProperty("EnLastName")]
         public string EnLastName{ get; set; }
 
         /// <summary>
-        /// Last name code
+        /// Telecode of the last name in Chinese
         /// </summary>
         [JsonProperty("LastNameCode")]
         public string LastNameCode{ get; set; }
 
         /// <summary>
-        /// Chinese first name
+        /// First name in Chinese
         /// </summary>
         [JsonProperty("CnFirstName")]
         public string CnFirstName{ get; set; }
 
         /// <summary>
-        /// English first name
+        /// First name in English
         /// </summary>
         [JsonProperty("EnFirstName")]
         public string EnFirstName{ get; set; }
 
         /// <summary>
-        /// First name code
+        /// Telecode of the first name in Chinese
         /// </summary>
         [JsonProperty("FirstNameCode")]
         public string FirstNameCode{ get; set; }
 
         /// <summary>
-        /// ID Number
+        /// Identity card number
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Birthday(DD-MM-YYYY)
+        /// Date of birth (DD-MM-YYYY)
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// gender
+        /// Gender
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// First issue Date (DD-MM-YYYY)
+        /// Date of first issue (DD-MM-YYYY)
         /// </summary>
         [JsonProperty("FirstIssueDate")]
         public string FirstIssueDate{ get; set; }
 
         /// <summary>
-        /// Issue date (DD-MM-YYYY)
+        /// Date of issue (DD-MM-YYYY)
         /// </summary>
         [JsonProperty("CurrentIssueDate")]
         public string CurrentIssueDate{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ValidityPeriod{ get; set; }
 
         /// <summary>
-        /// ID symbol
+        /// Document symbol
         /// </summary>
         [JsonProperty("Symbol")]
         public string Symbol{ get; set; }
@@ -115,13 +115,15 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RetImage{ get; set; }
 
         /// <summary>
-        /// Image rotation angle, the horizontal direction of the text is 0, clockwise is positive, counterclockwise is negative
+        /// This field is deprecated and will always return null. Usage is not recommended.
         /// </summary>
         [JsonProperty("Angle")]
+        [System.Obsolete]
         public string Angle{ get; set; }
 
         /// <summary>
-        /// Resident type.
+        /// Resident type. 
+        /// Valid values: Permanent Resident Identity Card, Non-permanent Resident Identity Card.
         /// </summary>
         [JsonProperty("ResidentType")]
         public string ResidentType{ get; set; }

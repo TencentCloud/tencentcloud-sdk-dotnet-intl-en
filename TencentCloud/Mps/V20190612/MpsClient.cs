@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1345";
 
         /// <summary>
         /// Client constructor.
@@ -1101,6 +1101,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// This API is used to delete a voice (created via voice cloning or design).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public Task<DeleteVoiceResponse> DeleteVoice(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice");
+        }
+
+        /// <summary>
+        /// This API is used to delete a voice (created via voice cloning or design).
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public DeleteVoiceResponse DeleteVoiceSync(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom watermarking template.
         /// </summary>
         /// <param name="req"><see cref="DeleteWatermarkTemplateRequest"/></param>
@@ -1928,7 +1949,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to design a voice. It generates a voice ID based on a prompt.
+        /// This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
         /// </summary>
         /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
         /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
@@ -1938,13 +1959,55 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to design a voice. It generates a voice ID based on a prompt.
+        /// This API is used to design a voice. It generates a voice ID based on a prompt. The default maximum number of cloned or designed voices is 100.
         /// </summary>
         /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
         /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
         public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
         {
             return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to quickly detect the hard subtitle area in a video file.
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoSubtitleAreaRequest"/></param>
+        /// <returns><see cref="DetectVideoSubtitleAreaResponse"/></returns>
+        public Task<DetectVideoSubtitleAreaResponse> DetectVideoSubtitleArea(DetectVideoSubtitleAreaRequest req)
+        {
+            return InternalRequestAsync<DetectVideoSubtitleAreaResponse>(req, "DetectVideoSubtitleArea");
+        }
+
+        /// <summary>
+        /// This API is used to quickly detect the hard subtitle area in a video file.
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoSubtitleAreaRequest"/></param>
+        /// <returns><see cref="DetectVideoSubtitleAreaResponse"/></returns>
+        public DetectVideoSubtitleAreaResponse DetectVideoSubtitleAreaSync(DetectVideoSubtitleAreaRequest req)
+        {
+            return InternalRequestAsync<DetectVideoSubtitleAreaResponse>(req, "DetectVideoSubtitleArea")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to quickly detect whether a video file contains a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoWatermarkRequest"/></param>
+        /// <returns><see cref="DetectVideoWatermarkResponse"/></returns>
+        public Task<DetectVideoWatermarkResponse> DetectVideoWatermark(DetectVideoWatermarkRequest req)
+        {
+            return InternalRequestAsync<DetectVideoWatermarkResponse>(req, "DetectVideoWatermark");
+        }
+
+        /// <summary>
+        /// This API is used to quickly detect whether a video file contains a watermark.
+        /// </summary>
+        /// <param name="req"><see cref="DetectVideoWatermarkRequest"/></param>
+        /// <returns><see cref="DetectVideoWatermarkResponse"/></returns>
+        public DetectVideoWatermarkResponse DetectVideoWatermarkSync(DetectVideoWatermarkRequest req)
+        {
+            return InternalRequestAsync<DetectVideoWatermarkResponse>(req, "DetectVideoWatermark")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2804,7 +2867,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to return the clone voice type Id or synthetic audio results synchronously.
+        /// This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
         /// </summary>
         /// <param name="req"><see cref="SyncDubbingRequest"/></param>
         /// <returns><see cref="SyncDubbingResponse"/></returns>
@@ -2814,7 +2877,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to return the clone voice type Id or synthetic audio results synchronously.
+        /// This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.
         /// </summary>
         /// <param name="req"><see cref="SyncDubbingRequest"/></param>
         /// <returns><see cref="SyncDubbingResponse"/></returns>
@@ -2884,6 +2947,27 @@ namespace TencentCloud.Mps.V20190612
         public UpdateProjectResponse UpdateProjectSync(UpdateProjectRequest req)
         {
             return InternalRequestAsync<UpdateProjectResponse>(req, "UpdateProject")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the voice information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public Task<UpdateVoiceResponse> UpdateVoice(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice");
+        }
+
+        /// <summary>
+        /// This API is used to update the voice information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public UpdateVoiceResponse UpdateVoiceSync(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

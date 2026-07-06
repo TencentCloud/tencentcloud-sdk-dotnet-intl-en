@@ -25,31 +25,31 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// RNE
+        /// The RNE (Registro Nacional de Estrangeiros) number.
         /// </summary>
         [JsonProperty("RNE")]
         public string RNE{ get; set; }
 
         /// <summary>
-        /// Classification
+        /// The classification of the RNE document.
         /// </summary>
         [JsonProperty("CLASSIFICATION")]
         public string CLASSIFICATION{ get; set; }
 
         /// <summary>
-        /// Valid date
+        /// The validity period (expiry date) of the RNE document.
         /// </summary>
         [JsonProperty("VALIDADE")]
         public string VALIDADE{ get; set; }
 
         /// <summary>
-        /// Name
+        /// The full name.
         /// </summary>
         [JsonProperty("NOME")]
         public string NOME{ get; set; }
 
         /// <summary>
-        /// Family information
+        /// Family information (parents' names).
         /// </summary>
         [JsonProperty("Membership")]
         public string Membership{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string NATURALIDADE{ get; set; }
 
         /// <summary>
-        /// Issuing agency
+        /// The issuing agency.
         /// </summary>
         [JsonProperty("IssuingAgency")]
         public string IssuingAgency{ get; set; }
 
         /// <summary>
-        /// Birthday
+        /// Date of birth.
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
@@ -85,25 +85,25 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Date of entry
+        /// The date of entry into Brazil.
         /// </summary>
         [JsonProperty("EntryDate")]
         public string EntryDate{ get; set; }
 
         /// <summary>
-        /// VIA
+        /// The VIA (document version/sequence number).
         /// </summary>
         [JsonProperty("VIA")]
         public string VIA{ get; set; }
 
         /// <summary>
-        /// Dispatch date
+        /// The issue date.
         /// </summary>
         [JsonProperty("DispatchDate")]
         public string DispatchDate{ get; set; }
 
         /// <summary>
-        /// MRZ
+        /// The machine readable zone (MRZ) code.
         /// </summary>
         [JsonProperty("MRZ")]
         public string MRZ{ get; set; }

@@ -37,31 +37,31 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EnName{ get; set; }
 
         /// <summary>
-        /// gender
+        /// Gender
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Birth Country
+        /// Country of birth
         /// </summary>
         [JsonProperty("CountryOfBirth")]
         public string CountryOfBirth{ get; set; }
 
         /// <summary>
-        /// Brithday
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Address(back side)
+        /// Address (back side)
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// License number
+        /// ID number
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string NRICCode{ get; set; }
 
         /// <summary>
-        /// Post code(back side)
+        /// Postal code (back side)
         /// </summary>
         [JsonProperty("PostCode")]
         public string PostCode{ get; set; }

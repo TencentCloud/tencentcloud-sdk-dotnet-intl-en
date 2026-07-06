@@ -49,11 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Alarm codes
-        /// -9103 Alarm for photographed certificate
-        /// -9102 Alarm for photocopied certificate
-        /// -9106 Alarm for covered certificate
-        /// -9107 Alarm for blurry image
+        /// This field is deprecated and will always return an empty array. Usage is not recommended.
         /// </summary>
         [JsonProperty("Warn")]
         [System.Obsolete]
@@ -66,26 +62,21 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// This is an extended field, 
-        /// with the confidence of a field recognition result returned in the following format.
-        /// {
-        ///   Field name:{
-        ///     Confidence:0.9999
-        ///   }
-        /// }
+        /// This field is deprecated and will always return "1". Usage is not recommended.
         /// </summary>
         [JsonProperty("AdvancedInfo")]
+        [System.Obsolete]
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// Certificate type
-        /// MyKad  ID card
-        /// MyPR    Permanent resident card
-        /// MyTentera   Military identity card
-        /// MyKAS    Temporary ID card
-        /// POLIS  Police card
-        /// IKAD   Work permit
-        /// MyKid   Kid card
+        /// Certificate type: 
+        /// - MyKad: ID card 
+        /// - MyPR: Permanent resident card 
+        /// - MyTentera: Military identity card 
+        /// - MyKAS: Temporary ID card 
+        /// - POLIS: Police card 
+        /// - IKAD: Work permit 
+        /// - MyKid: Child ID card
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -97,7 +88,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Number on the back of Malaysia ID card 
+        /// Number on the back of the Malaysian ID card
         /// </summary>
         [JsonProperty("MyKadNumber")]
         public string MyKadNumber{ get; set; }

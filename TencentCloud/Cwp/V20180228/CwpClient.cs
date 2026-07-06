@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1344";
+       private const string sdkVersion = "SDK_NET_3.0.1345";
 
         /// <summary>
         /// Client constructor.
@@ -4071,7 +4071,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// Retrieve the global configuration for uninstall protection
+        /// This API is used to obtain the global configuration for QR code login.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
         /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>
@@ -4081,7 +4081,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// Retrieve the global configuration for uninstall protection
+        /// This API is used to obtain the global configuration for QR code login.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginTypeGlobalConfRequest"/></param>
         /// <returns><see cref="DescribeLoginTypeGlobalConfResponse"/></returns>

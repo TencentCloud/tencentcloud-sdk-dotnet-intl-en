@@ -49,6 +49,14 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RetProfile")]
         public bool? RetProfile{ get; set; }
 
+        /// <summary>
+        /// The side of the document. Valid values: FRONT (front side, default),
+        /// BACK (back side, only supported for Mainland Travel Permit for inbound visits). 
+        /// Note: Back side recognition is only supported for the "Mainland Travel Permit for Hong Kong and Macao Residents" , and is not supported for Hong Kong, Macao, or Taiwan passes.
+        /// </summary>
+        [JsonProperty("CardSide")]
+        public string CardSide{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +66,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "RetProfile", this.RetProfile);
+            this.SetParamSimple(map, prefix + "CardSide", this.CardSide);
         }
     }
 }

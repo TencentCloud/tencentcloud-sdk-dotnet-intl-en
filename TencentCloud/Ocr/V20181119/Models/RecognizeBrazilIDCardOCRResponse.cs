@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string MemberShip{ get; set; }
 
         /// <summary>
-        /// Birthday
+        /// Date of birth
         /// </summary>
         [JsonProperty("DataNascimento")]
         public string DataNascimento{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssuingAgency{ get; set; }
 
         /// <summary>
-        /// blood type
+        /// Blood type
         /// </summary>
         [JsonProperty("Fatorrh")]
         public string Fatorrh{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string DNI{ get; set; }
 
         /// <summary>
-        /// universal registration
+        /// General registry (Registro Geral)
         /// </summary>
         [JsonProperty("RegistroGeral")]
         public string RegistroGeral{ get; set; }

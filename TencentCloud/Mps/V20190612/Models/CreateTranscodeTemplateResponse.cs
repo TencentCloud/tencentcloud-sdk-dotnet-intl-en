@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a transcoding template.
+        /// <p>Unique identifier of the transcoding template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

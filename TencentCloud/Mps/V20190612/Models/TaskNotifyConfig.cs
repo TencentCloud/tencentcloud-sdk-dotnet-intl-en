@@ -25,63 +25,56 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Notification type. available values:.
-        /// <li>CMQ: offline. switch to TDMQ-CMQ.</li>.
-        /// <Li>TDMQ-CMQ: message queue</li>.
-        /// <li>URL: when a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. the callback protocol is HTTP+json. the content of the packet body is the same as the output parameters of the parseeventnotification api.</li>.
-        /// <Li>SCF: not recommended. additional configuration is required in the console.</li>.
-        /// <Li>AWS-SQS: aws queue, suitable for aws tasks only and requires the same region.</li>.
-        /// <font color="red">note: if left blank, it is TDMQ-CMQ by default. to use another type, you need to fill in the corresponding type value. if using TDMQ-CMQ message queue, an excessively large task response may cause queue failure.</font>.
+        /// <p>Notification type. Valid values:</p><li>CMQ: Removed. We recommend that you switch to TDMQ-CMQ.</li><li>TDMQ-CMQ: TDMQ.</li><li>URL: If URL is specified, HTTP callbacks are pushed to the URL specified in NotifyUrl. The callback protocol is HTTP and JSON. The packet body is the same as the output parameter of the event parsing notification API.</li><li>SCF: This is not recommended. Additional configuration for SCF is required in the console.</li><li>AWS-SQS: AWS queue. This is only suitable for AWS tasks in the same region.</li><font color="red"> Note: The default value is TDMQ-CMQ if this is not specified or empty. To use another type, you need to specify the corresponding value. If TDMQ-CMQ is used, oversized task response may cause failure to write to the queue. </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
+        /// <p>Workflow notification mode. Valid values are Finish and Change. If this is not specified, the default value is Finish.</p>
         /// </summary>
         [JsonProperty("NotifyMode")]
         public string NotifyMode{ get; set; }
 
         /// <summary>
-        /// HTTP callback URL, required if `NotifyType` is set to `URL`
+        /// <p>HTTP callback URL. This is required if NotifyType is URL.</p>
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+        /// <p>CMQ or TDMQ for CMQ model. Valid values are Queue and Topic.</p>
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+        /// <p>CMQ or TDMQ for CMQ region, such as sh or bj.</p>
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+        /// <p>This field takes effect if the model is Topic. It indicates the topic name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+        /// <p>This field takes effect if the model is Queue. It indicates the queue name of the CMQ or TDMQ for CMQ for receiving event notifications.</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
-        /// 
+        /// <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }
 
         /// <summary>
-        /// key used to generate a callback signature.
+        /// <p>Key used to generate the callback signature.</p>
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

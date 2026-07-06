@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.intl.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1314";
+       private const string sdkVersion = "SDK_NET_3.0.1345";
 
         /// <summary>
         /// Client constructor.
@@ -917,6 +917,27 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// Obtaining CAM Console Password Rules
+        /// </summary>
+        /// <param name="req"><see cref="GetPasswordRulesRequest"/></param>
+        /// <returns><see cref="GetPasswordRulesResponse"/></returns>
+        public Task<GetPasswordRulesResponse> GetPasswordRules(GetPasswordRulesRequest req)
+        {
+            return InternalRequestAsync<GetPasswordRulesResponse>(req, "GetPasswordRules");
+        }
+
+        /// <summary>
+        /// Obtaining CAM Console Password Rules
+        /// </summary>
+        /// <param name="req"><see cref="GetPasswordRulesRequest"/></param>
+        /// <returns><see cref="GetPasswordRulesResponse"/></returns>
+        public GetPasswordRulesResponse GetPasswordRulesSync(GetPasswordRulesRequest req)
+        {
+            return InternalRequestAsync<GetPasswordRulesResponse>(req, "GetPasswordRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API (GetPolicy) is used to query and view policy details.
         /// </summary>
         /// <param name="req"><see cref="GetPolicyRequest"/></param>
@@ -1606,6 +1627,27 @@ namespace TencentCloud.Cam.V20190116
         public UpdateOIDCConfigResponse UpdateOIDCConfigSync(UpdateOIDCConfigRequest req)
         {
             return InternalRequestAsync<UpdateOIDCConfigResponse>(req, "UpdateOIDCConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Updating CAM Console Password Rules
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePasswordRulesRequest"/></param>
+        /// <returns><see cref="UpdatePasswordRulesResponse"/></returns>
+        public Task<UpdatePasswordRulesResponse> UpdatePasswordRules(UpdatePasswordRulesRequest req)
+        {
+            return InternalRequestAsync<UpdatePasswordRulesResponse>(req, "UpdatePasswordRules");
+        }
+
+        /// <summary>
+        /// Updating CAM Console Password Rules
+        /// </summary>
+        /// <param name="req"><see cref="UpdatePasswordRulesRequest"/></param>
+        /// <returns><see cref="UpdatePasswordRulesResponse"/></returns>
+        public UpdatePasswordRulesResponse UpdatePasswordRulesSync(UpdatePasswordRulesRequest req)
+        {
+            return InternalRequestAsync<UpdatePasswordRulesResponse>(req, "UpdatePasswordRules")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

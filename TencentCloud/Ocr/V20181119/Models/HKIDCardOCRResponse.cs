@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string EnName{ get; set; }
 
         /// <summary>
-        /// Telecode for the name in Chinese
+        /// Telecode of the name in Chinese
         /// </summary>
         [JsonProperty("TelexCode")]
         public string TelexCode{ get; set; }
@@ -76,13 +76,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Symbol{ get; set; }
 
         /// <summary>
-        /// First issue date
+        /// Date of first issue
         /// </summary>
         [JsonProperty("FirstIssueDate")]
         public string FirstIssueDate{ get; set; }
 
         /// <summary>
-        /// Last receipt date
+        /// Date of last receipt
         /// </summary>
         [JsonProperty("CurrentIssueDate")]
         public string CurrentIssueDate{ get; set; }

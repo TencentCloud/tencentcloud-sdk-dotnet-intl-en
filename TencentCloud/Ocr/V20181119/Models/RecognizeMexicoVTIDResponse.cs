@@ -25,13 +25,13 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Name
+        /// The full name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Sex
+        /// Gender.
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string CURP{ get; set; }
 
         /// <summary>
-        /// Birthday
+        /// Date of birth.
         /// </summary>
         [JsonProperty("Birth")]
         public string Birth{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssueDate{ get; set; }
 
         /// <summary>
-        /// ValidDate
+        /// The validity period (expiration date).
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }

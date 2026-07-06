@@ -31,6 +31,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Prompt{ get; set; }
 
         /// <summary>
+        /// <p>Voice attribute.</p>
+        /// </summary>
+        [JsonProperty("VoiceProfile")]
+        public VoiceProfile VoiceProfile{ get; set; }
+
+        /// <summary>
+        /// <p>Audition audio text. The length cannot exceed 500.</p>
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
         /// <p>Extended parameters in the format of a JSON string.</p>
         /// </summary>
         [JsonProperty("ExtParam")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
+            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

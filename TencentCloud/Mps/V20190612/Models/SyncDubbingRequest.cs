@@ -61,13 +61,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioLang{ get; set; }
 
         /// <summary>
-        /// <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+        /// <p>Voice attribute.</p>
+        /// </summary>
+        [JsonProperty("VoiceProfile")]
+        public VoiceProfile VoiceProfile{ get; set; }
+
+        /// <summary>
+        /// <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
         /// </summary>
         [JsonProperty("Output")]
         public SyncDubbingOutputOption Output{ get; set; }
 
         /// <summary>
-        /// <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+        /// <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>Extended parameters in the format of a JSON string.</p><p><strong>synExt</strong>    Object    Extended text to speech parameter.<br>  <strong>duration</strong>    Float    Synthesized audio duration, in seconds. Example: 5.2.<br>  <strong>sampleRate</strong>    Integer    Synthesized audio sample rate. Default value: 16000. Valid values: [8000, 16000, 22050, 24000, 32000, 44100].<br>  <strong>pitch</strong>    Integer    Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br><strong>cloneExt</strong>    Object    Extended voice cloning parameter.<br>  <strong>timeRanges</strong>    Float[][]    Specifies the time ranges for audio cloning. The default value is the first 20 seconds of the audio. Example: [[5.2, 10], [45, 59.8]].</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }
@@ -84,7 +96,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
             this.SetParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
             this.SetParamSimple(map, prefix + "AudioLang", this.AudioLang);
+            this.SetParamObj(map, prefix + "VoiceProfile.", this.VoiceProfile);
             this.SetParamObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }
