@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Antiddos.V20250903.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class Filter : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// <p>Fields to be filtered. Check corresponding API for specific available values.</p>
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// <p>Field's filter value.</p>
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
-
-        /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
-        /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Antiddos.V20250903.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class DDoSUnblockQuota : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// <p>Total quota of the number of unblocking times.</p>
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("TotalQuota")]
+        public ulong? TotalQuota{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// <p>Total quota used.</p>
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
+        [JsonProperty("UsedQuota")]
+        public ulong? UsedQuota{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// <p>Start time when the quota takes effect.</p>
         /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("QuotaStartTime")]
+        public string QuotaStartTime{ get; set; }
+
+        /// <summary>
+        /// <p>End time when the quota takes effect.</p>
+        /// </summary>
+        [JsonProperty("QuotaEndTime")]
+        public string QuotaEndTime{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "TotalQuota", this.TotalQuota);
+            this.SetParamSimple(map, prefix + "UsedQuota", this.UsedQuota);
+            this.SetParamSimple(map, prefix + "QuotaStartTime", this.QuotaStartTime);
+            this.SetParamSimple(map, prefix + "QuotaEndTime", this.QuotaEndTime);
         }
     }
 }

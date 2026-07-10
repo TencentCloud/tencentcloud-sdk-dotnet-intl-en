@@ -28,7 +28,7 @@ namespace TencentCloud.Privatedns.V20201028
 
        private const string endpoint = "privatedns.intl.tencentcloudapi.com";
        private const string version = "2020-10-28";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Privatedns.V20201028
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to add the VPC associated with the private domain.
+        /// </summary>
+        /// <param name="req"><see cref="AddSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="AddSpecifyPrivateZoneVpcResponse"/></returns>
+        public Task<AddSpecifyPrivateZoneVpcResponse> AddSpecifyPrivateZoneVpc(AddSpecifyPrivateZoneVpcRequest req)
+        {
+            return InternalRequestAsync<AddSpecifyPrivateZoneVpcResponse>(req, "AddSpecifyPrivateZoneVpc");
+        }
+
+        /// <summary>
+        /// This API is used to add the VPC associated with the private domain.
+        /// </summary>
+        /// <param name="req"><see cref="AddSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="AddSpecifyPrivateZoneVpcResponse"/></returns>
+        public AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpcSync(AddSpecifyPrivateZoneVpcRequest req)
+        {
+            return InternalRequestAsync<AddSpecifyPrivateZoneVpcResponse>(req, "AddSpecifyPrivateZoneVpc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -243,7 +264,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to delete a DNS record for a private domain.
+        /// This API is used to delete the private DNS records.
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
         /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
@@ -253,13 +274,34 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to delete a DNS record for a private domain.
+        /// This API is used to delete the private DNS records.
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateZoneRecordRequest"/></param>
         /// <returns><see cref="DeletePrivateZoneRecordResponse"/></returns>
         public DeletePrivateZoneRecordResponse DeletePrivateZoneRecordSync(DeletePrivateZoneRecordRequest req)
         {
             return InternalRequestAsync<DeletePrivateZoneRecordResponse>(req, "DeletePrivateZoneRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the VPC associated with the private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="DeleteSpecifyPrivateZoneVpcResponse"/></returns>
+        public Task<DeleteSpecifyPrivateZoneVpcResponse> DeleteSpecifyPrivateZoneVpc(DeleteSpecifyPrivateZoneVpcRequest req)
+        {
+            return InternalRequestAsync<DeleteSpecifyPrivateZoneVpcResponse>(req, "DeleteSpecifyPrivateZoneVpc");
+        }
+
+        /// <summary>
+        /// This API is used to delete the VPC associated with the private domain.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSpecifyPrivateZoneVpcRequest"/></param>
+        /// <returns><see cref="DeleteSpecifyPrivateZoneVpcResponse"/></returns>
+        public DeleteSpecifyPrivateZoneVpcResponse DeleteSpecifyPrivateZoneVpcSync(DeleteSpecifyPrivateZoneVpcRequest req)
+        {
+            return InternalRequestAsync<DeleteSpecifyPrivateZoneVpcResponse>(req, "DeleteSpecifyPrivateZoneVpc")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -474,7 +516,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to get the list of records for a private domain.
+        /// This API is used to obtain the private domain record list.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
         /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
@@ -484,7 +526,7 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
-        /// This API is used to get the list of records for a private domain.
+        /// This API is used to obtain the private domain record list.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivateZoneRecordListRequest"/></param>
         /// <returns><see cref="DescribePrivateZoneRecordListResponse"/></returns>
@@ -680,6 +722,27 @@ namespace TencentCloud.Privatedns.V20201028
         public ModifyRecordsStatusResponse ModifyRecordsStatusSync(ModifyRecordsStatusRequest req)
         {
             return InternalRequestAsync<ModifyRecordsStatusResponse>(req, "ModifyRecordsStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the asynchronous VPC binding status.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAsyncBindVpcStatusRequest"/></param>
+        /// <returns><see cref="QueryAsyncBindVpcStatusResponse"/></returns>
+        public Task<QueryAsyncBindVpcStatusResponse> QueryAsyncBindVpcStatus(QueryAsyncBindVpcStatusRequest req)
+        {
+            return InternalRequestAsync<QueryAsyncBindVpcStatusResponse>(req, "QueryAsyncBindVpcStatus");
+        }
+
+        /// <summary>
+        /// This API is used to query the asynchronous VPC binding status.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAsyncBindVpcStatusRequest"/></param>
+        /// <returns><see cref="QueryAsyncBindVpcStatusResponse"/></returns>
+        public QueryAsyncBindVpcStatusResponse QueryAsyncBindVpcStatusSync(QueryAsyncBindVpcStatusRequest req)
+        {
+            return InternalRequestAsync<QueryAsyncBindVpcStatusResponse>(req, "QueryAsyncBindVpcStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Privatedns.V20201028.Models
+namespace TencentCloud.Tokenhub.V20260322.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribePrivateZoneRecordListRequest : AbstractModel
+    public class DescribeApiKeyListRequest : AbstractModel
     {
         
         /// <summary>
-        /// Private domain ID, which is in zone-xxxxxx format.
+        /// Platform type. Currently supported values: maas.
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
 
         /// <summary>
-        /// Filter parameters. (Valid values: Value and RecordType.)
+        /// Number of returned results, defaults to 20, maximum value 100.
         /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset, starting from 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination limit. Maximum value: 200. Default value: 20.
+        /// Filter condition list. Supported filter fields: apikeyId (API Key ID), apiKeyName (name), platform (platform type), status (status), bindType (binding type).
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Filters")]
+        public RequestFilter[] Filters{ get; set; }
+
+        /// <summary>
+        /// Sorting condition list. Supported sorting field: apiKeyName
+        /// </summary>
+        [JsonProperty("Sorts")]
+        public RequestSort[] Sorts{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Privatedns.V20201028.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "Sorts.", this.Sorts);
         }
     }
 }

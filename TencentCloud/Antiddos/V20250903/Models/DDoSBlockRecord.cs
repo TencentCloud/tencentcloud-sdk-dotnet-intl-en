@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Antiddos.V20250903.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class DDoSBlockRecord : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// <p>Blocked resources, public IP address, for example:</p><ul><li>Public IP address: 117.175.94.231.</li></ul>
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("Resource")]
+        public string Resource{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// <p>The time when it was blocked.</p>
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
+        [JsonProperty("BlockTime")]
+        public string BlockTime{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// <p>Blocking and unblocking status.</p><p>Enumeration value:</p><ul><li>Blocked: Blocked;</li><li>Unblocking: Unblocking;</li><li>Unblocked: Unblocked.</li></ul>
         /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamSimple(map, prefix + "BlockTime", this.BlockTime);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

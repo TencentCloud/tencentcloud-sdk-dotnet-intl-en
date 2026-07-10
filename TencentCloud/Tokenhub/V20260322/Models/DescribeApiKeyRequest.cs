@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Tokenhub.V20260322.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class DescribeApiKeyRequest : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// Platform type. Currently supported values: maas.
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// API Key ID. At least one of this or ApiKey is required. Prioritize ApiKeyId.
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
+        [JsonProperty("ApiKeyId")]
+        public string ApiKeyId{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// API key plaintext. At least one of it and ApiKeyId must be imported.
         /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("ApiKey")]
+        public string ApiKey{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "ApiKeyId", this.ApiKeyId);
+            this.SetParamSimple(map, prefix + "ApiKey", this.ApiKey);
         }
     }
 }

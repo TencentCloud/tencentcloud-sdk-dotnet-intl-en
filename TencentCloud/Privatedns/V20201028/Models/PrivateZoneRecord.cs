@@ -25,79 +25,87 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// Record ID
+        /// Record ID.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Private domain ID: zone-xxxxxxxx
+        /// Private domain ID, which is in zone-xxxxxxxx format.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Subdomain
+        /// Subdomain name.
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// Record type. Valid values: "A", "AAAA", "CNAME", "MX", "TXT", "PTR"
+        /// Record type. Valid values: A, AAAA, CNAME, MX, TXT, and PTR.
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }
 
         /// <summary>
-        /// Record value
+        /// Record value.
         /// </summary>
         [JsonProperty("RecordValue")]
         public string RecordValue{ get; set; }
 
         /// <summary>
-        /// Record cache time. The smaller the value, the faster the record will take effect. Value range: 1–86400s. Default value: 600
+        /// Record cache time. The smaller the value, the faster the record will take effect. Value range: 1-86,400s. Default value: 600.
         /// </summary>
         [JsonProperty("TTL")]
         public long? TTL{ get; set; }
 
         /// <summary>
-        /// MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, 50
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// MX priority, which is required when the record type is MX. Valid values: 5, 10, 15, 20, 30, 40, and 50.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MX")]
         public long? MX{ get; set; }
 
         /// <summary>
-        /// Record status: ENABLED
+        /// Record status: ENABLED.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Record weight. Value range: 1–100
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Record weight. Value range: 1–100.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Record creation time
+        /// Record creation time.
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Record update time
+        /// Record update time.
         /// </summary>
         [JsonProperty("UpdatedOn")]
         public string UpdatedOn{ get; set; }
 
         /// <summary>
         /// Additional information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
+
+        /// <summary>
+        /// 0: pause; 1: enable.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public ulong? Enabled{ get; set; }
 
 
         /// <summary>
@@ -117,6 +125,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

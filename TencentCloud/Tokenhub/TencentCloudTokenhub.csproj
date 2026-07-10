@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FA551E64-85D1-306D-B95B-F495ED79A242}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1341</VersionPrefix>
+    <VersionPrefix>3.0.1347</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,15 +48,25 @@
 
   <ItemGroup>
     <Compile Include="V20260322\TokenhubClient.cs" />
+    <Compile Include="V20260322\Models\ApiKeyDetail.cs" />
+    <Compile Include="V20260322\Models\BindingItem.cs" />
+    <Compile Include="V20260322\Models\CreateApiKeyRequest.cs" />
+    <Compile Include="V20260322\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryRequest.cs" />
     <Compile Include="V20260322\Models\CreateGlossaryResponse.cs" />
+    <Compile Include="V20260322\Models\DeleteApiKeyRequest.cs" />
+    <Compile Include="V20260322\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryEntryInput.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryRequest.cs" />
     <Compile Include="V20260322\Models\DeleteGlossaryResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeApiKeyListRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeApiKeyListResponse.cs" />
+    <Compile Include="V20260322\Models\DescribeApiKeyRequest.cs" />
+    <Compile Include="V20260322\Models\DescribeApiKeyResponse.cs" />
     <Compile Include="V20260322\Models\DescribeGlossariesRequest.cs" />
     <Compile Include="V20260322\Models\DescribeGlossariesResponse.cs" />
     <Compile Include="V20260322\Models\DescribeGlossaryEntriesRequest.cs" />
@@ -64,9 +74,14 @@
     <Compile Include="V20260322\Models\GlossaryEntryInput.cs" />
     <Compile Include="V20260322\Models\GlossaryEntryItem.cs" />
     <Compile Include="V20260322\Models\GlossaryItem.cs" />
+    <Compile Include="V20260322\Models\ModifyApiKeyInfoRequest.cs" />
+    <Compile Include="V20260322\Models\ModifyApiKeyInfoResponse.cs" />
+    <Compile Include="V20260322\Models\ModifyApiKeyStatusRequest.cs" />
+    <Compile Include="V20260322\Models\ModifyApiKeyStatusResponse.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesRequest.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntriesResponse.cs" />
     <Compile Include="V20260322\Models\ModifyGlossaryEntryInput.cs" />
+    <Compile Include="V20260322\Models\QuotaInfo.cs" />
     <Compile Include="V20260322\Models\RequestFilter.cs" />
     <Compile Include="V20260322\Models\RequestSort.cs" />
   </ItemGroup>

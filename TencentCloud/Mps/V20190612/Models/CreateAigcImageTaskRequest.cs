@@ -67,6 +67,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AigcImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OutputImageCount")]
+        public long? OutputImageCount{ get; set; }
+
+        /// <summary>
         /// <p>Additional parameters required for the model.</p>
         /// </summary>
         [JsonProperty("ExtraParameters")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+            this.SetParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
             this.SetParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
             this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
             this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

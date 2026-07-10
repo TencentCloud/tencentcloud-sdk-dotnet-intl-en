@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Tokenhub.V20260322.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class BindingItem : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// Resource ID (model ID or service ID).
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// Resource type. Value: endpoint (service), model (model).
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// Resource status
         /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Ses.V20201002.Models
+namespace TencentCloud.Privatedns.V20201028.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpdateEmailIdentityRequest : AbstractModel
+    public class AddSpecifyPrivateZoneVpcRequest : AbstractModel
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// Private domain ID.
         /// </summary>
-        [JsonProperty("EmailIdentity")]
-        public string EmailIdentity{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// Information about the new VPC.
         /// </summary>
-        [JsonProperty("NewAPI")]
-        public bool? NewAPI{ get; set; }
+        [JsonProperty("VpcSet")]
+        public VpcInfo[] VpcSet{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// Information about the new VPC of the associated account.
         /// </summary>
-        [JsonProperty("DKIMOption")]
-        public ulong? DKIMOption{ get; set; }
+        [JsonProperty("AccountVpcSet")]
+        public AccountVpcInfo[] AccountVpcSet{ get; set; }
+
+        /// <summary>
+        /// Whether the operation is synchronous.
+        /// </summary>
+        [JsonProperty("Sync")]
+        public bool? Sync{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Ses.V20201002.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
-            this.SetParamSimple(map, prefix + "NewAPI", this.NewAPI);
-            this.SetParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "Sync", this.Sync);
         }
     }
 }

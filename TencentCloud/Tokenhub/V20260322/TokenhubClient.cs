@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.intl.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1341";
+       private const string sdkVersion = "SDK_NET_3.0.1347";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,31 @@ namespace TencentCloud.Tokenhub.V20260322
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// Create an API key.
+        /// 
+        /// Create a new API key. Upon successful creation, return the API Key ID. Specify the platform kind, binding method, and initial state.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public Task<CreateApiKeyResponse> CreateApiKey(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey");
+        }
+
+        /// <summary>
+        /// Create an API key.
+        /// 
+        /// Create a new API key. Upon successful creation, return the API Key ID. Specify the platform kind, binding method, and initial state.
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
+        /// <returns><see cref="CreateApiKeyResponse"/></returns>
+        public CreateApiKeyResponse CreateApiKeySync(CreateApiKeyRequest req)
+        {
+            return InternalRequestAsync<CreateApiKeyResponse>(req, "CreateApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -100,6 +125,27 @@ namespace TencentCloud.Tokenhub.V20260322
         public CreateGlossaryEntriesResponse CreateGlossaryEntriesSync(CreateGlossaryEntriesRequest req)
         {
             return InternalRequestAsync<CreateGlossaryEntriesResponse>(req, "CreateGlossaryEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete specified api keys and clean up associated model binding relationships.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public Task<DeleteApiKeyResponse> DeleteApiKey(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey");
+        }
+
+        /// <summary>
+        /// This API is used to delete specified api keys and clean up associated model binding relationships.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiKeyRequest"/></param>
+        /// <returns><see cref="DeleteApiKeyResponse"/></returns>
+        public DeleteApiKeyResponse DeleteApiKeySync(DeleteApiKeyRequest req)
+        {
+            return InternalRequestAsync<DeleteApiKeyResponse>(req, "DeleteApiKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -154,6 +200,52 @@ namespace TencentCloud.Tokenhub.V20260322
         }
 
         /// <summary>
+        /// This API is used to query API Key details based on API Key ID or key value, and return the plaintext key. At least one of ApiKeyId and ApiKey must be input, with priority given to ApiKeyId.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyResponse"/></returns>
+        public Task<DescribeApiKeyResponse> DescribeApiKey(DescribeApiKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyResponse>(req, "DescribeApiKey");
+        }
+
+        /// <summary>
+        /// This API is used to query API Key details based on API Key ID or key value, and return the plaintext key. At least one of ApiKeyId and ApiKey must be input, with priority given to ApiKeyId.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyResponse"/></returns>
+        public DescribeApiKeyResponse DescribeApiKeySync(DescribeApiKeyRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyResponse>(req, "DescribeApiKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query API key list.
+        /// 
+        /// Query the API key list of the current user with key values in masking display. Support pagination, filtering, and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyListResponse"/></returns>
+        public Task<DescribeApiKeyListResponse> DescribeApiKeyList(DescribeApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList");
+        }
+
+        /// <summary>
+        /// Query API key list.
+        /// 
+        /// Query the API key list of the current user with key values in masking display. Support pagination, filtering, and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiKeyListRequest"/></param>
+        /// <returns><see cref="DescribeApiKeyListResponse"/></returns>
+        public DescribeApiKeyListResponse DescribeApiKeyListSync(DescribeApiKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeApiKeyListResponse>(req, "DescribeApiKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the terminology repository list.
         /// 
         /// Query the Termbase list under this application. Support paginate, filter, and sort.
@@ -200,6 +292,52 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeGlossaryEntriesResponse DescribeGlossaryEntriesSync(DescribeGlossaryEntriesRequest req)
         {
             return InternalRequestAsync<DescribeGlossaryEntriesResponse>(req, "DescribeGlossaryEntries")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Refresh API key information.
+        /// 
+        /// This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyInfoRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyInfoResponse"/></returns>
+        public Task<ModifyApiKeyInfoResponse> ModifyApiKeyInfo(ModifyApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyInfoResponse>(req, "ModifyApiKeyInfo");
+        }
+
+        /// <summary>
+        /// Refresh API key information.
+        /// 
+        /// This API is used to update the remark information, IP allowlist and Token quota of an API key (recommended to use QuotaDesired parameter for quota modification). Passing no optional parameters means no modification.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyInfoRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyInfoResponse"/></returns>
+        public ModifyApiKeyInfoResponse ModifyApiKeyInfoSync(ModifyApiKeyInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyInfoResponse>(req, "ModifyApiKeyInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the status of an api key.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyStatusResponse"/></returns>
+        public Task<ModifyApiKeyStatusResponse> ModifyApiKeyStatus(ModifyApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyStatusResponse>(req, "ModifyApiKeyStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the status of an api key.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiKeyStatusRequest"/></param>
+        /// <returns><see cref="ModifyApiKeyStatusResponse"/></returns>
+        public ModifyApiKeyStatusResponse ModifyApiKeyStatusSync(ModifyApiKeyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyApiKeyStatusResponse>(req, "ModifyApiKeyStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

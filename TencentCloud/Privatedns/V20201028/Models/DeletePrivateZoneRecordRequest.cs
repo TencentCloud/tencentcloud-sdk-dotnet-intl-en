@@ -25,19 +25,19 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// Private domain ID
+        /// Private domain ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Record ID
+        /// Record ID (which can be obtained by calling DescribePrivateZoneRecordList).
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Array of record IDs. `RecordId` takes precedence.
+        /// Record ID array, with RecordId preferred.
         /// </summary>
         [JsonProperty("RecordIdSet")]
         public string[] RecordIdSet{ get; set; }
