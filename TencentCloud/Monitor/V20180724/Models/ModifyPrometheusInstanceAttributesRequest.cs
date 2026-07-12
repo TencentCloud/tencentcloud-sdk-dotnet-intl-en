@@ -25,22 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// Instance name
-        /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
-
-        /// <summary>
         /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Storage period. Valid values: 15, 30, 45. This parameter is not applicable to monthly subscribed instances.
+        /// Instance name
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// Storage period. Valid values: 15, 30, 45. This parameter is not applicable to yearly/monthly subscribed instances.
         /// </summary>
         [JsonProperty("DataRetentionTime")]
         public long? DataRetentionTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceAttributes")]
+        public PrometheusRuleKV[] InstanceAttributes{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "DataRetentionTime", this.DataRetentionTime);
+            this.SetParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
         }
     }
 }

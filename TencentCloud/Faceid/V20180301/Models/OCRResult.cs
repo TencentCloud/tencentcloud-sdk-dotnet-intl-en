@@ -88,6 +88,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("OriginalCardInfo")]
         public string OriginalCardInfo{ get; set; }
 
+        /// <summary>
+        /// Base64 of the cropped portrait image extracted from the identity document</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("HeadImageBase64")]
+        public string HeadImageBase64{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "CardBackCutImageBase64", this.CardBackCutImageBase64);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
+            this.SetParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
         }
     }
 }

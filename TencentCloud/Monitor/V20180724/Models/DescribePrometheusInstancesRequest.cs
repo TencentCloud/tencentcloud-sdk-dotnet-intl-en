@@ -84,7 +84,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// Filter by billing mode
-        /// <li>2: Monthly subscription</li>
+        /// <li>2: Yearly/Monthly subscription</li>
         /// <li>3: Pay-as-you-go</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]

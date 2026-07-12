@@ -39,7 +39,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// <summary>
         /// Instance billing mode. Valid values:
         /// <ul>
-        /// <li>2: Monthly subscription</li>
+        /// <li>2: Yearly/Monthly subscription</li>
         /// <li>3: Pay-as-you-go</li>
         /// </ul>
         /// </summary>
@@ -266,6 +266,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MigrationType")]
         public long? MigrationType{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("InstanceAttributes")]
+        public PrometheusRuleKV[] InstanceAttributes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +308,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
             this.SetParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
             this.SetParamSimple(map, prefix + "MigrationType", this.MigrationType);
+            this.SetParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
         }
     }
 }

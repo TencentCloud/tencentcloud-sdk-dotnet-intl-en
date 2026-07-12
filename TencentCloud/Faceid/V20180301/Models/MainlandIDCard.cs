@@ -74,6 +74,20 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }
 
+        /// <summary>
+        /// Issuing authority
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("Authority")]
+        public string Authority{ get; set; }
+
+        /// <summary>
+        /// Validity period
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("ValidDate")]
+        public string ValidDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +101,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
             this.SetParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
+            this.SetParamSimple(map, prefix + "Authority", this.Authority);
+            this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
         }
     }
 }
