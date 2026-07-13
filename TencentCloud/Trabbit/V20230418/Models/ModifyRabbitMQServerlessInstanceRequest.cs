@@ -48,6 +48,24 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("TraceFlag")]
         public bool? TraceFlag{ get; set; }
 
+        /// <summary>
+        /// Traffic throttling production consumption ratio
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
+        /// <summary>
+        /// Specifies whether to delete all tags. Default value: false.
+        /// </summary>
+        [JsonProperty("DeleteAllTags")]
+        public bool? DeleteAllTags{ get; set; }
+
+        /// <summary>
+        /// Modified instance tag list
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public RabbitMQServerlessTag[] InstanceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "DeleteAllTags", this.DeleteAllTags);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         }
     }
 }

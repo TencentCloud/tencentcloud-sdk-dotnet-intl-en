@@ -25,58 +25,64 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// binding id.
+        /// <p>Routing relationship id</p>
         /// </summary>
         [JsonProperty("BindingId")]
         public long? BindingId{ get; set; }
 
         /// <summary>
-        /// Vhost parameter.
+        /// <p>Vhost parameter</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Source exchange name.
+        /// <p>Source exchange name</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// Target type. valid values: queue or exchange.
+        /// <p>Target type, queue or exchange</p>
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
 
         /// <summary>
-        /// Target resource name.
+        /// <p>Target resource name</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string Destination{ get; set; }
 
         /// <summary>
-        /// Binding key.
+        /// <p>Bind key</p>
         /// </summary>
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }
 
         /// <summary>
-        /// Source exchange type.
+        /// <p>Source exchange type</p>
         /// </summary>
         [JsonProperty("SourceExchangeType")]
         public string SourceExchangeType{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time
+        /// <p>Modification time.</p>
         /// </summary>
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// <p>Bind parameter. Parameters can be passed in during binding for header type Exchange. No need to input for other types of Exchange.</p>
+        /// </summary>
+        [JsonProperty("Arguments")]
+        public RabbitMQServerlessKeyValuePair[] Arguments{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "SourceExchangeType", this.SourceExchangeType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamArrayObj(map, prefix + "Arguments.", this.Arguments);
         }
     }
 }

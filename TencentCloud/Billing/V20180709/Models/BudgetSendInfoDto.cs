@@ -15,78 +15,86 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MainlandIDCard : AbstractModel
+    public class BudgetSendInfoDto : AbstractModel
     {
         
         /// <summary>
-        /// <p>name</p>
+        /// Notification cycle, separated by commas.
+        /// Enumeration values:
+        /// Monday:1
+        /// Tuesday:2
+        /// Sunday: 7
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FullName")]
-        public string FullName{ get; set; }
+        [JsonProperty("WeekDays")]
+        public ulong?[] WeekDays{ get; set; }
 
         /// <summary>
-        /// <p>Gender</p>
+        /// Reception type.
+        /// Enumeration values:
+        /// UIN default mode
+        /// USER
+        /// GROUP User group.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Sex")]
-        public string Sex{ get; set; }
+        [JsonProperty("ReceiverType")]
+        public string ReceiverType{ get; set; }
 
         /// <summary>
-        /// <p>Ethnicity</p>
+        /// Sending and receiving window HH:mm:ss
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Nation")]
-        public string Nation{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>Birthday</p>
+        /// Budget configuration id (budget name)
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Birthday")]
-        public string Birthday{ get; set; }
+        [JsonProperty("BudgetId")]
+        public long? BudgetId{ get; set; }
 
         /// <summary>
-        /// <p>Address</p>
+        /// receiving channel, separated by commas
+        /// Enumeration values:
+        /// TITLE
+        /// Message Center
+        /// mail
+        /// SMS
+        /// WECHAT
+        /// VOICE
+        /// WeCom
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Address")]
-        [System.Obsolete]
-        public string Address{ get; set; }
+        [JsonProperty("NoticeWays")]
+        public string[] NoticeWays{ get; set; }
 
         /// <summary>
-        /// <p>Identity card number</p>
+        /// Send start window HH:mm:ss
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("LicenseNumber")]
-        public string LicenseNumber{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>Address</p>
+        /// id
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("FormattedAddress")]
-        public string FormattedAddress{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// <p>Issuing authority</p>
+        /// user id, user group id
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Authority")]
-        public string Authority{ get; set; }
-
-        /// <summary>
-        /// <p>Validity period</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("ValidDate")]
-        public string ValidDate{ get; set; }
+        [JsonProperty("ReceiverIds")]
+        public ulong?[] ReceiverIds{ get; set; }
 
 
         /// <summary>
@@ -94,15 +102,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FullName", this.FullName);
-            this.SetParamSimple(map, prefix + "Sex", this.Sex);
-            this.SetParamSimple(map, prefix + "Nation", this.Nation);
-            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
-            this.SetParamSimple(map, prefix + "Address", this.Address);
-            this.SetParamSimple(map, prefix + "LicenseNumber", this.LicenseNumber);
-            this.SetParamSimple(map, prefix + "FormattedAddress", this.FormattedAddress);
-            this.SetParamSimple(map, prefix + "Authority", this.Authority);
-            this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
+            this.SetParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
+            this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "BudgetId", this.BudgetId);
+            this.SetParamArraySimple(map, prefix + "NoticeWays.", this.NoticeWays);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamArraySimple(map, prefix + "ReceiverIds.", this.ReceiverIds);
         }
     }
 }

@@ -32,7 +32,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? IsPass{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the ID image</p>
+        /// <p>Base64 of the front side ID image</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CardImageBase64")]
@@ -89,11 +89,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string OriginalCardInfo{ get; set; }
 
         /// <summary>
-        /// Base64 of the cropped portrait image extracted from the identity document</p>
+        /// <p>Document portrait matting</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HeadImageBase64")]
         public string HeadImageBase64{ get; set; }
+
+        /// <summary>
+        /// <p>Base64 of the back side ID image</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("CardBackImageBase64")]
+        public string CardBackImageBase64{ get; set; }
 
 
         /// <summary>
@@ -111,6 +118,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
             this.SetParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
+            this.SetParamSimple(map, prefix + "CardBackImageBase64", this.CardBackImageBase64);
         }
     }
 }

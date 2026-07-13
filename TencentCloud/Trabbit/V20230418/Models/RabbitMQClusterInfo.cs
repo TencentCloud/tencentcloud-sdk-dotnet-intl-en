@@ -25,154 +25,196 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name.
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region information
+        /// <p>Regional information</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Creation time, in milliseconds
+        /// <p>Creation time in milliseconds</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Cluster description remark information
+        /// <p>Cluster description information</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// VPC and network information.
+        /// <p>VPC and network info</p>
         /// </summary>
         [JsonProperty("Vpcs")]
         public VpcEndpointInfo[] Vpcs{ get; set; }
 
         /// <summary>
-        /// Availability zone information
+        /// <p>AZ information</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// number of virtual hosts.
+        /// <p>Number of virtual hosts</p>
         /// </summary>
         [JsonProperty("VirtualHostNumber")]
         public long? VirtualHostNumber{ get; set; }
 
         /// <summary>
-        /// Number of queues
+        /// <p>Number of queues</p>
         /// </summary>
         [JsonProperty("QueueNumber")]
         public long? QueueNumber{ get; set; }
 
         /// <summary>
-        /// Number of messages produced per second (measurement unit: messages/second).
+        /// <p>Number of messages produced per second Unit: messages/second</p>
         /// </summary>
         [JsonProperty("MessagePublishRate")]
         public float? MessagePublishRate{ get; set; }
 
         /// <summary>
-        /// Number of accumulated messages. valid values: pieces.
+        /// <p>Number of accumulated messages Unit: unit</p>
         /// </summary>
         [JsonProperty("MessageStackNumber")]
         public long? MessageStackNumber{ get; set; }
 
         /// <summary>
-        /// Expiration time
+        /// <p>Expiration time</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// number of channels.
+        /// <p>Number of channels</p>
         /// </summary>
         [JsonProperty("ChannelNumber")]
         public long? ChannelNumber{ get; set; }
 
         /// <summary>
-        /// number of connections.
+        /// <p>Number of connections</p>
         /// </summary>
         [JsonProperty("ConnectionNumber")]
         public long? ConnectionNumber{ get; set; }
 
         /// <summary>
-        /// Number of consumers.
+        /// <p>Number of consumers</p>
         /// </summary>
         [JsonProperty("ConsumerNumber")]
         public long? ConsumerNumber{ get; set; }
 
         /// <summary>
-        /// Number of Exchanges.
+        /// <p>Number of Exchanges</p>
         /// </summary>
         [JsonProperty("ExchangeNumber")]
         public long? ExchangeNumber{ get; set; }
 
         /// <summary>
-        /// Cluster exception information.
+        /// <p>Cluster exception information</p>
         /// </summary>
         [JsonProperty("ExceptionInformation")]
         public string ExceptionInformation{ get; set; }
 
         /// <summary>
-        /// Instance status. 0 indicates creating in progress. 1 indicates normal. 2 indicates isolated. 3 indicates terminated. 4 indicates exception. 5 indicates delivery failed.
+        /// <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0 indicates the default status (If the default status is not configured, manual renewal is enabled), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (configured by the user).
+        /// <p>Automatic renewal flag. 0: default status (initial status (that is manual renewal) if no status is set by the user); 1: automatic renewal; 2: no automatic renewal (set by the user).</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether the mirrored queue strategy is enabled. 1 indicates enabled, and 0 indicates not enabled.
+        /// <p>Whether to enable the mirror queue policy. 1 means enabled, 0 means disabled.</p>
         /// </summary>
         [JsonProperty("MirrorQueuePolicyFlag")]
         public long? MirrorQueuePolicyFlag{ get; set; }
 
         /// <summary>
-        /// Number of messages consumed per second (measurement unit: messages/second).
+        /// <p>Number of messages consumed per second Unit: messages/second</p>
         /// </summary>
         [JsonProperty("MessageConsumeRate")]
         public float? MessageConsumeRate{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster version information.
+        /// <p>Cluster version information</p>
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// Billing mode. valid values: 0 (postpaid), 1 (prepaid).
+        /// <p>Billing mode. 0 - Postpaid, 1 - Prepaid</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster type.
+        /// <p>Cluster type.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public ulong? InstanceType{ get; set; }
 
         /// <summary>
-        /// Specifies the message retention time, in hours.
+        /// <p>Message retention period Unit: hour</p>
         /// </summary>
         [JsonProperty("MessageRetainTime")]
         public ulong? MessageRetainTime{ get; set; }
+
+        /// <summary>
+        /// <p>Traffic ratio of sending messages</p>
+        /// </summary>
+        [JsonProperty("SendReceiveRatio")]
+        public float? SendReceiveRatio{ get; set; }
+
+        /// <summary>
+        /// <p>Message trace retention time in hours</p>
+        /// </summary>
+        [JsonProperty("TraceTime")]
+        public ulong? TraceTime{ get; set; }
+
+        /// <summary>
+        /// <p>Instance tag list</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RabbitMQServerlessTag[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>Elastic scaling enabled tps</p>
+        /// </summary>
+        [JsonProperty("ElasticTpsFlag")]
+        public bool? ElasticTpsFlag{ get; set; }
+
+        /// <summary>
+        /// <p>Elastic tps multiple, default is 1x</p>
+        /// </summary>
+        [JsonProperty("ElasticTpsRatio")]
+        public float? ElasticTpsRatio{ get; set; }
+
+        /// <summary>
+        /// <p>Maximum retry count</p>
+        /// </summary>
+        [JsonProperty("MaxRedeliverCount")]
+        public ulong? MaxRedeliverCount{ get; set; }
+
+        /// <summary>
+        /// <p>Consumption timeout period Unit: min</p>
+        /// </summary>
+        [JsonProperty("ConsumerTimeout")]
+        public ulong? ConsumerTimeout{ get; set; }
 
 
         /// <summary>
@@ -205,6 +247,13 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "MessageRetainTime", this.MessageRetainTime);
+            this.SetParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+            this.SetParamSimple(map, prefix + "TraceTime", this.TraceTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ElasticTpsFlag", this.ElasticTpsFlag);
+            this.SetParamSimple(map, prefix + "ElasticTpsRatio", this.ElasticTpsRatio);
+            this.SetParamSimple(map, prefix + "MaxRedeliverCount", this.MaxRedeliverCount);
+            this.SetParamSimple(map, prefix + "ConsumerTimeout", this.ConsumerTimeout);
         }
     }
 }

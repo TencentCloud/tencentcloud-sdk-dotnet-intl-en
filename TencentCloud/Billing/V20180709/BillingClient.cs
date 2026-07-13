@@ -28,7 +28,7 @@ namespace TencentCloud.Billing.V20180709
 
        private const string endpoint = "billing.intl.tencentcloudapi.com";
        private const string version = "2018-07-09";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1349";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Billing.V20180709
         public CreateAllocationUnitResponse CreateAllocationUnitSync(CreateAllocationUnitRequest req)
         {
             return InternalRequestAsync<CreateAllocationUnitResponse>(req, "CreateAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create budget information
+        /// </summary>
+        /// <param name="req"><see cref="CreateBudgetRequest"/></param>
+        /// <returns><see cref="CreateBudgetResponse"/></returns>
+        public Task<CreateBudgetResponse> CreateBudget(CreateBudgetRequest req)
+        {
+            return InternalRequestAsync<CreateBudgetResponse>(req, "CreateBudget");
+        }
+
+        /// <summary>
+        /// Create budget information
+        /// </summary>
+        /// <param name="req"><see cref="CreateBudgetRequest"/></param>
+        /// <returns><see cref="CreateBudgetResponse"/></returns>
+        public CreateBudgetResponse CreateBudgetSync(CreateBudgetRequest req)
+        {
+            return InternalRequestAsync<CreateBudgetResponse>(req, "CreateBudget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -220,6 +241,27 @@ namespace TencentCloud.Billing.V20180709
         public DeleteAllocationUnitResponse DeleteAllocationUnitSync(DeleteAllocationUnitRequest req)
         {
             return InternalRequestAsync<DeleteAllocationUnitResponse>(req, "DeleteAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete the corresponding budget project based on the budget ID
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBudgetRequest"/></param>
+        /// <returns><see cref="DeleteBudgetResponse"/></returns>
+        public Task<DeleteBudgetResponse> DeleteBudget(DeleteBudgetRequest req)
+        {
+            return InternalRequestAsync<DeleteBudgetResponse>(req, "DeleteBudget");
+        }
+
+        /// <summary>
+        /// Delete the corresponding budget project based on the budget ID
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBudgetRequest"/></param>
+        /// <returns><see cref="DeleteBudgetResponse"/></returns>
+        public DeleteBudgetResponse DeleteBudgetSync(DeleteBudgetRequest req)
+        {
+            return InternalRequestAsync<DeleteBudgetResponse>(req, "DeleteBudget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -820,6 +862,69 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// Retrieve budget details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetRequest"/></param>
+        /// <returns><see cref="DescribeBudgetResponse"/></returns>
+        public Task<DescribeBudgetResponse> DescribeBudget(DescribeBudgetRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetResponse>(req, "DescribeBudget");
+        }
+
+        /// <summary>
+        /// Retrieve budget details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetRequest"/></param>
+        /// <returns><see cref="DescribeBudgetResponse"/></returns>
+        public DescribeBudgetResponse DescribeBudgetSync(DescribeBudgetRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetResponse>(req, "DescribeBudget")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query budget modification records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetOperationLogRequest"/></param>
+        /// <returns><see cref="DescribeBudgetOperationLogResponse"/></returns>
+        public Task<DescribeBudgetOperationLogResponse> DescribeBudgetOperationLog(DescribeBudgetOperationLogRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetOperationLogResponse>(req, "DescribeBudgetOperationLog");
+        }
+
+        /// <summary>
+        /// Query budget modification records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetOperationLogRequest"/></param>
+        /// <returns><see cref="DescribeBudgetOperationLogResponse"/></returns>
+        public DescribeBudgetOperationLogResponse DescribeBudgetOperationLogSync(DescribeBudgetOperationLogRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetOperationLogResponse>(req, "DescribeBudgetOperationLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Return budget alert records, including budget period, detection time, notification time, reminder type, and content.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetRemindRecordListRequest"/></param>
+        /// <returns><see cref="DescribeBudgetRemindRecordListResponse"/></returns>
+        public Task<DescribeBudgetRemindRecordListResponse> DescribeBudgetRemindRecordList(DescribeBudgetRemindRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetRemindRecordListResponse>(req, "DescribeBudgetRemindRecordList");
+        }
+
+        /// <summary>
+        /// Return budget alert records, including budget period, detection time, notification time, reminder type, and content.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBudgetRemindRecordListRequest"/></param>
+        /// <returns><see cref="DescribeBudgetRemindRecordListResponse"/></returns>
+        public DescribeBudgetRemindRecordListResponse DescribeBudgetRemindRecordListSync(DescribeBudgetRemindRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeBudgetRemindRecordListResponse>(req, "DescribeBudgetRemindRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the four-layer matching relationship between the quoted product name and billing products
         /// </summary>
         /// <param name="req"><see cref="DescribeCPQBillingMappingRequest"/></param>
@@ -1204,6 +1309,27 @@ namespace TencentCloud.Billing.V20180709
         public ModifyAllocationUnitResponse ModifyAllocationUnitSync(ModifyAllocationUnitRequest req)
         {
             return InternalRequestAsync<ModifyAllocationUnitResponse>(req, "ModifyAllocationUnit")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Refresh budget information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBudgetRequest"/></param>
+        /// <returns><see cref="ModifyBudgetResponse"/></returns>
+        public Task<ModifyBudgetResponse> ModifyBudget(ModifyBudgetRequest req)
+        {
+            return InternalRequestAsync<ModifyBudgetResponse>(req, "ModifyBudget");
+        }
+
+        /// <summary>
+        /// Refresh budget information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBudgetRequest"/></param>
+        /// <returns><see cref="ModifyBudgetResponse"/></returns>
+        public ModifyBudgetResponse ModifyBudgetSync(ModifyBudgetRequest req)
+        {
+            return InternalRequestAsync<ModifyBudgetResponse>(req, "ModifyBudget")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

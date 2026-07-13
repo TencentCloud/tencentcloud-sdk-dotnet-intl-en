@@ -25,54 +25,49 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost parameter.
+        /// <p>Vhost parameter</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Pagination offset
+        /// <p>Pagination offset.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination limit
+        /// <p>Pagination limit.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Search keywords
+        /// <p>Search keyword</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Specifies the queue type filter criteria. if it is left blank or set to "all", it indicates classic and quorum queues; if set to "classic", it filters classic queues; if set to "quorum", it filters quorum queues.
+        /// <p>Queue type filter criteria. Leave blank or use "all" for classic and quorum queues; "classic" for classic queues; "quorum" for quorum queues.</p>
         /// </summary>
         [JsonProperty("QueueType")]
         public string QueueType{ get; set; }
 
         /// <summary>
-        /// Sorting field.
-        /// ConsumerNumber: specifies the number of online consumers.
-        /// MessageHeapCount specifies the number of message backlogs.
-        /// MessageRateInOut specifies the total production and consumption rate.
-        /// MessageRateIn specifies the production rate.
-        /// MessageRateOut specifies the consumption rate.
+        /// <p>Sorting field:<br>messages_ready - message backlog;<br>publish - production rate;<br>deliver - consumption rate;<br>consumers - number of online consumers;</p>
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }
 
         /// <summary>
-        /// Sort order. valid values: ascend or descend.
+        /// <p>Sort order, asc or desc</p>
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

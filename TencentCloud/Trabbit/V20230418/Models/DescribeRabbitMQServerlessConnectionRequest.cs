@@ -37,31 +37,31 @@ namespace TencentCloud.Trabbit.V20230418.Models
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Sort by which field. Supported options: channel (channel count), incoming_bytes (inbound traffic size), outgoing_bytes (outbound traffic size)
+        /// Sort by which field. Supported values: channel (number of channels), incoming_bytes (inbound traffic volume), outgoing_bytes (outbound traffic volume).
         /// </summary>
         [JsonProperty("SortElement")]
         public string SortElement{ get; set; }
 
         /// <summary>
-        /// Sort order: ASC, DESC
+        /// Sorting method: ASC, DESC
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pagination parameters, started from which data entry
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Page size.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connection name fuzzy search
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

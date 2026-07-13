@@ -25,43 +25,43 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost parameter.
+        /// <p>Vhost parameter</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Source exchange.
+        /// <p>Source exchange</p>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
         /// <summary>
-        /// Target type. valid values: queue or exchange.
+        /// <p>Target type, value queue or exchange</p>
         /// </summary>
         [JsonProperty("DestinationType")]
         public string DestinationType{ get; set; }
 
         /// <summary>
-        /// Target queue or exchange.
+        /// <p>Target queue or switch</p>
         /// </summary>
         [JsonProperty("Destination")]
         public string Destination{ get; set; }
 
         /// <summary>
-        /// Binding key.
+        /// <p>Bind key</p>
         /// </summary>
         [JsonProperty("RoutingKey")]
         public string RoutingKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>When creating a Binding for Header type Exchange, parameters can be passed in. No need to input for other types of Exchange.</p>
         /// </summary>
         [JsonProperty("Arguments")]
         public RabbitMQServerlessKeyValuePair[] Arguments{ get; set; }

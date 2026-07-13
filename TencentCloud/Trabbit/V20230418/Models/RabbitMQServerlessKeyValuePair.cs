@@ -25,13 +25,13 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// 
+        /// Key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 
+        /// Value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

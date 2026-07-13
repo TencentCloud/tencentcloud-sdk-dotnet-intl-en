@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Trabbit.V20230418.Models
+namespace TencentCloud.Billing.V20180709.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RabbitMQServerlessAccessInfo : AbstractModel
+    public class DeleteBudgetRequest : AbstractModel
     {
         
         /// <summary>
-        /// Public network domain.
+        /// Budget project id
         /// </summary>
-        [JsonProperty("PublicAccessEndpoint")]
-        public string PublicAccessEndpoint{ get; set; }
-
-        /// <summary>
-        /// Public network status.
-        /// </summary>
-        [JsonProperty("PublicDataStreamStatus")]
-        public string PublicDataStreamStatus{ get; set; }
-
-        /// <summary>
-        /// Public network CLB instance ID
-        /// </summary>
-        [JsonProperty("PublicClbId")]
-        public string PublicClbId{ get; set; }
+        [JsonProperty("BudgetIds")]
+        public string[] BudgetIds{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Trabbit.V20230418.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
-            this.SetParamSimple(map, prefix + "PublicDataStreamStatus", this.PublicDataStreamStatus);
-            this.SetParamSimple(map, prefix + "PublicClbId", this.PublicClbId);
+            this.SetParamArraySimple(map, prefix + "BudgetIds.", this.BudgetIds);
         }
     }
 }

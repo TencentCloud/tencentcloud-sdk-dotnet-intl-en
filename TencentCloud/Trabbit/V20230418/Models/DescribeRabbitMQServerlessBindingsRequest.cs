@@ -25,49 +25,49 @@ namespace TencentCloud.Trabbit.V20230418.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Vhost parameter.
+        /// <p>Vhost parameter</p>
         /// </summary>
         [JsonProperty("VirtualHost")]
         public string VirtualHost{ get; set; }
 
         /// <summary>
-        /// Pagination Offset
+        /// <p>Pagination offset</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination Limit
+        /// <p>Pagination limit</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Search keywords. do fuzzy search based on source exchange name, target resource name or binding key.
+        /// <p>Search keywords, do fuzzy search based on source exchange name/target resource name</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Search and filter precisely according to the source Exchange.
+        /// <p>Precise search and filter based on source Exchange</p>
         /// </summary>
         [JsonProperty("SourceExchange")]
         public string SourceExchange{ get; set; }
 
         /// <summary>
-        /// Specifies precise search filter based on target QueueName. cannot set simultaneously with DestinationExchange filter.
+        /// <p>Precise search filter based on target QueueName and DestinationExchange cannot be set both at the same time</p>
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// Precise search filter based on target Exchange. cannot set it simultaneously with QueueName filter.
+        /// <p>Precise search filter based on target Exchange and QueueName filter cannot be set both at the same time</p>
         /// </summary>
         [JsonProperty("DestinationExchange")]
         public string DestinationExchange{ get; set; }

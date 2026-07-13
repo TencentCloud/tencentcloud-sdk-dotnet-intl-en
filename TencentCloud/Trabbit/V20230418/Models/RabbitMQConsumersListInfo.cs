@@ -36,6 +36,48 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("ConsumerTag")]
         public string ConsumerTag{ get; set; }
 
+        /// <summary>
+        /// Consume target queue
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// Whether required for the consumer to manually ack
+        /// </summary>
+        [JsonProperty("AckRequired")]
+        public bool? AckRequired{ get; set; }
+
+        /// <summary>
+        /// Consumer qos value
+        /// </summary>
+        [JsonProperty("PrefetchCount")]
+        public ulong? PrefetchCount{ get; set; }
+
+        /// <summary>
+        /// Consumer status
+        /// </summary>
+        [JsonProperty("Active")]
+        public string Active{ get; set; }
+
+        /// <summary>
+        /// Time of the last message submission
+        /// </summary>
+        [JsonProperty("LastDeliveredTime")]
+        public string LastDeliveredTime{ get; set; }
+
+        /// <summary>
+        /// Number of unconfirmed messages of the consumer
+        /// </summary>
+        [JsonProperty("UnAckMsgCount")]
+        public long? UnAckMsgCount{ get; set; }
+
+        /// <summary>
+        /// channel belonging to the consumer
+        /// </summary>
+        [JsonProperty("ChannelName")]
+        public string ChannelName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +86,13 @@ namespace TencentCloud.Trabbit.V20230418.Models
         {
             this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
             this.SetParamSimple(map, prefix + "ConsumerTag", this.ConsumerTag);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "AckRequired", this.AckRequired);
+            this.SetParamSimple(map, prefix + "PrefetchCount", this.PrefetchCount);
+            this.SetParamSimple(map, prefix + "Active", this.Active);
+            this.SetParamSimple(map, prefix + "LastDeliveredTime", this.LastDeliveredTime);
+            this.SetParamSimple(map, prefix + "UnAckMsgCount", this.UnAckMsgCount);
+            this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
         }
     }
 }

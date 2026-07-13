@@ -144,6 +144,18 @@ namespace TencentCloud.Trabbit.V20230418.Models
         [JsonProperty("IsolatedTime")]
         public ulong? IsolatedTime{ get; set; }
 
+        /// <summary>
+        /// Serverless Extension Fields
+        /// </summary>
+        [JsonProperty("ServerlessExt")]
+        public string ServerlessExt{ get; set; }
+
+        /// <summary>
+        /// Instance tag list.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RabbitMQServerlessTag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +182,8 @@ namespace TencentCloud.Trabbit.V20230418.Models
             this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
             this.SetParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "ServerlessExt", this.ServerlessExt);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
