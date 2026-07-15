@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>User-defined variable type.</p><p>Parameter format: PascalCase format.</p><p>This cannot be UserPrompt. The default platform template is not adapted for custom content. Submit a ticket if needed.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Custom variable description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

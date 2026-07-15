@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FromEmailAddress{ get; set; }
 
         /// <summary>
-        /// <p>Email Subject</p>
+        /// <p>Email Subject</p><p>When using templates to send, support using template variable parameters for population.</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }

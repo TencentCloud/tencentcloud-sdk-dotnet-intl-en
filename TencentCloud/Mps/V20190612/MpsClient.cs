@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1347";
+       private const string sdkVersion = "SDK_NET_3.0.1350";
 
         /// <summary>
         /// Client constructor.
@@ -140,7 +140,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create AIGC audio generation tasks.
+        /// This API is used to create AI audio generation tasks.
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
         /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
@@ -150,7 +150,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create AIGC audio generation tasks.
+        /// This API is used to create AI audio generation tasks.
         /// </summary>
         /// <param name="req"><see cref="CreateAigcAudioTaskRequest"/></param>
         /// <returns><see cref="CreateAigcAudioTaskResponse"/></returns>
@@ -1248,7 +1248,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to query the progress of AIGC audio generation tasks and obtain the generation results.
+        /// This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeAigcAudioTaskRequest"/></param>
         /// <returns><see cref="DescribeAigcAudioTaskResponse"/></returns>
@@ -1258,7 +1258,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to query the progress of AIGC audio generation tasks and obtain the generation results.
+        /// This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeAigcAudioTaskRequest"/></param>
         /// <returns><see cref="DescribeAigcAudioTaskResponse"/></returns>

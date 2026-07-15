@@ -25,79 +25,79 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Send time.
+        /// <p>Send time</p>
         /// </summary>
         [JsonProperty("DeliverTime")]
         public string DeliverTime{ get; set; }
 
         /// <summary>
-        /// Sender address.
+        /// <p>Sender address</p>
         /// </summary>
         [JsonProperty("OriginalMailFrom")]
         public string OriginalMailFrom{ get; set; }
 
         /// <summary>
-        /// Receive email.
+        /// <p>Receive email address</p>
         /// </summary>
         [JsonProperty("OriginalRcptTo")]
         public string OriginalRcptTo{ get; set; }
 
         /// <summary>
-        /// Sender domain name.
+        /// <p>Sender domain name</p>
         /// </summary>
         [JsonProperty("FromDomain")]
         public string FromDomain{ get; set; }
 
         /// <summary>
-        /// Complaint time.
+        /// <p>Complaint time</p>
         /// </summary>
         [JsonProperty("ComplainTime")]
         public string ComplainTime{ get; set; }
 
         /// <summary>
-        /// Recipient domain name.
+        /// <p>Recipient domain name</p>
         /// </summary>
         [JsonProperty("Mta")]
         public string Mta{ get; set; }
 
         /// <summary>
-        /// Source IP
+        /// <p>Source ip</p>
         /// </summary>
         [JsonProperty("SourceIp")]
         public string SourceIp{ get; set; }
 
         /// <summary>
-        /// Data time.
+        /// <p>Data time</p>
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// Template ID
+        /// <p>Template ID</p>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// bulkId
+        /// <p>bulkId</p>
         /// </summary>
         [JsonProperty("BulkId")]
         public string BulkId{ get; set; }
 
         /// <summary>
-        /// Message-Id in mail.
+        /// <p>Message-Id of the mail</p>
         /// </summary>
         [JsonProperty("MessageId")]
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// Complaint time.
+        /// <p>Complaint time</p>
         /// </summary>
         [JsonProperty("AbuseTime")]
         public string AbuseTime{ get; set; }
 
         /// <summary>
-        /// Email subject.
+        /// <p>Email Subject</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }

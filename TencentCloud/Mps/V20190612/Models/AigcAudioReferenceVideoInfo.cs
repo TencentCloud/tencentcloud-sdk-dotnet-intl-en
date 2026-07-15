@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Reference video URL, which must be accessible from the public network.</p>
         /// </summary>
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }

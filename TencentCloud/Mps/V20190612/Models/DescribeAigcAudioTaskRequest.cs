@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task ID returned when creating the AIGC audio generation task.Example value: 24000145-****d**-cb46b8040b684b539bbd46****e*e2fd
+        /// <p>Task ID returned when the AIGC video generation task is created.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

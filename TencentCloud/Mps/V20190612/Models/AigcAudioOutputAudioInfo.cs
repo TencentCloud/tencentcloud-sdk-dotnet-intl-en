@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Audio URL.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio duration.</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

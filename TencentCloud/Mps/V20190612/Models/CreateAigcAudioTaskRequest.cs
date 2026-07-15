@@ -25,67 +25,67 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Model name. Currently supported models for music generation: GL, MinimaxMusic.Example value: MiniMaxMusic
+        /// <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// Specifies the model version. By default, the system uses the supported stable version of the model.Supported versions for GL: 2.0, 3.0-clip, 3.0-pro.Supported versions for MinimaxMusic: 2.0, 2.5, 2.6.Example value: 2.0
+        /// <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MinimaxMusic: 2.0, 2.5, and 2.6.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// Specifies the audio generation scene. Music: music.Example value: music
+        /// <p>Specifies the scenario for audio generation. Music: music.</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// Description of the generated audio. (Note: Supports up to 2000 characters.) This parameter is required when no reference image is passed in.Example value: generate a piece of music
+        /// <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Reference video information. Only supported by certain models.
+        /// <p>Reference video information, which is supported by some models.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
-        /// Reference audio information.For example, this parameter is required when generating music from a reference audio.
+        /// <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// Output audio format. Empty by default. Supported values: mp3, wav.Example value: wav
+        /// <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
         /// </summary>
         [JsonProperty("OutputAudioFormat")]
         public string OutputAudioFormat{ get; set; }
 
         /// <summary>
-        /// COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+        /// <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
         /// </summary>
         [JsonProperty("StoreCosParam")]
         public AigcStoreCosParam StoreCosParam{ get; set; }
 
         /// <summary>
-        /// Additional parameters required for the model.
+        /// <p>Additional parameters required.</p>
         /// </summary>
         [JsonProperty("ExtraParameters")]
         public AigcAudioExtraParam ExtraParameters{ get; set; }
 
         /// <summary>
-        /// Used to input some special scene parameters required by the model, serialized into a string in JSON format.Example: when passing lyrics to the MinimaxMusic model:{"lyric":{"The pony runs happily, flowers are blooming"}}Example value: {"sequential_image_generation":"auto"}
+        /// <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p>
         /// </summary>
         [JsonProperty("AdditionalParameters")]
         public string AdditionalParameters{ get; set; }
 
         /// <summary>
-        /// API operator name.Example value: admin
+        /// <p>API operator name.</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

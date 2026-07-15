@@ -25,97 +25,94 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Adaptive dynamic streaming template ID.
+        /// <p>Adaptive bitrate streaming template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Digital watermark parameter.	
+        /// <p>Digital watermark parameter.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// Target storage for files after adaptive dynamic streaming. If left blank, it inherits the upper-level OutputStorage value.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Output path for the manifest file after adaptive dynamic streaming. It can be either a relative path or an absolute path.
-        /// If you need to define an output path, the path must end with `.{format}`. Refer to [Filename Variable Description](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1) for variable names.
-        /// Example of relative path:
-        /// <li>filename_{variable name}.{format}</li>
-        /// <li>filename.{format}</li>
-        /// Example of absolute path:
-        /// <li>/custom path/filename_{variable name}.{format}</li>
-        /// If not filled in, it is a relative path by default: {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
+        /// <p>Output path for the manifest file after adaptive bitrate streaming, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">Filename Variables</a>.<br>Relative path example:</p><li>Filename_{variable name}.{format}</li><li>Filename.{format}</li>Absolute path example:<li>/custom path/Filename_{variable name}.{format}</li>If this is not specified, the default relative path is {inputName}_adaptiveDynamicStreaming_{definition}.{format}.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// After adaptive dynamic streaming, the output path of substream files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`.
+        /// <p>Output path for substream files after adaptive bitrate streaming, which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}</code>.</p>
         /// </summary>
         [JsonProperty("SubStreamObjectName")]
         public string SubStreamObjectName{ get; set; }
 
         /// <summary>
-        /// After adaptive dynamic streaming (for HLS only), the output path of segment files can only be a relative path. If not filled in, it is a relative path by default: `{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`.
+        /// <p>Output path for segment files after adaptive bitrate streaming (HLS only), which can only be a relative path. If this is not specified, the default relative path is <code>{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}</code>.</p>
         /// </summary>
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// External subtitle feature specifies the subtitle file to be inserted.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// Specifies the Drm information.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>DRM information.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
 
         /// <summary>
-        /// Adaptive transcoding template type.
-        /// Common: audio/video type.
-        /// PureAudio: audio-only.
+        /// <p>Adaptive bitrate streaming template type. Valid values:<br>Common: audio and video.<br>PureAudio: audio only.</p>
         /// </summary>
         [JsonProperty("DefinitionType")]
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// Hard subtitle (suppression subtitle) feature, specify subtitles source, font size, position and other subtitle parameters.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// Transcoding parameter extension field.
+        /// <p>Extended transcoding parameter field.</p>
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// Specifies the frame at the given pts time as a key frame and segments it. unit: milliseconds (relative deviation <=1ms is allowed). when gop and segment duration are specified simultaneously, they function together. note: enable RawPts, keep the frame rate as source, and ensure the passed-in pts time corresponds to a frame in the source.
+        /// <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KeyPTSList")]
         public long?[] KeyPTSList{ get; set; }
+
+        /// <summary>
+        /// <p>External audio feature. Specifies the audio files to be inserted.</p>
+        /// </summary>
+        [JsonProperty("AddOnAudios")]
+        public AddOnAudio[] AddOnAudios{ get; set; }
 
 
         /// <summary>
@@ -136,6 +133,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
             this.SetParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
+            this.SetParamArrayObj(map, prefix + "AddOnAudios.", this.AddOnAudios);
         }
     }
 }

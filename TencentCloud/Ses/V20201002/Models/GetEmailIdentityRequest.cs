@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Sender domain.
+        /// <p>Sender domain name</p>
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }

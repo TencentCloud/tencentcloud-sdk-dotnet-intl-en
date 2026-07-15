@@ -46,7 +46,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ImageEraseConfig EraseConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>AI image set configuration.</p>
         /// </summary>
         [JsonProperty("AiPosterSuiteConfig")]
         public AiPosterSuiteConfig AiPosterSuiteConfig{ get; set; }

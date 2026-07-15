@@ -25,19 +25,19 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Domain to be verified.
+        /// <p>Domain name for request verification</p>
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }
 
         /// <summary>
-        /// The  DKIMOption parameter is effective or not
+        /// <p>Match the new and old APIs in the console</p>
         /// </summary>
         [JsonProperty("NewAPI")]
         public bool? NewAPI{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
         /// </summary>
         [JsonProperty("DKIMOption")]
         public ulong? DKIMOption{ get; set; }

@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Kms.V20190118.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AigcAudioExtraParam : AbstractModel
+    public class RegionQps : AbstractModel
     {
         
         /// <summary>
-        /// <p>Resource ID. Specify this based on your needs.</p>
+        /// <p>Region.</p>
         /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// <p>qps size</p>
+        /// </summary>
+        [JsonProperty("Qps")]
+        public ulong? Qps{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
         }
     }
 }

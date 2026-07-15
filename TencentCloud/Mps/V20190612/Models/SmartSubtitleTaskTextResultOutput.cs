@@ -25,6 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// <p>List of segments for smart subtitle recognition.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SegmentSet")]
+        public SmartSubtitleTaskFullTextSegmentItem[] SegmentSet{ get; set; }
+
+        /// <summary>
         /// <p>Subtitle recognition result</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamArrayObj(map, prefix + "RecognizeSubtitleResult.", this.RecognizeSubtitleResult);
             this.SetParamArrayObj(map, prefix + "TransSubtitleResult.", this.TransSubtitleResult);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

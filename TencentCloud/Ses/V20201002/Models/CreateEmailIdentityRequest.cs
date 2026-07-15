@@ -25,19 +25,19 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
+        /// <p>For your sender domain name, recommend using a level 3 or higher domain name. Example: mail.qcloud.com.</p>
         /// </summary>
         [JsonProperty("EmailIdentity")]
         public string EmailIdentity{ get; set; }
 
         /// <summary>
-        /// Generated dkim key length. valid values: 0 (1024), 1 (2048).
+        /// <p>Generated dkim key length. 0:1024, 1:2048</p>
         /// </summary>
         [JsonProperty("DKIMOption")]
         public ulong? DKIMOption{ get; set; }
 
         /// <summary>
-        /// tag.
+        /// <p>tag</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagList[] TagList{ get; set; }

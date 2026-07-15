@@ -25,49 +25,49 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Date
+        /// <p>Date</p>
         /// </summary>
         [JsonProperty("SendDate")]
         public string SendDate{ get; set; }
 
         /// <summary>
-        /// Number of email requests.
+        /// <p>Request quantity by email</p>
         /// </summary>
         [JsonProperty("RequestCount")]
         public ulong? RequestCount{ get; set; }
 
         /// <summary>
-        /// Number of email requests accepted by Tencent Cloud.
+        /// <p>Tencent Cloud pass count</p>
         /// </summary>
         [JsonProperty("AcceptedCount")]
         public ulong? AcceptedCount{ get; set; }
 
         /// <summary>
-        /// Number of delivered emails.
+        /// <p>Delivery quantity</p>
         /// </summary>
         [JsonProperty("DeliveredCount")]
         public ulong? DeliveredCount{ get; set; }
 
         /// <summary>
-        /// Number of users (deduplicated) who opened emails.
+        /// <p>Total number of times emails were opened</p>
         /// </summary>
         [JsonProperty("OpenedCount")]
         public ulong? OpenedCount{ get; set; }
 
         /// <summary>
-        /// Number of recipients who clicked on links in emails.
+        /// <p>Number of users who clicked the link in the mail</p>
         /// </summary>
         [JsonProperty("ClickedCount")]
         public ulong? ClickedCount{ get; set; }
 
         /// <summary>
-        /// Number of bounced emails.
+        /// <p>Bounced count</p>
         /// </summary>
         [JsonProperty("BounceCount")]
         public ulong? BounceCount{ get; set; }
 
         /// <summary>
-        /// Number of users for unsubscription.
+        /// <p>Number of users for unsubscription</p>
         /// </summary>
         [JsonProperty("UnsubscribeCount")]
         public ulong? UnsubscribeCount{ get; set; }

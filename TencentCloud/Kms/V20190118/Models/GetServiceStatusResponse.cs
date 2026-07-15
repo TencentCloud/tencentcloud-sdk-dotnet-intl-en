@@ -25,112 +25,130 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Whether the KMS service has been activated. true: activated
+        /// <p>Whether the KMS service is enabled. true means enabled</p>
         /// </summary>
         [JsonProperty("ServiceEnabled")]
         public bool? ServiceEnabled{ get; set; }
 
         /// <summary>
-        /// Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release.
+        /// <p>Service unavailability type: 0-not purchased, 1-normal, 2-service suspended due to overdue payments, 3-resource release</p>
         /// </summary>
         [JsonProperty("InvalidType")]
         public long? InvalidType{ get; set; }
 
         /// <summary>
-        /// 0: Basic Edition, 1: Ultimate Edition
+        /// <p>0-Standard Edition, 1-Flagship Edition</p>
         /// </summary>
         [JsonProperty("UserLevel")]
         public ulong? UserLevel{ get; set; }
 
         /// <summary>
-        /// Specifies the expiry time (Epoch Unix Timestamp) of the flagship edition.
+        /// <p>Expiry time of the flagship edition (Epoch Unix Timestamp).</p>
         /// </summary>
         [JsonProperty("ProExpireTime")]
         public ulong? ProExpireTime{ get; set; }
 
         /// <summary>
-        /// Specifies whether the flagship edition is automatically renewed: 0 - no automatic renewal, 1 - automatic renewal.
+        /// <p>Whether the flagship edition is automatically renewed: 0-no auto-renewal, 1-auto-renewal</p>
         /// </summary>
         [JsonProperty("ProRenewFlag")]
         public ulong? ProRenewFlag{ get; set; }
 
         /// <summary>
-        /// Flagship edition purchase record unique identifier. if not activated, the return value is empty.
+        /// <p>Unique identifier of the flagship edition purchase record. If the flagship edition is not activated, the return value is empty.</p>
         /// </summary>
         [JsonProperty("ProResourceId")]
         public string ProResourceId{ get; set; }
 
         /// <summary>
-        /// Whether to enable the KMS-managed version.
+        /// <p>Whether to enable managed by KMS</p>
         /// </summary>
         [JsonProperty("ExclusiveVSMEnabled")]
         public bool? ExclusiveVSMEnabled{ get; set; }
 
         /// <summary>
-        /// Whether to enable the exclusive edition of KMS.
+        /// <p>Whether to enable KMS exclusive edition</p>
         /// </summary>
         [JsonProperty("ExclusiveHSMEnabled")]
         public bool? ExclusiveHSMEnabled{ get; set; }
 
         /// <summary>
-        /// Specifies the KMS subscription information.
+        /// <p>KMS subscription information.</p>
         /// </summary>
         [JsonProperty("SubscriptionInfo")]
         public string SubscriptionInfo{ get; set; }
 
         /// <summary>
-        /// Returns the amount of KMS user secret keys used.
+        /// <p>Return the usage quantity of KMS user secret key</p>
         /// </summary>
         [JsonProperty("CmkUserCount")]
         public ulong? CmkUserCount{ get; set; }
 
         /// <summary>
-        /// Returns the specification quantity of KMS user secret keys.
+        /// <p>Return the specification quantity of KMS user secret keys</p>
         /// </summary>
         [JsonProperty("CmkLimit")]
         public ulong? CmkLimit{ get; set; }
 
         /// <summary>
-        /// Return dedicated cluster group.
+        /// <p>Return the dedicated cluster group</p>
         /// </summary>
         [JsonProperty("ExclusiveHSMList")]
         public ExclusiveHSM[] ExclusiveHSMList{ get; set; }
 
         /// <summary>
-        /// Whether data key management is supported. valid values: 1 (supported), 0 (unsupported).
+        /// <p>Indicates whether data key management is supported. 1: supported. 0: not supported.</p>
         /// </summary>
         [JsonProperty("IsAllowedDataKeyHosted")]
         public bool? IsAllowedDataKeyHosted{ get; set; }
 
         /// <summary>
-        /// Valid when IsAllowedDataKeyHosted is 1. specifies the purchase quota for data keys.
+        /// <p>Valid when IsAllowedDataKeyHosted is 1. Purchase quota of the data key</p>
         /// </summary>
         [JsonProperty("DataKeyLimit")]
         public ulong? DataKeyLimit{ get; set; }
 
         /// <summary>
-        /// Valid when IsAllowedDataKeyHosted is 1. data key free quota.
+        /// <p>Valid at that time when IsAllowedDataKeyHosted is 1. Data key free quota.</p>
         /// </summary>
         [JsonProperty("FreeDataKeyLimit")]
         public ulong? FreeDataKeyLimit{ get; set; }
 
         /// <summary>
-        /// Valid at that time when IsAllowedDataKeyHosted is 1. specifies the number of keys used.
+        /// <p>Valid when IsAllowedDataKeyHosted is 1. Number of used data keys.</p>
         /// </summary>
         [JsonProperty("DataKeyUsedCount")]
         public ulong? DataKeyUsedCount{ get; set; }
 
         /// <summary>
-        /// Specifies the target region of the sync task.
+        /// <p>Target region info of the sync task</p>
         /// </summary>
         [JsonProperty("SyncTaskList")]
         public DestinationSyncConfig[] SyncTaskList{ get; set; }
 
         /// <summary>
-        /// Whether synchronization task is supported. true: supported; false: unsupported.
+        /// <p>Whether sync task is supported. true: supported, false: unsupported.</p>
         /// </summary>
         [JsonProperty("IsAllowedSync")]
         public bool? IsAllowedSync{ get; set; }
+
+        /// <summary>
+        /// <p>QPS in the region</p>
+        /// </summary>
+        [JsonProperty("QpsLimit")]
+        public ulong? QpsLimit{ get; set; }
+
+        /// <summary>
+        /// <p>Total QPS value</p>
+        /// </summary>
+        [JsonProperty("QpsTotalLimit")]
+        public ulong? QpsTotalLimit{ get; set; }
+
+        /// <summary>
+        /// <p>QPS in the region</p>
+        /// </summary>
+        [JsonProperty("RegionsQps")]
+        public RegionQps[] RegionsQps{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -162,6 +180,9 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
             this.SetParamArrayObj(map, prefix + "SyncTaskList.", this.SyncTaskList);
             this.SetParamSimple(map, prefix + "IsAllowedSync", this.IsAllowedSync);
+            this.SetParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
+            this.SetParamSimple(map, prefix + "QpsTotalLimit", this.QpsTotalLimit);
+            this.SetParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

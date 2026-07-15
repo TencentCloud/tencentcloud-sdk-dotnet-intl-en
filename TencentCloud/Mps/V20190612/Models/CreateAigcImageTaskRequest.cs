@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AigcImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Specifies the number of output images. One image is supported by default.</p>
         /// </summary>
         [JsonProperty("OutputImageCount")]
         public long? OutputImageCount{ get; set; }

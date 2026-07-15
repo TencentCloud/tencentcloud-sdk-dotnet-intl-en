@@ -55,6 +55,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TrackChannelInfo")]
         public AudioTrackChannelInfo TrackChannelInfo{ get; set; }
 
+        /// <summary>
+        /// <p>Audio track language, such as chi or eng. Note: (1) This follows the ISO 639-2 standard. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source language is used.</p>
+        /// </summary>
+        [JsonProperty("AudioLanguage")]
+        public string AudioLanguage{ get; set; }
+
+        /// <summary>
+        /// <p>Audio track name, such as Chinese or English. Note: (1) Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters. (2) This applies only to adaptive bitrate streaming templates. (3) The value "source" means that the source name is used.</p>
+        /// </summary>
+        [JsonProperty("AudioName")]
+        public string AudioName{ get; set; }
+
+        /// <summary>
+        /// <p>Default audio track. When set to true, the current audio track is designated as the default audio track. A maximum of 1 default audio track can be specified.</p><p>Default value: false.</p>
+        /// </summary>
+        [JsonProperty("DefaultTrack")]
+        public bool? DefaultTrack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +84,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
             this.SetParamObj(map, prefix + "TrackChannelInfo.", this.TrackChannelInfo);
+            this.SetParamSimple(map, prefix + "AudioLanguage", this.AudioLanguage);
+            this.SetParamSimple(map, prefix + "AudioName", this.AudioName);
+            this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }
     }
 }

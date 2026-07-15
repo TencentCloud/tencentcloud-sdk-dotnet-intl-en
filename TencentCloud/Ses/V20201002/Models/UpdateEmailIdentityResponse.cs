@@ -25,25 +25,25 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// Verification type. The value is fixed to `DOMAIN`.
+        /// <p>Validation type. Fixed value: DOMAIN</p>
         /// </summary>
         [JsonProperty("IdentityType")]
         public string IdentityType{ get; set; }
 
         /// <summary>
-        /// Verification passed or not.
+        /// <p>Whether verified</p>
         /// </summary>
         [JsonProperty("VerifiedForSendingStatus")]
         public bool? VerifiedForSendingStatus{ get; set; }
 
         /// <summary>
-        /// DNS information that needs to be configured.
+        /// <p>DNS information needs to be configured</p>
         /// </summary>
         [JsonProperty("Attributes")]
         public DNSAttributes[] Attributes{ get; set; }
 
         /// <summary>
-        /// dkim option, 0: 1024, 1: 2048, 2: both
+        /// <p>dkim digits</p><p>Enumeration value:</p><ul><li>0: 1024</li><li>1: 2048</li><li>2: Dual signature</li></ul>
         /// </summary>
         [JsonProperty("DKIMOption")]
         public ulong? DKIMOption{ get; set; }

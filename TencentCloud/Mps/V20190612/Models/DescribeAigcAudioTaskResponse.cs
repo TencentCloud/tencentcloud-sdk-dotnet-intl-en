@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.Example value: DONE
+        /// <p>Current task status. WAIT: waiting. RUN: running. FAIL: failed. DONE: successful.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// When the task status is FAIL, the failure information is returned.
+        /// <p>If the task status is FAIL, the failure information is returned.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Output audio information.
+        /// <p>Output audio information.</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioOutputAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// Output video information. Only returned for scenarios such as video dubbing.
+        /// <p>Output video information, which is only available for scenarios such as video dubbing.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioOutputVideoInfo[] VideoInfos{ get; set; }

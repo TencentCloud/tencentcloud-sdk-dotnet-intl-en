@@ -25,25 +25,25 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Base64-encoded key material that encrypted with the `PublicKey` returned by `GetParametersForImport`. For the KMS of SM-CRYPTO version, the length of the key material should be 128 bits, while for KMS of FIPS-compliant version, the length should be 256 bits.
+        /// <p>base64-encoded encrypted key material using the PublicKey returned by GetParametersForImport. For KMS in national cryptography version regions, the length requirement for imported key material is 128 bit. For KMS in FIPS 140-2 version regions, the length requirement for imported key material is 256 bit.</p>
         /// </summary>
         [JsonProperty("EncryptedKeyMaterial")]
         public string EncryptedKeyMaterial{ get; set; }
 
         /// <summary>
-        /// Import token obtained by calling `GetParametersForImport`.
+        /// <p>Import token obtained by calling GetParametersForImport.</p>
         /// </summary>
         [JsonProperty("ImportToken")]
         public string ImportToken{ get; set; }
 
         /// <summary>
-        /// Specifies the CMK into which to import key material, which must be the same as the one specified by `GetParametersForImport`.
+        /// <p>The CMK designated for importing key material must be identical to the CMK specified in GetParametersForImport.</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Unix timestamp of the key material's expiration time. If this value is empty or 0, the key material will never expire. To specify the expiration time, it should be later than the current time. Maximum value: 2147443200.
+        /// <p>Expiration time of the key material in unix timestamp. If unspecified or 0, the key material does not expire. If specified, the expiration time must be greater than the current time and supports up to 2147443200.</p>
         /// </summary>
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }

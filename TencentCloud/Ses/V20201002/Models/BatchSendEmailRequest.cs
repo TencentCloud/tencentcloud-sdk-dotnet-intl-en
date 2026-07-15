@@ -37,7 +37,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// <p>Email Subject</p>
+        /// <p>Email Subject</p><p>When sending with templates, supports the use of template variable parameters for fill</p>
         /// </summary>
         [JsonProperty("Subject")]
         public string Subject{ get; set; }

@@ -25,40 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The mode. Valid values:
-        /// <li>`subtitle-stream`: Add a subtitle track.</li>
-        /// <li>`close-caption-708`: Embed CEA-708 subtitles in SEI frames.</li>
-        /// <li>`close-caption-608`: Embed CEA-608 subtitles in SEI frames.</li>
+        /// <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The subtitle file.
+        /// <p>Subtitle file.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Subtitle")]
         public MediaInputInfo Subtitle{ get; set; }
 
         /// <summary>
-        /// Subtitle name.
-        /// Note: supports Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and parentheses. Max 64 characters.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }
 
         /// <summary>
-        /// Output format of the subtitle. valid values: "WebVTT", "TTML".
-        /// Default value: "WebVTT".
+        /// <p>Subtitle language, such as eng.</p>
+        /// </summary>
+        [JsonProperty("SubtitleLanguage")]
+        public string SubtitleLanguage{ get; set; }
+
+        /// <summary>
+        /// <p>Subtitle output format. Valid values: {&quot;WebVTT&quot;,&quot;TTML&quot;}.<br>Default value: &quot;WebVTT&quot;.</p>
         /// </summary>
         [JsonProperty("OutputFormat")]
         public string OutputFormat{ get; set; }
 
         /// <summary>
-        /// Default subtitle track. specifies the current subtitle as the default track when true. a maximum of 1 default subtitle track can be specified.
-        /// Default value: `false`.
+        /// <p>Default subtitle track. When set to true, the current subtitle is designated as the default subtitle track. A maximum of 1 default subtitle track can be specified.<br>Default value: false.</p>
         /// </summary>
         [JsonProperty("DefaultTrack")]
         public bool? DefaultTrack{ get; set; }
@@ -72,6 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "Subtitle.", this.Subtitle);
             this.SetParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
+            this.SetParamSimple(map, prefix + "SubtitleLanguage", this.SubtitleLanguage);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamSimple(map, prefix + "DefaultTrack", this.DefaultTrack);
         }

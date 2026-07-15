@@ -25,169 +25,169 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Globally unique CMK ID
+        /// <p>Globally unique ID of the CMK.</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Alias that makes a key more recognizable and understandable
+        /// <p>An alias name as a key that is easier to identify and understand</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Key creation time
+        /// <p>Key creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// CMK description
+        /// <p>Description of the CMK.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+        /// <p>CMK state, value: Enabled | Disabled | PendingDelete | PendingImport | Archived</p>
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+        /// <p>CMK purpose. Value: ENCRYPT_DECRYPT | ASYMMETRIC_DECRYPT_RSA_2048 | ASYMMETRIC_DECRYPT_SM2 | ASYMMETRIC_SIGN_VERIFY_SM2 | ASYMMETRIC_SIGN_VERIFY_RSA_2048 | ASYMMETRIC_SIGN_VERIFY_ECC</p>
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
+        /// <p>CMK type. 2 means compliant with FIPS 140-2 standard. 4 means compliant with national cryptography standards.</p><p>Enumeration value:</p><ul><li>2: Complies with FIPS 140-2 standard</li><li>4: Complies with national cryptography standards</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Creator
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// Whether key rotation is enabled
+        /// <p>Is key rotation function enabled?</p>
         /// </summary>
         [JsonProperty("KeyRotationEnabled")]
         public bool? KeyRotationEnabled{ get; set; }
 
         /// <summary>
-        /// CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+        /// <p>Creator of the CMK. For user-created CMKs, the value is user. For CMKs auto-created by authorized Cloud services, the value is the corresponding product name.</p>
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// Time of next rotation if key rotation is enabled
+        /// <p>The time when the next rotation occurs with key rotation enabled</p>
         /// </summary>
         [JsonProperty("NextRotateTime")]
         public ulong? NextRotateTime{ get; set; }
 
         /// <summary>
-        /// The time when scheduled deletion occurs.
+        /// <p>The time when schedule deletion</p>
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
         /// <summary>
-        /// CMK key material type. the type created by KMS is TENCENT_KMS. the user-imported type is EXTERNAL.
+        /// <p>CMK key material type. TENCENT_KMS for those created by KMS, EXTERNAL for user import.</p>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// Valid when Origin is EXTERNAL. indicates the validity date of the key material. 0 means no expiration.
+        /// <p>Valid when Origin is EXTERNAL. Indicates the expiration date of the key material. 0 means never expire.</p>
         /// </summary>
         [JsonProperty("ValidTo")]
         public ulong? ValidTo{ get; set; }
 
         /// <summary>
-        /// Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+        /// <p>Resource ID, format: creatorUin/$creatorUin/$keyId</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+        /// <p>HSM Cluster ID (only applicable to KMS exclusive/managed service instance)</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
         /// <summary>
-        /// Key rotation period (days).
+        /// <p>Key rotation cycle (days)</p>
         /// </summary>
         [JsonProperty("RotateDays")]
         public ulong? RotateDays{ get; set; }
 
         /// <summary>
-        /// Last disorderly rotation time (Unix timestamp).
+        /// <p>Last rotation time (Unix timestamp).</p>
         /// </summary>
         [JsonProperty("LastRotateTime")]
         public ulong? LastRotateTime{ get; set; }
 
         /// <summary>
-        /// Specifies whether the key is a primary replica. valid values: 0 (primary replica), 1 (synced replica).
+        /// <p>Whether the key is the primary replica. 0: primary replica, 1: synced replica.</p>
         /// </summary>
         [JsonProperty("IsSyncReplica")]
         public long? IsSyncReplica{ get; set; }
 
         /// <summary>
-        /// Synchronous original region.
+        /// <p>Synchronous original region</p>
         /// </summary>
         [JsonProperty("SourceRegion")]
         public string SourceRegion{ get; set; }
 
         /// <summary>
-        /// The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+        /// <p>Key synchronization state: 0: unsynced, 1: synced successfully, 2: synchronization failed, 3: syncing.</p>
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }
 
         /// <summary>
-        /// Describes the synchronous result.
+        /// <p>Synchronous result description</p>
         /// </summary>
         [JsonProperty("SyncMessages")]
         public string SyncMessages{ get; set; }
 
         /// <summary>
-        /// Start time of synchronization.
+        /// <p>Start time of synchronization</p>
         /// </summary>
         [JsonProperty("SyncStartTime")]
         public ulong? SyncStartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the synchronous end time.
+        /// <p>Synchronous end time</p>
         /// </summary>
         [JsonProperty("SyncEndTime")]
         public ulong? SyncEndTime{ get; set; }
 
         /// <summary>
-        /// Synchronous original cluster. if empty, it is a public cloud public cluster.
+        /// <p>Synchronous original cluster. If empty, it is a public cloud public cluster.</p>
         /// </summary>
         [JsonProperty("SourceHsmClusterId")]
         public string SourceHsmClusterId{ get; set; }
 
         /// <summary>
-        /// Member account appId.
+        /// <p>Member account appId</p>
         /// </summary>
         [JsonProperty("AccountAppId")]
         public ulong? AccountAppId{ get; set; }
 
         /// <summary>
-        /// Member account UIN
+        /// <p>member account uin</p>
         /// </summary>
         [JsonProperty("AccountUin")]
         public ulong? AccountUin{ get; set; }
 
         /// <summary>
-        /// Member account name.
+        /// <p>Member account name</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
