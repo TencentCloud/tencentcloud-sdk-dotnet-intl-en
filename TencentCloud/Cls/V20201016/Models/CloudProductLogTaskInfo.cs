@@ -25,46 +25,58 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Service region
+        /// <p>Log service region</p>
         /// </summary>
         [JsonProperty("ClsRegion")]
         public string ClsRegion{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Logset ID
+        /// <p>Logset ID</p>
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Log topic ID
+        /// <p>Log topic ID.</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log configuration extended information, generally used for storage of additional log delivery configuration
+        /// <p>Extended information for logging configuration, generally used to store additional log delivery configuration</p>
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
 
         /// <summary>
-        /// Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+        /// <p>Log type, supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Task status: 0 Creating, 1 Creation completed, 2 Deleting
+        /// <p>Task status: 0 creating, 1 creation completed, 2 deleting</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>Tag information of the topic associated with the delivery task</p>
+        /// </summary>
+        [JsonProperty("TopicTags")]
+        public Tag[] TopicTags{ get; set; }
+
+        /// <summary>
+        /// <p>Tag information of the logset associated with the delivery task</p>
+        /// </summary>
+        [JsonProperty("LogsetTags")]
+        public Tag[] LogsetTags{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "TopicTags.", this.TopicTags);
+            this.SetParamArrayObj(map, prefix + "LogsetTags.", this.LogsetTags);
         }
     }
 }

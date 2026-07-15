@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.intl.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1351";
 
         /// <summary>
         /// Client constructor.
@@ -840,6 +840,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to create a remote write delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="CreateRemoteWriteTaskResponse"/></returns>
+        public Task<CreateRemoteWriteTaskResponse> CreateRemoteWriteTask(CreateRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteWriteTaskResponse>(req, "CreateRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a remote write delivery task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="CreateRemoteWriteTaskResponse"/></returns>
+        public CreateRemoteWriteTaskResponse CreateRemoteWriteTaskSync(CreateRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<CreateRemoteWriteTaskResponse>(req, "CreateRemoteWriteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a scheduled SQL analysis task.
         /// </summary>
         /// <param name="req"><see cref="CreateScheduledSqlRequest"/></param>
@@ -1550,6 +1571,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteRecordingRuleYamlTaskResponse DeleteRecordingRuleYamlTaskSync(DeleteRecordingRuleYamlTaskRequest req)
         {
             return InternalRequestAsync<DeleteRecordingRuleYamlTaskResponse>(req, "DeleteRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a RemoteWrite task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="DeleteRemoteWriteTaskResponse"/></returns>
+        public Task<DeleteRemoteWriteTaskResponse> DeleteRemoteWriteTask(DeleteRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteWriteTaskResponse>(req, "DeleteRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// This API is used to delete a RemoteWrite task.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="DeleteRemoteWriteTaskResponse"/></returns>
+        public DeleteRemoteWriteTaskResponse DeleteRemoteWriteTaskSync(DeleteRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteRemoteWriteTaskResponse>(req, "DeleteRemoteWriteTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2646,6 +2688,27 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// This API is used to obtain the list of RemoteWrite delivery tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWriteTasksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWriteTasksResponse"/></returns>
+        public Task<DescribeRemoteWriteTasksResponse> DescribeRemoteWriteTasks(DescribeRemoteWriteTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWriteTasksResponse>(req, "DescribeRemoteWriteTasks");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of RemoteWrite delivery tasks.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRemoteWriteTasksRequest"/></param>
+        /// <returns><see cref="DescribeRemoteWriteTasksResponse"/></returns>
+        public DescribeRemoteWriteTasksResponse DescribeRemoteWriteTasksSync(DescribeRemoteWriteTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeRemoteWriteTasksResponse>(req, "DescribeRemoteWriteTasks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to access the scheduled SQL analysis task list.
         /// </summary>
         /// <param name="req"><see cref="DescribeScheduledSqlInfoRequest"/></param>
@@ -3528,6 +3591,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyRecordingRuleYamlTaskResponse ModifyRecordingRuleYamlTaskSync(ModifyRecordingRuleYamlTaskRequest req)
         {
             return InternalRequestAsync<ModifyRecordingRuleYamlTaskResponse>(req, "ModifyRecordingRuleYamlTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a RemoteWrite task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="ModifyRemoteWriteTaskResponse"/></returns>
+        public Task<ModifyRemoteWriteTaskResponse> ModifyRemoteWriteTask(ModifyRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteWriteTaskResponse>(req, "ModifyRemoteWriteTask");
+        }
+
+        /// <summary>
+        /// This API is used to modify a RemoteWrite task.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRemoteWriteTaskRequest"/></param>
+        /// <returns><see cref="ModifyRemoteWriteTaskResponse"/></returns>
+        public ModifyRemoteWriteTaskResponse ModifyRemoteWriteTaskSync(ModifyRemoteWriteTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyRemoteWriteTaskResponse>(req, "ModifyRemoteWriteTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

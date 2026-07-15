@@ -25,82 +25,100 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Source log topic ID. Obtain the log topic Id through [Get Log Topic List](https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1).
+        /// <p>Source log topic ID - Obtain the log topic ID by <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">searching the log topic list</a>.</p>
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// Task name, 0-255 characters
+        /// <p>Task name, 0-255 characters</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Task start status. 1: Enabled, 2: Disabled
+        /// <p>Task start status. 1: Enabled, 2: Disabled</p>
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// Target log topic for scheduled SQL analysis
+        /// <p>Target log topic for scheduled SQL analysis</p>
         /// </summary>
         [JsonProperty("DstResource")]
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// Query statement
+        /// <p>Query statement</p>
         /// </summary>
         [JsonProperty("ScheduledSqlContent")]
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// Schedule start time, Unix timestamp, in milliseconds
+        /// <p>Schedule start time, Unix timestamp, in milliseconds</p>
         /// </summary>
         [JsonProperty("ProcessStartTime")]
         public ulong? ProcessStartTime{ get; set; }
 
         /// <summary>
-        /// Schedule type: 1: Continuous running; 2: Specified time range
+        /// <p>Schedule Type: 1 Continuous Running 2 Specified Time Range</p>
         /// </summary>
         [JsonProperty("ProcessType")]
         public long? ProcessType{ get; set; }
 
         /// <summary>
-        /// Scheduling Interval (Minutes), 1-1440 minutes
+        /// <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
 
         /// <summary>
-        /// Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.
+        /// <p>Time window for a single query. If your target topic is a metric topic, it is recommended that the size of this parameter not exceed 30 minutes, otherwise, metric conversion may fail.</p>
         /// </summary>
         [JsonProperty("ProcessTimeWindow")]
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution Delay (Seconds), 0-120 seconds, default 60 seconds
+        /// <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Regional information of the source topicId. For supported regions, see the region list (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) document.
+        /// <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// Schedule end time. Required field when ProcessType=2, Unix timestamp, in milliseconds
+        /// <p>Scheduling Time Unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>The default value is 1 (minute), and the additional value is 2 (second).</p>
+        /// </summary>
+        [JsonProperty("ProcessPeriodUnit")]
+        public long? ProcessPeriodUnit{ get; set; }
+
+        /// <summary>
+        /// <p>Schedule End Time, required when ProcessType=2, Unix timestamp, in milliseconds</p>
         /// </summary>
         [JsonProperty("ProcessEndTime")]
         public ulong? ProcessEndTime{ get; set; }
 
         /// <summary>
-        /// Query syntax rules. Default value is 0. 0: Lucene syntax, 1: CQL syntax
+        /// <p>Query syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// <p>Full-text search tag. 1: Off, 2: On. Default: 1</p>
+        /// </summary>
+        [JsonProperty("FullQuery")]
+        public ulong? FullQuery{ get; set; }
 
 
         /// <summary>
@@ -119,8 +137,11 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ProcessTimeWindow", this.ProcessTimeWindow);
             this.SetParamSimple(map, prefix + "ProcessDelay", this.ProcessDelay);
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
+            this.SetParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
             this.SetParamSimple(map, prefix + "ProcessEndTime", this.ProcessEndTime);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
         }
     }
 }

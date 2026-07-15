@@ -25,70 +25,88 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Task ID, which can be obtained through [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1).
+        /// <p>Task ID, obtained by <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">searching the scheduled SQL analysis task list</a>.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Source log topic. Search the [scheduled SQL analysis task list](https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1) to obtain it.
+        /// <p>Source log topic, obtained via <a href="https://www.tencentcloud.com/document/product/614/95519?from_cn_redirect=1">search scheduled SQL analysis task list</a></p>
         /// </summary>
         [JsonProperty("SrcTopicId")]
         public string SrcTopicId{ get; set; }
 
         /// <summary>
-        /// Task start status. 1: Enabled, 2: Disabled
+        /// <p>Task start status. 1: Enabled, 2: Disabled</p>
         /// </summary>
         [JsonProperty("EnableFlag")]
         public long? EnableFlag{ get; set; }
 
         /// <summary>
-        /// Target log topic for scheduled SQL analysis
+        /// <p>Target log topic for scheduled SQL analysis</p>
         /// </summary>
         [JsonProperty("DstResource")]
         public ScheduledSqlResouceInfo DstResource{ get; set; }
 
         /// <summary>
-        /// Queries statements
+        /// <p>Query statement</p>
         /// </summary>
         [JsonProperty("ScheduledSqlContent")]
         public string ScheduledSqlContent{ get; set; }
 
         /// <summary>
-        /// Scheduling cycle (minutes), 1-1440 minutes
+        /// <p>Scheduling Interval (Minutes), 1-1440 minutes</p>
         /// </summary>
         [JsonProperty("ProcessPeriod")]
         public long? ProcessPeriod{ get; set; }
 
         /// <summary>
-        /// Time window for a single query. Example: last 15 minutes
+        /// <p>Time window for a single query. Example: last 15 minutes</p>
         /// </summary>
         [JsonProperty("ProcessTimeWindow")]
         public string ProcessTimeWindow{ get; set; }
 
         /// <summary>
-        /// Execution delay (seconds), 0-120 seconds, default 60
+        /// <p>Execution delay (seconds), 0-120 seconds, default 60 seconds</p>
         /// </summary>
         [JsonProperty("ProcessDelay")]
         public long? ProcessDelay{ get; set; }
 
         /// <summary>
-        /// Regional information of the source topicId. Supported regions are listed in the region list document (https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+        /// <p>Regional information of the source topicId. For supported regions, see the <a href="https://www.tencentcloud.com/document/api/614/56474?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a> document.</p>
         /// </summary>
         [JsonProperty("SrcTopicRegion")]
         public string SrcTopicRegion{ get; set; }
 
         /// <summary>
-        /// Task name, 0-255 characters
+        /// <p>Task name, 0-255 characters</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax
+        /// <p>Syntax rules. Default value: 0. 0: Lucene syntax, 1: CQL syntax</p>
         /// </summary>
         [JsonProperty("SyntaxRule")]
         public ulong? SyntaxRule{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable delivery service log. 1: Disabled, 2: Enabled.</p>
+        /// </summary>
+        [JsonProperty("HasServicesLog")]
+        public ulong? HasServicesLog{ get; set; }
+
+        /// <summary>
+        /// <p>Full-text search query tag. 1: Off, 2: On.</p>
+        /// </summary>
+        [JsonProperty("FullQuery")]
+        public ulong? FullQuery{ get; set; }
+
+        /// <summary>
+        /// <p>Scheduling period unit</p><p>Value ranges from 1 to 2</p><p>Default value: 1</p><p>Default value 1 (minute), other value 2 (second)</p>
+        /// </summary>
+        [JsonProperty("ProcessPeriodUnit")]
+        public long? ProcessPeriodUnit{ get; set; }
 
 
         /// <summary>
@@ -107,6 +125,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "SrcTopicRegion", this.SrcTopicRegion);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+            this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "FullQuery", this.FullQuery);
+            this.SetParamSimple(map, prefix + "ProcessPeriodUnit", this.ProcessPeriodUnit);
         }
     }
 }

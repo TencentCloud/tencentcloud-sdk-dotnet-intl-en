@@ -25,46 +25,40 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Cloud product identifier, support enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS.
+        /// <p>Cloud product identifier, supports enumerate: CDS, CWP, CDB, TDSQL-C, MongoDB, TDStore, DCDB, MariaDB, PostgreSQL, BH, APIS</p>
         /// </summary>
         [JsonProperty("AssumerName")]
         public string AssumerName{ get; set; }
 
         /// <summary>
-        /// Log type, support enumerate: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB-ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS
+        /// <p>Log type. Supports enumeration: CDS-AUDIT, CDS-RISK, CDB-AUDIT, TDSQL-C-AUDIT, MongoDB-AUDIT, MongoDB-SlowLog, MongoDB  ErrorLog, TDMYSQL-SLOW, DCDB-AUDIT, DCDB-SLOW, DCDB-ERROR, MariaDB-AUDIT, MariaDB-SLOW, MariaDB-ERROR, PostgreSQL-SLOW, PostgreSQL-ERROR, PostgreSQL-AUDIT, BH-FILELOG, BH-COMMANDLOG, APIS-ACCESS</p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Cloud product region. Data discrepancies exist in the format of region input parameters for different log types (LogType). Refer to the following example:
-        /// -All log types of CDS: ap-guangzhou
-        /// - CDB-AUDIT: gz
-        /// - TDSQL-C-AUDIT: gz
-        /// - MongoDB-AUDIT: gz
-        /// - MongoDB-SlowLog:ap-guangzhou
-        /// - MongoDB-ErrorLog:ap-guangzhou
-        /// - TDMYSQL-SLOW:gz
-        /// -All log types of DCDB: gz
-        /// -All log types of MariaDB: gz
-        /// -PostgreSQL all log types: gz
-        /// -BH all log types: overseas-polaris (Hong Kong (China) and other)/fsi-polaris (financial district)/general-polaris (general zone)/intl-sg-prod (international site)
-        /// -All log types of APIS: gz
+        /// <p>Product region. Different log types have different region input formats. Refer to the following example:</p><ul><li>All CDS log types: ap-guangzhou</li><li>CDB-AUDIT: gz</li><li>TDSQL-C-AUDIT: gz</li><li>MongoDB-AUDIT: gz</li><li>MongoDB-SlowLog: ap-guangzhou</li><li>MongoDB-ErrorLog: ap-guangzhou</li><li>TDMYSQL-SLOW: gz</li><li>All DCDB log types: gz</li><li>All MariaDB log types: gz</li><li>All PostgreSQL log types: gz</li><li>All BH log types: overseas-polaris(Hong Kong (China) and other)/fsi-polaris(financial district)/general-polaris(general zone)/intl-sg-prod(international site)</li><li>All APIS log types: gz</li></ul>
         /// </summary>
         [JsonProperty("CloudProductRegion")]
         public string CloudProductRegion{ get; set; }
 
         /// <summary>
-        /// Logging configuration extended information, normally used to store additional log shipping configuration
+        /// <p>Logging configuration extended information, generally used to store additional log delivery configuration</p>
         /// </summary>
         [JsonProperty("Extend")]
         public string Extend{ get; set; }
+
+        /// <summary>
+        /// <p>Description list of tags. By specifying this parameter, you can simultaneously bind tags to the appropriate logset and topic. Supports a maximum of 10 tag key-value pairs. The same resource can only be bound to the same tag key.</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -77,6 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "CloudProductRegion", this.CloudProductRegion);
             this.SetParamSimple(map, prefix + "Extend", this.Extend);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

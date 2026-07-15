@@ -25,100 +25,118 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// <p>Task id.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Account id.
+        /// <p>Account id.</p>
         /// </summary>
         [JsonProperty("Uin")]
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// Log topic ID.
+        /// <p>Log topic id.</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Task name.
+        /// <p>Task name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Delivery Type. Valid values: 0: real-time delivery; 1: historic delivery.
+        /// <p>Delivery Type, 0: real-time delivery, 1: history delivery</p>
         /// </summary>
         [JsonProperty("DeliverType")]
         public ulong? DeliverType{ get; set; }
 
         /// <summary>
-        /// Delivery file size in MB
+        /// <p>Delivery file size, in MB.</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }
 
         /// <summary>
-        /// Delivery interval in seconds
+        /// <p>Delivery interval in seconds</p>
         /// </summary>
         [JsonProperty("Interval")]
         public ulong? Interval{ get; set; }
 
         /// <summary>
-        /// Start time of the delivery time range
+        /// <p>Start time of the delivery time range</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the delivery time range
+        /// <p>End time of the delivery time range</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// dlc configuration message
+        /// <p>dlc configuration message</p>
         /// </summary>
         [JsonProperty("DlcInfo")]
         public DlcInfo DlcInfo{ get; set; }
 
         /// <summary>
-        /// Whether to enable delivery service log. 1 for disabled, 2 for enabled
+        /// <p>Whether to enable delivery service log. 1 Disabled, 2 Enabled</p>
         /// </summary>
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }
 
         /// <summary>
-        /// Task status.
+        /// <p>Task status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Task progress. Historic delivery tasks take effect.
+        /// <p>Task progress. Historic delivery tasks take effect.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Topic type of logs. 0: standard topic; 1: metric topic.
+        /// <p>Log topic type. 0: Standard topic, 1: Metric topic</p>
         /// </summary>
         [JsonProperty("BizType")]
         public ulong? BizType{ get; set; }
 
         /// <summary>
-        /// Task creation time.
+        /// <p>Task creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Task modification time.
+        /// <p>Task last modified.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public ulong? UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+        /// </summary>
+        [JsonProperty("AutoCreateField")]
+        public bool? AutoCreateField{ get; set; }
+
+        /// <summary>
+        /// <p>Store logs with delivery failure in a DLC table</p>
+        /// </summary>
+        [JsonProperty("DlcFailHandle")]
+        public DlcFailHandle DlcFailHandle{ get; set; }
+
+        /// <summary>
+        /// <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -142,6 +160,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "AutoCreateField", this.AutoCreateField);
+            this.SetParamObj(map, prefix + "DlcFailHandle.", this.DlcFailHandle);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

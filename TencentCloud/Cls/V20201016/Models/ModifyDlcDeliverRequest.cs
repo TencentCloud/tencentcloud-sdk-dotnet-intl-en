@@ -90,6 +90,24 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
+        /// <summary>
+        /// <p>Auto-create dlc field</p><p>Default value: false</p><p>When there are additional fields in your log, the system will automatically ship them to DLC.</p>
+        /// </summary>
+        [JsonProperty("AutoCreateField")]
+        public bool? AutoCreateField{ get; set; }
+
+        /// <summary>
+        /// <p>Store logs with delivery failure in a DLC table</p>
+        /// </summary>
+        [JsonProperty("DlcFailHandle")]
+        public DlcFailHandle DlcFailHandle{ get; set; }
+
+        /// <summary>
+        /// <p>Log pre-filtering - Perform pre-filtering process on the original data for data ingestion into Splunk.</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +125,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "DlcInfo.", this.DlcInfo);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AutoCreateField", this.AutoCreateField);
+            this.SetParamObj(map, prefix + "DlcFailHandle.", this.DlcFailHandle);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

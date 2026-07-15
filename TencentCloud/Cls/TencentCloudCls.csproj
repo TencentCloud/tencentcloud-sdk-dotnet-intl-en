@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1329</VersionPrefix>
+    <VersionPrefix>3.0.1351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -157,6 +157,8 @@
     <Compile Include="V20201016\Models\CreateRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateRemoteWriteTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\CreateSearchViewRequest.cs" />
@@ -235,6 +237,8 @@
     <Compile Include="V20201016\Models\DeleteRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteRemoteWriteTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\DeleteSearchViewRequest.cs" />
@@ -341,6 +345,8 @@
     <Compile Include="V20201016\Models\DescribeRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeRemoteWriteTasksRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeRemoteWriteTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeSearchViewsRequest.cs" />
@@ -363,6 +369,8 @@
     <Compile Include="V20201016\Models\DescribeWebCallbacksResponse.cs" />
     <Compile Include="V20201016\Models\Dimension.cs" />
     <Compile Include="V20201016\Models\DlcDeliverInfo.cs" />
+    <Compile Include="V20201016\Models\DlcFailHandle.cs" />
+    <Compile Include="V20201016\Models\DlcFailTableInfo.cs" />
     <Compile Include="V20201016\Models\DlcFiledInfo.cs" />
     <Compile Include="V20201016\Models\DlcInfo.cs" />
     <Compile Include="V20201016\Models\DlcPartitionExtra.cs" />
@@ -401,6 +409,7 @@
     <Compile Include="V20201016\Models\Instance.cs" />
     <Compile Include="V20201016\Models\InstanceConfig.cs" />
     <Compile Include="V20201016\Models\InstanceData.cs" />
+    <Compile Include="V20201016\Models\JsonExpandInfo.cs" />
     <Compile Include="V20201016\Models\JsonInfo.cs" />
     <Compile Include="V20201016\Models\KafkaConsumerContent.cs" />
     <Compile Include="V20201016\Models\KafkaProtocolInfo.cs" />
@@ -484,6 +493,8 @@
     <Compile Include="V20201016\Models\ModifyRecordingRuleTaskResponse.cs" />
     <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskRequest.cs" />
     <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyRemoteWriteTaskRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyRemoteWriteTaskResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlResponse.cs" />
     <Compile Include="V20201016\Models\ModifySearchViewRequest.cs" />
@@ -530,6 +541,8 @@
     <Compile Include="V20201016\Models\RecordingRuleTaskInfo.cs" />
     <Compile Include="V20201016\Models\RecordingRuleYamlTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
+    <Compile Include="V20201016\Models\RemoteWriteAuthInfo.cs" />
+    <Compile Include="V20201016\Models\RemoteWriteInfo.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />
