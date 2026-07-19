@@ -21,15 +21,9 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMNGVersionRequest : AbstractModel
+    public class ApprovePaymentMerchantBindingRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <p>Task ID returned by the CreateMNPVersion API.</p>
-        /// </summary>
-        [JsonProperty("BusinessId")]
-        public string BusinessId{ get; set; }
-
         /// <summary>
         /// <p>Platform ID.</p>
         /// </summary>
@@ -37,10 +31,28 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>CICD ID</p>
+        /// <p>Superapp ID.</p>
         /// </summary>
-        [JsonProperty("PipelineId")]
-        public string PipelineId{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// <p>Approval number.</p>
+        /// </summary>
+        [JsonProperty("ApprovalNo")]
+        public string ApprovalNo{ get; set; }
+
+        /// <summary>
+        /// <p>Approval status. Valid values: 10: Approved; 20: Rejected.</p>
+        /// </summary>
+        [JsonProperty("ApprovalType")]
+        public ulong? ApprovalType{ get; set; }
+
+        /// <summary>
+        /// <p>Approval note.</p>
+        /// </summary>
+        [JsonProperty("ApprovalNote")]
+        public string ApprovalNote{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BusinessId", this.BusinessId);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
-            this.SetParamSimple(map, prefix + "PipelineId", this.PipelineId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "ApprovalNo", this.ApprovalNo);
+            this.SetParamSimple(map, prefix + "ApprovalType", this.ApprovalType);
+            this.SetParamSimple(map, prefix + "ApprovalNote", this.ApprovalNote);
         }
     }
 }

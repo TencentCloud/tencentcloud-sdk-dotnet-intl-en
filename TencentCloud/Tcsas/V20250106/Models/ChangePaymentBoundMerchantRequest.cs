@@ -21,20 +21,32 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MNPVersionSubPackageInfo : AbstractModel
+    public class ChangePaymentBoundMerchantRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Package name.</p>
+        /// <p>Platform ID.</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("PlatformId")]
+        public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Package size.</p>
+        /// <p>Mini program appid.</p>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("TeamId")]
+        public string TeamId{ get; set; }
+
+        /// <summary>
+        /// <p>Merchant ID.</p>
+        /// </summary>
+        [JsonProperty("MerchantID")]
+        public string MerchantID{ get; set; }
+
+        /// <summary>
+        /// <p>Merchant name.</p>
+        /// </summary>
+        [JsonProperty("MerchantName")]
+        public string MerchantName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
+            this.SetParamSimple(map, prefix + "MerchantID", this.MerchantID);
+            this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
         }
     }
 }

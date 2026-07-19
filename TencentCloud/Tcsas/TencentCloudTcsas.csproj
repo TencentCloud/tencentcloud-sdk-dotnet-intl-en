@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4FE02EAD-36EB-3BF7-AED6-3FB3FCFD4DB8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1340</VersionPrefix>
+    <VersionPrefix>3.0.1353</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,13 +56,25 @@
     <Compile Include="V20250106\Models\AddTeamMemberRequest.cs" />
     <Compile Include="V20250106\Models\AddTeamMemberResponse.cs" />
     <Compile Include="V20250106\Models\AdvertDataOverview.cs" />
+    <Compile Include="V20250106\Models\AgeRatingItem.cs" />
+    <Compile Include="V20250106\Models\AgeRatingItemReq.cs" />
     <Compile Include="V20250106\Models\AnalysisAdvertOverview.cs" />
     <Compile Include="V20250106\Models\AnalysisData.cs" />
     <Compile Include="V20250106\Models\ApplicationConfigInfo.cs" />
+    <Compile Include="V20250106\Models\ApplyPaymentOpenDetailRes.cs" />
     <Compile Include="V20250106\Models\ApprovalItem.cs" />
+    <Compile Include="V20250106\Models\ApprovalPaymentV2MerchantBindRes.cs" />
+    <Compile Include="V20250106\Models\ApproveMNPPaymentEnableRequest.cs" />
+    <Compile Include="V20250106\Models\ApproveMNPPaymentEnableResponse.cs" />
+    <Compile Include="V20250106\Models\ApproveMNPPaymentOpenRes.cs" />
+    <Compile Include="V20250106\Models\ApprovePaymentMerchantBindingRequest.cs" />
+    <Compile Include="V20250106\Models\ApprovePaymentMerchantBindingResponse.cs" />
     <Compile Include="V20250106\Models\BooleanInfo.cs" />
     <Compile Include="V20250106\Models\CategoryInfo.cs" />
     <Compile Include="V20250106\Models\CategoryItem.cs" />
+    <Compile Include="V20250106\Models\ChangePaymentBoundMerchantRequest.cs" />
+    <Compile Include="V20250106\Models\ChangePaymentBoundMerchantResponse.cs" />
+    <Compile Include="V20250106\Models\ChangePaymentV2BindMerchantRes.cs" />
     <Compile Include="V20250106\Models\ConfigureMNGPreviewRequest.cs" />
     <Compile Include="V20250106\Models\ConfigureMNGPreviewResponse.cs" />
     <Compile Include="V20250106\Models\ConfigureMNPPreviewRequest.cs" />
@@ -295,6 +307,8 @@
     <Compile Include="V20250106\Models\DescribeMNPOfflinePackageURLResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPageAnalysisDetailRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPageAnalysisDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPaymentApprovalInfoRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPPaymentApprovalInfoResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPPreviewResponse.cs" />
@@ -330,6 +344,7 @@
     <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateListResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPTeamMerchantInfoRes.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResponse.cs" />
@@ -372,6 +387,8 @@
     <Compile Include="V20250106\Models\DescribeUserResponse.cs" />
     <Compile Include="V20250106\Models\DisableApplicationSensitiveAPIRequest.cs" />
     <Compile Include="V20250106\Models\DisableApplicationSensitiveAPIResponse.cs" />
+    <Compile Include="V20250106\Models\DisableMNPPaymentRequest.cs" />
+    <Compile Include="V20250106\Models\DisableMNPPaymentResponse.cs" />
     <Compile Include="V20250106\Models\DownloadApplicationConfigResp.cs" />
     <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIRequest.cs" />
     <Compile Include="V20250106\Models\EnableApplicationSensitiveAPIResponse.cs" />
@@ -395,6 +412,7 @@
     <Compile Include="V20250106\Models\MNPSubscribeMessageTemplateDetailResp.cs" />
     <Compile Include="V20250106\Models\MNPTypeDefine.cs" />
     <Compile Include="V20250106\Models\MNPVersionSubPackageInfo.cs" />
+    <Compile Include="V20250106\Models\MerchantBindApprovalResp.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationConfigRequest.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationConfigResponse.cs" />
     <Compile Include="V20250106\Models\ModifyApplicationRequest.cs" />
@@ -431,6 +449,8 @@
     <Compile Include="V20250106\Models\ProcessMNPSensitiveAPIPermissionApprovalRequest.cs" />
     <Compile Include="V20250106\Models\ProcessMNPSensitiveAPIPermissionApprovalResponse.cs" />
     <Compile Include="V20250106\Models\QueryMNGOnlineVersionResp.cs" />
+    <Compile Include="V20250106\Models\QueryMNPMerchantInfoRequest.cs" />
+    <Compile Include="V20250106\Models\QueryMNPMerchantInfoResponse.cs" />
     <Compile Include="V20250106\Models\QueryOnlineVersionResp.cs" />
     <Compile Include="V20250106\Models\ReleaseMNGVersionRequest.cs" />
     <Compile Include="V20250106\Models\ReleaseMNGVersionResponse.cs" />
@@ -441,6 +461,10 @@
     <Compile Include="V20250106\Models\RemoveMNPRequest.cs" />
     <Compile Include="V20250106\Models\RemoveMNPResponse.cs" />
     <Compile Include="V20250106\Models\ReportDataResult.cs" />
+    <Compile Include="V20250106\Models\RequestPaymentEnableRequest.cs" />
+    <Compile Include="V20250106\Models\RequestPaymentEnableResponse.cs" />
+    <Compile Include="V20250106\Models\RequestPaymentMerchantBindingRequest.cs" />
+    <Compile Include="V20250106\Models\RequestPaymentMerchantBindingResponse.cs" />
     <Compile Include="V20250106\Models\ResetMNGAppSecretRequest.cs" />
     <Compile Include="V20250106\Models\ResetMNGAppSecretResp.cs" />
     <Compile Include="V20250106\Models\ResetMNGAppSecretResponse.cs" />
@@ -456,6 +480,10 @@
     <Compile Include="V20250106\Models\RollbackMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\StringData.cs" />
     <Compile Include="V20250106\Models\SubscribeMessageTemplateLibraryKeywordI18nInfoResp.cs" />
+    <Compile Include="V20250106\Models\UnbindMNPPaymentMerchantRequest.cs" />
+    <Compile Include="V20250106\Models\UnbindMNPPaymentMerchantResponse.cs" />
+    <Compile Include="V20250106\Models\UnbindPaymentMerchantRequest.cs" />
+    <Compile Include="V20250106\Models\UnbindPaymentMerchantResponse.cs" />
     <Compile Include="V20250106\Models\UploadFileTempSecret.cs" />
     <Compile Include="V20250106\Models\VisitData.cs" />
   </ItemGroup>

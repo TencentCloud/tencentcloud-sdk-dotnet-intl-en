@@ -72,6 +72,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("I18nList")]
         public MNPI18NSyncDto[] I18nList{ get; set; }
 
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItemReq[] AgeRatings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "MNPIcon", this.MNPIcon);
             this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

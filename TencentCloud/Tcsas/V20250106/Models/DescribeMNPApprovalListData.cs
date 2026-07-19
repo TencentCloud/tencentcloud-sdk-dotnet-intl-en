@@ -25,118 +25,124 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Approval number.
+        /// <p>Approval number.</p>
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Superapp ID.
+        /// <p>Superapp ID.</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+        /// <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Mini program appid.
+        /// <p>Mini program appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program version.
+        /// <p>Mini program version.</p>
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Mini program version ID.
+        /// <p>Mini program version ID.</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Applicant.
+        /// <p>Applicant.</p>
         /// </summary>
         [JsonProperty("ApplyUser")]
         public string ApplyUser{ get; set; }
 
         /// <summary>
-        /// Application time.
+        /// <p>Application time.</p>
         /// </summary>
         [JsonProperty("ApplyTime")]
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Mini program name.
+        /// <p>Mini program name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program icon.
+        /// <p>Mini program icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Superapp name.
+        /// <p>Superapp name.</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Superapp icon.
+        /// <p>Superapp icon.</p>
         /// </summary>
         [JsonProperty("ApplicationLogo")]
         public string ApplicationLogo{ get; set; }
 
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Mini program approval QR code URL.
+        /// <p>Mini program approval QR code URL.</p>
         /// </summary>
         [JsonProperty("MNPQrCodeUrl")]
         public string MNPQrCodeUrl{ get; set; }
 
         /// <summary>
-        /// Mini program category.
+        /// <p>Mini program category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Approver.
+        /// <p>Approver.</p>
         /// </summary>
         [JsonProperty("ApprovalUser")]
         public string ApprovalUser{ get; set; }
 
         /// <summary>
-        /// Approval time.
+        /// <p>Approval time.</p>
         /// </summary>
         [JsonProperty("ApprovalTime")]
         public string ApprovalTime{ get; set; }
 
         /// <summary>
-        /// Approval note.
+        /// <p>Approval note.</p>
         /// </summary>
         [JsonProperty("ApprovalNote")]
         public string ApprovalNote{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
 
 
         /// <summary>
@@ -163,6 +169,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "ApprovalUser", this.ApprovalUser);
             this.SetParamSimple(map, prefix + "ApprovalTime", this.ApprovalTime);
             this.SetParamSimple(map, prefix + "ApprovalNote", this.ApprovalNote);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

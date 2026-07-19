@@ -132,6 +132,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("VersionCurrentStatus")]
         public long? VersionCurrentStatus{ get; set; }
 
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "RollbackVersion", this.RollbackVersion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "VersionCurrentStatus", this.VersionCurrentStatus);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

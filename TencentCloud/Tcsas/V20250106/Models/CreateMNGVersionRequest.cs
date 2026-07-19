@@ -55,13 +55,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// <p>Version type. Valid values: 1: Debug; 2: Development. Default value: 2.</p>
+        /// <p>Version type. Valid values: 1: Debug version; 2: Development version.</p> Default value: 2.</p>
         /// </summary>
         [JsonProperty("VersionType")]
         public long? VersionType{ get; set; }
 
         /// <summary>
-        /// <p>Compilation condition.</p>
+        /// <p>Compilation conditions.</p>
         /// </summary>
         [JsonProperty("CompileCondition")]
         public string CompileCondition{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string CompileConfig{ get; set; }
 
         /// <summary>
-        /// <p>CI/CD key ID.</p>
+        /// <p>CICD ID</p>
         /// </summary>
         [JsonProperty("PipelineId")]
         public string PipelineId{ get; set; }

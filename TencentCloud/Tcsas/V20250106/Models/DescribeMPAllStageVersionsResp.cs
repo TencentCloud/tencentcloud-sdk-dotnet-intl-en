@@ -25,112 +25,118 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program appid.
+        /// <p>Mini program appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program version primary key ID.
+        /// <p>Mini program version primary key ID.</p>
         /// </summary>
         [JsonProperty("MNPVersionId")]
         public long? MNPVersionId{ get; set; }
 
         /// <summary>
-        /// Mini program name.
+        /// <p>Mini program name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program icon.
+        /// <p>Mini program icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program category.
+        /// <p>Mini program category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Mini program introduction.
+        /// <p>Mini program introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Mini program description.
+        /// <p>Mini program description.</p>
         /// </summary>
         [JsonProperty("MNPDesc")]
         public string MNPDesc{ get; set; }
 
         /// <summary>
-        /// Creator.
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Mini program version number.
+        /// <p>Mini program version.</p>
         /// </summary>
         [JsonProperty("MNPVersion")]
         public string MNPVersion{ get; set; }
 
         /// <summary>
-        /// Version introduction.
+        /// <p>Version introduction.</p>
         /// </summary>
         [JsonProperty("MNPVersionIntro")]
         public string MNPVersionIntro{ get; set; }
 
         /// <summary>
-        /// Phase: Valid values: Develop; Platform; Online.
+        /// <p>Phase:  Valid values: Develop; Platform; Online.</p>
         /// </summary>
         [JsonProperty("Phase")]
         public string Phase{ get; set; }
 
         /// <summary>
-        /// Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+        /// <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
         /// </summary>
         [JsonProperty("ApprovalStatus")]
         public long? ApprovalStatus{ get; set; }
 
         /// <summary>
-        /// Approval number.
+        /// <p>Approval number.</p>
         /// </summary>
         [JsonProperty("ApprovalNo")]
         public string ApprovalNo{ get; set; }
 
         /// <summary>
-        /// Whether this is a preview. Valid values: 0: No; 1: Yes.
+        /// <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
         /// </summary>
         [JsonProperty("ShowCase")]
         public long? ShowCase{ get; set; }
 
         /// <summary>
-        /// Rollback version number.
+        /// <p>Rollback version number.</p>
         /// </summary>
         [JsonProperty("RollbackVersion")]
         public long? RollbackVersion{ get; set; }
 
         /// <summary>
-        /// Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+        /// <p>Available status. Valid value: 0: All; 1 Available; 2: In canary release.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+        /// <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
         /// </summary>
         [JsonProperty("VersionCurrentStatus")]
         public long? VersionCurrentStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "RollbackVersion", this.RollbackVersion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "VersionCurrentStatus", this.VersionCurrentStatus);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

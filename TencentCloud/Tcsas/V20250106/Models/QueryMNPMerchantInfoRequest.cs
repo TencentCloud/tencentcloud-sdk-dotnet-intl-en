@@ -21,20 +21,20 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MNPVersionSubPackageInfo : AbstractModel
+    public class QueryMNPMerchantInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Package name.</p>
+        /// <p>Platform ID.</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("PlatformId")]
+        public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Package size.</p>
+        /// <p>Mini program appid.</p>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("QueryTeamID")]
+        public string QueryTeamID{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
+            this.SetParamSimple(map, prefix + "QueryTeamID", this.QueryTeamID);
         }
     }
 }

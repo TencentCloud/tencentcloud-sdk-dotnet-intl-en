@@ -25,106 +25,112 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program appid.
+        /// <p>Mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program icon.
+        /// <p>Mini game icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program name.
+        /// <p>Mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Team name. 
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Mini program category.
+        /// <p>Mini game category.</p>
         /// </summary>
         [JsonProperty("MNPType")]
         public string MNPType{ get; set; }
 
         /// <summary>
-        /// Mini program available status. Valid values: 1: Available; 2: Removed.
+        /// <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Mini program introduction.
+        /// <p>Mini game introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Creator.
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modifier.
+        /// <p>Last modifier.</p>
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Last modified time.
+        /// <p>Last modified time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Superapp name.
+        /// <p>Superapp name.</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+        /// <p>Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.</p>
         /// </summary>
         [JsonProperty("EffectStatus")]
         public long? EffectStatus{ get; set; }
 
         /// <summary>
-        /// Effective mini program version ID bound to the superapp. 
+        /// <p>Effective mini program version ID bound to the superapp.</p>
         /// </summary>
         [JsonProperty("EffectMNPVersionId")]
         public long? EffectMNPVersionId{ get; set; }
 
         /// <summary>
-        /// Effective mini program version number bound to the superapp. 
+        /// <p>Effective mini program version number bound to the superapp.</p>
         /// </summary>
         [JsonProperty("EffectMNPVersion")]
         public string EffectMNPVersion{ get; set; }
 
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+        /// <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
         /// </summary>
         [JsonProperty("TeamTypeId")]
         public long? TeamTypeId{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "EffectMNPVersion", this.EffectMNPVersion);
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
             this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

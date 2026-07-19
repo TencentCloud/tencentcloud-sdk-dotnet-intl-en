@@ -21,20 +21,20 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MNPVersionSubPackageInfo : AbstractModel
+    public class AgeRatingItemReq : AbstractModel
     {
         
         /// <summary>
-        /// <p>Package name.</p>
+        /// <p>Age rating standard.</p><p>Valid values:</p><ul><li>apple: Apple</li><li>iarc: Android.</li></ul>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("StandardId")]
+        public string StandardId{ get; set; }
 
         /// <summary>
-        /// <p>Package size.</p>
+        /// <p>Applicable age for age rating.</p>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("AgeRating")]
+        public long? AgeRating{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "StandardId", this.StandardId);
+            this.SetParamSimple(map, prefix + "AgeRating", this.AgeRating);
         }
     }
 }

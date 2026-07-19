@@ -31,13 +31,13 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// <p>Mini program appid.</p>
+        /// <p>Mini program or mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// <p>CI/CD key ID.</p>
+        /// <p>CICD ID</p>
         /// </summary>
         [JsonProperty("PipelineId")]
         public string PipelineId{ get; set; }

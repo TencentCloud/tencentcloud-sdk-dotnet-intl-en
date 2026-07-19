@@ -115,16 +115,22 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public string EffectMNPVersion{ get; set; }
 
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+        /// <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
         /// </summary>
         [JsonProperty("TeamTypeId")]
         public long? TeamTypeId{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
 
 
         /// <summary>
@@ -149,6 +155,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "EffectMNPVersion", this.EffectMNPVersion);
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
             this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }

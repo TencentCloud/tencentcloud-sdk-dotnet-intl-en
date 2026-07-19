@@ -103,10 +103,23 @@ namespace TencentCloud.Tcsas.V20250106.Models
         public MNPDetailI18nVO[] I18nList{ get; set; }
 
         /// <summary>
-        /// Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.
+        /// <p>Team type ID. Valid values: 1: Mini program team; 2: Superapp team; 3: Service provider team.</p>
         /// </summary>
         [JsonProperty("TeamTypeId")]
         public long? TeamTypeId{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
+
+        /// <summary>
+        /// <p>Merchant ID bound to the team to which the mini program belongs.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("MerchantId")]
+        public string MerchantId{ get; set; }
 
 
         /// <summary>
@@ -128,6 +141,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "I18nList.", this.I18nList);
             this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
+            this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
         }
     }
 }

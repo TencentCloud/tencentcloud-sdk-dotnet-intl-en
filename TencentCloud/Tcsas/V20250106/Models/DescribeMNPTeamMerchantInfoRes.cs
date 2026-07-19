@@ -21,20 +21,32 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MNPVersionSubPackageInfo : AbstractModel
+    public class DescribeMNPTeamMerchantInfoRes : AbstractModel
     {
         
         /// <summary>
-        /// <p>Package name.</p>
+        /// <p>Merchant ID.</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("MerchantID")]
+        public string MerchantID{ get; set; }
 
         /// <summary>
-        /// <p>Package size.</p>
+        /// <p>Approval status. Valid values: 0: In progress; 10: Approved; 20: Rejected.</p>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("ApprovalStatus")]
+        public long? ApprovalStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Merchant binding ID of the mini program team, used to unbind the merchant.</p>
+        /// </summary>
+        [JsonProperty("ID")]
+        public string ID{ get; set; }
+
+        /// <summary>
+        /// <p>Merchant name.</p>
+        /// </summary>
+        [JsonProperty("MerchantName")]
+        public string MerchantName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "MerchantID", this.MerchantID);
+            this.SetParamSimple(map, prefix + "ApprovalStatus", this.ApprovalStatus);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
         }
     }
 }

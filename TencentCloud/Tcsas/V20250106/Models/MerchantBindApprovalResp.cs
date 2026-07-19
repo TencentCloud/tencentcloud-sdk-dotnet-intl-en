@@ -21,20 +21,20 @@ namespace TencentCloud.Tcsas.V20250106.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MNPVersionSubPackageInfo : AbstractModel
+    public class MerchantBindApprovalResp : AbstractModel
     {
         
         /// <summary>
-        /// <p>Package name.</p>
+        /// <p>Operation response result. A value of true indicates that the operation succeeded.</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ApprovalResult")]
+        public bool? ApprovalResult{ get; set; }
 
         /// <summary>
-        /// <p>Package size.</p>
+        /// <p>Approval number. Required as an input parameter when calling the API to approve merchant binding.</p>
         /// </summary>
-        [JsonProperty("Size")]
-        public long? Size{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tcsas.V20250106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "ApprovalResult", this.ApprovalResult);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
         }
     }
 }

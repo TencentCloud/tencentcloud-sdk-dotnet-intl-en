@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1353";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,69 @@ namespace TencentCloud.Tcsas.V20250106
         public AddTeamMemberResponse AddTeamMemberSync(AddTeamMemberRequest req)
         {
             return InternalRequestAsync<AddTeamMemberResponse>(req, "AddTeamMember")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to approve the activation of mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="ApproveMNPPaymentEnableRequest"/></param>
+        /// <returns><see cref="ApproveMNPPaymentEnableResponse"/></returns>
+        public Task<ApproveMNPPaymentEnableResponse> ApproveMNPPaymentEnable(ApproveMNPPaymentEnableRequest req)
+        {
+            return InternalRequestAsync<ApproveMNPPaymentEnableResponse>(req, "ApproveMNPPaymentEnable");
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to approve the activation of mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="ApproveMNPPaymentEnableRequest"/></param>
+        /// <returns><see cref="ApproveMNPPaymentEnableResponse"/></returns>
+        public ApproveMNPPaymentEnableResponse ApproveMNPPaymentEnableSync(ApproveMNPPaymentEnableRequest req)
+        {
+            return InternalRequestAsync<ApproveMNPPaymentEnableResponse>(req, "ApproveMNPPaymentEnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to approve the payment merchant binding request of a mini program team.
+        /// </summary>
+        /// <param name="req"><see cref="ApprovePaymentMerchantBindingRequest"/></param>
+        /// <returns><see cref="ApprovePaymentMerchantBindingResponse"/></returns>
+        public Task<ApprovePaymentMerchantBindingResponse> ApprovePaymentMerchantBinding(ApprovePaymentMerchantBindingRequest req)
+        {
+            return InternalRequestAsync<ApprovePaymentMerchantBindingResponse>(req, "ApprovePaymentMerchantBinding");
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to approve the payment merchant binding request of a mini program team.
+        /// </summary>
+        /// <param name="req"><see cref="ApprovePaymentMerchantBindingRequest"/></param>
+        /// <returns><see cref="ApprovePaymentMerchantBindingResponse"/></returns>
+        public ApprovePaymentMerchantBindingResponse ApprovePaymentMerchantBindingSync(ApprovePaymentMerchantBindingRequest req)
+        {
+            return InternalRequestAsync<ApprovePaymentMerchantBindingResponse>(req, "ApprovePaymentMerchantBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to change the bound payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="ChangePaymentBoundMerchantRequest"/></param>
+        /// <returns><see cref="ChangePaymentBoundMerchantResponse"/></returns>
+        public Task<ChangePaymentBoundMerchantResponse> ChangePaymentBoundMerchant(ChangePaymentBoundMerchantRequest req)
+        {
+            return InternalRequestAsync<ChangePaymentBoundMerchantResponse>(req, "ChangePaymentBoundMerchant");
+        }
+
+        /// <summary>
+        /// This API is used to change the bound payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="ChangePaymentBoundMerchantRequest"/></param>
+        /// <returns><see cref="ChangePaymentBoundMerchantResponse"/></returns>
+        public ChangePaymentBoundMerchantResponse ChangePaymentBoundMerchantSync(ChangePaymentBoundMerchantRequest req)
+        {
+            return InternalRequestAsync<ChangePaymentBoundMerchantResponse>(req, "ChangePaymentBoundMerchant")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2028,6 +2091,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query the mini program payment approval information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPaymentApprovalInfoRequest"/></param>
+        /// <returns><see cref="DescribeMNPPaymentApprovalInfoResponse"/></returns>
+        public Task<DescribeMNPPaymentApprovalInfoResponse> DescribeMNPPaymentApprovalInfo(DescribeMNPPaymentApprovalInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPaymentApprovalInfoResponse>(req, "DescribeMNPPaymentApprovalInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the mini program payment approval information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPPaymentApprovalInfoRequest"/></param>
+        /// <returns><see cref="DescribeMNPPaymentApprovalInfoResponse"/></returns>
+        public DescribeMNPPaymentApprovalInfoResponse DescribeMNPPaymentApprovalInfoSync(DescribeMNPPaymentApprovalInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPPaymentApprovalInfoResponse>(req, "DescribeMNPPaymentApprovalInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini program preview details.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPPreviewRequest"/></param>
@@ -2532,6 +2616,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to allow the superapp to actively disable mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="DisableMNPPaymentRequest"/></param>
+        /// <returns><see cref="DisableMNPPaymentResponse"/></returns>
+        public Task<DisableMNPPaymentResponse> DisableMNPPayment(DisableMNPPaymentRequest req)
+        {
+            return InternalRequestAsync<DisableMNPPaymentResponse>(req, "DisableMNPPayment");
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to actively disable mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="DisableMNPPaymentRequest"/></param>
+        /// <returns><see cref="DisableMNPPaymentResponse"/></returns>
+        public DisableMNPPaymentResponse DisableMNPPaymentSync(DisableMNPPaymentRequest req)
+        {
+            return InternalRequestAsync<DisableMNPPaymentResponse>(req, "DisableMNPPayment")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable a superapp sensitive API.
         /// </summary>
         /// <param name="req"><see cref="EnableApplicationSensitiveAPIRequest"/></param>
@@ -2847,6 +2952,27 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query the merchant information of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="QueryMNPMerchantInfoRequest"/></param>
+        /// <returns><see cref="QueryMNPMerchantInfoResponse"/></returns>
+        public Task<QueryMNPMerchantInfoResponse> QueryMNPMerchantInfo(QueryMNPMerchantInfoRequest req)
+        {
+            return InternalRequestAsync<QueryMNPMerchantInfoResponse>(req, "QueryMNPMerchantInfo");
+        }
+
+        /// <summary>
+        /// This API is used to query the merchant information of a mini program.
+        /// </summary>
+        /// <param name="req"><see cref="QueryMNPMerchantInfoRequest"/></param>
+        /// <returns><see cref="QueryMNPMerchantInfoResponse"/></returns>
+        public QueryMNPMerchantInfoResponse QueryMNPMerchantInfoSync(QueryMNPMerchantInfoRequest req)
+        {
+            return InternalRequestAsync<QueryMNPMerchantInfoResponse>(req, "QueryMNPMerchantInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to release a mini game version.
         /// </summary>
         /// <param name="req"><see cref="ReleaseMNGVersionRequest"/></param>
@@ -2931,6 +3057,48 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to request the activation of mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="RequestPaymentEnableRequest"/></param>
+        /// <returns><see cref="RequestPaymentEnableResponse"/></returns>
+        public Task<RequestPaymentEnableResponse> RequestPaymentEnable(RequestPaymentEnableRequest req)
+        {
+            return InternalRequestAsync<RequestPaymentEnableResponse>(req, "RequestPaymentEnable");
+        }
+
+        /// <summary>
+        /// This API is used to request the activation of mini program payment.
+        /// </summary>
+        /// <param name="req"><see cref="RequestPaymentEnableRequest"/></param>
+        /// <returns><see cref="RequestPaymentEnableResponse"/></returns>
+        public RequestPaymentEnableResponse RequestPaymentEnableSync(RequestPaymentEnableRequest req)
+        {
+            return InternalRequestAsync<RequestPaymentEnableResponse>(req, "RequestPaymentEnable")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to request the binding of a payment merchant to a team.
+        /// </summary>
+        /// <param name="req"><see cref="RequestPaymentMerchantBindingRequest"/></param>
+        /// <returns><see cref="RequestPaymentMerchantBindingResponse"/></returns>
+        public Task<RequestPaymentMerchantBindingResponse> RequestPaymentMerchantBinding(RequestPaymentMerchantBindingRequest req)
+        {
+            return InternalRequestAsync<RequestPaymentMerchantBindingResponse>(req, "RequestPaymentMerchantBinding");
+        }
+
+        /// <summary>
+        /// This API is used to request the binding of a payment merchant to a team.
+        /// </summary>
+        /// <param name="req"><see cref="RequestPaymentMerchantBindingRequest"/></param>
+        /// <returns><see cref="RequestPaymentMerchantBindingResponse"/></returns>
+        public RequestPaymentMerchantBindingResponse RequestPaymentMerchantBindingSync(RequestPaymentMerchantBindingRequest req)
+        {
+            return InternalRequestAsync<RequestPaymentMerchantBindingResponse>(req, "RequestPaymentMerchantBinding")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to reset a mini game secret key.
         /// </summary>
         /// <param name="req"><see cref="ResetMNGAppSecretRequest"/></param>
@@ -3011,6 +3179,48 @@ namespace TencentCloud.Tcsas.V20250106
         public RollbackMNPVersionResponse RollbackMNPVersionSync(RollbackMNPVersionRequest req)
         {
             return InternalRequestAsync<RollbackMNPVersionResponse>(req, "RollbackMNPVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to allow a mini program team to actively unbind the payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindMNPPaymentMerchantRequest"/></param>
+        /// <returns><see cref="UnbindMNPPaymentMerchantResponse"/></returns>
+        public Task<UnbindMNPPaymentMerchantResponse> UnbindMNPPaymentMerchant(UnbindMNPPaymentMerchantRequest req)
+        {
+            return InternalRequestAsync<UnbindMNPPaymentMerchantResponse>(req, "UnbindMNPPaymentMerchant");
+        }
+
+        /// <summary>
+        /// This API is used to allow a mini program team to actively unbind the payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindMNPPaymentMerchantRequest"/></param>
+        /// <returns><see cref="UnbindMNPPaymentMerchantResponse"/></returns>
+        public UnbindMNPPaymentMerchantResponse UnbindMNPPaymentMerchantSync(UnbindMNPPaymentMerchantRequest req)
+        {
+            return InternalRequestAsync<UnbindMNPPaymentMerchantResponse>(req, "UnbindMNPPaymentMerchant")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to actively unbind the payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindPaymentMerchantRequest"/></param>
+        /// <returns><see cref="UnbindPaymentMerchantResponse"/></returns>
+        public Task<UnbindPaymentMerchantResponse> UnbindPaymentMerchant(UnbindPaymentMerchantRequest req)
+        {
+            return InternalRequestAsync<UnbindPaymentMerchantResponse>(req, "UnbindPaymentMerchant");
+        }
+
+        /// <summary>
+        /// This API is used to allow the superapp to actively unbind the payment merchant.
+        /// </summary>
+        /// <param name="req"><see cref="UnbindPaymentMerchantRequest"/></param>
+        /// <returns><see cref="UnbindPaymentMerchantResponse"/></returns>
+        public UnbindPaymentMerchantResponse UnbindPaymentMerchantSync(UnbindPaymentMerchantRequest req)
+        {
+            return InternalRequestAsync<UnbindPaymentMerchantResponse>(req, "UnbindPaymentMerchant")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

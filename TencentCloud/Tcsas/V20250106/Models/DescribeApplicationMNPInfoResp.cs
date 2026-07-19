@@ -25,88 +25,94 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Mini program or mini game appid.
+        /// <p>Mini program or mini game appid.</p>
         /// </summary>
         [JsonProperty("MNPId")]
         public string MNPId{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game icon.
+        /// <p>Mini program or mini game icon.</p>
         /// </summary>
         [JsonProperty("MNPIcon")]
         public string MNPIcon{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game name.
+        /// <p>Mini program or mini game name.</p>
         /// </summary>
         [JsonProperty("MNPName")]
         public string MNPName{ get; set; }
 
         /// <summary>
-        /// Mini program or mini game information.
+        /// <p>Mini program or mini game introduction.</p>
         /// </summary>
         [JsonProperty("MNPIntro")]
         public string MNPIntro{ get; set; }
 
         /// <summary>
-        /// Creator.
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modifier.
+        /// <p>Last modifier.</p>
         /// </summary>
         [JsonProperty("UpdateUser")]
         public string UpdateUser{ get; set; }
 
         /// <summary>
-        /// Last modified time.
+        /// <p>Last modified time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+        /// <p>Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.</p>
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+        /// <p>Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.</p>
         /// </summary>
         [JsonProperty("EngineType")]
         public long? EngineType{ get; set; }
 
         /// <summary>
-        /// Category information.
+        /// <p>Category information.</p>
         /// </summary>
         [JsonProperty("CategoryList")]
         public CategoryInfo[] CategoryList{ get; set; }
 
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Team type ID.
+        /// <p>Team type ID.</p>
         /// </summary>
         [JsonProperty("TeamTypeId")]
         public long? TeamTypeId{ get; set; }
+
+        /// <summary>
+        /// <p>Age rating information.</p>
+        /// </summary>
+        [JsonProperty("AgeRatings")]
+        public AgeRatingItem[] AgeRatings{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TeamId", this.TeamId);
             this.SetParamSimple(map, prefix + "TeamName", this.TeamName);
             this.SetParamSimple(map, prefix + "TeamTypeId", this.TeamTypeId);
+            this.SetParamArrayObj(map, prefix + "AgeRatings.", this.AgeRatings);
         }
     }
 }
