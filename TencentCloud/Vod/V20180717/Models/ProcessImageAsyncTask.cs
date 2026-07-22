@@ -25,18 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image transcoding output configuration.
+        /// <p>Image transcoding output configuration.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
-        /// Image enhancement configuration.
+        /// <p>Image enhancement configuration.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Image beauty effect configuration.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("BeautyConfig")]
+        public ImageBeautyConfig BeautyConfig{ get; set; }
 
 
         /// <summary>
@@ -46,6 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+            this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
         }
     }
 }

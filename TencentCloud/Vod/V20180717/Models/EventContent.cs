@@ -25,269 +25,259 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.
+        /// <p>Event handler. The caller must call ConfirmEvents to acknowledge the message has been received. Confirmed Valid Time is 30 seconds. After expiration, the event can be retrieved again.</p>
         /// </summary>
         [JsonProperty("EventHandle")]
         public string EventHandle{ get; set; }
 
         /// <summary>
-        /// <b>Supported event types:</b>
-        /// <li>NewFileUpload: Video upload completed;</li>
-        /// <li>ProcedureStateChanged: Task flow status change.</li>
-        /// <li>FileDeleted: Video deletion completed;</li>
-        /// <li>RestoreMediaComplete: Video retrieval completion;</li>
-        /// <li>PullComplete: Video conversion pull completed.</li>
-        /// <li>EditMediaComplete: Video editing completed;</li>
-        /// <li>SplitMediaComplete: Video splitting completed;</li>
-        /// <li>ComposeMediaComplete: Media file creation completion;</li>
-        /// <li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li>
-        /// <li>RemoveWatermark: Intelligent watermark removal completion.</li>
-        /// <li>RebuildMediaComplete: Audio and video quality rebirth completion event (This is not recommended).</li>
-        /// <li>ReviewAudioVideoComplete: Audio/video moderation completed;</li>
-        /// <li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li>
-        /// <li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion.</li>
-        /// <li>DescribeFileAttributesComplete: File attribute acquisition completion.</li>
-        /// <li>QualityInspectComplete: Audio and video quality inspection completed;</li>
-        /// <li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li>
-        /// <li>PersistenceComplete: Edit completed.</li>
-        /// <li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completed.</li>
-        /// <li>ProcessMediaByMPSComplete: MPS video processing is completed.</li>
-        /// <li>AigcImageTaskComplete: AIGC image generation task complete.</li>
-        /// <li>AigcVideoTaskComplete: AIGC video generation task completed.</li>
-        /// <b>Event types compatible with the 2017 version:</b>
-        /// <li>TranscodeComplete: video transcoding completion;</li>
-        /// <li>ConcatComplete: Video splicing completion.</li>
-        /// <li>ClipComplete: Video editing completed;</li>
-        /// <li>CreateImageSpriteComplete: Video thumbnail capture completion.</li>
-        /// <li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
+        /// <p><b>Supported event types:</b></p><li>NewFileUpload: Video upload complete;</li><li>ProcedureStateChanged: Task flow status change;</li><li>FileDeleted: Video deletion completed;</li><li>RestoreMediaComplete: Video retrieval completion;</li><li>PullComplete: Video conversion completed;</li><li>EditMediaComplete: Video editing completed;</li><li>SplitMediaComplete: Video splitting completed;</li><li>ComposeMediaComplete: Media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: Intelligent watermark removal completion.</li><li>RebuildMediaComplete: Audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: Audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: File attribute acquisition completion;</li><li>QualityInspectComplete: Audio and video quality inspection completed;</li><li>QualityEnhanceComplete: Audio and video quality rebirth task completion;</li><li>PersistenceComplete: Edit persistence completed;</li><li>ComplexAdaptiveDynamicStreamingComplete: Complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: Asynchronously fetch AIGC human face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: Video transcoding completion;</li><li>ConcatComplete: Video splicing completion;</li><li>ClipComplete: Video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: Video screenshot by time point.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// Video upload completion event. Valid when the event type is NewFileUpload.
+        /// <p>Video upload completion event. Valid when the event type is NewFileUpload.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileUploadEvent")]
         public FileUploadTask FileUploadEvent{ get; set; }
 
         /// <summary>
-        /// Task flow status change event. Valid when the event type is ProcedureStateChanged.
+        /// <p>Task flow status change event. Valid when the event type is ProcedureStateChanged.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ProcedureStateChangeEvent")]
         public ProcedureTask ProcedureStateChangeEvent{ get; set; }
 
         /// <summary>
-        /// File deletion event. Valid when the event type is FileDeleted.
+        /// <p>File deletion event. Valid when the event type is FileDeleted.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FileDeleteEvent")]
         public FileDeleteTask FileDeleteEvent{ get; set; }
 
         /// <summary>
-        /// Video pull completion event. Valid when the event type is PullComplete.
+        /// <p>Video pull completion event. Valid when the event type is PullComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PullCompleteEvent")]
         public PullUploadTask PullCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video editing completion event. Valid when the event type is EditMediaComplete.
+        /// <p>Video editing completion event. Valid when the event type is EditMediaComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EditMediaCompleteEvent")]
         public EditMediaTask EditMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video splitting completion event. Valid when the event type is SplitMediaComplete.
+        /// <p>Video splitting completion event. Valid when the event type is SplitMediaComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SplitMediaCompleteEvent")]
         public SplitMediaTask SplitMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Media file creation task completion event. Valid when the event type is ComposeMediaComplete.
+        /// <p>Media file creation task completion event. Valid when the event type is ComposeMediaComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ComposeMediaCompleteEvent")]
         public ComposeMediaTask ComposeMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video editing completion event. Valid when the event type is ClipComplete.
+        /// <p>Video editing completion event. Valid when the event type is ClipComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClipCompleteEvent")]
         public ClipTask2017 ClipCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video transcoding completion event, valid when the event type is TranscodeComplete.
+        /// <p>Video transcoding completion event. Valid when the event type is TranscodeComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TranscodeCompleteEvent")]
         public TranscodeTask2017 TranscodeCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.
+        /// <p>Video thumbnail capture completion event. Valid when the event type is CreateImageSpriteComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateImageSpriteCompleteEvent")]
         public CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video splicing completion event. Valid when the event type is ConcatComplete.
+        /// <p>Video splicing completion event. Valid when the event type is ConcatComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ConcatCompleteEvent")]
         public ConcatTask2017 ConcatCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.
+        /// <p>Video screenshot by time point completion event. Valid when the event type is CreateSnapshotByTimeOffsetComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetCompleteEvent")]
         public SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent{ get; set; }
 
         /// <summary>
-        /// WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.
+        /// <p>WeChat Publishing Completion Event. Valid when the event type is WechatPublishComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatPublishCompleteEvent")]
         public WechatPublishTask WechatPublishCompleteEvent{ get; set; }
 
         /// <summary>
-        /// WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.
+        /// <p>WeChat Mini Program Publishing Task Completion Event. Valid when the event type is WechatMiniProgramPublishComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("WechatMiniProgramPublishCompleteEvent")]
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Intelligent Watermark Removal Completion Event is valid when the event type is RemoveWatermark.
+        /// <p>Intelligent Watermark Removal Completion Event. Valid when the event type is RemoveWatermark.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RemoveWatermarkCompleteEvent")]
         public RemoveWatermarkTask RemoveWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Video retrieval completion event. Valid when the event type is RestoreMediaComplete.
+        /// <p>Video retrieval completion event. Valid when the event type is RestoreMediaComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.
+        /// <p>Audio and video quality rebirth completion event. Valid when the event type is RebuildMediaComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RebuildMediaCompleteEvent")]
         public RebuildMediaTask RebuildMediaCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.
+        /// <p>Traceability watermark extraction completion event. Valid when the event type is ExtractTraceWatermarkComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkCompleteEvent")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.
+        /// <p>Copyright watermark extraction completion event. Valid when the event type is ExtractCopyRightWatermarkComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExtractCopyRightWatermarkCompleteEvent")]
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.
+        /// <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReviewAudioVideoCompleteEvent")]
         public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
 
         /// <summary>
-        /// This field is invalid.
+        /// <p>This field is invalid.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReduceMediaBitrateCompleteEvent")]
         public ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent{ get; set; }
 
         /// <summary>
-        /// File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.
+        /// <p>File attribute acquisition completion event. Valid when the event type is DescribeFileAttributesComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DescribeFileAttributesCompleteEvent")]
         public DescribeFileAttributesTask DescribeFileAttributesCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.
+        /// <p>Audio and video quality detection completion event. Valid when the event type is QualityInspectComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityInspectCompleteEvent")]
         public QualityInspectTask QualityInspectCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.
+        /// <p>Audio and video quality rebirth completion event. Valid when the event type is QualityEnhanceComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("QualityEnhanceCompleteEvent")]
         public QualityEnhanceTask QualityEnhanceCompleteEvent{ get; set; }
 
         /// <summary>
-        /// MediaCastStatus changed event, valid when the event type is MediaCastStatusChanged.
-        /// Pay attention to: this field may return null, indicating that no valid value can be obtained.
+        /// <p>Media forwarding status change event. Valid when the event type is MediaCastStatusChanged.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MediaCastStatusChangedEvent")]
         public MediaCastEvent MediaCastStatusChangedEvent{ get; set; }
 
         /// <summary>
-        /// Editing solidification completion event. Valid when the event type is PersistenceComplete.
+        /// <p>Editing solidification completion event. Valid when the event type is PersistenceComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PersistenceCompleteEvent")]
         public PersistenceCompleteTask PersistenceCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Adaptive bitrate task information, valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.
+        /// <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingCompleteEvent")]
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent{ get; set; }
 
         /// <summary>
-        /// MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.
+        /// <p>MPS video processing task information. Valid only when EventType is ProcessMediaByMPSComplete.</p>
         /// </summary>
         [JsonProperty("ProcessMediaByMPSCompleteEvent")]
         public ProcessMediaByMPS ProcessMediaByMPSCompleteEvent{ get; set; }
 
         /// <summary>
-        /// AIGC image generation task info. Valid only when EventType is AigcImageTaskComplete.
+        /// <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
         /// </summary>
         [JsonProperty("AigcImageCompleteEvent")]
         public AigcImageTask AigcImageCompleteEvent{ get; set; }
 
         /// <summary>
-        /// AIGC video task info. Valid only when EventType is AigcVideoTaskComplete.
+        /// <p>AIGC video task info, valid only when EventType is AigcVideoTaskComplete.</p>
         /// </summary>
         [JsonProperty("AigcVideoCompleteEvent")]
         public AigcVideoTask AigcVideoCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Extract digital watermark information. Valid at that time only when EventType is ExtractBlindWatermarkComplete.
+        /// <p>Extract digital watermark info, valid only when EventType is ExtractBlindWatermarkComplete.</p>
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkComplete")]
         public ExtractBlindWatermarkTask ExtractBlindWatermarkComplete{ get; set; }
 
         /// <summary>
-        /// AIGC scenario-based image generation task info, valid only when EventType is SceneAigcImageCompleteEvent.
+        /// <p>Scenario-based AIGC image generation task info. Valid only when EventType is SceneAigcImageCompleteEvent.</p>
         /// </summary>
         [JsonProperty("SceneAigcImageCompleteEvent")]
         public SceneAigcImageTask SceneAigcImageCompleteEvent{ get; set; }
 
         /// <summary>
-        /// Image asynchronous task processing info, valid only when EventType is ProcessImageAsyncCompleteEvent.
+        /// <p>Image asynchronous task processing information. Valid only when EventType is ProcessImageAsyncCompleteEvent.</p>
         /// </summary>
         [JsonProperty("ProcessImageAsyncCompleteEvent")]
         public ProcessImageAsyncTask ProcessImageAsyncCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// <p>AIGC custom entity information, valid only when EventType is CreateAigcAdvancedCustomElementCompleteEvent and this field has a value.</p>
+        /// </summary>
+        [JsonProperty("CreateAigcAdvancedCustomElementCompleteEvent")]
+        public CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// <p>AIGC custom tone information. This field has a value only when EventType is CreateAigcCustomVoiceCompleteEvent.</p>
+        /// </summary>
+        [JsonProperty("CreateAigcCustomVoiceCompleteEvent")]
+        public CreateAigcCustomVoiceTask CreateAigcCustomVoiceCompleteEvent{ get; set; }
+
+        /// <summary>
+        /// <p>Asynchronously fetch AIGC face information. This field has a value only when EventType is DescribeAigcFaceInfoAsyncComplete.</p>
+        /// </summary>
+        [JsonProperty("DescribeAigcFaceInfoAsyncCompleteEvent")]
+        public DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncCompleteEvent{ get; set; }
 
 
         /// <summary>
@@ -330,6 +320,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "ExtractBlindWatermarkComplete.", this.ExtractBlindWatermarkComplete);
             this.SetParamObj(map, prefix + "SceneAigcImageCompleteEvent.", this.SceneAigcImageCompleteEvent);
             this.SetParamObj(map, prefix + "ProcessImageAsyncCompleteEvent.", this.ProcessImageAsyncCompleteEvent);
+            this.SetParamObj(map, prefix + "CreateAigcAdvancedCustomElementCompleteEvent.", this.CreateAigcAdvancedCustomElementCompleteEvent);
+            this.SetParamObj(map, prefix + "CreateAigcCustomVoiceCompleteEvent.", this.CreateAigcCustomVoiceCompleteEvent);
+            this.SetParamObj(map, prefix + "DescribeAigcFaceInfoAsyncCompleteEvent.", this.DescribeAigcFaceInfoAsyncCompleteEvent);
         }
     }
 }

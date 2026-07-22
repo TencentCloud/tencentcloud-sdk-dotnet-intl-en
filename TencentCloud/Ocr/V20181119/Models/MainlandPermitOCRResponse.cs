@@ -104,12 +104,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos{ get; set; }
 
         /// <summary>
-        /// Warning information for the document. This field is only valid for international site requests. 
-        /// Warning codes: 
-        /// -9102: photocopy warning; 
-        /// -9103: recapture warning; 
-        /// -9104: Photoshopped document warning; 
-        /// -9109: warning capability not enabled.
+        /// Card Warning Information
+        /// 
+        /// -9102 Alarm for photocopied certificate
+        /// -9103 Alarm for photographed certificate
+        /// -9104 Alarm for tamper certificate
+        /// -9109 This capability is not enabled.This capability is not enabled. Please contact customer support to activate the alert service.
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }

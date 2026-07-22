@@ -25,19 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>AI image generation scenario type. Available values:</p><ul><li>change_clothes: Change clothes in regular scenes.</li><li>change_clothes_under: Change clothes in special scenarios.</li><li>change_clothes_top_wear: Change upper body clothes.</li><li>change_clothes_bottom_wear: Change lower body clothes.</li><li>change_clothes_full_wear: Change full body clothes.</li><li>product_image: AI-generated product image.</li><li>outpainting: AI image outpainting.</li></ul>
+        /// <p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>When the Type is one of the following column types, this item is required and represents the AI clothing change image generation config:</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+        /// <p>Required when Type is ai_try_on. Represents AI dress up config.</p>
+        /// </summary>
+        [JsonProperty("AiTryOnConfig")]
+        public AiTryOnConfig AiTryOnConfig{ get; set; }
+
+        /// <summary>
+        /// <p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
 
         /// <summary>
-        /// <p>Valid when Type is product_image, indicating AI-generated product image config.</p>
+        /// <p>Required when Type is product_image. It represents the AI product image config.</p>
         /// </summary>
         [JsonProperty("ProductImageConfig")]
         public ProductImageConfig ProductImageConfig{ get; set; }
@@ -49,6 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "AiTryOnConfig.", this.AiTryOnConfig);
             this.SetParamObj(map, prefix + "ChangeClothesConfig.", this.ChangeClothesConfig);
             this.SetParamObj(map, prefix + "ProductImageConfig.", this.ProductImageConfig);
         }

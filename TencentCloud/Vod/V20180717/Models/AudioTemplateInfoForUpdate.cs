@@ -25,55 +25,34 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The audio codec.
-        /// If `Container` is `mp3`, the valid value is:
-        /// <li>`libmp3lame`</li>
-        /// If `Container` is `ogg` or `flac`, the valid value is:
-        /// <li>`flac`</li>
-        /// If `Container` is `m4a`, the valid values are:
-        /// <li>`libfdk_aac`</li>
-        /// <li>`libmp3lame`</li>
-        /// <li>`ac3`</li>
-        /// If `Container` is `mp4` or `flv`, the valid values are:
-        /// <li>`libfdk_aac` (Recommended for MP4)</li>
-        /// <li>`libmp3lame` (Recommended for FLV)</li>
-        /// <li>`mp2`</li>
-        /// If `Container` is `hls`, the valid value is:
-        /// <li>`libfdk_aac`</li>
-        /// If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-        /// <li>`libfdk_aac`</li>
-        /// If `Container` is `wav`, the valid value is:
-        /// <li>`pcm16`</li>
+        /// <p>Audio stream encoding format.<br>When the outer parameter Container is mp3, the valid value is:</p><li>libmp3lame.</li>When the outer parameter Container is ogg or flac, the valid value is:<li>flac.</li>When the outer parameter Container is m4a, the valid values are:<li>libfdk_aac;</li><li>libmp3lame;</li><li>ac3.</li>When the outer parameter Container is mp4 or flv, the valid values are:<li>libfdk_aac: suitable for mp4.</li><li>libmp3lame: suitable for flv.</li><li>mp2.</li>When the outer parameter Container is hls, the valid value is:<li>libfdk_aac.</li>When the outer parameter Format is HLS or MPEG-DASH, the valid value is:<li>libfdk_aac.</li>When the outer parameter Container is wav, the valid value is:<li>pcm16.</li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
+        /// <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means the bitrate is set automatically by VOD.</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// The audio sample rate. Valid values:
-        /// <li>`16000` (valid only if `Codec` is `pcm16`)</li>
-        /// <li>`32000`</li>
-        /// <li>`44100`</li>
-        /// <li>`48000`</li>
-        /// Unit: Hz.
+        /// <p>Sampling rate of the audio stream. Available values:</p><li>16000. Available only when Codec is pcm16.</li><li>32000</li><li>44100</li><li>48000</li>Unit: Hz.
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// Audio channel system. Valid values:
-        /// <li>1: mono-channel</li>
-        /// <li>2: dual-channel</li>
-        /// <li>6: stereo</li>
-        /// You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
+        /// <p>Audio channel. Available values:</p><li>1: Single channel.</li><li>2: Two channels.</li><li>6: Stereo.</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media container format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
+
+        /// <summary>
+        /// <p>Specifies the retained audio tracks for output. All source tracks are retained. </p><p>This parameter is valid only when specified in the OverrideParameter parameter and is disabled in other cases.</p>
+        /// </summary>
+        [JsonProperty("StreamSelects")]
+        public long?[] StreamSelects{ get; set; }
 
 
         /// <summary>
@@ -85,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Bitrate", this.Bitrate);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+            this.SetParamArraySimple(map, prefix + "StreamSelects.", this.StreamSelects);
         }
     }
 }

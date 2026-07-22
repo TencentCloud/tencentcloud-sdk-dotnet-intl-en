@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Input video file information for the AIGC video conversion task.</p>
+        /// <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }

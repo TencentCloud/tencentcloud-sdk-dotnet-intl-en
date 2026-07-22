@@ -85,14 +85,15 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Warning information for the document. This field is only valid for international site requests. Warning codes:
-        /// -9101: Incomplete card border warning
-        /// -9102: Photocopied card warning
-        /// -9103: Recaptured card warning
-        /// -9104: Photoshopped card warning
-        /// -9107: Reflective card warning
-        /// -9108: Blurry image warning
-        /// -9109: Warning capability not enabled
+        /// Card Warning Information
+        /// 
+        /// -9101 Alarm for covered certificate
+        /// -9102 Alarm for photocopied certificate
+        /// -9103 Alarm for photographed certificate
+        /// -9104 Alarm for tamper certificate
+        /// -9107 Alarm for reflective certificate
+        /// -9108 Alarm for blurry certificate 
+        /// -9109 This capability is not enabled. Please contact customer support to activate the alert service.
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }

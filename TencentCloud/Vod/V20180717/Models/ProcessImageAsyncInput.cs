@@ -25,19 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// FileId for image processing.
+        /// <p>FileId of image processing.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Image processing parameter.
+        /// <p>Image URL.</p>
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
+
+        /// <summary>
+        /// <p>Image processing parameter.</p>
         /// </summary>
         [JsonProperty("ImageTaskInput")]
         public ProcessImageAsyncTaskInput ImageTaskInput{ get; set; }
 
         /// <summary>
-        /// Output media file configuration for image processing tasks.
+        /// <p>Output media file configuration for the image processing task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public ProcessImageAsyncOutputConfig OutputConfig{ get; set; }
@@ -49,6 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamObj(map, prefix + "ImageTaskInput.", this.ImageTaskInput);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         }

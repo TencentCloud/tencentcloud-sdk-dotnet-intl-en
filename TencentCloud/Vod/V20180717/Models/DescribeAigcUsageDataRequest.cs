@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>AIGC type.</p><p>Enumeration value:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: scenario-based video processing</li><li>SceneAigcImage: scenario-based image processing</li><li>SceneAigcTime: scenario-based processing times</li></ul>
+        /// <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
         /// </summary>
         [JsonProperty("AigcType")]
         public string AigcType{ get; set; }
@@ -60,6 +60,24 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("APIKeys")]
         public string[] APIKeys{ get; set; }
 
+        /// <summary>
+        /// <p>Query cursor</p>
+        /// </summary>
+        [JsonProperty("ScrollToken")]
+        public string ScrollToken{ get; set; }
+
+        /// <summary>
+        /// <p>Size per page, maximum 200, it will be truncated to 200</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public ulong? PageSize{ get; set; }
+
+        /// <summary>
+        /// <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+        /// </summary>
+        [JsonProperty("ReqId")]
+        public string ReqId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "APIKey", this.APIKey);
             this.SetParamArraySimple(map, prefix + "APIKeys.", this.APIKeys);
+            this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "ReqId", this.ReqId);
         }
     }
 }

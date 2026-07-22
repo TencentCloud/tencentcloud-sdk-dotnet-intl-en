@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Pull Upload Task ID. The status of the pull upload task can be queried through this ID.
+        /// <p>Pull upload video task ID. This can be used to query the task status.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

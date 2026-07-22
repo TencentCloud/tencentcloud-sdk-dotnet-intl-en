@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// <p>Output image encoding format parameters. <strong>Valid only for AI clothing change scenarios.</strong></p>
+        /// <p>Output image encoding format parameters.</p>
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageSceneAigcEncodeConfig EncodeConfig{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ImageHeight{ get; set; }
 
         /// <summary>
-        /// <p>Output resolution. Only valid for change_clothes and change_clothes_under scenarios. Available values: 1K, 2K, 4K.</p>
+        /// <p>Output resolution. Only valid for <code>ai_try_on</code> scenarios. Value range: 1K, 2K, 4K.</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }

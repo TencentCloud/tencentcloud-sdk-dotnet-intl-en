@@ -25,32 +25,32 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Edited Video Playback URL
+        /// <p>Edited Video Playback URL.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Unique identifier of media file for post-editing solidified video.
+        /// <p>Unique identifier of media file for post-editing solidified video.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Edited video task flow ID after solidification.
+        /// <p>ID of the edited video task flow after solidification.</p>
         /// </summary>
         [JsonProperty("VodTaskId")]
         public string VodTaskId{ get; set; }
 
         /// <summary>
-        /// Edited Video Metadata
+        /// <p>Edited video metadata.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// <span id="p_segmentset">Edited video clip information.</span>
+        /// <p><span id="p_segmentset">Edited video clip information.</span></p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public LiveRealTimeClipMediaSegmentInfo[] SegmentSet{ get; set; }
