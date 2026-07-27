@@ -26,15 +26,15 @@ namespace TencentCloud.Tke.V20220501.Models
         
         /// <summary>
         /// Billing cycle of the pay-as-you-go mode (unit: month):
-        /// 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60
+        /// 1,2,3,4,5,6,7, 8,9,10,11,12,24,36,48,60
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
         /// Renewal method of the prepayment mode:
-        /// - NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew (default)
-        /// - NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but do not auto-renew
+        /// - NOTIFY_AND_AUTO_RENEW: Notify the user of expiration and auto-renew 
+        /// - NOTIFY_AND_MANUAL_RENEW: Notify the user of expiration but auto-renewal is not performed (default)
         /// - DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not notify the user of expiration and do not auto-renew
         /// </summary>
         [JsonProperty("RenewFlag")]

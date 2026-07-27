@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20220501.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Cloud disk size (GB)
+        /// Cloud disk size (G)
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -54,6 +54,27 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }
 
+        /// <summary>
+        /// Cloud disk ID
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
+        /// <summary>
+        /// Encrypt the system disk
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public string Encrypt{ get; set; }
+
+        /// <summary>
+        /// Custom KMS ID
+        /// Note: This field may return "null", indicating that no valid value can be obtained.
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +86,9 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
             this.SetParamSimple(map, prefix + "FileSystem", this.FileSystem);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

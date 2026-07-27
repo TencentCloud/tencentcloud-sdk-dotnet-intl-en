@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// skill information list
+        /// <p>skill information list</p>
         /// </summary>
         [JsonProperty("SkillInfoList")]
         public SkillInfo[] SkillInfoList{ get; set; }
