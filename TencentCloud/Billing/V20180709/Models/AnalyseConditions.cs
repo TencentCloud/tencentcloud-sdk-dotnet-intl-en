@@ -83,8 +83,8 @@ namespace TencentCloud.Billing.V20180709.Models
         /// cashPayAmount: Cash 
         /// incentivePayAmount: Bonus 
         /// voucherPayAmount: Coupon 
-        /// tax: tax. 
-        /// costBeforeTax: pre-tax price
+        /// tax: tax
+        /// amountBeforeTax: pre-tax price
         /// </summary>
         [JsonProperty("FeeType")]
         public string FeeType{ get; set; }
