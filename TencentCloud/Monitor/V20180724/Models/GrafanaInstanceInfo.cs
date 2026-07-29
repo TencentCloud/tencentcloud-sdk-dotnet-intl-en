@@ -92,7 +92,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid value: `1` (monthly subscription).
+        /// Billing mode. Valid value: `1` (yearly/monthly subscription).
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public long? InstanceChargeType{ get; set; }
