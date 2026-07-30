@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.intl.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1362";
+       private const string sdkVersion = "SDK_NET_3.0.1363";
 
         /// <summary>
         /// Client constructor.
@@ -1139,6 +1139,27 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacksSync(DescribeAlarmNoticeCallbacksRequest req)
         {
             return InternalRequestAsync<DescribeAlarmNoticeCallbacksResponse>(req, "DescribeAlarmNoticeCallbacks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the user information configured in the notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse"/></returns>
+        public Task<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse> DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse>(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID");
+        }
+
+        /// <summary>
+        /// This API is used to query the user information configured in the notification template.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest"/></param>
+        /// <returns><see cref="DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse"/></returns>
+        public DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDSync(DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDRequest req)
+        {
+            return InternalRequestAsync<DescribeAlarmNoticeOnCallUsersFromPrometheusAlertIDResponse>(req, "DescribeAlarmNoticeOnCallUsersFromPrometheusAlertID")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
