@@ -85,6 +85,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ReturnHeadImage")]
         public bool? ReturnHeadImage{ get; set; }
 
+        /// <summary>
+        /// Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+        /// </summary>
+        [JsonProperty("WebhookUrl")]
+        public string WebhookUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +104,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrlFront", this.ImageUrlFront);
             this.SetParamSimple(map, prefix + "ImageUrlBack", this.ImageUrlBack);
             this.SetParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
+            this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
         }
     }
 }

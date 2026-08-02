@@ -25,48 +25,53 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Whether automatic logical backup is enabled.
+        /// <p>Whether automatic logical backup is enabled</p>
         /// </summary>
         [JsonProperty("LogicBackupEnable")]
         public string LogicBackupEnable{ get; set; }
 
         /// <summary>
-        /// Specifies the automatic logic backup start time.
+        /// <p>Automatic logic backup start time</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeBeg")]
         public ulong? LogicBackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// Specifies the termination time of automatic logical backup.
+        /// <p>Automated logic backup end time</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeEnd")]
         public ulong? LogicBackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// Automatic logical backup retention time.
-        /// Unit: seconds.
+        /// <p>Automatic logical backup retention time<br>Unit: second</p>
         /// </summary>
         [JsonProperty("LogicReserveDuration")]
         public ulong? LogicReserveDuration{ get; set; }
 
         /// <summary>
-        /// Is cross-regional logical backup enabled?.
-        /// Valid values: ON/OFF.
+        /// <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
         /// </summary>
         [JsonProperty("LogicCrossRegionsEnable")]
         public string LogicCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// Regions covered by logical backup.
+        /// <p>Cross-regional logic backup</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LogicCrossRegions")]
         public string[] LogicCrossRegions{ get; set; }
 
         /// <summary>
-        /// Backup delivery relationship
+        /// <p>Backup delivery relationship</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
+
+        /// <summary>
+        /// <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+        /// </summary>
+        [JsonProperty("LogicCrossRegionSaveDays")]
+        public long? LogicCrossRegionSaveDays{ get; set; }
 
 
         /// <summary>
@@ -81,6 +86,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "LogicCrossRegionsEnable", this.LogicCrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "LogicCrossRegions.", this.LogicCrossRegions);
             this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
+            this.SetParamSimple(map, prefix + "LogicCrossRegionSaveDays", this.LogicCrossRegionSaveDays);
         }
     }
 }

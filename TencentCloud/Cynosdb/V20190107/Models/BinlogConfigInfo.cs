@@ -25,26 +25,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the retention time of binlogs.
+        /// <p>binlog retention time</p>
         /// </summary>
         [JsonProperty("BinlogSaveDays")]
         public long? BinlogSaveDays{ get; set; }
 
         /// <summary>
-        /// Whether binlog cross-region backup is enabled.
+        /// <p>Whether cross-region backup of binlog is enabled</p>
         /// </summary>
         [JsonProperty("BinlogCrossRegionsEnable")]
         public string BinlogCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// binlog in a different region.
+        /// <p>binlog cross-region</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BinlogCrossRegions")]
         public string[] BinlogCrossRegions{ get; set; }
 
         /// <summary>
-        /// Safe info
+        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
+        /// </summary>
+        [JsonProperty("BinlogCrossRegionSaveDays")]
+        public long? BinlogCrossRegionSaveDays{ get; set; }
+
+        /// <summary>
+        /// <p>Safe info</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
             this.SetParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+            this.SetParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
             this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }
     }

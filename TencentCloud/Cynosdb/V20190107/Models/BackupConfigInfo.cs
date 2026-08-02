@@ -25,65 +25,69 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// System automation time.
+        /// <p>System automation time</p>
         /// </summary>
         [JsonProperty("BackupCustomAutoTime")]
         public bool? BackupCustomAutoTime{ get; set; }
 
         /// <summary>
-        /// Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+        /// <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// Currently this parameter cannot be modified. no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+        /// <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BackupWeekDays")]
         public string[] BackupWeekDays{ get; set; }
 
         /// <summary>
-        /// Interval.
+        /// <p>Interval</p>
         /// </summary>
         [JsonProperty("BackupIntervalTime")]
         public long? BackupIntervalTime{ get; set; }
 
         /// <summary>
-        /// Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+        /// <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// Enable cross-region backup.
-        /// Enable.
-        /// 0: disabled.
+        /// <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
         /// </summary>
         [JsonProperty("CrossRegionsEnable")]
         public string CrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// Cross-Regional backup region.
+        /// <p>Cross-regional backup region</p>
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
+        /// </summary>
+        [JsonProperty("CrossRegionSaveDays")]
+        public long? CrossRegionSaveDays{ get; set; }
+
+        /// <summary>
+        /// <p>Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high frequency backup</p>
         /// </summary>
         [JsonProperty("BackupTriggerStrategy")]
         public string BackupTriggerStrategy{ get; set; }
 
         /// <summary>
-        /// Backup delivery relationship
+        /// <p>Backup delivery relationship</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
@@ -102,6 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
             this.SetParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CrossRegionSaveDays", this.CrossRegionSaveDays);
             this.SetParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
             this.SetParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
         }

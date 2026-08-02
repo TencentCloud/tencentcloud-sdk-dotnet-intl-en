@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1341";
+       private const string sdkVersion = "SDK_NET_3.0.1365";
 
         /// <summary>
         /// Client constructor.
@@ -1226,6 +1226,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeBackupListByVaultResponse DescribeBackupListByVaultSync(DescribeBackupListByVaultRequest req)
         {
             return InternalRequestAsync<DescribeBackupListByVaultResponse>(req, "DescribeBackupListByVault")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the backup usage overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public Task<DescribeBackupOverviewResponse> DescribeBackupOverview(DescribeBackupOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupOverviewResponse>(req, "DescribeBackupOverview");
+        }
+
+        /// <summary>
+        /// This API is used to query the backup usage overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBackupOverviewResponse"/></returns>
+        public DescribeBackupOverviewResponse DescribeBackupOverviewSync(DescribeBackupOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupOverviewResponse>(req, "DescribeBackupOverview")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4527,6 +4548,27 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// This API is used to convert a Prepaid Cluster to a postpaid cluster.
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterPrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferClusterPrepayToPostpayResponse"/></returns>
+        public Task<TransferClusterPrepayToPostpayResponse> TransferClusterPrepayToPostpay(TransferClusterPrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferClusterPrepayToPostpayResponse>(req, "TransferClusterPrepayToPostpay");
+        }
+
+        /// <summary>
+        /// This API is used to convert a Prepaid Cluster to a postpaid cluster.
+        /// </summary>
+        /// <param name="req"><see cref="TransferClusterPrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferClusterPrepayToPostpayResponse"/></returns>
+        public TransferClusterPrepayToPostpayResponse TransferClusterPrepayToPostpaySync(TransferClusterPrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferClusterPrepayToPostpayResponse>(req, "TransferClusterPrepayToPostpay")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to trigger cross-AZ migration.
         /// </summary>
         /// <param name="req"><see cref="TransferClusterZoneRequest"/></param>
@@ -4544,6 +4586,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public TransferClusterZoneResponse TransferClusterZoneSync(TransferClusterZoneRequest req)
         {
             return InternalRequestAsync<TransferClusterZoneResponse>(req, "TransferClusterZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to convert prepaid storage to postpaid storage.
+        /// </summary>
+        /// <param name="req"><see cref="TransferStoragePrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferStoragePrepayToPostpayResponse"/></returns>
+        public Task<TransferStoragePrepayToPostpayResponse> TransferStoragePrepayToPostpay(TransferStoragePrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferStoragePrepayToPostpayResponse>(req, "TransferStoragePrepayToPostpay");
+        }
+
+        /// <summary>
+        /// This API is used to convert prepaid storage to postpaid storage.
+        /// </summary>
+        /// <param name="req"><see cref="TransferStoragePrepayToPostpayRequest"/></param>
+        /// <returns><see cref="TransferStoragePrepayToPostpayResponse"/></returns>
+        public TransferStoragePrepayToPostpayResponse TransferStoragePrepayToPostpaySync(TransferStoragePrepayToPostpayRequest req)
+        {
+            return InternalRequestAsync<TransferStoragePrepayToPostpayResponse>(req, "TransferStoragePrepayToPostpay")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

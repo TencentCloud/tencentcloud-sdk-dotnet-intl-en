@@ -21,26 +21,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyBinlogSaveDaysRequest : AbstractModel
+    public class BinlogRegionInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>Cluster ID.</p>
+        /// <p>Backup region</p>
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("BackupRegion")]
+        public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// <p>Binlog retention days</p>
+        /// <p>Backup ID</p>
         /// </summary>
-        [JsonProperty("BinlogSaveDays")]
-        public long? BinlogSaveDays{ get; set; }
-
-        /// <summary>
-        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
-        /// </summary>
-        [JsonProperty("BinlogCrossRegionSaveDays")]
-        public long? BinlogCrossRegionSaveDays{ get; set; }
+        [JsonProperty("BackupId")]
+        public long? BackupId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
-            this.SetParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
+            this.SetParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
         }
     }
 }

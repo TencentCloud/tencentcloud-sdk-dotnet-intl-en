@@ -25,58 +25,70 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database proxy group ID
+        /// <p>Database Proxy Group ID.</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Number of nodes in the proxy group
+        /// <p>Number of database proxy group nodes</p>
         /// </summary>
         [JsonProperty("ProxyNodeCount")]
         public long? ProxyNodeCount{ get; set; }
 
         /// <summary>
-        /// Database proxy group status
+        /// <p>Database Proxy Group status</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Region
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Current proxy version
+        /// <p>Current proxy version</p>
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// User AppId
+        /// <p>User AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Specifies that a read-write node activates the database proxy.
+        /// <p>Activate database proxy for RWNode</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time.</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Update time.</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "OpenRw", this.OpenRw);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

@@ -21,36 +21,15 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyBinlogSaveDaysRequest : AbstractModel
+    public class TransferClusterPrepayToPostpayRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <p>Cluster ID.</p>
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
-
-        /// <summary>
-        /// <p>Binlog retention days</p>
-        /// </summary>
-        [JsonProperty("BinlogSaveDays")]
-        public long? BinlogSaveDays{ get; set; }
-
-        /// <summary>
-        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
-        /// </summary>
-        [JsonProperty("BinlogCrossRegionSaveDays")]
-        public long? BinlogCrossRegionSaveDays{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
-            this.SetParamSimple(map, prefix + "BinlogCrossRegionSaveDays", this.BinlogCrossRegionSaveDays);
         }
     }
 }

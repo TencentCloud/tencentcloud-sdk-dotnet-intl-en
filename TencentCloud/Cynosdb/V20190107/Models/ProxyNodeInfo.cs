@@ -25,70 +25,82 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database proxy node ID.
+        /// <p>Database Proxy Node ID</p>
         /// </summary>
         [JsonProperty("ProxyNodeId")]
         public string ProxyNodeId{ get; set; }
 
         /// <summary>
-        /// Current node connections, which is not returned by the `DescribeProxyNodes` API.
+        /// <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
         /// </summary>
         [JsonProperty("ProxyNodeConnections")]
         public long? ProxyNodeConnections{ get; set; }
 
         /// <summary>
-        /// CPU of the database proxy node.
+        /// <p>Database proxy node cpu</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory of the database proxy node.
+        /// <p>Database proxy node memory</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Status of the database proxy node.
+        /// <p>Database Proxy Node Status</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Database proxy group ID.
+        /// <p>Database Proxy Group ID</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Cluster ID.
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// User AppID.
+        /// <p>User AppID</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Region.
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// AZ.
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Database proxy node name.
+        /// <p>Database Proxy Node Name</p>
         /// </summary>
         [JsonProperty("OssProxyNodeName")]
         public string OssProxyNodeName{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time.</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Update time.</p>
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -107,6 +119,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "OssProxyNodeName", this.OssProxyNodeName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

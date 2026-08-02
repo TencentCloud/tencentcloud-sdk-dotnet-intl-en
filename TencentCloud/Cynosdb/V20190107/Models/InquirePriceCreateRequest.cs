@@ -25,72 +25,82 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ
+        /// <p>Availability zone, each region provision best practice</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Number of compute node to purchase
+        /// <p>Number of compute nodes to purchase</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
+        /// <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
         /// </summary>
         [JsonProperty("InstancePayMode")]
         public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
+        /// <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// Instance device type. Supported values are as follows:
-        /// - common: indicates the general type
-        /// - exclusive: indicates the exclusive type.
+        /// <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+        /// <p>Number of CPU cores. Required for PREPAID and POSTPAID instance types.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size in GB, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.
+        /// <p>Memory size in GB. Required for PREPAID and POSTPAID instance types.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// CCU size, which is required when `InstancePayMode` is `SERVERLESS`.
+        /// <p>Ccu size. Required for the serverless type.</p>
         /// </summary>
         [JsonProperty("Ccu")]
         public float? Ccu{ get; set; }
 
         /// <summary>
-        /// Storage size, which is required when `StoragePayMode` is `PREPAID`.
+        /// <p>Storage size. Required for PREPAID storage type</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Validity period, which is required when `InstancePayMode` is `PREPAID`.
+        /// <p>Purchase period, required for PREPAID purchase type</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Duration unit, which is required when `InstancePayMode` is `PREPAID`. Valid values: `m` (month), `d` (day).
+        /// <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+        /// </summary>
+        [JsonProperty("StorageVersion")]
+        public string StorageVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+        /// </summary>
+        [JsonProperty("IsMultiAz")]
+        public bool? IsMultiAz{ get; set; }
 
 
         /// <summary>
@@ -109,6 +119,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
+            this.SetParamSimple(map, prefix + "IsMultiAz", this.IsMultiAz);
         }
     }
 }

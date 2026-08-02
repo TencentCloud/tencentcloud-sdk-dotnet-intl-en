@@ -25,64 +25,70 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Binlog filename
+        /// <p>Binlog filename</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// File size in bytes
+        /// <p>File size, measurement unit: byte</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
 
         /// <summary>
-        /// Transaction start time
+        /// <p>Earliest transaction time</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Transaction end time
+        /// <p>Latest transaction time</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Binlog file ID
+        /// <p>Binlog file ID</p>
         /// </summary>
         [JsonProperty("BinlogId")]
         public long? BinlogId{ get; set; }
 
         /// <summary>
-        /// binlog cross-region coverage
+        /// <p>Cross-regional binlog</p>
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// Backup delivery status
+        /// <p>Backup delivery status</p>
         /// </summary>
         [JsonProperty("CopyStatus")]
         public string CopyStatus{ get; set; }
 
         /// <summary>
-        /// Safe info
+        /// <p>Safe information</p>
         /// </summary>
         [JsonProperty("VaultInfos")]
         public VaultInfo[] VaultInfos{ get; set; }
 
         /// <summary>
-        /// Encryption key
+        /// <p>Encryption key</p>
         /// </summary>
         [JsonProperty("EncryptKeyId")]
         public string EncryptKeyId{ get; set; }
 
         /// <summary>
-        /// Encrypt key region
+        /// <p>Key region for encryption</p>
         /// </summary>
         [JsonProperty("EncryptRegion")]
         public string EncryptRegion{ get; set; }
+
+        /// <summary>
+        /// <p>Geographical distribution of backups</p>
+        /// </summary>
+        [JsonProperty("ExistRegions")]
+        public BinlogRegionInfo[] ExistRegions{ get; set; }
 
 
         /// <summary>
@@ -100,6 +106,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
             this.SetParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
             this.SetParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+            this.SetParamArrayObj(map, prefix + "ExistRegions.", this.ExistRegions);
         }
     }
 }

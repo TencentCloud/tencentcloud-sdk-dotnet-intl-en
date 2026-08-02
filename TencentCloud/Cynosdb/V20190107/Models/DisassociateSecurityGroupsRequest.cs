@@ -42,6 +42,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
         /// </summary>
         [JsonProperty("Zone")]
+        [System.Obsolete]
         public string Zone{ get; set; }
 
 
