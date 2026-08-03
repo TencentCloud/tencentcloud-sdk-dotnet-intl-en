@@ -79,7 +79,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? MinInsyncReplicas{ get; set; }
 
         /// <summary>
-        /// <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+        /// <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
         /// </summary>
         [JsonProperty("UncleanLeaderElectionEnable")]
         public long? UncleanLeaderElectionEnable{ get; set; }

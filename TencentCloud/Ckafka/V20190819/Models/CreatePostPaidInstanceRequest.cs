@@ -61,19 +61,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ClusterId{ get; set; }
 
         /// <summary>
-        /// <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
+        /// <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
+        /// <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+        /// <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? InstanceNum{ get; set; }
 
         /// <summary>
-        /// <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+        /// <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
         /// </summary>
         [JsonProperty("PublicNetworkMonthly")]
         public long? PublicNetworkMonthly{ get; set; }
@@ -149,6 +149,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("CustomSSLCertId")]
         public string CustomSSLCertId{ get; set; }
+
+        /// <summary>
+        /// <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("StoreQuantityType")]
+        public long? StoreQuantityType{ get; set; }
 
 
         /// <summary>
@@ -177,6 +183,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
             this.SetParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+            this.SetParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
         }
     }
 }

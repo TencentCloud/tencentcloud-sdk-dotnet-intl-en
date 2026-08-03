@@ -15,38 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Ckafka.V20190819.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class User : AbstractModel
+    public class CfwStatusMonitorFilter : AbstractModel
     {
         
         /// <summary>
-        /// <p>User id</p>
-        /// </summary>
-        [JsonProperty("UserId")]
-        public long? UserId{ get; set; }
-
-        /// <summary>
-        /// <p>Username</p>
+        /// Filter field name.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Creation time.</p>
+        /// Filter value list, up to 10.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
         /// <summary>
-        /// <p>Last update time</p>
+        /// Operator type, optional; only supported for backend permission types.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("OperatorType")]
+        public long? OperatorType{ get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "OperatorType", this.OperatorType);
         }
     }
 }

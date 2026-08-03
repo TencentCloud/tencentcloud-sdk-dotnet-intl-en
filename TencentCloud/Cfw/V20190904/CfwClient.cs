@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.intl.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1281";
+       private const string sdkVersion = "SDK_NET_3.0.1366";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Cfw.V20190904
         public AddAcRuleResponse AddAcRuleSync(AddAcRuleRequest req)
         {
             return InternalRequestAsync<AddAcRuleResponse>(req, "AddAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add one or more Internet Boundary Access Control Rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddAclRuleRequest"/></param>
+        /// <returns><see cref="AddAclRuleResponse"/></returns>
+        public Task<AddAclRuleResponse> AddAclRule(AddAclRuleRequest req)
+        {
+            return InternalRequestAsync<AddAclRuleResponse>(req, "AddAclRule");
+        }
+
+        /// <summary>
+        /// Add one or more Internet Boundary Access Control Rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddAclRuleRequest"/></param>
+        /// <returns><see cref="AddAclRuleResponse"/></returns>
+        public AddAclRuleResponse AddAclRuleSync(AddAclRuleRequest req)
+        {
+            return InternalRequestAsync<AddAclRuleResponse>(req, "AddAclRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -407,6 +428,48 @@ namespace TencentCloud.Cfw.V20190904
         public DescribeBlockStaticListResponse DescribeBlockStaticListSync(DescribeBlockStaticListRequest req)
         {
             return InternalRequestAsync<DescribeBlockStaticListResponse>(req, "DescribeBlockStaticList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the firewall log of the current tenant. Only use HasMore/NextToken in Response.Data to paginate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwLogsRequest"/></param>
+        /// <returns><see cref="DescribeCfwLogsResponse"/></returns>
+        public Task<DescribeCfwLogsResponse> DescribeCfwLogs(DescribeCfwLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwLogsResponse>(req, "DescribeCfwLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query the firewall log of the current tenant. Only use HasMore/NextToken in Response.Data to paginate.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwLogsRequest"/></param>
+        /// <returns><see cref="DescribeCfwLogsResponse"/></returns>
+        public DescribeCfwLogsResponse DescribeCfwLogsSync(DescribeCfwLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwLogsResponse>(req, "DescribeCfwLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query status monitoring scenario. Op=describe_scene is used to detect available scenarios, metrics, perspectives, and secondary dropdown available_options. Op=fetch_scene is used to pull specific scenario snapshots, with results in the JSON string of Response.Data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwStatusMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCfwStatusMonitorResponse"/></returns>
+        public Task<DescribeCfwStatusMonitorResponse> DescribeCfwStatusMonitor(DescribeCfwStatusMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwStatusMonitorResponse>(req, "DescribeCfwStatusMonitor");
+        }
+
+        /// <summary>
+        /// Query status monitoring scenario. Op=describe_scene is used to detect available scenarios, metrics, perspectives, and secondary dropdown available_options. Op=fetch_scene is used to pull specific scenario snapshots, with results in the JSON string of Response.Data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwStatusMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCfwStatusMonitorResponse"/></returns>
+        public DescribeCfwStatusMonitorResponse DescribeCfwStatusMonitorSync(DescribeCfwStatusMonitorRequest req)
+        {
+            return InternalRequestAsync<DescribeCfwStatusMonitorResponse>(req, "DescribeCfwStatusMonitor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

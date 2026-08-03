@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of query results.
+        /// <p>The total number of records in the query result.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of L7 traffic data recorded over time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Layer-7 time series traffic data list.<br>For different queried metrics, time series data will be returned from different parameters according to the value type.<br>Currently existing value types include the following two:</p><ul>  <li><strong>Integer</strong>: Metrics with <code>Integer</code> value type will return corresponding time series data from <code>Data.N.TypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_outFlux</code>: L7 EdgeOne response traffic, unit: Byte;</li>      <li><code>l7Flow_inFlux</code>: L7 client request traffic, unit: Byte;</li>      <li><code>l7Flow_flux</code>: L7 total access traffic (EdgeOne response + client requests), unit: Byte;</li>      <li><code>l7Flow_outBandwidth</code>: L7 EdgeOne response bandwidth, unit: bps;</li>      <li><code>l7Flow_inBandwidth</code>: L7 client request bandwidth, unit: bps;</li>      <li><code>l7Flow_bandwidth</code>: L7 total access bandwidth (EdgeOne response + client requests), unit: bps;</li>      <li><code>l7Flow_request</code>: L7 access request count, unit: count;</li>      <li><code>l7Flow_avgResponseTime</code>: L7 average response time, unit: ms;</li>      <li><code>l7Flow_avgFirstByteResponseTime</code>: L7 average first byte response time, unit: ms.</li>    </ul>  </li>  <li><strong>Float</strong>: Metrics with <code>Float</code> value type will return corresponding time series data from <code>Data.N.FloatTypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_requestRate</code>: L7 access request rate, unit: qps.</li>    </ul>  </li></ul>
+        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("Data")]
         public TimingDataRecord[] Data{ get; set; }

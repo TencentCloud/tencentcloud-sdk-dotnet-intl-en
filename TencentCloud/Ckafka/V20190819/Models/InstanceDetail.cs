@@ -55,7 +55,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public VipEntity[] VipList{ get; set; }
 
         /// <summary>
-        /// <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+        /// <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+        /// <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
         /// </summary>
         [JsonProperty("RetentionBytes")]
         public long? RetentionBytes{ get; set; }

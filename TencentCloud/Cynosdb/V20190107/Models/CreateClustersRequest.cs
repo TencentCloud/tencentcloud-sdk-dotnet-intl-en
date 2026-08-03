@@ -306,6 +306,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
+        /// <summary>
+        /// <p>Synchronization method. Value range: async, semisync, sync.</p>
+        /// </summary>
+        [JsonProperty("SyncWay")]
+        public string SyncWay{ get; set; }
+
+        /// <summary>
+        /// <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+        /// </summary>
+        [JsonProperty("SemiSyncTimeout")]
+        public long? SemiSyncTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -359,6 +371,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+            this.SetParamSimple(map, prefix + "SyncWay", this.SyncWay);
+            this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
         }
     }
 }

@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+        /// <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Host
+        /// <p>host (% or ipv4 address)</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Password, which can contain 8-64 characters.
+        /// <p>Password. The length range is 8 to 64 characters.</p>
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Whether password rotation is enabled (0: turn off; 1: turn on)
+        /// <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
         /// </summary>
         [JsonProperty("PasswordRotation")]
         public long? PasswordRotation{ get; set; }
 
         /// <summary>
-        /// Description
+        /// <p>Description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Maximum number of user connections, which cannot be above 10,240.
+        /// <p>Maximum user connections cannot be greater than 10240</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }

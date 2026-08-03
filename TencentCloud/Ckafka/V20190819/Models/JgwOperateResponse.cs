@@ -25,20 +25,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Returned code. 0: normal, other values: error
+        /// <p>Returned code. 0 as normal, non-0 as error.</p>
         /// </summary>
         [JsonProperty("ReturnCode")]
         public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// Success message
+        /// <p>Success message</p>
         /// </summary>
         [JsonProperty("ReturnMessage")]
         public string ReturnMessage{ get; set; }
 
         /// <summary>
-        /// Data returned by an operation, which may contain `flowId`, etc.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>The Data returned by the operation may include flowId.</p>
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Data")]
         public OperateResponseData Data{ get; set; }

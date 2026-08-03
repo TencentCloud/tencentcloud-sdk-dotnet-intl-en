@@ -21,32 +21,26 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class User : AbstractModel
+    public class ModifyAccessPolicyRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>User id</p>
+        /// <p>Instance ID.</p>
         /// </summary>
-        [JsonProperty("UserId")]
-        public long? UserId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Username</p>
+        /// <p>Route ID</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("RouteId")]
+        public long? RouteId{ get; set; }
 
         /// <summary>
-        /// <p>Creation time.</p>
+        /// <p>Public Network IP Whitelist Configuration</p><p>Default if not passed: delete all</p>
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// <p>Last update time</p>
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("IpWhitelist")]
+        public IpWhitelistDTO[] IpWhitelist{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
+            this.SetParamArrayObj(map, prefix + "IpWhitelist.", this.IpWhitelist);
         }
     }
 }

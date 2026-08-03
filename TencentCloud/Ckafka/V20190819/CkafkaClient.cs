@@ -28,7 +28,7 @@ namespace TencentCloud.Ckafka.V20190819
 
        private const string endpoint = "ckafka.intl.tencentcloudapi.com";
        private const string version = "2019-08-19";
-       private const string sdkVersion = "SDK_NET_3.0.1312";
+       private const string sdkVersion = "SDK_NET_3.0.1366";
 
         /// <summary>
         /// Client constructor.
@@ -537,27 +537,6 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// This API is used to delete a topic IP allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
-        /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
-        public Task<DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req)
-        {
-            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList");
-        }
-
-        /// <summary>
-        /// This API is used to delete a topic IP allowlist.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteTopicIpWhiteListRequest"/></param>
-        /// <returns><see cref="DeleteTopicIpWhiteListResponse"/></returns>
-        public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteListSync(DeleteTopicIpWhiteListRequest req)
-        {
-            return InternalRequestAsync<DeleteTopicIpWhiteListResponse>(req, "DeleteTopicIpWhiteList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to delete a user.
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -596,6 +575,27 @@ namespace TencentCloud.Ckafka.V20190819
         public DescribeACLResponse DescribeACLSync(DescribeACLRequest req)
         {
             return InternalRequestAsync<DescribeACLResponse>(req, "DescribeACL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the public IP allowlist of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAccessPolicyResponse"/></returns>
+        public Task<DescribeAccessPolicyResponse> DescribeAccessPolicy(DescribeAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPolicyResponse>(req, "DescribeAccessPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the public IP allowlist of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPolicyRequest"/></param>
+        /// <returns><see cref="DescribeAccessPolicyResponse"/></returns>
+        public DescribeAccessPolicyResponse DescribeAccessPolicySync(DescribeAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPolicyResponse>(req, "DescribeAccessPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1249,6 +1249,48 @@ namespace TencentCloud.Ckafka.V20190819
         public InstanceScalingDownResponse InstanceScalingDownSync(InstanceScalingDownRequest req)
         {
             return InternalRequestAsync<InstanceScalingDownResponse>(req, "InstanceScalingDown")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Isolate a prepaid instance. This API is used to perform isolation on the instance. After successful execution, the instance is isolated.
+        /// </summary>
+        /// <param name="req"><see cref="IsolatedInstancePreRequest"/></param>
+        /// <returns><see cref="IsolatedInstancePreResponse"/></returns>
+        public Task<IsolatedInstancePreResponse> IsolatedInstancePre(IsolatedInstancePreRequest req)
+        {
+            return InternalRequestAsync<IsolatedInstancePreResponse>(req, "IsolatedInstancePre");
+        }
+
+        /// <summary>
+        /// Isolate a prepaid instance. This API is used to perform isolation on the instance. After successful execution, the instance is isolated.
+        /// </summary>
+        /// <param name="req"><see cref="IsolatedInstancePreRequest"/></param>
+        /// <returns><see cref="IsolatedInstancePreResponse"/></returns>
+        public IsolatedInstancePreResponse IsolatedInstancePreSync(IsolatedInstancePreRequest req)
+        {
+            return InternalRequestAsync<IsolatedInstancePreResponse>(req, "IsolatedInstancePre")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the public IP allowlist of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAccessPolicyResponse"/></returns>
+        public Task<ModifyAccessPolicyResponse> ModifyAccessPolicy(ModifyAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessPolicyResponse>(req, "ModifyAccessPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the public IP allowlist of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPolicyRequest"/></param>
+        /// <returns><see cref="ModifyAccessPolicyResponse"/></returns>
+        public ModifyAccessPolicyResponse ModifyAccessPolicySync(ModifyAccessPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAccessPolicyResponse>(req, "ModifyAccessPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

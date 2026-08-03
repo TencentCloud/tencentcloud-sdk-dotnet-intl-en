@@ -21,32 +21,14 @@ namespace TencentCloud.Ckafka.V20190819.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class User : AbstractModel
+    public class IsolatedInstancePreRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>User id</p>
+        /// CKafka cluster instance ID.
         /// </summary>
-        [JsonProperty("UserId")]
-        public long? UserId{ get; set; }
-
-        /// <summary>
-        /// <p>Username</p>
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// <p>Creation time.</p>
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
-
-        /// <summary>
-        /// <p>Last update time</p>
-        /// </summary>
-        [JsonProperty("UpdateTime")]
-        public string UpdateTime{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

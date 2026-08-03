@@ -25,37 +25,37 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Search term.
+        /// <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
         /// </summary>
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
         /// <summary>
-        /// Query offset, which defaults to `0`.
+        /// <p>Offset position of this page, defaults to 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+        /// <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Specifies whether to query the topic list from the connection.
+        /// <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
         /// </summary>
         [JsonProperty("QueryFromConnectResource")]
         public bool? QueryFromConnectResource{ get; set; }
 
         /// <summary>
-        /// Connection ID.
+        /// <p>Connection ID.</p>
         /// </summary>
         [JsonProperty("ConnectResourceId")]
         public string ConnectResourceId{ get; set; }
 
         /// <summary>
-        /// topic resource expression.
+        /// <p>topic resource expression</p>
         /// </summary>
         [JsonProperty("TopicRegularExpression")]
         public string TopicRegularExpression{ get; set; }

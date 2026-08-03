@@ -49,7 +49,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+        /// <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
@@ -90,6 +90,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+        /// </summary>
+        [JsonProperty("IpWhitelist")]
+        public IpWhitelistDTO[] IpWhitelist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArrayObj(map, prefix + "IpWhitelist.", this.IpWhitelist);
         }
     }
 }

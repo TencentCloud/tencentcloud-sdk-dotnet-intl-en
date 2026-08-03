@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+        /// <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of partitions, which should be greater than 0.
+        /// <p>Number of partitions, maximum value is 500, larger than 0</p>
         /// </summary>
         [JsonProperty("PartitionNum")]
         public long? PartitionNum{ get; set; }
 
         /// <summary>
-        /// Message retention period in milliseconds. The current minimum value is 60,000 ms.
+        /// <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
 
         /// <summary>
-        /// Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+        /// <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// Tag list
+        /// <p>Tag list</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

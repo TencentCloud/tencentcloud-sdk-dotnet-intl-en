@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1354";
+       private const string sdkVersion = "SDK_NET_3.0.1366";
 
         /// <summary>
         /// Client constructor.
@@ -2984,10 +2984,10 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data for L7 domain name business.
-        /// Create and bind policy Query instance Reset instance access password.
-        /// This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
-        /// This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
+        /// This API is used to query time-series data for Layer 7 domain services.
+        /// Notes:
+        /// 1. Data queried by this API has a latency of approximately 10 minutes. It is recommended to pull data from at least 10 minutes prior to the current time.
+        /// 2. By default, this API returns post-protection traffic request data. Users can customize queries for mitigated data by using `Filters.mitigatedByWebSecurity`.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -2997,10 +2997,10 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data for L7 domain name business.
-        /// Create and bind policy Query instance Reset instance access password.
-        /// This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
-        /// This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
+        /// This API is used to query time-series data for Layer 7 domain services.
+        /// Notes:
+        /// 1. Data queried by this API has a latency of approximately 10 minutes. It is recommended to pull data from at least 10 minutes prior to the current time.
+        /// 2. By default, this API returns post-protection traffic request data. Users can customize queries for mitigated data by using `Filters.mitigatedByWebSecurity`.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>

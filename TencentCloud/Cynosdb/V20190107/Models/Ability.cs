@@ -25,73 +25,73 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Whether secondary AZ is supported
+        /// <p>Whether support from availability zone is supported</p>
         /// </summary>
         [JsonProperty("IsSupportSlaveZone")]
         public string IsSupportSlaveZone{ get; set; }
 
         /// <summary>
-        /// The causes for no support from an availability zone.
+        /// <p>The causes for no support from availability zone</p>
         /// </summary>
         [JsonProperty("NonsupportSlaveZoneReason")]
         public string NonsupportSlaveZoneReason{ get; set; }
 
         /// <summary>
-        /// Whether read-only instance is supported
+        /// <p>Whether RO instance is supported</p>
         /// </summary>
         [JsonProperty("IsSupportRo")]
         public string IsSupportRo{ get; set; }
 
         /// <summary>
-        /// Reasons why RO instances are not supported.
+        /// <p>Reason for unsupported RO instance</p>
         /// </summary>
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
 
         /// <summary>
-        /// Whether manual snapshot backup initiation is supported.
+        /// <p>Whether manual snapshot backup initiation is supported</p>
         /// </summary>
         [JsonProperty("IsSupportManualSnapshot")]
         public string IsSupportManualSnapshot{ get; set; }
 
         /// <summary>
-        /// Whether transparent data encryption is supported.
+        /// <p>Whether transparent data encryption is supported</p>
         /// </summary>
         [JsonProperty("IsSupportTransparentDataEncryption")]
         public string IsSupportTransparentDataEncryption{ get; set; }
 
         /// <summary>
-        /// Reasons for no support of transparent data encryption.
+        /// <p>The causes for unsupported transparent data encryption</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReason")]
         public string NoSupportTransparentDataEncryptionReason{ get; set; }
 
         /// <summary>
-        /// Whether manual initiation of logical backup is supported.
+        /// <p>Whether manual initiation of logical backup is supported</p>
         /// </summary>
         [JsonProperty("IsSupportManualLogic")]
         public string IsSupportManualLogic{ get; set; }
 
         /// <summary>
-        /// Enable global encryption.
+        /// <p>Whether global encryption can be enabled</p>
         /// </summary>
         [JsonProperty("IsSupportGlobalEncryption")]
         public string IsSupportGlobalEncryption{ get; set; }
 
         /// <summary>
-        /// The causes for unsupported global encryption.
+        /// <p>The causes for unsupported global encryption</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReason")]
         public string NoSupportGlobalEncryptionReason{ get; set; }
 
         /// <summary>
-        /// Status code for unsupported tde reason.
+        /// <p>Status code for unsupported transparent encryption reason</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReasonCode")]
         public string NoSupportTransparentDataEncryptionReasonCode{ get; set; }
 
         /// <summary>
-        /// Status code for unsupported global encryption.
+        /// <p>Status code for unsupported global encryption reason</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReasonCode")]
         public string NoSupportGlobalEncryptionReasonCode{ get; set; }

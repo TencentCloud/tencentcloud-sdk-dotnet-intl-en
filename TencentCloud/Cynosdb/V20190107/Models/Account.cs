@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database account name
+        /// <p>Database account name.</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Host
+        /// <p>host</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Database account description
+        /// <p>Database account description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// <p>Update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The max connections
+        /// <p>Maximum user connections</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }
 
         /// <summary>
-        /// Whether password rotation is enabled (0: turn off; 1: turn on)
+        /// <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
         /// </summary>
         [JsonProperty("PasswordRotation")]
         public long? PasswordRotation{ get; set; }

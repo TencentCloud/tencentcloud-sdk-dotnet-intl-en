@@ -25,31 +25,31 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// The ckafka cluster instance Id.
+        /// <p>ckafka cluster instance Id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 1. smooth configuration upgrade 2. vertical configuration upgrade.
+        /// <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Version number
+        /// <p>Version number.</p>
         /// </summary>
         [JsonProperty("SourceVersion")]
         public string SourceVersion{ get; set; }
 
         /// <summary>
-        /// Version number
+        /// <p>Version number.</p>
         /// </summary>
         [JsonProperty("TargetVersion")]
         public string TargetVersion{ get; set; }
 
         /// <summary>
-        /// Delay time.
+        /// <p>Delay time</p>
         /// </summary>
         [JsonProperty("DelayTimeStamp")]
         public string DelayTimeStamp{ get; set; }

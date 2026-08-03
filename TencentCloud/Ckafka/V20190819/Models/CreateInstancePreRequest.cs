@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+        /// <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+        /// <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
         /// </summary>
         [JsonProperty("SpecificationsType")]
         public string SpecificationsType{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+        /// <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -162,6 +162,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("CustomSSLCertId")]
         public string CustomSSLCertId{ get; set; }
 
+        /// <summary>
+        /// <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("StoreQuantityType")]
+        public long? StoreQuantityType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +197,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
             this.SetParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
+            this.SetParamSimple(map, prefix + "StoreQuantityType", this.StoreQuantityType);
         }
     }
 }

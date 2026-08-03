@@ -198,6 +198,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("FromSaveBackup")]
         public bool? FromSaveBackup{ get; set; }
 
+        /// <summary>
+        /// <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+        /// </summary>
+        [JsonProperty("SyncWay")]
+        public string SyncWay{ get; set; }
+
+        /// <summary>
+        /// <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+        /// </summary>
+        [JsonProperty("SemiSyncTimeout")]
+        public long? SemiSyncTimeout{ get; set; }
+
+        /// <summary>
+        /// <p>Standby availability zone</p>
+        /// </summary>
+        [JsonProperty("SlaveZone")]
+        public string SlaveZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +251,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
             this.SetParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
+            this.SetParamSimple(map, prefix + "SyncWay", this.SyncWay);
+            this.SetParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
+            this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         }
     }
 }
