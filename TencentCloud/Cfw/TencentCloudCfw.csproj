@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1366</VersionPrefix>
+    <VersionPrefix>3.0.1367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20190904\Models\BlockIgnoreRule.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\CfwStatusMonitorFilter.cs" />
+    <Compile Include="V20190904\Models\Column.cs" />
     <Compile Include="V20190904\Models\CommonFilter.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
@@ -148,6 +149,9 @@
     <Compile Include="V20190904\Models\InstanceInfo.cs" />
     <Compile Include="V20190904\Models\IocListData.cs" />
     <Compile Include="V20190904\Models\IpStatic.cs" />
+    <Compile Include="V20190904\Models\LogInfo.cs" />
+    <Compile Include="V20190904\Models\LogItem.cs" />
+    <Compile Include="V20190904\Models\LogItems.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusRequest.cs" />
@@ -192,6 +196,7 @@
     <Compile Include="V20190904\Models\ModifyStorageSettingResponse.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="V20190904\Models\MultiTopicSearchInformation.cs" />
     <Compile Include="V20190904\Models\NatFwFilter.cs" />
     <Compile Include="V20190904\Models\NatFwInstance.cs" />
     <Compile Include="V20190904\Models\NatInstanceInfo.cs" />
@@ -206,6 +211,11 @@
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\ScanInfo.cs" />
     <Compile Include="V20190904\Models\ScanResultInfo.cs" />
+    <Compile Include="V20190904\Models\SearchLogErrors.cs" />
+    <Compile Include="V20190904\Models\SearchLogInfos.cs" />
+    <Compile Include="V20190904\Models\SearchLogRequest.cs" />
+    <Compile Include="V20190904\Models\SearchLogResponse.cs" />
+    <Compile Include="V20190904\Models\SearchLogTopics.cs" />
     <Compile Include="V20190904\Models\SecurityGroupBothWayInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupOrderIndexData.cs" />

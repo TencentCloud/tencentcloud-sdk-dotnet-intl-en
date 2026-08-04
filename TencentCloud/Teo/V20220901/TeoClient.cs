@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -521,6 +521,48 @@ namespace TencentCloud.Teo.V20220901
         public CreateFunctionRuleResponse CreateFunctionRuleSync(CreateFunctionRuleRequest req)
         {
             return InternalRequestAsync<CreateFunctionRuleResponse>(req, "CreateFunctionRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
+        public Task<CreateInferenceAPITokenResponse> CreateInferenceAPIToken(CreateInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceAPITokenResponse>(req, "CreateInferenceAPIToken");
+        }
+
+        /// <summary>
+        /// Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
+        public CreateInferenceAPITokenResponse CreateInferenceAPITokenSync(CreateInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceAPITokenResponse>(req, "CreateInferenceAPIToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public Task<CreateInferenceServiceResponse> CreateInferenceService(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService");
+        }
+
+        /// <summary>
+        /// This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
+        /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
+        public CreateInferenceServiceResponse CreateInferenceServiceSync(CreateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceServiceResponse>(req, "CreateInferenceService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1265,6 +1307,27 @@ namespace TencentCloud.Teo.V20220901
         public DeleteFunctionRulesResponse DeleteFunctionRulesSync(DeleteFunctionRulesRequest req)
         {
             return InternalRequestAsync<DeleteFunctionRulesResponse>(req, "DeleteFunctionRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
+        public Task<DeleteInferenceAPITokenResponse> DeleteInferenceAPIToken(DeleteInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceAPITokenResponse>(req, "DeleteInferenceAPIToken");
+        }
+
+        /// <summary>
+        /// This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
+        /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
+        public DeleteInferenceAPITokenResponse DeleteInferenceAPITokenSync(DeleteInferenceAPITokenRequest req)
+        {
+            return InternalRequestAsync<DeleteInferenceAPITokenResponse>(req, "DeleteInferenceAPIToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2233,6 +2296,132 @@ namespace TencentCloud.Teo.V20220901
         public DescribeIdentificationsResponse DescribeIdentificationsSync(DescribeIdentificationsRequest req)
         {
             return InternalRequestAsync<DescribeIdentificationsResponse>(req, "DescribeIdentifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
+        /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
+        public Task<DescribeInferenceAPITokensResponse> DescribeInferenceAPITokens(DescribeInferenceAPITokensRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceAPITokensResponse>(req, "DescribeInferenceAPITokens");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
+        /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
+        public DescribeInferenceAPITokensResponse DescribeInferenceAPITokensSync(DescribeInferenceAPITokensRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceAPITokensResponse>(req, "DescribeInferenceAPITokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
+        public Task<DescribeInferenceHardwareSpecificationsResponse> DescribeInferenceHardwareSpecifications(DescribeInferenceHardwareSpecificationsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceHardwareSpecificationsResponse>(req, "DescribeInferenceHardwareSpecifications");
+        }
+
+        /// <summary>
+        /// This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
+        public DescribeInferenceHardwareSpecificationsResponse DescribeInferenceHardwareSpecificationsSync(DescribeInferenceHardwareSpecificationsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceHardwareSpecificationsResponse>(req, "DescribeInferenceHardwareSpecifications")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
+        public Task<DescribeInferenceServiceDeploymentLogsResponse> DescribeInferenceServiceDeploymentLogs(DescribeInferenceServiceDeploymentLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentLogsResponse>(req, "DescribeInferenceServiceDeploymentLogs");
+        }
+
+        /// <summary>
+        /// This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
+        public DescribeInferenceServiceDeploymentLogsResponse DescribeInferenceServiceDeploymentLogsSync(DescribeInferenceServiceDeploymentLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentLogsResponse>(req, "DescribeInferenceServiceDeploymentLogs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
+        public Task<DescribeInferenceServiceDeploymentRecordsResponse> DescribeInferenceServiceDeploymentRecords(DescribeInferenceServiceDeploymentRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentRecordsResponse>(req, "DescribeInferenceServiceDeploymentRecords");
+        }
+
+        /// <summary>
+        /// This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
+        public DescribeInferenceServiceDeploymentRecordsResponse DescribeInferenceServiceDeploymentRecordsSync(DescribeInferenceServiceDeploymentRecordsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceDeploymentRecordsResponse>(req, "DescribeInferenceServiceDeploymentRecords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
+        public Task<DescribeInferenceServiceMonitorDataResponse> DescribeInferenceServiceMonitorData(DescribeInferenceServiceMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceMonitorDataResponse>(req, "DescribeInferenceServiceMonitorData");
+        }
+
+        /// <summary>
+        /// This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
+        public DescribeInferenceServiceMonitorDataResponse DescribeInferenceServiceMonitorDataSync(DescribeInferenceServiceMonitorDataRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServiceMonitorDataResponse>(req, "DescribeInferenceServiceMonitorData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
+        public Task<DescribeInferenceServicesResponse> DescribeInferenceServices(DescribeInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServicesResponse>(req, "DescribeInferenceServices");
+        }
+
+        /// <summary>
+        /// This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
+        /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
+        public DescribeInferenceServicesResponse DescribeInferenceServicesSync(DescribeInferenceServicesRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceServicesResponse>(req, "DescribeInferenceServices")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3958,6 +4147,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
+        /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
+        public Task<ModifyInferenceServiceResponse> ModifyInferenceService(ModifyInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyInferenceServiceResponse>(req, "ModifyInferenceService");
+        }
+
+        /// <summary>
+        /// This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
+        /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
+        public ModifyInferenceServiceResponse ModifyInferenceServiceSync(ModifyInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<ModifyInferenceServiceResponse>(req, "ModifyInferenceService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the configuration of a Layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
@@ -4588,6 +4798,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneWorkModeResponse ModifyZoneWorkModeSync(ModifyZoneWorkModeRequest req)
         {
             return InternalRequestAsync<ModifyZoneWorkModeResponse>(req, "ModifyZoneWorkMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
+        /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
+        public Task<OperateInferenceServiceResponse> OperateInferenceService(OperateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceServiceResponse>(req, "OperateInferenceService");
+        }
+
+        /// <summary>
+        /// This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
+        /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
+        public OperateInferenceServiceResponse OperateInferenceServiceSync(OperateInferenceServiceRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceServiceResponse>(req, "OperateInferenceService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

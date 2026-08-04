@@ -106,7 +106,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         public VideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+        /// Note: This field may return null, indicating that no valid value can be retrieved.
+        /// Example value: http://replayurl
         /// </summary>
         [JsonProperty("ReplayUrl")]
         public string ReplayUrl{ get; set; }

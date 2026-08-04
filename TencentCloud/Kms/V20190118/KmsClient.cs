@@ -28,7 +28,7 @@ namespace TencentCloud.Kms.V20190118
 
        private const string endpoint = "kms.intl.tencentcloudapi.com";
        private const string version = "2019-01-18";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -1291,6 +1291,27 @@ namespace TencentCloud.Kms.V20190118
         public ReEncryptResponse ReEncryptSync(ReEncryptRequest req)
         {
             return InternalRequestAsync<ReEncryptResponse>(req, "ReEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Rotate the designated customer master key immediately. You can call DescribeKey to return the last rotation time and the next rotation time, and determine whether the rotation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RotateKeyRequest"/></param>
+        /// <returns><see cref="RotateKeyResponse"/></returns>
+        public Task<RotateKeyResponse> RotateKey(RotateKeyRequest req)
+        {
+            return InternalRequestAsync<RotateKeyResponse>(req, "RotateKey");
+        }
+
+        /// <summary>
+        /// Rotate the designated customer master key immediately. You can call DescribeKey to return the last rotation time and the next rotation time, and determine whether the rotation is successful.
+        /// </summary>
+        /// <param name="req"><see cref="RotateKeyRequest"/></param>
+        /// <returns><see cref="RotateKeyResponse"/></returns>
+        public RotateKeyResponse RotateKeySync(RotateKeyRequest req)
+        {
+            return InternalRequestAsync<RotateKeyResponse>(req, "RotateKey")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

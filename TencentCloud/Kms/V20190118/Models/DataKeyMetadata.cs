@@ -25,148 +25,154 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// DataKey globally unique id.
+        /// <p>Globally unique ID of the DataKey</p>
         /// </summary>
         [JsonProperty("DataKeyId")]
         public string DataKeyId{ get; set; }
 
         /// <summary>
-        /// Globally unique id of the CMK.
+        /// <p>Globally unique ID of the CMK.</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// CMK name.
+        /// <p>CMK name</p>
         /// </summary>
         [JsonProperty("KeyName")]
         public string KeyName{ get; set; }
 
         /// <summary>
-        /// Key name as a more recognizable and understandable data key.
+        /// <p>Data key name that is easier to identify and understand as a key</p>
         /// </summary>
         [JsonProperty("DataKeyName")]
         public string DataKeyName{ get; set; }
 
         /// <summary>
-        /// Specifies the length of the data key in bytes.
+        /// <p>Length of the data key, in bytes</p>
         /// </summary>
         [JsonProperty("NumberOfBytes")]
         public ulong? NumberOfBytes{ get; set; }
 
         /// <summary>
-        /// Key key creation time.
+        /// <p>Key creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// DataKey description.
+        /// <p>Description of DataKey</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// DataKey status. valid values: Enabled, Disabled, PendingDelete.
+        /// <p>DataKey state, value: Enabled | Disabled | PendingDelete</p>
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// Creator.
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreatorUin")]
         public ulong? CreatorUin{ get; set; }
 
         /// <summary>
-        /// Specifies the creator of the data key. valid values: user (user-created) or product name (auto-created by authorized cloud services).
+        /// <p>Creator of the data key. For user-created keys, it is user; for keys automatically created by authorized cloud services, it is the corresponding product name.</p>
         /// </summary>
         [JsonProperty("Owner")]
         public string Owner{ get; set; }
 
         /// <summary>
-        /// The time when schedule deletion.
+        /// <p>Schedule deletion time</p>
         /// </summary>
         [JsonProperty("DeletionDate")]
         public ulong? DeletionDate{ get; set; }
 
         /// <summary>
-        /// Specifies the key material type of DataKey. valid values: TENCENT_KMS (created by KMS), EXTERNAL (user import).
+        /// <p>DataKey key material type. For keys created by KMS: TENCENT_KMS. For keys of user import type: EXTERNAL.</p>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// HSM cluster ID (only applicable to KMS exclusive/managed service instance).
+        /// <p>HSM Cluster ID (only applicable to KMS exclusive edition/managed version service instances)</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
         /// <summary>
-        /// Resource ID in the format of `creatorUin/$creatorUin/$dataKeyId`.
+        /// <p>Resource ID, format: creatorUin/$creatorUin/$dataKeyId</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Whether the key is a primary replica. valid values: `0` (primary), `1` (synced replica).
+        /// <p>Whether the key is a primary replica. 0: primary replica, 1: synced replica.</p>
         /// </summary>
         [JsonProperty("IsSyncReplica")]
         public long? IsSyncReplica{ get; set; }
 
         /// <summary>
-        /// Synchronous original region.
+        /// <p>Synchronous original region</p>
         /// </summary>
         [JsonProperty("SourceRegion")]
         public string SourceRegion{ get; set; }
 
         /// <summary>
-        /// The state of key synchronization. valid values: 0 (unsynced), 1 (synchronization successful), 2 (synchronization failed), 3 (synchronizing).
+        /// <p>Key synchronization status. 0: unsynced, 1: synchronization successful, 2: synchronization failure, 3: syncing.</p>
         /// </summary>
         [JsonProperty("SyncStatus")]
         public long? SyncStatus{ get; set; }
 
         /// <summary>
-        /// Sresult description}.
+        /// <p>Synchronous result description</p>
         /// </summary>
         [JsonProperty("SyncMessages")]
         public string SyncMessages{ get; set; }
 
         /// <summary>
-        /// Start time of synchronization.
+        /// <p>Start time of synchronization</p>
         /// </summary>
         [JsonProperty("SyncStartTime")]
         public ulong? SyncStartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the synchronous end time.
+        /// <p>Synchronous end time</p>
         /// </summary>
         [JsonProperty("SyncEndTime")]
         public ulong? SyncEndTime{ get; set; }
 
         /// <summary>
-        /// Synchronous original cluster. if empty, it is a public cloud public cluster.
+        /// <p>Synchronous primitive cluster. If empty, it is a public cloud public cluster.</p>
         /// </summary>
         [JsonProperty("SourceHsmClusterId")]
         public string SourceHsmClusterId{ get; set; }
 
         /// <summary>
-        /// Member account appId.
+        /// <p>Member account appId</p>
         /// </summary>
         [JsonProperty("AccountAppId")]
         public ulong? AccountAppId{ get; set; }
 
         /// <summary>
-        /// Member account UIN
+        /// <p>member account uin</p>
         /// </summary>
         [JsonProperty("AccountUin")]
         public ulong? AccountUin{ get; set; }
 
         /// <summary>
-        /// Member account name.
+        /// <p>Enter the member account name.</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
+
+        /// <summary>
+        /// <p>Creator UIN</p>
+        /// </summary>
+        [JsonProperty("CreatorUinString")]
+        public string CreatorUinString{ get; set; }
 
 
         /// <summary>
@@ -198,6 +204,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
             this.SetParamSimple(map, prefix + "AccountUin", this.AccountUin);
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
+            this.SetParamSimple(map, prefix + "CreatorUinString", this.CreatorUinString);
         }
     }
 }

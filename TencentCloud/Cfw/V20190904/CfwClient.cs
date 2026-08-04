@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.intl.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1367";
 
         /// <summary>
         /// Client constructor.
@@ -1444,6 +1444,33 @@ namespace TencentCloud.Cfw.V20190904
         public RemoveNatAcRuleResponse RemoveNatAcRuleSync(RemoveNatAcRuleRequest req)
         {
             return InternalRequestAsync<RemoveNatAcRuleResponse>(req, "RemoveNatAcRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+        /// 1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries must not exceed 15.
+        /// 2. For search syntax, it's recommended to use the dedicated CQL syntax rule for log service. Please use the SyntaxRule parameter and set its value to 1. The console uses this syntax rule by default.
+        /// 3. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public Task<SearchLogResponse> SearchLog(SearchLogRequest req)
+        {
+            return InternalRequestAsync<SearchLogResponse>(req, "SearchLog");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+        /// 1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries must not exceed 15.
+        /// 2. For search syntax, it's recommended to use the dedicated CQL syntax rule for log service. Please use the SyntaxRule parameter and set its value to 1. The console uses this syntax rule by default.
+        /// 3. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+        /// </summary>
+        /// <param name="req"><see cref="SearchLogRequest"/></param>
+        /// <returns><see cref="SearchLogResponse"/></returns>
+        public SearchLogResponse SearchLogSync(SearchLogRequest req)
+        {
+            return InternalRequestAsync<SearchLogResponse>(req, "SearchLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
