@@ -21,34 +21,26 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class EmbeddingDataRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Embedding model; currently only supports text_embedding_v1</p><p>Enumeration values: </p><ul><li>text_embedding_v1: The text embedding model. Prompt can be filled.</li></ul>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
 
         /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Embedding input</p>
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("Files")]
+        public EmbeddingData[] Files{ get; set; }
 
         /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
+        /// <p>Prompt for embedding input</p>
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+            this.SetParamArrayObj(map, prefix + "Files.", this.Files);
+            this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
         }
     }
 }

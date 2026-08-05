@@ -85,6 +85,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public AigcVideoReferenceVideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
+        /// <p>Some models support reference audio input via URL.</p>
+        /// </summary>
+        [JsonProperty("AudioInfos")]
+        public AigcVideoReferenceAudioInfo[] AudioInfos{ get; set; }
+
+        /// <summary>
         /// <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>
         /// </summary>
         [JsonProperty("Duration")]
@@ -130,6 +136,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "LastImageUrl", this.LastImageUrl);
             this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
             this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
+            this.SetParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
             this.SetParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

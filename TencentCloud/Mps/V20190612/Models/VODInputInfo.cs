@@ -25,28 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the Bucket ID where the input file resides.
+        /// <p><em>Bucket ID</em> where the media processing object file resides</p>
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// Specifies the region where the input file's Bucket resides.
+        /// <p>Region of the Bucket where the media processing object file resides</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Path of the input file.
+        /// <p>Input path of the media processing object file</p>
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }
 
         /// <summary>
-        /// VOD Pro application Id.
+        /// <p>VOD application ID.</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("VodBasic")]
+        public long? VodBasic{ get; set; }
+
+        /// <summary>
+        /// <p>VOD Standard Edition FileId</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Object", this.Object);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "VodBasic", this.VodBasic);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
 }

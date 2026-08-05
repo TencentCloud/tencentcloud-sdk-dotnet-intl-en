@@ -48,6 +48,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
+        /// <summary>
+        /// <p>Additional results, currently including subtitle file result URLs</p>
+        /// </summary>
+        [JsonProperty("ExtraOutput")]
+        public string ExtraOutput{ get; set; }
+
+        /// <summary>
+        /// <p>FileId of the dubbed video.</p>
+        /// </summary>
+        [JsonProperty("VideoFileId")]
+        public string VideoFileId{ get; set; }
+
+        /// <summary>
+        /// <p>FileId of the tag file.</p>
+        /// </summary>
+        [JsonProperty("SpeakerFileId")]
+        public string SpeakerFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+            this.SetParamSimple(map, prefix + "ExtraOutput", this.ExtraOutput);
+            this.SetParamSimple(map, prefix + "VideoFileId", this.VideoFileId);
+            this.SetParamSimple(map, prefix + "SpeakerFileId", this.SpeakerFileId);
         }
     }
 }

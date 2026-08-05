@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1350";
+       private const string sdkVersion = "SDK_NET_3.0.1368";
 
         /// <summary>
         /// Client constructor.
@@ -73,6 +73,27 @@ namespace TencentCloud.Mps.V20190612
         public BatchProcessMediaResponse BatchProcessMediaSync(BatchProcessMediaRequest req)
         {
             return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
+        /// </summary>
+        /// <param name="req"><see cref="CloneViralRequest"/></param>
+        /// <returns><see cref="CloneViralResponse"/></returns>
+        public Task<CloneViralResponse> CloneViral(CloneViralRequest req)
+        {
+            return InternalRequestAsync<CloneViralResponse>(req, "CloneViral");
+        }
+
+        /// <summary>
+        /// Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
+        /// </summary>
+        /// <param name="req"><see cref="CloneViralRequest"/></param>
+        /// <returns><see cref="CloneViralResponse"/></returns>
+        public CloneViralResponse CloneViralSync(CloneViralRequest req)
+        {
+            return InternalRequestAsync<CloneViralResponse>(req, "CloneViral")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -136,6 +157,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplateSync(CreateAdaptiveDynamicStreamingTemplateRequest req)
         {
             return InternalRequestAsync<CreateAdaptiveDynamicStreamingTemplateResponse>(req, "CreateAdaptiveDynamicStreamingTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// AI comic workflow, input a playbook, automatically split scenes, generate an AI comic
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiDramaTaskRequest"/></param>
+        /// <returns><see cref="CreateAiDramaTaskResponse"/></returns>
+        public Task<CreateAiDramaTaskResponse> CreateAiDramaTask(CreateAiDramaTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask");
+        }
+
+        /// <summary>
+        /// AI comic workflow, input a playbook, automatically split scenes, generate an AI comic
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiDramaTaskRequest"/></param>
+        /// <returns><see cref="CreateAiDramaTaskResponse"/></returns>
+        public CreateAiDramaTaskResponse CreateAiDramaTaskSync(CreateAiDramaTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -283,6 +325,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateContentReviewTemplateResponse CreateContentReviewTemplateSync(CreateContentReviewTemplateRequest req)
         {
             return InternalRequestAsync<CreateContentReviewTemplateResponse>(req, "CreateContentReviewTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creates an AIGC document-to-video task
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>
+        public Task<CreateDocToVideoTaskResponse> CreateDocToVideoTask(CreateDocToVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDocToVideoTaskResponse>(req, "CreateDocToVideoTask");
+        }
+
+        /// <summary>
+        /// Creates an AIGC document-to-video task
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
+        /// <returns><see cref="CreateDocToVideoTaskResponse"/></returns>
+        public CreateDocToVideoTaskResponse CreateDocToVideoTaskSync(CreateDocToVideoTaskRequest req)
+        {
+            return InternalRequestAsync<CreateDocToVideoTaskResponse>(req, "CreateDocToVideoTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -588,6 +651,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateTranscodeTemplateResponse CreateTranscodeTemplateSync(CreateTranscodeTemplateRequest req)
         {
             return InternalRequestAsync<CreateTranscodeTemplateResponse>(req, "CreateTranscodeTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creates an AIGC redrawing task
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public Task<CreateVideoRedrawTaskResponse> CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask");
+        }
+
+        /// <summary>
+        /// Creates an AIGC redrawing task
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoRedrawTaskRequest"/></param>
+        /// <returns><see cref="CreateVideoRedrawTaskResponse"/></returns>
+        public CreateVideoRedrawTaskResponse CreateVideoRedrawTaskSync(CreateVideoRedrawTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVideoRedrawTaskResponse>(req, "CreateVideoRedrawTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1290,6 +1374,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// Queries AIGC scenario task APIs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskStatusResponse"/></returns>
+        public Task<DescribeAigcTaskStatusResponse> DescribeAigcTaskStatus(DescribeAigcTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskStatusResponse>(req, "DescribeAigcTaskStatus");
+        }
+
+        /// <summary>
+        /// Queries AIGC scenario task APIs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskStatusRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskStatusResponse"/></returns>
+        public DescribeAigcTaskStatusResponse DescribeAigcTaskStatusSync(DescribeAigcTaskStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskStatusResponse>(req, "DescribeAigcTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
         /// </summary>
         /// <param name="req"><see cref="DescribeAigcVideoTaskRequest"/></param>
@@ -1416,6 +1521,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// Queries the results of a hit product clone task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneViralTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloneViralTaskResponse"/></returns>
+        public Task<DescribeCloneViralTaskResponse> DescribeCloneViralTask(DescribeCloneViralTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloneViralTaskResponse>(req, "DescribeCloneViralTask");
+        }
+
+        /// <summary>
+        /// Queries the results of a hit product clone task
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloneViralTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloneViralTaskResponse"/></returns>
+        public DescribeCloneViralTaskResponse DescribeCloneViralTaskSync(DescribeCloneViralTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloneViralTaskResponse>(req, "DescribeCloneViralTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
@@ -1496,6 +1622,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeImageTaskDetailResponse DescribeImageTaskDetailSync(DescribeImageTaskDetailRequest req)
         {
             return InternalRequestAsync<DescribeImageTaskDetailResponse>(req, "DescribeImageTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Image processing task query API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTasksRequest"/></param>
+        /// <returns><see cref="DescribeImageTasksResponse"/></returns>
+        public Task<DescribeImageTasksResponse> DescribeImageTasks(DescribeImageTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTasksResponse>(req, "DescribeImageTasks");
+        }
+
+        /// <summary>
+        /// Image processing task query API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageTasksRequest"/></param>
+        /// <returns><see cref="DescribeImageTasksResponse"/></returns>
+        public DescribeImageTasksResponse DescribeImageTasksSync(DescribeImageTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeImageTasksResponse>(req, "DescribeImageTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2099,6 +2246,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// Model embedding API
+        /// </summary>
+        /// <param name="req"><see cref="EmbeddingDataRequest"/></param>
+        /// <returns><see cref="EmbeddingDataResponse"/></returns>
+        public Task<EmbeddingDataResponse> EmbeddingData(EmbeddingDataRequest req)
+        {
+            return InternalRequestAsync<EmbeddingDataResponse>(req, "EmbeddingData");
+        }
+
+        /// <summary>
+        /// Model embedding API
+        /// </summary>
+        /// <param name="req"><see cref="EmbeddingDataRequest"/></param>
+        /// <returns><see cref="EmbeddingDataResponse"/></returns>
+        public EmbeddingDataResponse EmbeddingDataSync(EmbeddingDataRequest req)
+        {
+            return InternalRequestAsync<EmbeddingDataResponse>(req, "EmbeddingData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable a scheme.
         /// </summary>
         /// <param name="req"><see cref="EnableScheduleRequest"/></param>
@@ -2695,10 +2863,11 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate image processing, with features including:
-        /// 1. Format conversion.
-        /// 2. Image enhancement.
-        /// 3. Image erasure.
+        /// This API is used to initiate image processing. Its features include:
+        /// 1. Format conversion;
+        /// 2. Image enhancement;
+        /// 3. Image erasure;4. Digital watermark;
+        /// 5. Beauty filter;
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>
@@ -2708,10 +2877,11 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate image processing, with features including:
-        /// 1. Format conversion.
-        /// 2. Image enhancement.
-        /// 3. Image erasure.
+        /// This API is used to initiate image processing. Its features include:
+        /// 1. Format conversion;
+        /// 2. Image enhancement;
+        /// 3. Image erasure;4. Digital watermark;
+        /// 5. Beauty filter;
         /// </summary>
         /// <param name="req"><see cref="ProcessImageRequest"/></param>
         /// <returns><see cref="ProcessImageResponse"/></returns>

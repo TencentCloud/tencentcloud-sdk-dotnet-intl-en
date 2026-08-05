@@ -21,34 +21,26 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class VideoDramaCosInfo : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>cos bucket region</p>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("CosBucketRegion")]
+        public string CosBucketRegion{ get; set; }
 
         /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>cos bucket name</p>
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("CosBucketName")]
+        public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
+        /// <p>cos bucket path</p>
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("CosBucketPath")]
+        public string CosBucketPath{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "CosBucketPath", this.CosBucketPath);
         }
     }
 }

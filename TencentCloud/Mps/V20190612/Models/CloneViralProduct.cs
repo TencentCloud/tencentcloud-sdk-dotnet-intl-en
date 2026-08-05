@@ -21,34 +21,26 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class CloneViralProduct : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Product image</p>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("Images")]
+        public string[] Images{ get; set; }
 
         /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Product name</p>
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
+        /// <p>Product description</p>
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamArraySimple(map, prefix + "Images.", this.Images);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

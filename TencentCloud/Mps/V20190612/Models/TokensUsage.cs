@@ -21,34 +21,26 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class TokensUsage : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Input token count</p>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("InputTokens")]
+        public ulong? InputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Output token count</p>
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("OutputTokens")]
+        public ulong? OutputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
+        /// <p>Total token count, generally input + output</p>
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("TotalTokens")]
+        public ulong? TotalTokens{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "InputTokens", this.InputTokens);
+            this.SetParamSimple(map, prefix + "OutputTokens", this.OutputTokens);
+            this.SetParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
         }
     }
 }

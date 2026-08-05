@@ -21,34 +21,21 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class AiRestorationConfig : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
+        /// <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// <p>Strength type</p><p>Enumeration values: </p><ul><li>weak: Weak</li><li>normal: Medium</li><li>strong: Strong</li></ul><p>Default value: normal</p>
         /// Attention: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
-
-        /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
-        /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
-
-        /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
-        /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -56,10 +43,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

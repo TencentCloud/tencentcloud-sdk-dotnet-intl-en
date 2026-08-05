@@ -21,44 +21,44 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SubtitleTransResultItem : AbstractModel
+    public class DescribeImageTasksRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
+        /// <p>Task status filter condition.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Source language (such as "en")</p>
+        /// <p>Number of returned records.</p>
         /// </summary>
-        [JsonProperty("TransSrc")]
-        public string TransSrc{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Target language (such as "zh")</p>
+        /// <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
         /// </summary>
-        [JsonProperty("TransDst")]
-        public string TransDst{ get; set; }
+        [JsonProperty("ScrollToken")]
+        public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle file URL</p>
+        /// <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle translation suppression video path.</p>
+        /// <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
         /// </summary>
-        [JsonProperty("SubtitleEmbedPath")]
-        public string SubtitleEmbedPath{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>FileId of the subtitle file.</p>
+        /// <p>Filter subtask status.</p>
         /// </summary>
-        [JsonProperty("SubtitleFileId")]
-        public string SubtitleFileId{ get; set; }
+        [JsonProperty("SubTaskHasFailed")]
+        public bool? SubTaskHasFailed{ get; set; }
 
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "TransSrc", this.TransSrc);
-            this.SetParamSimple(map, prefix + "TransDst", this.TransDst);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
-            this.SetParamSimple(map, prefix + "SubtitleFileId", this.SubtitleFileId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SubTaskHasFailed", this.SubTaskHasFailed);
         }
     }
 }

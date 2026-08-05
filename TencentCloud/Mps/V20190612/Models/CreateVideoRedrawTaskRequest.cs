@@ -21,34 +21,26 @@ namespace TencentCloud.Mps.V20190612.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ImageProcessTaskOutput : AbstractModel
+    public class CreateVideoRedrawTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Path of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Input the url information of the video to be redrawn</p>
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("Input")]
+        public VideoRedrawInput Input{ get; set; }
 
         /// <summary>
-        /// <p>Storage location of the output file.</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// <p>User cos information, used to store the generation result</p>
         /// </summary>
-        [JsonProperty("OutputStorage")]
-        public TaskOutputStorage OutputStorage{ get; set; }
+        [JsonProperty("CosInfo")]
+        public VideoRedrawCosInfo CosInfo{ get; set; }
 
         /// <summary>
-        /// <p>Processing result of the image-to-text task.</p>
+        /// <p>ai redrawing task information</p>
         /// </summary>
-        [JsonProperty("Content")]
-        public string Content{ get; set; }
-
-        /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("TaskInfo")]
+        public VideoRedrawTaskInfo TaskInfo{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-            this.SetParamSimple(map, prefix + "Content", this.Content);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "Input.", this.Input);
+            this.SetParamObj(map, prefix + "CosInfo.", this.CosInfo);
+            this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
         }
     }
 }

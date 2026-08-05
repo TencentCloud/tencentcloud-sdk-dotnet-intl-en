@@ -114,6 +114,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("AddOnAudios")]
         public AddOnAudio[] AddOnAudios{ get; set; }
 
+        /// <summary>
+        /// <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+        /// </summary>
+        [JsonProperty("StdExtStreamInfos")]
+        public AdaptiveStreamTemplate[] StdExtStreamInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
             this.SetParamArraySimple(map, prefix + "KeyPTSList.", this.KeyPTSList);
             this.SetParamArrayObj(map, prefix + "AddOnAudios.", this.AddOnAudios);
+            this.SetParamArrayObj(map, prefix + "StdExtStreamInfos.", this.StdExtStreamInfos);
         }
     }
 }

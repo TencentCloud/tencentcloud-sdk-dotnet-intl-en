@@ -69,6 +69,36 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VoiceClonedMarkFile")]
         public string VoiceClonedMarkFile{ get; set; }
 
+        /// <summary>
+        /// <p>Result path of a video for removal only</p>
+        /// </summary>
+        [JsonProperty("ErasedVideoPath")]
+        public string ErasedVideoPath{ get; set; }
+
+        /// <summary>
+        /// <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+        /// </summary>
+        [JsonProperty("DubbingEditInfoUrl")]
+        public string DubbingEditInfoUrl{ get; set; }
+
+        /// <summary>
+        /// <p>FileId of a file after removal.</p>
+        /// </summary>
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
+
+        /// <summary>
+        /// <p>FileId of the subtitle file extracted from video.</p>
+        /// </summary>
+        [JsonProperty("OriginSubtitleFileId")]
+        public string OriginSubtitleFileId{ get; set; }
+
+        /// <summary>
+        /// <p>FileId of a subtitle translation file extracted from a video.</p>
+        /// </summary>
+        [JsonProperty("TranslateSubtitleFileId")]
+        public string TranslateSubtitleFileId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +112,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "SubtitlePos.", this.SubtitlePos);
             this.SetParamSimple(map, prefix + "VoiceClonedVideo", this.VoiceClonedVideo);
             this.SetParamSimple(map, prefix + "VoiceClonedMarkFile", this.VoiceClonedMarkFile);
+            this.SetParamSimple(map, prefix + "ErasedVideoPath", this.ErasedVideoPath);
+            this.SetParamSimple(map, prefix + "DubbingEditInfoUrl", this.DubbingEditInfoUrl);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "OriginSubtitleFileId", this.OriginSubtitleFileId);
+            this.SetParamSimple(map, prefix + "TranslateSubtitleFileId", this.TranslateSubtitleFileId);
         }
     }
 }
