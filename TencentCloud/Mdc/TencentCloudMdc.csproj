@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{468070DF-0A9C-33D2-AFC7-D2A39B59B45C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1328</VersionPrefix>
+    <VersionPrefix>3.0.1369</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,7 @@
     <Compile Include="V20200828\Models\CreateOutputInfoRTPSettings.cs" />
     <Compile Include="V20200828\Models\CreateOutputRTMPSettings.cs" />
     <Compile Include="V20200828\Models\CreateOutputRTPSettingsDestinations.cs" />
+    <Compile Include="V20200828\Models\CreateOutputRistSettings.cs" />
     <Compile Include="V20200828\Models\CreateOutputRtmpSettingsDestinations.cs" />
     <Compile Include="V20200828\Models\CreateOutputSrtSettings.cs" />
     <Compile Include="V20200828\Models\CreateOutputSrtSettingsDestinations.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="V20200828\Models\ModifyStreamLinkOutputInfoResponse.cs" />
     <Compile Include="V20200828\Models\OutputAddress.cs" />
     <Compile Include="V20200828\Models\OutputSRTSourceAddressResp.cs" />
+    <Compile Include="V20200828\Models\PidSelector.cs" />
     <Compile Include="V20200828\Models\RTMPAddressDestination.cs" />
     <Compile Include="V20200828\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\RTPAddressDestination.cs" />
@@ -148,5 +150,7 @@
     <Compile Include="V20200828\Models\StopStreamLinkFlowRequest.cs" />
     <Compile Include="V20200828\Models\StopStreamLinkFlowResponse.cs" />
     <Compile Include="V20200828\Models\StreamLinkRegionInfo.cs" />
+    <Compile Include="V20200828\Models\StreamSelector.cs" />
+    <Compile Include="V20200828\Models\TrackSelector.cs" />
   </ItemGroup>
 </Project>

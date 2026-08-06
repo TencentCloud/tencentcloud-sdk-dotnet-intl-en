@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1352";
+       private const string sdkVersion = "SDK_NET_3.0.1369";
 
         /// <summary>
         /// Client constructor.
@@ -417,7 +417,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// NFC verification service, obtain Token information for the NFC identify request.
+        /// NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
         /// </summary>
         /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
         /// <returns><see cref="GetNFCTokenResponse"/></returns>
@@ -427,7 +427,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// NFC verification service, obtain Token information for the NFC identify request.
+        /// NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
         /// </summary>
         /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
         /// <returns><see cref="GetNFCTokenResponse"/></returns>

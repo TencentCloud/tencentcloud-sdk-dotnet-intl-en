@@ -49,6 +49,18 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string Protocol{ get; set; }
 
         /// <summary>
+        /// Output Type: Internet/Tencent CSS/StreamLive
+        /// </summary>
+        [JsonProperty("OutputType")]
+        public string OutputType{ get; set; }
+
+        /// <summary>
+        /// Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+        /// </summary>
+        [JsonProperty("OutputKind")]
+        public string OutputKind{ get; set; }
+
+        /// <summary>
         /// The SRT relay configuration.
         /// </summary>
         [JsonProperty("SRTSettings")]
@@ -84,6 +96,31 @@ namespace TencentCloud.Mdc.V20200828.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// Availability Zone
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Transfer the configuration of RIST.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateOutputRistSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// </summary>
+        [JsonProperty("PidSelector")]
+        [System.Obsolete]
+        public PidSelector PidSelector{ get; set; }
+
+        /// <summary>
+        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// </summary>
+        [JsonProperty("StreamSelector")]
+        public StreamSelector StreamSelector{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,12 +131,18 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "OutputName", this.OutputName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
+            this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
             this.SetParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
             this.SetParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
+            this.SetParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
         }
     }
 }

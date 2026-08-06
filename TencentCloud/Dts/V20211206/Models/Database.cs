@@ -60,6 +60,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string NewSchemaName{ get; set; }
 
         /// <summary>
+        /// Table selection mode, which is required if `DBMode` is `Partial` for postgresql or sqlserver. Valid values: `All`, `Partial`. To sync an entire schema, set this parameter to `All`.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// </summary>
+        [JsonProperty("SchemaMode")]
+        public string SchemaMode{ get; set; }
+
+        /// <summary>
         /// Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
@@ -116,7 +123,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Procedures{ get; set; }
 
         /// <summary>
-        /// Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
+        /// Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "trigger" is not supported for data sync.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TriggerMode")]
@@ -130,7 +137,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string[] Triggers{ get; set; }
 
         /// <summary>
-        /// Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
+        /// Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object "event" is not supported for data sync.
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EventMode")]
@@ -154,6 +161,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
             this.SetParamSimple(map, prefix + "NewSchemaName", this.NewSchemaName);
+            this.SetParamSimple(map, prefix + "SchemaMode", this.SchemaMode);
             this.SetParamSimple(map, prefix + "TableMode", this.TableMode);
             this.SetParamArrayObj(map, prefix + "Tables.", this.Tables);
             this.SetParamSimple(map, prefix + "ViewMode", this.ViewMode);

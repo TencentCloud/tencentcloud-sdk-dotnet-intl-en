@@ -28,7 +28,7 @@ namespace TencentCloud.Cdb.V20170320
 
        private const string endpoint = "cdb.intl.tencentcloudapi.com";
        private const string version = "2017-03-20";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1369";
 
         /// <summary>
         /// Client constructor.
@@ -3604,6 +3604,27 @@ namespace TencentCloud.Cdb.V20170320
         public UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersionSync(UpgradeDBInstanceEngineVersionRequest req)
         {
             return InternalRequestAsync<UpgradeDBInstanceEngineVersionResponse>(req, "UpgradeDBInstanceEngineVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade a read-only group to a pure network forwarding mode.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeRoGroupRequest"/></param>
+        /// <returns><see cref="UpgradeRoGroupResponse"/></returns>
+        public Task<UpgradeRoGroupResponse> UpgradeRoGroup(UpgradeRoGroupRequest req)
+        {
+            return InternalRequestAsync<UpgradeRoGroupResponse>(req, "UpgradeRoGroup");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade a read-only group to a pure network forwarding mode.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeRoGroupRequest"/></param>
+        /// <returns><see cref="UpgradeRoGroupResponse"/></returns>
+        public UpgradeRoGroupResponse UpgradeRoGroupSync(UpgradeRoGroupRequest req)
+        {
+            return InternalRequestAsync<UpgradeRoGroupResponse>(req, "UpgradeRoGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
