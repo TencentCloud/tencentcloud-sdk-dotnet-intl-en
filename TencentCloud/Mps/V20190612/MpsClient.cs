@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1368";
+       private const string sdkVersion = "SDK_NET_3.0.1371";
 
         /// <summary>
         /// Client constructor.
@@ -3079,7 +3079,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 
+        /// This API is used to translate text. The "subtitle translation (additional languages)" billing item is used. Billing is calculated by converting characters to minutes at a rate of 1,100 characters per minute (based on Unicode code points. For example, "hello" counts as 5 characters).
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>
@@ -3089,7 +3089,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 
+        /// This API is used to translate text. The "subtitle translation (additional languages)" billing item is used. Billing is calculated by converting characters to minutes at a rate of 1,100 characters per minute (based on Unicode code points. For example, "hello" counts as 5 characters).
         /// </summary>
         /// <param name="req"><see cref="TextTranslationRequest"/></param>
         /// <returns><see cref="TextTranslationResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1366";
+       private const string sdkVersion = "SDK_NET_3.0.1371";
 
         /// <summary>
         /// Client constructor.
@@ -818,7 +818,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
         /// 
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// A maximum of 10 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="GeneralAccurateOCRRequest"/></param>
         /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
@@ -834,7 +834,7 @@ namespace TencentCloud.Ocr.V20181119
         /// 
         /// Strengths: compared with general print recognition, it provides higher-precision character recognition services. Its accuracy and recall rate are higher in difficult scenarios such as a large number of characters, long strings of digits, small characters, blurry characters, and tilted text.
         /// 
-        /// This API is not fully available for the time being. For more information, please contact your [Tencent Cloud sales rep](https://intl.cloud.tencent.com/contact-sales).
+        /// A maximum of 10 requests can be initiated per second for this API.
         /// </summary>
         /// <param name="req"><see cref="GeneralAccurateOCRRequest"/></param>
         /// <returns><see cref="GeneralAccurateOCRResponse"/></returns>
