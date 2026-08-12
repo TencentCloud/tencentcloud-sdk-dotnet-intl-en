@@ -21,20 +21,20 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VulSpreadTrend : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Date<br>Parameter format: YYYY-MM-DD</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Propagation trend numeric value of the date</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Trend")]
+        public float? Trend{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "Trend", this.Trend);
         }
     }
 }

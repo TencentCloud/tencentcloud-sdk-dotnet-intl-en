@@ -21,20 +21,20 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VPRRatingStage : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// Stage name (for example: threat activity level, exploitability, vulnerability severity)
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Stage")]
+        public string Stage{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// Rating result of this stage
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Stage", this.Stage);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
         }
     }
 }

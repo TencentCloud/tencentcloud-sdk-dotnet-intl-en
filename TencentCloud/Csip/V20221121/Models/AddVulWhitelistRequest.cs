@@ -21,26 +21,38 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filters : AbstractModel
+    public class AddVulWhitelistRequest : AbstractModel
     {
         
         /// <summary>
-        /// Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+        /// <p>Vulnerability ID</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("VulId")]
+        public ulong?[] VulId{ get; set; }
 
         /// <summary>
-        /// Filter condition value list
+        /// <p>Patch ID</p>
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("KbId")]
+        public ulong?[] KbId{ get; set; }
 
         /// <summary>
-        /// Exact match: 1 - exact match; default - fuzzy matching
+        /// <p>Group account member id</p>
         /// </summary>
-        [JsonProperty("ExactMatch")]
-        public string ExactMatch{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>Remarks.</p>
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// <p>Asset list</p>
+        /// </summary>
+        [JsonProperty("AssetList")]
+        public string[] AssetList{ get; set; }
 
 
         /// <summary>
@@ -48,9 +60,11 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
-            this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
+            this.SetParamArraySimple(map, prefix + "VulId.", this.VulId);
+            this.SetParamArraySimple(map, prefix + "KbId.", this.KbId);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArraySimple(map, prefix + "AssetList.", this.AssetList);
         }
     }
 }

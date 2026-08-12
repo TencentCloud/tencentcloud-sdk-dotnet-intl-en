@@ -21,20 +21,30 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VPRRatingInfo : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// VPR rating result
+        /// Enumeration value:
+        /// URGENT: Immediate repair
+        /// SUGGESTED: Suggested repairs
+        /// DEFERRABLE: Deferrable repair
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// Rating description
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// List of stage rating details
+        /// </summary>
+        [JsonProperty("Stage")]
+        public VPRRatingStage[] Stage{ get; set; }
 
 
         /// <summary>
@@ -42,8 +52,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArrayObj(map, prefix + "Stage.", this.Stage);
         }
     }
 }

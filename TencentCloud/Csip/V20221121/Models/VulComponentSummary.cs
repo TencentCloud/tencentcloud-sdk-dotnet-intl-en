@@ -21,20 +21,20 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VulComponentSummary : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Component name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Associated hosts.</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("RelateHostCount")]
+        public ulong? RelateHostCount{ get; set; }
 
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "RelateHostCount", this.RelateHostCount);
         }
     }
 }

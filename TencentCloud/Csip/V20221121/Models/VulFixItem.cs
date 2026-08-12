@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VulFixItem : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Vulnerability ID. Choose either VulId or KBId.</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("VulId")]
+        public long? VulId{ get; set; }
+
+        /// <summary>
+        /// <p>Patch ID. Choose either VulId or KBId.</p>
+        /// </summary>
+        [JsonProperty("KBId")]
+        public long? KBId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "VulId", this.VulId);
+            this.SetParamSimple(map, prefix + "KBId", this.KBId);
         }
     }
 }

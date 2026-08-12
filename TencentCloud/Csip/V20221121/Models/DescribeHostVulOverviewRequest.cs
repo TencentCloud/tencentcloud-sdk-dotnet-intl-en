@@ -21,20 +21,14 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class DescribeHostVulOverviewRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Group account member id</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// Tag value.
-        /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         }
     }
 }

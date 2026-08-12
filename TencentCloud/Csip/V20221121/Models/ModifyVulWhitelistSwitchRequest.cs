@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class ModifyVulWhitelistSwitchRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>id list</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Id")]
+        public ulong?[] Id{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Group account member id</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>Policy switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Enable</li></ul>
+        /// </summary>
+        [JsonProperty("Switch")]
+        public ulong? Switch{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

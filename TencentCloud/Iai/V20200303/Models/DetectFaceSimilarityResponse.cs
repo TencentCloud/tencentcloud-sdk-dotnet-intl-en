@@ -25,7 +25,7 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// The value range is [0.00, 100.00]. It is recommended that when the similarity is greater than or equal to 70, the person can be judged to be the same person, and the threshold can be adjusted according to the specific scenario (the false pass rate for a threshold of 70 is one in 1,000, and the false pass rate for a threshold of 80 is one in 10,000).
+        /// <p>Value ranges from 0.00 to 100.00.<br>It is recommended to judge as the same person when the similarity is equal to or greater than 70 (a fixed threshold of 70 is used, with a false acceptance rate of 1 in 10,000, and the threshold cannot be adjusted).</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }

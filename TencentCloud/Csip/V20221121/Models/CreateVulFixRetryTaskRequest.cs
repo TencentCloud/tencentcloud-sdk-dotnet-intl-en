@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class CreateVulFixRetryTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Repair task ID that needs to be retried</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// Group Account Member ID
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         }
     }
 }

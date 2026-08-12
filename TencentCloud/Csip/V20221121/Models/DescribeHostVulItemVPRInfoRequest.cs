@@ -21,20 +21,20 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class DescribeHostVulItemVPRInfoRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Group account member id</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Vulnerability ID</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("VulID")]
+        public ulong? VulID{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "VulID", this.VulID);
         }
     }
 }

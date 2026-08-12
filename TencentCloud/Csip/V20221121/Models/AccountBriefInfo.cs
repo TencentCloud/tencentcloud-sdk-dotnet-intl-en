@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class AccountBriefInfo : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Account AppID</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("AppID")]
+        public ulong? AppID{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Account nickname</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Nick")]
+        public string Nick{ get; set; }
+
+        /// <summary>
+        /// <p>account Uin</p>
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
+            this.SetParamSimple(map, prefix + "Nick", this.Nick);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }
 }

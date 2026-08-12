@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class DescribeVulRiskRelateComponentRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Vulnerability ID (vul_vuls.id)</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("VulID")]
+        public ulong? VulID{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Group account member id</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>Filter conditions array, multi-condition with each other in the AND relationship<br>Supported Filter.Name:<br>Keyword: Keyword fuzzy search (fuzzy matching for component name)</p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filters[] Filters{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "VulID", this.VulID);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

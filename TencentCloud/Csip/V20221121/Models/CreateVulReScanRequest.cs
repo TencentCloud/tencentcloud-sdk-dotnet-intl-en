@@ -21,20 +21,32 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class CreateVulReScanRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Vulnerability ID</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("VulId")]
+        public ulong?[] VulId{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Patch Number</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("KbNo")]
+        public string[] KbNo{ get; set; }
+
+        /// <summary>
+        /// <p>Group account member id</p>
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// <p>Asset list</p>
+        /// </summary>
+        [JsonProperty("AssetList")]
+        public string[] AssetList{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "VulId.", this.VulId);
+            this.SetParamArraySimple(map, prefix + "KbNo.", this.KbNo);
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamArraySimple(map, prefix + "AssetList.", this.AssetList);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1336";
+       private const string sdkVersion = "SDK_NET_3.0.1372";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Csip.V20221121
         public AddNewBindRoleUserResponse AddNewBindRoleUserSync(AddNewBindRoleUserRequest req)
         {
             return InternalRequestAsync<AddNewBindRoleUserResponse>(req, "AddNewBindRoleUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add a vulnerability allowlist
+        /// </summary>
+        /// <param name="req"><see cref="AddVulWhitelistRequest"/></param>
+        /// <returns><see cref="AddVulWhitelistResponse"/></returns>
+        public Task<AddVulWhitelistResponse> AddVulWhitelist(AddVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<AddVulWhitelistResponse>(req, "AddVulWhitelist");
+        }
+
+        /// <summary>
+        /// Add a vulnerability allowlist
+        /// </summary>
+        /// <param name="req"><see cref="AddVulWhitelistRequest"/></param>
+        /// <returns><see cref="AddVulWhitelistResponse"/></returns>
+        public AddVulWhitelistResponse AddVulWhitelistSync(AddVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<AddVulWhitelistResponse>(req, "AddVulWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -134,6 +155,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateDomainAndIpResponse CreateDomainAndIpSync(CreateDomainAndIpRequest req)
         {
             return InternalRequestAsync<CreateDomainAndIpResponse>(req, "CreateDomainAndIp")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a host vulnerability table export task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostVulExportJobResponse"/></returns>
+        public Task<CreateHostVulExportJobResponse> CreateHostVulExportJob(CreateHostVulExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostVulExportJobResponse>(req, "CreateHostVulExportJob");
+        }
+
+        /// <summary>
+        /// This API is used to create a host vulnerability table export task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateHostVulExportJobRequest"/></param>
+        /// <returns><see cref="CreateHostVulExportJobResponse"/></returns>
+        public CreateHostVulExportJobResponse CreateHostVulExportJobSync(CreateHostVulExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateHostVulExportJobResponse>(req, "CreateHostVulExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -243,6 +285,111 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Retry the vulnerability repair task that failed to fix, and redispatch the repair instruction only for the hosts of the original task that failed to fix. Retry is allowed only when the task status is partially or totally failed to fix.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixRetryTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixRetryTaskResponse"/></returns>
+        public Task<CreateVulFixRetryTaskResponse> CreateVulFixRetryTask(CreateVulFixRetryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixRetryTaskResponse>(req, "CreateVulFixRetryTask");
+        }
+
+        /// <summary>
+        /// Retry the vulnerability repair task that failed to fix, and redispatch the repair instruction only for the hosts of the original task that failed to fix. Retry is allowed only when the task status is partially or totally failed to fix.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixRetryTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixRetryTaskResponse"/></returns>
+        public CreateVulFixRetryTaskResponse CreateVulFixRetryTaskSync(CreateVulFixRetryTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixRetryTaskResponse>(req, "CreateVulFixRetryTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Users manually submit vulnerability repair tasks, specify the vulnerabilities and target hosts that need to be repaired, and the system creates fixing tasks and dispatches execution. It supports options such as specifying the repair timeout period and whether to create a snapshot. The FixItems array is used to precisely control which hosts each vulnerability or KB patch repairs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixTaskResponse"/></returns>
+        public Task<CreateVulFixTaskResponse> CreateVulFixTask(CreateVulFixTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixTaskResponse>(req, "CreateVulFixTask");
+        }
+
+        /// <summary>
+        /// Users manually submit vulnerability repair tasks, specify the vulnerabilities and target hosts that need to be repaired, and the system creates fixing tasks and dispatches execution. It supports options such as specifying the repair timeout period and whether to create a snapshot. The FixItems array is used to precisely control which hosts each vulnerability or KB patch repairs.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixTaskRequest"/></param>
+        /// <returns><see cref="CreateVulFixTaskResponse"/></returns>
+        public CreateVulFixTaskResponse CreateVulFixTaskSync(CreateVulFixTaskRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixTaskResponse>(req, "CreateVulFixTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an export task for the list of fixed vulnerabilities. It supports the same filter criteria as DescribeVulFixedList. The export is implemented via an asynchronous task. After a JobID is returned, the frontend polls to query the export task status. The export fields include vulnerability ID, vulnerability name, vulnerability level, VPR rating, vulnerability type, CVE ID, host name, instance ID, associated component & path, and repair time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixedExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulFixedExportJobResponse"/></returns>
+        public Task<CreateVulFixedExportJobResponse> CreateVulFixedExportJob(CreateVulFixedExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixedExportJobResponse>(req, "CreateVulFixedExportJob");
+        }
+
+        /// <summary>
+        /// Create an export task for the list of fixed vulnerabilities. It supports the same filter criteria as DescribeVulFixedList. The export is implemented via an asynchronous task. After a JobID is returned, the frontend polls to query the export task status. The export fields include vulnerability ID, vulnerability name, vulnerability level, VPR rating, vulnerability type, CVE ID, host name, instance ID, associated component & path, and repair time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulFixedExportJobRequest"/></param>
+        /// <returns><see cref="CreateVulFixedExportJobResponse"/></returns>
+        public CreateVulFixedExportJobResponse CreateVulFixedExportJobSync(CreateVulFixedExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateVulFixedExportJobResponse>(req, "CreateVulFixedExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a vulnerability rescan
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulReScanRequest"/></param>
+        /// <returns><see cref="CreateVulReScanResponse"/></returns>
+        public Task<CreateVulReScanResponse> CreateVulReScan(CreateVulReScanRequest req)
+        {
+            return InternalRequestAsync<CreateVulReScanResponse>(req, "CreateVulReScan");
+        }
+
+        /// <summary>
+        /// This API is used to create a vulnerability rescan
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulReScanRequest"/></param>
+        /// <returns><see cref="CreateVulReScanResponse"/></returns>
+        public CreateVulReScanResponse CreateVulReScanSync(CreateVulReScanRequest req)
+        {
+            return InternalRequestAsync<CreateVulReScanResponse>(req, "CreateVulReScan")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a vulnerability scanning (one-click scan).
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulScanManualRequest"/></param>
+        /// <returns><see cref="CreateVulScanManualResponse"/></returns>
+        public Task<CreateVulScanManualResponse> CreateVulScanManual(CreateVulScanManualRequest req)
+        {
+            return InternalRequestAsync<CreateVulScanManualResponse>(req, "CreateVulScanManual");
+        }
+
+        /// <summary>
+        /// This API is used to create a vulnerability scanning (one-click scan).
+        /// </summary>
+        /// <param name="req"><see cref="CreateVulScanManualRequest"/></param>
+        /// <returns><see cref="CreateVulScanManualResponse"/></returns>
+        public CreateVulScanManualResponse CreateVulScanManualSync(CreateVulScanManualRequest req)
+        {
+            return InternalRequestAsync<CreateVulScanManualResponse>(req, "CreateVulScanManual")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete assets.
         /// </summary>
         /// <param name="req"><see cref="DeleteDomainAndIpRequest"/></param>
@@ -323,6 +470,27 @@ namespace TencentCloud.Csip.V20221121
         public DeleteRiskScanTaskResponse DeleteRiskScanTaskSync(DeleteRiskScanTaskRequest req)
         {
             return InternalRequestAsync<DeleteRiskScanTaskResponse>(req, "DeleteRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a vulnerability allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteVulWhitelistResponse"/></returns>
+        public Task<DeleteVulWhitelistResponse> DeleteVulWhitelist(DeleteVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteVulWhitelistResponse>(req, "DeleteVulWhitelist");
+        }
+
+        /// <summary>
+        /// This API is used to delete a vulnerability allowlist.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVulWhitelistRequest"/></param>
+        /// <returns><see cref="DeleteVulWhitelistResponse"/></returns>
+        public DeleteVulWhitelistResponse DeleteVulWhitelistSync(DeleteVulWhitelistRequest req)
+        {
+            return InternalRequestAsync<DeleteVulWhitelistResponse>(req, "DeleteVulWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -974,6 +1142,69 @@ namespace TencentCloud.Csip.V20221121
         public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskListSync(DescribeHighBaseLineRiskListRequest req)
         {
             return InternalRequestAsync<DescribeHighBaseLineRiskListResponse>(req, "DescribeHighBaseLineRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain host vulnerability VPR information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulItemVPRInfoRequest"/></param>
+        /// <returns><see cref="DescribeHostVulItemVPRInfoResponse"/></returns>
+        public Task<DescribeHostVulItemVPRInfoResponse> DescribeHostVulItemVPRInfo(DescribeHostVulItemVPRInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulItemVPRInfoResponse>(req, "DescribeHostVulItemVPRInfo");
+        }
+
+        /// <summary>
+        /// This API is used to obtain host vulnerability VPR information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulItemVPRInfoRequest"/></param>
+        /// <returns><see cref="DescribeHostVulItemVPRInfoResponse"/></returns>
+        public DescribeHostVulItemVPRInfoResponse DescribeHostVulItemVPRInfoSync(DescribeHostVulItemVPRInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulItemVPRInfoResponse>(req, "DescribeHostVulItemVPRInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the host vulnerability overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHostVulOverviewResponse"/></returns>
+        public Task<DescribeHostVulOverviewResponse> DescribeHostVulOverview(DescribeHostVulOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulOverviewResponse>(req, "DescribeHostVulOverview");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the host vulnerability overview.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulOverviewRequest"/></param>
+        /// <returns><see cref="DescribeHostVulOverviewResponse"/></returns>
+        public DescribeHostVulOverviewResponse DescribeHostVulOverviewSync(DescribeHostVulOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulOverviewResponse>(req, "DescribeHostVulOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the host vulnerability risk list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskListResponse"/></returns>
+        public Task<DescribeHostVulRiskListResponse> DescribeHostVulRiskList(DescribeHostVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the host vulnerability risk list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskListResponse"/></returns>
+        public DescribeHostVulRiskListResponse DescribeHostVulRiskListSync(DescribeHostVulRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1902,6 +2133,216 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to query the associated server of a vulnerable component.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulComponentRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulComponentRelateHostResponse"/></returns>
+        public Task<DescribeVulComponentRelateHostResponse> DescribeVulComponentRelateHost(DescribeVulComponentRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulComponentRelateHostResponse>(req, "DescribeVulComponentRelateHost");
+        }
+
+        /// <summary>
+        /// This API is used to query the associated server of a vulnerable component.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulComponentRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulComponentRelateHostResponse"/></returns>
+        public DescribeVulComponentRelateHostResponse DescribeVulComponentRelateHostSync(DescribeVulComponentRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulComponentRelateHostResponse>(req, "DescribeVulComponentRelateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a specified vulnerability repair task, including detailed data such as remediation status and snapshot status for each host, and supports pagination and filtering.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskDetailResponse"/></returns>
+        public Task<DescribeVulFixTaskDetailResponse> DescribeVulFixTaskDetail(DescribeVulFixTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskDetailResponse>(req, "DescribeVulFixTaskDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the details of a specified vulnerability repair task, including detailed data such as remediation status and snapshot status for each host, and supports pagination and filtering.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskDetailResponse"/></returns>
+        public DescribeVulFixTaskDetailResponse DescribeVulFixTaskDetailSync(DescribeVulFixTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskDetailResponse>(req, "DescribeVulFixTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the vulnerability repair task record list with paging, support by conditional filtering such as remediation status and time range, and show summary information for each repair task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskListResponse"/></returns>
+        public Task<DescribeVulFixTaskListResponse> DescribeVulFixTaskList(DescribeVulFixTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskListResponse>(req, "DescribeVulFixTaskList");
+        }
+
+        /// <summary>
+        /// This API is used to query the vulnerability repair task record list with paging, support by conditional filtering such as remediation status and time range, and show summary information for each repair task.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixTaskListResponse"/></returns>
+        public DescribeVulFixTaskListResponse DescribeVulFixTaskListSync(DescribeVulFixTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixTaskListResponse>(req, "DescribeVulFixTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the host list where specified vulnerabilities can be repaired. Before a user submits a repair task, it is necessary to query which hosts support automatic fix, providing data support for users to select repair targets.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixableMachineListResponse"/></returns>
+        public Task<DescribeVulFixableMachineListResponse> DescribeVulFixableMachineList(DescribeVulFixableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixableMachineListResponse>(req, "DescribeVulFixableMachineList");
+        }
+
+        /// <summary>
+        /// This API is used to query the host list where specified vulnerabilities can be repaired. Before a user submits a repair task, it is necessary to query which hosts support automatic fix, providing data support for users to select repair targets.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixableMachineListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixableMachineListResponse"/></returns>
+        public DescribeVulFixableMachineListResponse DescribeVulFixableMachineListSync(DescribeVulFixableMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixableMachineListResponse>(req, "DescribeVulFixableMachineList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the repair details of a certain fixed vulnerability on a specified host, including basic information about the vulnerability, repair host information, and a detailed list of associated components and paths (component name, version number hit, associated path, repair command).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedHostDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedHostDetailResponse"/></returns>
+        public Task<DescribeVulFixedHostDetailResponse> DescribeVulFixedHostDetail(DescribeVulFixedHostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedHostDetailResponse>(req, "DescribeVulFixedHostDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the repair details of a certain fixed vulnerability on a specified host, including basic information about the vulnerability, repair host information, and a detailed list of associated components and paths (component name, version number hit, associated path, repair command).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedHostDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedHostDetailResponse"/></returns>
+        public DescribeVulFixedHostDetailResponse DescribeVulFixedHostDetailSync(DescribeVulFixedHostDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedHostDetailResponse>(req, "DescribeVulFixedHostDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of repaired vulnerabilities, show vulnerability information with successful fixes and statistics on repair conditions, helping users understand the repair results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedListResponse"/></returns>
+        public Task<DescribeVulFixedListResponse> DescribeVulFixedList(DescribeVulFixedListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedListResponse>(req, "DescribeVulFixedList");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of repaired vulnerabilities, show vulnerability information with successful fixes and statistics on repair conditions, helping users understand the repair results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulFixedListRequest"/></param>
+        /// <returns><see cref="DescribeVulFixedListResponse"/></returns>
+        public DescribeVulFixedListResponse DescribeVulFixedListSync(DescribeVulFixedListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulFixedListResponse>(req, "DescribeVulFixedList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query host-associated vulnerability components.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulHostRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulHostRelateComponentResponse"/></returns>
+        public Task<DescribeVulHostRelateComponentResponse> DescribeVulHostRelateComponent(DescribeVulHostRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulHostRelateComponentResponse>(req, "DescribeVulHostRelateComponent");
+        }
+
+        /// <summary>
+        /// This API is used to query host-associated vulnerability components.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulHostRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulHostRelateComponentResponse"/></returns>
+        public DescribeVulHostRelateComponentResponse DescribeVulHostRelateComponentSync(DescribeVulHostRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulHostRelateComponentResponse>(req, "DescribeVulHostRelateComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the vulnerability ignore list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="DescribeVulIgnoreRuleListResponse"/></returns>
+        public Task<DescribeVulIgnoreRuleListResponse> DescribeVulIgnoreRuleList(DescribeVulIgnoreRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulIgnoreRuleListResponse>(req, "DescribeVulIgnoreRuleList");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve the vulnerability ignore list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulIgnoreRuleListRequest"/></param>
+        /// <returns><see cref="DescribeVulIgnoreRuleListResponse"/></returns>
+        public DescribeVulIgnoreRuleListResponse DescribeVulIgnoreRuleListSync(DescribeVulIgnoreRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulIgnoreRuleListResponse>(req, "DescribeVulIgnoreRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain vulnerability list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulItemListRequest"/></param>
+        /// <returns><see cref="DescribeVulItemListResponse"/></returns>
+        public Task<DescribeVulItemListResponse> DescribeVulItemList(DescribeVulItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulItemListResponse>(req, "DescribeVulItemList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain vulnerability list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulItemListRequest"/></param>
+        /// <returns><see cref="DescribeVulItemListResponse"/></returns>
+        public DescribeVulItemListResponse DescribeVulItemListSync(DescribeVulItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulItemListResponse>(req, "DescribeVulItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtains the vulnerability tag list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulLabelListRequest"/></param>
+        /// <returns><see cref="DescribeVulLabelListResponse"/></returns>
+        public Task<DescribeVulLabelListResponse> DescribeVulLabelList(DescribeVulLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulLabelListResponse>(req, "DescribeVulLabelList");
+        }
+
+        /// <summary>
+        /// Obtains the vulnerability tag list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulLabelListRequest"/></param>
+        /// <returns><see cref="DescribeVulLabelListResponse"/></returns>
+        public DescribeVulLabelListResponse DescribeVulLabelListSync(DescribeVulLabelListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulLabelListResponse>(req, "DescribeVulLabelList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
         /// </summary>
         /// <param name="req"><see cref="DescribeVulRiskListRequest"/></param>
@@ -1919,6 +2360,111 @@ namespace TencentCloud.Csip.V20221121
         public DescribeVulRiskListResponse DescribeVulRiskListSync(DescribeVulRiskListRequest req)
         {
             return InternalRequestAsync<DescribeVulRiskListResponse>(req, "DescribeVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the associated component of a vulnerability
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateComponentResponse"/></returns>
+        public Task<DescribeVulRiskRelateComponentResponse> DescribeVulRiskRelateComponent(DescribeVulRiskRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateComponentResponse>(req, "DescribeVulRiskRelateComponent");
+        }
+
+        /// <summary>
+        /// Retrieve the associated component of a vulnerability
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateComponentRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateComponentResponse"/></returns>
+        public DescribeVulRiskRelateComponentResponse DescribeVulRiskRelateComponentSync(DescribeVulRiskRelateComponentRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateComponentResponse>(req, "DescribeVulRiskRelateComponent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Search for hosts associated with vulnerabilities or KBs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateHostResponse"/></returns>
+        public Task<DescribeVulRiskRelateHostResponse> DescribeVulRiskRelateHost(DescribeVulRiskRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateHostResponse>(req, "DescribeVulRiskRelateHost");
+        }
+
+        /// <summary>
+        /// Search for hosts associated with vulnerabilities or KBs
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulRiskRelateHostRequest"/></param>
+        /// <returns><see cref="DescribeVulRiskRelateHostResponse"/></returns>
+        public DescribeVulRiskRelateHostResponse DescribeVulRiskRelateHostSync(DescribeVulRiskRelateHostRequest req)
+        {
+            return InternalRequestAsync<DescribeVulRiskRelateHostResponse>(req, "DescribeVulRiskRelateHost")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain vulnerability scanning (period scanning).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="DescribeVulScanPeriodicResponse"/></returns>
+        public Task<DescribeVulScanPeriodicResponse> DescribeVulScanPeriodic(DescribeVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanPeriodicResponse>(req, "DescribeVulScanPeriodic");
+        }
+
+        /// <summary>
+        /// This API is used to obtain vulnerability scanning (period scanning).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="DescribeVulScanPeriodicResponse"/></returns>
+        public DescribeVulScanPeriodicResponse DescribeVulScanPeriodicSync(DescribeVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanPeriodicResponse>(req, "DescribeVulScanPeriodic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to retrieve vulnerability scanning task detail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskDetailResponse"/></returns>
+        public Task<DescribeVulScanTaskDetailResponse> DescribeVulScanTaskDetail(DescribeVulScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskDetailResponse>(req, "DescribeVulScanTaskDetail");
+        }
+
+        /// <summary>
+        /// This API is used to retrieve vulnerability scanning task detail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskDetailResponse"/></returns>
+        public DescribeVulScanTaskDetailResponse DescribeVulScanTaskDetailSync(DescribeVulScanTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskDetailResponse>(req, "DescribeVulScanTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to search vulnerability scanning task history
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskListResponse"/></returns>
+        public Task<DescribeVulScanTaskListResponse> DescribeVulScanTaskList(DescribeVulScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskListResponse>(req, "DescribeVulScanTaskList");
+        }
+
+        /// <summary>
+        /// This API is used to search vulnerability scanning task history
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulScanTaskListRequest"/></param>
+        /// <returns><see cref="DescribeVulScanTaskListResponse"/></returns>
+        public DescribeVulScanTaskListResponse DescribeVulScanTaskListSync(DescribeVulScanTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeVulScanTaskListResponse>(req, "DescribeVulScanTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2045,6 +2591,69 @@ namespace TencentCloud.Csip.V20221121
         public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitchSync(ModifyUebaRuleSwitchRequest req)
         {
             return InternalRequestAsync<ModifyUebaRuleSwitchResponse>(req, "ModifyUebaRuleSwitch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify vulnerability scanning (period scanning).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="ModifyVulScanPeriodicResponse"/></returns>
+        public Task<ModifyVulScanPeriodicResponse> ModifyVulScanPeriodic(ModifyVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<ModifyVulScanPeriodicResponse>(req, "ModifyVulScanPeriodic");
+        }
+
+        /// <summary>
+        /// This API is used to modify vulnerability scanning (period scanning).
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulScanPeriodicRequest"/></param>
+        /// <returns><see cref="ModifyVulScanPeriodicResponse"/></returns>
+        public ModifyVulScanPeriodicResponse ModifyVulScanPeriodicSync(ModifyVulScanPeriodicRequest req)
+        {
+            return InternalRequestAsync<ModifyVulScanPeriodicResponse>(req, "ModifyVulScanPeriodic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the vulnerability allowlist configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>
+        public Task<ModifyVulWhitelistConfigResponse> ModifyVulWhitelistConfig(ModifyVulWhitelistConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistConfigResponse>(req, "ModifyVulWhitelistConfig");
+        }
+
+        /// <summary>
+        /// This API is used to modify the vulnerability allowlist configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>
+        public ModifyVulWhitelistConfigResponse ModifyVulWhitelistConfigSync(ModifyVulWhitelistConfigRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistConfigResponse>(req, "ModifyVulWhitelistConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the vulnerability allowlist switch.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistSwitchRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistSwitchResponse"/></returns>
+        public Task<ModifyVulWhitelistSwitchResponse> ModifyVulWhitelistSwitch(ModifyVulWhitelistSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistSwitchResponse>(req, "ModifyVulWhitelistSwitch");
+        }
+
+        /// <summary>
+        /// This API is used to modify the vulnerability allowlist switch.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVulWhitelistSwitchRequest"/></param>
+        /// <returns><see cref="ModifyVulWhitelistSwitchResponse"/></returns>
+        public ModifyVulWhitelistSwitchResponse ModifyVulWhitelistSwitchSync(ModifyVulWhitelistSwitchRequest req)
+        {
+            return InternalRequestAsync<ModifyVulWhitelistSwitchResponse>(req, "ModifyVulWhitelistSwitch")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VulVendorProduct : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>supplier</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Vendor")]
+        public string Vendor{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Product name.</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
+        /// <summary>
+        /// <p>Affected version</p>
+        /// </summary>
+        [JsonProperty("VersionRange")]
+        public string[] VersionRange{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Vendor", this.Vendor);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamArraySimple(map, prefix + "VersionRange.", this.VersionRange);
         }
     }
 }

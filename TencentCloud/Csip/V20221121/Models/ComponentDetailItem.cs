@@ -21,20 +21,32 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class ComponentDetailItem : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// Component name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// cache hit version
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// Association path
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
+
+        /// <summary>
+        /// Fix Command
+        /// </summary>
+        [JsonProperty("FixCommand")]
+        public string FixCommand{ get; set; }
 
 
         /// <summary>
@@ -43,7 +55,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamSimple(map, prefix + "FixCommand", this.FixCommand);
         }
     }
 }

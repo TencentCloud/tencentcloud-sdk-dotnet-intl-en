@@ -21,20 +21,26 @@ namespace TencentCloud.Csip.V20221121.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Tag : AbstractModel
+    public class VPRLabel : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
         /// </summary>
-        [JsonProperty("Value")]
-        public string Value{ get; set; }
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
+        /// <summary>
+        /// <p>Tag description</p>
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -43,7 +49,8 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }
