@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Denoising configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Denoise")]
         public ImageDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
         /// Comprehensive enhancement configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ImageQualityEnhance")]
         public ImageQualityEnhanceConfig ImageQualityEnhance{ get; set; }
@@ -70,7 +68,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Low-light enhancement configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("LowLightEnhance")]
         public LowLightEnhanceConfig LowLightEnhance{ get; set; }

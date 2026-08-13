@@ -34,20 +34,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The strength. Valid values:
-        /// <li>lq: For low-resolution videos with obvious noise</li>
-        /// <li>hq: For high-resolution videos</li>
+        /// Type, available values:
+        /// <li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+        /// <li>hq: Targeting high-resolution video super-resolution.</li>
         /// Default value: lq.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The ratio of the target resolution to the original resolution. Valid values:
-        /// <li>2</li>
+        /// Super-resolution multiple, optional value:
+        /// <li>2: Currently only support 2x super resolution.</li>
         /// Default value: 2.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

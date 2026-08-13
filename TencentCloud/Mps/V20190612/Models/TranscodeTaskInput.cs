@@ -38,10 +38,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawTranscodeParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// Video transcoding custom parameter, which is valid when `Definition` is not 0.
-        /// When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-        /// This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+        /// When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+        /// This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideTranscodeParameter OverrideParameter{ get; set; }
@@ -53,8 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// Digital watermark parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Digital watermark parameters.
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
@@ -84,8 +82,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -110,14 +107,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Rule of the `{number}` variable in the output path after transcoding.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }
 
         /// <summary>
-        /// Opening and closing credits parameters
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Video opening/closing credits parameter.
         /// </summary>
         [JsonProperty("HeadTailParameter")]
         public HeadTailParameter HeadTailParameter{ get; set; }

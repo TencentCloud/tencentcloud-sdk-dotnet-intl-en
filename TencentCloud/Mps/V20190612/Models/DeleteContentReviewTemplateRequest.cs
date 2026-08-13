@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The unique ID of the content moderation template.
+        /// Unique identifier of a content review template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

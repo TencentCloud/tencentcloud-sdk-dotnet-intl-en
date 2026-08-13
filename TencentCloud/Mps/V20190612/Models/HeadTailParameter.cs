@@ -25,15 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The opening segments.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Opening scene list.
         /// </summary>
         [JsonProperty("HeadSet")]
         public MediaInputInfo[] HeadSet{ get; set; }
 
         /// <summary>
-        /// The closing segments.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Ending list.
         /// </summary>
         [JsonProperty("TailSet")]
         public MediaInputInfo[] TailSet{ get; set; }

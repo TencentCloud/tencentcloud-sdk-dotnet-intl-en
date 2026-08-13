@@ -31,20 +31,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public string HotwordsId{ get; set; }
 
         /// <summary>
-        /// Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+        /// Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Name of the hot lexicon.
+        /// Hotword lexicon name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-        /// Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+        /// The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+        /// The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
         /// 
         /// </summary>
         [JsonProperty("Type")]
@@ -65,19 +65,19 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Hotword text, which depends on the value of Type.
         /// If the value of Type is 0, the hotword string is returned.
-        /// If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+        /// If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Number of words contained in the hotword lexicon.
+        /// Number of words contained in the current hotword lexicon.
         /// </summary>
         [JsonProperty("WordCount")]
         public ulong? WordCount{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -89,13 +89,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+        /// Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+        /// Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

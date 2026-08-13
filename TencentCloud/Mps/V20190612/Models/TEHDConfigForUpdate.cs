@@ -25,18 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The TSC type. Valid values:
-        /// <li>`TEHD-100`: TSC-100 (video TSC). </li>
-        /// <li>`TEHD-200`: TSC-200 (audio TSC). </li>
-        /// If this parameter is left blank, no modification will be made.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top Speed Codec type. Available values:
+        /// <li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+        /// <li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+        /// Leave it blank to keep it unchanged.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Upper limit of video bitrate. Leave blank to keep unchanged.
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public long? MaxVideoBitrate{ get; set; }

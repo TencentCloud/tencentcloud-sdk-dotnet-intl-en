@@ -34,17 +34,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Required and valid when Type is CosFileUpload. This is a COS trigger rule.
         /// </summary>
         [JsonProperty("CosFileUploadTrigger")]
         public CosFileUploadTrigger CosFileUploadTrigger{ get; set; }
 
         /// <summary>
-        /// The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+        /// Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
         /// 
-        /// Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
         /// </summary>
         [JsonProperty("AwsS3FileUploadTrigger")]
         public AwsS3FileUploadTrigger AwsS3FileUploadTrigger{ get; set; }

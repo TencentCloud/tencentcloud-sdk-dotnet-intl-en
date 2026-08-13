@@ -59,8 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// The TSC transcoding parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Top Speed Codec transcoding parameter.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? WorkflowId{ get; set; }
 
         /// <summary>
-        /// Workflow name of up to 128 characters, which must be unique for the same user.
+        /// Workflow name, up to 128 characters. The name is unique for the same user.
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+        /// The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
         /// </summary>
         [JsonProperty("Trigger")]
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+        /// Video processing output configuration. If left blank, it inherits the storage location from Trigger.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -56,37 +56,37 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// Parameter of a video processing task.
+        /// Parameters for the video processing task.
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// Type parameter of a video content audit task.
+        /// Parameters for the video content review task.
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// Video content analysis task parameter.
+        /// Parameters for the video content analysis task.
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// Type parameter of a video content recognition task.
+        /// Parameters for the video content recognition task.
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+        /// Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TaskPriority")]
         public long? TaskPriority{ get; set; }
 
         /// <summary>
-        /// Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+        /// Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }

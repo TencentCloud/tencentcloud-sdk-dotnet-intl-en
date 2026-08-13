@@ -49,23 +49,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Formats{ get; set; }
 
         /// <summary>
-        /// The key ID of the AWS S3 bucket.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Secret key ID of the bound AWS S3 bucket.
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
-        /// The key of the AWS S3 bucket.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Secret Key of the bound AWS S3 bucket.
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }
 
         /// <summary>
-        /// The SQS queue of the AWS S3 bucket.
-        /// Note: The queue must be in the same region as the bucket.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// SQS event queue bound to the AWS S3 bucket.
+        /// Note: The queue and bucket need to be in the same region.
         /// </summary>
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }

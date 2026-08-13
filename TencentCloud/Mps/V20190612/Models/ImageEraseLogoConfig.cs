@@ -25,20 +25,17 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Capability configuration enabling status. Valid values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled</li>
+        /// Capability configuration switch. Valid values:
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled.</li>
         /// Default value: ON.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
         /// Multiple box selection areas that need to be erased, with a maximum of 16 areas available.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ImageAreaBoxes")]
         public ImageAreaBoxInfo[] ImageAreaBoxes{ get; set; }

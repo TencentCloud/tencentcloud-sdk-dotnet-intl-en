@@ -43,8 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

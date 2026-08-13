@@ -73,15 +73,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// Audio/Video enhancement configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Audio/Video enhancement configuration
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// Subtitle parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subtitle parameter
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }

@@ -34,22 +34,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
         /// </summary>
         [JsonProperty("CosOutputStorage")]
         public CosOutputStorage CosOutputStorage{ get; set; }
 
         /// <summary>
-        /// The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
         /// </summary>
         [JsonProperty("S3OutputStorage")]
         public S3OutputStorage S3OutputStorage{ get; set; }
 
         /// <summary>
-        /// The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
         /// </summary>
         [JsonProperty("VODOutputStorage")]
         public VODOutputStorage VODOutputStorage{ get; set; }

@@ -39,8 +39,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
-        /// 
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -54,9 +53,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Hotword sorting field. Valid values:
         /// 
-        ///  - Default: Sort by the hotword upload sequence.
-        ///  - Weight: Sort by the weight.
-        ///  - Lexical: Sort by the first letter of hotwords.
+        /// - Default: Sort by the order in the default file.
+        /// - Weight: Sort by the weight.
+        /// - Lexical: Sort by the first letter of hotwords.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

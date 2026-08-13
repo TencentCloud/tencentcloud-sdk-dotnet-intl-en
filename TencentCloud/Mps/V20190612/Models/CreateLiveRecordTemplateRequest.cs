@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MP4ConfigureInfo MP4Configure{ get; set; }
 
         /// <summary>
-        /// Recording template name. Length limit: 64 characters.
+        /// Recording template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,13 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Recording type. Valid values: 
-        /// 
-        /// - video: audio and video recording; 
-        /// - audio: audio recording; 
-        /// - auto: automatic detection;
-        /// 
-        /// If it is left blank, "video" will be used as the default value.
+        /// Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }

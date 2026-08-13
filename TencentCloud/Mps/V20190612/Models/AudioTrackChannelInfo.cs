@@ -25,32 +25,26 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable the feature of multi-audio track mixing. Valid values:
-        /// <li>0: To disable the multi-audio track mixing feature.
-        /// <li>1: To enable the multi-audio track mixing feature. 
-        /// <li>Default value: 0.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Whether audio mixing is enabled. Value range:
+        /// 0: Disable audio mixing
+        /// 1: Enable audio mixing
+        /// Default value: 0
         /// </summary>
         [JsonProperty("ChannelsRemix")]
         public long? ChannelsRemix{ get; set; }
 
         /// <summary>
-        /// Set the selector type for the input audio track. Valid values:
-        /// <li>track: indicates the usage of audio track id to identify the track to be used.
-        /// <li>track_channel: indicates the usage of both the audio track id and sound channel id to identify the track and channel to be used.
-        /// <li>Default value: track.
-        /// If the original audio track has multiple sound channels, please use track_channel.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Merge audio track input type, available values:
+        /// track: Indicates usage of the audio track id.
+        /// track_channel: Indicates usage of audio track id and sound channel id.
+        /// Default: track.
+        /// Note: If the original video is multichannel, recommend using track_channel.
         /// </summary>
         [JsonProperty("SelectType")]
         public string SelectType{ get; set; }
 
         /// <summary>
-        /// Audio track information.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Audio track info
         /// </summary>
         [JsonProperty("InputTrackInfo")]
         public TrackInfo[] InputTrackInfo{ get; set; }

@@ -34,10 +34,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The frame rate (Hz). Value range: [0, 100].
+        /// Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
         /// Default value: 0.
-        /// Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }

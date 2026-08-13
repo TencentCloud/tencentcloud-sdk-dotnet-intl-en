@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of an animated image generating template.
+        /// Unique identifier for rotation diagram template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

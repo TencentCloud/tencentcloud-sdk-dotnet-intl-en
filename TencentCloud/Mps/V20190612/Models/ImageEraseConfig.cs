@@ -26,7 +26,6 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Icon erasing configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ImageEraseLogo")]
         public ImageEraseLogoConfig ImageEraseLogo{ get; set; }

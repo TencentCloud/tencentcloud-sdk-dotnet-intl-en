@@ -68,7 +68,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }

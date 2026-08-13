@@ -26,21 +26,18 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// <p>Image encoding configuration.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
         /// <p>Image enhancement configuration.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
         /// <p>Image erasing configuration.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EraseConfig")]
         public ImageEraseConfig EraseConfig{ get; set; }
@@ -50,6 +47,30 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         [JsonProperty("AiPosterSuiteConfig")]
         public AiPosterSuiteConfig AiPosterSuiteConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai image cutout configuration</p>
+        /// </summary>
+        [JsonProperty("AiCutoutConfig")]
+        public AiCutoutConfig AiCutoutConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai Image Expansion Configuration</p>
+        /// </summary>
+        [JsonProperty("AiExpansionConfig")]
+        public AiExpansionConfig AiExpansionConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Ai storyboard deconstruction configuration</p>
+        /// </summary>
+        [JsonProperty("AiStoryboardConfig")]
+        public AiStoryboardConfig AiStoryboardConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Image understanding configuration.</p>
+        /// </summary>
+        [JsonProperty("UnderstandImageConfig")]
+        public UnderstandImageConfig UnderstandImageConfig{ get; set; }
 
 
         /// <summary>
@@ -61,6 +82,10 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
             this.SetParamObj(map, prefix + "AiPosterSuiteConfig.", this.AiPosterSuiteConfig);
+            this.SetParamObj(map, prefix + "AiCutoutConfig.", this.AiCutoutConfig);
+            this.SetParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
+            this.SetParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
+            this.SetParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
         }
     }
 }

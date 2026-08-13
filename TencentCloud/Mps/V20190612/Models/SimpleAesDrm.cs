@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The URI of decryption key.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Request decryption key uri address.
         /// </summary>
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
         /// <summary>
         /// Encryption key (32-byte hexadecimal string).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Initialization vector for encryption (32-byte hexadecimal string).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Encryption initialization vector (32-byte hexadecimal string).
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

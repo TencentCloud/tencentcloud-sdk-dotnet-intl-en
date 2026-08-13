@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The AWS S3 bucket.
+        /// S3 bucket.
         /// </summary>
         [JsonProperty("S3Bucket")]
         public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// The region of the AWS S3 bucket.
+        /// Region of the S3 bucket.
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }
 
         /// <summary>
-        /// The key ID required to upload files to the AWS S3 object.
+        /// Secret key id for uploading media content to the AWS private network.
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
-        /// The key required to upload files to the AWS S3 object.
+        /// Upload the secret key for media content on the AWS private network.
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

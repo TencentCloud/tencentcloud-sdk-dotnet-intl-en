@@ -34,15 +34,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
         /// </summary>
         [JsonProperty("FpsNum")]
         public long? FpsNum{ get; set; }
 
         /// <summary>
-        /// Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
         /// </summary>
         [JsonProperty("FpsDen")]
         public long? FpsDen{ get; set; }

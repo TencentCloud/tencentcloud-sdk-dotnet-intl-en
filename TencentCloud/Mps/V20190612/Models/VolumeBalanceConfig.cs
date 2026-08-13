@@ -34,11 +34,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The type. Valid values:
-        /// <li>`loudNorm`: Loudness normalization.</li>
-        /// <li>`gainControl`: Volume leveling.</li>
-        /// Default value: `loudNorm`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type, available values:
+        /// <li>loudNorm: Loudness normalization</li>
+        /// <li>gainControl: Reduce abrupt change</li>
+        /// Default value: loudNorm.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Packed string, which will vary according to the custom API.
+        /// String after packaging, coordinate with the backend.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

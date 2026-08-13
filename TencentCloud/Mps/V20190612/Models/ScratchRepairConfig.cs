@@ -34,9 +34,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The strength. Value range: 0.0-1.0
-        /// Default value: 0.0
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intensity, value ranges from 0.0 to 1.0.
+        /// Default value: 0.0.
         /// </summary>
         [JsonProperty("Intensity")]
         public float? Intensity{ get; set; }

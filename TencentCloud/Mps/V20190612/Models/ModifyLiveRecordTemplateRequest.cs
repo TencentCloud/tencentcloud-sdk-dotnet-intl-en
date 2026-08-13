@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the recording template unique identifier.
+        /// Unique identifier of the recording template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MP4ConfigureInfo MP4Configure{ get; set; }
 
         /// <summary>
-        /// Recording template name. Length limit: 64 characters.
+        /// Recording template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

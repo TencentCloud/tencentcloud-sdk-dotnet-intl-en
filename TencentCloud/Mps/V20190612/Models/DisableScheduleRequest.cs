@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The scheme ID.
+        /// Orchestration unique representation.
         /// </summary>
         [JsonProperty("ScheduleId")]
         public long? ScheduleId{ get; set; }

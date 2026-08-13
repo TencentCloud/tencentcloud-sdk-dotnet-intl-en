@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+        /// base64 content of the hot word library file, Type 1 required
         /// 
         /// </summary>
         [JsonProperty("FileContent")]

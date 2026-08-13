@@ -50,7 +50,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TrackChannelInfo")]
         public AudioTrackChannelInfo TrackChannelInfo{ get; set; }

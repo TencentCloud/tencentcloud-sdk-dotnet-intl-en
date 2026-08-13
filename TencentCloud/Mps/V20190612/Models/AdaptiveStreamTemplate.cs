@@ -54,9 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Audio parameter information list.
-        /// The parameter is only used when merging multiple audio tracks in adaptive bitrate transcoding. the maximum length of the parameter array is 64.
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
         /// </summary>
         [JsonProperty("AudioList")]
         public AudioTemplateInfo[] AudioList{ get; set; }

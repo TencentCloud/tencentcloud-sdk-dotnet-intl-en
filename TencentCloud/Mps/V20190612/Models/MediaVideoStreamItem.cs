@@ -60,49 +60,43 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Color primaries
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Colorspace.
         /// </summary>
         [JsonProperty("ColorPrimaries")]
         public string ColorPrimaries{ get; set; }
 
         /// <summary>
-        /// Color space
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Colorspace.
         /// </summary>
         [JsonProperty("ColorSpace")]
         public string ColorSpace{ get; set; }
 
         /// <summary>
-        /// Color transfer
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Colorspace.
         /// </summary>
         [JsonProperty("ColorTransfer")]
         public string ColorTransfer{ get; set; }
 
         /// <summary>
-        /// HDR type
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// HDR type.
         /// </summary>
         [JsonProperty("HdrType")]
         public string HdrType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video Codecs.
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// Numerator of the frame rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Numerator of the frame rate
         /// </summary>
         [JsonProperty("FpsNumerator")]
         public long? FpsNumerator{ get; set; }
 
         /// <summary>
-        /// Denominator of the frame rate.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Denominator of the frame rate
         /// </summary>
         [JsonProperty("FpsDenominator")]
         public long? FpsDenominator{ get; set; }

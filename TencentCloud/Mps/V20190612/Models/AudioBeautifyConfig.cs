@@ -34,11 +34,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The audio improvement options. You can specify multiple options. Valid values:
-        /// <li>`declick`: Noise removal.</li>
-        /// <li>`deesser`: De-essing.</li>
-        /// Default: `declick`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type. Multiple selections allowed. Valid values:
+        /// <li>declick: noise removal</li>
+        /// <li>deesser: Dental Click Suppression</li>
+        /// Default value: declick.
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }

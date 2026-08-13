@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Pagination offset. The default value is 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -55,8 +55,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values:
-        /// Definition: unique identifier of the template.
+        /// Sorting field. Valid values:  
+        /// Definition: Template Unique Identifier 
         /// Default value: creation time.
         /// </summary>
         [JsonProperty("OrderBy")]

@@ -34,48 +34,55 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type, available values:
+        /// <li>standard: Common super-resolution</li>
+        /// <li>super: Advanced super-resolution.
+        /// <li>ultra: Advanced super-resolution ultra edition.</li>
+        /// Default value: standard.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Image output mode. The default value is percent.
-        /// <li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+        /// <li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
         /// <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-        /// <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li>percent: Super-resolution magnification factor, which can be a decimal.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Super-resolution multiplication rate, can be a decimal.
+        /// Note: Used when Mode equals percent.
         /// </summary>
         [JsonProperty("Percent")]
         public float? Percent{ get; set; }
 
         /// <summary>
-        /// Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Image width must not exceed 4096.
+        /// Note: When Mode equals aspect or fixed, preferentially use this configuration.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Target image height must not exceed 4096.
+        /// Note: When Mode equals aspect or fixed, preferentially use this configuration.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The long side length of the target image must not exceed 4096.
+        /// Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
         /// </summary>
         [JsonProperty("LongSide")]
         public long? LongSide{ get; set; }
 
         /// <summary>
-        /// Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The short side length of the target image must not exceed 4096.
+        /// Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
         /// </summary>
         [JsonProperty("ShortSide")]
         public long? ShortSide{ get; set; }

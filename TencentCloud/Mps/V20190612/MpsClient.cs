@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1371";
+       private const string sdkVersion = "SDK_NET_3.0.1373";
 
         /// <summary>
         /// Client constructor.
@@ -94,6 +94,27 @@ namespace TencentCloud.Mps.V20190612
         public CloneViralResponse CloneViralSync(CloneViralRequest req)
         {
             return InternalRequestAsync<CloneViralResponse>(req, "CloneViral")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to clone a voice type from a reference audio.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceRequest"/></param>
+        /// <returns><see cref="CloneVoiceResponse"/></returns>
+        public Task<CloneVoiceResponse> CloneVoice(CloneVoiceRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceResponse>(req, "CloneVoice");
+        }
+
+        /// <summary>
+        /// This API is used to clone a voice type from a reference audio.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceRequest"/></param>
+        /// <returns><see cref="CloneVoiceResponse"/></returns>
+        public CloneVoiceResponse CloneVoiceSync(CloneVoiceRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceResponse>(req, "CloneVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -178,6 +199,27 @@ namespace TencentCloud.Mps.V20190612
         public CreateAiDramaTaskResponse CreateAiDramaTaskSync(CreateAiDramaTaskRequest req)
         {
             return InternalRequestAsync<CreateAiDramaTaskResponse>(req, "CreateAiDramaTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create an ai video fission task
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiFissionTaskRequest"/></param>
+        /// <returns><see cref="CreateAiFissionTaskResponse"/></returns>
+        public Task<CreateAiFissionTaskResponse> CreateAiFissionTask(CreateAiFissionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiFissionTaskResponse>(req, "CreateAiFissionTask");
+        }
+
+        /// <summary>
+        /// Create an ai video fission task
+        /// </summary>
+        /// <param name="req"><see cref="CreateAiFissionTaskRequest"/></param>
+        /// <returns><see cref="CreateAiFissionTaskResponse"/></returns>
+        public CreateAiFissionTaskResponse CreateAiFissionTaskSync(CreateAiFissionTaskRequest req)
+        {
+            return InternalRequestAsync<CreateAiFissionTaskResponse>(req, "CreateAiFissionTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -828,7 +870,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom animated image generating template.
+        /// This API is used to delete custom animated image generating templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
         /// <returns><see cref="DeleteAnimatedGraphicsTemplateResponse"/></returns>
@@ -838,7 +880,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom animated image generating template.
+        /// This API is used to delete custom animated image generating templates.
         /// </summary>
         /// <param name="req"><see cref="DeleteAnimatedGraphicsTemplateRequest"/></param>
         /// <returns><see cref="DeleteAnimatedGraphicsTemplateResponse"/></returns>
@@ -891,7 +933,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom content moderation template.
+        /// This API is used to delete a user-defined content moderation template.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -901,7 +943,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom content moderation template.
+        /// This API is used to delete a user-defined content moderation template.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -912,7 +954,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete an image sprite generating template.
+        /// This API is used to delete a sprite sheet template.
         /// </summary>
         /// <param name="req"><see cref="DeleteImageSpriteTemplateRequest"/></param>
         /// <returns><see cref="DeleteImageSpriteTemplateResponse"/></returns>
@@ -922,7 +964,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete an image sprite generating template.
+        /// This API is used to delete a sprite sheet template.
         /// </summary>
         /// <param name="req"><see cref="DeleteImageSpriteTemplateRequest"/></param>
         /// <returns><see cref="DeleteImageSpriteTemplateResponse"/></returns>
@@ -1038,7 +1080,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom sampled screencapturing template.
+        /// This API is used to delete a user-customized sampled screenshot template.
         /// </summary>
         /// <param name="req"><see cref="DeleteSampleSnapshotTemplateRequest"/></param>
         /// <returns><see cref="DeleteSampleSnapshotTemplateResponse"/></returns>
@@ -1048,7 +1090,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom sampled screencapturing template.
+        /// This API is used to delete a user-customized sampled screenshot template.
         /// </summary>
         /// <param name="req"><see cref="DeleteSampleSnapshotTemplateRequest"/></param>
         /// <returns><see cref="DeleteSampleSnapshotTemplateResponse"/></returns>
@@ -1059,7 +1101,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a scheme.
+        /// Delete orchestration
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
         /// <returns><see cref="DeleteScheduleResponse"/></returns>
@@ -1069,7 +1111,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a scheme.
+        /// Delete orchestration
         /// </summary>
         /// <param name="req"><see cref="DeleteScheduleRequest"/></param>
         /// <returns><see cref="DeleteScheduleResponse"/></returns>
@@ -1122,7 +1164,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom time point screencapturing template.
+        /// This API is used to delete a user-customized specified time point screenshot template.
         /// </summary>
         /// <param name="req"><see cref="DeleteSnapshotByTimeOffsetTemplateRequest"/></param>
         /// <returns><see cref="DeleteSnapshotByTimeOffsetTemplateResponse"/></returns>
@@ -1132,7 +1174,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom time point screencapturing template.
+        /// This API is used to delete a user-customized specified time point screenshot template.
         /// </summary>
         /// <param name="req"><see cref="DeleteSnapshotByTimeOffsetTemplateRequest"/></param>
         /// <returns><see cref="DeleteSnapshotByTimeOffsetTemplateResponse"/></returns>
@@ -1206,7 +1248,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom watermarking template.
+        /// This API is used to delete a user-customized watermark template.
         /// </summary>
         /// <param name="req"><see cref="DeleteWatermarkTemplateRequest"/></param>
         /// <returns><see cref="DeleteWatermarkTemplateResponse"/></returns>
@@ -1216,7 +1258,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a custom watermarking template.
+        /// This API is used to delete a user-customized watermark template.
         /// </summary>
         /// <param name="req"><see cref="DeleteWatermarkTemplateRequest"/></param>
         /// <returns><see cref="DeleteWatermarkTemplateResponse"/></returns>
@@ -1248,7 +1290,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a workflow. An enabled workflow must be disabled before it can be deleted.
+        /// Delete workflow. For enabled workflows, they must be disabled before they can be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
         /// <returns><see cref="DeleteWorkflowResponse"/></returns>
@@ -1258,7 +1300,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to delete a workflow. An enabled workflow must be disabled before it can be deleted.
+        /// Delete workflow. For enabled workflows, they must be disabled before they can be deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowRequest"/></param>
         /// <returns><see cref="DeleteWorkflowResponse"/></returns>
@@ -1370,6 +1412,27 @@ namespace TencentCloud.Mps.V20190612
         public DescribeAigcImageTaskResponse DescribeAigcImageTaskSync(DescribeAigcImageTaskRequest req)
         {
             return InternalRequestAsync<DescribeAigcImageTaskResponse>(req, "DescribeAigcImageTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query AIGC task list details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskListResponse"/></returns>
+        public Task<DescribeAigcTaskListResponse> DescribeAigcTaskList(DescribeAigcTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskListResponse>(req, "DescribeAigcTaskList");
+        }
+
+        /// <summary>
+        /// Query AIGC task list details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcTaskListRequest"/></param>
+        /// <returns><see cref="DescribeAigcTaskListResponse"/></returns>
+        public DescribeAigcTaskListResponse DescribeAigcTaskListSync(DescribeAigcTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcTaskListResponse>(req, "DescribeAigcTaskList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1668,7 +1731,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+        /// This API is used to obtain media meta information, including video image width, height, encoding format, duration, and frame rate.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaMetaDataRequest"/></param>
         /// <returns><see cref="DescribeMediaMetaDataResponse"/></returns>
@@ -1678,7 +1741,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+        /// This API is used to obtain media meta information, including video image width, height, encoding format, duration, and frame rate.
         /// </summary>
         /// <param name="req"><see cref="DescribeMediaMetaDataRequest"/></param>
         /// <returns><see cref="DescribeMediaMetaDataResponse"/></returns>
@@ -2159,7 +2222,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to disable a scheme.
+        /// Disable automated trigger orchestration tasks.
         /// </summary>
         /// <param name="req"><see cref="DisableScheduleRequest"/></param>
         /// <returns><see cref="DisableScheduleResponse"/></returns>
@@ -2169,7 +2232,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to disable a scheme.
+        /// Disable automated trigger orchestration tasks.
         /// </summary>
         /// <param name="req"><see cref="DisableScheduleRequest"/></param>
         /// <returns><see cref="DisableScheduleResponse"/></returns>
@@ -2267,7 +2330,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to enable a scheme.
+        /// Enable automated trigger orchestration tasks.
         /// </summary>
         /// <param name="req"><see cref="EnableScheduleRequest"/></param>
         /// <returns><see cref="EnableScheduleResponse"/></returns>
@@ -2277,7 +2340,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to enable a scheme.
+        /// Enable automated trigger orchestration tasks.
         /// </summary>
         /// <param name="req"><see cref="EnableScheduleRequest"/></param>
         /// <returns><see cref="EnableScheduleResponse"/></returns>
@@ -2288,7 +2351,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to enable a workflow.
+        /// Enables a workflow.
         /// </summary>
         /// <param name="req"><see cref="EnableWorkflowRequest"/></param>
         /// <returns><see cref="EnableWorkflowResponse"/></returns>
@@ -2298,7 +2361,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to enable a workflow.
+        /// Enables a workflow.
         /// </summary>
         /// <param name="req"><see cref="EnableWorkflowRequest"/></param>
         /// <returns><see cref="EnableWorkflowResponse"/></returns>
@@ -2309,7 +2372,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
+        /// This interface is only used for custom development in special scenarios. Unless a Media Processing Service customer service representative proactively informs you that you need to use this interface, do not call it in other cases.
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
         /// <returns><see cref="ExecuteFunctionResponse"/></returns>
@@ -2319,7 +2382,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
+        /// This interface is only used for custom development in special scenarios. Unless a Media Processing Service customer service representative proactively informs you that you need to use this interface, do not call it in other cases.
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
         /// <returns><see cref="ExecuteFunctionResponse"/></returns>
@@ -2544,7 +2607,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to modify a live recording template.
+        /// This example shows you how to modify a live streaming recording template.
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
@@ -2554,7 +2617,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to modify a live recording template.
+        /// This example shows you how to modify a live streaming recording template.
         /// </summary>
         /// <param name="req"><see cref="ModifyLiveRecordTemplateRequest"/></param>
         /// <returns><see cref="ModifyLiveRecordTemplateResponse"/></returns>
@@ -3016,7 +3079,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to reset an existing workflow that is disabled.
+        /// This API is used to reset a workflow that already exists and is in disable status.
         /// </summary>
         /// <param name="req"><see cref="ResetWorkflowRequest"/></param>
         /// <returns><see cref="ResetWorkflowResponse"/></returns>
@@ -3026,7 +3089,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to reset an existing workflow that is disabled.
+        /// This API is used to reset a workflow that already exists and is in disable status.
         /// </summary>
         /// <param name="req"><see cref="ResetWorkflowRequest"/></param>
         /// <returns><see cref="ResetWorkflowResponse"/></returns>
@@ -3054,6 +3117,27 @@ namespace TencentCloud.Mps.V20190612
         public SyncDubbingResponse SyncDubbingSync(SyncDubbingRequest req)
         {
             return InternalRequestAsync<SyncDubbingResponse>(req, "SyncDubbing")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to generate speech synchronously based on input text and specified voice tone.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public Task<TextToSpeechResponse> TextToSpeech(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech");
+        }
+
+        /// <summary>
+        /// This API is used to generate speech synchronously based on input text and specified voice tone.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechRequest"/></param>
+        /// <returns><see cref="TextToSpeechResponse"/></returns>
+        public TextToSpeechResponse TextToSpeechSync(TextToSpeechRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechResponse>(req, "TextToSpeech")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

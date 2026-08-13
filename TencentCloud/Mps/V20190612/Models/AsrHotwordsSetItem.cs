@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Hotword ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Serial number of the hot word
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Hotword text.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Hotword text
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a watermarking template.
+        /// Unique identifier of the watermark template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

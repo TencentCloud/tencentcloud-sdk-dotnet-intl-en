@@ -25,9 +25,8 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-        /// Segment duration is 5 seconds by default if left empty.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+        /// If left empty, the default segment duration is 5 seconds.
         /// </summary>
         [JsonProperty("SegmentDuration")]
         public long? SegmentDuration{ get; set; }

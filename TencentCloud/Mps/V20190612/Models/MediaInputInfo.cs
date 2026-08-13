@@ -41,22 +41,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public CosInputInfo CosInputInfo{ get; set; }
 
         /// <summary>
-        /// The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid when Type is URL. This item is required and indicates the media processing URL object information.
         /// </summary>
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }
 
         /// <summary>
-        /// The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
         /// </summary>
         [JsonProperty("S3InputInfo")]
         public S3InputInfo S3InputInfo{ get; set; }
 
         /// <summary>
-        /// The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
         /// </summary>
         [JsonProperty("VODInputInfo")]
         public VODInputInfo VODInputInfo{ get; set; }

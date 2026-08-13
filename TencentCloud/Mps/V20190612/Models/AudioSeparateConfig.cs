@@ -34,21 +34,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The scenario. Valid values:
-        /// <li>`normal`: Separate voice and background audio.</li>
-        /// <li>`music`: Separate vocals and instrumentals.</li>
-        /// Default value: `normal`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scenario type. Valid values:
+        /// <li>normal: Voice background audio scenario</li>
+        /// <li>music: Singing accompaniment scenario</li>
+        /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The output audio track. Valid values:
-        /// <li>`vocal`: Voice.</li>
-        /// <li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-        /// Default value: `vocal`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Output audio track. Available values:
+        /// <li>vocal: output voice.</li>
+        /// <li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+        /// Default value: vocal.
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }

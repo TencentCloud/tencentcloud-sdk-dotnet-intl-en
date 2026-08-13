@@ -25,26 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The URL of the subtitles to add to the video.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subtitle file URL to be suppressed in the video.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+        /// Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
         /// 
-        /// -Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+        /// -Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
         /// 
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("StreamIndex")]
         public long? StreamIndex{ get; set; }
 
         /// <summary>
-        /// Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
         /// </summary>
         [JsonProperty("SubtitleFileInput")]
         public MediaInputInfo SubtitleFileInput{ get; set; }
@@ -58,7 +54,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Font type. Valid values:
         /// <li>hei.ttf: SimHei</li>
-        /// <li>song.ttf: SimSun.</li>
+        /// <li>song.ttf: Song Typeface.</li>
         /// <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
         /// <li>msyh.ttf: Microsoft YaHei.</li>
         /// <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -93,68 +89,58 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <br>Note:
         /// <li>kai.ttf is recommended for SimKai.</li>
         /// <li>FontFileInput takes precedence when specified.</li>
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
-        /// Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+        /// Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
         /// 
-        /// - Pixel: Npx. Value range of N: (0,4096].
+        /// -.
         /// - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
         /// 
         /// The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
 
         /// <summary>
         /// Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
-        /// The text transparency. Value range: 0-1.
-        /// <li>`0`: Fully transparent.</li>
-        /// <li>`1`: Fully opaque.</li>
+        /// Text opacity, value ranges from 0 to 1.
+        /// <li>0: completely transparent.</li>
+        /// <li>1: completely opaque.</li>
         /// Default value: 1.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FontAlpha")]
         public float? FontAlpha{ get; set; }
 
         /// <summary>
-        /// Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+        /// Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
         /// 
-        ///  - Pixel: Npx. Value range of N: [0,4096].
-        ///  - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+        /// -.
+        /// -Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
         /// 
         /// By default, the position is 4% of the source video height.
-        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
         /// ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+        /// y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
         /// 
-        ///  - Pixel: Npx. Value range of N: [0,4096].
-        ///  - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+        /// -.
+        /// -Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
         /// 
         /// If this parameter is not specified, the subtitle background is disabled.
-        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
         /// ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-        /// 
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BoardY")]
         public string BoardY{ get; set; }
@@ -164,8 +150,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// - Value range for pixels: [0,4096].
         /// - Value range for percentages: [0, 100].
         /// If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BoardWidth")]
         public long? BoardWidth{ get; set; }
@@ -175,8 +159,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// - Value range for pixels: [0,4096].
         /// - Value range for percentages: [0, 100].
         /// If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BoardHeight")]
         public long? BoardHeight{ get; set; }
@@ -184,7 +166,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Board color. Format: 0xRRGGBB.
         /// Default value: 0x000000 (black).
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BoardColor")]
         public string BoardColor{ get; set; }
@@ -194,7 +175,6 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>0: completely transparent.</li>
         /// <li>1: completely opaque.</li>
         /// Default value: 0.8.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("BoardAlpha")]
         public float? BoardAlpha{ get; set; }

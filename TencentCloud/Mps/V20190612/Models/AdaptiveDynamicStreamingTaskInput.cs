@@ -38,14 +38,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>Digital watermark parameter.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -70,14 +68,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// <p>DRM information.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Drm information.</p>
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
@@ -90,7 +86,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
@@ -102,8 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
         /// </summary>
         [JsonProperty("KeyPTSList")]
         public long?[] KeyPTSList{ get; set; }

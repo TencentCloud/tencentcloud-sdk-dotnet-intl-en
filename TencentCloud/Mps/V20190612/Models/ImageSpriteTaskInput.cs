@@ -32,7 +32,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -51,7 +50,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }

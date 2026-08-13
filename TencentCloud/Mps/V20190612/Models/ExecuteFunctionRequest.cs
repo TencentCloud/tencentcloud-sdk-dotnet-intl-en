@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of called backend API.
+        /// Backend interface name invoked.
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// API parameter. Parameter format will depend on the actual function definition.
+        /// API parameter, coordinate with the backend for the specific parameter format when calling.
         /// </summary>
         [JsonProperty("FunctionArg")]
         public string FunctionArg{ get; set; }

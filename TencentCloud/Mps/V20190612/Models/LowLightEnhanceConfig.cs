@@ -34,10 +34,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The strength. Valid values:
+        /// Type. Valid values:
         /// <li>normal</li>
         /// Default value: normal.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

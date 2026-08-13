@@ -34,13 +34,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Valid values:
+        /// Type, available values:
         /// <li>HDR10</li>
         /// <li>HLG</li>
-        /// Default value: HDR10.
+        /// Default Value: HDR10.
         /// Note: The video encoding method should be h264 or h265.
         /// Note: The video encoding bit depth is 10.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

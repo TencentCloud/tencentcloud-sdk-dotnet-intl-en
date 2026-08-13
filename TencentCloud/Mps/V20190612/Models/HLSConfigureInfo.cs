@@ -25,27 +25,24 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Duration of a single TS file in seconds. Value range: 5-30 seconds.
+        /// Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
         /// 
-        /// If this parameter is left empty, 30 seconds will be used by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Leave it blank and it defaults to 30 seconds.
         /// </summary>
         [JsonProperty("ItemDuration")]
         public long? ItemDuration{ get; set; }
 
         /// <summary>
-        /// Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+        /// Recording period, unit: second, value ranges from 10 minutes to 12 hr.
         /// 
-        /// If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Leave it blank defaults to 10 minutes (3600 seconds).
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-        /// If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+        /// Leave blank defaults to 0 (recording continuation disabled).
         /// </summary>
         [JsonProperty("ContinueTimeout")]
         public long? ContinueTimeout{ get; set; }
