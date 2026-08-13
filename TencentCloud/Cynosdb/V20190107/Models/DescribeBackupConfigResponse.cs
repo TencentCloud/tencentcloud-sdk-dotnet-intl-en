@@ -67,8 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
-        /// <p>Second-level snapshot backup configuration information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Secondary snapshot backup configuration information</p>
         /// </summary>
         [JsonProperty("SnapshotSecondaryBackupConfig")]
         public BackupConfigInfo SnapshotSecondaryBackupConfig{ get; set; }

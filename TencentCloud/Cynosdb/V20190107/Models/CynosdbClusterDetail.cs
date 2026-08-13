@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>AZ.</p>
+        /// <p>Primary availability zone of the cluster</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -223,7 +223,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// <p>Primary AZ</p>
+        /// <p>Current instance located availability zone for read-write</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
@@ -372,6 +372,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("IsOpenTDE")]
         public bool? IsOpenTDE{ get; set; }
 
+        /// <summary>
+        /// <p>Current instance availability zone</p>
+        /// </summary>
+        [JsonProperty("RealZone")]
+        public string RealZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -436,6 +442,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
+            this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
         }
     }
 }

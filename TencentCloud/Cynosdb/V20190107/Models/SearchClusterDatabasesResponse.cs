@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database List
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database list.
         /// </summary>
         [JsonProperty("Databases")]
         public string[] Databases{ get; set; }

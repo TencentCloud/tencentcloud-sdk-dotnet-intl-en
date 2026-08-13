@@ -25,15 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Sparse backup switch: ON/OFF</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Backup switch: ON/OFF</p>
         /// </summary>
         [JsonProperty("SparseBackupSwitch")]
         public string SparseBackupSwitch{ get; set; }
 
         /// <summary>
         /// <p>Sparse backup policy list (1-3)</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SparseBackupConfigInfos")]
         public SparseBackupConfigInfo[] SparseBackupConfigInfos{ get; set; }

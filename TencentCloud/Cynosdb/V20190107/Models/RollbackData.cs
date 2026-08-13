@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? SnapShotId{ get; set; }
 
         /// <summary>
-        /// Rollback database.
+        /// Rollback database
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// Rollback data table.
+        /// Rollback data table
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }

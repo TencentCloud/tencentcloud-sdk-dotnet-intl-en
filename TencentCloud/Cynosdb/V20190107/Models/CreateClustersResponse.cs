@@ -49,8 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// <p>Large Order ID</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Large order number</p>
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

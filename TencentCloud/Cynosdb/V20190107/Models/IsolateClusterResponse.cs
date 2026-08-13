@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

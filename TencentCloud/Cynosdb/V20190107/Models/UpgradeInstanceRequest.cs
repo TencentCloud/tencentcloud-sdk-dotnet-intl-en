@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Database memory in GB.
+        /// Database memory in GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }

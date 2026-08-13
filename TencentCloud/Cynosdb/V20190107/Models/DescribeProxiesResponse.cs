@@ -37,8 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyGroupInfo[] ProxyGroupInfos{ get; set; }
 
         /// <summary>
-        /// <p>database proxy node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Database proxy node</p>
         /// </summary>
         [JsonProperty("ProxyNodeInfos")]
         public ProxyNodeInfo[] ProxyNodeInfos{ get; set; }

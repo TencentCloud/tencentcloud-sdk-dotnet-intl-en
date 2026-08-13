@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Safe id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
         /// Safe region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VaultRegion")]
         public string VaultRegion{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory in GB
+        /// <p>Memory in GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Number of added read-only instances. Value range: (0,16].
+        /// <p>Number of newly-added read-only instances, value range (0,15]</p>
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }
@@ -74,13 +74,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// The port used when adding an RO group. Value range: [0,65535).
+        /// <p>Port used when adding new RO groups, value range [0,65535)</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Instance name. String length range: [0,64).
+        /// <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

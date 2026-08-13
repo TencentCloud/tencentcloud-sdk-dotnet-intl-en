@@ -26,35 +26,30 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Source instance type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcInstanceType")]
         public string SrcInstanceType{ get; set; }
 
         /// <summary>
-        /// Source Cluster Id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Source cluster Id
         /// </summary>
         [JsonProperty("SrcClusterId")]
         public string SrcClusterId{ get; set; }
 
         /// <summary>
         /// Source instance ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SrcInstanceId")]
         public string SrcInstanceId{ get; set; }
 
         /// <summary>
         /// Copy task ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ReplicationJobId")]
         public string ReplicationJobId{ get; set; }
 
         /// <summary>
-        /// sync object details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Synchronization object details
         /// </summary>
         [JsonProperty("MigrateObjects")]
         public MigrateOpt MigrateObjects{ get; set; }

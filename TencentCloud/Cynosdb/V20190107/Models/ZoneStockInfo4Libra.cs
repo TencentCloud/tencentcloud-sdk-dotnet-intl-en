@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Availability zone
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// whether there is inventory
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether there is inventory
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }

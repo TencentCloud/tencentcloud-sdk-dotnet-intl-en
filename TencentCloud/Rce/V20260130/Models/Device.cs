@@ -84,6 +84,18 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("SdkBuildVersion")]
         public string SdkBuildVersion{ get; set; }
 
+        /// <summary>
+        /// <p>Signature verification token. Please contact us to enable signature verification</p>
+        /// </summary>
+        [JsonProperty("SignToken")]
+        public string SignToken{ get; set; }
+
+        /// <summary>
+        /// <p>Token generation timestamp, in milliseconds</p>
+        /// </summary>
+        [JsonProperty("TokenTime")]
+        public string TokenTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "SystemVersion", this.SystemVersion);
             this.SetParamSimple(map, prefix + "SdkBuildVersion", this.SdkBuildVersion);
+            this.SetParamSimple(map, prefix + "SignToken", this.SignToken);
+            this.SetParamSimple(map, prefix + "TokenTime", this.TokenTime);
         }
     }
 }

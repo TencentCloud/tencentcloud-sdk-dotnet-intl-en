@@ -61,8 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? StockCount{ get; set; }
 
         /// <summary>
-        /// <p>Availability zone inventory information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>AZ inventory information</p>
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
         public ServerlessZoneStockInfo[] ZoneStockInfos{ get; set; }

@@ -43,8 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// Detailed information of cross-region backup items.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed information of cross-region backup items
         /// </summary>
         [JsonProperty("CrossRegionBackupInfos")]
         public CrossRegionBackupItem[] CrossRegionBackupInfos{ get; set; }

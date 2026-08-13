@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>AZ.</p>
+        /// <p>Primary availability zone of the cluster</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -308,20 +308,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Resource tag</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Primary AZ</p>
+        /// <p>Current instance availability zone for read-write</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }
 
         /// <summary>
         /// <p>Standby availability zone</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
@@ -333,8 +331,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
 
         /// <summary>
-        /// <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
@@ -380,6 +377,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
+
+        /// <summary>
+        /// <p>Current instance availability zone</p>
+        /// </summary>
+        [JsonProperty("RealZone")]
+        public string RealZone{ get; set; }
 
 
         /// <summary>
@@ -446,6 +449,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
             this.SetParamArraySimple(map, prefix + "NodeList.", this.NodeList);
             this.SetParamSimple(map, prefix + "GdnId", this.GdnId);
+            this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
         }
     }
 }

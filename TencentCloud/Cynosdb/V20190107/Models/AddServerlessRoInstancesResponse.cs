@@ -25,29 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Freeze transaction. One frozen flow is activated at a time.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Freeze transaction, one frozen flow is activated at a time</p>
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
-        /// <p>Post-paid order number</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Post-paid Order Number</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// <p>Delivery resource id list.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Delivery resource id list</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
         /// <p>Large order number</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

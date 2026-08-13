@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Execution plan details</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Plan details</p>
         /// </summary>
         [JsonProperty("PlanDetail")]
         public ExecutionPlanDetail PlanDetail{ get; set; }

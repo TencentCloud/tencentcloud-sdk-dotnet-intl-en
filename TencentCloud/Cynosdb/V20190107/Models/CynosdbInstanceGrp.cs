@@ -116,21 +116,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// VPC ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Information of the old IP
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Recycling IP information
         /// </summary>
         [JsonProperty("OldAddrInfo")]
         public OldAddrInfo OldAddrInfo{ get; set; }

@@ -44,7 +44,6 @@ namespace TencentCloud.Rce.V20260130.Models
 
         /// <summary>
         /// <p>Basic IP environment information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Environment")]
         public Environment Environment{ get; set; }

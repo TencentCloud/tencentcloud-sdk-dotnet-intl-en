@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance specifications list in this region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance specifications list for this region
         /// </summary>
         [JsonProperty("InstanceSpecSet")]
         public RegionInstanceSpecInfo[] InstanceSpecSet{ get; set; }

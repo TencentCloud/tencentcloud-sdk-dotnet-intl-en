@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Audit rule information of the instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance audit rule information.
         /// </summary>
         [JsonProperty("Items")]
         public InstanceAuditRule[] Items{ get; set; }

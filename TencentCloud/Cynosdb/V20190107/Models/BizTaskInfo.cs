@@ -177,7 +177,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Modify parameter task information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyParamsData")]
         [System.Obsolete]
@@ -203,7 +202,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Manual backup task information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ManualBackupData")]
         public ManualBackupData ManualBackupData{ get; set; }
@@ -222,14 +220,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Convert cluster logs</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SwitchClusterLogBin")]
         public SwitchClusterLogBin SwitchClusterLogBin{ get; set; }
 
         /// <summary>
         /// <p>Modify instance parameter data</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ModifyInstanceParamsData")]
         public BizTaskModifyParamsData ModifyInstanceParamsData{ get; set; }

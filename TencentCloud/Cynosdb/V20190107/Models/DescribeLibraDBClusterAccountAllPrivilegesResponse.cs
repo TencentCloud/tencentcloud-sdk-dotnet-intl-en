@@ -26,28 +26,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Permission statement
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PrivilegeStatements")]
         public string[] PrivilegeStatements{ get; set; }
 
         /// <summary>
         /// Global permission
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
 
         /// <summary>
         /// Database permission
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DatabasePrivileges")]
         public DatabasePrivileges[] DatabasePrivileges{ get; set; }
 
         /// <summary>
         /// Table permission
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivileges[] TablePrivileges{ get; set; }

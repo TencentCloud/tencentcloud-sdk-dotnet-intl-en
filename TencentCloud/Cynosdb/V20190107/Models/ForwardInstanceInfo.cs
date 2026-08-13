@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Forward the instance id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Forward instance region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Forward the instance region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

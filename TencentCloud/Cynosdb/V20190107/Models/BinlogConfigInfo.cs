@@ -37,8 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BinlogCrossRegionsEnable{ get; set; }
 
         /// <summary>
-        /// <p>binlog cross-region</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cross-region binlog</p>
         /// </summary>
         [JsonProperty("BinlogCrossRegions")]
         public string[] BinlogCrossRegions{ get; set; }

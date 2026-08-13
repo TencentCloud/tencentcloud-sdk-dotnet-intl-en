@@ -36,6 +36,12 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("Device")]
         public Device Device{ get; set; }
 
+        /// <summary>
+        /// <p>Basic IP environment information</p>
+        /// </summary>
+        [JsonProperty("Environment")]
+        public Environment Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Rce.V20260130.Models
         {
             this.SetParamObj(map, prefix + "Score.", this.Score);
             this.SetParamObj(map, prefix + "Device.", this.Device);
+            this.SetParamObj(map, prefix + "Environment.", this.Environment);
         }
     }
 }

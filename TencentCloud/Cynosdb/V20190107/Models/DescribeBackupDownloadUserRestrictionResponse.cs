@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster backup download limit information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Backup download limit info for cluster
         /// </summary>
         [JsonProperty("BackupLimitClusterRestrictions")]
         public BackupLimitClusterRestriction[] BackupLimitClusterRestrictions{ get; set; }

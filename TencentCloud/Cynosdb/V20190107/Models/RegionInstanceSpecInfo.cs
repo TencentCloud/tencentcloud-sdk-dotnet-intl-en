@@ -26,70 +26,60 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Number of CPU cores
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
         /// Memory size.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
         /// Minimum storage size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
         /// Maximum storage size
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
         /// Whether there is inventory
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
         /// <summary>
         /// Instance type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// Storage type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// minimum replica count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Minimum replica count
         /// </summary>
         [JsonProperty("MinReplicaNum")]
         public ulong? MinReplicaNum{ get; set; }
 
         /// <summary>
         /// Maximum number of replicas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MaxReplicaNum")]
         public ulong? MaxReplicaNum{ get; set; }
 
         /// <summary>
         /// Availability zone inventory information list
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
         public ZoneStockInfo4Libra[] ZoneStockInfos{ get; set; }

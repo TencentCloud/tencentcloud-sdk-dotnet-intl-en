@@ -31,7 +31,7 @@ namespace TencentCloud.Rce.V20260130.Models
         public string DeviceToken{ get; set; }
 
         /// <summary>
-        /// <p>User client IP address(IPv4 or IPv6)</p>
+        /// <p>User client IP address (IPv4 or IPv6)</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

@@ -26,14 +26,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Database migration mode
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MigrateDBMode")]
         public string MigrateDBMode{ get; set; }
 
         /// <summary>
         /// Database information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Databases")]
         public MigrateDBItem[] Databases{ get; set; }

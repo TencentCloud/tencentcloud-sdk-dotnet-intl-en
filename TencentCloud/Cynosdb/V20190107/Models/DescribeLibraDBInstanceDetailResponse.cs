@@ -25,218 +25,187 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>root account</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Root account</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// <p>Account unique ID</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
         /// <p>Cluster ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
         /// <p>Cluster name.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
         /// <p>Instance ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// <p>Instance name.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// <p>Project ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project ID</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
         /// <p>AZ.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>Instance status.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Instance status</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
         /// <p>Status description</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
         /// <p>Libra analysis engine version</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LibraDBVersion")]
         public string LibraDBVersion{ get; set; }
 
         /// <summary>
-        /// <p>cpu cores</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>cpu cores.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// <p>Memory size</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Memory size.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
         /// <p>Storage size</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
         /// <p>Storage type</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// <p>Instance type</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Instance type.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
         /// <p>Instance role</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
         /// <summary>
         /// <p>Update time.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
         /// <p>Creation time.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// <p>Selling mode</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// <p>Start time</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PeriodStartTime")]
         public string PeriodStartTime{ get; set; }
 
         /// <summary>
-        /// <p>End time of sale</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Termination time</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
         /// <p>Renewal flag</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
         /// <p>Network type</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
         /// <p>VPC ID</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
         /// <p>Subnet ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
         /// <p>Virtual IP</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
         /// <p>Port</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// <p>Instance network information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Instance network info</p>
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo InstanceNetInfo{ get; set; }
 
         /// <summary>
         /// <p>Instance tag information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
@@ -254,8 +223,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? NodeCount{ get; set; }
 
         /// <summary>
-        /// <p>Analyze the information after instance upgrade version</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Analyze the information after the instance upgrade version</p>
         /// </summary>
         [JsonProperty("AnalysisUpgradeVersionInfo")]
         public UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo{ get; set; }

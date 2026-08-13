@@ -56,7 +56,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Parameter template details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ParamInfoSet")]
         public TemplateParamInfo[] ParamInfoSet{ get; set; }

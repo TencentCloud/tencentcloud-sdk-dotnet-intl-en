@@ -31,8 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Order ID for isolated instance (prepaid instance)
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Order ID of the isolated instance (prepaid instance)
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

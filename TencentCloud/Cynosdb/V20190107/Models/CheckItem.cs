@@ -26,28 +26,24 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Check item name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Item")]
         public string Item{ get; set; }
 
         /// <summary>
         /// Verification result of this item
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// Detailed explanation of validation failure and modification suggestions
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Details of validation failed and modification suggestions
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Details of validation failure and modification suggestions
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detailed explanation of validation failure and modification suggestions
         /// </summary>
         [JsonProperty("ExpectedValue")]
         public string ExpectedValue{ get; set; }

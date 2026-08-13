@@ -43,15 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IpComparisonSymbol{ get; set; }
 
         /// <summary>
-        /// Specifies the vpc setting for download restrictions.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Limit download vpc settings
         /// </summary>
         [JsonProperty("LimitVpcs")]
         public BackupLimitVpcItem[] LimitVpcs{ get; set; }
 
         /// <summary>
-        /// Specifies the ip settings for limiting downloads.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Limit download ip settings
         /// </summary>
         [JsonProperty("LimitIps")]
         public string[] LimitIps{ get; set; }

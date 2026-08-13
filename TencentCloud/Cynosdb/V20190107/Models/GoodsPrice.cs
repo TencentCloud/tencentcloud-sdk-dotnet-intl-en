@@ -25,22 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the instance price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance price
         /// </summary>
         [JsonProperty("InstancePrice")]
         public TradePrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// Specifies the storage price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage price
         /// </summary>
         [JsonProperty("StoragePrice")]
         public TradePrice StoragePrice{ get; set; }
 
         /// <summary>
-        /// Specifies the product specification.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Product specification
         /// </summary>
         [JsonProperty("GoodsSpec")]
         public GoodsSpec GoodsSpec{ get; set; }

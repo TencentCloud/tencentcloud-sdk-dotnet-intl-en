@@ -30,6 +30,12 @@ namespace TencentCloud.Rce.V20260130.Models
         [JsonProperty("DecisionResult")]
         public string DecisionResult{ get; set; }
 
+        /// <summary>
+        /// <p>Decision action when a strategy is matched. Configurable in the console.</p>
+        /// </summary>
+        [JsonProperty("Disposition")]
+        public string Disposition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Rce.V20260130.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DecisionResult", this.DecisionResult);
+            this.SetParamSimple(map, prefix + "Disposition", this.Disposition);
         }
     }
 }

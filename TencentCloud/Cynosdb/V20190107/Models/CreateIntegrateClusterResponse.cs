@@ -50,8 +50,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Large order number.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }

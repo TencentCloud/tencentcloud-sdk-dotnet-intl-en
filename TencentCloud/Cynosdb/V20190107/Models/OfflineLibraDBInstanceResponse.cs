@@ -25,8 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// task flow id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task flow id
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

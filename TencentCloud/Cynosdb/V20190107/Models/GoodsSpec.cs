@@ -26,49 +26,42 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Number of products
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GoodsNum")]
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores. required for PREPAID and POSTPAID instance types.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of CPU cores. Required for PREPAID and POSTPAID instance types.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size in gb. required for PREPAID and POSTPAID instance types.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Memory size, unit G, required for PREPAID and POSTPAID instance types
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Ccu size. required for serverless type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Ccu size, required for serverless type
         /// </summary>
         [JsonProperty("Ccu")]
         public float? Ccu{ get; set; }
 
         /// <summary>
-        /// Storage size. required for PREPAID storage type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Storage size, required for PREPAID storage type
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Purchase duration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Purchase period
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// Duration unit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

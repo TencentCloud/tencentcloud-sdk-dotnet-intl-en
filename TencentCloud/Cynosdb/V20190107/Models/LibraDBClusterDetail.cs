@@ -200,7 +200,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Grayscale information for version upgrade</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AnalysisUpgradeVersionInfo")]
         public UpgradeAnalysisInstanceVersionInfo AnalysisUpgradeVersionInfo{ get; set; }

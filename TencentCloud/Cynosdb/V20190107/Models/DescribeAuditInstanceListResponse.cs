@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of detailed information about the audit instance.
+        /// Audit the instance detail list.
         /// </summary>
         [JsonProperty("Items")]
         public InstanceAuditStatus[] Items{ get; set; }

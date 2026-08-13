@@ -43,8 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
         /// </summary>
         [JsonProperty("BackupWeekDays")]
         public string[] BackupWeekDays{ get; set; }
@@ -69,7 +68,6 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// <p>Cross-regional backup region</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
