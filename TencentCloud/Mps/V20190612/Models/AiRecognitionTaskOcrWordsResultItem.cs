@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Word{ get; set; }
 
         /// <summary>
-        /// List of segments that contain a text keyword.
+        /// List of segments where the key text appears.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskOcrWordsSegmentItem[] SegmentSet{ get; set; }

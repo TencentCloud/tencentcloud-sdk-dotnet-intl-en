@@ -49,34 +49,31 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskReelInput Input{ get; set; }
 
         /// <summary>
-        /// AI narration and video re-creation task output.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskReelOutput Output{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Task progress.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task completion time, in ISO date and time format.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

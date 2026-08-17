@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+        /// Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }

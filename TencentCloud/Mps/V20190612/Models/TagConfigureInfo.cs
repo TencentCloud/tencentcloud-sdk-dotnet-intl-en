@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of intelligent tagging task. Valid values:
-        /// <li>ON: enables intelligent tagging task;</li>
-        /// <li>OFF: disables intelligent tagging task.</li>
+        /// Intelligent tag task switch, available values:
+        /// <li>ON: Enable intelligent tag task.</li>
+        /// <li>OFF: Disables the intelligent tag task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

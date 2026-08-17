@@ -37,8 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// <p>Synthetic audio in Base64 encoding and WAV format.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
@@ -50,8 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// <p>Cloned voice ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

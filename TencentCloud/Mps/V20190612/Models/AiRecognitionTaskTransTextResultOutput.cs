@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The translated segments.
+        /// Translate segments.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskTransTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// The subtitle URL.
+        /// Subtitle file path.
         /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }

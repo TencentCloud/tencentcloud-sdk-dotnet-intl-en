@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start time offset of a suspected segment in seconds.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a suspected segment in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Score of a suspected porn segment.
+        /// Suspected segment porn score.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Tag of porn information detection result of a suspected segment.
+        /// Tag of the pornographic result for the suspected segment.
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Suggestion for porn information detection of a suspected segment. Valid values:
+        /// Pornographic result suggestion for suspected segment, value ranges from...to...
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -58,14 +58,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// URL of a suspected image (which will not be permanently stored
-        ///  and will be deleted after `PicUrlExpireTime`).
+        /// Suspected image URL (Images are not retained permanently upon arrival)
+        /// The image will be deleted after the PicUrlExpireTime time point.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

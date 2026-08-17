@@ -25,16 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Target storage of edited file.
+        /// Target storage for the edited file.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Path of edited video file.
+        /// Path of the edited video file.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MetaData")]
+        public MediaMetaData MetaData{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "Path", this.Path);
+            this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
         }
     }
 }

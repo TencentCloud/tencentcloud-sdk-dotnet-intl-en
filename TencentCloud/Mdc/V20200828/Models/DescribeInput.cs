@@ -95,25 +95,31 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// 
+        /// Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// The input RTMP_PULL configuration information.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// The RTSP_PULL configuration information entered.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// The input HLS-PULL configuration information.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Extended smooth streaming configuration information.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
@@ -123,6 +129,24 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// The input RIST configuration information.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public DescribeInputRISTSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+        /// </summary>
+        [JsonProperty("StreamUrls")]
+        public StreamUrlDetail[] StreamUrls{ get; set; }
+
+        /// <summary>
+        /// Disaster recovery configuration items
+        /// </summary>
+        [JsonProperty("FailOverOption")]
+        public FailOverOption FailOverOption{ get; set; }
 
 
         /// <summary>
@@ -141,11 +165,15 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
             this.SetParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
             this.SetParamSimple(map, prefix + "FailOver", this.FailOver);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
             this.SetParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
+            this.SetParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
         }
     }
 }

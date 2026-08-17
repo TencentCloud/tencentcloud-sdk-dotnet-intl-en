@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Policy type. Valid values:
+        /// Policy type. Value:
         /// - TimeSpotCheck
         /// </summary>
         [JsonProperty("StrategyType")]

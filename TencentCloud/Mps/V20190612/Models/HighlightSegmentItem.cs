@@ -25,38 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The confidence score.
+        /// Confidence degree.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The start time offset of the segment.
+        /// Segment start time offset.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end time offset of the segment.
+        /// End time offset of the recording clip.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Segment tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SegmentTags")]
         public string[] SegmentTags{ get; set; }
 
         /// <summary>
-        /// Start time of the live streaming segment in ISO date and time format.	
+        /// The start time of a live streaming segment, in the ISO date format.	
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time of the live streaming segment in ISO date and time format.	
+        /// The end time of a live streaming segment, in the ISO date format.	
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

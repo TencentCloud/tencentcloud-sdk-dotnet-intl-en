@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start time offset of a recognition segment in seconds.
+        /// Start time offset of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a recognition segment in seconds.
+        /// End time offset of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Confidence of a recognition segment. Value range: 0-100.
+        /// Confidence of a recognized segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

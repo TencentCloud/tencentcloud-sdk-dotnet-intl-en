@@ -37,7 +37,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string CosBucketRegion{ get; set; }
 
         /// <summary>
-        /// Path of the COS bucket to store to.Optional.Example value: my_file.
+        /// Store to the bucket path of cos.
+        /// Option.
+        /// Example value: my_file.
         /// </summary>
         [JsonProperty("CosBucketPath")]
         public string CosBucketPath{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>ID of the horizontal-to-vertical video transformation template.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

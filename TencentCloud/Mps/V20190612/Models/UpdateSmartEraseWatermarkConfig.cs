@@ -25,28 +25,30 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Watermark erasing method.
-        /// **Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
-        /// When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
-        ///  **Specified area erasing: ** For static watermarks in fixed positions, you are recommended to specify the erasing area directly.When you choose specified area erasing, specify at least one area.
-        /// - auto: automatic erasing.
+        /// Watermark removal method.
+        /// **Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+        /// When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+        /// **Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area for erasure.
+        /// When you choose specified area erasure, import at least a specified region.
+        /// 
+        /// - auto: automatic erasing
         /// - custom: specified area erasing.
         /// </summary>
         [JsonProperty("WatermarkEraseMethod")]
         public string WatermarkEraseMethod{ get; set; }
 
         /// <summary>
-        /// Watermark erasing model.
-        /// Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
-        /// Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
-        /// - basic: Basic Edition.
+        /// Watermark removal model.
+        /// Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+        /// Advanced edition: Better effectiveness, suitable for reality style videos such as mini-drama.
+        /// -.
         /// - advanced: Advanced Edition.
         /// </summary>
         [JsonProperty("WatermarkModel")]
         public string WatermarkModel{ get; set; }
 
         /// <summary>
-        /// Custom area for automatic erasing.
+        /// Automatic removal of custom region.
         /// For the specified area, AI models are used to automatically detect and erase the target objects.
         /// Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
@@ -54,7 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// Custom area for specified area erasing.
+        /// Specify a custom region for erasing.
         /// For the specified area, erase the target objects directly without detection and recognition within a selected time period.
         /// Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>

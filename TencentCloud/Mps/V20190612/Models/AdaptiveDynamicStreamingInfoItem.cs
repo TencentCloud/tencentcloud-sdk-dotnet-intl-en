@@ -31,19 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Container format. Valid values: HLS, MPEG-DASH.
+        /// Packaging format, which may be two kinds: HLS and MPEG-DASH.
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }
 
         /// <summary>
-        /// Playback address.
+        /// Playback path.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Storage location of adaptive bitrate streaming files.
+        /// Storage location of the adaptive bitrate stream file.
         /// </summary>
         [JsonProperty("Storage")]
         public TaskOutputStorage Storage{ get; set; }

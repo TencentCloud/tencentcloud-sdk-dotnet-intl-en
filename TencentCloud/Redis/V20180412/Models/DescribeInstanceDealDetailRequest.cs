@@ -25,10 +25,17 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Order transaction ID array, which is the output parameter DealId of [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+        /// Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
         /// </summary>
         [JsonProperty("DealIds")]
+        [System.Obsolete]
         public string[] DealIds{ get; set; }
+
+        /// <summary>
+        /// Order number, which is the output parameter DealName of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
 
 
         /// <summary>
@@ -37,6 +44,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

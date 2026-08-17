@@ -25,94 +25,100 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Backup start time
+        /// <p>Backup start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Backup task ID
+        /// <p>Backup task ID.</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+        /// <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+        /// <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Backup remarks
+        /// <p>Backup remarks.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+        /// <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
         /// </summary>
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
         /// <summary>
-        /// Internal field, which can be ignored.
+        /// <p>Internal field, which can be ignored.</p>
         /// </summary>
         [JsonProperty("BackupSize")]
         public long? BackupSize{ get; set; }
 
         /// <summary>
-        /// Internal field, which can be ignored.
+        /// <p>Internal field, which can be ignored.</p>
         /// </summary>
         [JsonProperty("FullBackup")]
         public long? FullBackup{ get; set; }
 
         /// <summary>
-        /// Internal field, which can be ignored.
+        /// <p>Internal field, which can be ignored.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// The region where the local backup resides.
+        /// <p>Local backup region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Backup end time
+        /// <p>Backup end time.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup file type
+        /// <p>Backup file type.</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Backup file expiration time
+        /// <p>Backup file expiration time.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the backup file is encrypted</p>
+        /// </summary>
+        [JsonProperty("Encrypted")]
+        public bool? Encrypted{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Encrypted", this.Encrypted);
         }
     }
 }

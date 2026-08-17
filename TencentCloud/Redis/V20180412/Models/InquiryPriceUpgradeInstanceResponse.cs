@@ -25,28 +25,37 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Price.
+        /// <p>Discounted price.</p>
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// High precision price.
+        /// <p>High-precision discounted price</p>
         /// </summary>
         [JsonProperty("HighPrecisionPrice")]
         public float? HighPrecisionPrice{ get; set; }
 
         /// <summary>
-        /// Currency.
+        /// <p>Original price</p>
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// <p>High-precision original price</p>
+        /// </summary>
+        [JsonProperty("HighPrecisionOriginalPrice")]
+        public float? HighPrecisionOriginalPrice{ get; set; }
+
+        /// <summary>
+        /// <p>Currency</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Price unit.
-        /// 
-        ///  - pent: cent.
-        ///  - microPent: microcent.
+        /// <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
         /// </summary>
         [JsonProperty("AmountUnit")]
         public string AmountUnit{ get; set; }
@@ -65,6 +74,8 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "HighPrecisionPrice", this.HighPrecisionPrice);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "HighPrecisionOriginalPrice", this.HighPrecisionOriginalPrice);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);

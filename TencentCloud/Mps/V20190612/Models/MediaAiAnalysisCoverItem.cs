@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Storage path of intelligently generated cover.
+        /// Intelligent cover storage path.
         /// </summary>
         [JsonProperty("CoverPath")]
         public string CoverPath{ get; set; }
 
         /// <summary>
-        /// Confidence of intelligently generated cover between 0 and 100.
+        /// Reliability of the intelligent cover, with a value range from 0 to -100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

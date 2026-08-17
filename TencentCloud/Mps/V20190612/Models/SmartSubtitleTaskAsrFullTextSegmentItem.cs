@@ -49,8 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// <p>Word timestamp information.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Wordlist")]
         public WordResult[] Wordlist{ get; set; }

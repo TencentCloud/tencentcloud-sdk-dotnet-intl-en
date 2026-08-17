@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start time offset of frame-specific tag.
+        /// Offset time starting from frame tagging.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of frame-specific tag.
+        /// Offset time for frame tagging completion.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// List of tags in time period.
+        /// Tag list within the time segment.
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisFrameTagItem[] TagSet{ get; set; }

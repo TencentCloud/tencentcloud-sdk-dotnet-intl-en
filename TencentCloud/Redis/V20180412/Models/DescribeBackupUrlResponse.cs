@@ -39,8 +39,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
-        /// Filename. This field will be disused soon.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filename, this field is gradually being deprecated.
         /// </summary>
         [JsonProperty("Filenames")]
         [System.Obsolete]

@@ -25,46 +25,52 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of a video content recognition template. Length limit: 64 characters.
+        /// Video content recognition template name, length limited to 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of a video content recognition template. Length limit: 256 characters.
+        /// Video Content Recognition template description, length limited to 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Face recognition control parameter.
+        /// Face Recognition Control Parameter.
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
-        /// Full text recognition control parameter.
+        /// Full Text Recognition Control Parameter.
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// Text keyword recognition control parameter.
+        /// Text keyword recognition control.
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfo OcrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Full speech recognition control parameter.
+        /// Speech Full-text Recognition Control Parameter.
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// Speech keyword recognition control parameter.
+        /// Voice keyword recognition control parameters.
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
+
+        /// <summary>
+        /// Voice translation control parameters.
+        /// </summary>
+        [JsonProperty("TranslateConfigure")]
+        public TranslateConfigureInfo TranslateConfigure{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
             this.SetParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
             this.SetParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+            this.SetParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
         }
     }
 }

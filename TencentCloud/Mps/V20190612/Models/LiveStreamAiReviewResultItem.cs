@@ -25,35 +25,35 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The type of moderation result. Valid values:
-        /// <li>ImagePorn</li>
-        /// <li>ImageTerrorism</li>
-        /// <li>ImagePolitical</li>
-        /// <li>VoicePorn</li>
+        /// Review result type. Valid values:
+        /// <li>ImagePorn: image porn detection.</li>
+        /// <li>ImageTerrorism: image terrorism.</li>
+        /// <li>ImagePolitical: image political sensitivity.</li>
+        /// <li>VoicePorn: sound rule violation.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
+        /// Image porn detection result, valid when Type is ImagePorn.
         /// </summary>
         [JsonProperty("ImagePornResultSet")]
         public LiveStreamAiReviewImagePornResult[] ImagePornResultSet{ get; set; }
 
         /// <summary>
-        /// The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+        /// Result of image terrorism detection, valid when Type is ImageTerrorism.
         /// </summary>
         [JsonProperty("ImageTerrorismResultSet")]
         public LiveStreamAiReviewImageTerrorismResult[] ImageTerrorismResultSet{ get; set; }
 
         /// <summary>
-        /// The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+        /// The result of image sensitivity, valid when Type is ImagePolitical.
         /// </summary>
         [JsonProperty("ImagePoliticalResultSet")]
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }
 
         /// <summary>
-        /// The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+        /// Result of sound rule violation, valid when Type is VoicePorn.
         /// </summary>
         [JsonProperty("VoicePornResultSet")]
         public LiveStreamAiReviewVoicePornResult[] VoicePornResultSet{ get; set; }

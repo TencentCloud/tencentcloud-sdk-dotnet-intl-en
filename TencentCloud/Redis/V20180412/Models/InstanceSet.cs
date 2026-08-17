@@ -25,388 +25,368 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance name.
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// App ID of a user, which is an application ID that uniquely corresponds to the account ID. Certain Tencent Cloud products use this app ID.
+        /// <p>User AppId. AppId is an application ID with a one-to-one correspondence to the account ID. Some Tencent Cloud products use this AppId.</p>
         /// </summary>
         [JsonProperty("Appid")]
         public long? Appid{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul>
+        /// <p>Region ID.<ul><li>1: Guangzhou.</li><li>4: Shanghai.</li><li>5: Hong Kong (China).</li><li>7: Shanghai Finance.</li><li>8: Beijing.</li><li>9: Singapore.</li><li>11: Shenzhen Finance.</li><li>15: Western US (Silicon Valley).</li><li>16: Chengdu.</li><li>17: Frankfurt.</li><li>18: Seoul.</li><li>19: Chongqing.</li><li>22: Eastern US (Virginia).</li><li>23: Bangkok.</li><li>25: Tokyo.</li></ul></p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Zone ID.
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// VPC ID, for example, 75101.
+        /// <p>vpc network ID, such as 75101.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// ID of the subnet under VPC, for example, 46315.
+        /// <p>Subnet ID under vpc, for example: 46315.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul>
+        /// <p>Current instance status. <ul><li>0: to be initialized;</li> <li>1: in process;</li> <li>2: running;</li> <li>-2: isolated;</li> <li>-3: to be deleted.</li></ul></p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Instance VIP.
+        /// <p>Instance VIP.</p>
         /// </summary>
         [JsonProperty("WanIp")]
         public string WanIp{ get; set; }
 
         /// <summary>
-        /// Instance port number.
+        /// <p>Instance port number.</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Instance creation time, for example, in the format of 2020-01-15 10:20:00.
+        /// <p>Instance creation time, for example, in the format of 2020-01-15 10:20:00.</p>
         /// </summary>
         [JsonProperty("Createtime")]
         public string Createtime{ get; set; }
 
         /// <summary>
-        /// Instance memory capacity. Unit: MB (1 MB = 1024 KB).
+        /// <p>Instance memory capacity. Unit: MB (1 MB = 1024 KB).</p>
         /// </summary>
         [JsonProperty("Size")]
         public float? Size{ get; set; }
 
         /// <summary>
-        /// This parameter has been deprecated. Obtain the memory capacity used by the instance through the TCOP API [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1).
+        /// <p>This field is deprecated. Please use the Tencent Cloud observability platform API interface <a href="https://www.tencentcloud.com/document/product/248/31014?from_cn_redirect=1">GetMonitorData</a> to obtain the memory capacity used by the instance.</p>
         /// </summary>
         [JsonProperty("SizeUsed")]
         [System.Obsolete]
         public float? SizeUsed{ get; set; }
 
         /// <summary>
-        /// Instance type.
-        /// 
-        /// - 2: Redis 2.8 memory edition (standard architecture).
-        /// - 3: CKV 3.2 memory edition (standard architecture).
-        /// - 4: CKV 3.2 memory edition (cluster architecture).
-        /// - 5: Redis 2.8 memory edition (standalone).
-        /// - 6: Redis 4.0 memory edition (standard architecture).
-        /// - 7: Redis 4.0 memory edition (cluster architecture).
-        /// - 8: Redis 5.0 memory edition (standard architecture).
-        /// - 9: Redis 5.0 memory edition (cluster architecture).
-        /// - 15: Redis 6.2 memory edition (standard architecture).
-        /// - 16: Redis 6.2 memory edition (cluster architecture).
-        /// - 17: Redis 7.0 memory edition (standard architecture).
-        /// - 18: Redis 7.0 memory edition (cluster architecture).
-        /// - 200: Memcached 1.6 memory edition (cluster architecture).
+        /// <p>Instance type.</p><p>Enumeration value:</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 8.0 memory edition (standard architecture).</li><li>22: Valkey 8.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Whether the automatic renewal flag is set for an instance. <ul><li>1: set;</li> <li>0: not set.</li></ul>
+        /// <p>Whether the automatic renewal flag is set for an instance.</p><ul><li>1: set auto-renewal.</li><li>0: automatic renewal flag not set.</li></ul>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Expiration time of a monthly subscription instance.
+        /// <p>Expiration time of a monthly subscription instance.</p>
         /// </summary>
         [JsonProperty("DeadlineTime")]
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.
+        /// <p>Engine. Valid values: Redis Community Edition and Tencent Cloud CKV.</p>
         /// </summary>
         [JsonProperty("Engine")]
         public string Engine{ get; set; }
 
         /// <summary>
-        /// Product type. <ul><li>standalone: Standard Edition;</li> <li>cluster: Cluster Edition.</li></ul>
+        /// <p>Product type.<ul><li>standalone: standard version.</li><li>cluster: cluster version.</li></ul></p>
         /// </summary>
         [JsonProperty("ProductType")]
         public string ProductType{ get; set; }
 
         /// <summary>
-        /// VPC ID, for example, vpc-fk33jsf43kgv.
+        /// <p>vpc Network id, such as vpc-fk33jsf43kgv.</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// ID of the subnet under VPC, for example, subnet-fd3j6l35mm0.
+        /// <p>subnet id under vpc, for example: subnet-fd3j6l35mm0.</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Billing mode. Only pay-as-you-go billing is supported.
+        /// <p>Billing mode.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// Description of the instance running status, for example, running.
+        /// <p>Description of instance running status: for example "instance running".</p>
         /// </summary>
         [JsonProperty("InstanceTitle")]
         public string InstanceTitle{ get; set; }
 
         /// <summary>
-        /// Default termination time of isolated instances, for example, in the format of 2020-02-15 10:20:00. By default, a pay-as-you-go instance will be terminated after 2 hours of isolation, and a monthly subscription instance will be terminated after 7 days.
+        /// <p>Default termination time of isolated instances. Pay-as-you-go instance offline after isolation. Monthly Subscription instance offline after 7 days. In the format of: 2020-02-15 10:20:00.</p>
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// Sub-status returned for the instance in the process.
-        ///  - 0: disk read-write status.
-        ///  - 1: disk read-only status because the upper limit is exceeded.
+        /// <p>Substatus of the instance in process returned.</p><ul><li>0: Read and write status of the disk.</li><li>1: Read-only status of the disk due to exceeding limit.</li></ul>
         /// </summary>
         [JsonProperty("SubStatus")]
         public long? SubStatus{ get; set; }
 
         /// <summary>
-        /// Anti-affinity tag.
+        /// <p>Anti-affinity tag.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// Instance node information.
+        /// <p>Instance node information.</p>
         /// </summary>
         [JsonProperty("InstanceNode")]
         public InstanceNode[] InstanceNode{ get; set; }
 
         /// <summary>
-        /// Shard size.
+        /// <p>Shard size.</p>
         /// </summary>
         [JsonProperty("RedisShardSize")]
         public long? RedisShardSize{ get; set; }
 
         /// <summary>
-        /// Number of shards.
+        /// <p>Number of shards.</p>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Number of replicas.
+        /// <p>Number of replicas.</p>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// Billing ID.
+        /// <p>Billing ID.</p>
         /// </summary>
         [JsonProperty("PriceId")]
         public long? PriceId{ get; set; }
 
         /// <summary>
-        /// Time when an instance starts to be isolated.
+        /// <p>Time when an instance starts to be isolated.</p>
         /// </summary>
         [JsonProperty("CloseTime")]
         public string CloseTime{ get; set; }
 
         /// <summary>
-        /// Read weight of a secondary node.
-        /// - 0: disable read-only replicas.
-        /// - 100: enable read-only replicas.
+        /// <p>Read weight of the secondary node.</p><ul><li>0: means disable read-only replica.</li><li>100: means enable read-only replica.</li></ul>
         /// </summary>
         [JsonProperty("SlaveReadWeight")]
         public long? SlaveReadWeight{ get; set; }
 
         /// <summary>
-        /// Information on tags associated with the instance.
+        /// <p>Tag information associated with an instance.</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Project name
+        /// <p>Project name.</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Whether the instance is password-free.<ul><li>true: password-free instance.</li><li>false: password required by the instance.</li></ul>
+        /// <p>Whether an instance is a password-free instance. <ul><li>true: yes;</li> <li>false: no.</li></ul></p>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// Number of client connections.
+        /// <p>Number of client connections.</p>
         /// </summary>
         [JsonProperty("ClientLimit")]
         public long? ClientLimit{ get; set; }
 
         /// <summary>
-        /// DTS status. (Internal parameter, which can be ignored.)
+        /// <p>DTS status (internal parameter, can be ignored by users).</p>
         /// </summary>
         [JsonProperty("DtsStatus")]
         public long? DtsStatus{ get; set; }
 
         /// <summary>
-        /// Shard bandwidth limit. Unit: MB.
+        /// <p>Upper limit of the shard bandwidth. Unit: MB.</p>
         /// </summary>
         [JsonProperty("NetLimit")]
         public long? NetLimit{ get; set; }
 
         /// <summary>
-        /// Password-free instance flag. (Internal parameter, which can be ignored.)
+        /// <p>Password-free instance flag (internal parameter, which can be ignored).</p>
         /// </summary>
         [JsonProperty("PasswordFree")]
         public long? PasswordFree{ get; set; }
 
         /// <summary>
-        /// This parameter encounters a naming issue. It is recommended to use the parameter IPv6 instead. It is an internal parameter and can be ignored.
+        /// <p>Internal parameter, which can be ignored. This parameter is not properly named. It is recommended to use the IPv6 parameter to replace it.</p>
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
+        /// <p>Internal parameter, which can be ignored.</p>
         /// </summary>
         [JsonProperty("IPv6")]
         public string IPv6{ get; set; }
 
         /// <summary>
-        /// Instance read-only flag. (Internal parameter, which can be ignored.)
+        /// <p>Instance read-only flag (internal parameter, which can be ignored).</p>
         /// </summary>
         [JsonProperty("ReadOnly")]
         public long? ReadOnly{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
+        /// <p>Internal parameter, which can be ignored.</p>
         /// </summary>
         [JsonProperty("RemainBandwidthDuration")]
         public string RemainBandwidthDuration{ get; set; }
 
         /// <summary>
-        /// For TencentDB for Redis® instances, ignore this parameter.
+        /// <p>For Redis instances, ignore this parameter.</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Monitoring version.<ul><li>1m: monitoring with the 1-minute granularity. Currently, this monitoring granularity is unavailable. For details, see [1-Minute Granularity Will Be Disused](https://intl.cloud.tencent.com/document/product/239/80653?from_cn_redirect=1).</li><li>5s: monitoring with the 5-second granularity.</li></ul>
+        /// <p>Monitoring version.<ul><li>1m: 1-minute granularity monitoring. This monitoring granularity is deprecated. For details, please see <a href="https://www.tencentcloud.com/document/product/239/80653?from_cn_redirect=1">TencentDB for Redis 1-minute granularity deprecation notice</a>.</li><li>5s: 5-second granularity monitoring.</li></ul></p>
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// Minimum value that can be set for the maximum number of client connections.
+        /// <p>Minimum value that can be set for the maximum number of client connections.</p>
         /// </summary>
         [JsonProperty("ClientLimitMin")]
         public long? ClientLimitMin{ get; set; }
 
         /// <summary>
-        /// Maximum value that can be set for the maximum number of client connections.
+        /// <p>Maximum value that can be set for the maximum number of client connections.</p>
         /// </summary>
         [JsonProperty("ClientLimitMax")]
         public long? ClientLimitMax{ get; set; }
 
         /// <summary>
-        /// Node details of the instance.
-        /// 
-        /// It is returned only for multi-AZ instances.
+        /// <p>Detailed node information of the instance.<br>Only multi-AZ instances will be returned.</p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// Region information on the instance. For example, ap-guangzhou.
+        /// <p>Region information of an instance, for example, ap-guangzhou.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Public network address.
+        /// <p>Public network address.</p>
         /// </summary>
         [JsonProperty("WanAddress")]
         public string WanAddress{ get; set; }
 
         /// <summary>
-        /// Polaris service address for internal use.
+        /// <p>Polaris service address for internal use.</p>
         /// </summary>
         [JsonProperty("PolarisServer")]
         public string PolarisServer{ get; set; }
 
         /// <summary>
-        /// CDC cluster ID of TencentDB for Redis®.
+        /// <p>CDC Redis cluster ID.</p>
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }
 
         /// <summary>
-        /// CDC cluster ID.
+        /// <p>CDC cluster ID.</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
 
         /// <summary>
-        /// Product edition.<ul><li>local: local disk.</li><li>cloud: cloud disk edition.</li><li>cdc: CDC cluster edition.</li></ul>
+        /// <p>Product edition. <ul><li>local: local disk;</li> <li>cloud: cloud disk;</li> <li>cdc: CDC cluster edition.</li></ul></p>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// Current proxy version of the instance.
+        /// <p>Current Proxy version of the instance.</p>
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }
 
         /// <summary>
-        /// Current cache minor version of the instance. If the instance is added to a global replication group, the global replication kernel version is displayed.
+        /// <p>Current Cache minor version of an instance. If the instance joins a global replication group, the kernel version of the global replication group will be displayed.</p>
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
-        /// Upgradable proxy version for the instance.
+        /// <p>Upgradable Proxy version of an instance.</p>
         /// </summary>
         [JsonProperty("UpgradeProxyVersion")]
         public string UpgradeProxyVersion{ get; set; }
 
         /// <summary>
-        /// Upgradable cache minor version for the instance.
+        /// <p>Upgradable Cache minor version of an instance.</p>
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }
 
         /// <summary>
-        /// Backup mode. - SecondLevelBackup: second-level backup. - NormalLevelBackup: ordinary backup.
+        /// <p>Backup mode.</p><ul><li>SecondLevelBackup: second-level backup.</li><li>NormalLevelBackup: normal backup.</li></ul>
         /// </summary>
         [JsonProperty("BackupMode")]
         public string BackupMode{ get; set; }
 
         /// <summary>
-        /// Deletion protection switch. 0: disabled; 1: enabled.
+        /// <p>Instance destruction protection switch.</p><ul><li>0: disabled.</li><li>1: enabled.</li></ul>
         /// </summary>
         [JsonProperty("DeleteProtectionSwitch")]
         public long? DeleteProtectionSwitch{ get; set; }

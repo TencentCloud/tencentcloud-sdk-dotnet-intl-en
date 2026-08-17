@@ -141,7 +141,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] AutoRenew{ get; set; }
 
         /// <summary>
-        /// Billing mode. Only pay-as-you-go billing is supported.
+        /// Billing mode.
+        /// - postpaid: pay-as-you-go.
+        /// - prepaid: monthly subscription.
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }

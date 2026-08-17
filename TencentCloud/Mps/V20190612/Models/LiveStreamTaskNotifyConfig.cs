@@ -26,15 +26,16 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Notification type:
-        /// TDMQ-CMQ: message queue.
-        /// "URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+        /// TDMQ-CMQ: Message Queue
+        /// "URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+        /// 
         /// <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// HTTP callback URL, required if `NotifyType` is set to `URL`
+        /// HTTP callback URL. This is required if NotifyType is URL.
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
@@ -64,8 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Key used to generate a callback signature.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("NotifyKey")]
         public string NotifyKey{ get; set; }

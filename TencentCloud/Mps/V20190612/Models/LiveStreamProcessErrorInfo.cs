@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Error code:
-        /// <li>0: No error;</li>
-        /// <li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+        /// Error code.
+        /// <li>0 means no error.</li>
+        /// <li>Non-zero means error. Refer to the error information in Message.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

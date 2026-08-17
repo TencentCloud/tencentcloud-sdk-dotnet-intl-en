@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of figure.
+        /// Unique identification ID of a figure.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -37,32 +37,32 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Figure library type, indicating to which figure library the recognized figure belongs:
-        /// <li>Default: default figure library</li><li>UserDefine: custom figure library</li>
+        /// Figure library type, which indicates which figure library the recognized figure comes from.
+        /// <li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Start PTS time of recognized segment in seconds.
+        /// Start PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of recognized segment in seconds.
+        /// End PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Confidence of recognized segment. Value range: 0–100.
+        /// Confidence of a recognized segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+        /// Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

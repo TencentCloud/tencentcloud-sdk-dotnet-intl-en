@@ -25,32 +25,32 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The confidence score for the detection of sensitive information. Value range: 0-100.
+        /// Video sensitive content score, ranging from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The suggestion for handling the sensitive information detected. Valid values:
-        /// <li>pass</li>
-        /// <li>review</li>
-        /// <li>block</li>
+        /// Result Suggestions for sensitive content, value ranges from...to...
+        /// <li>pass.</li>
+        /// <li>review.</li>
+        /// <li>block.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+        /// Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
         /// violation_photo:
-        /// <li>violation_photo (banned icons)</li>
-        /// Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-        /// <li>politician</li>
+        /// <li>violation_photo: violation icon.</li>
+        /// Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+        /// <li>politician: sensitive person.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// The video segments that contain sensitive information.
+        /// List of video segments suspected of containing sensitive content.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewPoliticalSegmentItem[] SegmentSet{ get; set; }

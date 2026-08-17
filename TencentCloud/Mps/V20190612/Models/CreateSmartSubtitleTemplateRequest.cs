@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VideoSrcLanguage{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent caption subtitle language type<br>0: Source language<br>1: Target language<br>2: Source language + target language<br>Only 0 is supported when TranslateSwitch is OFF<br>Only 1 or 2 is supported when TranslateSwitch is ON</p>
+        /// <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
         /// </summary>
         [JsonProperty("SubtitleType")]
         public long? SubtitleType{ get; set; }

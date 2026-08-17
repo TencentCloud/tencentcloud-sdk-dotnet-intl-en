@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start time offset of a suspected segment in seconds.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a suspected segment in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Confidence of a suspected segment.
+        /// Confidence degree of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for suspected segment audit. Valid values:
+        /// Review result suggestion for suspected segment, value ranges from...to...
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -52,7 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of suspected keywords.
+        /// Suspicious keyword list.
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }

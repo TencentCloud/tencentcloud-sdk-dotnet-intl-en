@@ -43,8 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Available voice list.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Voices")]
         public VoiceInfo[] Voices{ get; set; }

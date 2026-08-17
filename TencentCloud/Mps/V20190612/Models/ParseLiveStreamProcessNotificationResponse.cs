@@ -25,83 +25,80 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Live stream processing result type, including:.
-        /// <Li>AiReviewResult: content moderation result;</li>.
-        /// <Li>AiRecognitionResult: content recognition result;</li>.
-        /// <Li>LiveRecordResult: live streaming result;</li>.
-        /// <Li>AiQualityControlResult: media quality inspection result.</li>.
-        /// <Li>AiAnalysisResult: content analysis result.</li>.
-        /// <Li>AiSmartSubtitleResult: smart subtitle result.</li>.
+        /// Live stream processing result type, including:
+        /// <li>AiReviewResult: content moderation result;</li>
+        /// <li>AiRecognitionResult: content recognition result;</li>
+        /// <li>LiveRecordResult: live streaming result;</li>
+        /// <li>AiQualityControlResult: media quality inspection result.</li>
+        /// <li>AiAnalysisResult: content analysis result.</li>
+        /// <li>AiSmartSubtitleResult: smart subtitle result;</li>
         /// <li>ProcessEof: end of live stream processing.</li>
         /// </summary>
         [JsonProperty("NotificationType")]
         public string NotificationType{ get; set; }
 
         /// <summary>
-        /// Video processing task ID.
+        /// Task ID for video processing.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Information of a live stream processing error, which is valid when `NotificationType` is `ProcessEof`.
-        /// Note: when this field return null, means no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ProcessEofInfo")]
         public LiveStreamProcessErrorInfo ProcessEofInfo{ get; set; }
 
         /// <summary>
-        /// Content audit result, which is valid when `NotificationType` is `AiReviewResult`.
-        /// Note: when this field return null, means no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiReviewResultInfo")]
         public LiveStreamAiReviewResultInfo AiReviewResultInfo{ get; set; }
 
         /// <summary>
-        /// Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+        /// 
         /// </summary>
         [JsonProperty("AiRecognitionResultInfo")]
         public LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo{ get; set; }
 
         /// <summary>
-        /// Content analysis result, which is valid if `NotificationType` is `AiAnalysisResult`.
+        /// 
         /// </summary>
         [JsonProperty("AiAnalysisResultInfo")]
         public LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo{ get; set; }
 
         /// <summary>
-        /// Media quality inspection result, which is valid if `NotificationType` is `AiQualityControlResult`.
+        /// 
         /// </summary>
         [JsonProperty("AiQualityControlResultInfo")]
         public LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo{ get; set; }
 
         /// <summary>
-        /// Live recording result is valid when NotificationType is LiveRecordResult.
-        /// Note: when this field return null, means no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("LiveRecordResultInfo")]
         public LiveStreamRecordResultInfo LiveRecordResultInfo{ get; set; }
 
         /// <summary>
-        /// Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+        /// Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
         /// </summary>
         [JsonProperty("AiSmartSubtitleResultInfo")]
         public LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo{ get; set; }
 
         /// <summary>
-        /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+        /// Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// - expiration time, event notification signature expiration in UNIX Timestamp format. - notifications from media processing default to an expiration time of 10 minutes. if the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, furthermore preventing network replay attacks. - the Timestamp format is decimal UNIX Timestamp, seconds elapsed since midnight (UTC/GMT) on january 1, 1970.
+        /// -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }

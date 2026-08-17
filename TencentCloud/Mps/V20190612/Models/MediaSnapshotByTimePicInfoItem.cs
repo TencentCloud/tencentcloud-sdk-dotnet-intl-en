@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The timestamp (seconds) of the screenshot.
+        /// The screenshot corresponds to the time offset in the video file, expressed in seconds.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
 
         /// <summary>
-        /// Path to the screenshot.
+        /// Path of the screenshot.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// List of watermarking template IDs if the screenshots are watermarked.
+        /// If a screenshot is watermarked, list of template IDs used for watermarking.
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

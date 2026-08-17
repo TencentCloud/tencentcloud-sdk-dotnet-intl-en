@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the recording template unique identifier.
+        /// Unique identifier of the recording template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -49,27 +49,27 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description.
+        /// Template description information.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
         /// Template type. Valid values:
-        /// <li>Preset: system-preset template;</li>
-        /// <li>Custom: Custom template.</li>
+        /// <li>Preset: system preset template;</li>
+        /// <li>Custom: user-defined template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Last modification time of the template in [ISO datetime format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

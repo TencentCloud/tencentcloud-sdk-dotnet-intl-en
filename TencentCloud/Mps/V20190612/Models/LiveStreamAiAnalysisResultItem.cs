@@ -40,8 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SegmentRecognitionItem[] SegmentResultSet{ get; set; }
 
         /// <summary>
-        /// Highlight result. This field is valid when Type is set to Highlight.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HighlightResultSet")]
         public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }

@@ -43,8 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Voice ID.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
@@ -56,8 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// <p>Extended information.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

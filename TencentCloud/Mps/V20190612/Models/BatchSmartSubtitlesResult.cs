@@ -25,15 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input information for smart subtitle tasks.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// Output information for smart subtitle tasks.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Outputs")]
         public SmartSubtitleTaskBatchOutput[] Outputs{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

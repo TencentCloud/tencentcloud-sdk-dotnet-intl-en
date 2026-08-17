@@ -31,8 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SegmentRecognitionItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Video abstract, used for offline scenarios.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Abstract")]
         public string Abstract{ get; set; }

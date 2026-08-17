@@ -26,7 +26,7 @@ namespace TencentCloud.Redis.V20180412.Models
         
         /// <summary>
         /// Specify the instance ID.
-        ///  For example: crs-xjhsdj****, please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+        ///  For example: crs-xjhsdj****, please log in to the [Redis Console](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

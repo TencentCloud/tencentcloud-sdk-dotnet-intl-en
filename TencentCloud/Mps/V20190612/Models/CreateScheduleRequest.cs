@@ -25,38 +25,38 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The scheme name (max 128 characters). This name should be unique across your account.
+        /// Orchestration name, up to 128 characters. The name is unique for the same user.
         /// </summary>
         [JsonProperty("ScheduleName")]
         public string ScheduleName{ get; set; }
 
         /// <summary>
-        /// The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+        /// Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
         /// </summary>
         [JsonProperty("Trigger")]
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// The subtasks of the scheme.
+        /// Orchestration task list.
         /// </summary>
         [JsonProperty("Activities")]
         public Activity[] Activities{ get; set; }
 
         /// <summary>
-        /// The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+        /// Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-        /// If you do not specify this, the file will be saved to the trigger directory.
+        /// Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+        /// If left empty, it is the same as the directory of the trigger file.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// The notification configuration. If you do not specify this parameter, notifications will not be sent.
+        /// Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }

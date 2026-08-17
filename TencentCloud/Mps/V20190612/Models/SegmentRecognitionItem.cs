@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Confidence degree.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start time offset of a recording clip.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time offset of the recording clip.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Specifies the split segment URL.
+        /// Split segment URL.
         /// </summary>
         [JsonProperty("SegmentUrl")]
         public string SegmentUrl{ get; set; }
 
         /// <summary>
-        /// Specifies the segment cover.
+        /// Segment cover.
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Title{ get; set; }
 
         /// <summary>
-        /// Specifies the segment summary.
+        /// Segment summary.
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// Specifies the start time of a live streaming segment in the ISO date format.
+        /// The start time of a live streaming segment, in the ISO date format.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// Specifies the end time of a live streaming segment in the ISO date format.
+        /// The end time of a live streaming segment, in the ISO date format.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Specifies the character ID.
+        /// Specify the figure ID.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

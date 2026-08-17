@@ -25,49 +25,43 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+        /// <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+        /// <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+        /// <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
+        /// <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
+        /// <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup task status:
-        /// `1`: The backup is in the process.
-        /// `2`: The backup is normal.
-        /// `3`: The backup is being converted to an RDB file.
-        /// `4`: Conversion to RDB has been completed.
-        /// `-1`: The backup expired.
-        /// `-2`: The backup has been deleted.
+        /// <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Instance name, which can be fuzzily searched.
+        /// <p>Instance name, supports name fuzzy search based on instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

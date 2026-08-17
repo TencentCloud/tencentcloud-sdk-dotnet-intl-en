@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status, which can be PROCESSING, SUCCESS, or FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates success, while other values indicate failure. For specific values, see the list of MPS error codes at https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81.
+        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -49,8 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ExecRulesTask Input{ get; set; }
 
         /// <summary>
-        /// Output of the conditional judgment task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public ExecRuleTaskData Output{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of an adaptive bitrate streaming template.
+        /// Unique identifier of the adaptive transcoding template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

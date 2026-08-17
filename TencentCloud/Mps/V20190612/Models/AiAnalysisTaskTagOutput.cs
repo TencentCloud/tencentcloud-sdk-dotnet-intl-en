@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of intelligently generated video tags.
+        /// Video intelligent tag list.
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisTagItem[] TagSet{ get; set; }

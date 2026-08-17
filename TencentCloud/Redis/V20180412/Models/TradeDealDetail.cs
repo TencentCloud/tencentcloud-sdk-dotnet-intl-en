@@ -28,6 +28,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// Order ID, which is used when a TencentCloud API is called.
         /// </summary>
         [JsonProperty("DealId")]
+        [System.Obsolete]
         public string DealId{ get; set; }
 
         /// <summary>

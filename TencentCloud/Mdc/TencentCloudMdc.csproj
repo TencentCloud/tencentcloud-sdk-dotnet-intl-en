@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{468070DF-0A9C-33D2-AFC7-D2A39B59B45C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1369</VersionPrefix>
+    <VersionPrefix>3.0.1375</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,6 +76,7 @@
     <Compile Include="V20200828\Models\DescribeHLSPullSourceAddress.cs" />
     <Compile Include="V20200828\Models\DescribeInput.cs" />
     <Compile Include="V20200828\Models\DescribeInputHLSPullSettings.cs" />
+    <Compile Include="V20200828\Models\DescribeInputRISTSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputRTMPPullSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputRTMPSettings.cs" />
     <Compile Include="V20200828\Models\DescribeInputRTPSettings.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="V20200828\Models\DescribeStreamLinkFlowsResponse.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkRegionsRequest.cs" />
     <Compile Include="V20200828\Models\DescribeStreamLinkRegionsResponse.cs" />
+    <Compile Include="V20200828\Models\FailOverOption.cs" />
     <Compile Include="V20200828\Models\FlowAudio.cs" />
     <Compile Include="V20200828\Models\FlowLogInfo.cs" />
     <Compile Include="V20200828\Models\FlowMediaAudio.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="V20200828\Models\StopStreamLinkFlowResponse.cs" />
     <Compile Include="V20200828\Models\StreamLinkRegionInfo.cs" />
     <Compile Include="V20200828\Models\StreamSelector.cs" />
+    <Compile Include="V20200828\Models\StreamUrlDetail.cs" />
     <Compile Include="V20200828\Models\TrackSelector.cs" />
   </ItemGroup>
 </Project>

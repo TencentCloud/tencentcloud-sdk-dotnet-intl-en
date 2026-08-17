@@ -25,15 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Judgment condition ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Judgment condition configuration.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Conditions")]
         public RuleConditionItem[] Conditions{ get; set; }
@@ -41,15 +39,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Logical operator for the list of conditions. Valid values:
         /// 
-        ///  - &&: logical AND
-        ///  - ||: logical OR
+        /// - &&: logical AND
+        /// - ||: logical OR
         /// </summary>
         [JsonProperty("Linker")]
         public string Linker{ get; set; }
 
         /// <summary>
-        /// Indexes of the nodes to execute if the judgment conditions are met.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RearDriveIndexs")]
         public long?[] RearDriveIndexs{ get; set; }

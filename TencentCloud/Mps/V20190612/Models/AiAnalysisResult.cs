@@ -25,109 +25,109 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-        /// <li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+        /// Task type. Valid values:
+        /// <li>Classification: intelligent classification.</li>
+        /// <li>Cover: intelligent cover</li>
+        /// <li>Tag: intelligent tagging.</li>
+        /// <li>FrameTag: intelligent frame tagging.</li>
+        /// <li>Highlight: Intelligent Highlights</li>
+        /// <li>DeLogo: intelligent removal.</li>
+        /// <li>Description: large model summarization.</li>
+        /// <li>Dubbing: Intelligent Dubbing</li>
+        /// <li>VideoRemake: Video deduplication</li>
+        /// <li>VideoComprehension: video (audio) recognition.</li>
+        /// <li>Cutout: Video matting</li>
+        /// <li>Reel: intelligent video editing.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+        /// 
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+        /// 
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+        /// 
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+        /// 
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }
 
         /// <summary>
-        /// The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DeLogoTask")]
         public AiAnalysisTaskDelLogoResult DeLogoTask{ get; set; }
 
         /// <summary>
-        /// The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SegmentTask")]
         public AiAnalysisTaskSegmentResult SegmentTask{ get; set; }
 
         /// <summary>
-        /// The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HeadTailTask")]
         public AiAnalysisTaskHeadTailResult HeadTailTask{ get; set; }
 
         /// <summary>
-        /// The query result of a video analysis summarization task, which is valid when the task type is Description.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DescriptionTask")]
         public AiAnalysisTaskDescriptionResult DescriptionTask{ get; set; }
 
         /// <summary>
-        /// The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HorizontalToVerticalTask")]
         public AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask{ get; set; }
 
         /// <summary>
-        /// The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DubbingTask")]
         public AiAnalysisTaskDubbingResult DubbingTask{ get; set; }
 
         /// <summary>
-        /// The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoRemakeTask")]
         public AiAnalysisTaskVideoRemakeResult VideoRemakeTask{ get; set; }
 
         /// <summary>
-        /// Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoComprehensionTask")]
         public AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask{ get; set; }
 
         /// <summary>
-        /// Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CutoutTask")]
         public AiAnalysisTaskCutoutResult CutoutTask{ get; set; }
 
         /// <summary>
-        /// Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ReelTask")]
         public AiAnalysisTaskReelResult ReelTask{ get; set; }

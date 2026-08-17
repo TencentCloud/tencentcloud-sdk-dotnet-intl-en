@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Total number of backups.
+        /// <p>Total number of backups.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Array of instance backups.
+        /// <p>Backup array of the instance.</p>
         /// </summary>
         [JsonProperty("BackupSet")]
         public RedisBackupSet[] BackupSet{ get; set; }

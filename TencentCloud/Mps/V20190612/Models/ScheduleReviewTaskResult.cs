@@ -25,41 +25,52 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+        /// Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// The error message.
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of the content moderation task.
+        /// Review task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiContentReviewTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of the content moderation task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiContentReviewResult[] Output{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BeginProcessTime")]
+        public string BeginProcessTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public string FinishTime{ get; set; }
 
 
         /// <summary>
@@ -73,6 +84,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamArrayObj(map, prefix + "Output.", this.Output);
+            this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+            this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
         }
     }
 }

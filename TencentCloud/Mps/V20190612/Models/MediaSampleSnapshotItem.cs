@@ -25,41 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+        /// Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Sample type. Valid values:
-        /// <li>Percent: Samples at the specified percentage interval.</li>
-        /// <li>Time: Samples at the specified time interval.</li>
+        /// Sampling method, Valid value:
+        /// <li>Percent: interval sampling based on percentage.</li>
+        /// <li>Time: sampling based on time interval.</li>
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
 
         /// <summary>
         /// Sampling interval
-        /// <li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-        /// <li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+        /// <li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+        /// <li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// Storage location of a generated screenshot file.
+        /// Storage location of a file after screenshot.
         /// </summary>
         [JsonProperty("Storage")]
         public TaskOutputStorage Storage{ get; set; }
 
         /// <summary>
-        /// List of paths to generated screenshots.
+        /// List of generated screenshot paths.
         /// </summary>
         [JsonProperty("ImagePathSet")]
         public string[] ImagePathSet{ get; set; }
 
         /// <summary>
-        /// List of watermarking template IDs if the screenshots are watermarked.
+        /// If a screenshot is watermarked, the watermark template ID list.
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

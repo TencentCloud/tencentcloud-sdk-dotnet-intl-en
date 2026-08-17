@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -43,33 +43,31 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the smart erasure task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public SmartEraseTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of the smart erasure task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDelLogoOutput Output{ get; set; }
 
         /// <summary>
-        /// Task progress.		
+        /// Task progress.	
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// Task execution start time in ISO datetime format.
+        /// Starting time of task execution, in ISO date and time format.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task execution completion time in ISO datetime format.
+        /// Task completion time, in ISO date and time format.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

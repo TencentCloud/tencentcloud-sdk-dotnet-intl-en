@@ -25,38 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. 0: Task successful. Other values: Task failed.
         /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message
         /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Intelligent landscape-to-portrait task input.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskHorizontalToVerticalInput Input{ get; set; }
 
         /// <summary>
-        /// Intelligent landscape-to-portrait task output.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHorizontalToVerticalOutput Output{ get; set; }

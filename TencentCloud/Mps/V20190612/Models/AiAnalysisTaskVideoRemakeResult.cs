@@ -25,32 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+        /// Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. 0: success. other values: failure.
+        /// Error code. 0: successful; other values: failed.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// Error message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Deduplication task input.
+        /// Task input for deduplication
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskVideoRemakeInput Input{ get; set; }
 
         /// <summary>
-        /// Task output.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskVideoRemakeOutput Output{ get; set; }

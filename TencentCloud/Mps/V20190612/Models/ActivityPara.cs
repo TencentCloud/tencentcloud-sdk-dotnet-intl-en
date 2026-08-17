@@ -25,83 +25,79 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// A transcoding task.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public TranscodeTaskInput TranscodeTask{ get; set; }
 
         /// <summary>
-        /// An animated screenshot generation task.
+        /// 
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public AnimatedGraphicTaskInput AnimatedGraphicTask{ get; set; }
 
         /// <summary>
-        /// A time point screenshot task.
+        /// 
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// A sampled screenshot task.
+        /// 
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public SampleSnapshotTaskInput SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// An image sprite screenshot task.
+        /// 
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public ImageSpriteTaskInput ImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// An adaptive bitrate streaming task.
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
-        /// A content moderation task.
+        /// 
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// A content analysis task.
+        /// 
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// A content recognition task.
+        /// 
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// Media quality inspection task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("QualityControlTask")]
         public AiQualityControlTaskInput QualityControlTask{ get; set; }
 
         /// <summary>
-        /// Conditional judgment of the task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ExecRulesTask")]
         public ExecRulesTask ExecRulesTask{ get; set; }
 
         /// <summary>
-        /// Smart subtitle task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SmartSubtitlesTask")]
         public SmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
 
         /// <summary>
-        /// Smart erasure task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SmartEraseTask")]
         public SmartEraseTaskInput SmartEraseTask{ get; set; }

@@ -31,24 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Subtitle suppression template name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Subtitle suppression template description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Template type. Valid values:
-        /// * Preset: system preset template
-        /// * Custom: user-defined template.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -78,8 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SubtitleEmbedConfig SubtitleEmbedConfig{ get; set; }
 
         /// <summary>
-        /// Subtitle suppression template English name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }

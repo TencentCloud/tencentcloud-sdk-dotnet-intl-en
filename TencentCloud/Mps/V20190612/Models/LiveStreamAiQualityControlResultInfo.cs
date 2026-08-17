@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Content quality inspection result list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("QualityControlResults")]
         [System.Obsolete]
@@ -40,15 +39,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public DiagnoseResult[] DiagnoseResults{ get; set; }
 
         /// <summary>
-        /// Content quality inspection result list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// Format diagnostic result list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DiagnoseResultSet")]
         public DiagnoseResult[] DiagnoseResultSet{ get; set; }

@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input information for a batch task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("InputInfos")]
         public MediaInputInfo[] InputInfos{ get; set; }
 
         /// <summary>
-        /// Metadata of the original video.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Metadatas")]
         public MediaMetaData[] Metadatas{ get; set; }
 
         /// <summary>
-        /// Execution result of the smart subtitle task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SmartSubtitlesTaskResult")]
         public BatchSmartSubtitlesResult SmartSubtitlesTaskResult{ get; set; }

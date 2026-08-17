@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of intelligent cover generating task. Valid values:
-        /// <li>ON: enables intelligent cover generating task;</li>
-        /// <li>OFF: disables intelligent cover generating task.</li>
+        /// Intelligent Cover Task Switch. Valid values:
+        /// <li>ON: Enable intelligent thumbnail generation.</li>
+        /// <li>OFF: Disables the intelligent thumbnail generation task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

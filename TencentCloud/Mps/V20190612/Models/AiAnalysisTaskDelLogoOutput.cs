@@ -49,22 +49,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TranslateSubtitlePath{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SubtitlePos")]
         public SubtitlePosition SubtitlePos{ get; set; }
 
         /// <summary>
-        /// <p>File URL of the video after voice type cloning</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VoiceClonedVideo")]
         public string VoiceClonedVideo{ get; set; }
 
         /// <summary>
-        /// <p>File address of the voice type clone annotation</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VoiceClonedMarkFile")]
         public string VoiceClonedMarkFile{ get; set; }

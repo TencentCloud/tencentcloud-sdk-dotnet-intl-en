@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The error code. An empty string indicates the task is successful; any other value returned indicates the task failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+        /// Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -49,14 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for an OCR-based porn information detection in text task during content audit.
+        /// Content review Ocr text pornography detection task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of an OCR-based porn information detection in text task during content audit.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornOcrTaskOutput Output{ get; set; }

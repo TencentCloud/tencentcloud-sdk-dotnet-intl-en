@@ -25,27 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Shard size. Unit: MB.
+        /// <p>Shard size. Unit: MB.</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of shards.
-        /// - The instance adopts the standard architecture. The default value of RedisShardNum is 1.
-        /// - This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Stand-Alone Edition.
+        /// <p>Number of shards. - For instances with standard architecture, RedisShardNum defaults to 1. - This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Standalone Edition.</p>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Number of replicas. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.
+        /// <p>Number of replicas. This parameter is not required for Redis 2.8 Primary-Secondary Edition, CKV Primary-Secondary Edition, and Redis 2.8 Single-node Edition.</p>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The text transcript.
+        /// Recognized text.
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// The PTS (seconds) of the start of a segment.
+        /// Start PTS time of a translated fragment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// The PTS (seconds) of the end of a segment.
+        /// End PTS time of a translated segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// The confidence score for a segment. Value range: 0-100.
+        /// Confidence of a translated segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The translation.
+        /// Translated text.
         /// </summary>
         [JsonProperty("Trans")]
         public string Trans{ get; set; }
@@ -73,8 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public bool? SteadyState{ get; set; }
 
         /// <summary>
-        /// User ID in the result of real-time translation via WebSocket and TRTC.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

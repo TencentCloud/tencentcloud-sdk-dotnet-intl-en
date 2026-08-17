@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start PTS time of a suspected segment in seconds.
+        /// Start PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of a suspected segment in seconds.
+        /// End PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Score of a suspected porn segment.
+        /// Suspected segment porn score.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for porn information detection of a suspected segment. Valid values:
+        /// Pornographic result suggestion for suspected segment, value ranges from...to...
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,8 +52,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of the detected porn information in video. Valid values:
-        /// <li>sexual_moan: Sexual moans.</li>
+        /// Video porn detection result tag, value ranges from...to...
+        /// <li>sexual_moan: Moan.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

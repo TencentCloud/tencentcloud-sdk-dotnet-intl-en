@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+        /// <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
         /// </summary>
         [JsonProperty("BaseBandwidth")]
         public long? BaseBandwidth{ get; set; }
 
         /// <summary>
-        /// The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+        /// <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
         /// </summary>
         [JsonProperty("AddBandwidth")]
         public long? AddBandwidth{ get; set; }
 
         /// <summary>
-        /// The lower limit for additional bandwidth
+        /// <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
         /// </summary>
         [JsonProperty("MinAddBandwidth")]
         public long? MinAddBandwidth{ get; set; }
 
         /// <summary>
-        /// The upper limit for additional bandwidth
+        /// <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
         /// </summary>
         [JsonProperty("MaxAddBandwidth")]
         public long? MaxAddBandwidth{ get; set; }

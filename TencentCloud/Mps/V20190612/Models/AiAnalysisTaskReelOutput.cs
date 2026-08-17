@@ -25,29 +25,29 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Path of the output video.
+        /// Path of the commentated video.
         /// </summary>
         [JsonProperty("VideoPath")]
         public string VideoPath{ get; set; }
 
         /// <summary>
-        /// Path list of the output videos.
+        /// Path list of the commentated video.
         /// 
-        /// **Note**:.
-        /// 1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-        /// 2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+        /// **Note**:
+        /// 1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+        /// 2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
         /// </summary>
         [JsonProperty("VideoPaths")]
         public string[] VideoPaths{ get; set; }
 
         /// <summary>
-        /// Script file path.
+        /// Script file path
         /// </summary>
         [JsonProperty("ScriptPath")]
         public string ScriptPath{ get; set; }
 
         /// <summary>
-        /// Storage location of the output video.
+        /// Storage location of the commentated video.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

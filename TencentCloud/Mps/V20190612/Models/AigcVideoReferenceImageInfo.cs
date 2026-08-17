@@ -31,8 +31,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// Reference type.
-        /// Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+        /// Reference Type.
+        /// Note:
+        /// 1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }

@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of intelligent frame-specific tagging task. Valid values:
-        /// <li>ON: enables intelligent frame-specific tagging task;</li>
-        /// <li>OFF: disables intelligent frame-specific tagging task.</li>
+        /// Intelligent frame tagging task switch. Valid values:
+        /// <li>ON: Enable intelligent frame-specific tagging task.</li>
+        /// <li>OFF: Disables the intelligent frame-specific tagging task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

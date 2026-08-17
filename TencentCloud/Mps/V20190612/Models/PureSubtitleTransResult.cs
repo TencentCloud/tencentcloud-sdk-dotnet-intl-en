@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status (the three valid values are as follows):
+        /// Task status (the three valid values are as follows): 
         /// - PROCESSING
         /// - SUCCESS 
         /// - FAIL
@@ -58,8 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// Translation output result of pure subtitle files.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public PureSubtitleTransResultOutput Output{ get; set; }

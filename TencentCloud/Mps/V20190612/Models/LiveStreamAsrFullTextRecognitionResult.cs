@@ -31,19 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// Start PTS time of recognized segment in seconds.
+        /// Start PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of recognized segment in seconds.
+        /// End PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Confidence of recognized segment. Value range: 0–100.
+        /// Confidence of a recognized segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public bool? SteadyState{ get; set; }
 
         /// <summary>
-        /// User ID in the result of recognition via WebSocket and TRTC.Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

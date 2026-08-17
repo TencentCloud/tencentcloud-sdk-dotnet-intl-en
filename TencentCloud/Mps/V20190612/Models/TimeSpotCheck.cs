@@ -27,32 +27,32 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Duration of each loop detection, in seconds. Value range:
         /// 
-        ///  - Minimum value: 10.
-        ///  - Maximum value: 86400.
+        /// - Minimum value: 10.
+        /// - Maximum value: 86400.
         /// </summary>
         [JsonProperty("CheckDuration")]
         public ulong? CheckDuration{ get; set; }
 
         /// <summary>
         /// Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
-        ///  - Minimum value: 10.
-        ///  - Maximum value: 3600.
+        /// - Minimum value: 10.
+        /// - Maximum value: 3600.
         /// </summary>
         [JsonProperty("CheckInterval")]
         public ulong? CheckInterval{ get; set; }
 
         /// <summary>
         /// Skipped opening duration, in seconds. Value range:
-        ///  - Minimum value: 1.
-        ///  - Maximum value: 1800.
+        /// - Minimum value: 1.
+        /// - Maximum value: 1800.
         /// </summary>
         [JsonProperty("SkipDuration")]
         public ulong? SkipDuration{ get; set; }
 
         /// <summary>
         /// Number of loops. Value range:
-        ///  - Minimum value: 0.
-        ///  - Maximum value: 1000.
+        /// - Minimum value: 0.
+        /// - Maximum value: 1000.
         /// 
         /// If the value is 0 or not specified, it indicates that loops are executed until the video ends.
         /// </summary>

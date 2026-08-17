@@ -25,197 +25,190 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance type.
-        /// 
-        /// <ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li>Note: CKV editions are currently used by some users and are temporarily retained.</ul>
+        /// <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>19: Valkey 8.0 memory edition (standard architecture).</li><li>20: Valkey 8.0 memory edition (cluster architecture).</li><li>21: Valkey 9.0 memory edition (standard architecture).</li><li>22: Valkey 9.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).<br><strong>Note</strong>: CKV editions are currently used by some users and are temporarily retained.</li></ul>
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
 
         /// <summary>
-        /// Memory capacity in MB, which must be an integer multiple of 1024. For specific specifications, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
-        /// - When **TypeId** is a standard architecture, **MemSize** is the total memory capacity of the instance;
-        /// - When **TypeId** is a cluster architecture, **MemSize** is the single-shard memory capacity.
+        /// <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, query the sales specifications for all regions via the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API.</p><ul><li>When <strong>TypeId</strong> is standard architecture, <strong>MemSize</strong> is the total memory capacity of the instance.</li><li>When <strong>TypeId</strong> is cluster architecture, <strong>MemSize</strong> is the sharded memory capacity.</li></ul>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// The number of instances for each purchase. For details, query the sales specifications in all regions through the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+        /// <p>Instance count. Number of instances to purchase at a time. For details, query sales specifications in all regions via the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API.</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// The purchase duration of an instance
-        /// - If `BillingMode` is `1`, that is, when the billing mode is monthly subscription, you need to set this parameter to specify the duration of the purchased instance. Unit: month. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
-        /// - If `BillingMode` is `0`, that is, when the billing mode is pay-as-you-go, you need to set this parameter to `1`.
+        /// <p>Duration of instance purchase.</p><ul><li>If <strong>BillingMode</strong> is <strong>1</strong>, that is, the billing mode is monthly subscription, you need to set this parameter to specify the duration of instance purchase. Measurement unit: month, permissible range [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</li><li>If <strong>BillingMode</strong> is <strong>0</strong>, that is, the billing mode is pay-as-you-go, set this parameter to 1.</li></ul>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: pay-as-you-go
+        /// <p>Billing mode.</p><ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// ID of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Instance access password.
-        ///  - If the input parameter **NoAuth** is set to **true**, indicating that instance access requires no password, Password does not need to be specified. Otherwise, Password is required.
-        ///  - If the instance type (**TypeId**) is Redis 2.8 memory edition standard architecture or Redis 4.0/5.0/6.2/7.0 memory edition standard architecture or cluster architecture, the password complexity requirements are as follows: It should contain 8 to 64 characters but cannot start with a forward slash (/). It should contain at least two types of the following characters: lowercase letters, uppercase letters, digits, and special characters: ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-        ///  - When the instance type parameter **TypeId** is set to CKV 3.2 memory edition (standard architecture or cluster architecture), the password should contain 8 to 30 characters, including only letters and digits.
+        /// <p>Password for accessing instances.</p><ul><li>When the input parameter <strong>NoAuth</strong> is <strong>true</strong>, it means setting instances to Password-free access, and Password does not need to be configured. Otherwise, Password is required.</li><li>When the instance type <strong>TypeId</strong> is Redis 2.8 memory edition standard architecture, Redis 4.0, 5.0, 6.2, or 7.0 memory edition standard architecture or cluster architecture, the Password complexity requirements are: 8-64 characters, containing at least lowercase letters, uppercase letters, digits, and 2 of the following characters: ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/, and cannot start with "/".</li><li>When the instance type <strong>TypeId</strong> is CKV 3.2 memory edition standard architecture or cluster architecture, the Password complexity is: 8-30 characters, must include letters and digits, and exclude other characters.</li></ul>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// VPC ID. If this parameter is not passed in, the classic network will be selected by default. You can query the specific VPC ID in the [VPC console](https://console.cloud.tencent.com/vpc).
+        /// <p>VPC ID. If you do not configure this parameter, the basic network is selected by default. Log in to the <a href="https://console.cloud.tencent.com/vpc">private network</a> console to query the specific ID.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID. This parameter is not required for the classic network. You can get the specific subnet ID by querying the subnet list in the [VPC console](https://console.cloud.tencent.com/vpc).
+        /// <p>Subnet of the private network VPC. In the basic network, this parameter requires no configuration. Log in to the <a href="https://console.cloud.tencent.com/vpc">Private Network</a> console to query the subnet list and obtain the specific ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), go to the account information menu in the top-right corner, and select **Project Management** to query the project ID.
+        /// <p>Project ID. Log in to the <a href="https://console.cloud.tencent.com/redis#/">Redis console</a>, select <strong>Project Management</strong> from the account information menu in the top-right corner, and query the project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag
-        /// - `0`: Manual renewal (default).
-        /// - `1`: Auto-renewal.
-        /// - `2`: Not auto-renewal (set by user).
+        /// <p>Automatic renewal flag.</p><ul><li>0: default status (manual renewal).</li><li>1: automatic renewal.</li><li>2: non-renewal upon expiration.</li></ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Array of security group IDs.
-        /// - A security group is a virtual firewall that controls network access to cloud database instances. It is recommended to bind the corresponding security group when you create an instance.
-        /// - Obtain the security group ID of the instance through the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+        /// <p>Security group ID array.</p><ul><li>A security group is a virtual firewall that controls network access to a cloud database instance. When creating an instance, it is recommended to bind the corresponding security group.</li><li>Get the security group ID of an instance through the <a href="https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1">DescribeInstanceSecurityGroup</a> API.</li></ul>
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// User-defined network port. Default value: `6379`. Range: [1024,65535].
+        /// <p>User-defined network port. Defaults to 6379, range [1024,65535].</p>
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// Quantity of instance shards
-        /// - This parameter is not required for instances of Standard Edition.
-        /// - For instances of Cluster Edition, the range of shard quantity is [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].
+        /// <p>Number of instance shards.</p><ul><li>No need to configure this parameter for standard edition instances.</li><li>For cluster edition instances, the shard quantity range is: [1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128].</li></ul>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Quantity of instance replicas
-        /// - For Redis Memory Edition 4.0, 5.0, 6.2 (regardless of architecture), the range of replica quantity is [1,5].
-        /// - For Redis 2.8 Standard Edition and CKV Standard Edition, the replica quantity is `1`.
+        /// <p>Instance replica number.</p><ul><li>Redis Memory Edition 4.0, 5.0, 6.2, and 7.0 cluster architecture supports a replica quantity range of [1,5].</li><li>Redis 2.8 Standard Edition and CKV Standard Edition support only 1 replica.</li></ul>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// Whether to support read-only replicas.
-        /// - Redis 2.8 Standard Edition and CKV Standard Edition don’t support read-only replicas.
-        /// - If read-only replicas are enabled, read/write separation will be automatically enabled for an instance, with write requests routed to the master node and read requests to the replica node.
-        /// - To enable read-only replicas, we recommend that you create two or more replicas.
+        /// <p>Flag whether the instance needs to support read-only replica.</p><ul><li>Redis 2.8 Standard Edition and CKV Standard Edition do not support read-only replica.</li><li>If read-only replica is enabled, the instance will automatically separate read and write operations, with write requests routed to the primary node and read requests routed to replica nodes.</li><li>If needed to enable read-only replica, it is recommended to have at least 2 replicas.</li></ul>
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// Instance name, which can contain up to 60 letters, digits, hyphens, and underscores.
+        /// <p>Instance name. Naming requirement: It only supports Chinese characters, letters, numbers, hyphens ("-"), or underscores ("_"), with a length of less than 60.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Whether to support password-free access for an instance
-        /// - `true`: The instance access is password-free.
-        /// - `false`: The instance access is password-enabled. Default value: `false`. Only instances in a VPC support the password-free access.
+        /// <p>Configure whether the instance supports password-free access.</p><ul><li>true: Access the instance without a password.</li><li>false: Access the instance with a password. By default, password access is enabled. Only instances in a VPC network support password-free access.</li></ul>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// The node information of the instance, including node ID, type, and AZ. For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-        /// Node information of an instance. Currently, information about the node type (master or replica) and node AZ can be passed in. This parameter is not required for instances deployed in a single AZ.
+        /// <p>Node information of instance, including node ID, node type, node availability zone ID. For details, please see <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1">RedisNodeInfo</a>.<br>Currently support inputting node type (primary node or replica node) and availability zone. When this parameter is not specified, in regions that support multi-availability zone deployment, the system defaults to creating instances with multi-availability zone architecture.</p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// The tag for an instance
+        /// <p>Set a tag for the instance.</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// <p>Specify the name of the AZ to which the instance belongs. For details, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The parameter template ID associated with the instance
-        /// - If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
-        /// - Query the list of parameter templates of an instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+        /// <p>Parameter template ID of the specified instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt to the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// An internal parameter used to indicate whether to check when creating an instance.
-        /// - `false`: Default value. Send a normal request and create an instance if all the requirements are met.
-        /// - `true`: Send a check request and create no instance.
+        /// <p>Internal parameter to identify whether creating an instance needs to check.</p><ul><li>false: Default value. Send a normal request and create the instance directly after passing the check.</li><li>true: Send a check request without creating an instance.</li></ul>
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// Specifies the instance deployment mode.
-        ///  - local: traditional architecture. It is the default value.
-        ///  - cdc: dedicated cluster.
-        ///  - cloud: cloud native. Currently, this mode is unavailable.
+        /// <p>Indicates the instance deployment mode.</p><ul><li>local: traditional architecture, defaults to local.</li><li>cdc: dedicated cluster.</li><li>cloud: cloud native, currently not available for sale.</li></ul>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// Exclusive cluster ID. When `ProductVersion` is set to `cdc`, this parameter is required.
+        /// <p>Dedicated cluster ID.</p><ul><li>When <strong>ProductVersion</strong> is set to <strong>cdc</strong>, this parameter must be set.</li><li>Get cluster ID through the API <a href="https://www.tencentcloud.com/document/product/239/109628?from_cn_redirect=1">DescribeRedisClusters</a>.</li></ul>
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }
 
         /// <summary>
-        /// Alarm policy ID array.- Please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to access the alarm policy ID.- If this parameter is not configured, the default alarm policy will be bound. For the specific information about the default alarm policy, please log in to [Tencent Cloud Observability Platform - Alarm Management - Policy Management](https://console.cloud.tencent.com/monitor/alarm/policy) to view.
+        /// <p>Alarm policy ID array.</p><ul><li>Log in to <a href="https://console.cloud.tencent.com/monitor/alarm/policy">Tencent Cloud Observability Platform - Alarm Management - Policy Management</a> to get alarm policy ID.</li><li>If this parameter is not configured, the default alarm policy will be bound. For the default alarm policy details, log in to <a href="https://console.cloud.tencent.com/monitor/alarm/policy">Tencent Cloud Observability Platform - Alarm Management - Policy Management</a> to view.</li></ul>
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public string[] AlarmPolicyList{ get; set; }
 
         /// <summary>
-        /// Whether to encrypt the password.
+        /// <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
         /// </summary>
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }
+
+        /// <summary>
+        /// <p>Instance-level password complexity policy. When not passed in or Enabled=false, deem as not enabling policy, validate by system default rule.</p>
+        /// </summary>
+        [JsonProperty("PasswordPolicy")]
+        public PasswordPolicy PasswordPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable SSL encryption.</p><ul><li>true: Enable.</li><li>false: Disable (default value).</li></ul>
+        /// </summary>
+        [JsonProperty("EnableSSL")]
+        public bool? EnableSSL{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to write the private IPv4 address of an instance to the domain alias (SAN) of the certificate when SSL is enabled. This parameter is valid only when EnableSSL is true.</p><ul><li>true: Allows using private IP to perform SSL certificate verification.</li><li>false: Does not add the SAN extended information to the certificate.</li></ul>
+        /// </summary>
+        [JsonProperty("SSLBindPrivateIPv4")]
+        public bool? SSLBindPrivateIPv4{ get; set; }
+
+        /// <summary>
+        /// <p>Instance connectivity access Mode.</p><ul><li>0: Proxy Mode (default value).</li><li>1: Direct access Mode.</li></ul>
+        /// </summary>
+        [JsonProperty("ConnectionMode")]
+        public long? ConnectionMode{ get; set; }
 
 
         /// <summary>
@@ -250,6 +243,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
             this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+            this.SetParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
+            this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+            this.SetParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+            this.SetParamSimple(map, prefix + "ConnectionMode", this.ConnectionMode);
         }
     }
 }

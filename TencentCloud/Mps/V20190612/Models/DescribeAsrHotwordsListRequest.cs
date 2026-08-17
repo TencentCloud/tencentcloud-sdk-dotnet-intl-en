@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Hotword lexicon sorting order.
+        /// Hotword lexicon sort order
         /// 
         /// 0: ascending (default)
         /// 1: descending
@@ -58,13 +58,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+        /// Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
         /// 
-        ///  - CreateTime: sort by creation time
-        ///  - UpdateTime: sort by update time
-        ///  - Name: sort by hotword lexicon name
-        ///  - WordCount: sort by the number of hotwords
-        ///  - HotwordsId: sort by hotword lexicon ID
+        /// - CreateTime: sort by creation time
+        /// -UpdateTime: Update time sorting
+        /// -Name: Sort by hotword lexicon name.
+        /// - WordCount: sort by the number of hotwords
+        /// - HotwordsId: sort by hotword lexicon ID
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

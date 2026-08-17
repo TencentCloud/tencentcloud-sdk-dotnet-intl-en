@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The template ID.
+        /// Template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

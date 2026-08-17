@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Segmentation result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Paragraphs")]
         public LiveAiParagraphInfo[] Paragraphs{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Prohibited information detection template ID.
+        /// Prohibited information recognition template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+        /// <p>Specify the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Pagination size. The default value is 20, the minimum value is 1, and the maximum value is 100.
+        /// <p>Page size. Default value: 20; minimum value: 1; maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset,  which is an integral multiple of `Limit`.  Calculation formula:  `offset` = `limit` * (page number - 1).
+        /// <p>Pagination offset.</p><ul><li>Parameter value: Multiple of Limit, offset=limit*(page number-1).</li><li>Default value: 0.</li></ul>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

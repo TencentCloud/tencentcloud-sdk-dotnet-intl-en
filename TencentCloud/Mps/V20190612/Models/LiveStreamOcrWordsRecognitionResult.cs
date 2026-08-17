@@ -31,25 +31,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Word{ get; set; }
 
         /// <summary>
-        /// Start PTS time of recognized segment in seconds.
+        /// Start PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of recognized segment in seconds.
+        /// End PTS time of a recognized segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Confidence of recognized segment. Value range: 0–100.
+        /// Confidence of a recognized segment. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+        /// Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
         /// </summary>
         [JsonProperty("AreaCoords")]
         public long?[] AreaCoords{ get; set; }

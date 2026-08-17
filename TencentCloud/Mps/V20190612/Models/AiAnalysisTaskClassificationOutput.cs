@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of intelligently generated video categories.
+        /// Video intelligent classification list.
         /// </summary>
         [JsonProperty("ClassificationSet")]
         public MediaAiAnalysisClassificationItem[] ClassificationSet{ get; set; }

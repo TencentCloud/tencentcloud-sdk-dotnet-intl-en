@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// ID of a porn information detection template.
+        /// Pornography detection template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

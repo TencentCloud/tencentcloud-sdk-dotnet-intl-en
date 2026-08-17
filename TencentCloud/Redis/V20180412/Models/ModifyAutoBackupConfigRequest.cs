@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// Specifies the retention days of full backup files. unit: day.
+        /// Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+        /// Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -43,15 +43,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-        /// * Preset: System preset template;
-        /// * Custom
+        /// Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+        /// * Preset: system preset template
+        /// * Custom: user-defined template.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+        /// Filter condition for recording template identifiers, with a length limit of 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

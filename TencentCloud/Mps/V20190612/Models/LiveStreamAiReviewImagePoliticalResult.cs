@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start PTS time of a suspected segment in seconds.
+        /// Start PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of a suspected segment in seconds.
+        /// End PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// The confidence score for the detected sensitive segments.
+        /// Sensitive score of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for porn information detection of a suspected segment. Valid values:
+        /// Result suggestion for suspected segment porn detection, permissible range:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,34 +52,34 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The labels for the detected sensitive information. Valid values:
-        /// <li>politician</li>
-        /// <li>violation_photo (banned icons)</li>
+        /// Video sensitive result tag, value ranges from...to...
+        /// <li>politician: sensitive person.</li>
+        /// <li>violation_photo: violation icon.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// The name of a sensitive person or banned icon.
+        /// Sensitive person, violative icon name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+        /// Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// URL of a suspected image (which will not be permanently stored
-        /// and will be deleted after `PicUrlExpireTime`).
+        /// Suspected image URL (Images are not retained permanently upon arrival)
+        /// The image will be deleted after the PicUrlExpireTime time point.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

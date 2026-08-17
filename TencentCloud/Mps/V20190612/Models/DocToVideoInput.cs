@@ -25,55 +25,55 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Document link for video generation.</p><p>Supported document types: pdf, pptx, docx, png, jpg<br>Document count limit: 3<br>Document size limit: 10MB<br>Document page limit: 100</p>
+        /// 
         /// </summary>
         [JsonProperty("FileUrl")]
         public string[] FileUrl{ get; set; }
 
         /// <summary>
-        /// <p>Prompt information for video generation.</p><p>Prompt length limit: 2,000 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Document-to-video model name</p><p>Default value: Wand</p>
+        /// 
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+        /// 
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
+        /// 
         /// </summary>
         [JsonProperty("Ratio")]
         public string Ratio{ get; set; }
 
         /// <summary>
-        /// <p>Language of the generated video.</p><p>Enumeration values: </p><ul><li>zh: Chinese</li><li>en: English</li><li>ja: Japanese</li><li>ko: Korean</li><li>ru: Russian</li><li>fr: French</li><li>es: Spanish</li><li>de: German</li></ul><p>Default value: zh</p>
+        /// 
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// <p>Video duration for reference.</p><p>This is not an exact duration; it serves as a reference for the LLM only.</p><p>Range: [15, 1200]</p><p>Unit: second</p>
+        /// 
         /// </summary>
         [JsonProperty("ReferenceDuration")]
         public long? ReferenceDuration{ get; set; }
 
         /// <summary>
-        /// <p>Whether the AI dubbing feature is enabled.</p><p>Default value: false</p>
+        /// 
         /// </summary>
         [JsonProperty("EnableTTS")]
         public bool? EnableTTS{ get; set; }
 
         /// <summary>
-        /// <p>Voice ID. Valid only when AI dubbing feature is enabled.</p>
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

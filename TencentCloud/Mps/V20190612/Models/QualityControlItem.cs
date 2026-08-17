@@ -25,27 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The confidence score. Value range: 0-100.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// The start timestamp (second) of the segment.
+        /// Start time of occurrence, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end timestamp (second) of the segment.
+        /// End timestamp of the occurrence, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The coordinates (px) of the top left and bottom right corner.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

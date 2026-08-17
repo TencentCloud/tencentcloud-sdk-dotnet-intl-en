@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Event notification obtained from CMQ.
+        /// Event notification content obtained from CMQ.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

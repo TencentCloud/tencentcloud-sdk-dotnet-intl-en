@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// Translate the starting PTS time of a segment, in seconds.
+        /// Start PTS time of a translated recording clip, in seconds.
         /// </summary>
         [JsonProperty("StartPTSTime")]
         public float? StartPTSTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of a translated segment, in seconds.
+        /// End PTS time of a translated recording clip, in seconds.
         /// </summary>
         [JsonProperty("EndPTSTime")]
         public float? EndPTSTime{ get; set; }
@@ -49,29 +49,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Trans{ get; set; }
 
         /// <summary>
-        /// Translation started at UTC time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Translation ends at UTC time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Steady-State tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SteadyState")]
         public bool? SteadyState{ get; set; }
 
         /// <summary>
-        /// websocket and trtc real-time translation UserId.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

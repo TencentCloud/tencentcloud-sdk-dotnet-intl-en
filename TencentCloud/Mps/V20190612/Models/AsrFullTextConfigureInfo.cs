@@ -25,19 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a full speech recognition task. Valid values:
-        /// <li>ON: Enables an intelligent full speech recognition task;</li>
-        /// <li>OFF: Disables an intelligent full speech recognition task.</li>
+        /// Voice full-text recognition task switch, available values:
+        /// <li>ON: Enable intelligent voice full-text recognition task.</li>
+        /// <li>OFF: Disables the intelligent voice full-text recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-        /// <li>vtt: Generates a WebVTT subtitles file.</li>
+        /// Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+        /// <li>vtt: Generate a WebVTT subtitle file.</li>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
+
+        /// <summary>
+        /// Video source language.
+        /// </summary>
+        [JsonProperty("SourceLanguage")]
+        public string SourceLanguage{ get; set; }
 
 
         /// <summary>
@@ -47,6 +53,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+            this.SetParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>cos bucket region</p>
+        /// 
         /// </summary>
         [JsonProperty("CosBucketRegion")]
         public string CosBucketRegion{ get; set; }
 
         /// <summary>
-        /// <p>cos bucket name</p>
+        /// 
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// <p>cos bucket path</p>
+        /// 
         /// </summary>
         [JsonProperty("CosBucketPath")]
         public string CosBucketPath{ get; set; }

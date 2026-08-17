@@ -25,43 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>TaskId of the image processing task.</p>
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Input file.</p>
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+        /// 
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+        /// 
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// <p>Subtask failure identifier.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubTaskHasFailed")]
         public bool? SubTaskHasFailed{ get; set; }

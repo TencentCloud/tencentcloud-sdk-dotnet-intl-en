@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Segment start time (unit: seconds).
+        /// Segment start time (unit: seconds)
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// Segment end time (unit: s).
+        /// Segment end time (unit: seconds)
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }
 
         /// <summary>
-        /// Video clip title.
+        /// Storyboard clip title
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// Storyboard clip information description.
+        /// Segment information description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Scene clip keywords.
+        /// Storyboard clip keywords
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }

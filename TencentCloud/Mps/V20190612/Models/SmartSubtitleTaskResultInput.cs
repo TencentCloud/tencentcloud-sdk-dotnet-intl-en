@@ -31,8 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawSmartSubtitleParameter RawParameter{ get; set; }

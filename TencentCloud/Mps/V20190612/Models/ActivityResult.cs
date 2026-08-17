@@ -26,26 +26,24 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Atomic task type.
-        /// <Li>Transcode: transcoding.</li>.
-        /// <Li>SampleSnapshot: specifies sampled screenshot taking.</li>.
-        /// <Li>AnimatedGraphics: specifies the animated image.</li>.
-        /// <Li>SnapshotByTimeOffset: specifies time point screenshot taking.</li>.
-        /// <Li>ImageSprites: specifies the sprite sheet.</li>.
-        /// <Li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>.
-        /// <Li>AiContentReview: specifies content moderation.</li>.
-        /// <Li>AIRecognition: intelligent identification.</li>.
-        /// <Li>AIAnalysis: specifies ai analysis.</li>.
+        /// <li>Transcode: transcoding.</li>
+        /// <li>SampleSnapshot: sampled screenshot taking.</li>
+        /// <li>AnimatedGraphics: Animated image.</li>
+        /// <li>SnapshotByTimeOffset: time point screenshot taking.</li>
+        /// <li>ImageSprites: sprite sheet.</li>
+        /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+        /// <li>AiContentReview: content moderation.</li>
+        /// <li>AIRecognition: intelligent recognition.</li>
+        /// <li>AIAnalysis: AI analysis.</li>
         /// <li>AiQualityControl: media quality inspection</li>
-        /// 
         /// <Li>SmartSubtitles: smart subtitle</li>
-        /// 
-        /// <Li>SmartErase: smart erasure.</li>.
+        /// <li>SmartErase: intelligent removal.</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// The execution results of the subtasks of the scheme.
+        /// Atomic task output.
         /// </summary>
         [JsonProperty("ActivityResItem")]
         public ActivityResItem ActivityResItem{ get; set; }

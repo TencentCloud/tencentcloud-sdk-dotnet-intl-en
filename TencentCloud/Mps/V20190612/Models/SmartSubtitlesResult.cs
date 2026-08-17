@@ -26,8 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// - AsrFullTextRecognition: full speech recognition.
-        /// - TransTextRecognition: speech translation.
+        /// - AsrFullTextRecognition: full speech recognition
+        /// - TransTextRecognition: speech translation
         /// - PureSubtitleTrans: pure subtitle translation.
         /// - OcrFullTextRecognition: text-based subtitle extraction.
         /// </summary>
@@ -35,33 +35,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Full speech recognition result. When Type is
-        ///  set to AsrFullTextRecognition, this parameter takes effect.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public SmartSubtitleTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
-        /// Translation result. When Type is
         /// 
-        ///  set to TransTextRecognition, this parameter takes effect.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("TransTextTask")]
         public SmartSubtitleTaskTransTextResult TransTextTask{ get; set; }
 
         /// <summary>
-        /// The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("PureSubtitleTransTask")]
         public PureSubtitleTransResult PureSubtitleTransTask{ get; set; }
 
         /// <summary>
-        /// Text-based subtitle extraction result. This field is valid when the value of Type is
-        /// OcrFullTextRecognition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public SmartSubtitleTaskFullTextResult OcrFullTextTask{ get; set; }

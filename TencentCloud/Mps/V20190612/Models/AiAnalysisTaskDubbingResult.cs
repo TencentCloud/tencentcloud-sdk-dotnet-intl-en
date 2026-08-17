@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. `0`: Task successful. Other values: Task failed.
+        /// Error code. 0: Task successful. Other values: Task failed.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -43,14 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Describes the task input for intelligent translation.
+        /// Intelligent dubbing task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskDubbingInput Input{ get; set; }
 
         /// <summary>
-        /// Describes the task output of intelligent translation.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDubbingOutput Output{ get; set; }

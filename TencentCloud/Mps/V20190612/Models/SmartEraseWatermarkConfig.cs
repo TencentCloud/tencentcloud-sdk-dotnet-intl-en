@@ -25,41 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the watermark removal method.
-        /// **Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-        /// When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-        /// **Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-        /// When you choose specified area erasure, import at least one specified region.
+        /// Watermark removal method.
+        /// **Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+        /// When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+        /// **Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+        /// When you choose specified area erasure, import at least a specified region.
         /// 
-        /// -Automated removal.
-        /// -Specifies the custom specified area erasure.
+        /// -. auto: automatic removal
+        /// - custom: specified area erasing.
         /// </summary>
         [JsonProperty("WatermarkEraseMethod")]
         public string WatermarkEraseMethod{ get; set; }
 
         /// <summary>
-        /// Specifies the watermark removal model.
-        /// Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-        /// Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-        /// **Supported values**:
-        /// - basic
-        /// - advanced
+        /// Watermark removal model.
+        /// Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+        /// Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+        /// -.
+        /// - advanced: Advanced Edition.
         /// </summary>
         [JsonProperty("WatermarkModel")]
         public string WatermarkModel{ get; set; }
 
         /// <summary>
-        /// Automatically erase the custom region.
-        /// Automatically detects and erases the targeted removal in the specified region using the AI model.
-        /// Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+        /// Custom area for automatic erasing.
+        /// For the specified area, AI models are used to automatically detect and erase the target objects.
+        /// Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("AutoAreas")]
         public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// Specifies the removal of a custom region.
-        /// Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-        /// Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+        /// Specify the custom region for erasing.
+        /// For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+        /// Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("CustomAreas")]
         public EraseTimeArea[] CustomAreas{ get; set; }

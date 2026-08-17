@@ -25,17 +25,17 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specifies the privacy protection removal method.
-        /// -Blur: specifies the blur detection.
-        /// -Specifies the mosaic.
+        /// Privacy protection removal method.
+        /// - Blur: blur detection
+        /// - mosaic
         /// </summary>
         [JsonProperty("PrivacyModel")]
         public string PrivacyModel{ get; set; }
 
         /// <summary>
-        /// Privacy protection objective. no need to import an array when in use on API Explorer. just add the corresponding item and fill in the value.
-        /// -Human face.
-        /// -License plate.
+        /// Privacy protection target. (When API Explorer is used, no need to specify an array. Just add the corresponding items and fill in the value.)
+        /// -Human face
+        /// - plate: license plate.
         /// </summary>
         [JsonProperty("PrivacyTargets")]
         public string[] PrivacyTargets{ get; set; }

@@ -31,51 +31,50 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>OcrWordsRecognition: text keyword recognition.</li>
         /// <li>AsrFullTextRecognition: full speech recognition.</li>
         /// <li>OcrFullTextRecognition: full text recognition.</li>
-        /// <li>TransTextRecognition: speech translation.</li>
-        /// 
-        /// <li>ObjectRecognition: object recognition.</li>
+        /// <li>TransTextRecognition: speech translation</li>
+        /// <li>ObjectRecognition: object detection.</li>
         /// <li>TagRecognition: highlights marking.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Face recognition result, which is valid when `Type` is
-        /// `FaceRecognition`.
+        /// Face recognition result, which is valid when Type is
+        /// FaceRecognition is valid at that time.
         /// </summary>
         [JsonProperty("FaceRecognitionResultSet")]
         public LiveStreamFaceRecognitionResult[] FaceRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Speech keyword recognition result, which is valid when `Type` is
-        /// `AsrWordsRecognition`.
+        /// Speech keyword recognition result. When Type is
+        /// AsrWordsRecognition.
         /// </summary>
         [JsonProperty("AsrWordsRecognitionResultSet")]
         public LiveStreamAsrWordsRecognitionResult[] AsrWordsRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Text keyword recognition result, which is valid when `Type` is
-        /// `OcrWordsRecognition`.
+        /// Text keyword recognition result. When Type is
+        /// OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsRecognitionResultSet")]
         public LiveStreamOcrWordsRecognitionResult[] OcrWordsRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Full speech recognition result, which is valid when `Type` is
-        /// `AsrFullTextRecognition`.
+        /// Full speech recognition result. When Type is
+        /// AsrFullTextRecognition.
         /// </summary>
         [JsonProperty("AsrFullTextRecognitionResultSet")]
         public LiveStreamAsrFullTextRecognitionResult[] AsrFullTextRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Full text recognition result, which is valid when `Type` is
-        /// `OcrFullTextRecognition`.
+        /// Full text recognition result, when Type is
+        /// OcrFullTextRecognition.
         /// </summary>
         [JsonProperty("OcrFullTextRecognitionResultSet")]
         public LiveStreamOcrFullTextRecognitionResult[] OcrFullTextRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+        /// Translation result. Valid when Type is TransTextRecognition.
         /// </summary>
         [JsonProperty("TransTextRecognitionResultSet")]
         public LiveStreamTransTextRecognitionResult[] TransTextRecognitionResultSet{ get; set; }

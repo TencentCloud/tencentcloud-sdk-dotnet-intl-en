@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Live stream smart subtitling task result list.
+        /// Live stream smart subtitle task result list.
         /// </summary>
         [JsonProperty("SmartSubtitleResult")]
         public LiveSmartSubtitleResult[] SmartSubtitleResult{ get; set; }

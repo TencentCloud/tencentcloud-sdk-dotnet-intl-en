@@ -25,28 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video input information.
+        /// Input video information.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// The start offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+        /// [Edit] task takes effect, video editing start time offset, measurement unit: second.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end offset (seconds) for video clipping. This parameter is valid for video clipping tasks.
+        /// [Edit] task takes effect, video editing end time offset, measurement unit: second.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// The ID of the material associated with an element. This parameter is required for video compositing tasks.
         /// 
-        /// Note: The ID can be up to 32 characters long and can contain letters, digits, and special characters -_
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

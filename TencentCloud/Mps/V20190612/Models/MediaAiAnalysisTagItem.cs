@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Confidence of tag between 0 and 100.
+        /// Reliability of the tag, with a value range from 0 to -100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

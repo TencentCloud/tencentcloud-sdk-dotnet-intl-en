@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Score of the OCR-detected porn information in text from 0 to 100.
+        /// Ocr text involves pornographic content scoring, with a score ranging from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for the OCR-detected porn information in text. Valid values:
+        /// Result Suggestions for Ocr text pornographic content, value ranges from...to...
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain the OCR-detected porn information in text.
+        /// Video segment list with suspect Ocr text pornographic information.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

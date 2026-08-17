@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? ShadowWidthUnit{ get; set; }
 
         /// <summary>
-        /// Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+        /// Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
         /// </summary>
         [JsonProperty("ShadowColor")]
         public string ShadowColor{ get; set; }
 
         /// <summary>
-        /// Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+        /// Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
         /// </summary>
         [JsonProperty("ShadowAlpha")]
         public float? ShadowAlpha{ get; set; }

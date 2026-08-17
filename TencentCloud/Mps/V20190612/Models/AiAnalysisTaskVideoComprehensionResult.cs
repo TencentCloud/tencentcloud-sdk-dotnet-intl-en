@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// Error message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
@@ -49,8 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskVideoComprehensionInput Input{ get; set; }
 
         /// <summary>
-        /// Output file for video (audio) recognition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskVideoComprehensionOutput Output{ get; set; }

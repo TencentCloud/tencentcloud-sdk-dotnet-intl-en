@@ -31,19 +31,26 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// New memory size of an instance shard. <ul><li>Unit: MB. </li><li>You can only modify one of the three parameters at a time: `MemSize`, `RedisShardNum`, and `RedisReplicasNum`. To modify one of them, you need to enter the other two, which are consistent with the original configuration specifications of the instance. </li><li>In case of capacity reduction, the new specification must be at least 1.3 times the used capacity; otherwise, the operation will fail.</li></ul>
+        /// Refers to the size of memory in each shard after the change.
+        /// -Unit: MB.
+        /// -You can only modify one of the parameters MemSize, RedisShardNum, and RedisReplicasNum each time, and cannot include both. When modifying one parameter, you need to manually input the original instance configuration specification for the other two parameters.
+        /// -When scaling down, the new specifications must be equal to or greater than 1.3 times the used capacity, otherwise execution will fail.
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// New number of instance shards. <ul><li>This parameter is not required for standard architecture instances, but for cluster architecture instances. </li><li>For cluster architecture, you can only modify one of the three parameters at a time: `MemSize`, `RedisShardNum`, and `RedisReplicasNum`. To modify one of them, you need to enter the other two, which are consistent with the original configuration specifications of the instance. </li></ul>
+        /// Specifies the number of shards after the instance specification modification.
+        /// -Standard architecture does not require this parameter, while cluster architecture is mandatory.
+        /// -Cluster architecture. Every time, you can only modify one of the parameters RedisShardNum, MemSize, and RedisReplicasNum. You cannot modify them simultaneously. When modifying one parameter, you need to manually input the original instance configuration specification for the other two parameters.
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// New replica quantity. <ul><li>You can only modify one of the three parameters at a time: `MemSize`, `RedisShardNum`, and `RedisReplicasNum`. To modify one of them, you need to enter the other two, which are consistent with the original configuration specifications of the instance. </li></ul>To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.</li></ul>
+        /// Specifies the number of replicas after the instance specification modification.
+        /// -Only one of the parameters RedisReplicasNum, MemSize, and RedisShardNum can be modified each time. You cannot include both. When modifying one parameter, the other two parameters require the original instance configuration specification.
+        /// -When modifying a replica of a multi-AZ instance, you must input NodeSet.
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }

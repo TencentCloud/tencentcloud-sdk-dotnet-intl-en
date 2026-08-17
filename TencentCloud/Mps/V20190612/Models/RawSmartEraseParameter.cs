@@ -31,22 +31,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public SmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public SmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }

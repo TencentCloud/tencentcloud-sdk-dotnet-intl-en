@@ -25,90 +25,67 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance type.
-        /// 
-        /// - 2: Redis 2.8 memory edition (standard architecture).
-        /// - 6: Redis 4.0 memory edition (standard architecture).
-        /// - 7: Redis 4.0 memory edition (cluster architecture).
-        /// - 8: Redis 5.0 memory edition (standard architecture).
-        /// - 9: Redis 5.0 memory edition (cluster architecture).
-        /// - 15: Redis 6.2 memory edition (standard architecture).
-        /// - 16: Redis 6.2 memory edition (cluster architecture).
-        /// - 17: Redis 7.0 memory edition (standard architecture).
-        /// - 18: Redis 7.0 memory edition (cluster architecture).
-        /// - 200: Memcached 1.6 memory edition (cluster architecture).
+        /// <p>Instance type. - 2: Redis 2.8 memory edition (standard architecture). - 6: Redis 4.0 memory edition (standard architecture). - 7: Redis 4.0 memory edition (cluster architecture). - 8: Redis 5.0 memory edition (standard architecture). - 9: Redis 5.0 memory edition (cluster architecture). - 15: Redis 6.2 memory edition (standard architecture). - 16: Redis 6.2 memory edition (cluster architecture). - 17: Redis 7.0 memory edition (standard architecture). - 18: Redis 7.0 memory edition (cluster architecture). - 200: Memcached 1.6 memory edition (cluster architecture).</p>
         /// </summary>
         [JsonProperty("TypeId")]
         public ulong? TypeId{ get; set; }
 
         /// <summary>
-        /// Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
-        /// If `TypeId` indicates the standard architecture, `MemSize` indicates the total memory capacity of an instance; if `TypeId` indicates the cluster architecture, `MemSize` indicates the memory capacity per shard.
+        /// <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
+        /// <p>Instance count. The number of instances to purchase at a time is subject to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>.</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// Length of purchase in months, which is required when creating a monthly-subscribed instance. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, set the parameter to `1`.
+        /// <p>Purchase period needs to be filled in when creating an annual and monthly subscription instance. For pay-as-you-go instances, just fill in 1. Unit: month. Value ranges from 1 to 36 [1,2,3,4,5,6,7,8,9,10,11,12,24,36].</p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Billing mode.
-        /// - 0: pay-as-you-go.
-        /// - 1: monthly subscription.
+        /// <p>Payment method. - 0: Pay-As-You-Go. - 1: Monthly Subscription.</p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
-        /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+        /// <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Number of instance shards.
-        /// - The number of shards is required to be set to 1 for the standard architecture.
-        /// - The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.
+        /// <p>Number of instance shards. - The shard number should be set to 1 for the standard architecture. - The number of shards can be set to 1, 3, 5, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, or 128 for the cluster architecture.</p>
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.
+        /// <p>Number of instance replicas. Valid values: 1, 2, 3, 4, and 5.</p>
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// Whether replica read-only is supported. For the standard architecture of Redis 2.8 and CKV, this parameter does not need to be configured.
-        /// - true: Replica read-only is not required.
-        /// - false: Replica read-only is required.
+        /// <p>Whether replica read-only is supported. For Redis 2.8 standard architecture and CKV standard architecture, this parameter is not required. - true: replica read-only not required. - false: read-only replica supported.</p>
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
-        /// **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
+        /// <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Deployment mode.
-        /// - local: local disk. This is the default value.
-        /// - cloud: cloud disk.
-        /// - cdc: CDC.
+        /// <p>Deployment method. - local: local disk, defaults to local. - cloud: cloud disk. - cdc: dedicated cluster edition.</p>
         /// </summary>
         [JsonProperty("ProductVersion")]
         public string ProductVersion{ get; set; }

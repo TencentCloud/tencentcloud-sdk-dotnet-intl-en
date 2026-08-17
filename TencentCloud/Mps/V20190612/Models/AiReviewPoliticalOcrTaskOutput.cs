@@ -25,22 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
+        /// Ocr text sensitivity score, ranging from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The suggestion for handling the sensitive information detected based on OCR. Valid values:
-        /// <li>pass</li>
-        /// <li>review</li>
-        /// <li>block</li>
+        /// Ocr text sensitive result recommendation, value ranges from...to...
+        /// <li>pass.</li>
+        /// <li>review.</li>
+        /// <li>block.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The video segments that contain sensitive information detected based on OCR.
+        /// Video segment list with suspect Ocr text sensitivity.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

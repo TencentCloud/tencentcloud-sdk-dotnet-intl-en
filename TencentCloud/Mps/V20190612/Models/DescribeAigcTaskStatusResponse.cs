@@ -37,8 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// <p>Output url</p>
-        /// Attention: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OutputUrl")]
         public string OutputUrl{ get; set; }

@@ -25,30 +25,27 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a full speech recognition task. Valid values:
-        /// <li>ON: Enables an intelligent full speech recognition task;</li>
-        /// <li>OFF: Disables an intelligent full speech recognition task.</li>
+        /// Voice translation task switch, available values:
+        /// <li>ON: Enable Intelligent Voice Translation task.</li>
+        /// <li>OFF: Disables the Intelligent Voice Translation task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video source language.
         /// </summary>
         [JsonProperty("SourceLanguage")]
         public string SourceLanguage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target language.
         /// </summary>
         [JsonProperty("DestinationLanguage")]
         public string DestinationLanguage{ get; set; }
 
         /// <summary>
-        /// Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-        /// <li>vtt: Generate a WebVTT subtitle file.</li>
         /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }

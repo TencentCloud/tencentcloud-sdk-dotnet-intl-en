@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Segment summary.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
@@ -38,21 +37,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Title{ get; set; }
 
         /// <summary>
-        /// Segment keywords.
+        /// Segment keyword.
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// Segmentation start time point, in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Segmentation end time point, in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

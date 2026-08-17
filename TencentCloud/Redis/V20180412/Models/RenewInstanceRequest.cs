@@ -25,19 +25,23 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Validity period in months
+        /// Purchase duration.
+        /// -Unit: month.
+        /// - Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+        /// Flag whether to change billing mode.
+        /// -The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+        /// -The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
         /// </summary>
         [JsonProperty("ModifyPayMode")]
         public string ModifyPayMode{ get; set; }

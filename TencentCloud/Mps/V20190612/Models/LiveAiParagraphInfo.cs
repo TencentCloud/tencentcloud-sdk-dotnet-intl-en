@@ -55,13 +55,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Starting time point of the live streaming segment in ISO date and time format.	
+        /// The start time of a live streaming segment, in the ISO date format.	
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// End time point of the live streaming segment in ISO date and time format.	
+        /// The end time of a live streaming segment, in the ISO date format.	
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

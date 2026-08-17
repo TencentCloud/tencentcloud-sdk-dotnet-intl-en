@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of content audit results.
+        /// Content moderation result list.
         /// </summary>
         [JsonProperty("ResultSet")]
         public LiveStreamAiReviewResultItem[] ResultSet{ get; set; }

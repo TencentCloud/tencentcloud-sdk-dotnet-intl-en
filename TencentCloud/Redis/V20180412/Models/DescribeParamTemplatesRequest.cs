@@ -25,33 +25,34 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Product type array.
-        /// - 2: Redis 2.8 Memory Edition (standard architecture).
-        /// - 3: CKV 3.2 Memory Edition (standard architecture).
-        /// - 4: CKV 3.2 Memory Edition (cluster architecture).
-        /// - 6: Redis 4.0 Memory Edition (standard architecture).
-        /// - 7: Redis 4.0 Memory Edition (cluster architecture).
-        /// - 8: Redis 5.0 Memory Edition (standard architecture).
-        /// - 9: Redis 5.0 Memory Edition (cluster architecture).
-        /// - 15: Redis 6.2 Memory Edition (standard architecture).
-        /// - 16: Redis 6.2 Memory Edition (cluster architecture).
-        /// - 17: Redis 7.0 Memory Edition (standard architecture).
-        /// - 18: Redis 7.0 Memory Edition (cluster architecture).
+        /// <p>Specified query for product version and architecture.</p><ul><li>6: Redis 4.0 standard architecture;</li><li>7: Redis 4.0 cluster architecture;</li><li>8: Redis 5.0 standard architecture;</li><li>9: Redis 5.0 cluster architecture;</li><li>15: Redis 6.2 standard architecture;</li><li>16: Redis 6.2 cluster architecture;</li><li>17: Redis 7.0 standard architecture;</li><li>18: Redis 7.0 cluster architecture;</li><li>19: ValKey 8.0 standard architecture;</li><li>20: ValKey 8.0 cluster architecture.</li></ul>
         /// </summary>
         [JsonProperty("ProductTypes")]
         public long?[] ProductTypes{ get; set; }
 
         /// <summary>
-        /// Template name array, with the maximum array length of 50.
+        /// <p>Specify the parameter template name for the query.</p><ul><li>Data type: string array, with a maximum length limit of 50.</li><li>Method for obtaining: Copy the Template name of a custom template or system default template on the <a href="https://console.cloud.tencent.com/redis/templates">parameter template page in the Redis console</a>.</li></ul>
         /// </summary>
         [JsonProperty("TemplateNames")]
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// Template ID array, with the maximum array length of 50.
+        /// <p>Parameter template ID specified for query.</p><ul><li>Data type: string array, with a maximum length limit of 50.</li><li>Method for obtaining: Copy the template ID of a custom template or system default template on the <a href="https://console.cloud.tencent.com/redis/templates">parameter template page in the Redis console</a>.</li></ul>
         /// </summary>
         [JsonProperty("TemplateIds")]
         public string[] TemplateIds{ get; set; }
+
+        /// <summary>
+        /// <p>Specify the pagination size of the query result, which is the number of records returned per page.</p><ul><li>Value ranges from 0–200.</li><li>Default value: 200.</li></ul>
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// <p>Pagination offset, used to specify the starting position of the query result.</p><ul><li>Value: Must be an integral multiple of Limit. Default value is 0.</li><li>Calculation formula: offset=limit*(page number-1).</li></ul>
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
 
         /// <summary>
@@ -62,6 +63,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ProductTypes.", this.ProductTypes);
             this.SetParamArraySimple(map, prefix + "TemplateNames.", this.TemplateNames);
             this.SetParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

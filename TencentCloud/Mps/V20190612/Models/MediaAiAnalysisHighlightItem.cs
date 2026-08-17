@@ -25,45 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The URL of the highlight segments.
+        /// Intelligent highlight address.
         /// </summary>
         [JsonProperty("HighlightPath")]
         public string HighlightPath{ get; set; }
 
         /// <summary>
-        /// The URL of the thumbnail.
+        /// Intelligent highlight cover address.
         /// </summary>
         [JsonProperty("CovImgPath")]
         public string CovImgPath{ get; set; }
 
         /// <summary>
-        /// The confidence score. Value range: 0-100.
+        /// Reliability of the intelligent highlights, with a value range from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The duration of the highlights.
+        /// Intelligent highlight duration.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// A list of the highlight segments.
+        /// Intelligent highlight sub-clip list.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public HighlightSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Intelligent highlight address.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HighlightUrl")]
         public string HighlightUrl{ get; set; }
 
         /// <summary>
-        /// Intelligent highlight cover address.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }

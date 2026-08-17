@@ -25,87 +25,87 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of a figure.
+        /// Unique identification ID of the figure.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Figure library type, indicating to which figure library the recognized figure belongs:
-        /// <li>Default: Default figure library;</li>
-        /// <li>UserDefine: Custom figure library.</li>
+        /// Figure library type, indicates which figure library the recognized figure comes from.
+        /// <li>Default: default figure library;</li>
+        /// <li>UserDefine: user-defined character library.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Name of a figure.
+        /// Figure name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Result set of segments that contain a figure.
+        /// Result set of segments that contain people.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskFaceSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Gender of the person.
-        /// <Li>Male: man.</li>.
-        /// <Li>Female: specifies the woman.</li>.
+        /// Gender
+        /// <li>Male: man</li>
+        /// <li>Female: woman.</li>
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }
 
         /// <summary>
-        /// Date of birth.
+        /// Date of birth of a person.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Occupation or position of a person.
+        /// Occupation or position.
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// Specifies the graduation institution of the person.
+        /// Graduation institution of the person.
         /// </summary>
         [JsonProperty("SchoolOfGraduation")]
         public string SchoolOfGraduation{ get; set; }
 
         /// <summary>
-        /// Description of the person.
+        /// Figure description.
         /// </summary>
         [JsonProperty("Abstract")]
         public string Abstract{ get; set; }
 
         /// <summary>
-        /// Specifies the birthplace or place of origin.
+        /// Birthplace or place of origin of a person.
         /// </summary>
         [JsonProperty("PlaceOfBirth")]
         public string PlaceOfBirth{ get; set; }
 
         /// <summary>
-        /// Person type.
-        /// <Li>Politician: specifies the official.</li>.
-        /// <Li>Artist: specifies the artist.</li>.
+        /// Person type:
+        /// <li>Politician: official.</li>
+        /// <li>Artist: artist.</li>
         /// </summary>
         [JsonProperty("PersonType")]
         public string PersonType{ get; set; }
 
         /// <summary>
-        /// Sensitivity labeling.
-        /// <Li>Normal: specifies the scaling group is normal.</li>.
-        /// <Li>Sensitive: specifies sensitivity.</li>.
+        /// Sensitivity labeling:
+        /// <li>NORMAL: Normal;</li>
+        /// <li>Sensitive: sensitive.</li>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Specifies the screenshot link.
+        /// Screenshot link
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

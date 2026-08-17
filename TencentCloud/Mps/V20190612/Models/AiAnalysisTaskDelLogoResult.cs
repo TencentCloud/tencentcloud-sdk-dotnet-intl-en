@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Task status, including PROCESSING, SUCCESS, and FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. `0`: Task successful. Other values: Task failed.
+        /// Error code. 0: Task successful. Other values: Task failed.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskDelLogoInput Input{ get; set; }
 
         /// <summary>
-        /// Intelligent removal task output.Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDelLogoOutput Output{ get; set; }

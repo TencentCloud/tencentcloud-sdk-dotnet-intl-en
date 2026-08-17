@@ -25,14 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// A list of the highlight segments generated.
+        /// Intelligent video highlight list.
         /// </summary>
         [JsonProperty("HighlightSet")]
         public MediaAiAnalysisHighlightItem[] HighlightSet{ get; set; }
 
         /// <summary>
-        /// The storage location of the highlight segments.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

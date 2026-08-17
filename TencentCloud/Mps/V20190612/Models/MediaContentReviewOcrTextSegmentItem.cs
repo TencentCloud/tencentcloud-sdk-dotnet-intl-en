@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start time offset of a suspected segment in seconds.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a suspected segment in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Confidence of a suspected segment.
+        /// Confidence degree of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for suspected segment audit. Valid values:
+        /// Result Suggestions for suspected segment review, value ranges from...to...
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -52,26 +52,26 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of suspected keywords.
+        /// Suspicious keyword list.
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }
 
         /// <summary>
-        /// Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+        /// Area coordinates of suspected text occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// URL of a suspected image (which will not be permanently stored
-        /// and will be deleted after `PicUrlExpireTime`).
+        /// Suspected image URL (Images are not retained permanently, reaching
+        /// The image will be deleted after the PicUrlExpireTime time point.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

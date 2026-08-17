@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Exception type. valid values:.
+        /// Exception type. Valid values:
         /// Jitter: jitter.
-        /// Blur: specifies the blur effect.
-        /// LowLighting: specifies low light.
+        /// Blur: blurry.
+        /// LowLighting: low light.
         /// HighLighting: overexposure.
-        /// CrashScreen: specifies screen glitch.
-        /// BlackWhiteEdge: specifies the black and white edges.
-        /// SolidColorScreen: specifies the solid color screen.
-        /// Noise: specifies the noise.
-        /// Mosaic: mosaic.
-        /// QRCode: specifies the qr code.
-        /// AppletCode: specifies the mini program code.
-        /// BarCode: specifies the barcode.
-        /// LowVoice: specifies the bass.
-        /// HighVoice: specifies high voice detection.
-        /// NoVoice: specifies mute.
-        /// LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-        /// AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-        /// AudioNoise: specifies the audio noise.
+        /// CrashScreen: screen glitch.
+        /// BlackWhiteEdge: Black and white edges
+        /// SolidColorScreen: solid color screen.
+        /// Noise: noise.
+        /// Mosaic: Mosaic
+        /// QRCode: QR code.
+        /// AppletCode: Mini program code.
+        /// BarCode: barcode.
+        /// LowVoice: bass.
+        /// HighVoice: high voice detection.
+        /// NoVoice: mute.
+        /// LowEvaluation: The video no-reference score (MOS) is below the threshold.
+        /// AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+        /// AudioNoise: Audio noise.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The information of a checked segment in quality control.
+        /// Quality inspection result item.
         /// </summary>
         [JsonProperty("QualityControlItems")]
         public QualityControlItem[] QualityControlItems{ get; set; }

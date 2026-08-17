@@ -25,46 +25,52 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Slow query duration in milliseconds
+        /// <p>Slow query duration. Measurement unit: ms.</p>
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// Client address
+        /// <p>Client address.</p>
         /// </summary>
         [JsonProperty("Client")]
         public string Client{ get; set; }
 
         /// <summary>
-        /// Slow query command
+        /// <p>Slow query command.</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// Detailed command line information of slow query
+        /// <p>Slow query command line information.</p>
         /// </summary>
         [JsonProperty("CommandLine")]
         public string CommandLine{ get; set; }
 
         /// <summary>
-        /// Execution time
+        /// <p>Execution time.</p>
         /// </summary>
         [JsonProperty("ExecuteTime")]
         public string ExecuteTime{ get; set; }
 
         /// <summary>
-        /// Duration of receiving client requests (ms).
+        /// <p>Duration of receiving client requests (ms)</p>
         /// </summary>
         [JsonProperty("RecvClientEnd")]
         public long? RecvClientEnd{ get; set; }
 
         /// <summary>
-        /// Duration of sending client requests (ms).
+        /// <p>Duration of sending client requests (ms)</p>
         /// </summary>
         [JsonProperty("SendClientEnd")]
         public long? SendClientEnd{ get; set; }
+
+        /// <summary>
+        /// <p>Proxy node ID.</p>
+        /// </summary>
+        [JsonProperty("Node")]
+        public string Node{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
             this.SetParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
             this.SetParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
+            this.SetParamSimple(map, prefix + "Node", this.Node);
         }
     }
 }

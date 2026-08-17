@@ -25,32 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. `0`: The task succeeded; other values: The task failed.
+        /// Error code. 0: Task successful. Other values: Task failed.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// The error message.
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of the intelligent highlight generation task.
+        /// Input of the intelligent highlight task.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskHighlightInput Input{ get; set; }
 
         /// <summary>
-        /// The output of the intelligent highlight generation task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHighlightOutput Output{ get; set; }

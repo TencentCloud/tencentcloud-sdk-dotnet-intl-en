@@ -49,15 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// Segmentation result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Paragraphs")]
         public AiParagraphInfo[] Paragraphs{ get; set; }
 
         /// <summary>
-        /// Address of the mind map of a summary task.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MindMapUrl")]
         public string MindMapUrl{ get; set; }

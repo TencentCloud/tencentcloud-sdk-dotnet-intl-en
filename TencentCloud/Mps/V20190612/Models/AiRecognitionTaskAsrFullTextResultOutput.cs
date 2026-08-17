@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// List of full speech recognition segments.
+        /// Full speech recognition segment list.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Subtitles file address.
+        /// Subtitle file path.
         /// </summary>
         [JsonProperty("SubtitlePath")]
         public string SubtitlePath{ get; set; }
 
         /// <summary>
-        /// Subtitles file storage location.
+        /// Storage location of the subtitle file.
         /// </summary>
         [JsonProperty("OutputStorage")]
         [System.Obsolete]

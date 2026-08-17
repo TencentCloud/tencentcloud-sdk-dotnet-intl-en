@@ -25,58 +25,49 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the account that needs modification.
-        /// - root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-        /// - Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+        /// <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Specifies the access password for the account to be modified.
+        /// <p>Specifies the access password for the account to be modified.</p>
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// Account description information.
+        /// <p>Account description.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Specifies the read-write request routing policies for the account to be modified.
-        /// - master: read-write request routing to the primary node.
-        /// - replication: read-write request routing to the secondary node.
+        /// <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Specifies the read-write permissions for the account to be modified.
-        /// - r: read-only.
-        /// - w: write-only.
-        /// - rw: read-write.
+        /// <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-        /// - true: set the default account (root) to a password-free account.
-        /// - false: not set the default account (root) to a password-free account.
+        /// <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// Specifies whether to encrypt the password for the account to be modified.
+        /// <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
         /// </summary>
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }

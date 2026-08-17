@@ -34,10 +34,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Subtitle background base plate x-axis coordinate position; Supports pixel and percentage format:
         /// 
         /// - Pixel: Npx. Value range of N: [-4096,4096].
-        /// -Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
+        /// - Percentage: N%, N range: [-100,100]. For example, 10% means the X-coordinate of the subtitle background base plate is 10% of the source video width.
         /// 
         /// Default value: 0px.
-        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle base plate is at the bottom of the central axis, as shown in the figure below.
+        /// Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle base plate is at the bottom of its central axis, refer to the figure below.
         /// ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
         /// </summary>
         [JsonProperty("BoardX")]
@@ -50,13 +50,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? BoardXUnit{ get; set; }
 
         /// <summary>
-        /// Subtitle background base plate y-axis coordinate position; Supports pixel and percentage format:
+        /// y-axis coordinate position of the subtitle background base plate; supports pixel and percentage format.
         /// 
-        /// - Pixel: Npx. Value range of N: [0,4096].
-        /// -Percentage: N%, where N ranges from [0,100]. For example, 10% means the y-coordinate of the subtitle background base plate equals 10% of the video height.
+        /// -.
+        /// -Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
         /// 
         /// If this parameter is not specified, the subtitle background is disabled.
-        /// Note: The origin point of the coordinate axis is located at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram.
+        /// Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the benchmark of the subtitle background base plate is at the bottom of its central axis. See the following diagram:
         /// ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
         /// </summary>
         [JsonProperty("BoardY")]
@@ -72,7 +72,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Background width. The value should be a positive integer.
         /// - Value range for pixels: [0,4096].
         /// - Value range for percentages: [0, 100].
-        /// If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.
+        /// If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
         /// </summary>
         [JsonProperty("BoardWidth")]
         public long? BoardWidth{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Background height. The value should be a positive integer.
         /// - Value range for pixels: [0,4096].
         /// - Value range for percentages: [0, 100].
-        /// If the base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.
+        /// If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
         /// </summary>
         [JsonProperty("BoardHeight")]
         public long? BoardHeight{ get; set; }

@@ -25,41 +25,41 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a face recognition task. Valid values:
-        /// <li>ON: Enables an intelligent face recognition task;</li>
-        /// <li>OFF: Disables an intelligent face recognition task.</li>
+        /// Face Recognition task switch. Valid values:
+        /// <li>ON: Enable intelligent face recognition task.</li>
+        /// <li>OFF: Disables the intelligent face recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
+        /// Face recognition filter score. Returns recognition result when the recognition result reaches or exceeds this score. Default is 95. Value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-        /// <li>entertainment (people in the entertainment industry)</li>
-        /// <li>sport (sports celebrities)</li>
-        /// <li>politician</li>
+        /// Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+        /// <li>entertainment: entertainment star;</li>
+        /// <li>Sport: sports celebrity;</li>
+        /// <li>politician: sensitive person.</li>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-        /// Up to 100 tags are allowed, each containing no more than 16 characters.
+        /// User-defined character filter tag. Specify the tag of the user-defined character to be returned. If left blank or empty, all customized figure results will be returned.
+        /// The number of tags is up to 100, and each tag can have up to 16 characters.
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// Figure library. Valid values:
-        /// <li>Default: Default figure library;</li>
-        /// <li>UserDefine: Custom figure library.</li>
-        /// <li>All: Both default and custom figure libraries will be used.</li>
-        /// Default value: All (both default and custom figure libraries will be used.)
+        /// Figure library selection. Available values:
+        /// <li>Default: Use default character library;</li>
+        /// <li>UserDefine: Use a user-defined character library.</li>
+        /// <li>All: Use default character library and user-defined character library simultaneously.</li>
+        /// Default value: All, using the default figure library and user-defined character library.
         /// </summary>
         [JsonProperty("FaceLibrary")]
         public string FaceLibrary{ get; set; }

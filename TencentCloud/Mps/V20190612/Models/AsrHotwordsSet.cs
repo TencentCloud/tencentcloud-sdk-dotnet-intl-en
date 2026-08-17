@@ -25,60 +25,49 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Hotword lexicon ID.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HotwordsId")]
         public string HotwordsId{ get; set; }
 
         /// <summary>
-        /// Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-        /// If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-        /// If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Hotword lexicon name.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of hotwords in the hotword lexicon.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WordCount")]
         public ulong? WordCount{ get; set; }
 
         /// <summary>
-        /// Name of the uploaded hotword file.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 0: temporary hotword lexicon
-        /// 1: file-based hotword lexicon
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

@@ -31,8 +31,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// Reference type.
-        /// Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+        /// Reference Type.
+        /// Note:
+        /// 1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+        /// 2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }

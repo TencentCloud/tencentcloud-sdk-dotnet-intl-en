@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a full text recognition task. Valid values:
-        /// <li>ON: Enables an intelligent full text recognition task;</li>
-        /// <li>OFF: Disables an intelligent full text recognition task.</li>
+        /// Task switch for full text recognition, available values:
+        /// <li>ON: Enable intelligent full text recognition task;</li>
+        /// <li>OFF: Disables the intelligent full text recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

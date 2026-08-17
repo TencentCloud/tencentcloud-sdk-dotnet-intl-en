@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Reference video URL, which must be accessible from the public network.
+        /// Reference video url. Must be external network accessible.
         /// This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
         /// The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
         /// If the reference video is a video for editing, the first and last frames cannot be defined.

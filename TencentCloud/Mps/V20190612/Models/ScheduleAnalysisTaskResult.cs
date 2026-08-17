@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The error code. An empty string indicates the task is successful; any other value returned indicates the task has failed. For details, see [Error Codes](https://intl.cloud.tencent.com/document/product/1041/40249).
+        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// The error code. 0 indicates the task is successful; other values indicate the task has failed. This parameter is not recommended. Please use `ErrCodeExt` instead.
+        /// Error code. 0 indicates that the task is successful, and other values indicate that the task has failed. (This field is not recommended. Use the new error code field ErrCodeExt instead.)
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// The error message.
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of the content analysis task.
+        /// Analyze the input of the task.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskInput Input{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisResult[] Output{ get; set; }
 
         /// <summary>
-        /// Task execution start time in ISO date and time format.
+        /// Task execution start time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task execution completion time in ISO date and time format.
+        /// Task execution completion time in [ISO date and time format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

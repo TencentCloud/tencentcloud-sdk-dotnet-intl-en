@@ -25,93 +25,79 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Target bucket of an output file.
+        /// Target storage of the transcoded file.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Path to an output video file.
+        /// Video file path after transcoding.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+        /// Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Sum of the average bitrate of a video stream and that of an audio stream in bps.
+        /// Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height of a video stream in px.
+        /// Maximum value of video stream height, measurement unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width of a video stream in px.
+        /// Maximum value of the video stream width in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
+        /// Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Video duration in seconds.
+        /// Video duration, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Container, such as m4a and mp4.
+        /// Container type, such as m4a and mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// MD5 value of a video.
+        /// md5 value of the video.
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
         /// Audio stream information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
         /// Video stream information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
         /// <summary>
-        /// Enhancement items used for video transcoding. Descriptions of enhancement items:
-        /// <li>hdr: HDR configuration</li>
-        /// <li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-        /// <li>video_super_resolution: 	super-resolution configuration</li>
-        /// <li>repair: comprehensive enhancement configuration</li>
-        /// <li>denoise: video denoising configuration</li>
-        /// <Li>color_enhance: color enhancement configuration</li>
-        /// <Li>scratch: scratch removal configuration</li>
-        /// <li>artifact: artifact (glitch) removal configuration</li>
-        /// <li>sharp: detail enhancement configuration</li>
-        /// <Li>low_light: low-light enhancement configuration</li>
-        /// <Li>face_enhance: face enhancement configuration</li>
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CallBackExtInfo")]
         public string CallBackExtInfo{ get; set; }

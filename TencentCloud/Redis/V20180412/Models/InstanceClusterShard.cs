@@ -89,6 +89,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("Connected")]
         public long? Connected{ get; set; }
 
+        /// <summary>
+        /// AZ information.
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// Node group ID.
+        /// </summary>
+        [JsonProperty("ReplicasNodeId")]
+        public long? ReplicasNodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +117,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Runid", this.Runid);
             this.SetParamSimple(map, prefix + "RunId", this.RunId);
             this.SetParamSimple(map, prefix + "Connected", this.Connected);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ReplicasNodeId", this.ReplicasNodeId);
         }
     }
 }

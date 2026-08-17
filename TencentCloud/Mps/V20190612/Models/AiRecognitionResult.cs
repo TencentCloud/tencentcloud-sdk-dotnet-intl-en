@@ -25,70 +25,55 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The task type. Valid values:
-        /// <li>FaceRecognition: Face recognition</li>
-        /// <li>AsrWordsRecognition: Speech keyword recognition</li>
-        /// <li>OcrWordsRecognition: Text keyword recognition</li>
-        /// <li>AsrFullTextRecognition: Full speech recognition</li>
-        /// <li>OcrFullTextRecognition: Full text recognition</li>
-        /// <li>TransTextRecognition: Speech translation</li>
+        /// Task type. Valid values:
+        /// <li>FaceRecognition: face recognition.</li>
+        /// <li>AsrWordsRecognition: speech keyword recognition.</li>
+        /// <li>OcrWordsRecognition: text keyword recognition.</li>
+        /// <li>AsrFullTextRecognition: full speech recognition.</li>
+        /// <li>OcrFullTextRecognition: full text recognition.</li>
+        /// <li>TransTextRecognition: speech translation</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Face recognition result, which is valid when `Type` is 
-        ///  `FaceRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FaceTask")]
         public AiRecognitionTaskFaceResult FaceTask{ get; set; }
 
         /// <summary>
-        /// Speech keyword recognition result, which is valid when `Type` is
-        ///  `AsrWordsRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AsrWordsTask")]
         public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
-        /// Full speech recognition result, which is valid when `Type` is
-        ///  `AsrFullTextRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
-        /// Text keyword recognition result, which is valid when `Type` is
-        ///  `OcrWordsRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OcrWordsTask")]
         public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
-        /// Full text recognition result, which is valid when `Type` is
-        ///  `OcrFullTextRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
-        /// The translation result. This parameter is valid only if `Type` is
-        ///  `TransTextRecognition`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TransTextTask")]
         public AiRecognitionTaskTransTextResult TransTextTask{ get; set; }
 
         /// <summary>
-        /// Object recognition result, which is valid when Type is
         /// 
-        /// ObjectRecognition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ObjectTask")]
         public AiRecognitionTaskObjectResult ObjectTask{ get; set; }

@@ -25,55 +25,52 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Account name.
+        /// <p>Account name.</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Account description.
+        /// <p>Account description.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Read/Write permission policy.
-        /// - r: read-only.
-        /// 
-        ///  - w: write-only.
-        /// - rw: read/write.
+        /// <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Read-only routing policy.
-        ///  - master: primary node.
-        ///  - replication: replica node.
+        /// <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Sub-account status.
-        ///  - 1: account under modification.
-        ///  - 2: valid account.
-        ///  - 4: account deleted.
+        /// <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+        /// </summary>
+        [JsonProperty("PasswordLastModifiedTime")]
+        public string PasswordLastModifiedTime{ get; set; }
 
 
         /// <summary>
@@ -88,6 +85,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PasswordLastModifiedTime", this.PasswordLastModifiedTime);
         }
     }
 }

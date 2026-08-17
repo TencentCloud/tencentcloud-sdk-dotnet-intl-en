@@ -25,67 +25,67 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Storage location of a generated animated image file.
+        /// Storage location of the animated image file.
         /// </summary>
         [JsonProperty("Storage")]
         public TaskOutputStorage Storage{ get; set; }
 
         /// <summary>
-        /// Path to a generated animated image file.
+        /// File path of the animated image.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Specifies the rotating image template ID. see [rotating image template](https://intl.cloud.tencent.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(ID.3Amove)).
+        /// Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Animated image format, such as gif.
+        /// Animated image file format, for example gif.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Height of an animated image in px.
+        /// Height of the animated image, measurement unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Width of an animated image in px.
+        /// Width of the animated image, measurement unit: px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Bitrate of an animated image in bps.
+        /// Animated image bitrate. Measurement unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Size of an animated image in bytes.
+        /// Animated image size, unit: byte.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// MD5 value of an animated image.
+        /// md5 value of the animated image.
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// Start time offset of an animated image in the video in seconds.
+        /// Start time offset of the GIF in the video, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of an animated image in the video in seconds.
+        /// End time offset of the GIF in the video, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

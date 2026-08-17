@@ -31,16 +31,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task flow status. valid values:.
-        /// <Li>WAITING: waiting.</li>.
-        /// <Li>PROCESSING: processing.</li>.
+        /// Task flow status. Valid values:
+        /// <li>WAITING: waiting.</li>
+        /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. `0` indicates success. other values indicate failure.
+        /// Error code. `0` indicates success. Other values indicate failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -52,31 +52,31 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Target file information for media processing.
+        /// Target file info of Media Processing Service.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// Specifies the digital watermark type. valid values: <li>blind-basic: basic version copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>.
+        /// Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Indicates whether a watermark is detected. if this parameter is true, the Result field will return the watermark extraction Result. if this parameter is false, the Result field will not return.
+        /// Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
         /// </summary>
         [JsonProperty("IsDetected")]
         public bool? IsDetected{ get; set; }
 
         /// <summary>
-        /// Fetched watermark content. this field will not be returned when no detection.
+        /// Watermark content fetched. Field will not be returned if no digital watermark is detected.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// Extracts the digital watermark configuration.
+        /// Extract digital watermark configuration.
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkConfig")]
         public ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig{ get; set; }

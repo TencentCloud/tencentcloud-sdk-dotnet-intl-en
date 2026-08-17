@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Score of the detected porn information in video from 0 to 100.
+        /// Video porn detection score, ranging from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suggestion for the detected porn information. Valid values:
+        /// Pornographic result recommendation, value ranges from...to...
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,17 +40,17 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of the detected porn information in video. Valid values:
-        /// <li>porn: Porn.</li>
-        /// <li>sexy: Sexiness.</li>
-        /// <li>vulgar: Vulgarity.</li>
-        /// <li>intimacy: Intimacy.</li>
+        /// Video pornographic result tag, value ranges from...to...
+        /// <li>porn: pornography.</li>
+        /// <li>sexy: sexy.</li>
+        /// <li>vulgar: vulgarity.</li>
+        /// <li>intimacy: intimate behavior.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// List of video segments that contain the detected porn information.
+        /// List of video segments suspected of containing pornographic content.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }

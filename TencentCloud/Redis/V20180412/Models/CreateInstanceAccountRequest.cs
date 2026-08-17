@@ -25,51 +25,43 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+        /// <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Custom account name for accessing the database.
-        /// - It contains only letters, digits, underscores (_), and hyphens (-).
-        /// - The length cannot exceed 32 characters.
+        /// <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Password of the custom account. The password complexity requirements are as follows:
-        /// - It can contain 8 to 64 characters.
-        /// - It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-        /// - It cannot start with a forward slash (/).
+        /// <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
 
         /// <summary>
-        /// The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-        /// - master: Master node.- replication: Replica node.
+        /// <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }
 
         /// <summary>
-        /// Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-        /// - r: read-only.
-        /// - rw: read-write.
+        /// <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
         /// </summary>
         [JsonProperty("Privilege")]
         public string Privilege{ get; set; }
 
         /// <summary>
-        /// Description information about account remarks, with a length of [0, 64] bytes.
+        /// <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Whether to encrypt the password.
+        /// <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
         /// </summary>
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }

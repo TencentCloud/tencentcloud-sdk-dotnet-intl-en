@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique ID of video content analysis template.
+        /// Unique identifier of a video analysis template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

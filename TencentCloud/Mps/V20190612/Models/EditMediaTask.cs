@@ -32,16 +32,16 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Task status. Valid values:
-        /// <li>PROCESSING: processing;</li>
-        /// <li>FINISH: completed.</li>
+        /// <li>PROCESSING: Processing;</li>
+        /// <li>FINISH: completed</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code
-        /// <li>0: success;</li>
-        /// <li>Other values: failure.</li>
+        /// Error code.
+        /// <li>0: Success;</li>
+        /// <li>Additional values: fail.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -53,13 +53,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of video editing task.
+        /// Input for video editing tasks.
         /// </summary>
         [JsonProperty("Input")]
         public EditMediaTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of video editing task.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public EditMediaTaskOutput Output{ get; set; }

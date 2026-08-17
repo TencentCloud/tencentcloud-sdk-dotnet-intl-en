@@ -25,51 +25,48 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// The event type. Valid values:
-        /// <li>WorkflowTask</li>
-        /// <li>EditMediaTask</li>
-        /// <li>ScheduleTask (scheme)</li>
+        /// Supported event types. Currently, the valid values include:
+        /// <li>WorkflowTask: video workflow processing task.</li>
+        /// <li>EditMediaTask: video editing task.</li>
+        /// <li>ScheduleTask: Orchestration task.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WorkflowTaskEvent")]
         public WorkflowTask WorkflowTaskEvent{ get; set; }
 
         /// <summary>
-        /// The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EditMediaTaskEvent")]
         public EditMediaTask EditMediaTaskEvent{ get; set; }
 
         /// <summary>
-        /// The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+        /// Source context, which is used to pass through user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ScheduleTaskEvent")]
         public ScheduleTask ScheduleTaskEvent{ get; set; }
 
         /// <summary>
-        /// - The expiration time (Unix timestamp) of the notification's signature.
-        /// - By default, notifications sent by MPS expire after 10 minutes. If the expiration time specified has elapsed, a notification will be considered invalid. This can prevent replay attacks.
-        /// - The format of this parameter is a decimal Unix timestamp, i.e., the number of seconds that have elapsed since 00:00 (UTC/GMT time) on January 1, 1970.
+        /// -Expiration time, event notification signature expiration UNIX timestamp.
+        /// -The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
+        /// -Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
@@ -81,15 +78,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Sign{ get; set; }
 
         /// <summary>
-        /// Batch processing task information. this field has a value only when EventType is BatchTask.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("BatchTaskEvent")]
         public BatchSubTaskResult BatchTaskEvent{ get; set; }
 
         /// <summary>
-        /// Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkTask")]
         public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }

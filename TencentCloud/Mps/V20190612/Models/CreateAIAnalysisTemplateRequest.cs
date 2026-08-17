@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video content analysis template name. Length limit: 64 characters.
+        /// Name of the video analysis template, length limited to 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Video content analysis template description. Length limit: 256 characters.
+        /// Description of the video analysis template, length limited to 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent categorization task.
+        /// Intelligent Classification Task Control Parameters.
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent tagging task.
+        /// Intelligent tag task control parameter.
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent cover generating task.
+        /// Intelligent Cover Task Control Parameters.
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of intelligent frame-specific tagging task.
+        /// Intelligent frame-specific tagging task control parameter.
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }

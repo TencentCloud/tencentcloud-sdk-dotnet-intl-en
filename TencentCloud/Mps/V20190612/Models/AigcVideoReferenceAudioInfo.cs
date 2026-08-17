@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Reference audio URL, which must be accessible from the public network.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }

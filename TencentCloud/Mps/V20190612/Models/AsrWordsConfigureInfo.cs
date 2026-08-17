@@ -25,16 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of a speech keyword recognition task. Valid values:
-        /// <li>ON: Enables a speech keyword recognition task;</li>
-        /// <li>OFF: Disables a speech keyword recognition task.</li>
+        /// Speech keyword recognition task switch, available values:
+        /// <li>ON: Enable speech keyword recognition task.</li>
+        /// <li>OFF: Disables the speech keyword recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-        /// There can be up to 10 tags, each with a length limit of 16 characters.
+        /// Keyword-based filtering tag, specify the tag of the keyword to return. If left blank or empty, all results are returned.
+        /// The number of tags is up to 10, and each tag can have up to 16 characters.
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

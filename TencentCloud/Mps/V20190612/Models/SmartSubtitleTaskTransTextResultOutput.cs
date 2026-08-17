@@ -25,8 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>List of segments for translation.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskTransTextSegmentItem[] SegmentSet{ get; set; }

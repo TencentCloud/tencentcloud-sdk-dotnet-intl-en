@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Switch of intelligent categorization task. Valid values:
-        /// <li>ON: enables intelligent categorization task;</li>
-        /// <li>OFF: disables intelligent categorization task.</li>
+        /// Intelligent classification task switch.
+        /// <li>ON: Turn on intelligent classification.</li>
+        /// <li>OFF: Disables the intelligent classification task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

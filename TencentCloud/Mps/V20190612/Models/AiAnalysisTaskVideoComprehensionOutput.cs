@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string VideoComprehensionAnalysisResult{ get; set; }
 
         /// <summary>
-        /// Video (audio) extended information.
+        /// Video (Audio) understanding extended information
         /// </summary>
         [JsonProperty("VideoComprehensionExtInfo")]
         public string VideoComprehensionExtInfo{ get; set; }
 
         /// <summary>
-        /// Video shot understanding result.
+        /// Video shot understanding result
         /// </summary>
         [JsonProperty("VideoComprehensionResultList")]
         public VideoComprehensionResultItem[] VideoComprehensionResultList{ get; set; }

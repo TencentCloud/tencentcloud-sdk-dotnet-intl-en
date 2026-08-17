@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Account details.
+        /// <p>Account detailed information.</p>
         /// </summary>
         [JsonProperty("Accounts")]
         public Account[] Accounts{ get; set; }
 
         /// <summary>
-        /// Number of accounts.
+        /// <p>Account count.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

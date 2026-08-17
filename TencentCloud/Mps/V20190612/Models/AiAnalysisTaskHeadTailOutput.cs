@@ -25,15 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Opening segment PTS.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HeadTimeOffset")]
         public float? HeadTimeOffset{ get; set; }
 
         /// <summary>
-        /// Closing segment PTS.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TailTimeOffset")]
         public float? TailTimeOffset{ get; set; }

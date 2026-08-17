@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start PTS time of a suspected segment in seconds.
+        /// Start PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
 
         /// <summary>
-        /// End PTS time of a suspected segment in seconds.
+        /// End PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndPtsTime")]
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// The confidence score for the detected sensitive segments.
+        /// Suspected segment sensitivity score.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The suggestion for handling the sensitive segments. Valid values:
+        /// Suspected segment sensitive result suggestion, permissible range:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,28 +52,28 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The labels for the detected sensitive content. Valid values:
-        /// <li>guns</li>
-        /// <li>crowd</li>
-        /// <li>police</li>
-        /// <li>bloody</li>
-        /// <li>banners (sensitive flags)</li>
-        /// <li>militant</li>
-        /// <li>explosion</li>
-        /// <li>terrorists</li>
+        /// Video sensitive content result tag, value ranges from...to...
+        /// <li>guns: weapons and firearms.</li>
+        /// <li>crowd: crowd gathering.</li>
+        /// <li>police: police force.</li>
+        /// <li>bloody: graphic violence.</li>
+        /// <li>banners: sensitive flags.</li>
+        /// <li>militant: militant.</li>
+        /// <li>explosion: explosions and fires.</li>
+        /// <li>terrorists: sensitive persons.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// URL of a suspected image (which will not be permanently stored
-        /// and will be deleted after `PicUrlExpireTime`).
+        /// Suspected image URL (Images are not retained permanently upon arrival)
+        /// The image will be deleted after the PicUrlExpireTime time point.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

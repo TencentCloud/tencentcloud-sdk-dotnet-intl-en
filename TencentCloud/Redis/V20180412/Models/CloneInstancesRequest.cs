@@ -25,135 +25,154 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+        /// <p>Specify the source instance ID to be cloned. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The number of clone instances at a time
-        /// - The maximum number of monthly subscribed instances is 100 for each purchase.
-        /// - The maximum number of pay-as-you-go instances is 30 for each purchase.
+        /// <p>The number of clone instances per operation.</p><ul><li>The maximum allowed number for each Monthly Subscription purchase is 100.</li><li>The maximum allowed number for each Pay-As-You-Go purchase is 30.</li></ul>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// ID of the AZ where the clone instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+        /// <p>Availability zone ID of the cloned instance. For supported AZ IDs, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: <ul><li>`0` (Pay-as-you-go) </li><li>`1` (Monthly subscription) </li></ul>
+        /// <p>Payment method.<ul><li>0: Pay-As-You-Go.</li><li>1: Monthly Subscription.</li></ul></p>
         /// </summary>
         [JsonProperty("BillingMode")]
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// Purchase duration of an instance. <ul><li>Unit: Month</li><li>Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`, `48`, `60` (for monthly subscription mode).</li><li> Valid value: `1` (for pay-as-you-go mode).</li></ul>
+        /// <p>Instance Purchase Duration.<ul><li>Unit: month.</li><li>When the payment method is set to Monthly Subscription, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60].</li><li>When the payment method is set to Pay-As-You-Go, it is set to 1.</li></ul></p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Security group ID. Call the [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1) API to obtain the security group ID for the instance.
+        /// <p>Security group ID. Call the <a href="https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1">DescribeInstanceSecurityGroup</a> API to obtain the security group ID for the instance.</p>
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// Backup ID of the clone instance, which can be obtained through the [DescribeInstanceBackups](https://intl.cloud.tencent.com/document/product/239/20011?from_cn_redirect=1) API.
+        /// <p>Backup ID used to clone an instance. Use the interface <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a> to obtain the backup ID.</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// Whether the clone instance supports password-free access. Valid values: <ul><li>`true` (Yes)</li><li>`false` (No. When SSL or public network is enabled). Default value: `false`.</li></ul>
+        /// <p>Configure whether the cloned instance supports password-free access. Enabling SSL or public network does not support password-free access.<ul><li>true: Password-free instance,</li><li>false: Non-password-free instance. Default for non-passwordless instance.</li></ul></p>
         /// </summary>
         [JsonProperty("NoAuth")]
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+        /// <p>Configure the VPC ID for the clone instance. If not configured, the basic network is selected by default.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
+        /// <p>Configure the subnet of the private network for the cloned instance. This parameter requires no configuration for the basic network.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Name of the clone instance. <br>Enter up to 60 letters, digits, hyphens, and underscores.</br>
+        /// <p>Name of the cloned instance.<br>Only Chinese characters, English letters, numbers, dashes ("-"), or underscores ("_") are allowed, with a length of less than 60.<br></p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// The access password of the clone instance. <ul><li>When the input parameter <b>NoAuth</b> is <b>true</b>, this parameter is not required. </li><li>When the instance is Redis 2.8, 4.0, or 5.0, the password must contain 8–30 characters in at least two of the following types: lowercase letters, uppercase letters, digits, and special characters `()`~!@#$%^&*-+=_|{}[]:;<>,.?/` and cannot start with `/`.</li><li>When the instance is CKV 3.2, the password must and can only contain 8–30 letters and digits.</li></ul>
+        /// <p>The access password of the clone instance.<ul><li>When the input parameter <b>NoAuth</b> is <b>true</b>, setting this parameter is optional.</li><li>For Redis 2.8, 4.0, and 5.0 instances, the password format is: 8-30 characters, containing at least lowercase letters, uppercase letters, digits, and 2 types of characters from ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/, and cannot start with "/".</li><li>For CKV 3.2 instances, the password format is: 8-30 characters, must include letters and digits, and exclude other characters.</li></ul></p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
+        /// <p>Automatic renewal flag.<ul><li>0: default status, manual renewal.</li><li>1: automatic renewal.</li><li>2: no automatic renewal, auto-isolation upon expiration.</li></ul></p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Customized port. Valid range: 1024-65535. Default value: `6379`.
+        /// <p>User-defined port, defaults to 6379, in the range of [1024,65535].</p>
         /// </summary>
         [JsonProperty("VPort")]
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// Node information of an instance. <ul><li>Currently supported type and AZ information of a node to be configured (master node or replica node) For more information, see [RedisNodeInfo](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo).</li><li>This parameter is not required for single-AZ deployment.</li></ul>
+        /// <p>Node information of instance.<ul><li>Currently supports configuring node type (primary node or replica node) and its availability zone info. For details, please refer to <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo">RedisNodeInfo</a>.</li><li>This parameter can be left blank for single-AZ deployment.</li></ul></p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
 
         /// <summary>
-        /// Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
+        /// <p>Project ID. Log in to the <a href="https://console.cloud.tencent.com/redis#/">Redis console</a>. You can find the project ID in the <b>Account Center</b> &gt; <b>Project Management</b> at the top-right corner.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Tag to be bound for the clone instance
+        /// <p>Tag bound to the clone instance.</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// The parameter template ID associated with the clone instance
-        /// - If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
-        /// - You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+        /// <p>Specify the parameter template ID related to the cloned instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+        /// <p>Specify the alarm policy ID of the clone instance. Log in to the <a href="https://console.cloud.tencent.com/monitor/alarm2/policy">Tencent Cloud observability platform console</a>, and get policy ID information on the <b>alarm management</b> &gt; <b>policy management</b> page.</p>
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public string[] AlarmPolicyList{ get; set; }
 
         /// <summary>
-        /// Time to restore data for cloning.
-        /// Only instances with second-level backup enabled are supported.
+        /// <p>Clone the time when data is recovered.<br>Only instances with second-level backup enabled are supported.</p>
         /// </summary>
         [JsonProperty("CloneTime")]
         public string CloneTime{ get; set; }
 
         /// <summary>
-        /// Whether to encrypt the password.
+        /// <p>Whether to encrypt the password</p>
         /// </summary>
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }
+
+        /// <summary>
+        /// <p>Instance password complexity policy</p><p>Input parameter limit: If not passed or Enabled=false, deem as not enabled and verify by default rule.</p>
+        /// </summary>
+        [JsonProperty("PasswordPolicy")]
+        public PasswordPolicy PasswordPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable SSL encryption.</p><p>Enumeration value:</p><ul><li>true: Enable.</li><li>false: Disable (default value).</li></ul><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("EnableSSL")]
+        public bool? EnableSSL{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to write the private IPv4 address of the instance to the domain alias (SAN) of the certificate when SSL is enabled. This parameter is valid only when EnableSSL is true.</p><p>Enumeration value:</p><ul><li>true: The private IP is allowed for SSL certificate verification.</li><li>false: The SAN extended information of the certificate is not added.</li></ul><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("SSLBindPrivateIPv4")]
+        public bool? SSLBindPrivateIPv4{ get; set; }
+
+        /// <summary>
+        /// <p>Indicates the instance type.</p><p>Enumeration value:</p><ul><li>local: Common I</li><li>localv2: Common II</li></ul><p>If not passed, it remains the same as the original instance type by default.</p>
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
 
 
         /// <summary>
@@ -182,6 +201,10 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
             this.SetParamSimple(map, prefix + "CloneTime", this.CloneTime);
             this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+            this.SetParamObj(map, prefix + "PasswordPolicy.", this.PasswordPolicy);
+            this.SetParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+            this.SetParamSimple(map, prefix + "SSLBindPrivateIPv4", this.SSLBindPrivateIPv4);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         }
     }
 }

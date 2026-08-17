@@ -26,55 +26,49 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Transcode: Transcoding</li>
-        /// <li>AnimatedGraphics: Animated image generating</li>
-        /// <li>SnapshotByTimeOffset: Time point screenshot</li>
-        /// <li>SampleSnapshot: Sampled screenshot</li>
-        /// <li>ImageSprites: Image sprite screenshot</li>
-        /// <li>CoverBySnapshot: Screenshot for cover image</li>
-        /// <li>AdaptiveDynamicStreaming: Adaptive bitrate streaming</li>
+        /// <li>Transcode: Transcode</li>
+        /// <li>AnimatedGraphics: Animated image</li>
+        /// <li>SnapshotByTimeOffset: time point screenshot.</li>
+        /// <li>SampleSnapshot: sampled screenshot.</li>
+        /// <li>ImageSprites: sprite sheet</li>
+        /// <li>CoverBySnapshot: screencapturing for cover image.</li>
+        /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of a transcoding task, which is valid when task type is `Transcode`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// Query result of an animated image generating task, which is valid when task type is `AnimatedGraphics`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
 
         /// <summary>
-        /// Query result of a time point screenshot task, which is valid when task type is `SnapshotByTimeOffset`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// Query result of a sampled screenshot task, which is valid when task type is `SampleSnapshot`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// Query result of an image sprite screenshot task, which is valid when task type is `ImageSprite`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }

@@ -32,14 +32,14 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Line spacing. The value should be a positive integer.
-        /// -Value range for pixels: [0, 1000].
-        /// - Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+        /// - Value range for pixels: [0, 1000].
+        /// - Value range for percentages: [0, 100]. If left blank, the default is 0.
         /// </summary>
         [JsonProperty("LineSpacing")]
         public long? LineSpacing{ get; set; }
 
         /// <summary>
-        /// LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+        /// LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
         /// </summary>
         [JsonProperty("LineSpacingUnit")]
         public long? LineSpacingUnit{ get; set; }
