@@ -32,14 +32,12 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// Dashboard subscription time. If this field is empty, the dashboard default time is used.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DashboardTime")]
         public string[] DashboardTime{ get; set; }
 
         /// <summary>
         /// Dashboard subscription template variable.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("TemplateVariables")]
         public DashboardTemplateVariable[] TemplateVariables{ get; set; }

@@ -56,7 +56,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ActionList{ get; set; }
 
         /// <summary>
-        /// <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+        /// BASIC: Basic version (Default).
+        /// ENHANCED: Enhance version, enable additional output of device risk level field.
+        /// PRO: Pro version, enable additional output of attack type fields.
+        /// PLUS: Plus version, enable additional output of device risk level and attack type fields.
+        /// Please contact us to access enhance version & plus version.	
         /// </summary>
         [JsonProperty("SdkVersion")]
         public string SdkVersion{ get; set; }

@@ -27,28 +27,28 @@ namespace TencentCloud.Cls.V20201016.Models
         /// <summary>
         /// Dashboard subscription name.
         /// Input limit:
-        /// -Cannot be empty
-        /// -Length cannot exceed 128 bytes
-        /// -Cannot contain character '|'
+        /// -cannot be empty
+        /// -Length cannot exceed 128 bytes.
+        /// -Cannot contain the character '|'
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Dashboard Id.
-        /// -Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+        /// -Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }
 
         /// <summary>
         /// Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
-        /// -{seconds} Value ranges from 0 to 59. 
+        /// -{seconds} value ranges from 0 to 59. 
         /// -{Minutes} Value ranges from 0 to 59. 
         /// -Hour. Value ranges from 0 to 23. 
-        /// -{Date} value ranges from 1 to 31 AND (last day of month: L) 
+        /// -{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
         /// -{Month} value ranges from 1 to 12. 
-        /// -Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+        /// -Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
         /// </summary>
         [JsonProperty("Cron")]
         public string Cron{ get; set; }

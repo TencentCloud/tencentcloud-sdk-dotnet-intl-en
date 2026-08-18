@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.intl.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1351";
+       private const string sdkVersion = "SDK_NET_3.0.1378";
 
         /// <summary>
         /// Client constructor.
@@ -2075,6 +2075,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeDashboardSubscribesResponse DescribeDashboardSubscribesSync(DescribeDashboardSubscribesRequest req)
         {
             return InternalRequestAsync<DescribeDashboardSubscribesResponse>(req, "DescribeDashboardSubscribes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardsRequest"/></param>
+        /// <returns><see cref="DescribeDashboardsResponse"/></returns>
+        public Task<DescribeDashboardsResponse> DescribeDashboards(DescribeDashboardsRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardsResponse>(req, "DescribeDashboards");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the dashboard.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDashboardsRequest"/></param>
+        /// <returns><see cref="DescribeDashboardsResponse"/></returns>
+        public DescribeDashboardsResponse DescribeDashboardsSync(DescribeDashboardsRequest req)
+        {
+            return InternalRequestAsync<DescribeDashboardsResponse>(req, "DescribeDashboards")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

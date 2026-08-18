@@ -21,26 +21,42 @@ namespace TencentCloud.Cls.V20201016.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDashboardRequest : AbstractModel
+    public class DashboardTopicInfo : AbstractModel
     {
         
         /// <summary>
-        /// Dashboard name
+        /// Topic ID
         /// </summary>
-        [JsonProperty("DashboardName")]
-        public string DashboardName{ get; set; }
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
 
         /// <summary>
-        /// Dashboard configuration data
+        /// Region of the topic.
+        /// - 1: Guangzhou
+        /// -4: Shanghai
+        /// - 5: Hong Kong (China)
+        /// - 7: Shanghai Finance
+        /// -8: Beijing
+        /// -9: Singapore
+        /// - 11: Shenzhen Finance
+        /// - 15: Silicon Valley
+        /// -16: Chengdu
+        /// -17: Frankfurt
+        /// - 18: Seoul
+        /// - 19: Chongqing
+        /// - 22: Virginia
+        /// - 23: Bangkok
+        /// - 25: Tokyo
+        /// - 33: Nanjing
+        /// - 36: Tianjin
+        /// -39: Taipei (China)
+        /// - 46: Beijing Finance
+        /// -72: Jakarta
+        /// -74: São Paulo
+        /// -78: Shanghai Autonomous Driving Cloud
         /// </summary>
-        [JsonProperty("Data")]
-        public string Data{ get; set; }
-
-        /// <summary>
-        /// List of tag descriptions. When you specify this parameter, tags can be bound to the corresponding log topic at the same time. It supports up to 10 tag key-value pairs, and one resource can only be bound to one tag key.
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -48,9 +64,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DashboardName", this.DashboardName);
-            this.SetParamSimple(map, prefix + "Data", this.Data);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

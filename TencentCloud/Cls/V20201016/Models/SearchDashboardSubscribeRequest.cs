@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+        /// Dashboard id. Obtain the DashboardId through the [search for a dashboard.](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public DashboardSubscribeData SubscribeData{ get; set; }
 
         /// <summary>
-        /// Dashboard subscription Id. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+        /// Dashboard subscription Id. Obtain the Id through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) api.
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Dashboard subscription Name. Obtain through the api [Dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1).
+        /// Dashboard subscription name. Obtain the Name through the [dashboard subscription list](https://www.tencentcloud.com/document/api/614/105779?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

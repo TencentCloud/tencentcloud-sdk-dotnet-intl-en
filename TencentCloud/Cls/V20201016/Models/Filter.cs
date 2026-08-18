@@ -25,13 +25,13 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Field to be filtered
+        /// Fields that need to be filtered.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Value to be filtered
+        /// Values to be filtered
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

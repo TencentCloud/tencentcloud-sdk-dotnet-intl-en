@@ -61,13 +61,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+        /// Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+        /// Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
         /// </summary>
         [JsonProperty("LastTime")]
         public string LastTime{ get; set; }
