@@ -49,19 +49,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Repository type, which can be `harbor`.
+        /// Repository type, which can be `harbor`
         /// </summary>
         [JsonProperty("RegistryType")]
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// warehouse version
+        /// Registry version
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// Network type, which can be `public` (public network).
+        /// Network type, which can be `public` (public network)
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RegistryRegion{ get; set; }
 
         /// <summary>
-        /// rate limiting
+        /// Rate limiting
         /// </summary>
         [JsonProperty("SpeedLimit")]
         public ulong? SpeedLimit{ get; set; }
@@ -85,37 +85,37 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Insecure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Connectivity test results
         /// </summary>
         [JsonProperty("ConnDetectDetail")]
         public RegistryConnDetectResult[] ConnDetectDetail{ get; set; }
 
         /// <summary>
-        /// 
+        /// TCR Instance ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Synchronization method. 0: full synchronization; 1: incremental synchronization.
+        /// Synchronization method. 0: full synchronization; 1: incremental synchronization
         /// </summary>
         [JsonProperty("SyncMode")]
         public ulong? SyncMode{ get; set; }
 
         /// <summary>
-        /// Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+        /// Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
         /// </summary>
         [JsonProperty("NeedScan")]
         public bool? NeedScan{ get; set; }
 
         /// <summary>
-        /// Webhook access address.
+        /// Webhook access address
         /// </summary>
         [JsonProperty("WebhookUrl")]
         public string WebhookUrl{ get; set; }
 
         /// <summary>
-        /// Webhook access token.	
+        /// Webhook access token.
         /// </summary>
         [JsonProperty("WebhookToken")]
         public string WebhookToken{ get; set; }
