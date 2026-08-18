@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+        /// Dashboard id.
         /// </summary>
         [JsonProperty("DashboardId")]
         public string DashboardId{ get; set; }
