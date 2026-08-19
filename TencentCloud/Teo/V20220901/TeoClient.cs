@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1380";
 
         /// <summary>
         /// Client constructor.
@@ -672,6 +672,35 @@ namespace TencentCloud.Teo.V20220901
         public CreateLoadBalancerResponse CreateLoadBalancerSync(CreateLoadBalancerRequest req)
         {
             return InternalRequestAsync<CreateLoadBalancerResponse>(req, "CreateLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a log analysis download task. After creation, you can query the download task via the DescribeLogAnalysisDownloadTasks API.
+        /// Note:
+        /// 1. Supports up to 50 million log entries per download.
+        /// 2. Log files are reserved for 3 days.
+        /// 3. When multiple tasks exist at the same time, they are processed sequentially based on task creation time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
+        public Task<CreateLogAnalysisDownloadTaskResponse> CreateLogAnalysisDownloadTask(CreateLogAnalysisDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogAnalysisDownloadTaskResponse>(req, "CreateLogAnalysisDownloadTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a log analysis download task. After creation, you can query the download task via the DescribeLogAnalysisDownloadTasks API.
+        /// Note:
+        /// 1. Supports up to 50 million log entries per download.
+        /// 2. Log files are reserved for 3 days.
+        /// 3. When multiple tasks exist at the same time, they are processed sequentially based on task creation time.
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
+        public CreateLogAnalysisDownloadTaskResponse CreateLogAnalysisDownloadTaskSync(CreateLogAnalysisDownloadTaskRequest req)
+        {
+            return InternalRequestAsync<CreateLogAnalysisDownloadTaskResponse>(req, "CreateLogAnalysisDownloadTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3673,7 +3702,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID. Users need to use the site configuration import result query API to obtain the execution result of this import task.
         /// </summary>
         /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
         /// <returns><see cref="ImportZoneConfigResponse"/></returns>
@@ -3683,7 +3712,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID. Users need to use the site configuration import result query API to obtain the execution result of this import task.
         /// </summary>
         /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
         /// <returns><see cref="ImportZoneConfigResponse"/></returns>

@@ -28,7 +28,7 @@ namespace TencentCloud.Sms.V20210111
 
        private const string endpoint = "sms.intl.tencentcloudapi.com";
        private const string version = "2021-01-11";
-       private const string sdkVersion = "SDK_NET_3.0.1379";
+       private const string sdkVersion = "SDK_NET_3.0.1380";
 
         /// <summary>
         /// Client constructor.
@@ -369,7 +369,7 @@ namespace TencentCloud.Sms.V20210111
 
         /// <summary>
         /// This API is used to pull SMS delivery status.
-        /// Currently, you can also [configure the callback](https://intl.cloud.tencent.com/document/product/382/37809?from_cn_redirect=1#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) to get the delivery status.
+        /// Currently, you can also [configure the callback](https://www.tencentcloud.com/document/product/382/35469#38206134-503f-4344-b118-cfc7a72c4a9b) to get the delivery status.
         /// >- Note: you need to contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) to activate this API.
         /// >- Note: because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the SDK.
         /// >- You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
@@ -383,7 +383,7 @@ namespace TencentCloud.Sms.V20210111
 
         /// <summary>
         /// This API is used to pull SMS delivery status.
-        /// Currently, you can also [configure the callback](https://intl.cloud.tencent.com/document/product/382/37809?from_cn_redirect=1#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) to get the delivery status.
+        /// Currently, you can also [configure the callback](https://www.tencentcloud.com/document/product/382/35469#38206134-503f-4344-b118-cfc7a72c4a9b) to get the delivery status.
         /// >- Note: you need to contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81) to activate this API.
         /// >- Note: because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the SDK.
         /// >- You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
@@ -398,7 +398,7 @@ namespace TencentCloud.Sms.V20210111
 
         /// <summary>
         /// This API is used to pull SMS delivery status for one single number.
-        /// Currently, you can also [configure the callback](https://intl.cloud.tencent.com/document/product/382/37809?from_cn_redirect=1#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) to get the delivery status.
+        /// Currently, you can also [configure the callback](https://www.tencentcloud.com/document/product/382/35469#38206134-503f-4344-b118-cfc7a72c4a9b) to get the delivery status.
         /// >- Note: because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the SDK.
         /// >- You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms) to eliminate the need to calculate signatures. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
         /// </summary>
@@ -411,7 +411,7 @@ namespace TencentCloud.Sms.V20210111
 
         /// <summary>
         /// This API is used to pull SMS delivery status for one single number.
-        /// Currently, you can also [configure the callback](https://intl.cloud.tencent.com/document/product/382/37809?from_cn_redirect=1#.E8.AE.BE.E7.BD.AE.E4.BA.8B.E4.BB.B6.E5.9B.9E.E8.B0.83.E9.85.8D.E7.BD.AE) to get the delivery status.
+        /// Currently, you can also [configure the callback](https://www.tencentcloud.com/document/product/382/35469#38206134-503f-4344-b118-cfc7a72c4a9b) to get the delivery status.
         /// >- Note: because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the SDK.
         /// >- You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms) to eliminate the need to calculate signatures. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
         /// </summary>

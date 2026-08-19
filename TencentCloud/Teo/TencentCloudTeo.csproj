@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1367</VersionPrefix>
+    <VersionPrefix>3.0.1380</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -195,6 +195,8 @@
     <Compile Include="V20220901\Models\CreateL7AccRulesResponse.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerRequest.cs" />
     <Compile Include="V20220901\Models\CreateLoadBalancerResponse.cs" />
+    <Compile Include="V20220901\Models\CreateLogAnalysisDownloadTaskRequest.cs" />
+    <Compile Include="V20220901\Models\CreateLogAnalysisDownloadTaskResponse.cs" />
     <Compile Include="V20220901\Models\CreateMultiPathGatewayLineRequest.cs" />
     <Compile Include="V20220901\Models\CreateMultiPathGatewayLineResponse.cs" />
     <Compile Include="V20220901\Models\CreateMultiPathGatewayRequest.cs" />

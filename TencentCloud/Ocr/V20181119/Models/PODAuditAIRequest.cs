@@ -48,6 +48,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SignType")]
         public long? SignType{ get; set; }
 
+        /// <summary>
+        /// <p>Shipping address of the waybill in the business system</p>
+        /// </summary>
+        [JsonProperty("ShipToAddress")]
+        public string ShipToAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamSimple(map, prefix + "WaybillNumber", this.WaybillNumber);
             this.SetParamSimple(map, prefix + "SignType", this.SignType);
+            this.SetParamSimple(map, prefix + "ShipToAddress", this.ShipToAddress);
         }
     }
 }
