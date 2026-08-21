@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1344</VersionPrefix>
+    <VersionPrefix>3.0.1381</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,6 +155,7 @@
     <Compile Include="V20190722\Models\McuWaterMarkImage.cs" />
     <Compile Include="V20190722\Models\McuWaterMarkParams.cs" />
     <Compile Include="V20190722\Models\McuWaterMarkText.cs" />
+    <Compile Include="V20190722\Models\MessageInfo.cs" />
     <Compile Include="V20190722\Models\MixLayout.cs" />
     <Compile Include="V20190722\Models\MixLayoutParams.cs" />
     <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
@@ -170,6 +171,8 @@
     <Compile Include="V20190722\Models\ModifyCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\PronunciationDict.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
+    <Compile Include="V20190722\Models\QueryAIMessageListRequest.cs" />
+    <Compile Include="V20190722\Models\QueryAIMessageListResponse.cs" />
     <Compile Include="V20190722\Models\RecognizeConfig.cs" />
     <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />

@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1344";
+       private const string sdkVersion = "SDK_NET_3.0.1381";
 
         /// <summary>
         /// Client constructor.
@@ -989,6 +989,27 @@ namespace TencentCloud.Trtc.V20190722
         public ModifyCloudSliceTaskResponse ModifyCloudSliceTaskSync(ModifyCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<ModifyCloudSliceTaskResponse>(req, "ModifyCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// input a task ID to query the list of AI conversation context information.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAIMessageListRequest"/></param>
+        /// <returns><see cref="QueryAIMessageListResponse"/></returns>
+        public Task<QueryAIMessageListResponse> QueryAIMessageList(QueryAIMessageListRequest req)
+        {
+            return InternalRequestAsync<QueryAIMessageListResponse>(req, "QueryAIMessageList");
+        }
+
+        /// <summary>
+        /// input a task ID to query the list of AI conversation context information.
+        /// </summary>
+        /// <param name="req"><see cref="QueryAIMessageListRequest"/></param>
+        /// <returns><see cref="QueryAIMessageListResponse"/></returns>
+        public QueryAIMessageListResponse QueryAIMessageListSync(QueryAIMessageListRequest req)
+        {
+            return InternalRequestAsync<QueryAIMessageListResponse>(req, "QueryAIMessageList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

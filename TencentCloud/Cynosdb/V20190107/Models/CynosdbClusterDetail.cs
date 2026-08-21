@@ -378,6 +378,18 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RealZone")]
         public string RealZone{ get; set; }
 
+        /// <summary>
+        /// <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+        /// </summary>
+        [JsonProperty("StorageOverUse")]
+        public string StorageOverUse{ get; set; }
+
+        /// <summary>
+        /// <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+        /// </summary>
+        [JsonProperty("StorageAutoExpand")]
+        public string StorageAutoExpand{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -443,6 +455,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
             this.SetParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
             this.SetParamSimple(map, prefix + "RealZone", this.RealZone);
+            this.SetParamSimple(map, prefix + "StorageOverUse", this.StorageOverUse);
+            this.SetParamSimple(map, prefix + "StorageAutoExpand", this.StorageAutoExpand);
         }
     }
 }
