@@ -71,6 +71,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RetryLimit")]
         public long? RetryLimit{ get; set; }
 
+        /// <summary>
+        /// <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("EnableBotBgDetection")]
+        public bool? EnableBotBgDetection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -84,6 +90,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ActionList", this.ActionList);
             this.SetParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
             this.SetParamSimple(map, prefix + "RetryLimit", this.RetryLimit);
+            this.SetParamSimple(map, prefix + "EnableBotBgDetection", this.EnableBotBgDetection);
         }
     }
 }

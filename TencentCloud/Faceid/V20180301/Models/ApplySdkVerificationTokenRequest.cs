@@ -46,21 +46,21 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? SecurityLevel{ get; set; }
 
         /// <summary>
-        /// Specifies the identity document type used for authentication. valid values:.  
+        /// Specifies the identity document type used for authentication. Valid values:
         /// 
-        /// 1. HK (default): hong kong (china) identity card.
-        /// 2. ML: malaysian identity card.
-        /// 3. Indonesian identity card.
-        /// 4. PhilippinesVoteID: specifies the voter card in the philippines.
-        /// 5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-        /// 6. PhilippinesTinID: specifies the philippines tin id.
-        /// 7. PhilippinesSSSID: specifies the SSSID in the philippines.
-        /// 8. philippines UMID: specifies the philippines UMID.
-        /// 9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-        /// 10. ThailandIDCard: specifies the thai identity card.
-        /// 11. Mainland id card.
-        /// 12. SingaporeIDCard: specifies the Singapore id card.
-        /// 13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+        /// 1. HK (default): Hong Kong (China) Identity Card.
+        /// 2. ML: Malaysia Identity Card.
+        /// 3. IndonesiaIDCard: Indonesia Identity Card.
+        /// 4. PhilippinesVoteID: Philippines Voter's ID.
+        /// 5. PhilippinesDrivingLicense: Philippines Driving License.
+        /// 6. PhilippinesTinID: Philippines TIN ID.
+        /// 7. PhilippinesSSSID: Philippines SSS ID.
+        /// 8. PhilippinesUMID: Philippines UMID.
+        /// 9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+        /// 10. ThailandIDCard: Thailand Identity Card.
+        /// 11. MainlandIDCard: Chinese Mainland Identity Card.
+        /// 12. SingaporeIDCard: Singapore Identity Card.
+        /// 13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
         /// </summary>
         [JsonProperty("IdCardType")]
         public string IdCardType{ get; set; }
@@ -192,6 +192,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("AllowUploadPhoto")]
         public bool? AllowUploadPhoto{ get; set; }
 
+        /// <summary>
+        /// <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("EnableBotBgDetection")]
+        public bool? EnableBotBgDetection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "SkipOcrConfirmPage", this.SkipOcrConfirmPage);
             this.SetParamSimple(map, prefix + "HideProgressBar", this.HideProgressBar);
             this.SetParamSimple(map, prefix + "AllowUploadPhoto", this.AllowUploadPhoto);
+            this.SetParamSimple(map, prefix + "EnableBotBgDetection", this.EnableBotBgDetection);
         }
     }
 }
