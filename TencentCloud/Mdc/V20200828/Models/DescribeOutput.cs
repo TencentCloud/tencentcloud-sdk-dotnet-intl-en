@@ -97,27 +97,25 @@ namespace TencentCloud.Mdc.V20200828.Models
         public DescribeOutputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// CIDR allowlist
-        /// This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// 
+        /// The output RTSP streaming configuration information.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeOutputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output the HLS streaming configuration information.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// The maximum number of concurrent streams is 4, with a default of 4.
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
@@ -127,6 +125,43 @@ namespace TencentCloud.Mdc.V20200828.Models
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// The available zone currently only supports a maximum of one output.
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Output RIST configuration information.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public DescribeOutputRISTSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// </summary>
+        [JsonProperty("PidSelector")]
+        [System.Obsolete]
+        public PidSelector PidSelector{ get; set; }
+
+        /// <summary>
+        /// Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+        /// </summary>
+        [JsonProperty("OutputKind")]
+        public string OutputKind{ get; set; }
+
+        /// <summary>
+        /// Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+        /// </summary>
+        [JsonProperty("StreamUrls")]
+        public StreamUrlDetail[] StreamUrls{ get; set; }
+
+        /// <summary>
+        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// </summary>
+        [JsonProperty("StreamSelector")]
+        public StreamSelector StreamSelector{ get; set; }
 
 
         /// <summary>
@@ -150,6 +185,12 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
+            this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
+            this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
+            this.SetParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
         }
     }
 }
