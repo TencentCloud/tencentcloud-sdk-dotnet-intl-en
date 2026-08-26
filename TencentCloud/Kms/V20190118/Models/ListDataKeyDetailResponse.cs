@@ -25,13 +25,13 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Returns the attribute information list.
+        /// <p>Returned attribute information list.</p>
         /// </summary>
         [JsonProperty("DataKeyMetadatas")]
         public DataKeyMetadata[] DataKeyMetadatas{ get; set; }
 
         /// <summary>
-        /// Total number of datakeys.
+        /// <p>Total number of DataKeys</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

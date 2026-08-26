@@ -51,7 +51,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         /// <summary>
         /// Billing mode
         /// .
-        /// Monthly subscription.
+        /// yearly/monthly subscription.
         /// Pay-As-You-Go resources.
         /// Standard ri reserved instances.
         /// </summary>
@@ -205,6 +205,30 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// Product code
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
+        /// <summary>
+        /// Subproduct code
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// Component type code
+        /// </summary>
+        [JsonProperty("ComponentCode")]
+        public string ComponentCode{ get; set; }
+
+        /// <summary>
+        /// Component code
+        /// </summary>
+        [JsonProperty("ItemCode")]
+        public string ItemCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -240,6 +264,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+            this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
         }
     }
 }

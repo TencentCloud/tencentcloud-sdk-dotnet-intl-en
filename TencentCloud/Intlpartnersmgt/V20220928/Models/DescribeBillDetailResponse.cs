@@ -25,13 +25,13 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Data details.
+        /// <p>Data details</p>
         /// </summary>
         [JsonProperty("DetailSet")]
         public CustomerBillDetailData[] DetailSet{ get; set; }
 
         /// <summary>
-        /// Total number of entries.
+        /// <p>Total quantity.</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

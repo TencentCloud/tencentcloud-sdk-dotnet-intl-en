@@ -72,6 +72,12 @@ namespace TencentCloud.Mdp.V20200527.Models
         [JsonProperty("Manifest")]
         public string Manifest{ get; set; }
 
+        /// <summary>
+        /// Callback address after recording completion
+        /// </summary>
+        [JsonProperty("CallbackURL")]
+        public string CallbackURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Mdp.V20200527.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Destination", this.Destination);
             this.SetParamSimple(map, prefix + "Manifest", this.Manifest);
+            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         }
     }
 }

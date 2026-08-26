@@ -226,6 +226,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("TemplateDataModifyAction")]
         public string TemplateDataModifyAction{ get; set; }
 
+        /// <summary>
+        /// Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterfaces[] NetworkInterfaces{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +269,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "TemplateDataModifyAction", this.TemplateDataModifyAction);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

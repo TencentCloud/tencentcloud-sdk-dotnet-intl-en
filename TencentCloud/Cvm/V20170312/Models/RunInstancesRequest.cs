@@ -226,6 +226,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string[] ChcIds{ get; set; }
 
         /// <summary>
+        /// Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public long? PartitionNumber{ get; set; }
+
+        /// <summary>
         /// Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
         /// </summary>
         [JsonProperty("DisableApiTermination")]
@@ -236,6 +242,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         [JsonProperty("EnableJumboFrame")]
         public bool? EnableJumboFrame{ get; set; }
+
+        /// <summary>
+        /// Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterfaces[] NetworkInterfaces{ get; set; }
 
 
         /// <summary>
@@ -273,8 +285,10 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
             this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Total amount
+        /// <p>Total amount</p>
         /// </summary>
         [JsonProperty("TotalCost")]
         public float? TotalCost{ get; set; }

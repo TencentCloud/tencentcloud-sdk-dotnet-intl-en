@@ -25,73 +25,73 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+        /// <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+        /// <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+        /// <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
         /// </summary>
         [JsonProperty("Role")]
         public ulong? Role{ get; set; }
 
         /// <summary>
-        /// Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+        /// <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+        /// <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
         /// </summary>
         [JsonProperty("KeyState")]
         public ulong? KeyState{ get; set; }
 
         /// <summary>
-        /// Performs a fuzzy match query based on DataKeyId or DataKeyName.
+        /// <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
         /// </summary>
         [JsonProperty("SearchKeyAlias")]
         public string SearchKeyAlias{ get; set; }
 
         /// <summary>
-        /// Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+        /// <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
         /// </summary>
         [JsonProperty("Origin")]
         public string Origin{ get; set; }
 
         /// <summary>
-        /// HSM cluster ID corresponding to KMS advanced edition.
+        /// <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }
 
         /// <summary>
-        /// Specifies the globally unique identifier of the root key.
+        /// <p>Root key globally unique identifier</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Length of the data key.
+        /// <p>Length of the data key</p>
         /// </summary>
         [JsonProperty("DataKeyLen")]
         public ulong? DataKeyLen{ get; set; }
 
         /// <summary>
-        /// Tag filtering conditions.
+        /// <p>Tag filtering condition</p>
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
         /// <summary>
-        /// Array of member account information.
+        /// <p>Member account information array</p>
         /// </summary>
         [JsonProperty("MemberAccounts")]
         public MemberAccount[] MemberAccounts{ get; set; }

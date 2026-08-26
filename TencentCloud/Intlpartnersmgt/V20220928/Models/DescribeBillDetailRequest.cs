@@ -25,31 +25,31 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// Inquiry month, in the format of YYYY-MM, such as 2023-01
+        /// <p>Query month, in the format of YYYY-MM, such as 2023-01</p>
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
 
         /// <summary>
-        /// Page parameter: number of entries per page. Value range: [1, 200]
+        /// <p>Page parameter: number of entries per page. Value range: [1, 200]</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Page parameter: current page number. The minimum value is 1.
+        /// <p>Page parameter: current page number. The minimum value is 1.</p>
         /// </summary>
         [JsonProperty("Page")]
         public long? Page{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: prePay (Monthly subscription) and postPay (Pay-As-You-Go resources)
+        /// <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// Transaction type. Valid values: prepay_purchase (Purchase), prepay_renew (Renewal), prepay_modify (Upgrade/Downgrade), prepay_return ( Monthly subscription refund), postpay_deduct (Pay-as-you-go), postpay_deduct_h (Hourly settlement), postpay_deduct_d (Daily settlement), postpay_deduct_m (Monthly settlement), offline_deduct (Offline project deduction), online_deduct (Offline product deduction), recon_deduct (Adjustment - deduction), recon_increase (Adjustment - compensation), ripay_purchase (One-off RI Fee), postpay_deduct_s (Spot), ri_hour_pay (Hourly RI fee), prePurchase (New monthly subscription), preRenew (Monthly subscription renewal), preUpgrade (Upgrade/Downgrade), preDowngrade (Upgrade/Downgrade), svp_hour_pay (Hourly Savings Plan fee), recon_guarantee (Minimum spend deduction), pre_purchase (New monthly subscription), pre_renew (Monthly subscription renewal), pre_upgrade (Upgrade/Downgrade), pre_downgrade (Upgrade/Downgrade)
+        /// <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew:  Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>recon_increase: Adjustment - compensation</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li><li>preDowngrade: Upgrade/Downgrade</li><li>svp_hour_pay: Hourly Savings Plan fee</li><li>recon_guarantee: Minimum spend deduction</li><li>pre_purchase: New yearly/monthly subscription</li><li>pre_renew: yearly/monthly subscription renewal</li><li>pre_upgrade: Upgrade/Downgrade</li><li>pre_downgrade: Upgrade/Downgrade</li></ul>
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }

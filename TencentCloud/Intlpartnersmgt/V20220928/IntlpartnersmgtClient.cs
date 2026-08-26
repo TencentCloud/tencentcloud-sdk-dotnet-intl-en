@@ -28,7 +28,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
 
        private const string endpoint = "intlpartnersmgt.intl.tencentcloudapi.com";
        private const string version = "2022-09-28";
-       private const string sdkVersion = "SDK_NET_3.0.1322";
+       private const string sdkVersion = "SDK_NET_3.0.1384";
 
         /// <summary>
         /// Client constructor.
@@ -360,8 +360,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details by resellers.
-        /// Callable roles: Distributor, Second-level reseller, Reseller.
+        /// Description: Query customer bill details.
+        /// Resellers, first-level resellers, and second-level resellers can call this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
@@ -371,8 +371,8 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the customer bill details by resellers.
-        /// Callable roles: Distributor, Second-level reseller, Reseller.
+        /// Description: Query customer bill details.
+        /// Resellers, first-level resellers, and second-level resellers can call this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillDetailRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillDetailResponse"/></returns>
@@ -431,8 +431,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the total amount of customer bills.
-        /// Callable roles: Distributor, Second-level reseller, Reseller
+        /// Query the aggregate value of a sub-client bill
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>
@@ -442,8 +441,7 @@ namespace TencentCloud.Intlpartnersmgt.V20220928
         }
 
         /// <summary>
-        /// This API is used to query the total amount of customer bills.
-        /// Callable roles: Distributor, Second-level reseller, Reseller
+        /// Query the aggregate value of a sub-client bill
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerBillSummaryRequest"/></param>
         /// <returns><see cref="DescribeCustomerBillSummaryResponse"/></returns>

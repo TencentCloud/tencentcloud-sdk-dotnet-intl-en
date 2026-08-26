@@ -25,202 +25,220 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
     {
         
         /// <summary>
-        /// reseller account.
+        /// <p> Distributor account</p>
         /// </summary>
         [JsonProperty("PayerAccountId")]
         public long? PayerAccountId{ get; set; }
 
         /// <summary>
-        /// Subaccount.
+        /// <p>Sub-Customer account</p>
         /// </summary>
         [JsonProperty("OwnerAccountId")]
         public long? OwnerAccountId{ get; set; }
 
         /// <summary>
-        /// Operator account.
+        /// <p>Operator account</p>
         /// </summary>
         [JsonProperty("OperatorAccountId")]
         public long? OperatorAccountId{ get; set; }
 
         /// <summary>
-        /// Product name.
+        /// <p>Product name.</p>
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Billing mode
-        /// .
-        /// Monthly subscription (annual and monthly).
-        /// Pay-As-You-Go resources.
-        /// Standard ri reserved instance.
+        /// <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// Project name.
+        /// <p>Project name.</p>
         /// </summary>
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
         /// <summary>
-        /// Resource region.
+        /// <p>Associated region of the resource</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Resource available zone.
+        /// <p>Availability zone of resource</p>
         /// </summary>
         [JsonProperty("AvailabilityZone")]
         public string AvailabilityZone{ get; set; }
 
         /// <summary>
-        /// Instance id.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Sub-Product name
-        /// .
+        /// <p>Sub-product name</p>
         /// </summary>
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
 
         /// <summary>
-        /// Settlement type.
+        /// <p>Settlement type</p>
         /// </summary>
         [JsonProperty("TransactionType")]
         public string TransactionType{ get; set; }
 
         /// <summary>
-        /// <Transaction id>.
+        /// <p>Transaction log ID</p>
         /// </summary>
         [JsonProperty("TransactionId")]
         public string TransactionId{ get; set; }
 
         /// <summary>
-        /// Settlement time.
+        /// <p>Time of settlement</p>
         /// </summary>
         [JsonProperty("TransactionTime")]
         public string TransactionTime{ get; set; }
 
         /// <summary>
-        /// <Resource start time>.
+        /// <p>Resource usage start time</p>
         /// </summary>
         [JsonProperty("UsageStartTime")]
         public string UsageStartTime{ get; set; }
 
         /// <summary>
-        /// <Resource end usage time>.
+        /// <p>Resource usage end time</p>
         /// </summary>
         [JsonProperty("UsageEndTime")]
         public string UsageEndTime{ get; set; }
 
         /// <summary>
-        /// Component.
+        /// <p>Component</p>
         /// </summary>
         [JsonProperty("ComponentType")]
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// Component name.
+        /// <p>Component name</p>
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// Component list price.
+        /// <p>Component list price</p>
         /// </summary>
         [JsonProperty("ComponentListPrice")]
         public string ComponentListPrice{ get; set; }
 
         /// <summary>
-        /// Price unit.
+        /// <p>Price unit</p>
         /// </summary>
         [JsonProperty("ComponentPriceMeasurementUnit")]
         public string ComponentPriceMeasurementUnit{ get; set; }
 
         /// <summary>
-        /// Component usage.
+        /// <p>Component usage</p>
         /// </summary>
         [JsonProperty("ComponentUsage")]
         public string ComponentUsage{ get; set; }
 
         /// <summary>
-        /// Component usage unit.
+        /// <p>Component usage unit</p>
         /// </summary>
         [JsonProperty("ComponentUsageUnit")]
         public string ComponentUsageUnit{ get; set; }
 
         /// <summary>
-        /// Resource usage duration.
+        /// <p>Resource usage duration</p>
         /// </summary>
         [JsonProperty("UsageDuration")]
         public string UsageDuration{ get; set; }
 
         /// <summary>
-        /// duration unit.
+        /// <p>Duration unit</p>
         /// </summary>
         [JsonProperty("DurationUnit")]
         public string DurationUnit{ get; set; }
 
         /// <summary>
-        /// Total original price.
-        /// Original cost = component list price * component usage * usage duration.
+        /// <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discount (default is 1) - abandoned.
+        /// <p>Discount (default: 1) - abandoned</p>
         /// </summary>
         [JsonProperty("DiscountRate")]
         public string DiscountRate{ get; set; }
 
         /// <summary>
-        /// Currency.
+        /// <p>Currency.</p>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Total cost after discount.
+        /// <p>Total cost after discount</p>
         /// </summary>
         [JsonProperty("TotalAmountAfterDiscount")]
         public string TotalAmountAfterDiscount{ get; set; }
 
         /// <summary>
-        /// Voucher deduction amount.
+        /// <p>Voucher deducted amount</p>
         /// </summary>
         [JsonProperty("VoucherDeduction")]
         public string VoucherDeduction{ get; set; }
 
         /// <summary>
-        /// = Total Amount After Discount - Voucher Deduction
+        /// <p>= Total Amount After Discount - Voucher Deduction</p>
         /// </summary>
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
         /// <summary>
-        /// Identifier (id).
+        /// <p>id</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+        /// <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
         /// </summary>
         [JsonProperty("CustomerDiscountRate")]
         public string CustomerDiscountRate{ get; set; }
+
+        /// <summary>
+        /// <p>Product code</p>
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
+        /// <summary>
+        /// <p>Sub-product code</p>
+        /// </summary>
+        [JsonProperty("ProductCode")]
+        public string ProductCode{ get; set; }
+
+        /// <summary>
+        /// <p>Component type code</p>
+        /// </summary>
+        [JsonProperty("ComponentCode")]
+        public string ComponentCode{ get; set; }
+
+        /// <summary>
+        /// <p>Component code</p>
+        /// </summary>
+        [JsonProperty("ItemCode")]
+        public string ItemCode{ get; set; }
 
 
         /// <summary>
@@ -260,6 +278,10 @@ namespace TencentCloud.Intlpartnersmgt.V20220928.Models
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "CustomerDiscountRate", this.CustomerDiscountRate);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+            this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
+            this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
+            this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
         }
     }
 }
