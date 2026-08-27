@@ -28,7 +28,7 @@ namespace TencentCloud.Tokenhub.V20260322
 
        private const string endpoint = "tokenhub.intl.tencentcloudapi.com";
        private const string version = "2026-03-22";
-       private const string sdkVersion = "SDK_NET_3.0.1384";
+       private const string sdkVersion = "SDK_NET_3.0.1385";
 
         /// <summary>
         /// Client constructor.
@@ -517,6 +517,51 @@ namespace TencentCloud.Tokenhub.V20260322
         public DescribeTokenPlanListResponse DescribeTokenPlanListSync(DescribeTokenPlanListRequest req)
         {
             return InternalRequestAsync<DescribeTokenPlanListResponse>(req, "DescribeTokenPlanList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the usage ranking list.
+        /// 
+        /// Metric family (MetricType)
+        /// - `tokens` (default): Token usage statistics. Supports Dimension = apikey / endpoint / model.
+        /// Metrics returned: TotalToken (total) / InputTotalToken (input) / OutputTotalToken (output) / CacheTotalToken (read cache).
+        /// - `search`: [To be launched] Online search usage statistics. Supports Dimension = apikey / endpoint / model.
+        /// Returns metrics: SearchRequestCount (search request count)/SearchCount (search engine call count).
+        /// 
+        /// content
+        /// -The MetricType field is used to switch metric families. The response echoes back MetricType and MetricKeys.
+        /// -TotalStats: The aggregated value of all objects over the entire time window.
+        /// -PageStats: The aggregated value of objects on the current page.
+        /// - TopList: A list of objects sorted by MetricKeys[0] in descending order, including the aggregated value over the entire period and point-in-time curves.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageRankListRequest"/></param>
+        /// <returns><see cref="DescribeUsageRankListResponse"/></returns>
+        public Task<DescribeUsageRankListResponse> DescribeUsageRankList(DescribeUsageRankListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageRankListResponse>(req, "DescribeUsageRankList");
+        }
+
+        /// <summary>
+        /// Query the usage ranking list.
+        /// 
+        /// Metric family (MetricType)
+        /// - `tokens` (default): Token usage statistics. Supports Dimension = apikey / endpoint / model.
+        /// Metrics returned: TotalToken (total) / InputTotalToken (input) / OutputTotalToken (output) / CacheTotalToken (read cache).
+        /// - `search`: [To be launched] Online search usage statistics. Supports Dimension = apikey / endpoint / model.
+        /// Returns metrics: SearchRequestCount (search request count)/SearchCount (search engine call count).
+        /// 
+        /// content
+        /// -The MetricType field is used to switch metric families. The response echoes back MetricType and MetricKeys.
+        /// -TotalStats: The aggregated value of all objects over the entire time window.
+        /// -PageStats: The aggregated value of objects on the current page.
+        /// - TopList: A list of objects sorted by MetricKeys[0] in descending order, including the aggregated value over the entire period and point-in-time curves.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageRankListRequest"/></param>
+        /// <returns><see cref="DescribeUsageRankListResponse"/></returns>
+        public DescribeUsageRankListResponse DescribeUsageRankListSync(DescribeUsageRankListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageRankListResponse>(req, "DescribeUsageRankList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
