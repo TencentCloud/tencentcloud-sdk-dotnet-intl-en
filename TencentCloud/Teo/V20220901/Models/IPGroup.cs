@@ -25,38 +25,40 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Group ID. Enter `0`.
+        /// <p>IP group Id. Enter 0 when created.</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Group name.
+        /// <p>IP group name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP group content, supports ip and ip range.
+        /// <p>IP group content supports only IP and IP range.</p>
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }
 
         /// <summary>
-        /// Number of ips or ranges in effect in the IP group. valid as an output parameter, no need to specify this field as an input parameter.
+        /// <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
         /// </summary>
         [JsonProperty("IPTotalCount")]
         public long? IPTotalCount{ get; set; }
 
         /// <summary>
-        /// Specifies the scheduled expiration information of the IP.
-        /// Specifies the IP address or IP range configuration with scheduled expiration time as an input parameter.
-        /// As an output parameter, contains the following two categories of information.
-        /// <Li>Currently not expired scheduled expiration information: expiration configuration not triggered.</li>.
-        /// <Li>Scheduled expiration information expired within a week: cache expiration configuration has been triggered.</li>.
+        /// <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
         /// </summary>
         [JsonProperty("IPExpireInfo")]
         public IPExpireInfo[] IPExpireInfo{ get; set; }
+
+        /// <summary>
+        /// <p>The number of IP groups referenced.</p>
+        /// </summary>
+        [JsonProperty("RefCount")]
+        public long? RefCount{ get; set; }
 
 
         /// <summary>
@@ -69,6 +71,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "IPTotalCount", this.IPTotalCount);
             this.SetParamArrayObj(map, prefix + "IPExpireInfo.", this.IPExpireInfo);
+            this.SetParamSimple(map, prefix + "RefCount", this.RefCount);
         }
     }
 }

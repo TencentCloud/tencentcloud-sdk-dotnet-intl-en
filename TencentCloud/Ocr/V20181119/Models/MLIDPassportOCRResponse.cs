@@ -25,43 +25,43 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Passport ID
+        /// Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Name
+        /// Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Date of birth
+        /// Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// Gender (F: female, M: male)
+        /// Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Expiration date
+        /// Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
         /// <summary>
-        /// Issuing country
+        /// Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("IssuingCountry")]
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// Nationality code (MRZ field)
+        /// Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
@@ -87,33 +87,31 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
-        /// The first row of the machine-readable zone (MRZ) at the bottom
+        /// Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("CodeSet")]
         public string CodeSet{ get; set; }
 
         /// <summary>
-        /// The second row of the MRZ at the bottom
+        /// Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("CodeCrc")]
         public string CodeCrc{ get; set; }
 
         /// <summary>
-        /// The surname.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("Surname")]
         public string Surname{ get; set; }
 
         /// <summary>
-        /// The given name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("GivenName")]
         public string GivenName{ get; set; }
 
         /// <summary>
-        /// Type (in Machine Readable Zone)
+        /// Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -130,7 +128,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// -9101 Alarm for covered certificate
         /// -9102 Alarm for photocopied certificate
         /// -9103 Alarm for photographed certificate
-        /// -9104 Alarm for tamper certificate
+        /// -9104 Alarm for PS certificate
         /// -9107 Alarm for reflective certificate
         /// -9108 Alarm for blurry certificate 
         /// -9109 This capability is not enabled. Please contact customer support to activate the alert service.

@@ -28,7 +28,7 @@ namespace TencentCloud.Edgezone.V20260401
 
        private const string endpoint = "edgezone.intl.tencentcloudapi.com";
        private const string version = "2026-04-01";
-       private const string sdkVersion = "SDK_NET_3.0.1304";
+       private const string sdkVersion = "SDK_NET_3.0.1386";
 
         /// <summary>
         /// Client constructor.
@@ -73,6 +73,27 @@ namespace TencentCloud.Edgezone.V20260401
         public ApplyPublicIpsResponse ApplyPublicIpsSync(ApplyPublicIpsRequest req)
         {
             return InternalRequestAsync<ApplyPublicIpsResponse>(req, "ApplyPublicIps")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Enable the billing service for edge nodes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeNodeServiceRequest"/></param>
+        /// <returns><see cref="CreateEdgeNodeServiceResponse"/></returns>
+        public Task<CreateEdgeNodeServiceResponse> CreateEdgeNodeService(CreateEdgeNodeServiceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeNodeServiceResponse>(req, "CreateEdgeNodeService");
+        }
+
+        /// <summary>
+        /// Enable the billing service for edge nodes.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeNodeServiceRequest"/></param>
+        /// <returns><see cref="CreateEdgeNodeServiceResponse"/></returns>
+        public CreateEdgeNodeServiceResponse CreateEdgeNodeServiceSync(CreateEdgeNodeServiceRequest req)
+        {
+            return InternalRequestAsync<CreateEdgeNodeServiceResponse>(req, "CreateEdgeNodeService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
